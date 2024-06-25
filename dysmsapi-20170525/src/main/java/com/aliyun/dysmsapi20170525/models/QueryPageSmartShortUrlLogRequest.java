@@ -4,27 +4,49 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryPageSmartShortUrlLogRequest extends TeaModel {
-    @NameInMap("ClickState")
-    public Long clickState;
-
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20181225</p>
+     */
     @NameInMap("CreateDateEnd")
     public Long createDateEnd;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20181225</p>
+     */
     @NameInMap("CreateDateStart")
     public Long createDateStart;
-
-    @NameInMap("EndId")
-    public Long endId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1390000****</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
@@ -34,26 +56,16 @@ public class QueryPageSmartShortUrlLogRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ShortName")
-    public String shortName;
-
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://ays.cn/">http://ays.cn/</a>****</p>
+     */
     @NameInMap("ShortUrl")
     public String shortUrl;
-
-    @NameInMap("StartId")
-    public Long startId;
 
     public static QueryPageSmartShortUrlLogRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPageSmartShortUrlLogRequest self = new QueryPageSmartShortUrlLogRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryPageSmartShortUrlLogRequest setClickState(Long clickState) {
-        this.clickState = clickState;
-        return this;
-    }
-    public Long getClickState() {
-        return this.clickState;
     }
 
     public QueryPageSmartShortUrlLogRequest setCreateDateEnd(Long createDateEnd) {
@@ -70,14 +82,6 @@ public class QueryPageSmartShortUrlLogRequest extends TeaModel {
     }
     public Long getCreateDateStart() {
         return this.createDateStart;
-    }
-
-    public QueryPageSmartShortUrlLogRequest setEndId(Long endId) {
-        this.endId = endId;
-        return this;
-    }
-    public Long getEndId() {
-        return this.endId;
     }
 
     public QueryPageSmartShortUrlLogRequest setOwnerId(Long ownerId) {
@@ -128,28 +132,12 @@ public class QueryPageSmartShortUrlLogRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public QueryPageSmartShortUrlLogRequest setShortName(String shortName) {
-        this.shortName = shortName;
-        return this;
-    }
-    public String getShortName() {
-        return this.shortName;
-    }
-
     public QueryPageSmartShortUrlLogRequest setShortUrl(String shortUrl) {
         this.shortUrl = shortUrl;
         return this;
     }
     public String getShortUrl() {
         return this.shortUrl;
-    }
-
-    public QueryPageSmartShortUrlLogRequest setStartId(Long startId) {
-        this.startId = startId;
-        return this;
-    }
-    public Long getStartId() {
-        return this.startId;
     }
 
 }

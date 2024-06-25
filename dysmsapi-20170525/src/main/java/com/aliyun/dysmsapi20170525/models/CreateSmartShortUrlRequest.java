@@ -4,12 +4,22 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateSmartShortUrlRequest extends TeaModel {
-    @NameInMap("Expiration")
-    public Long expiration;
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
+    @NameInMap("OutId")
+    public String outId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15900195***</p>
+     */
     @NameInMap("PhoneNumbers")
     public String phoneNumbers;
 
@@ -19,9 +29,12 @@ public class CreateSmartShortUrlRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SourceName")
-    public String sourceName;
-
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
     @NameInMap("SourceUrl")
     public String sourceUrl;
 
@@ -30,12 +43,12 @@ public class CreateSmartShortUrlRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateSmartShortUrlRequest setExpiration(Long expiration) {
-        this.expiration = expiration;
+    public CreateSmartShortUrlRequest setOutId(String outId) {
+        this.outId = outId;
         return this;
     }
-    public Long getExpiration() {
-        return this.expiration;
+    public String getOutId() {
+        return this.outId;
     }
 
     public CreateSmartShortUrlRequest setOwnerId(Long ownerId) {
@@ -68,14 +81,6 @@ public class CreateSmartShortUrlRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateSmartShortUrlRequest setSourceName(String sourceName) {
-        this.sourceName = sourceName;
-        return this;
-    }
-    public String getSourceName() {
-        return this.sourceName;
     }
 
     public CreateSmartShortUrlRequest setSourceUrl(String sourceUrl) {

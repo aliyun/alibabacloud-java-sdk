@@ -4,18 +4,50 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySendDetailsRequest extends TeaModel {
+    /**
+     * <p>The ID of the delivery receipt. The delivery receipt ID is the value of the BizId parameter that is returned when you call the SendSms or SendBatchSms operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>134523^435****</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>The page number of the first page.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Long currentPage;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of items displayed per page.</p>
+     * <p>Valid values: 1 to 50.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The mobile numbers of the recipients. Format:</p>
+     * <ul>
+     * <li>If you send messages in the Chinese mainland, specify an 11-digit mobile number, for example, 1390000\<em>\</em>\<em>\</em>.</li>
+     * <li>If you send messages to countries or regions outside the Chinese mainland, specify this parameter in the \<Area code>\<Mobile number> format. Example: 8520000\<em>\</em>\<em>\</em>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
@@ -25,6 +57,14 @@ public class QuerySendDetailsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The date when the message was sent. You can query messages that were sent within the last 30 days.</p>
+     * <p>Format: yyyyMMdd. Example: 20181225.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20181228</p>
+     */
     @NameInMap("SendDate")
     public String sendDate;
 

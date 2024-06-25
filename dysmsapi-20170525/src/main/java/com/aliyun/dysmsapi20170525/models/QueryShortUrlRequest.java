@@ -13,6 +13,13 @@ public class QueryShortUrlRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The short URL. You can query the short URL by calling the <a href="https://help.aliyun.com/document_detail/186774.html">AddShortUrl</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>http://****.cn/6y8uy7</p>
+     */
     @NameInMap("ShortUrl")
     public String shortUrl;
 

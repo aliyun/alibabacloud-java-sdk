@@ -4,18 +4,34 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public QueryPageSmartShortUrlLogResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +81,45 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
     }
 
     public static class QueryPageSmartShortUrlLogResponseBodyModelList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>87</p>
+         */
         @NameInMap("ClickState")
         public Long clickState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>51</p>
+         */
         @NameInMap("ClickTime")
         public Long clickTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
         @NameInMap("ShortName")
         public String shortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
         @NameInMap("ShortUrl")
         public String shortUrl;
 
@@ -142,15 +182,31 @@ public class QueryPageSmartShortUrlLogResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<QueryPageSmartShortUrlLogResponseBodyModelList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>74</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>66</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86</p>
+         */
         @NameInMap("TotalPage")
         public Long totalPage;
 

@@ -4,15 +4,44 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetOSSInfoForCardTemplateResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A90E4451-FED7-49D2-87C8-00700A8C4D0D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,27 +83,75 @@ public class GetOSSInfoForCardTemplateResponseBody extends TeaModel {
     }
 
     public static class GetOSSInfoForCardTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAIxetqt1Dg****</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>599333677478****</p>
+         */
         @NameInMap("AliUid")
         public String aliUid;
 
+        /**
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alicom-cardsms-resources</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1634209418</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://alicom-cardsms-resources.oss-cn-zhangjiakou.aliyuncs.com">https://alicom-cardsms-resources.oss-cn-zhangjiakou.aliyuncs.com</a></p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The signature policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJxxx0=</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <p>The signature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
+         */
         @NameInMap("Signature")
         public String signature;
 
+        /**
+         * <p>The path of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1631792777</p>
+         */
         @NameInMap("StartPath")
         public String startPath;
 

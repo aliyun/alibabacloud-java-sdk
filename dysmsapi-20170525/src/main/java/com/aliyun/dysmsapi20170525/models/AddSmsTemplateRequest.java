@@ -7,6 +7,13 @@ public class AddSmsTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The description of the message template. It is one of the reference information for template review. The description cannot exceed 100 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Apply for a template to send verification codes.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
@@ -16,12 +23,42 @@ public class AddSmsTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The content of the template. The content can be up to 500 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/108253.html">Message template specifications</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are applying for mobile registration. The verification code is: ${code}, valid for 5 minutes!</p>
+     */
     @NameInMap("TemplateContent")
     public String templateContent;
 
+    /**
+     * <p>The name of the template. The name can be up to 30 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun Test</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>The type of the message. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: verification code</li>
+     * <li><strong>1</strong>: notification</li>
+     * <li><strong>2</strong>: promotional message</li>
+     * <li><strong>3</strong>: message sent to countries or regions outside the Chinese mainland</li>
+     * </ul>
+     * <blockquote>
+     * <p>Only enterprise users can send promotional messages, or send messages to countries or regions outside the Chinese mainland.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TemplateType")
     public Integer templateType;
 

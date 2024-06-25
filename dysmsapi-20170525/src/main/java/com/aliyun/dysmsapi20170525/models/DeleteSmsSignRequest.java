@@ -13,6 +13,16 @@ public class DeleteSmsSignRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The signature.</p>
+     * <blockquote>
+     * <p>The signature must be submitted by the current Alibaba Cloud account, and has been approved.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
+     */
     @NameInMap("SignName")
     public String signName;
 
