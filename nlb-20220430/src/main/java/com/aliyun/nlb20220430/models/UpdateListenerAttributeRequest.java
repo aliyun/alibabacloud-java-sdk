@@ -6,39 +6,56 @@ import com.aliyun.tea.*;
 public class UpdateListenerAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AlpnEnabled")
     public Boolean alpnEnabled;
 
     /**
      * <p>The ALPN policy. Valid values:</p>
-     * <br>
-     * <p>*   **HTTP1Only**: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</p>
-     * <p>*   **HTTP2Only**: uses only HTTP 2.0.</p>
-     * <p>*   **HTTP2Optional**: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</p>
-     * <p>*   **HTTP2Preferred**: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</p>
-     * <br>
-     * <p>> This parameter is required if AlpnEnabled is set to true.</p>
+     * <ul>
+     * <li><strong>HTTP1Only</strong>: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
+     * <li><strong>HTTP2Only</strong>: uses only HTTP 2.0.</li>
+     * <li><strong>HTTP2Optional</strong>: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</li>
+     * <li><strong>HTTP2Preferred</strong>: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required if AlpnEnabled is set to true.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ALPN</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("AlpnPolicy")
     public String alpnPolicy;
 
     /**
      * <p>The CA certificates. Only one CA certificate is supported.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * </blockquote>
      */
     @NameInMap("CaCertificateIds")
     public java.util.List<String> caCertificateIds;
 
     /**
      * <p>Specifies whether to enable mutual authentication. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong> (default): no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
@@ -51,60 +68,86 @@ public class UpdateListenerAttributeRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: **0** to **1000000**. **0** specifies that the number of connections is unlimited.</p>
+     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> specifies that the number of connections is unlimited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("Cps")
     public Integer cps;
 
     /**
      * <p>Specifies whether only to precheck the request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request but does not update the configurations of the listener. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: prechecks the request but does not update the configurations of the listener. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **900**.</p>
+     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1</strong> to <strong>900</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
      * <p>Enter a name for the listener.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).</p>
+     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tcpssl_443</p>
      */
     @NameInMap("ListenerDescription")
     public String listenerDescription;
 
     /**
      * <p>The ID of the listener.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsn-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The size of the largest TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** specifies that the maximum segment size remains unchanged. This parameter is supported only by listeners that use SSL over TCP.</p>
+     * <p>The size of the largest TCP segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> specifies that the maximum segment size remains unchanged. This parameter is supported only by listeners that use SSL over TCP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>344</p>
      */
     @NameInMap("Mss")
     public Integer mss;
 
     /**
      * <p>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
@@ -117,31 +160,44 @@ public class UpdateListenerAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the NLB instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SecSensorEnabled")
     public Boolean secSensorEnabled;
 
     /**
      * <p>The ID of the security policy.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>tls_cipher_policy_1_1</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
     /**
      * <p>The ID of the server group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sgp-ppdpc14gdm3x4o****</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
@@ -298,27 +354,39 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     public static class UpdateListenerAttributeRequestProxyProtocolV2Config extends TeaModel {
         /**
          * <p>Specifies whether to use the Proxy protocol to pass the PrivateLinkEpId parameter to backend servers. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Ppv2PrivateLinkEpIdEnabled")
         public Boolean ppv2PrivateLinkEpIdEnabled;
 
         /**
          * <p>Specifies whether to use the Proxy protocol to pass the PrivateLinkEpsId parameter to backend servers. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
         public Boolean ppv2PrivateLinkEpsIdEnabled;
 
         /**
          * <p>Specifies whether to use the Proxy protocol to pass the VpcId parameter to backend servers. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Ppv2VpcIdEnabled")
         public Boolean ppv2VpcIdEnabled;

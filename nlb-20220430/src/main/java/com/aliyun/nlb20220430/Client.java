@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Adds backend servers to a specified server group.</p>
+     * 
+     * @param request AddServersToServerGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddServersToServerGroupResponse
+     */
     public AddServersToServerGroupResponse addServersToServerGroupWithOptions(AddServersToServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -71,19 +79,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddServersToServerGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Adds backend servers to a specified server group.</p>
+     * 
+     * @param request AddServersToServerGroupRequest
+     * @return AddServersToServerGroupResponse
+     */
     public AddServersToServerGroupResponse addServersToServerGroup(AddServersToServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addServersToServerGroupWithOptions(request, runtime);
     }
 
     /**
-      * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
-      * *   If the listener is in the **Associating** state, the additional certificates are being associated.
-      * *   If the listener is in the **Associated** state, the additional certificates are associated.
-      *
-      * @param request AssociateAdditionalCertificatesWithListenerRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AssociateAdditionalCertificatesWithListenerResponse
+     * <b>description</b> :
+     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Associating</strong> state, the additional certificates are being associated.</li>
+     * <li>If the listener is in the <strong>Associated</strong> state, the additional certificates are associated.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates additional certificates with a listener that uses SSL over TCP.</p>
+     * 
+     * @param request AssociateAdditionalCertificatesWithListenerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssociateAdditionalCertificatesWithListenerResponse
      */
     public AssociateAdditionalCertificatesWithListenerResponse associateAdditionalCertificatesWithListenerWithOptions(AssociateAdditionalCertificatesWithListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -126,18 +147,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
-      * *   If the listener is in the **Associating** state, the additional certificates are being associated.
-      * *   If the listener is in the **Associated** state, the additional certificates are associated.
-      *
-      * @param request AssociateAdditionalCertificatesWithListenerRequest
-      * @return AssociateAdditionalCertificatesWithListenerResponse
+     * <b>description</b> :
+     * <p><em>AssociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</p>
+     * <ul>
+     * <li>If the listener is in the <strong>Associating</strong> state, the additional certificates are being associated.</li>
+     * <li>If the listener is in the <strong>Associated</strong> state, the additional certificates are associated.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates additional certificates with a listener that uses SSL over TCP.</p>
+     * 
+     * @param request AssociateAdditionalCertificatesWithListenerRequest
+     * @return AssociateAdditionalCertificatesWithListenerResponse
      */
     public AssociateAdditionalCertificatesWithListenerResponse associateAdditionalCertificatesWithListener(AssociateAdditionalCertificatesWithListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateAdditionalCertificatesWithListenerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>绑定带宽包</p>
+     * 
+     * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachCommonBandwidthPackageToLoadBalancerResponse
+     */
     public AttachCommonBandwidthPackageToLoadBalancerResponse attachCommonBandwidthPackageToLoadBalancerWithOptions(AttachCommonBandwidthPackageToLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -178,17 +213,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachCommonBandwidthPackageToLoadBalancerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>绑定带宽包</p>
+     * 
+     * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
+     * @return AttachCommonBandwidthPackageToLoadBalancerResponse
+     */
     public AttachCommonBandwidthPackageToLoadBalancerResponse attachCommonBandwidthPackageToLoadBalancer(AttachCommonBandwidthPackageToLoadBalancerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachCommonBandwidthPackageToLoadBalancerWithOptions(request, runtime);
     }
 
     /**
-      * Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the [StartShiftLoadBalancerZones](~~2411999~~) API operation.
-      *
-      * @param request CancelShiftLoadBalancerZonesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CancelShiftLoadBalancerZonesResponse
+     * <b>description</b> :
+     * <p>Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds the elastic IP address (EIP) and virtual IP address (VIP) of a zone to the DNS record.</p>
+     * 
+     * @param request CancelShiftLoadBalancerZonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelShiftLoadBalancerZonesResponse
      */
     public CancelShiftLoadBalancerZonesResponse cancelShiftLoadBalancerZonesWithOptions(CancelShiftLoadBalancerZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -231,16 +277,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the [StartShiftLoadBalancerZones](~~2411999~~) API operation.
-      *
-      * @param request CancelShiftLoadBalancerZonesRequest
-      * @return CancelShiftLoadBalancerZonesResponse
+     * <b>description</b> :
+     * <p>Before you call this operation, the zone of the Network Load Balancer (NLB) instance is removed from the DNS record by using the console or calling the <a href="https://help.aliyun.com/document_detail/2411999.html">StartShiftLoadBalancerZones</a> API operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds the elastic IP address (EIP) and virtual IP address (VIP) of a zone to the DNS record.</p>
+     * 
+     * @param request CancelShiftLoadBalancerZonesRequest
+     * @return CancelShiftLoadBalancerZonesResponse
      */
     public CancelShiftLoadBalancerZonesResponse cancelShiftLoadBalancerZones(CancelShiftLoadBalancerZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.cancelShiftLoadBalancerZonesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a TCP or UDP listener, or a listener that uses SSL over TCP for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param tmpReq CreateListenerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateListenerResponse
+     */
     public CreateListenerResponse createListenerWithOptions(CreateListenerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateListenerShrinkRequest request = new CreateListenerShrinkRequest();
@@ -359,20 +417,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateListenerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a TCP or UDP listener, or a listener that uses SSL over TCP for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request CreateListenerRequest
+     * @return CreateListenerResponse
+     */
     public CreateListenerResponse createListener(CreateListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createListenerWithOptions(request, runtime);
     }
 
     /**
-      * *   When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.
-      * *   **CreateLoadBalancer** is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~445873~~) to query the status of an NLB instance.
-      *     *   If an NLB instance is in the **Provisioning** state, the NLB instance is being created.
-      *     *   If an NLB instance is in the **Active** state, the NLB instance is created.
-      *
-      * @param request CreateLoadBalancerRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateLoadBalancerResponse
+     * <b>description</b> :
+     * <p>  When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.</p>
+     * <ul>
+     * <li><strong>CreateLoadBalancer</strong> is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> to query the status of an NLB instance.<ul>
+     * <li>If an NLB instance is in the <strong>Provisioning</strong> state, the NLB instance is being created.</li>
+     * <li>If an NLB instance is in the <strong>Active</strong> state, the NLB instance is created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Network Load Balancer (NLB) instance in a specified region.</p>
+     * 
+     * @param request CreateLoadBalancerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLoadBalancerResponse
      */
     public CreateLoadBalancerResponse createLoadBalancerWithOptions(CreateLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -460,19 +533,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.
-      * *   **CreateLoadBalancer** is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~445873~~) to query the status of an NLB instance.
-      *     *   If an NLB instance is in the **Provisioning** state, the NLB instance is being created.
-      *     *   If an NLB instance is in the **Active** state, the NLB instance is created.
-      *
-      * @param request CreateLoadBalancerRequest
-      * @return CreateLoadBalancerResponse
+     * <b>description</b> :
+     * <p>  When you create an NLB instance, the service-linked role AliyunServiceRoleForNlb is automatically created and assigned to you.</p>
+     * <ul>
+     * <li><strong>CreateLoadBalancer</strong> is an asynchronous operation. After you send a request, the system returns an instance ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> to query the status of an NLB instance.<ul>
+     * <li>If an NLB instance is in the <strong>Provisioning</strong> state, the NLB instance is being created.</li>
+     * <li>If an NLB instance is in the <strong>Active</strong> state, the NLB instance is created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Network Load Balancer (NLB) instance in a specified region.</p>
+     * 
+     * @param request CreateLoadBalancerRequest
+     * @return CreateLoadBalancerResponse
      */
     public CreateLoadBalancerResponse createLoadBalancer(CreateLoadBalancerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLoadBalancerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom security policy for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request CreateSecurityPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSecurityPolicyResponse
+     */
     public CreateSecurityPolicyResponse createSecurityPolicyWithOptions(CreateSecurityPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -525,21 +614,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSecurityPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a custom security policy for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request CreateSecurityPolicyRequest
+     * @return CreateSecurityPolicyResponse
+     */
     public CreateSecurityPolicyResponse createSecurityPolicy(CreateSecurityPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSecurityPolicyWithOptions(request, runtime);
     }
 
     /**
-      * *   **protocol** specifies the protocol used to forward requests to the backend servers.
-      * *   NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.
-      * *   **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the creation status of the task.
-      *     *   If the task is in the **Succeeded** status, the server group is created.
-      *     *   If the task is in the **Processing** status, the server group is being created.
-      *
-      * @param request CreateServerGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateServerGroupResponse
+     * <b>description</b> :
+     * <p>  <strong>protocol</strong> specifies the protocol used to forward requests to the backend servers.</p>
+     * <ul>
+     * <li>NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.</li>
+     * <li><strong>CreateServerGroup</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.<ul>
+     * <li>If the task is in the <strong>Succeeded</strong> status, the server group is created.</li>
+     * <li>If the task is in the <strong>Processing</strong> status, the server group is being created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a server group in a region.</p>
+     * 
+     * @param request CreateServerGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateServerGroupResponse
      */
     public CreateServerGroupResponse createServerGroupWithOptions(CreateServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -631,20 +735,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **protocol** specifies the protocol used to forward requests to the backend servers.
-      * *   NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.
-      * *   **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the creation status of the task.
-      *     *   If the task is in the **Succeeded** status, the server group is created.
-      *     *   If the task is in the **Processing** status, the server group is being created.
-      *
-      * @param request CreateServerGroupRequest
-      * @return CreateServerGroupResponse
+     * <b>description</b> :
+     * <p>  <strong>protocol</strong> specifies the protocol used to forward requests to the backend servers.</p>
+     * <ul>
+     * <li>NLB instances support only backend server groups that use TCP, UDP, or SSL over TCP.</li>
+     * <li><strong>CreateServerGroup</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the creation status of the task.<ul>
+     * <li>If the task is in the <strong>Succeeded</strong> status, the server group is created.</li>
+     * <li>If the task is in the <strong>Processing</strong> status, the server group is being created.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a server group in a region.</p>
+     * 
+     * @param request CreateServerGroupRequest
+     * @return CreateServerGroupResponse
      */
     public CreateServerGroupResponse createServerGroup(CreateServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createServerGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除监听</p>
+     * 
+     * @param request DeleteListenerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteListenerResponse
+     */
     public DeleteListenerResponse deleteListenerWithOptions(DeleteListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -681,11 +801,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteListenerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除监听</p>
+     * 
+     * @param request DeleteListenerRequest
+     * @return DeleteListenerResponse
+     */
     public DeleteListenerResponse deleteListener(DeleteListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteListenerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除负载均衡</p>
+     * 
+     * @param request DeleteLoadBalancerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLoadBalancerResponse
+     */
     public DeleteLoadBalancerResponse deleteLoadBalancerWithOptions(DeleteLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -722,11 +857,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLoadBalancerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除负载均衡</p>
+     * 
+     * @param request DeleteLoadBalancerRequest
+     * @return DeleteLoadBalancerResponse
+     */
     public DeleteLoadBalancerResponse deleteLoadBalancer(DeleteLoadBalancerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteLoadBalancerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除安全策略</p>
+     * 
+     * @param request DeleteSecurityPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSecurityPolicyResponse
+     */
     public DeleteSecurityPolicyResponse deleteSecurityPolicyWithOptions(DeleteSecurityPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -763,17 +913,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSecurityPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>删除安全策略</p>
+     * 
+     * @param request DeleteSecurityPolicyRequest
+     * @return DeleteSecurityPolicyResponse
+     */
     public DeleteSecurityPolicyResponse deleteSecurityPolicy(DeleteSecurityPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSecurityPolicyWithOptions(request, runtime);
     }
 
     /**
-      * You can delete server groups that are not associated with listeners.
-      *
-      * @param request DeleteServerGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteServerGroupResponse
+     * <b>description</b> :
+     * <p>You can delete server groups that are not associated with listeners.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>DeleteServerGroup</p>
+     * 
+     * @param request DeleteServerGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteServerGroupResponse
      */
     public DeleteServerGroupResponse deleteServerGroupWithOptions(DeleteServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -812,16 +973,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can delete server groups that are not associated with listeners.
-      *
-      * @param request DeleteServerGroupRequest
-      * @return DeleteServerGroupResponse
+     * <b>description</b> :
+     * <p>You can delete server groups that are not associated with listeners.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>DeleteServerGroup</p>
+     * 
+     * @param request DeleteServerGroupRequest
+     * @return DeleteServerGroupResponse
      */
     public DeleteServerGroupResponse deleteServerGroup(DeleteServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteServerGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询秒级监控存储配置</p>
+     * 
+     * @param request DescribeHdMonitorRegionConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHdMonitorRegionConfigResponse
+     */
+    public DescribeHdMonitorRegionConfigResponse describeHdMonitorRegionConfigWithOptions(DescribeHdMonitorRegionConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHdMonitorRegionConfig"),
+            new TeaPair("version", "2022-04-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHdMonitorRegionConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询秒级监控存储配置</p>
+     * 
+     * @param request DescribeHdMonitorRegionConfigRequest
+     * @return DescribeHdMonitorRegionConfigResponse
+     */
+    public DescribeHdMonitorRegionConfigResponse describeHdMonitorRegionConfig(DescribeHdMonitorRegionConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHdMonitorRegionConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries regions that support Network Load Balancer (NLB) instances.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -856,11 +1073,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries regions that support Network Load Balancer (NLB) instances.</p>
+     * 
+     * @param request DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     */
     public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeRegionsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries zones in a region that supports Network Load Balancer (NLB).</p>
+     * 
+     * @param request DescribeZonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeZonesResponse
+     */
     public DescribeZonesResponse describeZonesWithOptions(DescribeZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -897,11 +1129,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeZonesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries zones in a region that supports Network Load Balancer (NLB).</p>
+     * 
+     * @param request DescribeZonesRequest
+     * @return DescribeZonesResponse
+     */
     public DescribeZonesResponse describeZones(DescribeZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeZonesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>解绑带宽包</p>
+     * 
+     * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachCommonBandwidthPackageFromLoadBalancerResponse
+     */
     public DetachCommonBandwidthPackageFromLoadBalancerResponse detachCommonBandwidthPackageFromLoadBalancerWithOptions(DetachCommonBandwidthPackageFromLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -942,11 +1189,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachCommonBandwidthPackageFromLoadBalancerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>解绑带宽包</p>
+     * 
+     * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
+     * @return DetachCommonBandwidthPackageFromLoadBalancerResponse
+     */
     public DetachCommonBandwidthPackageFromLoadBalancerResponse detachCommonBandwidthPackageFromLoadBalancer(DetachCommonBandwidthPackageFromLoadBalancerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachCommonBandwidthPackageFromLoadBalancerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the network type of an IPv6 Network Load Balancer (NLB) instance from Internet-facing to internal-facing.</p>
+     * 
+     * @param request DisableLoadBalancerIpv6InternetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableLoadBalancerIpv6InternetResponse
+     */
     public DisableLoadBalancerIpv6InternetResponse disableLoadBalancerIpv6InternetWithOptions(DisableLoadBalancerIpv6InternetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -983,19 +1245,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableLoadBalancerIpv6InternetResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the network type of an IPv6 Network Load Balancer (NLB) instance from Internet-facing to internal-facing.</p>
+     * 
+     * @param request DisableLoadBalancerIpv6InternetRequest
+     * @return DisableLoadBalancerIpv6InternetResponse
+     */
     public DisableLoadBalancerIpv6InternetResponse disableLoadBalancerIpv6Internet(DisableLoadBalancerIpv6InternetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableLoadBalancerIpv6InternetWithOptions(request, runtime);
     }
 
     /**
-      * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
-      * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
-      * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
-      *
-      * @param request DisassociateAdditionalCertificatesWithListenerRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DisassociateAdditionalCertificatesWithListenerResponse
+     * <b>description</b> :
+     * <p><em>DisassociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</p>
+     * <ul>
+     * <li>If an additional certificate is in the <strong>Dissociating</strong> state, the additional certificate is being disassociated.</li>
+     * <li>If an additional certificate is in the <strong>Dissociated</strong> state, the additional certificate is disassociated.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates additional certificates from a listener that uses SSL over TCP.</p>
+     * 
+     * @param request DisassociateAdditionalCertificatesWithListenerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisassociateAdditionalCertificatesWithListenerResponse
      */
     public DisassociateAdditionalCertificatesWithListenerResponse disassociateAdditionalCertificatesWithListenerWithOptions(DisassociateAdditionalCertificatesWithListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1038,18 +1313,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
-      * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
-      * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
-      *
-      * @param request DisassociateAdditionalCertificatesWithListenerRequest
-      * @return DisassociateAdditionalCertificatesWithListenerResponse
+     * <b>description</b> :
+     * <p><em>DisassociateAdditionalCertificatesWithListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/615175.html">ListListenerCertificates</a> operation to query the status of the task:</p>
+     * <ul>
+     * <li>If an additional certificate is in the <strong>Dissociating</strong> state, the additional certificate is being disassociated.</li>
+     * <li>If an additional certificate is in the <strong>Dissociated</strong> state, the additional certificate is disassociated.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates additional certificates from a listener that uses SSL over TCP.</p>
+     * 
+     * @param request DisassociateAdditionalCertificatesWithListenerRequest
+     * @return DisassociateAdditionalCertificatesWithListenerResponse
      */
     public DisassociateAdditionalCertificatesWithListenerResponse disassociateAdditionalCertificatesWithListener(DisassociateAdditionalCertificatesWithListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disassociateAdditionalCertificatesWithListenerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the network type of the IPv6 address of a dual-stack NLB instance from private to the public.</p>
+     * 
+     * @param request EnableLoadBalancerIpv6InternetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableLoadBalancerIpv6InternetResponse
+     */
     public EnableLoadBalancerIpv6InternetResponse enableLoadBalancerIpv6InternetWithOptions(EnableLoadBalancerIpv6InternetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1086,11 +1375,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnableLoadBalancerIpv6InternetResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the network type of the IPv6 address of a dual-stack NLB instance from private to the public.</p>
+     * 
+     * @param request EnableLoadBalancerIpv6InternetRequest
+     * @return EnableLoadBalancerIpv6InternetResponse
+     */
     public EnableLoadBalancerIpv6InternetResponse enableLoadBalancerIpv6Internet(EnableLoadBalancerIpv6InternetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableLoadBalancerIpv6InternetWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取工作流状态</p>
+     * 
+     * @param request GetJobStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobStatusResponse
+     */
     public GetJobStatusResponse getJobStatusWithOptions(GetJobStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1119,11 +1423,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取工作流状态</p>
+     * 
+     * @param request GetJobStatusRequest
+     * @return GetJobStatusResponse
+     */
     public GetJobStatusResponse getJobStatus(GetJobStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getJobStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a Network Load Balancer (NLB) listener.</p>
+     * 
+     * @param request GetListenerAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetListenerAttributeResponse
+     */
     public GetListenerAttributeResponse getListenerAttributeWithOptions(GetListenerAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1160,11 +1479,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetListenerAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details of a Network Load Balancer (NLB) listener.</p>
+     * 
+     * @param request GetListenerAttributeRequest
+     * @return GetListenerAttributeResponse
+     */
     public GetListenerAttributeResponse getListenerAttribute(GetListenerAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getListenerAttributeWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the health check status of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request GetListenerHealthStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetListenerHealthStatusResponse
+     */
     public GetListenerHealthStatusResponse getListenerHealthStatusWithOptions(GetListenerHealthStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1201,11 +1535,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetListenerHealthStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the health check status of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request GetListenerHealthStatusRequest
+     * @return GetListenerHealthStatusResponse
+     */
     public GetListenerHealthStatusResponse getListenerHealthStatus(GetListenerHealthStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getListenerHealthStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details about a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request GetLoadBalancerAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLoadBalancerAttributeResponse
+     */
     public GetLoadBalancerAttributeResponse getLoadBalancerAttributeWithOptions(GetLoadBalancerAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1242,11 +1591,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetLoadBalancerAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the details about a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request GetLoadBalancerAttributeRequest
+     * @return GetLoadBalancerAttributeResponse
+     */
     public GetLoadBalancerAttributeResponse getLoadBalancerAttribute(GetLoadBalancerAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getLoadBalancerAttributeWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Enables or disables deletion protection and the configuration read-only mode for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request ListListenerCertificatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListListenerCertificatesResponse
+     */
     public ListListenerCertificatesResponse listListenerCertificatesWithOptions(ListListenerCertificatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1287,11 +1651,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListListenerCertificatesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Enables or disables deletion protection and the configuration read-only mode for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request ListListenerCertificatesRequest
+     * @return ListListenerCertificatesResponse
+     */
     public ListListenerCertificatesResponse listListenerCertificates(ListListenerCertificatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listListenerCertificatesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries listeners added to a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request ListListenersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListListenersResponse
+     */
     public ListListenersResponse listListenersWithOptions(ListListenersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1340,11 +1719,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListListenersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries listeners added to a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request ListListenersRequest
+     * @return ListListenersResponse
+     */
     public ListListenersResponse listListeners(ListListenersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listListenersWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries Network Load Balancer (NLB) instances in a region based on specified conditions.</p>
+     * 
+     * @param request ListLoadBalancersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLoadBalancersResponse
+     */
     public ListLoadBalancersResponse listLoadBalancersWithOptions(ListLoadBalancersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1429,11 +1823,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListLoadBalancersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries Network Load Balancer (NLB) instances in a region based on specified conditions.</p>
+     * 
+     * @param request ListLoadBalancersRequest
+     * @return ListLoadBalancersResponse
+     */
     public ListLoadBalancersResponse listLoadBalancers(ListLoadBalancersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listLoadBalancersWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the TLS security policies set for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request ListSecurityPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSecurityPolicyResponse
+     */
     public ListSecurityPolicyResponse listSecurityPolicyWithOptions(ListSecurityPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1484,11 +1893,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSecurityPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the TLS security policies set for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request ListSecurityPolicyRequest
+     * @return ListSecurityPolicyResponse
+     */
     public ListSecurityPolicyResponse listSecurityPolicy(ListSecurityPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSecurityPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the backend servers in a specified server group.</p>
+     * 
+     * @param request ListServerGroupServersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServerGroupServersResponse
+     */
     public ListServerGroupServersResponse listServerGroupServersWithOptions(ListServerGroupServersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1533,11 +1957,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerGroupServersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the backend servers in a specified server group.</p>
+     * 
+     * @param request ListServerGroupServersRequest
+     * @return ListServerGroupServersResponse
+     */
     public ListServerGroupServersResponse listServerGroupServers(ListServerGroupServersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listServerGroupServersWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the server groups of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request ListServerGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListServerGroupsResponse
+     */
     public ListServerGroupsResponse listServerGroupsWithOptions(ListServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1596,11 +2035,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerGroupsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the server groups of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request ListServerGroupsRequest
+     * @return ListServerGroupsResponse
+     */
     public ListServerGroupsResponse listServerGroups(ListServerGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listServerGroupsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the default TLS policy.</p>
+     * 
+     * @param request ListSystemSecurityPolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSystemSecurityPolicyResponse
+     */
     public ListSystemSecurityPolicyResponse listSystemSecurityPolicyWithOptions(ListSystemSecurityPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1625,11 +2079,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSystemSecurityPolicyResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the default TLS policy.</p>
+     * 
+     * @param request ListSystemSecurityPolicyRequest
+     * @return ListSystemSecurityPolicyResponse
+     */
     public ListSystemSecurityPolicyResponse listSystemSecurityPolicy(ListSystemSecurityPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSystemSecurityPolicyWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tags of a resource.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1679,22 +2148,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tags of a resource.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
     /**
-      * *   Make sure that you have created a security group. For more information about how to create a security group, see [CreateSecurityGroup](~~25553~~).
-      * *   An NLB instance can be associated with up to four security groups.
-      * *   You can query the security groups that are associated with an NLB instance by calling the [GetLoadBalancerAttribute](~~214362~~) operation.
-      * *   LoadBalancerJoinSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the status of a task.
-      *     *   If the task is in the **Succeeded** state, the security group is associated.
-      *     *   If the task is in the **Processing** state, the security group is being associated. In this case, you can perform only query operations.
-      *
-      * @param request LoadBalancerJoinSecurityGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return LoadBalancerJoinSecurityGroupResponse
+     * <b>description</b> :
+     * <p>  Make sure that you have created a security group. For more information about how to create a security group, see <a href="https://help.aliyun.com/document_detail/25553.html">CreateSecurityGroup</a>.</p>
+     * <ul>
+     * <li>An NLB instance can be associated with up to four security groups.</li>
+     * <li>You can query the security groups that are associated with an NLB instance by calling the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation.</li>
+     * <li>LoadBalancerJoinSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the status of a task.<ul>
+     * <li>If the task is in the <strong>Succeeded</strong> state, the security group is associated.</li>
+     * <li>If the task is in the <strong>Processing</strong> state, the security group is being associated. In this case, you can perform only query operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates a security group with a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request LoadBalancerJoinSecurityGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LoadBalancerJoinSecurityGroupResponse
      */
     public LoadBalancerJoinSecurityGroupResponse loadBalancerJoinSecurityGroupWithOptions(LoadBalancerJoinSecurityGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1737,15 +2221,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Make sure that you have created a security group. For more information about how to create a security group, see [CreateSecurityGroup](~~25553~~).
-      * *   An NLB instance can be associated with up to four security groups.
-      * *   You can query the security groups that are associated with an NLB instance by calling the [GetLoadBalancerAttribute](~~214362~~) operation.
-      * *   LoadBalancerJoinSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the status of a task.
-      *     *   If the task is in the **Succeeded** state, the security group is associated.
-      *     *   If the task is in the **Processing** state, the security group is being associated. In this case, you can perform only query operations.
-      *
-      * @param request LoadBalancerJoinSecurityGroupRequest
-      * @return LoadBalancerJoinSecurityGroupResponse
+     * <b>description</b> :
+     * <p>  Make sure that you have created a security group. For more information about how to create a security group, see <a href="https://help.aliyun.com/document_detail/25553.html">CreateSecurityGroup</a>.</p>
+     * <ul>
+     * <li>An NLB instance can be associated with up to four security groups.</li>
+     * <li>You can query the security groups that are associated with an NLB instance by calling the <a href="https://help.aliyun.com/document_detail/214362.html">GetLoadBalancerAttribute</a> operation.</li>
+     * <li>LoadBalancerJoinSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the status of a task.<ul>
+     * <li>If the task is in the <strong>Succeeded</strong> state, the security group is associated.</li>
+     * <li>If the task is in the <strong>Processing</strong> state, the security group is being associated. In this case, you can perform only query operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates a security group with a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request LoadBalancerJoinSecurityGroupRequest
+     * @return LoadBalancerJoinSecurityGroupResponse
      */
     public LoadBalancerJoinSecurityGroupResponse loadBalancerJoinSecurityGroup(LoadBalancerJoinSecurityGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1753,13 +2245,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the status of a task.
-      * *   If the task is in the **Succeeded** state, the security group is disassociated.
-      * *   If the task is in the **Processing** state, the security group is being disassociated. In this case, you can perform only query operations.
-      *
-      * @param request LoadBalancerLeaveSecurityGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return LoadBalancerLeaveSecurityGroupResponse
+     * <b>description</b> :
+     * <p>LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the status of a task.</p>
+     * <ul>
+     * <li>If the task is in the <strong>Succeeded</strong> state, the security group is disassociated.</li>
+     * <li>If the task is in the <strong>Processing</strong> state, the security group is being disassociated. In this case, you can perform only query operations.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates a security group from a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request LoadBalancerLeaveSecurityGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return LoadBalancerLeaveSecurityGroupResponse
      */
     public LoadBalancerLeaveSecurityGroupResponse loadBalancerLeaveSecurityGroupWithOptions(LoadBalancerLeaveSecurityGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1802,18 +2300,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the status of a task.
-      * *   If the task is in the **Succeeded** state, the security group is disassociated.
-      * *   If the task is in the **Processing** state, the security group is being disassociated. In this case, you can perform only query operations.
-      *
-      * @param request LoadBalancerLeaveSecurityGroupRequest
-      * @return LoadBalancerLeaveSecurityGroupResponse
+     * <b>description</b> :
+     * <p>LoadBalancerLeaveSecurityGroup is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the status of a task.</p>
+     * <ul>
+     * <li>If the task is in the <strong>Succeeded</strong> state, the security group is disassociated.</li>
+     * <li>If the task is in the <strong>Processing</strong> state, the security group is being disassociated. In this case, you can perform only query operations.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disassociates a security group from a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request LoadBalancerLeaveSecurityGroupRequest
+     * @return LoadBalancerLeaveSecurityGroupResponse
      */
     public LoadBalancerLeaveSecurityGroupResponse loadBalancerLeaveSecurityGroup(LoadBalancerLeaveSecurityGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.loadBalancerLeaveSecurityGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modify the group of resource.</p>
+     * 
+     * @param request MoveResourceGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MoveResourceGroupResponse
+     */
     public MoveResourceGroupResponse moveResourceGroupWithOptions(MoveResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1850,11 +2362,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new MoveResourceGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modify the group of resource.</p>
+     * 
+     * @param request MoveResourceGroupRequest
+     * @return MoveResourceGroupResponse
+     */
     public MoveResourceGroupResponse moveResourceGroup(MoveResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.moveResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Removes backend servers from a server group of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request RemoveServersFromServerGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RemoveServersFromServerGroupResponse
+     */
     public RemoveServersFromServerGroupResponse removeServersFromServerGroupWithOptions(RemoveServersFromServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1895,11 +2422,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveServersFromServerGroupResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Removes backend servers from a server group of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request RemoveServersFromServerGroupRequest
+     * @return RemoveServersFromServerGroupResponse
+     */
     public RemoveServersFromServerGroupResponse removeServersFromServerGroup(RemoveServersFromServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeServersFromServerGroupWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>配置秒级监控存储</p>
+     * 
+     * @param request SetHdMonitorRegionConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetHdMonitorRegionConfigResponse
+     */
+    public SetHdMonitorRegionConfigResponse setHdMonitorRegionConfigWithOptions(SetHdMonitorRegionConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logProject)) {
+            query.put("LogProject", request.logProject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricStore)) {
+            query.put("MetricStore", request.metricStore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetHdMonitorRegionConfig"),
+            new TeaPair("version", "2022-04-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetHdMonitorRegionConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置秒级监控存储</p>
+     * 
+     * @param request SetHdMonitorRegionConfigRequest
+     * @return SetHdMonitorRegionConfigResponse
+     */
+    public SetHdMonitorRegionConfigResponse setHdMonitorRegionConfig(SetHdMonitorRegionConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setHdMonitorRegionConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Enables a listener for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request StartListenerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartListenerResponse
+     */
     public StartListenerResponse startListenerWithOptions(StartListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1936,17 +2530,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartListenerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Enables a listener for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request StartListenerRequest
+     * @return StartListenerResponse
+     */
     public StartListenerResponse startListener(StartListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startListenerWithOptions(request, runtime);
     }
 
     /**
-      * > If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.
-      *
-      * @param request StartShiftLoadBalancerZonesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return StartShiftLoadBalancerZonesResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes an elastic IP address (EIP) or a virtual IP address (VIP) of a zone from a DNS record.</p>
+     * 
+     * @param request StartShiftLoadBalancerZonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartShiftLoadBalancerZonesResponse
      */
     public StartShiftLoadBalancerZonesResponse startShiftLoadBalancerZonesWithOptions(StartShiftLoadBalancerZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1989,16 +2596,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.
-      *
-      * @param request StartShiftLoadBalancerZonesRequest
-      * @return StartShiftLoadBalancerZonesResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>If a Network Load Balancer (NLB) instance is deployed only in one zone, you cannot remove the NLB instance from the zone.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes an elastic IP address (EIP) or a virtual IP address (VIP) of a zone from a DNS record.</p>
+     * 
+     * @param request StartShiftLoadBalancerZonesRequest
+     * @return StartShiftLoadBalancerZonesResponse
      */
     public StartShiftLoadBalancerZonesResponse startShiftLoadBalancerZones(StartShiftLoadBalancerZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startShiftLoadBalancerZonesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disables a listener for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request StopListenerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopListenerResponse
+     */
     public StopListenerResponse stopListenerWithOptions(StopListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2035,11 +2656,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopListenerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Disables a listener for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request StopListenerRequest
+     * @return StopListenerResponse
+     */
     public StopListenerResponse stopListener(StopListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopListenerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Adds tags to specified resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2089,11 +2725,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Adds tags to specified resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
+     */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Removes tags from resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2147,11 +2798,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Removes tags from resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the attributes of a listener, such as the name and the idle connection timeout period.</p>
+     * 
+     * @param tmpReq UpdateListenerAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateListenerAttributeResponse
+     */
     public UpdateListenerAttributeResponse updateListenerAttributeWithOptions(UpdateListenerAttributeRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateListenerAttributeShrinkRequest request = new UpdateListenerAttributeShrinkRequest();
@@ -2250,21 +2916,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateListenerAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the attributes of a listener, such as the name and the idle connection timeout period.</p>
+     * 
+     * @param request UpdateListenerAttributeRequest
+     * @return UpdateListenerAttributeResponse
+     */
     public UpdateListenerAttributeResponse updateListenerAttribute(UpdateListenerAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateListenerAttributeWithOptions(request, runtime);
     }
 
     /**
-      * *   Make sure that an NLB instance is created. For more information, see [CreateLoadBalancer](~~445868~~).
-      * *   You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the **AddressType** value of an NLB instance after you change the network type.
-      * *   **UpdateLoadBalancerAddressTypeConfig** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the task status:
-      *     *   If the task is in the **Succeeded** state, the network type of the IPv4 address of the NLB instance is changed.
-      *     *   If the task is in the **Processing** state, the network type of the IPv4 address of the NLB instance is being changed. In this case, you can perform only query operations.
-      *
-      * @param request UpdateLoadBalancerAddressTypeConfigRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateLoadBalancerAddressTypeConfigResponse
+     * <b>description</b> :
+     * <p>  Make sure that an NLB instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/445868.html">CreateLoadBalancer</a>.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the <strong>AddressType</strong> value of an NLB instance after you change the network type.</li>
+     * <li><strong>UpdateLoadBalancerAddressTypeConfig</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the task status:<ul>
+     * <li>If the task is in the <strong>Succeeded</strong> state, the network type of the IPv4 address of the NLB instance is changed.</li>
+     * <li>If the task is in the <strong>Processing</strong> state, the network type of the IPv4 address of the NLB instance is being changed. In this case, you can perform only query operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the network type of the IPv4 address of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateLoadBalancerAddressTypeConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLoadBalancerAddressTypeConfigResponse
      */
     public UpdateLoadBalancerAddressTypeConfigResponse updateLoadBalancerAddressTypeConfigWithOptions(UpdateLoadBalancerAddressTypeConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2311,20 +2992,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Make sure that an NLB instance is created. For more information, see [CreateLoadBalancer](~~445868~~).
-      * *   You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the **AddressType** value of an NLB instance after you change the network type.
-      * *   **UpdateLoadBalancerAddressTypeConfig** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation to query the task status:
-      *     *   If the task is in the **Succeeded** state, the network type of the IPv4 address of the NLB instance is changed.
-      *     *   If the task is in the **Processing** state, the network type of the IPv4 address of the NLB instance is being changed. In this case, you can perform only query operations.
-      *
-      * @param request UpdateLoadBalancerAddressTypeConfigRequest
-      * @return UpdateLoadBalancerAddressTypeConfigResponse
+     * <b>description</b> :
+     * <p>  Make sure that an NLB instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/445868.html">CreateLoadBalancer</a>.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the <strong>AddressType</strong> value of an NLB instance after you change the network type.</li>
+     * <li><strong>UpdateLoadBalancerAddressTypeConfig</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation to query the task status:<ul>
+     * <li>If the task is in the <strong>Succeeded</strong> state, the network type of the IPv4 address of the NLB instance is changed.</li>
+     * <li>If the task is in the <strong>Processing</strong> state, the network type of the IPv4 address of the NLB instance is being changed. In this case, you can perform only query operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the network type of the IPv4 address of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateLoadBalancerAddressTypeConfigRequest
+     * @return UpdateLoadBalancerAddressTypeConfigResponse
      */
     public UpdateLoadBalancerAddressTypeConfigResponse updateLoadBalancerAddressTypeConfig(UpdateLoadBalancerAddressTypeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerAddressTypeConfigWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the attributes, including the name, of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateLoadBalancerAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLoadBalancerAttributeResponse
+     */
     public UpdateLoadBalancerAttributeResponse updateLoadBalancerAttributeWithOptions(UpdateLoadBalancerAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2373,17 +3070,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Updates the attributes, including the name, of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateLoadBalancerAttributeRequest
+     * @return UpdateLoadBalancerAttributeResponse
+     */
     public UpdateLoadBalancerAttributeResponse updateLoadBalancerAttribute(UpdateLoadBalancerAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerAttributeWithOptions(request, runtime);
     }
 
     /**
-      * > You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the details about deletion protection and the configuration read-only mode.
-      *
-      * @param request UpdateLoadBalancerProtectionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateLoadBalancerProtectionResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the details about deletion protection and the configuration read-only mode.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables deletion protection and the configuration read-only mode for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateLoadBalancerProtectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLoadBalancerProtectionResponse
      */
     public UpdateLoadBalancerProtectionResponse updateLoadBalancerProtectionWithOptions(UpdateLoadBalancerProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2438,10 +3148,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the details about deletion protection and the configuration read-only mode.
-      *
-      * @param request UpdateLoadBalancerProtectionRequest
-      * @return UpdateLoadBalancerProtectionResponse
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the details about deletion protection and the configuration read-only mode.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables deletion protection and the configuration read-only mode for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateLoadBalancerProtectionRequest
+     * @return UpdateLoadBalancerProtectionResponse
      */
     public UpdateLoadBalancerProtectionResponse updateLoadBalancerProtection(UpdateLoadBalancerProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -2449,17 +3165,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, make sure that you specify all the zones of the NLB instance, including the existing zones and new zones. If you do not specify the existing zones, the existing zones are removed.
-      * Prerequisites
-      * *   An NLB instance is created. For more information, see [CreateLoadBalancer](~~445868~~).
-      * *   You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the zones and zone attributes of an NLB instance.
-      * *   **UpdateLoadBalancerZones** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation query to query the status of a task:
-      *     *   If the task is in the **Succeeded** state, the zones and zone attributes are modified.
-      *     *   If the task is in the **Processing** state, the zones and zone attributes are being modified. In this case, you can perform only query operations.
-      *
-      * @param request UpdateLoadBalancerZonesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateLoadBalancerZonesResponse
+     * <b>description</b> :
+     * <p>When you call this operation, make sure that you specify all the zones of the NLB instance, including the existing zones and new zones. If you do not specify the existing zones, the existing zones are removed.
+     * Prerequisites</p>
+     * <ul>
+     * <li>An NLB instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/445868.html">CreateLoadBalancer</a>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the zones and zone attributes of an NLB instance.</li>
+     * <li><strong>UpdateLoadBalancerZones</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation query to query the status of a task:<ul>
+     * <li>If the task is in the <strong>Succeeded</strong> state, the zones and zone attributes are modified.</li>
+     * <li>If the task is in the <strong>Processing</strong> state, the zones and zone attributes are being modified. In this case, you can perform only query operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the zones and zone attributes of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateLoadBalancerZonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLoadBalancerZonesResponse
      */
     public UpdateLoadBalancerZonesResponse updateLoadBalancerZonesWithOptions(UpdateLoadBalancerZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2502,22 +3226,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, make sure that you specify all the zones of the NLB instance, including the existing zones and new zones. If you do not specify the existing zones, the existing zones are removed.
-      * Prerequisites
-      * *   An NLB instance is created. For more information, see [CreateLoadBalancer](~~445868~~).
-      * *   You can call the [GetLoadBalancerAttribute](~~445873~~) operation to query the zones and zone attributes of an NLB instance.
-      * *   **UpdateLoadBalancerZones** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetJobStatus](~~445904~~) operation query to query the status of a task:
-      *     *   If the task is in the **Succeeded** state, the zones and zone attributes are modified.
-      *     *   If the task is in the **Processing** state, the zones and zone attributes are being modified. In this case, you can perform only query operations.
-      *
-      * @param request UpdateLoadBalancerZonesRequest
-      * @return UpdateLoadBalancerZonesResponse
+     * <b>description</b> :
+     * <p>When you call this operation, make sure that you specify all the zones of the NLB instance, including the existing zones and new zones. If you do not specify the existing zones, the existing zones are removed.
+     * Prerequisites</p>
+     * <ul>
+     * <li>An NLB instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/445868.html">CreateLoadBalancer</a>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/445873.html">GetLoadBalancerAttribute</a> operation to query the zones and zone attributes of an NLB instance.</li>
+     * <li><strong>UpdateLoadBalancerZones</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/445904.html">GetJobStatus</a> operation query to query the status of a task:<ul>
+     * <li>If the task is in the <strong>Succeeded</strong> state, the zones and zone attributes are modified.</li>
+     * <li>If the task is in the <strong>Processing</strong> state, the zones and zone attributes are being modified. In this case, you can perform only query operations.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the zones and zone attributes of a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateLoadBalancerZonesRequest
+     * @return UpdateLoadBalancerZonesResponse
      */
     public UpdateLoadBalancerZonesResponse updateLoadBalancerZones(UpdateLoadBalancerZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerZonesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a security policy for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateSecurityPolicyAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateSecurityPolicyAttributeResponse
+     */
     public UpdateSecurityPolicyAttributeResponse updateSecurityPolicyAttributeWithOptions(UpdateSecurityPolicyAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2566,11 +3306,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSecurityPolicyAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a security policy for a Network Load Balancer (NLB) instance.</p>
+     * 
+     * @param request UpdateSecurityPolicyAttributeRequest
+     * @return UpdateSecurityPolicyAttributeResponse
+     */
     public UpdateSecurityPolicyAttributeResponse updateSecurityPolicyAttribute(UpdateSecurityPolicyAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSecurityPolicyAttributeWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a server group of Network Load Balancer (NLB).</p>
+     * 
+     * @param request UpdateServerGroupAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateServerGroupAttributeResponse
+     */
     public UpdateServerGroupAttributeResponse updateServerGroupAttributeWithOptions(UpdateServerGroupAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2636,23 +3391,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServerGroupAttributeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a server group of Network Load Balancer (NLB).</p>
+     * 
+     * @param request UpdateServerGroupAttributeRequest
+     * @return UpdateServerGroupAttributeResponse
+     */
     public UpdateServerGroupAttributeResponse updateServerGroupAttribute(UpdateServerGroupAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateServerGroupAttributeWithOptions(request, runtime);
     }
 
     /**
-      * **UpdateServerGroupServersAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
-      * 1.  You can call the [ListServerGroups](~~445895~~) operation to query the status of a server group.
-      *     *   If a server group is in the **Configuring** state, the server group is being modified.
-      *     *   If a server group is in the **Available** state, the server group is running.
-      * 2.  You can call the [ListServerGroupServers](~~445896~~) operation to query the status of a backend server.
-      *     *   If a backend server is in the **Configuring** state, it indicates that the backend server is being modified.
-      *     *   If a backend server is in the **Available** state, it indicates that the backend server is running.
-      *
-      * @param request UpdateServerGroupServersAttributeRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateServerGroupServersAttributeResponse
+     * <b>description</b> :
+     * <p><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <ol>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/445895.html">ListServerGroups</a> operation to query the status of a server group.<ul>
+     * <li>If a server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If a server group is in the <strong>Available</strong> state, the server group is running.</li>
+     * </ul>
+     * </li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/445896.html">ListServerGroupServers</a> operation to query the status of a backend server.<ul>
+     * <li>If a backend server is in the <strong>Configuring</strong> state, it indicates that the backend server is being modified.</li>
+     * <li>If a backend server is in the <strong>Available</strong> state, it indicates that the backend server is running.</li>
+     * </ul>
+     * </li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of backend servers in a server group, such as the weight and description.</p>
+     * 
+     * @param request UpdateServerGroupServersAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateServerGroupServersAttributeResponse
      */
     public UpdateServerGroupServersAttributeResponse updateServerGroupServersAttributeWithOptions(UpdateServerGroupServersAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -2695,16 +3467,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **UpdateServerGroupServersAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
-      * 1.  You can call the [ListServerGroups](~~445895~~) operation to query the status of a server group.
-      *     *   If a server group is in the **Configuring** state, the server group is being modified.
-      *     *   If a server group is in the **Available** state, the server group is running.
-      * 2.  You can call the [ListServerGroupServers](~~445896~~) operation to query the status of a backend server.
-      *     *   If a backend server is in the **Configuring** state, it indicates that the backend server is being modified.
-      *     *   If a backend server is in the **Available** state, it indicates that the backend server is running.
-      *
-      * @param request UpdateServerGroupServersAttributeRequest
-      * @return UpdateServerGroupServersAttributeResponse
+     * <b>description</b> :
+     * <p><em>UpdateServerGroupServersAttribute</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
+     * <ol>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/445895.html">ListServerGroups</a> operation to query the status of a server group.<ul>
+     * <li>If a server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If a server group is in the <strong>Available</strong> state, the server group is running.</li>
+     * </ul>
+     * </li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/445896.html">ListServerGroupServers</a> operation to query the status of a backend server.<ul>
+     * <li>If a backend server is in the <strong>Configuring</strong> state, it indicates that the backend server is being modified.</li>
+     * <li>If a backend server is in the <strong>Available</strong> state, it indicates that the backend server is running.</li>
+     * </ul>
+     * </li>
+     * </ol>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of backend servers in a server group, such as the weight and description.</p>
+     * 
+     * @param request UpdateServerGroupServersAttributeRequest
+     * @return UpdateServerGroupServersAttributeResponse
      */
     public UpdateServerGroupServersAttributeResponse updateServerGroupServersAttribute(UpdateServerGroupServersAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();

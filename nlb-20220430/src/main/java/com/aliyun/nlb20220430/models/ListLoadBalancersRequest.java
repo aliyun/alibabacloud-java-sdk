@@ -6,42 +6,61 @@ import com.aliyun.tea.*;
 public class ListLoadBalancersRequest extends TeaModel {
     /**
      * <p>The protocol version. Valid values:</p>
-     * <br>
-     * <p>*   **ipv4**: IPv4</p>
-     * <p>*   **DualStack**: dual stack</p>
+     * <ul>
+     * <li><strong>ipv4</strong>: IPv4</li>
+     * <li><strong>DualStack</strong>: dual stack</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
     /**
      * <p>The type of IPv4 address used by the NLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **Internet**: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</p>
-     * <p>*   **Intranet**: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</p>
+     * <ul>
+     * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
+     * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Internet</p>
      */
     @NameInMap("AddressType")
     public String addressType;
 
     /**
      * <p>The domain name of the NLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nlb-wb7r6dlwetvt5j****.cn-hangzhou.nlb.aliyuncs.com</p>
      */
     @NameInMap("DNSName")
     public String DNSName;
 
     /**
      * <p>The type of IPv6 address used by the NLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **Internet**: a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</p>
-     * <p>*   **Intranet**: a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</p>
+     * <ul>
+     * <li><strong>Internet</strong>: a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</li>
+     * <li><strong>Intranet</strong>: a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Internet</p>
      */
     @NameInMap("Ipv6AddressType")
     public String ipv6AddressType;
 
     /**
      * <p>The business status of the NLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **Abnormal**: The NLB instance is not working as expected.</p>
-     * <p>*   **Normal**: The NLB instance is working as expected.</p>
+     * <ul>
+     * <li><strong>Abnormal</strong>: The NLB instance is not working as expected.</li>
+     * <li><strong>Normal</strong>: The NLB instance is working as expected.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("LoadBalancerBusinessStatus")
     public String loadBalancerBusinessStatus;
@@ -60,48 +79,67 @@ public class ListLoadBalancersRequest extends TeaModel {
 
     /**
      * <p>The status of the NLB instance. Valid values:</p>
-     * <br>
-     * <p>*   **Inactive**: The NLB instance is disabled. Listeners of NLB instances in the Inactive state do not forward traffic.</p>
-     * <p>*   **Active**: The NLB instance is running.</p>
-     * <p>*   **Provisioning**: The NLB instance is being created.</p>
-     * <p>*   **Configuring**: The NLB instance is being modified.</p>
-     * <p>*   **Deleting**: The NLB instance is being deleted.</p>
-     * <p>*   **Deleted**: The NLB instance is deleted.</p>
+     * <ul>
+     * <li><strong>Inactive</strong>: The NLB instance is disabled. Listeners of NLB instances in the Inactive state do not forward traffic.</li>
+     * <li><strong>Active</strong>: The NLB instance is running.</li>
+     * <li><strong>Provisioning</strong>: The NLB instance is being created.</li>
+     * <li><strong>Configuring</strong>: The NLB instance is being modified.</li>
+     * <li><strong>Deleting</strong>: The NLB instance is being deleted.</li>
+     * <li><strong>Deleted</strong>: The NLB instance is deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
     /**
-     * <p>The type of the Server Load Balancer (SLB) instance. Set the value to **network**, which specifies NLB.</p>
+     * <p>The type of the Server Load Balancer (SLB) instance. Set the value to <strong>network</strong>, which specifies NLB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>network</p>
      */
     @NameInMap("LoadBalancerType")
     public String loadBalancerType;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the next query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query and no subsequent queries are to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region where the NLB instance is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -119,7 +157,10 @@ public class ListLoadBalancersRequest extends TeaModel {
     public java.util.List<String> vpcIds;
 
     /**
-     * <p>The name of the zone. You can call the [DescribeZones](~~443890~~) operation to query the most recent zone list.</p>
+     * <p>The name of the zone. You can call the <a href="https://help.aliyun.com/document_detail/443890.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-a</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -260,16 +301,20 @@ public class ListLoadBalancersRequest extends TeaModel {
     public static class ListLoadBalancersRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyTest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ValueTest</p>
          */
         @NameInMap("Value")
         public String value;

@@ -12,21 +12,31 @@ public class MoveResourceGroupResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -71,6 +81,9 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     public static class MoveResourceGroupResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the resource. You can specify up to 50 resource IDs in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-nrnrxwd15en27r****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;

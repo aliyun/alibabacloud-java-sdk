@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateListenerResponseBody extends TeaModel {
     /**
      * <p>The asynchronous task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72dcd26b-f12d-4c27-b3af-18f6aed5****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The listener ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsn-bp1bpn0kn908w4nbw****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,27 +12,40 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>- If **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>- If a value of **NextToken** is returned, the value is the token used for the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -84,14 +97,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServersReason extends TeaModel {
         /**
-         * <p>The reason why the **status** is abnormal. Valid values:</p>
-         * <br>
-         * <p>*   **CONNECT_TIMEOUT**: The NLB instance failed to connect to the backend server within the specified period of time.</p>
-         * <p>*   **CONNECT_FAILED**: The NLB instance failed to connect to the backend server.</p>
-         * <p>*   **RECV_RESPONSE_TIMEOUT**: The NLB instance failed to receive a response from the backend server within the specified period of time.</p>
-         * <p>*   **CONNECT_INTERRUPT**: The connection between the health check and the backend servers was interrupted.</p>
-         * <p>*   **HTTP_CODE_NOT_MATCH**: The HTTP status code from the backend servers was not the expected one.</p>
-         * <p>*   **HTTP_INVALID_HEADER**: The format of the response from the backend servers is invalid.</p>
+         * <p>The reason why the <strong>status</strong> is abnormal. Valid values:</p>
+         * <ul>
+         * <li><strong>CONNECT_TIMEOUT</strong>: The NLB instance failed to connect to the backend server within the specified period of time.</li>
+         * <li><strong>CONNECT_FAILED</strong>: The NLB instance failed to connect to the backend server.</li>
+         * <li><strong>RECV_RESPONSE_TIMEOUT</strong>: The NLB instance failed to receive a response from the backend server within the specified period of time.</li>
+         * <li><strong>CONNECT_INTERRUPT</strong>: The connection between the health check and the backend servers was interrupted.</li>
+         * <li><strong>HTTP_CODE_NOT_MATCH</strong>: The HTTP status code from the backend servers was not the expected one.</li>
+         * <li><strong>HTTP_INVALID_HEADER</strong>: The format of the response from the backend servers is invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONNECT_TIMEOUT</p>
          */
         @NameInMap("ReasonCode")
         public String reasonCode;
@@ -114,6 +131,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServers extends TeaModel {
         /**
          * <p>The backend port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
@@ -126,23 +146,33 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1bt75jaujl7tjl****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The IP address of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.8.10</p>
          */
         @NameInMap("ServerIp")
         public String serverIp;
 
         /**
          * <p>The health check status. Valid values:</p>
-         * <br>
-         * <p>*   **Initial**: indicates that health checks are configured for the NLB instance, but no data was found.</p>
-         * <p>*   **Unhealthy**: indicates that the backend server consecutively fails health checks.</p>
-         * <p>*   **Unused**: indicates that the weight of the backend server is 0.</p>
-         * <p>*   **Unavailable**: indicates that health checks are disabled.</p>
+         * <ul>
+         * <li><strong>Initial</strong>: indicates that health checks are configured for the NLB instance, but no data was found.</li>
+         * <li><strong>Unhealthy</strong>: indicates that the backend server consecutively fails health checks.</li>
+         * <li><strong>Unused</strong>: indicates that the weight of the backend server is 0.</li>
+         * <li><strong>Unavailable</strong>: indicates that health checks are disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial</p>
          */
         @NameInMap("Status")
         public String status;
@@ -197,9 +227,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfos extends TeaModel {
         /**
          * <p>Indicates whether the health check feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled</li>
+         * <li><strong>false</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HeathCheckEnabled")
         public Boolean heathCheckEnabled;
@@ -212,6 +246,9 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the server group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-ppdpc14gdm3x4o****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
@@ -250,18 +287,27 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     public static class GetListenerHealthStatusResponseBodyListenerHealthStatus extends TeaModel {
         /**
          * <p>The ID of the listener of the NLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lsn-agkd9gmjx8nd85jjs0****</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
          * <p>The listening port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
         /**
-         * <p>The listening protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
+         * <p>The listening protocol. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCPSSL</p>
          */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;

@@ -6,127 +6,176 @@ import com.aliyun.tea.*;
 public class GetListenerAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether Application-Layer Protocol Negotiation (ALPN) is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AlpnEnabled")
     public Boolean alpnEnabled;
 
     /**
      * <p>The ALPN policy. Valid values:</p>
-     * <br>
-     * <p>*   **HTTP1Only**</p>
-     * <p>*   **HTTP2Only**</p>
-     * <p>*   **HTTP2Preferred**</p>
-     * <p>*   **HTTP2Optional**</p>
+     * <ul>
+     * <li><strong>HTTP1Only</strong></li>
+     * <li><strong>HTTP2Only</strong></li>
+     * <li><strong>HTTP2Preferred</strong></li>
+     * <li><strong>HTTP2Optional</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP1Only</p>
      */
     @NameInMap("AlpnPolicy")
     public String alpnPolicy;
 
     /**
      * <p>The CA certificates. Only one CA certificate is supported.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * </blockquote>
      */
     @NameInMap("CaCertificateIds")
     public java.util.List<String> caCertificateIds;
 
     /**
      * <p>Indicates whether mutual authentication is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
 
     /**
      * <p>The server certificates. Only one server certificate is supported.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * </blockquote>
      */
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 
     /**
-     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: **0** to **1000000**. **0** specifies that the number of connections is unlimited.</p>
+     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> specifies that the number of connections is unlimited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Cps")
     public Integer cps;
 
     /**
-     * <p>The last port in the listening port range. Valid values: **0** to **65535**. The number of the last port must be smaller than that of the first port.</p>
+     * <p>The last port in the listening port range. Valid values: <strong>0</strong> to <strong>65535</strong>. The number of the last port must be smaller than that of the first port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>455</p>
      */
     @NameInMap("EndPort")
     public String endPort;
 
     /**
-     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1** to **900**.</p>
+     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1</strong> to <strong>900</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
      * <p>The name of the listener.</p>
-     * <br>
-     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).</p>
+     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tcpssl_443</p>
      */
     @NameInMap("ListenerDescription")
     public String listenerDescription;
 
     /**
      * <p>The ID of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lsn-ga6sjjcll6ou34l1et****</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The listening port. Valid values: **0** to **65535**. A value of **0** specifies all ports. If you set the value to **0**, you must also set the **StartPort** and **EndPort** parameters.</p>
+     * <p>The listening port. Valid values: <strong>0</strong> to <strong>65535</strong>. A value of <strong>0</strong> specifies all ports. If you set the value to <strong>0</strong>, you must also set the <strong>StartPort</strong> and <strong>EndPort</strong> parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>233</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The listening protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
+     * <p>The listening protocol. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TCPSSL</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The status of the listener. Valid values:</p>
-     * <br>
-     * <p>*   **Provisioning**: The listener is being created.</p>
-     * <p>*   **Running**: The listener is running.</p>
-     * <p>*   **Configuring**: The listener is being configured.</p>
-     * <p>*   **Stopping**: The listener is being stopped.</p>
-     * <p>*   **Stopped**: The listener is stopped.</p>
-     * <p>*   **Starting**: The listener is being started.</p>
-     * <p>*   **Deleting**: The listener is being deleted.</p>
-     * <p>*   **Deleted**: The listener is deleted.</p>
+     * <ul>
+     * <li><strong>Provisioning</strong>: The listener is being created.</li>
+     * <li><strong>Running</strong>: The listener is running.</li>
+     * <li><strong>Configuring</strong>: The listener is being configured.</li>
+     * <li><strong>Stopping</strong>: The listener is being stopped.</li>
+     * <li><strong>Stopped</strong>: The listener is stopped.</li>
+     * <li><strong>Starting</strong>: The listener is being started.</li>
+     * <li><strong>Deleting</strong>: The listener is being deleted.</li>
+     * <li><strong>Deleted</strong>: The listener is deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("ListenerStatus")
     public String listenerStatus;
 
     /**
      * <p>The ID of the NLB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nlb-83ckzc8d4xlp8o****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The size of the largest TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** specifies that the maximum segment size remains unchanged.</p>
-     * <br>
-     * <p>>  This parameter is supported only by listeners that use SSL over TCP.</p>
+     * <p>The size of the largest TCP segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> specifies that the maximum segment size remains unchanged.</p>
+     * <blockquote>
+     * <p> This parameter is supported only by listeners that use SSL over TCP.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>166</p>
      */
     @NameInMap("Mss")
     public Integer mss;
 
     /**
      * <p>Indicates whether the Proxy protocol is used to pass client IP addresses to backend servers. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
@@ -139,43 +188,62 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the region where the NLB instance is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether fine-grained monitoring is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SecSensorEnabled")
     public Boolean secSensorEnabled;
 
     /**
      * <p>The ID of the security policy. System security policies and custom security policies are supported.</p>
-     * <br>
-     * <p>Valid values: **tls_cipher_policy\_1\_0**, **tls_cipher_policy\_1\_1**, **tls_cipher_policy\_1\_2**, **tls_cipher_policy\_1\_2\_strict**, and **tls_cipher_policy\_1\_2\_strict_with\_1\_3**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p>Valid values: <strong>tls_cipher_policy_1_0</strong>, <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>tls_cipher_policy_1_0</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
     /**
      * <p>The ID of the server group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sgp-ppdpc14gdm3x4o****</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
     /**
-     * <p>The first port in the listening port range. Valid values: **0** to **65535**.</p>
+     * <p>The first port in the listening port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>233</p>
      */
     @NameInMap("StartPort")
     public String startPort;
@@ -386,27 +454,39 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public static class GetListenerAttributeResponseBodyProxyProtocolV2Config extends TeaModel {
         /**
          * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpId parameter to backend servers. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Ppv2PrivateLinkEpIdEnabled")
         public Boolean ppv2PrivateLinkEpIdEnabled;
 
         /**
          * <p>Indicates whether the Proxy protocol passes the PrivateLinkEpsId parameter to backend servers. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
         public Boolean ppv2PrivateLinkEpsIdEnabled;
 
         /**
          * <p>Indicates whether the Proxy protocol passes the VpcId parameter to backend servers. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Ppv2VpcIdEnabled")
         public Boolean ppv2VpcIdEnabled;
@@ -445,12 +525,18 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     public static class GetListenerAttributeResponseBodyTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-cus-tag-4</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

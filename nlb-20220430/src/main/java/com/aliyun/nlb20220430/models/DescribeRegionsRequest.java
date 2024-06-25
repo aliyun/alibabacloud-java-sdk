@@ -6,26 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The supported natural language. Valid values:</p>
-     * <br>
-     * <p>*   **zh-CN**: Chinese</p>
-     * <p>*   **en-US** (default): English</p>
-     * <p>*   **ja**: Japanese</p>
+     * <ul>
+     * <li><strong>zh-CN</strong>: Chinese</li>
+     * <li><strong>en-US</strong> (default): English</li>
+     * <li><strong>ja</strong>: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en-US</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The service code. Set the value to **nlb**.</p>
+     * <p>The service code. Set the value to <strong>nlb</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nlb</p>
      */
     @NameInMap("ServiceCode")
     public String serviceCode;

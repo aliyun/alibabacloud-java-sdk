@@ -6,131 +6,182 @@ import com.aliyun.tea.*;
 public class CreateListenerShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AlpnEnabled")
     public Boolean alpnEnabled;
 
     /**
      * <p>The ALPN policy.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   HTTP1Only</p>
-     * <p>*   HTTP2Only</p>
-     * <p>*   HTTP2Preferred</p>
-     * <p>*   HTTP2Optional</p>
+     * <ul>
+     * <li>HTTP1Only</li>
+     * <li>HTTP2Only</li>
+     * <li>HTTP2Preferred</li>
+     * <li>HTTP2Optional</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALPN</p>
      */
     @NameInMap("AlpnPolicy")
     public String alpnPolicy;
 
     /**
      * <p>The certificate authority (CA) certificates. This parameter takes effect only for listeners that use SSL over TCP.</p>
-     * <br>
-     * <p>> You can specify only one CA certificate.</p>
+     * <blockquote>
+     * <p>You can specify only one CA certificate.</p>
+     * </blockquote>
      */
     @NameInMap("CaCertificateIds")
     public java.util.List<String> caCertificateIds;
 
     /**
      * <p>Specifies whether to enable mutual authentication. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
 
     /**
      * <p>The server certificates. This parameter takes effect only for listeners that use SSL over TCP.</p>
-     * <br>
-     * <p>> You can specify only one server certificate.</p>
+     * <blockquote>
+     * <p>You can specify only one server certificate.</p>
+     * </blockquote>
      */
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: **0** to **1000000**. **0** specifies that the number of connections is unlimited.</p>
+     * <p>The maximum number of connections that can be created per second on the NLB instance. Valid values: <strong>0</strong> to <strong>1000000</strong>. <strong>0</strong> specifies that the number of connections is unlimited.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Cps")
     public Integer cps;
 
     /**
      * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The last port in the listener port range. Valid values: **0** to **65535**. The number of the last port must be greater than the number of the first port.</p>
-     * <br>
-     * <p>> This parameter is required when **ListenerPort** is set to **0**.</p>
+     * <p>The last port in the listener port range. Valid values: <strong>0</strong> to <strong>65535</strong>. The number of the last port must be greater than the number of the first port.</p>
+     * <blockquote>
+     * <p>This parameter is required when <strong>ListenerPort</strong> is set to <strong>0</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>566</p>
      */
     @NameInMap("EndPort")
     public Integer endPort;
 
     /**
-     * <p>The timeout period of idle connections. Unit: seconds. Valid values: **1** to **900**. Default value: **900**.</p>
+     * <p>The timeout period of idle connections. Unit: seconds. Valid values: <strong>1</strong> to <strong>900</strong>. Default value: <strong>900</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>900</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
      * <p>The name of the listener.</p>
-     * <br>
-     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (\_), and hyphens (-).</p>
+     * <p>The name must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp_80</p>
      */
     @NameInMap("ListenerDescription")
     public String listenerDescription;
 
     /**
-     * <p>The listener port. Valid values: **0** to **65535**.</p>
-     * <br>
-     * <p>If you set the value to **0**, the listener listens by port range. If you set the value to **0**, you must specify **StartPort** and **EndPort**.</p>
+     * <p>The listener port. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+     * <p>If you set the value to <strong>0</strong>, the listener listens by port range. If you set the value to <strong>0</strong>, you must specify <strong>StartPort</strong> and <strong>EndPort</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The listener protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
+     * <p>The listener protocol. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TCP</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The ID of the Network Load Balancer (NLB) instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nlb-83ckzc8d4xlp8o****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The maximum size of a TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** specifies that the maximum segment size remains unchanged.</p>
-     * <br>
-     * <p>> This parameter is supported only by TCP listeners and listeners that use SSL over TCP.</p>
+     * <p>The maximum size of a TCP segment. Unit: bytes. Valid values: <strong>0</strong> to <strong>1500</strong>. <strong>0</strong> specifies that the maximum segment size remains unchanged.</p>
+     * <blockquote>
+     * <p>This parameter is supported only by TCP listeners and listeners that use SSL over TCP.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>43</p>
      */
     @NameInMap("Mss")
     public Integer mss;
 
     /**
      * <p>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
@@ -143,47 +194,67 @@ public class CreateListenerShrinkRequest extends TeaModel {
 
     /**
      * <p>The region ID of the NLB instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SecSensorEnabled")
     public Boolean secSensorEnabled;
 
     /**
      * <p>The security policy ID. System security policies and custom security policies are supported.</p>
-     * <br>
-     * <p>Valid values: **tls_cipher_policy\_1\_0** (default), **tls_cipher_policy\_1\_1**, **tls_cipher_policy\_1\_2**, **tls_cipher_policy\_1\_2\_strict**, and **tls_cipher_policy\_1\_2\_strict_with\_1\_3**.</p>
-     * <br>
-     * <p>> This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p>Valid values: <strong>tls_cipher_policy_1_0</strong> (default), <strong>tls_cipher_policy_1_1</strong>, <strong>tls_cipher_policy_1_2</strong>, <strong>tls_cipher_policy_1_2_strict</strong>, and <strong>tls_cipher_policy_1_2_strict_with_1_3</strong>.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>tls_cipher_policy_1_0</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
     /**
      * <p>The server group ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sgp-ppdpc14gdm3x4o****</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
     /**
-     * <p>The first port in the listener port range. Valid values: **0** to **65535**.</p>
-     * <br>
-     * <p>> This parameter is required when **ListenerPort** is set to **0**.</p>
+     * <p>The first port in the listener port range. Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+     * <blockquote>
+     * <p>This parameter is required when <strong>ListenerPort</strong> is set to <strong>0</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>244</p>
      */
     @NameInMap("StartPort")
     public Integer startPort;
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateListenerShrinkRequestTag> tag;
@@ -380,16 +451,20 @@ public class CreateListenerShrinkRequest extends TeaModel {
     public static class CreateListenerShrinkRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyTest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can add up to 20 tags in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Value")
         public String value;

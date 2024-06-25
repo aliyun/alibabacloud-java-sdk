@@ -5,30 +5,42 @@ import com.aliyun.tea.*;
 
 public class ListServerGroupsRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID of the NLB instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the server group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -47,9 +59,13 @@ public class ListServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The type of server group. Valid values:</p>
-     * <br>
-     * <p>*   **Instance** : allows you to add servers of the **Ecs**, **Ens**, and **Eci** types.</p>
-     * <p>*   **Ip**: allows you to add servers by specifying IP addresses.</p>
+     * <ul>
+     * <li><strong>Instance</strong> : allows you to add servers of the <strong>Ecs</strong>, <strong>Ens</strong>, and <strong>Eci</strong> types.</li>
+     * <li><strong>Ip</strong>: allows you to add servers by specifying IP addresses.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
      */
     @NameInMap("ServerGroupType")
     public String serverGroupType;
@@ -62,6 +78,9 @@ public class ListServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the server group belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp15zckdt37pq72zv****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -146,16 +165,20 @@ public class ListServerGroupsRequest extends TeaModel {
     public static class ListServerGroupsRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify up to 10 tag keys.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag. You can specify up to 10 tag values.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Value")
         public String value;

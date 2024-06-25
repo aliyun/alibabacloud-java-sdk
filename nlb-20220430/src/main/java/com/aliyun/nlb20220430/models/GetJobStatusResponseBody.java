@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class GetJobStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>365F4154-92F6-4AE4-92F8-7FF34B540710</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The state of the task. Valid values:</p>
-     * <br>
-     * <p>*   **Succeeded**: The task is successful.</p>
-     * <p>*   **processing**: The ticket is being executed.</p>
+     * <ul>
+     * <li><strong>Succeeded</strong>: The task is successful.</li>
+     * <li><strong>processing</strong>: The ticket is being executed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
      */
     @NameInMap("Status")
     public String status;

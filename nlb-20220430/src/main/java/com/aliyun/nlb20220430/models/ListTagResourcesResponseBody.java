@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,6 +43,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,56 +98,82 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>The UID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1429****39299349</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The type of the tag. Valid values:</p>
-         * <br>
-         * <p>*   **Custom**</p>
-         * <p>*   **System**</p>
-         * <p>*   **All**</p>
+         * <ul>
+         * <li><strong>Custom</strong></li>
+         * <li><strong>System</strong></li>
+         * <li><strong>All</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The region information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nlb-nrnrxwd15en27r****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of resource. Valid values:</p>
-         * <br>
-         * <p>*   **loadbalancer**: an NLB instance</p>
-         * <p>*   **securitypolicy**: a security policy</p>
-         * <p>*   **servergroup**: a server group</p>
+         * <ul>
+         * <li><strong>loadbalancer</strong>: an NLB instance</li>
+         * <li><strong>securitypolicy</strong>: a security policy</li>
+         * <li><strong>servergroup</strong>: a server group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>loadbalancer</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The visible range of the tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("Scope")
         public String scope;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>product</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

@@ -17,28 +17,41 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
 
     /**
-     * <p>The number of entries returned per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries returned per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2198BD6D-9EBB-5E1C-9C48-E0ABB79CF831</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -99,34 +112,49 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12315790343_166f8204689_1714763408_70998****</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;
 
         /**
          * <p>The type of the certificate.</p>
-         * <br>
-         * <p>-  Server</p>
-         * <p>- Ca</p>
+         * <ul>
+         * <li>Server</li>
+         * <li>Ca</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Server</p>
          */
         @NameInMap("CertificateType")
         public String certificateType;
 
         /**
          * <p>Indicates whether the certificate is the default certificate of the listener. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
          * <p>Indicates whether the certificate is associated with the listener. Valid values:</p>
-         * <br>
-         * <p>*   **Associating**</p>
-         * <p>*   **Associated**</p>
-         * <p>*   **Diassociating**</p>
+         * <ul>
+         * <li><strong>Associating</strong></li>
+         * <li><strong>Associated</strong></li>
+         * <li><strong>Diassociating</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Associating</p>
          */
         @NameInMap("Status")
         public String status;

@@ -6,34 +6,50 @@ import com.aliyun.tea.*;
 public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the new resource group.</p>
-     * <br>
-     * <p>You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups) to view resource group IDs.</p>
+     * <p>You can log on to the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> to view resource group IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzjcnrv3vvqhq</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
      * <p>The region ID of the NLB instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~443657~~) operation to obtain the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/443657.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the bastion host for which you want to change the resource group.</p>
-     * <br>
-     * <p>>  You can call the [DescribeInstances](~~153281~~) operation to query the ID of the bastion host.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nlb-nrnrxwd15en27r****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **loadbalancer**: a Network Load Balancer (NLB) instance</p>
-     * <p>*   **securitypolicy**: a security policy</p>
-     * <p>*   **servergroup**: a server group</p>
+     * <ul>
+     * <li><strong>loadbalancer</strong>: a Network Load Balancer (NLB) instance</li>
+     * <li><strong>securitypolicy</strong>: a security policy</li>
+     * <li><strong>servergroup</strong>: a server group</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>loadbalancer</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
