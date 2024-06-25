@@ -4,21 +4,41 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class TemplateListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<TemplateListResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1683440860035</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
@@ -90,24 +110,36 @@ public class TemplateListResponseBody extends TeaModel {
 
         /**
          * <p>话术所需参数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("Properties")
         public String properties;
 
         /**
          * <p>AI话术ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
         /**
          * <p>话术模板名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>模板类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("TemplateType")
         public Long templateType;

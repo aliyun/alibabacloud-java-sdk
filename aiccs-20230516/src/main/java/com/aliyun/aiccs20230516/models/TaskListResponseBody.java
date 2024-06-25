@@ -4,27 +4,58 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class TaskListResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<TaskListResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
     public static TaskListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TaskListResponseBody self = new TaskListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public TaskListResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public TaskListResponseBody setCode(Long code) {
@@ -78,12 +109,18 @@ public class TaskListResponseBody extends TeaModel {
     public static class TaskListResponseBodyModelIntentTags extends TeaModel {
         /**
          * <p>意向标签描述</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("IntentDescription")
         public String intentDescription;
 
         /**
          * <p>意向标签ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("IntentTag")
         public String intentTag;
@@ -114,36 +151,54 @@ public class TaskListResponseBody extends TeaModel {
     public static class TaskListResponseBodyModel extends TeaModel {
         /**
          * <p>外呼时间段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“8:00~20:30”</p>
          */
         @NameInMap("AllowCallTime")
         public String allowCallTime;
 
         /**
          * <p>外呼时间段格式化</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“8:00 ~ 20:00”</p>
          */
         @NameInMap("AllowCallTimeFormat")
         public String allowCallTimeFormat;
 
         /**
          * <p>外呼时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“1,2,3”</p>
          */
         @NameInMap("AllowDayOfWeek")
         public String allowDayOfWeek;
 
         /**
          * <p>外呼类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("CallType")
         public Long callType;
 
         /**
          * <p>创建时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-05 12:11:11</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>最近导入时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-05 12:11:11</p>
          */
         @NameInMap("ImportTime")
         public String importTime;
@@ -156,18 +211,27 @@ public class TaskListResponseBody extends TeaModel {
 
         /**
          * <p>接通重呼次数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         @NameInMap("InvalidReCall")
         public Long invalidReCall;
 
         /**
          * <p>最后外呼时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-05 12:11:11</p>
          */
         @NameInMap("LastCallTime")
         public String lastCallTime;
 
         /**
          * <p>最大并发数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("MaxConcurrency")
         public Long maxConcurrency;
@@ -180,54 +244,90 @@ public class TaskListResponseBody extends TeaModel {
 
         /**
          * <p>优先任务</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("Priority")
         public Long priority;
 
         /**
          * <p>任务所需参数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("Properties")
         public String properties;
 
         /**
          * <p>自动重呼</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("RecallType")
         public Long recallType;
 
         /**
          * <p>发送短信</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39</p>
          */
         @NameInMap("SendSms")
         public Long sendSms;
 
         /**
          * <p>短信模板</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("SmsName")
         public String smsName;
 
         /**
          * <p>任务状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79</p>
          */
         @NameInMap("Status")
         public Long status;
 
         /**
          * <p>任务ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
         /**
          * <p>任务名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
+         * <p>话术模板Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
+        @NameInMap("TemplateId")
+        public String templateId;
+
+        /**
          * <p>话术模板名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
@@ -387,6 +487,14 @@ public class TaskListResponseBody extends TeaModel {
         }
         public String getTaskName() {
             return this.taskName;
+        }
+
+        public TaskListResponseBodyModel setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
         }
 
         public TaskListResponseBodyModel setTemplateName(String templateName) {

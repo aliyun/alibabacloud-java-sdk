@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class TaskRecoverCallShrinkRequest extends TeaModel {
     /**
      * <p>查询开始导入时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;2023-01-09 18:58:19&quot;</p>
      */
     @NameInMap("BeginImportTime")
     public String beginImportTime;
 
     /**
      * <p>查询结束导入时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;2023-01-09 18:58:19&quot;</p>
      */
     @NameInMap("EndImportTime")
     public String endImportTime;
@@ -39,6 +45,10 @@ public class TaskRecoverCallShrinkRequest extends TeaModel {
 
     /**
      * <p>任务ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

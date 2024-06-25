@@ -4,21 +4,41 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class SmsTemplatePageListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public SmsTemplatePageListResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1683440860035</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
@@ -78,60 +98,90 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
     public static class SmsTemplatePageListResponseBodyModelList extends TeaModel {
         /**
          * <p>短信内容</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>创建时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-26 11:34:59</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>模板所需参数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("Properties")
         public String properties;
 
         /**
          * <p>智能短链ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46</p>
          */
         @NameInMap("ShortUrlTaskId")
         public Long shortUrlTaskId;
 
         /**
          * <p>短信签名</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a234n</p>
          */
         @NameInMap("Sign")
         public String sign;
 
         /**
          * <p>短信类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("SmsType")
         public String smsType;
 
         /**
          * <p>模板状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         @NameInMap("Status")
         public Long status;
 
         /**
          * <p>模板ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
         /**
          * <p>模板名称</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
          * <p>模板类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>56</p>
          */
         @NameInMap("TemplateType")
         public Long templateType;
@@ -227,15 +277,31 @@ public class SmsTemplatePageListResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<SmsTemplatePageListResponseBodyModelList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>53</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>42</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31</p>
+         */
         @NameInMap("TotalPage")
         public Long totalPage;
 

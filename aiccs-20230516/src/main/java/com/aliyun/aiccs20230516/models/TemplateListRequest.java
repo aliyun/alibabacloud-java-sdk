@@ -15,6 +15,9 @@ public class TemplateListRequest extends TeaModel {
 
     /**
      * <p>必须空参</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateTaskCustomerShrinkRequest extends TeaModel {
     /**
      * <p>外呼客户</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Customers")
     public String customersShrink;
@@ -21,6 +22,10 @@ public class UpdateTaskCustomerShrinkRequest extends TeaModel {
 
     /**
      * <p>任务ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

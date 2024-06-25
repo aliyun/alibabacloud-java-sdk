@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class TaskCallListRequest extends TeaModel {
     /**
      * <p>导入号码时返回的批次号</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BatchId")
     public String batchId;
 
     /**
      * <p>开始外呼时间</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-25 00:00:00</p>
      */
     @NameInMap("CallDate")
     public String callDate;
 
     /**
      * <p>结束外呼时间</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-25 00:00:00</p>
      */
     @NameInMap("EndCallDate")
     public String endCallDate;
@@ -39,12 +50,19 @@ public class TaskCallListRequest extends TeaModel {
 
     /**
      * <p>页数</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39</p>
      */
     @NameInMap("Page")
     public Long page;
 
     /**
      * <p>每页外呼记录数,正整数，默认10000</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -57,6 +75,10 @@ public class TaskCallListRequest extends TeaModel {
 
     /**
      * <p>任务ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DetailsRequest extends TeaModel {
     /**
      * <p>批次id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>75</p>
      */
     @NameInMap("BatchId")
     public Long batchId;
 
     /**
      * <p>结束导入时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-25 15:19:02</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>号码状态</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NumberStatus")
     public Long numberStatus;
@@ -33,12 +42,19 @@ public class DetailsRequest extends TeaModel {
 
     /**
      * <p>页数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>77</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
      * <p>每页条数</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -51,12 +67,19 @@ public class DetailsRequest extends TeaModel {
 
     /**
      * <p>开始导入时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-25 15:19:02</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>任务id</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

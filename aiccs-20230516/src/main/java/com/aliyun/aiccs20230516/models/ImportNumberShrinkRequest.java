@@ -4,12 +4,25 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class ImportNumberShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Customers")
     public String customersShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FailReturn")
     public Long failReturn;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
@@ -22,6 +35,12 @@ public class ImportNumberShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 

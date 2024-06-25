@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class AgentRecoverCallRequest extends TeaModel {
     /**
      * <p>坐席ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("AgentId")
     public Long agentId;
 
     /**
      * <p>坐席标签</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("AgentTag")
     public String agentTag;
 
     /**
      * <p>查询开始导入时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-03-06 10:10:10</p>
      */
     @NameInMap("BeginImportTime")
     public String beginImportTime;
 
     /**
      * <p>查询结束导入时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-03-06 10:10:10</p>
      */
     @NameInMap("EndImportTime")
     public String endImportTime;

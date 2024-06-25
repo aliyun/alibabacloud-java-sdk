@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>添加黑名单接口</p>
+     * 
+     * @param tmpReq AddBlacklistRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddBlacklistResponse
+     */
     public AddBlacklistResponse addBlacklistWithOptions(AddBlacklistRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddBlacklistShrinkRequest request = new AddBlacklistShrinkRequest();
@@ -76,11 +84,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddBlacklistResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>添加黑名单接口</p>
+     * 
+     * @param request AddBlacklistRequest
+     * @return AddBlacklistResponse
+     */
     public AddBlacklistResponse addBlacklist(AddBlacklistRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addBlacklistWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>创建任务接口</p>
+     * 
+     * @param tmpReq AddTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddTaskResponse
+     */
     public AddTaskResponse addTaskWithOptions(AddTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AddTaskShrinkRequest request = new AddTaskShrinkRequest();
@@ -199,11 +222,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddTaskResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>创建任务接口</p>
+     * 
+     * @param request AddTaskRequest
+     * @return AddTaskResponse
+     */
     public AddTaskResponse addTask(AddTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>坐席取消号码外呼</p>
+     * 
+     * @param tmpReq AgentCancelCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AgentCancelCallResponse
+     */
     public AgentCancelCallResponse agentCancelCallWithOptions(AgentCancelCallRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AgentCancelCallShrinkRequest request = new AgentCancelCallShrinkRequest();
@@ -262,11 +300,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AgentCancelCallResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>坐席取消号码外呼</p>
+     * 
+     * @param request AgentCancelCallRequest
+     * @return AgentCancelCallResponse
+     */
     public AgentCancelCallResponse agentCancelCall(AgentCancelCallRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.agentCancelCallWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>坐席任务恢复号码</p>
+     * 
+     * @param tmpReq AgentRecoverCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AgentRecoverCallResponse
+     */
     public AgentRecoverCallResponse agentRecoverCallWithOptions(AgentRecoverCallRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AgentRecoverCallShrinkRequest request = new AgentRecoverCallShrinkRequest();
@@ -333,11 +386,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AgentRecoverCallResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>坐席任务恢复号码</p>
+     * 
+     * @param request AgentRecoverCallRequest
+     * @return AgentRecoverCallResponse
+     */
     public AgentRecoverCallResponse agentRecoverCall(AgentRecoverCallRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.agentRecoverCallWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>AI批量任务查询号码状态接口</p>
+     * 
+     * @param tmpReq DetailsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetailsResponse
+     */
     public DetailsResponse detailsWithOptions(DetailsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DetailsShrinkRequest request = new DetailsShrinkRequest();
@@ -408,11 +476,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetailsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>AI批量任务查询号码状态接口</p>
+     * 
+     * @param request DetailsRequest
+     * @return DetailsResponse
+     */
     public DetailsResponse details(DetailsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detailsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>编辑任务接口</p>
+     * 
+     * @param tmpReq EditTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EditTaskResponse
+     */
     public EditTaskResponse editTaskWithOptions(EditTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         EditTaskShrinkRequest request = new EditTaskShrinkRequest();
@@ -531,11 +614,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EditTaskResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>编辑任务接口</p>
+     * 
+     * @param request EditTaskRequest
+     * @return EditTaskResponse
+     */
     public EditTaskResponse editTask(EditTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.editTaskWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>导入号码</p>
+     * 
+     * @param tmpReq ImportNumberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportNumberResponse
+     */
     public ImportNumberResponse importNumberWithOptions(ImportNumberRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ImportNumberShrinkRequest request = new ImportNumberShrinkRequest();
@@ -590,11 +688,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ImportNumberResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>导入号码</p>
+     * 
+     * @param request ImportNumberRequest
+     * @return ImportNumberResponse
+     */
     public ImportNumberResponse importNumber(ImportNumberRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importNumberWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询企业黑名单</p>
+     * 
+     * @param tmpReq PageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PageResponse
+     */
     public PageResponse pageWithOptions(PageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         PageShrinkRequest request = new PageShrinkRequest();
@@ -645,11 +758,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PageResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询企业黑名单</p>
+     * 
+     * @param request PageRequest
+     * @return PageResponse
+     */
     public PageResponse page(PageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.pageWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>短信模板创建</p>
+     * 
+     * @param request SmsTemplateCreateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SmsTemplateCreateResponse
+     */
     public SmsTemplateCreateResponse smsTemplateCreateWithOptions(SmsTemplateCreateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -702,11 +830,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SmsTemplateCreateResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>短信模板创建</p>
+     * 
+     * @param request SmsTemplateCreateRequest
+     * @return SmsTemplateCreateResponse
+     */
     public SmsTemplateCreateResponse smsTemplateCreate(SmsTemplateCreateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.smsTemplateCreateWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>短信模板列表查询</p>
+     * 
+     * @param request SmsTemplatePageListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SmsTemplatePageListResponse
+     */
     public SmsTemplatePageListResponse smsTemplatePageListWithOptions(SmsTemplatePageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -767,11 +910,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SmsTemplatePageListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>短信模板列表查询</p>
+     * 
+     * @param request SmsTemplatePageListRequest
+     * @return SmsTemplatePageListResponse
+     */
     public SmsTemplatePageListResponse smsTemplatePageList(SmsTemplatePageListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.smsTemplatePageListWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询聊天记录接口</p>
+     * 
+     * @param request TaskCallChatsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TaskCallChatsResponse
+     */
     public TaskCallChatsResponse taskCallChatsWithOptions(TaskCallChatsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -820,11 +978,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TaskCallChatsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询聊天记录接口</p>
+     * 
+     * @param request TaskCallChatsRequest
+     * @return TaskCallChatsResponse
+     */
     public TaskCallChatsResponse taskCallChats(TaskCallChatsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.taskCallChatsWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取任务外呼情况接口</p>
+     * 
+     * @param request TaskCallInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TaskCallInfoResponse
+     */
     public TaskCallInfoResponse taskCallInfoWithOptions(TaskCallInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -861,11 +1034,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TaskCallInfoResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取任务外呼情况接口</p>
+     * 
+     * @param request TaskCallInfoRequest
+     * @return TaskCallInfoResponse
+     */
     public TaskCallInfoResponse taskCallInfo(TaskCallInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.taskCallInfoWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>AI批量任务查询外呼记录接口</p>
+     * 
+     * @param tmpReq TaskCallListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TaskCallListResponse
+     */
     public TaskCallListResponse taskCallListWithOptions(TaskCallListRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         TaskCallListShrinkRequest request = new TaskCallListShrinkRequest();
@@ -940,11 +1128,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TaskCallListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>AI批量任务查询外呼记录接口</p>
+     * 
+     * @param request TaskCallListRequest
+     * @return TaskCallListResponse
+     */
     public TaskCallListResponse taskCallList(TaskCallListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.taskCallListWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>批量任务取消号码外呼</p>
+     * 
+     * @param tmpReq TaskCancelCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TaskCancelCallResponse
+     */
     public TaskCancelCallResponse taskCancelCallWithOptions(TaskCancelCallRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         TaskCancelCallShrinkRequest request = new TaskCancelCallShrinkRequest();
@@ -999,11 +1202,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TaskCancelCallResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>批量任务取消号码外呼</p>
+     * 
+     * @param request TaskCancelCallRequest
+     * @return TaskCancelCallResponse
+     */
     public TaskCancelCallResponse taskCancelCall(TaskCancelCallRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.taskCancelCallWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询任务列表接口</p>
+     * 
+     * @param request TaskListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TaskListResponse
+     */
     public TaskListResponse taskListWithOptions(TaskListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1027,6 +1245,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             query.put("TaskId", request.taskId);
         }
@@ -1048,11 +1270,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TaskListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>查询任务列表接口</p>
+     * 
+     * @param request TaskListRequest
+     * @return TaskListResponse
+     */
     public TaskListResponse taskList(TaskListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.taskListWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>批量任务恢复号码</p>
+     * 
+     * @param tmpReq TaskRecoverCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TaskRecoverCallResponse
+     */
     public TaskRecoverCallResponse taskRecoverCallWithOptions(TaskRecoverCallRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         TaskRecoverCallShrinkRequest request = new TaskRecoverCallShrinkRequest();
@@ -1115,11 +1352,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TaskRecoverCallResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>批量任务恢复号码</p>
+     * 
+     * @param request TaskRecoverCallRequest
+     * @return TaskRecoverCallResponse
+     */
     public TaskRecoverCallResponse taskRecoverCall(TaskRecoverCallRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.taskRecoverCallWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>话术模板列表查询接口</p>
+     * 
+     * @param request TemplateListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TemplateListResponse
+     */
     public TemplateListResponse templateListWithOptions(TemplateListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1156,11 +1408,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TemplateListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>话术模板列表查询接口</p>
+     * 
+     * @param request TemplateListRequest
+     * @return TemplateListResponse
+     */
     public TemplateListResponse templateList(TemplateListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.templateListWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>修改坐席状态</p>
+     * 
+     * @param request UpdateAgentStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAgentStatusResponse
+     */
     public UpdateAgentStatusResponse updateAgentStatusWithOptions(UpdateAgentStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1205,11 +1472,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAgentStatusResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>修改坐席状态</p>
+     * 
+     * @param request UpdateAgentStatusRequest
+     * @return UpdateAgentStatusResponse
+     */
     public UpdateAgentStatusResponse updateAgentStatus(UpdateAgentStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAgentStatusWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>更新当天导入的号码</p>
+     * 
+     * @param tmpReq UpdateTaskCustomerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateTaskCustomerResponse
+     */
     public UpdateTaskCustomerResponse updateTaskCustomerWithOptions(UpdateTaskCustomerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateTaskCustomerShrinkRequest request = new UpdateTaskCustomerShrinkRequest();
@@ -1256,6 +1538,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateTaskCustomerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>更新当天导入的号码</p>
+     * 
+     * @param request UpdateTaskCustomerRequest
+     * @return UpdateTaskCustomerResponse
+     */
     public UpdateTaskCustomerResponse updateTaskCustomer(UpdateTaskCustomerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateTaskCustomerWithOptions(request, runtime);

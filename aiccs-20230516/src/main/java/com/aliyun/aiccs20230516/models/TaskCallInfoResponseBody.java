@@ -4,21 +4,41 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class TaskCallInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public TaskCallInfoResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>62</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
@@ -76,12 +96,24 @@ public class TaskCallInfoResponseBody extends TeaModel {
     }
 
     public static class TaskCallInfoResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>75</p>
+         */
         @NameInMap("FinishTotal")
         public Long finishTotal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>59</p>
+         */
         @NameInMap("Total")
         public Long total;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("UnCallTotal")
         public Long unCallTotal;
 

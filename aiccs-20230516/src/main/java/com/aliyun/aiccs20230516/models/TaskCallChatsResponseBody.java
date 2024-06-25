@@ -4,21 +4,41 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class TaskCallChatsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<TaskCallChatsResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1683440860035</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
@@ -78,18 +98,27 @@ public class TaskCallChatsResponseBody extends TeaModel {
     public static class TaskCallChatsResponseBodyModel extends TeaModel {
         /**
          * <p>说话内容</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>说话时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-13 14:56:46.604</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>说话号码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138*****265</p>
          */
         @NameInMap("FromNumber")
         public String fromNumber;

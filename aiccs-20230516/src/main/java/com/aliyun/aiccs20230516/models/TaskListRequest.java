@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class TaskListRequest extends TeaModel {
     /**
      * <p>创建时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-05 12:11:11</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>最后外呼时间</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-05 12:11:11</p>
      */
     @NameInMap("LastCallTime")
     public String lastCallTime;
@@ -26,7 +32,19 @@ public class TaskListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>任务状态。1 未启用，2 启用中，4 已停止</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("Status")
+    public Long status;
+
+    /**
      * <p>任务ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
@@ -74,6 +92,14 @@ public class TaskListRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public TaskListRequest setStatus(Long status) {
+        this.status = status;
+        return this;
+    }
+    public Long getStatus() {
+        return this.status;
     }
 
     public TaskListRequest setTaskId(Long taskId) {

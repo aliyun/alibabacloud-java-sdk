@@ -4,21 +4,41 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class PageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public PageResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1683440860035</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
@@ -78,30 +98,45 @@ public class PageResponseBody extends TeaModel {
     public static class PageResponseBodyModelList extends TeaModel {
         /**
          * <p>添加时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-06 10:10:10</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>过期时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ExpirationTime")
         public String expirationTime;
 
         /**
          * <p>手机号码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13314206082</p>
          */
         @NameInMap("Number")
         public String number;
 
         /**
          * <p>手机号MD5</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e10adc3949ba59abbe56e057f20f883e</p>
          */
         @NameInMap("NumberMD5")
         public String numberMD5;
 
         /**
          * <p>备注</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         @NameInMap("Remark")
         public String remark;
@@ -157,15 +192,31 @@ public class PageResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<PageResponseBodyModelList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>97</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TotalPage")
         public Long totalPage;
 
