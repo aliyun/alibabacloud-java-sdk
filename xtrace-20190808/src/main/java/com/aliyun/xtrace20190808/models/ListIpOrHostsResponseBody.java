@@ -12,6 +12,9 @@ public class ListIpOrHostsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1FC4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

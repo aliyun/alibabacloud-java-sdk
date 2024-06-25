@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class QueryMetricResponseBody extends TeaModel {
     /**
      * <p>The returned statistics.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{   &quot;RequestId&quot;: &quot;E2373982-D8CD-413D-B991-8EB678******&quot;,   &quot;Data&quot;: &quot;{\&quot;data\&quot;:[{\&quot;date\&quot;:1583686800000,\&quot;count\&quot;:0,\&quot;rt\&quot;:0,\&quot;rpc\&quot;:\&quot;childSpan3\&quot;}}</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1F******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

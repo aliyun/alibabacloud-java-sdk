@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListServicesResponseBody extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1FC47DED</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListServicesResponseBody extends TeaModel {
     public static class ListServicesResponseBodyServicesService extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXXqn3ly@741623b4e915df8</p>
          */
         @NameInMap("Pid")
         public String pid;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;

@@ -5,70 +5,107 @@ import com.aliyun.tea.*;
 
 public class SearchTracesRequest extends TeaModel {
     /**
-     * <p>The type of the application. You can set the value to **XTRACE** or leave this parameter unspecified.</p>
+     * <p>The type of the application. You can set the value to <strong>XTRACE</strong> or leave this parameter unspecified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XTRACE</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1575622455686</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The time more than which is used to call the trace. Unit: milliseconds. For example, a value of 100 specifies to return the traces that more than 100 milliseconds are used to call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("MinDuration")
     public Long minDuration;
 
     /**
      * <p>The name of the span.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/api</p>
      */
     @NameInMap("OperationName")
     public String operationName;
 
     /**
      * <p>The number of the page to return. For example, a value of 5 indicates page 5.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: false. Valid values:</p>
-     * <br>
-     * <p>- true: reverse chronological order </p>
-     * <p>- false: chronological order</p>
+     * <ul>
+     * <li>true: reverse chronological order </li>
+     * <li>false: chronological order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
      * <p>The IP address that corresponds to the span.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0</p>
      */
     @NameInMap("ServiceIp")
     public String serviceIp;
 
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service 1</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1575561600000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -183,12 +220,18 @@ public class SearchTracesRequest extends TeaModel {
     public static class SearchTracesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http.status_cod</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Value")
         public String value;

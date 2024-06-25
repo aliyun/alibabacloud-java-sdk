@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTraceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1F******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetTraceResponseBody extends TeaModel {
     public static class GetTraceResponseBodySpansSpanLogEventListLogEventTagEntryListTagEntry extends TeaModel {
         /**
          * <p>The tag key in the log event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logLevel</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value in the log event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Warning</p>
          */
         @NameInMap("Value")
         public String value;
@@ -101,6 +110,9 @@ public class GetTraceResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the log event was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1583683202047000</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
@@ -150,12 +162,18 @@ public class GetTraceResponseBody extends TeaModel {
     public static class GetTraceResponseBodySpansSpanTagEntryListTagEntry extends TeaModel {
         /**
          * <p>The tag key in the span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logLevel</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value in the span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Warning</p>
          */
         @NameInMap("Value")
         public String value;
@@ -205,15 +223,22 @@ public class GetTraceResponseBody extends TeaModel {
     public static class GetTraceResponseBodySpansSpan extends TeaModel {
         /**
          * <p>The time used to call the trace. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Duration")
         public Long duration;
 
         /**
          * <p>Indicates whether the span has child spans. Valid values:</p>
-         * <br>
-         * <p>- true: The span has child spans. </p>
-         * <p>- false: The span has no child spans.</p>
+         * <ul>
+         * <li>true: The span has child spans. </li>
+         * <li>false: The span has no child spans.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HaveStack")
         public Boolean haveStack;
@@ -226,42 +251,63 @@ public class GetTraceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api</p>
          */
         @NameInMap("OperationName")
         public String operationName;
 
         /**
          * <p>The ID of the parent span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fec891bb8f8XXX</p>
          */
         @NameInMap("ParentSpanId")
         public String parentSpanId;
 
         /**
          * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("ResultCode")
         public String resultCode;
 
         /**
          * <p>The parent-child and sibling relationship between spans. For example, span 1.1 is the parent of span 1.1.1, and span 1.1.2 and span 1.1.1 are siblings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
          */
         @NameInMap("RpcId")
         public String rpcId;
 
         /**
          * <p>The IP address of the server where the span resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XXX.XXX</p>
          */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>server1</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>Span ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fec891bb8f8XXX</p>
          */
         @NameInMap("SpanId")
         public String spanId;
@@ -274,12 +320,18 @@ public class GetTraceResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the span was generated. Unit: microseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1689845513298000</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The unique ID of the trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1c6881aab84191a4****</p>
          */
         @NameInMap("TraceID")
         public String traceID;
