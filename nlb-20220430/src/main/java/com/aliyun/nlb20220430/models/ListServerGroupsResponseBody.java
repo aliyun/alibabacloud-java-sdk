@@ -5,22 +5,32 @@ import com.aliyun.tea.*;
 
 public class ListServerGroupsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B28E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,6 +43,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,90 +98,127 @@ public class ListServerGroupsResponseBody extends TeaModel {
     public static class ListServerGroupsResponseBodyServerGroupsHealthCheck extends TeaModel {
         /**
          * <p>The backend port that is used for health checks.</p>
-         * <br>
-         * <p>Valid values: **0** to **65535**.</p>
-         * <br>
-         * <p>A value of **0** indicates that the port on a backend server is used for health checks.</p>
+         * <p>Valid values: <strong>0</strong> to <strong>65535</strong>.</p>
+         * <p>A value of <strong>0</strong> indicates that the port on a backend server is used for health checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
         /**
-         * <p>The maximum timeout period of a health check. Unit: seconds. Valid values: **1** to **300**.</p>
+         * <p>The maximum timeout period of a health check. Unit: seconds. Valid values: <strong>1</strong> to <strong>300</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("HealthCheckConnectTimeout")
         public Integer healthCheckConnectTimeout;
 
         /**
          * <p>The domain name that you want to use for health checks. Valid values:</p>
-         * <br>
-         * <p>*   **$SERVER_IP**: the private IP address of a backend server.</p>
-         * <p>*   **domain**: a specified domain name. The domain name must be 1 to 80 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.).</p>
-         * <br>
-         * <p>> This parameter takes effect only when **HealthCheckType** is set to **HTTP**.</p>
+         * <ul>
+         * <li><strong>$SERVER_IP</strong>: the private IP address of a backend server.</li>
+         * <li><strong>domain</strong>: a specified domain name. The domain name must be 1 to 80 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.).</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>$SERVER_IP</p>
          */
         @NameInMap("HealthCheckDomain")
         public String healthCheckDomain;
 
         /**
          * <p>Indicates whether the health check feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
+        @NameInMap("HealthCheckExp")
+        public String healthCheckExp;
+
         /**
-         * <p>The HTTP status codes returned for health checks. Multiple HTTP status codes are separated by commas (,). Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
-         * <br>
-         * <p>> This parameter takes effect only when **HealthCheckType** is set to **HTTP**.</p>
+         * <p>The HTTP status codes returned for health checks. Multiple HTTP status codes are separated by commas (,). Valid values: <strong>http_2xx</strong>, <strong>http_3xx</strong>, <strong>http_4xx</strong>, and <strong>http_5xx</strong>.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
+         * </blockquote>
          */
         @NameInMap("HealthCheckHttpCode")
         public java.util.List<String> healthCheckHttpCode;
 
         /**
          * <p>The interval at which health checks are performed. Unit: seconds.</p>
-         * <br>
-         * <p>Valid values: **5** to **50**.</p>
+         * <p>Valid values: <strong>5</strong> to <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
+        @NameInMap("HealthCheckReq")
+        public String healthCheckReq;
+
         /**
-         * <p>The protocol that is used for health checks. Valid values: **TCP** and **HTTP**.</p>
+         * <p>The protocol that is used for health checks. Valid values: <strong>TCP</strong> and <strong>HTTP</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("HealthCheckType")
         public String healthCheckType;
 
         /**
          * <p>The path to which health check probes are sent.</p>
-         * <br>
-         * <p>> This parameter takes effect only when **HealthCheckType** is set to **HTTP**.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>/test/index.html</p>
          */
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;
 
         /**
-         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from **fail** to **success**.</p>
-         * <br>
-         * <p>Valid values: **2** to **10**.</p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
         /**
-         * <p>The HTTP method that is used for health checks. Valid values: **GET** and **HEAD**.</p>
-         * <br>
-         * <p>> This parameter takes effect only when **HealthCheckType** is set to **HTTP**.</p>
+         * <p>The HTTP method that is used for health checks. Valid values: <strong>GET</strong> and <strong>HEAD</strong>.</p>
+         * <blockquote>
+         * <p>This parameter takes effect only when <strong>HealthCheckType</strong> is set to <strong>HTTP</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         @NameInMap("HttpCheckMethod")
         public String httpCheckMethod;
 
         /**
-         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from **success** to **fail**.</p>
-         * <br>
-         * <p>Valid values: **2** to **10**.</p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <strong>success</strong> to <strong>fail</strong>.</p>
+         * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
@@ -210,6 +260,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             return this.healthCheckEnabled;
         }
 
+        public ListServerGroupsResponseBodyServerGroupsHealthCheck setHealthCheckExp(String healthCheckExp) {
+            this.healthCheckExp = healthCheckExp;
+            return this;
+        }
+        public String getHealthCheckExp() {
+            return this.healthCheckExp;
+        }
+
         public ListServerGroupsResponseBodyServerGroupsHealthCheck setHealthCheckHttpCode(java.util.List<String> healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
             return this;
@@ -224,6 +282,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public Integer getHealthCheckInterval() {
             return this.healthCheckInterval;
+        }
+
+        public ListServerGroupsResponseBodyServerGroupsHealthCheck setHealthCheckReq(String healthCheckReq) {
+            this.healthCheckReq = healthCheckReq;
+            return this;
+        }
+        public String getHealthCheckReq() {
+            return this.healthCheckReq;
         }
 
         public ListServerGroupsResponseBodyServerGroupsHealthCheck setHealthCheckType(String healthCheckType) {
@@ -271,16 +337,20 @@ public class ListServerGroupsResponseBody extends TeaModel {
     public static class ListServerGroupsResponseBodyServerGroupsTags extends TeaModel {
         /**
          * <p>The tag key. At most 10 tag keys are returned.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. At most 10 tag values are returned.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Value")
         public String value;
@@ -311,39 +381,57 @@ public class ListServerGroupsResponseBody extends TeaModel {
     public static class ListServerGroupsResponseBodyServerGroups extends TeaModel {
         /**
          * <p>The IP version. Valid values:</p>
-         * <br>
-         * <p>*   **ipv4**</p>
-         * <p>*   **DualStack**</p>
+         * <ul>
+         * <li><strong>ipv4</strong></li>
+         * <li><strong>DualStack</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>165820696622****</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>Indicates whether the feature of forwarding requests to all ports is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AnyPortEnabled")
         public Boolean anyPortEnabled;
 
         /**
          * <p>Indicates whether connection draining is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ConnectionDrainEnabled")
         public Boolean connectionDrainEnabled;
 
         /**
-         * <p>The timeout period of connection draining. Unit: seconds. Valid values: **10** to **900**.</p>
+         * <p>The timeout period of connection draining. Unit: seconds. Valid values: <strong>10</strong> to <strong>900</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("ConnectionDrainTimeout")
         public Integer connectionDrainTimeout;
@@ -356,23 +444,34 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether client IP preservation is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is set to **true** by default when **AddressIPVersion** is set to **ipv4**. This parameter is set to **false** when **AddressIPVersion** is set to **ipv6**. **true** will be supported by later versions.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is set to <strong>true</strong> by default when <strong>AddressIPVersion</strong> is set to <strong>ipv4</strong>. This parameter is set to <strong>false</strong> when <strong>AddressIPVersion</strong> is set to <strong>ipv6</strong>. <strong>true</strong> will be supported by later versions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PreserveClientIpEnabled")
         public Boolean preserveClientIpEnabled;
 
         /**
-         * <p>The protocol used to forward requests to the backend servers. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
+         * <p>The protocol used to forward requests to the backend servers. Valid values: <strong>TCP</strong>, <strong>UDP</strong>, and <strong>TCPSSL</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The region ID of the NLB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -385,55 +484,79 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group to which the server group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The routing algorithm. Valid values:</p>
-         * <br>
-         * <p>*   **Wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights.</p>
-         * <p>*   **rr**: Requests are forwarded to the backend servers in sequence. sch: Requests are forwarded to the backend servers based on source IP address hashing.</p>
-         * <p>*   **sch**: Requests from the same source IP address are forwarded to the same backend server.</p>
-         * <p>*   **tch**: Four-element hashing, which specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are forwarded to the same backend server.</p>
-         * <p>*   **qch**: QUIC ID hashing. Requests that contain the same QUIC ID are forwarded to the same backend server.</p>
+         * <ul>
+         * <li><strong>Wrr</strong>: Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+         * <li><strong>rr</strong>: Requests are forwarded to the backend servers in sequence. sch: Requests are forwarded to the backend servers based on source IP address hashing.</li>
+         * <li><strong>sch</strong>: Requests from the same source IP address are forwarded to the same backend server.</li>
+         * <li><strong>tch</strong>: Four-element hashing, which specifies consistent hashing that is based on four factors: source IP address, destination IP address, source port, and destination port. Requests that contain the same information based on the four factors are forwarded to the same backend server.</li>
+         * <li><strong>qch</strong>: QUIC ID hashing. Requests that contain the same QUIC ID are forwarded to the same backend server.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Wrr</p>
          */
         @NameInMap("Scheduler")
         public String scheduler;
 
         /**
          * <p>The number of server groups associated with the NLB instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ServerCount")
         public Integer serverCount;
 
         /**
          * <p>The server group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-atstuj3rtoptyui****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
         /**
          * <p>The server group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NLB_ServerGroup</p>
          */
         @NameInMap("ServerGroupName")
         public String serverGroupName;
 
         /**
          * <p>The status of the server group. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Configuring**</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Configuring</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("ServerGroupStatus")
         public String serverGroupStatus;
 
         /**
          * <p>The type of server group. Valid values:</p>
-         * <br>
-         * <p>*   **Instance** : contains servers of the **Ecs**, **Ens**, and **Eci** types.</p>
-         * <p>*   **Ip**: contains servers specified by IP addresses.</p>
+         * <ul>
+         * <li><strong>Instance</strong> : contains servers of the <strong>Ecs</strong>, <strong>Ens</strong>, and <strong>Eci</strong> types.</li>
+         * <li><strong>Ip</strong>: contains servers specified by IP addresses.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         @NameInMap("ServerGroupType")
         public String serverGroupType;
@@ -446,6 +569,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC to which the server group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

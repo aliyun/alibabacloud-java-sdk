@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the asynchronous task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aab74cfa-3bc4-48fc-80fc-0101da5a****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7294679F-08DE-16D4-8E5D-1625685DC10B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

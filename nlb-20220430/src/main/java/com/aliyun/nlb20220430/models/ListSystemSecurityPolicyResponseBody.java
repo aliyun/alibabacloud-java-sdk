@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListSystemSecurityPolicyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C057647-284B-5C67-A07E-4B8F3DABA9F9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
     public static class ListSystemSecurityPolicyResponseBodySecurityPolicies extends TeaModel {
         /**
          * <p>The cipher suites.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECDHE-ECDSA-AES128-SHA</p>
          */
         @NameInMap("Ciphers")
         public String ciphers;
 
         /**
          * <p>The TLS policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-3fdab6dkkke10s****</p>
          */
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
         /**
          * <p>The TLS policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("SecurityPolicyName")
         public String securityPolicyName;
 
         /**
          * <p>The version of the TLS protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLSv1.0</p>
          */
         @NameInMap("TlsVersion")
         public String tlsVersion;
