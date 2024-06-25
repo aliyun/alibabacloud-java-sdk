@@ -14,7 +14,7 @@ public class ListClustersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of clusters.</p>
+     * <p>The clusters.</p>
      */
     @NameInMap("result")
     public java.util.List<ListClustersResponseBodyResult> result;
@@ -42,7 +42,7 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyResultDataNode extends TeaModel {
         /**
-         * <p>The name of the node.</p>
+         * <p>The name of the Searcher worker.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-8ed2k7brm05_qrs</p>
@@ -51,7 +51,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of nodes.</p>
+         * <p>The number of Searcher workers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -60,7 +60,7 @@ public class ListClustersResponseBody extends TeaModel {
         public Integer number;
 
         /**
-         * <p>The partition ID of the node.</p>
+         * <p>The ID of the partition that is stored on the Searcher worker.</p>
          * 
          * <strong>example:</strong>
          * <p>dt=20220216</p>
@@ -101,7 +101,7 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyResultQueryNode extends TeaModel {
         /**
-         * <p>The name of the node.</p>
+         * <p>The name of the QRS worker.</p>
          * 
          * <strong>example:</strong>
          * <p>test_0704</p>
@@ -110,7 +110,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of nodes.</p>
+         * <p>The number of QRS workers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -119,7 +119,7 @@ public class ListClustersResponseBody extends TeaModel {
         public Integer number;
 
         /**
-         * <p>The number o replicas.</p>
+         * <p>The ID of the partition that is stored on the QRS worker.</p>
          * 
          * <strong>example:</strong>
          * <p>dt=20211216</p>
@@ -175,7 +175,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The effective advanced version.</p>
+         * <p>The effective advanced configuration version.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot; &quot;</p>
@@ -184,7 +184,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String currentAdvanceConfigVersion;
 
         /**
-         * <p>词典配置生效版本</p>
+         * <p>The effective dictionary configuration version.</p>
          */
         @NameInMap("currentOfflineDictConfigVersion")
         public String currentOfflineDictConfigVersion;
@@ -199,13 +199,13 @@ public class ListClustersResponseBody extends TeaModel {
         public String currentOnlineConfigVersion;
 
         /**
-         * <p>查询配置生效版本</p>
+         * <p>The effective query configuration version.</p>
          */
         @NameInMap("currentOnlineQueryConfigVersion")
         public String currentOnlineQueryConfigVersion;
 
         /**
-         * <p>The information about the node in the cluster.</p>
+         * <p>The information about Searcher workers.</p>
          */
         @NameInMap("dataNode")
         public ListClustersResponseBodyResultDataNode dataNode;
@@ -229,7 +229,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String latestAdvanceConfigVersion;
 
         /**
-         * <p>词典配置最新版本</p>
+         * <p>The latest dictionary configuration version.</p>
          */
         @NameInMap("latestOfflineDictConfigVersion")
         public String latestOfflineDictConfigVersion;
@@ -244,13 +244,13 @@ public class ListClustersResponseBody extends TeaModel {
         public String latestOnlineConfigVersion;
 
         /**
-         * <p>查询配置最新版本</p>
+         * <p>The latest query configuration version.</p>
          */
         @NameInMap("latestOnlineQueryConfigVersion")
         public String latestOnlineQueryConfigVersion;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>ha-cn-7pp2pcna701_qrs</p>
@@ -259,13 +259,13 @@ public class ListClustersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The query node of the cluster.</p>
+         * <p>The information about Query Result Searcher (QRS) workers.</p>
          */
         @NameInMap("queryNode")
         public ListClustersResponseBodyResultQueryNode queryNode;
 
         /**
-         * <p>The status of the cluster. Valid values: running, starting, stopping, and stopped. running indicates the cluster is running, starting indicates the cluster is starting, stopping indicates the cluster is stopping, and stopped indicates the cluster has stopped.</p>
+         * <p>The status of the cluster. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;starting&quot;</p>

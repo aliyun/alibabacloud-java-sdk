@@ -3,7 +3,7 @@ package com.aliyun.searchengine20211025.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDataSourceResponse extends TeaModel {
+public class DeleteFolderResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class ModifyDataSourceResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ModifyDataSourceResponseBody body;
+    public DeleteFolderResponseBody body;
 
-    public static ModifyDataSourceResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDataSourceResponse self = new ModifyDataSourceResponse();
+    public static DeleteFolderResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteFolderResponse self = new DeleteFolderResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDataSourceResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteFolderResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class ModifyDataSourceResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyDataSourceResponse setStatusCode(Integer statusCode) {
+    public DeleteFolderResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class ModifyDataSourceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ModifyDataSourceResponse setBody(ModifyDataSourceResponseBody body) {
+    public DeleteFolderResponse setBody(DeleteFolderResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyDataSourceResponseBody getBody() {
+    public DeleteFolderResponseBody getBody() {
         return this.body;
     }
 
