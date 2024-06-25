@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListEventStreamingsRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. A maximum of 100 entries can be returned in a call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The name of the event stream that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("NamePrefix")
     public String namePrefix;
 
     /**
      * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ARN of the event target.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-hangzhou:118609547428****:services/fw1.LATEST/functions/log1</p>
      */
     @NameInMap("SinkArn")
     public String sinkArn;

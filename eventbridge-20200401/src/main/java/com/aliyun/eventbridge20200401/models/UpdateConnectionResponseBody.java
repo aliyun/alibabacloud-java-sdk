@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateConnectionResponseBody extends TeaModel {
     /**
      * <p>The returned response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8346BE8F-40F3-533D-A0B8-1359C31BD5BA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

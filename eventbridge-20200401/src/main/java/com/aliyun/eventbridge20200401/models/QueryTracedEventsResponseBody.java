@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryTracedEventsResponseBody extends TeaModel {
     /**
      * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryTracedEventsResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EventBusNotExist</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d9e4628b-8b34-4f33-82be-5aac50aac0ba</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,30 +94,45 @@ public class QueryTracedEventsResponseBody extends TeaModel {
     public static class QueryTracedEventsResponseBodyDataEvents extends TeaModel {
         /**
          * <p>The name of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-custom-bus</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
 
         /**
          * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07E-1OCckaVzNB92BIFFh4xgydOF1wd</p>
          */
         @NameInMap("EventId")
         public String eventId;
 
         /**
          * <p>The time when the event was delivered to the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661773573100</p>
          */
         @NameInMap("EventReceivedTime")
         public Long eventReceivedTime;
 
         /**
          * <p>The name of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs.resourcemanager</p>
          */
         @NameInMap("EventSource")
         public String eventSource;
 
         /**
          * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eventbridge:Events:HTTPEvent</p>
          */
         @NameInMap("EventType")
         public String eventType;
@@ -166,12 +193,18 @@ public class QueryTracedEventsResponseBody extends TeaModel {
 
         /**
          * <p>If excess return values exist, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Total")
         public Integer total;

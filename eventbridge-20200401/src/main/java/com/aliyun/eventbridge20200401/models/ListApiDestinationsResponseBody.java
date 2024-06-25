@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListApiDestinationsResponseBody extends TeaModel {
     /**
      * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,12 +21,18 @@ public class ListApiDestinationsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96D7C0AB-DCE5-5E82-96B8-4725E1706BB1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,26 +77,34 @@ public class ListApiDestinationsResponseBody extends TeaModel {
     public static class ListApiDestinationsResponseBodyDataApiDestinationsHttpApiParameters extends TeaModel {
         /**
          * <p>The endpoint of the API destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://127.0.0.1:8001/api">http://127.0.0.1:8001/api</a></p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The HTTP request method. Valid values:</p>
-         * <br>
-         * <p>- POST</p>
-         * <br>
-         * <p>- GET</p>
-         * <br>
-         * <p>- DELETE</p>
-         * <br>
-         * <p>- PUT</p>
-         * <br>
-         * <p>- HEAD</p>
-         * <br>
-         * <p>- TRACE</p>
-         * <br>
-         * <p>- PATCH</p>
+         * <ul>
+         * <li><p>POST</p>
+         * </li>
+         * <li><p>GET</p>
+         * </li>
+         * <li><p>DELETE</p>
+         * </li>
+         * <li><p>PUT</p>
+         * </li>
+         * <li><p>HEAD</p>
+         * </li>
+         * <li><p>TRACE</p>
+         * </li>
+         * <li><p>PATCH</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         @NameInMap("Method")
         public String method;
@@ -118,24 +135,36 @@ public class ListApiDestinationsResponseBody extends TeaModel {
     public static class ListApiDestinationsResponseBodyDataApiDestinations extends TeaModel {
         /**
          * <p>The name of the API destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api-destination-2</p>
          */
         @NameInMap("ApiDestinationName")
         public String apiDestinationName;
 
         /**
          * <p>The connection name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection-name</p>
          */
         @NameInMap("ConnectionName")
         public String connectionName;
 
         /**
          * <p>The description of the connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the API destination was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1665223213000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -202,18 +231,27 @@ public class ListApiDestinationsResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Float maxResults;
 
         /**
          * <p>If excess return values exist, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Total")
         public Float total;

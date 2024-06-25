@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListEventBusesResponseBody extends TeaModel {
     /**
      * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class ListEventBusesResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidArgument</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D1DCF64A-3F2C-5323-ADCB-3F4DF30FAD2D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the event buses are successfully queried. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class ListEventBusesResponseBody extends TeaModel {
     public static class ListEventBusesResponseBodyDataEventBuses extends TeaModel {
         /**
          * <p>The timestamp that indicates when the event bus was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607071602000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The description of the queried event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bus_description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the queried event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:123456789098***:eventbus/default</p>
          */
         @NameInMap("EventBusARN")
         public String eventBusARN;
 
         /**
          * <p>The name of the queried event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
@@ -152,12 +176,18 @@ public class ListEventBusesResponseBody extends TeaModel {
 
         /**
          * <p>If excess return values exist, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Total")
         public Integer total;

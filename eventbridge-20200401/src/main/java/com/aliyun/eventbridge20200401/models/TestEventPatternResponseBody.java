@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class TestEventPatternResponseBody extends TeaModel {
     /**
      * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,12 +27,18 @@ public class TestEventPatternResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96D7C0AB-DCE5-5E82-96B8-4725E1706BB1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,6 +91,9 @@ public class TestEventPatternResponseBody extends TeaModel {
     public static class TestEventPatternResponseBodyData extends TeaModel {
         /**
          * <p>The value true indicates that the event pattern matches the provided JSON format. The value false indicates that the event pattern does not match the provided JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Result")
         public Boolean result;

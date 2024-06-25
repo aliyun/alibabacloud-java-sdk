@@ -27,10 +27,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an API destination.
-     *
-     * @description You can call this API operation to create an API destination.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an API destination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an API destination.</p>
+     * 
      * @param tmpReq CreateApiDestinationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateApiDestinationResponse
@@ -78,10 +80,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an API destination.
-     *
-     * @description You can call this API operation to create an API destination.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an API destination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an API destination.</p>
+     * 
      * @param request CreateApiDestinationRequest
      * @return CreateApiDestinationResponse
      */
@@ -91,10 +95,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a connection.
-     *
-     * @description You can call this API operation to create a connection.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a connection.</p>
+     * 
      * @param tmpReq CreateConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateConnectionResponse
@@ -146,10 +152,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a connection.
-     *
-     * @description You can call this API operation to create a connection.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a connection.</p>
+     * 
      * @param request CreateConnectionRequest
      * @return CreateConnectionResponse
      */
@@ -159,10 +167,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an event bus.
-     *
-     * @description You can call this API operation to create an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an event bus.</p>
+     * 
      * @param request CreateEventBusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEventBusResponse
@@ -196,10 +206,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an event bus.
-     *
-     * @description You can call this API operation to create an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an event bus.</p>
+     * 
      * @param request CreateEventBusRequest
      * @return CreateEventBusResponse
      */
@@ -209,10 +221,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an event source.
-     *
-     * @description You can call this operation to create an event source.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to create an event source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an event source.</p>
+     * 
      * @param tmpReq CreateEventSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEventSourceResponse
@@ -221,6 +235,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateEventSourceShrinkRequest request = new CreateEventSourceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.externalSourceConfig)) {
+            request.externalSourceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalSourceConfig, "ExternalSourceConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceHttpEventParameters)) {
             request.sourceHttpEventParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceHttpEventParameters, "SourceHttpEventParameters", "json");
         }
@@ -260,6 +278,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventSourceName)) {
             body.put("EventSourceName", request.eventSourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalSourceConfigShrink)) {
+            body.put("ExternalSourceConfig", request.externalSourceConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalSourceType)) {
+            body.put("ExternalSourceType", request.externalSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.linkedExternalSource)) {
+            body.put("LinkedExternalSource", request.linkedExternalSource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceHttpEventParametersShrink)) {
@@ -308,10 +338,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an event source.
-     *
-     * @description You can call this operation to create an event source.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to create an event source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an event source.</p>
+     * 
      * @param request CreateEventSourceRequest
      * @return CreateEventSourceResponse
      */
@@ -321,10 +353,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an event stream.
-     *
-     * @description You can call this API operation to create an event stream.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an event stream.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an event stream.</p>
+     * 
      * @param tmpReq CreateEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEventStreamingResponse
@@ -396,10 +430,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an event stream.
-     *
-     * @description You can call this API operation to create an event stream.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an event stream.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an event stream.</p>
+     * 
      * @param request CreateEventStreamingRequest
      * @return CreateEventStreamingResponse
      */
@@ -409,10 +445,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an event rule.
-     *
-     * @description You can call this API operation to create an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an event rule.</p>
+     * 
      * @param tmpReq CreateRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRuleResponse
@@ -468,10 +506,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an event rule.
-     *
-     * @description You can call this API operation to create an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an event rule.</p>
+     * 
      * @param request CreateRuleRequest
      * @return CreateRuleResponse
      */
@@ -481,10 +521,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a service-linked role for your cloud service.
-     *
-     * @description You can call this API operation to create a service-linked role for your cloud service.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create a service-linked role for your cloud service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service-linked role for your cloud service.</p>
+     * 
      * @param request CreateServiceLinkedRoleForProductRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateServiceLinkedRoleForProductResponse
@@ -514,10 +556,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a service-linked role for your cloud service.
-     *
-     * @description You can call this API operation to create a service-linked role for your cloud service.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create a service-linked role for your cloud service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a service-linked role for your cloud service.</p>
+     * 
      * @param request CreateServiceLinkedRoleForProductRequest
      * @return CreateServiceLinkedRoleForProductResponse
      */
@@ -527,10 +571,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API destination.
-     *
-     * @description You can call this API operation to delete an API destination.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an API destination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an API destination.</p>
+     * 
      * @param request DeleteApiDestinationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApiDestinationResponse
@@ -560,10 +606,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an API destination.
-     *
-     * @description You can call this API operation to delete an API destination.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an API destination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an API destination.</p>
+     * 
      * @param request DeleteApiDestinationRequest
      * @return DeleteApiDestinationResponse
      */
@@ -573,10 +621,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a connection.
-     *
-     * @description You can call this API operation to delete a connection.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a connection.</p>
+     * 
      * @param request DeleteConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConnectionResponse
@@ -606,10 +656,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a connection.
-     *
-     * @description You can call this API operation to delete a connection.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a connection.</p>
+     * 
      * @param request DeleteConnectionRequest
      * @return DeleteConnectionResponse
      */
@@ -619,10 +671,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an event bus.
-     *
-     * @description You can call this API operation to delete an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an event bus.</p>
+     * 
      * @param request DeleteEventBusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEventBusResponse
@@ -652,10 +706,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an event bus.
-     *
-     * @description You can call this API operation to delete an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an event bus.</p>
+     * 
      * @param request DeleteEventBusRequest
      * @return DeleteEventBusResponse
      */
@@ -665,10 +721,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an event source.
-     *
-     * @description You can call this API operation to delete an event source.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an event source.</p>
+     * 
      * @param request DeleteEventSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEventSourceResponse
@@ -702,10 +760,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an event source.
-     *
-     * @description You can call this API operation to delete an event source.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an event source.</p>
+     * 
      * @param request DeleteEventSourceRequest
      * @return DeleteEventSourceResponse
      */
@@ -715,10 +775,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an event stream.
-     *
-     * @description You can call this API operation to delete an event stream.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event stream.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an event stream.</p>
+     * 
      * @param request DeleteEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEventStreamingResponse
@@ -748,10 +810,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an event stream.
-     *
-     * @description You can call this API operation to delete an event stream.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event stream.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an event stream.</p>
+     * 
      * @param request DeleteEventStreamingRequest
      * @return DeleteEventStreamingResponse
      */
@@ -761,10 +825,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an event rule.
-     *
-     * @description You can call this API operation to delete an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an event rule.</p>
+     * 
      * @param request DeleteRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRuleResponse
@@ -798,10 +864,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes an event rule.
-     *
-     * @description You can call this API operation to delete an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an event rule.</p>
+     * 
      * @param request DeleteRuleRequest
      * @return DeleteRuleResponse
      */
@@ -811,10 +879,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more event targets of an event rule.
-     *
-     * @description You can call this API operation to delete one or more event targets of an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete one or more event targets of an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more event targets of an event rule.</p>
+     * 
      * @param tmpReq DeleteTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTargetsResponse
@@ -858,10 +928,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes one or more event targets of an event rule.
-     *
-     * @description You can call this API operation to delete one or more event targets of an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to delete one or more event targets of an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes one or more event targets of an event rule.</p>
+     * 
      * @param request DeleteTargetsRequest
      * @return DeleteTargetsResponse
      */
@@ -871,10 +943,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables an event rule.
-     *
-     * @description You can call this API operation to disable an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to disable an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables an event rule.</p>
+     * 
      * @param request DisableRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableRuleResponse
@@ -908,10 +982,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables an event rule.
-     *
-     * @description You can call this API operation to disable an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to disable an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables an event rule.</p>
+     * 
      * @param request DisableRuleRequest
      * @return DisableRuleResponse
      */
@@ -921,10 +997,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables an event rule.
-     *
-     * @description You can call this API operation to enable an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to enable an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables an event rule.</p>
+     * 
      * @param request EnableRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableRuleResponse
@@ -958,10 +1036,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables an event rule.
-     *
-     * @description You can call this API operation to enable an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to enable an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables an event rule.</p>
+     * 
      * @param request EnableRuleRequest
      * @return EnableRuleResponse
      */
@@ -971,8 +1051,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary EventCenterCheckEnabledOnDefaultBus
-     *
+     * <b>summary</b> : 
+     * <p>EventCenterCheckEnabledOnDefaultBus</p>
+     * 
      * @param request EventCenterCheckEnabledOnDefaultBusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EventCenterCheckEnabledOnDefaultBusResponse
@@ -994,8 +1075,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary EventCenterCheckEnabledOnDefaultBus
-     *
+     * <b>summary</b> : 
+     * <p>EventCenterCheckEnabledOnDefaultBus</p>
      * @return EventCenterCheckEnabledOnDefaultBusResponse
      */
     public EventCenterCheckEnabledOnDefaultBusResponse eventCenterCheckEnabledOnDefaultBus() throws Exception {
@@ -1004,8 +1085,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary EventCenterDisableOnDefaultBus
-     *
+     * <b>summary</b> : 
+     * <p>EventCenterDisableOnDefaultBus</p>
+     * 
      * @param request EventCenterDisableOnDefaultBusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EventCenterDisableOnDefaultBusResponse
@@ -1027,8 +1109,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary EventCenterDisableOnDefaultBus
-     *
+     * <b>summary</b> : 
+     * <p>EventCenterDisableOnDefaultBus</p>
      * @return EventCenterDisableOnDefaultBusResponse
      */
     public EventCenterDisableOnDefaultBusResponse eventCenterDisableOnDefaultBus() throws Exception {
@@ -1037,8 +1119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary EventCenterEnableOnDefaultBus
-     *
+     * <b>summary</b> : 
+     * <p>EventCenterEnableOnDefaultBus</p>
+     * 
      * @param request EventCenterEnableOnDefaultBusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EventCenterEnableOnDefaultBusResponse
@@ -1060,8 +1143,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary EventCenterEnableOnDefaultBus
-     *
+     * <b>summary</b> : 
+     * <p>EventCenterEnableOnDefaultBus</p>
      * @return EventCenterEnableOnDefaultBusResponse
      */
     public EventCenterEnableOnDefaultBusResponse eventCenterEnableOnDefaultBus() throws Exception {
@@ -1070,8 +1153,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary EventCenterQueryEvents
-     *
+     * <b>summary</b> : 
+     * <p>EventCenterQueryEvents</p>
+     * 
      * @param tmpReq EventCenterQueryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EventCenterQueryEventsResponse
@@ -1121,8 +1205,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary EventCenterQueryEvents
-     *
+     * <b>summary</b> : 
+     * <p>EventCenterQueryEvents</p>
+     * 
      * @param request EventCenterQueryEventsRequest
      * @return EventCenterQueryEventsResponse
      */
@@ -1132,10 +1217,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about an API destination.
-     *
-     * @description You can call this API operation to query the information about an API destination.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the information about an API destination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about an API destination.</p>
+     * 
      * @param request GetApiDestinationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetApiDestinationResponse
@@ -1165,10 +1252,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about an API destination.
-     *
-     * @description You can call this API operation to query the information about an API destination.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the information about an API destination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about an API destination.</p>
+     * 
      * @param request GetApiDestinationRequest
      * @return GetApiDestinationResponse
      */
@@ -1178,10 +1267,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of a connection.
-     *
-     * @description You can call this API operation to query the configurations of a connection.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the configurations of a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a connection.</p>
+     * 
      * @param request GetConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConnectionResponse
@@ -1211,10 +1302,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of a connection.
-     *
-     * @description You can call this API operation to query the configurations of a connection.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the configurations of a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a connection.</p>
+     * 
      * @param request GetConnectionRequest
      * @return GetConnectionResponse
      */
@@ -1224,10 +1317,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the detailed information about an event bus.
-     *
-     * @description You can call this API operation to query the detailed information about an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the detailed information about an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the detailed information about an event bus.</p>
+     * 
      * @param request GetEventBusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEventBusResponse
@@ -1257,10 +1352,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the detailed information about an event bus.
-     *
-     * @description You can call this API operation to query the detailed information about an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the detailed information about an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the detailed information about an event bus.</p>
+     * 
      * @param request GetEventBusRequest
      * @return GetEventBusResponse
      */
@@ -1270,10 +1367,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an event stream.
-     *
-     * @description You can call this API operation to query the details of an event stream.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the details of an event stream.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an event stream.</p>
+     * 
      * @param request GetEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEventStreamingResponse
@@ -1303,10 +1402,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an event stream.
-     *
-     * @description You can call this API operation to query the details of an event stream.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the details of an event stream.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an event stream.</p>
+     * 
      * @param request GetEventStreamingRequest
      * @return GetEventStreamingResponse
      */
@@ -1316,10 +1417,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an event rule.
-     *
-     * @description You can call this API operation to query the details of an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the details of an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an event rule.</p>
+     * 
      * @param request GetRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRuleResponse
@@ -1353,10 +1456,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of an event rule.
-     *
-     * @description You can call this API operation to query the details of an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the details of an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of an event rule.</p>
+     * 
      * @param request GetRuleRequest
      * @return GetRuleResponse
      */
@@ -1366,10 +1471,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all Alibaba Cloud service event sources.
-     *
-     * @description You can call this API operation to query all Alibaba Cloud service event sources.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query all Alibaba Cloud service event sources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all Alibaba Cloud service event sources.</p>
+     * 
      * @param request ListAliyunOfficialEventSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAliyunOfficialEventSourcesResponse
@@ -1391,10 +1498,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all Alibaba Cloud service event sources.
-     *
-     * @description You can call this API operation to query all Alibaba Cloud service event sources.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query all Alibaba Cloud service event sources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all Alibaba Cloud service event sources.</p>
      * @return ListAliyunOfficialEventSourcesResponse
      */
     public ListAliyunOfficialEventSourcesResponse listAliyunOfficialEventSources() throws Exception {
@@ -1403,10 +1511,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of API destinations.
-     *
-     * @description You can use this API operation to query a list of API destinations.
-     *
+     * <b>description</b> :
+     * <p>You can use this API operation to query a list of API destinations.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of API destinations.</p>
+     * 
      * @param request ListApiDestinationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListApiDestinationsResponse
@@ -1448,10 +1558,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of API destinations.
-     *
-     * @description You can use this API operation to query a list of API destinations.
-     *
+     * <b>description</b> :
+     * <p>You can use this API operation to query a list of API destinations.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of API destinations.</p>
+     * 
      * @param request ListApiDestinationsRequest
      * @return ListApiDestinationsResponse
      */
@@ -1461,10 +1573,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries connections.
-     *
-     * @description You can call this API operation to query connections.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query connections.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries connections.</p>
+     * 
      * @param request ListConnectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConnectionsResponse
@@ -1502,10 +1616,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries connections.
-     *
-     * @description You can call this API operation to query connections.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query connections.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries connections.</p>
+     * 
      * @param request ListConnectionsRequest
      * @return ListConnectionsResponse
      */
@@ -1515,10 +1631,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all event buses.
-     *
-     * @description You can call this API operation to query all event buses.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query all event buses.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all event buses.</p>
+     * 
      * @param request ListEventBusesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEventBusesResponse
@@ -1556,10 +1674,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all event buses.
-     *
-     * @description You can call this API operation to query all event buses.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query all event buses.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all event buses.</p>
+     * 
      * @param request ListEventBusesRequest
      * @return ListEventBusesResponse
      */
@@ -1569,10 +1689,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries event streams.
-     *
-     * @description You can call this API operation to query event streams.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event streams.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries event streams.</p>
+     * 
      * @param request ListEventStreamingsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEventStreamingsResponse
@@ -1618,10 +1740,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries event streams.
-     *
-     * @description You can call this API operation to query event streams.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event streams.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries event streams.</p>
+     * 
      * @param request ListEventStreamingsRequest
      * @return ListEventStreamingsResponse
      */
@@ -1631,10 +1755,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all rules of an event bus.
-     *
-     * @description You can call this API operation to query all rules of an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query all rules of an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all rules of an event bus.</p>
+     * 
      * @param request ListRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRulesResponse
@@ -1676,10 +1802,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all rules of an event bus.
-     *
-     * @description You can call this API operation to query all rules of an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query all rules of an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all rules of an event bus.</p>
+     * 
      * @param request ListRulesRequest
      * @return ListRulesResponse
      */
@@ -1689,8 +1817,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all event targets of an event rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all event targets of an event rule.</p>
+     * 
      * @param request ListTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTargetsResponse
@@ -1736,8 +1865,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all event targets of an event rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all event targets of an event rule.</p>
+     * 
      * @param request ListTargetsRequest
      * @return ListTargetsResponse
      */
@@ -1747,10 +1877,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all custom event sources.
-     *
-     * @description You can call this API operation to query custom event sources.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query custom event sources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all custom event sources.</p>
+     * 
      * @param request ListUserDefinedEventSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserDefinedEventSourcesResponse
@@ -1792,10 +1924,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all custom event sources.
-     *
-     * @description You can call this API operation to query custom event sources.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query custom event sources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all custom event sources.</p>
+     * 
      * @param request ListUserDefinedEventSourcesRequest
      * @return ListUserDefinedEventSourcesResponse
      */
@@ -1805,10 +1939,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an event stream that is running.
-     *
-     * @description You can call this API operation to stop an event stream that is running.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to stop an event stream that is running.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an event stream that is running.</p>
+     * 
      * @param request PauseEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PauseEventStreamingResponse
@@ -1838,10 +1974,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops an event stream that is running.
-     *
-     * @description You can call this API operation to stop an event stream that is running.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to stop an event stream that is running.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops an event stream that is running.</p>
+     * 
      * @param request PauseEventStreamingRequest
      * @return PauseEventStreamingResponse
      */
@@ -1851,10 +1989,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or updates event targets under a rule.
-     *
-     * @description You can call this API operation to create or update event targets under a rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create or update event targets under a rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates or updates event targets under a rule.</p>
+     * 
      * @param tmpReq PutTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutTargetsResponse
@@ -1898,10 +2038,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or updates event targets under a rule.
-     *
-     * @description You can call this API operation to create or update event targets under a rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to create or update event targets under a rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates or updates event targets under a rule.</p>
+     * 
      * @param request PutTargetsRequest
      * @return PutTargetsResponse
      */
@@ -1911,10 +2053,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the content of an event.
-     *
-     * @description You can call this API operation to query the content of an event.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the content of an event.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the content of an event.</p>
+     * 
      * @param request QueryEventRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEventResponse
@@ -1952,10 +2096,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the content of an event.
-     *
-     * @description You can call this API operation to query the content of an event.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query the content of an event.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the content of an event.</p>
+     * 
      * @param request QueryEventRequest
      * @return QueryEventResponse
      */
@@ -1965,10 +2111,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries event traces.
-     *
-     * @description You can call this API operation to query event traces.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event traces.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries event traces.</p>
+     * 
      * @param request QueryEventTracesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryEventTracesResponse
@@ -2002,10 +2150,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries event traces.
-     *
-     * @description You can call this API operation to query event traces.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event traces.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries event traces.</p>
+     * 
      * @param request QueryEventTracesRequest
      * @return QueryEventTracesResponse
      */
@@ -2015,10 +2165,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries event traces by event ID.
-     *
-     * @description You can call this API operation to query event traces by event ID.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event traces by event ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries event traces by event ID.</p>
+     * 
      * @param request QueryTracedEventByEventIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTracedEventByEventIdResponse
@@ -2056,10 +2208,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries event traces by event ID.
-     *
-     * @description You can call this API operation to query event traces by event ID.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event traces by event ID.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries event traces by event ID.</p>
+     * 
      * @param request QueryTracedEventByEventIdRequest
      * @return QueryTracedEventByEventIdResponse
      */
@@ -2069,10 +2223,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries event traces by time range.
-     *
-     * @description You can call this API operation to query event traces by time range.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event traces by time range.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries event traces by time range.</p>
+     * 
      * @param request QueryTracedEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryTracedEventsResponse
@@ -2130,10 +2286,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries event traces by time range.
-     *
-     * @description You can call this API operation to query event traces by time range.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to query event traces by time range.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries event traces by time range.</p>
+     * 
      * @param request QueryTracedEventsRequest
      * @return QueryTracedEventsResponse
      */
@@ -2143,10 +2301,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a created or deactivated event stream.
-     *
-     * @description You can call this API operation to enable a created or deactivated event stream.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to enable a created or deactivated event stream.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a created or deactivated event stream.</p>
+     * 
      * @param request StartEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartEventStreamingResponse
@@ -2176,10 +2336,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a created or deactivated event stream.
-     *
-     * @description You can call this API operation to enable a created or deactivated event stream.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to enable a created or deactivated event stream.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a created or deactivated event stream.</p>
+     * 
      * @param request StartEventStreamingRequest
      * @return StartEventStreamingResponse
      */
@@ -2189,10 +2351,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the event pattern matches the provided JSON format.
-     *
-     * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to check whether the event pattern matches the provided JSON format.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether the event pattern matches the provided JSON format.</p>
+     * 
      * @param request TestEventPatternRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TestEventPatternResponse
@@ -2226,10 +2390,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether the event pattern matches the provided JSON format.
-     *
-     * @description You can call this API operation to check whether the event pattern matches the provided JSON format.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to check whether the event pattern matches the provided JSON format.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether the event pattern matches the provided JSON format.</p>
+     * 
      * @param request TestEventPatternRequest
      * @return TestEventPatternResponse
      */
@@ -2239,10 +2405,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an API destination.
-     *
-     * @description You can call this API operation to update an API destination.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to update an API destination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an API destination.</p>
+     * 
      * @param tmpReq UpdateApiDestinationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateApiDestinationResponse
@@ -2290,10 +2458,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an API destination.
-     *
-     * @description You can call this API operation to update an API destination.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to update an API destination.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an API destination.</p>
+     * 
      * @param request UpdateApiDestinationRequest
      * @return UpdateApiDestinationResponse
      */
@@ -2303,10 +2473,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a connection.
-     *
-     * @description You can call this API operation to update a connection.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to update a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a connection.</p>
+     * 
      * @param tmpReq UpdateConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateConnectionResponse
@@ -2358,10 +2530,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a connection.
-     *
-     * @description You can call this API operation to update a connection.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to update a connection.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a connection.</p>
+     * 
      * @param request UpdateConnectionRequest
      * @return UpdateConnectionResponse
      */
@@ -2371,10 +2545,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an event bus.
-     *
-     * @description You can call this API operation to modify an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to modify an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies an event bus.</p>
+     * 
      * @param request UpdateEventBusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateEventBusResponse
@@ -2408,10 +2584,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an event bus.
-     *
-     * @description You can call this API operation to modify an event bus.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to modify an event bus.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies an event bus.</p>
+     * 
      * @param request UpdateEventBusRequest
      * @return UpdateEventBusResponse
      */
@@ -2421,10 +2599,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an event source.
-     *
-     * @description You can call this API operation to update an event source.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to update an event source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an event source.</p>
+     * 
      * @param tmpReq UpdateEventSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateEventSourceResponse
@@ -2433,6 +2613,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateEventSourceShrinkRequest request = new UpdateEventSourceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.externalSourceConfig)) {
+            request.externalSourceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.externalSourceConfig, "ExternalSourceConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceHttpEventParameters)) {
             request.sourceHttpEventParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceHttpEventParameters, "SourceHttpEventParameters", "json");
         }
@@ -2472,6 +2656,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventSourceName)) {
             body.put("EventSourceName", request.eventSourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalSourceConfigShrink)) {
+            body.put("ExternalSourceConfig", request.externalSourceConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalSourceType)) {
+            body.put("ExternalSourceType", request.externalSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.linkedExternalSource)) {
+            body.put("LinkedExternalSource", request.linkedExternalSource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceHttpEventParametersShrink)) {
@@ -2520,10 +2716,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates an event source.
-     *
-     * @description You can call this API operation to update an event source.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to update an event source.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an event source.</p>
+     * 
      * @param request UpdateEventSourceRequest
      * @return UpdateEventSourceResponse
      */
@@ -2533,10 +2731,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-     *
-     * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * 
      * @param tmpReq UpdateEventStreamingRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateEventStreamingResponse
@@ -2608,10 +2808,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-     *
-     * @description You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to modify the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the information about an event stream, such as the basic information and the information about the event source, event filtering rule, and event target.</p>
+     * 
      * @param request UpdateEventStreamingRequest
      * @return UpdateEventStreamingResponse
      */
@@ -2621,10 +2823,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of an event rule.
-     *
-     * @description You can call this API operation to update the configurations of an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to update the configurations of an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configurations of an event rule.</p>
+     * 
      * @param request UpdateRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateRuleResponse
@@ -2670,10 +2874,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of an event rule.
-     *
-     * @description You can call this API operation to update the configurations of an event rule.
-     *
+     * <b>description</b> :
+     * <p>You can call this API operation to update the configurations of an event rule.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configurations of an event rule.</p>
+     * 
      * @param request UpdateRuleRequest
      * @return UpdateRuleResponse
      */

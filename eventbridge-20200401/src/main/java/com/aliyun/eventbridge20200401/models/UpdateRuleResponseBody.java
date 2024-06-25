@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class UpdateRuleResponseBody extends TeaModel {
     /**
      * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The result of the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The error message that is returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EventRuleFilterPatternSchemaError</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7439944D-D9FC-5614-B65E-07A468988924</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     /**
      * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidArgument</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5f80e9b3-98d5-4f51-8412-c758818a03e4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. If the operation is successful, the value true is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     public static class ListAliyunOfficialEventSourcesResponseBodyDataEventSourceListEventTypes extends TeaModel {
         /**
          * <p>The name of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("EventSourceName")
         public String eventSourceName;
 
         /**
          * <p>The name of the group to which the event type belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyuncvc:MeetingEvent</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The full name of the event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyuncvc:MeetingEvent:MeetingStateEvent</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The short name of the event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MeetingStateEvent</p>
          */
         @NameInMap("ShortName")
         public String shortName;
@@ -146,12 +170,18 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     public static class ListAliyunOfficialEventSourcesResponseBodyDataEventSourceList extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:SYSTEM:eventsource/acs.aliyuncvc</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The time when the event source was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607071602000</p>
          */
         @NameInMap("Ctime")
         public Float ctime;
@@ -164,6 +194,9 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the event source to which the event type belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs.aliyuncvc</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
@@ -176,24 +209,36 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
 
         /**
          * <p>The full name of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E-MapReduce</p>
          */
         @NameInMap("FullName")
         public String fullName;
 
         /**
          * <p>The name of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs.aliyuncvc</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The status of the event source. Valid value: Activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Activated</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public String type;

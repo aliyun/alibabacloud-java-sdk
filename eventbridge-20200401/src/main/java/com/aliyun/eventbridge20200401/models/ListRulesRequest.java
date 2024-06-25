@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class ListRulesRequest extends TeaModel {
     /**
      * <p>The name of the event bus.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
 
     /**
      * <p>The maximum number of entries to be returned in a single call. You can use this parameter and the NextToken parameter to implement paging. A maximum of 100 entries can be returned in a single call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>If you set the Limit parameter and excess return values exist, this parameter is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The prefix of the rule name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RuleNamePrefix")
     public String ruleNamePrefix;

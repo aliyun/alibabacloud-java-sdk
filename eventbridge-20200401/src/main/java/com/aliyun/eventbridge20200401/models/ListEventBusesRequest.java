@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListEventBusesRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Note: Up to 100 entries can be returned in a call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The prefix of the names of the event buses that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My</p>
      */
     @NameInMap("NamePrefix")
     public String namePrefix;
 
     /**
      * <p>If you set Limit and excess return values exist, this parameter is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

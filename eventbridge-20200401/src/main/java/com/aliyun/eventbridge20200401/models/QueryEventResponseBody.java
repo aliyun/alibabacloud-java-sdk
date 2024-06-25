@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryEventResponseBody extends TeaModel {
     /**
      * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryEventResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EventBusNotExist</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>580A938B-6107-586C-8EC7-F22EEBEDA9E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class CreateEventStreamingResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   Success: The request is successful.</p>
-     * <p>*   Other codes: The request failed. For more information about error codes, see Error codes.</p>
+     * <ul>
+     * <li>Success: The request is successful.</li>
+     * <li>Other codes: The request failed. For more information about error codes, see Error codes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,18 +25,27 @@ public class CreateEventStreamingResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The name [xxxx] of event streaming in request is already exist!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B896B484-F16D-59DE-9E23-DD0E5C361108</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,6 +98,9 @@ public class CreateEventStreamingResponseBody extends TeaModel {
     public static class CreateEventStreamingResponseBodyData extends TeaModel {
         /**
          * <p>The ARN of the event stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:164901546557****:eventstreaming/myeventstreaming</p>
          */
         @NameInMap("EventStreamingARN")
         public String eventStreamingARN;

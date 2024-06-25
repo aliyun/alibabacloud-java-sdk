@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListConnectionsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. The value Success indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,12 +21,18 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E3619976-8714-5D88-BBA2-6983D798A8BB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class ListConnectionsResponseBody extends TeaModel {
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersApiKeyAuthParameters extends TeaModel {
         /**
          * <p>The API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Token</p>
          */
         @NameInMap("ApiKeyName")
         public String apiKeyName;
 
         /**
          * <p>The value of the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdkjnqkwejooa</p>
          */
         @NameInMap("ApiKeyValue")
         public String apiKeyValue;
@@ -104,12 +119,18 @@ public class ListConnectionsResponseBody extends TeaModel {
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersBasicAuthParameters extends TeaModel {
         /**
          * <p>The password for basic authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>The username for basic authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         @NameInMap("Username")
         public String username;
@@ -140,12 +161,18 @@ public class ListConnectionsResponseBody extends TeaModel {
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersClientParameters extends TeaModel {
         /**
          * <p>The client ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClientID</p>
          */
         @NameInMap("ClientID")
         public String clientID;
 
         /**
          * <p>The client key secret of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClientSecret</p>
          */
         @NameInMap("ClientSecret")
         public String clientSecret;
@@ -176,18 +203,27 @@ public class ListConnectionsResponseBody extends TeaModel {
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersBodyParameters extends TeaModel {
         /**
          * <p>Indicates whether authentication is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsValueSecret")
         public String isValueSecret;
 
         /**
          * <p>The key in the request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the key in the request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("Value")
         public String value;
@@ -226,18 +262,27 @@ public class ListConnectionsResponseBody extends TeaModel {
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters extends TeaModel {
         /**
          * <p>Indicates whether authentication is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsValueSecret")
         public String isValueSecret;
 
         /**
          * <p>The key in the request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the key in the request header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("Value")
         public String value;
@@ -276,18 +321,27 @@ public class ListConnectionsResponseBody extends TeaModel {
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters extends TeaModel {
         /**
          * <p>Indicates whether authentication is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsValueSecret")
         public String isValueSecret;
 
         /**
          * <p>The key in the request path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the key in the request path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("Value")
         public String value;
@@ -376,6 +430,9 @@ public class ListConnectionsResponseBody extends TeaModel {
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParameters extends TeaModel {
         /**
          * <p>The endpoint that is used to obtain the OAuth token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://localhost:8080/oauth/token">http://localhost:8080/oauth/token</a></p>
          */
         @NameInMap("AuthorizationEndpoint")
         public String authorizationEndpoint;
@@ -388,12 +445,17 @@ public class ListConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The HTTP request method. Valid values:</p>
-         * <br>
-         * <p>- GET</p>
-         * <br>
-         * <p>- POST</p>
-         * <br>
-         * <p>- HEAD</p>
+         * <ul>
+         * <li><p>GET</p>
+         * </li>
+         * <li><p>POST</p>
+         * </li>
+         * <li><p>HEAD</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         @NameInMap("HttpMethod")
         public String httpMethod;
@@ -452,12 +514,17 @@ public class ListConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The authentication type. Valid values:</p>
-         * <br>
-         * <p>- BASIC_AUTH: basic authentication.</p>
-         * <br>
-         * <p>- API_KEY_AUTH: API key authentication.</p>
-         * <br>
-         * <p>- OAUTH_AUTH: OAuth authentication.</p>
+         * <ul>
+         * <li><p>BASIC_AUTH: basic authentication.</p>
+         * </li>
+         * <li><p>API_KEY_AUTH: API key authentication.</p>
+         * </li>
+         * <li><p>OAUTH_AUTH: OAuth authentication.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC_AUTH</p>
          */
         @NameInMap("AuthorizationType")
         public String authorizationType;
@@ -516,24 +583,36 @@ public class ListConnectionsResponseBody extends TeaModel {
     public static class ListConnectionsResponseBodyDataConnectionsNetworkParameters extends TeaModel {
         /**
          * <p>The network type. Valid values:PublicNetwork and PrivateNetwork.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicNetwork</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
          * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eb-167adad548759-security_grop/sg-bp1addad26peuh9qh9rtyb</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>The virtual private cloud (VPC) ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eb-test/vpc-bp1symadadwnwgmqud</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1iu4x7aeradadown1og8,vsw-bp193sqmadadlaszpeqbt2c</p>
          */
         @NameInMap("VswitcheId")
         public String vswitcheId;
@@ -586,24 +665,36 @@ public class ListConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The connection name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection-name</p>
          */
         @NameInMap("ConnectionName")
         public String connectionName;
 
         /**
          * <p>The connection description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The description of the connection.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the connection was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1592838994234</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1141093</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -675,18 +766,27 @@ public class ListConnectionsResponseBody extends TeaModel {
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxResults")
         public Float maxResults;
 
         /**
          * <p>If excess return values exist, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Float total;

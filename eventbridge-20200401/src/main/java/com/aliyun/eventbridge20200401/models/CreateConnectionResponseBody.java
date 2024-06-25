@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateConnectionResponseBody extends TeaModel {
     /**
      * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,12 +21,18 @@ public class CreateConnectionResponseBody extends TeaModel {
 
     /**
      * <p>The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7DA60DED-CD36-5837-B848-C01A23D2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,6 +77,9 @@ public class CreateConnectionResponseBody extends TeaModel {
     public static class CreateConnectionResponseBodyData extends TeaModel {
         /**
          * <p>The connection name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection-demo</p>
          */
         @NameInMap("ConnectionName")
         public String connectionName;

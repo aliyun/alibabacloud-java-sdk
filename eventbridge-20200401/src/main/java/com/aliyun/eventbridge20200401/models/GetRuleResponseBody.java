@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetRuleResponseBody extends TeaModel {
     /**
      * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For a list of error codes, see Error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class GetRuleResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The event rule not existed!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2BC1857D-E633-5E79-B2C2-43EF5F7730D8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. If the operation is successful, the value true is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -79,9 +91,31 @@ public class GetRuleResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetRuleResponseBodyDataTargetsConcurrentConfig extends TeaModel {
+        @NameInMap("Concurrency")
+        public Long concurrency;
+
+        public static GetRuleResponseBodyDataTargetsConcurrentConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetRuleResponseBodyDataTargetsConcurrentConfig self = new GetRuleResponseBodyDataTargetsConcurrentConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRuleResponseBodyDataTargetsConcurrentConfig setConcurrency(Long concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public Long getConcurrency() {
+            return this.concurrency;
+        }
+
+    }
+
     public static class GetRuleResponseBodyDataTargetsDeadLetterQueue extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:164901546557****:eventbus/my-event-bus/eventsource/myRocketMQ.source</p>
          */
         @NameInMap("Arn")
         public String arn;
@@ -103,25 +137,37 @@ public class GetRuleResponseBody extends TeaModel {
 
     public static class GetRuleResponseBodyDataTargetsParamList extends TeaModel {
         /**
-         * <p>The method that is used to deliver events to the event target. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
+         * <p>The method that is used to deliver events to the event target. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEMPLATE</p>
          */
         @NameInMap("Form")
         public String form;
 
         /**
-         * <p>The resource key of the event target. For more information, see [Limits](https://help.aliyun.com/document_detail/163289.html).</p>
+         * <p>The resource key of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>body</p>
          */
         @NameInMap("ResourceKey")
         public String resourceKey;
 
         /**
          * <p>The template based on which events are delivered to the event target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
 
         /**
          * <p>The event target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;key\&quot;=\&quot;value\&quot;}</p>
          */
         @NameInMap("Value")
         public String value;
@@ -166,6 +212,9 @@ public class GetRuleResponseBody extends TeaModel {
     }
 
     public static class GetRuleResponseBodyDataTargets extends TeaModel {
+        @NameInMap("ConcurrentConfig")
+        public GetRuleResponseBodyDataTargetsConcurrentConfig concurrentConfig;
+
         /**
          * <p>The dead-letter queue.</p>
          */
@@ -180,18 +229,27 @@ public class GetRuleResponseBody extends TeaModel {
 
         /**
          * <p>The endpoint of the event target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:mns:cn-hangzhou:123456789098****:queues/myqueue</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The fault tolerance policy. Valid values: ALL: Fault tolerance is allowed. If an error occurs in an event, event processing is not blocked. If the event fails to be sent after the maximum number of retries specified by the retry policy is reached, the event is delivered to the dead-letter queue or discarded based on your configurations. NONE: Fault tolerance is not allowed. If an error occurs in an event and the event fails to be sent after the maximum number of retries specified by the retry policy is reached, event processing is blocked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
          */
         @NameInMap("ErrorsTolerance")
         public String errorsTolerance;
 
         /**
          * <p>The ID of the event target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public String id;
@@ -204,18 +262,27 @@ public class GetRuleResponseBody extends TeaModel {
 
         /**
          * <p>The retry policy that is used to push failed events. Valid values: BACKOFF_RETRY: backoff retry. A failed event can be retried up to three times. The interval between two consecutive retries is a random value between 10 seconds and 20 seconds. EXPONENTIAL_DECAY_RETRY: exponential decay retry. A failed event can be retried up to 176 times. The interval between two consecutive retries exponentially increases to a maximum of 512 seconds. The total retry time is 1 day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, and 512 seconds. The interval of 512 seconds is used for 167 retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BACKOFF_RETRY</p>
          */
         @NameInMap("PushRetryStrategy")
         public String pushRetryStrategy;
 
         /**
          * <p>The transformer that is used to push events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MATCHED_EVENT</p>
          */
         @NameInMap("PushSelector")
         public String pushSelector;
 
         /**
-         * <p>The type of the event target. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/185887.html).</p>
+         * <p>The type of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs.mns.queue</p>
          */
         @NameInMap("Type")
         public String type;
@@ -223,6 +290,14 @@ public class GetRuleResponseBody extends TeaModel {
         public static GetRuleResponseBodyDataTargets build(java.util.Map<String, ?> map) throws Exception {
             GetRuleResponseBodyDataTargets self = new GetRuleResponseBodyDataTargets();
             return TeaModel.build(map, self);
+        }
+
+        public GetRuleResponseBodyDataTargets setConcurrentConfig(GetRuleResponseBodyDataTargetsConcurrentConfig concurrentConfig) {
+            this.concurrentConfig = concurrentConfig;
+            return this;
+        }
+        public GetRuleResponseBodyDataTargetsConcurrentConfig getConcurrentConfig() {
+            return this.concurrentConfig;
         }
 
         public GetRuleResponseBodyDataTargets setDeadLetterQueue(GetRuleResponseBodyDataTargetsDeadLetterQueue deadLetterQueue) {
@@ -302,44 +377,64 @@ public class GetRuleResponseBody extends TeaModel {
     public static class GetRuleResponseBodyData extends TeaModel {
         /**
          * <p>The timestamp that indicates when the event rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1607071602000</p>
          */
         @NameInMap("CreatedTimestamp")
         public Long createdTimestamp;
 
         /**
          * <p>The description of the event rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Housekeeping-Bus</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
 
         /**
          * <p>The event pattern, in JSON format. Valid values: stringEqual and stringExpression. You can specify up to five expressions in the map data structure in each field.</p>
-         * <br>
          * <p>You can specify up to five expressions in the map data structure in each field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;source\&quot;:[\&quot;acs.oss\&quot;],\&quot;type\&quot;:[\&quot;oss:BucketQueried:GetBucketStat\&quot;]}</p>
          */
         @NameInMap("FilterPattern")
         public String filterPattern;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the event rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:123456789098****:eventbus/default/rule/myRule3</p>
          */
         @NameInMap("RuleARN")
         public String ruleARN;
 
         /**
          * <p>The name of the event rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ramrolechange-fc</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The status of the event rule. Valid values: ENABLE (default): The event rule is enabled. DISABLE: The event rule is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
          */
         @NameInMap("Status")
         public String status;

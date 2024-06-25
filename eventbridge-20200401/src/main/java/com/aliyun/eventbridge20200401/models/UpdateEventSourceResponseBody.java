@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class UpdateEventSourceResponseBody extends TeaModel {
     /**
      * <p>The returned response code. Valid values:</p>
-     * <br>
-     * <p>*   Success: The request is successful.</p>
-     * <p>*   Other codes: The request failed. For more information about error codes, see Error codes.</p>
+     * <ul>
+     * <li>Success: The request is successful.</li>
+     * <li>Other codes: The request failed. For more information about error codes, see Error codes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The result of the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Remote error. requestId: [xxxx-9D10-65DFDFA3A75D], error code: [EventSourceNotExist], message: [The event source in request is not exist! ]</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c057d379-ea65-41ec-a8a8-90627a968204</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. The value true indicates that the operation is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

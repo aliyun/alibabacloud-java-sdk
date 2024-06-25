@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteEventStreamingRequest extends TeaModel {
     /**
      * <p>The name of the event stream that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rocketmq-sync</p>
      */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;

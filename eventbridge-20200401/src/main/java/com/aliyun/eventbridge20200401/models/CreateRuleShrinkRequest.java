@@ -12,8 +12,10 @@ public class CreateRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the event bus.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyEventBus</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
@@ -26,24 +28,30 @@ public class CreateRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The event pattern, in JSON format. Valid values: stringEqual and stringExpression. You can specify up to five expressions in the map data structure in each field.</p>
-     * <br>
      * <p>You can specify up to five expressions in the map data structure in each field.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;source\&quot;: [{\&quot;prefix\&quot;: \&quot;acs.\&quot;}],\&quot;type\&quot;: [{\&quot;prefix\&quot;:\&quot;oss:ObjectReplication\&quot;}],\&quot;subject\&quot;:[{\&quot;prefix\&quot;:\&quot;acs:oss:cn-hangzhou:123456789098****:my-movie-bucket/\&quot;, \&quot;suffix\&quot;:\&quot;.txt\&quot;}]}</p>
      */
     @NameInMap("FilterPattern")
     public String filterPattern;
 
     /**
      * <p>The name of the event rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MNSRule</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The status of the event rule. Valid values: ENABLE: enables the event rule. It is the default status of the event rule. DISABLE: disables the event rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENABLE</p>
      */
     @NameInMap("Status")
     public String status;

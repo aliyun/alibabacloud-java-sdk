@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteTargetsShrinkRequest extends TeaModel {
     /**
      * <p>The name of the event bus.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyEventBus</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
 
     /**
      * <p>The name of the event rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ramrolechange-mns</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
