@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeDatabasesRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The name of the database.</p>
-     * <br>
-     * <p>> You cannot specify multiple database names.</p>
+     * <blockquote>
+     * <p>You cannot specify multiple database names.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test_db</p>
      */
     @NameInMap("DBName")
     public String DBName;
@@ -27,19 +33,25 @@ public class DescribeDatabasesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: **1**.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
-     * <br>
-     * <p>Default value: **30**.</p>
+     * <ul>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

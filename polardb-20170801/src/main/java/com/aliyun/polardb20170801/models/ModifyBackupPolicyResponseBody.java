@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyBackupPolicyResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5A5DF0E-5968-4DC1-882E-AC2FE7******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

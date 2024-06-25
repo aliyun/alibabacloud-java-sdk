@@ -6,28 +6,43 @@ import com.aliyun.tea.*;
 public class DescribeMetaListRequest extends TeaModel {
     /**
      * <p>The ID of the data backup file.</p>
-     * <br>
-     * <p>>*   When you run a query, you must specify the `BackId` or `RestoreTime` parameter.</p>
-     * <p>>*   You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the ID of the backup set.</p>
+     * <blockquote>
+     * <ul>
+     * <li>When you run a query, you must specify the <code>BackId</code> or <code>RestoreTime</code> parameter.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the ID of the backup set.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>111111</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of all clusters under your account.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>Specify the specific database name (such as `test_db`) to query the names of all data tables that can be restored in the desired database.</p>
-     * <br>
-     * <p>>*   You can specify only one database name each time.</p>
-     * <p>>*   If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.</p>
+     * <p>Specify the specific database name (such as <code>test_db</code>) to query the names of all data tables that can be restored in the desired database.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can specify only one database name each time.</li>
+     * <li>If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test_db</p>
      */
     @NameInMap("GetDbName")
     public String getDbName;
@@ -39,27 +54,37 @@ public class DescribeMetaListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <br>
-     * <p>*   **50**</p>
-     * <br>
-     * <p>*   **100**</p>
-     * <br>
-     * <p>    Default value: **30**.</p>
+     * <ul>
+     * <li><p><strong>30</strong></p>
+     * </li>
+     * <li><p><strong>50</strong></p>
+     * </li>
+     * <li><p><strong>100</strong></p>
+     * <p>Default value: <strong>30</strong>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBClusterAttribute](https://help.aliyun.com/document_detail/2319132.html) operation to query the region ID of the instance.</p>
+     * <p>The ID of the region in which the instance resides. You can call the <a href="https://help.aliyun.com/document_detail/2319132.html">DescribeDBClusterAttribute</a> operation to query the region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;
@@ -72,8 +97,12 @@ public class DescribeMetaListRequest extends TeaModel {
 
     /**
      * <p>The point in time for the restoration. Specify the time in the YYYY-MM-DDThh:mmZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>>  When you run a query, you must specify the `BackId` or `RestoreTime` parameter. You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the point in time for the restoration.</p>
+     * <blockquote>
+     * <p> When you run a query, you must specify the <code>BackId</code> or <code>RestoreTime</code> parameter. You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the point in time for the restoration.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-04T01:40:00Z</p>
      */
     @NameInMap("RestoreTime")
     public String restoreTime;

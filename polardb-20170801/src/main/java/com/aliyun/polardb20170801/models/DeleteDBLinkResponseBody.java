@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDBLinkResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9F1CB1A-B1D5-4EF5-A53A-************</p>
      */
     @NameInMap("RequestId")
     public String requestId;

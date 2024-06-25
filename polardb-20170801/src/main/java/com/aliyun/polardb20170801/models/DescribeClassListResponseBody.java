@@ -12,12 +12,18 @@ public class DescribeClassListResponseBody extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,105 +60,155 @@ public class DescribeClassListResponseBody extends TeaModel {
     public static class DescribeClassListResponseBodyItems extends TeaModel {
         /**
          * <p>The specifications of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.medium</p>
          */
         @NameInMap("ClassCode")
         public String classCode;
 
         /**
          * <p>The instance family of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   Exclusive package: dedicated</p>
-         * <p>*   Exclusive physical machine: dedicated host</p>
-         * <p>*   Beginner: starter</p>
-         * <p>*   Historical specifications: historical</p>
+         * <ul>
+         * <li>Exclusive package: dedicated</li>
+         * <li>Exclusive physical machine: dedicated host</li>
+         * <li>Beginner: starter</li>
+         * <li>Historical specifications: historical</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Exclusive package</p>
          */
         @NameInMap("ClassGroup")
         public String classGroup;
 
         /**
          * <p>The specification type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         @NameInMap("ClassTypeLevel")
         public String classTypeLevel;
 
         /**
          * <p>The number of vCPU cores. Unit: cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Cpu")
         public String cpu;
 
         /**
          * <p>The maximum number of concurrent connections in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         @NameInMap("MaxConnections")
         public String maxConnections;
 
         /**
          * <p>The maximum IOPS. Unit: operations per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32000</p>
          */
         @NameInMap("MaxIOPS")
         public String maxIOPS;
 
         /**
          * <p>The maximum storage capacity. Unit: TB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxStorageCapacity")
         public String maxStorageCapacity;
 
         /**
          * <p>The memory size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("MemoryClass")
         public String memoryClass;
 
         /**
          * <p>The maximum IOPS of an enhanced SSD (ESSD) of performance level 1 (PL1). Unit: operations per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000</p>
          */
         @NameInMap("Pl1MaxIOPS")
         public String pl1MaxIOPS;
 
         /**
          * <p>The maximum IOPS of an ESSD of performance level 2 (PL2). Unit: operations per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("Pl2MaxIOPS")
         public String pl2MaxIOPS;
 
         /**
          * <p>The maximum IOPS of an ESSD of performance level 3 (PL3). Unit: operations per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000</p>
          */
         @NameInMap("Pl3MaxIOPS")
         public String pl3MaxIOPS;
 
         /**
          * <p>The maximum Input/output operations per second (IOPS) for PolarStore Level 4 (PSL4). Unit: operations per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48000</p>
          */
         @NameInMap("Psl4MaxIOPS")
         public String psl4MaxIOPS;
 
         /**
          * <p>The maximum IOPS for PolarStore Level 5 (PSL5). Unit: operations per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96000</p>
          */
         @NameInMap("Psl5MaxIOPS")
         public String psl5MaxIOPS;
 
         /**
          * <p>The additional price.</p>
-         * <br>
          * <p>Unit: cents (USD).</p>
-         * <br>
-         * <p>>- If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the same as the value of ReferencePrice.</p>
-         * <p>>- If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the price of the single-node cluster.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the same as the value of ReferencePrice.</li>
+         * <li>If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the price of the single-node cluster.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200000</p>
          */
         @NameInMap("ReferenceExtPrice")
         public String referenceExtPrice;
 
         /**
          * <p>The price.</p>
-         * <br>
          * <p>Unit: cents (USD).</p>
-         * <br>
-         * <p>>- If you set CommodityCode to a commodity that uses the pay-as-you-go billing method, ReferencePrice indicates the hourly fee that you need to pay.</p>
-         * <p>>- If you set CommodityCode to a commodity that uses the subscription billing method, ReferencePrice indicates the monthly fee that you need to pay.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set CommodityCode to a commodity that uses the pay-as-you-go billing method, ReferencePrice indicates the hourly fee that you need to pay.</li>
+         * <li>If you set CommodityCode to a commodity that uses the subscription billing method, ReferencePrice indicates the monthly fee that you need to pay.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200000</p>
          */
         @NameInMap("ReferencePrice")
         public String referencePrice;

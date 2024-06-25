@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteParameterGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F7195E7-5F74-479D-AF59-1B4BF9******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

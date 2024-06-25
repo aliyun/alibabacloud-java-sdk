@@ -6,91 +6,124 @@ import com.aliyun.tea.*;
 public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The description of the account. The description must meet the following requirements:</p>
-     * <br>
-     * <p>*   It cannot start with `http://` or `https://`.</p>
-     * <p>*   It must be 2 to 256 characters in length.</p>
+     * <ul>
+     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It must be 2 to 256 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>testdes</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
      * <p>The name of the account. The name must meet the following requirements:</p>
-     * <br>
-     * <p>*   It must start with a lowercase letter and end with a letter or a digit.</p>
-     * <p>*   It can contain lowercase letters, digits, and underscores (_).</p>
-     * <p>*   It must be 2 to 16 characters in length.</p>
-     * <p>*   It cannot be root, admin, or another username that is reserved by the system.</p>
-     * <br>
+     * <ul>
+     * <li>It must start with a lowercase letter and end with a letter or a digit.</li>
+     * <li>It can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>It must be 2 to 16 characters in length.</li>
+     * <li>It cannot be root, admin, or another username that is reserved by the system.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The password of the account. The password must meet the following requirements:</p>
-     * <br>
-     * <p>*   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   It must be 8 to 32 characters in length.</p>
-     * <p>*   Special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
-     * <br>
+     * <ul>
+     * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>It must be 8 to 32 characters in length.</li>
+     * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test1111</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>The permissions that are granted to the account. Valid values:</p>
-     * <br>
-     * <p>*   **ReadWrite**: read and write permissions</p>
-     * <p>*   **ReadOnly**: read-only permissions</p>
-     * <p>*   **DMLOnly**: the permissions to execute only DML statements</p>
-     * <p>*   **DDLOnly**: the permissions to execute only DDL statements</p>
-     * <p>*   **ReadIndex**: the read and index permissions</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The `AccountPrivilege` parameter is valid only after you specify the `DBName` parameter.</p>
-     * <br>
-     * <p>*   If multiple database names are specified by the `DBName` parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,). For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set `DBName` to `DB1,DB2`, and set `AccountPrivilege` to `ReadWrite,ReadOnly`.</p>
-     * <p>*   This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
+     * <ul>
+     * <li><strong>ReadWrite</strong>: read and write permissions</li>
+     * <li><strong>ReadOnly</strong>: read-only permissions</li>
+     * <li><strong>DMLOnly</strong>: the permissions to execute only DML statements</li>
+     * <li><strong>DDLOnly</strong>: the permissions to execute only DDL statements</li>
+     * <li><strong>ReadIndex</strong>: the read and index permissions</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The <code>AccountPrivilege</code> parameter is valid only after you specify the <code>DBName</code> parameter.</p>
+     * </li>
+     * <li><p>If multiple database names are specified by the <code>DBName</code> parameter, you must grant permissions on the databases. Separate multiple permissions with commas (,). For example, if you want to grant the account the read and write permissions on DB1 and the read-only permissions on DB2, set <code>DBName</code> to <code>DB1,DB2</code>, and set <code>AccountPrivilege</code> to <code>ReadWrite,ReadOnly</code>.</p>
+     * </li>
+     * <li><p>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ReadWrite</p>
      */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
     /**
      * <p>The type of the account. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**: standard account</p>
-     * <p>*   **Super**: privileged account</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you leave this parameter empty, the default value **Super** is used.</p>
-     * <br>
-     * <p>*   You can create multiple privileged accounts for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see [Create a database account](https://help.aliyun.com/document_detail/68508.html).</p>
-     * <p>*   You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see [Create a database account](https://help.aliyun.com/document_detail/68508.html).</p>
+     * <ul>
+     * <li><strong>Normal</strong>: standard account</li>
+     * <li><strong>Super</strong>: privileged account</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If you leave this parameter empty, the default value <strong>Super</strong> is used.</p>
+     * </li>
+     * <li><p>You can create multiple privileged accounts for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
+     * </li>
+     * <li><p>You can create only one privileged account for a PolarDB for MySQL cluster. A privileged account is granted more permissions than a standard account. For more information about how to create a database account, see <a href="https://help.aliyun.com/document_detail/68508.html">Create a database account</a>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("AccountType")
     public String accountType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The name of the database that can be accessed by the account. To enter multiple database names, separate the names with commas (,).</p>
-     * <br>
-     * <p>> This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
+     * <blockquote>
+     * <p>This parameter is valid only for standard accounts of PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
      */
     @NameInMap("DBName")
     public String DBName;

@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterTDERequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specifies whether to enable automatic encryption for new tables. Valid values:</p>
-     * <br>
-     * <p>*   **ON**</p>
-     * <p>*   **OFF**</p>
+     * <ul>
+     * <li><strong>ON</strong></li>
+     * <li><strong>OFF</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ON</p>
      */
     @NameInMap("EncryptNewTables")
     public String encryptNewTables;
 
     /**
      * <p>The ID of the custom key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong>*****</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
@@ -40,15 +49,20 @@ public class ModifyDBClusterTDERequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see [RAM role overview](https://help.aliyun.com/document_detail/93689.html).</p>
+     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
 
     /**
-     * <p>Modifies the TDE status. Set the value to **Enable**.</p>
-     * <br>
+     * <p>Modifies the TDE status. Set the value to <strong>Enable</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("TDEStatus")
     public String TDEStatus;

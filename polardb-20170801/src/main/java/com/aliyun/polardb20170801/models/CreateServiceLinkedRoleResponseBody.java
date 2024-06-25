@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateServiceLinkedRoleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F9E6A3B-C13E-4064-A010-18582A******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

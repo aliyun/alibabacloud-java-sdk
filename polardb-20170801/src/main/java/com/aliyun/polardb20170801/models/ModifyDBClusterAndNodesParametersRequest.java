@@ -6,25 +6,35 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The node ID. You can set this parameter to modify the parameters of a specified node or of the cluster. Separate multiple node IDs with commas (,).</p>
-     * <br>
-     * <p>> If you do not specify this parameter, only the cluster parameters are modified.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, only the cluster parameters are modified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-****************,pi-**********,</p>
      */
     @NameInMap("DBNodeIds")
     public String DBNodeIds;
 
     /**
      * <p>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **false**: runs the kernel upgrade task in a scheduled manner.</p>
-     * <p>*   **true**: immediately runs the kernel upgrade task.</p>
+     * <ul>
+     * <li><strong>false</strong>: runs the kernel upgrade task in a scheduled manner.</li>
+     * <li><strong>true</strong>: immediately runs the kernel upgrade task.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("FromTimeService")
     public Boolean fromTimeService;
@@ -37,36 +47,52 @@ public class ModifyDBClusterAndNodesParametersRequest extends TeaModel {
 
     /**
      * <p>The ID of the parameter template that is used for the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pcpg-**************</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
     /**
      * <p>The JSON string for the parameter and its value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
-     * <p>The latest start time to run the task. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.</p>
-     * <br>
-     * <p>*   By default, if you specify the `PlannedStartTime` parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: `Value of the PlannedEndTime parameter + 30 minutes`. For example, if you set the `PlannedStartTime` parameter to `2021-01-14T09:00:00Z` and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to `2021-01-14T09:30:00Z`.</p>
+     * <p>The latest start time to run the task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.</p>
+     * </li>
+     * <li><p>By default, if you specify the <code>PlannedStartTime</code> parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: <code>Value of the PlannedEndTime parameter + 30 minutes</code>. For example, if you set the <code>PlannedStartTime</code> parameter to <code>2021-01-14T09:00:00Z</code> and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-14T09:30:00Z</p>
      */
     @NameInMap("PlannedEndTime")
     public String plannedEndTime;
 
     /**
-     * <p>The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in the time range from `2021-01-14T09:00:00Z` to `2021-01-15T09:00:00Z`.</p>
-     * <br>
-     * <p>*   If this parameter is empty, the upgrade task is immediately performed.</p>
+     * <p>The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in the time range from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</p>
+     * </li>
+     * <li><p>If this parameter is empty, the upgrade task is immediately performed.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-14T09:00:00Z</p>
      */
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;

@@ -6,26 +6,33 @@ import com.aliyun.tea.*;
 public class RevokeAccountPrivilegeRequest extends TeaModel {
     /**
      * <p>The name of the account.</p>
-     * <br>
-     * <p>>  You can specify only a standard account.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can specify only a standard account.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The ID of the PolarDB cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The names of the databases. If you need to specify multiple database names, separate the names with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
      */
     @NameInMap("DBName")
     public String DBName;

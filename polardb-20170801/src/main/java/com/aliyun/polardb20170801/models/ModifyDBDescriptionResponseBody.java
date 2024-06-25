@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDBDescriptionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5F295AAB-B599-4F0E-96D0-DBFAB3******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

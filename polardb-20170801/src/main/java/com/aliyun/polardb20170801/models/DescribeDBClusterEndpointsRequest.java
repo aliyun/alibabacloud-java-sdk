@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterEndpointsRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-*************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pe-*************</p>
      */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AI</p>
+     */
     @NameInMap("DescribeType")
     public String describeType;
 

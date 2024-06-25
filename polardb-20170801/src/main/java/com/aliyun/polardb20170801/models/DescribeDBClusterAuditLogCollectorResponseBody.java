@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
     /**
      * <p>The status of SQL collector. Valid values:</p>
-     * <br>
-     * <p>*   Enable</p>
-     * <p>*   Disabled</p>
+     * <ul>
+     * <li>Enable</li>
+     * <li>Disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
      */
     @NameInMap("CollectorStatus")
     public String collectorStatus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59011D2B-2A38-4207-A86C-72BC1F882D19</p>
      */
     @NameInMap("RequestId")
     public String requestId;

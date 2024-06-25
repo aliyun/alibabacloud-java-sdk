@@ -4,6 +4,10 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterResourceGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>70656639-1416-479F-AF13-D08197******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

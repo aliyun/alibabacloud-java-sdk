@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class DescribeBackupTasksRequest extends TeaModel {
     /**
      * <p>The ID of the backup task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111111</p>
      */
     @NameInMap("BackupJobId")
     public String backupJobId;
 
     /**
      * <p>The backup mode. Valid values:</p>
-     * <br>
-     * <p>*   **Automated**</p>
-     * <p>*   **Manual**</p>
+     * <ul>
+     * <li><strong>Automated</strong></li>
+     * <li><strong>Manual</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Manual</p>
      */
     @NameInMap("BackupMode")
     public String backupMode;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-***************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterAuditLogCollectorResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22C0ACF0-DD29-4B67-9190-B7A48C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

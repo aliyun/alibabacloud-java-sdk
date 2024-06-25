@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-*****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The type of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("DBType")
     public String DBType;
 
     /**
      * <p>The version of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
 
     /**
-     * <p>The end time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+     * <p>The end time of the query. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-09-23T01:01:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -36,12 +48,18 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>35D3E3DA-4650-407A-BFF5-59BFF1******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The start time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+     * <p>The start time of the query. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-09-23T01:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -110,12 +128,18 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
         /**
          * <p>The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1600822800000</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.38</p>
          */
         @NameInMap("Value")
         public String value;
@@ -165,20 +189,30 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem extends TeaModel {
         /**
          * <p>The ID of the cluster node.</p>
-         * <br>
-         * <p>>  The value of this parameter is not returned if the `Key` parameter is set to `PolarDBDiskUsage`.</p>
+         * <blockquote>
+         * <p> The value of this parameter is not returned if the <code>Key</code> parameter is set to <code>PolarDBDiskUsage</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-*************</p>
          */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
         /**
          * <p>The performance metrics that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PolarDBDiskUsage</p>
          */
         @NameInMap("Measurement")
         public String measurement;
 
         /**
          * <p>The name of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mean_data_size</p>
          */
         @NameInMap("MetricName")
         public String metricName;

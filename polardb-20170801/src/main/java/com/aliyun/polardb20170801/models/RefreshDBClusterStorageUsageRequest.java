@@ -18,9 +18,13 @@ public class RefreshDBClusterStorageUsageRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable real-time synchronization. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**: T + 1</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong>: T + 1</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SyncRealTime")
     public Boolean syncRealTime;

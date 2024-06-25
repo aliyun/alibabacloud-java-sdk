@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the cluster that will become the primary cluster in the GDN.</p>
-     * <br>
-     * <p>You can call the [DescribeGlobalDatabaseNetwork](https://help.aliyun.com/document_detail/264580.html) operation to query the ID of the cluster in the GDN.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to query the ID of the cluster in the GDN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-wz9fb5nn44u1d****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specifies whether to forcibly switch over the primary and secondary clusters in the GDN. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Forced")
     public Boolean forced;
 
     /**
      * <p>The ID of the GDN.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gdn-bp1fttxsrmv*****</p>
      */
     @NameInMap("GDNId")
     public String GDNId;
@@ -37,12 +45,18 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

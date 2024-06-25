@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class EnableDBClusterServerlessResponseBody extends TeaModel {
     /**
      * <p>The ID of the serverless cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp10gr51qasnl****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E71541A-6007-4DCC-A38A-F872C31FEB45</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,17 +12,25 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C890995A-CF06-4F4D-8DB8-DD26C2******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **Enable**: The feature is enabled.</p>
-     * <p>*   **Disable**: The feature is disabled.</p>
-     * <br>
-     * <p>> This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * <ul>
+     * <li><strong>Enable</strong>: The feature is enabled.</li>
+     * <li><strong>Disable</strong>: The feature is disabled.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("SSLAutoRotate")
     public String SSLAutoRotate;
@@ -59,27 +67,40 @@ public class DescribeDBClusterSSLResponseBody extends TeaModel {
     public static class DescribeDBClusterSSLResponseBodyItems extends TeaModel {
         /**
          * <p>The ID of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pe-************</p>
          */
         @NameInMap("DBEndpointId")
         public String DBEndpointId;
 
         /**
          * <p>The SSL connection string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-************.mysql.polardb.rds.aliyuncs.com</p>
          */
         @NameInMap("SSLConnectionString")
         public String SSLConnectionString;
 
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **Enabled**: SSL is enabled.</p>
-         * <p>*   **Disable**: SSL is disabled.</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: SSL is enabled.</li>
+         * <li><strong>Disable</strong>: SSL is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("SSLEnabled")
         public String SSLEnabled;
 
         /**
-         * <p>The time when the server certificate expires. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the server certificate expires. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-13T07:14:22Z</p>
          */
         @NameInMap("SSLExpireTime")
         public String SSLExpireTime;

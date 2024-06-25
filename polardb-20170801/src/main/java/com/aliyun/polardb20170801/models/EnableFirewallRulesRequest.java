@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class EnableFirewallRulesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
@@ -27,6 +34,9 @@ public class EnableFirewallRulesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test111</p>
      */
     @NameInMap("RuleNameList")
     public String ruleNameList;

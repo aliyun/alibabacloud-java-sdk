@@ -12,24 +12,36 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>717B2382-BB14-4DCB-BBC2-32DBE0******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("TotalRecordCount")
     public String totalRecordCount;
@@ -82,95 +94,140 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
     public static class DescribeDetachedBackupsResponseBodyItemsBackup extends TeaModel {
         /**
          * <p>The end time of the backup task. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-12T03:25:55Z</p>
          */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
         /**
          * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111</p>
          */
         @NameInMap("BackupId")
         public String backupId;
 
         /**
-         * <p>The backup method. Only snapshot backups are supported. The value is set to **Snapshot**.</p>
+         * <p>The backup method. Only snapshot backups are supported. The value is set to <strong>Snapshot</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Snapshot</p>
          */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
         /**
          * <p>The backup mode. Valid values:</p>
-         * <br>
-         * <p>*   **Automated**</p>
-         * <p>*   **Manual**</p>
+         * <ul>
+         * <li><strong>Automated</strong></li>
+         * <li><strong>Manual</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         @NameInMap("BackupMode")
         public String backupMode;
 
         /**
          * <p>The size of the backup set. Unit: bytes.</p>
-         * <br>
-         * <p>> After you delete the target snapshot backups, the storage space consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share certain data blocks.</p>
+         * <blockquote>
+         * <p>After you delete the target snapshot backups, the storage space consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share certain data blocks.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>7251056</p>
          */
         @NameInMap("BackupSetSize")
         public String backupSetSize;
 
         /**
          * <p>The start time of the backup task. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-12T03:25:44Z</p>
          */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         /**
          * <p>The status of the backup set. Valid values:</p>
-         * <br>
-         * <p>*   **Success**</p>
-         * <p>*   **Failed**</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
-         * <p>The type of the backup. Only full backups are supported. The value is set to **FullBackup**.</p>
+         * <p>The type of the backup. Only full backups are supported. The value is set to <strong>FullBackup</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FullBackup</p>
          */
         @NameInMap("BackupType")
         public String backupType;
 
         /**
          * <p>The level of the backup set. Valid values:</p>
-         * <br>
-         * <p>*   **Level-1**: level-1 backup set</p>
-         * <p>*   **Level-2**: level-2 backup set</p>
+         * <ul>
+         * <li><strong>Level-1</strong>: level-1 backup set</li>
+         * <li><strong>Level-2</strong>: level-2 backup set</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Level-2</p>
          */
         @NameInMap("BackupsLevel")
         public String backupsLevel;
 
         /**
          * <p>The snapshot checkpoint time. The value is a Unix timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1589253947</p>
          */
         @NameInMap("ConsistentTime")
         public String consistentTime;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>Indicates whether the backup set is available. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The data backup set is unavailable.</p>
-         * <p>*   **1**: The data backup set is available.</p>
+         * <ul>
+         * <li><strong>0</strong>: The data backup set is unavailable.</li>
+         * <li><strong>1</strong>: The data backup set is available.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsAvail")
         public String isAvail;
 
         /**
          * <p>Indicates whether the backup set can be deleted. Valid values:</p>
-         * <br>
-         * <p>*   **Enabled**: The backup set can be deleted.</p>
-         * <p>*   **Disabled**: The backup set cannot be deleted.</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: The backup set can be deleted.</li>
+         * <li><strong>Disabled</strong>: The backup set cannot be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         @NameInMap("StoreStatus")
         public String storeStatus;

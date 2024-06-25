@@ -6,19 +6,26 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterParametersRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:</p>
-     * <br>
-     * <p>*   false: scheduled task</p>
-     * <p>*   true: immediate task</p>
+     * <ul>
+     * <li>false: scheduled task</li>
+     * <li>true: immediate task</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("FromTimeService")
     public Boolean fromTimeService;
@@ -31,50 +38,72 @@ public class ModifyDBClusterParametersRequest extends TeaModel {
 
     /**
      * <p>The ID of the parameter template.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can call the [DescribeParameterGroups](https://help.aliyun.com/document_detail/207178.html) operation to query the parameter template ID.</p>
-     * <br>
-     * <p>*   You must specify this parameter or the `Parameters` parameter.</p>
-     * <p>*   This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the parameter template ID.</p>
+     * </li>
+     * <li><p>You must specify this parameter or the <code>Parameters</code> parameter.</p>
+     * </li>
+     * <li><p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pcpg-**************</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
     /**
-     * <p>The JSON string that consists of parameters and values. The parameter values are strings, for example, `{"wait_timeout":"86","innodb_old_blocks_time":"10"}`.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can call the [DescribeDBClusterParameters](https://help.aliyun.com/document_detail/98122.html) operation to query the parameters of the PolarDB cluster.</p>
-     * <br>
-     * <p>*   This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster.</p>
-     * <p>*   For PolarDB for MySQL clusters, you must specify this parameter or the `ParameterGroupId` parameter.</p>
+     * <p>The JSON string that consists of parameters and values. The parameter values are strings, for example, <code>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</code>.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98122.html">DescribeDBClusterParameters</a> operation to query the parameters of the PolarDB cluster.</p>
+     * </li>
+     * <li><p>This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster.</p>
+     * </li>
+     * <li><p>For PolarDB for MySQL clusters, you must specify this parameter or the <code>ParameterGroupId</code> parameter.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
-     * <p>The latest start time to run the task. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.</p>
-     * <br>
-     * <p>*   By default, if you specify the `PlannedStartTime` parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: `Value of the PlannedEndTime parameter + 30 minutes`. For example, if you set the `PlannedStartTime` parameter to `2021-01-14T09:00:00Z` and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to `2021-01-14T09:30:00Z`.</p>
+     * <p>The latest start time to run the task. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.</p>
+     * </li>
+     * <li><p>By default, if you specify the <code>PlannedStartTime</code> parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: <code>Value of the PlannedEndTime parameter + 30 minutes</code>. For example, if you set the <code>PlannedStartTime</code> parameter to <code>2021-01-14T09:00:00Z</code> and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-04-28T14:30:00Z</p>
      */
     @NameInMap("PlannedEndTime")
     public String plannedEndTime;
 
     /**
-     * <p>The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in the time range from `2021-01-14T09:00:00Z` to `2021-01-15T09:00:00Z`.</p>
-     * <br>
-     * <p>*   If this parameter is empty, the upgrade task is immediately performed.</p>
+     * <p>The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in the time range from <code>2021-01-14T09:00:00Z</code> to <code>2021-01-15T09:00:00Z</code>.</p>
+     * </li>
+     * <li><p>If this parameter is empty, the upgrade task is immediately performed.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-04-28T14:00:00Z</p>
      */
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;

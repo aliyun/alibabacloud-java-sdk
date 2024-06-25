@@ -5,90 +5,126 @@ import com.aliyun.tea.*;
 
 public class CreateDatabaseRequest extends TeaModel {
     /**
-     * <p>The name of the account that is authorized to access the database. You can call the [DescribeAccounts](https://help.aliyun.com/document_detail/98107.html) operation to query account information.</p>
-     * <p>>- You can specify only a standard account. By default, privileged accounts have all permissions on all databases. You do not need to grant privileged accounts the permissions to access the database.</p>
-     * <p>>- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</p>
+     * <p>The name of the account that is authorized to access the database. You can call the <a href="https://help.aliyun.com/document_detail/98107.html">DescribeAccounts</a> operation to query account information.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can specify only a standard account. By default, privileged accounts have all permissions on all databases. You do not need to grant privileged accounts the permissions to access the database.</li>
+     * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The permissions that are granted to the account. Valid values:</p>
-     * <br>
-     * <p>*   **ReadWrite**: read and write permissions.</p>
-     * <p>*   **ReadOnly**: read-only permissions.</p>
-     * <p>*   **DMLOnly**: the permissions to execute only DML statements.</p>
-     * <p>*   **DDLOnly**: the permissions to execute only DDL statements.</p>
-     * <p>*   **ReadIndex**: the read-only and index permissions.</p>
-     * <br>
-     * <p>If you leave this parameter empty, the default value **ReadWrite** is used.</p>
-     * <br>
-     * <p>>- This parameter is valid only if you specify **AccountName**.</p>
-     * <p>>- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</p>
-     * <p>>- This parameter is optional for PolarDB for MySQL clusters.</p>
+     * <ul>
+     * <li><strong>ReadWrite</strong>: read and write permissions.</li>
+     * <li><strong>ReadOnly</strong>: read-only permissions.</li>
+     * <li><strong>DMLOnly</strong>: the permissions to execute only DML statements.</li>
+     * <li><strong>DDLOnly</strong>: the permissions to execute only DDL statements.</li>
+     * <li><strong>ReadIndex</strong>: the read-only and index permissions.</li>
+     * </ul>
+     * <p>If you leave this parameter empty, the default value <strong>ReadWrite</strong> is used.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is valid only if you specify <strong>AccountName</strong>.</li>
+     * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters.</li>
+     * <li>This parameter is optional for PolarDB for MySQL clusters.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ReadWrite</p>
      */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
     /**
-     * <p>The character set that is used by the cluster. For more information, see [Character set tables](https://help.aliyun.com/document_detail/99716.html).</p>
-     * <br>
+     * <p>The character set that is used by the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/99716.html">Character set tables</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>utf8</p>
      */
     @NameInMap("CharacterSetName")
     public String characterSetName;
 
     /**
      * <p>The language that indicates the collation of the databases that are created.</p>
-     * <br>
-     * <p>> *   The language must be compatible with the character set that is specified by **CharacterSetName**.</p>
-     * <p>>*   This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is not supported by PolarDB for MySQL clusters.</p>
-     * <br>
-     * <p>To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</li>
+     * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is not supported by PolarDB for MySQL clusters.</li>
+     * </ul>
+     * </blockquote>
+     * <p>To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Then, click <strong>Create Database</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C</p>
      */
     @NameInMap("Collate")
     public String collate;
 
     /**
      * <p>The language that indicates the character type of the database.</p>
-     * <br>
-     * <p>>- The language must be compatible with the character set that is specified by **CharacterSetName**.</p>
-     * <p>>- The value that you specify must be the same as the value of **Collate**.</p>
-     * <p>>- This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</p>
-     * <br>
-     * <p>To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The language must be compatible with the character set that is specified by <strong>CharacterSetName</strong>.</li>
+     * <li>The value that you specify must be the same as the value of <strong>Collate</strong>.</li>
+     * <li>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</li>
+     * </ul>
+     * </blockquote>
+     * <p>To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose <strong>Settings and Management</strong> &gt; <strong>Databases</strong>. Then, click <strong>Create Database</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C</p>
      */
     @NameInMap("Ctype")
     public String ctype;
 
     /**
      * <p>The ID of cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The description of the database. The description must meet the following requirements:</p>
-     * <br>
-     * <p>*   It cannot start with `http://` or `https://`.</p>
-     * <p>*   It must be 2 to 256 characters in length.</p>
-     * <br>
-     * <p>> This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster.</p>
+     * <ul>
+     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It must be 2 to 256 characters in length.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required for a PolarDB for Oracle or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>testdesc</p>
      */
     @NameInMap("DBDescription")
     public String DBDescription;
 
     /**
      * <p>The name of the database. The name must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name can contain lowercase letters, digits, hyphens (-), and underscores (_).</p>
-     * <p>*   The name must start with a lowercase letter and end with a lowercase letter or a digit. The name must be 1 to 64 characters in length.</p>
-     * <br>
-     * <p>> Do not use reserved words as database names, such as `test` or `mysql`.</p>
-     * <br>
+     * <ul>
+     * <li>The name can contain lowercase letters, digits, hyphens (-), and underscores (_).</li>
+     * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit. The name must be 1 to 64 characters in length.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Do not use reserved words as database names, such as <code>test</code> or <code>mysql</code>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDB</p>
      */
     @NameInMap("DBName")
     public String DBName;

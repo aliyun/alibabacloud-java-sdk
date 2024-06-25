@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class ResetGlobalDatabaseNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the cluster in the GDN.</p>
-     * <br>
-     * <p>>  You can call the [DescribeGlobalDatabaseNetwork](https://help.aliyun.com/document_detail/264580.html) operation to view the ID of the cluster in the GDN.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/264580.html">DescribeGlobalDatabaseNetwork</a> operation to view the ID of the cluster in the GDN.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-wz9fb5nn44u1d****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the GDN.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gdn-bp1fttxsrmv*****</p>
      */
     @NameInMap("GDNId")
     public String GDNId;
@@ -30,6 +35,9 @@ public class ResetGlobalDatabaseNetworkRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,44 +6,62 @@ import com.aliyun.tea.*;
 public class EvaluateRegionResourceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether sufficient resources are available. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DBInstanceAvailable")
     public String DBInstanceAvailable;
 
     /**
      * <p>The type of the database engine. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <p>*   **Oracle**</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("DBType")
     public String DBType;
 
     /**
      * <p>The version of the database engine</p>
-     * <br>
-     * <p>*   Valid values for the MySQL database engine:</p>
-     * <br>
-     * <p>    *   **5.6**</p>
-     * <p>    *   **5.7**</p>
-     * <p>    *   **8.0**</p>
-     * <br>
-     * <p>*   Valid values for the PostgreSQL database engine:</p>
-     * <br>
-     * <p>    *   **11**</p>
-     * <p>    *   **14**</p>
-     * <br>
-     * <p>*   Valid value for the Oracle database engine: **11**</p>
+     * <ul>
+     * <li><p>Valid values for the MySQL database engine:</p>
+     * <ul>
+     * <li><strong>5.6</strong></li>
+     * <li><strong>5.7</strong></li>
+     * <li><strong>8.0</strong></li>
+     * </ul>
+     * </li>
+     * <li><p>Valid values for the PostgreSQL database engine:</p>
+     * <ul>
+     * <li><strong>11</strong></li>
+     * <li><strong>14</strong></li>
+     * </ul>
+     * </li>
+     * <li><p>Valid value for the Oracle database engine: <strong>11</strong></p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

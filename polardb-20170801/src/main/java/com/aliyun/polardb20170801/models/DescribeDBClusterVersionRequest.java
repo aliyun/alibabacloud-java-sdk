@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterVersionRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specify to return the latest version information or a list of upgradeable versions.Valid values:</p>
-     * <br>
-     * <p>- AVAILABLE_VERSION</p>
-     * <p>- LATEST_VERSION</p>
+     * <ul>
+     * <li>AVAILABLE_VERSION</li>
+     * <li>LATEST_VERSION</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LATEST_VERSION</p>
      */
     @NameInMap("DescribeType")
     public String describeType;

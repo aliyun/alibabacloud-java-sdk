@@ -12,24 +12,36 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of records on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69A85BAF-1089-4CDF-A82F-0A140F******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,23 +94,34 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     public static class DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters extends TeaModel {
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The role of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Primary**: the primary cluster</p>
-         * <p>*   **standby**: the secondary cluster</p>
-         * <br>
-         * <p>> A GDN consists of one primary cluster and up to four secondary clusters. For more information, see [GDN](https://help.aliyun.com/document_detail/160381.html).</p>
+         * <ul>
+         * <li><strong>Primary</strong>: the primary cluster</li>
+         * <li><strong>standby</strong>: the secondary cluster</li>
+         * </ul>
+         * <blockquote>
+         * <p>A GDN consists of one primary cluster and up to four secondary clusters. For more information, see <a href="https://help.aliyun.com/document_detail/160381.html">GDN</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         @NameInMap("Role")
         public String role;
@@ -136,7 +159,10 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
 
     public static class DescribeGlobalDatabaseNetworksResponseBodyItems extends TeaModel {
         /**
-         * <p>The time when the GDN was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the GDN was created. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-23T05:46:54Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -148,42 +174,59 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
         public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters> DBClusters;
 
         /**
-         * <p>The type of the database engine. Only **MySQL** is supported.</p>
+         * <p>The type of the database engine. Only <strong>MySQL</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("DBType")
         public String DBType;
 
         /**
-         * <p>The version of the database engine. Only the **8.0** version is supported.</p>
+         * <p>The version of the database engine. Only the <strong>8.0</strong> version is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         @NameInMap("DBVersion")
         public String DBVersion;
 
         /**
          * <p>The description of the GDN. The description must meet the following requirements:</p>
-         * <br>
-         * <p>*   It cannot start with `http://` or `https://`.</p>
-         * <p>*   It must start with a letter.</p>
-         * <p>*   It can contain letters, digits, underscores (_), and hyphens (-).</p>
-         * <p>*   It must be 2 to 126 characters in length.</p>
+         * <ul>
+         * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>It must start with a letter.</li>
+         * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
+         * <li>It must be 2 to 126 characters in length.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("GDNDescription")
         public String GDNDescription;
 
         /**
          * <p>The ID of the GDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn-****************</p>
          */
         @NameInMap("GDNId")
         public String GDNId;
 
         /**
          * <p>The status of the GDN. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The GDN is being created.</p>
-         * <p>*   **active**: The GDN is running.</p>
-         * <p>*   **deleting**: The GDN is being deleted.</p>
-         * <p>*   **locked**: The GDN is locked. If the GDN is locked, you cannot perform operations on clusters in the GDN.</p>
-         * <p>*   **removing_member**: The secondary cluster is being removed from the GDN.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The GDN is being created.</li>
+         * <li><strong>active</strong>: The GDN is running.</li>
+         * <li><strong>deleting</strong>: The GDN is being deleted.</li>
+         * <li><strong>locked</strong>: The GDN is locked. If the GDN is locked, you cannot perform operations on clusters in the GDN.</li>
+         * <li><strong>removing_member</strong>: The secondary cluster is being removed from the GDN.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("GDNStatus")
         public String GDNStatus;

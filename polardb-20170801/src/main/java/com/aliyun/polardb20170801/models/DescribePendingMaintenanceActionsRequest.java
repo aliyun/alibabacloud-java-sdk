@@ -6,11 +6,14 @@ import com.aliyun.tea.*;
 public class DescribePendingMaintenanceActionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the historical tasks. Valid values:</p>
-     * <br>
-     * <p>*   **0**: returns the current task.</p>
-     * <p>*   **1**: returns the historical tasks.</p>
-     * <br>
-     * <p>Default value: **0**.</p>
+     * <ul>
+     * <li><strong>0</strong>: returns the current task.</li>
+     * <li><strong>1</strong>: returns the historical tasks.</li>
+     * </ul>
+     * <p>Default value: <strong>0</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsHistory")
     public Integer isHistory;
@@ -23,14 +26,19 @@ public class DescribePendingMaintenanceActionsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

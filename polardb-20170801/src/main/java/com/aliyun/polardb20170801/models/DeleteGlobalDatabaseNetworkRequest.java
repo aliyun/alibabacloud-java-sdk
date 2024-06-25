@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteGlobalDatabaseNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the GDN.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gdn-bp1fttxsrmv*****</p>
      */
     @NameInMap("GDNId")
     public String GDNId;
@@ -20,6 +22,9 @@ public class DeleteGlobalDatabaseNetworkRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

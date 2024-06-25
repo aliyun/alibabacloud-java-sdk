@@ -6,36 +6,53 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterConnectivityResponseBody extends TeaModel {
     /**
      * <p>The error code for connection diagnosis. Valid values:</p>
-     * <br>
-     * <p>*   **SRC_IP_NOT_IN_USER_WHITELIST**: The source IP address is not added to the whitelist.</p>
-     * <p>*   **CONNECTION_ABNORMAL**: The connection to the cluster is normal.</p>
+     * <ul>
+     * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist.</li>
+     * <li><strong>CONNECTION_ABNORMAL</strong>: The connection to the cluster is normal.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SRC_IP_NOT_IN_USER_WHITELIST</p>
      */
     @NameInMap("ConnCheckErrorCode")
     public String connCheckErrorCode;
 
     /**
      * <p>The error message for connection diagnosis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Src ip:192.<em><strong>.</strong></em>.1 not in user whitelist</p>
      */
     @NameInMap("ConnCheckErrorMessage")
     public String connCheckErrorMessage;
 
     /**
      * <p>The connection diagnosis result. Valid values:</p>
-     * <br>
-     * <p>*   **Success**</p>
-     * <p>*   **Failed**</p>
+     * <ul>
+     * <li><strong>Success</strong></li>
+     * <li><strong>Failed</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Failed</p>
      */
     @NameInMap("ConnCheckResult")
     public String connCheckResult;
 
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-xxxxxxxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73A85BAF-1039-4CDE-A83F-1A140F******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

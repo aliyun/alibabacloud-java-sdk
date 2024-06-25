@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     /**
      * <p>The ID of cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-*****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The type of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>polardb_mysql</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -24,24 +30,36 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of SQL statements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -110,54 +128,81 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public static class DescribeSlowLogRecordsResponseBodyItemsSQLSlowRecord extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-*****************</p>
          */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
         /**
-         * <p>The time when the SQL statement was executed. The time is in the `yyyy-MM-ddTHH:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the SQL statement was executed. The time is in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-07T03:47Z</p>
          */
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
         /**
          * <p>The IP address of the client that is used to connect to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb[testdb] @  [100.<strong>.</strong>.242]</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
          * <p>The period of time during which the SQL statement was locked. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LockTimes")
         public Long lockTimes;
 
         /**
          * <p>The number of rows parsed by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ParseRowCounts")
         public Long parseRowCounts;
 
         /**
          * <p>The time range for the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("QueryTimeMS")
         public Long queryTimeMS;
 
         /**
          * <p>The amount of time that was consumed to execute the SQL statement. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("QueryTimes")
         public Long queryTimes;
 
         /**
          * <p>The number of rows returned by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;

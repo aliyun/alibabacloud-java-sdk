@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>314127C2-B6C1-4F58-B1F6-E6B645******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
     public static class DescribePendingMaintenanceActionsResponseBodyTypeList extends TeaModel {
         /**
          * <p>The number of pending events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The task type of pending events. Valid values:</p>
-         * <br>
-         * <p>*   **DatabaseSoftwareUpgrading**: database software upgrades</p>
-         * <p>*   **DatabaseHardwareMaintenance**: hardware maintenance and upgrades</p>
-         * <p>*   **DatabaseStorageUpgrading**: database storage upgrades</p>
-         * <p>*   **DatabaseProxyUpgrading**: minor version upgrades of the proxy</p>
+         * <ul>
+         * <li><strong>DatabaseSoftwareUpgrading</strong>: database software upgrades</li>
+         * <li><strong>DatabaseHardwareMaintenance</strong>: hardware maintenance and upgrades</li>
+         * <li><strong>DatabaseStorageUpgrading</strong>: database storage upgrades</li>
+         * <li><strong>DatabaseProxyUpgrading</strong>: minor version upgrades of the proxy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DatabaseSoftwareUpgrading</p>
          */
         @NameInMap("TaskType")
         public String taskType;

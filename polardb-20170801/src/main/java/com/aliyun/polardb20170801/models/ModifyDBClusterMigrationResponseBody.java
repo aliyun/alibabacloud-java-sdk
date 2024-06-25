@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterMigrationResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1B303A5-653F-4AEE-A598-023FF9******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

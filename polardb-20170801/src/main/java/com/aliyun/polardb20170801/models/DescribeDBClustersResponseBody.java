@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClustersResponseBody extends TeaModel {
     /**
-     * <p>The details of the cluster.</p>
+     * <p>The information about the clusters.</p>
      */
     @NameInMap("Items")
     public DescribeDBClustersResponseBodyItems items;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of clusters returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B7BFB11-C077-4FE3-B051-F69CEB******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,60 +94,90 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public static class DescribeDBClustersResponseBodyItemsDBClusterDBNodesDBNode extends TeaModel {
         /**
          * <p>The specifications of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.large</p>
          */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-****************</p>
          */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
         /**
          * <p>The role of the node. Valid values:</p>
-         * <br>
-         * <p>*   **Writer**: The node is the primary node.</p>
-         * <p>*   **Reader**: The node is the read-only node.</p>
+         * <ul>
+         * <li><strong>Writer</strong>: primary node</li>
+         * <li><strong>Reader</strong>: read-only node</li>
+         * <li><strong>ColumnReader</strong>: column store read-only node</li>
+         * <li><strong>AI</strong>: AI node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Reader</p>
          */
         @NameInMap("DBNodeRole")
         public String DBNodeRole;
 
         /**
          * <p>Indicates whether the hot standby feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **ON**</p>
-         * <p>*   **OFF**</p>
+         * <ul>
+         * <li><strong>ON</strong></li>
+         * <li><strong>OFF</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OFF</p>
          */
         @NameInMap("HotReplicaMode")
         public String hotReplicaMode;
 
         /**
          * <p>Indicates whether the In-Memory Column Index (IMCI) feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **ON**</p>
-         * <p>*   **OFF**</p>
+         * <ul>
+         * <li><strong>ON</strong></li>
+         * <li><strong>OFF</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OFF</p>
          */
         @NameInMap("ImciSwitch")
         public String imciSwitch;
 
         /**
-         * <p>The ID of the region in which the node resides.</p>
+         * <p>The region ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>Indicates whether the serverless feature is enabled for the current node.</p>
-         * <br>
-         * <p>*   **ON** indicates that the serverless feature is enabled.</p>
-         * <p>*   An empty value indicates that the serverless feature is disabled.</p>
+         * <p>Indicates whether the serverless feature is enabled for the node.</p>
+         * <ul>
+         * <li><strong>ON</strong> indicates that the serverless feature is enabled.</li>
+         * <li>No value is returned if the serverless feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("Serverless")
         public String serverless;
 
         /**
-         * <p>The zone ID of the node.</p>
+         * <p>The zone ID of node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -233,12 +275,18 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public static class DescribeDBClustersResponseBodyItemsDBClusterTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         @NameInMap("Value")
         public String value;
@@ -288,219 +336,348 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     public static class DescribeDBClustersResponseBodyItemsDBCluster extends TeaModel {
         /**
          * <p>The type of the AI node. Valid values:</p>
-         * <br>
-         * <p>*   SearchNode: search node.</p>
-         * <p>*   DLNode: AI node.</p>
+         * <ul>
+         * <li>SearchNode: search node</li>
+         * <li>DLNode: AI node</li>
+         * </ul>
+         * <p>Enumeration values:</p>
+         * <ul>
+         * <li>SearchNode | DLNode: both</li>
+         * <li>DLNode: AI node</li>
+         * <li>SearchNode: search node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SearchNode</p>
          */
         @NameInMap("AiType")
         public String aiType;
 
         /**
          * <p>The edition of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: Cluster Edition</p>
-         * <p>*   **Basic**: Single Node Edition</p>
-         * <p>*   **Archive**: X-Engine Edition</p>
-         * <p>*   **NormalMultimaster**: Multi-master Cluster (Database/Table)</p>
+         * <ul>
+         * <li><strong>Normal</strong>: Cluster Edition</li>
+         * <li><strong>Basic</strong>: Single Node Edition</li>
+         * <li><strong>Archive</strong>: X-Engine Edition</li>
+         * <li><strong>NormalMultimaster</strong>: Multi-master Cluster (Database/Table) Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CpuCores")
         public String cpuCores;
 
         /**
          * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-14T05:58:42Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GDN-1</p>
          */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The network type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("DBClusterNetworkType")
         public String DBClusterNetworkType;
 
         /**
-         * <p>The status of the cluster.</p>
+         * <p>The state of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;
 
         /**
-         * <p>The specifications of the node.</p>
+         * <p>The node specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.large</p>
          */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
         /**
          * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("DBNodeNumber")
         public Integer DBNodeNumber;
 
         /**
-         * <p>The nodes of the cluster.</p>
+         * <p>The information about the nodes.</p>
          */
         @NameInMap("DBNodes")
         public DescribeDBClustersResponseBodyItemsDBClusterDBNodes DBNodes;
 
         /**
          * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("DBType")
         public String DBType;
 
         /**
-         * <p>The version of the database.</p>
+         * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         @NameInMap("DBVersion")
         public String DBVersion;
 
         /**
          * <p>Indicates whether the cluster is protected from deletion. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The cluster is not locked.</p>
-         * <p>*   **1**: The cluster is locked.</p>
-         * <br>
-         * <p>> You cannot delete clusters that are locked.</p>
+         * <ul>
+         * <li><strong>0</strong>: The cluster is not protected from deletion.</li>
+         * <li><strong>1</strong>: The cluster is protected from deletion.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You cannot delete clusters that are protected from deletion.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeletionLock")
         public Integer deletionLock;
 
         /**
-         * <p>The engine of the cluster.</p>
+         * <p>The database engine of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The expiration time of the cluster.</p>
-         * <br>
-         * <p>> A specific value is returned only for subscription (**Prepaid**) clusters. For pay-as-you-go (**Postpaid**) clusters, an empty string is returned.</p>
+         * <blockquote>
+         * <p> A specific value is returned only for subscription (<strong>Prepaid</strong>) clusters. For pay-as-you-go (<strong>Postpaid</strong>) clusters, no value is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-14T16:00:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>Indicates whether the cluster has expired. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> A specific value is returned only for subscription (**Prepaid**) clusters.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> A specific value is returned only for subscription (<strong>Prepaid</strong>) clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Expired")
         public String expired;
 
         /**
          * <p>The lock state of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Unlock**: The cluster is not locked.</p>
-         * <p>*   **ManualLock**: The cluster is manually locked.</p>
-         * <p>*   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The cluster is unlocked.</li>
+         * <li><strong>ManualLock</strong>: The cluster is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The cluster is locked due to cluster expiration.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <p>The memory size for local operations. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("MemorySize")
         public String memorySize;
 
         /**
          * <p>The billing method of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Postpaid**: pay-as-you-go</p>
-         * <p>*   **Prepaid**: subscription</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
-         * <p>The ID of the region in which the node resides.</p>
+         * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The memory size for distributed operations. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3612</p>
+         */
         @NameInMap("RemoteMemorySize")
         public String remoteMemorySize;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-************</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the cluster is a serverless cluster. **AgileServerless** indicates a serverless cluster. An empty value indicates a common cluster.</p>
+         * <p>Indicates whether the cluster is a serverless cluster. <strong>AgileServerless</strong> indicates a serverless cluster. No value is returned for a common cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgileServerless</p>
          */
         @NameInMap("ServerlessType")
         public String serverlessType;
 
         /**
-         * <p>The billing method of the storage space. Valid values:</p>
-         * <br>
-         * <p>*   **Postpaid**: pay-as-you-go</p>
-         * <p>*   **Prepaid**: subscription</p>
+         * <p>The storage billing method of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         @NameInMap("StoragePayType")
         public String storagePayType;
 
         /**
-         * <p>The storage capacity that is billed based on the subscription billing method. Unit: byte.</p>
+         * <p>The storage that is billed based on the subscription billing method. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("StorageSpace")
         public Long storageSpace;
 
+        @NameInMap("StorageType")
+        public String storageType;
+
         /**
-         * <p>The storage space this is occupied by the cluster. Unit: bytes.</p>
+         * <p>The used storage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3009413120</p>
          */
         @NameInMap("StorageUsed")
         public Long storageUsed;
 
         /**
          * <p>Indicates whether multi-zone data consistency is enabled for the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **ON**: multi-zone data consistency is enabled, which is suitable for Standard Edition clusters of Multi-zone Edition.</p>
-         * <p>*   **OFF**: multi-zone data consistency is disabled.</p>
+         * <ul>
+         * <li><strong>ON</strong>: Multi-zone data consistency is enabled. For Standard Edition clusters of Multi-zone Edition, this value is returned.</li>
+         * <li><strong>OFF</strong>: Multi-zone data consistency is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
          */
         @NameInMap("StrictConsistency")
         public String strictConsistency;
 
+        /**
+         * <p>The specification type of the compute node. Valid values:</p>
+         * <ul>
+         * <li><strong>Exclusive</strong>: dedicated.</li>
+         * <li><strong>General</strong>: general-purpose.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Exclusive</p>
+         */
         @NameInMap("SubCategory")
         public String subCategory;
 
         /**
-         * <p>The tags of the cluster.</p>
+         * <p>The information about the tags.</p>
          */
         @NameInMap("Tags")
         public DescribeDBClustersResponseBodyItemsDBClusterTags tags;
 
         /**
-         * <p>The VPC ID of the cluster.</p>
+         * <p>The virtual private cloud (VPC) ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-****************</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The vSwitch ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-***************</p>
          */
         @NameInMap("VswitchId")
         public String vswitchId;
 
         /**
          * <p>The zone ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -716,6 +893,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public Long getStorageSpace() {
             return this.storageSpace;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setStorageUsed(Long storageUsed) {

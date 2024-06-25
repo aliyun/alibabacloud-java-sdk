@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeDBProxyPerformanceRequest extends TeaModel {
     /**
      * <p>The ID of cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pe-****************</p>
      */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
-     * <br>
+     * <p>The end of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-09-24T02:08Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,17 +37,21 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>The performance metrics that you want to query. Separate multiple indicators with commas (,). For more information, see [Performance parameters](https://help.aliyun.com/document_detail/141787.html).</p>
-     * <br>
+     * <p>The performance metrics that you want to query. Separate multiple indicators with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/141787.html">Performance parameters</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PolarProxy_CpuUsage</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
-     * <br>
+     * <p>The beginning of the time range to query. Specify the time in the <code>yyyy-MM-ddTHH:mmZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-09-23T01:01Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

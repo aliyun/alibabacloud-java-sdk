@@ -6,21 +6,26 @@ import com.aliyun.tea.*;
 public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
     /**
      * <p>The description of the GDN. The description must meet the following requirements:</p>
-     * <br>
-     * <p>*   It cannot start with `http://` or `https://`.</p>
-     * <p>*   It must start with a letter.</p>
-     * <p>*   It can contain letters, digits, underscores (_), and hyphens (-).</p>
-     * <p>*   It must be 2 to 126 characters in length.</p>
-     * <br>
+     * <ul>
+     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It must start with a letter.</li>
+     * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>It must be 2 to 126 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GDN-fortest</p>
      */
     @NameInMap("GDNDescription")
     public String GDNDescription;
 
     /**
      * <p>The ID of the GDN.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gdn-bp1fttxsrmv*****</p>
      */
     @NameInMap("GDNId")
     public String GDNId;
@@ -33,6 +38,9 @@ public class ModifyGlobalDatabaseNetworkRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

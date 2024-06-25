@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class CancelScheduleTasksRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -22,6 +25,9 @@ public class CancelScheduleTasksRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -34,11 +40,16 @@ public class CancelScheduleTasksRequest extends TeaModel {
 
     /**
      * <p>The ID of the scheduled task that you want to cancel.</p>
-     * <br>
-     * <p>> *   You can call the [DescribeScheduleTasks](https://help.aliyun.com/document_detail/199648.html) operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.</p>
-     * <p>>*   You can cancel only the tasks whose status is `pending`.``</p>
-     * <br>
+     * <blockquote>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/199648.html">DescribeScheduleTasks</a> operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.</li>
+     * <li>You can cancel only the tasks whose status is <code>pending</code>.``</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ec8c4723-eac5-4f12-becb-01ac08******</p>
      */
     @NameInMap("TaskId")
     public String taskId;

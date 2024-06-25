@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token required to obtain more results. This parameter is not required in the first query. If the first query does not return all results, you can use the token that is returned from the first query in the next query to obtain more results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86sca4384811e0b5e8707e******</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -17,21 +20,28 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available region IDs.</p>
-     * <br>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available region IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The cluster ID. To query the tags of multiple clusters, click **Add** to add cluster IDs.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You must specify at least one of the `ResourceId.N` and `Tag.N.Key` parameters.</p>
-     * <br>
-     * <p>*   If you specify the `ResourceId.N` parameter, you can add a maximum of 50 cluster IDs at a time.</p>
+     * <p>The cluster ID. To query the tags of multiple clusters, click <strong>Add</strong> to add cluster IDs.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You must specify at least one of the <code>ResourceId.N</code> and <code>Tag.N.Key</code> parameters.</p>
+     * </li>
+     * <li><p>If you specify the <code>ResourceId.N</code> parameter, you can add a maximum of 50 cluster IDs at a time.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -43,9 +53,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **cluster**.</p>
-     * <br>
+     * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -135,19 +147,27 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. To query the details of clusters to which multiple tags are bound, click **Add** to add tags.</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   You must specify at least one of the `ResourceId.N` and `Tag.N.Key` parameters.</p>
-         * <br>
-         * <p>*   If you specify the `Tag.N.Key` parameter, you can create up to 20 tags at a time.</p>
+         * <p>The key of the tag. To query the details of clusters to which multiple tags are bound, click <strong>Add</strong> to add tags.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You must specify at least one of the <code>ResourceId.N</code> and <code>Tag.N.Key</code> parameters.</p>
+         * </li>
+         * <li><p>If you specify the <code>Tag.N.Key</code> parameter, you can create up to 20 tags at a time.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value that is paired with the tag key. This parameter can be set to an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

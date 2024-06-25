@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterMonitorResponseBody extends TeaModel {
     /**
      * <p>The interval at which monitoring data is collected. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>593AE1C5-B70C-463F-9207-074639******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

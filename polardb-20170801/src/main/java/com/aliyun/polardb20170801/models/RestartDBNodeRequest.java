@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class RestartDBNodeRequest extends TeaModel {
     /**
      * <p>The ID of the node.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/185342.html) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-*************</p>
      */
     @NameInMap("DBNodeId")
     public String DBNodeId;

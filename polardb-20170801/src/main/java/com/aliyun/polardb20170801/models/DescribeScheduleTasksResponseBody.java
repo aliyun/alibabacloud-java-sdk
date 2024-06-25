@@ -12,20 +12,30 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned for the request.</p>
-     * <br>
-     * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>936C7025-27A5-4CB1-BB31-540E1F0CCA12</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -70,77 +80,115 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
     public static class DescribeScheduleTasksResponseBodyDataTimerInfos extends TeaModel {
         /**
          * <p>The type of the scheduled tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateDBNodes</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-**************</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_cluster</p>
          */
         @NameInMap("DbClusterDescription")
         public String dbClusterDescription;
 
         /**
          * <p>The state of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DbClusterStatus")
         public String dbClusterStatus;
 
         /**
          * <p>The ID of the order.</p>
-         * <br>
-         * <p>>  This parameter is returned only when you set the `Action` parameter to **CreateDBNodes** or **ModifyDBNodeClass**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when you set the <code>Action</code> parameter to <strong>CreateDBNodes</strong> or <strong>ModifyDBNodeClass</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>208161753******</p>
          */
         @NameInMap("OrderId")
         public String orderId;
 
         /**
          * <p>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-28T12:30Z</p>
          */
         @NameInMap("PlannedEndTime")
         public String plannedEndTime;
 
         /**
          * <p>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-28T12:00Z</p>
          */
         @NameInMap("PlannedStartTime")
         public String plannedStartTime;
 
         /**
          * <p>The expected start time of the task. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-28T12:16Z</p>
          */
         @NameInMap("PlannedTime")
         public String plannedTime;
 
         /**
          * <p>The ID of the region in which the scheduled task runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The state of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>finish</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>Indicates whether the scheduled task can be canceled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TaskCancel")
         public Boolean taskCancel;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53879cdb-9a00-428e-acaf-ff4cff******</p>
          */
         @NameInMap("TaskId")
         public String taskId;
@@ -251,12 +299,18 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
     public static class DescribeScheduleTasksResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -269,6 +323,9 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalRecordCount")
         public Integer totalRecordCount;

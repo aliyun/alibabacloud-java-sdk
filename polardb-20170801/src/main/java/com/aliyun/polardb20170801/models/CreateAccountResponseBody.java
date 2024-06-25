@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateAccountResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CED079B7-A408-41A1-BFF1-EC608E******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

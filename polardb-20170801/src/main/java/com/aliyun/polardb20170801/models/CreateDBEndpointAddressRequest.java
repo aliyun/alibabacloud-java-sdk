@@ -6,36 +6,47 @@ import com.aliyun.tea.*;
 public class CreateDBEndpointAddressRequest extends TeaModel {
     /**
      * <p>The prefix of the new endpoint. The prefix of the endpoint must meet the following requirements:</p>
-     * <br>
-     * <p>*   The prefix can contain lowercase letters, digits, and hyphens (-).</p>
-     * <p>*   The prefix must start with a letter and end with a digit or a letter.</p>
-     * <p>*   The prefix must be 6 to 40 characters in length.</p>
+     * <ul>
+     * <li>The prefix can contain lowercase letters, digits, and hyphens (-).</li>
+     * <li>The prefix must start with a letter and end with a digit or a letter.</li>
+     * <li>The prefix must be 6 to 40 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test-1</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the endpoint.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusterEndpoints](https://help.aliyun.com/document_detail/98205.html) operation to query endpoint details.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint details.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pe-**************</p>
      */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 
     /**
-     * <p>The network type of the endpoint. Set the value to **Public**.</p>
-     * <br>
+     * <p>The network type of the endpoint. Set the value to <strong>Public</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
      */
     @NameInMap("NetType")
     public String netType;
@@ -54,12 +65,18 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the ECS security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp**************</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The ID of the virtual private cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-**********</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
@@ -166,12 +183,18 @@ public class CreateDBEndpointAddressRequest extends TeaModel {
     public static class CreateDBEndpointAddressRequestZoneInfo extends TeaModel {
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-**********</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

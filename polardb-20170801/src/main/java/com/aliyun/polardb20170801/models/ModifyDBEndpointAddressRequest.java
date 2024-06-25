@@ -6,41 +6,54 @@ import com.aliyun.tea.*;
 public class ModifyDBEndpointAddressRequest extends TeaModel {
     /**
      * <p>The prefix of the new endpoint. The prefix must meet the following requirements:</p>
-     * <br>
-     * <p>*   It can contain lowercase letters, digits, and hyphens (-).</p>
-     * <p>*   It must start with a letter and end with a digit or a letter.</p>
-     * <p>*   It must be 6 to 30 characters in length.</p>
+     * <ul>
+     * <li>It can contain lowercase letters, digits, and hyphens (-).</li>
+     * <li>It must start with a letter and end with a digit or a letter.</li>
+     * <li>It must be 6 to 30 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
      * <p>The ID of cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-***************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the endpoint.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusterEndpoints](https://help.aliyun.com/document_detail/98205.html) operation to query endpoint IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pe-****************</p>
      */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 
     /**
      * <p>The network type of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Public**</p>
-     * <p>*   **Private**</p>
-     * <br>
+     * <ul>
+     * <li><strong>Public</strong></li>
+     * <li><strong>Private</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Public</p>
      */
     @NameInMap("NetType")
     public String netType;
@@ -53,29 +66,44 @@ public class ModifyDBEndpointAddressRequest extends TeaModel {
 
     /**
      * <p>The port number. Valid values: 3000 to 5999.</p>
-     * <br>
-     * <p>> This parameter is valid only for PolarDB for MySQL clusters. If you leave this parameter empty, the default port 3306 is used.</p>
+     * <blockquote>
+     * <p>This parameter is valid only for PolarDB for MySQL clusters. If you leave this parameter empty, the default port 3306 is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The prefix of the private domain name. The prefix must meet the following requirements:</p>
-     * <br>
-     * <p>*   The prefix can contain lowercase letters, digits, and hyphens (-).</p>
-     * <p>*   The prefix must start with a letter and end with a digit or a letter.</p>
-     * <p>*   The prefix must be 6 to 30 characters in length.</p>
-     * <br>
-     * <p>>- You can bind each internal endpoint of PolarDB to a private domain name. The private domain name takes effect only in the specified virtual private clouds (VPCs) in the current region. Private domain names are managed by using PrivateZone. You can use the CNAME record of PrivateZone to map domain names to PolarDB. You are charged a small fee for this feature. For more information, see [Pricing](https://help.aliyun.com/document_detail/71338.html).</p>
-     * <p>>- This parameter takes effect only if you set **NetType** to Private.</p>
+     * <ul>
+     * <li>The prefix can contain lowercase letters, digits, and hyphens (-).</li>
+     * <li>The prefix must start with a letter and end with a digit or a letter.</li>
+     * <li>The prefix must be 6 to 30 characters in length.</li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>You can bind each internal endpoint of PolarDB to a private domain name. The private domain name takes effect only in the specified virtual private clouds (VPCs) in the current region. Private domain names are managed by using PrivateZone. You can use the CNAME record of PrivateZone to map domain names to PolarDB. You are charged a small fee for this feature. For more information, see <a href="https://help.aliyun.com/document_detail/71338.html">Pricing</a>.</li>
+     * <li>This parameter takes effect only if you set <strong>NetType</strong> to Private.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyundoc</p>
      */
     @NameInMap("PrivateZoneAddressPrefix")
     public String privateZoneAddressPrefix;
 
     /**
      * <p>The name of the private zone.</p>
-     * <br>
-     * <p>> This parameter takes effect only when **NetType** is set to Private.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only when <strong>NetType</strong> is set to Private.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyundoc.com</p>
      */
     @NameInMap("PrivateZoneName")
     public String privateZoneName;

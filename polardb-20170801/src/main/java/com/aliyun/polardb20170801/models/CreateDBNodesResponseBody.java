@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDBNodesResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-***************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,12 +21,18 @@ public class CreateDBNodesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2148126708*****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E053E730-5755-4AA9-AA9D-A47867******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

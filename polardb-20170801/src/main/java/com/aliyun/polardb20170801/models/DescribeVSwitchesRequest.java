@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
      * <p>The dedicated cluster ID.</p>
-     * <br>
-     * <p>>  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the <strong>VpcId</strong> and <strong>DedicatedHostGroupId</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dhg-4n****</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -20,24 +24,36 @@ public class DescribeVSwitchesRequest extends TeaModel {
 
     /**
      * <p>The page number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return per page. Maximum value: 50. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region where the vSwitch belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the vSwitch belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -53,14 +69,21 @@ public class DescribeVSwitchesRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual private type (VPC) to which the vSwitch belongs.</p>
-     * <br>
-     * <p>>  You must specify at least one of the **VpcId** and **DedicatedHostGroupId** parameters.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the <strong>VpcId</strong> and <strong>DedicatedHostGroupId</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-25cdvfeq58pl****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The ID of the zone to which the vSwitch belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-d</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

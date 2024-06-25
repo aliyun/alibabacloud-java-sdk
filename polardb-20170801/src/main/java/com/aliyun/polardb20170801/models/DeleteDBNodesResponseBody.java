@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteDBNodesResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2035638*******</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6566B2E6-3157-4B57-A693-AFB751******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

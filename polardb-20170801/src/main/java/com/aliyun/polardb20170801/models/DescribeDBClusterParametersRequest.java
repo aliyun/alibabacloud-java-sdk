@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterParametersRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**********</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The kernel parameter. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**: the kernel parameters.</p>
-     * <p>*   **MigrationFromRDS**: compares the current parameters with the parameters of the source RDS instance.</p>
+     * <ul>
+     * <li><strong>Normal</strong>: the kernel parameters.</li>
+     * <li><strong>MigrationFromRDS</strong>: compares the current parameters with the parameters of the source RDS instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("DescribeType")
     public String describeType;

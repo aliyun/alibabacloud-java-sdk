@@ -4,14 +4,25 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateColdStorageInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6000170000591aed949d0f5********************</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxxxxxx</p>
+     */
     @NameInMap("ColdStorageInstanceDescription")
     public String coldStorageInstanceDescription;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-wz9ye3xrtj60ua6d1</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -22,6 +33,10 @@ public class CreateColdStorageInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-************</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

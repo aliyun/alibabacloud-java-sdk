@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteDBClusterEndpointRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-******************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the custom cluster endpoint.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pe-******************</p>
      */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;

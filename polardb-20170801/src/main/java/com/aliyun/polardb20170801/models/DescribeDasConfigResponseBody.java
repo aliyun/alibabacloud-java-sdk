@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeDasConfigResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>593AE1C5-B70C-463F-9207-074639******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Enable</p>
+     */
     @NameInMap("StorageAutoScale")
     public String storageAutoScale;
 
+    /**
+     * <strong>example:</strong>
+     * <p>800</p>
+     */
     @NameInMap("StorageUpperBound")
     public Long storageUpperBound;
 
