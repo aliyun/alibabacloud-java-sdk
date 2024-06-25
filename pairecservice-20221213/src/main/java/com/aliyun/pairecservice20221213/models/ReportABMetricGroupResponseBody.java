@@ -10,6 +10,10 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
     @NameInMap("GroupDimension")
     public java.util.List<String> groupDimension;
 
+    /**
+     * <strong>example:</strong>
+     * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

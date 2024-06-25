@@ -4,9 +4,17 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceResourceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bucket-test-123</p>
+     */
     @NameInMap("Uri")
     public String uri;
 

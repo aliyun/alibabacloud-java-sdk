@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class ListCrowdUsersResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F0AB6527-093F-5C44-B3BD-42C8C210C619</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

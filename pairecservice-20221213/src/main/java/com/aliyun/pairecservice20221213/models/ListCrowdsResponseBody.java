@@ -9,10 +9,17 @@ public class ListCrowdsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,27 +53,59 @@ public class ListCrowdsResponseBody extends TeaModel {
     }
 
     public static class ListCrowdsResponseBodyCrowds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("CrowdId")
         public String crowdId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>os=android</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>crowd1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Quantity")
         public String quantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ManualInput</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1,user2</p>
+         */
         @NameInMap("Users")
         public String users;
 

@@ -4,18 +4,33 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListExperimentsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ExperimentGroupId")
     public String experimentGroupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>experiment_test1</p>
+     */
     @NameInMap("Query")
     public String query;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Offline</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -4,30 +4,66 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DataManagement</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-13 17:34:52</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-10-13 17:34:52</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>storage</p>
+     */
     @NameInMap("Group")
     public String group;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D75C43DC-3D3A-5CC8-9AAC-8C77306C433B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>reso-2s416t***</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bucket-test-123</p>
+     */
     @NameInMap("Uri")
     public String uri;
 

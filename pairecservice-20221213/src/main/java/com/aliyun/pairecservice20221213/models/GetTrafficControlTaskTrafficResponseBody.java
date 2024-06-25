@@ -7,8 +7,8 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TrafficControlTaskTraffic")
-    public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic trafficControlTaskTraffic;
+    @NameInMap("TrafficControlTaskTrafficInfo")
+    public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo trafficControlTaskTrafficInfo;
 
     public static GetTrafficControlTaskTrafficResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTrafficControlTaskTrafficResponseBody self = new GetTrafficControlTaskTrafficResponseBody();
@@ -23,27 +23,27 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTrafficControlTaskTrafficResponseBody setTrafficControlTaskTraffic(GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic trafficControlTaskTraffic) {
-        this.trafficControlTaskTraffic = trafficControlTaskTraffic;
+    public GetTrafficControlTaskTrafficResponseBody setTrafficControlTaskTrafficInfo(GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo trafficControlTaskTrafficInfo) {
+        this.trafficControlTaskTrafficInfo = trafficControlTaskTrafficInfo;
         return this;
     }
-    public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic getTrafficControlTaskTraffic() {
-        return this.trafficControlTaskTraffic;
+    public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo getTrafficControlTaskTrafficInfo() {
+        return this.trafficControlTaskTrafficInfo;
     }
 
-    public static class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics extends TeaModel {
+    public static class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics extends TeaModel {
         @NameInMap("Data")
         public java.util.List<java.util.Map<String, ?>> data;
 
         @NameInMap("TrafficContorlTargetId")
         public String trafficContorlTargetId;
 
-        public static GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics build(java.util.Map<String, ?> map) throws Exception {
-            GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics self = new GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics();
+        public static GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics build(java.util.Map<String, ?> map) throws Exception {
+            GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics self = new GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics();
             return TeaModel.build(map, self);
         }
 
-        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics setData(java.util.List<java.util.Map<String, ?>> data) {
+        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics setData(java.util.List<java.util.Map<String, ?>> data) {
             this.data = data;
             return this;
         }
@@ -51,7 +51,7 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             return this.data;
         }
 
-        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics setTrafficContorlTargetId(String trafficContorlTargetId) {
+        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics setTrafficContorlTargetId(String trafficContorlTargetId) {
             this.trafficContorlTargetId = trafficContorlTargetId;
             return this;
         }
@@ -61,27 +61,27 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
 
     }
 
-    public static class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic extends TeaModel {
+    public static class GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo extends TeaModel {
         @NameInMap("TargetTraffics")
-        public java.util.List<GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics> targetTraffics;
+        public java.util.List<GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics> targetTraffics;
 
         @NameInMap("TaskTraffics")
         public java.util.Map<String, ?> taskTraffics;
 
-        public static GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic build(java.util.Map<String, ?> map) throws Exception {
-            GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic self = new GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic();
+        public static GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo self = new GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic setTargetTraffics(java.util.List<GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics> targetTraffics) {
+        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo setTargetTraffics(java.util.List<GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics> targetTraffics) {
             this.targetTraffics = targetTraffics;
             return this;
         }
-        public java.util.List<GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficTargetTraffics> getTargetTraffics() {
+        public java.util.List<GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfoTargetTraffics> getTargetTraffics() {
             return this.targetTraffics;
         }
 
-        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTraffic setTaskTraffics(java.util.Map<String, ?> taskTraffics) {
+        public GetTrafficControlTaskTrafficResponseBodyTrafficControlTaskTrafficInfo setTaskTraffics(java.util.Map<String, ?> taskTraffics) {
             this.taskTraffics = taskTraffics;
             return this;
         }

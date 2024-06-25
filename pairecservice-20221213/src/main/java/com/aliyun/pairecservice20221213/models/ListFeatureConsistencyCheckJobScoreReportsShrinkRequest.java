@@ -7,6 +7,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsShrinkRequest extends Tea
     @NameInMap("ExcludeRequestIds")
     public String excludeRequestIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pairec-cn-********</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

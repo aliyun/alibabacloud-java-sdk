@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateSubCrowdRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ManualInput</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user1,user2,user3</p>
      */
     @NameInMap("Users")
     public String users;

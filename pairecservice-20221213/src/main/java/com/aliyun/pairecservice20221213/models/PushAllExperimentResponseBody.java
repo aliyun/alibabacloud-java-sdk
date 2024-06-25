@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PushAllExperimentResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>74D958EF-3598-56FA-8296-FF1575CE43DF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

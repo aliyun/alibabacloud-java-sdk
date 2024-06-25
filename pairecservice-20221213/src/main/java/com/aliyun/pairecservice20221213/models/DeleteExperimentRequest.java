@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteExperimentRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-abcdefg1234</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

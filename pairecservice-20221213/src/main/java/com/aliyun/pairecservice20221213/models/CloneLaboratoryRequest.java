@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CloneLaboratoryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CloneExperimentGroup")
     public Boolean cloneExperimentGroup;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Daily</p>
      */
     @NameInMap("Environment")
     public String environment;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-abcdefg1234</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

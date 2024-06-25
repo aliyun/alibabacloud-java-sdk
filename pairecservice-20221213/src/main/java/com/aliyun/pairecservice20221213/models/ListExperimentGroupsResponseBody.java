@@ -9,10 +9,17 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,63 +53,131 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
     }
 
     public static class ListExperimentGroupsResponseBodyExperimentGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("CrowdId")
         public String crowdId;
 
         @NameInMap("CrowdTargetType")
         public String crowdTargetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("DebugCrowdId")
         public String debugCrowdId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1124512470******,1124512471******,1124512472******</p>
+         */
         @NameInMap("DebugUsers")
         public String debugUsers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("DistributionTimeDuration")
         public Integer distributionTimeDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UserId</p>
+         */
         @NameInMap("DistributionType")
         public String distributionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ExperimentGroupId")
         public String experimentGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gender=female</p>
+         */
         @NameInMap("Filter")
         public String filter;
 
         @NameInMap("HoldingBuckets")
         public String holdingBuckets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("LaboratoryId")
         public String laboratoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LayerId")
         public String layerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>experiment_group1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NeedAA")
         public Boolean needAA;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1124512470******</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
         @NameInMap("RandomFlow")
         public Long randomFlow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
+         */
         @NameInMap("ReservedBuckets")
         public String reservedBuckets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Offline</p>
+         */
         @NameInMap("Status")
         public String status;
 

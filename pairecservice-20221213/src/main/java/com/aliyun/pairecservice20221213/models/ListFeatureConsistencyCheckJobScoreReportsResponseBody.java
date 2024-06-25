@@ -4,15 +4,27 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>http://*******</p>
+     */
     @NameInMap("DataPath")
     public String dataPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://********</p>
+     */
     @NameInMap("OssPath")
     public String ossPath;
 
     @NameInMap("ReportsOfScoreDiff")
     public java.util.List<ListFeatureConsistencyCheckJobScoreReportsResponseBodyReportsOfScoreDiff> reportsOfScoreDiff;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F0AB6527-093F-5C44-B3BD-42C8C210C619</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,38 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
     }
 
     public static class ListFeatureConsistencyCheckJobScoreReportsResponseBodyReportsOfScoreDiff extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("LogItemId")
         public String logItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323</p>
+         */
         @NameInMap("LogRequestId")
         public String logRequestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LogUserId")
         public String logUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.00000234</p>
+         */
         @NameInMap("ScoreDiff")
         public String scoreDiff;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ScoreDiffDetail")
         public String scoreDiffDetail;
 

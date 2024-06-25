@@ -4,21 +4,40 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetSubCrowdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132+08:00</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Quantity")
     public String quantity;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01D22D08-BA20-5F35-8302-99115F288220</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ManualInput</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user1,user2</p>
+     */
     @NameInMap("Users")
     public String users;
 

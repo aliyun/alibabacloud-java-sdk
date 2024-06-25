@@ -9,10 +9,17 @@ public class ListExperimentsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68075085-1A7D-55C2-B51D-7AD9B02A6DD6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,54 +53,122 @@ public class ListExperimentsResponseBody extends TeaModel {
     }
 
     public static class ListExperimentsResponseBodyExperiments extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>L1#EG1#E1</p>
+         */
         @NameInMap("AliasExperimentId")
         public String aliasExperimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
+         */
         @NameInMap("Buckets")
         public String buckets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("DebugCrowdId")
         public String debugCrowdId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>uid1,uid2,uid3</p>
+         */
         @NameInMap("DebugUsers")
         public String debugUsers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ExperimentGroupId")
         public String experimentGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ExperimentId")
         public String experimentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FlowPercent")
         public Integer flowPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LaboratoryId")
         public String laboratoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LayerId")
         public String layerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>experiment_test1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Offline</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Baseline</p>
+         */
         @NameInMap("Type")
         public String type;
 

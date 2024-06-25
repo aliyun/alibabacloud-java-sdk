@@ -4,15 +4,27 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>https://********</p>
+     */
     @NameInMap("DataPath")
     public String dataPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://********</p>
+     */
     @NameInMap("OssPath")
     public String ossPath;
 
     @NameInMap("ReportsOfFeatureDiff")
     public java.util.List<ListFeatureConsistencyCheckJobFeatureReportsResponseBodyReportsOfFeatureDiff> reportsOfFeatureDiff;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BBD41FBF-E75C-551A-92FA-CAD654AA006F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,45 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
     }
 
     public static class ListFeatureConsistencyCheckJobFeatureReportsResponseBodyReportsOfFeatureDiff extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gender</p>
+         */
         @NameInMap("FeatureName")
         public String featureName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9010</p>
+         */
         @NameInMap("LogItemId")
         public String logItemId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
+         */
         @NameInMap("LogRequestId")
         public String logRequestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1010</p>
+         */
         @NameInMap("LogUserId")
         public String logUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>male</p>
+         */
         @NameInMap("OfflineValue")
         public String offlineValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>male</p>
+         */
         @NameInMap("OnlineValue")
         public String onlineValue;
 

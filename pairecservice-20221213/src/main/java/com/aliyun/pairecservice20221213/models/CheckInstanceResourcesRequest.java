@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class CheckInstanceResourcesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bucket-test-123</p>
+     */
     @NameInMap("Uri")
     public String uri;
 

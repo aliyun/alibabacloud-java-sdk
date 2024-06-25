@@ -4,30 +4,62 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetCalculationJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ABMetricId")
     public String ABMetricId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pv</p>
+     */
     @NameInMap("ABMetricName")
     public String ABMetricName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15</p>
+     */
     @NameInMap("BizDate")
     public String bizDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-15T23:24:33.132+08:00</p>
+     */
     @NameInMap("GmtRanTime")
     public String gmtRanTime;
 
     @NameInMap("JobMessage")
     public java.util.List<String> jobMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CronOffline</p>
+     */
     @NameInMap("JobSource")
     public String jobSource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7D59453C-48AA-5FC5-8848-2D373BD1A17F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 

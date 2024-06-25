@@ -7,6 +7,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsRequest extends TeaModel 
     @NameInMap("ExcludeRequestIds")
     public java.util.List<String> excludeRequestIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pairec-cn-********</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

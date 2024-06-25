@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>pairecservice20221213</artifactId>
-  <version>1.4.0</version>
+  <version>2.0.0</version>
   <packaging>jar</packaging>
   <name>pairecservice20221213</name>
   <description>Alibaba Cloud PaiRecService (20221213) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.3</version>
+      <version>0.3.4</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

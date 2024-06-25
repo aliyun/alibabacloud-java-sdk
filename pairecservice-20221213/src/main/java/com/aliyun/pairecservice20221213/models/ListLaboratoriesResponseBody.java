@@ -9,10 +9,17 @@ public class ListLaboratoriesResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1C0898E5-9220-5443-B2D9-445FF0688215</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,45 +53,101 @@ public class ListLaboratoriesResponseBody extends TeaModel {
     }
 
     public static class ListLaboratoriesResponseBodyLaboratories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("BucketCount")
         public Integer bucketCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Filter</p>
+         */
         @NameInMap("BucketType")
         public String bucketType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2,3,10-20</p>
+         */
         @NameInMap("Buckets")
         public String buckets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("CrowdId")
         public String crowdId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("DebugCrowdId")
         public String debugCrowdId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1,user2,user3</p>
+         */
         @NameInMap("DebugUsers")
         public String debugUsers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Daily</p>
+         */
         @NameInMap("Environment")
         public String environment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>filter=xxx</p>
+         */
         @NameInMap("Filter")
         public String filter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LaboratoryId")
         public String laboratoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>laboratory1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Offline</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Base</p>
+         */
         @NameInMap("Type")
         public String type;
 

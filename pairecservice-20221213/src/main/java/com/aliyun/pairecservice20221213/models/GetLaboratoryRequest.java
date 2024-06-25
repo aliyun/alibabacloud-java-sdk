@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetLaboratoryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

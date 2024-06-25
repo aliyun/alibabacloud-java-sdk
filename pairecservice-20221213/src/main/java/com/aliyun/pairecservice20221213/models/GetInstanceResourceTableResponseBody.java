@@ -7,9 +7,17 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
     @NameInMap("Fields")
     public java.util.List<GetInstanceResourceTableResponseBodyFields> fields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>74D958EF-3598-56FA-8296-FF1575CE43DF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_table</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
@@ -43,18 +51,34 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResourceTableResponseBodyFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDimensionField")
         public Boolean isDimensionField;
 
         @NameInMap("IsPartitionField")
         public Boolean isPartitionField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Meaning")
         public String meaning;
 
+        /**
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BIGINT</p>
+         */
         @NameInMap("Type")
         public String type;
 

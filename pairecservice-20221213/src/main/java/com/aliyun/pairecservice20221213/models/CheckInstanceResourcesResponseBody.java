@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CheckInstanceResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
     }
 
     public static class CheckInstanceResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bucket-test-123</p>
+         */
         @NameInMap("Uri")
         public String uri;
 

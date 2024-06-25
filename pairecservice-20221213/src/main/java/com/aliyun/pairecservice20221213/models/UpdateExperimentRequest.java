@@ -4,38 +4,66 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UpdateExperimentRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;RankBy&quot;: &quot;Score&quot;}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("DebugCrowdId")
     public String debugCrowdId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1124512470******,1124512471******,1124512472******</p>
+     */
     @NameInMap("DebugUsers")
     public String debugUsers;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a test.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("FlowPercent")
     public Integer flowPercent;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-abcdefg1234</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>experiment_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Baseline</p>
      */
     @NameInMap("Type")
     public String type;

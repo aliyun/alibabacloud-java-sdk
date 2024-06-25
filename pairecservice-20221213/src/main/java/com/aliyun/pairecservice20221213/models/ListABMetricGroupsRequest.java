@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListABMetricGroupsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -13,15 +16,31 @@ public class ListABMetricGroupsRequest extends TeaModel {
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Realtime")
     public Boolean realtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

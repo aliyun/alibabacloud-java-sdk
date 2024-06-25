@@ -4,9 +4,17 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateFeatureConsistencyCheckJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("FeatureConsistencyCheckJobId")
     public String featureConsistencyCheckJobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7D59453C-48AA-5FC5-8848-2D373BD1A17F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
