@@ -4,6 +4,9 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class DescribeImportFileUrlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContentType")
     public String contentType;
 

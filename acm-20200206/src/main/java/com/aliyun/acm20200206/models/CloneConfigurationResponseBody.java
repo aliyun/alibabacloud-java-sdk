@@ -4,14 +4,14 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class CloneConfigurationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Result")
     public CloneConfigurationResponseBodyResult result;
@@ -19,6 +19,14 @@ public class CloneConfigurationResponseBody extends TeaModel {
     public static CloneConfigurationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CloneConfigurationResponseBody self = new CloneConfigurationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CloneConfigurationResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public CloneConfigurationResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class CloneConfigurationResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CloneConfigurationResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public CloneConfigurationResponseBody setResult(CloneConfigurationResponseBodyResult result) {

@@ -3,16 +3,10 @@ package com.aliyun.acm20200206;
 
 import com.aliyun.tea.*;
 import com.aliyun.acm20200206.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this.checkConfig(config);
@@ -32,125 +26,111 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public BatchExportConfigurationsResponse batchExportConfigurations(BatchExportConfigurationsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.batchExportConfigurationsWithOptions(request, headers, runtime);
-    }
-
-    public BatchExportConfigurationsResponse batchExportConfigurationsWithOptions(BatchExportConfigurationsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request BatchExportConfigurationsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchExportConfigurationsResponse
+     */
+    public BatchExportConfigurationsResponse batchExportConfigurationsWithOptions(BatchExportConfigurationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
-            query.put("NamespaceId", request.namespaceId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.data)) {
             query.put("Data", request.data);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("BatchExportConfigurations", "2020-02-06", "HTTPS", "GET", "AK", "/diamond-ops/pop/batch/export", "json", req, runtime), new BatchExportConfigurationsResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchExportConfigurations"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/batch/export"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchExportConfigurationsResponse());
     }
 
-    public BatchImportConfigurationsResponse batchImportConfigurations(BatchImportConfigurationsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request BatchExportConfigurationsRequest
+     * @return BatchExportConfigurationsResponse
+     */
+    public BatchExportConfigurationsResponse batchExportConfigurations(BatchExportConfigurationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.batchImportConfigurationsWithOptions(request, headers, runtime);
+        return this.batchExportConfigurationsWithOptions(request, headers, runtime);
     }
 
-    public BatchImportConfigurationsResponse batchImportConfigurationsWithOptions(BatchImportConfigurationsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request BatchImportConfigurationsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchImportConfigurationsResponse
+     */
+    public BatchImportConfigurationsResponse batchImportConfigurationsWithOptions(BatchImportConfigurationsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
-            body.put("NamespaceId", request.namespaceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
-            body.put("Policy", request.policy);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
             body.put("FileUrl", request.fileUrl);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        return TeaModel.toModel(this.doROARequestWithForm("BatchImportConfigurations", "2020-02-06", "HTTPS", "POST", "AK", "/diamond-ops/pop/batch/import", "json", req, runtime), new BatchImportConfigurationsResponse());
-    }
-
-    public CheckConfigurationCloneResponse checkConfigurationClone(CheckConfigurationCloneRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.checkConfigurationCloneWithOptions(request, headers, runtime);
-    }
-
-    public CheckConfigurationCloneResponse checkConfigurationCloneWithOptions(CheckConfigurationCloneRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
-            body.put("Policy", request.policy);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.namespaceFrom)) {
-            body.put("NamespaceFrom", request.namespaceFrom);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.namespaceTo)) {
-            body.put("NamespaceTo", request.namespaceTo);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.data)) {
-            body.put("Data", request.data);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        return TeaModel.toModel(this.doROARequestWithForm("CheckConfigurationClone", "2020-02-06", "HTTPS", "POST", "AK", "/diamond-ops/pop/batch/checkForClone", "json", req, runtime), new CheckConfigurationCloneResponse());
-    }
-
-    public CheckConfigurationExportResponse checkConfigurationExport(CheckConfigurationExportRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.checkConfigurationExportWithOptions(request, headers, runtime);
-    }
-
-    public CheckConfigurationExportResponse checkConfigurationExportWithOptions(CheckConfigurationExportRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             body.put("NamespaceId", request.namespaceId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.data)) {
-            body.put("Data", request.data);
+        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
+            body.put("Policy", request.policy);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("CheckConfigurationExport", "2020-02-06", "HTTPS", "POST", "AK", "/diamond-ops/pop/batch/checkForExport", "json", req, runtime), new CheckConfigurationExportResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchImportConfigurations"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/batch/import"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchImportConfigurationsResponse());
     }
 
-    public CloneConfigurationResponse cloneConfiguration(CloneConfigurationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request BatchImportConfigurationsRequest
+     * @return BatchImportConfigurationsResponse
+     */
+    public BatchImportConfigurationsResponse batchImportConfigurations(BatchImportConfigurationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.cloneConfigurationWithOptions(request, headers, runtime);
+        return this.batchImportConfigurationsWithOptions(request, headers, runtime);
     }
 
-    public CloneConfigurationResponse cloneConfigurationWithOptions(CloneConfigurationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request CheckConfigurationCloneRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckConfigurationCloneResponse
+     */
+    public CheckConfigurationCloneResponse checkConfigurationCloneWithOptions(CheckConfigurationCloneRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
-            body.put("Policy", request.policy);
+        if (!com.aliyun.teautil.Common.isUnset(request.data)) {
+            body.put("Data", request.data);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceFrom)) {
@@ -161,92 +141,253 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("NamespaceTo", request.namespaceTo);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
+            body.put("Policy", request.policy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckConfigurationClone"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/batch/checkForClone"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckConfigurationCloneResponse());
+    }
+
+    /**
+     * @param request CheckConfigurationCloneRequest
+     * @return CheckConfigurationCloneResponse
+     */
+    public CheckConfigurationCloneResponse checkConfigurationClone(CheckConfigurationCloneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.checkConfigurationCloneWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @param request CheckConfigurationExportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckConfigurationExportResponse
+     */
+    public CheckConfigurationExportResponse checkConfigurationExportWithOptions(CheckConfigurationExportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.data)) {
             body.put("Data", request.data);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            body.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("CloneConfiguration", "2020-02-06", "HTTPS", "POST", "AK", "/diamond-ops/pop/batch/clone", "json", req, runtime), new CloneConfigurationResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckConfigurationExport"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/batch/checkForExport"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckConfigurationExportResponse());
     }
 
-    public CreateConfigurationResponse createConfiguration(CreateConfigurationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request CheckConfigurationExportRequest
+     * @return CheckConfigurationExportResponse
+     */
+    public CheckConfigurationExportResponse checkConfigurationExport(CheckConfigurationExportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createConfigurationWithOptions(request, headers, runtime);
+        return this.checkConfigurationExportWithOptions(request, headers, runtime);
     }
 
-    public CreateConfigurationResponse createConfigurationWithOptions(CreateConfigurationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request CloneConfigurationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloneConfigurationResponse
+     */
+    public CloneConfigurationResponse cloneConfigurationWithOptions(CloneConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
-            body.put("DataId", request.dataId);
+        if (!com.aliyun.teautil.Common.isUnset(request.data)) {
+            body.put("Data", request.data);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceFrom)) {
+            body.put("NamespaceFrom", request.namespaceFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceTo)) {
+            body.put("NamespaceTo", request.namespaceTo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policy)) {
+            body.put("Policy", request.policy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloneConfiguration"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/batch/clone"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloneConfigurationResponse());
+    }
+
+    /**
+     * @param request CloneConfigurationRequest
+     * @return CloneConfigurationResponse
+     */
+    public CloneConfigurationResponse cloneConfiguration(CloneConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cloneConfigurationWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @param request CreateConfigurationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConfigurationResponse
+     */
+    public CreateConfigurationResponse createConfigurationWithOptions(CreateConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             body.put("AppName", request.appName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
-            body.put("Group", request.group);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
-            body.put("Desc", request.desc);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
-            body.put("Tags", request.tags);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             body.put("Content", request.content);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            body.put("Type", request.type);
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            body.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
+            body.put("Desc", request.desc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
+            body.put("Group", request.group);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             body.put("NamespaceId", request.namespaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("CreateConfiguration", "2020-02-06", "HTTPS", "POST", "AK", "/diamond-ops/pop/configuration", "json", req, runtime), new CreateConfigurationResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateConfiguration"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/configuration"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConfigurationResponse());
     }
 
-    public CreateNamespaceResponse createNamespace(CreateNamespaceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request CreateConfigurationRequest
+     * @return CreateConfigurationResponse
+     */
+    public CreateConfigurationResponse createConfiguration(CreateConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createNamespaceWithOptions(request, headers, runtime);
+        return this.createConfigurationWithOptions(request, headers, runtime);
     }
 
-    public CreateNamespaceResponse createNamespaceWithOptions(CreateNamespaceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request CreateNamespaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNamespaceResponse
+     */
+    public CreateNamespaceResponse createNamespaceWithOptions(CreateNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("CreateNamespace", "2020-02-06", "HTTPS", "POST", "AK", "/diamond-ops/pop/namespace", "json", req, runtime), new CreateNamespaceResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNamespace"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/namespace"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNamespaceResponse());
     }
 
-    public DeleteConfigurationResponse deleteConfiguration(DeleteConfigurationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request CreateNamespaceRequest
+     * @return CreateNamespaceResponse
+     */
+    public CreateNamespaceResponse createNamespace(CreateNamespaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteConfigurationWithOptions(request, headers, runtime);
+        return this.createNamespaceWithOptions(request, headers, runtime);
     }
 
-    public DeleteConfigurationResponse deleteConfigurationWithOptions(DeleteConfigurationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request DeleteConfigurationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConfigurationResponse
+     */
+    public DeleteConfigurationResponse deleteConfigurationWithOptions(DeleteConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
@@ -261,92 +402,155 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NamespaceId", request.namespaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteConfiguration", "2020-02-06", "HTTPS", "DELETE", "AK", "/diamond-ops/pop/configuration", "json", req, runtime), new DeleteConfigurationResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConfiguration"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/configuration"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConfigurationResponse());
     }
 
-    public DeleteNamespaceResponse deleteNamespace(DeleteNamespaceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request DeleteConfigurationRequest
+     * @return DeleteConfigurationResponse
+     */
+    public DeleteConfigurationResponse deleteConfiguration(DeleteConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteNamespaceWithOptions(request, headers, runtime);
+        return this.deleteConfigurationWithOptions(request, headers, runtime);
     }
 
-    public DeleteNamespaceResponse deleteNamespaceWithOptions(DeleteNamespaceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request DeleteNamespaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNamespaceResponse
+     */
+    public DeleteNamespaceResponse deleteNamespaceWithOptions(DeleteNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DeleteNamespace", "2020-02-06", "HTTPS", "DELETE", "AK", "/diamond-ops/pop/namespace", "json", req, runtime), new DeleteNamespaceResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNamespace"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/namespace"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNamespaceResponse());
     }
 
-    public DeployConfigurationResponse deployConfiguration(DeployConfigurationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request DeleteNamespaceRequest
+     * @return DeleteNamespaceResponse
+     */
+    public DeleteNamespaceResponse deleteNamespace(DeleteNamespaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deployConfigurationWithOptions(request, headers, runtime);
+        return this.deleteNamespaceWithOptions(request, headers, runtime);
     }
 
-    public DeployConfigurationResponse deployConfigurationWithOptions(DeployConfigurationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request DeployConfigurationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeployConfigurationResponse
+     */
+    public DeployConfigurationResponse deployConfigurationWithOptions(DeployConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
-            body.put("DataId", request.dataId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             body.put("AppName", request.appName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
-            body.put("Group", request.group);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
-            body.put("Desc", request.desc);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
-            body.put("Tags", request.tags);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
-            body.put("Content", request.content);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            body.put("Type", request.type);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
-            body.put("NamespaceId", request.namespaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.betaIps)) {
             body.put("BetaIps", request.betaIps);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            body.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desc)) {
+            body.put("Desc", request.desc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
+            body.put("Group", request.group);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            body.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("DeployConfiguration", "2020-02-06", "HTTPS", "PUT", "AK", "/diamond-ops/pop/configuration", "json", req, runtime), new DeployConfigurationResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeployConfiguration"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/configuration"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeployConfigurationResponse());
     }
 
-    public DescribeConfigurationResponse describeConfiguration(DescribeConfigurationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request DeployConfigurationRequest
+     * @return DeployConfigurationResponse
+     */
+    public DeployConfigurationResponse deployConfiguration(DeployConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeConfigurationWithOptions(request, headers, runtime);
+        return this.deployConfigurationWithOptions(request, headers, runtime);
     }
 
-    public DescribeConfigurationResponse describeConfigurationWithOptions(DescribeConfigurationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request DescribeConfigurationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeConfigurationResponse
+     */
+    public DescribeConfigurationResponse describeConfigurationWithOptions(DescribeConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
@@ -361,90 +565,195 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NamespaceId", request.namespaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeConfiguration", "2020-02-06", "HTTPS", "GET", "AK", "/diamond-ops/pop/configuration", "json", req, runtime), new DescribeConfigurationResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeConfiguration"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/configuration"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConfigurationResponse());
     }
 
-    public DescribeImportFileUrlResponse describeImportFileUrl(DescribeImportFileUrlRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request DescribeConfigurationRequest
+     * @return DescribeConfigurationResponse
+     */
+    public DescribeConfigurationResponse describeConfiguration(DescribeConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeImportFileUrlWithOptions(request, headers, runtime);
+        return this.describeConfigurationWithOptions(request, headers, runtime);
     }
 
-    public DescribeImportFileUrlResponse describeImportFileUrlWithOptions(DescribeImportFileUrlRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request DescribeImportFileUrlRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeImportFileUrlResponse
+     */
+    public DescribeImportFileUrlResponse describeImportFileUrlWithOptions(DescribeImportFileUrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
             query.put("ContentType", request.contentType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeImportFileUrl", "2020-02-06", "HTTPS", "GET", "AK", "/diamond-ops/pop/batch/importFileUrl", "json", req, runtime), new DescribeImportFileUrlResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeImportFileUrl"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/batch/importFileUrl"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeImportFileUrlResponse());
     }
 
-    public DescribeNamespaceResponse describeNamespace(DescribeNamespaceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request DescribeImportFileUrlRequest
+     * @return DescribeImportFileUrlResponse
+     */
+    public DescribeImportFileUrlResponse describeImportFileUrl(DescribeImportFileUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeNamespaceWithOptions(request, headers, runtime);
+        return this.describeImportFileUrlWithOptions(request, headers, runtime);
     }
 
-    public DescribeNamespaceResponse describeNamespaceWithOptions(DescribeNamespaceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request DescribeNamespaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNamespaceResponse
+     */
+    public DescribeNamespaceResponse describeNamespaceWithOptions(DescribeNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeNamespace", "2020-02-06", "HTTPS", "GET", "AK", "/diamond-ops/pop/namespace", "json", req, runtime), new DescribeNamespaceResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNamespace"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/namespace"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNamespaceResponse());
     }
 
+    /**
+     * @param request DescribeNamespaceRequest
+     * @return DescribeNamespaceResponse
+     */
+    public DescribeNamespaceResponse describeNamespace(DescribeNamespaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeNamespaceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNamespacesResponse
+     */
+    public DescribeNamespacesResponse describeNamespacesWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNamespaces"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/namespace/list"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNamespacesResponse());
+    }
+
+    /**
+     * @return DescribeNamespacesResponse
+     */
     public DescribeNamespacesResponse describeNamespaces() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeNamespacesWithOptions(headers, runtime);
     }
 
-    public DescribeNamespacesResponse describeNamespacesWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+    /**
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNamespacesWithCreateResponse
+     */
+    public DescribeNamespacesWithCreateResponse describeNamespacesWithCreateWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeNamespaces", "2020-02-06", "HTTPS", "GET", "AK", "/diamond-ops/pop/namespace/list", "json", req, runtime), new DescribeNamespacesResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNamespacesWithCreate"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/namespace/listWithCreate"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNamespacesWithCreateResponse());
     }
 
+    /**
+     * @return DescribeNamespacesWithCreateResponse
+     */
     public DescribeNamespacesWithCreateResponse describeNamespacesWithCreate() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeNamespacesWithCreateWithOptions(headers, runtime);
     }
 
-    public DescribeNamespacesWithCreateResponse describeNamespacesWithCreateWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        return TeaModel.toModel(this.doROARequest("DescribeNamespacesWithCreate", "2020-02-06", "HTTPS", "GET", "AK", "/diamond-ops/pop/namespace/listWithCreate", "json", req, runtime), new DescribeNamespacesWithCreateResponse());
-    }
-
-    public DescribeTraceByConfigurationResponse describeTraceByConfiguration(DescribeTraceByConfigurationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeTraceByConfigurationWithOptions(request, headers, runtime);
-    }
-
-    public DescribeTraceByConfigurationResponse describeTraceByConfigurationWithOptions(DescribeTraceByConfigurationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request DescribeTraceByConfigurationRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTraceByConfigurationResponse
+     */
+    public DescribeTraceByConfigurationResponse describeTraceByConfigurationWithOptions(DescribeTraceByConfigurationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
             query.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTs)) {
+            query.put("EndTs", request.endTs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.group)) {
@@ -459,24 +768,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartTs", request.startTs);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.endTs)) {
-            query.put("EndTs", request.endTs);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeTraceByConfiguration", "2020-02-06", "HTTPS", "GET", "AK", "/diamond-ops/pop/trace/getByConfiguration", "json", req, runtime), new DescribeTraceByConfigurationResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTraceByConfiguration"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/trace/getByConfiguration"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTraceByConfigurationResponse());
     }
 
-    public UpdateNamespaceResponse updateNamespace(UpdateNamespaceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+     * @param request DescribeTraceByConfigurationRequest
+     * @return DescribeTraceByConfigurationResponse
+     */
+    public DescribeTraceByConfigurationResponse describeTraceByConfiguration(DescribeTraceByConfigurationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateNamespaceWithOptions(request, headers, runtime);
+        return this.describeTraceByConfigurationWithOptions(request, headers, runtime);
     }
 
-    public UpdateNamespaceResponse updateNamespaceWithOptions(UpdateNamespaceRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+     * @param request UpdateNamespaceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateNamespaceResponse
+     */
+    public UpdateNamespaceResponse updateNamespaceWithOptions(UpdateNamespaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
@@ -487,10 +813,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("NamespaceName", request.namespaceName);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequestWithForm("UpdateNamespace", "2020-02-06", "HTTPS", "PUT", "AK", "/diamond-ops/pop/namespace", "json", req, runtime), new UpdateNamespaceResponse());
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateNamespace"),
+            new TeaPair("version", "2020-02-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/diamond-ops/pop/namespace"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateNamespaceResponse());
+    }
+
+    /**
+     * @param request UpdateNamespaceRequest
+     * @return UpdateNamespaceResponse
+     */
+    public UpdateNamespaceResponse updateNamespace(UpdateNamespaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateNamespaceWithOptions(request, headers, runtime);
     }
 }

@@ -4,29 +4,41 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class CheckConfigurationCloneRequest extends TeaModel {
-    @NameInMap("Policy")
-    public String policy;
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("Data")
+    public String data;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NamespaceFrom")
     public String namespaceFrom;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NamespaceTo")
     public String namespaceTo;
 
-    @NameInMap("Data")
-    public String data;
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("Policy")
+    public String policy;
 
     public static CheckConfigurationCloneRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckConfigurationCloneRequest self = new CheckConfigurationCloneRequest();
         return TeaModel.build(map, self);
     }
 
-    public CheckConfigurationCloneRequest setPolicy(String policy) {
-        this.policy = policy;
+    public CheckConfigurationCloneRequest setData(String data) {
+        this.data = data;
         return this;
     }
-    public String getPolicy() {
-        return this.policy;
+    public String getData() {
+        return this.data;
     }
 
     public CheckConfigurationCloneRequest setNamespaceFrom(String namespaceFrom) {
@@ -45,12 +57,12 @@ public class CheckConfigurationCloneRequest extends TeaModel {
         return this.namespaceTo;
     }
 
-    public CheckConfigurationCloneRequest setData(String data) {
-        this.data = data;
+    public CheckConfigurationCloneRequest setPolicy(String policy) {
+        this.policy = policy;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public String getPolicy() {
+        return this.policy;
     }
 
 }

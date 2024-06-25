@@ -4,6 +4,12 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>112300d2-ca66-42ba-b706-****</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 

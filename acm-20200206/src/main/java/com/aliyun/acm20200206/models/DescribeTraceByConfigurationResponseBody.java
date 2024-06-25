@@ -4,6 +4,9 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class DescribeTraceByConfigurationResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
     @NameInMap("Traces")
     public java.util.List<DescribeTraceByConfigurationResponseBodyTraces> traces;
 
-    @NameInMap("Code")
-    public String code;
-
     public static DescribeTraceByConfigurationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTraceByConfigurationResponseBody self = new DescribeTraceByConfigurationResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTraceByConfigurationResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeTraceByConfigurationResponseBody setMessage(String message) {
@@ -45,26 +53,12 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
         return this.traces;
     }
 
-    public DescribeTraceByConfigurationResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public static class DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("DataId")
+        public String dataId;
 
         @NameInMap("Delay")
         public String delay;
-
-        @NameInMap("Ts")
-        public String ts;
-
-        @NameInMap("ResponseIp")
-        public String responseIp;
 
         @NameInMap("Event")
         public String event;
@@ -72,32 +66,38 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
         @NameInMap("Ext")
         public String ext;
 
-        @NameInMap("DataId")
-        public String dataId;
-
-        @NameInMap("RequestIp")
-        public String requestIp;
-
-        @NameInMap("LogDate")
-        public String logDate;
+        @NameInMap("Group")
+        public String group;
 
         @NameInMap("HandleIp")
         public String handleIp;
 
-        @NameInMap("Group")
-        public String group;
+        @NameInMap("LogDate")
+        public String logDate;
+
+        @NameInMap("RequestIp")
+        public String requestIp;
+
+        @NameInMap("ResponseIp")
+        public String responseIp;
+
+        @NameInMap("Ts")
+        public String ts;
+
+        @NameInMap("Type")
+        public String type;
 
         public static DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails self = new DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setType(String type) {
-            this.type = type;
+        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setDataId(String dataId) {
+            this.dataId = dataId;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getDataId() {
+            return this.dataId;
         }
 
         public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setDelay(String delay) {
@@ -106,22 +106,6 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
         }
         public String getDelay() {
             return this.delay;
-        }
-
-        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setTs(String ts) {
-            this.ts = ts;
-            return this;
-        }
-        public String getTs() {
-            return this.ts;
-        }
-
-        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setResponseIp(String responseIp) {
-            this.responseIp = responseIp;
-            return this;
-        }
-        public String getResponseIp() {
-            return this.responseIp;
         }
 
         public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setEvent(String event) {
@@ -140,28 +124,12 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
             return this.ext;
         }
 
-        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setDataId(String dataId) {
-            this.dataId = dataId;
+        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setGroup(String group) {
+            this.group = group;
             return this;
         }
-        public String getDataId() {
-            return this.dataId;
-        }
-
-        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setRequestIp(String requestIp) {
-            this.requestIp = requestIp;
-            return this;
-        }
-        public String getRequestIp() {
-            return this.requestIp;
-        }
-
-        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setLogDate(String logDate) {
-            this.logDate = logDate;
-            return this;
-        }
-        public String getLogDate() {
-            return this.logDate;
+        public String getGroup() {
+            return this.group;
         }
 
         public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setHandleIp(String handleIp) {
@@ -172,34 +140,58 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
             return this.handleIp;
         }
 
-        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setGroup(String group) {
-            this.group = group;
+        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setLogDate(String logDate) {
+            this.logDate = logDate;
             return this;
         }
-        public String getGroup() {
-            return this.group;
+        public String getLogDate() {
+            return this.logDate;
+        }
+
+        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setRequestIp(String requestIp) {
+            this.requestIp = requestIp;
+            return this;
+        }
+        public String getRequestIp() {
+            return this.requestIp;
+        }
+
+        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setResponseIp(String responseIp) {
+            this.responseIp = responseIp;
+            return this;
+        }
+        public String getResponseIp() {
+            return this.responseIp;
+        }
+
+        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setTs(String ts) {
+            this.ts = ts;
+            return this;
+        }
+        public String getTs() {
+            return this.ts;
+        }
+
+        public DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
     }
 
     public static class DescribeTraceByConfigurationResponseBodyTracesEventGroups extends TeaModel {
-        @NameInMap("EventType")
-        public String eventType;
-
         @NameInMap("EventDetails")
         public java.util.List<DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails> eventDetails;
+
+        @NameInMap("EventType")
+        public String eventType;
 
         public static DescribeTraceByConfigurationResponseBodyTracesEventGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeTraceByConfigurationResponseBodyTracesEventGroups self = new DescribeTraceByConfigurationResponseBodyTracesEventGroups();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTraceByConfigurationResponseBodyTracesEventGroups setEventType(String eventType) {
-            this.eventType = eventType;
-            return this;
-        }
-        public String getEventType() {
-            return this.eventType;
         }
 
         public DescribeTraceByConfigurationResponseBodyTracesEventGroups setEventDetails(java.util.List<DescribeTraceByConfigurationResponseBodyTracesEventGroupsEventDetails> eventDetails) {
@@ -210,26 +202,26 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
             return this.eventDetails;
         }
 
+        public DescribeTraceByConfigurationResponseBodyTracesEventGroups setEventType(String eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+        public String getEventType() {
+            return this.eventType;
+        }
+
     }
 
     public static class DescribeTraceByConfigurationResponseBodyTraces extends TeaModel {
-        @NameInMap("Timestamp")
-        public Long timestamp;
-
         @NameInMap("EventGroups")
         public java.util.List<DescribeTraceByConfigurationResponseBodyTracesEventGroups> eventGroups;
+
+        @NameInMap("Timestamp")
+        public Long timestamp;
 
         public static DescribeTraceByConfigurationResponseBodyTraces build(java.util.Map<String, ?> map) throws Exception {
             DescribeTraceByConfigurationResponseBodyTraces self = new DescribeTraceByConfigurationResponseBodyTraces();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTraceByConfigurationResponseBodyTraces setTimestamp(Long timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public Long getTimestamp() {
-            return this.timestamp;
         }
 
         public DescribeTraceByConfigurationResponseBodyTraces setEventGroups(java.util.List<DescribeTraceByConfigurationResponseBodyTracesEventGroups> eventGroups) {
@@ -238,6 +230,14 @@ public class DescribeTraceByConfigurationResponseBody extends TeaModel {
         }
         public java.util.List<DescribeTraceByConfigurationResponseBodyTracesEventGroups> getEventGroups() {
             return this.eventGroups;
+        }
+
+        public DescribeTraceByConfigurationResponseBodyTraces setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
         }
 
     }

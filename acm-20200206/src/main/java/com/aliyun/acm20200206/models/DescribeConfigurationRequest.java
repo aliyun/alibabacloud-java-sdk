@@ -4,12 +4,30 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigurationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliyun.acm.example</p>
+     */
     @NameInMap("DataId")
     public String dataId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT_GROUP</p>
+     */
     @NameInMap("Group")
     public String group;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101100d2-ca66-42ba-b706-****</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
