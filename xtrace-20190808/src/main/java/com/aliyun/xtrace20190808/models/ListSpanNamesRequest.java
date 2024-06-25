@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class ListSpanNamesRequest extends TeaModel {
     /**
      * <p>The timestamp of the end time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1575622455686</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service 1</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
      * <p>The timestamp of the start time of the time range to query. The timestamp is accurate to milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1575561600000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

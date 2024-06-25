@@ -4,9 +4,19 @@ package com.aliyun.xtrace20190808.models;
 import com.aliyun.tea.*;
 
 public class CheckCommercialStatusRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xtrace</p>
+     */
     @NameInMap("Service")
     public String service;
 

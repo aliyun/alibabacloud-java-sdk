@@ -12,6 +12,9 @@ public class SearchTracesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1E2B6A4C-6B83-4062-8B6F-AEEC1F******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class SearchTracesResponseBody extends TeaModel {
     public static class SearchTracesResponseBodyPageBeanTraceInfosTraceInfo extends TeaModel {
         /**
          * <p>The time used to call the trace. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Duration")
         public Long duration;
 
         /**
          * <p>The name of the span.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/api</p>
          */
         @NameInMap("OperationName")
         public String operationName;
 
         /**
          * <p>The IP address of the server where the span resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.163.XXX.XXX</p>
          */
         @NameInMap("ServiceIp")
         public String serviceIp;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service1</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>The map of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;env&quot;:&quot;dev&quot;}</p>
          */
         @NameInMap("TagMap")
         public java.util.Map<String, ?> tagMap;
 
         /**
          * <p>The time when the span was generated. Unit: microseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1575561600000000</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The ID of the trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1c6881aab84191a4</p>
          */
         @NameInMap("TraceID")
         public String traceID;
@@ -165,18 +189,27 @@ public class SearchTracesResponseBody extends TeaModel {
     public static class SearchTracesResponseBodyPageBean extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

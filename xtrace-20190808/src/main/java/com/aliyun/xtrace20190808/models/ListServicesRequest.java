@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
     /**
-     * <p>The type of the application. You can set the value to **XTRACE** or leave this parameter unspecified.</p>
+     * <p>The type of the application. You can set the value to <strong>XTRACE</strong> or leave this parameter unspecified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>XTRACE</p>
      */
     @NameInMap("AppType")
     public String appType;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
