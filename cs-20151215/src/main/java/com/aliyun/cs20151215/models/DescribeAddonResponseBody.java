@@ -6,39 +6,55 @@ import com.aliyun.tea.*;
 public class DescribeAddonResponseBody extends TeaModel {
     /**
      * <p>Architectures supported by the component. Valid values:</p>
-     * <br>
-     * <p>*   amd64</p>
-     * <p>*   arm64</p>
+     * <ul>
+     * <li>amd64</li>
+     * <li>arm64</li>
+     * </ul>
      */
     @NameInMap("architecture")
     public java.util.List<String> architecture;
 
     /**
      * <p>The category of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>network</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
      * <p>The custom parameter schema of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("config_schema")
     public String configSchema;
 
     /**
      * <p>Indicates whether the component is automatically installed by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("install_by_default")
     public Boolean installByDefault;
 
     /**
      * <p>Indicates whether the component is fully managed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("managed")
     public Boolean managed;
 
     /**
      * <p>The name of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>coredns</p>
      */
     @NameInMap("name")
     public String name;
@@ -51,17 +67,21 @@ public class DescribeAddonResponseBody extends TeaModel {
 
     /**
      * <p>Operations supported by the component. Valid values:</p>
-     * <br>
-     * <p>*   Install</p>
-     * <p>*   Upgrade</p>
-     * <p>*   Modify</p>
-     * <p>*   Uninstall</p>
+     * <ul>
+     * <li>Install</li>
+     * <li>Upgrade</li>
+     * <li>Modify</li>
+     * <li>Uninstall</li>
+     * </ul>
      */
     @NameInMap("supported_actions")
     public java.util.List<String> supportedActions;
 
     /**
      * <p>The version of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1.9.3.6-32932850-aliyun</p>
      */
     @NameInMap("version")
     public String version;
@@ -146,18 +166,27 @@ public class DescribeAddonResponseBody extends TeaModel {
     public static class DescribeAddonResponseBodyNewerVersions extends TeaModel {
         /**
          * <p>The minimum cluster version required by the component version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.20.4</p>
          */
         @NameInMap("minimum_cluster_version")
         public String minimumClusterVersion;
 
         /**
          * <p>Indicates whether the component can be updated to the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("upgradable")
         public Boolean upgradable;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.9.3.10-7dfca203-aliyun</p>
          */
         @NameInMap("version")
         public String version;

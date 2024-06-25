@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CancelOperationPlanResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>873DC52C-28AA-5A5C-938C-684D3D4B****</p>
      */
     @NameInMap("requestId")
     public String requestId;

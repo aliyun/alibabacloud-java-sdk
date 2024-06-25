@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeExternalAgentRequest extends TeaModel {
     /**
      * <p>The permission mode of the agent. Valid values:</p>
-     * <br>
      * <p>admin: the admin mode, which provides full permissions. restricted: the restricted mode, which provides partial permissions. Default value: admin.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("AgentMode")
     public String agentMode;
 
     /**
      * <p>Specifies whether to obtain the credentials that are used to access the cluster over the internal network.</p>
-     * <br>
-     * <p>*   `true`: obtains the credentials that are used to access the cluster over the internal network.</p>
-     * <p>*   `false`: obtains the credentials that are used to access the cluster over the Internet.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: obtains the credentials that are used to access the cluster over the internal network.</li>
+     * <li><code>false</code>: obtains the credentials that are used to access the cluster over the Internet.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;

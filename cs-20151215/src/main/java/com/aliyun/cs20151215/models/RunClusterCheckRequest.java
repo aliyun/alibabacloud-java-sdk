@@ -12,14 +12,19 @@ public class RunClusterCheckRequest extends TeaModel {
 
     /**
      * <p>检查目标。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np1f6779297c4444a3a1cdd29be8e5****</p>
      */
     @NameInMap("target")
     public String target;
 
     /**
      * <p>The check method.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ClusterUpgrade</p>
      */
     @NameInMap("type")
     public String type;

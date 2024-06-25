@@ -7,12 +7,24 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
     @NameInMap("check_items")
     public java.util.List<GetClusterDiagnosisCheckItemsResponseBodyCheckItems> checkItems;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("is_success")
     public Boolean isSuccess;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1DFFD8C6-259E-582B-8B40-002C17DC****</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
@@ -54,27 +66,59 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
     }
 
     public static class GetClusterDiagnosisCheckItemsResponseBodyCheckItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Check whether the node can access host dns service</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HostDNS</p>
+         */
         @NameInMap("display")
         public String display;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Node</p>
+         */
         @NameInMap("group")
         public String group;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HostDNS</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("refer")
         public String refer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("value")
         public String value;
 

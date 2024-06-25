@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel {
     /**
      * <p>The device name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TEST0621N0FF****</p>
      */
     @NameInMap("device_name")
     public String deviceName;
 
     /**
      * <p>The model of the cloud-native box.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACK-A-S001</p>
      */
     @NameInMap("model")
     public String model;
 
     /**
      * <p>Product Key</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a11rXul****</p>
      */
     @NameInMap("product_key")
     public String productKey;
 
     /**
      * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bfd12953-31cb-42f1-8a36-7b80ec345094</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
     /**
      * <p>The serial number of the cloud-native box.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Q2CB5XZAFBFG****</p>
      */
     @NameInMap("sn")
     public String sn;
 
     /**
      * <p>Token</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcd****</p>
      */
     @NameInMap("token")
     public String token;
 
     /**
      * <p>The tunnel endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wss://frontend-iotx-r-debug.aliyun-inc.test</p>
      */
     @NameInMap("tunnel_endpoint")
     public String tunnelEndpoint;

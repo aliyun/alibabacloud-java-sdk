@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RepairClusterNodePoolResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db82195b-75a8-40e5-9be4-16f1829dc624</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-613b19bbd160ad4928000001</p>
      */
     @NameInMap("task_id")
     public String taskId;

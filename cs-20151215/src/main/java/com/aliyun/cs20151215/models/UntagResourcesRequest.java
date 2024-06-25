@@ -5,41 +5,47 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all custom labels. This parameter takes effect only when `tag_keys` is left empty. Valid values:</p>
-     * <br>
-     * <p>*   `true`: Remove all custom labels.</p>
-     * <p>*   `false`: Do not remove all custom labels.</p>
+     * <p>Specifies whether to remove all custom labels. This parameter takes effect only when <code>tag_keys</code> is left empty. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: Remove all custom labels.</li>
+     * <li><code>false</code>: Do not remove all custom labels.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("all")
     public Boolean all;
 
     /**
      * <p>The region ID of the resources.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region_id")
     public String regionId;
 
     /**
      * <p>The list of resource IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resource_ids")
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The type of resource. Set the value to `CLUSTER`.</p>
-     * <br>
+     * <p>The type of resource. Set the value to <code>CLUSTER</code>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("resource_type")
     public String resourceType;
 
     /**
      * <p>The list of keys of the labels that you want to remove.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("tag_keys")

@@ -6,11 +6,14 @@ import com.aliyun.tea.*;
 public class DeleteEdgeMachineRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully delete the cloud-native box. Valid values:</p>
-     * <br>
-     * <p>*   `true`: forcefully deletes the cloud-native box.</p>
-     * <p>*   `false`: does not forcefully delete the cloud-native box.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: forcefully deletes the cloud-native box.</li>
+     * <li><code>false</code>: does not forcefully delete the cloud-native box.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true/false</p>
      */
     @NameInMap("force")
     public String force;

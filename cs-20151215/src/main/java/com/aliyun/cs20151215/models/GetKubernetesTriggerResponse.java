@@ -45,53 +45,71 @@ public class GetKubernetesTriggerResponse extends TeaModel {
     public static class GetKubernetesTriggerResponseBody extends TeaModel {
         /**
          * <p>The ID of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the trigger.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The ID of the associated cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c259f563386444ebb8d7**</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
 
         /**
          * <p>The name of the project.</p>
-         * <br>
-         * <p>The name consists of the namespace where the application is deployed and the name of the application. The format is `${namespace}/${name}`. Example: default/test-app.</p>
+         * <p>The name consists of the namespace where the application is deployed and the name of the application. The format is <code>${namespace}/${name}</code>. Example: default/test-app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default/test-app</p>
          */
         @NameInMap("project_id")
         public String projectId;
 
         /**
          * <p>The type of trigger.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   `deployment`: performs actions on Deployments.</p>
-         * <p>*   `application`: performs actions on applications that are deployed in Application Center.</p>
-         * <br>
-         * <p>Default value: `deployment`.</p>
+         * <ul>
+         * <li><code>deployment</code>: performs actions on Deployments.</li>
+         * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+         * </ul>
+         * <p>Default value: <code>deployment</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deployment</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The action that the trigger performs. The value is set to redeploy.</p>
-         * <br>
-         * <p>`redeploy`: redeploys the resource specified by project_id.</p>
+         * <p><code>redeploy</code>: redeploys the resource specified by project_id.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redeploy</p>
          */
         @NameInMap("action")
         public String action;
 
         /**
          * <p>Token</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJhbGci***</p>
          */
         @NameInMap("token")
         public String token;

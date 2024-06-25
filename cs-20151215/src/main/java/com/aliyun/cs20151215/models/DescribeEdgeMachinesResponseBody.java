@@ -40,60 +40,90 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     public static class DescribeEdgeMachinesResponseBodyEdgeMachines extends TeaModel {
         /**
          * <p>The time when the cloud-native box was activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-19T16:07:48+08:00</p>
          */
         @NameInMap("active_time")
         public String activeTime;
 
         /**
          * <p>The time when the cloud-native box was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-07T20:44:00+08:00</p>
          */
         @NameInMap("created")
         public String created;
 
         /**
          * <p>The device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c61083909b13f4a95b8554bda9577****</p>
          */
         @NameInMap("edge_machine_id")
         public String edgeMachineId;
 
         /**
-         * <p>The `hostname` of the cloud-native box.</p>
+         * <p>The <code>hostname</code> of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-v-b010-ssdfw****</p>
          */
         @NameInMap("hostname")
         public String hostname;
 
         /**
          * <p>The lifecycle of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>activated</p>
          */
         @NameInMap("life_state")
         public String lifeState;
 
         /**
          * <p>The model of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK-V-B010</p>
          */
         @NameInMap("model")
         public String model;
 
         /**
          * <p>The machine name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-v-b010-ssdfw****</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("online_state")
         public String onlineState;
 
         /**
          * <p>The serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK9GBL31SXX****</p>
          */
         @NameInMap("sn")
         public String sn;
 
         /**
          * <p>The time when the cloud-native box was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-07T20:44:00+08:00</p>
          */
         @NameInMap("updated")
         public String updated;
@@ -188,22 +218,29 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
     public static class DescribeEdgeMachinesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
-         * <br>
          * <p>Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("page_number")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
-         * <br>
          * <p>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("page_size")
         public Integer pageSize;
 
         /**
          * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("total_count")
         public Integer totalCount;

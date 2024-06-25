@@ -157,54 +157,77 @@ public class DescribeClusterResourcesResponse extends TeaModel {
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb95aa626a47740afbf6aa099b65****</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
 
         /**
          * <p>The time when the resource was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-11T10:11:54+08:00</p>
          */
         @NameInMap("created")
         public String created;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-wz9poz4r0ymh8u0uf****</p>
          */
         @NameInMap("instance_id")
         public String instanceId;
 
         /**
-         * <p>The information about the resource. For more information about how to query the source information about a resource, see [ListStackResources](https://help.aliyun.com/document_detail/133836.html).</p>
+         * <p>The information about the resource. For more information about how to query the source information about a resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Id\&quot;:\&quot;k8s_master_slb\&quot;,\&quot;Name\&quot;:\&quot;k8s_master_slb\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::SLB::LoadBalancer\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2020-05-21T13:25:02\&quot;,\&quot;PhysicalId\&quot;:\&quot;lb-wz9poz4r0ymh8u0uf****\&quot;}</p>
          */
         @NameInMap("resource_info")
         public String resourceInfo;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::SLB::LoadBalancer</p>
          */
         @NameInMap("resource_type")
         public String resourceType;
 
         /**
          * <p>The resource status. Valid values:</p>
-         * <br>
-         * <p>*   `CREATE_COMPLETE`: The resource is created.</p>
-         * <p>*   `CREATE_FAILED`: The resource failed to be created.</p>
-         * <p>*   `CREATE_IN_PROGRESS`: The resource is being created.</p>
-         * <p>*   `DELETE_FAILED`: The resource failed to be deleted.</p>
-         * <p>*   `DELETE_IN_PROGRESS`: The resource is being deleted.</p>
-         * <p>*   `ROLLBACK_COMPLETE`: The resource is rolled back.</p>
-         * <p>*   `ROLLBACK_FAILED`: The resource failed to be rolled back.</p>
-         * <p>*   `ROLLBACK_IN_PROGRESS`: The resource is being rolled back.</p>
+         * <ul>
+         * <li><code>CREATE_COMPLETE</code>: The resource is created.</li>
+         * <li><code>CREATE_FAILED</code>: The resource failed to be created.</li>
+         * <li><code>CREATE_IN_PROGRESS</code>: The resource is being created.</li>
+         * <li><code>DELETE_FAILED</code>: The resource failed to be deleted.</li>
+         * <li><code>DELETE_IN_PROGRESS</code>: The resource is being deleted.</li>
+         * <li><code>ROLLBACK_COMPLETE</code>: The resource is rolled back.</li>
+         * <li><code>ROLLBACK_FAILED</code>: The resource failed to be rolled back.</li>
+         * <li><code>ROLLBACK_IN_PROGRESS</code>: The resource is being rolled back.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_COMPLETE</p>
          */
         @NameInMap("state")
         public String state;
 
         /**
          * <p>Indicates whether the resource is created by Container Service for Kubernetes (ACK). Valid values:</p>
-         * <br>
-         * <p>*   1: The resource is created by ACK.</p>
-         * <p>*   0: The resource is an existing resource.</p>
+         * <ul>
+         * <li>1: The resource is created by ACK.</li>
+         * <li>0: The resource is an existing resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("auto_create")
         public Long autoCreate;

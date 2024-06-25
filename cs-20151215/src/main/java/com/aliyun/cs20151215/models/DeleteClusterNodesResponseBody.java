@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteClusterNodesResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c104d5d5f301c4e2a8ee578c37bc****</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A9891419-D125-4D89-AFCA-68846675E2F7</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-60fea8ad2e277f0879000ae9</p>
      */
     @NameInMap("task_id")
     public String taskId;

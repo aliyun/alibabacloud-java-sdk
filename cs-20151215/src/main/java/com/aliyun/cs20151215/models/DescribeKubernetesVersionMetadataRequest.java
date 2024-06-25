@@ -6,45 +6,55 @@ import com.aliyun.tea.*;
 public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     /**
      * <p>The cluster type that you want to use. Valid values:</p>
-     * <br>
-     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
-     * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</p>
-     * <p>*   `ExternalKubernetes`: registered cluster.</p>
-     * <br>
+     * <ul>
+     * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</li>
+     * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Kubernetes</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not set this parameter, the latest Kubernetes version is used.</p>
-     * <br>
-     * <p>You can create ACK clusters of the latest two Kubernetes versions in the ACK console. You can call the specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
+     * <p>You can create ACK clusters of the latest two Kubernetes versions in the ACK console. You can call the specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.16.9-aliyun.1</p>
      */
     @NameInMap("KubernetesVersion")
     public String kubernetesVersion;
 
     /**
      * <p>The query mode. Valid values:</p>
-     * <br>
-     * <p>*   `supported`: queries all supported versions.</p>
-     * <p>*   `creatable`: queries only versions that allow you to create clusters.</p>
-     * <br>
-     * <p>If you specify `KubernetesVersion`, this parameter does not take effect.</p>
-     * <br>
+     * <ul>
+     * <li><code>supported</code>: queries all supported versions.</li>
+     * <li><code>creatable</code>: queries only versions that allow you to create clusters.</li>
+     * </ul>
+     * <p>If you specify <code>KubernetesVersion</code>, this parameter does not take effect.</p>
      * <p>Default value: creatable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>supported</p>
      */
     @NameInMap("Mode")
     public String mode;
 
     /**
      * <p>The scenario where clusters are used. Valid values:</p>
-     * <br>
-     * <p>*   `Default`: non-edge computing scenarios</p>
-     * <p>*   `Edge`: edge computing scenarios</p>
-     * <p>*   `Serverless`: serverless scenarios.</p>
-     * <br>
-     * <p>Default value: `Default`.</p>
+     * <ul>
+     * <li><code>Default</code>: non-edge computing scenarios</li>
+     * <li><code>Edge</code>: edge computing scenarios</li>
+     * <li><code>Serverless</code>: serverless scenarios.</li>
+     * </ul>
+     * <p>Default value: <code>Default</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("Profile")
     public String profile;
@@ -54,22 +64,26 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The container runtime type that you want to use. You can specify a runtime type to query only OS images that support the runtime type. Valid values:</p>
-     * <br>
-     * <p>*   `docker`: Docker</p>
-     * <p>*   `containerd`: containerd</p>
-     * <p>*   `Sandboxed-Container.runv`: Sandboxed-Container</p>
-     * <br>
+     * <ul>
+     * <li><code>docker</code>: Docker</li>
+     * <li><code>containerd</code>: containerd</li>
+     * <li><code>Sandboxed-Container.runv</code>: Sandboxed-Container</li>
+     * </ul>
      * <p>If you specify a runtime type, only the OS images that support the specified runtime type are returned.</p>
-     * <br>
      * <p>Otherwise, all OS images are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>docker</p>
      */
     @NameInMap("runtime")
     public String runtime;

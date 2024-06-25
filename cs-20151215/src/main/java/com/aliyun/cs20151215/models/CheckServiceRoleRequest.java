@@ -26,6 +26,9 @@ public class CheckServiceRoleRequest extends TeaModel {
     public static class CheckServiceRoleRequestRoles extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunCSManagedAutoScalerRole</p>
          */
         @NameInMap("name")
         public String name;

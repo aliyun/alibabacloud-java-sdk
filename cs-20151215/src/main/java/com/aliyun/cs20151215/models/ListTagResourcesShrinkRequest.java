@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("next_token")
     public String nextToken;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("region_id")
     public String regionId;
 
     /**
      * <p>The list of cluster IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;xxxxx&quot;,&quot;xxxxxx&quot;]</p>
      */
     @NameInMap("resource_ids")
     public String resourceIdsShrink;
 
     /**
-     * <p>The resource type. Set the value to `CLUSTER`.</p>
-     * <br>
+     * <p>The resource type. Set the value to <code>CLUSTER</code>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("resource_type")
     public String resourceType;
 
     /**
      * <p>The list of labels that you want to query. You can specify at most 20 labels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;key\&quot;:\&quot;env\&quot;,\&quot;value\&quot;,\&quot;dev\&quot;},{\&quot;key\&quot;:\&quot;dev\&quot;, \&quot;value\&quot;:\&quot;IT\&quot;}]</p>
      */
     @NameInMap("tags")
     public String tagsShrink;

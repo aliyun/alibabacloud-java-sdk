@@ -6,61 +6,92 @@ import com.aliyun.tea.*;
 public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c82e6987e2961451182edacd74faf****</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
      * <p>The edition of the cluster if the cluster is an ACK managed cluster. Valid values:</p>
-     * <br>
-     * <p>*   `ack.pro.small`: ACK Pro</p>
-     * <p>*   `ack.standard`: ACK Basic</p>
+     * <ul>
+     * <li><code>ack.pro.small</code>: ACK Pro</li>
+     * <li><code>ack.standard</code>: ACK Basic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ack.pro.small</p>
      */
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
     /**
      * <p>The type of cluster. Valid values:</p>
-     * <br>
-     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
-     * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</p>
-     * <p>*   `ExternalKubernetes`: registered cluster.</p>
+     * <ul>
+     * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</li>
+     * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Kubernetes</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;
 
     /**
      * <p>The time when the cluster was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-25T15:50:20+08:00</p>
      */
     @NameInMap("created")
     public String created;
 
     /**
-     * <p>The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
+     * <p>The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.16.6-aliyun.1</p>
      */
     @NameInMap("current_version")
     public String currentVersion;
 
     /**
      * <p>Indicates whether deletion protection is enabled for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the Container Service console or by calling API operations. Valid values:</p>
-     * <br>
-     * <p>*   `true`: deletion protection is enabled for the cluster. This way, the cluster cannot be deleted in the Container Service console or by calling API operations.</p>
-     * <p>*   `false`: deletion protection is disabled for the cluster. This way, the cluster can be deleted in the Container Service console or by calling API operations.</p>
+     * <ul>
+     * <li><code>true</code>: deletion protection is enabled for the cluster. This way, the cluster cannot be deleted in the Container Service console or by calling API operations.</li>
+     * <li><code>false</code>: deletion protection is disabled for the cluster. This way, the cluster can be deleted in the Container Service console or by calling API operations.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
 
     /**
      * <p>The Docker version that is used by the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19.03.5</p>
      */
     @NameInMap("docker_version")
     public String dockerVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>lb-2zehc05z3b8dwiifh****</p>
+     */
     @NameInMap("external_loadbalancer_id")
     public String externalLoadbalancerId;
 
     /**
      * <p>The initial Kubernetes version of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.16.6-aliyun.1</p>
      */
     @NameInMap("init_version")
     public String initVersion;
@@ -73,27 +104,43 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     /**
      * <p>The endpoints of the cluster, including an internal endpoint and a public endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;intranet_api_server_endpoint\&quot;:\&quot;<a href="https://192.168.0.251:6443%5C%5C%22***%7D">https://192.168.0.251:6443\\&quot;***}</a></p>
      */
     @NameInMap("master_url")
     public String masterUrl;
 
     /**
      * <p>The metadata of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>\&quot;Addons\&quot;:***</p>
      */
     @NameInMap("meta_data")
     public String metaData;
 
     /**
      * <p>The name of the cluster.</p>
-     * <br>
      * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster-demo</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vpc</p>
+     */
     @NameInMap("network_mode")
     public String networkMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.18.8-aliyun.1</p>
+     */
     @NameInMap("next_version")
     public String nextVersion;
 
@@ -103,71 +150,97 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("parameters")
     public java.util.Map<String, String> parameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("private_zone")
     public Boolean privateZone;
 
     /**
      * <p>Indicates the scenario in which the cluster is used. Valid values:</p>
-     * <br>
-     * <p>*   `Default`: non-edge computing scenarios</p>
-     * <p>*   `Edge`: edge computing scenarios</p>
+     * <ul>
+     * <li><code>Default</code>: non-edge computing scenarios</li>
+     * <li><code>Edge</code>: edge computing scenarios</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("profile")
     public String profile;
 
     /**
      * <p>The region ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("region_id")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the cluster belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyvw3wjm****</p>
      */
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the security group to which the cluster belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-25yq****</p>
      */
     @NameInMap("security_group_id")
     public String securityGroupId;
 
     /**
      * <p>The number of nodes in the cluster. Master nodes and worker nodes are included.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("size")
     public Long size;
 
     /**
      * <p>The status of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   `initial`: The cluster is being created.</p>
-     * <p>*   `failed`: The cluster failed to be created.</p>
-     * <p>*   `running`: The cluster is running.</p>
-     * <p>*   `updating`: The cluster is being updated.</p>
-     * <p>*   `updating_failed`: The cluster failed to be updated.</p>
-     * <p>*   `scaling`: The cluster is being scaled.</p>
-     * <p>*   `waiting`: The cluster is waiting for connection requests.</p>
-     * <p>*   `disconnected`: The cluster is disconnected.</p>
-     * <p>*   `stopped`: The cluster is stopped.</p>
-     * <p>*   `deleting`: The cluster is being deleted.</p>
-     * <p>*   `deleted`: The cluster is deleted.</p>
-     * <p>*   `delete_failed`: The cluster failed to be deleted.</p>
+     * <ul>
+     * <li><code>initial</code>: The cluster is being created.</li>
+     * <li><code>failed</code>: The cluster failed to be created.</li>
+     * <li><code>running</code>: The cluster is running.</li>
+     * <li><code>updating</code>: The cluster is being updated.</li>
+     * <li><code>updating_failed</code>: The cluster failed to be updated.</li>
+     * <li><code>scaling</code>: The cluster is being scaled.</li>
+     * <li><code>waiting</code>: The cluster is waiting for connection requests.</li>
+     * <li><code>disconnected</code>: The cluster is disconnected.</li>
+     * <li><code>stopped</code>: The cluster is stopped.</li>
+     * <li><code>deleting</code>: The cluster is being deleted.</li>
+     * <li><code>deleted</code>: The cluster is deleted.</li>
+     * <li><code>delete_failed</code>: The cluster failed to be deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
      */
     @NameInMap("state")
     public String state;
 
     /**
      * <p>The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</p>
-     * <br>
-     * <p>*   10.0.0.0/8</p>
-     * <p>*   172.16-31.0.0/12-16</p>
-     * <p>*   192.168.0.0/16</p>
-     * <br>
+     * <ul>
+     * <li>10.0.0.0/8</li>
+     * <li>172.16-31.0.0/12-16</li>
+     * <li>192.168.0.0/16</li>
+     * </ul>
      * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks of the clusters in the VPC.</p>
-     * <br>
-     * <p>For more information, see [Plan CIDR blocks for an ACK cluster](https://help.aliyun.com/document_detail/186964.html).</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/186964.html">Plan CIDR blocks for an ACK cluster</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.20.0.0/16</p>
      */
     @NameInMap("subnet_cidr")
     public String subnetCidr;
@@ -180,28 +253,44 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     /**
      * <p>The time when the cluster was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-01-13T23:01:03+08:00</p>
      */
     @NameInMap("updated")
     public String updated;
 
     /**
      * <p>The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zecuu62b9zw7a7qn****</p>
      */
     @NameInMap("vpc_id")
     public String vpcId;
 
     /**
      * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-2zete8s4qocqg0mf6****,vsw-2zete8s4qocqg0mf6****</p>
      */
     @NameInMap("vswitch_id")
     public String vswitchId;
 
     /**
      * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KubernetesWorkerRole-ec87d15b-edca-4302-933f-c8a16bf0****</p>
      */
     @NameInMap("worker_ram_role_name")
     public String workerRamRoleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing-a</p>
+     */
     @NameInMap("zone_id")
     public String zoneId;
 

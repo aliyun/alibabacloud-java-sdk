@@ -4,6 +4,10 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
@@ -12,6 +16,9 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0527ac9a-c899-4341-a21a-xxxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetClusterCheckResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</p>
      */
     @NameInMap("check_id")
     public String checkId;
@@ -18,30 +21,45 @@ public class GetClusterCheckResponseBody extends TeaModel {
 
     /**
      * <p>The time when the cluster check task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-10-16T08:31:20.292030178Z</p>
      */
     @NameInMap("created_at")
     public String createdAt;
 
     /**
      * <p>The time when the cluster check task was completed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-10-16T08:35:20.292030178Z</p>
      */
     @NameInMap("finished_at")
     public String finishedAt;
 
     /**
      * <p>The message that indicates the status of the cluster check task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task succeed</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The status of the cluster check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
      * <p>The check method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ClusterUpgrade</p>
      */
     @NameInMap("type")
     public String type;

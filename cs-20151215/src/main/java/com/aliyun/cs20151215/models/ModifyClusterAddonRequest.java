@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyClusterAddonRequest extends TeaModel {
     /**
      * <p>The custom parameter settings that you want to use.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;CpuRequest&quot;:&quot;800m&quot;}</p>
      */
     @NameInMap("config")
     public String config;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class OpenAckServiceResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2067*******0374</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20758A-585D-4A41-A9B2-28DA8F4F534F</p>
      */
     @NameInMap("request_id")
     public String requestId;

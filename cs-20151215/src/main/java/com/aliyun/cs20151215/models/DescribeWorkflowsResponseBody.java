@@ -26,18 +26,27 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
     public static class DescribeWorkflowsResponseBodyJobs extends TeaModel {
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cb1a7214cfc0b41d9bb086affc2d8f51c</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
 
         /**
          * <p>The time when the workflow was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-15T13:18:52Z</p>
          */
         @NameInMap("create_time")
         public String createTime;
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wgs-gpu-qb4dk</p>
          */
         @NameInMap("job_name")
         public String jobName;

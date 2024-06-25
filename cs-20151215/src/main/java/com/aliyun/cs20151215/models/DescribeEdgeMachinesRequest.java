@@ -5,40 +5,59 @@ import com.aliyun.tea.*;
 
 public class DescribeEdgeMachinesRequest extends TeaModel {
     /**
-     * <p>The `hostname` of the cloud-native box.</p>
+     * <p>The <code>hostname</code> of the cloud-native box.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ack-v-b010-ssdfw****</p>
      */
     @NameInMap("hostname")
     public String hostname;
 
     /**
      * <p>The lifecycle status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>activated/waitOnline/deleting</p>
      */
     @NameInMap("life_state")
     public String lifeState;
 
     /**
      * <p>The type of cloud-native box.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACK-V-B010</p>
      */
     @NameInMap("model")
     public String model;
 
     /**
      * <p>The status of the cloud-native box. Valid values:</p>
-     * <br>
-     * <p>*   `offline`</p>
-     * <p>*   `online`</p>
+     * <ul>
+     * <li><code>offline</code></li>
+     * <li><code>online</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>offline/online</p>
      */
     @NameInMap("online_state")
     public String onlineState;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page_number")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("page_size")
     public Long pageSize;

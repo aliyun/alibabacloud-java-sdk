@@ -10,6 +10,10 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     @NameInMap("vul_records")
     public java.util.List<DescribeNodePoolVulsResponseBodyVulRecords> vulRecords;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("vuls_fix_service_purchased")
     public Boolean vulsFixServicePurchased;
 
@@ -37,6 +41,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
     public static class DescribeNodePoolVulsResponseBodyVulRecordsVulList extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RHSA-2019:3197-Important: sudo security update</p>
          */
         @NameInMap("alias_name")
         public String aliasName;
@@ -49,21 +56,30 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oval:com.redhat.rhsa:def:20193197</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The severity level of the vulnerability.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   nntf: You can ignore the vulnerability</p>
-         * <p>*   later: You can fix the vulnerability later</p>
-         * <p>*   asap: You need to fix the vulnerability at the earliest opportunity</p>
+         * <ul>
+         * <li>nntf: You can ignore the vulnerability</li>
+         * <li>later: You can fix the vulnerability later</li>
+         * <li>asap: You need to fix the vulnerability at the earliest opportunity</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asap</p>
          */
         @NameInMap("necessity")
         public String necessity;
+
+        @NameInMap("need_reboot")
+        public Boolean needReboot;
 
         public static DescribeNodePoolVulsResponseBodyVulRecordsVulList build(java.util.Map<String, ?> map) throws Exception {
             DescribeNodePoolVulsResponseBodyVulRecordsVulList self = new DescribeNodePoolVulsResponseBodyVulRecordsVulList();
@@ -102,17 +118,31 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             return this.necessity;
         }
 
+        public DescribeNodePoolVulsResponseBodyVulRecordsVulList setNeedReboot(Boolean needReboot) {
+            this.needReboot = needReboot;
+            return this;
+        }
+        public Boolean getNeedReboot() {
+            return this.needReboot;
+        }
+
     }
 
     public static class DescribeNodePoolVulsResponseBodyVulRecords extends TeaModel {
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-t4n2qolb0wtzt0pz****</p>
          */
         @NameInMap("instance_id")
         public String instanceId;
 
         /**
          * <p>The node name. This name is the identifier of the node in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou.192.168.x.x</p>
          */
         @NameInMap("node_name")
         public String nodeName;

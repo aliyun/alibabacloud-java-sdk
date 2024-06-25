@@ -4,12 +4,24 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class Taint extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoSchedule</p>
+     */
     @NameInMap("effect")
     public String effect;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>value</p>
+     */
     @NameInMap("value")
     public String value;
 

@@ -26,12 +26,18 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
     public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
         /**
          * <p>Specifies whether to release cloud resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("cleanup_cloud_resources")
         public Boolean cleanupCloudResources;
 
         /**
          * <p>The component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack-node-problem-detector</p>
          */
         @NameInMap("name")
         public String name;

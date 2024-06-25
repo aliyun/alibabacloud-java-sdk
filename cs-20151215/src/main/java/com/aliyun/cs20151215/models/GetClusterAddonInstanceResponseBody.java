@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetClusterAddonInstanceResponseBody extends TeaModel {
     /**
      * <p>The custom configurations of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;sls_project_name&quot;:&quot;&quot;}</p>
      */
     @NameInMap("config")
     public String config;
@@ -18,23 +21,33 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The name of the component instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ack-node-problem-detector</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The status of the component. Valid values:</p>
-     * <br>
-     * <p>*   active: The component is installed.</p>
-     * <p>*   updating: The component is being modified.</p>
-     * <p>*   upgrading: The component is being updated.</p>
-     * <p>*   deleting: The component is being uninstalled.</p>
+     * <ul>
+     * <li>active: The component is installed.</li>
+     * <li>updating: The component is being modified.</li>
+     * <li>upgrading: The component is being updated.</li>
+     * <li>deleting: The component is being uninstalled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("state")
     public String state;
 
     /**
      * <p>The version of the component instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.2.16</p>
      */
     @NameInMap("version")
     public String version;
@@ -87,24 +100,36 @@ public class GetClusterAddonInstanceResponseBody extends TeaModel {
     public static class GetClusterAddonInstanceResponseBodyLogging extends TeaModel {
         /**
          * <p>Indicates whether Simple Log Service is supported by the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("capable")
         public Boolean capable;
 
         /**
          * <p>Indicates whether Simple Log Service is enabled for the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
          * <p>The Simple Log Service project that is used to collect logs for the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-log-project</p>
          */
         @NameInMap("log_project")
         public String logProject;
 
         /**
          * <p>The Simple Log Service Logstore that is used to collect logs for the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-logstore</p>
          */
         @NameInMap("logstore")
         public String logstore;

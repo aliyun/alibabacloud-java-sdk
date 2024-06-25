@@ -6,69 +6,91 @@ import com.aliyun.tea.*;
 public class DescribeClustersV1Request extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca418e5e6fa2849d78301341700axxxxx</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
-     * <p>The cluster type, which is available only when the cluster type is set to `ManagedKubernetes`. Valid values:</p>
-     * <br>
-     * <p>*   `ack.pro.small`: ACK Pro cluster</p>
-     * <p>*   `ack.standard`: ACK Basic cluster</p>
-     * <br>
+     * <p>The cluster type, which is available only when the cluster type is set to <code>ManagedKubernetes</code>. Valid values:</p>
+     * <ul>
+     * <li><code>ack.pro.small</code>: ACK Pro cluster</li>
+     * <li><code>ack.standard</code>: ACK Basic cluster</li>
+     * </ul>
      * <p>By default, this parameter is left empty, which means that ACK clusters are not filtered by this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ack.pro.small</p>
      */
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
     /**
      * <p>The cluster type. Valid values:</p>
-     * <br>
-     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
-     * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</p>
-     * <p>*   `ExternalKubernetes`: registered cluster.</p>
+     * <ul>
+     * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</li>
+     * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Kubernetes</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;
 
     /**
      * <p>The cluster name.</p>
-     * <br>
      * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster-demo</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("page_number")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("page_size")
     public Long pageSize;
 
     /**
-     * <p>The identifier of the cluster. Valid values when the cluster_type parameter is set to `ManagedKubernetes`:</p>
-     * <br>
-     * <p>*   `Default`: ACK managed cluster</p>
-     * <p>*   `Serverless`: ACK Serverless cluster</p>
-     * <p>*   `Edge`: ACK Edge cluster</p>
-     * <br>
-     * <p>Valid values when the cluster_type parameter is set to `Ask`:</p>
-     * <br>
-     * <p>`ask.v2`: ACK Serverless cluster</p>
-     * <br>
+     * <p>The identifier of the cluster. Valid values when the cluster_type parameter is set to <code>ManagedKubernetes</code>:</p>
+     * <ul>
+     * <li><code>Default</code>: ACK managed cluster</li>
+     * <li><code>Serverless</code>: ACK Serverless cluster</li>
+     * <li><code>Edge</code>: ACK Edge cluster</li>
+     * </ul>
+     * <p>Valid values when the cluster_type parameter is set to <code>Ask</code>:</p>
+     * <p><code>ask.v2</code>: ACK Serverless cluster</p>
      * <p>By default, this parameter is left empty. If you leave this parameter empty, ACK clusters are not filtered by identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("profile")
     public String profile;
 
     /**
      * <p>The region ID of the clusters. You can use this parameter to query all clusters in the specified region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region_id")
     public String regionId;

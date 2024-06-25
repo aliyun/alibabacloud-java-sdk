@@ -6,36 +6,53 @@ import com.aliyun.tea.*;
 public class StandardComponentsValue extends TeaModel {
     /**
      * <p>The name of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ack-arena</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The version of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.5.0</p>
      */
     @NameInMap("version")
     public String version;
 
     /**
      * <p>The description of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>Indicates whether the component is a required component. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The component is required and must be installed when a cluster is created.</p>
-     * <p>*   `false`: The component is optional. After a cluster is created, you can go to the `Add-ons` page to install the component.</p>
+     * <ul>
+     * <li><code>true</code>: The component is required and must be installed when a cluster is created.</li>
+     * <li><code>false</code>: The component is optional. After a cluster is created, you can go to the <code>Add-ons</code> page to install the component.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("required")
     public String required;
 
     /**
      * <p>Indicates whether the automatic installation of the component is disabled. By default, some optional components, such as components for logging and Ingresses, are installed when a cluster is created. You can set this parameter to disable automatic component installation. Valid values:</p>
-     * <br>
-     * <p>*   `true`: disables automatic component installation.</p>
-     * <p>*   `false`: enables automatic component installation.</p>
+     * <ul>
+     * <li><code>true</code>: disables automatic component installation.</li>
+     * <li><code>false</code>: enables automatic component installation.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("disabled")
     public Boolean disabled;

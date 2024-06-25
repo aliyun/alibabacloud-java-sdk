@@ -45,71 +45,99 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
     public static class DescribeKubernetesVersionMetadataResponseBodyImages extends TeaModel {
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_7_7_x64_20G_alibase_20200426.vhd</p>
          */
         @NameInMap("image_id")
         public String imageId;
 
         /**
          * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS 7.7</p>
          */
         @NameInMap("image_name")
         public String imageName;
 
         /**
          * <p>The OS platform. Valid values:</p>
-         * <br>
-         * <p>*   `AliyunLinux`</p>
-         * <p>*   `CentOS`</p>
-         * <p>*   `Windows`</p>
-         * <p>*   `WindowsCore`</p>
+         * <ul>
+         * <li><code>AliyunLinux</code></li>
+         * <li><code>CentOS</code></li>
+         * <li><code>Windows</code></li>
+         * <li><code>WindowsCore</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CentOS</p>
          */
         @NameInMap("platform")
         public String platform;
 
         /**
          * <p>The version of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.7</p>
          */
         @NameInMap("os_version")
         public String osVersion;
 
         /**
          * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</p>
-         * <br>
-         * <p>*   `CentOS`</p>
-         * <p>*   `AliyunLinux`</p>
-         * <p>*   `AliyunLinux Qboot`</p>
-         * <p>*   `AliyunLinuxUEFI`</p>
-         * <p>*   `AliyunLinux3`</p>
-         * <p>*   `Windows`</p>
-         * <p>*   `WindowsCore`</p>
-         * <p>*   `AliyunLinux3Arm64`</p>
-         * <p>*   `ContainerOS`</p>
+         * <ul>
+         * <li><code>CentOS</code></li>
+         * <li><code>AliyunLinux</code></li>
+         * <li><code>AliyunLinux Qboot</code></li>
+         * <li><code>AliyunLinuxUEFI</code></li>
+         * <li><code>AliyunLinux3</code></li>
+         * <li><code>Windows</code></li>
+         * <li><code>WindowsCore</code></li>
+         * <li><code>AliyunLinux3Arm64</code></li>
+         * <li><code>ContainerOS</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_7_7_20</p>
          */
         @NameInMap("image_type")
         public String imageType;
 
         /**
          * <p>The type of operating system. Examples:</p>
-         * <br>
-         * <p>*   `Windows`</p>
-         * <p>*   `Linux`</p>
+         * <ul>
+         * <li><code>Windows</code></li>
+         * <li><code>Linux</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("os_type")
         public String osType;
 
         /**
          * <p>The type of image. Valid values:</p>
-         * <br>
-         * <p>*   `system`: public image</p>
-         * <p>*   `self`: custom image</p>
-         * <p>*   `others`: shared image from other Alibaba Cloud accounts</p>
-         * <p>*   `marketplace`: image from the marketplace</p>
+         * <ul>
+         * <li><code>system</code>: public image</li>
+         * <li><code>self</code>: custom image</li>
+         * <li><code>others</code>: shared image from other Alibaba Cloud accounts</li>
+         * <li><code>marketplace</code>: image from the marketplace</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("image_category")
         public String imageCategory;
 
         /**
          * <p>The architecture of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
          */
         @NameInMap("architecture")
         public String architecture;
@@ -211,25 +239,37 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public java.util.List<Runtime> runtimes;
 
         /**
-         * <p>The Kubernetes version that is supported by ACK. For more information, see [Release notes for Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
+         * <p>The Kubernetes version that is supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.16.9-aliyun.1</p>
          */
         @NameInMap("version")
         public String version;
 
         /**
          * <p>The release date of the Kubernetes version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-30T00:00:00Z</p>
          */
         @NameInMap("release_date")
         public String releaseDate;
 
         /**
          * <p>The expiration date of the Kubernetes version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-04-30T00:00:00Z</p>
          */
         @NameInMap("expiration_date")
         public String expirationDate;
 
         /**
          * <p>Indicates whether you can create clusters that run the Kubernetes version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("creatable")
         public Boolean creatable;

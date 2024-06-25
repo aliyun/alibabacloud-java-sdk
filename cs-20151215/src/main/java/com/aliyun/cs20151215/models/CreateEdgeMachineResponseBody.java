@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateEdgeMachineResponseBody extends TeaModel {
     /**
      * <p>The ID of the cloud-native box.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cc0725ddf688744979cd98445f67e****</p>
      */
     @NameInMap("edge_machine_id")
     public String edgeMachineId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;request_id&quot;: &quot;6e7b377a-c5ed-4388-8026-689e1b34****&quot;,</p>
      */
     @NameInMap("request_id")
     public String requestId;

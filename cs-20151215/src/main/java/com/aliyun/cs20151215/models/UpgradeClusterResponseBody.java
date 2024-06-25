@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpgradeClusterResponseBody extends TeaModel {
     /**
      * <p>集群ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c82e6987e2961451182edacd74faf****</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0527ac9a-c899-4341-a21a-****</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
     /**
      * <p>任务ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-5faa48fb31b6b8078d00****</p>
      */
     @NameInMap("task_id")
     public String taskId;

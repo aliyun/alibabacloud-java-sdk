@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
     /**
      * <p>Information about the number of policy instances of each severity level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;high&quot;: 11,     &quot;medium&quot;: 1  }</p>
      */
     @NameInMap("instances_severity_count")
     public java.util.Map<String, ?> instancesSeverityCount;
@@ -39,31 +42,46 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
 
     public static class DescribePolicyInstancesStatusResponseBodyPolicyInstances extends TeaModel {
         /**
-         * <p>The policy type. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](https://help.aliyun.com/document_detail/359819.html).</p>
+         * <p>The policy type. For more information about different types of policies and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>compliance</p>
          */
         @NameInMap("policy_category")
         public String policyCategory;
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restricts use of the cluster-admin role.</p>
          */
         @NameInMap("policy_description")
         public String policyDescription;
 
         /**
          * <p>The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("policy_instances_count")
         public Long policyInstancesCount;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKRestrictRoleBindings</p>
          */
         @NameInMap("policy_name")
         public String policyName;
 
         /**
          * <p>The severity level of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         @NameInMap("policy_severity")
         public String policySeverity;

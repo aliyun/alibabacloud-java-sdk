@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListOperationPlansRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c29ced64b3dfe4f33b57ca0aa9f68****</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
      * <p>The operation plan type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster_upgrade</p>
      */
     @NameInMap("type")
     public String type;

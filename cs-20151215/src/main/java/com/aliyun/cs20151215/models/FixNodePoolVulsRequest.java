@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class FixNodePoolVulsRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow the nodes to restart.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("auto_restart")
     public Boolean autoRestart;
@@ -68,6 +71,9 @@ public class FixNodePoolVulsRequest extends TeaModel {
     public static class FixNodePoolVulsRequestRolloutPolicy extends TeaModel {
         /**
          * <p>The maximum concurrency for batch patching. Minimum value: 1. The maximum value equals the number of nodes in the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("max_parallelism")
         public Long maxParallelism;

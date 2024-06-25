@@ -6,45 +6,61 @@ import com.aliyun.tea.*;
 public class DescribeAddonsRequest extends TeaModel {
     /**
      * <p>The cluster type. Valid values:</p>
-     * <br>
-     * <p>*   `Default`: ACK managed cluster</p>
-     * <p>*   `Serverless`: ACK Serverless cluster</p>
-     * <p>*   `Edge`: ACK Edge cluster</p>
+     * <ul>
+     * <li><code>Default</code>: ACK managed cluster</li>
+     * <li><code>Serverless</code>: ACK Serverless cluster</li>
+     * <li><code>Edge</code>: ACK Edge cluster</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("cluster_profile")
     public String clusterProfile;
 
     /**
-     * <p>The edition of the cluster. If you set the cluster type to `ManagedKubernetes`, the following editions are supported:</p>
-     * <br>
-     * <p>*   `ack.pro.small`: ACK Pro cluster</p>
-     * <p>*   `ack.standard`: ACK Basic cluster</p>
-     * <br>
+     * <p>The edition of the cluster. If you set the cluster type to <code>ManagedKubernetes</code>, the following editions are supported:</p>
+     * <ul>
+     * <li><code>ack.pro.small</code>: ACK Pro cluster</li>
+     * <li><code>ack.standard</code>: ACK Basic cluster</li>
+     * </ul>
      * <p>By default, this parameter is left empty. If you leave this parameter empty, clusters are not filtered by edition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ack.pro.small</p>
      */
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
     /**
      * <p>The type of cluster. Valid values:</p>
-     * <br>
-     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
-     * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</p>
-     * <p>*   `ExternalKubernetes`: registered cluster.</p>
+     * <ul>
+     * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.</li>
+     * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>kubernetes</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;
 
     /**
      * <p>The cluster version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.24.6-aliyun.1</p>
      */
     @NameInMap("cluster_version")
     public String clusterVersion;
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("region")
     public String region;

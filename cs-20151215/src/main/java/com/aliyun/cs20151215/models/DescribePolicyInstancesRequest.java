@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribePolicyInstancesRequest extends TeaModel {
     /**
      * <p>The name of the policy instance that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>allowed-repos-cz4s2</p>
      */
     @NameInMap("instance_name")
     public String instanceName;
 
     /**
      * <p>The name of the policy that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACKPSPCapabilities</p>
      */
     @NameInMap("policy_name")
     public String policyName;

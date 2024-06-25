@@ -12,6 +12,9 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0527ac9a-c899-4341-a21a-xxxxxxxxx</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     public static class DescribeClusterTasksResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("page_number")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("page_size")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("total_count")
         public Long totalCount;
@@ -104,12 +116,18 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     public static class DescribeClusterTasksResponseBodyTasksError extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BadRequest</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Addon status not match</p>
          */
         @NameInMap("message")
         public String message;
@@ -140,6 +158,9 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     public static class DescribeClusterTasksResponseBodyTasks extends TeaModel {
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-03T10:11:33+08:00</p>
          */
         @NameInMap("created")
         public String created;
@@ -152,24 +173,36 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
 
         /**
          * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("state")
         public String state;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>install-addons-c3xxxxxx</p>
          */
         @NameInMap("task_id")
         public String taskId;
 
         /**
          * <p>The type of task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster_addon_install</p>
          */
         @NameInMap("task_type")
         public String taskType;
 
         /**
          * <p>The time when the task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-03T10:12:03.482+08:00</p>
          */
         @NameInMap("updated")
         public String updated;

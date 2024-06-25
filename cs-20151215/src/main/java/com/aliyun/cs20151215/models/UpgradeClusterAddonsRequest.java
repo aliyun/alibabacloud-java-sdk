@@ -26,37 +26,51 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
     public static class UpgradeClusterAddonsRequestBody extends TeaModel {
         /**
          * <p>The name of the component.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coredns</p>
          */
         @NameInMap("component_name")
         public String componentName;
 
         /**
          * <p>The custom component settings that you want to use. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;CpuRequest\&quot;:\&quot;800m\&quot;}</p>
          */
         @NameInMap("config")
         public String config;
 
         /**
-         * <p>The version to which the component can be updated. You can call the `DescribeClusterAddonsVersion` operation to query the version to which the component can be updated.</p>
-         * <br>
+         * <p>The version to which the component can be updated. You can call the <code>DescribeClusterAddonsVersion</code> operation to query the version to which the component can be updated.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.6.7</p>
          */
         @NameInMap("next_version")
         public String nextVersion;
 
         /**
          * <p>The update policy. Valid values:</p>
-         * <br>
-         * <p>*   overwrite</p>
-         * <p>*   canary</p>
+         * <ul>
+         * <li>overwrite</li>
+         * <li>canary</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>canary</p>
          */
         @NameInMap("policy")
         public String policy;
 
         /**
          * <p>The current version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.6.2</p>
          */
         @NameInMap("version")
         public String version;

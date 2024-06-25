@@ -4,12 +4,27 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enable")
     public Boolean enable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>services</p>
+     */
     @NameInMap("resource_type")
     public String resourceType;
 

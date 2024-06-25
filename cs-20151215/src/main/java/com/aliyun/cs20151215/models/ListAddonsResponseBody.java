@@ -26,56 +26,76 @@ public class ListAddonsResponseBody extends TeaModel {
     public static class ListAddonsResponseBodyAddons extends TeaModel {
         /**
          * <p>Architectures supported by the component. Valid values:</p>
-         * <br>
-         * <p>*   amd64</p>
-         * <p>*   arm64</p>
+         * <ul>
+         * <li>amd64</li>
+         * <li>arm64</li>
+         * </ul>
          */
         @NameInMap("architecture")
         public java.util.List<String> architecture;
 
         /**
          * <p>The category of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>monitor</p>
          */
         @NameInMap("category")
         public String category;
 
         /**
          * <p>The schema of the custom parameters of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         @NameInMap("config_schema")
         public String configSchema;
 
         /**
          * <p>Indicates whether the component is automatically installed by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("install_by_default")
         public Boolean installByDefault;
 
         /**
          * <p>Indicates whether the component is fully managed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("managed")
         public Boolean managed;
 
         /**
          * <p>The component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>arms-prometheus</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>Operations supported by the component. Valid values:</p>
-         * <br>
-         * <p>*   Install</p>
-         * <p>*   Upgrade</p>
-         * <p>*   Modify</p>
-         * <p>*   Uninstall</p>
+         * <ul>
+         * <li>Install</li>
+         * <li>Upgrade</li>
+         * <li>Modify</li>
+         * <li>Uninstall</li>
+         * </ul>
          */
         @NameInMap("supported_actions")
         public java.util.List<String> supportedActions;
 
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.9</p>
          */
         @NameInMap("version")
         public String version;

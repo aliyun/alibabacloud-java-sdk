@@ -4,45 +4,101 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DataDisk extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("auto_format")
     public Boolean autoFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sp-2zej1nogjvovnz4z****</p>
+     */
     @NameInMap("auto_snapshot_policy_id")
     public String autoSnapshotPolicyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("bursting_enabled")
     public Boolean burstingEnabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
+     */
     @NameInMap("category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/dev/xvdb</p>
+     */
     @NameInMap("device")
     public String device;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DataDiskName</p>
+     */
     @NameInMap("disk_name")
     public String diskName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("encrypted")
     public String encrypted;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ext4</p>
+     */
     @NameInMap("file_system")
     public String fileSystem;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
+     */
     @NameInMap("kms_key_id")
     public String kmsKeyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/mnt/path1</p>
+     */
     @NameInMap("mount_target")
     public String mountTarget;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PL1</p>
+     */
     @NameInMap("performance_level")
     public String performanceLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("provisioned_iops")
     public Long provisionedIops;
 
+    /**
+     * <strong>example:</strong>
+     * <p>40</p>
+     */
     @NameInMap("size")
     public Long size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>s-280s7****</p>
+     */
     @NameInMap("snapshot_id")
     public String snapshotId;
 

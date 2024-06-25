@@ -40,18 +40,27 @@ public class DescribeEventsResponseBody extends TeaModel {
     public static class DescribeEventsResponseBodyEventsData extends TeaModel {
         /**
          * <p>The severity level of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         @NameInMap("level")
         public String level;
 
         /**
          * <p>The details of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Start to upgrade NodePool nodePool/nodePool-A</p>
          */
         @NameInMap("message")
         public String message;
 
         /**
          * <p>The status of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Started</p>
          */
         @NameInMap("reason")
         public String reason;
@@ -90,6 +99,9 @@ public class DescribeEventsResponseBody extends TeaModel {
     public static class DescribeEventsResponseBodyEvents extends TeaModel {
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-id</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
@@ -102,6 +114,9 @@ public class DescribeEventsResponseBody extends TeaModel {
 
         /**
          * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A234-1234-1234</p>
          */
         @NameInMap("event_id")
         public String eventId;
@@ -114,35 +129,45 @@ public class DescribeEventsResponseBody extends TeaModel {
 
         /**
          * <p>The subject of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nodePool-id</p>
          */
         @NameInMap("subject")
         public String subject;
 
         /**
          * <p>The time when the event started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-23T20:48:01+08:00</p>
          */
         @NameInMap("time")
         public String time;
 
         /**
          * <p>The event type. Valid values:</p>
-         * <br>
-         * <p>*   `cluster_create`: cluster creation.</p>
-         * <p>*   `cluster_scaleout`: cluster scale-out.</p>
-         * <p>*   `cluster_attach`: node addition.</p>
-         * <p>*   `cluster_delete`: cluster deletion.</p>
-         * <p>*   `cluster_upgrade`: cluster upgrades.</p>
-         * <p>*   `cluster_migrate`: cluster migration.</p>
-         * <p>*   `cluster_node_delete`: node removal.</p>
-         * <p>*   `cluster_node_drain`: node draining.</p>
-         * <p>*   `cluster_modify`: cluster modifications.</p>
-         * <p>*   `cluster_configuration_modify`: modifications of control plane configurations.</p>
-         * <p>*   `cluster_addon_install`: component installation.</p>
-         * <p>*   `cluster_addon_upgrade`: component updates.</p>
-         * <p>*   `cluster_addon_uninstall`: component uninstallation.</p>
-         * <p>*   `runtime_upgrade`: runtime updates.</p>
-         * <p>*   `nodepool_upgrade`: node pool upgrades.</p>
-         * <p>*   `nodepool_update`: node pool updates.</p>
+         * <ul>
+         * <li><code>cluster_create</code>: cluster creation.</li>
+         * <li><code>cluster_scaleout</code>: cluster scale-out.</li>
+         * <li><code>cluster_attach</code>: node addition.</li>
+         * <li><code>cluster_delete</code>: cluster deletion.</li>
+         * <li><code>cluster_upgrade</code>: cluster upgrades.</li>
+         * <li><code>cluster_migrate</code>: cluster migration.</li>
+         * <li><code>cluster_node_delete</code>: node removal.</li>
+         * <li><code>cluster_node_drain</code>: node draining.</li>
+         * <li><code>cluster_modify</code>: cluster modifications.</li>
+         * <li><code>cluster_configuration_modify</code>: modifications of control plane configurations.</li>
+         * <li><code>cluster_addon_install</code>: component installation.</li>
+         * <li><code>cluster_addon_upgrade</code>: component updates.</li>
+         * <li><code>cluster_addon_uninstall</code>: component uninstallation.</li>
+         * <li><code>runtime_upgrade</code>: runtime updates.</li>
+         * <li><code>nodepool_upgrade</code>: node pool upgrades.</li>
+         * <li><code>nodepool_update</code>: node pool updates.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nodepool_upgrade</p>
          */
         @NameInMap("type")
         public String type;
@@ -213,18 +238,27 @@ public class DescribeEventsResponseBody extends TeaModel {
     public static class DescribeEventsResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("page_number")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("page_size")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("total_count")
         public Long totalCount;

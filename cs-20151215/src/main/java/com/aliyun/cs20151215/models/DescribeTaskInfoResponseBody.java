@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeTaskInfoResponseBody extends TeaModel {
     /**
      * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c78592bfe92244365b3c3ad47f1de****</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
      * <p>The time when the task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-11-10T16:02:04+08:00</p>
      */
     @NameInMap("created")
     public String created;
 
     /**
      * <p>The current stage of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DrainNodes</p>
      */
     @NameInMap("current_stage")
     public String currentStage;
@@ -48,10 +57,14 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   `running`: The task is running.</p>
-     * <p>*   `failed`: The task failed.</p>
-     * <p>*   `success`: The task is complete.</p>
+     * <ul>
+     * <li><code>running</code>: The task is running.</li>
+     * <li><code>failed</code>: The task failed.</li>
+     * <li><code>success</code>: The task is complete.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
      */
     @NameInMap("state")
     public String state;
@@ -64,6 +77,9 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-5faa48fb31b6b8078d000006</p>
      */
     @NameInMap("task_id")
     public String taskId;
@@ -75,13 +91,19 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public java.util.List<DescribeTaskInfoResponseBodyTaskResult> taskResult;
 
     /**
-     * <p>The task type. A value of `cluster_scaleout` indicates a scale-out task.</p>
+     * <p>The task type. A value of <code>cluster_scaleout</code> indicates a scale-out task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster_scaleout</p>
      */
     @NameInMap("task_type")
     public String taskType;
 
     /**
      * <p>The time when the task was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-11-10T16:03:06+08:00</p>
      */
     @NameInMap("updated")
     public String updated;
@@ -198,12 +220,18 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public static class DescribeTaskInfoResponseBodyError extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failed to xxx</p>
          */
         @NameInMap("message")
         public String message;
@@ -234,36 +262,54 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public static class DescribeTaskInfoResponseBodyEvents extends TeaModel {
         /**
          * <p>The action of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
          */
         @NameInMap("action")
         public String action;
 
         /**
          * <p>The severity level of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("level")
         public String level;
 
         /**
          * <p>The message about the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start to xxx</p>
          */
         @NameInMap("message")
         public String message;
 
         /**
          * <p>The cause of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NodePoolUpgradeStart</p>
          */
         @NameInMap("reason")
         public String reason;
 
         /**
          * <p>The source of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK</p>
          */
         @NameInMap("source")
         public String source;
 
         /**
          * <p>The timestamp when the event was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1669706229286</p>
          */
         @NameInMap("timestamp")
         public String timestamp;
@@ -326,12 +372,18 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public static class DescribeTaskInfoResponseBodyStages extends TeaModel {
         /**
          * <p>The end time of the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-15 23:00:00</p>
          */
         @NameInMap("end_time")
         public String endTime;
 
         /**
          * <p>The message about the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success to xxxxx</p>
          */
         @NameInMap("message")
         public String message;
@@ -344,12 +396,18 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
         /**
          * <p>The start time of the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-15 23:00:00</p>
          */
         @NameInMap("start_time")
         public String startTime;
 
         /**
          * <p>The status of the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("state")
         public String state;
@@ -404,12 +462,18 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public static class DescribeTaskInfoResponseBodyTarget extends TeaModel {
         /**
          * <p>The ID of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c78592bfe92244365b3c3ad47f1de****</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The type of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster</p>
          */
         @NameInMap("type")
         public String type;
@@ -440,16 +504,23 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     public static class DescribeTaskInfoResponseBodyTaskResult extends TeaModel {
         /**
          * <p>The resources that are managed by the task. For a scale-out task, the value of this parameter is the ID of the instance that is added by the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxx</p>
          */
         @NameInMap("data")
         public String data;
 
         /**
          * <p>The status of the scale-out task. Valid values:</p>
-         * <br>
-         * <p>*   `success`: The scale-out task is successful.</p>
-         * <p>*   `success`: The scale-out task failed.</p>
-         * <p>*   `initial`: The scale-out task is being initialized.</p>
+         * <ul>
+         * <li><code>success</code>: The scale-out task is successful.</li>
+         * <li><code>success</code>: The scale-out task failed.</li>
+         * <li><code>initial</code>: The scale-out task is being initialized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("status")
         public String status;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class MigrateClusterRequest extends TeaModel {
     /**
      * <p>The endpoint of the OSS bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>*******.oss-cn-hangzhou.aliyuncs.com</p>
      */
     @NameInMap("oss_bucket_endpoint")
     public String ossBucketEndpoint;
 
     /**
      * <p>The name of the Object Storage Service (OSS) bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bucket-****</p>
      */
     @NameInMap("oss_bucket_name")
     public String ossBucketName;

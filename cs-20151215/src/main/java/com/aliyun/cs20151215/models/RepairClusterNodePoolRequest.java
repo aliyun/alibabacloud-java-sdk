@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RepairClusterNodePoolRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow node restart.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("auto_restart")
     public Boolean autoRestart;

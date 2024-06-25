@@ -6,18 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteClusterNodesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all pods from the nodes that you want to remove. Valid values:</p>
-     * <br>
-     * <p>*   `true`: removes all pods from the nodes that you want to remove.</p>
-     * <p>*   `false`: does not remove pods from the nodes that you want to remove.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: removes all pods from the nodes that you want to remove.</li>
+     * <li><code>false</code>: does not remove pods from the nodes that you want to remove.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("drain_node")
     public Boolean drainNode;
 
     /**
-     * <p>The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, `cn-hangzhou.192.168.0.70`.</p>
-     * <br>
+     * <p>The list of nodes to be removed. You need to specify the name of the nodes used in the cluster, for example, <code>cn-hangzhou.192.168.0.70</code>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("nodes")
@@ -25,13 +27,17 @@ public class DeleteClusterNodesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to release the Elastic Compute Service (ECS) instances. Valid values:</p>
-     * <br>
-     * <p>*   `true`: releases the ECS instances.</p>
-     * <p>*   `false`: does not release the ECS instances.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
-     * <br>
-     * <p>>  You cannot release subscription ECS instances.</p>
+     * <ul>
+     * <li><code>true</code>: releases the ECS instances.</li>
+     * <li><code>false</code>: does not release the ECS instances.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * <blockquote>
+     * <p> You cannot release subscription ECS instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("release_node")
     public Boolean releaseNode;

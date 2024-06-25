@@ -6,42 +6,55 @@ import com.aliyun.tea.*;
 public class DescribeClusterNodesRequest extends TeaModel {
     /**
      * <p>The IDs of the nodes that you want to query. Separate multiple node IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;i-bp11xjhwkj8k966u****,i-bp1dmhc2bu5igkyq****&quot;</p>
      */
     @NameInMap("instanceIds")
     public String instanceIds;
 
     /**
      * <p>The node pool ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np****</p>
      */
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public String pageSize;
 
     /**
      * <p>The node state that you want to use to filter nodes. Valid values:</p>
-     * <br>
-     * <p>*   `all`: query nodes in the following four states.</p>
-     * <p>*   `running`: query nodes in the running state.</p>
-     * <p>*   `removing`: query nodes that are being removed.</p>
-     * <p>*   `initial`: query nodes that are being initialized.</p>
-     * <p>*   `failed`: query nodes that fail to be created.</p>
-     * <br>
-     * <p>Default value: `all`.</p>
+     * <ul>
+     * <li><code>all</code>: query nodes in the following four states.</li>
+     * <li><code>running</code>: query nodes in the running state.</li>
+     * <li><code>removing</code>: query nodes that are being removed.</li>
+     * <li><code>initial</code>: query nodes that are being initialized.</li>
+     * <li><code>failed</code>: query nodes that fail to be created.</li>
+     * </ul>
+     * <p>Default value: <code>all</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
      */
     @NameInMap("state")
     public String state;

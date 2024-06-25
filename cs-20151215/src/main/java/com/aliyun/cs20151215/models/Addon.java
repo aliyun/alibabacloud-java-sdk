@@ -4,15 +4,31 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class Addon extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}</p>
+     */
     @NameInMap("config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("disabled")
     public Boolean disabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nginx-ingress-controller</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1.9.3-aliyun.1</p>
+     */
     @NameInMap("version")
     public String version;
 

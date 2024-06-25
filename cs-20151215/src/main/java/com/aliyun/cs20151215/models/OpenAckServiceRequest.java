@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class OpenAckServiceRequest extends TeaModel {
     /**
      * <p>The type of service that you want to activate. Valid values:</p>
-     * <br>
-     * <p>*   `propayasgo`: professional managed Kubernetes service.</p>
-     * <p>*   `edgepayasgo`: ACK Edge.</p>
+     * <ul>
+     * <li><code>propayasgo</code>: professional managed Kubernetes service.</li>
+     * <li><code>edgepayasgo</code>: ACK Edge.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>propayasgo</p>
      */
     @NameInMap("type")
     public String type;

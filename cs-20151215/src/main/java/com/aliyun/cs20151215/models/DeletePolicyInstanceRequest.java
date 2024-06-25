@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeletePolicyInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the policy instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>allowed-repos-mqdsf</p>
      */
     @NameInMap("instance_name")
     public String instanceName;

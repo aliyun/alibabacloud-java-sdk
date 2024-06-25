@@ -6,35 +6,38 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The region ID of the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("region_id")
     public String regionId;
 
     /**
      * <p>The list of resource IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resource_ids")
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The type of resource that you want to label. Set the value to `CLUSTER`.</p>
-     * <br>
+     * <p>The type of resource that you want to label. Set the value to <code>CLUSTER</code>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("resource_type")
     public String resourceType;
 
     /**
      * <p>The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Usage notes:</p>
-     * <br>
-     * <p>*   Label values must not be empty strings. A label value must be 1 to 128 characters in length.</p>
-     * <p>*   The label value must not start with `aliyun` or `acs:`.</p>
-     * <p>*   The label value must not contain `http://` or `https://`.</p>
-     * <br>
+     * <ul>
+     * <li>Label values must not be empty strings. A label value must be 1 to 128 characters in length.</li>
+     * <li>The label value must not start with <code>aliyun</code> or <code>acs:</code>.</li>
+     * <li>The label value must not contain <code>http://</code> or <code>https://</code>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      */
     @NameInMap("tags")

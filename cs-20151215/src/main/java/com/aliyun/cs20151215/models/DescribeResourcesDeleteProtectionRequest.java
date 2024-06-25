@@ -4,9 +4,17 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcesDeleteProtectionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1,test2</p>
+     */
     @NameInMap("resources")
     public String resources;
 
