@@ -379,6 +379,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>milvus_milvuspre_public_cn</p>
+         */
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        /**
+         * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
         @NameInMap("RegionId")
@@ -494,6 +501,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public Integer getPayType() {
             return this.payType;
+        }
+
+        public ListInstancesResponseBodyData setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
         }
 
         public ListInstancesResponseBodyData setRegionId(String regionId) {
