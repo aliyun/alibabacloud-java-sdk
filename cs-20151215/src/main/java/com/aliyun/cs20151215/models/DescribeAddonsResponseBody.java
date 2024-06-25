@@ -40,6 +40,9 @@ public class DescribeAddonsResponseBody extends TeaModel {
     public static class DescribeAddonsResponseBodyComponentGroupsItems extends TeaModel {
         /**
          * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>flexvolume</p>
          */
         @NameInMap("name")
         public String name;
@@ -62,6 +65,9 @@ public class DescribeAddonsResponseBody extends TeaModel {
     public static class DescribeAddonsResponseBodyComponentGroups extends TeaModel {
         /**
          * <p>The name of the component group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>storage</p>
          */
         @NameInMap("group_name")
         public String groupName;

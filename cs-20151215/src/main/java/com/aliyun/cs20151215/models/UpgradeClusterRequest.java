@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpgradeClusterRequest extends TeaModel {
     /**
      * <p>This parameter is discontinued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s</p>
      */
     @NameInMap("component_name")
     @Deprecated
@@ -13,21 +16,31 @@ public class UpgradeClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to update only the master nodes. Valid values:</p>
-     * <br>
-     * <p>*   true: Updates only the master nodes.</p>
-     * <p>*   false: Updates the master nodes and worker nodes.</p>
+     * <ul>
+     * <li>true: Updates only the master nodes.</li>
+     * <li>false: Updates the master nodes and worker nodes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("master_only")
     public Boolean masterOnly;
 
     /**
      * <p>The Kubernetes version to which you want to update the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.16.9-aliyun.1</p>
      */
     @NameInMap("next_version")
     public String nextVersion;
 
     /**
      * <p>This parameter is discontinued. Specify the Kubernetes version by using the next_version parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.14.8-aliyun.1</p>
      */
     @NameInMap("version")
     @Deprecated

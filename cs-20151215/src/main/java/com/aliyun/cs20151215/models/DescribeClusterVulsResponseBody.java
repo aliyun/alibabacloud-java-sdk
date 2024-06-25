@@ -32,57 +32,78 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
 
         /**
          * <p>The severity level of the vulnerability.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   nntf: low</p>
-         * <p>*   later: medium     </p>
-         * <p>*   asap: high</p>
+         * <ul>
+         * <li>nntf: low</li>
+         * <li>later: medium     </li>
+         * <li>asap: high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asap</p>
          */
         @NameInMap("necessity")
         public String necessity;
 
         /**
          * <p>The number of nodes that have the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("node_count")
         public Integer nodeCount;
 
         /**
          * <p>The node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np0156da1082b54fa987e32618dd45f5d3</p>
          */
         @NameInMap("nodepool_id")
         public String nodepoolId;
 
         /**
          * <p>The name of the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("nodepool_name")
         public String nodepoolName;
 
         /**
          * <p>The alias of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CVE-2022-xxxx:rsync Security vulnerabilities</p>
          */
         @NameInMap("vul_alias_name")
         public String vulAliasName;
 
         /**
          * <p>The name of the vulnerability.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oval:com.redhat.rhsa:def:xxxxxxx</p>
          */
         @NameInMap("vul_name")
         public String vulName;
 
         /**
          * <p>The type of vulnerability.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   app: application vulnerabilities</p>
-         * <p>*   sca: application vulnerabilities (software component analysis)</p>
-         * <p>*   cve: Linux vulnerabilities</p>
-         * <p>*   cms: Web-CMS vulnerabilities</p>
-         * <p>*   sys: Windows vulnerabilities</p>
-         * <p>*   emg:  emergency vulnerabilities</p>
+         * <ul>
+         * <li>app: application vulnerabilities</li>
+         * <li>sca: application vulnerabilities (software component analysis)</li>
+         * <li>cve: Linux vulnerabilities</li>
+         * <li>cms: Web-CMS vulnerabilities</li>
+         * <li>sys: Windows vulnerabilities</li>
+         * <li>emg:  emergency vulnerabilities</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cve</p>
          */
         @NameInMap("vul_type")
         public String vulType;

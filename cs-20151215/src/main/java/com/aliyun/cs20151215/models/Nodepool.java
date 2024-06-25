@@ -7,6 +7,10 @@ public class Nodepool extends TeaModel {
     @NameInMap("auto_scaling")
     public NodepoolAutoScaling autoScaling;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("count")
     @Deprecated
     public Long count;
@@ -15,6 +19,10 @@ public class Nodepool extends TeaModel {
     @Deprecated
     public NodepoolInterconnectConfig interconnectConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>basic</p>
+     */
     @NameInMap("interconnect_mode")
     public String interconnectMode;
 
@@ -24,6 +32,10 @@ public class Nodepool extends TeaModel {
     @NameInMap("management")
     public NodepoolManagement management;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("max_nodes")
     public Long maxNodes;
 
@@ -133,36 +145,61 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolAutoScaling extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("eip_bandwidth")
         @Deprecated
         public Long eipBandwidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
+         */
         @NameInMap("eip_internet_charge_type")
         @Deprecated
         public String eipInternetChargeType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("is_bond_eip")
         @Deprecated
         public Boolean isBondEip;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("max_instances")
         public Long maxInstances;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("min_instances")
         public Long minInstances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cpu</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -230,22 +267,42 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolInterconnectConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("bandwidth")
         @Deprecated
         public Long bandwidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccn-qm5i0i0q9yi*******</p>
+         */
         @NameInMap("ccn_id")
         @Deprecated
         public String ccnId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("ccn_region_id")
         @Deprecated
         public String ccnRegionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cen-ey9k9nfhz0f*******</p>
+         */
         @NameInMap("cen_id")
         @Deprecated
         public String cenId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("improved_period")
         @Deprecated
         public String improvedPeriod;
@@ -298,26 +355,44 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolKubernetesConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("cms_enabled")
         public Boolean cmsEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("cpu_policy")
         public String cpuPolicy;
 
         @NameInMap("labels")
         public java.util.List<Tag> labels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>customized,test.,5,.com</p>
+         */
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker</p>
          */
         @NameInMap("runtime")
         public String runtime;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19.03.5</p>
          */
         @NameInMap("runtime_version")
         public String runtimeVersion;
@@ -325,6 +400,10 @@ public class Nodepool extends TeaModel {
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MXM=</p>
+         */
         @NameInMap("user_data")
         public String userData;
 
@@ -400,6 +479,10 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolManagementAutoRepairPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("restart_node")
         public Boolean restartNode;
 
@@ -419,6 +502,10 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolManagementAutoUpgradePolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("auto_upgrade_kubelet")
         public Boolean autoUpgradeKubelet;
 
@@ -438,9 +525,17 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolManagementAutoVulFixPolicy extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("restart_node")
         public Boolean restartNode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>asap,nntf</p>
+         */
         @NameInMap("vul_level")
         public String vulLevel;
 
@@ -468,15 +563,31 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolManagementUpgradeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("max_unavailable")
         public Long maxUnavailable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("surge")
         public Long surge;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("surge_percentage")
         public Long surgePercentage;
 
@@ -520,24 +631,40 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolManagement extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("auto_repair")
         public Boolean autoRepair;
 
         @NameInMap("auto_repair_policy")
         public NodepoolManagementAutoRepairPolicy autoRepairPolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
 
         @NameInMap("auto_upgrade_policy")
         public NodepoolManagementAutoUpgradePolicy autoUpgradePolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("auto_vul_fix")
         public Boolean autoVulFix;
 
         @NameInMap("auto_vul_fix_policy")
         public NodepoolManagementAutoVulFixPolicy autoVulFixPolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
@@ -638,13 +765,24 @@ public class Nodepool extends TeaModel {
     public static class NodepoolNodepoolInfo extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-test</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-acfmyvw3wjm****</p>
+         */
         @NameInMap("resource_group_id")
         public String resourceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ess</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -710,9 +848,17 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolScalingGroupSpotPriceLimit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
+         */
         @NameInMap("instance_type")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.39</p>
+         */
         @NameInMap("price_limit")
         public String priceLimit;
 
@@ -740,9 +886,17 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolScalingGroupTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -770,32 +924,63 @@ public class Nodepool extends TeaModel {
     }
 
     public static class NodepoolScalingGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("auto_renew")
         public Boolean autoRenew;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("compensate_with_on_demand")
         public Boolean compensateWithOnDemand;
 
         @NameInMap("data_disks")
         public java.util.List<DataDisk> dataDisks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ds-bp1d19mmbsv3jf6xxxxx</p>
+         */
         @NameInMap("deploymentset_id")
         public String deploymentsetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("desired_size")
         public Long desiredSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aliyun_2_1903_x64_20G_alibase_20200904.vhd</p>
+         */
         @NameInMap("image_id")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliyunLinux</p>
+         */
         @NameInMap("image_type")
         public String imageType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
@@ -806,36 +991,76 @@ public class Nodepool extends TeaModel {
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
+         */
         @NameInMap("internet_charge_type")
         public String internetChargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("internet_max_bandwidth_out")
         public Long internetMaxBandwidthOut;
 
+        /**
+         * <strong>example:</strong>
+         * <p>np-key</p>
+         */
         @NameInMap("key_pair")
         public String keyPair;
 
         @NameInMap("login_as_non_root")
         public Boolean loginAsNonRoot;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Hello1234,,</p>
+         */
         @NameInMap("login_password")
         public String loginPassword;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COST_OPTIMIZED</p>
+         */
         @NameInMap("multi_az_policy")
         public String multiAzPolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("on_demand_base_capacity")
         public Long onDemandBaseCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("on_demand_percentage_above_base_capacity")
         public Long onDemandPercentageAboveBaseCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("period")
         public Long period;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Month</p>
+         */
         @NameInMap("period_unit")
         public String periodUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliyunLinux</p>
+         */
         @NameInMap("platform")
         @Deprecated
         public String platform;
@@ -846,51 +1071,99 @@ public class Nodepool extends TeaModel {
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>release</p>
+         */
         @NameInMap("scaling_policy")
         public String scalingPolicy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-2zeihch86ooz9io4****</p>
+         */
         @NameInMap("security_group_id")
         public String securityGroupId;
 
         @NameInMap("security_group_ids")
         public java.util.List<String> securityGroupIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("spot_instance_pools")
         public Long spotInstancePools;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("spot_instance_remedy")
         public Boolean spotInstanceRemedy;
 
         @NameInMap("spot_price_limit")
         public java.util.List<NodepoolScalingGroupSpotPriceLimit> spotPriceLimit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
+         */
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
 
         @NameInMap("system_disk_categories")
         public java.util.List<String> systemDiskCategories;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
+         */
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aes-256</p>
+         */
         @NameInMap("system_disk_encrypt_algorithm")
         public String systemDiskEncryptAlgorithm;
 
         @NameInMap("system_disk_encrypted")
         public Boolean systemDiskEncrypted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
+         */
         @NameInMap("system_disk_kms_key_id")
         public String systemDiskKmsKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PL1</p>
+         */
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;
 
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
@@ -1241,6 +1514,9 @@ public class Nodepool extends TeaModel {
     public static class NodepoolTeeConfig extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("tee_enable")
         public Boolean teeEnable;

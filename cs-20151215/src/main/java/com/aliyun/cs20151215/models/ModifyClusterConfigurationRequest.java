@@ -26,12 +26,18 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
     public static class ModifyClusterConfigurationRequestCustomizeConfigConfigs extends TeaModel {
         /**
          * <p>The name of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxRequestsInflight</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("value")
         public String value;
@@ -68,6 +74,9 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
 
         /**
          * <p>The name of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kube-apiserver</p>
          */
         @NameInMap("name")
         public String name;

@@ -26,23 +26,33 @@ public class ListClusterAddonInstancesResponseBody extends TeaModel {
     public static class ListClusterAddonInstancesResponseBodyAddons extends TeaModel {
         /**
          * <p>The component name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coredns</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The status of the component. Valid values:</p>
-         * <br>
-         * <p>*   active: The component is installed.</p>
-         * <p>*   updating: The component is being modified.</p>
-         * <p>*   upgrading: The component is being updated.</p>
-         * <p>*   deleting: The component is being uninstalled.</p>
+         * <ul>
+         * <li>active: The component is installed.</li>
+         * <li>updating: The component is being modified.</li>
+         * <li>upgrading: The component is being updated.</li>
+         * <li>deleting: The component is being uninstalled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("state")
         public String state;
 
         /**
          * <p>The version of the component.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1.9.3.10-7dfca203-aliyun</p>
          */
         @NameInMap("version")
         public String version;

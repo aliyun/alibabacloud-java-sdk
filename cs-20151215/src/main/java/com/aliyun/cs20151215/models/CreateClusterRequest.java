@@ -11,66 +11,62 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> accessControlList;
 
     /**
-     * <p>The components that you want to install in the cluster. When you create a cluster, you can configure the `addons` parameter to install specific components.</p>
-     * <br>
-     * <p>**Network plug-in**: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.</p>
-     * <br>
-     * <p>*   Specify the Flannel plug-in in the following format: [{"name":"flannel","config":""}].</p>
-     * <p>*   Specify the Flannel plug-in in the following format: [{"name": "terway-eniip","config": ""}].</p>
-     * <br>
-     * <p>**Volume plug-in**: optional. Only the `CSI` plug-in is supported.</p>
-     * <br>
-     * <p>Specify the `CSI` plug-in in the following format: [{"name":"csi-plugin","config": ""},{"name": "csi-provisioner","config": ""}].</p>
-     * <br>
-     * <p>**Simple Log Service component**: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.</p>
-     * <br>
-     * <p>*   To use an existing `Simple Log Service project`, specify the value in the following format: [{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true","sls_project_name":"your_sls_project_name"}"}].</p>
-     * <p>*   To create a `Simple Log Service project`, specify the value in the following format: [{"name": "logtail-ds","config": "{"IngressDashboardEnabled":"true"}"}].</p>
-     * <br>
-     * <p>**Ingress controller**: optional. By default, the `nginx-ingress-controller` component is installed in ACK dedicated clusters.</p>
-     * <br>
-     * <p>*   To install nginx-ingress-controller and enable Internet access, specify the value in the following format: [{"name":"nginx-ingress-controller","config":"{"IngressSlbNetworkType":"internet"}"}].</p>
-     * <p>*   To disable the system to automatically install nginx-ingress-controller, specify the value in the following format: [{"name": "nginx-ingress-controller","config": "","disabled": true}].</p>
-     * <br>
-     * <p>**Event center**: optional. By default, the event center feature is enabled.</p>
-     * <br>
-     * <p>You can use Kubernetes event centers to store and query events and configure alerts. You can use the Logstores that are associated with Kubernetes event centers free of charge within 90 days. For more information, see [Create and use a Kubernetes event center](https://help.aliyun.com/document_detail/150476.html).</p>
-     * <br>
-     * <p>To enable the ack-node-problem-detector component, specify the value in the following format: [{"name":"ack-node-problem-detector","config":"{"sls_project_name":"your_sls_project_name"}"}].</p>
+     * <p>The components that you want to install in the cluster. When you create a cluster, you can configure the <code>addons</code> parameter to install specific components.</p>
+     * <p><strong>Network plug-in</strong>: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.</p>
+     * <ul>
+     * <li>Specify the Flannel plug-in in the following format: [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}].</li>
+     * <li>Specify the Flannel plug-in in the following format: [{&quot;name&quot;: &quot;terway-eniip&quot;,&quot;config&quot;: &quot;&quot;}].</li>
+     * </ul>
+     * <p><strong>Volume plug-in</strong>: optional. Only the <code>CSI</code> plug-in is supported.</p>
+     * <p>Specify the <code>CSI</code> plug-in in the following format: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}].</p>
+     * <p><strong>Simple Log Service component</strong>: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.</p>
+     * <ul>
+     * <li>To use an existing <code>Simple Log Service project</code>, specify the value in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;,&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</li>
+     * <li>To create a <code>Simple Log Service project</code>, specify the value in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;}&quot;}].</li>
+     * </ul>
+     * <p><strong>Ingress controller</strong>: optional. By default, the <code>nginx-ingress-controller</code> component is installed in ACK dedicated clusters.</p>
+     * <ul>
+     * <li>To install nginx-ingress-controller and enable Internet access, specify the value in the following format: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}&quot;}].</li>
+     * <li>To disable the system to automatically install nginx-ingress-controller, specify the value in the following format: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}].</li>
+     * </ul>
+     * <p><strong>Event center</strong>: optional. By default, the event center feature is enabled.</p>
+     * <p>You can use Kubernetes event centers to store and query events and configure alerts. You can use the Logstores that are associated with Kubernetes event centers free of charge within 90 days. For more information, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use a Kubernetes event center</a>.</p>
+     * <p>To enable the ack-node-problem-detector component, specify the value in the following format: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</p>
      */
     @NameInMap("addons")
     public java.util.List<Addon> addons;
 
     /**
-     * <p>Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `api-audiences` are used by the `API server` to check whether the `tokens` of requests are legitimate.`` Separate multiple `audiences` with commas (,).</p>
-     * <br>
-     * <p>For more information about `ServiceAccount`, see [Enable service account token volume projection](https://help.aliyun.com/document_detail/160384.html).</p>
+     * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. <code>api-audiences</code> are used by the <code>API server</code> to check whether the <code>tokens</code> of requests are legitimate.`` Separate multiple <code>audiences</code> with commas (,).</p>
+     * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kubernetes.default.svc</p>
      */
     @NameInMap("api_audiences")
     public String apiAudiences;
 
     /**
      * <p>The billing method of the cluster. The following resources are billed on a subscription basis:</p>
-     * <br>
      * <p>ECS instances in node pools.</p>
-     * <br>
      * <p>The internal-facing SLB instance used by the API server.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
      * <p>PrePaid: subscription.</p>
-     * <br>
      * <p>PostPaid: pay-as-you-go.</p>
-     * <br>
      * <p>Default value: PostPaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("charge_type")
     public String chargeType;
 
     /**
      * <p>[This parameter is deprecated]</p>
-     * <br>
      * <p>Please replace this parameter with security_hardening_os.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("cis_enabled")
     @Deprecated
@@ -78,107 +74,140 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to install the CloudMonitor agent. Valid values:</p>
-     * <br>
-     * <p>*   `true`: installs the CloudMonitor agent.</p>
-     * <p>*   `false`: does not install the CloudMonitor agent.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: installs the CloudMonitor agent.</li>
+     * <li><code>false</code>: does not install the CloudMonitor agent.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("cloud_monitor_flags")
     public Boolean cloudMonitorFlags;
 
     /**
      * <p>The domain name of the cluster.</p>
-     * <br>
      * <p>The domain name can contain one or more parts that are separated by periods (.). Each part cannot exceed 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). Each part must start and end with a lowercase letter or digit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster.local</p>
      */
     @NameInMap("cluster_domain")
     public String clusterDomain;
 
     /**
-     * <p>After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the edition of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   `ack.pro.small`: Pro.</p>
-     * <p>*   `ack.standard`: Basic. If you leave the parameter empty, the Basic edition is selected.</p>
+     * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster. Valid values:</p>
+     * <ul>
+     * <li><code>ack.pro.small</code>: Pro.</li>
+     * <li><code>ack.standard</code>: Basic. If you leave the parameter empty, the Basic edition is selected.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ack.pro.small</p>
      */
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
     /**
-     * <p>*   `Kubernetes`: ACK dedicated cluster.</p>
-     * <p>*   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</p>
-     * <p>*   `ExternalKubernetes`: registered cluster.</p>
-     * <br>
+     * <ul>
+     * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</li>
+     * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Kubernetes</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;
 
     /**
      * <p>The CIDR block of pods. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the CIDR block of pods. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
-     * <br>
-     * <p>For more information about subnetting for ACK clusters, see [Plan CIDR blocks for an ACK cluster that is deployed in a VPC](https://help.aliyun.com/document_detail/86500.html).</p>
-     * <br>
-     * <p>>  This parameter is required if the cluster uses Flannel as the network plug-in.</p>
+     * <p>For more information about subnetting for ACK clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster that is deployed in a VPC</a>.</p>
+     * <blockquote>
+     * <p> This parameter is required if the cluster uses Flannel as the network plug-in.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>172.20.0.0/16</p>
      */
     @NameInMap("container_cidr")
     public String containerCidr;
 
     /**
      * <p>The list of control plane components for which you want to enable log collection.</p>
-     * <br>
      * <p>By default, the log of kube-apiserver, kube-controller-manager, and kube-scheduler is collected.</p>
      */
     @NameInMap("controlplane_log_components")
     public java.util.List<String> controlplaneLogComponents;
 
     /**
-     * <p>The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the `k8s-log-{ClusterID}` format.</p>
+     * <p>The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the <code>k8s-log-{ClusterID}</code> format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s-log-xxx</p>
      */
     @NameInMap("controlplane_log_project")
     public String controlplaneLogProject;
 
     /**
      * <p>The retention period of control plane logs in days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("controlplane_log_ttl")
     public String controlplaneLogTtl;
 
     /**
      * <p>The CPU management policy of the nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</p>
-     * <br>
-     * <p>*   `static`: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</p>
-     * <p>*   `none`: specifies that the default CPU affinity is used.</p>
-     * <br>
-     * <p>Default value: `none`.</p>
+     * <ul>
+     * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</li>
+     * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
+     * </ul>
+     * <p>Default value: <code>none</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>none</p>
      */
     @NameInMap("cpu_policy")
     public String cpuPolicy;
 
     /**
      * <p>Specifies custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses or domain names with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cs.aliyun.com</p>
      */
     @NameInMap("custom_san")
     public String customSan;
 
     /**
      * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the Container Service console or by calling API operations.</p>
-     * <p>*   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the Container Service console or by calling API operations.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the Container Service console or by calling API operations.</li>
+     * <li><code>false</code>: disables deletion protection for the cluster. This way, the cluster can be deleted in the Container Service console or by calling API operations.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
 
     /**
      * <p>Specifies whether to perform a rollback if the cluster fails to be created. Valid values:</p>
-     * <br>
-     * <p>*   `true`: performs a rollback if the system fails to create the cluster.</p>
-     * <p>*   `false`: does not perform a rollback if the system fails to create the cluster.</p>
-     * <br>
-     * <p>Default value: `true`.</p>
+     * <ul>
+     * <li><code>true</code>: performs a rollback if the system fails to create the cluster.</li>
+     * <li><code>false</code>: does not perform a rollback if the system fails to create the cluster.</li>
+     * </ul>
+     * <p>Default value: <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("disable_rollback")
     @Deprecated
@@ -186,298 +215,375 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enable_rrsa")
     public Boolean enableRrsa;
 
     /**
-     * <p>The ID of a key that is managed by Key Management Service (KMS). The key is used to encrypt data disks. For more information, see [KMS](https://help.aliyun.com/document_detail/28935.html).</p>
-     * <br>
-     * <p>>  The key can be used only in ACK Pro clusters.</p>
+     * <p>The ID of a key that is managed by Key Management Service (KMS). The key is used to encrypt data disks. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">KMS</a>.</p>
+     * <blockquote>
+     * <p> The key can be used only in ACK Pro clusters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0fe64791-55eb-4fc7-84c5-c6c7cdca****</p>
      */
     @NameInMap("encryption_provider_key")
     public String encryptionProviderKey;
 
     /**
      * <p>Specifies whether to enable Internet access for the cluster. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables Internet access.</p>
-     * <p>*   `false`: disables Internet access. If you set this parameter to false, the API server cannot be accessed over the Internet.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: enables Internet access.</li>
+     * <li><code>false</code>: disables Internet access. If you set this parameter to false, the API server cannot be accessed over the Internet.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("endpoint_public_access")
     public Boolean endpointPublicAccess;
 
     /**
      * <p>Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:</p>
-     * <br>
-     * <p>*   `true`: stores the data of containers and images on a data disk. Back up the existing data on the data disk first.</p>
-     * <p>*   `false`: does not store the data of containers and images on a data disk.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
-     * <br>
+     * <ul>
+     * <li><code>true</code>: stores the data of containers and images on a data disk. Back up the existing data on the data disk first.</li>
+     * <li><code>false</code>: does not store the data of containers and images on a data disk.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
      * <p>How data disks are mounted:</p>
-     * <br>
-     * <p>*   If an ECS instance has data disks mounted and the file system of the last data disk is not initialized, the system automatically formats the data disk to ext4. Then, the system mounts the data disk to /var/lib/docker and /var/lib/kubelet.</p>
-     * <p>*   If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.</p>
+     * <ul>
+     * <li>If an ECS instance has data disks mounted and the file system of the last data disk is not initialized, the system automatically formats the data disk to ext4. Then, the system mounts the data disk to /var/lib/docker and /var/lib/kubelet.</li>
+     * <li>If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("format_disk")
     public Boolean formatDisk;
 
     /**
-     * <p>Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see [Custom images](https://help.aliyun.com/document_detail/146647.html).</p>
+     * <p>Specifies a custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Custom images</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp16z7xko3vvv8gt****</p>
      */
     @NameInMap("image_id")
     public String imageId;
 
     /**
      * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</p>
-     * <br>
-     * <p>*   CentOS</p>
-     * <p>*   AliyunLinux</p>
-     * <p>*   AliyunLinux Qboot</p>
-     * <p>*   AliyunLinuxUEFI</p>
-     * <p>*   AliyunLinux3</p>
-     * <p>*   Windows</p>
-     * <p>*   WindowsCore</p>
-     * <p>*   AliyunLinux3Arm64</p>
-     * <p>*   ContainerOS</p>
-     * <br>
-     * <p>Default value: `CentOS`.</p>
+     * <ul>
+     * <li>CentOS</li>
+     * <li>AliyunLinux</li>
+     * <li>AliyunLinux Qboot</li>
+     * <li>AliyunLinuxUEFI</li>
+     * <li>AliyunLinux3</li>
+     * <li>Windows</li>
+     * <li>WindowsCore</li>
+     * <li>AliyunLinux3Arm64</li>
+     * <li>ContainerOS</li>
+     * </ul>
+     * <p>Default value: <code>CentOS</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunLinux</p>
      */
     @NameInMap("image_type")
     public String imageType;
 
     /**
      * <p>The list of existing Elastic Compute Service (ECS) instances that are specified as worker nodes for the cluster.</p>
-     * <br>
-     * <p>>  This parameter is required when you create worker nodes based on existing ECS instances.</p>
+     * <blockquote>
+     * <p> This parameter is required when you create worker nodes based on existing ECS instances.</p>
+     * </blockquote>
      */
     @NameInMap("instances")
     public java.util.List<String> instances;
 
     /**
      * <p>The IP stack of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Optional value: ipv4 (Single stack) or ipv6 (Dual Stack)
+     * Default value: IPV4</p>
      */
     @NameInMap("ip_stack")
     public String ipStack;
 
     /**
-     * <p>Specifies whether to create an advanced security group. This parameter takes effect only if `security_group_id` is left empty.</p>
-     * <br>
-     * <p>>  To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that has Terway installed.</p>
-     * <br>
-     * <p>*   `true`: creates an advanced security group.</p>
-     * <p>*   `false`: does not create an advanced security group.</p>
-     * <br>
-     * <p>Default value: `true`.</p>
+     * <p>Specifies whether to create an advanced security group. This parameter takes effect only if <code>security_group_id</code> is left empty.</p>
+     * <blockquote>
+     * <p> To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that has Terway installed.</p>
+     * </blockquote>
+     * <ul>
+     * <li><code>true</code>: creates an advanced security group.</li>
+     * <li><code>false</code>: does not create an advanced security group.</li>
+     * </ul>
+     * <p>Default value: <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("is_enterprise_security_group")
     public Boolean isEnterpriseSecurityGroup;
 
     /**
      * <p>Specifies whether to retain the names of existing ECS instances that are used in the cluster. Valid values:</p>
-     * <br>
-     * <p>*   `true`: retains the names.</p>
-     * <p>*   `false`: does not retain the names. The system assigns new names.</p>
-     * <br>
-     * <p>Default value: `true`.</p>
+     * <ul>
+     * <li><code>true</code>: retains the names.</li>
+     * <li><code>false</code>: does not retain the names. The system assigns new names.</li>
+     * </ul>
+     * <p>Default value: <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("keep_instance_name")
     public Boolean keepInstanceName;
 
     /**
-     * <p>The name of the key pair. You must configure this parameter or the `login_password` parameter.</p>
+     * <p>The name of the key pair. You must configure this parameter or the <code>login_password</code> parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>secrity-key</p>
      */
     @NameInMap("key_pair")
     public String keyPair;
 
     /**
      * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.</p>
-     * <br>
-     * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the API. For more information about the Kubernetes versions supported by ACK, see [Release notes on Kubernetes versions](https://help.aliyun.com/document_detail/185269.html).</p>
+     * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the API. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes on Kubernetes versions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.16.9-aliyun.1</p>
      */
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
 
     /**
      * <p>The specification of the Server Load Balancer (SLB) instance. Valid values:</p>
-     * <br>
-     * <p>*   slb.s1.small</p>
-     * <p>*   slb.s2.small</p>
-     * <p>*   slb.s2.medium</p>
-     * <p>*   slb.s3.small</p>
-     * <p>*   slb.s3.medium</p>
-     * <p>*   slb.s3.large</p>
-     * <br>
-     * <p>Default value: `slb.s2.small`.</p>
+     * <ul>
+     * <li>slb.s1.small</li>
+     * <li>slb.s2.small</li>
+     * <li>slb.s2.medium</li>
+     * <li>slb.s3.small</li>
+     * <li>slb.s3.medium</li>
+     * <li>slb.s3.large</li>
+     * </ul>
+     * <p>Default value: <code>slb.s2.small</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>slb.s2.small</p>
      */
     @NameInMap("load_balancer_spec")
     public String loadBalancerSpec;
 
     /**
-     * <p>Enables Simple Log Service for the cluster. This parameter takes effect only on ACK Serverless clusters. Set the value to `SLS`.</p>
+     * <p>Enables Simple Log Service for the cluster. This parameter takes effect only on ACK Serverless clusters. Set the value to <code>SLS</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SLS</p>
      */
     @NameInMap("logging_type")
     public String loggingType;
 
     /**
-     * <p>The password for SSH logon. You must configure this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>The password for SSH logon. You must configure this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello@1234</p>
      */
     @NameInMap("login_password")
     public String loginPassword;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only if `master_instance_charge_type` is set to `PrePaid`. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables auto-renewal.</p>
-     * <p>*   `false`: disables auto-renewal.</p>
-     * <br>
-     * <p>Default value: `true`.</p>
+     * <p>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only if <code>master_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: enables auto-renewal.</li>
+     * <li><code>false</code>: disables auto-renewal.</li>
+     * </ul>
+     * <p>Default value: <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("master_auto_renew")
     public Boolean masterAutoRenew;
 
     /**
      * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for master nodes.</p>
-     * <br>
      * <p>Valid values: 1, 2, 3, 6, and 12.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("master_auto_renew_period")
     public Long masterAutoRenewPeriod;
 
     /**
-     * <p>The number of master nodes. Valid values: `3` and `5`.</p>
-     * <br>
-     * <p>Default value: `3`.</p>
+     * <p>The number of master nodes. Valid values: <code>3</code> and <code>5</code>.</p>
+     * <p>Default value: <code>3</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("master_count")
     public Long masterCount;
 
     /**
      * <p>The billing method of master nodes. Valid values:</p>
-     * <br>
-     * <p>*   `PrePaid`: subscription.</p>
-     * <p>*   `PostPaid`: pay-as-you-go.</p>
-     * <br>
-     * <p>Default value: `PostPaid`.</p>
+     * <ul>
+     * <li><code>PrePaid</code>: subscription.</li>
+     * <li><code>PostPaid</code>: pay-as-you-go.</li>
+     * </ul>
+     * <p>Default value: <code>PostPaid</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("master_instance_charge_type")
     public String masterInstanceChargeType;
 
     /**
-     * <p>The instance types of master nodes. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).</p>
+     * <p>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</p>
      */
     @NameInMap("master_instance_types")
     public java.util.List<String> masterInstanceTypes;
 
     /**
-     * <p>The subscription duration of master nodes. This parameter takes effect and is required only if `master_instance_charge_type` is set to `PrePaid`.</p>
-     * <br>
+     * <p>The subscription duration of master nodes. This parameter takes effect and is required only if <code>master_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("master_period")
     public Long masterPeriod;
 
     /**
-     * <p>The billing cycle of master nodes. This parameter is required if master_instance_charge_type is set to `PrePaid`.</p>
-     * <br>
-     * <p>Set the value to `Month`. Master nodes are billed only on a monthly basis.</p>
+     * <p>The billing cycle of master nodes. This parameter is required if master_instance_charge_type is set to <code>PrePaid</code>.</p>
+     * <p>Set the value to <code>Month</code>. Master nodes are billed only on a monthly basis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("master_period_unit")
     public String masterPeriodUnit;
 
     /**
      * <p>The type of system disk that you want to use for the master nodes. Valid values:</p>
-     * <br>
-     * <p>*   `cloud_efficiency`: ultra disk.</p>
-     * <p>*   `cloud_ssd`: standard SSD.</p>
-     * <p>*   `cloud_essd`: enhanced SSD (ESSD).</p>
-     * <br>
-     * <p>Default value: `cloud_ssd`. The default value may vary in different zones.</p>
+     * <ul>
+     * <li><code>cloud_efficiency</code>: ultra disk.</li>
+     * <li><code>cloud_ssd</code>: standard SSD.</li>
+     * <li><code>cloud_essd</code>: enhanced SSD (ESSD).</li>
+     * </ul>
+     * <p>Default value: <code>cloud_ssd</code>. The default value may vary in different zones.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_ssd</p>
      */
     @NameInMap("master_system_disk_category")
     public String masterSystemDiskCategory;
 
     /**
-     * <p>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
+     * <p>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL1</p>
      */
     @NameInMap("master_system_disk_performance_level")
     public String masterSystemDiskPerformanceLevel;
 
     /**
      * <p>The size of the system disk that is specified for master nodes. Valid values: 40 to 500. Unit: GiB.</p>
-     * <br>
-     * <p>Default value: `120`.</p>
+     * <p>Default value: <code>120</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
      */
     @NameInMap("master_system_disk_size")
     public Long masterSystemDiskSize;
 
     /**
      * <p>The ID of the automatic snapshot policy that is used by the system disk specified for master nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-2zej1nogjvovnz4z****</p>
      */
     @NameInMap("master_system_disk_snapshot_policy_id")
     public String masterSystemDiskSnapshotPolicyId;
 
     /**
      * <p>The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.</p>
-     * <br>
-     * <p>The number of vSwitches must be the same as that specified in `master_count` and the same as those specified in `master_vswitch_ids`.</p>
+     * <p>The number of vSwitches must be the same as that specified in <code>master_count</code> and the same as those specified in <code>master_vswitch_ids</code>.</p>
      */
     @NameInMap("master_vswitch_ids")
     public java.util.List<String> masterVswitchIds;
 
     /**
      * <p>The name of the cluster.</p>
-     * <br>
      * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster-demo</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>Specifies whether to create a NAT gateway and configure SNAT rules when the system creates the ACK Serverless cluster. Valid values:</p>
-     * <br>
-     * <p>*   `true`: automatically creates a NAT gateway and configures SNAT rules. This enables Internet access for the VPC in which the cluster is deployed.</p>
-     * <p>*   `false`: does not create a NAT gateway or configure SNAT rules. In this case, the cluster in the VPC cannot access the Internet.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: automatically creates a NAT gateway and configures SNAT rules. This enables Internet access for the VPC in which the cluster is deployed.</li>
+     * <li><code>false</code>: does not create a NAT gateway or configure SNAT rules. In this case, the cluster in the VPC cannot access the Internet.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("nat_gateway")
     public Boolean natGateway;
 
     /**
      * <p>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel as the network plug-in.</p>
-     * <br>
-     * <p>Default value: `26`.</p>
+     * <p>Default value: <code>26</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25</p>
      */
     @NameInMap("node_cidr_mask")
     public String nodeCidrMask;
 
     /**
      * <p>The name of the custom node.</p>
-     * <br>
      * <p>A node name consists of a prefix, an IP substring, and a suffix.</p>
-     * <br>
-     * <p>*   The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.</p>
-     * <p>*   The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.</p>
-     * <br>
+     * <ul>
+     * <li>The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.</li>
+     * <li>The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.</li>
+     * </ul>
      * <p>For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun.com00055test</p>
      */
     @NameInMap("node_name_mode")
     public String nodeNameMode;
 
     /**
      * <p>The node port range. Valid values: 30000 to 65535.</p>
-     * <br>
-     * <p>Default value: `30000-32767`.</p>
+     * <p>Default value: <code>30000-32767</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000~32767</p>
      */
     @NameInMap("node_port_range")
     public String nodePortRange;
@@ -490,6 +596,9 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The number of worker nodes. Valid values: 0 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("num_of_nodes")
     @Deprecated
@@ -497,74 +606,91 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The type of OS. Valid values:</p>
-     * <br>
-     * <p>*   Windows</p>
-     * <p>*   Linux</p>
-     * <br>
-     * <p>Default value: `Linux`.</p>
+     * <ul>
+     * <li>Windows</li>
+     * <li>Linux</li>
+     * </ul>
+     * <p>Default value: <code>Linux</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Linux</p>
      */
     @NameInMap("os_type")
     public String osType;
 
     /**
      * <p>The subscription duration. This parameter takes effect and is required only if you set charge_type to PrePaid.</p>
-     * <br>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FY2023</p>
      */
     @NameInMap("period")
     public Long period;
 
     /**
      * <p>The billing cycle. This parameter is required if charge_type is set to PrePaid.</p>
-     * <br>
      * <p>Set the value to Month. Master nodes are billed only on a monthly basis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("period_unit")
     public String periodUnit;
 
     /**
      * <p>The OS distribution. Valid values:</p>
-     * <br>
-     * <p>*   CentOS</p>
-     * <p>*   AliyunLinux</p>
-     * <p>*   QbootAliyunLinux</p>
-     * <p>*   Qboot</p>
-     * <p>*   Windows</p>
-     * <p>*   WindowsCore</p>
-     * <br>
-     * <p>Default value: `CentOS`.</p>
+     * <ul>
+     * <li>CentOS</li>
+     * <li>AliyunLinux</li>
+     * <li>QbootAliyunLinux</li>
+     * <li>Qboot</li>
+     * <li>Windows</li>
+     * <li>WindowsCore</li>
+     * </ul>
+     * <p>Default value: <code>CentOS</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CentOS</p>
      */
     @NameInMap("platform")
     public String platform;
 
     /**
-     * <p>The list of pod vSwitches. You need to specify at least one pod vSwitch for each node vSwitch, and the pod vSwitches must be different from the node vSwitches (`vswitch`). We recommend that you specify pod vSwitches whose mask lengths are no longer than 19.</p>
-     * <br>
-     * <p>>  The `pod_vswitch_ids` parameter is required if the cluster uses Terway as the network plug-in.</p>
+     * <p>The list of pod vSwitches. You need to specify at least one pod vSwitch for each node vSwitch, and the pod vSwitches must be different from the node vSwitches (<code>vswitch</code>). We recommend that you specify pod vSwitches whose mask lengths are no longer than 19.</p>
+     * <blockquote>
+     * <p> The <code>pod_vswitch_ids</code> parameter is required if the cluster uses Terway as the network plug-in.</p>
+     * </blockquote>
      */
     @NameInMap("pod_vswitch_ids")
     public java.util.List<String> podVswitchIds;
 
     /**
-     * <p>If you set `cluster_type` to `ManagedKubernetes`, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
-     * <br>
-     * <p>*   `Default`: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</p>
-     * <p>*   `Edge`: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</p>
-     * <p>*   `Serverless`: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</p>
-     * <p>*   `Lingjun`: ACK Lingjun Pro cluster.</p>
+     * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</p>
+     * <ul>
+     * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
+     * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
+     * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
+     * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("profile")
     public String profile;
 
     /**
      * <p>The kube-proxy mode. Valid values:</p>
-     * <br>
-     * <p>*   `iptables`: iptables is a kube-proxy mode. It uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</p>
-     * <p>*   `ipvs`: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios when high load balancing performance is required.</p>
-     * <br>
-     * <p>Default value: `ipvs`.</p>
+     * <ul>
+     * <li><code>iptables</code>: iptables is a kube-proxy mode. It uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
+     * <li><code>ipvs</code>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios when high load balancing performance is required.</li>
+     * </ul>
+     * <p>Default value: <code>ipvs</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipvs</p>
      */
     @NameInMap("proxy_mode")
     public String proxyMode;
@@ -577,69 +703,81 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which you want to deploy the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("region_id")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the cluster belongs. You can use resource groups to isolate clusters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm3mkrure****</p>
      */
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 
     /**
      * <p>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</p>
-     * <br>
-     * <p>For more information about how to select a proper container runtime, see [How to select between Docker and Sandboxed-Container](https://help.aliyun.com/document_detail/160313.html).</p>
+     * <p>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">How to select between Docker and Sandboxed-Container</a>.</p>
      */
     @NameInMap("runtime")
     public Runtime runtime;
 
     /**
-     * <p>The ID of an existing security group. You need to choose between this parameter and the `is_enterprise_security_group` parameter. Cluster nodes are automatically added to the security group.</p>
+     * <p>The ID of an existing security group. You need to choose between this parameter and the <code>is_enterprise_security_group</code> parameter. Cluster nodes are automatically added to the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1bdue0qc1g7k****</p>
      */
     @NameInMap("security_group_id")
     public String securityGroupId;
 
     /**
      * <p>Specifies whether to enable Alibaba Cloud Linux Security Hardening. </p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>- true: enables Alibaba Cloud Linux Security Hardening.</p>
-     * <p>- false: disables Alibaba Cloud Linux Security Hardening.</p>
-     * <br>
+     * <ul>
+     * <li>true: enables Alibaba Cloud Linux Security Hardening.</li>
+     * <li>false: disables Alibaba Cloud Linux Security Hardening.</li>
+     * </ul>
      * <p>Default value: false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("security_hardening_os")
     public Boolean securityHardeningOs;
 
     /**
-     * <p>Service accounts provide identities for pods when pods communicate with the `API server` of the cluster. `service-account-issuer` is the issuer of the `serviceaccount token`, which corresponds to the `iss` field in the `token payload`.</p>
-     * <br>
-     * <p>For more information about `ServiceAccount`, see [Enable service account token volume projection](https://help.aliyun.com/document_detail/160384.html).</p>
+     * <p>Service accounts provide identities for pods when pods communicate with the <code>API server</code> of the cluster. <code>service-account-issuer</code> is the issuer of the <code>serviceaccount token</code>, which corresponds to the <code>iss</code> field in the <code>token payload</code>.</p>
+     * <p>For more information about <code>ServiceAccount</code>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kubernetes.default.svc</p>
      */
     @NameInMap("service_account_issuer")
     public String serviceAccountIssuer;
 
     /**
      * <p>The CIDR block of Services. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The CIDR block of Services cannot overlap with the CIDR block of the VPC (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the CIDR block of Services after the cluster is created.</p>
-     * <br>
      * <p>By default, the CIDR block of Services is set to 172.19.0.0/20.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.21.0.0/20</p>
      */
     @NameInMap("service_cidr")
     public String serviceCidr;
 
     /**
-     * <p>The type of service discovery that is implemented in the `ACK Serverless` cluster.</p>
-     * <br>
-     * <p>*   `CoreDNS`: CoreDNS is a standard service discovery plug-in that is provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCores and 512 MiB of memory.</p>
-     * <p>*   `PrivateZone`: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.</p>
-     * <br>
+     * <p>The type of service discovery that is implemented in the <code>ACK Serverless</code> cluster.</p>
+     * <ul>
+     * <li><code>CoreDNS</code>: CoreDNS is a standard service discovery plug-in that is provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCores and 512 MiB of memory.</li>
+     * <li><code>PrivateZone</code>: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.</li>
+     * </ul>
      * <p>By default, this parameter is not specified.</p>
      */
     @NameInMap("service_discovery_types")
@@ -647,105 +785,130 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to configure Source Network Address Translation (SNAT) rules for the VPC in which the cluster is deployed. Valid values:</p>
-     * <br>
-     * <p>*   `true`: automatically creates a NAT gateway and configures SNAT rules. Set this parameter to `true` if nodes and applications in the cluster need to access the Internet.</p>
-     * <p>*   `false`: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.</p>
-     * <br>
-     * <p>>  If this feature is disabled when you create the cluster, you can manually enable this feature after you create the cluster. For more information, see [Manually create a NAT gateway and configure SNAT rules](https://help.aliyun.com/document_detail/178480.html).</p>
-     * <br>
-     * <p>Default value: `true`.</p>
+     * <ul>
+     * <li><code>true</code>: automatically creates a NAT gateway and configures SNAT rules. Set this parameter to <code>true</code> if nodes and applications in the cluster need to access the Internet.</li>
+     * <li><code>false</code>: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If this feature is disabled when you create the cluster, you can manually enable this feature after you create the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/178480.html">Manually create a NAT gateway and configure SNAT rules</a>.</p>
+     * </blockquote>
+     * <p>Default value: <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("snat_entry")
     public Boolean snatEntry;
 
     /**
-     * <p>Specifies whether to enable reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see [ACK reinforcement based on classified protection](https://help.aliyun.com/document_detail/196148.html).</p>
-     * <br>
+     * <p>Specifies whether to enable reinforcement based on Multi-Level Protection Scheme (MLPS). For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK reinforcement based on classified protection</a>.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables reinforcement based on MLPS.</p>
-     * <p>*   `false`: disables reinforcement based on MLPS.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: enables reinforcement based on MLPS.</li>
+     * <li><code>false</code>: disables reinforcement based on MLPS.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("soc_enabled")
     public Boolean socEnabled;
 
     /**
      * <p>Specifies whether to enable SSH logon. If this parameter is set to true, you can log on to master nodes in an ACK dedicated cluster over the Internet. This parameter does not take effect for ACK managed clusters. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables SSH logon.</p>
-     * <p>*   `false`: disables SSH logon.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: enables SSH logon.</li>
+     * <li><code>false</code>: disables SSH logon.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ssh_flags")
     public Boolean sshFlags;
 
     /**
      * <p>The labels that you want to add to nodes. You must add labels based on the following rules:</p>
-     * <br>
-     * <p>*   A label is a case-sensitive key-value pair. You can add up to 20 labels.</p>
-     * <p>*   When you add a label, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).</p>
+     * <ul>
+     * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+     * <li>When you add a label, you must specify a unique key but you can leave the value empty. A key cannot exceed 64 characters in length and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+     * </ul>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The taints of the nodes in the node pool. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).</p>
+     * <p>The taints of the nodes in the node pool. Taints can be used together with tolerations to avoid scheduling pods to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
      */
     @NameInMap("taints")
     public java.util.List<Taint> taints;
 
     /**
      * <p>Specifies the timeout period of cluster creation. Unit: minutes.</p>
-     * <br>
-     * <p>Default value: `60`.</p>
+     * <p>Default value: <code>60</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("timeout_mins")
     public Long timeoutMins;
 
     /**
      * <p>The time zone of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Asia/Shanghai</p>
      */
     @NameInMap("timezone")
     public String timezone;
 
     /**
      * <p>The custom Certificate Authority (CA) certificate used by the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----****</p>
      */
     @NameInMap("user_ca")
     public String userCa;
 
     /**
      * <p>The user data of nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFD****</p>
      */
     @NameInMap("user_data")
     public String userData;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-2zeik9h3ahvv2zz95****</p>
      */
     @NameInMap("vpcid")
     public String vpcid;
 
     /**
      * <p>The vSwitches that are specified for nodes in the cluster. This parameter is required when you create an ACK managed cluster that does not contain nodes.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if `worker_instance_charge_type` is set to `PrePaid`. Valid values:</p>
-     * <br>
-     * <p>*   `true`: enables auto-renewal.</p>
-     * <p>*   `false`: disables auto-renewal.</p>
-     * <br>
-     * <p>Default value: `true`.</p>
+     * <p>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: enables auto-renewal.</li>
+     * <li><code>false</code>: disables auto-renewal.</li>
+     * </ul>
+     * <p>Default value: <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("worker_auto_renew")
     @Deprecated
@@ -753,8 +916,10 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The cycle of auto-renewal. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.</p>
-     * <br>
      * <p>Valid values: 1, 2, 3, 6, and 12.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("worker_auto_renew_period")
     @Deprecated
@@ -769,11 +934,14 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The billing method of worker nodes. Valid values:</p>
-     * <br>
-     * <p>*   `PrePaid`: subscription.</p>
-     * <p>*   `PostPaid`: pay-as-you-go.</p>
-     * <br>
+     * <ul>
+     * <li><code>PrePaid</code>: subscription.</li>
+     * <li><code>PostPaid</code>: pay-as-you-go.</li>
+     * </ul>
      * <p>Default value: PostPaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("worker_instance_charge_type")
     @Deprecated
@@ -787,48 +955,56 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> workerInstanceTypes;
 
     /**
-     * <p>The subscription duration of worker nodes. This parameter takes effect and is required only if `worker_instance_charge_type` is set to `PrePaid`.</p>
-     * <br>
+     * <p>The subscription duration of worker nodes. This parameter takes effect and is required only if <code>worker_instance_charge_type</code> is set to <code>PrePaid</code>.</p>
      * <p>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("worker_period")
     @Deprecated
     public Long workerPeriod;
 
     /**
-     * <p>The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to `PrePaid`.</p>
-     * <br>
-     * <p>Set the value to `Month`. Worker nodes are billed only on a monthly basis.</p>
+     * <p>The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to <code>PrePaid</code>.</p>
+     * <p>Set the value to <code>Month</code>. Worker nodes are billed only on a monthly basis.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("worker_period_unit")
     @Deprecated
     public String workerPeriodUnit;
 
     /**
-     * <p>The category of the system disks for worker nodes. For more information, see [Elastic Block Storage devices](https://help.aliyun.com/document_detail/63136.html).</p>
-     * <br>
+     * <p>The category of the system disks for worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Elastic Block Storage devices</a>.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   `cloud_efficiency`: ultra disk.</p>
-     * <p>*   `cloud_ssd`: standard SSD.</p>
-     * <br>
-     * <p>Default value: `cloud_ssd`.</p>
+     * <ul>
+     * <li><code>cloud_efficiency</code>: ultra disk.</li>
+     * <li><code>cloud_ssd</code>: standard SSD.</li>
+     * </ul>
+     * <p>Default value: <code>cloud_ssd</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_efficiency</p>
      */
     @NameInMap("worker_system_disk_category")
     @Deprecated
     public String workerSystemDiskCategory;
 
     /**
-     * <p>If the system disk is an ESSD, you can set the PL of the ESSD. For more information, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
-     * <br>
+     * <p>If the system disk is an ESSD, you can set the PL of the ESSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   PL0</p>
-     * <p>*   PL1</p>
-     * <p>*   PL2</p>
-     * <p>*   PL3</p>
+     * <ul>
+     * <li>PL0</li>
+     * <li>PL1</li>
+     * <li>PL2</li>
+     * <li>PL3</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PL1</p>
      */
     @NameInMap("worker_system_disk_performance_level")
     @Deprecated
@@ -836,12 +1012,12 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The system disk size of worker nodes. Unit: GiB.</p>
-     * <br>
      * <p>Valid values: 40 to 500.</p>
-     * <br>
      * <p>The value of this parameter must be at least 40 and no less than the image size.</p>
-     * <br>
-     * <p>Default value: `120`.</p>
+     * <p>Default value: <code>120</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120</p>
      */
     @NameInMap("worker_system_disk_size")
     @Deprecated
@@ -849,6 +1025,9 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the automatic snapshot policy that is used by the system disk specified for worker nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-2zej1nogjvovnz4z****</p>
      */
     @NameInMap("worker_system_disk_snapshot_policy_id")
     @Deprecated
@@ -856,8 +1035,7 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The list of vSwitches that are specified for nodes. Each node is allocated a vSwitch.</p>
-     * <br>
-     * <p>The `worker_vswitch_ids` parameter is optional but the `vswitch_ids` parameter is required when you create an ACK managed cluster that does not contain nodes.</p>
+     * <p>The <code>worker_vswitch_ids</code> parameter is optional but the <code>vswitch_ids</code> parameter is required when you create an ACK managed cluster that does not contain nodes.</p>
      */
     @NameInMap("worker_vswitch_ids")
     @Deprecated
@@ -865,8 +1043,10 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the zone to which the cluster belongs. This parameter takes effect for only ACK Serverless clusters.</p>
-     * <br>
-     * <p>When you create an ACK Serverless cluster, you must configure `zone_id` if `vpc_id` and `vswitch_ids` are not configured. This way, the system automatically creates a VPC in the specified zone.</p>
+     * <p>When you create an ACK Serverless cluster, you must configure <code>zone_id</code> if <code>vpc_id</code> and <code>vswitch_ids</code> are not configured. This way, the system automatically creates a VPC in the specified zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beiji****</p>
      */
     @NameInMap("zone_id")
     public String zoneId;
@@ -1607,33 +1787,43 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestWorkerDataDisks extends TeaModel {
         /**
          * <p>The type of a data disk.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         @NameInMap("category")
         public String category;
 
         /**
          * <p>Specifies whether to encrypt the data disk. Valid values:</p>
-         * <br>
-         * <p>*   `true`: encrypts the data disk.</p>
-         * <p>*   `false`: does not encrypt the data disk.</p>
-         * <br>
-         * <p>Default value: `false`.</p>
+         * <ul>
+         * <li><code>true</code>: encrypts the data disk.</li>
+         * <li><code>false</code>: does not encrypt the data disk.</li>
+         * </ul>
+         * <p>Default value: <code>false</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("encrypted")
         public String encrypted;
 
         /**
-         * <p>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see [ESSDs](https://help.aliyun.com/document_detail/122389.html).</p>
+         * <p>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("performance_level")
         public String performanceLevel;
 
         /**
          * <p>The size of the data disk. Valid values: 40 to 32767. Unit: GiB.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("size")
         public String size;

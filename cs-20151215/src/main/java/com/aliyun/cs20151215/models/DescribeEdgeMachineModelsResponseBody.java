@@ -26,48 +26,72 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
     public static class DescribeEdgeMachineModelsResponseBodyModels extends TeaModel {
         /**
          * <p>The number of vCores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("cpu")
         public Integer cpu;
 
         /**
          * <p>The CPU architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64/arm64</p>
          */
         @NameInMap("cpu_arch")
         public String cpuArch;
 
         /**
          * <p>The time when the cloud-native box was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-07T20:44:00+08:00</p>
          */
         @NameInMap("created")
         public String created;
 
         /**
          * <p>The description of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B010</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>Indicates whether the cloud-native box model manages the Docker runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/1</p>
          */
         @NameInMap("manage_runtime")
         public Integer manageRuntime;
 
         /**
          * <p>The memory. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("memory")
         public Integer memory;
 
         /**
          * <p>The model of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACK-V-B010</p>
          */
         @NameInMap("model")
         public String model;
 
         /**
          * <p>The ID of the cloud-native box.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c34cc753-8908-4739-bd10-ebd922a4****</p>
          */
         @NameInMap("model_id")
         public String modelId;

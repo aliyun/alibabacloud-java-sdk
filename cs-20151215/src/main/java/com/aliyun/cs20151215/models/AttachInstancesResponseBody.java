@@ -12,6 +12,9 @@ public class AttachInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-5a544aff80282e39ea000039</p>
      */
     @NameInMap("task_id")
     public String taskId;
@@ -40,18 +43,27 @@ public class AttachInstancesResponseBody extends TeaModel {
     public static class AttachInstancesResponseBodyList extends TeaModel {
         /**
          * <p>The code that indicates the task result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("code")
         public String code;
 
         /**
          * <p>The ID of the ECS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2ze0lgm3y6iylcbt****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>Indicates whether the ECS instance is successfully added to the ACK cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         @NameInMap("message")
         public String message;

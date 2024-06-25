@@ -21,12 +21,24 @@ public class CheckServiceRoleResponseBody extends TeaModel {
     }
 
     public static class CheckServiceRoleResponseBodyRoles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("granted")
         public Boolean granted;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The role does not exist: AliyunCSManagedAutoScalerRole</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliyunCSManagedAutoScalerRole</p>
+         */
         @NameInMap("name")
         public String name;
 

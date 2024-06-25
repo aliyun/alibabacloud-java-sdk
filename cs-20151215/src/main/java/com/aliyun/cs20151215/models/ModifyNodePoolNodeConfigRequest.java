@@ -70,6 +70,9 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     public static class ModifyNodePoolNodeConfigRequestRollingPolicy extends TeaModel {
         /**
          * <p>The maximum number of unavailable nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("max_parallelism")
         public Long maxParallelism;

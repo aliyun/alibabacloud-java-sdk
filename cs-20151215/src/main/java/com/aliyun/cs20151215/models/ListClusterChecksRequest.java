@@ -12,6 +12,9 @@ public class ListClusterChecksRequest extends TeaModel {
 
     /**
      * <p>The check method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ClusterUpgrade</p>
      */
     @NameInMap("type")
     public String type;

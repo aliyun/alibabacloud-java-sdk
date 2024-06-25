@@ -40,78 +40,116 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     public static class DescribeClusterNodesResponseBodyNodes extends TeaModel {
         /**
          * <p>The time when the node was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-25T11:25:35+08:00</p>
          */
         @NameInMap("creation_time")
         public String creationTime;
 
         /**
          * <p>The error message generated when the node was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error***</p>
          */
         @NameInMap("error_message")
         public String errorMessage;
 
         /**
          * <p>The expiration date of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2099-12-31T23:59:00+08:00</p>
          */
         @NameInMap("expired_time")
         public String expiredTime;
 
         /**
          * <p>The name of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iZ2vcckdmxp7u0urj2k****</p>
          */
         @NameInMap("host_name")
         public String hostName;
 
         /**
          * <p>The ID of the system image that is used by the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
          */
         @NameInMap("image_id")
         public String imageId;
 
         /**
          * <p>The billing method of the node. Valid values:</p>
-         * <br>
-         * <p>*   `PrePaid`: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.</p>
-         * <p>*   `PostPaid`: the pay-as-you-go billing method.</p>
+         * <ul>
+         * <li><code>PrePaid</code>: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an <code>InvalidPayMethod</code> error is returned.</li>
+         * <li><code>PostPaid</code>: the pay-as-you-go billing method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-2vcckdmxp7u0urj2****</p>
          */
         @NameInMap("instance_id")
         public String instanceId;
 
         /**
          * <p>The name of the instance on which the node is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>worker-k8s-for-cs-c5cdf7e3938bc4f8eb0e44b21a80f****</p>
          */
         @NameInMap("instance_name")
         public String instanceName;
 
         /**
          * <p>The role of the node. Valid values:</p>
-         * <br>
-         * <p>*   Master: master node</p>
-         * <p>*   Worker: worker node</p>
+         * <ul>
+         * <li>Master: master node</li>
+         * <li>Worker: worker node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Worker</p>
          */
         @NameInMap("instance_role")
         public String instanceRole;
 
         /**
          * <p>The status of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("instance_status")
         public String instanceStatus;
 
         /**
          * <p>The type of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5.xlarge</p>
          */
         @NameInMap("instance_type")
         public String instanceType;
 
         /**
          * <p>The ECS instance family of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5</p>
          */
         @NameInMap("instance_type_family")
         public String instanceTypeFamily;
@@ -124,60 +162,85 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the instance on which the node is deployed is provided by Alibaba Cloud. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The instance is provided by Alibaba Cloud.</p>
-         * <p>*   `false`: The instance is not provided by Alibaba Cloud.</p>
+         * <ul>
+         * <li><code>true</code>: The instance is provided by Alibaba Cloud.</li>
+         * <li><code>false</code>: The instance is not provided by Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("is_aliyun_node")
         public Boolean isAliyunNode;
 
         /**
          * <p>The name of the node. This name is the identifier of the node in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu.192.168.0.36</p>
          */
         @NameInMap("node_name")
         public String nodeName;
 
         /**
          * <p>Indicates whether the node is ready. Valid values:</p>
-         * <br>
-         * <p>*   `Ready`: The node is ready.</p>
-         * <p>*   `NotReady`: The node is not ready.</p>
-         * <p>*   `Unknown`: The status of the node is unknown.</p>
-         * <p>*   `Offline`: The node is offline.</p>
+         * <ul>
+         * <li><code>Ready</code>: The node is ready.</li>
+         * <li><code>NotReady</code>: The node is not ready.</li>
+         * <li><code>Unknown</code>: The status of the node is unknown.</li>
+         * <li><code>Offline</code>: The node is offline.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         @NameInMap("node_status")
         public String nodeStatus;
 
         /**
          * <p>The node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np0794239424a84eb7a95327369d56****</p>
          */
         @NameInMap("nodepool_id")
         public String nodepoolId;
 
         /**
          * <p>Indicates how the node is initialized. A node can be manually created or created by using Resource Orchestration Service (ROS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ess_attach</p>
          */
         @NameInMap("source")
         public String source;
 
         /**
          * <p>The type of preemptible instance. Valid values:</p>
-         * <br>
-         * <p>*   NoSpot: a non-preemptible instance.</p>
-         * <p>*   SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.</p>
-         * <p>*   SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.</p>
+         * <ul>
+         * <li>NoSpot: a non-preemptible instance.</li>
+         * <li>SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.</li>
+         * <li>SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
         /**
          * <p>The status of the node. Valid values:</p>
-         * <br>
-         * <p>*   `pending`: The node is being created.</p>
-         * <p>*   `running`: The node is running.</p>
-         * <p>*   `starting`: The node is being started.</p>
-         * <p>*   `stopping`: The node is being stopped.</p>
-         * <p>*   `stopped`: The node is stopped.</p>
+         * <ul>
+         * <li><code>pending</code>: The node is being created.</li>
+         * <li><code>running</code>: The node is running.</li>
+         * <li><code>starting</code>: The node is being started.</li>
+         * <li><code>stopping</code>: The node is being stopped.</li>
+         * <li><code>stopped</code>: The node is stopped.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("state")
         public String state;
@@ -352,18 +415,27 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
     public static class DescribeClusterNodesResponseBodyPage extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("page_number")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("page_size")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("total_count")
         public Integer totalCount;

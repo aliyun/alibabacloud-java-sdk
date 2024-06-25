@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeClusterEventsRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page_number")
     public Long pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("page_size")
     public Long pageSize;
 
     /**
      * <p>The ID of the query task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-xascadasd*****</p>
      */
     @NameInMap("task_id")
     public String taskId;

@@ -15,71 +15,96 @@ public class ModifyClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to associate an elastic IP address (EIP) with the cluster. This EIP is used for accessing the API server over the Internet. Valid values:</p>
-     * <br>
-     * <p>*   `true`: associates an EIP with the cluster.</p>
-     * <p>*   `false`: does not associate an EIP with the cluster.</p>
+     * <ul>
+     * <li><code>true</code>: associates an EIP with the cluster.</li>
+     * <li><code>false</code>: does not associate an EIP with the cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("api_server_eip")
     public Boolean apiServerEip;
 
     /**
-     * <p>The ID of the EIP that you want to associate with the API server of the cluster. This parameter takes effect when `api_server_eip` is set to `true`.</p>
+     * <p>The ID of the EIP that you want to associate with the API server of the cluster. This parameter takes effect when <code>api_server_eip</code> is set to <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-wz9fnasl6dsfhmvci****</p>
      */
     @NameInMap("api_server_eip_id")
     public String apiServerEipId;
 
     /**
      * <p>The cluster name.</p>
-     * <br>
      * <p>The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (_). The cluster name cannot start with a hyphen (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster-new-name</p>
      */
     @NameInMap("cluster_name")
     public String clusterName;
 
     /**
      * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
-     * <br>
-     * <p>Default value: `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * <p>Default value: <code>false</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
 
     /**
      * <p>Specifies whether to enable the RRSA feature. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enable_rrsa")
     public Boolean enableRrsa;
 
     /**
      * <p>Specifies whether to remap the test domain name of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
-     * <br>
-     * <p>Default value: `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * <p>Default value: <code>false</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ingress_domain_rebinding")
     public Boolean ingressDomainRebinding;
 
     /**
      * <p>The ID of the Server Load Balancer (SLB) instance of the cluster to be modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-wz97kes8tnndkpodw****</p>
      */
     @NameInMap("ingress_loadbalancer_id")
     public String ingressLoadbalancerId;
 
     /**
      * <p>Specifies whether to enable instance deletion protection. If this option is enabled, the instance cannot be deleted in the console or by calling API operations. Valid values:</p>
-     * <br>
-     * <p>*   `true`</p>
-     * <p>*   `false`</p>
-     * <br>
-     * <p>Default value: `false`</p>
+     * <ul>
+     * <li><code>true</code></li>
+     * <li><code>false</code></li>
+     * </ul>
+     * <p>Default value: <code>false</code></p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("instance_deletion_protection")
     public Boolean instanceDeletionProtection;
@@ -95,6 +120,9 @@ public class ModifyClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the cluster resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyvw3wjm****</p>
      */
     @NameInMap("resource_group_id")
     public String resourceGroupId;
@@ -223,6 +251,10 @@ public class ModifyClusterRequest extends TeaModel {
     }
 
     public static class ModifyClusterRequestApiServerCustomCertSans extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>append</p>
+         */
         @NameInMap("action")
         public String action;
 
@@ -253,9 +285,17 @@ public class ModifyClusterRequest extends TeaModel {
     }
 
     public static class ModifyClusterRequestOperationPolicyClusterAutoUpgrade extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>patch</p>
+         */
         @NameInMap("channel")
         public String channel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enabled")
         public Boolean enabled;
 
@@ -304,12 +344,18 @@ public class ModifyClusterRequest extends TeaModel {
     public static class ModifyClusterRequestSystemEventsLogging extends TeaModel {
         /**
          * <p>Specifies whether to enable system event storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
          * <p>The name of the LogProject that stores system events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-log-cb95aa626a47740afbf6aa099b65****</p>
          */
         @NameInMap("logging_project")
         public String loggingProject;

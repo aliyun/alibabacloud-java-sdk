@@ -45,10 +45,17 @@ public class DescribeResourcesDeleteProtectionResponse extends TeaModel {
     public static class DescribeResourcesDeleteProtectionResponseBody extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("namespace")
         public String namespace;
 

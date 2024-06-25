@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ScaleClusterNodePoolResponseBody extends TeaModel {
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-5faa48fb31b6b8078d00****</p>
      */
     @NameInMap("task_id")
     public String taskId;

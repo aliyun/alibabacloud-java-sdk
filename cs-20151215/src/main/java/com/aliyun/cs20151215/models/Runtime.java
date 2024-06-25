@@ -4,9 +4,17 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class Runtime extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>docker</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19.03.5</p>
+     */
     @NameInMap("version")
     public String version;
 

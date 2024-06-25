@@ -7,21 +7,41 @@ public class InstancePatterns extends TeaModel {
     @NameInMap("architectures")
     public java.util.List<String> architectures;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Exclude</p>
+     */
     @NameInMap("burst_performance_option")
     public String burstPerformanceOption;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("core")
     public Long core;
 
     @NameInMap("excluded_instance_types")
     public java.util.List<String> excludedInstanceTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EnterpriseLevel</p>
+     */
     @NameInMap("instance_family_level")
     public String instanceFamilyLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("max_price")
     public Float maxPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("memory")
     public Float memory;
 

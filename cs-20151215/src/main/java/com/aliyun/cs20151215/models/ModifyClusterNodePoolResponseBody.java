@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ModifyClusterNodePoolResponseBody extends TeaModel {
     /**
      * <p>The node pool ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np737c3ac1ac684703b9e10673aa2c****</p>
      */
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-5fd211e924e1d00787000293</p>
      */
     @NameInMap("task_id")
     public String taskId;

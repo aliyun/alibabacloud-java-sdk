@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class DescribeTemplatesRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page_num")
     public Long pageNum;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("page_size")
     public Long pageSize;
 
     /**
      * <p>The type of template. This parameter can be set to a custom value.</p>
-     * <br>
-     * <p>*   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.</p>
-     * <p>*   If you set the parameter to `compose`, the template is not displayed on the Templates page in the console.</p>
-     * <br>
-     * <p>Default value: `kubernetes`.</p>
+     * <ul>
+     * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
+     * <li>If you set the parameter to <code>compose</code>, the template is not displayed on the Templates page in the console.</li>
+     * </ul>
+     * <p>Default value: <code>kubernetes</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kubernetes</p>
      */
     @NameInMap("template_type")
     public String templateType;

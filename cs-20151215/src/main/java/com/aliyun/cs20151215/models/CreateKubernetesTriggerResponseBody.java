@@ -5,36 +5,51 @@ import com.aliyun.tea.*;
 
 public class CreateKubernetesTriggerResponseBody extends TeaModel {
     /**
-     * <p>The action that the trigger performs. For example, a value of `redeploy` indicates that the trigger redeploys the application.</p>
+     * <p>The action that the trigger performs. For example, a value of <code>redeploy</code> indicates that the trigger redeploys the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>redeploy</p>
      */
     @NameInMap("action")
     public String action;
 
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
      * <p>The ID of the trigger.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
      */
     @NameInMap("id")
     public String id;
 
     /**
      * <p>The name of the trigger project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default/test-app</p>
      */
     @NameInMap("project_id")
     public String projectId;
 
     /**
      * <p>The type of trigger.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   `deployment`: performs actions on Deployments.</p>
-     * <p>*   `application`: performs actions on applications that are deployed in Application Center.</p>
+     * <ul>
+     * <li><code>deployment</code>: performs actions on Deployments.</li>
+     * <li><code>application</code>: performs actions on applications that are deployed in Application Center.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>deployment</p>
      */
     @NameInMap("type")
     public String type;

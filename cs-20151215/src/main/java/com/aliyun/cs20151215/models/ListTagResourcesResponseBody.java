@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c374bf4864448****</p>
      */
     @NameInMap("next_token")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E368C761-F8F6-4A36-9B58-BD53D5CD0CEB</p>
      */
     @NameInMap("request_id")
     public String requestId;
@@ -54,24 +60,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-xxx</p>
          */
         @NameInMap("resource_id")
         public String resourceId;
 
         /**
-         * <p>The type of the resource. For more information, see [Labels](https://help.aliyun.com/document_detail/110425.html).</p>
+         * <p>The type of the resource. For more information, see <a href="https://help.aliyun.com/document_detail/110425.html">Labels</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CLUSTER</p>
          */
         @NameInMap("resource_type")
         public String resourceType;
 
         /**
          * <p>The key of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ack.aliyun.com</p>
          */
         @NameInMap("tag_key")
         public String tagKey;
 
         /**
          * <p>The value of the label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c71cf3d796c374bf48644482cb0c3****</p>
          */
         @NameInMap("tag_value")
         public String tagValue;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class RemoveNodePoolNodesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A9891419-D125-4D89-AFCA-68846675E2F7</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-62a944794ee141074400****</p>
      */
     @NameInMap("task_id")
     public String taskId;

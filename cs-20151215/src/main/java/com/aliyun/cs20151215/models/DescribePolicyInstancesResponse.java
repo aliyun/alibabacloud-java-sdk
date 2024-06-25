@@ -45,67 +45,98 @@ public class DescribePolicyInstancesResponse extends TeaModel {
     public static class DescribePolicyInstancesResponseBody extends TeaModel {
         /**
          * <p>The UID of the Alibaba Cloud account that is used to deploy the policy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16298168****</p>
          */
         @NameInMap("ali_uid")
         public String aliUid;
 
         /**
          * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c8155823d057948c69a****</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
 
         /**
          * <p>The name of the policy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no-env-var-secrets-****</p>
          */
         @NameInMap("instance_name")
         public String instanceName;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKPSPCapabilities</p>
          */
         @NameInMap("policy_name")
         public String policyName;
 
         /**
          * <p>The type of policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k8s-general</p>
          */
         @NameInMap("policy_category")
         public String policyCategory;
 
         /**
          * <p>The description of the policy template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restricts secrets used in pod envs</p>
          */
         @NameInMap("policy_description")
         public String policyDescription;
 
         /**
          * <p>The parameters of the policy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</p>
          */
         @NameInMap("policy_parameters")
         public String policyParameters;
 
         /**
          * <p>The severity level of the policy instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("policy_severity")
         public String policySeverity;
 
         /**
          * <p>The applicable scope of the policy instance.</p>
-         * <br>
-         * <p>A value of \\* indicates all namespaces in the cluster. This is the default value.</p>
-         * <br>
+         * <p>A value of \* indicates all namespaces in the cluster. This is the default value.</p>
          * <p>Multiple namespaces are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("policy_scope")
         public String policyScope;
 
         /**
          * <p>The action of the policy. Valid values:</p>
-         * <br>
-         * <p>*   `deny`: Deployments that match the policy are denied.</p>
-         * <p>*   `warn`: Alerts are generated for deployments that match the policy.</p>
+         * <ul>
+         * <li><code>deny</code>: Deployments that match the policy are denied.</li>
+         * <li><code>warn</code>: Alerts are generated for deployments that match the policy.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
          */
         @NameInMap("policy_action")
         public String policyAction;

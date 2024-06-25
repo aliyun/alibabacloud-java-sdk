@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteClusterNodepoolRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully delete the node pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("force")
     public Boolean force;

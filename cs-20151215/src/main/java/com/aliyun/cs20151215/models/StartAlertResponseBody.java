@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StartAlertResponseBody extends TeaModel {
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("msg")
     public String msg;
 
     /**
      * <p>The status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("status")
     public Boolean status;

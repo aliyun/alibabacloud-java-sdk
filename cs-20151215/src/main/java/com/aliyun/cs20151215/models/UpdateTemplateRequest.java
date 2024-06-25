@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class UpdateTemplateRequest extends TeaModel {
     /**
      * <p>The description of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>web server cluster</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>The name of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>webserver01</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The label of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>web</p>
      */
     @NameInMap("tags")
     public String tags;
 
     /**
      * <p>The YAML content of the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apiVersion: apps/v1\\nkind: Deployment\\nmetadata:\\n  name: nginx-deployment-basic\\n  labels:\\n    app: nginx\\nspec:\\n  replicas: 2\\n  selector:\\n    matchLabels:\\n      app: nginx\\n  template:\\n    metadata:\\n      labels:\\n        app: nginx\\n    spec:\\n      containers:\\n      - name: nginx\\n        image: busybox:latest\\n        ports:\\n        - containerPort: 8080</p>
      */
     @NameInMap("template")
     public String template;
 
     /**
      * <p>The type of template. This parameter can be set to a custom value.</p>
-     * <br>
-     * <p>*   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.</p>
-     * <p>*   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</p>
+     * <ul>
+     * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
+     * <li>If the parameter is set to <code>compose</code>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>kubernetes</p>
      */
     @NameInMap("template_type")
     public String templateType;

@@ -4,9 +4,17 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ScanClusterVulsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>687C5BAA-D103-4993-884B-C35E4314A1E1</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>T-xascadasd*****</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

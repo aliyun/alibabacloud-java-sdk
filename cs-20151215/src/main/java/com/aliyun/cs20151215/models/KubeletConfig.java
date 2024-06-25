@@ -7,18 +7,38 @@ public class KubeletConfig extends TeaModel {
     @NameInMap("allowedUnsafeSysctls")
     public java.util.List<String> allowedUnsafeSysctls;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("containerLogMaxFiles")
     public Long containerLogMaxFiles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10Mi</p>
+     */
     @NameInMap("containerLogMaxSize")
     public String containerLogMaxSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>none</p>
+     */
     @NameInMap("cpuManagerPolicy")
     public String cpuManagerPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("eventBurst")
     public Long eventBurst;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("eventRecordQPS")
     public Long eventRecordQPS;
 
@@ -34,27 +54,55 @@ public class KubeletConfig extends TeaModel {
     @NameInMap("featureGates")
     public java.util.Map<String, ?> featureGates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("kubeAPIBurst")
     public Long kubeAPIBurst;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("kubeAPIQPS")
     public Long kubeAPIQPS;
 
     @NameInMap("kubeReserved")
     public java.util.Map<String, ?> kubeReserved;
 
+    /**
+     * <strong>example:</strong>
+     * <p>110</p>
+     */
     @NameInMap("maxPods")
     public Long maxPods;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("readOnlyPort")
     public Long readOnlyPort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("registryBurst")
     public Long registryBurst;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("registryPullQPS")
     public Long registryPullQPS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("serializeImagePulls")
     public Boolean serializeImagePulls;
 

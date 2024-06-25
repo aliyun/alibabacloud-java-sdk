@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DeployPolicyInstanceRequest extends TeaModel {
     /**
      * <p>The action of the policy. Valid values:</p>
-     * <br>
-     * <p>*   `deny`: Deployments that match the policy are denied.</p>
-     * <p>*   `warn`: Alerts are generated for Deployments that match the policy.</p>
+     * <ul>
+     * <li><code>deny</code>: Deployments that match the policy are denied.</li>
+     * <li><code>warn</code>: Alerts are generated for Deployments that match the policy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>deny</p>
      */
     @NameInMap("action")
     public String action;
@@ -20,7 +24,10 @@ public class DeployPolicyInstanceRequest extends TeaModel {
     public java.util.List<String> namespaces;
 
     /**
-     * <p>The parameter settings of the policy. For more information about the parameters supported by each policy, see [Predefined security policies of ACK](https://www.alibabacloud.com/help/doc-detail/359819.html).</p>
+     * <p>The parameter settings of the policy. For more information about the parameters supported by each policy, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Predefined security policies of ACK</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]}</p>
      */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;

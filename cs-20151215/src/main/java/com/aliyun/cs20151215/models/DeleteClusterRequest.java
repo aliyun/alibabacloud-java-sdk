@@ -12,23 +12,29 @@ public class DeleteClusterRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to retain the Server Load Balancer (SLB) instances that are created by the cluster.</p>
-     * <br>
-     * <p>*   `true`: retains the SLB instances that are created by the cluster.</p>
-     * <p>*   `false`: does not retain the SLB instances that are created by the cluster.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: retains the SLB instances that are created by the cluster.</li>
+     * <li><code>false</code>: does not retain the SLB instances that are created by the cluster.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("keep_slb")
     @Deprecated
     public Boolean keepSlb;
 
     /**
-     * <p>Specifies whether to retain all resources. If you set the parameter to `true`, the `retain_resources` parameter is ignored.</p>
-     * <br>
-     * <p>*   `true`: retains all resources.</p>
-     * <p>*   `false`: does not retain all resources.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <p>Specifies whether to retain all resources. If you set the parameter to <code>true</code>, the <code>retain_resources</code> parameter is ignored.</p>
+     * <ul>
+     * <li><code>true</code>: retains all resources.</li>
+     * <li><code>false</code>: does not retain all resources.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("retain_all_resources")
     public Boolean retainAllResources;
@@ -79,21 +85,29 @@ public class DeleteClusterRequest extends TeaModel {
     public static class DeleteClusterRequestDeleteOptions extends TeaModel {
         /**
          * <p>The deletion policy for the specified type of resource. Valid values:</p>
-         * <br>
-         * <p>*   delete: deletes the specified type of resource.</p>
-         * <p>*   retain: retains the specified type of resource.</p>
+         * <ul>
+         * <li>delete: deletes the specified type of resource.</li>
+         * <li>retain: retains the specified type of resource.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>delete</p>
          */
         @NameInMap("delete_mode")
         public String deleteMode;
 
         /**
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SLB: SLB resources created for Services. By default, the SLB resources are automatically deleted.</p>
-         * <p>*   ALB: Application Load Balancer (ALB) resources created by the ALB Ingress controller. By default, the ALB resources are retained.</p>
-         * <p>*   SLS_Data: Simple Log Service projects used by the cluster logging feature. By default, the Simple Log Service projects are retained.</p>
-         * <p>*   SLS_ControlPlane: Simple Log Service projects used to store the logs of control planes in ACK managed clusters. By default, the Simple Log Service projects are retained.</p>
-         * <p>*   PrivateZone: PrivateZone resources created by ACK Serverless clusters. By default, the PrivateZone resources are retained.</p>
+         * <ul>
+         * <li>SLB: SLB resources created for Services. By default, the SLB resources are automatically deleted.</li>
+         * <li>ALB: Application Load Balancer (ALB) resources created by the ALB Ingress controller. By default, the ALB resources are retained.</li>
+         * <li>SLS_Data: Simple Log Service projects used by the cluster logging feature. By default, the Simple Log Service projects are retained.</li>
+         * <li>SLS_ControlPlane: Simple Log Service projects used to store the logs of control planes in ACK managed clusters. By default, the Simple Log Service projects are retained.</li>
+         * <li>PrivateZone: PrivateZone resources created by ACK Serverless clusters. By default, the PrivateZone resources are retained.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS_Data</p>
          */
         @NameInMap("resource_type")
         public String resourceType;

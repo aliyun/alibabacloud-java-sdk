@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class FixNodePoolVulsResponseBody extends TeaModel {
     /**
      * <p>The ID of the CVE patching task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-60fea8ad2e277f087900****</p>
      */
     @NameInMap("task_id")
     public String taskId;

@@ -6,32 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeClusterAddonInstanceResponseBody extends TeaModel {
     /**
      * <p>The configuration of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;NetworkPolicy&quot;:&quot;true&quot;}</p>
      */
     @NameInMap("config")
     public String config;
 
     /**
      * <p>The name of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>terway-eniip</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
      * <p>The status of the component. Valid values:</p>
-     * <br>
-     * <p>*   initial: The component is being installed.</p>
-     * <p>*   active: The component is installed.</p>
-     * <p>*   unhealthy: The component is in an abnormal state.</p>
-     * <p>*   upgrading: The component is being updated.</p>
-     * <p>*   updating: The component is being modified.</p>
-     * <p>*   deleting: The component is being uninstalled.</p>
-     * <p>*   deleted: The component is deleted.</p>
+     * <ul>
+     * <li>initial: The component is being installed.</li>
+     * <li>active: The component is installed.</li>
+     * <li>unhealthy: The component is in an abnormal state.</li>
+     * <li>upgrading: The component is being updated.</li>
+     * <li>updating: The component is being modified.</li>
+     * <li>deleting: The component is being uninstalled.</li>
+     * <li>deleted: The component is deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("state")
     public String state;
 
     /**
      * <p>The version of the component.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1.4.3</p>
      */
     @NameInMap("version")
     public String version;

@@ -6,35 +6,49 @@ import com.aliyun.tea.*;
 public class GetUpgradeStatusResponseBody extends TeaModel {
     /**
      * <p>The error message returned during the update.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>subject to actual return</p>
      */
     @NameInMap("error_message")
     public String errorMessage;
 
     /**
      * <p>The ID of the precheck report.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>be4c8eb72de94d459ea7ace7c811d119</p>
      */
     @NameInMap("precheck_report_id")
     public String precheckReportId;
 
     /**
      * <p>The status of the update. Valid values:</p>
-     * <br>
-     * <p>*   `success`: The update is successful.</p>
-     * <p>*   `fail`: The update failed.</p>
-     * <p>*   `pause`: The update is paused.</p>
-     * <p>*   `running`: The update is in progress.</p>
+     * <ul>
+     * <li><code>success</code>: The update is successful.</li>
+     * <li><code>fail</code>: The update failed.</li>
+     * <li><code>pause</code>: The update is paused.</li>
+     * <li><code>running</code>: The update is in progress.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
      */
     @NameInMap("status")
     public String status;
 
     /**
      * <p>The current phase of the update. Valid values:</p>
-     * <br>
-     * <p>*   `not_start`: The update is not started.</p>
-     * <p>*   `prechecking`: The precheck is in progress.</p>
-     * <p>*   `upgrading`: The cluster is being updated.</p>
-     * <p>*   `pause`: The update is paused.</p>
-     * <p>*   `success`: The update is successful.</p>
+     * <ul>
+     * <li><code>not_start</code>: The update is not started.</li>
+     * <li><code>prechecking</code>: The precheck is in progress.</li>
+     * <li><code>upgrading</code>: The cluster is being updated.</li>
+     * <li><code>pause</code>: The update is paused.</li>
+     * <li><code>success</code>: The update is successful.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>prechecking</p>
      */
     @NameInMap("upgrade_step")
     public String upgradeStep;
@@ -93,16 +107,23 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     public static class GetUpgradeStatusResponseBodyUpgradeTask extends TeaModel {
         /**
          * <p>The description of the update task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subject to actual return</p>
          */
         @NameInMap("message")
         public String message;
 
         /**
          * <p>The status of the update task. Valid values:</p>
-         * <br>
-         * <p>*   `running`: The update task is being executed.</p>
-         * <p>*   `Success`: The update task is successfully executed.</p>
-         * <p>*   `Failed`: The update task failed.</p>
+         * <ul>
+         * <li><code>running</code>: The update task is being executed.</li>
+         * <li><code>Success</code>: The update task is successfully executed.</li>
+         * <li><code>Failed</code>: The update task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("status")
         public String status;

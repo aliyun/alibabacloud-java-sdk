@@ -4,12 +4,24 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterDiagnosisResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>c5cdf7e3938bc4f8eb0e44b21a80f****</p>
+     */
     @NameInMap("cluster_id")
     public String clusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6f719f23098240818eb26fe3a37d****</p>
+     */
     @NameInMap("diagnosis_id")
     public String diagnosisId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 

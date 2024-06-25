@@ -12,23 +12,29 @@ public class DeleteClusterShrinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to retain the Server Load Balancer (SLB) instances that are created by the cluster.</p>
-     * <br>
-     * <p>*   `true`: retains the SLB instances that are created by the cluster.</p>
-     * <p>*   `false`: does not retain the SLB instances that are created by the cluster.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <ul>
+     * <li><code>true</code>: retains the SLB instances that are created by the cluster.</li>
+     * <li><code>false</code>: does not retain the SLB instances that are created by the cluster.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("keep_slb")
     @Deprecated
     public Boolean keepSlb;
 
     /**
-     * <p>Specifies whether to retain all resources. If you set the parameter to `true`, the `retain_resources` parameter is ignored.</p>
-     * <br>
-     * <p>*   `true`: retains all resources.</p>
-     * <p>*   `false`: does not retain all resources.</p>
-     * <br>
-     * <p>Default value: `false`.</p>
+     * <p>Specifies whether to retain all resources. If you set the parameter to <code>true</code>, the <code>retain_resources</code> parameter is ignored.</p>
+     * <ul>
+     * <li><code>true</code>: retains all resources.</li>
+     * <li><code>false</code>: does not retain all resources.</li>
+     * </ul>
+     * <p>Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("retain_all_resources")
     public Boolean retainAllResources;

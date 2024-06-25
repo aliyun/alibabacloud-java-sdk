@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class StopAlertResponseBody extends TeaModel {
     /**
      * <p>The error message returned if the call fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("msg")
     public String msg;
 
     /**
      * <p>The operation result. Valid values:</p>
-     * <br>
-     * <p>*   True: The operation is successful.</p>
-     * <p>*   False: The operation failed.</p>
+     * <ul>
+     * <li>True: The operation is successful.</li>
+     * <li>False: The operation failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("status")
     public Boolean status;

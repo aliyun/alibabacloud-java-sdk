@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class QuotasValue extends TeaModel {
     /**
-     * <p>The value of the quota. If the quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
+     * <p>The value of the quota. If the quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("quota")
     public String quota;
 
     /**
      * <p>The quota code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q_Kubernetes_Cluster</p>
      */
     @NameInMap("operation_code")
     public String operationCode;
 
     /**
      * <p>Indicates whether the quota is adjustable.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("adjustable")
     public Boolean adjustable;
 
     /**
      * <p>The unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cluster</p>
      */
     @NameInMap("unit")
     public String unit;

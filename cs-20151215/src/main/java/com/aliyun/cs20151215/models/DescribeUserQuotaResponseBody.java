@@ -5,39 +5,53 @@ import com.aliyun.tea.*;
 
 public class DescribeUserQuotaResponseBody extends TeaModel {
     /**
-     * <p>The quota of Container Service for Kubernetes (ACK) managed clusters. Default value: 20. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
+     * <p>The quota of Container Service for Kubernetes (ACK) managed clusters. Default value: 20. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("amk_cluster_quota")
     public Long amkClusterQuota;
 
     /**
-     * <p>The quota of ACK Serverless clusters. Default value: 20. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
+     * <p>The quota of ACK Serverless clusters. Default value: 20. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ask_cluster_quota")
     public Long askClusterQuota;
 
     /**
-     * <p>The quota of node pools in an ACK cluster. Default value: 20. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
+     * <p>The quota of node pools in an ACK cluster. Default value: 20. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("cluster_nodepool_quota")
     public Long clusterNodepoolQuota;
 
     /**
-     * <p>The quota of clusters that belong to an Alibaba Cloud account. Default value: 50. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
+     * <p>The quota of clusters that belong to an Alibaba Cloud account. Default value: 50. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("cluster_quota")
     public Long clusterQuota;
 
     /**
      * <p>This parameter is deprecated.</p>
-     * <br>
      * <p>The quota of enhanced edge node pools.</p>
      */
     @NameInMap("edge_improved_nodepool_quota")
     public DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota;
 
     /**
-     * <p>The quota of nodes in an ACK cluster. Default value: 100. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
+     * <p>The quota of nodes in an ACK cluster. Default value: 100. If the default quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("node_quota")
     public Long nodeQuota;
@@ -112,26 +126,33 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public static class DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota extends TeaModel {
         /**
          * <p>This parameter is deprecated.</p>
-         * <br>
          * <p>The maximum bandwidth of each enhanced node pool. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>This parameter is deprecated.</p>
-         * <br>
          * <p>The quota of enhanced edge node pools that belong to an Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("count")
         public Integer count;
 
         /**
          * <p>This parameter is deprecated.</p>
-         * <br>
          * <p>The maximum subscription duration of an enhanced edge node pool. Unit: months.</p>
-         * <br>
-         * <p>> You can ignore this parameter because enhanced edge node pools are pay-as-you-go resources.</p>
+         * <blockquote>
+         * <p>You can ignore this parameter because enhanced edge node pools are pay-as-you-go resources.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("period")
         public Integer period;

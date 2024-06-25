@@ -40,18 +40,27 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public static class DescribeTemplatesResponseBodyPageInfo extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("page_number")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("page_size")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("total_count")
         public Long totalCount;
@@ -90,69 +99,100 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     public static class DescribeTemplatesResponseBodyTemplates extends TeaModel {
         /**
          * <p>The access control policy of the template. Valid values:</p>
-         * <br>
-         * <p>*   `private`: The template is private.</p>
-         * <p>*   `public`: The template is public.</p>
-         * <p>*   `shared`: The template can be shared.</p>
-         * <br>
-         * <p>Default value: `private`.</p>
+         * <ul>
+         * <li><code>private</code>: The template is private.</li>
+         * <li><code>public</code>: The template is public.</li>
+         * <li><code>shared</code>: The template can be shared.</li>
+         * </ul>
+         * <p>Default value: <code>private</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         @NameInMap("acl")
         public String acl;
 
         /**
          * <p>The time when the template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-10T16:30:16+08:00</p>
          */
         @NameInMap("created")
         public String created;
 
         /**
          * <p>The description of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a web server</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
          * <p>The ID of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>874ec485-e7e6-4373-8a3b-47bde8ae789f</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>webserver</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The label of the template. By default, the value is the name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kubernetes</p>
          */
         @NameInMap("tags")
         public String tags;
 
         /**
          * <p>The template content in the YAML format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment-basic\n  labels:\n    app: nginx\nspec:\n  replicas: 2\n  selector:\n    matchLabels:\n      app: nginx\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: busybox:latest\n        ports:\n        - containerPort: 80</p>
          */
         @NameInMap("template")
         public String template;
 
         /**
          * <p>The type of template. This parameter can be set to a custom value.</p>
-         * <br>
-         * <p>*   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.</p>
-         * <p>*   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.</p>
+         * <ul>
+         * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
+         * <li>If the parameter is set to <code>compose</code>, the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>kubernetes</p>
          */
         @NameInMap("template_type")
         public String templateType;
 
         /**
-         * <p>The ID of the parent template. The value of `template_with_hist_id` is the same for each template version. This allows you to manage different template versions.</p>
+         * <p>The ID of the parent template. The value of <code>template_with_hist_id</code> is the same for each template version. This allows you to manage different template versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad81d115-7c8b-47e7-a222-9c28d7f6e588</p>
          */
         @NameInMap("template_with_hist_id")
         public String templateWithHistId;
 
         /**
          * <p>The time when the template was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-10T16:30:16+08:00</p>
          */
         @NameInMap("updated")
         public String updated;

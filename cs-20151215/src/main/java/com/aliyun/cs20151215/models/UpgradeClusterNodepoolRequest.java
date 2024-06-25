@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpgradeClusterNodepoolRequest extends TeaModel {
     /**
      * <p>The ID of the OS image that is used by the nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
      */
     @NameInMap("image_id")
     public String imageId;
 
     /**
      * <p>The Kubernetes version that is used by the nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.22.15-aliyun.1</p>
      */
     @NameInMap("kubernetes_version")
     public String kubernetesVersion;
@@ -24,12 +30,18 @@ public class UpgradeClusterNodepoolRequest extends TeaModel {
 
     /**
      * <p>The runtime type. Valid values: containerd and docker.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>containerd</p>
      */
     @NameInMap("runtime_type")
     public String runtimeType;
 
     /**
      * <p>The version of the container runtime that is used by the nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.5.10</p>
      */
     @NameInMap("runtime_version")
     public String runtimeVersion;

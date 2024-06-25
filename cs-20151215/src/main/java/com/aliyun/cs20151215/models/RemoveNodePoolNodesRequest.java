@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class RemoveNodePoolNodesRequest extends TeaModel {
     /**
      * <p>是否并发移除。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("concurrency")
     public Boolean concurrency;
 
     /**
      * <p>Specifies whether to drain the nodes that you want to remove. Valid values:</p>
-     * <br>
-     * <p>*   true: drain the nodes that you want to remove.</p>
-     * <p>*   false: do not drain the nodes that you want to remove.</p>
+     * <ul>
+     * <li>true: drain the nodes that you want to remove.</li>
+     * <li>false: do not drain the nodes that you want to remove.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("drain_node")
     public Boolean drainNode;
@@ -34,9 +41,13 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to release the nodes after they are removed. Valid values:</p>
-     * <br>
-     * <p>*   true: release the nodes after they are removed.</p>
-     * <p>*   false: do not release the nodes after they are removed.</p>
+     * <ul>
+     * <li>true: release the nodes after they are removed.</li>
+     * <li>false: do not release the nodes after they are removed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("release_node")
     public Boolean releaseNode;

@@ -26,56 +26,81 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsAutoScaling extends TeaModel {
         /**
          * <p>The maximum bandwidth of the elastic IP address (EIP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("eip_bandwidth")
         public Long eipBandwidth;
 
         /**
          * <p>The billing method of the EIP. Valid values:</p>
-         * <br>
-         * <p>*   `PayByBandwidth`: pay-by-bandwidth.</p>
-         * <p>*   `PayByTraffic`: pay-by-data-transfer.</p>
+         * <ul>
+         * <li><code>PayByBandwidth</code>: pay-by-bandwidth.</li>
+         * <li><code>PayByTraffic</code>: pay-by-data-transfer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         @NameInMap("eip_internet_charge_type")
         public String eipInternetChargeType;
 
         /**
          * <p>Specifies whether to enable auto scaling. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`: If you set this parameter to `false`, other parameters in `auto_scaling` do not take effect.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code>: If you set this parameter to <code>false</code>, other parameters in <code>auto_scaling</code> do not take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
         /**
          * <p>Specifies whether to associate an EIP with the node pool. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("is_bond_eip")
         public Boolean isBondEip;
 
         /**
          * <p>The maximum number of Elastic Compute Service (ECS) instances that can be created in the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("max_instances")
         public Long maxInstances;
 
         /**
          * <p>The minimum number of ECS instances that must be retained in the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("min_instances")
         public Long minInstances;
 
         /**
          * <p>The instance types that can be used for the auto scaling of the node pool. Valid values:</p>
-         * <br>
-         * <p>*   `cpu`: regular instance.</p>
-         * <p>*   `gpu`: GPU-accelerated instance.</p>
-         * <p>*   `gpushare`: shared GPU-accelerated instance.</p>
-         * <p>*   `spot`: preemptible instance.</p>
+         * <ul>
+         * <li><code>cpu</code>: regular instance.</li>
+         * <li><code>gpu</code>: GPU-accelerated instance.</li>
+         * <li><code>gpushare</code>: shared GPU-accelerated instance.</li>
+         * <li><code>spot</code>: preemptible instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cpu</p>
          */
         @NameInMap("type")
         public String type;
@@ -146,40 +171,50 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsInterconnectConfig extends TeaModel {
         /**
          * <p>This parameter is discontinued.</p>
-         * <br>
          * <p>The bandwidth of the enhanced edge node pool. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("bandwidth")
         public Long bandwidth;
 
         /**
          * <p>This parameter is discontinued.</p>
-         * <br>
          * <p>The ID of the Cloud Connect Network (CCN) instance that is associated with the enhanced edge node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ccn-qm5i0i0q9yi*******</p>
          */
         @NameInMap("ccn_id")
         public String ccnId;
 
         /**
          * <p>This parameter is discontinued.</p>
-         * <br>
          * <p>The region in which the CCN instance that is with the enhanced edge node pool resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("ccn_region_id")
         public String ccnRegionId;
 
         /**
          * <p>This parameter is discontinued.</p>
-         * <br>
          * <p>The ID of the Cloud Enterprise Network (CEN) instance that is associated with the enhanced edge node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-ey9k9nfhz0f*******</p>
          */
         @NameInMap("cen_id")
         public String cenId;
 
         /**
          * <p>This parameter is discontinued.</p>
-         * <br>
          * <p>The subscription duration of the enhanced edge node pool. Unit: months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("improved_period")
         public String improvedPeriod;
@@ -234,68 +269,92 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig extends TeaModel {
         /**
          * <p>Specifies whether to install the CloudMonitor agent on ECS nodes. After the CloudMonitor agent is installed on ECS nodes, you can view the monitoring information about the instances in the CloudMonitor console. We recommend that you install the CloudMonitor agent. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("cms_enabled")
         public Boolean cmsEnabled;
 
         /**
          * <p>The CPU management policy of the nodes in the node pool. The following policies are supported if the version of the cluster is Kubernetes 1.12.6 or later:</p>
-         * <br>
-         * <p>*   `static`: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</p>
-         * <p>*   `none`: specifies that the default CPU affinity is used.</p>
+         * <ul>
+         * <li><code>static</code>: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
+         * <li><code>none</code>: specifies that the default CPU affinity is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("cpu_policy")
         public String cpuPolicy;
 
         /**
          * <p>The labels that you want to add to the nodes in the cluster. You must add labels based on the following rules:</p>
-         * <br>
-         * <p>*   A label is a case-sensitive key-value pair. You can add up to 20 labels.</p>
-         * <p>*   The key must be unique and can be up to 64 characters in length. The value can be empty and can be up to 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).</p>
+         * <ul>
+         * <li>A label is a case-sensitive key-value pair. You can add up to 20 labels.</li>
+         * <li>The key must be unique and can be up to 64 characters in length. The value can be empty and can be up to 128 characters in length. Keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</li>
+         * </ul>
          */
         @NameInMap("labels")
         public java.util.List<Tag> labels;
 
         /**
          * <p>The custom node name. A custom node name consists of a prefix, an IP substring, and a suffix.</p>
-         * <br>
-         * <p>*   The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-). A custom node name must start and end with a digit or lowercase letter.</p>
-         * <p>*   The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.</p>
-         * <br>
+         * <ul>
+         * <li>The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-). A custom node name must start and end with a digit or lowercase letter.</li>
+         * <li>The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.</li>
+         * </ul>
          * <p>For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name is aliyun.com00055test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customized,test.,5,.com</p>
          */
         @NameInMap("node_name_mode")
         public String nodeNameMode;
 
         /**
          * <p>The name of the container runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docker</p>
          */
         @NameInMap("runtime")
         public String runtime;
 
         /**
          * <p>The version of the container runtime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19.03.5</p>
          */
         @NameInMap("runtime_version")
         public String runtimeVersion;
 
         /**
-         * <p>The taints of the nodes in the node pool. Taints can be used together with tolerations to prevent pods from being scheduled to specified nodes. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).</p>
+         * <p>The taints of the nodes in the node pool. Taints can be used together with tolerations to prevent pods from being scheduled to specified nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</p>
          */
         @NameInMap("taints")
         public java.util.List<Taint> taints;
 
         /**
          * <p>Specifies whether the nodes are schedulable after a scale-out activity is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("unschedulable")
         public Boolean unschedulable;
 
         /**
-         * <p>The user data of the node pool. For more information, see [Generate user-defined data](https://help.aliyun.com/document_detail/49121.html).</p>
+         * <p>The user data of the node pool. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate user-defined data</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IyEvYmluL3NoCmVjaG8gIkhlbGxvIEFD****</p>
          */
         @NameInMap("user_data")
         public String userData;
@@ -382,6 +441,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoRepairPolicy extends TeaModel {
         /**
          * <p>Specifies whether to allow node restart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("restart_node")
         public Boolean restartNode;
@@ -404,6 +466,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoUpgradePolicy extends TeaModel {
         /**
          * <p>Specifies whether to allow auto update of the kubelet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("auto_upgrade_kubelet")
         public Boolean autoUpgradeKubelet;
@@ -426,12 +491,18 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagementAutoVulFixPolicy extends TeaModel {
         /**
          * <p>Specifies whether to allow node restart.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("restart_node")
         public Boolean restartNode;
 
         /**
          * <p>The severity level of CVEs that can be automatically patched. Multiple severity levels are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asap,nntf</p>
          */
         @NameInMap("vul_level")
         public String vulLevel;
@@ -462,31 +533,42 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig extends TeaModel {
         /**
          * <p>Specifies whether to enable auto update. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
 
         /**
          * <p>The maximum number of unavailable nodes. Valid values: 1 to 1000.</p>
-         * <br>
          * <p>Default value: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("max_unavailable")
         public Long maxUnavailable;
 
         /**
          * <p>The number of additional nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("surge")
         public Long surge;
 
         /**
-         * <p>The percentage of additional nodes to the total nodes in the node pool. You must specify this parameter or the `surge` parameter.</p>
-         * <br>
+         * <p>The percentage of additional nodes to the total nodes in the node pool. You must specify this parameter or the <code>surge</code> parameter.</p>
          * <p>The number of additional nodes = The percentage of additional nodes × The number of nodes in the node pool. For example, if the percentage of additional nodes is 50% and the number of nodes in the node pool is 6, the number of additional nodes is 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("surge_percentage")
         public Long surgePercentage;
@@ -532,10 +614,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsManagement extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto repair. This parameter takes effect only if `enable` is set to true. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <p>Specifies whether to enable auto repair. This parameter takes effect only if <code>enable</code> is set to true. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("auto_repair")
         public Boolean autoRepair;
@@ -548,6 +634,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable auto update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("auto_upgrade")
         public Boolean autoUpgrade;
@@ -560,6 +649,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable auto Common Vulnerabilities and Exposures (CVE) patching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("auto_vul_fix")
         public Boolean autoVulFix;
@@ -572,15 +664,19 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>Specifies whether to enable the managed node pool feature. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`: If you set this parameter to false, other parameters of `management` do not take effect.</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code>: If you set this parameter to false, other parameters of <code>management</code> do not take effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("enable")
         public Boolean enable;
 
         /**
-         * <p>The configurations of auto update. The configurations take effect only if `enable` is set to true.</p>
+         * <p>The configurations of auto update. The configurations take effect only if <code>enable</code> is set to true.</p>
          */
         @NameInMap("upgrade_config")
         public DescribeClusterNodePoolsResponseBodyNodepoolsManagementUpgradeConfig upgradeConfig;
@@ -681,56 +777,81 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsNodepoolInfo extends TeaModel {
         /**
          * <p>The time when the node pool was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-27T19:14:09.156823496+08:00</p>
          */
         @NameInMap("created")
         public String created;
 
         /**
          * <p>Specifies whether the node pool is a default node pool. A Container Service for Kubernetes (ACK) cluster generally has only one default node pool. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code>:</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("is_default")
         public Boolean isDefault;
 
         /**
          * <p>The name of the node pool.</p>
-         * <br>
          * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-nodepool</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
          * <p>The node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np615c0e0966124216a0412e10afe0****</p>
          */
         @NameInMap("nodepool_id")
         public String nodepoolId;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("region_id")
         public String regionId;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmyvw3wjm****</p>
          */
         @NameInMap("resource_group_id")
         public String resourceGroupId;
 
         /**
          * <p>The type of node pool. Valid values:</p>
-         * <br>
-         * <p>*   `edge`: edge node pool.</p>
-         * <p>*   `ess`: node pool in the cloud.</p>
+         * <ul>
+         * <li><code>edge</code>: edge node pool.</li>
+         * <li><code>ess</code>: node pool in the cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ess</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
          * <p>The time when the node pool was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-27T20:37:46+08:00</p>
          */
         @NameInMap("updated")
         public String updated;
@@ -809,16 +930,23 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupPrivatePoolOptions extends TeaModel {
         /**
          * <p>The private pool ID, which is the same as the ID of the elasticity assurance or capacity reservation for which the private pool is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-bp67acfmxazb4****</p>
          */
         @NameInMap("id")
         public String id;
 
         /**
          * <p>The type of the private node pool. This parameter specifies the type of the private node pool that is used to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:</p>
-         * <br>
-         * <p>*   `Open`: uses open private pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.</p>
-         * <p>*   `Target`: uses the specified private node pool. The system uses the resources of the specified private node pool to launch instances. If the specified private node pool is unavailable, instances cannot be launched.</p>
-         * <p>*   `None`: No private node pool is used. The resources of private node pools are not used to launch instances.</p>
+         * <ul>
+         * <li><code>Open</code>: uses open private pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.</li>
+         * <li><code>Target</code>: uses the specified private node pool. The system uses the resources of the specified private node pool to launch instances. If the specified private node pool is unavailable, instances cannot be launched.</li>
+         * <li><code>None</code>: No private node pool is used. The resources of private node pools are not used to launch instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("match_criteria")
         public String matchCriteria;
@@ -849,14 +977,19 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroupSpotPriceLimit extends TeaModel {
         /**
          * <p>The instance type of preemptible instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
          */
         @NameInMap("instance_type")
         public String instanceType;
 
         /**
          * <p>The price cap for a single preemptible instance.</p>
-         * <br>
          * <p>Unit: USD/hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.39</p>
          */
         @NameInMap("price_limit")
         public String priceLimit;
@@ -886,34 +1019,47 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup extends TeaModel {
         /**
-         * <p>Specifies whether to enable auto-renewal for the nodes in the node pool. This parameter takes effect only if `instance_charge_type` is set to `PrePaid`. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <p>Specifies whether to enable auto-renewal for the nodes in the node pool. This parameter takes effect only if <code>instance_charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("auto_renew")
         public Boolean autoRenew;
 
         /**
-         * <p>The auto-renewal duration. This parameter takes effect and is required only if `instance_charge_type` is set to `PrePaid`.</p>
-         * <br>
-         * <p>If you set `period_unit` to Month, the valid values of this parameter are 1, 2, 3, 6, and 12.</p>
+         * <p>The auto-renewal duration. This parameter takes effect and is required only if <code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>If you set <code>period_unit</code> to Month, the valid values of this parameter are 1, 2, 3, 6, and 12.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("auto_renew_period")
         public Long autoRenewPeriod;
 
         /**
          * <p>Specifies whether to enable Center for Internet Security (CIS) reinforcement. CIS reinforcement can be enabled only if Alibaba Cloud Linux 2 or Alibaba Cloud Linux 3 is installed on nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("cis_enabled")
         @Deprecated
         public Boolean cisEnabled;
 
         /**
-         * <p>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect if you set `multi_az_policy` to `COST_OPTIMIZED` Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <p>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the cost or insufficient inventory. This parameter takes effect if you set <code>multi_az_policy</code> to <code>COST_OPTIMIZED</code> Valid values:</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("compensate_with_on_demand")
         public Boolean compensateWithOnDemand;
@@ -926,33 +1072,49 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The deployment set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-bp1d19mmbsv3jf6xxxxx</p>
          */
         @NameInMap("deploymentset_id")
         public String deploymentsetId;
 
         /**
          * <p>The expected number of nodes in the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("desired_size")
         public Long desiredSize;
 
         /**
-         * <p>The custom image ID. You can call the `DescribeKubernetesVersionMetadata` operation to query the images supported by ACK.</p>
+         * <p>The custom image ID. You can call the <code>DescribeKubernetesVersionMetadata</code> operation to query the images supported by ACK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun_2_1903_x64_20G_alibase_20200529.vhd</p>
          */
         @NameInMap("image_id")
         public String imageId;
 
         /**
          * <p>The type of the operating system image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunLinux</p>
          */
         @NameInMap("image_type")
         public String imageType;
 
         /**
          * <p>The billing method of the nodes in the node pool. Valid values:</p>
-         * <br>
-         * <p>*   `PrePaid`: subscription.</p>
-         * <p>*   `PostPaid`: pay-as-you-go.</p>
+         * <ul>
+         * <li><code>PrePaid</code>: subscription.</li>
+         * <li><code>PostPaid</code>: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
@@ -962,95 +1124,128 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The list of instance types. You can select multiple instance types. When the system needs to create a node, it starts from the first instance type until the node is created. The instance type that is used to create the node varies based on the inventory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n4.large</p>
          */
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
         /**
          * <p>The billing method of the public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         @NameInMap("internet_charge_type")
         public String internetChargeType;
 
         /**
          * <p>The maximum outbound bandwidth of the public IP address. Unit: Mbit/s. Valid values: 1 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("internet_max_bandwidth_out")
         public Long internetMaxBandwidthOut;
 
         /**
-         * <p>The name of the key pair. You must specify this parameter or the `login_password` parameter.</p>
-         * <br>
-         * <p>You must specify the `key_pair` parameter if the node pool is a managed node pool.</p>
+         * <p>The name of the key pair. You must specify this parameter or the <code>login_password</code> parameter.</p>
+         * <p>You must specify the <code>key_pair</code> parameter if the node pool is a managed node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pro-nodepool</p>
          */
         @NameInMap("key_pair")
         public String keyPair;
 
         /**
          * <p>Specifies whether a non-root user can log on to the ECS instance added to the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("login_as_non_root")
         public Boolean loginAsNonRoot;
 
         /**
-         * <p>The password for SSH logon. You must specify this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-         * <br>
+         * <p>The password for SSH logon. You must specify this parameter or the <code>key_pair</code> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
          * <p>The returned password is encrypted to ensure security.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("login_password")
         public String loginPassword;
 
         /**
          * <p>The ECS instance scaling policy for the multi-zone scaling group. Valid values:</p>
-         * <br>
-         * <p>*   `PRIORITY`: ECS instances are created based on the VSwitchIds.N parameter. If Auto Scaling fails to create an ECS instance in the zone of the vSwitch that has the highest priority, Auto Scaling attempts to create the ECS instance in the zone of the vSwitch that has a lower priority.</p>
-         * <br>
-         * <p>*   `COST_OPTIMIZED`: ECS instances are created based on the vCPU unit price in ascending order. Preemptible instances are preferably created when preemptible instance types are specified in the scaling configuration. You can specify `CompensateWithOnDemand` to specify whether to automatically create pay-as-you-go instances if preemptible instances cannot be created due to insufficient resources.</p>
-         * <br>
-         * <p>    **</p>
-         * <br>
-         * <p>    **Note** `COST_OPTIMIZED` takes effect only if multiple instance types are specified or at least one preemptible instance type is specified.</p>
-         * <br>
-         * <p>*   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If the distribution of ECS instances across zones is not balanced due to reasons such as insufficient inventory, you can call the `RebalanceInstances` operation to evenly distribute the ECS instances across zones. For more information, see [RebalanceInstances](https://help.aliyun.com/document_detail/71516.html).</p>
+         * <ul>
+         * <li><p><code>PRIORITY</code>: ECS instances are created based on the VSwitchIds.N parameter. If Auto Scaling fails to create an ECS instance in the zone of the vSwitch that has the highest priority, Auto Scaling attempts to create the ECS instance in the zone of the vSwitch that has a lower priority.</p>
+         * </li>
+         * <li><p><code>COST_OPTIMIZED</code>: ECS instances are created based on the vCPU unit price in ascending order. Preemptible instances are preferably created when preemptible instance types are specified in the scaling configuration. You can specify <code>CompensateWithOnDemand</code> to specify whether to automatically create pay-as-you-go instances if preemptible instances cannot be created due to insufficient resources.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> <code>COST_OPTIMIZED</code> takes effect only if multiple instance types are specified or at least one preemptible instance type is specified.</p>
+         * </li>
+         * <li><p><code>BALANCE</code>: ECS instances are evenly distributed across multiple zones specified by the scaling group. If the distribution of ECS instances across zones is not balanced due to reasons such as insufficient inventory, you can call the <code>RebalanceInstances</code> operation to evenly distribute the ECS instances across zones. For more information, see <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COST_OPTIMIZED</p>
          */
         @NameInMap("multi_az_policy")
         public String multiAzPolicy;
 
         /**
          * <p>The minimum number of pay-as-you-go instances that must be kept in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is smaller than the value of this parameter, Auto Scaling preferably creates pay-as-you-go instances</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("on_demand_base_capacity")
         public Long onDemandBaseCapacity;
 
         /**
-         * <p>The percentage of pay-as-you-go instances among the extra instances that exceed the number specified by `on_demand_base_capacity`. Valid values: 0 to 100.</p>
+         * <p>The percentage of pay-as-you-go instances among the extra instances that exceed the number specified by <code>on_demand_base_capacity</code>. Valid values: 0 to 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("on_demand_percentage_above_base_capacity")
         public Long onDemandPercentageAboveBaseCapacity;
 
         /**
-         * <p>The subscription duration of the nodes in the node pool. This parameter takes effect and is required if you set `instance_charge_type` to `PrePaid`.</p>
-         * <br>
-         * <p>If `period_unit` is set to Month, the valid values of period are 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * <p>The subscription duration of the nodes in the node pool. This parameter takes effect and is required if you set <code>instance_charge_type</code> to <code>PrePaid</code>.</p>
+         * <p>If <code>period_unit</code> is set to Month, the valid values of period are 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("period")
         public Long period;
 
         /**
-         * <p>The billing cycle of the nodes in the node pool. This parameter takes effect only if`instance_charge_type` is set to `PrePaid`.</p>
-         * <br>
-         * <p>Valid value: `Month`, which indicates that the subscription duration is measured in months.</p>
+         * <p>The billing cycle of the nodes in the node pool. This parameter takes effect only if<code>instance_charge_type</code> is set to <code>PrePaid</code>.</p>
+         * <p>Valid value: <code>Month</code>, which indicates that the subscription duration is measured in months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         @NameInMap("period_unit")
         public String periodUnit;
 
         /**
          * <p>The operating system distribution. Valid values:</p>
-         * <br>
-         * <p>*   `CentOS`</p>
-         * <p>*   `AliyunLinux`</p>
-         * <p>*   `Windows`</p>
-         * <p>*   `WindowsCore`</p>
+         * <ul>
+         * <li><code>CentOS</code></li>
+         * <li><code>AliyunLinux</code></li>
+         * <li><code>Windows</code></li>
+         * <li><code>WindowsCore</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunLinux</p>
          */
         @NameInMap("platform")
         public String platform;
@@ -1063,6 +1258,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KubernetesWorkerRole-021dc54f-929b-437a-8ae0-34c24d3e****</p>
          */
         @NameInMap("ram_policy")
         public String ramPolicy;
@@ -1075,21 +1273,31 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The scaling group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-2ze8n5qw4atggut8****</p>
          */
         @NameInMap("scaling_group_id")
         public String scalingGroupId;
 
         /**
          * <p>The scaling mode of the scaling group. Valid values:</p>
-         * <br>
-         * <p>*   `release`: the standard mode. ECS instances are created and released based on the resource usage.</p>
-         * <p>*   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached to local disks.</p>
+         * <ul>
+         * <li><code>release</code>: the standard mode. ECS instances are created and released based on the resource usage.</li>
+         * <li><code>recycle</code>: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached to local disks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>release</p>
          */
         @NameInMap("scaling_policy")
         public String scalingPolicy;
 
         /**
-         * <p>The ID of the security group to which the node pool is added. If the node pool is added to multiple security groups, the first ID in the value of the `security_group_ids` parameter is returned.</p>
+         * <p>The ID of the security group to which the node pool is added. If the node pool is added to multiple security groups, the first ID in the value of the <code>security_group_ids</code> parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-2ze1iuk12m2sb4c4****</p>
          */
         @NameInMap("security_group_id")
         public String securityGroupId;
@@ -1102,32 +1310,42 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>阿里云OS安全加固。取值：</p>
-         * <br>
-         * <p>- `true`：开启阿里云OS安全加固。</p>
-         * <p>- `false`：不开启阿里云OS安全加固。</p>
-         * <br>
-         * <p>默认值：`false`。</p>
+         * <ul>
+         * <li><code>true</code>：开启阿里云OS安全加固。</li>
+         * <li><code>false</code>：不开启阿里云OS安全加固。</li>
+         * </ul>
+         * <p>默认值：<code>false</code>。</p>
          */
         @NameInMap("security_hardening_os")
         public Boolean securityHardeningOs;
 
         /**
          * <p>Specifies whether to enable reinforcement based on classified protection. You can enable reinforcement based on classified protection only if Alibaba Cloud Linux 2 or Alibaba Cloud Linux 3 is installed on nodes. Alibaba Cloud provides standards for baseline check and a scanner to ensure the compliance of Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 images with the level 3 standards of classified protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("soc_enabled")
         public Boolean socEnabled;
 
         /**
          * <p>The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("spot_instance_pools")
         public Long spotInstancePools;
 
         /**
          * <p>Specifies whether to enable the supplementation of preemptible instances. If the supplementation of preemptible instances is enabled, when the scaling group receives a system message that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("spot_instance_remedy")
         public Boolean spotInstanceRemedy;
@@ -1140,18 +1358,24 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The bidding policy of preemptible instances. Valid values:</p>
-         * <br>
-         * <p>*   NoSpot: non-preemptible.</p>
-         * <p>*   SpotWithPriceLimit: specifies the highest bid.</p>
-         * <p>*   SpotAsPriceGo: automatically submits bids based on the up-to-date market price.</p>
-         * <br>
-         * <p>For more information, see [Create a preemptible elastic container instance](https://help.aliyun.com/document_detail/157759.html).</p>
+         * <ul>
+         * <li>NoSpot: non-preemptible.</li>
+         * <li>SpotWithPriceLimit: specifies the highest bid.</li>
+         * <li>SpotAsPriceGo: automatically submits bids based on the up-to-date market price.</li>
+         * </ul>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/157759.html">Create a preemptible elastic container instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoSpot</p>
          */
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
         /**
          * <p>Specifies whether to enable Burst for the system disk when the disk type is cloud_auto.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("system_disk_bursting_enabled")
         public Boolean systemDiskBurstingEnabled;
@@ -1164,57 +1388,78 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The type of system disk. Valid values:</p>
-         * <br>
-         * <p>*   `cloud_efficiency`: ultra disk</p>
-         * <p>*   `cloud_ssd`: SSD</p>
+         * <ul>
+         * <li><code>cloud_efficiency</code>: ultra disk</li>
+         * <li><code>cloud_ssd</code>: SSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
         /**
          * <p>The algorithm that you want to use to encrypt the system disk. Set the value to aes-256.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aes-256</p>
          */
         @NameInMap("system_disk_encrypt_algorithm")
         public String systemDiskEncryptAlgorithm;
 
         /**
          * <p>Specifies whether to encrypt the system disk. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("system_disk_encrypted")
         public Boolean systemDiskEncrypted;
 
         /**
          * <p>The ID of the Key Management Service (KMS) key that is used to encrypt the system disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
          */
         @NameInMap("system_disk_kms_key_id")
         public String systemDiskKmsKeyId;
 
         /**
          * <p>The performance level (PL) of the system disk. This parameter takes effect only for an ESSD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
 
         /**
          * <p>The predefined read and write IOPS of the system disk when the disk type is cloud_auto.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("system_disk_provisioned_iops")
         public Long systemDiskProvisionedIops;
 
         /**
          * <p>The size of the system disk. Unit: GiB.</p>
-         * <br>
          * <p>Valid values: 20 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
 
         /**
          * <p>The tag that you want to add only to ECS instances.</p>
-         * <br>
          * <p>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value must not start with aliyun or acs: or contain https:// or http://.</p>
          */
         @NameInMap("tags")
@@ -1222,8 +1467,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The vSwitch IDs. You can specify 1 to 20 vSwitches.</p>
-         * <br>
-         * <p>>  To ensure high availability, we recommend that you select vSwitches in different zones.</p>
+         * <blockquote>
+         * <p> To ensure high availability, we recommend that you select vSwitches in different zones.</p>
+         * </blockquote>
          */
         @NameInMap("vswitch_ids")
         public java.util.List<String> vswitchIds;
@@ -1614,54 +1860,79 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsStatus extends TeaModel {
         /**
          * <p>The number of failed nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("failed_nodes")
         public Long failedNodes;
 
         /**
          * <p>The number of healthy nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("healthy_nodes")
         public Long healthyNodes;
 
         /**
          * <p>The number of nodes that are being created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("initial_nodes")
         public Long initialNodes;
 
         /**
          * <p>The number of offline nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("offline_nodes")
         public Long offlineNodes;
 
         /**
          * <p>The number of nodes that are being removed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("removing_nodes")
         public Long removingNodes;
 
         /**
          * <p>The number of running nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("serving_nodes")
         public Long servingNodes;
 
         /**
          * <p>The status of the node pool. Valid values:</p>
-         * <br>
-         * <p>*   `active`: The node pool is active.</p>
-         * <p>*   `scaling`: The node pool is being scaled.</p>
-         * <p>*   `removing`: The nodes are being removed from the node pool.</p>
-         * <p>*   `deleting`: The node pool is being deleted.</p>
-         * <p>*   `updating`: The node pool is being updated.</p>
+         * <ul>
+         * <li><code>active</code>: The node pool is active.</li>
+         * <li><code>scaling</code>: The node pool is being scaled.</li>
+         * <li><code>removing</code>: The nodes are being removed from the node pool.</li>
+         * <li><code>deleting</code>: The node pool is being deleted.</li>
+         * <li><code>updating</code>: The node pool is being updated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("state")
         public String state;
 
         /**
          * <p>The total number of nodes in the node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("total_nodes")
         public Long totalNodes;
@@ -1740,9 +2011,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsTeeConfig extends TeaModel {
         /**
          * <p>Specifies whether to enable confidential computing for the cluster. Valid values:</p>
-         * <br>
-         * <p>*   `true`</p>
-         * <p>*   `false`</p>
+         * <ul>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("tee_enable")
         public Boolean teeEnable;
@@ -1771,7 +2046,6 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is discontinued.</p>
-         * <br>
          * <p>The network configurations of the edge node pool. This parameter takes effect only on edge node pools.</p>
          */
         @NameInMap("interconnect_config")
@@ -1779,6 +2053,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The network type of the edge node pool. Valid values: basic and dedicated. This parameter takes effect only on edge node pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>improved</p>
          */
         @NameInMap("interconnect_mode")
         public String interconnectMode;
@@ -1797,6 +2074,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of nodes that can be created in the edge node pool. The value of this parameter must be greater than or equal to 0. A value of 0 indicates that the number of nodes in the node pool is limited only by the quota of nodes in the cluster. In most cases, this parameter is set to a value larger than 0 for edge node pools. This parameter is set to 0 for node pools whose types are ess or default edge node pools.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("max_nodes")
         public Long maxNodes;

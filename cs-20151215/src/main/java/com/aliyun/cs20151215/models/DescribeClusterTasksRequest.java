@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeClusterTasksRequest extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("page_number")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("page_size")
     public Integer pageSize;

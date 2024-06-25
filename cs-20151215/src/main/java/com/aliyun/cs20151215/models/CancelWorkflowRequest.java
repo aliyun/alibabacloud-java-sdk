@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CancelWorkflowRequest extends TeaModel {
     /**
      * <p>The operation that you want to perform. Set the value to cancel.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cancel</p>
      */
     @NameInMap("action")
     public String action;

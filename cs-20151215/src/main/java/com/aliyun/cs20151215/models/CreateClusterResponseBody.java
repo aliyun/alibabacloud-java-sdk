@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateClusterResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cb95aa626a47740afbf6aa099b650****</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>687C5BAA-D103-4993-884B-C35E4314A1E1</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>T-5a54309c80282e39ea00002f</p>
      */
     @NameInMap("task_id")
     public String taskId;
