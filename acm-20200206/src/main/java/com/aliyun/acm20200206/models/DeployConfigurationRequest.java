@@ -4,44 +4,76 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class DeployConfigurationRequest extends TeaModel {
-    @NameInMap("DataId")
-    public String dataId;
-
+    /**
+     * <strong>example:</strong>
+     * <p>app</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("Group")
-    public String group;
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
+    @NameInMap("BetaIps")
+    public String betaIps;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello World</p>
+     */
+    @NameInMap("Content")
+    public String content;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliyun.acm.example</p>
+     */
+    @NameInMap("DataId")
+    public String dataId;
 
     @NameInMap("Desc")
     public String desc;
 
-    @NameInMap("Tags")
-    public String tags;
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFAULT_GROUP</p>
+     */
+    @NameInMap("Group")
+    public String group;
 
-    @NameInMap("Content")
-    public String content;
-
-    @NameInMap("Type")
-    public String type;
-
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111000d2-ca66-42ba-b706-****</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
-    @NameInMap("BetaIps")
-    public String betaIps;
+    /**
+     * <strong>example:</strong>
+     * <p>tag1,tag2</p>
+     */
+    @NameInMap("Tags")
+    public String tags;
+
+    /**
+     * <strong>example:</strong>
+     * <p>text</p>
+     */
+    @NameInMap("Type")
+    public String type;
 
     public static DeployConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeployConfigurationRequest self = new DeployConfigurationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeployConfigurationRequest setDataId(String dataId) {
-        this.dataId = dataId;
-        return this;
-    }
-    public String getDataId() {
-        return this.dataId;
     }
 
     public DeployConfigurationRequest setAppName(String appName) {
@@ -52,28 +84,12 @@ public class DeployConfigurationRequest extends TeaModel {
         return this.appName;
     }
 
-    public DeployConfigurationRequest setGroup(String group) {
-        this.group = group;
+    public DeployConfigurationRequest setBetaIps(String betaIps) {
+        this.betaIps = betaIps;
         return this;
     }
-    public String getGroup() {
-        return this.group;
-    }
-
-    public DeployConfigurationRequest setDesc(String desc) {
-        this.desc = desc;
-        return this;
-    }
-    public String getDesc() {
-        return this.desc;
-    }
-
-    public DeployConfigurationRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
+    public String getBetaIps() {
+        return this.betaIps;
     }
 
     public DeployConfigurationRequest setContent(String content) {
@@ -84,12 +100,28 @@ public class DeployConfigurationRequest extends TeaModel {
         return this.content;
     }
 
-    public DeployConfigurationRequest setType(String type) {
-        this.type = type;
+    public DeployConfigurationRequest setDataId(String dataId) {
+        this.dataId = dataId;
         return this;
     }
-    public String getType() {
-        return this.type;
+    public String getDataId() {
+        return this.dataId;
+    }
+
+    public DeployConfigurationRequest setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
+    }
+
+    public DeployConfigurationRequest setGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    public String getGroup() {
+        return this.group;
     }
 
     public DeployConfigurationRequest setNamespaceId(String namespaceId) {
@@ -100,12 +132,20 @@ public class DeployConfigurationRequest extends TeaModel {
         return this.namespaceId;
     }
 
-    public DeployConfigurationRequest setBetaIps(String betaIps) {
-        this.betaIps = betaIps;
+    public DeployConfigurationRequest setTags(String tags) {
+        this.tags = tags;
         return this;
     }
-    public String getBetaIps() {
-        return this.betaIps;
+    public String getTags() {
+        return this.tags;
+    }
+
+    public DeployConfigurationRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

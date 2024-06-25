@@ -4,18 +4,26 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class BatchImportConfigurationsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static BatchImportConfigurationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchImportConfigurationsResponseBody self = new BatchImportConfigurationsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BatchImportConfigurationsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public BatchImportConfigurationsResponseBody setMessage(String message) {
@@ -32,14 +40,6 @@ public class BatchImportConfigurationsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public BatchImportConfigurationsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

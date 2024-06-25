@@ -4,6 +4,9 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class DescribeImportFileUrlResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("FileUrl")
     public String fileUrl;
 
@@ -13,12 +16,17 @@ public class DescribeImportFileUrlResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
     public static DescribeImportFileUrlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImportFileUrlResponseBody self = new DescribeImportFileUrlResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeImportFileUrlResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public DescribeImportFileUrlResponseBody setFileUrl(String fileUrl) {
@@ -43,14 +51,6 @@ public class DescribeImportFileUrlResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeImportFileUrlResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
 }

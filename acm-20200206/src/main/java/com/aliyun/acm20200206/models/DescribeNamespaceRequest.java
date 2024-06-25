@@ -4,6 +4,12 @@ package com.aliyun.acm20200206.models;
 import com.aliyun.tea.*;
 
 public class DescribeNamespaceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3115d2bf-1f44-47bf-a855-****</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
