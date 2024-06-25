@@ -4,12 +4,24 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceResourcesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DataManagement</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>storage</p>
+     */
     @NameInMap("Group")
     public String group;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("Type")
     public String type;
 

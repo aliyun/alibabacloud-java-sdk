@@ -4,20 +4,35 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetLayerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("LaboratoryId")
     public String laboratoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>layer1</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE97D06A-2AA0-5AD9-B6CF-8A267924D691</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -25,6 +40,10 @@ public class GetLayerResponseBody extends TeaModel {
     @NameInMap("ResidualFlow")
     public Long residualFlow;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

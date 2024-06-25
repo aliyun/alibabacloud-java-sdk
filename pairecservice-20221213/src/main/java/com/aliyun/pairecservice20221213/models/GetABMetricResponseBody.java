@@ -4,48 +4,104 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetABMetricResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sum(click_cnt)</p>
+     */
     @NameInMap("Definition")
     public String definition;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("LeftMetricId")
     public String leftMetricId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pv</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Division</p>
+     */
     @NameInMap("Operator")
     public String operator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Realtime")
     public String realtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ResultResourceId")
     public String resultResourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ResultTableMetaId")
     public String resultTableMetaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("RightMetricId")
     public String rightMetricId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>home_feed</p>
+     */
     @NameInMap("SceneName")
     public String sceneName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("StatisticsCycle")
     public Integer statisticsCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TableMetaId")
     public String tableMetaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Single</p>
+     */
     @NameInMap("Type")
     public String type;
 

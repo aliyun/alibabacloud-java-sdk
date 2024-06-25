@@ -6,48 +6,72 @@ import com.aliyun.tea.*;
 public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;Value\&quot;:{\&quot;FloatFeature\&quot;:0.1}}]</p>
      */
     @NameInMap("ContextFeatures")
     public String contextFeatures;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("FeatureConsistencyCheckJobConfigId")
     public String featureConsistencyCheckJobConfigId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>week_day:1 | userid:3 | itemid:9001 | cate:cat1 | click_5_seq__cate:cat1</p>
      */
     @NameInMap("GeneratedFeatures")
     public String generatedFeatures;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-********</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9010</p>
      */
     @NameInMap("LogItemId")
     public String logItemId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
      */
     @NameInMap("LogRequestId")
     public String logRequestId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1693900981465</p>
      */
     @NameInMap("LogRequestTime")
     public Long logRequestTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1010</p>
      */
     @NameInMap("LogUserId")
     public String logUserId;
@@ -60,6 +84,9 @@ public class SyncFeatureConsistencyCheckJobReplayLogRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>video-feed</p>
      */
     @NameInMap("SceneName")
     public String sceneName;

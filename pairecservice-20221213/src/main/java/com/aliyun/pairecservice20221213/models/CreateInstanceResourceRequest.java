@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateInstanceResourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DataManagement</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>storage</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bucket-test-123</p>
      */
     @NameInMap("Uri")
     public String uri;

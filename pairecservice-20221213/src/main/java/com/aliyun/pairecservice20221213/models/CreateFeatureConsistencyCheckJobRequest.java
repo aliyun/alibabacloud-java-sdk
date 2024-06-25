@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class CreateFeatureConsistencyCheckJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pre</p>
      */
     @NameInMap("Environment")
     public String environment;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("FeatureConsistencyCheckJobConfigId")
     public String featureConsistencyCheckJobConfigId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-********</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("SamplingDuration")
     public Integer samplingDuration;

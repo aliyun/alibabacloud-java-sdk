@@ -4,11 +4,18 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateExperimentGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ExperimentGroupId")
     public String experimentGroupId;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A04CB8C0-E74A-5E83-BC61-64D153574EC7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

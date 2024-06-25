@@ -7,9 +7,17 @@ public class ListCalculationJobsResponseBody extends TeaModel {
     @NameInMap("CalculationJobs")
     public java.util.List<ListCalculationJobsResponseBodyCalculationJobs> calculationJobs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,27 +51,55 @@ public class ListCalculationJobsResponseBody extends TeaModel {
     }
 
     public static class ListCalculationJobsResponseBodyCalculationJobs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pv</p>
+         */
         @NameInMap("ABMetricName")
         public String ABMetricName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15</p>
+         */
         @NameInMap("BizDate")
         public String bizDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CalculationJobId")
         public String calculationJobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtRanTime")
         public String gmtRanTime;
 
         @NameInMap("JobMessage")
         public java.util.List<String> jobMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CronOffline</p>
+         */
         @NameInMap("JobSource")
         public String jobSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 

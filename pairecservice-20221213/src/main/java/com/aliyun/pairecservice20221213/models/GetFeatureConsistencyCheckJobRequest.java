@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetFeatureConsistencyCheckJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pairec-cn-********</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

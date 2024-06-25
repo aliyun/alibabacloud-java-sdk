@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class CreateSceneResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FCF741D8-9C30-578E-807F-B935487DB34A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

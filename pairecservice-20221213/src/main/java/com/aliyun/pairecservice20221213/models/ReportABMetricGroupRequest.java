@@ -6,43 +6,79 @@ import com.aliyun.tea.*;
 public class ReportABMetricGroupRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("BaseExperimentId")
     public String baseExperimentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;gender&quot;:&quot;man&quot;}</p>
+     */
     @NameInMap("DimensionFields")
     public String dimensionFields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-07-01</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ExperimentGroupId")
     public String experimentGroupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3,4,5</p>
      */
     @NameInMap("ExperimentIds")
     public String experimentIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Offline</p>
      */
     @NameInMap("ReportType")
     public String reportType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-07-01</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Hour</p>
+     */
     @NameInMap("TimeStatisticsMethod")
     public String timeStatisticsMethod;
 

@@ -7,9 +7,17 @@ public class ListABMetricsResponseBody extends TeaModel {
     @NameInMap("ABMetrics")
     public java.util.List<ListABMetricsResponseBodyABMetrics> ABMetrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,48 +51,104 @@ public class ListABMetricsResponseBody extends TeaModel {
     }
 
     public static class ListABMetricsResponseBodyABMetrics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ABMetricId")
         public String ABMetricId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sum(click_cnt)</p>
+         */
         @NameInMap("Definition")
         public String definition;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LeftMetricId")
         public String leftMetricId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pv</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Division</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Realtime")
         public String realtime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ResultResourceId")
         public String resultResourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ResultTableMetaId")
         public String resultTableMetaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RightMetricId")
         public String rightMetricId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>home_feed</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StatisticsCycle")
         public Integer statisticsCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TableMetaId")
         public String tableMetaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Single</p>
+         */
         @NameInMap("Type")
         public String type;
 

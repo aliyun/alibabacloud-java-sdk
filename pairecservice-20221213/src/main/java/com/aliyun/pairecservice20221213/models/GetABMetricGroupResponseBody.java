@@ -4,27 +4,55 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class GetABMetricGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1,2</p>
+     */
     @NameInMap("ABMetricIds")
     public String ABMetricIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pv,uv</p>
+     */
     @NameInMap("ABMetricNames")
     public String ABMetricNames;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>visits</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2799614***</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Realtime")
     public Boolean realtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01D22D08-BA20-5F35-8302-99115F288220</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SceneId")
     public String sceneId;
 

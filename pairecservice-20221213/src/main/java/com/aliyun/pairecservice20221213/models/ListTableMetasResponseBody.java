@@ -4,12 +4,20 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListTableMetasResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TableMetas")
     public java.util.List<ListTableMetasResponseBodyTableMetas> tableMetas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,15 +51,31 @@ public class ListTableMetasResponseBody extends TeaModel {
     }
 
     public static class ListTableMetasResponseBodyTableMetasFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDimensionField")
         public Boolean isDimensionField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>the gender of people</p>
+         */
         @NameInMap("Meaning")
         public String meaning;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gender</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BIGINT</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -95,45 +119,93 @@ public class ListTableMetasResponseBody extends TeaModel {
     }
 
     public static class ListTableMetasResponseBodyTableMetas extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CanDelete")
         public Boolean canDelete;
 
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>this is a test table</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Fields")
         public java.util.List<ListTableMetasResponseBodyTableMetasFields> fields;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-12 12:24:33</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>imprecation</p>
+         */
         @NameInMap("GmtImportedTime")
         public String gmtImportedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-12 12:24:33</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ABTest</p>
+         */
         @NameInMap("Module")
         public String module;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_table</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>reso-2s416t***</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TableMetaId")
         public String tableMetaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_mysql</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dmc-xxx.com/dm/table/xxx">https://dmc-xxx.com/dm/table/xxx</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

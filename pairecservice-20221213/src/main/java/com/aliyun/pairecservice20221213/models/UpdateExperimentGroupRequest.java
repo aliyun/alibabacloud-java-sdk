@@ -4,60 +4,108 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UpdateExperimentGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;RankBy&quot;: &quot;Score&quot;}</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("CrowdId")
     public String crowdId;
 
     @NameInMap("CrowdTargetType")
     public String crowdTargetType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("DebugCrowdId")
     public String debugCrowdId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user1,user2,user3</p>
+     */
     @NameInMap("DebugUsers")
     public String debugUsers;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a test.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("DistributionTimeDuration")
     public Integer distributionTimeDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UserId</p>
+     */
     @NameInMap("DistributionType")
     public String distributionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gender=male</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-abcdefg1234</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("LayerId")
     public String layerId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>experiment_group1</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("NeedAA")
     public Boolean needAA;
 
     @NameInMap("RandomFlow")
     public Long randomFlow;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1,2,3</p>
+     */
     @NameInMap("ReservcedBuckets")
     public String reservcedBuckets;
 

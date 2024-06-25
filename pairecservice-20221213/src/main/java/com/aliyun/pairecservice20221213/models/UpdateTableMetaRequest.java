@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableMetaRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>this is a test table</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -15,30 +19,45 @@ public class UpdateTableMetaRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-test1</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABTest</p>
      */
     @NameInMap("Module")
     public String module;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>reso-2s416t***</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table_mysql</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -110,6 +129,9 @@ public class UpdateTableMetaRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDimensionField")
         public Boolean isDimensionField;
@@ -128,12 +150,18 @@ public class UpdateTableMetaRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIGINT</p>
          */
         @NameInMap("Type")
         public String type;

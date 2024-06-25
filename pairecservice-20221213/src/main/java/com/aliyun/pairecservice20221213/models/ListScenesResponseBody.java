@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListScenesResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B8987BF7-6028-5B17-80E0-251B7BD67BBA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -13,6 +16,10 @@ public class ListScenesResponseBody extends TeaModel {
     @NameInMap("Scenes")
     public java.util.List<ListScenesResponseBodyScenes> scenes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,9 +53,17 @@ public class ListScenesResponseBody extends TeaModel {
     }
 
     public static class ListScenesResponseBodyScenesFlows extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>liuliang1</p>
+         */
         @NameInMap("FlowCode")
         public String flowCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>流量1</p>
+         */
         @NameInMap("FlowName")
         public String flowName;
 
@@ -76,15 +91,27 @@ public class ListScenesResponseBody extends TeaModel {
     }
 
     public static class ListScenesResponseBodyScenes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Flows")
         public java.util.List<ListScenesResponseBodyScenesFlows> flows;
 
+        /**
+         * <strong>example:</strong>
+         * <p>scene1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 

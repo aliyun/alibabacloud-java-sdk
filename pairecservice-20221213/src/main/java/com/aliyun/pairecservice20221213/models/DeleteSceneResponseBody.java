@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteSceneResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D75C43DC-3D3A-5CC8-9AAC-8C77306C433B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

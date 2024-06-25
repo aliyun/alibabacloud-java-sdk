@@ -4,12 +4,20 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceResourcesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Resources")
     public java.util.List<ListInstanceResourcesResponseBodyResources> resources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,27 +51,59 @@ public class ListInstanceResourcesResponseBody extends TeaModel {
     }
 
     public static class ListInstanceResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DataManagement</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-13 17:34:52</p>
+         */
         @NameInMap("GmtCreateAt")
         public String gmtCreateAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-10-13 17:34:52</p>
+         */
         @NameInMap("GmtModifiedAt")
         public String gmtModifiedAt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>storage</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <strong>example:</strong>
+         * <p>reso-2s416t***</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bucket-test-123</p>
+         */
         @NameInMap("Uri")
         public String uri;
 

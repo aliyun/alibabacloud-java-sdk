@@ -9,10 +9,17 @@ public class ListParamsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2D07551-38DA-531E-9B22-877D1D86A579</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,18 +53,38 @@ public class ListParamsResponseBody extends TeaModel {
     }
 
     public static class ListParamsResponseBodyParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Daily</p>
+         */
         @NameInMap("Environment")
         public String environment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>home</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("ParamId")
         public String paramId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>house</p>
+         */
         @NameInMap("Value")
         public String value;
 

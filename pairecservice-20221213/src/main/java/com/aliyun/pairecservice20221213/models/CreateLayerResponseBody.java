@@ -4,11 +4,18 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateLayerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("LayerId")
     public String layerId;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>
      */
     @NameInMap("RequestId")
     public String requestId;

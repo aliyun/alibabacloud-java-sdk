@@ -7,9 +7,17 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
     @NameInMap("ABMetricGroups")
     public java.util.List<ListABMetricGroupsResponseBodyABMetricGroups> ABMetricGroups;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E15A1443-7917-5BE0-AE70-25538ECF398D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,27 +51,55 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
     }
 
     public static class ListABMetricGroupsResponseBodyABMetricGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ABMetricGroupId")
         public String ABMetricGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1,2</p>
+         */
         @NameInMap("ABMetricIds")
         public String ABMetricIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pv,uv</p>
+         */
         @NameInMap("ABMetricNames")
         public String ABMetricNames;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>visits</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2799614***</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Realtime")
         public Boolean realtime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 

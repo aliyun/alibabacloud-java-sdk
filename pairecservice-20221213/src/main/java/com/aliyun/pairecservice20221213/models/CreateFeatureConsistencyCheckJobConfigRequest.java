@@ -6,31 +6,56 @@ import com.aliyun.tea.*;
 public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CompareFeature")
     public Boolean compareFeature;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service_123</p>
      */
     @NameInMap("EasServiceName")
     public String easServiceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://*******</p>
+     */
     @NameInMap("EasyRecPackagePath")
     public String easyRecPackagePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.3.60</p>
+     */
     @NameInMap("EasyRecVersion")
     public String easyRecVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>feature1,feature2</p>
+     */
     @NameInMap("FeatureDisplayExclude")
     public String featureDisplayExclude;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>reso-********</p>
      */
     @NameInMap("FeatureLandingResourceId")
     public String featureLandingResourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>feature1,feature2,feature3</p>
+     */
     @NameInMap("FeaturePriority")
     public String featurePriority;
 
@@ -52,62 +77,107 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("FeatureStoreUserId")
     public String featureStoreUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
+     */
     @NameInMap("FgJarVersion")
     public String fgJarVersion;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>file.json</p>
      */
     @NameInMap("FgJsonFileName")
     public String fgJsonFileName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("GenerateZip")
     public Boolean generateZip;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-********</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>item_id</p>
+     */
     @NameInMap("ItemIdField")
     public String itemIdField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>item_table</p>
+     */
     @NameInMap("ItemTable")
     public String itemTable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ds</p>
+     */
     @NameInMap("ItemTablePartitionField")
     public String itemTablePartitionField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyymmdd</p>
+     */
     @NameInMap("ItemTablePartitionFieldFormat")
     public String itemTablePartitionFieldFormat;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>feature_consistency_check1</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>reso-********</p>
+     */
     @NameInMap("OssResourceId")
     public String ossResourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.89</p>
      */
     @NameInMap("SampleRate")
     public Double sampleRate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("SceneId")
     public String sceneId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
@@ -118,18 +188,38 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("UseFeatureStore")
     public Boolean useFeatureStore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user_id</p>
+     */
     @NameInMap("UserIdField")
     public String userIdField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user_table</p>
+     */
     @NameInMap("UserTable")
     public String userTable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ds</p>
+     */
     @NameInMap("UserTablePartitionField")
     public String userTablePartitionField;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yyyymmdd</p>
+     */
     @NameInMap("UserTablePartitionFieldFormat")
     public String userTablePartitionFieldFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>work_flow_1</p>
+     */
     @NameInMap("WorkflowName")
     public String workflowName;
 

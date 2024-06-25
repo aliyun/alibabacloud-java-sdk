@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class TerminateFeatureConsistencyCheckJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A6C01890-54CA-5C49-BC91-AD85A98E4A98</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

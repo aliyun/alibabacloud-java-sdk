@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CloneFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-********</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

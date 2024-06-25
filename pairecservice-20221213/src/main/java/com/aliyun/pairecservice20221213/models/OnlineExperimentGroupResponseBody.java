@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class OnlineExperimentGroupResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47F761ED-BE4E-51A6-B678-78E1490DF313</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,15 +4,27 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class UpdateSceneRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>This is a test.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     @NameInMap("Flows")
     public java.util.List<UpdateSceneRequestFlows> flows;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pairec-cn-abcdefg1234</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>scene1</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -54,9 +66,17 @@ public class UpdateSceneRequest extends TeaModel {
     }
 
     public static class UpdateSceneRequestFlows extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>liuliang1</p>
+         */
         @NameInMap("FlowCode")
         public String flowCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>流量1</p>
+         */
         @NameInMap("FlowName")
         public String flowName;
 

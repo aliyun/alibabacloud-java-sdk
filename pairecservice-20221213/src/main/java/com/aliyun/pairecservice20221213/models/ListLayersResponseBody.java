@@ -9,10 +9,17 @@ public class ListLayersResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>518C64F6-DFF7-11ED-85B0-00163E14B3D1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -46,24 +53,44 @@ public class ListLayersResponseBody extends TeaModel {
     }
 
     public static class ListLayersResponseBodyLayers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LaboratoryId")
         public String laboratoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LayerId")
         public String layerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>layer1</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ResidualFlow")
         public Long residualFlow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 

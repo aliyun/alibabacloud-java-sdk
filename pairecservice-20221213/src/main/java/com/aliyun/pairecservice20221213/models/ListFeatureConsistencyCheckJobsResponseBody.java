@@ -7,9 +7,17 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
     @NameInMap("FeatureConsistencyCheckJobs")
     public java.util.List<ListFeatureConsistencyCheckJobsResponseBodyFeatureConsistencyCheckJobs> featureConsistencyCheckJobs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A04CB8C0-E74A-5E83-BC61-64D153574EC7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -43,27 +51,55 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
     }
 
     public static class ListFeatureConsistencyCheckJobsResponseBodyFeatureConsistencyCheckJobs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("FeatureConsistencyCheckJobConfigId")
         public String featureConsistencyCheckJobConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feature_consistency_check_1</p>
+         */
         @NameInMap("FeatureConsistencyCheckJobConfigName")
         public String featureConsistencyCheckJobConfigName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("FeatureConsistencyCheckJobId")
         public String featureConsistencyCheckJobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtEndTime")
         public String gmtEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtStartTime")
         public String gmtStartTime;
 
         @NameInMap("Logs")
         public java.util.List<String> logs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 

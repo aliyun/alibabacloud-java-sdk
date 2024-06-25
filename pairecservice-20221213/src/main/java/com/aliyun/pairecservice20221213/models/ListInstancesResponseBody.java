@@ -7,9 +7,17 @@ public class ListInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BDB621CB-A81E-5D39-8793-39A365CBCC74</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,12 +51,20 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesConfigDataManagements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>storage</p>
+         */
         @NameInMap("ComponentCode")
         public String componentCode;
 
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -84,12 +100,20 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesConfigEngines extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>feature</p>
+         */
         @NameInMap("ComponentCode")
         public String componentCode;
 
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Hologres</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -125,12 +149,20 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesConfigMonitors extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>featuresets</p>
+         */
         @NameInMap("ComponentCode")
         public String componentCode;
 
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Platform</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -207,33 +239,69 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Subscription</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>airec_developers_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         @NameInMap("Config")
         public ListInstancesResponseBodyInstancesConfig config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-14 00:00:00.0</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-13 17:34:52.0</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-05 09:02:30.0</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pairec-test1</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Initializing</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>basic</p>
+         */
         @NameInMap("Type")
         public String type;
 

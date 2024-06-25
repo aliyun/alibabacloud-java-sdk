@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateTableMetaRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a test table</p>
      */
     @NameInMap("Description")
     public String description;
@@ -18,30 +21,45 @@ public class CreateTableMetaRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-test123</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABTest</p>
      */
     @NameInMap("Module")
     public String module;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table_test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>reso-2s416t146ffjc3yefx</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>table_mysql</p>
      */
     @NameInMap("TableName")
     public String tableName;
@@ -113,6 +131,9 @@ public class CreateTableMetaRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDimensionField")
         public Boolean isDimensionField;
@@ -125,18 +146,27 @@ public class CreateTableMetaRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is gender of people</p>
          */
         @NameInMap("Meaning")
         public String meaning;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gender</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIGINT</p>
          */
         @NameInMap("Type")
         public String type;

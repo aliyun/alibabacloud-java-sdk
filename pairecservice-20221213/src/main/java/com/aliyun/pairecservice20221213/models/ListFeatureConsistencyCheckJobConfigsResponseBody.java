@@ -7,9 +7,17 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
     @NameInMap("FeatureConsistencyCheckConfigs")
     public java.util.List<ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs> featureConsistencyCheckConfigs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FCF741D8-9C30-578E-807F-B935487DB34A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,30 +51,66 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
     }
 
     public static class ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("CompareFeature")
         public Boolean compareFeature;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eas_service_1</p>
+         */
         @NameInMap("EasServiceName")
         public String easServiceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://*******</p>
+         */
         @NameInMap("EasyRecPackagePath")
         public String easyRecPackagePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.3.60</p>
+         */
         @NameInMap("EasyRecVersion")
         public String easyRecVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("FeatureConsistencyCheckJobConfigId")
         public String featureConsistencyCheckJobConfigId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feature1,feature2</p>
+         */
         @NameInMap("FeatureDisplayExclude")
         public String featureDisplayExclude;
 
+        /**
+         * <strong>example:</strong>
+         * <p>reso-********</p>
+         */
         @NameInMap("FeatureLandingResourceId")
         public String featureLandingResourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mc_project_1</p>
+         */
         @NameInMap("FeatureLandingResourceUri")
         public String featureLandingResourceUri;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feature1,feature2,feature3</p>
+         */
         @NameInMap("FeaturePriority")
         public String featurePriority;
 
@@ -88,84 +132,188 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         @NameInMap("FeatureStoreUserId")
         public String featureStoreUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("FgJarVersion")
         public String fgJarVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>file.json</p>
+         */
         @NameInMap("FgJsonFileName")
         public String fgJsonFileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("GenerateZip")
         public Boolean generateZip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_id</p>
+         */
         @NameInMap("ItemIdField")
         public String itemIdField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>item_table</p>
+         */
         @NameInMap("ItemTable")
         public String itemTable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ds</p>
+         */
         @NameInMap("ItemTablePartitionField")
         public String itemTablePartitionField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yyyymmdd</p>
+         */
         @NameInMap("ItemTablePartitionFieldFormat")
         public String itemTablePartitionFieldFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("LatestJobGmtSamplingEndTime")
         public String latestJobGmtSamplingEndTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
+         */
         @NameInMap("LatestJobGmtSamplingStartTime")
         public String latestJobGmtSamplingStartTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("LatestJobId")
         public String latestJobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>feature_consistency_check1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss_bucket_1</p>
+         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>reso-********</p>
+         */
         @NameInMap("OssResourceId")
         public String ossResourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.89</p>
+         */
         @NameInMap("SampleRate")
         public String sampleRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("SceneId")
         public String sceneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>scene1</p>
+         */
         @NameInMap("SceneName")
         public String sceneName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>service1</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Editable</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("UseFeatureStore")
         public String useFeatureStore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_id</p>
+         */
         @NameInMap("UserIdField")
         public String userIdField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_table</p>
+         */
         @NameInMap("UserTable")
         public String userTable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ds</p>
+         */
         @NameInMap("UserTablePartitionField")
         public String userTablePartitionField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yyyymmdd</p>
+         */
         @NameInMap("UserTablePartitionFieldFormat")
         public String userTablePartitionFieldFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>work_flow_1</p>
+         */
         @NameInMap("WorkflowName")
         public String workflowName;
 

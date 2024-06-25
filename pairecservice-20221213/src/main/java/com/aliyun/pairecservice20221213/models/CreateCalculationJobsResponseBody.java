@@ -7,6 +7,10 @@ public class CreateCalculationJobsResponseBody extends TeaModel {
     @NameInMap("CalculationJobIds")
     public java.util.List<String> calculationJobIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8C27790E-CCA5-56BB-BA17-646295DEC0A2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

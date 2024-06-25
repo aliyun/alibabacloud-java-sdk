@@ -4,6 +4,10 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class BackflowFeatureConsistencyCheckJobDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BDB621CB-A81E-5D39-8793-39A365CBCC74</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

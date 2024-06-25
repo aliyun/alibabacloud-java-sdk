@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pairec-cn-********</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9010</p>
      */
     @NameInMap("LogItemId")
     public String logItemId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
      */
     @NameInMap("LogRequestId")
     public String logRequestId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1010</p>
      */
     @NameInMap("LogUserId")
     public String logUserId;
