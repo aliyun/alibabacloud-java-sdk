@@ -4,18 +4,34 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class EventCenterCheckEnabledOnDefaultBusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public EventCenterCheckEnabledOnDefaultBusResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Unknown system error</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>382E6272-8E9C-5681-AC96-XXXXXXXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,10 @@ public class EventCenterCheckEnabledOnDefaultBusResponseBody extends TeaModel {
     }
 
     public static class EventCenterCheckEnabledOnDefaultBusResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 

@@ -10,17 +10,27 @@ public class EventCenterQueryEventsShrinkRequest extends TeaModel {
     @NameInMap("Body")
     public String bodyShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("BusName")
     public String busName;
 
     /**
      * <p>本次读取的最大数据量，默认值为100。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>用来标记当前开始读取的位置。置空表示从头开始。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

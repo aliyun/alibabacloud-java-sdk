@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTargetsResponseBody extends TeaModel {
     /**
      * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DeleteTargetsResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EventBusNotExist</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78FA9EAC-F0C0-58B0-871E-9F9756CE1D29</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,18 +94,27 @@ public class DeleteTargetsResponseBody extends TeaModel {
     public static class DeleteTargetsResponseBodyDataErrorEntries extends TeaModel {
         /**
          * <p>The ID of the event body that failed to be processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>target5</p>
          */
         @NameInMap("EntryId")
         public String entryId;
 
         /**
          * <p>The returned error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventRuleTargetIdDuplicate</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The id of event target is duplicate!</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -138,6 +159,9 @@ public class DeleteTargetsResponseBody extends TeaModel {
 
         /**
          * <p>The number of event bodies that failed to be processed. Valid values: 0: No event bodies failed to be processed. An integer other than 0: the number of event bodies that failed to be processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ErrorEntriesCount")
         public Integer errorEntriesCount;

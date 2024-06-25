@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class EnableRuleResponseBody extends TeaModel {
     /**
      * <p>The error code. The value Success indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message that is returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EventRuleNotExisted</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>580A938B-6107-586C-8EC7-F22EEBEDA9E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

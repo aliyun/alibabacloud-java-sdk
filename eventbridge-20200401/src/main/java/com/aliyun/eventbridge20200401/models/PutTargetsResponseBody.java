@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class PutTargetsResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   Success: The call succeeded.</p>
-     * <p>*   Other codes: The call failed. For more information about error codes, see Error codes.</p>
+     * <ul>
+     * <li>Success: The call succeeded.</li>
+     * <li>Other codes: The call failed. For more information about error codes, see Error codes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,21 +25,31 @@ public class PutTargetsResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The event rule not existed!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6FB52207-7621-5292-BDF2-A17E2E984160</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,18 +102,27 @@ public class PutTargetsResponseBody extends TeaModel {
     public static class PutTargetsResponseBodyDataErrorEntries extends TeaModel {
         /**
          * <p>The ID of the failed event target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mlm123456JHd2RsRoKw</p>
          */
         @NameInMap("EntryId")
         public String entryId;
 
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EventRuleTargetIdDuplicate</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The id of event target is duplicate!</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
@@ -144,9 +167,13 @@ public class PutTargetsResponseBody extends TeaModel {
 
         /**
          * <p>The number of failed event targets. Valid values:</p>
-         * <br>
-         * <p>*   0: All event targets succeeded.</p>
-         * <p>*   An integer other than 0: indicates the number of failed event targets.</p>
+         * <ul>
+         * <li>0: All event targets succeeded.</li>
+         * <li>An integer other than 0: indicates the number of failed event targets.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ErrorEntriesCount")
         public Integer errorEntriesCount;

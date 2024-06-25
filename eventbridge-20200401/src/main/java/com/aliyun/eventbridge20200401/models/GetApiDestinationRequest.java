@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetApiDestinationRequest extends TeaModel {
     /**
      * <p>The name of the API destination.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api-destination-name</p>
      */
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;

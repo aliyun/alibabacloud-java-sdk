@@ -10,17 +10,27 @@ public class EventCenterQueryEventsRequest extends TeaModel {
     @NameInMap("Body")
     public EventCenterQueryEventsRequestBody body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("BusName")
     public String busName;
 
     /**
      * <p>本次读取的最大数据量，默认值为100。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>用来标记当前开始读取的位置。置空表示从头开始。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -63,9 +73,17 @@ public class EventCenterQueryEventsRequest extends TeaModel {
     }
 
     public static class EventCenterQueryEventsRequestBodyParametersCalculations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>source</p>
+         */
         @NameInMap("Column")
         public String column;
 
+        /**
+         * <strong>example:</strong>
+         * <p>COUNT_DISTINCT</p>
+         */
         @NameInMap("Op")
         public String op;
 
@@ -93,9 +111,17 @@ public class EventCenterQueryEventsRequest extends TeaModel {
     }
 
     public static class EventCenterQueryEventsRequestBodyParametersFilters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>source</p>
+         */
         @NameInMap("Column")
         public String column;
 
+        /**
+         * <strong>example:</strong>
+         * <p>=</p>
+         */
         @NameInMap("Op")
         public String op;
 
@@ -134,12 +160,24 @@ public class EventCenterQueryEventsRequest extends TeaModel {
     }
 
     public static class EventCenterQueryEventsRequestBodyParametersOrders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>source</p>
+         */
         @NameInMap("Column")
         public String column;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Desc")
         public Boolean desc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AVG</p>
+         */
         @NameInMap("Op")
         public String op;
 
@@ -181,30 +219,58 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         @NameInMap("Calculations")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersCalculations> calculations;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1687861201814</p>
+         */
         @NameInMap("EndTime")
         public Integer endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AND</p>
+         */
         @NameInMap("FilterCombination")
         public String filterCombination;
 
         @NameInMap("Filters")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersFilters> filters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Granularity")
         public Integer granularity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Limit")
         public Integer limit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Offset")
         public Integer offset;
 
         @NameInMap("Orders")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersOrders> orders;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1687860901814</p>
+         */
         @NameInMap("StartTime")
         public Integer startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000000</p>
+         */
         @NameInMap("TimeRange")
         public Integer timeRange;
 
@@ -312,14 +378,19 @@ public class EventCenterQueryEventsRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>timeseries_and_table</p>
          */
         @NameInMap("QueryType")
         public String queryType;
 
         /**
          * <p>Schema ID。</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs:GeneralSchema</p>
          */
         @NameInMap("SchemaId")
         public String schemaId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateApiDestinationResponseBody extends TeaModel {
     /**
      * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,12 +21,18 @@ public class CreateApiDestinationResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5DAF96FB-A4B6-548C-B999-0BFDCB2261B9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,6 +77,9 @@ public class CreateApiDestinationResponseBody extends TeaModel {
     public static class CreateApiDestinationResponseBodyDate extends TeaModel {
         /**
          * <p>The name of the API destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApiDestinationName</p>
          */
         @NameInMap("ApiDestinationName")
         public String apiDestinationName;

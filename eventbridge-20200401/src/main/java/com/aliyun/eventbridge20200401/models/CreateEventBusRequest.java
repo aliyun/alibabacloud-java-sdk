@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class CreateEventBusRequest extends TeaModel {
     /**
      * <p>The description of the event bus.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the event bus.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MyEventBus</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;

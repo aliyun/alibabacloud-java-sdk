@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetConnectionRequest extends TeaModel {
     /**
      * <p>The connection name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>connection-name</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;

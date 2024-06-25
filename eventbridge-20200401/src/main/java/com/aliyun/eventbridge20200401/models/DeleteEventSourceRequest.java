@@ -9,8 +9,10 @@ public class DeleteEventSourceRequest extends TeaModel {
 
     /**
      * <p>The name of the event source.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myrabbitmq.source</p>
      */
     @NameInMap("EventSourceName")
     public String eventSourceName;

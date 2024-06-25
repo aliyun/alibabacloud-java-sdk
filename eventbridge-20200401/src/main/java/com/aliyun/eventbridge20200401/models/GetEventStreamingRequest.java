@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetEventStreamingRequest extends TeaModel {
     /**
      * <p>The name of the event stream whose details you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myeventstreaming</p>
      */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;

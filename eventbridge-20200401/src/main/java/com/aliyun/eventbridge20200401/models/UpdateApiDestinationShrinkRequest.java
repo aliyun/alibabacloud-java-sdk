@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class UpdateApiDestinationShrinkRequest extends TeaModel {
     /**
      * <p>The name of the API destination. The name must be 2 to 127 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api-destination-name</p>
      */
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;
 
     /**
      * <p>The name of the connection. The name must be 2 to 127 characters in length.</p>
-     * <br>
      * <p>Note: Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>connection-name</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
 
     /**
      * <p>The description of the API destination. The description can be up to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("Description")
     public String description;

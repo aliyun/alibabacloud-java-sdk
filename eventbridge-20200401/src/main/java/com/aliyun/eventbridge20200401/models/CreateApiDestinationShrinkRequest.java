@@ -6,19 +6,23 @@ import com.aliyun.tea.*;
 public class CreateApiDestinationShrinkRequest extends TeaModel {
     /**
      * <p>The name of the API destination. The name must be 2 to 127 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api-destination-name</p>
      */
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;
 
     /**
      * <p>The name of the connection. The name must be 2 to 127 characters in length.</p>
-     * <br>
-     * <p>> </p>
-     * <p>>  Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</p>
-     * <br>
+     * <blockquote>
+     * <p> Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>connection-name</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
@@ -31,7 +35,6 @@ public class CreateApiDestinationShrinkRequest extends TeaModel {
 
     /**
      * <p>The parameters that are configured for the API destination.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("HttpApiParameters")

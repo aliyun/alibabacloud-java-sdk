@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetEventBusResponseBody extends TeaModel {
     /**
      * <p>The response code. The value Success indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class GetEventBusResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EventBusNotExist</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d5bfc188-4452-4ba7-b73a-a9005e522439</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class GetEventBusResponseBody extends TeaModel {
     public static class GetEventBusResponseBodyData extends TeaModel {
         /**
          * <p>The timestamp that indicates when the event bus was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1641781825000</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>The description of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:123456789098****:eventbus/MyEventBus</p>
          */
         @NameInMap("EventBusARN")
         public String eventBusARN;
 
         /**
          * <p>The name of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyEventBus</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;

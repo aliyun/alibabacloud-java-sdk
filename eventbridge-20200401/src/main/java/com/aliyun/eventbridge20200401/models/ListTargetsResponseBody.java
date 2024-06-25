@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListTargetsResponseBody extends TeaModel {
     /**
      * <p>The returned response code. Valid values:</p>
-     * <br>
-     * <p>*   Success: The request is successful.</p>
-     * <p>*   Other codes: The request failed. For a list of error codes, see Error codes.</p>
+     * <ul>
+     * <li>Success: The request is successful.</li>
+     * <li>Other codes: The request failed. For a list of error codes, see Error codes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,21 +25,31 @@ public class ListTargetsResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EventRuleNotExisted</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5DAF96FB-A4B6-548C-B999-0BFDCB2261B9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,24 +102,36 @@ public class ListTargetsResponseBody extends TeaModel {
     public static class ListTargetsResponseBodyDataTargetsParamList extends TeaModel {
         /**
          * <p>The format that is used by the event target parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEMPLATE</p>
          */
         @NameInMap("Form")
         public String form;
 
         /**
          * <p>The resource parameter of the event target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>body</p>
          */
         @NameInMap("ResourceKey")
         public String resourceKey;
 
         /**
          * <p>The template that is used by the event target parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
 
         /**
          * <p>The value of the event target parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;key\&quot;=\&quot;value\&quot;}</p>
          */
         @NameInMap("Value")
         public String value;
@@ -152,6 +178,9 @@ public class ListTargetsResponseBody extends TeaModel {
     public static class ListTargetsResponseBodyDataTargets extends TeaModel {
         /**
          * <p>The endpoint of the event target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-hangzhou:123456789098****:services/guide.LATEST/functions/HelloFC</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
@@ -161,12 +190,18 @@ public class ListTargetsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sls-beijing-one1-tf</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
 
         /**
          * <p>The ID of the event target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1453</p>
          */
         @NameInMap("Id")
         public String id;
@@ -179,12 +214,18 @@ public class ListTargetsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the event rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule-uKAK2</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The type of the event target. For more information, see [Event target parameters](https://help.aliyun.com/document_detail/183698.html).</p>
+         * <p>The type of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/183698.html">Event target parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs.fc.function</p>
          */
         @NameInMap("Type")
         public String type;
@@ -255,6 +296,9 @@ public class ListTargetsResponseBody extends TeaModel {
     public static class ListTargetsResponseBodyData extends TeaModel {
         /**
          * <p>If excess return values exist, this parameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
@@ -267,6 +311,9 @@ public class ListTargetsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         @NameInMap("Total")
         public Integer total;

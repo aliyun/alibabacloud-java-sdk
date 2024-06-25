@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteApiDestinationRequest extends TeaModel {
     /**
      * <p>The name of the API destination.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ApiDestinationName</p>
      */
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;

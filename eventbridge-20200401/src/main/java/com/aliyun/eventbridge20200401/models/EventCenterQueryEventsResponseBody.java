@@ -4,18 +4,34 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class EventCenterQueryEventsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public EventCenterQueryEventsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Specified parameter Limit is not valid.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5DAF96FB-A4B6-548C-B999-XXXXXXXX</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +81,13 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
     }
 
     public static class EventCenterQueryEventsResponseBodyDataTable extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;id&quot;:&quot;xxx&quot;,
+         *   &quot;source&quot;:&quot;acs.ecs&quot;
+         * }</p>
+         */
         @NameInMap("RowData")
         public java.util.Map<String, ?> rowData;
 
@@ -84,9 +107,20 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
     }
 
     public static class EventCenterQueryEventsResponseBodyDataTimeSeries extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;id&quot;:&quot;xxx&quot;,
+         *   &quot;source&quot;:&quot;acs.ecs&quot;
+         * }</p>
+         */
         @NameInMap("RowData")
         public java.util.Map<String, ?> rowData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1683561600000</p>
+         */
         @NameInMap("Time")
         public String time;
 
@@ -114,9 +148,17 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
     }
 
     public static class EventCenterQueryEventsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
@@ -126,6 +168,10 @@ public class EventCenterQueryEventsResponseBody extends TeaModel {
         @NameInMap("TimeSeries")
         public java.util.List<EventCenterQueryEventsResponseBodyDataTimeSeries> timeSeries;
 
+        /**
+         * <strong>example:</strong>
+         * <p>76</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

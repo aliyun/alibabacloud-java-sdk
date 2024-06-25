@@ -12,19 +12,32 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
 
     /**
      * <p>The event bus with which the event source is associated.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-event-bus</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
 
     /**
      * <p>The name of the event source.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myrabbitmq.source</p>
      */
     @NameInMap("EventSourceName")
     public String eventSourceName;
+
+    @NameInMap("ExternalSourceConfig")
+    public String externalSourceConfigShrink;
+
+    @NameInMap("ExternalSourceType")
+    public String externalSourceType;
+
+    @NameInMap("LinkedExternalSource")
+    public Boolean linkedExternalSource;
 
     /**
      * <p>The parameters that are configured if the event source is HTTP events.</p>
@@ -95,6 +108,30 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     }
     public String getEventSourceName() {
         return this.eventSourceName;
+    }
+
+    public UpdateEventSourceShrinkRequest setExternalSourceConfigShrink(String externalSourceConfigShrink) {
+        this.externalSourceConfigShrink = externalSourceConfigShrink;
+        return this;
+    }
+    public String getExternalSourceConfigShrink() {
+        return this.externalSourceConfigShrink;
+    }
+
+    public UpdateEventSourceShrinkRequest setExternalSourceType(String externalSourceType) {
+        this.externalSourceType = externalSourceType;
+        return this;
+    }
+    public String getExternalSourceType() {
+        return this.externalSourceType;
+    }
+
+    public UpdateEventSourceShrinkRequest setLinkedExternalSource(Boolean linkedExternalSource) {
+        this.linkedExternalSource = linkedExternalSource;
+        return this;
+    }
+    public Boolean getLinkedExternalSource() {
+        return this.linkedExternalSource;
     }
 
     public UpdateEventSourceShrinkRequest setSourceHttpEventParametersShrink(String sourceHttpEventParametersShrink) {

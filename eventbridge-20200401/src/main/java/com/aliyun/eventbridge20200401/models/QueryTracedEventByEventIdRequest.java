@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class QueryTracedEventByEventIdRequest extends TeaModel {
     /**
      * <p>The name of the event bus.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;
 
     /**
      * <p>The event ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1935debf-ddac-49dc-a090-d4f2857a046d</p>
      */
     @NameInMap("EventId")
     public String eventId;
 
     /**
      * <p>The name of the event source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mse</p>
      */
     @NameInMap("EventSource")
     public String eventSource;

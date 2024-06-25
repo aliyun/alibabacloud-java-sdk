@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateEventBusResponseBody extends TeaModel {
     /**
      * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class CreateEventBusResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The event bus [xxxx] not existed!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A995F07C-E503-5881-9962-9CECA8566876</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. The value true indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,6 +94,9 @@ public class CreateEventBusResponseBody extends TeaModel {
     public static class CreateEventBusResponseBodyData extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:123456789098****:eventbus/MyEventBus</p>
          */
         @NameInMap("EventBusARN")
         public String eventBusARN;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryEventTracesResponseBody extends TeaModel {
     /**
      * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryEventTracesResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EventBusNotExist</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BB934571-1F5A-5E17-91DD-E2BC3E1BFBFF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,72 +94,108 @@ public class QueryEventTracesResponseBody extends TeaModel {
     public static class QueryEventTracesResponseBodyData extends TeaModel {
         /**
          * <p>The type of the event trace. Valid values: PutEvent: a delivery event. FilterEvent: a filtering event. PushEvent: a pushing event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PutEvent</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The execution time of the event trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1659495343896</p>
          */
         @NameInMap("ActionTime")
         public Long actionTime;
 
         /**
          * <p>The endpoint of the event target. This parameter is returned if the value of the Action parameter is PushEvent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:mns:cn-zhangjiakou:123456789098****:queues/testQueue</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The name of the event bus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("EventBusName")
         public String eventBusName;
 
         /**
          * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5747e4f-2af2-40b6-b262-d0140e995bf7</p>
          */
         @NameInMap("EventId")
         public String eventId;
 
         /**
          * <p>The name of the event source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert-api</p>
          */
         @NameInMap("EventSource")
         public String eventSource;
 
         /**
          * <p>The delivery delay of the event target. This parameter is returned if the value of the Action parameter is PushEvent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("NotifyLatency")
         public String notifyLatency;
 
         /**
          * <p>The event target delivery status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[200]Ok</p>
          */
         @NameInMap("NotifyStatus")
         public String notifyStatus;
 
         /**
          * <p>The delivery time of the event target. This parameter is returned if the value of the Action parameter is PushEvent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1659495343896</p>
          */
         @NameInMap("NotifyTime")
         public Long notifyTime;
 
         /**
          * <p>The time when the event was delivered to the event bus. This parameter is returned if the value of the Action parameter is PutEvent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1659495343896</p>
          */
         @NameInMap("ReceivedTime")
         public Long receivedTime;
 
         /**
          * <p>The time when the event rule was matched. This parameter is returned if the value of the Action parameter is FilterEvent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1659495343896</p>
          */
         @NameInMap("RuleMatchingTime")
         public String ruleMatchingTime;
 
         /**
          * <p>The name of the event rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ramrolechange-mns</p>
          */
         @NameInMap("RuleName")
         public String ruleName;

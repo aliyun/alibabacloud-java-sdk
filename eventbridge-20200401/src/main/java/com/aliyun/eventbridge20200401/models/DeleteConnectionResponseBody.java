@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteConnectionResponseBody extends TeaModel {
     /**
      * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8EF25E37-1750-5D7A-BA56-F8AE081A69C8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

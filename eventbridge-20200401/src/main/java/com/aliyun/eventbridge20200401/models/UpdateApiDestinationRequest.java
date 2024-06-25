@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class UpdateApiDestinationRequest extends TeaModel {
     /**
      * <p>The name of the API destination. The name must be 2 to 127 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api-destination-name</p>
      */
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;
 
     /**
      * <p>The name of the connection. The name must be 2 to 127 characters in length.</p>
-     * <br>
      * <p>Note: Before you configure this parameter, you must call the CreateConnection operation to create a connection. Then, set this parameter to the name of the connection that you created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>connection-name</p>
      */
     @NameInMap("ConnectionName")
     public String connectionName;
 
     /**
      * <p>The description of the API destination. The description can be up to 255 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo</p>
      */
     @NameInMap("Description")
     public String description;
@@ -72,19 +79,26 @@ public class UpdateApiDestinationRequest extends TeaModel {
     public static class UpdateApiDestinationRequestHttpApiParameters extends TeaModel {
         /**
          * <p>The endpoint of the API destination. The endpoint can be up to 127 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://127.0.0.1:8001/api">http://127.0.0.1:8001/api</a></p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>The HTTP request method. Valid values:</p>
-         * <br>
-         * <p>- GET</p>
-         * <p>- POST</p>
-         * <p>- HEAD</p>
-         * <p>- DELETE</p>
-         * <p>- PUT</p>
-         * <p>- PATCH</p>
+         * <ul>
+         * <li>GET</li>
+         * <li>POST</li>
+         * <li>HEAD</li>
+         * <li>DELETE</li>
+         * <li>PUT</li>
+         * <li>PATCH</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>POST</p>
          */
         @NameInMap("Method")
         public String method;
