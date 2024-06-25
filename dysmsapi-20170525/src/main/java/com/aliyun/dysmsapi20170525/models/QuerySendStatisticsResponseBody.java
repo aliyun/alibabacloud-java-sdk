@@ -4,15 +4,40 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySendStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <ul>
+     * <li>If OK is returned, the request is successful.</li>
+     * <li>Other values indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QuerySendStatisticsResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>819BE656-D2E0-4858-8B21-B2E47708****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +79,48 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
     }
 
     public static class QuerySendStatisticsResponseBodyDataTargetList extends TeaModel {
+        /**
+         * <p>The number of messages without a delivery receipt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("NoRespondedCount")
         public Long noRespondedCount;
 
+        /**
+         * <p>The number of messages with a delivery receipt that indicates a failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RespondedFailCount")
         public Long respondedFailCount;
 
+        /**
+         * <p>The number of messages with a delivery receipt that indicates a success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17</p>
+         */
         @NameInMap("RespondedSuccessCount")
         public Long respondedSuccessCount;
 
+        /**
+         * <p>The date when the message is sent. Format: yyyyMMdd. Example: 20181225.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20201010</p>
+         */
         @NameInMap("SendDate")
         public String sendDate;
 
+        /**
+         * <p>The number of delivered messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -117,9 +172,18 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
     }
 
     public static class QuerySendStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the data returned.</p>
+         */
         @NameInMap("TargetList")
         public java.util.List<QuerySendStatisticsResponseBodyDataTargetList> targetList;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

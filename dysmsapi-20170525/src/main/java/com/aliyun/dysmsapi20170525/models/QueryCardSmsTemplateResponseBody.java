@@ -4,15 +4,44 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryCardSmsTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/101346.html">API error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryCardSmsTemplateResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,6 +83,9 @@ public class QueryCardSmsTemplateResponseBody extends TeaModel {
     }
 
     public static class QueryCardSmsTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The array of objects.</p>
+         */
         @NameInMap("Templates")
         public java.util.List<java.util.Map<String, ?>> templates;
 

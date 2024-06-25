@@ -4,12 +4,31 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ConversionDataIntlRequest extends TeaModel {
+    /**
+     * <p>The conversion rate.</p>
+     * <blockquote>
+     * <p>The value of this parameter is a double, and ranges from 0 to 1.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.53</p>
+     */
     @NameInMap("ConversionRate")
     public String conversionRate;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The time point at which the conversion rate is monitored. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the current timestamp is used by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1349055900000</p>
+     */
     @NameInMap("ReportTime")
     public Long reportTime;
 

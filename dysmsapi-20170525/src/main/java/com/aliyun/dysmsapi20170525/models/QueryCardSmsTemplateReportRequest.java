@@ -4,12 +4,28 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryCardSmsTemplateReportRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-11 00:00:01</p>
+     */
     @NameInMap("EndDate")
     public String endDate;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-10-10 00:00:01</p>
+     */
     @NameInMap("StartDate")
     public String startDate;
 
+    /**
+     * <p>The array of message templates.</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateCodes")
     public java.util.List<String> templateCodes;
 

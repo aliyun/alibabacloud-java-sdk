@@ -4,15 +4,44 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryMobilesCardSupportResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/101346.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryMobilesCardSupportResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08C17DFE-2E10-54F4-BAFB-7180039CC217</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,9 +83,25 @@ public class QueryMobilesCardSupportResponseBody extends TeaModel {
     }
 
     public static class QueryMobilesCardSupportResponseBodyDataQueryResult extends TeaModel {
+        /**
+         * <p>The mobile phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1380000****</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 
+        /**
+         * <p>Indicates whether the mobile phone number supports card messages. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Support")
         public Boolean support;
 
@@ -84,6 +129,9 @@ public class QueryMobilesCardSupportResponseBody extends TeaModel {
     }
 
     public static class QueryMobilesCardSupportResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of returned results.</p>
+         */
         @NameInMap("QueryResult")
         public java.util.List<QueryMobilesCardSupportResponseBodyDataQueryResult> queryResult;
 

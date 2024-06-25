@@ -4,6 +4,13 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddShortUrlRequest extends TeaModel {
+    /**
+     * <p>The validity period of the short URL. Unit: days. The maximum validity period is 90 days.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("EffectiveDays")
     public String effectiveDays;
 
@@ -16,9 +23,23 @@ public class AddShortUrlRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The service name of the short URL. The name cannot exceed 13 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Alibaba Cloud Short Link service.</p>
+     */
     @NameInMap("ShortUrlName")
     public String shortUrlName;
 
+    /**
+     * <p>The source URL. The URL cannot exceed 1,000 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></p>
+     */
     @NameInMap("SourceUrl")
     public String sourceUrl;
 

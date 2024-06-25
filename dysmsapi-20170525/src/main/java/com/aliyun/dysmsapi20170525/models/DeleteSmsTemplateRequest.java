@@ -13,6 +13,14 @@ public class DeleteSmsTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The code of the message template.</p>
+     * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Alibaba Cloud SMS console</a> and obtain the message template code on the <strong>Message Templates</strong> tab. You can also obtain the message template code by calling the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SMS_152550****</p>
+     */
     @NameInMap("TemplateCode")
     public String templateCode;
 

@@ -13,6 +13,13 @@ public class QuerySmsSignRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The signature.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
+     */
     @NameInMap("SignName")
     public String signName;
 

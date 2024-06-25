@@ -4,15 +4,27 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateSmartShortUrlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public java.util.List<CreateSmartShortUrlResponseBodyModel> model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,38 @@ public class CreateSmartShortUrlResponseBody extends TeaModel {
     }
 
     public static class CreateSmartShortUrlResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("Expiration")
         public Long expiration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
         @NameInMap("ShortName")
         public String shortName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
         @NameInMap("ShortUrl")
         public String shortUrl;
 

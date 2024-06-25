@@ -13,6 +13,13 @@ public class DeleteShortUrlRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The source address. The address can be up to 1,000 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://www.****.com/product/sms">https://www.****.com/product/sms</a></p>
+     */
     @NameInMap("SourceUrl")
     public String sourceUrl;
 
