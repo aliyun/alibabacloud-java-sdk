@@ -9,12 +9,18 @@ public class SmsTemplatePageListRequest extends TeaModel {
 
     /**
      * <p>页码</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
      * <p>每页条数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -27,30 +33,45 @@ public class SmsTemplatePageListRequest extends TeaModel {
 
     /**
      * <p>短信签名</p>
+     * 
+     * <strong>example:</strong>
+     * <p>114ah23m</p>
      */
     @NameInMap("Sign")
     public String sign;
 
     /**
      * <p>短信类型</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42</p>
      */
     @NameInMap("SmsType")
     public Long smsType;
 
     /**
      * <p>模板状态</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92</p>
      */
     @NameInMap("Status")
     public Long status;
 
     /**
      * <p>模板ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
      * <p>模板类型</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19</p>
      */
     @NameInMap("TemplateType")
     public Long templateType;

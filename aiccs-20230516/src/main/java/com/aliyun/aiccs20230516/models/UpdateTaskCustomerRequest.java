@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class UpdateTaskCustomerRequest extends TeaModel {
     /**
      * <p>外呼客户</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Customers")
     public java.util.List<UpdateTaskCustomerRequestCustomers> customers;
@@ -21,6 +22,10 @@ public class UpdateTaskCustomerRequest extends TeaModel {
 
     /**
      * <p>任务ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
@@ -73,24 +78,36 @@ public class UpdateTaskCustomerRequest extends TeaModel {
     public static class UpdateTaskCustomerRequestCustomers extends TeaModel {
         /**
          * <p>是否取消外呼 0否，1是</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Cancel")
         public Long cancel;
 
         /**
          * <p>电话号码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13661109390</p>
          */
         @NameInMap("Number")
         public String number;
 
         /**
          * <p>需根据具体任务参数要求传输</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:&quot;234&quot;}</p>
          */
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
         /**
          * <p>用户自定义标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
          */
         @NameInMap("Tag")
         public String tag;

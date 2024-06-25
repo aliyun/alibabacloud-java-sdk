@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class TaskCallChatsRequest extends TeaModel {
     /**
      * <p>坐席ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72</p>
      */
     @NameInMap("AgentId")
     public Long agentId;
 
     /**
      * <p>坐席标签</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA</p>
      */
     @NameInMap("AgentTag")
     public String agentTag;
 
     /**
      * <p>外呼ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9b2eb6b8-7a27-4357-b5ec-104450086e24</p>
      */
     @NameInMap("CallId")
     public String callId;
@@ -33,6 +43,9 @@ public class TaskCallChatsRequest extends TeaModel {
 
     /**
      * <p>任务ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>26</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

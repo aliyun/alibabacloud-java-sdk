@@ -12,18 +12,28 @@ public class AddTaskRequest extends TeaModel {
 
     /**
      * <p>回调地址</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
     /**
      * <p>并发数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99</p>
      */
     @NameInMap("MaxConcurrency")
     public Long maxConcurrency;
 
     /**
      * <p>任务名称</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Name")
     public String name;
@@ -33,36 +43,54 @@ public class AddTaskRequest extends TeaModel {
 
     /**
      * <p>播放间隔时长</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89</p>
      */
     @NameInMap("PlaySleepVal")
     public Long playSleepVal;
 
     /**
      * <p>录音播放次数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51</p>
      */
     @NameInMap("PlayTimes")
     public Long playTimes;
 
     /**
      * <p>重呼配置</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53</p>
      */
     @NameInMap("RecallType")
     public Long recallType;
 
     /**
      * <p>录音地址</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值</p>
      */
     @NameInMap("RecordPath")
     public String recordPath;
 
     /**
      * <p>重呼次数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>37</p>
      */
     @NameInMap("RepeatCount")
     public Long repeatCount;
 
     /**
      * <p>重呼间隔</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14</p>
      */
     @NameInMap("RepeatInterval")
     public Long repeatInterval;
@@ -93,24 +121,37 @@ public class AddTaskRequest extends TeaModel {
 
     /**
      * <p>任务启动日期</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-09-16</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>任务类型</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TaskType")
     public Long taskType;
 
     /**
      * <p>话术模板ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
      * <p>话术模板类型</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TemplateType")
     public Long templateType;
@@ -308,6 +349,9 @@ public class AddTaskRequest extends TeaModel {
 
         /**
          * <p>短信模板ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71</p>
          */
         @NameInMap("SmsTemplateId")
         public Long smsTemplateId;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class SmsTemplateCreateRequest extends TeaModel {
     /**
      * <p>短信内容</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Content")
     public String content;
@@ -21,24 +25,38 @@ public class SmsTemplateCreateRequest extends TeaModel {
 
     /**
      * <p>短信签名</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ef2i29fsljf</p>
      */
     @NameInMap("Sign")
     public String sign;
 
     /**
      * <p>短信类型</p>
+     * 
+     * <strong>example:</strong>
+     * <p>73</p>
      */
     @NameInMap("SmsType")
     public Long smsType;
 
     /**
      * <p>模板名称</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
      * <p>模板类型</p>
+     * 
+     * <strong>example:</strong>
+     * <p>56</p>
      */
     @NameInMap("TemplateType")
     public Long templateType;

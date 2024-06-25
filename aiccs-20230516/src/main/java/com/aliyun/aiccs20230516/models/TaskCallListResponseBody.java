@@ -4,21 +4,41 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class TaskCallListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public TaskCallListResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1683440860035</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
@@ -78,246 +98,369 @@ public class TaskCallListResponseBody extends TeaModel {
     public static class TaskCallListResponseBodyModelList extends TeaModel {
         /**
          * <p>加微</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AddWx")
         public Long addWx;
 
         /**
          * <p>加微进度</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("AddWxStatus")
         public String addWxStatus;
 
         /**
          * <p>坐席分机</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112</p>
          */
         @NameInMap("AgentExtension")
         public String agentExtension;
 
         /**
          * <p>坐席ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87</p>
          */
         @NameInMap("AgentId")
         public Long agentId;
 
         /**
          * <p>人工通话时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98</p>
          */
         @NameInMap("AgentSpeakingDuration")
         public Long agentSpeakingDuration;
 
         /**
          * <p>人工通话时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("AgentSpeakingTime")
         public String agentSpeakingTime;
 
         /**
          * <p>坐席标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         @NameInMap("AgentTag")
         public String agentTag;
 
         /**
          * <p>是否接通重呼</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         @NameInMap("AnswerRecall")
         public Long answerRecall;
 
         /**
          * <p>接通时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-26 18:58:25</p>
          */
         @NameInMap("AnswerTime")
         public String answerTime;
 
         /**
          * <p>批次ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BatchId")
         public String batchId;
 
         /**
          * <p>开始通话时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-26 18:58:25</p>
          */
         @NameInMap("CallBeginTime")
         public String callBeginTime;
 
         /**
          * <p>外呼ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9197ed9e-ceda-42a5-b683-823b23ef208e</p>
          */
         @NameInMap("CallId")
         public String callId;
 
         /**
          * <p>呼叫次数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CallTimes")
         public String callTimes;
 
         /**
          * <p>外呼类型</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         @NameInMap("CallType")
         public Long callType;
 
         /**
          * <p>对话录音</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("ChatRecord")
         public String chatRecord;
 
         /**
          * <p>外呼网关</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Gateway")
         public String gateway;
 
         /**
          * <p>挂断时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-26 18:58:25</p>
          */
         @NameInMap("HangupTime")
         public String hangupTime;
 
         /**
          * <p>挂机方式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HangupType")
         public Long hangupType;
 
         /**
          * <p>导入时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-26 18:58:25</p>
          */
         @NameInMap("ImportTime")
         public String importTime;
 
         /**
          * <p>个性标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         @NameInMap("IndividualTag")
         public String individualTag;
 
         /**
          * <p>意向说明</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("IntentDescription")
         public String intentDescription;
 
         /**
          * <p>意向标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“C”</p>
          */
         @NameInMap("IntentTag")
         public String intentTag;
 
         /**
          * <p>拦截原因</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         @NameInMap("InterceptReason")
         public String interceptReason;
 
         /**
          * <p>回复关键词</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("Keywords")
         public String keywords;
 
         /**
          * <p>外呼号码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138*****123</p>
          */
         @NameInMap("Number")
         public String number;
 
         /**
          * <p>外呼号码MD5</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75916b635568954583783d</p>
          */
         @NameInMap("NumberMD5")
         public String numberMD5;
 
         /**
          * <p>参数</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("Properties")
         public String properties;
 
         /**
          * <p>备注</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>振铃时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("RingTime")
         public Long ringTime;
 
         /**
          * <p>挂机短信</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         @NameInMap("Sms")
         public String sms;
 
         /**
          * <p>AI通话时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         @NameInMap("SpeakingDuration")
         public Long speakingDuration;
 
         /**
          * <p>AI通话时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("SpeakingTime")
         public String speakingTime;
 
         /**
          * <p>对话轮次</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SpeakingTurns")
         public String speakingTurns;
 
         /**
          * <p>外呼状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>外呼状态编码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("StatusCode")
         public Long statusCode;
 
         /**
          * <p>外呼状态描述</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
          */
         @NameInMap("StatusDescription")
         public String statusDescription;
 
         /**
          * <p>用户自定义标签</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>外呼任务ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("TaskId")
         public Long taskId;
 
         /**
          * <p>AI话术ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
         /**
          * <p>转人工状态</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
          */
         @NameInMap("TransferStatus")
         public String transferStatus;
 
         /**
          * <p>转人工状态编码</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TransferStatusCode")
         public Long transferStatusCode;
@@ -661,15 +804,31 @@ public class TaskCallListResponseBody extends TeaModel {
         @NameInMap("List")
         public java.util.List<TaskCallListResponseBodyModelList> list;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>95</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>39</p>
+         */
         @NameInMap("TotalPage")
         public Long totalPage;
 

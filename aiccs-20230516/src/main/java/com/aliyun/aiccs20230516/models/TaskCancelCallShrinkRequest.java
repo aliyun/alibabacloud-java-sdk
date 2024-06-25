@@ -21,6 +21,10 @@ public class TaskCancelCallShrinkRequest extends TeaModel {
 
     /**
      * <p>任务ID</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

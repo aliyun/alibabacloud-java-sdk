@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class AddBlacklistRequest extends TeaModel {
     /**
      * <p>有效天数</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ExpiredDay")
     public String expiredDay;
 
     /**
      * <p>号码列表</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Numbers")
     public java.util.List<String> numbers;
@@ -21,6 +26,10 @@ public class AddBlacklistRequest extends TeaModel {
 
     /**
      * <p>备注</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值</p>
      */
     @NameInMap("Remark")
     public String remark;

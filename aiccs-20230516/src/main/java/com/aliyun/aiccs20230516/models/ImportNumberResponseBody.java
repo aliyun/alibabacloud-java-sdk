@@ -4,21 +4,41 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class ImportNumberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public ImportNumberResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1683440860035</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
@@ -76,18 +96,38 @@ public class ImportNumberResponseBody extends TeaModel {
     }
 
     public static class ImportNumberResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>54</p>
+         */
         @NameInMap("BatchId")
         public Long batchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>94</p>
+         */
         @NameInMap("Code")
         public Long code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26</p>
+         */
         @NameInMap("ImportNum")
         public Long importNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
         @NameInMap("Message")
         public String message;
 

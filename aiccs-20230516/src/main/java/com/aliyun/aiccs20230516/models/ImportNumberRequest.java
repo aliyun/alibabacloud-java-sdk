@@ -4,12 +4,25 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class ImportNumberRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Customers")
     public java.util.List<ImportNumberRequestCustomers> customers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("FailReturn")
     public Long failReturn;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
@@ -22,6 +35,12 @@ public class ImportNumberRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92</p>
+     */
     @NameInMap("TaskId")
     public Long taskId;
 
@@ -87,18 +106,38 @@ public class ImportNumberRequest extends TeaModel {
     }
 
     public static class ImportNumberRequestCustomers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://test.com">http://test.com</a></p>
+         */
         @NameInMap("ClientUrl")
         public String clientUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13541251222,18665214444</p>
+         */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
         @NameInMap("NumberMD5")
         public String numberMD5;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;testt&quot;:&quot;123&quot;}</p>
+         */
         @NameInMap("Properties")
         public java.util.Map<String, ?> properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag1</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

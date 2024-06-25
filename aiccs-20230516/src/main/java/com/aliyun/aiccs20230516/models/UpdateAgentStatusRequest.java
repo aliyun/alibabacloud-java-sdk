@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateAgentStatusRequest extends TeaModel {
     /**
      * <p>坐席ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58</p>
      */
     @NameInMap("AgentId")
     public Long agentId;
 
     /**
      * <p>坐席状态 1:在线；2:忙碌；3:小休；4:离线</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AgentStatus")
     public Long agentStatus;
 
     /**
      * <p>坐席标签</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abac</p>
      */
     @NameInMap("AgentTag")
     public String agentTag;

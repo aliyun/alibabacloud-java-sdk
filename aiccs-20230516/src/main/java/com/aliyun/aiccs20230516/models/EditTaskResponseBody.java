@@ -4,21 +4,41 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class EditTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public EditTaskResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5453cc9b-02bc-4dbb-9527-f28a9100b912</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1686225227338</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
@@ -78,6 +98,9 @@ public class EditTaskResponseBody extends TeaModel {
     public static class EditTaskResponseBodyModel extends TeaModel {
         /**
          * <p>任务ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92</p>
          */
         @NameInMap("TaskId")
         public Long taskId;

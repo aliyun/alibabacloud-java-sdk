@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AgentCancelCallShrinkRequest extends TeaModel {
     /**
      * <p>坐席ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
      */
     @NameInMap("AgentId")
     public Long agentId;
 
     /**
      * <p>坐席标签</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("AgentTag")
     public String agentTag;

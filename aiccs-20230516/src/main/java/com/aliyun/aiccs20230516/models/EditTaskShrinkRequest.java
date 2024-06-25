@@ -12,18 +12,27 @@ public class EditTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>回调地址</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
     /**
      * <p>并发数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83</p>
      */
     @NameInMap("MaxConcurrency")
     public Long maxConcurrency;
 
     /**
      * <p>任务名称</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Name")
     public String name;
@@ -33,36 +42,54 @@ public class EditTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>播放间隔时长</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29</p>
      */
     @NameInMap("PlaySleepVal")
     public Long playSleepVal;
 
     /**
      * <p>录音播放次数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("PlayTimes")
     public Long playTimes;
 
     /**
      * <p>重呼配置</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RecallType")
     public Long recallType;
 
     /**
      * <p>录音地址</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("RecordPath")
     public String recordPath;
 
     /**
      * <p>重呼次数</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51</p>
      */
     @NameInMap("RepeatCount")
     public Long repeatCount;
 
     /**
      * <p>重呼间隔</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91</p>
      */
     @NameInMap("RepeatInterval")
     public Long repeatInterval;
@@ -93,24 +120,37 @@ public class EditTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>任务状态</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Status")
     public Long status;
 
     /**
      * <p>任务id</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
 
     /**
      * <p>话术模板ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
      * <p>话术模板类型</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TemplateType")
     public Long templateType;

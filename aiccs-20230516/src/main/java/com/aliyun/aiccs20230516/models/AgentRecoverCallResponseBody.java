@@ -4,24 +4,43 @@ package com.aliyun.aiccs20230516.models;
 import com.aliyun.tea.*;
 
 public class AgentRecoverCallResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public AgentRecoverCallResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EFC6D10-307B-1ECA-A8C6-7CBDF776AAD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>坐席标签</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1683440860035</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
