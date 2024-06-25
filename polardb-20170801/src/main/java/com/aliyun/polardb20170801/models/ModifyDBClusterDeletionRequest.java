@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterDeletionRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to.obtain the cluster ID.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to.obtain the cluster ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1313h70cd5m****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -22,9 +25,13 @@ public class ModifyDBClusterDeletionRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the cluster lock feature. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables the cluster lock feature. If you enable the cluster lock feature, you cannot directly release the cluster. You must disable the cluster lock feature before you can release the cluster.</p>
-     * <p>*   **false**: disables the cluster lock feature.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the cluster lock feature. If you enable the cluster lock feature, you cannot directly release the cluster. You must disable the cluster lock feature before you can release the cluster.</li>
+     * <li><strong>false</strong>: disables the cluster lock feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Protection")
     public Boolean protection;

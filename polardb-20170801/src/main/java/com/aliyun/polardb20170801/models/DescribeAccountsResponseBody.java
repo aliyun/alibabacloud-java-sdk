@@ -12,18 +12,27 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>155462B9-205F-4FFC-BB43-4855FE******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +77,18 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccountsDatabasePrivileges extends TeaModel {
         /**
          * <p>The permissions that the account is granted on the database. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadOnly</p>
          */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBtest</p>
          */
         @NameInMap("DBName")
         public String DBName;
@@ -104,46 +119,67 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccounts extends TeaModel {
         /**
          * <p>The description of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
         /**
          * <p>The locking state of the account. Valid values:</p>
-         * <br>
-         * <p>*   **UnLock**</p>
-         * <p>*   **Lock**</p>
+         * <ul>
+         * <li><strong>UnLock</strong></li>
+         * <li><strong>Lock</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UnLock</p>
          */
         @NameInMap("AccountLockState")
         public String accountLockState;
 
         /**
          * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_acc</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The validity period of the password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>undefined</p>
          */
         @NameInMap("AccountPasswordValidTime")
         public String accountPasswordValidTime;
 
         /**
          * <p>The state of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The account is being created.</p>
-         * <p>*   **Available**: The account is available.</p>
-         * <p>*   **Deleting**: The account is being deleted</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The account is being created.</li>
+         * <li><strong>Available</strong>: The account is available.</li>
+         * <li><strong>Deleting</strong>: The account is being deleted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
         /**
          * <p>The type of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: a standard account</p>
-         * <p>*   **Super**: a privileged account</p>
+         * <ul>
+         * <li><strong>Normal</strong>: a standard account</li>
+         * <li><strong>Super</strong>: a privileged account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("AccountType")
         public String accountType;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeMaskingRulesResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1s826a1up******</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,23 +21,34 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned for the request.</p>
-     * <br>
-     * <p>> If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2F83D131-1C18-4599-889D-729A9D******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid value:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class OpenAITaskRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DLNode</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
@@ -23,20 +29,28 @@ public class OpenAITaskRequest extends TeaModel {
 
     /**
      * <p>The password used to access the database for which you want to enable the PolarDB for AI feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testPassword</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -49,6 +63,9 @@ public class OpenAITaskRequest extends TeaModel {
 
     /**
      * <p>The username used to access the database for which you want to enable the PolarDB for AI feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAccountName</p>
      */
     @NameInMap("Username")
     public String username;

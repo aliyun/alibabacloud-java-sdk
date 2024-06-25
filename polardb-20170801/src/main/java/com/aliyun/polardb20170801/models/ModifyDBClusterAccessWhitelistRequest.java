@@ -5,46 +5,65 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterAccessWhitelistRequest extends TeaModel {
     /**
-     * <p>The attributes of the IP whitelist group. Set this parameter to **hidden** to hide the IP whitelist group in the console.</p>
-     * <br>
-     * <p>> *   The IP whitelist group that has appeared in the console cannot be hidden.</p>
-     * <p>> *   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.</p>
+     * <p>The attributes of the IP whitelist group. Set this parameter to <strong>hidden</strong> to hide the IP whitelist group in the console.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The IP whitelist group that has appeared in the console cannot be hidden.</li>
+     * <li>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>hidden</p>
      */
     @NameInMap("DBClusterIPArrayAttribute")
     public String DBClusterIPArrayAttribute;
 
     /**
      * <p>The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.</p>
-     * <br>
-     * <p>*   If the specified whitelist group name does not exist, the whitelist group is created.</p>
-     * <p>*   If the specified whitelist group name exists, the whitelist group is modified.</p>
-     * <p>*   If you do not specify this parameter, the default group is modified.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can create a maximum of 50 IP whitelist groups for a cluster.</p>
-     * <br>
-     * <p>*   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.</p>
+     * <ul>
+     * <li>If the specified whitelist group name does not exist, the whitelist group is created.</li>
+     * <li>If the specified whitelist group name exists, the whitelist group is modified.</li>
+     * <li>If you do not specify this parameter, the default group is modified.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can create a maximum of 50 IP whitelist groups for a cluster.</p>
+     * </li>
+     * <li><p>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("DBClusterIPArrayName")
     public String DBClusterIPArrayName;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-*************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The method used to modify the IP whitelist. Valid values:</p>
-     * <br>
-     * <p>*   **Cover** (default): overwrites the original IP whitelist.</p>
-     * <p>*   **Append**: appends IP addresses to the original whitelist.</p>
-     * <p>*   **Delete**: deletes IP addresses.</p>
-     * <br>
-     * <p>>  This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.</p>
+     * <ul>
+     * <li><strong>Cover</strong> (default): overwrites the original IP whitelist.</li>
+     * <li><strong>Append</strong>: appends IP addresses to the original whitelist.</li>
+     * <li><strong>Delete</strong>: deletes IP addresses.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Cover</p>
      */
     @NameInMap("ModifyMode")
     public String modifyMode;
@@ -63,31 +82,45 @@ public class ModifyDBClusterAccessWhitelistRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group. Separate multiple security groups with commas (,).</p>
-     * <br>
-     * <p>> *   You can add a maximum of three security groups to a cluster.</p>
-     * <p>> *   This parameter can be specified only when the **WhiteListType** parameter is set to **SecurityGroup**.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can add a maximum of three security groups to a cluster.</li>
+     * <li>This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>SecurityGroup</strong>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-*********</p>
      */
     @NameInMap("SecurityGroupIds")
     public String securityGroupIds;
 
     /**
      * <p>The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:</p>
-     * <br>
-     * <p>*   IP addresses. Example: 10.23.12.24.</p>
-     * <p>*   CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.</p>
-     * <br>
-     * <p>>  This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.</p>
+     * <ul>
+     * <li>IP addresses. Example: 10.23.12.24.</li>
+     * <li>CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter can be specified only when the <strong>WhiteListType</strong> parameter is set to <strong>IP</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10.23.12.24</p>
      */
     @NameInMap("SecurityIps")
     public String securityIps;
 
     /**
      * <p>The type of the whitelist. Valid values:</p>
-     * <br>
-     * <p>*   **IP**: IP whitelist group.</p>
-     * <p>*   **SecurityGroup**: security group.</p>
-     * <br>
-     * <p>Default value: **IP**.</p>
+     * <ul>
+     * <li><strong>IP</strong>: IP whitelist group.</li>
+     * <li><strong>SecurityGroup</strong>: security group.</li>
+     * </ul>
+     * <p>Default value: <strong>IP</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IP</p>
      */
     @NameInMap("WhiteListType")
     public String whiteListType;

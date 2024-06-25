@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeAccountsRequest extends TeaModel {
     /**
      * <p>The name of the account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_acc</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-***************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -25,19 +30,25 @@ public class DescribeAccountsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Set this parameter to an integer that is larger than 0. Default value: **1**.</p>
+     * <p>The page number of the page to return. Set this parameter to an integer that is larger than 0. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
-     * <br>
-     * <p>Default value: **30**.</p>
+     * <ul>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

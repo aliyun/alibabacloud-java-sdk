@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDasConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

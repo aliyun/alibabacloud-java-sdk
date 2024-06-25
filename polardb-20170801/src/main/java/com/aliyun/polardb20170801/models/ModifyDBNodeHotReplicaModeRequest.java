@@ -6,29 +6,37 @@ import com.aliyun.tea.*;
 public class ModifyDBNodeHotReplicaModeRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-2vc327c2a14a3u858</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the node in the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-2ze28275h9x5r4wt1</p>
      */
     @NameInMap("DBNodeId")
     public String DBNodeId;
 
     /**
      * <p>Specifies whether to enable the hot standby feature. Valid values:</p>
-     * <br>
-     * <p>*   **ON**</p>
-     * <p>*   **OFF**</p>
-     * <br>
+     * <ul>
+     * <li><strong>ON</strong></li>
+     * <li><strong>OFF</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ON</p>
      */
     @NameInMap("HotReplicaMode")
     public String hotReplicaMode;

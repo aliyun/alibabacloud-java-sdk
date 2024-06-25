@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ModifyGlobalSecurityIPGroupRelationRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-*****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the IP whitelist template.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g-zsldxfiwjmti0kcm****</p>
      */
     @NameInMap("GlobalSecurityGroupId")
     public String globalSecurityGroupId;
@@ -28,14 +32,19 @@ public class ModifyGlobalSecurityIPGroupRelationRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-**********</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

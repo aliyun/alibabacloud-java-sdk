@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
     /**
      * <p>The IDs of the clusters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1s826a1up******</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3655211B-4D74-4E13-91E6-FF2AFE******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the SQL Explorer feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **Enable**</p>
-     * <p>*   **Disabled**</p>
+     * <ul>
+     * <li><strong>Enable</strong></li>
+     * <li><strong>Disabled</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
      */
     @NameInMap("SQLCollectorStatus")
     public String SQLCollectorStatus;

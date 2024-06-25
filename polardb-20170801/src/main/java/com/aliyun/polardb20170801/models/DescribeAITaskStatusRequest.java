@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeAITaskStatusRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-xxxxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -20,6 +22,9 @@ public class DescribeAITaskStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,41 +6,62 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterParametersResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1s826a1up******</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The database engine that the cluster runs. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <p>*   **Oracle**</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("DBType")
     public String DBType;
 
     /**
      * <p>The version of the database engine. </p>
-     * <br>
-     * <p>- Valid values for the MySQL database engine:    - **5.6**</p>
-     * <p>  - **5.7**</p>
-     * <p>  - **8.0**</p>
-     * <p>- Valid value for the PostgreSQL database engine:    - **11**</p>
-     * <p>  - **14**</p>
-     * <p>- Valid value for the Oracle database engine: **11**</p>
+     * <ul>
+     * <li>Valid values for the MySQL database engine:    - <strong>5.6</strong><ul>
+     * <li><strong>5.7</strong></li>
+     * <li><strong>8.0</strong></li>
+     * </ul>
+     * </li>
+     * <li>Valid value for the PostgreSQL database engine:    - <strong>11</strong><ul>
+     * <li><strong>14</strong></li>
+     * </ul>
+     * </li>
+     * <li>Valid value for the Oracle database engine: <strong>11</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5.6</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
 
     /**
      * <p>The cluster engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POLARDB</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The number of parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ParameterNumbers")
     public String parameterNumbers;
@@ -53,6 +74,9 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EBEAA83D-1734-42E3-85E3-E25F6E******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -135,6 +159,9 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     public static class DescribeDBClusterParametersResponseBodyParametersParameters extends TeaModel {
         /**
          * <p>Indicates whether the source parameters and current parameters have the same value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsEqual")
         public String isEqual;
@@ -153,48 +180,78 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
 
         /**
          * <p>The description of the parameter of the current cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The server\&quot;s default character set.</p>
          */
         @NameInMap("distParameterDescription")
         public String distParameterDescription;
 
         /**
          * <p>The name of the parameter of the current cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>character_set_server</p>
          */
         @NameInMap("distParameterName")
         public String distParameterName;
 
         /**
          * <p>The valid values of the parameter of the current cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li>utf8</li>
+         * <li>gbk</li>
+         * </ul>
          */
         @NameInMap("distParameterOptional")
         public String distParameterOptional;
 
         /**
          * <p>The value of the parameter of the current cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("distParameterValue")
         public String distParameterValue;
 
         /**
          * <p>The description of the parameter of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The server\&quot;s default character set.</p>
          */
         @NameInMap("rdsParameterDescription")
         public String rdsParameterDescription;
 
         /**
          * <p>The name of the parameter of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>character_set_server</p>
          */
         @NameInMap("rdsParameterName")
         public String rdsParameterName;
 
         /**
          * <p>The valid values of the parameter of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li>utf8</li>
+         * <li>gbk</li>
+         * </ul>
          */
         @NameInMap("rdsParameterOptional")
         public String rdsParameterOptional;
 
         /**
          * <p>The value of the parameter of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("rdsParameterValue")
         public String rdsParameterValue;
@@ -332,88 +389,129 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
     public static class DescribeDBClusterParametersResponseBodyRunningParametersParameter extends TeaModel {
         /**
          * <p>The valid values of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[utf8|latin1|gbk|utf8mb4]</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
         /**
          * <p>The data type of the parameter value. Valid values:</p>
-         * <br>
-         * <p>*   **INT**</p>
-         * <p>*   **STRING**</p>
-         * <p>*   **B**</p>
+         * <ul>
+         * <li><strong>INT</strong></li>
+         * <li><strong>STRING</strong></li>
+         * <li><strong>B</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INT</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The default value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("DefaultParameterValue")
         public String defaultParameterValue;
 
         /**
          * <p>A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Factor")
         public String factor;
 
         /**
          * <p>Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:</p>
-         * <br>
-         * <p>*   **false**</p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
         /**
          * <p>Indicates whether the parameter can be modified. Valid values:</p>
-         * <br>
-         * <p>*   **false**</p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsModifiable")
         public Boolean isModifiable;
 
         /**
          * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
-         * <br>
-         * <p>*   **0**: yes. The modified parameter value is synchronized to other nodes.</p>
-         * <p>*   **1**: no. You can customize the nodes to which the modified parameter value can be synchronized.</p>
+         * <ul>
+         * <li><strong>0</strong>: yes. The modified parameter value is synchronized to other nodes.</li>
+         * <li><strong>1</strong>: no. You can customize the nodes to which the modified parameter value can be synchronized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsNodeAvailable")
         public String isNodeAvailable;
 
         /**
          * <p>The dependencies of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("ParamRelyRule")
         public String paramRelyRule;
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The server\&quot;s default character set.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>character_set_server</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The status of the parameter. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **Modifying**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("ParameterStatus")
         public String parameterStatus;
 
         /**
          * <p>The value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

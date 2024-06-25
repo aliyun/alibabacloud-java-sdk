@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterMonitorRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -19,9 +21,11 @@ public class ModifyDBClusterMonitorRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval at which monitoring data is collected. Valid values: **5** and **60**. Unit: seconds.</p>
-     * <br>
+     * <p>The interval at which monitoring data is collected. Valid values: <strong>5</strong> and <strong>60</strong>. Unit: seconds.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Period")
     public String period;

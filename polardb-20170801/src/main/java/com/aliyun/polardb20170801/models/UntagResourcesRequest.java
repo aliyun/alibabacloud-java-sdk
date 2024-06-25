@@ -5,9 +5,13 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to unbinds all tags from the cluster. Valid values: **true** and **false**. Default value: **false**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only when the value of the `TagKey.n` parameter is empty.</p>
+     * <p>Specifies whether to unbinds all tags from the cluster. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: <strong>false</strong>.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only when the value of the <code>TagKey.n</code> parameter is empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -20,18 +24,23 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the clusters.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-***************</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -43,15 +52,20 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **cluster**.</p>
-     * <br>
+     * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The keys of the tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>type</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

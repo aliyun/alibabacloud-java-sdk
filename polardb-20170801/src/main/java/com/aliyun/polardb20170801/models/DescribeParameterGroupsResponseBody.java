@@ -12,6 +12,9 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>944CED46-A6F7-40C6-B6DC-C6E5CC******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,62 +42,91 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
 
     public static class DescribeParameterGroupsResponseBodyParameterGroups extends TeaModel {
         /**
-         * <p>The time when the parameter template was created. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the parameter template was created. The time is in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-10T08:40:39Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The type of the engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("DBType")
         public String DBType;
 
         /**
          * <p>The version of the database engine</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         @NameInMap("DBVersion")
         public String DBVersion;
 
         /**
          * <p>Indicates whether to restart the cluster when this parameter template is applied. Valid values:</p>
-         * <br>
-         * <p>*   **0**: A restart is not required.</p>
-         * <p>*   **1**: A restart is required.</p>
+         * <ul>
+         * <li><strong>0</strong>: A restart is not required.</li>
+         * <li><strong>1</strong>: A restart is required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
         /**
          * <p>The number of parameters in the parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ParameterCounts")
         public Long parameterCounts;
 
         /**
          * <p>The description of the parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testgroup</p>
          */
         @NameInMap("ParameterGroupDesc")
         public String parameterGroupDesc;
 
         /**
          * <p>The ID of the parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pcpg-**************</p>
          */
         @NameInMap("ParameterGroupId")
         public String parameterGroupId;
 
         /**
          * <p>The name of the parameter template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ParameterGroupName")
         public String parameterGroupName;
 
         /**
          * <p>The type of the parameter template. Valid values:</p>
-         * <br>
-         * <p>*   **0**: the default parameter template.</p>
-         * <p>*   **1**: a custom parameter template.</p>
-         * <p>*   **2**: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</p>
+         * <ul>
+         * <li><strong>0</strong>: the default parameter template.</li>
+         * <li><strong>1</strong>: a custom parameter template.</li>
+         * <li><strong>2</strong>: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParameterGroupType")
         public String parameterGroupType;

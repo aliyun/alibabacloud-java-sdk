@@ -6,75 +6,98 @@ import com.aliyun.tea.*;
 public class EvaluateRegionResourceRequest extends TeaModel {
     /**
      * <p>The cluster link type. The backend randomly selects the default value. Valid values:</p>
-     * <br>
-     * <p>*   **lvs** :Linux virtual server</p>
-     * <p>*   **proxy**: proxy server</p>
-     * <p>*   **dns**: domain name system</p>
+     * <ul>
+     * <li><strong>lvs</strong> :Linux virtual server</li>
+     * <li><strong>proxy</strong>: proxy server</li>
+     * <li><strong>dns</strong>: domain name system</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>lvs</p>
      */
     @NameInMap("DBInstanceConnType")
     public String DBInstanceConnType;
 
     /**
      * <p>The specifications of the node. For information about node specifications, see the following topics:</p>
-     * <br>
-     * <p>*   PolarDB for MySQL: [Specifications of compute nodes](https://help.aliyun.com/document_detail/102542.html)</p>
-     * <p>*   PolarDB for Oracle: [Specifications of compute nodes](https://help.aliyun.com/document_detail/207921.html)</p>
-     * <p>*   PolarDB for PostgreSQL: [Specifications of compute nodes](https://help.aliyun.com/document_detail/209380.html)</p>
-     * <br>
+     * <ul>
+     * <li>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></li>
+     * <li>PolarDB for Oracle: <a href="https://help.aliyun.com/document_detail/207921.html">Specifications of compute nodes</a></li>
+     * <li>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Specifications of compute nodes</a></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>polar.mysql.x4.large</p>
      */
     @NameInMap("DBNodeClass")
     public String DBNodeClass;
 
     /**
      * <p>The type of the database engine. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <p>*   **Oracle**</p>
-     * <br>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("DBType")
     public String DBType;
 
     /**
      * <p>The version of the database engine</p>
-     * <br>
-     * <p>*   Valid values for the MySQL database engine:</p>
-     * <br>
-     * <p>    *   **5.6**</p>
-     * <p>    *   **5.7**</p>
-     * <p>    *   **8.0**</p>
-     * <br>
-     * <p>*   Valid values for the PostgreSQL database engine:</p>
-     * <br>
-     * <p>    *   **11**</p>
-     * <p>    *   **14**</p>
-     * <br>
-     * <p>*   Valid value for the Oracle database engine: **11**</p>
-     * <br>
+     * <ul>
+     * <li><p>Valid values for the MySQL database engine:</p>
+     * <ul>
+     * <li><strong>5.6</strong></li>
+     * <li><strong>5.7</strong></li>
+     * <li><strong>8.0</strong></li>
+     * </ul>
+     * </li>
+     * <li><p>Valid values for the PostgreSQL database engine:</p>
+     * <ul>
+     * <li><strong>11</strong></li>
+     * <li><strong>14</strong></li>
+     * </ul>
+     * </li>
+     * <li><p>Valid value for the Oracle database engine: <strong>11</strong></p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
 
     /**
      * <p>Specifies whether to return the zones in which the single-zone deployment method is supported. Default value: 0. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no value returned</p>
-     * <p>*   **1**: returns the zones.</p>
+     * <ul>
+     * <li><strong>0</strong>: no value returned</li>
+     * <li><strong>1</strong>: returns the zones.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DispenseMode")
     public String dispenseMode;
 
     /**
      * <p>Specifies whether Maxscale is created. Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("NeedMaxScaleLink")
     public String needMaxScaleLink;
@@ -87,16 +110,22 @@ public class EvaluateRegionResourceRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available regions.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -109,16 +138,22 @@ public class EvaluateRegionResourceRequest extends TeaModel {
 
     /**
      * <p>The subdomain. It is the child domain of the top-level domain name or parent domain. For example, if the parent domain name is cn-beijing, its child domain can be cn-beijing-i-aliyun.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-i-aliyun</p>
      */
     @NameInMap("SubDomain")
     public String subDomain;
 
     /**
      * <p>The zone ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query available zones.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available zones.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-g</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

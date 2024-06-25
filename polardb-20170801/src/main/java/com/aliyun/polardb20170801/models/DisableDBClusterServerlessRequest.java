@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DisableDBClusterServerlessRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-***************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

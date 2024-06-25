@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterServerlessConfRequest extends TeaModel {
     /**
      * <p>The ID of the serverless cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp10gr51qasnl****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

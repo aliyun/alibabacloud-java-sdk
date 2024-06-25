@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDBLinksResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-a*************</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -18,6 +21,9 @@ public class DescribeDBLinksResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45D24263-7E3A-4140-9472-************</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,38 +60,57 @@ public class DescribeDBLinksResponseBody extends TeaModel {
     public static class DescribeDBLinksResponseBodyDBLinkInfos extends TeaModel {
         /**
          * <p>The ID of the source cluster that the database link connects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-a*************</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
          * <p>The name of the database link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dblink_test</p>
          */
         @NameInMap("DBLinkName")
         public String DBLinkName;
 
         /**
          * <p>The name of the source database of the database link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb1</p>
          */
         @NameInMap("SourceDBName")
         public String sourceDBName;
 
         /**
          * <p>The account of the destination database of the database link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testacc</p>
          */
         @NameInMap("TargetAccount")
         public String targetAccount;
 
         /**
          * <p>The ID of the destination cluster that the database link connects.</p>
-         * <br>
-         * <p>> If the destination cluster is not a PolarDB for Oracle cluster, the returned value is empty.</p>
+         * <blockquote>
+         * <p>If the destination cluster is not a PolarDB for Oracle cluster, the returned value is empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-b************</p>
          */
         @NameInMap("TargetDBInstanceName")
         public String targetDBInstanceName;
 
         /**
          * <p>The name of the destination database of the database link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb2</p>
          */
         @NameInMap("TargetDBName")
         public String targetDBName;

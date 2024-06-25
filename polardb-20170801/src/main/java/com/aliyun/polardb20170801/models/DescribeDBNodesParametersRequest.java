@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeDBNodesParametersRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-<strong><strong><strong><strong><strong><strong><strong><strong>,pi-</strong></strong></strong></strong></strong></strong></strong></strong></p>
      */
     @NameInMap("DBNodeIds")
     public String DBNodeIds;

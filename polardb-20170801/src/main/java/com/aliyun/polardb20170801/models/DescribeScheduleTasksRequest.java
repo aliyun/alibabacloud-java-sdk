@@ -6,26 +6,38 @@ import com.aliyun.tea.*;
 public class DescribeScheduleTasksRequest extends TeaModel {
     /**
      * <p>The description of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
      */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the information of all PolarDB clusters that are deployed in a specific region, such as the cluster IDs.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, all scheduled tasks on your clusters are queried.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all PolarDB clusters that are deployed in a specific region, such as the cluster IDs.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, all scheduled tasks on your clusters are queried.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the order.</p>
-     * <br>
-     * <p>>  The order ID can contain only digits.</p>
+     * <blockquote>
+     * <p> The order ID can contain only digits.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>20951253014****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
@@ -37,43 +49,63 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Set this parameter to an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The page number of the page to return. Set this parameter to an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-28T12:30Z</p>
      */
     @NameInMap("PlannedEndTime")
     public String plannedEndTime;
 
     /**
      * <p>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-28T12:00Z</p>
      */
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the region information of all clusters in a specific account.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, scheduled tasks on your clusters that are deployed in all regions are queried.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters in a specific account.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, scheduled tasks on your clusters that are deployed in all regions are queried.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -86,33 +118,44 @@ public class DescribeScheduleTasksRequest extends TeaModel {
 
     /**
      * <p>The state of the tasks that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **pending**: The tasks are pending execution.</p>
-     * <p>*   **executing**: The tasks are being executed.</p>
-     * <p>*   **failure**: The tasks failed and need to be run again.</p>
-     * <p>*   **finish**: The tasks are complete.</p>
-     * <p>*   **cancel**: The tasks are canceled.</p>
-     * <p>*   **expired**: The tasks are expired. The tasks are not started within the time periods that are specified to start the tasks.</p>
-     * <p>*   **rollback**: The tasks are being rolled back.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, all scheduled tasks in all states are queried.</p>
+     * <ul>
+     * <li><strong>pending</strong>: The tasks are pending execution.</li>
+     * <li><strong>executing</strong>: The tasks are being executed.</li>
+     * <li><strong>failure</strong>: The tasks failed and need to be run again.</li>
+     * <li><strong>finish</strong>: The tasks are complete.</li>
+     * <li><strong>cancel</strong>: The tasks are canceled.</li>
+     * <li><strong>expired</strong>: The tasks are expired. The tasks are not started within the time periods that are specified to start the tasks.</li>
+     * <li><strong>rollback</strong>: The tasks are being rolled back.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, all scheduled tasks in all states are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>finish</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The type of scheduled tasks that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **CreateDBNodes**</p>
-     * <p>*   **ModifyDBNodeClass**</p>
-     * <p>*   **UpgradeDBClusterVersion**</p>
-     * <p>*   **ModifyDBClusterPrimaryZone**</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you specify the `PlannedStartTime` parameter when you call the four preceding operations, the details of each task are returned. Otherwise, an empty string is returned for the `TimerInfos` parameter.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, all types of scheduled tasks on you clusters are queried.</p>
+     * <ul>
+     * <li><strong>CreateDBNodes</strong></li>
+     * <li><strong>ModifyDBNodeClass</strong></li>
+     * <li><strong>UpgradeDBClusterVersion</strong></li>
+     * <li><strong>ModifyDBClusterPrimaryZone</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If you specify the <code>PlannedStartTime</code> parameter when you call the four preceding operations, the details of each task are returned. Otherwise, an empty string is returned for the <code>TimerInfos</code> parameter.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, all types of scheduled tasks on you clusters are queried.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateDBNodes</p>
      */
     @NameInMap("TaskAction")
     public String taskAction;

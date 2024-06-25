@@ -6,33 +6,45 @@ import com.aliyun.tea.*;
 public class DeleteDBNodesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000170000591aed949d0f54a343f1a42***********</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The IDs of the nodes.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/185342.html) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-************</p>
      */
     @NameInMap("DBNodeId")
     public java.util.List<String> DBNodeId;
 
     /**
      * <p>The type of the node. Valid values:</p>
-     * <br>
-     * <p>*   RO</p>
-     * <p>*   STANDBY</p>
+     * <ul>
+     * <li>RO</li>
+     * <li>STANDBY</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RO</p>
      */
     @NameInMap("DBNodeType")
     public String DBNodeType;

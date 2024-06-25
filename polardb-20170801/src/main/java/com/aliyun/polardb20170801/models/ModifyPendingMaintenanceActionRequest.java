@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyPendingMaintenanceActionRequest extends TeaModel {
     /**
      * <p>The ID of the task. You can specify multiple task IDs at a time to modify the switching time of the tasks in a unified manner. The task IDs must be separated with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111111</p>
      */
     @NameInMap("Ids")
     public String ids;
@@ -20,16 +22,22 @@ public class ModifyPendingMaintenanceActionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the region ID details.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region ID details.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -44,9 +52,11 @@ public class ModifyPendingMaintenanceActionRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The time that you specify for the background to perform the action that corresponds to the pending event. Specify the time in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
-     * <br>
+     * <p>The time that you specify for the background to perform the action that corresponds to the pending event. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-06-09T22:00:00Z</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;

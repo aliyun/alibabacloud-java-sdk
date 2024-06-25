@@ -6,31 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specify the region in which you want to query GDNs. You can create secondary clusters for the GDNs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("FilterRegion")
     public String filterRegion;
 
     /**
      * <p>The description of the GDN. The description must meet the following requirements:</p>
-     * <br>
-     * <p>*   It cannot start with `http://` or `https://`.</p>
-     * <p>*   It must start with a letter.</p>
-     * <p>*   It can contain letters, digits, underscores (_), and hyphens (-).</p>
-     * <p>*   It must be 2 to 126 characters in length.</p>
+     * <ul>
+     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It must start with a letter.</li>
+     * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>It must be 2 to 126 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("GDNDescription")
     public String GDNDescription;
 
     /**
      * <p>The ID of the GDN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gdn-****************</p>
      */
     @NameInMap("GDNId")
     public String GDNId;
@@ -43,22 +57,32 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
 
     /**
      * <p>The page number. Default value: 1. The value must be an integer that is greater than 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
-     * <br>
-     * <p>*   30</p>
-     * <p>*   50</p>
-     * <p>*   100</p>
+     * <ul>
+     * <li>30</li>
+     * <li>50</li>
+     * <li>100</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

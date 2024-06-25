@@ -6,21 +6,27 @@ import com.aliyun.tea.*;
 public class CloseDBClusterMigrationRequest extends TeaModel {
     /**
      * <p>Specifies whether to continue to enable binary logging. Valid values:</p>
-     * <br>
-     * <p>*   **true**: continues to enable binary logging.</p>
-     * <p>*   **false**: disables binary logging.</p>
-     * <br>
-     * <p>Default value: **true**.</p>
-     * <br>
-     * <p>> If binary logging is disabled, your PolarDB cluster is restarted.</p>
+     * <ul>
+     * <li><strong>true</strong>: continues to enable binary logging.</li>
+     * <li><strong>false</strong>: disables binary logging.</li>
+     * </ul>
+     * <p>Default value: <strong>true</strong>.</p>
+     * <blockquote>
+     * <p>If binary logging is disabled, your PolarDB cluster is restarted.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ContinueEnableBinlog")
     public Boolean continueEnableBinlog;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSlowLogsResponseBody extends TeaModel {
     /**
      * <p>The ID of cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The end date of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-30Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The type of the database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>polardb_mysql</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -30,30 +39,45 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of SQL statements that are returned on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2553A660-E4EB-4AF4-A402-8AFF70A49143</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start date of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-01Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -138,84 +162,126 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public static class DescribeSlowLogsResponseBodyItemsSQLSlowLog extends TeaModel {
         /**
          * <p>The date when the data was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-30Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PolarDB_MySQL</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-***************</p>
          */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
         /**
          * <p>The longest execution duration of a specific SQL statement in the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("MaxExecutionTime")
         public Long maxExecutionTime;
 
         /**
          * <p>The longest lock duration that was caused by a specific SQL statement in the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MaxLockTime")
         public Long maxLockTime;
 
         /**
          * <p>The largest number of rows that were parsed by a specific SQL statement in the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ParseMaxRowCount")
         public Long parseMaxRowCount;
 
         /**
          * <p>The total number of rows that were parsed by all SQL statements in the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ParseTotalRowCounts")
         public Long parseTotalRowCounts;
 
         /**
          * <p>The largest number of rows that were returned by a specific SQL statement in the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ReturnMaxRowCount")
         public Long returnMaxRowCount;
 
         /**
          * <p>The total number of rows that were returned by all SQL statements in the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReturnTotalRowCounts")
         public Long returnTotalRowCounts;
 
         /**
          * <p>The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>U2FsdGVkxxxx</p>
          */
         @NameInMap("SQLHASH")
         public String SQLHASH;
 
         /**
          * <p>The SQL statement that is executed in the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select id,name from tb_table</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
          * <p>The total number of executions of the SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalExecutionCounts")
         public Long totalExecutionCounts;
 
         /**
          * <p>The total duration that was caused by all SQL statements in the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalExecutionTimes")
         public Long totalExecutionTimes;
 
         /**
          * <p>The total lock duration that was caused by all SQL statements in the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalLockTimes")
         public Long totalLockTimes;

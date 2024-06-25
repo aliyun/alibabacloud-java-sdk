@@ -6,28 +6,35 @@ import com.aliyun.tea.*;
 public class ModifyAccountPasswordRequest extends TeaModel {
     /**
      * <p>The username of the account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The new password of the account. The new password must meet the following requirements:</p>
-     * <br>
-     * <p>*   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   It must be 8 to 32 characters in length.</p>
-     * <p>*   Special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
-     * <br>
+     * <ul>
+     * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>It must be 8 to 32 characters in length.</li>
+     * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pw123456</p>
      */
     @NameInMap("NewAccountPassword")
     public String newAccountPassword;

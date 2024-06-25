@@ -4,12 +4,30 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class RestartDBLinkResponseBody extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E56531A4-E552-40BA-9C58-137B80******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ec8c4723-eac5-4f12-becb-01ac08******</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

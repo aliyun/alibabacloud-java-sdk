@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class DeleteDBLinkRequest extends TeaModel {
     /**
      * <p>The ID of the source cluster where a database link is to be deleted.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/173433.html) operation to query PolarDB clusters.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query PolarDB clusters.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The name of the database link to be deleted.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dblink_test</p>
      */
     @NameInMap("DBLinkName")
     public String DBLinkName;

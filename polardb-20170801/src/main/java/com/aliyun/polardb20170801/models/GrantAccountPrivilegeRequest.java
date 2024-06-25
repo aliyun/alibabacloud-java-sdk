@@ -6,40 +6,50 @@ import com.aliyun.tea.*;
 public class GrantAccountPrivilegeRequest extends TeaModel {
     /**
      * <p>The username of the account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The permissions that are granted to the account. Valid values:</p>
-     * <br>
-     * <p>*   **ReadWrite**: read and write permissions</p>
-     * <p>*   **ReadOnly**: read-only permissions</p>
-     * <p>*   **DMLOnly**: The account is granted the permissions to execute only DML statements on the database.</p>
-     * <p>*   **DDLOnly**: The account is granted the permissions to execute only DDL statements on the database.</p>
-     * <p>*   **ReadIndex**: The account has the read and index permissions on the database.</p>
-     * <br>
-     * <p>> The number of **AccountPrivilege** values must be the consistent with the number of **DBName** values. Each account permission must correspond to a database name in sequence. For example, you can set **DBName** to `testdb_1,testdb_2` and set **AccountPrivilege** to `ReadWrite,ReadOnly`. In this case, the specified standard account is granted the **read and write** permissions on the **testdb_1** database and the **read** permission on the **testdb_2** database.</p>
-     * <br>
+     * <ul>
+     * <li><strong>ReadWrite</strong>: read and write permissions</li>
+     * <li><strong>ReadOnly</strong>: read-only permissions</li>
+     * <li><strong>DMLOnly</strong>: The account is granted the permissions to execute only DML statements on the database.</li>
+     * <li><strong>DDLOnly</strong>: The account is granted the permissions to execute only DDL statements on the database.</li>
+     * <li><strong>ReadIndex</strong>: The account has the read and index permissions on the database.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The number of <strong>AccountPrivilege</strong> values must be the consistent with the number of <strong>DBName</strong> values. Each account permission must correspond to a database name in sequence. For example, you can set <strong>DBName</strong> to <code>testdb_1,testdb_2</code> and set <strong>AccountPrivilege</strong> to <code>ReadWrite,ReadOnly</code>. In this case, the specified standard account is granted the <strong>read and write</strong> permissions on the <strong>testdb_1</strong> database and the <strong>read</strong> permission on the <strong>testdb_2</strong> database.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ReadWrite,ReadOnly</p>
      */
     @NameInMap("AccountPrivilege")
     public String accountPrivilege;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The names of the databases that the account can access. You can grant the access permissions on one or more databases to the specified standard account. If you need to specify multiple database names, separate the database names with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb_1,testdb_2</p>
      */
     @NameInMap("DBName")
     public String DBName;

@@ -12,14 +12,19 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-*****************</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -31,9 +36,11 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Set the value to **cluster**.</p>
-     * <br>
+     * <p>The type of the resource. Set the value to <strong>cluster</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -115,17 +122,25 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. To create multiple tags for a cluster at a time, click **Add** to add tag keys.</p>
-         * <br>
-         * <p>>  You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.</p>
+         * <p>The key of the tag. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag keys.</p>
+         * <blockquote>
+         * <p> You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of <code>Tag.N.Key</code> is paired with a value of <code>Tag.N.Value</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag. To create multiple tags for a cluster at a time, click **Add** to add tag values.</p>
-         * <br>
-         * <p>>  You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of `Tag.N.Value` is paired with a value of `Tag.N.Key`.</p>
+         * <p>The value of the tag. To create multiple tags for a cluster at a time, click <strong>Add</strong> to add tag values.</p>
+         * <blockquote>
+         * <p> You can create up to 20 tags at a time. A tag consists of a key and a value. Each value of <code>Tag.N.Value</code> is paired with a value of <code>Tag.N.Key</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,23 +6,34 @@ import com.aliyun.tea.*;
 public class ModifyMaskingRulesResponseBody extends TeaModel {
     /**
      * <p>The message that is returned for the request.</p>
-     * <br>
-     * <p>> If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99B355CE-526C-478B-B730-AD9D7C******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid value:</p>
-     * <br>
-     * <p>*   **true**:</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong>:</li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

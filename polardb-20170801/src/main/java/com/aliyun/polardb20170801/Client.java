@@ -75,8 +75,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels scheduled tasks that are not yet started.
-     *
+     * <b>summary</b> : 
+     * <p>Cancels scheduled tasks that are not yet started.</p>
+     * 
      * @param request CancelScheduleTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelScheduleTasksResponse
@@ -130,8 +131,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels scheduled tasks that are not yet started.
-     *
+     * <b>summary</b> : 
+     * <p>Cancels scheduled tasks that are not yet started.</p>
+     * 
      * @param request CancelScheduleTasksRequest
      * @return CancelScheduleTasksResponse
      */
@@ -141,8 +143,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether an account name is valid or unique in a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether an account name is valid or unique in a cluster.</p>
+     * 
      * @param request CheckAccountNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckAccountNameResponse
@@ -192,8 +195,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether an account name is valid or unique in a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether an account name is valid or unique in a cluster.</p>
+     * 
      * @param request CheckAccountNameRequest
      * @return CheckAccountNameResponse
      */
@@ -203,8 +207,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a database name is valid or whether the name is already used by another database in the current cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether a database name is valid or whether the name is already used by another database in the current cluster.</p>
+     * 
      * @param request CheckDBNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckDBNameResponse
@@ -254,8 +259,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a database name is valid or whether the name is already used by another database in the current cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether a database name is valid or whether the name is already used by another database in the current cluster.</p>
+     * 
      * @param request CheckDBNameRequest
      * @return CheckDBNameResponse
      */
@@ -265,8 +271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the cluster is authorized to use Key Management Service (KMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether the cluster is authorized to use Key Management Service (KMS).</p>
+     * 
      * @param request CheckKMSAuthorizedRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckKMSAuthorizedResponse
@@ -320,8 +327,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the cluster is authorized to use Key Management Service (KMS).
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether the cluster is authorized to use Key Management Service (KMS).</p>
+     * 
      * @param request CheckKMSAuthorizedRequest
      * @return CheckKMSAuthorizedResponse
      */
@@ -331,8 +339,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a service-linked role (SLR) is created.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether a service-linked role (SLR) is created.</p>
+     * 
      * @param request CheckServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckServiceLinkedRoleResponse
@@ -374,8 +383,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a service-linked role (SLR) is created.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether a service-linked role (SLR) is created.</p>
+     * 
      * @param request CheckServiceLinkedRoleRequest
      * @return CheckServiceLinkedRoleResponse
      */
@@ -385,8 +395,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 关闭DB4AI
-     *
+     * <b>summary</b> : 
+     * <p>关闭DB4AI</p>
+     * 
      * @param request CloseAITaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CloseAITaskResponse
@@ -436,8 +447,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 关闭DB4AI
-     *
+     * <b>summary</b> : 
+     * <p>关闭DB4AI</p>
+     * 
      * @param request CloseAITaskRequest
      * @return CloseAITaskResponse
      */
@@ -447,12 +459,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels or completes the migration task that upgrades an RDS cluster to a PolarDB cluster.
-     *
-     * @description *   You can call this operation to cancel the migration task before data migration.
-     * *   You can call this operation to perform the migration task after data migration.
-     * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](https://help.aliyun.com/document_detail/121582.html).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation to cancel the migration task before data migration.</p>
+     * <ul>
+     * <li>You can call this operation to perform the migration task after data migration.<blockquote>
+     * <p>Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Create a PolarDB for MySQL cluster by using the Migration from RDS method</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels or completes the migration task that upgrades an RDS cluster to a PolarDB cluster.</p>
+     * 
      * @param request CloseDBClusterMigrationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CloseDBClusterMigrationResponse
@@ -502,12 +520,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Cancels or completes the migration task that upgrades an RDS cluster to a PolarDB cluster.
-     *
-     * @description *   You can call this operation to cancel the migration task before data migration.
-     * *   You can call this operation to perform the migration task after data migration.
-     * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](https://help.aliyun.com/document_detail/121582.html).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation to cancel the migration task before data migration.</p>
+     * <ul>
+     * <li>You can call this operation to perform the migration task after data migration.<blockquote>
+     * <p>Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Create a PolarDB for MySQL cluster by using the Migration from RDS method</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Cancels or completes the migration task that upgrades an RDS cluster to a PolarDB cluster.</p>
+     * 
      * @param request CloseDBClusterMigrationRequest
      * @return CloseDBClusterMigrationResponse
      */
@@ -517,8 +541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database account for a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a database account for a PolarDB cluster.</p>
+     * 
      * @param request CreateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAccountResponse
@@ -596,8 +621,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database account for a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a database account for a PolarDB cluster.</p>
+     * 
      * @param request CreateAccountRequest
      * @return CreateAccountResponse
      */
@@ -607,13 +633,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a full snapshot backup for a PolarDB cluster.
-     *
-     * @description > 
-     * *   You can manually create up to three backups for each cluster.
-     * *   The `Exceeding the daily backup times of this DB cluster` error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see [Delete backups](https://help.aliyun.com/document_detail/98101.html).
-     * *   After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>You can manually create up to three backups for each cluster.</li>
+     * <li>The <code>Exceeding the daily backup times of this DB cluster</code> error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a>.</li>
+     * <li>After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a full snapshot backup for a PolarDB cluster.</p>
+     * 
      * @param request CreateBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateBackupResponse
@@ -663,13 +694,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a full snapshot backup for a PolarDB cluster.
-     *
-     * @description > 
-     * *   You can manually create up to three backups for each cluster.
-     * *   The `Exceeding the daily backup times of this DB cluster` error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see [Delete backups](https://help.aliyun.com/document_detail/98101.html).
-     * *   After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>You can manually create up to three backups for each cluster.</li>
+     * <li>The <code>Exceeding the daily backup times of this DB cluster</code> error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see <a href="https://help.aliyun.com/document_detail/98101.html">Delete backups</a>.</li>
+     * <li>After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a full snapshot backup for a PolarDB cluster.</p>
+     * 
      * @param request CreateBackupRequest
      * @return CreateBackupResponse
      */
@@ -679,8 +715,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建冷存储实例
-     *
+     * <b>summary</b> : 
+     * <p>创建冷存储实例</p>
+     * 
      * @param request CreateColdStorageInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateColdStorageInstanceResponse
@@ -738,8 +775,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建冷存储实例
-     *
+     * <b>summary</b> : 
+     * <p>创建冷存储实例</p>
+     * 
      * @param request CreateColdStorageInstanceRequest
      * @return CreateColdStorageInstanceResponse
      */
@@ -749,8 +787,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a PolarDB cluster.</p>
+     * 
      * @param request CreateDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBClusterResponse
@@ -992,8 +1031,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a PolarDB cluster.</p>
+     * 
      * @param request CreateDBClusterRequest
      * @return CreateDBClusterResponse
      */
@@ -1003,8 +1043,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom cluster endpoint for a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a custom cluster endpoint for a PolarDB cluster.</p>
+     * 
      * @param request CreateDBClusterEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBClusterEndpointResponse
@@ -1078,8 +1119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom cluster endpoint for a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a custom cluster endpoint for a PolarDB cluster.</p>
+     * 
      * @param request CreateDBClusterEndpointRequest
      * @return CreateDBClusterEndpointResponse
      */
@@ -1089,10 +1131,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
-     *
-     * @description > You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
+     * 
      * @param request CreateDBEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBEndpointAddressResponse
@@ -1162,10 +1208,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
-     *
-     * @description > You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</p>
+     * 
      * @param request CreateDBEndpointAddressRequest
      * @return CreateDBEndpointAddressResponse
      */
@@ -1175,13 +1225,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database link.
-     *
-     * @description A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.
-     * > *   You can create up to 10 database links for a cluster.
-     * > *   Each database link connects a source cluster and a destination cluster.
-     * > *   The source cluster and the destination cluster or the destination ECS instance must be located in the same region.
-     *
+     * <b>description</b> :
+     * <p>A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can create up to 10 database links for a cluster.</li>
+     * <li>Each database link connects a source cluster and a destination cluster.</li>
+     * <li>The source cluster and the destination cluster or the destination ECS instance must be located in the same region.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a database link.</p>
+     * 
      * @param request CreateDBLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBLinkResponse
@@ -1275,13 +1331,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database link.
-     *
-     * @description A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.
-     * > *   You can create up to 10 database links for a cluster.
-     * > *   Each database link connects a source cluster and a destination cluster.
-     * > *   The source cluster and the destination cluster or the destination ECS instance must be located in the same region.
-     *
+     * <b>description</b> :
+     * <p>A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.</p>
+     * <blockquote>
+     * <ul>
+     * <li>You can create up to 10 database links for a cluster.</li>
+     * <li>Each database link connects a source cluster and a destination cluster.</li>
+     * <li>The source cluster and the destination cluster or the destination ECS instance must be located in the same region.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a database link.</p>
+     * 
      * @param request CreateDBLinkRequest
      * @return CreateDBLinkResponse
      */
@@ -1291,8 +1353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a read-only node to a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a read-only node to a PolarDB cluster.</p>
+     * 
      * @param request CreateDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBNodesResponse
@@ -1370,8 +1433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a read-only node to a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a read-only node to a PolarDB cluster.</p>
+     * 
      * @param request CreateDBNodesRequest
      * @return CreateDBNodesResponse
      */
@@ -1381,12 +1445,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database for a PolarDB cluster.
-     *
-     * @description Before you call this operation, make sure that the following requirements are met:
-     * *   The cluster is in the Running state.
-     * *   The cluster is unlocked.
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The cluster is in the Running state.</li>
+     * <li>The cluster is unlocked.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a database for a PolarDB cluster.</p>
+     * 
      * @param request CreateDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDatabaseResponse
@@ -1460,12 +1528,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a database for a PolarDB cluster.
-     *
-     * @description Before you call this operation, make sure that the following requirements are met:
-     * *   The cluster is in the Running state.
-     * *   The cluster is unlocked.
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the following requirements are met:</p>
+     * <ul>
+     * <li>The cluster is in the Running state.</li>
+     * <li>The cluster is unlocked.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a database for a PolarDB cluster.</p>
+     * 
      * @param request CreateDatabaseRequest
      * @return CreateDatabaseResponse
      */
@@ -1475,10 +1547,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a global database network (GDN).
-     *
-     * @description >  A cluster belongs to only one GDN.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A cluster belongs to only one GDN.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a global database network (GDN).</p>
+     * 
      * @param request CreateGlobalDatabaseNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateGlobalDatabaseNetworkResponse
@@ -1536,10 +1612,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a global database network (GDN).
-     *
-     * @description >  A cluster belongs to only one GDN.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> A cluster belongs to only one GDN.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a global database network (GDN).</p>
+     * 
      * @param request CreateGlobalDatabaseNetworkRequest
      * @return CreateGlobalDatabaseNetworkResponse
      */
@@ -1549,8 +1629,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a global IP whitelist template.</p>
+     * 
      * @param request CreateGlobalSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateGlobalSecurityIPGroupResponse
@@ -1612,8 +1693,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a global IP whitelist template.</p>
+     * 
      * @param request CreateGlobalSecurityIPGroupRequest
      * @return CreateGlobalSecurityIPGroupResponse
      */
@@ -1623,11 +1705,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a parameter template.
-     *
-     * @description You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
-     * > You can call this operation only on a PolarDB for MySQL cluster.
-     *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p>You can call this operation only on a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a parameter template.</p>
+     * 
      * @param request CreateParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateParameterGroupResponse
@@ -1697,11 +1783,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a parameter template.
-     *
-     * @description You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
-     * > You can call this operation only on a PolarDB for MySQL cluster.
-     *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p>You can call this operation only on a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a parameter template.</p>
+     * 
      * @param request CreateParameterGroupRequest
      * @return CreateParameterGroupResponse
      */
@@ -1711,8 +1801,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a service-linked role (SLR).
-     *
+     * <b>summary</b> : 
+     * <p>Creates a service-linked role (SLR).</p>
+     * 
      * @param request CreateServiceLinkedRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateServiceLinkedRoleResponse
@@ -1754,8 +1845,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a service-linked role (SLR).
-     *
+     * <b>summary</b> : 
+     * <p>Creates a service-linked role (SLR).</p>
+     * 
      * @param request CreateServiceLinkedRoleRequest
      * @return CreateServiceLinkedRoleResponse
      */
@@ -1765,8 +1857,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Purchases a storage plan.
-     *
+     * <b>summary</b> : 
+     * <p>Purchases a storage plan.</p>
+     * 
      * @param request CreateStoragePlanRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateStoragePlanResponse
@@ -1828,8 +1921,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Purchases a storage plan.
-     *
+     * <b>summary</b> : 
+     * <p>Purchases a storage plan.</p>
+     * 
      * @param request CreateStoragePlanRequest
      * @return CreateStoragePlanResponse
      */
@@ -1839,10 +1933,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a database account for a PolarDB cluster.
-     *
-     * @description > Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a database account for a PolarDB cluster.</p>
+     * 
      * @param request DeleteAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAccountResponse
@@ -1892,10 +1990,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a database account for a PolarDB cluster.
-     *
-     * @description > Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a database account for a PolarDB cluster.</p>
+     * 
      * @param request DeleteAccountRequest
      * @return DeleteAccountResponse
      */
@@ -1905,14 +2007,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the backup sets of a PolarDB cluster.
-     *
-     * @description Before you call this operation, make sure that the cluster meets the following requirements:
-     * *   The cluster is in the Running state.
-     * *   The backup sets are in the Success state.
-     * > *   You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the status of backup sets.
-     * >*   After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the cluster meets the following requirements:</p>
+     * <ul>
+     * <li>The cluster is in the Running state.</li>
+     * <li>The backup sets are in the Success state.<blockquote>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the status of backup sets.</li>
+     * <li>After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks</li>
+     * </ul>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the backup sets of a PolarDB cluster.</p>
+     * 
      * @param request DeleteBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteBackupResponse
@@ -1962,14 +2072,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the backup sets of a PolarDB cluster.
-     *
-     * @description Before you call this operation, make sure that the cluster meets the following requirements:
-     * *   The cluster is in the Running state.
-     * *   The backup sets are in the Success state.
-     * > *   You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the status of backup sets.
-     * >*   After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the cluster meets the following requirements:</p>
+     * <ul>
+     * <li>The cluster is in the Running state.</li>
+     * <li>The backup sets are in the Success state.<blockquote>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the status of backup sets.</li>
+     * <li>After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks</li>
+     * </ul>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the backup sets of a PolarDB cluster.</p>
+     * 
      * @param request DeleteBackupRequest
      * @return DeleteBackupResponse
      */
@@ -1979,8 +2097,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases a pay-as-you-go PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go PolarDB cluster.</p>
+     * 
      * @param request DeleteDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBClusterResponse
@@ -2030,8 +2149,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases a pay-as-you-go PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Releases a pay-as-you-go PolarDB cluster.</p>
+     * 
      * @param request DeleteDBClusterRequest
      * @return DeleteDBClusterResponse
      */
@@ -2041,8 +2161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases a custom cluster endpoint of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Releases a custom cluster endpoint of a PolarDB cluster.</p>
+     * 
      * @param request DeleteDBClusterEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBClusterEndpointResponse
@@ -2092,8 +2213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases a custom cluster endpoint of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Releases a custom cluster endpoint of a PolarDB cluster.</p>
+     * 
      * @param request DeleteDBClusterEndpointRequest
      * @return DeleteDBClusterEndpointResponse
      */
@@ -2103,11 +2225,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the public endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, and custom cluster endpoint.
-     *
-     * @description > *   You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
-     * > *   Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</li>
+     * <li>Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, and custom cluster endpoint.</p>
+     * 
      * @param request DeleteDBEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBEndpointAddressResponse
@@ -2161,11 +2289,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Releases the public endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, and custom cluster endpoint.
-     *
-     * @description > *   You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
-     * > *   Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.</li>
+     * <li>Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Releases the public endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, and custom cluster endpoint.</p>
+     * 
      * @param request DeleteDBEndpointAddressRequest
      * @return DeleteDBEndpointAddressResponse
      */
@@ -2175,8 +2309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a database link from a PolarDB for PostgreSQL (Compatible with Oracle) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a database link from a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
+     * 
      * @param request DeleteDBLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBLinkResponse
@@ -2226,8 +2361,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a database link from a PolarDB for PostgreSQL (Compatible with Oracle) cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a database link from a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
+     * 
      * @param request DeleteDBLinkRequest
      * @return DeleteDBLinkResponse
      */
@@ -2237,8 +2373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a read-only node from a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a read-only node from a PolarDB cluster.</p>
+     * 
      * @param request DeleteDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDBNodesResponse
@@ -2296,8 +2433,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a read-only node from a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a read-only node from a PolarDB cluster.</p>
+     * 
      * @param request DeleteDBNodesRequest
      * @return DeleteDBNodesResponse
      */
@@ -2307,11 +2445,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a database from a PolarDB cluster.
-     *
-     * @description >- The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.
-     * >- The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.</li>
+     * <li>The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a database from a PolarDB cluster.</p>
+     * 
      * @param request DeleteDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDatabaseResponse
@@ -2361,11 +2505,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a database from a PolarDB cluster.
-     *
-     * @description >- The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.
-     * >- The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.</li>
+     * <li>The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a database from a PolarDB cluster.</p>
+     * 
      * @param request DeleteDatabaseRequest
      * @return DeleteDatabaseResponse
      */
@@ -2375,10 +2525,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a global database network (GDN).
-     *
-     * @description >  You can delete a GDN only when the GDN includes only a primary cluster.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can delete a GDN only when the GDN includes only a primary cluster.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a global database network (GDN).</p>
+     * 
      * @param request DeleteGlobalDatabaseNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGlobalDatabaseNetworkResponse
@@ -2432,10 +2586,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a global database network (GDN).
-     *
-     * @description >  You can delete a GDN only when the GDN includes only a primary cluster.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can delete a GDN only when the GDN includes only a primary cluster.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a global database network (GDN).</p>
+     * 
      * @param request DeleteGlobalDatabaseNetworkRequest
      * @return DeleteGlobalDatabaseNetworkResponse
      */
@@ -2445,8 +2603,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a global IP whitelist template.</p>
+     * 
      * @param request DeleteGlobalSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGlobalSecurityIPGroupResponse
@@ -2508,8 +2667,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a global IP whitelist template.</p>
+     * 
      * @param request DeleteGlobalSecurityIPGroupRequest
      * @return DeleteGlobalSecurityIPGroupResponse
      */
@@ -2519,8 +2679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a data masking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a data masking rule.</p>
+     * 
      * @param request DeleteMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMaskingRulesResponse
@@ -2554,8 +2715,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a data masking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a data masking rule.</p>
+     * 
      * @param request DeleteMaskingRulesRequest
      * @return DeleteMaskingRulesResponse
      */
@@ -2565,11 +2727,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a parameter template of a PolarDB cluster.
-     *
-     * @description You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
-     * >  When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.
-     *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p> When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a parameter template of a PolarDB cluster.</p>
+     * 
      * @param request DeleteParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteParameterGroupResponse
@@ -2623,11 +2789,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a parameter template of a PolarDB cluster.
-     *
-     * @description You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
-     * >  When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.
-     *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p> When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a parameter template of a PolarDB cluster.</p>
+     * 
      * @param request DeleteParameterGroupRequest
      * @return DeleteParameterGroupResponse
      */
@@ -2637,8 +2807,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the state of the PolarDB for AI feature for a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the state of the PolarDB for AI feature for a cluster.</p>
+     * 
      * @param request DescribeAITaskStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAITaskStatusResponse
@@ -2664,8 +2835,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the state of the PolarDB for AI feature for a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the state of the PolarDB for AI feature for a cluster.</p>
+     * 
      * @param request DescribeAITaskStatusRequest
      * @return DescribeAITaskStatusResponse
      */
@@ -2675,8 +2847,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about a database account of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a database account of a PolarDB cluster.</p>
+     * 
      * @param request DescribeAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAccountsResponse
@@ -2734,8 +2907,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about a database account of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a database account of a PolarDB cluster.</p>
+     * 
      * @param request DescribeAccountsRequest
      * @return DescribeAccountsResponse
      */
@@ -2745,8 +2919,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the auto-renewal attributes of a subscription PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the auto-renewal attributes of a subscription PolarDB cluster.</p>
+     * 
      * @param request DescribeAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAutoRenewAttributeResponse
@@ -2808,8 +2983,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the auto-renewal attributes of a subscription PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the auto-renewal attributes of a subscription PolarDB cluster.</p>
+     * 
      * @param request DescribeAutoRenewAttributeRequest
      * @return DescribeAutoRenewAttributeResponse
      */
@@ -2819,8 +2995,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries backup logs and the URLs to download the backup logs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries backup logs and the URLs to download the backup logs.</p>
+     * 
      * @param request DescribeBackupLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupLogsResponse
@@ -2886,8 +3063,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries backup logs and the URLs to download the backup logs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries backup logs and the URLs to download the backup logs.</p>
+     * 
      * @param request DescribeBackupLogsRequest
      * @return DescribeBackupLogsResponse
      */
@@ -2897,8 +3075,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the automatic backup policy of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the automatic backup policy of a PolarDB cluster.</p>
+     * 
      * @param request DescribeBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupPolicyResponse
@@ -2944,8 +3123,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the automatic backup policy of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the automatic backup policy of a PolarDB cluster.</p>
+     * 
      * @param request DescribeBackupPolicyRequest
      * @return DescribeBackupPolicyResponse
      */
@@ -2955,8 +3135,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup tasks of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the backup tasks of a PolarDB cluster.</p>
+     * 
      * @param request DescribeBackupTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupTasksResponse
@@ -3010,8 +3191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup tasks of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the backup tasks of a PolarDB cluster.</p>
+     * 
      * @param request DescribeBackupTasksRequest
      * @return DescribeBackupTasksResponse
      */
@@ -3021,8 +3203,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup details of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the backup details of a PolarDB cluster.</p>
+     * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupsResponse
@@ -3100,8 +3283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the backup details of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the backup details of a PolarDB cluster.</p>
+     * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
      */
@@ -3111,8 +3295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries character sets that are supported by a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries character sets that are supported by a PolarDB for MySQL cluster.</p>
+     * 
      * @param request DescribeCharacterSetNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCharacterSetNameResponse
@@ -3162,8 +3347,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries character sets that are supported by a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries character sets that are supported by a PolarDB for MySQL cluster.</p>
+     * 
      * @param request DescribeCharacterSetNameRequest
      * @return DescribeCharacterSetNameResponse
      */
@@ -3173,8 +3359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the specifications of a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the specifications of a cluster.</p>
+     * 
      * @param request DescribeClassListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeClassListResponse
@@ -3236,8 +3423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the specifications of a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the specifications of a cluster.</p>
+     * 
      * @param request DescribeClassListRequest
      * @return DescribeClassListResponse
      */
@@ -3247,8 +3435,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IP address whitelists and security groups of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IP address whitelists and security groups of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterAccessWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterAccessWhitelistResponse
@@ -3294,8 +3483,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the IP address whitelists and security groups of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the IP address whitelists and security groups of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterAccessWhitelistRequest
      * @return DescribeDBClusterAccessWhitelistResponse
      */
@@ -3305,8 +3495,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterAttributeResponse
@@ -3356,8 +3547,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterAttributeRequest
      * @return DescribeDBClusterAttributeResponse
      */
@@ -3367,8 +3559,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Describe SQL collector for a PolarDB cluster. Features related to SQL collector include audit log and SQL Explorer.
-     *
+     * <b>summary</b> : 
+     * <p>Describe SQL collector for a PolarDB cluster. Features related to SQL collector include audit log and SQL Explorer.</p>
+     * 
      * @param request DescribeDBClusterAuditLogCollectorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterAuditLogCollectorResponse
@@ -3414,8 +3607,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Describe SQL collector for a PolarDB cluster. Features related to SQL collector include audit log and SQL Explorer.
-     *
+     * <b>summary</b> : 
+     * <p>Describe SQL collector for a PolarDB cluster. Features related to SQL collector include audit log and SQL Explorer.</p>
+     * 
      * @param request DescribeDBClusterAuditLogCollectorRequest
      * @return DescribeDBClusterAuditLogCollectorResponse
      */
@@ -3425,8 +3619,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available resources in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available resources in a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterAvailableResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterAvailableResourcesResponse
@@ -3492,8 +3687,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries available resources in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries available resources in a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterAvailableResourcesRequest
      * @return DescribeDBClusterAvailableResourcesResponse
      */
@@ -3503,8 +3699,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the source IP address can access a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether the source IP address can access a cluster.</p>
+     * 
      * @param request DescribeDBClusterConnectivityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterConnectivityResponse
@@ -3562,8 +3759,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the source IP address can access a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether the source IP address can access a cluster.</p>
+     * 
      * @param request DescribeDBClusterConnectivityRequest
      * @return DescribeDBClusterConnectivityResponse
      */
@@ -3573,8 +3771,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the endpoints of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the endpoints of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterEndpointsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterEndpointsResponse
@@ -3628,8 +3827,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the endpoints of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the endpoints of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterEndpointsRequest
      * @return DescribeDBClusterEndpointsResponse
      */
@@ -3639,11 +3839,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the migration status of PolarDB clusters.
-     *
-     * @description *   You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see [Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click](https://help.aliyun.com/document_detail/121582.html).
-     * *   Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click</a>.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the migration status of PolarDB clusters.</p>
+     * 
      * @param request DescribeDBClusterMigrationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterMigrationResponse
@@ -3689,11 +3893,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the migration status of PolarDB clusters.
-     *
-     * @description *   You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see [Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click](https://help.aliyun.com/document_detail/121582.html).
-     * *   Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click</a>.</p>
+     * <ul>
+     * <li>Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the migration status of PolarDB clusters.</p>
+     * 
      * @param request DescribeDBClusterMigrationRequest
      * @return DescribeDBClusterMigrationResponse
      */
@@ -3703,8 +3911,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the interval at which the monitoring data of a PolarDB cluster is collected.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the interval at which the monitoring data of a PolarDB cluster is collected.</p>
+     * 
      * @param request DescribeDBClusterMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterMonitorResponse
@@ -3750,8 +3959,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the interval at which the monitoring data of a PolarDB cluster is collected.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the interval at which the monitoring data of a PolarDB cluster is collected.</p>
+     * 
      * @param request DescribeDBClusterMonitorRequest
      * @return DescribeDBClusterMonitorResponse
      */
@@ -3761,8 +3971,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameters of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the parameters of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterParametersResponse
@@ -3812,8 +4023,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameters of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the parameters of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterParametersRequest
      * @return DescribeDBClusterParametersResponse
      */
@@ -3823,21 +4035,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance data of a PolarDB cluster.
-     *
-     * @description *   When the monitoring data is collected every 5 seconds:
+     * <b>description</b> :
+     * <p>  When the monitoring data is collected every 5 seconds:
      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * *   When the monitoring data is collected every 60 seconds:
-     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](https://help.aliyun.com/document_detail/159557.html) operation to set the data collection interval to every 5 seconds.
-     *
+     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
+     * <ul>
+     * <li>When the monitoring data is collected every 60 seconds:<ul>
+     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
+     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
+     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.<blockquote>
+     * <p> By default, the monitoring data is collected once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the data collection interval to every 5 seconds.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance data of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterPerformanceResponse
@@ -3883,21 +4103,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance data of a PolarDB cluster.
-     *
-     * @description *   When the monitoring data is collected every 5 seconds:
+     * <b>description</b> :
+     * <p>  When the monitoring data is collected every 5 seconds:
      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * *   When the monitoring data is collected every 60 seconds:
-     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](https://help.aliyun.com/document_detail/159557.html) operation to set the data collection interval to every 5 seconds.
-     *
+     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
+     * <ul>
+     * <li>When the monitoring data is collected every 60 seconds:<ul>
+     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
+     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
+     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.<blockquote>
+     * <p> By default, the monitoring data is collected once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the data collection interval to every 5 seconds.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance data of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterPerformanceRequest
      * @return DescribeDBClusterPerformanceResponse
      */
@@ -3907,8 +4135,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Secure Sockets Layer (SSL) settings of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Secure Sockets Layer (SSL) settings of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterSSLResponse
@@ -3954,8 +4183,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Secure Sockets Layer (SSL) settings of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Secure Sockets Layer (SSL) settings of a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBClusterSSLRequest
      * @return DescribeDBClusterSSLResponse
      */
@@ -3965,8 +4195,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of a serverless cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a serverless cluster.</p>
+     * 
      * @param request DescribeDBClusterServerlessConfRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterServerlessConfResponse
@@ -4012,8 +4243,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of a serverless cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the configurations of a serverless cluster.</p>
+     * 
      * @param request DescribeDBClusterServerlessConfRequest
      * @return DescribeDBClusterServerlessConfResponse
      */
@@ -4023,8 +4255,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Transparent Data Encryption (TDE) settings of a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Transparent Data Encryption (TDE) settings of a PolarDB for MySQL cluster.</p>
+     * 
      * @param request DescribeDBClusterTDERequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterTDEResponse
@@ -4070,8 +4303,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Transparent Data Encryption (TDE) settings of a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Transparent Data Encryption (TDE) settings of a PolarDB for MySQL cluster.</p>
+     * 
      * @param request DescribeDBClusterTDERequest
      * @return DescribeDBClusterTDEResponse
      */
@@ -4081,8 +4315,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the database engine version of a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the database engine version of a PolarDB for MySQL cluster.</p>
+     * 
      * @param request DescribeDBClusterVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClusterVersionResponse
@@ -4132,8 +4367,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the database engine version of a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about the database engine version of a PolarDB for MySQL cluster.</p>
+     * 
      * @param request DescribeDBClusterVersionRequest
      * @return DescribeDBClusterVersionResponse
      */
@@ -4143,8 +4379,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries PolarDB clusters or the clusters that can be accessed by an authorized RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries PolarDB clusters or the clusters that can be accessed by an authorized RAM user.</p>
+     * 
      * @param request DescribeDBClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClustersResponse
@@ -4254,8 +4491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries PolarDB clusters or the clusters that can be accessed by an authorized RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries PolarDB clusters or the clusters that can be accessed by an authorized RAM user.</p>
+     * 
      * @param request DescribeDBClustersRequest
      * @return DescribeDBClustersResponse
      */
@@ -4265,8 +4503,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about PolarDB clusters that contain backup sets in a region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about PolarDB clusters that contain backup sets in a region.</p>
+     * 
      * @param request DescribeDBClustersWithBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBClustersWithBackupsResponse
@@ -4344,8 +4583,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about PolarDB clusters that contain backup sets in a region.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about PolarDB clusters that contain backup sets in a region.</p>
+     * 
      * @param request DescribeDBClustersWithBackupsRequest
      * @return DescribeDBClustersWithBackupsResponse
      */
@@ -4355,8 +4595,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the attributes that are supported by a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster, such as the character sets and collations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attributes that are supported by a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster, such as the character sets and collations.</p>
+     * 
      * @param request DescribeDBInitializeVariableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBInitializeVariableResponse
@@ -4402,8 +4643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the attributes that are supported by a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster, such as the character sets and collations.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the attributes that are supported by a PolarDB for PostgreSQL (Compatible with Oracle) cluster or a PolarDB for PostgreSQL cluster, such as the character sets and collations.</p>
+     * 
      * @param request DescribeDBInitializeVariableRequest
      * @return DescribeDBInitializeVariableResponse
      */
@@ -4413,10 +4655,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the database links of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.
-     *
-     * @description > You can query only the database links that use a PolarDB for Oracle cluster as the source.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can query only the database links that use a PolarDB for Oracle cluster as the source.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the database links of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
+     * 
      * @param request DescribeDBLinksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBLinksResponse
@@ -4466,10 +4712,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the database links of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.
-     *
-     * @description > You can query only the database links that use a PolarDB for Oracle cluster as the source.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can query only the database links that use a PolarDB for Oracle cluster as the source.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the database links of a PolarDB for PostgreSQL (Compatible with Oracle) cluster.</p>
+     * 
      * @param request DescribeDBLinksRequest
      * @return DescribeDBLinksResponse
      */
@@ -4479,21 +4729,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance data of a node in a PolarDB cluster.
-     *
-     * @description *   When the monitoring data is collected every 5 seconds:
+     * <b>description</b> :
+     * <p>  When the monitoring data is collected every 5 seconds:
      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * *   When the monitoring data is collected every 60 seconds:
-     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](https://help.aliyun.com/document_detail/159557.html) operation to set the data collection interval to every 5 seconds.
-     *
+     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
+     * <ul>
+     * <li>When the monitoring data is collected every 60 seconds:<ul>
+     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
+     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
+     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.<blockquote>
+     * <p> By default, the monitoring data is collected once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the data collection interval to every 5 seconds.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance data of a node in a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBNodePerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBNodePerformanceResponse
@@ -4547,21 +4805,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance data of a node in a PolarDB cluster.
-     *
-     * @description *   When the monitoring data is collected every 5 seconds:
+     * <b>description</b> :
+     * <p>  When the monitoring data is collected every 5 seconds:
      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * *   When the monitoring data is collected every 60 seconds:
-     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](https://help.aliyun.com/document_detail/159557.html) operation to set the data collection interval to every 5 seconds.
-     *
+     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
+     * <ul>
+     * <li>When the monitoring data is collected every 60 seconds:<ul>
+     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
+     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
+     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.<blockquote>
+     * <p> By default, the monitoring data is collected once every 60 seconds. You can call the <a href="https://help.aliyun.com/document_detail/159557.html">ModifyDBClusterMonitor</a> operation to set the data collection interval to every 5 seconds.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance data of a node in a PolarDB cluster.</p>
+     * 
      * @param request DescribeDBNodePerformanceRequest
      * @return DescribeDBNodePerformanceResponse
      */
@@ -4571,8 +4837,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameters of a specified node in a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the parameters of a specified node in a cluster.</p>
+     * 
      * @param request DescribeDBNodesParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBNodesParametersResponse
@@ -4622,8 +4889,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the parameters of a specified node in a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the parameters of a specified node in a cluster.</p>
+     * 
      * @param request DescribeDBNodesParametersRequest
      * @return DescribeDBNodesParametersResponse
      */
@@ -4633,10 +4901,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance data of PolarProxy.
-     *
-     * @description > This operation is applicable only to PolarDB for MySQL clusters.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance data of PolarProxy.</p>
+     * 
      * @param request DescribeDBProxyPerformanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDBProxyPerformanceResponse
@@ -4690,10 +4962,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the performance data of PolarProxy.
-     *
-     * @description > This operation is applicable only to PolarDB for MySQL clusters.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the performance data of PolarProxy.</p>
+     * 
      * @param request DescribeDBProxyPerformanceRequest
      * @return DescribeDBProxyPerformanceResponse
      */
@@ -4703,8 +4979,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看实例的 DAS 配置
-     *
+     * <b>summary</b> : 
+     * <p>查看实例的 DAS 配置</p>
+     * 
      * @param request DescribeDasConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDasConfigResponse
@@ -4750,8 +5027,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看实例的 DAS 配置
-     *
+     * <b>summary</b> : 
+     * <p>查看实例的 DAS 配置</p>
+     * 
      * @param request DescribeDasConfigRequest
      * @return DescribeDasConfigResponse
      */
@@ -4761,8 +5039,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about databases in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about databases in a PolarDB cluster.</p>
+     * 
      * @param request DescribeDatabasesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDatabasesResponse
@@ -4820,8 +5099,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about databases in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about databases in a PolarDB cluster.</p>
+     * 
      * @param request DescribeDatabasesRequest
      * @return DescribeDatabasesResponse
      */
@@ -4831,11 +5111,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the backup sets in a released PolarDB cluster.
-     *
-     * @description Before you call this operation, make sure that the PolarDB cluster is in the **Released** state. You must also confirm that the **Retain All Backups Permanently** or **Retain Last Automatic Backup Permanently** backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.
-     * > You can call the [DescribeDBClusterAttribute](https://help.aliyun.com/document_detail/98181.html) operation to query the cluster status.
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the PolarDB cluster is in the <strong>Released</strong> state. You must also confirm that the <strong>Retain All Backups Permanently</strong> or <strong>Retain Last Automatic Backup Permanently</strong> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the backup sets in a released PolarDB cluster.</p>
+     * 
      * @param request DescribeDetachedBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDetachedBackupsResponse
@@ -4913,11 +5197,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the backup sets in a released PolarDB cluster.
-     *
-     * @description Before you call this operation, make sure that the PolarDB cluster is in the **Released** state. You must also confirm that the **Retain All Backups Permanently** or **Retain Last Automatic Backup Permanently** backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.
-     * > You can call the [DescribeDBClusterAttribute](https://help.aliyun.com/document_detail/98181.html) operation to query the cluster status.
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that the PolarDB cluster is in the <strong>Released</strong> state. You must also confirm that the <strong>Retain All Backups Permanently</strong> or <strong>Retain Last Automatic Backup Permanently</strong> backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98181.html">DescribeDBClusterAttribute</a> operation to query the cluster status.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the backup sets in a released PolarDB cluster.</p>
+     * 
      * @param request DescribeDetachedBackupsRequest
      * @return DescribeDetachedBackupsResponse
      */
@@ -4927,8 +5215,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a Global Database Network (GDN).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a Global Database Network (GDN).</p>
+     * 
      * @param request DescribeGlobalDatabaseNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGlobalDatabaseNetworkResponse
@@ -4982,8 +5271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a Global Database Network (GDN).
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a Global Database Network (GDN).</p>
+     * 
      * @param request DescribeGlobalDatabaseNetworkRequest
      * @return DescribeGlobalDatabaseNetworkResponse
      */
@@ -4993,8 +5283,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all Global Database Networks (GDNs) that belong to an account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about all Global Database Networks (GDNs) that belong to an account.</p>
+     * 
      * @param request DescribeGlobalDatabaseNetworksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGlobalDatabaseNetworksResponse
@@ -5068,8 +5359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all Global Database Networks (GDNs) that belong to an account.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about all Global Database Networks (GDNs) that belong to an account.</p>
+     * 
      * @param request DescribeGlobalDatabaseNetworksRequest
      * @return DescribeGlobalDatabaseNetworksResponse
      */
@@ -5079,8 +5371,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries global IP whitelist templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries global IP whitelist templates.</p>
+     * 
      * @param request DescribeGlobalSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGlobalSecurityIPGroupResponse
@@ -5138,8 +5431,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries global IP whitelist templates.
-     *
+     * <b>summary</b> : 
+     * <p>Queries global IP whitelist templates.</p>
+     * 
      * @param request DescribeGlobalSecurityIPGroupRequest
      * @return DescribeGlobalSecurityIPGroupResponse
      */
@@ -5149,8 +5443,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the relationship between a cluster and a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the relationship between a cluster and a global IP whitelist template.</p>
+     * 
      * @param request DescribeGlobalSecurityIPGroupRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeGlobalSecurityIPGroupRelationResponse
@@ -5208,8 +5503,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the relationship between a cluster and a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the relationship between a cluster and a global IP whitelist template.</p>
+     * 
      * @param request DescribeGlobalSecurityIPGroupRelationRequest
      * @return DescribeGlobalSecurityIPGroupRelationResponse
      */
@@ -5219,8 +5515,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the retention policy of log backups in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the retention policy of log backups in a PolarDB cluster.</p>
+     * 
      * @param request DescribeLogBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLogBackupPolicyResponse
@@ -5266,8 +5563,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the retention policy of log backups in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the retention policy of log backups in a PolarDB cluster.</p>
+     * 
      * @param request DescribeLogBackupPolicyRequest
      * @return DescribeLogBackupPolicyResponse
      */
@@ -5277,8 +5575,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the data masking rules of a PolarDB cluster or the information about a specified masking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the data masking rules of a PolarDB cluster or the information about a specified masking rule.</p>
+     * 
      * @param request DescribeMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMaskingRulesResponse
@@ -5312,8 +5611,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the data masking rules of a PolarDB cluster or the information about a specified masking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the data masking rules of a PolarDB cluster or the information about a specified masking rule.</p>
+     * 
      * @param request DescribeMaskingRulesRequest
      * @return DescribeMaskingRulesResponse
      */
@@ -5323,8 +5623,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the databases or tables that can be restored.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the databases or tables that can be restored.</p>
+     * 
      * @param request DescribeMetaListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMetaListResponse
@@ -5398,8 +5699,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the databases or tables that can be restored.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of the databases or tables that can be restored.</p>
+     * 
      * @param request DescribeMetaListRequest
      * @return DescribeMetaListResponse
      */
@@ -5409,11 +5711,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a parameter template.
-     *
-     * @description You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
-     * > This parameter is valid only for a PolarDB for MySQL cluster.
-     *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a parameter template.</p>
+     * 
      * @param request DescribeParameterGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeParameterGroupResponse
@@ -5467,11 +5773,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a parameter template.
-     *
-     * @description You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
-     * > This parameter is valid only for a PolarDB for MySQL cluster.
-     *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p>This parameter is valid only for a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a parameter template.</p>
+     * 
      * @param request DescribeParameterGroupRequest
      * @return DescribeParameterGroupResponse
      */
@@ -5481,11 +5791,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries parameter templates that are available in a specified region.
-     *
-     * @description You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
-     * > This operation is applicable only to PolarDB for MySQL clusters.
-     *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries parameter templates that are available in a specified region.</p>
+     * 
      * @param request DescribeParameterGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeParameterGroupsResponse
@@ -5543,11 +5857,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries parameter templates that are available in a specified region.
-     *
-     * @description You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
-     * > This operation is applicable only to PolarDB for MySQL clusters.
-     *
+     * <b>description</b> :
+     * <p>You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.</p>
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries parameter templates that are available in a specified region.</p>
+     * 
      * @param request DescribeParameterGroupsRequest
      * @return DescribeParameterGroupsResponse
      */
@@ -5557,8 +5875,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the default parameters in a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the default parameters in a cluster.</p>
+     * 
      * @param request DescribeParameterTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeParameterTemplatesResponse
@@ -5616,8 +5935,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the default parameters in a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the default parameters in a cluster.</p>
+     * 
      * @param request DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
      */
@@ -5627,8 +5947,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a pending event.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a pending event.</p>
+     * 
      * @param request DescribePendingMaintenanceActionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePendingMaintenanceActionResponse
@@ -5698,8 +6019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a pending event.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a pending event.</p>
+     * 
      * @param request DescribePendingMaintenanceActionRequest
      * @return DescribePendingMaintenanceActionResponse
      */
@@ -5709,8 +6031,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the numbers of pending events of different task types.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the numbers of pending events of different task types.</p>
+     * 
      * @param request DescribePendingMaintenanceActionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePendingMaintenanceActionsResponse
@@ -5768,8 +6091,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the numbers of pending events of different task types.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the numbers of pending events of different task types.</p>
+     * 
      * @param request DescribePendingMaintenanceActionsRequest
      * @return DescribePendingMaintenanceActionsResponse
      */
@@ -5779,8 +6103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the SQL Explorer feature is enabled for the cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether the SQL Explorer feature is enabled for the cluster.</p>
+     * 
      * @param request DescribePolarSQLCollectorPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePolarSQLCollectorPolicyResponse
@@ -5806,8 +6131,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether the SQL Explorer feature is enabled for the cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries whether the SQL Explorer feature is enabled for the cluster.</p>
+     * 
      * @param request DescribePolarSQLCollectorPolicyRequest
      * @return DescribePolarSQLCollectorPolicyResponse
      */
@@ -5817,8 +6143,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the regions and zones available for PolarDB.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the regions and zones available for PolarDB.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -5860,8 +6187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the regions and zones available for PolarDB.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the regions and zones available for PolarDB.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
@@ -5871,8 +6199,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of all scheduled tasks.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of all scheduled tasks.</p>
+     * 
      * @param request DescribeScheduleTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeScheduleTasksResponse
@@ -5958,8 +6287,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of all scheduled tasks.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of all scheduled tasks.</p>
+     * 
      * @param request DescribeScheduleTasksRequest
      * @return DescribeScheduleTasksResponse
      */
@@ -5969,10 +6299,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the slow query logs of a PolarDB cluster.
-     *
-     * @description > This operation is applicable only to PolarDB for MySQL clusters.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of the slow query logs of a PolarDB cluster.</p>
+     * 
      * @param request DescribeSlowLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSlowLogRecordsResponse
@@ -5990,6 +6324,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -6046,10 +6384,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the slow query logs of a PolarDB cluster.
-     *
-     * @description > This operation is applicable only to PolarDB for MySQL clusters.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of the slow query logs of a PolarDB cluster.</p>
+     * 
      * @param request DescribeSlowLogRecordsRequest
      * @return DescribeSlowLogRecordsResponse
      */
@@ -6059,10 +6401,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics about the slow query logs of a PolarDB cluster.
-     *
-     * @description > This operation is applicable only to PolarDB for MySQL clusters.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics about the slow query logs of a PolarDB cluster.</p>
+     * 
      * @param request DescribeSlowLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSlowLogsResponse
@@ -6132,10 +6478,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statistics about the slow query logs of a PolarDB cluster.
-     *
-     * @description > This operation is applicable only to PolarDB for MySQL clusters.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation is applicable only to PolarDB for MySQL clusters.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statistics about the slow query logs of a PolarDB cluster.</p>
+     * 
      * @param request DescribeSlowLogsRequest
      * @return DescribeSlowLogsResponse
      */
@@ -6145,11 +6495,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the tasks that are generated by calling API operations. For example, you can call this operation to view the details of the task when you create a cluster.
-     *
-     * @description *   You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation or [create a cluster](https://help.aliyun.com/document_detail/58769.html) in the console.
-     * *   You can view the details of tasks that are generated only when you call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation to create a cluster and `CreationOption` is not set to `CreateGdnStandby`.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation or <a href="https://help.aliyun.com/document_detail/58769.html">create a cluster</a> in the console.</p>
+     * <ul>
+     * <li>You can view the details of tasks that are generated only when you call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create a cluster and <code>CreationOption</code> is not set to <code>CreateGdnStandby</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of the tasks that are generated by calling API operations. For example, you can call this operation to view the details of the task when you create a cluster.</p>
+     * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTasksResponse
@@ -6219,11 +6573,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of the tasks that are generated by calling API operations. For example, you can call this operation to view the details of the task when you create a cluster.
-     *
-     * @description *   You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation or [create a cluster](https://help.aliyun.com/document_detail/58769.html) in the console.
-     * *   You can view the details of tasks that are generated only when you call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation to create a cluster and `CreationOption` is not set to `CreateGdnStandby`.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation or <a href="https://help.aliyun.com/document_detail/58769.html">create a cluster</a> in the console.</p>
+     * <ul>
+     * <li>You can view the details of tasks that are generated only when you call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create a cluster and <code>CreationOption</code> is not set to <code>CreateGdnStandby</code>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of the tasks that are generated by calling API operations. For example, you can call this operation to view the details of the task when you create a cluster.</p>
+     * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
      */
@@ -6233,8 +6591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Key Management Service (KMS)-managed customer master keys (CMKs) that are used to encrypt data in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Key Management Service (KMS)-managed customer master keys (CMKs) that are used to encrypt data in a PolarDB cluster.</p>
+     * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserEncryptionKeyListResponse
@@ -6288,8 +6647,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Key Management Service (KMS)-managed customer master keys (CMKs) that are used to encrypt data in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Key Management Service (KMS)-managed customer master keys (CMKs) that are used to encrypt data in a PolarDB cluster.</p>
+     * 
      * @param request DescribeUserEncryptionKeyListRequest
      * @return DescribeUserEncryptionKeyListResponse
      */
@@ -6299,8 +6659,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a vSwitch.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a vSwitch.</p>
+     * 
      * @param request DescribeVSwitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVSwitchesResponse
@@ -6374,8 +6735,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a vSwitch.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a vSwitch.</p>
+     * 
      * @param request DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse
      */
@@ -6385,8 +6747,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables a stable serverless cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Disables a stable serverless cluster.</p>
+     * 
      * @param request DisableDBClusterServerlessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableDBClusterServerlessResponse
@@ -6432,8 +6795,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables a stable serverless cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Disables a stable serverless cluster.</p>
+     * 
      * @param request DisableDBClusterServerlessRequest
      * @return DisableDBClusterServerlessResponse
      */
@@ -6443,8 +6807,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a stable serverless cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Enables a stable serverless cluster.</p>
+     * 
      * @param request EnableDBClusterServerlessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableDBClusterServerlessResponse
@@ -6514,8 +6879,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a stable serverless cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Enables a stable serverless cluster.</p>
+     * 
      * @param request EnableDBClusterServerlessRequest
      * @return EnableDBClusterServerlessResponse
      */
@@ -6525,8 +6891,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改sql防火墙状态
-     *
+     * <b>summary</b> : 
+     * <p>修改sql防火墙状态</p>
+     * 
      * @param request EnableFirewallRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableFirewallRulesResponse
@@ -6580,8 +6947,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改sql防火墙状态
-     *
+     * <b>summary</b> : 
+     * <p>修改sql防火墙状态</p>
+     * 
      * @param request EnableFirewallRulesRequest
      * @return EnableFirewallRulesResponse
      */
@@ -6591,8 +6959,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Evaluates available resources.
-     *
+     * <b>summary</b> : 
+     * <p>Evaluates available resources.</p>
+     * 
      * @param request EvaluateRegionResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EvaluateRegionResourceResponse
@@ -6674,8 +7043,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Evaluates available resources.
-     *
+     * <b>summary</b> : 
+     * <p>Evaluates available resources.</p>
+     * 
      * @param request EvaluateRegionResourceRequest
      * @return EvaluateRegionResourceResponse
      */
@@ -6685,8 +7055,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a manual failover to promote a read-only node to the primary node in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Performs a manual failover to promote a read-only node to the primary node in a PolarDB cluster.</p>
+     * 
      * @param request FailoverDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return FailoverDBClusterResponse
@@ -6744,8 +7115,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Performs a manual failover to promote a read-only node to the primary node in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Performs a manual failover to promote a read-only node to the primary node in a PolarDB cluster.</p>
+     * 
      * @param request FailoverDBClusterRequest
      * @return FailoverDBClusterResponse
      */
@@ -6755,14 +7127,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants a standard account the permissions to access one or more databases in a specified PolarDB cluster.
-     *
-     * @description > *   An account can be authorized to access one or more databases.
-     * > *   If the specified account already has the access permissions on the specified databases, the operation returns a successful response.
-     * > *   Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
-     * > *   You can call this operation only on a PolarDB for MySQL cluster.
-     * > *   By default, a privileged account for a cluster has all the permissions on the databases in the cluster.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>An account can be authorized to access one or more databases.</li>
+     * <li>If the specified account already has the access permissions on the specified databases, the operation returns a successful response.</li>
+     * <li>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</li>
+     * <li>You can call this operation only on a PolarDB for MySQL cluster.</li>
+     * <li>By default, a privileged account for a cluster has all the permissions on the databases in the cluster.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants a standard account the permissions to access one or more databases in a specified PolarDB cluster.</p>
+     * 
      * @param request GrantAccountPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GrantAccountPrivilegeResponse
@@ -6820,14 +7198,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants a standard account the permissions to access one or more databases in a specified PolarDB cluster.
-     *
-     * @description > *   An account can be authorized to access one or more databases.
-     * > *   If the specified account already has the access permissions on the specified databases, the operation returns a successful response.
-     * > *   Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
-     * > *   You can call this operation only on a PolarDB for MySQL cluster.
-     * > *   By default, a privileged account for a cluster has all the permissions on the databases in the cluster.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>An account can be authorized to access one or more databases.</li>
+     * <li>If the specified account already has the access permissions on the specified databases, the operation returns a successful response.</li>
+     * <li>Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.</li>
+     * <li>You can call this operation only on a PolarDB for MySQL cluster.</li>
+     * <li>By default, a privileged account for a cluster has all the permissions on the databases in the cluster.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Grants a standard account the permissions to access one or more databases in a specified PolarDB cluster.</p>
+     * 
      * @param request GrantAccountPrivilegeRequest
      * @return GrantAccountPrivilegeResponse
      */
@@ -6837,8 +7221,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are bound to one or more PolarDB clusters, or queries the PolarDB clusters to which one or more tags are bound.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are bound to one or more PolarDB clusters, or queries the PolarDB clusters to which one or more tags are bound.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -6900,8 +7285,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are bound to one or more PolarDB clusters, or queries the PolarDB clusters to which one or more tags are bound.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are bound to one or more PolarDB clusters, or queries the PolarDB clusters to which one or more tags are bound.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -6911,8 +7297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Manually starts a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Manually starts a cluster.</p>
+     * 
      * @param request ManuallyStartDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ManuallyStartDBClusterResponse
@@ -6962,8 +7349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Manually starts a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Manually starts a cluster.</p>
+     * 
      * @param request ManuallyStartDBClusterRequest
      * @return ManuallyStartDBClusterResponse
      */
@@ -6973,8 +7361,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a database account of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the description of a database account of a PolarDB cluster.</p>
+     * 
      * @param request ModifyAccountDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAccountDescriptionResponse
@@ -7028,8 +7417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a database account of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the description of a database account of a PolarDB cluster.</p>
+     * 
      * @param request ModifyAccountDescriptionRequest
      * @return ModifyAccountDescriptionResponse
      */
@@ -7039,8 +7429,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the password of a database account for a specified PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the password of a database account for a specified PolarDB cluster.</p>
+     * 
      * @param request ModifyAccountPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAccountPasswordResponse
@@ -7098,8 +7489,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the password of a database account for a specified PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the password of a database account for a specified PolarDB cluster.</p>
+     * 
      * @param request ModifyAccountPasswordRequest
      * @return ModifyAccountPasswordResponse
      */
@@ -7109,8 +7501,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the auto-renewal attributes of a subscription PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the auto-renewal attributes of a subscription PolarDB cluster.</p>
+     * 
      * @param request ModifyAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAutoRenewAttributeResponse
@@ -7176,8 +7569,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the auto-renewal attributes of a subscription PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the auto-renewal attributes of a subscription PolarDB cluster.</p>
+     * 
      * @param request ModifyAutoRenewAttributeRequest
      * @return ModifyAutoRenewAttributeResponse
      */
@@ -7187,10 +7581,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the automatic backup policy of a PolarDB cluster.
-     *
-     * @description > You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see [Backup settings](https://help.aliyun.com/document_detail/280422.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the automatic backup policy of a PolarDB cluster.</p>
+     * 
      * @param request ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyBackupPolicyResponse
@@ -7284,10 +7682,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the automatic backup policy of a PolarDB cluster.
-     *
-     * @description > You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see [Backup settings](https://help.aliyun.com/document_detail/280422.html).
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see <a href="https://help.aliyun.com/document_detail/280422.html">Backup settings</a>.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the automatic backup policy of a PolarDB cluster.</p>
+     * 
      * @param request ModifyBackupPolicyRequest
      * @return ModifyBackupPolicyResponse
      */
@@ -7297,8 +7699,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a PolarDB for MySQL cluster.</p>
+     * 
      * @param request ModifyDBClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterResponse
@@ -7314,8 +7717,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeCrashList)) {
+            query.put("DBNodeCrashList", request.DBNodeCrashList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataSyncMode)) {
             query.put("DataSyncMode", request.dataSyncMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faultInjectionType)) {
+            query.put("FaultInjectionType", request.faultInjectionType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.faultSimulateMode)) {
@@ -7368,8 +7779,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a PolarDB for MySQL cluster.</p>
+     * 
      * @param request ModifyDBClusterRequest
      * @return ModifyDBClusterResponse
      */
@@ -7379,8 +7791,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or modifies the whitelists (IP whitelists and security groups) of a specified cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates or modifies the whitelists (IP whitelists and security groups) of a specified cluster.</p>
+     * 
      * @param request ModifyDBClusterAccessWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterAccessWhitelistResponse
@@ -7450,8 +7863,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates or modifies the whitelists (IP whitelists and security groups) of a specified cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates or modifies the whitelists (IP whitelists and security groups) of a specified cluster.</p>
+     * 
      * @param request ModifyDBClusterAccessWhitelistRequest
      * @return ModifyDBClusterAccessWhitelistResponse
      */
@@ -7461,8 +7875,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies cluster parameters and applies them to specified nodes.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies cluster parameters and applies them to specified nodes.</p>
+     * 
      * @param request ModifyDBClusterAndNodesParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterAndNodesParametersResponse
@@ -7532,8 +7947,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies cluster parameters and applies them to specified nodes.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies cluster parameters and applies them to specified nodes.</p>
+     * 
      * @param request ModifyDBClusterAndNodesParametersRequest
      * @return ModifyDBClusterAndNodesParametersResponse
      */
@@ -7543,8 +7959,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables SQL collector for a PolarDB cluster. The features related to SQL collector include Audit Logs and SQL Explorer.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables SQL collector for a PolarDB cluster. The features related to SQL collector include Audit Logs and SQL Explorer.</p>
+     * 
      * @param request ModifyDBClusterAuditLogCollectorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterAuditLogCollectorResponse
@@ -7594,8 +8011,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables SQL collector for a PolarDB cluster. The features related to SQL collector include Audit Logs and SQL Explorer.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables SQL collector for a PolarDB cluster. The features related to SQL collector include Audit Logs and SQL Explorer.</p>
+     * 
      * @param request ModifyDBClusterAuditLogCollectorRequest
      * @return ModifyDBClusterAuditLogCollectorResponse
      */
@@ -7605,8 +8023,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the cluster lock feature for a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables the cluster lock feature for a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterDeletionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterDeletionResponse
@@ -7656,8 +8075,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the cluster lock feature for a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables the cluster lock feature for a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterDeletionRequest
      * @return ModifyDBClusterDeletionResponse
      */
@@ -7667,8 +8087,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name of a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterDescriptionResponse
@@ -7718,8 +8139,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name of a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterDescriptionRequest
      * @return ModifyDBClusterDescriptionResponse
      */
@@ -7729,8 +8151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the attributes of a specified PolarDB cluster endpoint. For example, you can modify the following attributes for the specified cluster endpoint: read/write mode, consistency level, transaction splitting, primary node accepts read requests, and connection pool. You can also call the operation to specify whether newly added nodes are automatically associated with the specified cluster endpoint.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the attributes of a specified PolarDB cluster endpoint. For example, you can modify the following attributes for the specified cluster endpoint: read/write mode, consistency level, transaction splitting, primary node accepts read requests, and connection pool. You can also call the operation to specify whether newly added nodes are automatically associated with the specified cluster endpoint.</p>
+     * 
      * @param request ModifyDBClusterEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterEndpointResponse
@@ -7800,8 +8223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the attributes of a specified PolarDB cluster endpoint. For example, you can modify the following attributes for the specified cluster endpoint: read/write mode, consistency level, transaction splitting, primary node accepts read requests, and connection pool. You can also call the operation to specify whether newly added nodes are automatically associated with the specified cluster endpoint.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the attributes of a specified PolarDB cluster endpoint. For example, you can modify the following attributes for the specified cluster endpoint: read/write mode, consistency level, transaction splitting, primary node accepts read requests, and connection pool. You can also call the operation to specify whether newly added nodes are automatically associated with the specified cluster endpoint.</p>
+     * 
      * @param request ModifyDBClusterEndpointRequest
      * @return ModifyDBClusterEndpointResponse
      */
@@ -7811,10 +8235,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the maintenance window of a PolarDB cluster.
-     *
-     * @description >  We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the maintenance window of a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterMaintainTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterMaintainTimeResponse
@@ -7864,10 +8292,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the maintenance window of a PolarDB cluster.
-     *
-     * @description >  We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the maintenance window of a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterMaintainTimeRequest
      * @return ModifyDBClusterMaintainTimeResponse
      */
@@ -7877,12 +8309,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches or rolls back the task that migrates data from ApsaraDB for RDS to PolarDB.
-     *
-     * @description *   You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.
-     * *   You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.
-     * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](https://help.aliyun.com/document_detail/121582.html).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.</p>
+     * <ul>
+     * <li>You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.<blockquote>
+     * <p>Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Create a PolarDB for MySQL cluster by using the Migration from RDS method</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches or rolls back the task that migrates data from ApsaraDB for RDS to PolarDB.</p>
+     * 
      * @param request ModifyDBClusterMigrationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterMigrationResponse
@@ -7948,12 +8386,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Switches or rolls back the task that migrates data from ApsaraDB for RDS to PolarDB.
-     *
-     * @description *   You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.
-     * *   You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.
-     * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](https://help.aliyun.com/document_detail/98169.html) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](https://help.aliyun.com/document_detail/121582.html).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.</p>
+     * <ul>
+     * <li>You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.<blockquote>
+     * <p>Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the <a href="https://help.aliyun.com/document_detail/98169.html">CreateDBCluster</a> operation to create an upgrade task. Set the <strong>CreationOption</strong> parameter to <strong>MigrationFromRDS</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">Create a PolarDB for MySQL cluster by using the Migration from RDS method</a>.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Switches or rolls back the task that migrates data from ApsaraDB for RDS to PolarDB.</p>
+     * 
      * @param request ModifyDBClusterMigrationRequest
      * @return ModifyDBClusterMigrationResponse
      */
@@ -7963,20 +8407,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the interval at which the monitoring data of a PolarDB cluster is collected.
-     *
-     * @description *   When the monitoring data is collected every 5 seconds:
+     * <b>description</b> :
+     * <p>  When the monitoring data is collected every 5 seconds:
      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * *   When the monitoring data is collected every 60 seconds:
-     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     *
+     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
+     * <ul>
+     * <li>When the monitoring data is collected every 60 seconds:<ul>
+     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
+     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
+     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the interval at which the monitoring data of a PolarDB cluster is collected.</p>
+     * 
      * @param request ModifyDBClusterMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterMonitorResponse
@@ -8026,20 +8476,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the interval at which the monitoring data of a PolarDB cluster is collected.
-     *
-     * @description *   When the monitoring data is collected every 5 seconds:
+     * <b>description</b> :
+     * <p>  When the monitoring data is collected every 5 seconds:
      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     * *   When the monitoring data is collected every 60 seconds:
-     *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
-     *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
-     *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
-     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
-     *
+     *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</p>
+     * <ul>
+     * <li>When the monitoring data is collected every 60 seconds:<ul>
+     * <li>If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.</li>
+     * <li>If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.</li>
+     * <li>If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.</li>
+     * <li>When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the interval at which the monitoring data of a PolarDB cluster is collected.</p>
+     * 
      * @param request ModifyDBClusterMonitorRequest
      * @return ModifyDBClusterMonitorResponse
      */
@@ -8049,12 +8505,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the parameters of a specified PolarDB cluster or applies existing parameter templates to a specified cluster.
-     *
-     * @description PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
+     * <b>description</b> :
+     * <p>PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.
      * **
-     * **Only PolarDB for MySQL clusters support parameter templates.
-     *
+     * **Only PolarDB for MySQL clusters support parameter templates.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of a specified PolarDB cluster or applies existing parameter templates to a specified cluster.</p>
+     * 
      * @param request ModifyDBClusterParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterParametersResponse
@@ -8120,12 +8578,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the parameters of a specified PolarDB cluster or applies existing parameter templates to a specified cluster.
-     *
-     * @description PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see [Use a parameter template](https://help.aliyun.com/document_detail/207009.html).
+     * <b>description</b> :
+     * <p>PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/207009.html">Use a parameter template</a>.
      * **
-     * **Only PolarDB for MySQL clusters support parameter templates.
-     *
+     * **Only PolarDB for MySQL clusters support parameter templates.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of a specified PolarDB cluster or applies existing parameter templates to a specified cluster.</p>
+     * 
      * @param request ModifyDBClusterParametersRequest
      * @return ModifyDBClusterParametersResponse
      */
@@ -8135,8 +8595,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the primary zone of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the primary zone of a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterPrimaryZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterPrimaryZoneResponse
@@ -8214,8 +8675,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the primary zone of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the primary zone of a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterPrimaryZoneRequest
      * @return ModifyDBClusterPrimaryZoneResponse
      */
@@ -8287,8 +8749,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterSSLResponse
@@ -8350,8 +8813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables Secure Sockets Layer (SSL) encryption or updates the Certificate Authorities (CA) certificate for a specified PolarDB cluster.</p>
+     * 
      * @param request ModifyDBClusterSSLRequest
      * @return ModifyDBClusterSSLResponse
      */
@@ -8361,8 +8825,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a serverless cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a serverless cluster.</p>
+     * 
      * @param request ModifyDBClusterServerlessConfRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterServerlessConfResponse
@@ -8464,8 +8929,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of a serverless cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of a serverless cluster.</p>
+     * 
      * @param request ModifyDBClusterServerlessConfRequest
      * @return ModifyDBClusterServerlessConfResponse
      */
@@ -8475,8 +8941,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the storage capacity of a pay-as-you-go cluster of Enterprise Edition or a cluster of Standard Edition.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the storage capacity of a pay-as-you-go cluster of Enterprise Edition or a cluster of Standard Edition.</p>
+     * 
      * @param request ModifyDBClusterStorageSpaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterStorageSpaceResponse
@@ -8542,8 +9009,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the storage capacity of a pay-as-you-go cluster of Enterprise Edition or a cluster of Standard Edition.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the storage capacity of a pay-as-you-go cluster of Enterprise Edition or a cluster of Standard Edition.</p>
+     * 
      * @param request ModifyDBClusterStorageSpaceRequest
      * @return ModifyDBClusterStorageSpaceResponse
      */
@@ -8553,11 +9021,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the TDE feature or changes the encryption method for a specified PolarDB for MySQL cluster.
-     *
-     * @description > *   To perform this operation, you must activate KMS first. For more information, see [Purchase a dedicated KMS instance](https://help.aliyun.com/document_detail/153781.html).
-     * > *   After TDE is enabled, you cannot disable TDE.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>To perform this operation, you must activate KMS first. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</li>
+     * <li>After TDE is enabled, you cannot disable TDE.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the TDE feature or changes the encryption method for a specified PolarDB for MySQL cluster.</p>
+     * 
      * @param request ModifyDBClusterTDERequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBClusterTDEResponse
@@ -8619,11 +9093,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the TDE feature or changes the encryption method for a specified PolarDB for MySQL cluster.
-     *
-     * @description > *   To perform this operation, you must activate KMS first. For more information, see [Purchase a dedicated KMS instance](https://help.aliyun.com/document_detail/153781.html).
-     * > *   After TDE is enabled, you cannot disable TDE.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>To perform this operation, you must activate KMS first. For more information, see <a href="https://help.aliyun.com/document_detail/153781.html">Purchase a dedicated KMS instance</a>.</li>
+     * <li>After TDE is enabled, you cannot disable TDE.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables the TDE feature or changes the encryption method for a specified PolarDB for MySQL cluster.</p>
+     * 
      * @param request ModifyDBClusterTDERequest
      * @return ModifyDBClusterTDEResponse
      */
@@ -8633,8 +9113,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a database in a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the description of a database in a PolarDB for MySQL cluster.</p>
+     * 
      * @param request ModifyDBDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBDescriptionResponse
@@ -8688,8 +9169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a database in a PolarDB for MySQL cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the description of a database in a PolarDB for MySQL cluster.</p>
+     * 
      * @param request ModifyDBDescriptionRequest
      * @return ModifyDBDescriptionResponse
      */
@@ -8699,8 +9181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, custom cluster endpoint, and private domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, custom cluster endpoint, and private domain name.</p>
+     * 
      * @param request ModifyDBEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBEndpointAddressResponse
@@ -8770,8 +9253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, custom cluster endpoint, and private domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the endpoints of a PolarDB cluster, including the primary endpoint, default cluster endpoint, custom cluster endpoint, and private domain name.</p>
+     * 
      * @param request ModifyDBEndpointAddressRequest
      * @return ModifyDBEndpointAddressResponse
      */
@@ -8781,8 +9265,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the node specifications of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the node specifications of a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBNodeClassRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBNodeClassResponse
@@ -8856,8 +9341,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the node specifications of a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the node specifications of a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBNodeClassRequest
      * @return ModifyDBNodeClassResponse
      */
@@ -8867,8 +9353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables a cluster node.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables a cluster node.</p>
+     * 
      * @param request ModifyDBNodeHotReplicaModeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBNodeHotReplicaModeResponse
@@ -8922,8 +9409,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables a cluster node.
-     *
+     * <b>summary</b> : 
+     * <p>Enables or disables a cluster node.</p>
+     * 
      * @param request ModifyDBNodeHotReplicaModeRequest
      * @return ModifyDBNodeHotReplicaModeResponse
      */
@@ -8933,8 +9421,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the specifications of a node in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the specifications of a node in a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBNodesClassRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBNodesClassResponse
@@ -9004,8 +9493,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the specifications of a node in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the specifications of a node in a PolarDB cluster.</p>
+     * 
      * @param request ModifyDBNodesClassRequest
      * @return ModifyDBNodesClassResponse
      */
@@ -9015,8 +9505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the parameters of a node and applies them to specified nodes.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of a node and applies them to specified nodes.</p>
+     * 
      * @param request ModifyDBNodesParametersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyDBNodesParametersResponse
@@ -9086,8 +9577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the parameters of a node and applies them to specified nodes.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the parameters of a node and applies them to specified nodes.</p>
+     * 
      * @param request ModifyDBNodesParametersRequest
      * @return ModifyDBNodesParametersResponse
      */
@@ -9097,8 +9589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a Global Database Network (GDN).
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a Global Database Network (GDN).</p>
+     * 
      * @param request ModifyGlobalDatabaseNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyGlobalDatabaseNetworkResponse
@@ -9156,8 +9649,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a Global Database Network (GDN).
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a Global Database Network (GDN).</p>
+     * 
      * @param request ModifyGlobalDatabaseNetworkRequest
      * @return ModifyGlobalDatabaseNetworkResponse
      */
@@ -9167,8 +9661,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies an IP whitelist template.</p>
+     * 
      * @param request ModifyGlobalSecurityIPGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyGlobalSecurityIPGroupResponse
@@ -9234,8 +9729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies an IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies an IP whitelist template.</p>
+     * 
      * @param request ModifyGlobalSecurityIPGroupRequest
      * @return ModifyGlobalSecurityIPGroupResponse
      */
@@ -9245,8 +9741,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name of a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name of a global IP whitelist template.</p>
+     * 
      * @param request ModifyGlobalSecurityIPGroupNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyGlobalSecurityIPGroupNameResponse
@@ -9308,8 +9805,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the name of a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the name of a global IP whitelist template.</p>
+     * 
      * @param request ModifyGlobalSecurityIPGroupNameRequest
      * @return ModifyGlobalSecurityIPGroupNameResponse
      */
@@ -9319,8 +9817,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the relationship between a cluster and a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the relationship between a cluster and a global IP whitelist template.</p>
+     * 
      * @param request ModifyGlobalSecurityIPGroupRelationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyGlobalSecurityIPGroupRelationResponse
@@ -9382,8 +9881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the relationship between a cluster and a global IP whitelist template.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the relationship between a cluster and a global IP whitelist template.</p>
+     * 
      * @param request ModifyGlobalSecurityIPGroupRelationRequest
      * @return ModifyGlobalSecurityIPGroupRelationResponse
      */
@@ -9393,8 +9893,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the retention policy of the log backups in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the retention policy of the log backups in a PolarDB cluster.</p>
+     * 
      * @param request ModifyLogBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyLogBackupPolicyResponse
@@ -9452,8 +9953,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the retention policy of the log backups in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the retention policy of the log backups in a PolarDB cluster.</p>
+     * 
      * @param request ModifyLogBackupPolicyRequest
      * @return ModifyLogBackupPolicyResponse
      */
@@ -9463,8 +9965,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies or adds a data masking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies or adds a data masking rule.</p>
+     * 
      * @param request ModifyMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMaskingRulesResponse
@@ -9514,8 +10017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies or adds a data masking rule.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies or adds a data masking rule.</p>
+     * 
      * @param request ModifyMaskingRulesRequest
      * @return ModifyMaskingRulesResponse
      */
@@ -9525,8 +10029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the switching time of a pending event.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the switching time of a pending event.</p>
+     * 
      * @param request ModifyPendingMaintenanceActionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyPendingMaintenanceActionResponse
@@ -9588,8 +10093,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the switching time of a pending event.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the switching time of a pending event.</p>
+     * 
      * @param request ModifyPendingMaintenanceActionRequest
      * @return ModifyPendingMaintenanceActionResponse
      */
@@ -9599,8 +10105,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the PolarDB for AI feature for a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Enables the PolarDB for AI feature for a cluster.</p>
+     * 
      * @param request OpenAITaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenAITaskResponse
@@ -9666,8 +10173,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables the PolarDB for AI feature for a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Enables the PolarDB for AI feature for a cluster.</p>
+     * 
      * @param request OpenAITaskRequest
      * @return OpenAITaskResponse
      */
@@ -9677,8 +10185,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the storage usage of a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the storage usage of a cluster.</p>
+     * 
      * @param request RefreshDBClusterStorageUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RefreshDBClusterStorageUsageResponse
@@ -9724,8 +10233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the storage usage of a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the storage usage of a cluster.</p>
+     * 
      * @param request RefreshDBClusterStorageUsageRequest
      * @return RefreshDBClusterStorageUsageResponse
      */
@@ -9735,10 +10245,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a secondary cluster from a GDN.
-     *
-     * @description >  You cannot remove the primary cluster from a GDN.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot remove the primary cluster from a GDN.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a secondary cluster from a GDN.</p>
+     * 
      * @param request RemoveDBClusterFromGDNRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveDBClusterFromGDNResponse
@@ -9792,10 +10306,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes a secondary cluster from a GDN.
-     *
-     * @description >  You cannot remove the primary cluster from a GDN.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You cannot remove the primary cluster from a GDN.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes a secondary cluster from a GDN.</p>
+     * 
      * @param request RemoveDBClusterFromGDNRequest
      * @return RemoveDBClusterFromGDNResponse
      */
@@ -9805,11 +10323,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the permissions of a privileged account for a PolarDB cluster.
-     *
-     * @description >- Only PolarDB for MySQL clusters support this operation.
-     * >- If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Only PolarDB for MySQL clusters support this operation.</li>
+     * <li>If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the permissions of a privileged account for a PolarDB cluster.</p>
+     * 
      * @param request ResetAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetAccountResponse
@@ -9863,11 +10387,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the permissions of a privileged account for a PolarDB cluster.
-     *
-     * @description >- Only PolarDB for MySQL clusters support this operation.
-     * >- If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Only PolarDB for MySQL clusters support this operation.</li>
+     * <li>If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Resets the permissions of a privileged account for a PolarDB cluster.</p>
+     * 
      * @param request ResetAccountRequest
      * @return ResetAccountResponse
      */
@@ -9877,8 +10407,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rebuilds a secondary cluster in a Global Database Network (GDN).
-     *
+     * <b>summary</b> : 
+     * <p>Rebuilds a secondary cluster in a Global Database Network (GDN).</p>
+     * 
      * @param request ResetGlobalDatabaseNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetGlobalDatabaseNetworkResponse
@@ -9936,8 +10467,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rebuilds a secondary cluster in a Global Database Network (GDN).
-     *
+     * <b>summary</b> : 
+     * <p>Rebuilds a secondary cluster in a Global Database Network (GDN).</p>
+     * 
      * @param request ResetGlobalDatabaseNetworkRequest
      * @return ResetGlobalDatabaseNetworkResponse
      */
@@ -9947,8 +10479,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 重启代理
-     *
+     * <b>summary</b> : 
+     * <p>Restarts database links.</p>
+     * 
      * @param request RestartDBLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestartDBLinkResponse
@@ -9998,8 +10531,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 重启代理
-     *
+     * <b>summary</b> : 
+     * <p>Restarts database links.</p>
+     * 
      * @param request RestartDBLinkRequest
      * @return RestartDBLinkResponse
      */
@@ -10009,8 +10543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts a node in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts a node in a PolarDB cluster.</p>
+     * 
      * @param request RestartDBNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestartDBNodeResponse
@@ -10056,8 +10591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restarts a node in a PolarDB cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Restarts a node in a PolarDB cluster.</p>
+     * 
      * @param request RestartDBNodeRequest
      * @return RestartDBNodeResponse
      */
@@ -10067,8 +10603,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores PolarDB databases and tables.
-     *
+     * <b>summary</b> : 
+     * <p>Restores PolarDB databases and tables.</p>
+     * 
      * @param request RestoreTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RestoreTableResponse
@@ -10130,8 +10667,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Restores PolarDB databases and tables.
-     *
+     * <b>summary</b> : 
+     * <p>Restores PolarDB databases and tables.</p>
+     * 
      * @param request RestoreTableRequest
      * @return RestoreTableResponse
      */
@@ -10141,8 +10679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes the access permissions on one or more databases from a specified PolarDB standard account.
-     *
+     * <b>summary</b> : 
+     * <p>Revokes the access permissions on one or more databases from a specified PolarDB standard account.</p>
+     * 
      * @param request RevokeAccountPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevokeAccountPrivilegeResponse
@@ -10196,8 +10735,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes the access permissions on one or more databases from a specified PolarDB standard account.
-     *
+     * <b>summary</b> : 
+     * <p>Revokes the access permissions on one or more databases from a specified PolarDB standard account.</p>
+     * 
      * @param request RevokeAccountPrivilegeRequest
      * @return RevokeAccountPrivilegeResponse
      */
@@ -10347,8 +10887,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Temporarily upgrades the configuration of a PolarDB cluster or adds one or more nodes to a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Temporarily upgrades the configuration of a PolarDB cluster or adds one or more nodes to a cluster.</p>
+     * 
      * @param request TempModifyDBNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TempModifyDBNodeResponse
@@ -10414,8 +10955,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Temporarily upgrades the configuration of a PolarDB cluster or adds one or more nodes to a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Temporarily upgrades the configuration of a PolarDB cluster or adds one or more nodes to a cluster.</p>
+     * 
      * @param request TempModifyDBNodeRequest
      * @return TempModifyDBNodeResponse
      */
@@ -10425,12 +10967,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the billing method of a PolarDB cluster.
-     *
-     * @description > *   PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see [Change the billing method from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/172886.html) and [Change the billing method from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/84076.html).
-     * >*   You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.
-     * >*   If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change the billing method from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change the billing method from pay-as-you-go to subscription</a>.</li>
+     * <li>You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.</li>
+     * <li>If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the billing method of a PolarDB cluster.</p>
+     * 
      * @param request TransformDBClusterPayTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TransformDBClusterPayTypeResponse
@@ -10500,12 +11048,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the billing method of a PolarDB cluster.
-     *
-     * @description > *   PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see [Change the billing method from subscription to pay-as-you-go](https://help.aliyun.com/document_detail/172886.html) and [Change the billing method from pay-as-you-go to subscription](https://help.aliyun.com/document_detail/84076.html).
-     * >*   You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.
-     * >*   If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/172886.html">Change the billing method from subscription to pay-as-you-go</a> and <a href="https://help.aliyun.com/document_detail/84076.html">Change the billing method from pay-as-you-go to subscription</a>.</li>
+     * <li>You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.</li>
+     * <li>If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the billing method of a PolarDB cluster.</p>
+     * 
      * @param request TransformDBClusterPayTypeRequest
      * @return TransformDBClusterPayTypeResponse
      */
@@ -10515,8 +11069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds tags from PolarDB clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Unbinds tags from PolarDB clusters.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -10578,8 +11133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds tags from PolarDB clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Unbinds tags from PolarDB clusters.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -10589,11 +11145,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades the kernel version of a PolarDB for MySQL cluster.
-     *
-     * @description > *  You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-     * >*   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.</li>
+     * <li>You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the kernel version of a PolarDB for MySQL cluster.</p>
+     * 
      * @param request UpgradeDBClusterVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeDBClusterVersionResponse
@@ -10671,11 +11233,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Upgrades the kernel version of a PolarDB for MySQL cluster.
-     *
-     * @description > *  You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
-     * >*   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.</li>
+     * <li>You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the kernel version of a PolarDB for MySQL cluster.</p>
+     * 
      * @param request UpgradeDBClusterVersionRequest
      * @return UpgradeDBClusterVersionResponse
      */

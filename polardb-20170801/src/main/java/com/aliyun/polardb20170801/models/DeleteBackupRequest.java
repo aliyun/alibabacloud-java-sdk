@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class DeleteBackupRequest extends TeaModel {
     /**
      * <p>The backup ID. If you need to specify multiple backup IDs, separate the backup IDs with commas (,).</p>
-     * <br>
-     * <p>>  You can call the [DescribeBackups](https://help.aliyun.com/document_detail/98102.html) operation to query the backup IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98102.html">DescribeBackups</a> operation to query the backup IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111111</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

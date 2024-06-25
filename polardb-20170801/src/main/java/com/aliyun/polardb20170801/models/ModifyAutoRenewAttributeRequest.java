@@ -6,20 +6,24 @@ import com.aliyun.tea.*;
 public class ModifyAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-***************</p>
      */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
 
     /**
      * <p>The automatic renewal period.</p>
-     * <br>
-     * <p> </p>
-     * <p>*   Valid values when **PeriodUnit** is set to **Month**: `1, 2, 3, 6, and 12`.</p>
-     * <p>*   Valid values when **PeriodUnit** is set to **Year**: `1, 2, and 3`.</p>
-     * <p> </p>
-     * <p>Default value: **1**.</p>
+     * <ul>
+     * <li>Valid values when you set the <strong>PeriodUnit</strong> parameter to <strong>Month</strong>: <code>1, 2, 3, 6, and 12</code>.</li>
+     * <li>Valid values when you set the <strong>PeriodUnit</strong> parameter to <strong>Year</strong>: <code>1, 2, and 3</code>.</li>
+     * </ul>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public String duration;
@@ -32,42 +36,55 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
 
     /**
      * <p>The unit of the renewal period. Valid values:</p>
-     * <p> </p>
-     * <p>*   **Year**</p>
-     * <p>*   **Month**</p>
-     * <p> </p>
-     * <p>Default value: **Month**.</p>
+     * <ul>
+     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong></li>
+     * </ul>
+     * <p>Default value: <strong>Month</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
-     * <p>The ID of the region. The region ID can be up to 50 characters in length.</p>
-     * <p>cn-hangzhou</p>
-     * <p> </p>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.</p>
-     * <br>
+     * <p>The ID of the region. The region ID can be up to 50 characters in length.
+     * cn-hangzhou</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The auto-renewal state of the cluster. Valid values:</p>
-     * <p> </p>
-     * <p>*   **AutoRenewal:** The cluster are automatically renewed.</p>
-     * <p>*   **Normal**: The cluster is manually renewed.</p>
-     * <p>*   **NotRenewal:** The cluster is not renewed after expiration.</p>
-     * <p> </p>
-     * <p>Default value: **AutoRenewal**.</p>
-     * <p> </p>
-     * <p>>  If this parameter is set to **NotRenewal**, the system does not send a text message for the cluster expiration, but only sends a message three days before the cluster expires to remind you that the cluster is not renewed.</p>
+     * <p>The auto-renewal status of the cluster. Valid values:</p>
+     * <ul>
+     * <li><strong>AutoRenewal:</strong> The cluster is automatically renewed.</li>
+     * <li><strong>Normal</strong>: The cluster is manually renewed.</li>
+     * <li><strong>NotRenewal:</strong> The cluster is not renewed after expiration.</li>
+     * </ul>
+     * <p>Default value: <strong>AutoRenewal</strong>.</p>
+     * <blockquote>
+     * <p> If you set this parameter to <strong>NotRenewal</strong>, the system sends a notification that indicates the cluster is not renewed three days before the cluster expires. After the cluster expires, the system no longer sends a notification.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>AutoRenewal</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

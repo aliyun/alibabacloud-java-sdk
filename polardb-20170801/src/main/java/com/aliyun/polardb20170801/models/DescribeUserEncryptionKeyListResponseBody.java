@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,6 +21,9 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

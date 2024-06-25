@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterResourceGroupRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-*************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-**********</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -22,6 +28,10 @@ public class ModifyDBClusterResourceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-**********</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

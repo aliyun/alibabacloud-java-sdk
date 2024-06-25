@@ -6,26 +6,36 @@ import com.aliyun.tea.*;
 public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable No-activity Suspension. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AllowShutDown")
     public String allowShutDown;
 
     /**
      * <p>The ID of the serverless cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp10gr51qasnl****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:</p>
-     * <br>
-     * <p>*   false: scheduled task</p>
-     * <p>*   true: immediate task</p>
+     * <ul>
+     * <li>false: scheduled task</li>
+     * <li>true: immediate task</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("FromTimeService")
     public Boolean fromTimeService;
@@ -38,17 +48,30 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
 
     /**
      * <p>The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
-     * <p>> * The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</p>
-     * <p>>*   If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: `PlannedEndTime value + 30 minutes`. For example, if you set PlannedStartTime to `2021-01-14T09:00:00Z` and you do not specify PlannedEndTime, the latest start time of the task is set to `2021-01-14T09:30:00Z`.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</li>
+     * <li>If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: <code>PlannedEndTime value + 30 minutes</code>. For example, if you set PlannedStartTime to <code>2021-01-14T09:00:00Z</code> and you do not specify PlannedEndTime, the latest start time of the task is set to <code>2021-01-14T09:30:00Z</code>.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-14T09:30:00Z</p>
      */
     @NameInMap("PlannedEndTime")
     public String plannedEndTime;
 
     /**
      * <p>The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> *   The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is `2021-01-14T09:00:00Z`, you can specify a point in time between `2021-01-14T09:00:00Z` and `2021-01-15T09:00:00Z`.</p>
-     * <p>>*   If you leave this parameter empty, the task for adding the read-only node is immediately run by default.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is <code>2021-01-14T09:00:00Z</code>, you can specify a point in time between <code>2021-01-14T09:00:00Z</code> and <code>2021-01-15T09:00:00Z</code>.</li>
+     * <li>If you leave this parameter empty, the task for adding the read-only node is immediately run by default.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-14T09:00:00Z</p>
      */
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;
@@ -61,42 +84,63 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
 
     /**
      * <p>The maximum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ScaleApRoNumMax")
     public String scaleApRoNumMax;
 
     /**
      * <p>The minimum number of stable AP read-only nodes. Valid values: 0 to 7.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ScaleApRoNumMin")
     public String scaleApRoNumMin;
 
     /**
      * <p>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("ScaleMax")
     public String scaleMax;
 
     /**
      * <p>The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ScaleMin")
     public String scaleMin;
 
     /**
      * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ScaleRoNumMax")
     public String scaleRoNumMax;
 
     /**
      * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ScaleRoNumMin")
     public String scaleRoNumMin;
 
     /**
      * <p>The detection period for No-activity Suspension. Valid values: 5 to 1440. Unit: minutes. The detection duration must be a multiple of 5 minutes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("SecondsUntilAutoPause")
     public String secondsUntilAutoPause;

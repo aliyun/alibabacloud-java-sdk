@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CloseAITaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>936C7025-27A5-4CB1-BB31-540E1F0CCA12</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task for disabling the PolarDB for AI feature.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53879cdb-9a00-428e-acaf-ff4cff******</p>
      */
     @NameInMap("TaskId")
     public String taskId;

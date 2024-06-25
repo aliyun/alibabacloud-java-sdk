@@ -12,6 +12,9 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2B19F698-8FFC-4918-B9E2-58D878******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     public static class DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEnginesAvailableResources extends TeaModel {
         /**
          * <p>The edition of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: Cluster Edition.</p>
-         * <p>*   **Basic**: Single Node Edition.</p>
-         * <p>*   **ArchiveNormal**: X-Engine.</p>
-         * <p>*   **NormalMultimaster**: Multi-master Cluster (Database/Table) Edition.</p>
-         * <p>*   **SENormal**: Standard Edition.</p>
-         * <br>
-         * <p>>- Only PolarDB for MySQL supports Single Node Edition.</p>
-         * <p>>- Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: Cluster Edition.</li>
+         * <li><strong>Basic</strong>: Single Node Edition.</li>
+         * <li><strong>ArchiveNormal</strong>: X-Engine.</li>
+         * <li><strong>NormalMultimaster</strong>: Multi-master Cluster (Database/Table) Edition.</li>
+         * <li><strong>SENormal</strong>: Standard Edition.</li>
+         * </ul>
+         * <blockquote>
+         * <ul>
+         * <li>Only PolarDB for MySQL supports Single Node Edition.</li>
+         * <li>Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The specifications of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.large</p>
          */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
@@ -91,6 +104,9 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql57</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -121,6 +137,9 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     public static class DescribeDBClusterAvailableResourcesResponseBodyAvailableZones extends TeaModel {
         /**
          * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -133,6 +152,9 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
 
         /**
          * <p>The zone ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

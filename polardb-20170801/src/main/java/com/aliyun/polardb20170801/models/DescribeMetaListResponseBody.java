@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeMetaListResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1s826a1up******</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,30 +21,45 @@ public class DescribeMetaListResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA815DE7-B576-4B22-B33C-3FB31A******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalPageCount")
     public String totalPageCount;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalRecordCount")
     public String totalRecordCount;
@@ -110,6 +128,9 @@ public class DescribeMetaListResponseBody extends TeaModel {
     public static class DescribeMetaListResponseBodyItems extends TeaModel {
         /**
          * <p>The name of the database that can be restored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         @NameInMap("Database")
         public String database;

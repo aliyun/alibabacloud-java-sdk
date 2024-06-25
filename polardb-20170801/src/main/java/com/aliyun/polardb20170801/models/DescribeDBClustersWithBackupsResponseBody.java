@@ -12,24 +12,36 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of clusters returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F8529AA2-522F-4B30-B80B-8F7D39******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -82,143 +94,207 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
     public static class DescribeDBClustersWithBackupsResponseBodyItemsDBCluster extends TeaModel {
         /**
          * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-09T09:33:51Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
         /**
          * <p>The ID of cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-****************</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
          * <p>The network type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("DBClusterNetworkType")
         public String DBClusterNetworkType;
 
         /**
          * <p>The status of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   Creating: The cluster is being created.</p>
-         * <p>*   Running: The cluster is running.</p>
-         * <p>*   Deleting: The cluster is being released.</p>
-         * <p>*   Rebooting: The cluster is restarting.</p>
-         * <p>*   DBNodeCreating: The node is being added.</p>
-         * <p>*   DBNodeDeleting: The node is being deleted.</p>
-         * <p>*   ClassChanging: The specifications of the node are being changed.</p>
-         * <p>*   NetAddressCreating: The network connection is being created.</p>
-         * <p>*   NetAddressDeleting: The network connection is being deleted.</p>
-         * <p>*   NetAddressModifying: The network connection is being modified.</p>
-         * <p>*   Deleted: The cluster has been released.</p>
+         * <ul>
+         * <li>Creating: The cluster is being created.</li>
+         * <li>Running: The cluster is running.</li>
+         * <li>Deleting: The cluster is being released.</li>
+         * <li>Rebooting: The cluster is restarting.</li>
+         * <li>DBNodeCreating: The node is being added.</li>
+         * <li>DBNodeDeleting: The node is being deleted.</li>
+         * <li>ClassChanging: The specifications of the node are being changed.</li>
+         * <li>NetAddressCreating: The network connection is being created.</li>
+         * <li>NetAddressDeleting: The network connection is being deleted.</li>
+         * <li>NetAddressModifying: The network connection is being modified.</li>
+         * <li>Deleted: The cluster has been released.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;
 
         /**
          * <p>The specifications of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.medium</p>
          */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
         /**
          * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("DBType")
         public String DBType;
 
         /**
          * <p>The version of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         @NameInMap("DBVersion")
         public String DBVersion;
 
         /**
          * <p>The time when the cluster was deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-12T03:25:37Z</p>
          */
         @NameInMap("DeletedTime")
         public String deletedTime;
 
         /**
          * <p>Indicates whether the cluster is locked and can be deleted. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The cluster is not locked and can be deleted.</p>
-         * <p>*   **1**: The cluster is locked and cannot be deleted.</p>
+         * <ul>
+         * <li><strong>0</strong>: The cluster is not locked and can be deleted.</li>
+         * <li><strong>1</strong>: The cluster is locked and cannot be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeletionLock")
         public Integer deletionLock;
 
         /**
          * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POLARDB</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The time when the cluster expires.</p>
-         * <br>
-         * <p>> A specific value will be returned only for subscription clusters. For pay-as-you-go clusters, an empty string will be returned.</p>
+         * <blockquote>
+         * <p>A specific value will be returned only for subscription clusters. For pay-as-you-go clusters, an empty string will be returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-14T16:00:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>Indicates whether the cluster has expired.</p>
-         * <br>
-         * <p>> A specific value will be returned only for subscription clusters.</p>
+         * <blockquote>
+         * <p>A specific value will be returned only for subscription clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Expired")
         public String expired;
 
         /**
          * <p>Indicates whether the cluster was released. Valid values:</p>
-         * <br>
-         * <p>*   1: released</p>
-         * <p>*   0: not released</p>
+         * <ul>
+         * <li>1: released</li>
+         * <li>0: not released</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IsDeleted")
         public Integer isDeleted;
 
         /**
          * <p>The state of the cluster lock. Valid values:</p>
-         * <br>
-         * <p>*   **Unlock**: The cluster is not locked.</p>
-         * <p>*   **ManualLock**: The cluster is manually locked.</p>
-         * <p>*   **LockByExpiration**: The cluster is automatically locked after the cluster expires.</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The cluster is not locked.</li>
+         * <li><strong>ManualLock</strong>: The cluster is manually locked.</li>
+         * <li><strong>LockByExpiration</strong>: The cluster is automatically locked after the cluster expires.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Unlock</p>
          */
         @NameInMap("LockMode")
         public String lockMode;
 
         /**
          * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   **Postpaid**: pay-as-you-go.</p>
-         * <p>*   **Prepaid**: subscription</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Postpaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The VPC ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-******************</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The ID of the zone in which the instance is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -5,21 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
-     * <p>The type of the database engine. Only **MySQL** is supported.</p>
-     * <br>
+     * <p>The type of the database engine. Only <strong>MySQL</strong> is supported.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("DBType")
     public String DBType;
 
     /**
      * <p>The version of the database. Valid values:</p>
-     * <br>
-     * <p>*   **5.6**</p>
-     * <p>*   **5.7**</p>
-     * <p>*   **8.0**</p>
-     * <br>
+     * <ul>
+     * <li><strong>5.6</strong></li>
+     * <li><strong>5.7</strong></li>
+     * <li><strong>8.0</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.7</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
@@ -32,16 +37,22 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query all regions that are available within your account, such as the region IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available within your account, such as the region IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AllowShutDown")
     public String allowShutDown;
 
     /**
      * <p>The ID of the serverless cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp10gr51qasnl****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E71541A-6007-4DCC-A38A-F872C31FEB45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,30 +43,45 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ScaleMax")
     public String scaleMax;
 
     /**
      * <p>The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ScaleMin")
     public String scaleMin;
 
     /**
      * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("ScaleRoNumMax")
     public String scaleRoNumMax;
 
     /**
      * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ScaleRoNumMin")
     public String scaleRoNumMin;
 
     /**
      * <p>The detection period for no-activity suspension. Valid values: 300 to 86400. Unit: seconds. The value must be a multiple of 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("SecondsUntilAutoPause")
     public String secondsUntilAutoPause;

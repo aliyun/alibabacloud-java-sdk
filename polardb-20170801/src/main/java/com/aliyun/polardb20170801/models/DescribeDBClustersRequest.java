@@ -6,63 +6,93 @@ import com.aliyun.tea.*;
 public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>The endpoint of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>********.rwlb.polardb-pg-public.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>The description of the cluster. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
     /**
      * <p>The ID of the cluster. Separate multiple cluster IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-****************</p>
      */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
 
     /**
-     * <p>The state of the cluster that you want to query. For information about valid values, see [Cluster states](https://help.aliyun.com/document_detail/99286.html).</p>
+     * <p>The state of the cluster that you want to query. For information about valid values, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster states</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
 
     /**
      * <p>The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-***************</p>
      */
     @NameInMap("DBNodeIds")
     public String DBNodeIds;
 
     /**
      * <p>The database engine that the cluster runs. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <p>*   **Oracle**</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>Oracle</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("DBType")
     public String DBType;
 
     /**
      * <p>The database engine version of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.6</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
 
     /**
      * <p>The query mode of the list. The value Simple indicates that the simple mode is used. In this mode, only the basic metadata information of the cluster is returned.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the detailed mode is used by default. Detailed information about the cluster is returned.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the detailed mode is used by default. Detailed information about the cluster is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Simple</p>
      */
     @NameInMap("DescribeType")
     public String describeType;
 
     /**
      * <p>Specifies whether the cluster has expired. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Expired")
     public Boolean expired;
@@ -74,52 +104,73 @@ public class DescribeDBClustersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Valid values: **30**, **50**, or **100**.</p>
-     * <br>
-     * <p>Default value: **30**.</p>
+     * <p>The number of entries per page. Valid values: <strong>30</strong>, <strong>50</strong>, or <strong>100</strong>.</p>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   **Postpaid**: pay-as-you-go</p>
-     * <p>*   **Prepaid**: subscription</p>
+     * <ul>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Postpaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>Filters clusters created in the last N days. Valid values: 0 to 15.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("RecentCreationInterval")
     public Integer recentCreationInterval;
 
     /**
      * <p>Filters clusters that expire after N days. Valid values: 0 to 15.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("RecentExpirationInterval")
     public Integer recentExpirationInterval;
 
     /**
      * <p>The region ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/98041.html) operation to query the available regions.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-**********</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -312,16 +363,24 @@ public class DescribeDBClustersRequest extends TeaModel {
     public static class DescribeDBClustersRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can use tags to filter clusters. You can specify up to 20 tags. N specifies the serial number of each tag. The values that you specify for N must be unique and consecutive integers that start from 1. The value of Tag.N.Key is Tag.N.Value.</p>
-         * <br>
-         * <p>> The tag key can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
+         * <blockquote>
+         * <p>The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
-         * <br>
-         * <p>> The tag value can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
+         * <blockquote>
+         * <p>The tag value can be up to 64 characters in length and cannot start with <code>aliyun</code>, <code>acs:</code>, <code>http://</code>, or <code>https://</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5.6</p>
          */
         @NameInMap("Value")
         public String value;

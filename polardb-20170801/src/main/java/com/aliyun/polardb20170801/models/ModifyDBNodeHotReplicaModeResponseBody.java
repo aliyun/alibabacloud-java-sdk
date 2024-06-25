@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyDBNodeHotReplicaModeResponseBody extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-2vc327c2a14a3u858</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2148126708*****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F4DDFBF-205C-5A3E-8DC2-C60F3E3FDC38</p>
      */
     @NameInMap("RequestId")
     public String requestId;

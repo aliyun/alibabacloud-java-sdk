@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RestoreTableResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C47508C-9DC8-455B-985E-2F2FA8******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

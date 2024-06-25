@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyPendingMaintenanceActionResponseBody extends TeaModel {
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111111</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93061E17-B56A-4324-BC95-D0FFD2******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

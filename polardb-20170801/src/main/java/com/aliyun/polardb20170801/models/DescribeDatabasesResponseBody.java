@@ -12,18 +12,27 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E1DF8CA6-2300-448B-9ABF-760C4B******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,40 +77,56 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     public static class DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount extends TeaModel {
         /**
          * <p>The username of the account.</p>
-         * <br>
-         * <p>> A PolarDB for MySQL cluster does not support privileged accounts.</p>
+         * <blockquote>
+         * <p>A PolarDB for MySQL cluster does not support privileged accounts.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test_acc</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The permissions that are granted to the account. Valid values:</p>
-         * <br>
-         * <p>*   **ReadWrite**: read and write permissions</p>
-         * <p>*   **ReadOnly**: read-only permissions</p>
-         * <p>*   **DMLOnly**: The account is granted the permissions to execute only DML statements on the database.</p>
-         * <p>*   **DDLOnly**: The account is granted the permissions to execute only DDL statements on the database.</p>
-         * <p>*   **ReadIndex**: The account has the read and index permissions on the database.</p>
+         * <ul>
+         * <li><strong>ReadWrite</strong>: read and write permissions</li>
+         * <li><strong>ReadOnly</strong>: read-only permissions</li>
+         * <li><strong>DMLOnly</strong>: The account is granted the permissions to execute only DML statements on the database.</li>
+         * <li><strong>DDLOnly</strong>: The account is granted the permissions to execute only DDL statements on the database.</li>
+         * <li><strong>ReadIndex</strong>: The account has the read and index permissions on the database.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadOnly</p>
          */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
         /**
          * <p>The state of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
         /**
          * <p>The authorization state of the account. Valid values:</p>
-         * <br>
-         * <p>*   **Empowering**: The system is granting permissions to the account.</p>
-         * <p>*   **Empowered**: Permissions are granted to the account.</p>
-         * <p>*   **Removing**: The system is revoking permissions from the account.</p>
+         * <ul>
+         * <li><strong>Empowering</strong>: The system is granting permissions to the account.</li>
+         * <li><strong>Empowered</strong>: Permissions are granted to the account.</li>
+         * <li><strong>Removing</strong>: The system is revoking permissions from the account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Empowered</p>
          */
         @NameInMap("PrivilegeStatus")
         public String privilegeStatus;
@@ -167,52 +192,73 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     public static class DescribeDatabasesResponseBodyDatabasesDatabase extends TeaModel {
         /**
          * <p>Details about the accounts.</p>
-         * <br>
-         * <p>> A PolarDB for MySQL cluster does not support privileged accounts.</p>
+         * <blockquote>
+         * <p>A PolarDB for MySQL cluster does not support privileged accounts.</p>
+         * </blockquote>
          */
         @NameInMap("Accounts")
         public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts;
 
         /**
-         * <p>The character set that the database uses. For more information, see [Character set tables](https://help.aliyun.com/document_detail/99716.html).</p>
+         * <p>The character set that the database uses. For more information, see <a href="https://help.aliyun.com/document_detail/99716.html">Character set tables</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
          */
         @NameInMap("CharacterSetName")
         public String characterSetName;
 
         /**
          * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_des</p>
          */
         @NameInMap("DBDescription")
         public String DBDescription;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
          * <p>The state of the database. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Running**</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Running</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DBStatus")
         public String DBStatus;
 
         /**
          * <p>The type of the database engine. Valid values:</p>
-         * <br>
-         * <p>*   **MySQL**</p>
-         * <p>*   **Oracle**</p>
-         * <p>*   **PostgreSQL**</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
          * <p>The ID of the primary node in the cluster of Multi-master Cluster (Database/Table) Edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MasterID")
         public String masterID;

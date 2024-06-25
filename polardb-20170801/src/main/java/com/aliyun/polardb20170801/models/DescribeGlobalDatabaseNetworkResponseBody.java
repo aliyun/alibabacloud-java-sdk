@@ -12,12 +12,18 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     /**
      * <p>The time at which the GDN was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-24T11:57:54Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1s826a1up******</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -30,53 +36,76 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     /**
      * <p>The type of the database engine. Only MySQL is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("DBType")
     public String DBType;
 
     /**
      * <p>The version of the database engine. Only version 8.0 is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
 
     /**
      * <p>The description of the GDN. The description must meet the following requirements:</p>
-     * <br>
-     * <p>*   It cannot start with `http://` or `https://`.</p>
-     * <p>*   It must start with a letter.</p>
-     * <p>*   It can contain letters, digits, underscores (_), and hyphens (-).</p>
-     * <p>*   It must be 2 to 126 characters in length.</p>
+     * <ul>
+     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It must start with a letter.</li>
+     * <li>It can contain letters, digits, underscores (_), and hyphens (-).</li>
+     * <li>It must be 2 to 126 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>GDN-fortest</p>
      */
     @NameInMap("GDNDescription")
     public String GDNDescription;
 
     /**
      * <p>The ID of the GDN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gdn-bp1fttxsrmv*****</p>
      */
     @NameInMap("GDNId")
     public String GDNId;
 
     /**
      * <p>The status of the GDN. Valid values:</p>
-     * <br>
-     * <p>*   **Creating**: The GDN is being created.</p>
-     * <p>*   **active**: The GDN is running.</p>
-     * <p>*   **deleting**: The GDN is being deleted.</p>
-     * <p>*   **locked**: The GDN is locked. If the GDN is locked, you cannot perform operations on clusters in the GDN.</p>
-     * <p>*   **removing_member**: The secondary cluster is being removed from the GDN.</p>
+     * <ul>
+     * <li><strong>Creating</strong>: The GDN is being created.</li>
+     * <li><strong>active</strong>: The GDN is running.</li>
+     * <li><strong>deleting</strong>: The GDN is being deleted.</li>
+     * <li><strong>locked</strong>: The GDN is locked. If the GDN is locked, you cannot perform operations on clusters in the GDN.</li>
+     * <li><strong>removing_member</strong>: The secondary cluster is being removed from the GDN.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
      */
     @NameInMap("GDNStatus")
     public String GDNStatus;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67F2E75F-AE67-4FB2-821F-A81237EACD15</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-************</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -177,18 +206,27 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     public static class DescribeGlobalDatabaseNetworkResponseBodyConnections extends TeaModel {
         /**
          * <p>The URL of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc.polardb.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The network type of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         @NameInMap("NetType")
         public String netType;
 
         /**
          * <p>The port number of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
@@ -227,71 +265,100 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     public static class DescribeGlobalDatabaseNetworkResponseBodyDBClustersDBNodes extends TeaModel {
         /**
          * <p>The time when the node was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-23T21:35:43Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The specifications of the node in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.large</p>
          */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-****************</p>
          */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
         /**
          * <p>The role of the node. Valid values:</p>
-         * <br>
-         * <p>*   **Writer**: The node is the primary node.</p>
-         * <p>*   **Reader**: The node is a read-only node.</p>
+         * <ul>
+         * <li><strong>Writer</strong>: The node is the primary node.</li>
+         * <li><strong>Reader</strong>: The node is a read-only node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Reader</p>
          */
         @NameInMap("DBNodeRole")
         public String DBNodeRole;
 
         /**
          * <p>The status of the node. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The cluster is being created.</p>
-         * <p>*   **Running**: The cluster is running.</p>
-         * <p>*   **Deleting**: The cluster is being deleted.</p>
-         * <p>*   **Rebooting**: The cluster is restarting.</p>
-         * <p>*   **DBNodeCreating**: PolarProxy is being added.</p>
-         * <p>*   **DBNodeDeleting**: PolarProxy is being deleted.</p>
-         * <p>*   **ClassChanging**: The specifications of PolarProxy are being changed.</p>
-         * <p>*   **NetAddressCreating**: The network connection is being created.</p>
-         * <p>*   **NetAddressDeleting**: The network connection is being deleted.</p>
-         * <p>*   **NetAddressModifying**: The network connection is being modified.</p>
-         * <p>*   **MinorVersionUpgrading**: The minor version is being updated.</p>
-         * <p>*   **Maintaining**: The cluster is being maintained.</p>
-         * <p>*   **Switching**: A failover is being performed.</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The cluster is being created.</li>
+         * <li><strong>Running</strong>: The cluster is running.</li>
+         * <li><strong>Deleting</strong>: The cluster is being deleted.</li>
+         * <li><strong>Rebooting</strong>: The cluster is restarting.</li>
+         * <li><strong>DBNodeCreating</strong>: PolarProxy is being added.</li>
+         * <li><strong>DBNodeDeleting</strong>: PolarProxy is being deleted.</li>
+         * <li><strong>ClassChanging</strong>: The specifications of PolarProxy are being changed.</li>
+         * <li><strong>NetAddressCreating</strong>: The network connection is being created.</li>
+         * <li><strong>NetAddressDeleting</strong>: The network connection is being deleted.</li>
+         * <li><strong>NetAddressModifying</strong>: The network connection is being modified.</li>
+         * <li><strong>MinorVersionUpgrading</strong>: The minor version is being updated.</li>
+         * <li><strong>Maintaining</strong>: The cluster is being maintained.</li>
+         * <li><strong>Switching</strong>: A failover is being performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DBNodeStatus")
         public String DBNodeStatus;
 
         /**
          * <p>The priority of failover. Each node is assigned a failover priority. If a failover occurs, a node can be selected as the primary node based on the priority. A larger value indicates a higher priority. Valid values: 1 to 15.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("FailoverPriority")
         public Integer failoverPriority;
 
         /**
          * <p>The maximum number of concurrent connections to the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8000</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
          * <p>The maximum input/output operations per second (IOPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32000</p>
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
         /**
          * <p>The zone ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -378,24 +445,36 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     public static class DescribeGlobalDatabaseNetworkResponseBodyDBClusters extends TeaModel {
         /**
          * <p>The description of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
         /**
          * <p>The ID of the cluster in the GDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pc-wz9fb5nn44u1d****</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
-         * <p>The status of the cluster in the GDN. For more information, see [Cluster status table](https://help.aliyun.com/document_detail/99286.html).</p>
+         * <p>The status of the cluster in the GDN. For more information, see <a href="https://help.aliyun.com/document_detail/99286.html">Cluster status table</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;
 
         /**
          * <p>The specifications of the node in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polar.mysql.x4.large</p>
          */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
@@ -408,63 +487,93 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
         /**
          * <p>The type of the database engine. Only MySQL is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("DBType")
         public String DBType;
 
         /**
          * <p>The version of the database engine. Only version 8.0 is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         @NameInMap("DBVersion")
         public String DBVersion;
 
         /**
          * <p>The expiration time of the cluster.</p>
-         * <br>
-         * <p>> A specific value is returned only for subscription (**Prepaid**) clusters. For pay-as-you-go (**Postpaid**) clusters, an empty string is returned.</p>
+         * <blockquote>
+         * <p>A specific value is returned only for subscription (<strong>Prepaid</strong>) clusters. For pay-as-you-go (<strong>Postpaid</strong>) clusters, an empty string is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-14T16:00:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>Indicates whether the cluster is expired. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
-         * <br>
-         * <p>> This parameter is returned only for subscription (**Prepaid**) clusters.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only for subscription (<strong>Prepaid</strong>) clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Expired")
         public String expired;
 
         /**
          * <p>The billing method of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Postpaid**: pay-as-you-go.</p>
-         * <p>*   **Prepaid**: subscription.</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The ID of the region in which the cluster resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The latency of cross-region data replication between the primary cluster and secondary clusters. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReplicaLag")
         public String replicaLag;
 
         /**
          * <p>The role of the cluster. Valid values:</p>
-         * <br>
-         * <p>*   **Primary**: the primary cluster</p>
-         * <p>*   **standby**: the secondary cluster</p>
-         * <br>
-         * <p>> A GDN consists of one primary cluster and up to four secondary clusters.</p>
+         * <ul>
+         * <li><strong>Primary</strong>: the primary cluster</li>
+         * <li><strong>standby</strong>: the secondary cluster</li>
+         * </ul>
+         * <blockquote>
+         * <p>A GDN consists of one primary cluster and up to four secondary clusters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         @NameInMap("Role")
         public String role;
@@ -474,6 +583,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
         /**
          * <p>The storage space that is occupied by the cluster. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3012558848</p>
          */
         @NameInMap("StorageUsed")
         public String storageUsed;

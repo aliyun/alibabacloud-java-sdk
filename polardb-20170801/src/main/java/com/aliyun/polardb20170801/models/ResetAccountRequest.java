@@ -6,28 +6,37 @@ import com.aliyun.tea.*;
 public class ResetAccountRequest extends TeaModel {
     /**
      * <p>The username of the account.</p>
-     * <br>
-     * <p>> You can reset only the permissions of a privileged account.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can reset only the permissions of a privileged account.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The password of the account. The password must meet the following requirements:</p>
-     * <br>
-     * <p>*   It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   The password must be 8 to 32 characters in length.</p>
-     * <p>*   Special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
+     * <ul>
+     * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password must be 8 to 32 characters in length.</li>
+     * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Pw123456</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-**************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

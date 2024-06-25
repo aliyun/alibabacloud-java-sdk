@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteAccountRequest extends TeaModel {
     /**
      * <p>The username of the account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-*************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
