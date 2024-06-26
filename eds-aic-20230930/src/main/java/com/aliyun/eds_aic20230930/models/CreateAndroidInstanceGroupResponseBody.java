@@ -7,9 +7,17 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22365781890****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

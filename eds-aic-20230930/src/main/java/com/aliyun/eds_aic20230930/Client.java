@@ -28,8 +28,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 绑定密钥对
-     *
+     * <b>summary</b> : 
+     * <p>绑定密钥对</p>
+     * 
      * @param request AttachKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachKeyPairResponse
@@ -63,8 +64,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 绑定密钥对
-     *
+     * <b>summary</b> : 
+     * <p>绑定密钥对</p>
+     * 
      * @param request AttachKeyPairRequest
      * @return AttachKeyPairResponse
      */
@@ -74,8 +76,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 为用户授权/解授权安卓实例
-     *
+     * <b>summary</b> : 
+     * <p>为用户授权/解授权安卓实例</p>
+     * 
      * @param request AuthorizeAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AuthorizeAndroidInstanceResponse
@@ -113,8 +116,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 为用户授权/解授权安卓实例
-     *
+     * <b>summary</b> : 
+     * <p>为用户授权/解授权安卓实例</p>
+     * 
      * @param request AuthorizeAndroidInstanceRequest
      * @return AuthorizeAndroidInstanceResponse
      */
@@ -182,8 +186,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 检查资源库存
-     *
+     * <b>summary</b> : 
+     * <p>检查资源库存</p>
+     * 
      * @param request CheckResourceStockRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckResourceStockResponse
@@ -221,8 +226,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 检查资源库存
-     *
+     * <b>summary</b> : 
+     * <p>检查资源库存</p>
+     * 
      * @param request CheckResourceStockRequest
      * @return CheckResourceStockResponse
      */
@@ -232,8 +238,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>创建安卓实例组</p>
+     * 
      * @param request CreateAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAndroidInstanceGroupResponse
@@ -311,8 +318,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>创建安卓实例组</p>
+     * 
      * @param request CreateAndroidInstanceGroupRequest
      * @return CreateAndroidInstanceGroupResponse
      */
@@ -331,6 +339,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -384,8 +396,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义镜像
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义镜像</p>
+     * 
      * @param request CreateCustomImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCustomImageResponse
@@ -423,8 +436,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建自定义镜像
-     *
+     * <b>summary</b> : 
+     * <p>创建自定义镜像</p>
+     * 
      * @param request CreateCustomImageRequest
      * @return CreateCustomImageResponse
      */
@@ -434,8 +448,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建密钥对
-     *
+     * <b>summary</b> : 
+     * <p>创建密钥对</p>
+     * 
      * @param request CreateKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateKeyPairResponse
@@ -465,8 +480,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建密钥对
-     *
+     * <b>summary</b> : 
+     * <p>创建密钥对</p>
+     * 
      * @param request CreateKeyPairRequest
      * @return CreateKeyPairResponse
      */
@@ -476,8 +492,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建策略
-     *
+     * <b>summary</b> : 
+     * <p>创建策略</p>
+     * 
      * @param request CreatePolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePolicyGroupResponse
@@ -531,8 +548,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建策略
-     *
+     * <b>summary</b> : 
+     * <p>创建策略</p>
+     * 
      * @param request CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
      */
@@ -542,8 +560,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>删除安卓实例组</p>
+     * 
      * @param request DeleteAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAndroidInstanceGroupResponse
@@ -573,8 +592,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>删除安卓实例组</p>
+     * 
      * @param request DeleteAndroidInstanceGroupRequest
      * @return DeleteAndroidInstanceGroupResponse
      */
@@ -584,8 +604,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除app
-     *
+     * <b>summary</b> : 
+     * <p>删除app</p>
+     * 
      * @param request DeleteAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAppsResponse
@@ -615,8 +636,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除app
-     *
+     * <b>summary</b> : 
+     * <p>删除app</p>
+     * 
      * @param request DeleteAppsRequest
      * @return DeleteAppsResponse
      */
@@ -670,8 +692,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除密钥对
-     *
+     * <b>summary</b> : 
+     * <p>删除密钥对</p>
+     * 
      * @param request DeleteKeyPairsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteKeyPairsResponse
@@ -701,8 +724,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除密钥对
-     *
+     * <b>summary</b> : 
+     * <p>删除密钥对</p>
+     * 
      * @param request DeleteKeyPairsRequest
      * @return DeleteKeyPairsResponse
      */
@@ -712,8 +736,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除策略
-     *
+     * <b>summary</b> : 
+     * <p>删除策略</p>
+     * 
      * @param request DeletePolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePolicyGroupResponse
@@ -743,8 +768,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除策略
-     *
+     * <b>summary</b> : 
+     * <p>删除策略</p>
+     * 
      * @param request DeletePolicyGroupRequest
      * @return DeletePolicyGroupResponse
      */
@@ -754,8 +780,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>查询安卓实例组</p>
+     * 
      * @param request DescribeAndroidInstanceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAndroidInstanceGroupsResponse
@@ -821,8 +848,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>查询安卓实例组</p>
+     * 
      * @param request DescribeAndroidInstanceGroupsRequest
      * @return DescribeAndroidInstanceGroupsResponse
      */
@@ -832,8 +860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询安卓实例列表
-     *
+     * <b>summary</b> : 
+     * <p>查询安卓实例列表</p>
+     * 
      * @param request DescribeAndroidInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAndroidInstancesResponse
@@ -891,8 +920,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询安卓实例列表
-     *
+     * <b>summary</b> : 
+     * <p>查询安卓实例列表</p>
+     * 
      * @param request DescribeAndroidInstancesRequest
      * @return DescribeAndroidInstancesResponse
      */
@@ -902,8 +932,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询app
-     *
+     * <b>summary</b> : 
+     * <p>查询app</p>
+     * 
      * @param request DescribeAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeAppsResponse
@@ -917,6 +948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.installationStatus)) {
@@ -953,8 +988,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询app
-     *
+     * <b>summary</b> : 
+     * <p>查询app</p>
+     * 
      * @param request DescribeAppsRequest
      * @return DescribeAppsResponse
      */
@@ -1100,8 +1136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询命令结果
-     *
+     * <b>summary</b> : 
+     * <p>查询命令结果</p>
+     * 
      * @param request DescribeInvocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInvocationsResponse
@@ -1135,8 +1172,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询命令结果
-     *
+     * <b>summary</b> : 
+     * <p>查询命令结果</p>
+     * 
      * @param request DescribeInvocationsRequest
      * @return DescribeInvocationsResponse
      */
@@ -1146,8 +1184,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询密钥对
-     *
+     * <b>summary</b> : 
+     * <p>查询密钥对</p>
+     * 
      * @param request DescribeKeyPairsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeKeyPairsResponse
@@ -1189,8 +1228,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询密钥对
-     *
+     * <b>summary</b> : 
+     * <p>查询密钥对</p>
+     * 
      * @param request DescribeKeyPairsRequest
      * @return DescribeKeyPairsResponse
      */
@@ -1200,8 +1240,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询地域
-     *
+     * <b>summary</b> : 
+     * <p>查询地域</p>
+     * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
@@ -1223,8 +1264,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询地域
-     *
+     * <b>summary</b> : 
+     * <p>查询地域</p>
      * @return DescribeRegionsResponse
      */
     public DescribeRegionsResponse describeRegions() throws Exception {
@@ -1233,8 +1274,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询规格
-     *
+     * <b>summary</b> : 
+     * <p>查询规格</p>
+     * 
      * @param request DescribeSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSpecResponse
@@ -1280,8 +1322,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询规格
-     *
+     * <b>summary</b> : 
+     * <p>查询规格</p>
+     * 
      * @param request DescribeSpecRequest
      * @return DescribeSpecResponse
      */
@@ -1291,8 +1334,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 解绑密钥对
-     *
+     * <b>summary</b> : 
+     * <p>解绑密钥对</p>
+     * 
      * @param request DetachKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachKeyPairResponse
@@ -1326,8 +1370,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 解绑密钥对
-     *
+     * <b>summary</b> : 
+     * <p>解绑密钥对</p>
+     * 
      * @param request DetachKeyPairRequest
      * @return DetachKeyPairResponse
      */
@@ -1337,8 +1382,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 自定义镜像分发
-     *
+     * <b>summary</b> : 
+     * <p>自定义镜像分发</p>
+     * 
      * @param request DistributeImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DistributeImageResponse
@@ -1372,8 +1418,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 自定义镜像分发
-     *
+     * <b>summary</b> : 
+     * <p>自定义镜像分发</p>
+     * 
      * @param request DistributeImageRequest
      * @return DistributeImageResponse
      */
@@ -1383,8 +1430,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实例组缩容
-     *
+     * <b>summary</b> : 
+     * <p>实例组缩容</p>
+     * 
      * @param request DowngradeAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DowngradeAndroidInstanceGroupResponse
@@ -1422,8 +1470,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实例组缩容
-     *
+     * <b>summary</b> : 
+     * <p>实例组缩容</p>
+     * 
      * @param request DowngradeAndroidInstanceGroupRequest
      * @return DowngradeAndroidInstanceGroupResponse
      */
@@ -1433,8 +1482,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 云手机拉取文件到OSS
-     *
+     * <b>summary</b> : 
+     * <p>云手机拉取文件到OSS</p>
+     * 
      * @param request FetchFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return FetchFileResponse
@@ -1480,8 +1530,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 云手机拉取文件到OSS
-     *
+     * <b>summary</b> : 
+     * <p>云手机拉取文件到OSS</p>
+     * 
      * @param request FetchFileRequest
      * @return FetchFileResponse
      */
@@ -1571,8 +1622,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 安装app到实例组
-     *
+     * <b>summary</b> : 
+     * <p>安装app到实例组</p>
+     * 
      * @param request InstallAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InstallAppResponse
@@ -1606,8 +1658,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 安装app到实例组
-     *
+     * <b>summary</b> : 
+     * <p>安装app到实例组</p>
+     * 
      * @param request InstallAppRequest
      * @return InstallAppResponse
      */
@@ -1617,8 +1670,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询Policy列表
-     *
+     * <b>summary</b> : 
+     * <p>查询Policy列表</p>
+     * 
      * @param request ListPolicyGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPolicyGroupsResponse
@@ -1660,8 +1714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询Policy列表
-     *
+     * <b>summary</b> : 
+     * <p>查询Policy列表</p>
+     * 
      * @param request ListPolicyGroupsRequest
      * @return ListPolicyGroupsResponse
      */
@@ -1671,8 +1726,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改安卓实例信息
-     *
+     * <b>summary</b> : 
+     * <p>修改安卓实例信息</p>
+     * 
      * @param request ModifyAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAndroidInstanceResponse
@@ -1706,8 +1762,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改安卓实例信息
-     *
+     * <b>summary</b> : 
+     * <p>修改安卓实例信息</p>
+     * 
      * @param request ModifyAndroidInstanceRequest
      * @return ModifyAndroidInstanceResponse
      */
@@ -1717,8 +1774,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>修改安卓实例组</p>
+     * 
      * @param request ModifyAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAndroidInstanceGroupResponse
@@ -1756,8 +1814,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>修改安卓实例组</p>
+     * 
      * @param request ModifyAndroidInstanceGroupRequest
      * @return ModifyAndroidInstanceGroupResponse
      */
@@ -1767,8 +1826,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改app
-     *
+     * <b>summary</b> : 
+     * <p>修改app</p>
+     * 
      * @param request ModifyAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyAppResponse
@@ -1810,8 +1870,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改app
-     *
+     * <b>summary</b> : 
+     * <p>修改app</p>
+     * 
      * @param request ModifyAppRequest
      * @return ModifyAppResponse
      */
@@ -1821,8 +1882,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改密钥对名称
-     *
+     * <b>summary</b> : 
+     * <p>修改密钥对名称</p>
+     * 
      * @param request ModifyKeyPairNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyKeyPairNameResponse
@@ -1856,8 +1918,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改密钥对名称
-     *
+     * <b>summary</b> : 
+     * <p>修改密钥对名称</p>
+     * 
      * @param request ModifyKeyPairNameRequest
      * @return ModifyKeyPairNameResponse
      */
@@ -1867,8 +1930,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改policy
-     *
+     * <b>summary</b> : 
+     * <p>修改policy</p>
+     * 
      * @param request ModifyPolicyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyPolicyGroupResponse
@@ -1926,8 +1990,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改policy
-     *
+     * <b>summary</b> : 
+     * <p>修改policy</p>
+     * 
      * @param request ModifyPolicyGroupRequest
      * @return ModifyPolicyGroupResponse
      */
@@ -1937,8 +2002,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 重启安卓实例
-     *
+     * <b>summary</b> : 
+     * <p>重启安卓实例</p>
+     * 
      * @param request RebootAndroidInstancesInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RebootAndroidInstancesInGroupResponse
@@ -1968,8 +2034,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 重启安卓实例
-     *
+     * <b>summary</b> : 
+     * <p>重启安卓实例</p>
+     * 
      * @param request RebootAndroidInstancesInGroupRequest
      * @return RebootAndroidInstancesInGroupResponse
      */
@@ -2033,8 +2100,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 续费安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>续费安卓实例组</p>
+     * 
      * @param request RenewAndroidInstanceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RenewAndroidInstanceGroupsResponse
@@ -2076,8 +2144,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 续费安卓实例组
-     *
+     * <b>summary</b> : 
+     * <p>续费安卓实例组</p>
+     * 
      * @param request RenewAndroidInstanceGroupsRequest
      * @return RenewAndroidInstanceGroupsResponse
      */
@@ -2087,8 +2156,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 重置安卓实例
-     *
+     * <b>summary</b> : 
+     * <p>重置安卓实例</p>
+     * 
      * @param request ResetAndroidInstancesInGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ResetAndroidInstancesInGroupResponse
@@ -2118,8 +2188,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 重置安卓实例
-     *
+     * <b>summary</b> : 
+     * <p>重置安卓实例</p>
+     * 
      * @param request ResetAndroidInstancesInGroupRequest
      * @return ResetAndroidInstancesInGroupResponse
      */
@@ -2129,8 +2200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通过eds agent通道下发命令
-     *
+     * <b>summary</b> : 
+     * <p>通过eds agent通道下发命令</p>
+     * 
      * @param request RunCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RunCommandResponse
@@ -2168,8 +2240,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通过eds agent通道下发命令
-     *
+     * <b>summary</b> : 
+     * <p>通过eds agent通道下发命令</p>
+     * 
      * @param request RunCommandRequest
      * @return RunCommandResponse
      */
@@ -2179,8 +2252,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 推送文件到云手机
-     *
+     * <b>summary</b> : 
+     * <p>推送文件到云手机</p>
+     * 
      * @param request SendFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SendFileResponse
@@ -2226,8 +2300,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 推送文件到云手机
-     *
+     * <b>summary</b> : 
+     * <p>推送文件到云手机</p>
+     * 
      * @param request SendFileRequest
      * @return SendFileResponse
      */
@@ -2279,8 +2354,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实例开机
-     *
+     * <b>summary</b> : 
+     * <p>实例开机</p>
+     * 
      * @param request StartAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartAndroidInstanceResponse
@@ -2310,8 +2386,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实例开机
-     *
+     * <b>summary</b> : 
+     * <p>实例开机</p>
+     * 
      * @param request StartAndroidInstanceRequest
      * @return StartAndroidInstanceResponse
      */
@@ -2321,8 +2398,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实例关机
-     *
+     * <b>summary</b> : 
+     * <p>实例关机</p>
+     * 
      * @param request StopAndroidInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopAndroidInstanceResponse
@@ -2352,8 +2430,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实例关机
-     *
+     * <b>summary</b> : 
+     * <p>实例关机</p>
+     * 
      * @param request StopAndroidInstanceRequest
      * @return StopAndroidInstanceResponse
      */
@@ -2363,8 +2442,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 卸载app
-     *
+     * <b>summary</b> : 
+     * <p>卸载app</p>
+     * 
      * @param request UninstallAppRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UninstallAppResponse
@@ -2398,8 +2478,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 卸载app
-     *
+     * <b>summary</b> : 
+     * <p>卸载app</p>
+     * 
      * @param request UninstallAppRequest
      * @return UninstallAppResponse
      */
@@ -2409,8 +2490,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改自定义镜像名称
-     *
+     * <b>summary</b> : 
+     * <p>修改自定义镜像名称</p>
+     * 
      * @param request UpdateCustomImageNameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCustomImageNameResponse
@@ -2444,8 +2526,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改自定义镜像名称
-     *
+     * <b>summary</b> : 
+     * <p>修改自定义镜像名称</p>
+     * 
      * @param request UpdateCustomImageNameRequest
      * @return UpdateCustomImageNameResponse
      */
@@ -2455,8 +2538,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实例组变更镜像
-     *
+     * <b>summary</b> : 
+     * <p>实例组变更镜像</p>
+     * 
      * @param request UpdateInstanceGroupImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateInstanceGroupImageResponse
@@ -2490,8 +2574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实例组变更镜像
-     *
+     * <b>summary</b> : 
+     * <p>实例组变更镜像</p>
+     * 
      * @param request UpdateInstanceGroupImageRequest
      * @return UpdateInstanceGroupImageResponse
      */
@@ -2501,8 +2586,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 安卓实例组扩容
-     *
+     * <b>summary</b> : 
+     * <p>安卓实例组扩容</p>
+     * 
      * @param request UpgradeAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpgradeAndroidInstanceGroupResponse
@@ -2540,8 +2626,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 安卓实例组扩容
-     *
+     * <b>summary</b> : 
+     * <p>安卓实例组扩容</p>
+     * 
      * @param request UpgradeAndroidInstanceGroupRequest
      * @return UpgradeAndroidInstanceGroupResponse
      */

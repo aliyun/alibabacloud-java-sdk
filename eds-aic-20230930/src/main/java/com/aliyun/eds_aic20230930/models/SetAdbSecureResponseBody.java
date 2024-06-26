@@ -7,6 +7,10 @@ public class SetAdbSecureResponseBody extends TeaModel {
     @NameInMap("Data")
     public SetAdbSecureResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,20 @@ public class SetAdbSecureResponseBody extends TeaModel {
     }
 
     public static class SetAdbSecureResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FailCount")
         public Integer failCount;
 
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

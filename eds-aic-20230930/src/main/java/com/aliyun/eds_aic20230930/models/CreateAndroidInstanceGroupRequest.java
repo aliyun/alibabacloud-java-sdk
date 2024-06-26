@@ -4,23 +4,41 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateAndroidInstanceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>imgc-06zyt9m93zwax****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -30,28 +48,54 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acp.basic.small</p>
      */
     @NameInMap("InstanceGroupSpec")
     public String instanceGroupSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NumberOfInstances")
     public Integer numberOfInstances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-745976****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pg-b7bxrrwxkijjh****</p>
      */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-uf61uvzhz8ejaw776****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

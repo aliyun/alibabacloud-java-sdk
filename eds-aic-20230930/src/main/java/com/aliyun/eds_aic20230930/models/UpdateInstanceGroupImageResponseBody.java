@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceGroupImageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>55726272-E40B-530D-914F-5126B19C79B3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

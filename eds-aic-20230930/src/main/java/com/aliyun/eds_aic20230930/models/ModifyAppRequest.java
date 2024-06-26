@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("AppId")
     public Integer appId;
 
@@ -13,6 +17,10 @@ public class ModifyAppRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://defaultIcon.png">https://defaultIcon.png</a></p>
+     */
     @NameInMap("IconUrl")
     public String iconUrl;
 

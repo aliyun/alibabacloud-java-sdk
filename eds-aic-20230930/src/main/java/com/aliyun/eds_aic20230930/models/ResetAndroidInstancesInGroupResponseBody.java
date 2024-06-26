@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

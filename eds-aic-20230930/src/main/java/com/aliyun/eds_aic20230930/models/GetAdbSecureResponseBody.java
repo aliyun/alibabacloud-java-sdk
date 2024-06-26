@@ -7,6 +7,10 @@ public class GetAdbSecureResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAdbSecureResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetAdbSecureResponseBody extends TeaModel {
     }
 
     public static class GetAdbSecureResponseBodyDataAdbSecureList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acp-5hh431emkt6u*****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

@@ -7,6 +7,10 @@ public class DetachKeyPairResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetachKeyPairResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,12 +39,24 @@ public class DetachKeyPairResponseBody extends TeaModel {
         @NameInMap("DetachedInstanceIds")
         public java.util.List<String> detachedInstanceIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FailCount")
         public Integer failCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kp-6v2q33ae4tw3a****</p>
+         */
         @NameInMap("KeyPairId")
         public String keyPairId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

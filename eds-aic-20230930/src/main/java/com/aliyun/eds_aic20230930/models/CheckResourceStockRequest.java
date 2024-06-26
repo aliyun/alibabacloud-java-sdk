@@ -4,15 +4,26 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CheckResourceStockRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acp.basic.small</p>
+     */
     @NameInMap("AcpSpecId")
     public String acpSpecId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

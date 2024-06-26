@@ -12,18 +12,27 @@ public class SendFileRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/data</p>
      */
     @NameInMap("SourceFilePath")
     public String sourceFilePath;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-cn-hangzhou.aliyuncs.com</p>
      */
     @NameInMap("UploadEndpoint")
     public String uploadEndpoint;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
      */
     @NameInMap("UploadType")
     public String uploadType;

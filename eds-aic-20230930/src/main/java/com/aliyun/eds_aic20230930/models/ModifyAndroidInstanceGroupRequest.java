@@ -4,12 +4,24 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ModifyAndroidInstanceGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ag-cuv4scs4obxhs****</p>
+     */
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>newName</p>
+     */
     @NameInMap("NewInstanceGroupName")
     public String newInstanceGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pg-2w97kp89gnsif****</p>
+     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 

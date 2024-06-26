@@ -7,12 +7,24 @@ public class DescribeAppsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeAppsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CB95E410-FD1D-53C5-9F7D-93CC44D7****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -54,33 +66,68 @@ public class DescribeAppsResponseBody extends TeaModel {
     }
 
     public static class DescribeAppsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
         @NameInMap("AndroidAppVersion")
         public String androidAppVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10404</p>
+         */
         @NameInMap("AppId")
         public Integer appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testapp</p>
+         */
         @NameInMap("AppName")
         public String appName;
+
+        @NameInMap("BizRegionId")
+        public String bizRegionId;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-11 17:45:03</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-11 17:45:03</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://test.png">https://test.png</a></p>
+         */
         @NameInMap("IconUrl")
         public String iconUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INSTALLING</p>
+         */
         @NameInMap("InstallationStatus")
         public String installationStatus;
 
         @NameInMap("InstanceGroupList")
         public java.util.List<String> instanceGroupList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -111,6 +158,14 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public DescribeAppsResponseBodyData setBizRegionId(String bizRegionId) {
+            this.bizRegionId = bizRegionId;
+            return this;
+        }
+        public String getBizRegionId() {
+            return this.bizRegionId;
         }
 
         public DescribeAppsResponseBodyData setDescription(String description) {

@@ -10,21 +10,40 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("BizRegionId")
+    public String bizRegionId;
+
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testApp.apk</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
     @NameInMap("FilePath")
     public String filePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://test.png">https://test.png</a></p>
+     */
     @NameInMap("IconUrl")
     public String iconUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-d</p>
+     */
     @NameInMap("InstallParam")
     public String installParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://testApp.apk">http://testApp.apk</a></p>
+     */
     @NameInMap("OssAppUrl")
     public String ossAppUrl;
 
@@ -39,6 +58,14 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public CreateAppRequest setBizRegionId(String bizRegionId) {
+        this.bizRegionId = bizRegionId;
+        return this;
+    }
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     public CreateAppRequest setDescription(String description) {

@@ -7,6 +7,10 @@ public class ImportKeyPairResponseBody extends TeaModel {
     @NameInMap("Data")
     public ImportKeyPairResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class ImportKeyPairResponseBody extends TeaModel {
     }
 
     public static class ImportKeyPairResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-03-05T10:29:22Z</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kp-6v2q33ae4tw3*****</p>
+         */
         @NameInMap("KeyPairId")
         public String keyPairId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TestKeyPairName</p>
+         */
         @NameInMap("KeyPairName")
         public String keyPairName;
 

@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ModifyAndroidInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acp-8v5bjld0r7tkl****</p>
+     */
     @NameInMap("AndroidInstanceId")
     public String androidInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>new_name</p>
+     */
     @NameInMap("NewAndroidInstanceName")
     public String newAndroidInstanceName;
 

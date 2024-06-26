@@ -7,11 +7,18 @@ public class DowngradeAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ag-cuv4scs4obxhs****</p>
      */
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;

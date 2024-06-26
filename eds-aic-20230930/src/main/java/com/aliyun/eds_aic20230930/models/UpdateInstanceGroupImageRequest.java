@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateInstanceGroupImageRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>imgc-075cllfeuazh****</p>
      */
     @NameInMap("ImageId")
     public String imageId;

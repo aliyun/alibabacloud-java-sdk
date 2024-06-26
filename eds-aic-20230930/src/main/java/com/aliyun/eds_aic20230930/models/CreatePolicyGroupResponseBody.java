@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>pg-exbuu6yrpvb******</p>
+     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

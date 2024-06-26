@@ -4,12 +4,24 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupFilesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acp-34pqe4r0kd9kn****</p>
+     */
     @NameInMap("AndroidInstanceId")
     public String androidInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acp-34pqe4r0kd9kn****</p>
+     */
     @NameInMap("AndroidInstanceName")
     public String androidInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bf-dxrh5jrv0zpb8****</p>
+     */
     @NameInMap("BackupFileId")
     public String backupFileId;
 
@@ -19,21 +31,45 @@ public class DescribeBackupFilesRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-05-20 10:00:00</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ag-fxdx91jsfyiy3****</p>
+     */
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2024-05-23 10:00:00</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

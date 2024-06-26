@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RenewAndroidInstanceGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>22326560487****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4B886792-2051-5DB4-8AE6-C8E45D3B4****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

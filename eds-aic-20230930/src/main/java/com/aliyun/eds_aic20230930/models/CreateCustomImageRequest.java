@@ -4,17 +4,27 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomImageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>create for cc5g group auth rules test</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>custom image name</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acp-2zecay9ponatdc4m****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

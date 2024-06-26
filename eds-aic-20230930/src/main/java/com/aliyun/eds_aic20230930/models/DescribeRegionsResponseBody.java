@@ -7,6 +7,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
     @NameInMap("RegionModels")
     public java.util.List<DescribeRegionsResponseBodyRegionModels> regionModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A87B3769-0D05-5383-B236-5798B455****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

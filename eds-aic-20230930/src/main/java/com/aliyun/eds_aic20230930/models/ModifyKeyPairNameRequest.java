@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyKeyPairNameRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kp-6v2q33ae4tw3a****</p>
      */
     @NameInMap("KeyPairId")
     public String keyPairId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>newKeyPairName</p>
      */
     @NameInMap("NewKeyPairName")
     public String newKeyPairName;

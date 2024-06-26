@@ -7,12 +7,24 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     @NameInMap("InstanceModel")
     public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModel> instanceModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kmma/xxE9WtwL/ADvZ****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,51 +66,115 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeAndroidInstancesResponseBodyInstanceModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ag-ayyhomlal7po****</p>
+         */
         @NameInMap("AndroidInstanceGroupId")
         public String androidInstanceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acp-8at8h6ejkadjh****</p>
+         */
         @NameInMap("AndroidInstanceId")
         public String androidInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("AndroidInstanceName")
         public String androidInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("AndroidInstanceStatus")
         public String androidInstanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aig-i7yv6tkn7kh8dv****</p>
+         */
         @NameInMap("AppInstanceGroupId")
         public String appInstanceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ai-9ey6io0q58rcd****</p>
+         */
         @NameInMap("AppInstanceId")
         public String appInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AuthorizedUserId")
         public String authorizedUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("BindUserId")
         public String bindUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FilePathNotFound</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-06 10:42:10</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-06 10:42:10</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kp-5hh431emkpucs****</p>
+         */
         @NameInMap("KeyPairId")
         public String keyPairId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.22.48</p>
+         */
         @NameInMap("NetworkInterfaceIp")
         public String networkInterfaceIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>p-0btrd5zj8epo****</p>
+         */
         @NameInMap("PersistentAppInstanceId")
         public String persistentAppInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Rate")
         public Integer rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

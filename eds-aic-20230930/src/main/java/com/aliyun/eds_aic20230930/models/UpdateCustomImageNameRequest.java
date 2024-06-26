@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomImageNameRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>imgc-075cllfeuazh0****</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>imagename</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 

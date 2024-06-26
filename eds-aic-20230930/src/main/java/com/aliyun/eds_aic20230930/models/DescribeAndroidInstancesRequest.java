@@ -7,24 +7,52 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name</p>
+     */
     @NameInMap("AndroidInstanceName")
     public String androidInstanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ag-25nt4kk9whjh****</p>
+     */
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kp-5hh431emkpuoi****</p>
+     */
     @NameInMap("KeyPairId")
     public String keyPairId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("SaleMode")
     public String saleMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("Status")
     public String status;
 

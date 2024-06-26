@@ -10,15 +10,34 @@ public class DescribeAppsRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    @NameInMap("BizRegionId")
+    public String bizRegionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>INSTALLING</p>
+     */
     @NameInMap("InstallationStatus")
     public String installationStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -41,6 +60,14 @@ public class DescribeAppsRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public DescribeAppsRequest setBizRegionId(String bizRegionId) {
+        this.bizRegionId = bizRegionId;
+        return this;
+    }
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     public DescribeAppsRequest setInstallationStatus(String installationStatus) {

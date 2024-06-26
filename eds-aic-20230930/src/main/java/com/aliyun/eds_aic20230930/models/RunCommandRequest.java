@@ -4,12 +4,20 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ls</p>
+     */
     @NameInMap("CommandContent")
     public String commandContent;
 
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 

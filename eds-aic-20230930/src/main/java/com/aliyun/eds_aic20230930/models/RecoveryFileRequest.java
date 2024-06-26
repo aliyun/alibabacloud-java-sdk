@@ -12,6 +12,9 @@ public class RecoveryFileRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bf-azhps4rdyi2th****</p>
      */
     @NameInMap("BackupFileId")
     public String backupFileId;
@@ -22,9 +25,17 @@ public class RecoveryFileRequest extends TeaModel {
     @NameInMap("BackupFilePath")
     public String backupFilePath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
+     */
     @NameInMap("UploadEndpoint")
     public String uploadEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("UploadType")
     public String uploadType;
 
