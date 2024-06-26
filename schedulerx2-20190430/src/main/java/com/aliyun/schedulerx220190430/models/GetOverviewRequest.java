@@ -4,38 +4,66 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetOverviewRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1684166400</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testSchedulerx.defaultGroup</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("MetricType")
     public Integer metricType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>query</p>
      */
     @NameInMap("Operate")
     public String operate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1684166400</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

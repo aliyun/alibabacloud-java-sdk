@@ -6,38 +6,49 @@ import com.aliyun.tea.*;
 public class RevokePermissionRequest extends TeaModel {
     /**
      * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.defalutGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The unique identifier (UID) of the namespace. You can obtain the namespace UID on the Namespace page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffcdf01</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The UID of the RAM user.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>277641081920123456</p>
      */
     @NameInMap("UserId")
     public String userId;

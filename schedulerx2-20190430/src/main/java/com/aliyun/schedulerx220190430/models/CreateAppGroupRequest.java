@@ -6,103 +6,149 @@ import com.aliyun.tea.*;
 public class CreateAppGroupRequest extends TeaModel {
     /**
      * <p>The AppKey for the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcExHZviLcl****</p>
      */
     @NameInMap("AppKey")
     public String appKey;
 
     /**
      * <p>The name of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DocTest</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>应用类型。</p>
-     * <br>
-     * <p>- 1、普通应用。</p>
-     * <p>- 2、k8s应用。</p>
+     * <ul>
+     * <li>1、普通应用。</li>
+     * <li>2、k8s应用。</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AppType")
     public Integer appType;
 
     /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("AppVersion")
+    public Integer appVersion;
+
+    /**
      * <p>The description of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>是否开启日志。</p>
-     * <br>
-     * <p>- true：开启</p>
-     * <br>
-     * <p>- false：关闭</p>
+     * <ul>
+     * <li><p>true：开启</p>
+     * </li>
+     * <li><p>false：关闭</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableLog")
     public Boolean enableLog;
 
     /**
      * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestSchedulerx.defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The maximum number of jobs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("MaxJobs")
     public Integer maxJobs;
 
     /**
-     * <p>The configuration of the alert. The value is a JSON string. For more information about this parameter, see **Additional information about request parameters**.</p>
+     * <p>The configuration of the alert. The value is a JSON string. For more information about this parameter, see <strong>Additional information about request parameters</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;sendChannel&quot;:&quot;sms,ding&quot;}</p>
      */
     @NameInMap("MonitorConfigJson")
     public String monitorConfigJson;
 
     /**
      * <p>The configuration of alert contacts. The value is a JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756\<em>\</em>\<em>\</em>\<em>\</em>&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></p>
      */
     @NameInMap("MonitorContactsJson")
     public String monitorContactsJson;
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
     /**
      * <p>This parameter is not supported. You do not need to specify this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to schedule a busy worker.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ScheduleBusyWorkers")
     public Boolean scheduleBusyWorkers;
-
-    @NameInMap("Version")
-    public Integer version;
 
     public static CreateAppGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppGroupRequest self = new CreateAppGroupRequest();
@@ -131,6 +177,14 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public Integer getAppType() {
         return this.appType;
+    }
+
+    public CreateAppGroupRequest setAppVersion(Integer appVersion) {
+        this.appVersion = appVersion;
+        return this;
+    }
+    public Integer getAppVersion() {
+        return this.appVersion;
     }
 
     public CreateAppGroupRequest setDescription(String description) {
@@ -219,14 +273,6 @@ public class CreateAppGroupRequest extends TeaModel {
     }
     public Boolean getScheduleBusyWorkers() {
         return this.scheduleBusyWorkers;
-    }
-
-    public CreateAppGroupRequest setVersion(Integer version) {
-        this.version = version;
-        return this;
-    }
-    public Integer getVersion() {
-        return this.version;
     }
 
 }

@@ -4,15 +4,31 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteRouteStrategyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job is not existed, jobId=162837</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>704A2A61-3681-5568-92F7-2DFCC53F33D1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

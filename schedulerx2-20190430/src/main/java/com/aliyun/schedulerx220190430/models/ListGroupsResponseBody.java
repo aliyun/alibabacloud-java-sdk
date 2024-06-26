@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListGroupsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,21 +21,31 @@ public class ListGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB58A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,36 +98,55 @@ public class ListGroupsResponseBody extends TeaModel {
     public static class ListGroupsResponseBodyDataAppGroups extends TeaModel {
         /**
          * <p>The application group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AppGroupId")
         public Long appGroupId;
 
         /**
          * <p>The AppKey for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3G77O6NZxq/lyo1NC****==</p>
          */
         @NameInMap("AppKey")
         public String appKey;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DocTest</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("AppVersion")
+        public Integer appVersion;
+
+        /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DocTest.Group</p>
          */
         @NameInMap("GroupId")
         public String groupId;
-
-        @NameInMap("Version")
-        public Integer version;
 
         public static ListGroupsResponseBodyDataAppGroups build(java.util.Map<String, ?> map) throws Exception {
             ListGroupsResponseBodyDataAppGroups self = new ListGroupsResponseBodyDataAppGroups();
@@ -145,6 +177,14 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListGroupsResponseBodyDataAppGroups setAppVersion(Integer appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public Integer getAppVersion() {
+            return this.appVersion;
+        }
+
         public ListGroupsResponseBodyDataAppGroups setDescription(String description) {
             this.description = description;
             return this;
@@ -159,14 +199,6 @@ public class ListGroupsResponseBody extends TeaModel {
         }
         public String getGroupId() {
             return this.groupId;
-        }
-
-        public ListGroupsResponseBodyDataAppGroups setVersion(Integer version) {
-            this.version = version;
-            return this;
-        }
-        public Integer getVersion() {
-            return this.version;
         }
 
     }

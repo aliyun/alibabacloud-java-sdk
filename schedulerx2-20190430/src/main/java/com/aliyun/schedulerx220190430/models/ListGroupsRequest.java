@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class ListGroupsRequest extends TeaModel {
     /**
      * <p>The name of the application group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k8s-test</p>
      */
     @NameInMap("AppGroupName")
     public String appGroupName;
 
     /**
-     * <p>The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
-     * <br>
+     * <p>The namespace ID. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1a72ecb1-b4cc-400a-a71b-20cdec9b****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

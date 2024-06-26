@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetJobInstanceListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,21 +21,31 @@ public class GetJobInstanceListResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned only if the corresponding error occurs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jobid: 92583 not match groupId: testSchedulerx.defaultGroup</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,101 +98,140 @@ public class GetJobInstanceListResponseBody extends TeaModel {
     public static class GetJobInstanceListResponseBodyDataJobInstanceDetails extends TeaModel {
         /**
          * <p>The data timestamp of the job instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-27 11:52:10</p>
          */
         @NameInMap("DataTime")
         public String dataTime;
 
         /**
          * <p>The end time of the job execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-27 11:52:10</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The user who executes the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A</p>
          */
         @NameInMap("Executor")
         public String executor;
 
         /**
          * <p>The job instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11111111</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>92583</p>
          */
         @NameInMap("JobId")
         public Long jobId;
 
         /**
          * <p>The progress of the job instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>complete</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The execution results of the job instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The time when the job was scheduled to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-27 11:52:10</p>
          */
         @NameInMap("ScheduleTime")
         public String scheduleTime;
 
         /**
          * <p>The start time of the job execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-27 11:52:10</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The state of the job instance. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The job instance is waiting for execution.</p>
-         * <p>*   **3**: The job instance is running.</p>
-         * <p>*   **4**: The job instance is successful.</p>
-         * <p>*   **5**: The job instance failed.</p>
-         * <p>*   **9**: The job instance is rejected.</p>
-         * <br>
+         * <ul>
+         * <li><strong>1</strong>: The job instance is waiting for execution.</li>
+         * <li><strong>3</strong>: The job instance is running.</li>
+         * <li><strong>4</strong>: The job instance is successful.</li>
+         * <li><strong>5</strong>: The job instance failed.</li>
+         * <li><strong>9</strong>: The job instance is rejected.</li>
+         * </ul>
          * <p>Enumeration class: com.alibaba.schedulerx.common.domain.InstanceStatus</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The method that is used to specify the time when to schedule the job instance. Valid values:</p>
-         * <br>
-         * <p>*   **1**: cron</p>
-         * <p>*   **3**: fix_rate</p>
-         * <p>*   **4**: second_delay</p>
-         * <p>*   **100**: api</p>
-         * <br>
+         * <ul>
+         * <li><strong>1</strong>: cron</li>
+         * <li><strong>3</strong>: fix_rate</li>
+         * <li><strong>4</strong>: second_delay</li>
+         * <li><strong>100</strong>: api</li>
+         * </ul>
          * <p>Enumeration class: com.alibaba.schedulerx.common.domain.TimeType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TimeType")
         public Integer timeType;
 
         /**
          * <p>The trigger type of the job instance. Valid values:</p>
-         * <br>
-         * <p>*   **1**: The job instance was triggered at the scheduled time.</p>
-         * <p>*   **2**: The job instance was triggered due to data updates.</p>
-         * <p>*   **3**: The job instance was triggered by an API call.</p>
-         * <p>*   **4**: The job instance was triggered because it is manually rerun.</p>
-         * <p>*   **5**: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.</p>
-         * <br>
+         * <ul>
+         * <li><strong>1</strong>: The job instance was triggered at the scheduled time.</li>
+         * <li><strong>2</strong>: The job instance was triggered due to data updates.</li>
+         * <li><strong>3</strong>: The job instance was triggered by an API call.</li>
+         * <li><strong>4</strong>: The job instance was triggered because it is manually rerun.</li>
+         * <li><strong>5</strong>: The job instance was triggered because the system automatically reruns the job instance upon a system exception, such as a database exception.</li>
+         * </ul>
          * <p>Enumeration class: com.alibaba.schedulerx.common.domain.TriggerType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TriggerType")
         public Integer triggerType;
 
         /**
          * <p>The endpoint of the triggered client. The value is in the IP address:Port number format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0:16</p>
          */
         @NameInMap("WorkAddr")
         public String workAddr;

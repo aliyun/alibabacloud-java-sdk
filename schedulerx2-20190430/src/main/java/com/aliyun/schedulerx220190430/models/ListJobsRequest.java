@@ -5,46 +5,62 @@ import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.</p>
-     * <br>
+     * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DocTest.Group</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The name of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>helloword</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
-     * <p>The ID of the namespace. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
-     * <br>
+     * <p>The ID of the namespace. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1a72ecb1-b4cc-400a-a71b-20cdec9b****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to enable the job. Valid values:</p>
-     * <br>
-     * <p>*   **0**: disables the job.</p>
-     * <p>*   **1**: enables the job.</p>
+     * <ul>
+     * <li><strong>0</strong>: disables the job.</li>
+     * <li><strong>1</strong>: enables the job.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public String status;

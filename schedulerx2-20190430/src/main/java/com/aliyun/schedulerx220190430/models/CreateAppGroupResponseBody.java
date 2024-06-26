@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateAppGroupResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,21 +21,31 @@ public class CreateAppGroupResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned only if the corresponding error occurs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Your request is denied as lack of ssl protect.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>883AFE93-FB03-4FA9-A958-E750C6DE120C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the application was created. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class CreateAppGroupResponseBody extends TeaModel {
     public static class CreateAppGroupResponseBodyData extends TeaModel {
         /**
          * <p>The job group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6607</p>
          */
         @NameInMap("AppGroupId")
         public Long appGroupId;
 
         /**
          * <p>The AppKey for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcExHZviL******</p>
          */
         @NameInMap("AppKey")
         public String appKey;

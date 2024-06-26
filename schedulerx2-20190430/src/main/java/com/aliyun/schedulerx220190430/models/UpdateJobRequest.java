@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class UpdateJobRequest extends TeaModel {
     /**
      * <p>The interval of retries after a job failure. Default value: 30. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("AttemptInterval")
     public Integer attemptInterval;
 
     /**
      * <p>If you set TimeType to 1 (cron), you can specify calendar days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Business days</p>
      */
     @NameInMap("Calendar")
     public String calendar;
 
     /**
      * <p>The full path of the job interface class.</p>
-     * <br>
      * <p>This field is available only when you set the job type to java. In this case, you must enter a full path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.alibaba.test.helloworld</p>
      */
     @NameInMap("ClassName")
     public String className;
 
     /**
      * <p>The number of threads that are triggered by a single worker at a time. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("ConsumerSize")
     public Integer consumerSize;
@@ -38,164 +49,235 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <p>The script content. This parameter is required when you set the job type to python, shell, go, or k8s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>echo \&quot;hello\&quot;</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>If you set TimeType to 1 (cron), you can specify a time offset. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2400</p>
      */
     @NameInMap("DataOffset")
     public Integer dataOffset;
 
     /**
      * <p>The job description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The number of task distribution threads. Default value: 5. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("DispatcherSize")
     public Integer dispatcherSize;
 
     /**
      * <p>The execution mode of the job. Valid values:</p>
-     * <br>
-     * <p>*   **Stand-alone operation**</p>
-     * <p>*   **Broadcast run**</p>
-     * <p>*   **Visual MapReduce**</p>
-     * <p>*   **MapReduce**</p>
-     * <p>*   **Shard run**</p>
+     * <ul>
+     * <li><strong>Stand-alone operation</strong></li>
+     * <li><strong>Broadcast run</strong></li>
+     * <li><strong>Visual MapReduce</strong></li>
+     * <li><strong>MapReduce</strong></li>
+     * <li><strong>Shard run</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standalone</p>
      */
     @NameInMap("ExecuteMode")
     public String executeMode;
 
     /**
      * <p>Specifies whether to turn on Failure alarm. If the switch is turned on, an alert will be generated upon a failure. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("FailEnable")
     public Boolean failEnable;
 
     /**
      * <p>The number of consecutive failures. An alert will be received if the number of consecutive failures reaches the value of this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FailTimes")
     public Integer failTimes;
 
     /**
      * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSchedulerx.defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92583</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
      * <p>The maximum number of retries after a job failure. This parameter is specified based on your business requirements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("MaxAttempt")
     public Integer maxAttempt;
 
     /**
      * <p>The maximum number of concurrent instances. Default value: 1. The default value indicates that only one instance is allowed to run at a time. When an instance is running, another instance is not triggered even if the scheduled time for running the instance is reached.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxConcurrency")
     public Integer maxConcurrency;
 
     /**
      * <p>Specifies whether to turn on No machine alarm available. If the switch is turned on, an alert will be generated when no machine is available for running the job. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("MissWorkerEnable")
     public Boolean missWorkerEnable;
 
     /**
      * <p>The job name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>helloword</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The namespace source. This parameter is required only for a special third party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The number of tasks that can be pulled at a time. Default value: 100. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The user-defined parameters that you can obtain when the job is running.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
      * <p>The maximum number of tasks that can be queued. Default value: 10000. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("QueueSize")
     public Integer queueSize;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The method that is used to send alerts. Only Short Message Service (SMS) is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sms</p>
      */
     @NameInMap("SendChannel")
     public String sendChannel;
 
     /**
      * <p>Specifies whether to turn on Successful notice. If the switch is turned on, a notice will be sent when a job succeeds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SuccessNoticeEnable")
     public Boolean successNoticeEnable;
 
     /**
      * <p>The interval of retries after a task failure. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("TaskAttemptInterval")
     public Integer taskAttemptInterval;
 
     /**
      * <p>The job mode. Valid values: push and pull. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>push</p>
      */
     @NameInMap("TaskDispatchMode")
     public String taskDispatchMode;
 
     /**
      * <p>The number of retries after a task failure. This parameter is an advanced configuration item of the MapReduce job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("TaskMaxAttempt")
     public Integer taskMaxAttempt;
@@ -205,56 +287,82 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <p>The time expression. Specify the time expression based on the value of TimeType:</p>
-     * <br>
-     * <p>*   If you set TimeType to **1** (cron), specify this parameter to a standard CRON expression.</p>
-     * <p>*   If you set TimeType to **100** (api), no time expression is required.</p>
-     * <p>*   If you set TimeType to **3** (fixed_rate), specify this parameter to a fixed frequency in seconds. For example, if you set this parameter to 30, the system triggers a job every 30 seconds.</p>
-     * <p>*   If you set TimeType to **4** (second_delay), specify this parameter to a fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</p>
+     * <ul>
+     * <li>If you set TimeType to <strong>1</strong> (cron), specify this parameter to a standard CRON expression.</li>
+     * <li>If you set TimeType to <strong>100</strong> (api), no time expression is required.</li>
+     * <li>If you set TimeType to <strong>3</strong> (fixed_rate), specify this parameter to a fixed frequency in seconds. For example, if you set this parameter to 30, the system triggers a job every 30 seconds.</li>
+     * <li>If you set TimeType to <strong>4</strong> (second_delay), specify this parameter to a fixed delay after which the job is triggered. Valid values: 1 to 60. Unit: seconds.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("TimeExpression")
     public String timeExpression;
 
     /**
      * <p>The time type. Valid values:</p>
-     * <br>
-     * <p>*   **1**: cron</p>
-     * <p>*   **3**: fix_rate</p>
-     * <p>*   **4**: second_delay</p>
-     * <p>*   **100**: api</p>
+     * <ul>
+     * <li><strong>1</strong>: cron</li>
+     * <li><strong>3</strong>: fix_rate</li>
+     * <li><strong>4</strong>: second_delay</li>
+     * <li><strong>100</strong>: api</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TimeType")
     public Integer timeType;
 
     /**
      * <p>The timeout threshold. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7200</p>
      */
     @NameInMap("Timeout")
     public Long timeout;
 
     /**
      * <p>Specifies whether to turn on Timeout alarm. If the switch is turned on, an alert will be generated upon a timeout. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("TimeoutEnable")
     public Boolean timeoutEnable;
 
     /**
      * <p>Specifies whether to turn on Timeout termination. If the switch is turned on, the job will be terminated upon a timeout. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("TimeoutKillEnable")
     public Boolean timeoutKillEnable;
 
     /**
      * <p>Time zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GMT+8</p>
      */
     @NameInMap("Timezone")
     public String timezone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;resource&quot;:&quot;shell&quot;,&quot;fileFormat&quot;:&quot;unix&quot;,&quot;templateType&quot;:&quot;customTemplate&quot;}</p>
+     */
     @NameInMap("XAttrs")
     public String XAttrs;
 
@@ -561,25 +669,37 @@ public class UpdateJobRequest extends TeaModel {
 
     public static class UpdateJobRequestContactInfo extends TeaModel {
         /**
-         * <p>The webhook URL of the DingTalk chatbot.[](https://open.dingtalk.com/document/org/application-types)</p>
+         * <p>The webhook URL of the DingTalk chatbot.<a href="https://open.dingtalk.com/document/org/application-types"></a></p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**********</p>
          */
         @NameInMap("Ding")
         public String ding;
 
         /**
          * <p>The email address of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test***@***.com</p>
          */
         @NameInMap("UserMail")
         public String userMail;
 
         /**
          * <p>The name of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userA</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The mobile phone number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         @NameInMap("UserPhone")
         public String userPhone;
