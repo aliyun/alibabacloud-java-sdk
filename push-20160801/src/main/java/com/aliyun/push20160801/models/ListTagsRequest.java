@@ -4,6 +4,12 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class ListTagsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23267207</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 

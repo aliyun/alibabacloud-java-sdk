@@ -4,18 +4,48 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceStatRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23267207</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iOS</p>
+     */
     @NameInMap("DeviceType")
     public String deviceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-07-29T00:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TOTAL</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-07-28T00:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

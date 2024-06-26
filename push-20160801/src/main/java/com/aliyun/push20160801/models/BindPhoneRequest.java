@@ -4,12 +4,30 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class BindPhoneRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27725900</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eb5f741d83d04d34807d229999eefa52</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1381111****</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

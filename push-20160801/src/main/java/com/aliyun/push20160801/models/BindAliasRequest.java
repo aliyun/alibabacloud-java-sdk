@@ -4,12 +4,30 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class BindAliasRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_alias</p>
+     */
     @NameInMap("AliasName")
     public String aliasName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23267207</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e2ba19de97604f55b16557673****</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 

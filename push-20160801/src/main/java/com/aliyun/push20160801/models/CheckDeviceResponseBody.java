@@ -4,9 +4,17 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class CheckDeviceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ture</p>
+     */
     @NameInMap("Available")
     public Boolean available;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

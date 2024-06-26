@@ -4,9 +4,21 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicesByAliasRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliasName</p>
+     */
     @NameInMap("Alias")
     public String alias;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23267207</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 

@@ -4,6 +4,10 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryTagsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D68AE5C6-8AAF-46C9-B627-3FDACD1A4168</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class QueryTagsResponseBody extends TeaModel {
     }
 
     public static class QueryTagsResponseBodyTagInfosTagInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test_tag2</p>
+         */
         @NameInMap("TagName")
         public String tagName;
 

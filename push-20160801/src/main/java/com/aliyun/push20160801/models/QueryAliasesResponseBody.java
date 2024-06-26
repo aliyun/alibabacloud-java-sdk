@@ -7,6 +7,10 @@ public class QueryAliasesResponseBody extends TeaModel {
     @NameInMap("AliasInfos")
     public QueryAliasesResponseBodyAliasInfos aliasInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>159E4422-6624-4750-8943-DFD98D34858C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class QueryAliasesResponseBody extends TeaModel {
     }
 
     public static class QueryAliasesResponseBodyAliasInfosAliasInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test_alias1</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 

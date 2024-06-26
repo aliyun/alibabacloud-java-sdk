@@ -4,15 +4,39 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class UnbindTagRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23267207</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e2ba19de97604f55b16557673****</p>
+     */
     @NameInMap("ClientKey")
     public String clientKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEVICE</p>
+     */
     @NameInMap("KeyType")
     public String keyType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_tag1,test_tag2</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 

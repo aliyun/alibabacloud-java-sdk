@@ -4,6 +4,10 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class UnbindAliasResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>159E4422-6624-4750-8943-DFD98D34858C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

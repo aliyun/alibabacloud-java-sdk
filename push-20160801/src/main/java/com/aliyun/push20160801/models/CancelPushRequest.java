@@ -4,9 +4,21 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class CancelPushRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23267207</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>501029</p>
+     */
     @NameInMap("MessageId")
     public Long messageId;
 

@@ -4,102 +4,210 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class PushRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>com.alibaba.cloudpushdemo.bizactivity</p>
+     */
     @NameInMap("AndroidActivity")
     public String androidActivity;
 
     @NameInMap("AndroidBigBody")
     public String androidBigBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></p>
+     */
     @NameInMap("AndroidBigPictureUrl")
     public String androidBigPictureUrl;
 
     @NameInMap("AndroidBigTitle")
     public String androidBigTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;api_name&quot;:&quot;PushNoticeToAndroidRequest&quot;}</p>
+     */
     @NameInMap("AndroidExtParameters")
     public String androidExtParameters;
 
     @NameInMap("AndroidHonorTargetUserType")
     public Integer androidHonorTargetUserType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RCP4C123456</p>
+     */
     @NameInMap("AndroidHuaweiReceiptId")
     public String androidHuaweiReceiptId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AndroidHuaweiTargetUserType")
     public Integer androidHuaweiTargetUserType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></p>
+     */
     @NameInMap("AndroidImageUrl")
     public String androidImageUrl;
 
     @NameInMap("AndroidInboxBody")
     public String androidInboxBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VOIP</p>
+     */
     @NameInMap("AndroidMessageHuaweiCategory")
     public String androidMessageHuaweiCategory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HIGH</p>
+     */
     @NameInMap("AndroidMessageHuaweiUrgency")
     public String androidMessageHuaweiUrgency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TODO</p>
+     */
     @NameInMap("AndroidMessageVivoCategory")
     public String androidMessageVivoCategory;
 
     @NameInMap("AndroidMusic")
     public String androidMusic;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AndroidNotificationBarPriority")
     public Integer androidNotificationBarPriority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("AndroidNotificationBarType")
     public Integer androidNotificationBarType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AndroidNotificationChannel")
     public String androidNotificationChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>group-1</p>
+     */
     @NameInMap("AndroidNotificationGroup")
     public String androidNotificationGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LOW</p>
+     */
     @NameInMap("AndroidNotificationHonorChannel")
     public String androidNotificationHonorChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LOW</p>
+     */
     @NameInMap("AndroidNotificationHuaweiChannel")
     public String androidNotificationHuaweiChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100001</p>
+     */
     @NameInMap("AndroidNotificationNotifyId")
     public Integer androidNotificationNotifyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>classification</p>
+     */
     @NameInMap("AndroidNotificationVivoChannel")
     public String androidNotificationVivoChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>michannel</p>
+     */
     @NameInMap("AndroidNotificationXiaomiChannel")
     public String androidNotificationXiaomiChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BOTH</p>
+     */
     @NameInMap("AndroidNotifyType")
     public String androidNotifyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>APPLICATION</p>
+     */
     @NameInMap("AndroidOpenType")
     public String androidOpenType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://xxxx.xxx">https://xxxx.xxx</a></p>
+     */
     @NameInMap("AndroidOpenUrl")
     public String androidOpenUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>com.alibaba.cloudpushdemo.bizactivity</p>
+     */
     @NameInMap("AndroidPopupActivity")
     public String androidPopupActivity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hello</p>
+     */
     @NameInMap("AndroidPopupBody")
     public String androidPopupBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hello</p>
+     */
     @NameInMap("AndroidPopupTitle")
     public String androidPopupTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AndroidRemind")
     public Boolean androidRemind;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AndroidRenderStyle")
     public Integer androidRenderStyle;
 
     @NameInMap("AndroidTargetUserType")
     public Integer androidTargetUserType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AndroidVivoPushMode")
     public Integer androidVivoPushMode;
 
@@ -118,46 +226,155 @@ public class PushRequest extends TeaModel {
     @Deprecated
     public String androidXiaoMiNotifyTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png">https://f6.market.xiaomi.com/download/MiPass/aaa/bbb.png</a></p>
+     */
     @NameInMap("AndroidXiaomiBigPictureUrl")
     public String androidXiaomiBigPictureUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://imag.example.com/image.png">https://imag.example.com/image.png</a></p>
+     */
     @NameInMap("AndroidXiaomiImageUrl")
     public String androidXiaomiImageUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23267207</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hello</p>
+     */
     @NameInMap("Body")
     public String body;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("DeviceType")
     public String deviceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-02-20T00:00:00Z</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    @NameInMap("HarmonyAction")
+    public String harmonyAction;
+
+    @NameInMap("HarmonyActionType")
+    public String harmonyActionType;
+
+    @NameInMap("HarmonyCategory")
+    public String harmonyCategory;
+
+    @NameInMap("HarmonyExtParameters")
+    public String harmonyExtParameters;
+
+    @NameInMap("HarmonyImageUrl")
+    public String harmonyImageUrl;
+
+    @NameInMap("HarmonyInboxContent")
+    public String harmonyInboxContent;
+
+    @NameInMap("HarmonyNotificationSlotType")
+    public String harmonyNotificationSlotType;
+
+    @NameInMap("HarmonyNotifyId")
+    public Integer harmonyNotifyId;
+
+    @NameInMap("HarmonyReceiptId")
+    public String harmonyReceiptId;
+
+    @NameInMap("HarmonyRemind")
+    public Boolean harmonyRemind;
+
+    @NameInMap("HarmonyRemindBody")
+    public String harmonyRemindBody;
+
+    @NameInMap("HarmonyRemindTitle")
+    public String harmonyRemindTitle;
+
+    @NameInMap("HarmonyRenderStyle")
+    public String harmonyRenderStyle;
+
+    @NameInMap("HarmonyTestMessage")
+    public Boolean harmonyTestMessage;
+
+    @NameInMap("HarmonyUri")
+    public String harmonyUri;
+
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("JobKey")
     public String jobKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-02-20T00:00:00Z</p>
+     */
     @NameInMap("PushTime")
     public String pushTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MESSAGE</p>
+     */
     @NameInMap("PushType")
     public String pushType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>accs,huawei,xiaomi</p>
+     */
     @NameInMap("SendChannels")
     public String sendChannels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SendSpeed")
     @Deprecated
     public Integer sendSpeed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("SmsDelaySecs")
     public Integer smsDelaySecs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key1=value1</p>
+     */
     @NameInMap("SmsParams")
     public String smsParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SmsSendPolicy")
     public Integer smsSendPolicy;
 
@@ -167,63 +384,143 @@ public class PushRequest extends TeaModel {
     @NameInMap("SmsTemplateName")
     public String smsTemplateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("StoreOffline")
     public Boolean storeOffline;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("Target")
     public String target;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("TargetValue")
     public String targetValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>title</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Trim")
     public Boolean trim;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DEV</p>
+     */
     @NameInMap("iOSApnsEnv")
     public String iOSApnsEnv;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("iOSBadge")
     public Integer iOSBadge;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("iOSBadgeAutoIncrement")
     public Boolean iOSBadgeAutoIncrement;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{“attachment”: “<a href="https://xxxx.xxx/notification_pic.png%22%7D">https://xxxx.xxx/notification_pic.png&quot;}</a></p>
+     */
     @NameInMap("iOSExtParameters")
     public String iOSExtParameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("iOSInterruptionLevel")
     public String iOSInterruptionLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("iOSMusic")
     public String iOSMusic;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("iOSMutableContent")
     public Boolean iOSMutableContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ios</p>
+     */
     @NameInMap("iOSNotificationCategory")
     public String iOSNotificationCategory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ZD2011</p>
+     */
     @NameInMap("iOSNotificationCollapseId")
     public String iOSNotificationCollapseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("iOSNotificationThreadId")
     public String iOSNotificationThreadId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.01</p>
+     */
     @NameInMap("iOSRelevanceScore")
     public Double iOSRelevanceScore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("iOSRemind")
     public Boolean iOSRemind;
 
     @NameInMap("iOSRemindBody")
     public String iOSRemindBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("iOSSilentNotification")
     public Boolean iOSSilentNotification;
 
+    /**
+     * <strong>example:</strong>
+     * <p>su\&quot;b</p>
+     */
     @NameInMap("iOSSubtitle")
     public String iOSSubtitle;
 
@@ -574,6 +871,126 @@ public class PushRequest extends TeaModel {
     }
     public String getExpireTime() {
         return this.expireTime;
+    }
+
+    public PushRequest setHarmonyAction(String harmonyAction) {
+        this.harmonyAction = harmonyAction;
+        return this;
+    }
+    public String getHarmonyAction() {
+        return this.harmonyAction;
+    }
+
+    public PushRequest setHarmonyActionType(String harmonyActionType) {
+        this.harmonyActionType = harmonyActionType;
+        return this;
+    }
+    public String getHarmonyActionType() {
+        return this.harmonyActionType;
+    }
+
+    public PushRequest setHarmonyCategory(String harmonyCategory) {
+        this.harmonyCategory = harmonyCategory;
+        return this;
+    }
+    public String getHarmonyCategory() {
+        return this.harmonyCategory;
+    }
+
+    public PushRequest setHarmonyExtParameters(String harmonyExtParameters) {
+        this.harmonyExtParameters = harmonyExtParameters;
+        return this;
+    }
+    public String getHarmonyExtParameters() {
+        return this.harmonyExtParameters;
+    }
+
+    public PushRequest setHarmonyImageUrl(String harmonyImageUrl) {
+        this.harmonyImageUrl = harmonyImageUrl;
+        return this;
+    }
+    public String getHarmonyImageUrl() {
+        return this.harmonyImageUrl;
+    }
+
+    public PushRequest setHarmonyInboxContent(String harmonyInboxContent) {
+        this.harmonyInboxContent = harmonyInboxContent;
+        return this;
+    }
+    public String getHarmonyInboxContent() {
+        return this.harmonyInboxContent;
+    }
+
+    public PushRequest setHarmonyNotificationSlotType(String harmonyNotificationSlotType) {
+        this.harmonyNotificationSlotType = harmonyNotificationSlotType;
+        return this;
+    }
+    public String getHarmonyNotificationSlotType() {
+        return this.harmonyNotificationSlotType;
+    }
+
+    public PushRequest setHarmonyNotifyId(Integer harmonyNotifyId) {
+        this.harmonyNotifyId = harmonyNotifyId;
+        return this;
+    }
+    public Integer getHarmonyNotifyId() {
+        return this.harmonyNotifyId;
+    }
+
+    public PushRequest setHarmonyReceiptId(String harmonyReceiptId) {
+        this.harmonyReceiptId = harmonyReceiptId;
+        return this;
+    }
+    public String getHarmonyReceiptId() {
+        return this.harmonyReceiptId;
+    }
+
+    public PushRequest setHarmonyRemind(Boolean harmonyRemind) {
+        this.harmonyRemind = harmonyRemind;
+        return this;
+    }
+    public Boolean getHarmonyRemind() {
+        return this.harmonyRemind;
+    }
+
+    public PushRequest setHarmonyRemindBody(String harmonyRemindBody) {
+        this.harmonyRemindBody = harmonyRemindBody;
+        return this;
+    }
+    public String getHarmonyRemindBody() {
+        return this.harmonyRemindBody;
+    }
+
+    public PushRequest setHarmonyRemindTitle(String harmonyRemindTitle) {
+        this.harmonyRemindTitle = harmonyRemindTitle;
+        return this;
+    }
+    public String getHarmonyRemindTitle() {
+        return this.harmonyRemindTitle;
+    }
+
+    public PushRequest setHarmonyRenderStyle(String harmonyRenderStyle) {
+        this.harmonyRenderStyle = harmonyRenderStyle;
+        return this;
+    }
+    public String getHarmonyRenderStyle() {
+        return this.harmonyRenderStyle;
+    }
+
+    public PushRequest setHarmonyTestMessage(Boolean harmonyTestMessage) {
+        this.harmonyTestMessage = harmonyTestMessage;
+        return this;
+    }
+    public Boolean getHarmonyTestMessage() {
+        return this.harmonyTestMessage;
+    }
+
+    public PushRequest setHarmonyUri(String harmonyUri) {
+        this.harmonyUri = harmonyUri;
+        return this;
+    }
+    public String getHarmonyUri() {
+        return this.harmonyUri;
     }
 
     public PushRequest setJobKey(String jobKey) {

@@ -7,6 +7,10 @@ public class CheckDevicesResponseBody extends TeaModel {
     @NameInMap("DeviceCheckInfos")
     public CheckDevicesResponseBodyDeviceCheckInfos deviceCheckInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class CheckDevicesResponseBody extends TeaModel {
     }
 
     public static class CheckDevicesResponseBodyDeviceCheckInfosDeviceCheckInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Available")
         public Boolean available;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ae296f3b04a58a05b30c95f****</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 

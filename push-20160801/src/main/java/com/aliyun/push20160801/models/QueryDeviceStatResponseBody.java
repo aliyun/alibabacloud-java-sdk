@@ -7,6 +7,10 @@ public class QueryDeviceStatResponseBody extends TeaModel {
     @NameInMap("AppDeviceStats")
     public QueryDeviceStatResponseBodyAppDeviceStats appDeviceStats;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class QueryDeviceStatResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceStatResponseBodyAppDeviceStatsAppDeviceStat extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iOS</p>
+         */
         @NameInMap("DeviceType")
         public String deviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-07-28T16:00:00Z</p>
+         */
         @NameInMap("Time")
         public String time;
 

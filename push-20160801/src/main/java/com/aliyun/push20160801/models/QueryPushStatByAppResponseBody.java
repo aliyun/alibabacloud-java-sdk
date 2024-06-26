@@ -7,6 +7,10 @@ public class QueryPushStatByAppResponseBody extends TeaModel {
     @NameInMap("AppPushStats")
     public QueryPushStatByAppResponseBodyAppPushStats appPushStats;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +36,80 @@ public class QueryPushStatByAppResponseBody extends TeaModel {
     }
 
     public static class QueryPushStatByAppResponseBodyAppPushStatsAppPushStat extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("AcceptCount")
         public Long acceptCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("DeletedCount")
         public Long deletedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("OpenedCount")
         public Long openedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("ReceivedCount")
         public Long receivedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SentCount")
         public Long sentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsFailedCount")
         public Long smsFailedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsReceiveFailedCount")
         public Long smsReceiveFailedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsReceiveSuccessCount")
         public Long smsReceiveSuccessCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsSentCount")
         public Long smsSentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsSkipCount")
         public Long smsSkipCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-07-25T00:00:00Z</p>
+         */
         @NameInMap("Time")
         public String time;
 

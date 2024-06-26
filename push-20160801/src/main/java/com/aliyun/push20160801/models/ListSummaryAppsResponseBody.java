@@ -4,6 +4,10 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class ListSummaryAppsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ListSummaryAppsResponseBody extends TeaModel {
     }
 
     public static class ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>23****07</p>
+         */
         @NameInMap("AppKey")
         public Long appKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("AppName")
         public String appName;
 

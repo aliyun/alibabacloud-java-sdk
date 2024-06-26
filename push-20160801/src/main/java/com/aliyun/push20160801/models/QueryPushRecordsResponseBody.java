@@ -4,21 +4,41 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class QueryPushRecordsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>i91D***********kXIh/dVBEQ==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("PushInfos")
     public QueryPushRecordsResponseBodyPushInfos pushInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9B24B396-249D-55E4-8CA1-66C9B50BB734</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>193</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -76,33 +96,73 @@ public class QueryPushRecordsResponseBody extends TeaModel {
     }
 
     public static class QueryPushRecordsResponseBodyPushInfosPushInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>333526247</p>
+         */
         @NameInMap("AppKey")
         public Long appKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abcd</p>
+         */
         @NameInMap("Body")
         public String body;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ANDROID</p>
+         */
         @NameInMap("DeviceType")
         public String deviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>510431</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-15T02:05:24Z</p>
+         */
         @NameInMap("PushTime")
         public String pushTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NOTICE</p>
+         */
         @NameInMap("PushType")
         public String pushType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DEVICE</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SENT</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DEVICE</p>
+         */
         @NameInMap("Target")
         public String target;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sssss</p>
+         */
         @NameInMap("Title")
         public String title;
 
