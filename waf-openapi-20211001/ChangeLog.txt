@@ -1,3 +1,8 @@
+2024-06-26 Version: 3.7.0
+- Support API DescribePauseProtectionStatus.
+- Support API ModifyPauseProtectionStatus.
+
+
 2024-06-20 Version: 3.6.0
 - Support API DescribeApisecLogDeliveries.
 - Support API DescribeApisecSlsLogStores.
