@@ -12,6 +12,9 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
     public static class DescribeOasSQLPlansResponseBodyDataPlanExplain extends TeaModel {
         /**
          * <p>JSON string of the SQL execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;RootOperations\&quot;:[{\&quot;Children\</p>
          */
         @NameInMap("PlanJsonString")
         public String planJsonString;
@@ -62,186 +68,279 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
     public static class DescribeOasSQLPlansResponseBodyDataPlans extends TeaModel {
         /**
          * <p>Average Application event waiting time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgApplicationWaitTime")
         public Double avgApplicationWaitTime;
 
         /**
          * <p>Average cache read count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30137.03</p>
          */
         @NameInMap("AvgBufferGets")
         public Double avgBufferGets;
 
         /**
          * <p>Average Concurrency event waiting time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgConcurrencyWaitTime")
         public Double avgConcurrencyWaitTime;
 
         /**
          * <p>Average CPU time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1875.34</p>
          */
         @NameInMap("AvgCpuTime")
         public Double avgCpuTime;
 
         /**
          * <p>The average physical read count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgDiskReads")
         public Double avgDiskReads;
 
         /**
          * <p>The average physical write count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgDiskWrites")
         public Double avgDiskWrites;
 
         /**
          * <p>Average interval waiting time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1876.78</p>
          */
         @NameInMap("AvgElapsedTime")
         public Double avgElapsedTime;
 
         /**
          * <p>Average row processing waiting time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("AvgRowProcessed")
         public Double avgRowProcessed;
 
         /**
          * <p>Average UserIo event waiting time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgUserIoWaitTime")
         public Double avgUserIoWaitTime;
 
         /**
          * <p>Collection time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684368****00000</p>
          */
         @NameInMap("CollectTimeUs")
         public Long collectTimeUs;
 
         /**
          * <p>Percentage of delayed long-running queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("DelayedLargeQueryPercentage")
         public Double delayedLargeQueryPercentage;
 
         /**
          * <p>The average execution count per second during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.31</p>
          */
         @NameInMap("ExecPs")
         public Double execPs;
 
         /**
          * <p>The total number of executions during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Executions")
         public Long executions;
 
         /**
          * <p>First time to load the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:46:38Z</p>
          */
         @NameInMap("FirstLoadTime")
         public String firstLoadTime;
 
         /**
          * <p>First loading time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684****03289441</p>
          */
         @NameInMap("FirstLoadTimeUs")
         public Long firstLoadTimeUs;
 
         /**
          * <p>Whether to hit the diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HitDiagnosis")
         public Boolean hitDiagnosis;
 
         /**
          * <p>Hit rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.0</p>
          */
         @NameInMap("HitPercentage")
         public Double hitPercentage;
 
         /**
          * <p>Percentage of completed long-running queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("LargeQueryPercentage")
         public Double largeQueryPercentage;
 
         /**
          * <p>Merge version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>513</p>
          */
         @NameInMap("MergedVersion")
         public Long mergedVersion;
 
         /**
          * <p>Database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11006****828</p>
          */
         @NameInMap("ObDbId")
         public Long obDbId;
 
         /**
          * <p>Server ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ObServerId")
         public Long obServerId;
 
         /**
          * <p>The outline_data parameter of the SQL execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/*+ BEGIN_OUTLINE_DATA INDEX(@\&quot;SEL$1\</p>
          */
         @NameInMap("OutlineData")
         public String outlineData;
 
         /**
          * <p>Outline ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("OutlineId")
         public Long outlineId;
 
         /**
          * <p>The internal identifier of the SQL execution plan in the diagnostic system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-86290582****886880</p>
          */
         @NameInMap("PlanHash")
         public String planHash;
 
         /**
          * <p>The ID of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>590****</p>
          */
         @NameInMap("PlanId")
         public Long planId;
 
         /**
          * <p>Plan size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10****</p>
          */
         @NameInMap("PlanSize")
         public Long planSize;
 
         /**
          * <p>Plan type, including LOCAL, REMOTE, DIST.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOCAL</p>
          */
         @NameInMap("PlanType")
         public String planType;
 
         /**
          * <p>The internal unique identifier of the SQL execution plan in the diagnostic system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;52c7c53<strong><strong>53e61b3f7586b17</strong></strong>ad&quot;</p>
          */
         @NameInMap("PlanUnionHash")
         public String planUnionHash;
 
         /**
          * <p>Schema version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16838****3550464</p>
          */
         @NameInMap("SchemaVersion")
         public Long schemaVersion;
 
         /**
          * <p>The server where the SQL is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1db1a9us038****jio</p>
          */
         @NameInMap("Server")
         public String server;
 
         /**
          * <p>The ID of the backend server instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ServerId")
         public Long serverId;
@@ -251,18 +350,27 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
 
         /**
          * <p>Whether a full table scan is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("TableScan")
         public Boolean tableScan;
 
         /**
          * <p>Percentage of timeouts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("TimeoutPercentage")
         public Double timeoutPercentage;
 
         /**
          * <p>The unique identifier of the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAAAAAAI<strong><strong>AAFoT2QAF--7W</strong></strong></p>
          */
         @NameInMap("Uid")
         public String uid;
@@ -557,42 +665,63 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
     public static class DescribeOasSQLPlansResponseBodyData extends TeaModel {
         /**
          * <p>Average CPU time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1875.34</p>
          */
         @NameInMap("AvgCpuTime")
         public Double avgCpuTime;
 
         /**
          * <p>Whether to bind the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Bounded")
         public Boolean bounded;
 
         /**
          * <p>Execution count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Executions")
         public Long executions;
 
         /**
          * <p>First loading time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:46:38Z</p>
          */
         @NameInMap("FirstLoadTime")
         public String firstLoadTime;
 
         /**
          * <p>Whether to hit the diagnosis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HitDiagnosis")
         public Boolean hitDiagnosis;
 
         /**
          * <p>Hit rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.0</p>
          */
         @NameInMap("HitPercentage")
         public Double hitPercentage;
 
         /**
          * <p>Merge version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>513</p>
          */
         @NameInMap("MergedVersion")
         public Long mergedVersion;
@@ -605,18 +734,27 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
 
         /**
          * <p>The internal identifier of the SQL execution plan in the diagnostic system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1758<strong><strong>24913166</strong></strong></p>
          */
         @NameInMap("PlanHash")
         public String planHash;
 
         /**
          * <p>Execution plan type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOCAL</p>
          */
         @NameInMap("PlanType")
         public String planType;
 
         /**
          * <p>The internal unique identifier of the SQL execution plan in the diagnostic system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;52c7c53<strong><strong>53e61b3f7586b17</strong></strong>ad&quot;</p>
          */
         @NameInMap("PlanUnionHash")
         public String planUnionHash;
@@ -629,6 +767,9 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
 
         /**
          * <p>The SQL for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;select 1 from t&quot;</p>
          */
         @NameInMap("QuerySql")
         public String querySql;

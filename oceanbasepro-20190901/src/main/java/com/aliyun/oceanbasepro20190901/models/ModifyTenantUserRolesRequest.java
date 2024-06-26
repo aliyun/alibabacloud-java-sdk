@@ -5,46 +5,54 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantUserRolesRequest extends TeaModel {
     /**
-     * <p>The type of the privilege modification operation.   </p>
-     * <p>Valid values:  </p>
-     * <p>update: updates all privileges. This is the default value.  </p>
-     * <p>add: adds a privilege.  </p>
-     * <p>delete: deletes a privilege.</p>
-     * <br>
+     * <p>The type of the privilege modification operation.<br>Valid values:<br>update: updates all privileges. This is the default value.<br>add: adds a privilege.<br>delete: deletes a privilege.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update</p>
      */
     @NameInMap("ModifyType")
     public String modifyType;
 
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **ModifyTenantUserRoles**.</p>
-     * <br>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyTenantUserRoles</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The role of the database account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pay_test</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
      * <p>The type of the account. Valid values:   </p>
-     * <p>- Admin: the super administrator account.   </p>
-     * <p>- Normal: a general account.</p>
-     * <br>
+     * <ul>
+     * <li>Admin: the super administrator account.   </li>
+     * <li>Normal: a general account.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Database&quot;:&quot;20210824160559&quot;,&quot;Role&quot;:&quot;readwrite&quot;}]</p>
      */
     @NameInMap("UserRole")
     public String userRole;

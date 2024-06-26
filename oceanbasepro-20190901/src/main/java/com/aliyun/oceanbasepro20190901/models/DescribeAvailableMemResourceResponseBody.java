@@ -12,6 +12,9 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
     public static class DescribeAvailableMemResourceResponseBodyData extends TeaModel {
         /**
          * <p>The maximum memory size for each resource unit, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxMem")
         public Long maxMem;
 
         /**
          * <p>The minimum memory size required for each resource unit, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("MinMem")
         public Long minMem;
 
         /**
          * <p>The maximum allowed memory usage, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0</p>
          */
         @NameInMap("SafeMem")
         public String safeMem;
 
         /**
          * <p>The number of resource units in the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("UsedMem")
         public Long usedMem;

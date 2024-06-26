@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class BatchKillProcessListRequest extends TeaModel {
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The list of sessions to close.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ProxySessId&quot;:&quot;752113700739156671&quot;,&quot;SessionId&quot;:3221555062,&quot;ServerIp&quot;:&quot;10.<em><strong>.</strong>.</em>**&quot;}]</p>
      */
     @NameInMap("SessionList")
     public String sessionList;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t33h8y08k****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

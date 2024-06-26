@@ -5,34 +5,41 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantUserDescriptionRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **ModifyTenantUserDescription**.</p>
-     * <br>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyTenantUserDescription</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a test database</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The description of the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pay_test</p>
      */
     @NameInMap("UserName")
     public String userName;

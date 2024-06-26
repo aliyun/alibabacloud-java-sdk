@@ -4,12 +4,24 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectProgressResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Contact the administrator.</p>
+     */
     @NameInMap("Advice")
     public String advice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INNER_ERROR</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Cost")
     public String cost;
 
@@ -19,21 +31,45 @@ public class DescribeProjectProgressResponseBody extends TeaModel {
     @NameInMap("ErrorDetail")
     public DescribeProjectProgressResponseBodyErrorDetail errorDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A system error occurred.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -131,39 +167,87 @@ public class DescribeProjectProgressResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectProgressResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MEDIUM</p>
+         */
         @NameInMap("AlarmLevel")
         public String alarmLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRE_CHECK</p>
+         */
         @NameInMap("CurrentStep")
         public String currentStep;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableFullTransfer")
         public Boolean enableFullTransfer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableIncrSync")
         public Boolean enableIncrSync;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableReverseIncrTransfer")
         public Boolean enableReverseIncrTransfer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableStructTransfer")
         public Boolean enableStructTransfer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("FullTransferProgress")
         public Integer fullTransferProgress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1689248064</p>
+         */
         @NameInMap("IncrSyncCheckpoint")
         public Long incrSyncCheckpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>np_fe****</p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1689248075</p>
+         */
         @NameInMap("ReverseIncrTransferCheckpoint")
         public Long reverseIncrTransferCheckpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("StructTransferProgress")
         public Integer structTransferProgress;
 
@@ -271,42 +355,78 @@ public class DescribeProjectProgressResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectProgressResponseBodyErrorDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CM-RESOAT1111</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("ExtraContext")
         public java.util.Map<String, ?> extraContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ERROR</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A system error occurred.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("MessageMcmsContext")
         public java.util.Map<String, String> messageMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("MessageMcmsKey")
         public String messageMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Proposal")
         public String proposal;
 
         @NameInMap("ProposalMcmsContext")
         public java.util.Map<String, String> proposalMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ProposalMcmsKey")
         public String proposalMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         @NameInMap("ReasonMcmsContext")
         public java.util.Map<String, String> reasonMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ReasonMcmsKey")
         public String reasonMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("UpstreamErrorDetail")
         public Object upstreamErrorDetail;
 

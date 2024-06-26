@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class DeleteDatabasesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;sms_pre&quot;, &quot;pay_pre&quot;]</p>
      */
     @NameInMap("DatabaseNames")
     public String databaseNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

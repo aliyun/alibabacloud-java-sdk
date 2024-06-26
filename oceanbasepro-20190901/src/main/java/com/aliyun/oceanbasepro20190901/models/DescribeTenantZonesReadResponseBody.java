@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTenantZonesReadResponseBody extends TeaModel {
     /**
      * <p>Indicates whether a read-only connection needs to be created for the zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,31 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
     public static class DescribeTenantZonesReadResponseBodyTenantZones extends TeaModel {
         /**
          * <p>Example 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsElectable")
         public Boolean isElectable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsPrimary")
         public Boolean isPrimary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsReadable")
         public String isReadable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
         @NameInMap("Zone")
         public String zone;
 

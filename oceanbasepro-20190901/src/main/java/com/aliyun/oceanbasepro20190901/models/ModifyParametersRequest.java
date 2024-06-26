@@ -6,31 +6,39 @@ import com.aliyun.tea.*;
 public class ModifyParametersRequest extends TeaModel {
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TENANT</p>
      */
     @NameInMap("Dimension")
     public String dimension;
 
     /**
      * <p>The cause of the modification failure.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("DimensionValue")
     public String dimensionValue;
 
     /**
      * <p>Alibaba Cloud CLI</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The resource ID of the parameter type.    </p>
-     * <p>You can leave this parameter unspecified when you call this operation to modify cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
-     * <br>
+     * <p>The resource ID of the parameter type.<br>You can leave this parameter unspecified when you call this operation to modify cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Name&quot;:&quot;connect_timeout&quot;,&quot;Value&quot;:&quot;20&quot;}]</p>
      */
     @NameInMap("Parameters")
     public String parameters;

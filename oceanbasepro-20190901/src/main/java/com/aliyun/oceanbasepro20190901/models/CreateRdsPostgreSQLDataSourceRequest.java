@@ -6,33 +6,52 @@ import com.aliyun.tea.*;
 public class CreateRdsPostgreSQLDataSourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db_name</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>this is a test database</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g_abcdefj***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>data_name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pass_word</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user_name</p>
      */
     @NameInMap("UserName")
     public String userName;

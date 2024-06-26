@@ -4,27 +4,38 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceTemporaryCapacityRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The disk size. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("DiskSize")
     public String diskSize;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Specification.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oceanbase.cluster.i2.small</p>
      */
     @NameInMap("Spec")
     public String spec;

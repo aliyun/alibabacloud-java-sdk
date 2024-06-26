@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyTenantUserStatusResponseBody extends TeaModel {
     /**
      * <p>Example 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,12 +38,24 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
     }
 
     public static class ModifyTenantUserStatusResponseBodyTenantUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>t33h8y08k****</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pay_test</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LOCKED</p>
+         */
         @NameInMap("UserStatus")
         public String userStatus;
 

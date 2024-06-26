@@ -4,27 +4,54 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataBackupSetRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>tenant</p>
+     */
     @NameInMap("BackupObjectType")
     public String backupObjectType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-01-06T15:59:59Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-12-27T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DONE</p>
+     */
     @NameInMap("Status")
     public String status;
 

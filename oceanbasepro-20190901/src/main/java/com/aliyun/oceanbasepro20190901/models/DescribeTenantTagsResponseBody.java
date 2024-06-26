@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTenantTagsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
     public static class DescribeTenantTagsResponseBodyTagResources extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Key&quot;: &quot;xxx&quot;, &quot;Value&quot;, &quot;xxx&quot;},{}]</p>
          */
         @NameInMap("Tag")
         public String tag;

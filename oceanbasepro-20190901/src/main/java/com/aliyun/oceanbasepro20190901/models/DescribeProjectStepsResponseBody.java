@@ -4,12 +4,24 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectStepsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Contact the administrator.</p>
+     */
     @NameInMap("Advice")
     public String advice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INNER_ERROR</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Cost")
     public String cost;
 
@@ -19,21 +31,45 @@ public class DescribeProjectStepsResponseBody extends TeaModel {
     @NameInMap("ErrorDetail")
     public DescribeProjectStepsResponseBodyErrorDetail errorDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A system error occurred.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -131,42 +167,78 @@ public class DescribeProjectStepsResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectStepsResponseBodyDataExtraInfoErrorDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CM-RESOAT1111</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("ExtraContext")
         public java.util.Map<String, ?> extraContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ERROR</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A system error occurred.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("MessageMcmsContext")
         public java.util.Map<String, String> messageMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("MessageMcmsKey")
         public String messageMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Proposal")
         public String proposal;
 
         @NameInMap("ProposalMcmsContext")
         public java.util.Map<String, String> proposalMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ProposalMcmsKey")
         public String proposalMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         @NameInMap("ReasonMcmsContext")
         public java.util.Map<String, String> reasonMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ReasonMcmsKey")
         public String reasonMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("UpstreamErrorDetail")
         public Object upstreamErrorDetail;
 
@@ -282,18 +354,30 @@ public class DescribeProjectStepsResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectStepsResponseBodyDataExtraInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INNER_ERROR</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         @NameInMap("ErrorDetails")
         public java.util.List<DescribeProjectStepsResponseBodyDataExtraInfoErrorDetails> errorDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The ResourceDirectoryId is invalid.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         @NameInMap("ErrorParam")
         public java.util.Map<String, String> errorParam;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("FailedTime")
         public String failedTime;
 
@@ -351,24 +435,52 @@ public class DescribeProjectStepsResponseBody extends TeaModel {
         @NameInMap("ExtraInfo")
         public DescribeProjectStepsResponseBodyDataExtraInfo extraInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-05-22T17:04:18</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRE_CHECK</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Order")
         public Integer order;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-05-22T17:04:18</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("StepInfo")
         public java.util.Map<String, ?> stepInfo;
 
@@ -452,42 +564,78 @@ public class DescribeProjectStepsResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectStepsResponseBodyErrorDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CM-RESOAT1111</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("ExtraContext")
         public java.util.Map<String, ?> extraContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ERROR</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A system error occurred.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("MessageMcmsContext")
         public java.util.Map<String, String> messageMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("MessageMcmsKey")
         public String messageMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Contact the administrator.</p>
+         */
         @NameInMap("Proposal")
         public String proposal;
 
         @NameInMap("ProposalMcmsContext")
         public java.util.Map<String, String> proposalMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ProposalMcmsKey")
         public String proposalMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         @NameInMap("ReasonMcmsContext")
         public java.util.Map<String, String> reasonMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ReasonMcmsKey")
         public String reasonMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("UpstreamErrorDetail")
         public Object upstreamErrorDetail;
 

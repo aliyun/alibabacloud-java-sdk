@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTopSQLListResponseBody extends TeaModel {
     /**
      * <p>Alibaba Cloud CLI</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
 
     /**
      * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,259 +60,380 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
     public static class DescribeTopSQLListResponseBodyTopSQLList extends TeaModel {
         /**
          * <p>The internal wait time, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AffectedRows")
         public Long affectedRows;
 
         /**
          * <p>The wait time in concurrent execution, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AppWaitTime")
         public Float appWaitTime;
 
         /**
          * <p>The average CPU time, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         @NameInMap("BlockCacheHit")
         public Long blockCacheHit;
 
         /**
          * <p>$.parameters[16].schema.example</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("BlockIndexCacheHit")
         public Long blockIndexCacheHit;
 
         /**
          * <p>$.parameters[14].schema.enumValueTitles</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BloomFilterCacheHit")
         public Long bloomFilterCacheHit;
 
         /**
          * <p>$.parameters[14].schema.description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1<em>2.</em><strong>.1<em>3.</em></strong></p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The number of rows returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("ConcurrencyWaitTime")
         public Float concurrencyWaitTime;
 
         /**
          * <p>The maximum CPU time, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50.13</p>
          */
         @NameInMap("CpuTime")
         public Float cpuTime;
 
         /**
          * <p>The number of remote plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>The number of rows to return on each page.   </p>
-         * <p>- Maximum value: 100   </p>
-         * <p>- Default value: 10</p>
+         * <ul>
+         * <li>Maximum value: 100   </li>
+         * <li>Default value: 10</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("DecodeTime")
         public Float decodeTime;
 
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DiskRead")
         public Long diskRead;
 
         /**
          * <p>The sorting rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76.382</p>
          */
         @NameInMap("ElapsedTime")
         public Float elapsedTime;
 
         /**
          * <p>The number of rows read from the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql response wait client</p>
          */
         @NameInMap("Event")
         public String event;
 
         /**
-         * <p>The operation that you want to perform.   </p>
-         * <p>Set the value to **DescribeTopSQLList**.</p>
+         * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeTopSQLList</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163.0</p>
          */
         @NameInMap("ExecPerSecond")
         public Float execPerSecond;
 
         /**
          * <p>The number of rows read from the memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61.044</p>
          */
         @NameInMap("ExecuteTime")
         public Float executeTime;
 
         /**
          * <p>The number of executions per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89403</p>
          */
         @NameInMap("Executions")
         public Long executions;
 
         /**
          * <p>$.parameters[12].schema.description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailTimes")
         public Long failTimes;
 
         /**
          * <p>The queuing time, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.052</p>
          */
         @NameInMap("GetPlanTime")
         public Float getPlanTime;
 
         /**
          * <p>$.parameters[15].schema.example</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("IOWaitTime")
         public Float IOWaitTime;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Key")
         public Long key;
 
         /**
          * <p>You can call this operation to query SQL execution performance data collected by the diagnostic system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("LogicalRead")
         public Long logicalRead;
 
         /**
          * <p>SQLID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>257.967</p>
          */
         @NameInMap("MaxCpuTime")
         public Float maxCpuTime;
 
         /**
          * <p>The sequence number of the returned SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260.044</p>
          */
         @NameInMap("MaxElapsedTime")
         public Float maxElapsedTime;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>527</p>
          */
         @NameInMap("MemstoreReadRowCount")
         public Long memstoreReadRowCount;
 
         /**
          * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MissPlans")
         public Long missPlans;
 
         /**
-         * <p>The end time of the time range for querying TOP SQL statements.   </p>
-         * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>The end time of the time range for querying TOP SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("NetWaitTime")
         public Float netWaitTime;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp18qljorblo8es*****</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
 
         /**
          * <p>$.parameters[12].schema.enumValueTitles</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15.275</p>
          */
         @NameInMap("QueueTime")
         public Float queueTime;
 
         /**
-         * <p>The start time of the time range for querying TOP SQL statements.   </p>
-         * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * <p>The start time of the time range for querying TOP SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RPCCount")
         public Long RPCCount;
 
         /**
          * <p>The return result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemotePlans")
         public Long remotePlans;
 
         /**
          * <p>$.parameters[13].schema.description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetryCount")
         public Long retryCount;
 
         /**
          * <p>The wait event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReturnRows")
         public Long returnRows;
 
         /**
-         * <p>```</p>
-         * <p>http(s)://[Endpoint]/?Action=DescribeTopSQLList</p>
-         * <p>&TenantId=t2mr3oae0****</p>
-         * <p>&StartTime=2021-06-13 15:40:43</p>
-         * <p>&EndTime=2021-09-13 15:40:43</p>
-         * <p>&DbName=testdb</p>
-         * <p>&SearchKeyWord=update</p>
-         * <p>&SearchParameter=cputime</p>
-         * <p>&SearchRule=></p>
-         * <p>&SearchValue=0.01</p>
-         * <p>&SQLId=8D6E84****0B8FB1823D199E2CA1****</p>
-         * <p>&NodeIp=i-bp19y05uq6xpacyqnlrc</p>
-         * <p>&PageNumber=1</p>
-         * <p>&PageSize=10</p>
-         * <p>&SortColumn=cputime</p>
-         * <p>&SortOrder=desc</p>
-         * <p>&Common request parameters</p>
-         * <p>```</p>
+         * <pre><code>http(s)://[Endpoint]/?Action=DescribeTopSQLList
+         * &amp;TenantId=t2mr3oae0****
+         * &amp;StartTime=2021-06-13 15:40:43
+         * &amp;EndTime=2021-09-13 15:40:43
+         * &amp;DbName=testdb
+         * &amp;SearchKeyWord=update
+         * &amp;SearchParameter=cputime
+         * &amp;SearchRule=&gt;
+         * &amp;SearchValue=0.01
+         * &amp;SQLId=8D6E84****0B8FB1823D199E2CA1****
+         * &amp;NodeIp=i-bp19y05uq6xpacyqnlrc
+         * &amp;PageNumber=1
+         * &amp;PageSize=10
+         * &amp;SortColumn=cputime
+         * &amp;SortOrder=desc
+         * &amp;Common request parameters
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RowCacheHit")
         public Long rowCacheHit;
 
         /**
          * <p>$.parameters[13].schema.example</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         @NameInMap("SQLId")
         public String SQLId;
 
         /**
          * <p>The list of top SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SQLType")
         public Long SQLType;
 
         /**
          * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("ScheduleTime")
         public Float scheduleTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>43086</p>
+         */
         @NameInMap("SsstoreReadRowCount")
         public Long ssstoreReadRowCount;
 
         /**
-         * <p>-</p>
+         * <ul>
+         * <li></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10.966</p>
          */
         @NameInMap("TotalWaitTime")
         public Float totalWaitTime;
 
         /**
          * <p>The number of Bloom filter cache hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tester</p>
          */
         @NameInMap("UserName")
         public String userName;

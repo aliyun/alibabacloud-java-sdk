@@ -6,39 +6,61 @@ import com.aliyun.tea.*;
 public class DescribeProjectStepMetricRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AVG</p>
      */
     @NameInMap("Aggregator")
     public String aggregator;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1689244696</p>
      */
     @NameInMap("BeginTimestamp")
     public Long beginTimestamp;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1689254646</p>
      */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("MaxPointNum")
     public Integer maxPointNum;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RPS</p>
      */
     @NameInMap("MetricType")
     public String metricType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np_dr****</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FULL_TRANSFER</p>
      */
     @NameInMap("StepName")
     public String stepName;

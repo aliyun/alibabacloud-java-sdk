@@ -7,18 +7,38 @@ public class CreateProjectRequest extends TeaModel {
     @NameInMap("CommonTransferConfig")
     public CreateProjectRequestCommonTransferConfig commonTransferConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableFullTransfer")
     public Boolean enableFullTransfer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableFullVerify")
     public Boolean enableFullVerify;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableIncrTransfer")
     public Boolean enableIncrTransfer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableReverseIncrTransfer")
     public Boolean enableReverseIncrTransfer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableStructTransfer")
     public Boolean enableStructTransfer;
 
@@ -39,10 +59,17 @@ public class CreateProjectRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>open_api_create_project/oacp_xxx</p>
+     */
     @NameInMap("OssKey")
     public String ossKey;
 
@@ -51,12 +78,18 @@ public class CreateProjectRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e_4j0cz****</p>
      */
     @NameInMap("SinkEndpointId")
     public String sinkEndpointId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e_4j0c12z****</p>
      */
     @NameInMap("SourceEndpointId")
     public String sourceEndpointId;
@@ -72,15 +105,25 @@ public class CreateProjectRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MIGRATION</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseOss")
     public Boolean useOss;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g_abcdefj***</p>
      */
     @NameInMap("WorkerGradeId")
     public String workerGradeId;
@@ -281,38 +324,84 @@ public class CreateProjectRequest extends TeaModel {
     }
 
     public static class CreateProjectRequestCommonTransferConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("ActiveActive")
         public Boolean activeActive;
 
         @NameInMap("CustomColumns")
         public java.util.List<CreateProjectRequestCommonTransferConfigCustomColumns> customColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataWorksBusinessName")
         public String dataWorksBusinessName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TUPLE</p>
+         */
         @NameInMap("DatahubTopicType")
         public String datahubTopicType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MqPartition")
         public Integer mqPartition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONE</p>
+         */
         @NameInMap("MqPartitionMode")
         public String mqPartitionMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
         @NameInMap("MqSerializerType")
         public String mqSerializerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("RocketMqEnableMsgTrace")
         public Boolean rocketMqEnableMsgTrace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default_tag</p>
+         */
         @NameInMap("RocketMqMsgTags")
         public String rocketMqMsgTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OMS</p>
+         */
         @NameInMap("RocketMqProducerGroup")
         public String rocketMqProducerGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RocketMqSendMsgTimeout")
         public Long rocketMqSendMsgTimeout;
+
+        @NameInMap("SinkStoreFormat")
+        public String sinkStoreFormat;
+
+        @NameInMap("SourceStoreFormat")
+        public String sourceStoreFormat;
 
         @NameInMap("SyncSchema")
         public Boolean syncSchema;
@@ -320,6 +409,10 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("SyncSchemaColumnName")
         public String syncSchemaColumnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
         @NameInMap("TableCategory")
         public String tableCategory;
 
@@ -416,6 +509,22 @@ public class CreateProjectRequest extends TeaModel {
             return this.rocketMqSendMsgTimeout;
         }
 
+        public CreateProjectRequestCommonTransferConfig setSinkStoreFormat(String sinkStoreFormat) {
+            this.sinkStoreFormat = sinkStoreFormat;
+            return this;
+        }
+        public String getSinkStoreFormat() {
+            return this.sinkStoreFormat;
+        }
+
+        public CreateProjectRequestCommonTransferConfig setSourceStoreFormat(String sourceStoreFormat) {
+            this.sourceStoreFormat = sourceStoreFormat;
+            return this;
+        }
+        public String getSourceStoreFormat() {
+            return this.sourceStoreFormat;
+        }
+
         public CreateProjectRequestCommonTransferConfig setSyncSchema(Boolean syncSchema) {
             this.syncSchema = syncSchema;
             return this;
@@ -443,15 +552,31 @@ public class CreateProjectRequest extends TeaModel {
     }
 
     public static class CreateProjectRequestFullTransferConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AllowDestTableNotEmpty")
         public Boolean allowDestTableNotEmpty;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("FullTransferSpeedMode")
         public String fullTransferSpeedMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("FullVerifySpeedMode")
         public String fullVerifySpeedMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NonePkUkTruncateDstTable")
         public Boolean nonePkUkTruncateDstTable;
 
@@ -539,21 +664,41 @@ public class CreateProjectRequest extends TeaModel {
     }
 
     public static class CreateProjectRequestIncrTransferConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableIncrSyncStatistics")
         public Boolean enableIncrSyncStatistics;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableSequencingWithinTxn")
         public Boolean enableSequencingWithinTxn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("IncrSyncConcurrency")
         public Integer incrSyncConcurrency;
 
         @NameInMap("RecordTypeWhiteList")
         public java.util.List<String> recordTypeWhiteList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1689201369</p>
+         */
         @NameInMap("StartTimestamp")
         public String startTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
         @NameInMap("StoreLogKeptHour")
         public Integer storeLogKeptHour;
 
@@ -753,9 +898,17 @@ public class CreateProjectRequest extends TeaModel {
     }
 
     public static class CreateProjectRequestStructTransferConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DO_NOTHING_IF_BYTE_USED</p>
+         */
         @NameInMap("ByteCharConvertStrategy")
         public String byteCharConvertStrategy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DeferIndexCreation")
         public Boolean deferIndexCreation;
 
@@ -786,9 +939,17 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -841,18 +1002,34 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_4azdil4lu7***</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_table</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;5</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -923,9 +1100,17 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -978,18 +1163,34 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_3wsmjv49a***</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_view</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>view_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;5</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -1060,9 +1261,17 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -1115,18 +1324,34 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_4l085bu7***</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_table</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id &gt; 1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -1197,9 +1422,17 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -1252,18 +1485,34 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_4himpq4z***</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_view</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>view_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&gt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -1331,15 +1580,31 @@ public class CreateProjectRequest extends TeaModel {
     }
 
     public static class CreateProjectRequestTransferMappingDatabases extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cluster_name</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gez3***</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_db</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>db_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -1352,6 +1617,10 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("Tables")
         public java.util.List<CreateProjectRequestTransferMappingDatabasesTables> tables;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tenant_name</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
@@ -1441,9 +1710,17 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -1496,18 +1773,34 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_4himpq4zf***</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_table</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -1578,9 +1871,17 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -1633,18 +1934,34 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_474hmh5iqo***</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_table</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -1715,9 +2032,17 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -1770,18 +2095,34 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_474hmh5iqo***</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_table</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -1852,9 +2193,17 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -1907,18 +2256,34 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_4azdil4lu7mo</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_view</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>view_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;5</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -1986,15 +2351,31 @@ public class CreateProjectRequest extends TeaModel {
     }
 
     public static class CreateProjectRequestTransferMappingDatabasesBlack extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cluster_name</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_3y6v5v1x94f4</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_db</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>db_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -2007,6 +2388,10 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("Tables")
         public java.util.List<CreateProjectRequestTransferMappingDatabasesBlackTables> tables;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tenant_name</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
@@ -2099,6 +2484,10 @@ public class CreateProjectRequest extends TeaModel {
         @NameInMap("DatabasesBlack")
         public java.util.List<CreateProjectRequestTransferMappingDatabasesBlack> databasesBlack;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SPCEIFIC</p>
+         */
         @NameInMap("Mode")
         public String mode;
 

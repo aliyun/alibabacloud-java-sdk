@@ -5,36 +5,45 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantUserStatusRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **ModifyTenantUserStatus**.</p>
-     * <br>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyTenantUserStatus</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The list of database accounts in the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pay_test</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
      * <p>The status of the database account. Valid values:   </p>
-     * <p>- Locked: The account is locked. </p>
-     * <p>- Online: The account is unlocked.</p>
-     * <br>
+     * <ul>
+     * <li>Locked: The account is locked. </li>
+     * <li>Online: The account is unlocked.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("UserStatus")
     public String userStatus;

@@ -6,55 +6,81 @@ import com.aliyun.tea.*;
 public class DescribeTenantMetricsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-13T15:45:43Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>2021-06-13T15:40:43Z</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>{"name":"DescribeTenantMetrics","product":"OceanBasePro","version":"2019-09-01","path":"/","deprecated":0,"method":"POST|GET","protocol":"HTTP|HTTPS","hidden":0,"timeout":10000,"parameter_type":"Single","params":"[{\\"name\\":\\"Action\\",\\"position\\":\\"Query\\",\\"required\\":true,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"String\\",\\"description\\":\\"\\",\\"example\\":\\"DescribeTenantMetrics\\"},{\\"name\\":\\"InstanceId\\",\\"position\\":\\"Body\\",\\"required\\":true,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"String\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"ob317v4uif****\\"},{\\"name\\":\\"PageSize\\",\\"position\\":\\"Body\\",\\"required\\":false,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"Integer\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"10\\"},{\\"name\\":\\"PageNumber\\",\\"position\\":\\"Body\\",\\"required\\":false,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"Integer\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"1\\"},{\\"name\\":\\"TenantName\\",\\"position\\":\\"Body\\",\\"required\\":false,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":true,\\"type\\":\\"String\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"pay_online\\"},{\\"name\\":\\"StartTime\\",\\"position\\":\\"Body\\",\\"required\\":true,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"String\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"2021-06-13T15:40:43Z\\"},{\\"name\\":\\"EndTime\\",\\"position\\":\\"Body\\",\\"required\\":true,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"String\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"2021-06-13T15:45:43Z\\"},{\\"name\\":\\"Metrics\\",\\"position\\":\\"Body\\",\\"required\\":true,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"String\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"tps\\"},{\\"name\\":\\"TenantId\\",\\"position\\":\\"Body\\",\\"required\\":false,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":true,\\"type\\":\\"String\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"tfafd34fs****\\"},{\\"name\\":\\"TenantIdList\\",\\"position\\":\\"Body\\",\\"required\\":false,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"String\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"[tdak3nac****,tdakc42df****]\\"}]","response_headers":"[]","response":"{\\"type\\":\\"Object\\",\\"children\\":[{\\"name\\":\\"TotalCount\\",\\"required\\":false,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"Integer\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"9\\"},{\\"name\\":\\"RequestId\\",\\"required\\":false,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"String\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C\\"},{\\"name\\":\\"TenantMetrics\\",\\"required\\":false,\\"checkBlank\\":false,\\"visibility\\":\\"Public\\",\\"deprecated\\":false,\\"type\\":\\"String\\",\\"title\\":\\"\\",\\"description\\":\\"\\",\\"example\\":\\"\\\\\\"Metrics\\\\\\":[ {\\\\\\"request_queue_rt\\\\\\":0.0,\\\\\\"TimeStamp\\\\\\":\\\\\\"2022-02-23T01:58:00Z\\\\\\"}]\\"}],\\"title\\":\\"\\",\\"description\\":\\"\\"}","errors":"{}"}</p>
-     * <br>
+     * <p>{&quot;name&quot;:&quot;DescribeTenantMetrics&quot;,&quot;product&quot;:&quot;OceanBasePro&quot;,&quot;version&quot;:&quot;2019-09-01&quot;,&quot;path&quot;:&quot;/&quot;,&quot;deprecated&quot;:0,&quot;method&quot;:&quot;POST|GET&quot;,&quot;protocol&quot;:&quot;HTTP|HTTPS&quot;,&quot;hidden&quot;:0,&quot;timeout&quot;:10000,&quot;parameter_type&quot;:&quot;Single&quot;,&quot;params&quot;:&quot;[{\&quot;name\&quot;:\&quot;Action\&quot;,\&quot;position\&quot;:\&quot;Query\&quot;,\&quot;required\&quot;:true,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;DescribeTenantMetrics\&quot;},{\&quot;name\&quot;:\&quot;InstanceId\&quot;,\&quot;position\&quot;:\&quot;Body\&quot;,\&quot;required\&quot;:true,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;ob317v4uif****\&quot;},{\&quot;name\&quot;:\&quot;PageSize\&quot;,\&quot;position\&quot;:\&quot;Body\&quot;,\&quot;required\&quot;:false,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;10\&quot;},{\&quot;name\&quot;:\&quot;PageNumber\&quot;,\&quot;position\&quot;:\&quot;Body\&quot;,\&quot;required\&quot;:false,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;1\&quot;},{\&quot;name\&quot;:\&quot;TenantName\&quot;,\&quot;position\&quot;:\&quot;Body\&quot;,\&quot;required\&quot;:false,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:true,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;pay_online\&quot;},{\&quot;name\&quot;:\&quot;StartTime\&quot;,\&quot;position\&quot;:\&quot;Body\&quot;,\&quot;required\&quot;:true,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;2021-06-13T15:40:43Z\&quot;},{\&quot;name\&quot;:\&quot;EndTime\&quot;,\&quot;position\&quot;:\&quot;Body\&quot;,\&quot;required\&quot;:true,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;2021-06-13T15:45:43Z\&quot;},{\&quot;name\&quot;:\&quot;Metrics\&quot;,\&quot;position\&quot;:\&quot;Body\&quot;,\&quot;required\&quot;:true,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;tps\&quot;},{\&quot;name\&quot;:\&quot;TenantId\&quot;,\&quot;position\&quot;:\&quot;Body\&quot;,\&quot;required\&quot;:false,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:true,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;tfafd34fs****\&quot;},{\&quot;name\&quot;:\&quot;TenantIdList\&quot;,\&quot;position\&quot;:\&quot;Body\&quot;,\&quot;required\&quot;:false,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;[tdak3nac****,tdakc42df****]\&quot;}]&quot;,&quot;response_headers&quot;:&quot;[]&quot;,&quot;response&quot;:&quot;{\&quot;type\&quot;:\&quot;Object\&quot;,\&quot;children\&quot;:[{\&quot;name\&quot;:\&quot;TotalCount\&quot;,\&quot;required\&quot;:false,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;Integer\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;9\&quot;},{\&quot;name\&quot;:\&quot;RequestId\&quot;,\&quot;required\&quot;:false,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C\&quot;},{\&quot;name\&quot;:\&quot;TenantMetrics\&quot;,\&quot;required\&quot;:false,\&quot;checkBlank\&quot;:false,\&quot;visibility\&quot;:\&quot;Public\&quot;,\&quot;deprecated\&quot;:false,\&quot;type\&quot;:\&quot;String\&quot;,\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;,\&quot;example\&quot;:\&quot;\\\&quot;Metrics\\\&quot;:[ {\\\&quot;request_queue_rt\\\&quot;:0.0,\\\&quot;TimeStamp\\\&quot;:\\\&quot;2022-02-23T01:58:00Z\\\&quot;}]\&quot;}],\&quot;title\&quot;:\&quot;\&quot;,\&quot;description\&quot;:\&quot;\&quot;}&quot;,&quot;errors&quot;:&quot;{}&quot;}</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tps</p>
      */
     @NameInMap("Metrics")
     public String metrics;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>tfafd34fs****</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Example 1</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-13T15:40:43Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tfafd34fs****</p>
+     */
     @NameInMap("TenantId")
     @Deprecated
     public String tenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[tdak3nac****,tdakc42df****]</p>
+     */
     @NameInMap("TenantIdList")
     public String tenantIdList;
 
     /**
      * <p>2021-06-13T15:45:43Z</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pay_online</p>
      */
     @NameInMap("TenantName")
     @Deprecated

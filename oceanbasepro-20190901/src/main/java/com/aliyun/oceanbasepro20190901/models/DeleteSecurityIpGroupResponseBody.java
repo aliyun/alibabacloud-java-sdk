@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteSecurityIpGroupResponseBody extends TeaModel {
     /**
      * <p>Example 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +38,17 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
     }
 
     public static class DeleteSecurityIpGroupResponseBodySecurityIpGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>paytest</p>
+         */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 

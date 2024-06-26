@@ -4,11 +4,17 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectConfigShrinkRequest extends TeaModel {
+    @NameInMap("CommonTransferConfig")
+    public String commonTransferConfigShrink;
+
     @NameInMap("FullTransferConfig")
     public String fullTransferConfigShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np_fe****</p>
      */
     @NameInMap("Id")
     public String id;
@@ -22,6 +28,14 @@ public class UpdateProjectConfigShrinkRequest extends TeaModel {
     public static UpdateProjectConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectConfigShrinkRequest self = new UpdateProjectConfigShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateProjectConfigShrinkRequest setCommonTransferConfigShrink(String commonTransferConfigShrink) {
+        this.commonTransferConfigShrink = commonTransferConfigShrink;
+        return this;
+    }
+    public String getCommonTransferConfigShrink() {
+        return this.commonTransferConfigShrink;
     }
 
     public UpdateProjectConfigShrinkRequest setFullTransferConfigShrink(String fullTransferConfigShrink) {

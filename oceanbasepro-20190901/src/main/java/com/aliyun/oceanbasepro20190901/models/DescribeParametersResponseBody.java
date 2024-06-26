@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeParametersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   </p>
-     * <p>- true: A restart is required.   </p>
-     * <p>- false: A restart is not required.</p>
+     * <ul>
+     * <li>true: A restart is required.   </li>
+     * <li>false: A restart is not required.</li>
+     * </ul>
      */
     @NameInMap("Parameters")
     public java.util.List<DescribeParametersResponseBodyParameters> parameters;
 
     /**
      * <p>The return result of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -48,36 +53,50 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("CurrentValue")
         public String currentValue;
 
         /**
-         * <p>```</p>
-         * <p>http(s)://[Endpoint]/?Action=DescribeParameters</p>
-         * <p>&InstanceId=ob317v4uif****</p>
-         * <p>&Dimension=TENANT</p>
-         * <p>&DimensionValue=ob2mr3oae0****</p>
-         * <p>&Common request parameters</p>
-         * <p>```</p>
+         * <pre><code>http(s)://[Endpoint]/?Action=DescribeParameters
+         * &amp;InstanceId=ob317v4uif****
+         * &amp;Dimension=TENANT
+         * &amp;DimensionValue=ob2mr3oae0****
+         * &amp;Common request parameters
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>600s</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>The description of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeParameters</strong>.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connect_timeout</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("NeedReboot")
         public Boolean needReboot;
@@ -89,35 +108,41 @@ public class DescribeParametersResponseBody extends TeaModel {
         public Boolean readonly;
 
         /**
-         * <p>{</p>
-         * <p>    "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",</p>
-         * <p>    "Parameters": [</p>
-         * <p>        {</p>
-         * <p>            "Description": "The maximum delay allowed in weak-consistency reads.",</p>
-         * <p>            "ValueType": "CAPACITY",</p>
-         * <p>            "CurrentValue": "600",</p>
-         * <p>            "NeedReboot": false,</p>
-         * <p>            "Name": "connect_timeout",</p>
-         * <p>            "DefaultValue": "600s",</p>
-         * <p>            "RejectedValue": [</p>
-         * <p>                "1s"</p>
-         * <p>            ],</p>
-         * <p>            "AcceptableValue": [</p>
-         * <p>                "1s"</p>
-         * <p>            ]</p>
-         * <p>        }</p>
-         * <p>    ]</p>
-         * <p>}</p>
+         * <p>{
+         *     &quot;RequestId&quot;: &quot;EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C&quot;,
+         *     &quot;Parameters&quot;: [
+         *         {
+         *             &quot;Description&quot;: &quot;The maximum delay allowed in weak-consistency reads.&quot;,
+         *             &quot;ValueType&quot;: &quot;CAPACITY&quot;,
+         *             &quot;CurrentValue&quot;: &quot;600&quot;,
+         *             &quot;NeedReboot&quot;: false,
+         *             &quot;Name&quot;: &quot;connect_timeout&quot;,
+         *             &quot;DefaultValue&quot;: &quot;600s&quot;,
+         *             &quot;RejectedValue&quot;: [
+         *                 &quot;1s&quot;
+         *             ],
+         *             &quot;AcceptableValue&quot;: [
+         *                 &quot;1s&quot;
+         *             ]
+         *         }
+         *     ]
+         * }</p>
          */
         @NameInMap("RejectedValue")
         public java.util.List<String> rejectedValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>s</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
         /**
-         * <p>The invalid value range of the parameter.    </p>
-         * <p>It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.</p>
+         * <p>The invalid value range of the parameter.<br>It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAPACITY</p>
          */
         @NameInMap("ValueType")
         public String valueType;

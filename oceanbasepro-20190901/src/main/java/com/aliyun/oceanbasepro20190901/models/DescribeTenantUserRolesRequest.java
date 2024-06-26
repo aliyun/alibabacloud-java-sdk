@@ -4,6 +4,10 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantUserRolesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>t4pnum****</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

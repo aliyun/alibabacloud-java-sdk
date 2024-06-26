@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateTenantUserResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,9 +41,17 @@ public class CreateTenantUserResponseBody extends TeaModel {
     }
 
     public static class CreateTenantUserResponseBodyTenantUserRoles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>db_pay1</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ReadOnly</p>
+         */
         @NameInMap("Role")
         public String role;
 
@@ -71,9 +82,17 @@ public class CreateTenantUserResponseBody extends TeaModel {
         @NameInMap("Roles")
         public java.util.List<CreateTenantUserResponseBodyTenantUserRoles> roles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pay_test</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("UserStatus")
         public String userStatus;
 

@@ -6,21 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteTenantsRequest extends TeaModel {
     /**
      * <p>You can call this operation to delete one or more tenants from an OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>```</p>
-     * <p>http(s)://[Endpoint]/?Action=DeleteTenants</p>
-     * <p>&TenantIds=["ob2mr3oae0****", "ob2mr3oae1****"]</p>
-     * <p>&InstanceId=ob317v4uif****</p>
-     * <p>&Common request parameters</p>
-     * <p>```</p>
-     * <br>
+     * <pre><code>http(s)://[Endpoint]/?Action=DeleteTenants
+     * &amp;TenantIds=[&quot;ob2mr3oae0****&quot;, &quot;ob2mr3oae1****&quot;]
+     * &amp;InstanceId=ob317v4uif****
+     * &amp;Common request parameters
+     * </code></pre>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;ob2mr3oae0****&quot;, &quot;ob2mr3oae1****&quot;]</p>
      */
     @NameInMap("TenantIds")
     public String tenantIds;

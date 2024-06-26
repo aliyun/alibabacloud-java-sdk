@@ -6,43 +6,54 @@ import com.aliyun.tea.*;
 public class ModifyTenantUserPasswordRequest extends TeaModel {
     /**
      * <p>加密方式。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RSA</p>
      */
     @NameInMap("EncryptionType")
     public String encryptionType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>```</p>
-     * <p>http(s)://[Endpoint]/?Action=ModifyTenantUserPassword</p>
-     * <p>&UserName=pay_test</p>
-     * <p>&TenantId=ob2mr3oae0****</p>
-     * <p>&UserPassword=!Aliyun4Oceanbase</p>
-     * <p>&InstanceId=ob317v4uif****</p>
-     * <p>&Common request parameters</p>
-     * <p>```</p>
-     * <br>
+     * <pre><code>http(s)://[Endpoint]/?Action=ModifyTenantUserPassword
+     * &amp;UserName=pay_test
+     * &amp;TenantId=ob2mr3oae0****
+     * &amp;UserPassword=!Aliyun4Oceanbase
+     * &amp;InstanceId=ob317v4uif****
+     * &amp;Common request parameters
+     * </code></pre>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pay_test</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
      * <p>You can call this operation to change the logon password of a specified account in a tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>!Aliyun4Oceanbase</p>
      */
     @NameInMap("UserPassword")
     public String userPassword;

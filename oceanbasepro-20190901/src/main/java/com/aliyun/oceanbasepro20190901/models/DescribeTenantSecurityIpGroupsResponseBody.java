@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469**-AA6F-4D**-B3DB-A***********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of the whitelist groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,26 +60,40 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
     public static class DescribeTenantSecurityIpGroupsResponseBodySecurityIpGroups extends TeaModel {
         /**
          * <p>The group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
         /**
          * <p>The whitelist group type.</p>
-         * <p>- instance: the whitelist group from the cluster.</p>
-         * <p>- tenant: the whitelist group of the current tenant.</p>
+         * <ul>
+         * <li>instance: the whitelist group from the cluster.</li>
+         * <li>tenant: the whitelist group of the current tenant.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>tenant</p>
          */
         @NameInMap("SecurityIpGroupType")
         public String securityIpGroupType;
 
         /**
          * <p>The whitelist of IP addresses. It is a string separated by commas, and each object is an IP string or a CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.***.<em>.</em>&quot;</p>
          */
         @NameInMap("SecurityIps")
         public String securityIps;
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
          */
         @NameInMap("TenantId")
         public String tenantId;

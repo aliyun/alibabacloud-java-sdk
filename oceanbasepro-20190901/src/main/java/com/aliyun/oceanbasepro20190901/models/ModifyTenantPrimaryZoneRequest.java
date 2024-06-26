@@ -5,28 +5,34 @@ import com.aliyun.tea.*;
 
 public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     /**
-     * <p>The primary zone of the tenant.    </p>
-     * <p>It is one of the zones in which the cluster is deployed.</p>
-     * <br>
+     * <p>The primary zone of the tenant.<br>It is one of the zones in which the cluster is deployed.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>```</p>
-     * <p>http(s)://[Endpoint]/?Action=ModifyTenantPrimaryZone</p>
-     * <p>&TenantId=ob2mr3oae0****</p>
-     * <p>&InstanceId=ob317v4uif****</p>
-     * <p>&PrimaryZone=cn-hangzhou-h</p>
-     * <p>&Common request parameters</p>
-     * <p>```</p>
+     * <pre><code>http(s)://[Endpoint]/?Action=ModifyTenantPrimaryZone
+     * &amp;TenantId=ob2mr3oae0****
+     * &amp;InstanceId=ob317v4uif****
+     * &amp;PrimaryZone=cn-hangzhou-h
+     * &amp;Common request parameters
+     * </code></pre>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("MasterIntranetAddressZone")
     public String masterIntranetAddressZone;
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
      */
     @NameInMap("PrimaryZone")
     public String primaryZone;
@@ -34,13 +40,19 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     @NameInMap("TenantEndpointDirectId")
     public String tenantEndpointDirectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>obe-4tw51gp7****</p>
+     */
     @NameInMap("TenantEndpointId")
     public String tenantEndpointId;
 
     /**
      * <p>The return result of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
@@ -50,6 +62,9 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-xxx</p>
      */
     @NameInMap("UserVSwitchId")
     public String userVSwitchId;

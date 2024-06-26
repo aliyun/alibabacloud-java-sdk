@@ -10,21 +10,41 @@ public class ListProjectsShrinkRequest extends TeaModel {
     @NameInMap("NeedRelatedInfo")
     public Boolean needRelatedInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>descend</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>np_4w****</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
     @NameInMap("SinkEndpointTypes")
     public String sinkEndpointTypesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gmtCreate</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 
@@ -34,9 +54,17 @@ public class ListProjectsShrinkRequest extends TeaModel {
     @NameInMap("Status")
     public String statusShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MIGRATION</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("VisibleSubProject")
     public Boolean visibleSubProject;
 

@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyParametersResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **ModifyParameters**.</p>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyParameters</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,9 +41,17 @@ public class ModifyParametersResponseBody extends TeaModel {
     }
 
     public static class ModifyParametersResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>schedule timeout.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

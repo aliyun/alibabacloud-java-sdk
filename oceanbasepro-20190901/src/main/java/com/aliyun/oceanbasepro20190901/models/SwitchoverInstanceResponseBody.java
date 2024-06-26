@@ -12,6 +12,9 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469**-AA6F-4D**-B3DB-A***********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,14 +43,22 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
     public static class SwitchoverInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The message of the switchover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>delete tag-value success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Whether the switchover is successful.</p>
-         * <p>- true: the switchover succeeded.</p>
-         * <p>- false: the switchover failed.</p>
+         * <ul>
+         * <li>true: the switchover succeeded.</li>
+         * <li>false: the switchover failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

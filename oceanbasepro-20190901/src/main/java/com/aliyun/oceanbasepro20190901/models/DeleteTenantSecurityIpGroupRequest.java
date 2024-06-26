@@ -6,26 +6,31 @@ import com.aliyun.tea.*;
 public class DeleteTenantSecurityIpGroupRequest extends TeaModel {
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The group name of the whitelist group of IP addresses.</p>
-     * <br>
      * <p>It starts with lowercase letters and ends with lowercase letters or numbers. It can only contain lowercase letters, numbers, and underscores, and should be 2~32 characters in length.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paytest</p>
      */
     @NameInMap("SecurityIpGroupName")
     public String securityIpGroupName;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t4louaeei****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

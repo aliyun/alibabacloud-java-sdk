@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeInstanceCreatableZoneRequest extends TeaModel {
     /**
      * <p>The ID of the zone.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

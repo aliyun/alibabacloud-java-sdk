@@ -12,6 +12,9 @@ public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class CreateOmsMysqlDataSourceResponseBody extends TeaModel {
     public static class CreateOmsMysqlDataSourceResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the data source record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e_1234abcd*****</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;

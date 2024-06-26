@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,240 +43,360 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
     public static class DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList extends TeaModel {
         /**
          * <p>The number of rows affected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AffectedRows")
         public Double affectedRows;
 
         /**
          * <p>The wait time of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AppWaitTime")
         public Double appWaitTime;
 
         /**
          * <p>The number of block cache hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         @NameInMap("BlockCacheHit")
         public Double blockCacheHit;
 
         /**
          * <p>The number of block index cache hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("BlockIndexCacheHit")
         public Double blockIndexCacheHit;
 
         /**
          * <p>The number of Bloom filter cache hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BloomFilterCacheHit")
         public Double bloomFilterCacheHit;
 
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1<em>2.</em><strong>.1<em>3.</em></strong></p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The wait time in concurrent execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("ConcurrencyWaitTime")
         public Double concurrencyWaitTime;
 
         /**
          * <p>The average CPU time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50.13</p>
          */
         @NameInMap("CpuTime")
         public Double cpuTime;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>The time to wait for decoding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("DecodeTime")
         public Double decodeTime;
 
         /**
          * <p>The number of physical reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DiskRead")
         public Double diskRead;
 
         /**
          * <p>The average response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76.382</p>
          */
         @NameInMap("ElapsedTime")
         public Double elapsedTime;
 
         /**
          * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-28T02:08:18Z</p>
          */
         @NameInMap("EndTimeUTCString")
         public String endTimeUTCString;
 
         /**
          * <p>The wait event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql response wait client</p>
          */
         @NameInMap("Event")
         public String event;
 
         /**
          * <p>The number of executions per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>163.0</p>
          */
         @NameInMap("ExecPerSecond")
         public Double execPerSecond;
 
         /**
          * <p>The internal execution time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61.044</p>
          */
         @NameInMap("ExecuteTime")
         public Double executeTime;
 
         /**
          * <p>The number of executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89403</p>
          */
         @NameInMap("Executions")
         public Double executions;
 
         /**
          * <p>The number of failures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailTimes")
         public Double failTimes;
 
         /**
          * <p>Hard parsing time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.052</p>
          */
         @NameInMap("GetPlanTime")
         public Double getPlanTime;
 
         /**
          * <p>The I/O wait time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("IOWaitTime")
         public Double IOWaitTime;
 
         /**
          * <p>The number of logical reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("LogicalRead")
         public Double logicalRead;
 
         /**
          * <p>The maximum CPU time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>257.967</p>
          */
         @NameInMap("MaxCpuTime")
         public Double maxCpuTime;
 
         /**
          * <p>The maximum response time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260.044</p>
          */
         @NameInMap("MaxElapsedTime")
         public Double maxElapsedTime;
 
         /**
          * <p>The number of rows read from the memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>527</p>
          */
         @NameInMap("MemstoreReadRowCount")
         public Double memstoreReadRowCount;
 
         /**
          * <p>The number of plan misses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MissPlans")
         public Double missPlans;
 
         /**
          * <p>The wait time for network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("NetWaitTime")
         public Double netWaitTime;
 
         /**
          * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp18qljorblo8es*****</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
 
         /**
          * <p>The queuing time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15.275</p>
          */
         @NameInMap("QueueTime")
         public Double queueTime;
 
         /**
          * <p>The number of RPCs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RPCCount")
         public Double RPCCount;
 
         /**
          * <p>The number of remote plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemotePlans")
         public Double remotePlans;
 
         /**
          * <p>The number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetryCount")
         public Double retryCount;
 
         /**
          * <p>The number of rows returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReturnRows")
         public Double returnRows;
 
         /**
          * <p>The number of row cache hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RowCacheHit")
         public Double rowCacheHit;
 
         /**
          * <p>The scheduling duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("ScheduleTime")
         public Double scheduleTime;
 
         /**
          * <p>SQLID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         @NameInMap("SqlId")
         public String sqlId;
 
         /**
          * <p>The SQL type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
          * <p>The number of rows read from the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43086</p>
          */
         @NameInMap("SsstoreReadRowCount")
         public Double ssstoreReadRowCount;
 
         /**
          * <p>The name of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_online</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
         /**
          * <p>The internal wait time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.966</p>
          */
         @NameInMap("TotalWaitTime")
         public Double totalWaitTime;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tester</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -608,6 +731,9 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
     public static class DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryList extends TeaModel {
         /**
          * <p>The quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public Long count;

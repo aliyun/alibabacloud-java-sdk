@@ -6,102 +6,147 @@ import com.aliyun.tea.*;
 public class DescribeSlowSQLListRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
-     * <p>The end time of the time range for querying slow SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
+     * <p>The end time of the time range for querying slow SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-13T15:40:43Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The filter condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[dbName:sys]</p>
      */
     @NameInMap("FilterCondition")
     public java.util.Map<String, ?> filterCondition;
 
     /**
      * <p>The IP address of the database node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp18qljorblo8es*****</p>
      */
     @NameInMap("NodeIp")
     public String nodeIp;
 
     /**
      * <p>The number of rows to return on each page.  </p>
-     * <p>- Maximum value: 100  </p>
-     * <p>- Default value: 10</p>
+     * <ul>
+     * <li>Maximum value: 100  </li>
+     * <li>Default value: 10</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of the page to return.    </p>
-     * <p>- Start value: 1   </p>
-     * <p>- Default value: 1</p>
+     * <ul>
+     * <li>Start value: 1   </li>
+     * <li>Default value: 1</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The SQL ID, which uniquely identifies an SQL statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
      * <p>The search keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update</p>
      */
     @NameInMap("SearchKeyWord")
     public String searchKeyWord;
 
     /**
      * <p>The search parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cputime</p>
      */
     @NameInMap("SearchParameter")
     public String searchParameter;
 
     /**
      * <p>The search rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * </blockquote>
      */
     @NameInMap("SearchRule")
     public String searchRule;
 
     /**
      * <p>The search value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.01</p>
      */
     @NameInMap("SearchValue")
     public String searchValue;
 
     /**
      * <p>The sorted column.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cputime</p>
      */
     @NameInMap("SortColumn")
     public String sortColumn;
 
     /**
      * <p>The sorting rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
-     * <p>The start time of the time range for querying slow SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
+     * <p>The start time of the time range for querying slow SQL statements.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-13T15:40:43Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

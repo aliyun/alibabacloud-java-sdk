@@ -6,33 +6,52 @@ import com.aliyun.tea.*;
 public class DescribeMetricsDataRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-13T15:40:43Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app,clusterId</p>
      */
     @NameInMap("GroupByLabels")
     public String groupByLabels;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app:OB,clusterId:ob***</p>
      */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Limit")
     public String limit;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tps</p>
      */
     @NameInMap("Metrics")
     public String metrics;
@@ -40,14 +59,25 @@ public class DescribeMetricsDataRequest extends TeaModel {
     @NameInMap("ReplicaType")
     public String replicaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tps</p>
+     */
     @NameInMap("SortMetricKey")
     public String sortMetricKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-13T15:40:43Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

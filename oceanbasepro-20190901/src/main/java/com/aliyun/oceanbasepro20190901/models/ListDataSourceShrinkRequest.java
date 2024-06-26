@@ -4,18 +4,38 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourceShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>descend</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GRATI****89278244</p>
+     */
     @NameInMap("SearchKey")
     public String searchKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gmtCreate</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 

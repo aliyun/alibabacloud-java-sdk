@@ -6,20 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeTenantRequest extends TeaModel {
     /**
      * <p>The status of the Internet address for accessing the tenant. Valid values:   </p>
-     * <p>- CLOSED: The address is disabled.   </p>
-     * <p>- ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   </p>
-     * <p>- PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   </p>
-     * <p>- ONLINE: The address is in service.</p>
-     * <br>
+     * <ul>
+     * <li>CLOSED: The address is disabled.   </li>
+     * <li>ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   </li>
+     * <li>PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   </li>
+     * <li>ONLINE: The address is in service.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Indicates whether to enable transaction splitting.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

@@ -12,6 +12,9 @@ public class CreateProjectModifyRecordsShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np_fe****</p>
      */
     @NameInMap("Id")
     public String id;

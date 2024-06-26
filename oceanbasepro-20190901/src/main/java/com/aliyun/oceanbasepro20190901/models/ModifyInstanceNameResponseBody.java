@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNameResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **ModifyInstanceName**.</p>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyInstanceName</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

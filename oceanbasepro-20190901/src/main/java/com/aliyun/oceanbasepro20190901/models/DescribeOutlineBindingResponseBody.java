@@ -12,6 +12,9 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
     public static class DescribeOutlineBindingResponseBodyOutlineBinding extends TeaModel {
         /**
          * <p>The bound index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIMARY</p>
          */
         @NameInMap("BindIndex")
         public String bindIndex;
 
         /**
          * <p>The bound plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHY_TABLE_SCAN | bmsql_order_line | 40 ******</p>
          */
         @NameInMap("BindPlan")
         public String bindPlan;
 
         /**
          * <p>The maximum number of concurrent tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MaxConcurrent")
         public Integer maxConcurrent;
 
         /**
          * <p>OutlineID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("OutlineId")
         public Long outlineId;

@@ -4,29 +4,40 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodeMetricsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("NodeMetrics")
     public String nodeMetrics;
 
     /**
      * <p>You can call this operation to query the detailed metrics information of an OceanBase Database node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>```</p>
-     * <p>http(s)://[Endpoint]/?Action=DescribeNodeMetrics</p>
-     * <p>&InstanceId=ob317v4uif****</p>
-     * <p>&PageSize=10</p>
-     * <p>&PageNumber=1</p>
-     * <p>&TenantId=ob2mr3oae0****</p>
-     * <p>&StartTime=2021-06-13 15:40:43</p>
-     * <p>&EndTime=2021-09-13 15:40:43</p>
-     * <p>&Metrics=tps</p>
-     * <p>&NodeName=i-bp16niirq4zdmgvm****</p>
-     * <p>&NodeIdList=["i-bp19y05uq6xpacyqnlrc","i-bp1blcr3htr3g3u2vqvu","i-bp1392ikhayhr3hi4fli"]</p>
-     * <p>&Common request parameters</p>
-     * <p>```</p>
+     * <pre><code>http(s)://[Endpoint]/?Action=DescribeNodeMetrics
+     * &amp;InstanceId=ob317v4uif****
+     * &amp;PageSize=10
+     * &amp;PageNumber=1
+     * &amp;TenantId=ob2mr3oae0****
+     * &amp;StartTime=2021-06-13 15:40:43
+     * &amp;EndTime=2021-09-13 15:40:43
+     * &amp;Metrics=tps
+     * &amp;NodeName=i-bp16niirq4zdmgvm****
+     * &amp;NodeIdList=[&quot;i-bp19y05uq6xpacyqnlrc&quot;,&quot;i-bp1blcr3htr3g3u2vqvu&quot;,&quot;i-bp1392ikhayhr3hi4fli&quot;]
+     * &amp;Common request parameters
+     * </code></pre>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

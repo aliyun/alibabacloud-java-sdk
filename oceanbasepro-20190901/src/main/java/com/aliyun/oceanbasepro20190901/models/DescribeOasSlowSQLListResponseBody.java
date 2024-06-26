@@ -12,6 +12,9 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -895,42 +898,63 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
     public static class DescribeOasSlowSQLListResponseBodyData extends TeaModel {
         /**
          * <p>Average updated rows during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9978.75</p>
          */
         @NameInMap("AvgAffectedRows")
         public Double avgAffectedRows;
 
         /**
          * <p>Average Application event wait time (in milliseconds) during the client waiting period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgApplicationWaitTime")
         public Double avgApplicationWaitTime;
 
         /**
          * <p>Average BlockCache hit count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgBlockCacheHit")
         public Double avgBlockCacheHit;
 
         /**
          * <p>Average BlockIndexCache hit count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgBlockIndexCacheHit")
         public Double avgBlockIndexCacheHit;
 
         /**
          * <p>Average BloomFilterCache hit count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgBloomFilterCacheHit")
         public Double avgBloomFilterCacheHit;
 
         /**
          * <p>Average Concurrency event wait time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgConcurrencyWaitTime")
         public Double avgConcurrencyWaitTime;
 
         /**
          * <p>Average CPU time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1875.34</p>
          */
         @NameInMap("AvgCpuTime")
         public Double avgCpuTime;
@@ -940,150 +964,225 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
 
         /**
          * <p>Average syntax parsing time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgDecodeTime")
         public Double avgDecodeTime;
 
         /**
          * <p>Average physical read count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgDiskReads")
         public Double avgDiskReads;
 
         /**
          * <p>Average response time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1876.78</p>
          */
         @NameInMap("AvgElapsedTime")
         public Double avgElapsedTime;
 
         /**
          * <p>Average plan execution time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1895.7</p>
          */
         @NameInMap("AvgExecuteTime")
         public Double avgExecuteTime;
 
         /**
          * <p>Average number of RPC requests executed during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgExecutorRpcCount")
         public Double avgExecutorRpcCount;
 
         /**
          * <p>Average degree of parallelism during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("AvgExpectedWorkerCount")
         public Double avgExpectedWorkerCount;
 
         /**
          * <p>Average plan generation time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgGetPlanTime")
         public Double avgGetPlanTime;
 
         /**
          * <p>Average logical reads of the SQL during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgLogicalReads")
         public Double avgLogicalReads;
 
         /**
          * <p>Strong consistent transaction percentage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgMemstoreReadRows")
         public Double avgMemstoreReadRows;
 
         /**
          * <p>Average network transmission time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgNetTime")
         public Double avgNetTime;
 
         /**
          * <p>Average network enqueue time (in milliseconds) during the network waiting period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgNetWaitTime")
         public Double avgNetWaitTime;
 
         /**
          * <p>Average number of partition accessed during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("AvgPartitionCount")
         public Double avgPartitionCount;
 
         /**
          * <p>Average queueing time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("AvgQueueTime")
         public Double avgQueueTime;
 
         /**
          * <p>Average number of rows returned during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgReturnRows")
         public Double avgReturnRows;
 
         /**
          * <p>Average RowCache hit count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgRowCacheHit")
         public Double avgRowCacheHit;
 
         /**
          * <p>Average number of RPC sent during the execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         @NameInMap("AvgRpcCount")
         public Double avgRpcCount;
 
         /**
          * <p>Average Schedule event wait time (in milliseconds) during the scheduling period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgScheduleTime")
         public Double avgScheduleTime;
 
         /**
          * <p>Eventually consistent transaction percentage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgSsstoreReadRows")
         public Double avgSsstoreReadRows;
 
         /**
          * <p>Average number of threads used of the SQL during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("AvgUsedWorkerCount")
         public Double avgUsedWorkerCount;
 
         /**
          * <p>Average UserIO event wait time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgUserIoWaitTime")
         public Double avgUserIoWaitTime;
 
         /**
          * <p>Average number of waits during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("AvgWaitCount")
         public Double avgWaitCount;
 
         /**
          * <p>Average wait time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.42</p>
          */
         @NameInMap("AvgWaitTime")
         public Double avgWaitTime;
 
         /**
          * <p>Client IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1<em>2.</em><strong>.1<em>3.</em></strong></p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>Distributed plan percentage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.0</p>
          */
         @NameInMap("DistPlanPercentage")
         public Double distPlanPercentage;
@@ -1093,192 +1192,288 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
 
         /**
          * <p>Average execution count per second during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.31</p>
          */
         @NameInMap("ExecPs")
         public Double execPs;
 
         /**
          * <p>Total number of executions during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Executions")
         public Double executions;
 
         /**
          * <p>Average number of partition accessed during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailCount")
         public Double failCount;
 
         /**
          * <p>Error percentage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("FailPercentage")
         public Double failPercentage;
 
         /**
          * <p>Whether an internal SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Inner")
         public Boolean inner;
 
         /**
          * <p>Local plan percentage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("LocalPlanPercentage")
         public Double localPlanPercentage;
 
         /**
          * <p>Max affected rows during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000.0</p>
          */
         @NameInMap("MaxAffectedRows")
         public Double maxAffectedRows;
 
         /**
          * <p>Max Application event wait time (in milliseconds) during the execution period</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("MaxApplicationWaitTime")
         public Double maxApplicationWaitTime;
 
         /**
          * <p>Max Concurrency event wait time (in milliseconds) during the execution period</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("MaxConcurrencyWaitTime")
         public Double maxConcurrencyWaitTime;
 
         /**
          * <p>Max CPU time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>257.967</p>
          */
         @NameInMap("MaxCpuTime")
         public Double maxCpuTime;
 
         /**
          * <p>Max physical read count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("MaxDiskReads")
         public Double maxDiskReads;
 
         /**
          * <p>Max response time during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>260.044</p>
          */
         @NameInMap("MaxElapsedTime")
         public Double maxElapsedTime;
 
         /**
          * <p>Max returned rows during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("MaxReturnRows")
         public Double maxReturnRows;
 
         /**
          * <p>Max UserIO event wait time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("MaxUserIoWaitTime")
         public Double maxUserIoWaitTime;
 
         /**
          * <p>Max wait time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.4</p>
          */
         @NameInMap("MaxWaitTime")
         public Double maxWaitTime;
 
         /**
          * <p>Plan hit rage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("MissPlanPercentage")
         public Double missPlanPercentage;
 
         /**
          * <p>Missed hit count of the execution plan during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MissPlans")
         public Double missPlans;
 
         /**
          * <p>Remote plan percentage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("RemotePlanPercentage")
         public Double remotePlanPercentage;
 
         /**
          * <p>Remote execution count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemotePlans")
         public Double remotePlans;
 
         /**
          * <p>Number of occurrences of code 4012 during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode4012Count")
         public Long retCode4012Count;
 
         /**
          * <p>Number of occurrences of code 4013 during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode4013Count")
         public Long retCode4013Count;
 
         /**
          * <p>Number of occurrences of code 5001 during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode5001Count")
         public Double retCode5001Count;
 
         /**
          * <p>Number of occurrences of code 5024 during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode5024Count")
         public Double retCode5024Count;
 
         /**
          * <p>Number of occurrences of code 5167 during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode5167Count")
         public Double retCode5167Count;
 
         /**
          * <p>Number of occurrences of code 5217 during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode5217Count")
         public Double retCode5217Count;
 
         /**
          * <p>Number of occurrences of code 6002 during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode6002Count")
         public Double retCode6002Count;
 
         /**
          * <p>Total number of retries during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("RetryCount")
         public Double retryCount;
 
         /**
          * <p>RPC count during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RpcCount")
         public Double rpcCount;
 
         /**
          * <p>The server where the SQL is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1db1a<strong>s038</strong>mej**</p>
          */
         @NameInMap("Server")
         public String server;
 
         /**
          * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1db1a<strong>s038</strong>mej**</p>
          */
         @NameInMap("ServerIp")
         public String serverIp;
 
         /**
          * <p>The server port where the SQL is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10110</p>
          */
         @NameInMap("ServerPort")
         public Long serverPort;
 
         /**
          * <p>SQL ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         @NameInMap("SqlId")
         public String sqlId;
@@ -1288,18 +1483,27 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
 
         /**
          * <p>SQL text (the first 100 characters).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select a from b where</p>
          */
         @NameInMap("SqlTextShort")
         public String sqlTextShort;
 
         /**
          * <p>SQL type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
          * <p>Strong consistent transaction percentage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.0</p>
          */
         @NameInMap("StrongConsistencyPercentage")
         public Double strongConsistencyPercentage;
@@ -1309,48 +1513,72 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
 
         /**
          * <p>Total response time (in milliseconds) during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11452126.36</p>
          */
         @NameInMap("SumElapsedTime")
         public Double sumElapsedTime;
 
         /**
          * <p>Total logical reads of the SQL during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("SumLogicalReads")
         public Double sumLogicalReads;
 
         /**
          * <p>The total wait time (in milliseconds) during the internal waiting period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9421.73</p>
          */
         @NameInMap("SumWaitTime")
         public Double sumWaitTime;
 
         /**
          * <p>Table scan percentage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("TableScanPercentage")
         public Double tableScanPercentage;
 
         /**
          * <p>Total wait time during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.966</p>
          */
         @NameInMap("TotalWaitTime")
         public Double totalWaitTime;
 
         /**
          * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>Longest wait event during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("WaitEvent")
         public String waitEvent;
 
         /**
          * <p>Eventually consistent transaction percentage during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("WeakConsistencyPercentage")
         public Double weakConsistencyPercentage;

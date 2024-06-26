@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeAvailableSpecRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oceanbase.cluster.cd8.xlarge</p>
+     */
     @NameInMap("Spec")
     public String spec;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>upgradespec</p>
      */
     @NameInMap("UpgradeType")
     public String upgradeType;

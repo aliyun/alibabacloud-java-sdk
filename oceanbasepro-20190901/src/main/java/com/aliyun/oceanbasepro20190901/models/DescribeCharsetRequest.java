@@ -9,14 +9,19 @@ public class DescribeCharsetRequest extends TeaModel {
 
     /**
      * <p>实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("Series")
     public String series;
 
     /**
      * <p>The return result of the request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Oracle</p>
      */
     @NameInMap("TenantMode")
     public String tenantMode;

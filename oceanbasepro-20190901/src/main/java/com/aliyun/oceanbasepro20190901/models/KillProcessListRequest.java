@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class KillProcessListRequest extends TeaModel {
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The list of the sessions that need to be closed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ServerIp&quot;:&quot;192.168.13.119&quot;,&quot;SessionId&quot;:&quot;3221614618&quot;}]</p>
      */
     @NameInMap("SessionList")
     public String sessionList;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t4louaeei****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

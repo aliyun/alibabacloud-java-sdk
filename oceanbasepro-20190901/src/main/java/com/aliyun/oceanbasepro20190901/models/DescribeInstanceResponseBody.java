@@ -12,6 +12,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The total log disk space of the cluster, in GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -186,15 +189,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceReadOnlyResourceCpu extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("OriginalTotalCpu")
         public Long originalTotalCpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("TotalCpu")
         public Long totalCpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("UnitCpu")
         public Long unitCpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("UsedCpu")
         public Long usedCpu;
 
@@ -250,15 +269,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("MaxDiskUsedPercent")
         public Double maxDiskUsedPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("OriginalTotalDiskSize")
         public Long originalTotalDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("TotalDiskSize")
         public Long totalDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("UnitDiskSize")
         public Long unitDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("UsedDiskSize")
         public Long usedDiskSize;
 
@@ -343,9 +378,17 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("MaxLogAssignedPercent")
         public String maxLogAssignedPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>400</p>
+         */
         @NameInMap("TotalDiskSize")
         public Long totalDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("UnitDiskSize")
         public Long unitDiskSize;
 
@@ -397,15 +440,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>72</p>
+         */
         @NameInMap("OriginalTotalMemory")
         public Long originalTotalMemory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>70</p>
+         */
         @NameInMap("TotalMemory")
         public Long totalMemory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("UnitMemory")
         public Long unitMemory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("UsedMemory")
         public Long usedMemory;
 
@@ -464,6 +523,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("Memory")
         public DescribeInstanceResponseBodyInstanceReadOnlyResourceMemory memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UnitCount")
         public Long unitCount;
 
@@ -564,27 +627,41 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResourceCpu extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>14</p>
+         */
         @NameInMap("OriginalTotalCpu")
         public Long originalTotalCpu;
 
         /**
          * <p>The series of the OceanBase cluster. Valid values:   </p>
-         * <p>- NORMAL: the high availability edition.   </p>
-         * <p>- BASIC: the basic edition.</p>
+         * <ul>
+         * <li>NORMAL: the high availability edition.   </li>
+         * <li>BASIC: the basic edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         @NameInMap("TotalCpu")
         public Long totalCpu;
 
         /**
          * <p>The type of the storage disk where the cluster is deployed. </p>
-         * <br>
          * <p>The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("UnitCpu")
         public Long unitCpu;
 
         /**
          * <p>Indicates whether automatic upgrade of the OBServer version is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("UsedCpu")
         public Long usedCpu;
@@ -631,6 +708,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     public static class DescribeInstanceResponseBodyInstanceResourceDiskSize extends TeaModel {
         /**
          * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("DataUsedSize")
         public Double dataUsedSize;
@@ -646,36 +726,57 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The maximum disk usage, in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.14</p>
          */
         @NameInMap("MaxDiskUsedPercent")
         public Double maxDiskUsedPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("OriginalTotalDiskSize")
         public Long originalTotalDiskSize;
 
         /**
          * <p>The data replica distribution mode of the cluster. Valid values: </p>
-         * <p>- n: indicates the single-IDC mode. </p>
-         * <p>- n-n: indicates the dual-IDC mode. </p>
-         * <p>- n-n-n: indicates the multi-IDC mode. </p>
-         * <br>
-         * <p>> <br>The integer n represents the number of OBServer nodes in each IDC.</p>
+         * <ul>
+         * <li>n: indicates the single-IDC mode. </li>
+         * <li>n-n: indicates the dual-IDC mode. </li>
+         * <li>n-n-n: indicates the multi-IDC mode.</li>
+         * </ul>
+         * <blockquote>
+         * <p><br>The integer n represents the number of OBServer nodes in each IDC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("TotalDiskSize")
         public Long totalDiskSize;
 
         /**
          * <p>The list of zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("UnitDiskSize")
         public Long unitDiskSize;
 
         /**
          * <p>The specifications of the cluster.  You can specify one of the following four plans:    </p>
-         * <p>- 8C32G: indicates 8 CPU cores and 32 GB of memory. </p>
-         * <p>- 14C70G: indicates 14 CPU cores and 70 GB of memory. </p>
-         * <p>- 30C180G: indicates 30 CPU cores and 180 GB of memory. </p>
-         * <p>- 62C400G: indicates 62 CPU cores and 400 GB of memory.</p>
+         * <ul>
+         * <li>8C32G: indicates 8 CPU cores and 32 GB of memory. </li>
+         * <li>14C70G: indicates 14 CPU cores and 70 GB of memory. </li>
+         * <li>30C180G: indicates 30 CPU cores and 180 GB of memory. </li>
+         * <li>62C400G: indicates 62 CPU cores and 400 GB of memory.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("UsedDiskSize")
         public Long usedDiskSize;
@@ -766,12 +867,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         @NameInMap("TotalDiskSize")
         public Long totalDiskSize;
 
         /**
          * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("UnitDiskSize")
         public Long unitDiskSize;
@@ -832,23 +939,36 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceResourceMemory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>72</p>
+         */
         @NameInMap("OriginalTotalMemory")
         public Long originalTotalMemory;
 
         /**
          * <p>Indicates whether trusted ECS instances are used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("TotalMemory")
         public Long totalMemory;
 
         /**
          * <p>The log disk space of each replica node in the cluster. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("UnitMemory")
         public Long unitMemory;
 
         /**
          * <p>The time in UTC when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("UsedMemory")
         public Long usedMemory;
@@ -904,8 +1024,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The number of the page to return. </p>
-         * <p>- Start value: 1  </p>
-         * <p>- Default value: 1</p>
+         * <ul>
+         * <li>Start value: 1  </li>
+         * <li>Default value: 1</li>
+         * </ul>
          */
         @NameInMap("DiskSize")
         public DescribeInstanceResponseBodyInstanceResourceDiskSize diskSize;
@@ -924,6 +1046,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The number of CPU cores used in the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UnitCount")
         public Long unitCount;
@@ -984,6 +1109,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyInstanceTenantCreatable extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CPU_NOT_ENOUGH、 MEMORY_NOT_ENOUGH、TENANT_COUNT_EXCEEDS_LIMIT</p>
+         */
         @NameInMap("DisableCreateTenantReason")
         public String disableCreateTenantReason;
 
@@ -1018,13 +1147,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public Boolean allowModifyInternetAddressConnectionLimit;
 
         /**
-         * <p>The operation that you want to perform. <br>Set the value to **DescribeInstance**.</p>
+         * <p>The operation that you want to perform. <br>Set the value to <strong>DescribeInstance</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoRenewal")
         public Boolean autoRenewal;
 
         /**
          * <p>Example 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoUpgradeObVersion")
         public Boolean autoUpgradeObVersion;
@@ -1032,11 +1167,18 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("AvailableZones")
         public java.util.List<String> availableZones;
 
+        /**
+         * <strong>example:</strong>
+         * <p>X86</p>
+         */
         @NameInMap("CpuArchitecture")
         public String cpuArchitecture;
 
         /**
          * <p>Indicates whether the log disk specifications can be upgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-19T07:13:41Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -1049,24 +1191,36 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The total number of CPU cores of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02:00</p>
          */
         @NameInMap("DataMergeTime")
         public String dataMergeTime;
 
         /**
          * <p>Alibaba Cloud CLI</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1-1-1</p>
          */
         @NameInMap("DeployMode")
         public String deployMode;
 
         /**
          * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>multiple</p>
          */
         @NameInMap("DeployType")
         public String deployType;
 
         /**
          * <p>The total storage space of the cluster, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd_pl1</p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -1083,6 +1237,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @NameInMap("EnableReadOnlyReplicaManagement")
         public Boolean enableReadOnlyReplicaManagement;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableUpgradeLogDisk")
         public Boolean enableUpgradeLogDisk;
 
@@ -1091,6 +1249,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The information of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-17T16:00:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -1100,30 +1261,50 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The detailed information of the OBServer version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14C70G</p>
          */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
         /**
          * <p>The information about the log disk space of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>Indicates whether automatic upgrade of the OBServer version is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob4test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("InstanceRole")
         public String instanceRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsLatestObVersion")
         public Boolean isLatestObVersion;
 
         /**
          * <p>The information about the CPU resources of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsTrustEcs")
         public Boolean isTrustEcs;
@@ -1133,25 +1314,47 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The time when the major compaction of cluster data is performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19:00Z-20:00Z</p>
          */
         @NameInMap("MaintainTime")
         public String maintainTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("NodeNum")
         public String nodeNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.2.77-20210526202046</p>
+         */
         @NameInMap("ObRpmVersion")
         public String obRpmVersion;
 
         /**
          * <p>The list of zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ob3h8ytroxxxxx</p>
+         */
         @NameInMap("PrimaryInstance")
         public String primaryInstance;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("PrimaryRegion")
         public String primaryRegion;
 
@@ -1175,6 +1378,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the OBServer version is the latest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Indicates whether the OBServer version is the latest.</p>
          */
         @NameInMap("Series")
         public String series;
@@ -1187,6 +1393,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The information about cluster resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("Status")
         public String status;
@@ -1199,6 +1408,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         /**
          * <p>You can call this operation to query the detailed information of an OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.2.77</p>
          */
         @NameInMap("Version")
         public String version;

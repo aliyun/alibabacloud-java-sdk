@@ -12,6 +12,9 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,39 @@ public class CreateInstanceResponseBody extends TeaModel {
     public static class CreateInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The result of the dry-run request.</p>
-         * <br>
-         * <p>If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.</p>
-         * <p>If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</p>
+         * <p>If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.
+         * If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DryRunResult")
         public Boolean dryRunResult;
 
         /**
          * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp67acfmxazb4p****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>Order ID. The ID of the order that you have placed.</p>
-         * <p>This parameter returns a value after you create a pre-paid or post-paid cluster.</p>
+         * <p>Order ID. The ID of the order that you have placed.
+         * This parameter returns a value after you create a pre-paid or post-paid cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         @NameInMap("OrderId")
         public String orderId;
 
         /**
          * <p>Resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-***************</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

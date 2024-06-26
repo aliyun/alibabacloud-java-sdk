@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyTenantEncryptionResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,12 +41,24 @@ public class ModifyTenantEncryptionResponseBody extends TeaModel {
     }
 
     public static class ModifyTenantEncryptionResponseBodyTenantEncryption extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>EncryptionKey</p>
+         */
         @NameInMap("EncryptionType")
         public String encryptionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 

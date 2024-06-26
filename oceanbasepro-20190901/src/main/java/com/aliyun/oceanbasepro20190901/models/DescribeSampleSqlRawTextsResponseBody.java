@@ -7,6 +7,10 @@ public class DescribeSampleSqlRawTextsResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeSampleSqlRawTextsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

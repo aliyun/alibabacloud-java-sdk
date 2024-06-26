@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeTenantTagsRequest extends TeaModel {
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Key&quot;: &quot;xxx&quot;, &quot;Value&quot;, &quot;xxx&quot;}]</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
      * <p>The JSON string of the tenant ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;t5r0x2f6q****&quot;, &quot;t33h8y08k****&quot;, &quot;t5r41rtl7****&quot;]</p>
      */
     @NameInMap("TenantIds")
     public String tenantIds;

@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class ModifyDatabaseUserRolesRequest extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sms_pre</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>The account information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>A list of usernames and their respective roles.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;UserName&quot;:&quot;omstest&quot;,&quot;Role&quot;:&quot;readwrite&quot;}]</p>
      */
     @NameInMap("Users")
     public String users;

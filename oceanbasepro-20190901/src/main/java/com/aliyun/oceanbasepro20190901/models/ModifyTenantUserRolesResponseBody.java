@@ -4,6 +4,10 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantUserRolesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,28 +40,41 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
 
     public static class ModifyTenantUserRolesResponseBodyTenantUserUserRole extends TeaModel {
         /**
-         * <p>```</p>
-         * <p>http(s)://[Endpoint]/?Action=ModifyTenantUserRoles</p>
-         * <p>&UserName=pay_test</p>
-         * <p>&TenantId=ob2mr3oae0****</p>
-         * <p>&UserRole=[{"Database":"20210824160559","Role":"readwrite"}]</p>
-         * <p>&InstanceId=ob317v4uif****</p>
-         * <p>&ModifyType=update</p>
-         * <p>&Common request parameters</p>
-         * <p>```</p>
+         * <pre><code>http(s)://[Endpoint]/?Action=ModifyTenantUserRoles
+         * &amp;UserName=pay_test
+         * &amp;TenantId=ob2mr3oae0****
+         * &amp;UserRole=[{&quot;Database&quot;:&quot;20210824160559&quot;,&quot;Role&quot;:&quot;readwrite&quot;}]
+         * &amp;InstanceId=ob317v4uif****
+         * &amp;ModifyType=update
+         * &amp;Common request parameters
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>db_pay1</p>
          */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
         /**
          * <p>You can call this operation to modify the database privileges of a specified account in a tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadOnly</p>
          */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tbl_pay1</p>
+         */
         @NameInMap("Table")
         public String table;
 
@@ -101,14 +118,25 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
     }
 
     public static class ModifyTenantUserRolesResponseBodyTenantUser extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>t33h8y08k****</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pay_test</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The name of the database (MySQL mode) or schema (Oracle mode).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>账号具备的数据库权限信息列表。</p>
          */
         @NameInMap("UserRole")
         public java.util.List<ModifyTenantUserRolesResponseBodyTenantUserUserRole> userRole;

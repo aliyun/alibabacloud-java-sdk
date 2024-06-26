@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class StopProjectModifyRecordsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>344000005</p>
      */
     @NameInMap("Id")
     public String id;

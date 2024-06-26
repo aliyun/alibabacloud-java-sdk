@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDataSourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e_5anwndq</p>
      */
     @NameInMap("Id")
     public String id;

@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityIpGroupRequest extends TeaModel {
     /**
-     * <p>The name of the IP address whitelist group.    </p>
-     * <p>It must be 2 to 32 characters in length, start with a lowercase letter, end with a lowercase letter or digit, and contain only lowercase letters, digits, and underscores (_).</p>
-     * <br>
+     * <p>The name of the IP address whitelist group.<br>It must be 2 to 32 characters in length, start with a lowercase letter, end with a lowercase letter or digit, and contain only lowercase letters, digits, and underscores (_).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The information of the deleted IP whitelist group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>paytest</p>
      */
     @NameInMap("SecurityIpGroupName")
     public String securityIpGroupName;

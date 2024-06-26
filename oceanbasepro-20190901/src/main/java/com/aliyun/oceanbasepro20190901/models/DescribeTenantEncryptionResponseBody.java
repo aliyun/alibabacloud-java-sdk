@@ -4,12 +4,20 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantEncryptionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TenantEncryptions")
     public java.util.List<DescribeTenantEncryptionResponseBodyTenantEncryptions> tenantEncryptions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,27 +51,59 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantEncryptionResponseBodyTenantEncryptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("EnableEncryption")
         public Boolean enableEncryption;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("EncryptionKeyId")
         public String encryptionKeyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INTERNAL</p>
+         */
         @NameInMap("EncryptionType")
         public String encryptionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("TenantMode")
         public String tenantMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>forMySQLTenant</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("TenantStatus")
         public String tenantStatus;
 

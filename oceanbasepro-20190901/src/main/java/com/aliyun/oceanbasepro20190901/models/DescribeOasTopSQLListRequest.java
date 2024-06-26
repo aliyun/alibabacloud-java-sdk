@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeOasTopSQLListRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>- zh: Chinese</p>
-     * <p>- en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_db</p>
      */
     @NameInMap("DbName")
     public String dbName;
@@ -23,24 +30,31 @@ public class DescribeOasTopSQLListRequest extends TeaModel {
     public Boolean dynamicSql;
 
     /**
-     * <p>The end time of querying the TOPSQL parameter.</p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
+     * <p>The end time of querying the TOPSQL parameter.
+     * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-12T05:38:38Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>All parameters are referenced by the symbol @. For a list of available parameters, refer to the returned parameters in [Query performance indicators of an SQL statement](https://en.oceanbase.com/docs/community-ocp-en-10000000000840290).</p>
+     * <p>All parameters are referenced by the symbol @. For a list of available parameters, refer to the returned parameters in <a href="https://en.oceanbase.com/docs/community-ocp-en-10000000000840290">Query performance indicators of an SQL statement</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>@avgCpuTime &gt; 20 and @executions &gt; 100</p>
      */
     @NameInMap("FilterCondition")
     public String filterCondition;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -50,60 +64,87 @@ public class DescribeOasTopSQLListRequest extends TeaModel {
 
     /**
      * <p>The node IP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp18l4****str4uk03</p>
      */
     @NameInMap("NodeIp")
     public String nodeIp;
 
     /**
      * <p>The search keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update</p>
      */
     @NameInMap("SearchKeyWord")
     public String searchKeyWord;
 
     /**
      * <p>The search parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cputime</p>
      */
     @NameInMap("SearchParam")
     public String searchParam;
 
     /**
      * <p>The search rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * </blockquote>
      */
     @NameInMap("SearchRule")
     public String searchRule;
 
     /**
      * <p>The search value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.01</p>
      */
     @NameInMap("SearchValue")
     public String searchValue;
 
     /**
      * <p>SQL ID.</p>
-     * <p>> When the SQL ID is provided, the system collects all the request data for the target SQL ID. When the SQL ID is empty, the system collects all the request data for the entire database instance.</p>
+     * <blockquote>
+     * <p>When the SQL ID is provided, the system collects all the request data for the target SQL ID. When the SQL ID is empty, the system collects all the request data for the entire database instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
      */
     @NameInMap("SqlId")
     public String sqlId;
 
     /**
      * <p>Max length of the returned SQL text.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65535</p>
      */
     @NameInMap("SqlTextLength")
     public Long sqlTextLength;
 
     /**
-     * <p>The start time of querying the TOPSQL parameter.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
+     * <p>The start time of querying the TOPSQL parameter.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-12T04:38:38Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t4louaeei****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

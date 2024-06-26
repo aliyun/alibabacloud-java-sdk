@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeBackupSetDownloadLinkRequest extends TeaModel {
     /**
      * <p>The ID of the download task corresponding to the target backup set.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000002</p>
      */
     @NameInMap("DownloadTaskId")
     public String downloadTaskId;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

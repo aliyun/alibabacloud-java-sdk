@@ -6,24 +6,33 @@ import com.aliyun.tea.*;
 public class SwitchoverInstanceRequest extends TeaModel {
     /**
      * <p>Whether to force the switchover.</p>
-     * <p>- true: Force the switchover.</p>
-     * <p>- false: Do not force the switchover.</p>
+     * <ul>
+     * <li>true: Force the switchover.</li>
+     * <li>false: Do not force the switchover.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Forced")
     public Boolean forced;
 
     /**
      * <p>The instance ID of the primary/standby instance. You can set the default value to the instance ID of the instance to be switched to the primary instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The instance ID of the instance to be switched to the primary instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob4bv8o7sp****</p>
      */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;

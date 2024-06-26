@@ -6,31 +6,39 @@ import com.aliyun.tea.*;
 public class ModifyDatabaseDescriptionRequest extends TeaModel {
     /**
      * <p>Example 1</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sms_pre</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a test database</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The description of the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **ModifyDatabaseDescription**.</p>
-     * <br>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>ModifyDatabaseDescription</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

@@ -7,6 +7,10 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeAvailableSpecResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableSpecResponseBodyDataAvailableSpecificationsDiskSizeRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40000</p>
+         */
         @NameInMap("Max")
         public Long max;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Min")
         public Long min;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Step")
         public Long step;
 
@@ -73,12 +89,24 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableSpecResponseBodyDataAvailableSpecificationsLogDiskSizeRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4000</p>
+         */
         @NameInMap("Max")
         public Long max;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Min")
         public Long min;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Step")
         public Long step;
 
@@ -120,6 +148,10 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         @NameInMap("DiskTypes")
         public java.util.List<String> diskTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4C16GB</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
@@ -129,6 +161,10 @@ public class DescribeAvailableSpecResponseBody extends TeaModel {
         @NameInMap("NodeNum")
         public java.util.List<Integer> nodeNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oceanbase.cluster.cd8.xlarge</p>
+         */
         @NameInMap("Spec")
         public String spec;
 

@@ -4,6 +4,10 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +39,17 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
     }
 
     public static class ModifyDatabaseUserRolesResponseBodyTenantUserUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ReadOnly</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_pay_ro</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -67,10 +79,17 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
     public static class ModifyDatabaseUserRolesResponseBodyTenantUser extends TeaModel {
         /**
          * <p>Example 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms_pre</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t33h8y08k****</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteTenantSecurityIpGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DeleteTenantSecurityIpGroupResponseBody extends TeaModel {
     public static class DeleteTenantSecurityIpGroupResponseBodySecurityIpGroup extends TeaModel {
         /**
          * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the whitelist group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paytest</p>
          */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
          */
         @NameInMap("TenantId")
         public String tenantId;

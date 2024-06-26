@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateTenantSecurityIpGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,26 +43,37 @@ public class CreateTenantSecurityIpGroupResponseBody extends TeaModel {
     public static class CreateTenantSecurityIpGroupResponseBodySecurityIpGroup extends TeaModel {
         /**
          * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the whitelist group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paytest</p>
          */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
         /**
          * <p>The list of IP addresses in the IP address whitelist group.   </p>
-         * <br>
          * <p>It is a string separated by commas, and each object is an IP address or CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.***.<em>.</em></p>
          */
         @NameInMap("SecurityIps")
         public String securityIps;
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t4louaeei****</p>
          */
         @NameInMap("TenantId")
         public String tenantId;

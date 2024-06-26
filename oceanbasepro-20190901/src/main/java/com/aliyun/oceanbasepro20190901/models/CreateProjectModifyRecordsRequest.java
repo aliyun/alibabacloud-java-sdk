@@ -12,6 +12,9 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np_fe****</p>
      */
     @NameInMap("Id")
     public String id;
@@ -41,9 +44,17 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -96,18 +107,34 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_table</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -178,9 +205,17 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -233,18 +268,34 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>view_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_view</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>view_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id &lt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -315,9 +366,17 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -370,18 +429,34 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_table</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -452,9 +527,17 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public String partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -507,18 +590,34 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>view_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_view</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>view_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -586,12 +685,24 @@ public class CreateProjectModifyRecordsRequest extends TeaModel {
     }
 
     public static class CreateProjectModifyRecordsRequestDatabases extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>db_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_db</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>db_name</p>
+         */
         @NameInMap("Name")
         public String name;
 

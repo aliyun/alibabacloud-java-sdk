@@ -6,27 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeAvailableCpuResourceRequest extends TeaModel {
     /**
      * <p>The CPU resources available.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>```</p>
-     * <p>http(s)://[Endpoint]/?Action=DescribeAvailableCpuResource</p>
-     * <p>&InstanceId=ob317v4uif****</p>
-     * <p>&TenantId=ob2mr3oae0****</p>
-     * <p>&ModifyType=update</p>
-     * <p>&Common request parameters</p>
-     * <p>```</p>
+     * <pre><code>http(s)://[Endpoint]/?Action=DescribeAvailableCpuResource
+     * &amp;InstanceId=ob317v4uif****
+     * &amp;TenantId=ob2mr3oae0****
+     * &amp;ModifyType=update
+     * &amp;Common request parameters
+     * </code></pre>
+     * 
+     * <strong>example:</strong>
+     * <p>update</p>
      */
     @NameInMap("ModifyType")
     public String modifyType;
 
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **DescribeAvailableCpuResource**.</p>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeAvailableCpuResource</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

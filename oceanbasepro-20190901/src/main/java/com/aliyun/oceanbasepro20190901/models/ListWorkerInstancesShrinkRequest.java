@@ -4,21 +4,45 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ListWorkerInstancesShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>KAFKA</p>
+     */
     @NameInMap("DestType")
     public String destType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i4katz****</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("OnlyBindable")
     public Boolean onlyBindable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OCEANBASE</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 

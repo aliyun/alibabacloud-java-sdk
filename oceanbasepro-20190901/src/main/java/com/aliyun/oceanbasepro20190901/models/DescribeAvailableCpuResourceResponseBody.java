@@ -7,6 +7,10 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeAvailableCpuResourceResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableCpuResourceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>UnitNum.RejectComment.Storage</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("MaxCpu")
         public Long maxCpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MinCpu")
         public Long minCpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UnitNum.Change.Accept</p>
+         */
         @NameInMap("ReviewCode")
         public String reviewCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("UnitNum")
         public Long unitNum;
 

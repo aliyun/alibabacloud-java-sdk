@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
     /**
-     * <p>```</p>
-     * <p>http(s)://[Endpoint]/?Action=DescribeZones</p>
-     * <p>&Series=normal</p>
-     * <p>&DeployType=single</p>
-     * <p>&Common request parameters</p>
-     * <p>```</p>
+     * <pre><code>http(s)://[Endpoint]/?Action=DescribeZones
+     * &amp;Series=normal
+     * &amp;DeployType=single
+     * &amp;Common request parameters
+     * </code></pre>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -43,15 +45,31 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZones extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1-1-1</p>
+         */
         @NameInMap("DeployType")
         public String deployType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("Series")
         public String series;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i,cn-hangzhou-j,cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>H/I/J</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 

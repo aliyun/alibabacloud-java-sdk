@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTenantResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t33h8y08k****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
