@@ -4,11 +4,17 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectConfigRequest extends TeaModel {
+    @NameInMap("CommonTransferConfig")
+    public UpdateProjectConfigRequestCommonTransferConfig commonTransferConfig;
+
     @NameInMap("FullTransferConfig")
     public UpdateProjectConfigRequestFullTransferConfig fullTransferConfig;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np_fe****</p>
      */
     @NameInMap("Id")
     public String id;
@@ -22,6 +28,14 @@ public class UpdateProjectConfigRequest extends TeaModel {
     public static UpdateProjectConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProjectConfigRequest self = new UpdateProjectConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateProjectConfigRequest setCommonTransferConfig(UpdateProjectConfigRequestCommonTransferConfig commonTransferConfig) {
+        this.commonTransferConfig = commonTransferConfig;
+        return this;
+    }
+    public UpdateProjectConfigRequestCommonTransferConfig getCommonTransferConfig() {
+        return this.commonTransferConfig;
     }
 
     public UpdateProjectConfigRequest setFullTransferConfig(UpdateProjectConfigRequestFullTransferConfig fullTransferConfig) {
@@ -56,16 +70,62 @@ public class UpdateProjectConfigRequest extends TeaModel {
         return this.reverseIncrTransferConfig;
     }
 
+    public static class UpdateProjectConfigRequestCommonTransferConfig extends TeaModel {
+        @NameInMap("SinkStoreFormat")
+        public String sinkStoreFormat;
+
+        @NameInMap("SourceStoreFormat")
+        public String sourceStoreFormat;
+
+        public static UpdateProjectConfigRequestCommonTransferConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateProjectConfigRequestCommonTransferConfig self = new UpdateProjectConfigRequestCommonTransferConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateProjectConfigRequestCommonTransferConfig setSinkStoreFormat(String sinkStoreFormat) {
+            this.sinkStoreFormat = sinkStoreFormat;
+            return this;
+        }
+        public String getSinkStoreFormat() {
+            return this.sinkStoreFormat;
+        }
+
+        public UpdateProjectConfigRequestCommonTransferConfig setSourceStoreFormat(String sourceStoreFormat) {
+            this.sourceStoreFormat = sourceStoreFormat;
+            return this;
+        }
+        public String getSourceStoreFormat() {
+            return this.sourceStoreFormat;
+        }
+
+    }
+
     public static class UpdateProjectConfigRequestFullTransferConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("ReadWorkerNum")
         public Integer readWorkerNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ThrottleIOPS")
         public Integer throttleIOPS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ThrottleRps")
         public Integer throttleRps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("WriteWorkerNum")
         public Integer writeWorkerNum;
 
@@ -109,6 +169,10 @@ public class UpdateProjectConfigRequest extends TeaModel {
     }
 
     public static class UpdateProjectConfigRequestIncrTransferConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("IncrSyncThreadCount")
         public Integer incrSyncThreadCount;
 
@@ -118,9 +182,17 @@ public class UpdateProjectConfigRequest extends TeaModel {
         @NameInMap("SupportDDLTypes")
         public java.util.List<String> supportDDLTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ThrottleIOPS")
         public Integer throttleIOPS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ThrottleRps")
         public Integer throttleRps;
 
@@ -172,6 +244,10 @@ public class UpdateProjectConfigRequest extends TeaModel {
     }
 
     public static class UpdateProjectConfigRequestReverseIncrTransferConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("IncrSyncThreadCount")
         public Integer incrSyncThreadCount;
 
@@ -181,9 +257,17 @@ public class UpdateProjectConfigRequest extends TeaModel {
         @NameInMap("SupportDDLTypes")
         public java.util.List<String> supportDDLTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ThrottleIOPS")
         public Integer throttleIOPS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ThrottleRps")
         public Integer throttleRps;
 

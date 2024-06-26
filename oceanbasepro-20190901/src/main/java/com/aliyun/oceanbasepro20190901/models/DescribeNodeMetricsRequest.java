@@ -6,62 +6,85 @@ import com.aliyun.tea.*;
 public class DescribeNodeMetricsRequest extends TeaModel {
     /**
      * <p>$.parameters[7].schema.description</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-13T15:40:43Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The list of nodes.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>$.parameters[7].schema.enumValueTitles</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tps</p>
      */
     @NameInMap("Metrics")
     public String metrics;
 
     /**
      * <p>$.parameters[10].schema.description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[i-bp16niirq4zdmgvm****,i-bp16n56hq4z4fgvm****]</p>
      */
     @NameInMap("NodeIdList")
     public String nodeIdList;
 
     /**
      * <p>$.parameters[8].schema.example</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp16niirq4zdmgvm****</p>
      */
     @NameInMap("NodeName")
     public String nodeName;
 
     /**
      * <p>$.parameters[6].schema.description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>$.parameters[9].schema.example</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-13T15:40:43Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>$.parameters[6].schema.enumValueTitles</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tfafd34fs****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

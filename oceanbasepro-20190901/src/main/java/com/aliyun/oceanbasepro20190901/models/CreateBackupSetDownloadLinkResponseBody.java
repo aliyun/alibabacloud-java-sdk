@@ -4,9 +4,17 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupSetDownloadLinkResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10000***67</p>
+     */
     @NameInMap("DownloadTaskId")
     public Long downloadTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

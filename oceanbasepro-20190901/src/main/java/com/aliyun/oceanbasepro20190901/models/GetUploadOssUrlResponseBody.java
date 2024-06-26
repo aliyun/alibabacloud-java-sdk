@@ -4,12 +4,24 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class GetUploadOssUrlResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Contact the administrator.</p>
+     */
     @NameInMap("Advice")
     public String advice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INNER_ERROR</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>278</p>
+     */
     @NameInMap("Cost")
     public String cost;
 
@@ -19,21 +31,45 @@ public class GetUploadOssUrlResponseBody extends TeaModel {
     @NameInMap("ErrorDetail")
     public GetUploadOssUrlResponseBodyErrorDetail errorDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A system error occurred.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -131,12 +167,24 @@ public class GetUploadOssUrlResponseBody extends TeaModel {
     }
 
     public static class GetUploadOssUrlResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-26T06:33:11.175</p>
+         */
         @NameInMap("ExpectedExpirationTime")
         public String expectedExpirationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>open_api_create_project/oacp_4xd****vk</p>
+         */
         @NameInMap("OssKey")
         public String ossKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://cn-hangzhou-pre-omsstore.oss-cn-hangzhou.aliyuncs.com/open_api_create_project/oacp_4x****pvk?Expires=169031&OSSAccessKeyId=LTAI5tMN52D***TBf&Signature=XdDFPz%2BXKC***%2B">https://cn-hangzhou-pre-omsstore.oss-cn-hangzhou.aliyuncs.com/open_api_create_project/oacp_4x****pvk?Expires=169031&amp;OSSAccessKeyId=LTAI5tMN52D***TBf&amp;Signature=XdDFPz%2BXKC***%2B</a></p>
+         */
         @NameInMap("OssUrl")
         public String ossUrl;
 
@@ -172,42 +220,78 @@ public class GetUploadOssUrlResponseBody extends TeaModel {
     }
 
     public static class GetUploadOssUrlResponseBodyErrorDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CM-RESOAT1111</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("ExtraContext")
         public java.util.Map<String, ?> extraContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ERROR</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("MessageMcmsContext")
         public java.util.Map<String, String> messageMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("MessageMcmsKey")
         public String messageMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Proposal")
         public String proposal;
 
         @NameInMap("ProposalMcmsContext")
         public java.util.Map<String, String> proposalMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ProposalMcmsKey")
         public String proposalMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         @NameInMap("ReasonMcmsContext")
         public java.util.Map<String, String> reasonMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ReasonMcmsKey")
         public String reasonMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("UpstreamErrorDetail")
         public Object upstreamErrorDetail;
 

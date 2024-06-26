@@ -6,46 +6,61 @@ import com.aliyun.tea.*;
 public class DescribeOutlineBindingRequest extends TeaModel {
     /**
      * <p>The name of the database.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>- When the value is set to True, the throttling information in the database is queried based on the SQL ID.   </p>
-     * <p>- When the value is set to False, the bound index or execution plan in the database is queried based on the SQL ID.</p>
+     * <ul>
+     * <li>When the value is set to True, the throttling information in the database is queried based on the SQL ID.   </li>
+     * <li>When the value is set to False, the bound index or execution plan in the database is queried based on the SQL ID.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsConcurrentLimit")
     public Boolean isConcurrentLimit;
 
     /**
      * <p>SQLID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
-     * <p>The name of the tenant.    </p>
-     * <p>It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_). It cannot be set to SYS.</p>
-     * <br>
+     * <p>The name of the tenant.<br>It must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>). It cannot be set to SYS.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pay_online</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

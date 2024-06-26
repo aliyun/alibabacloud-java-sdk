@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeInstanceTopologyRequest extends TeaModel {
     /**
      * <p>The status of the node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -6,99 +6,142 @@ import com.aliyun.tea.*;
 public class DescribeTopSQLListShrinkRequest extends TeaModel {
     /**
      * <p>The number of block index cache hits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>The SQL type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-13T15:40:43Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The average number of logical reads of the SQL statement during the specified period of time.   </p>
-     * <p>The value covers the numbers of reads of different caches and the number of disk I/Os. It is an important metric for measuring the SQL filtering performance.   </p>
-     * <br>
-     * <p>> <br> A higher ratio of the number of logical reads to the number of returned rows indicates poorer filtering performance. General causes include non-standard content written by SQL statements, non-standard table indexes created, and non-standard SQL execution plans.</p>
+     * <p>The average number of logical reads of the SQL statement during the specified period of time.<br>The value covers the numbers of reads of different caches and the number of disk I/Os. It is an important metric for measuring the SQL filtering performance.   </p>
+     * <blockquote>
+     * <p><br> A higher ratio of the number of logical reads to the number of returned rows indicates poorer filtering performance. General causes include non-standard content written by SQL statements, non-standard table indexes created, and non-standard SQL execution plans.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[dbName:sys]</p>
      */
     @NameInMap("FilterCondition")
     public String filterConditionShrink;
 
     /**
      * <p>The number of failures.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp19y05uq6xpacyqnlrc</p>
      */
     @NameInMap("NodeIp")
     public String nodeIp;
 
     /**
      * <p>The queuing time, in ms.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of row cache hits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The I/O wait time, in ms.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
      * <p>The number of retries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update</p>
      */
     @NameInMap("SearchKeyWord")
     public String searchKeyWord;
 
     /**
      * <p>SQLID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cputime</p>
      */
     @NameInMap("SearchParameter")
     public String searchParameter;
 
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * </blockquote>
      */
     @NameInMap("SearchRule")
     public String searchRule;
 
     /**
      * <p>The number of Bloom filter cache hits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.01</p>
      */
     @NameInMap("SearchValue")
     public String searchValue;
 
     /**
      * <p>The number of rows read from the disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cputime</p>
      */
     @NameInMap("SortColumn")
     public String sortColumn;
 
     /**
      * <p>The list of top SQL statements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
      * <p>The maximum response time, in ms.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-13T15:40:43Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The average CPU time, in ms.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

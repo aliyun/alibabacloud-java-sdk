@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyTenantUserDescriptionResponseBody extends TeaModel {
     /**
      * <p>You can call this operation to modify the description of a specified account in a tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

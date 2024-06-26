@@ -7,6 +7,10 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeTenantReadableScnResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8442BB1E-3171-1192-B9DC-F6F4E53B2673</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantReadableScnResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1715329164977</p>
+         */
         @NameInMap("ReadableScn")
         public Long readableScn;
 

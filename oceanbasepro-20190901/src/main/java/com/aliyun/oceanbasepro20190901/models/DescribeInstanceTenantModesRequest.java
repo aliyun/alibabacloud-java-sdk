@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTenantModesRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **DescribeInstanceTenantModes**.</p>
-     * <br>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeInstanceTenantModes</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTimeZonesResponseBody extends TeaModel {
     /**
      * <p>DescribeTimeZones</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,13 +43,18 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
     public static class DescribeTimeZonesResponseBodyTimeZonesList extends TeaModel {
         /**
          * <p>Example 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(GMT+8:00) Asia/Shanghai</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The operation that you want to perform.   </p>
-         * <p>Set the value to **DescribeTimeZones**.</p>
+         * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeTimeZones</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         @NameInMap("TimeZone")
         public String timeZone;
@@ -75,6 +83,10 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeTimeZonesResponseBodyTimeZones extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
         @NameInMap("Default")
         public String _default;
 

@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyTagValueNameRequest extends TeaModel {
     /**
      * <p>The name of the tag group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tag group 1</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The new name of the tag.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tag 2</p>
      */
     @NameInMap("NewValue")
     public String newValue;
 
     /**
      * <p>The name of the tag.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tag 1</p>
      */
     @NameInMap("Value")
     public String value;

@@ -4,11 +4,18 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class GetUploadOssUrlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("EffectiveTimeMinutes")
     public Integer effectiveTimeMinutes;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATE_PROJECT</p>
      */
     @NameInMap("Type")
     public String type;

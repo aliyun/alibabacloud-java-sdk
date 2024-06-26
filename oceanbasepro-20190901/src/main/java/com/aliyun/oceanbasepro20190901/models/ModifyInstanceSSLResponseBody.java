@@ -12,6 +12,9 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,26 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
     public static class ModifyInstanceSSLResponseBodyInstanceSSL extends TeaModel {
         /**
          * <p>The operation to modify the SSL status. Valid values:</p>
-         * <br>
-         * <p>- open: Enable SSL encryption.</p>
-         * <br>
-         * <p>- update: Update the CA certificate.</p>
-         * <br>
-         * <p>- close: Disable SSL encryption.</p>
+         * <ul>
+         * <li><p>open: Enable SSL encryption.</p>
+         * </li>
+         * <li><p>update: Update the CA certificate.</p>
+         * </li>
+         * <li><p>close: Disable SSL encryption.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>open</p>
          */
         @NameInMap("EnableSSL")
         public String enableSSL;
 
         /**
          * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

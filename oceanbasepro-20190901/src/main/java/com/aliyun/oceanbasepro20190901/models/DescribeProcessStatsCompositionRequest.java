@@ -6,50 +6,73 @@ import com.aliyun.tea.*;
 public class DescribeProcessStatsCompositionRequest extends TeaModel {
     /**
      * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.<em>.</em>.*</p>
      */
     @NameInMap("ClientIp")
     public String clientIp;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.<em>.</em>.*</p>
      */
     @NameInMap("ServerIp")
     public String serverIp;
 
     /**
      * <p>The SQL statement. It supports LIKE clauses, and you may specify only part of the clauses in the SQL statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT  ****   FROM ****   WHERE **** = ? AND **** = ?   ORDER BY **** ASC</p>
      */
     @NameInMap("SqlText")
     public String sqlText;
 
     /**
      * <p>The state of the session.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ACTIVE</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t33h8y08k****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>The user identifier (UID) of OceanBase Database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139*************</p>
      */
     @NameInMap("UId")
     public String UId;
 
     /**
      * <p>The username that you use to log in to the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("Users")
     public String users;

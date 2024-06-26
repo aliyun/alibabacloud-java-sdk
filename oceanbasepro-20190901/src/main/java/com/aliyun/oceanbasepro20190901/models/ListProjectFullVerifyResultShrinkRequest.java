@@ -7,6 +7,10 @@ public class ListProjectFullVerifyResultShrinkRequest extends TeaModel {
     @NameInMap("DestSchemas")
     public String destSchemasShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -15,6 +19,9 @@ public class ListProjectFullVerifyResultShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np_4w5abs****</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -22,6 +29,10 @@ public class ListProjectFullVerifyResultShrinkRequest extends TeaModel {
     @NameInMap("SourceSchemas")
     public String sourceSchemasShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FINISHED</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateBackupSetDownloadLinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bak-6f****</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

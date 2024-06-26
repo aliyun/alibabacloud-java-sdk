@@ -5,61 +5,78 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersHistoryRequest extends TeaModel {
     /**
-     * <p>The type of the parameter.   </p>
-     * <p>Valid values: CLUSTER and TENANT.</p>
-     * <br>
+     * <p>The type of the parameter.<br>Valid values: CLUSTER and TENANT.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TENANT</p>
      */
     @NameInMap("Dimension")
     public String dimension;
 
     /**
-     * <p>The resource ID of the parameter type.   </p>
-     * <p>You can leave this parameter unspecified when you call this operation to query the modification history of cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
+     * <p>The resource ID of the parameter type.<br>You can leave this parameter unspecified when you call this operation to query the modification history of cluster parameters. In the case of tenant parameters, pass the tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("DimensionValue")
     public String dimensionValue;
 
     /**
      * <p>The end time for the query of parameter modification history.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-09-13 15:40:43</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page to return.    </p>
-     * <p>- Start value: 1   </p>
-     * <p>- Default value: 1</p>
-     * <br>
+     * <ul>
+     * <li>Start value: 1   </li>
+     * <li>Default value: 1</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of rows to return on each page.   </p>
-     * <p>- Maximum value: 100   </p>
-     * <p>- Default value: 10</p>
-     * <br>
+     * <ul>
+     * <li>Maximum value: 100   </li>
+     * <li>Default value: 10</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The start time of the time range for querying the parameter modification history.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-13 15:40:43</p>
      */
     @NameInMap("StartTime")
     public String startTime;

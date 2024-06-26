@@ -12,6 +12,9 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
 
     /**
      * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,102 +43,153 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
     public static class DescribeSQLSamplesResponseBodyData extends TeaModel {
         /**
          * <p>Average updated rows during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000.0</p>
          */
         @NameInMap("AffectedRows")
         public Double affectedRows;
 
         /**
          * <p>Application event waiting time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("ApplicationWaitTime")
         public Double applicationWaitTime;
 
         /**
          * <p>BlockCache hit count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99279.0</p>
          */
         @NameInMap("BlockCacheHit")
         public Double blockCacheHit;
 
         /**
          * <p>BlockIndexCache hit count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>142514.0</p>
          */
         @NameInMap("BlockIndexCacheHit")
         public Double blockIndexCacheHit;
 
         /**
          * <p>BloomFilterCache hit count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("BloomFilterCacheHit")
         public Double bloomFilterCacheHit;
 
         /**
          * <p>Client IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1db****38uemejio</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>Client port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4****</p>
          */
         @NameInMap("ClientPort")
         public String clientPort;
 
         /**
          * <p>Concurrency event waiting time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("ConcurrencyWaitTime")
         public Double concurrencyWaitTime;
 
         /**
          * <p>Consistency level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ConsistencyLevel")
         public String consistencyLevel;
 
         /**
          * <p>CPU time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3377.57</p>
          */
         @NameInMap("CpuTime")
         public Double cpuTime;
 
         /**
          * <p>Database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_db</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>Syntax parsing time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("DecodeTime")
         public Double decodeTime;
 
         /**
          * <p>Disk read count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96972.0</p>
          */
         @NameInMap("DiskReads")
         public Double diskReads;
 
         /**
          * <p>Response time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2182.66</p>
          */
         @NameInMap("ElapsedTime")
         public Double elapsedTime;
 
         /**
          * <p>Plan execution time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8262.01</p>
          */
         @NameInMap("ExecuteTime")
         public Double executeTime;
 
         /**
          * <p>Whether to initiate RPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("ExecutorRpc")
         public Boolean executorRpc;
 
         /**
          * <p>Degree of parallelism.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExpectedWorkerCount")
         public Double expectedWorkerCount;
@@ -145,132 +199,198 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
 
         /**
          * <p>Plan generation time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.19</p>
          */
         @NameInMap("GetPlanTime")
         public Double getPlanTime;
 
         /**
          * <p>Whether to hit the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HitPlan")
         public Boolean hitPlan;
 
         /**
          * <p>Whether an internal SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Inner")
         public Boolean inner;
 
         /**
          * <p>Memstore read row count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MemstoreReadRows")
         public Double memstoreReadRows;
 
         /**
          * <p>Network transmission time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("NetTime")
         public Double netTime;
 
         /**
          * <p>Network enqueue time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("NetWaitTime")
         public Double netWaitTime;
 
         /**
          * <p>Database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11006111****4828</p>
          */
         @NameInMap("ObDbId")
         public Double obDbId;
 
         /**
          * <p>Server  ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ObServerId")
         public Double obServerId;
 
         /**
          * <p>User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100010</p>
          */
         @NameInMap("ObUserId")
         public Double obUserId;
 
         /**
          * <p>Average number of partition accessed during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("PartitionCount")
         public Double partitionCount;
 
         /**
          * <p>The execution plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>590****</p>
          */
         @NameInMap("PlanId")
         public Double planId;
 
         /**
          * <p>Plan type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOCAL</p>
          */
         @NameInMap("PlanType")
         public String planType;
 
         /**
          * <p>Queueing time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.02</p>
          */
         @NameInMap("QueueTime")
         public Double queueTime;
 
         /**
          * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
          */
         @NameInMap("RequestId")
         public String requestId;
 
         /**
          * <p>SQL request time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:46:38Z</p>
          */
         @NameInMap("RequestTime")
         public String requestTime;
 
         /**
          * <p>Result code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode")
         public Double retCode;
 
         /**
          * <p>Retry count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetryCount")
         public Double retryCount;
 
         /**
          * <p>Average returned rows during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("ReturnRows")
         public Double returnRows;
 
         /**
          * <p>RowCache hit count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>498.0</p>
          */
         @NameInMap("RowCacheHit")
         public Double rowCacheHit;
 
         /**
          * <p>Number of RPC sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8.0</p>
          */
         @NameInMap("RpcCount")
         public Double rpcCount;
 
         /**
          * <p>Schedule event waiting time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("ScheduleTime")
         public Double scheduleTime;
 
         /**
          * <p>The server where the SQL is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1db1****8uemejio</p>
          */
         @NameInMap("Server")
         public String server;
@@ -280,72 +400,108 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
 
         /**
          * <p>SQL type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
          * <p>Ssstore read row count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>986190</p>
          */
         @NameInMap("SsstoreReadRows")
         public Double ssstoreReadRows;
 
         /**
          * <p>Parameterized SQL text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select a from b</p>
          */
         @NameInMap("Statement")
         public String statement;
 
         /**
          * <p>Whether to perform full table scan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("TableScan")
         public Boolean tableScan;
 
         /**
          * <p>Trace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YB42C****-0005E303D1****-0-0</p>
          */
         @NameInMap("TraceId")
         public String traceId;
 
         /**
          * <p>Transaction hash.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1219<strong><strong>927</strong></strong>73791</p>
          */
         @NameInMap("TransHash")
         public String transHash;
 
         /**
          * <p>Actual number of SQL execution threads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UsedWorkerCount")
         public Double usedWorkerCount;
 
         /**
          * <p>UserIO event waiting time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("UserIoWaitTime")
         public Double userIoWaitTime;
 
         /**
          * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>Wait count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("WaitCount")
         public Double waitCount;
 
         /**
          * <p>Longest wait event during the execution period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("WaitEvent")
         public String waitEvent;
 
         /**
          * <p>Wait time (in milliseconds).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("WaitTime")
         public Double waitTime;

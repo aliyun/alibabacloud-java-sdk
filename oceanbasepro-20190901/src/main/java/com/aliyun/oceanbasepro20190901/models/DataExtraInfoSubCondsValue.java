@@ -4,21 +4,45 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DataExtraInfoSubCondsValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>tenant_name</p>
+     */
     @NameInMap("TenantName")
     public String tenantName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>db_name</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dest_db</p>
+     */
     @NameInMap("DestDatabase")
     public String destDatabase;
 
+    /**
+     * <strong>example:</strong>
+     * <p>table_name</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dest_name</p>
+     */
     @NameInMap("DestName")
     public String destName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id&gt;1</p>
+     */
     @NameInMap("WhereClause")
     public String whereClause;
 
@@ -28,12 +52,24 @@ public class DataExtraInfoSubCondsValue extends TeaModel {
     @NameInMap("ShardColumns")
     public java.util.List<String> shardColumns;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("LogicTableId")
     public String logicTableId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("SourceEndpointId")
     public String sourceEndpointId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("SourceClientId")
     public String sourceClientId;
 

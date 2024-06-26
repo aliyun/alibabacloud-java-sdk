@@ -12,6 +12,9 @@ public class BatchKillProcessListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class BatchKillProcessListResponseBody extends TeaModel {
     public static class BatchKillProcessListResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the calling is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

@@ -11,9 +11,10 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
     public DescribeRecommendIndexResponseBodyRecommendIndex recommendIndex;
 
     /**
-     * <p>The tenant mode.   Valid values:  </p>
-     * <p>Oracle   </p>
-     * <p>MySQL</p>
+     * <p>The tenant mode.   Valid values:<br>Oracle<br>MySQL</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,13 +43,24 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
     public static class DescribeRecommendIndexResponseBodyRecommendIndex extends TeaModel {
         /**
          * <p>Example 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIMARY</p>
          */
         @NameInMap("SuggestIndex")
         public String suggestIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testtable</p>
+         */
         @NameInMap("TableList")
         public String tableList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mysql</p>
+         */
         @NameInMap("TenantMode")
         public String tenantMode;
 

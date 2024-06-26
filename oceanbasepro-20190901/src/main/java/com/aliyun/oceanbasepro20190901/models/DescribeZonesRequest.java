@@ -4,18 +4,27 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>x86</p>
+     */
     @NameInMap("CpuArch")
     public String cpuArch;
 
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **DescribeZones**.</p>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeZones</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>single</p>
      */
     @NameInMap("DeployType")
     public String deployType;
 
     /**
      * <p>The deployment mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("Series")
     public String series;

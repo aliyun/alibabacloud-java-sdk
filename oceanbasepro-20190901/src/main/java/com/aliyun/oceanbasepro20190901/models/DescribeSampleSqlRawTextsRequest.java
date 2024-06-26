@@ -6,39 +6,66 @@ import com.aliyun.tea.*;
 public class DescribeSampleSqlRawTextsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_db</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-12T05:38:38Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Limit")
     public String limit;
 
     /**
      * <p>SQL ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
      */
     @NameInMap("SqlId")
     public String sqlId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-12T04:38:38Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>YB420A700EFB-00060D53E42D0C61-0-0</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeProjectComponentsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np_4w3a****</p>
      */
     @NameInMap("Id")
     public String id;

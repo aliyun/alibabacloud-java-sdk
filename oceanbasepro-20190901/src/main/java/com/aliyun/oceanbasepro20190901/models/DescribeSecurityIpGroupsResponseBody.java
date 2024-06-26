@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -15,6 +18,9 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
 
     /**
      * <p>Example 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -49,9 +55,17 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityIpGroupsResponseBodySecurityIpGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>online_paycore</p>
+         */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>121.41.106.33,100.104.7.0/26</p>
+         */
         @NameInMap("SecurityIps")
         public String securityIps;
 

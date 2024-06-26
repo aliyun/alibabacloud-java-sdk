@@ -12,12 +12,18 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of databases in the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,6 +60,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     public static class DescribeDatabasesResponseBodyDatabasesTables extends TeaModel {
         /**
          * <p>The name of the database table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testTables</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -76,31 +85,46 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     public static class DescribeDatabasesResponseBodyDatabasesUsers extends TeaModel {
         /**
          * <p>If you have granted custom privileges on the database, this parameter indicates the custom privileges, separated by commas (,). Otherwise, no data is returned for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select,delete,update</p>
          */
         @NameInMap("Privileges")
         public String privileges;
 
         /**
-         * <p>The role of the account.    </p>
-         * <p>In MySQL mode, a role is a database-level role. Valid values:  </p>
-         * <p>- ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  </p>
-         * <p>- ReadOnly: a role that has only the read-only privilege SELECT.   </p>
-         * <p>- DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </p>
-         * <p>- DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</p>
+         * <p>The role of the account.<br>In MySQL mode, a role is a database-level role. Valid values:  </p>
+         * <ul>
+         * <li>ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  </li>
+         * <li>ReadOnly: a role that has only the read-only privilege SELECT.   </li>
+         * <li>DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </li>
+         * <li>DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ReadOnly</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_pay_ro</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The type of the account. Valid values:  </p>
-         * <p>- Admin: the super administrator account. </p>
-         * <p>- Normal: a general account.</p>
+         * <ul>
+         * <li>Admin: the super administrator account. </li>
+         * <li>Normal: a general account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("UserType")
         public String userType;
@@ -147,63 +171,97 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     public static class DescribeDatabasesResponseBodyDatabases extends TeaModel {
         /**
          * <p>The collation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4_general_ci</p>
          */
         @NameInMap("Collation")
         public String collation;
 
         /**
          * <p>The time when the database was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-21 15:41:06</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The actual data size, in GB. </p>
-         * <p>>Notice: This parameter is no longer used in later versions. RequiredSize is used instead.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is no longer used in later versions. RequiredSize is used instead.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5.67 GB</p>
          */
         @NameInMap("DataSize")
         public Double dataSize;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sms_pre</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
          * <p>The description of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test db</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The encoding standard of the database. Encoding standards such as utf8mb4 and GBK are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
          * <p>The ID of the cluster to which the tenant belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>obsdh2f****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The storage space required, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.67 GB</p>
          */
         @NameInMap("RequiredSize")
         public Double requiredSize;
 
         /**
          * <p>The status of the database. Valid values:    </p>
-         * <p>- ONLINE: The database is running.  </p>
-         * <p>- DELETING: The database is being deleted.</p>
+         * <ul>
+         * <li>ONLINE: The database is running.  </li>
+         * <li>DELETING: The database is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("Status")
         public String status;
@@ -216,12 +274,18 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t33h8y08k****</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
          * <p>The name of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tenantABC</p>
          */
         @NameInMap("TenantName")
         public String tenantName;

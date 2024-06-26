@@ -4,23 +4,36 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ModifyTenantEncryptionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>key-shh322<strong><strong>470h8v0-g2ll85</strong></strong></p>
+     */
     @NameInMap("EncryptionKeyId")
     public String encryptionKeyId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EncryptionKey</p>
      */
     @NameInMap("EncryptionType")
     public String encryptionType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeParametersRequest extends TeaModel {
     /**
      * <p>It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TENANT</p>
      */
     @NameInMap("Dimension")
     public String dimension;
 
     /**
      * <p>Alibaba Cloud CLI</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("DimensionValue")
     public String dimensionValue;
 
     /**
      * <p>498529</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

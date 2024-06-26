@@ -5,51 +5,67 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowSQLHistoryListRequest extends TeaModel {
     /**
-     * <p>The end time of the time range for querying the execution history of the slow SQL statement.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
+     * <p>The end time of the time range for querying the execution history of the slow SQL statement.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-14T08:34:49Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The number of the page to return.    </p>
-     * <p>- Start value: 1   </p>
-     * <p>- Default value: 1</p>
+     * <ul>
+     * <li>Start value: 1   </li>
+     * <li>Default value: 1</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of rows to return on each page.  </p>
-     * <p>- Maximum value: 100   </p>
-     * <p>- Default value: 10</p>
+     * <ul>
+     * <li>Maximum value: 100   </li>
+     * <li>Default value: 10</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The SQL ID, which uniquely identifies an SQL statement.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D6E84735C0<strong><strong>1823D199E2CA1</strong></strong></p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
-     * <p>The start time of the time range for querying the execution history of the slow SQL statement.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
+     * <p>The start time of the time range for querying the execution history of the slow SQL statement.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-14T02:34:49Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t384tolsj****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

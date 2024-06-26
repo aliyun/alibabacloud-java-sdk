@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeTenantReadableScnRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t33h8y08k****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

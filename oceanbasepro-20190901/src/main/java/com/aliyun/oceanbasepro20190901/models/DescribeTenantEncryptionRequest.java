@@ -6,19 +6,38 @@ import com.aliyun.tea.*;
 public class DescribeTenantEncryptionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>t4louaeei****</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>forMySQLTenant</p>
+     */
     @NameInMap("TenantName")
     public String tenantName;
 

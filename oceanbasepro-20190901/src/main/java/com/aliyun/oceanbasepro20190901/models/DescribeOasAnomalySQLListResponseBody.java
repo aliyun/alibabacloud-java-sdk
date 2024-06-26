@@ -12,12 +12,18 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469**-AA6F-4D**-B3DB-A***********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -282,6 +288,9 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
     public static class DescribeOasAnomalySQLListResponseBodyData extends TeaModel {
         /**
          * <p>Average CPU time of the suspicious SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.24</p>
          */
         @NameInMap("AvgCpuTime")
         public Double avgCpuTime;
@@ -291,12 +300,18 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
         /**
          * <p>Average response time of the suspicious SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.28</p>
          */
         @NameInMap("AvgElapsedTime")
         public Double avgElapsedTime;
 
         /**
          * <p>Average time to obtain the execution plan of the suspicious SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AvgGetPlanTime")
         public Double avgGetPlanTime;
@@ -309,12 +324,18 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
         /**
          * <p>CPU time of the suspicious SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.23</p>
          */
         @NameInMap("CpuTime")
         public Double cpuTime;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db_***</p>
          */
         @NameInMap("DbName")
         public String dbName;
@@ -336,24 +357,36 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
         /**
          * <p>Total execution count of the suspicious SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Executions")
         public Double executions;
 
         /**
          * <p>Last execution time of the suspicious SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-12T04:38:38Z</p>
          */
         @NameInMap("LastExecutedTime")
         public Double lastExecutedTime;
 
         /**
          * <p>Risk level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
          * <p>SQL ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
          */
         @NameInMap("SqlId")
         public String sqlId;
@@ -369,6 +402,9 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
         /**
          * <p>Suggestion for the suspicious SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>review</p>
          */
         @NameInMap("Suggestion")
         public String suggestion;
@@ -378,6 +414,9 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
         /**
          * <p>Total response time of the suspicious SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11452126.36</p>
          */
         @NameInMap("SumElapsedTime")
         public String sumElapsedTime;
@@ -387,6 +426,9 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
 
         /**
          * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
          */
         @NameInMap("UserName")
         public String userName;

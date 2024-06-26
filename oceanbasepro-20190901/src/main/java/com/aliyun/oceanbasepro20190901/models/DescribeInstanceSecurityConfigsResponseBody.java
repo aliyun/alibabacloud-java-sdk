@@ -12,6 +12,9 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
     public static class DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigsSecurityConfigs extends TeaModel {
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Check whether the scope of the cluster allowlist is too big</p>
          */
         @NameInMap("ConfigDescription")
         public String configDescription;
 
         /**
          * <p>The group of the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WHITELIST</p>
          */
         @NameInMap("ConfigGroup")
         public String configGroup;
 
         /**
          * <p>The name of the specific check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("ConfigName")
         public String configName;
 
         /**
          * <p>Specifies whether a risk is detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Risk")
         public Boolean risk;
 
         /**
          * <p>Security recommendations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("RiskDescription")
         public String riskDescription;
@@ -118,18 +136,27 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
     public static class DescribeInstanceSecurityConfigsResponseBodyInstanceSecurityConfigs extends TeaModel {
         /**
          * <p>The unique identifier of the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("CheckId")
         public String checkId;
 
         /**
          * <p>The time when the check was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-07 15:30:00</p>
          */
         @NameInMap("CheckTime")
         public String checkTime;
 
         /**
          * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -142,12 +169,18 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of security check items for the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TotalCheckCount")
         public Integer totalCheckCount;
 
         /**
          * <p>The total number of detected cluster security risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalRiskCount")
         public Integer totalRiskCount;

@@ -7,6 +7,10 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
     @NameInMap("Data")
     public DescribeAvailableZoneResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZoneResponseBodyDataAvailableZonesSupportSpecificationsDiskSizeRange extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40000</p>
+         */
         @NameInMap("Max")
         public Long max;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Min")
         public Long min;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Step")
         public Long step;
 
@@ -73,9 +89,17 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZoneResponseBodyDataAvailableZonesSupportSpecificationsSupportEngineVersions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3.2.4.4</p>
+         */
         @NameInMap("ObVersion")
         public String obVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportIsolationOptimization")
         public Boolean supportIsolationOptimization;
 
@@ -120,9 +144,17 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
         @NameInMap("DiskTypes")
         public java.util.List<String> diskTypes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4C16GB</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oceanbase.cluster.cd8.xlarge</p>
+         */
         @NameInMap("Spec")
         public String spec;
 
@@ -177,27 +209,55 @@ public class DescribeAvailableZoneResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableZoneResponseBodyDataAvailableZones extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>PUBLIC</p>
+         */
         @NameInMap("Channel")
         public String channel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>x86</p>
+         */
         @NameInMap("CpuArch")
         public String cpuArch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>multiple</p>
+         */
         @NameInMap("DeployType")
         public String deployType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cluster</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Series")
         public String series;
 
         @NameInMap("SupportSpecifications")
         public java.util.List<DescribeAvailableZoneResponseBodyDataAvailableZonesSupportSpecifications> supportSpecifications;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h,cn-hangzhou-i,cn-hangzhou-j</p>
+         */
         @NameInMap("Zones")
         public String zones;
 

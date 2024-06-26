@@ -5,18 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeCharsetResponseBody extends TeaModel {
     /**
-     * <p>```</p>
-     * <p>http(s)://[Endpoint]/?Action=DescribeCharset</p>
-     * <p>&TenantMode=Oracle</p>
-     * <p>&Common request parameters</p>
-     * <p>```</p>
+     * <pre><code>http(s)://[Endpoint]/?Action=DescribeCharset
+     * &amp;TenantMode=Oracle
+     * &amp;Common request parameters
+     * </code></pre>
      */
     @NameInMap("Charset")
     public java.util.List<DescribeCharsetResponseBodyCharset> charset;
 
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **DescribeCharset**.</p>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeCharset</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,6 +46,9 @@ public class DescribeCharsetResponseBody extends TeaModel {
     public static class DescribeCharsetResponseBodyCharset extends TeaModel {
         /**
          * <p>DescribeCharset</p>
+         * 
+         * <strong>example:</strong>
+         * <p>utf8</p>
          */
         @NameInMap("Charset")
         public String charset;

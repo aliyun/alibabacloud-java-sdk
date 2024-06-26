@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSecurityConfigsRequest extends TeaModel {
     /**
      * <p>The unique identifier of the check.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("CheckId")
     public String checkId;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

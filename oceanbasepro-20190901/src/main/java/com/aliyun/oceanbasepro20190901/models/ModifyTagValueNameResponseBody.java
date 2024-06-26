@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyTagValueNameResponseBody extends TeaModel {
     /**
      * <p>The tag renaming result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>update tag-value name success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4C91F7BA-xxxx-xxxx-xxxx-846ECA1A9908</p>
      */
     @NameInMap("RequestId")
     public String requestId;

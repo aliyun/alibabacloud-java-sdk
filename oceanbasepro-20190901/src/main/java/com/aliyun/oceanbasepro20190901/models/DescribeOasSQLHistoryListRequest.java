@@ -6,14 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeOasSQLHistoryListRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
-     * <p>- zh: Chinese</p>
-     * <p>- en: English</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_db</p>
      */
     @NameInMap("DbName")
     public String dbName;
@@ -22,49 +30,60 @@ public class DescribeOasSQLHistoryListRequest extends TeaModel {
     public Boolean dynamicSql;
 
     /**
-     * <p>The end time of querying the execution history of the SQL statement.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
+     * <p>The end time of querying the execution history of the SQL statement.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-12T05:38:38Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the OceanBase cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob317v4uif****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp19y05uq6x*********</p>
      */
     @NameInMap("NodeIp")
     public String nodeIp;
 
     /**
      * <p>SQL ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8D6E84<strong><strong>0B8FB1823D199E2CA1</strong></strong></p>
      */
     @NameInMap("SqlId")
     public String sqlId;
 
     /**
-     * <p>The start time of querying the execution history of the SQL statement.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     * <br>
+     * <p>The start time of querying the execution history of the SQL statement.<br>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-12T04:38:38Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The ID of the tenant.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t4louaeei****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

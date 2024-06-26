@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTenantsResponseBody extends TeaModel {
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeTenantsResponseBody extends TeaModel {
 
     /**
      * <p>The total memory size of the tenant, in GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -52,39 +58,69 @@ public class DescribeTenantsResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantsResponseBodyTenants extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
+         */
         @NameInMap("Charset")
         public String charset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>utf8mb4_general_ci</p>
+         */
         @NameInMap("Collation")
         public String collation;
 
         /**
          * <p>The total number of CPU cores of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
          * <p>The number of CPU cores in each resource unit of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-17 15:52:17.0</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The search keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1-1-1</p>
          */
         @NameInMap("DeployMode")
         public String deployMode;
 
         /**
-         * <p>The name of the tenant.   </p>
-         * <p>It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.</p>
+         * <p>The name of the tenant.<br>It must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>).  It cannot be set to sys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>multiple</p>
          */
         @NameInMap("DeployType")
         public String deployType;
 
         /**
          * <p>Example 1</p>
+         * 
+         * <strong>example:</strong>
+         * <pre><code>http(s)://[Endpoint]/?Action=DescribeTenants
+         * &amp;InstanceId=ob317v4uif****
+         * &amp;TenantName=pay_online
+         * &amp;PageSize=10
+         * &amp;PageNumber=1
+         * &amp;TenantId=ob2mr3oae0****
+         * &amp;SearchKey=pay
+         * &amp;Common request parameters
+         * </code></pre>
          */
         @NameInMap("Description")
         public String description;
@@ -93,89 +129,129 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public Boolean enableReadOnlyReplica;
 
         /**
-         * <p>The number of the page to return.   </p>
-         * <p>Start value: 1</p>
-         * <p>- Default value: 1</p>
+         * <p>The number of the page to return.<br>Start value: 1</p>
+         * <ul>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Mem")
         public Integer mem;
 
         /**
          * <p>The return result of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("PrimaryZone")
         public String primaryZone;
 
         /**
          * <p>The status of the tenant.  <br></p>
-         * <p>- PENDING_CREATE: The tenant is being created.</p>
-         * <p>- RESTORE: The tenant is being recovered.</p>
-         * <p>- ONLINE: The tenant is running.</p>
-         * <p>- SPEC_MODIFYING: The specification of the tenant is being modified.</p>
-         * <p>ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.</p>
-         * <p>PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.</p>
-         * <p>- PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.</p>
-         * <p>- PARAMETER_MODIFYING: Parameters are being modified.</p>
-         * <p>- WHITE_LIST_MODIFYING: The whitelist is being modified.</p>
+         * <ul>
+         * <li>PENDING_CREATE: The tenant is being created.</li>
+         * <li>RESTORE: The tenant is being recovered.</li>
+         * <li>ONLINE: The tenant is running.</li>
+         * <li>SPEC_MODIFYING: The specification of the tenant is being modified.
+         * ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.
+         * PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.</li>
+         * <li>PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.</li>
+         * <li>PARAMETER_MODIFYING: Parameters are being modified.</li>
+         * <li>WHITE_LIST_MODIFYING: The whitelist is being modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>You can call this operation to query the tenants in an OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t33h8y08k****</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
-         * <p>{</p>
-         * <p>    "TotalCount": 1,</p>
-         * <p>    "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",</p>
-         * <p>    "Tenants": [</p>
-         * <p>        {</p>
-         * <p>            "VpcId": "vpc-bp1d2q3mhg9i23ofi****",</p>
-         * <p>            "Status": "ONLINE",</p>
-         * <p>            "PrimaryZone": "cn-hangzhou-i",</p>
-         * <p>            "DeployType": "multiple",</p>
-         * <p>            "DeployMode": "1-1-1",</p>
-         * <p>            "CreateTime": "2021-09-17 15:52:17.0",</p>
-         * <p>            "TenantName": "pay_online",</p>
-         * <p>            "Mem": 20,</p>
-         * <p>            "Cpu": 10,</p>
-         * <p>            "Description": "PayCore business database",</p>
-         * <p>            "TenantMode": "Oracle",</p>
-         * <p>            "TenantId": "t33h8y08k****",</p>
-         * <p>            "UnitCpu": 5,</p>
-         * <p>            "UnitMem": 10,</p>
-         * <p>            "UnitNum": 2,</p>
-         * <p>            "UsedDiskSize": 10</p>
-         * <p>        }</p>
-         * <p>    ]</p>
-         * <p>}</p>
+         * <p>{
+         *     &quot;TotalCount&quot;: 1,
+         *     &quot;RequestId&quot;: &quot;EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C&quot;,
+         *     &quot;Tenants&quot;: [
+         *         {
+         *             &quot;VpcId&quot;: &quot;vpc-bp1d2q3mhg9i23ofi****&quot;,
+         *             &quot;Status&quot;: &quot;ONLINE&quot;,
+         *             &quot;PrimaryZone&quot;: &quot;cn-hangzhou-i&quot;,
+         *             &quot;DeployType&quot;: &quot;multiple&quot;,
+         *             &quot;DeployMode&quot;: &quot;1-1-1&quot;,
+         *             &quot;CreateTime&quot;: &quot;2021-09-17 15:52:17.0&quot;,
+         *             &quot;TenantName&quot;: &quot;pay_online&quot;,
+         *             &quot;Mem&quot;: 20,
+         *             &quot;Cpu&quot;: 10,
+         *             &quot;Description&quot;: &quot;PayCore business database&quot;,
+         *             &quot;TenantMode&quot;: &quot;Oracle&quot;,
+         *             &quot;TenantId&quot;: &quot;t33h8y08k****&quot;,
+         *             &quot;UnitCpu&quot;: 5,
+         *             &quot;UnitMem&quot;: 10,
+         *             &quot;UnitNum&quot;: 2,
+         *             &quot;UsedDiskSize&quot;: 10
+         *         }
+         *     ]
+         * }</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Oracle</p>
          */
         @NameInMap("TenantMode")
         public String tenantMode;
 
         /**
          * <p>The information of tenants.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_online</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("UnitCpu")
         public Integer unitCpu;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("UnitMem")
         public Integer unitMem;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("UnitNum")
         public Integer unitNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("UsedDiskSize")
         public Double usedDiskSize;
 
         /**
          * <p>The time when the tenant was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1d2q3mhg9i23ofi****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

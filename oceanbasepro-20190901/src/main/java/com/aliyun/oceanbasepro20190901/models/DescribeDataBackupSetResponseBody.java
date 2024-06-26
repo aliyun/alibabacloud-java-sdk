@@ -7,9 +7,17 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeDataBackupSetResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,6 +51,10 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
     }
 
     public static class DescribeDataBackupSetResponseBodyDataBackupObjectsDatabaseTablesList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sms_pre</p>
+         */
         @NameInMap("Database")
         public String database;
 
@@ -73,12 +85,20 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
     }
 
     public static class DescribeDataBackupSetResponseBodyDataBackupObjects extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-****way</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
         @NameInMap("DatabaseTablesList")
         public java.util.List<DescribeDataBackupSetResponseBodyDataBackupObjectsDatabaseTablesList> databaseTablesList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
@@ -114,15 +134,31 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
     }
 
     public static class DescribeDataBackupSetResponseBodyDataBackupResultsTableBackupResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>order_ce****_online</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Create tag success</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tr_sale_order_****</p>
+         */
         @NameInMap("Table")
         public String table;
 
@@ -166,12 +202,20 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
     }
 
     public static class DescribeDataBackupSetResponseBodyDataBackupResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>container-opa-****-02</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
         @NameInMap("TableBackupResults")
         public java.util.List<DescribeDataBackupSetResponseBodyDataBackupResultsTableBackupResults> tableBackupResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ob2mr3oae0****</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
@@ -207,6 +251,10 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
     }
 
     public static class DescribeDataBackupSetResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cluster</p>
+         */
         @NameInMap("BackupObjectType")
         public String backupObjectType;
 
@@ -216,48 +264,108 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         @NameInMap("BackupResults")
         public java.util.List<DescribeDataBackupSetResponseBodyDataBackupResults> backupResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-15T07:11:08Z</p>
+         */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31457280</p>
+         */
         @NameInMap("DataSize")
         public Integer dataSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1678847020352</p>
+         */
         @NameInMap("DataVersion")
         public Integer dataVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100***012</p>
+         */
         @NameInMap("DownloadTaskId")
         public Long downloadTaskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>not_exist</p>
+         */
         @NameInMap("DownloadTaskStatus")
         public String downloadTaskStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-13T03:38:10Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>logical</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <strong>example:</strong>
+         * <p>automated</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
+        /**
+         * <strong>example:</strong>
+         * <p>52</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>imm-test-set-cb****ee-b7d7-11ed-956f-****3e10bd70</p>
+         */
         @NameInMap("SetId")
         public Integer setId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-05-22T17:04:18</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("StorageClass")
         public String storageClass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>manual</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VALID</p>
+         */
         @NameInMap("Validity")
         public String validity;
 

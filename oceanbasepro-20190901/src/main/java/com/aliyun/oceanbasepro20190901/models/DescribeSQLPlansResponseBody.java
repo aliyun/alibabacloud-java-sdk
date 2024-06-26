@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSQLPlansResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
     public static class DescribeSQLPlansResponseBodySQLPlans extends TeaModel {
         /**
          * <p>The average execution duration, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AvgExecutionMS")
         public Float avgExecutionMS;
 
         /**
          * <p>The average execution duration when the database uses this execution plan, in ms.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>288</p>
          */
         @NameInMap("AvgExecutionTimeMS")
         public Long avgExecutionTimeMS;
 
         /**
          * <p>The time when the plan was loaded for the first time, .</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1641492303000</p>
          */
         @NameInMap("FirstLoadTime")
         public Long firstLoadTime;
 
         /**
          * <p>The time when the plan was loaded for the first time, in UTC +0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-06T18:05:03Z</p>
          */
         @NameInMap("FirstLoadTimeUTCString")
         public String firstLoadTimeUTCString;
 
         /**
          * <p>The number of hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("HitCount")
         public Integer hitCount;
 
         /**
          * <p>The major compaction version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
          */
         @NameInMap("MergedVersion")
         public Integer mergedVersion;
 
         /**
          * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp16niirq4zdmgvm****</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
@@ -88,48 +112,72 @@ public class DescribeSQLPlansResponseBody extends TeaModel {
 
         /**
          * <p>OutlineID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("OutlineId")
         public Long outlineId;
 
         /**
          * <p>The time when the plan was bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1641492303000</p>
          */
         @NameInMap("OutlineTime")
         public Long outlineTime;
 
         /**
          * <p>The time when the plan was bound, in UTC +0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-06T18:05:03Z</p>
          */
         @NameInMap("OutlineTimeUTCString")
         public String outlineTimeUTCString;
 
         /**
          * <p>The complete execution plan of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHY_TABLE_SCAN | bmsql_order_line | 40 ******</p>
          */
         @NameInMap("PlanFull")
         public String planFull;
 
         /**
          * <p>The ID of the SQL execution plan in the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9114</p>
          */
         @NameInMap("PlanId")
         public Integer planId;
 
         /**
          * <p>The information about the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHY_TABLE_SCAN</p>
          */
         @NameInMap("PlanInfo")
         public String planInfo;
 
         /**
          * <p>The unique identifier of the SQL execution plan in the diagnostic system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>859ef7ee<strong><strong>b23ac98cdeb2476f</strong></strong></p>
          */
         @NameInMap("PlanUnionHash")
         public String planUnionHash;
 
         /**
          * <p>The query SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT ol_i_id, ***, *** FROM aaa</p>
          */
         @NameInMap("QuerySQL")
         public String querySQL;

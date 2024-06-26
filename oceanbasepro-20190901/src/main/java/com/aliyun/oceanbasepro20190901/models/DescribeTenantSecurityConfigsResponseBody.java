@@ -12,6 +12,9 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>523E7183-<strong><strong>-590D-</strong></strong>-12DFD316614B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
     public static class DescribeTenantSecurityConfigsResponseBodyConfigsTenantSecurityConfigsSecurityConfigs extends TeaModel {
         /**
          * <p>The name of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Check whether the scope of the cluster allowlist is too big</p>
          */
         @NameInMap("ConfigDescription")
         public String configDescription;
 
         /**
          * <p>The group of the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WHITELIST</p>
          */
         @NameInMap("ConfigGroup")
         public String configGroup;
 
         /**
          * <p>The name of the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WHITELIST_RANGE_LARGE</p>
          */
         @NameInMap("ConfigName")
         public String configName;
 
         /**
          * <p>Indicates whether the risk causes security issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Risk")
         public Boolean risk;
 
         /**
          * <p>The description of the risk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The scope of the allowlist is too big.</p>
          */
         @NameInMap("RiskDescription")
         public String riskDescription;
@@ -118,6 +136,9 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
     public static class DescribeTenantSecurityConfigsResponseBodyConfigsTenantSecurityConfigs extends TeaModel {
         /**
          * <p>The number of detected tenant security risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RiskCount")
         public Integer riskCount;
@@ -130,12 +151,18 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
          * <p>The name of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
@@ -182,18 +209,27 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
     public static class DescribeTenantSecurityConfigsResponseBodyConfigs extends TeaModel {
         /**
          * <p>The unique identifier of the check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("CheckId")
         public String checkId;
 
         /**
          * <p>The time when the check was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-07 15:30:00</p>
          */
         @NameInMap("CheckTime")
         public String checkTime;
 
         /**
          * <p>The ID of the OceanBase cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -206,12 +242,18 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of security check items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("TotalCheckCount")
         public Integer totalCheckCount;
 
         /**
          * <p>The total number of detected security risks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalRiskCount")
         public Integer totalRiskCount;

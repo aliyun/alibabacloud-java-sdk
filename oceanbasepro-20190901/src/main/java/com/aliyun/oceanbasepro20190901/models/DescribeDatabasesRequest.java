@@ -5,50 +5,76 @@ import com.aliyun.tea.*;
 
 public class DescribeDatabasesRequest extends TeaModel {
     /**
-     * <p>The name of the database.    </p>
-     * <p>You cannot use reserved keywords, such as test and mysql.</p>
+     * <p>The name of the database.<br>You cannot use reserved keywords, such as test and mysql.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sms_pre</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob****n0abo9uo</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The number of the page returned.  </p>
-     * <p>- Start value: 1   </p>
-     * <p>- Default value: 1</p>
+     * <ul>
+     * <li>Start value: 1   </li>
+     * <li>Default value: 1</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of rows returned on each page.  </p>
-     * <p>- Maximum value: 100.  </p>
-     * <p>- Default value: 10</p>
+     * <ul>
+     * <li>Maximum value: 100.  </li>
+     * <li>Default value: 10</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The search keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pay</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
      * <p>The ID of the tenant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ob2mr3oae0****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
-     * <p>Specifies whether to return the information about tables in the database.</p>
-     * <p>Default value: false. </p>
-     * <p>> The operation may time out if the database contains a large number of tables.</p>
+     * <p>Specifies whether to return the information about tables in the database.
+     * Default value: false. </p>
+     * <blockquote>
+     * <p>The operation may time out if the database contains a large number of tables.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("WithTables")
     public Boolean withTables;

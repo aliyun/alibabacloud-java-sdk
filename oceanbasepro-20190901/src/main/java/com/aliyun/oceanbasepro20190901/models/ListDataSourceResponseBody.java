@@ -4,12 +4,24 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Contact the administrator.</p>
+     */
     @NameInMap("Advice")
     public String advice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INNER_ERROR</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>28</p>
+     */
     @NameInMap("Cost")
     public String cost;
 
@@ -19,21 +31,45 @@ public class ListDataSourceResponseBody extends TeaModel {
     @NameInMap("ErrorDetail")
     public ListDataSourceResponseBodyErrorDetail errorDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A system error occurred.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>132</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -131,78 +167,178 @@ public class ListDataSourceResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>utf8mb4</p>
+         */
         @NameInMap("Charset")
         public String charset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cluster_name</p>
+         */
         @NameInMap("Cluster")
         public String cluster;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ConnExtraAttributes")
         public Object connExtraAttributes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-13T20:27:28.000+00:00</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-13T20:37:28.000+00:00</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>e_4w****v</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx.xxx.xxx.1</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RATION***1DBUTF11</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Linux</p>
+         */
         @NameInMap("OperatingSystem")
         public String operatingSystem;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("OracleNlsLengthSemantics")
         public String oracleNlsLengthSemantics;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("OracleSid")
         public String oracleSid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("PartnerId")
         public String partnerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2883</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>178641****05809</p>
+         */
         @NameInMap("ResourceOwner")
         public String resourceOwner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MASTER</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>schema_name</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tenant_name</p>
+         */
         @NameInMap("Tenant")
         public String tenant;
 
+        /**
+         * <strong>example:</strong>
+         * <p>+08:00</p>
+         */
         @NameInMap("Timezone")
         public String timezone;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MYSQL_PUBLIC</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user_name</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4.1.0</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc_t4***</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -414,42 +550,78 @@ public class ListDataSourceResponseBody extends TeaModel {
     }
 
     public static class ListDataSourceResponseBodyErrorDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CM-RESOAT1111</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("ExtraContext")
         public java.util.Map<String, ?> extraContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ERROR</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A system error occurred.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("MessageMcmsContext")
         public java.util.Map<String, String> messageMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("MessageMcmsKey")
         public String messageMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Proposal")
         public String proposal;
 
         @NameInMap("ProposalMcmsContext")
         public java.util.Map<String, String> proposalMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ProposalMcmsKey")
         public String proposalMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         @NameInMap("ReasonMcmsContext")
         public java.util.Map<String, String> reasonMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ReasonMcmsKey")
         public String reasonMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("UpstreamErrorDetail")
         public Object upstreamErrorDetail;
 

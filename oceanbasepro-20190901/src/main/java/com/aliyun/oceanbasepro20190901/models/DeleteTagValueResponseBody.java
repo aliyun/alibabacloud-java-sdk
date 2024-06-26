@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteTagValueResponseBody extends TeaModel {
     /**
      * <p>The tag deletion result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>delete tag-value success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4C91F7BA-xxxx-xxxx-xxxx-846ECA1A9908</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class CreateTagRequest extends TeaModel {
     /**
      * <p>The identifier of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The name of the tag group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tag group 1</p>
      */
     @NameInMap("Key")
     public String key;

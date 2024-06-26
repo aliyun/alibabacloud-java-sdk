@@ -4,21 +4,45 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DataExtraInfoSubDbsValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cluster_name</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tenant_name</p>
+     */
     @NameInMap("TenantName")
     public String tenantName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("DatabaseId")
     public String databaseId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>db_name</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mapped_db</p>
+     */
     @NameInMap("MappingDatabaseName")
     public String mappingDatabaseName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("SourceClientId")
     public String sourceClientId;
 
@@ -87,45 +111,101 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
     }
 
     public static class DataExtraInfoSubDbsValueTablesColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RecordFieldType")
         public String recordFieldType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RawColumnType")
         public String rawColumnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ColumnKey")
         public String columnKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Nullable")
         public Boolean nullable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataLength")
         public Long dataLength;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataScale")
         public Integer dataScale;
 
+        /**
+         * <strong>example:</strong>
+         * <p>utf8</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <strong>example:</strong>
+         * <p>comments</p>
+         */
         @NameInMap("ColumnComment")
         public String columnComment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsGenerateField")
         public Boolean isGenerateField;
 
@@ -249,18 +329,38 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
     }
 
     public static class DataExtraInfoSubDbsValueTables extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>fexg***</p>
+         */
         @NameInMap("TableId")
         public String tableId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>db_name</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_table</p>
+         */
         @NameInMap("MappingTableName")
         public String mappingTableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>g_i4kat***</p>
+         */
         @NameInMap("Instance")
         public String instance;
 

@@ -12,6 +12,9 @@ public class KillProcessListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,66 +43,99 @@ public class KillProcessListResponseBody extends TeaModel {
     public static class KillProcessListResponseBodyData extends TeaModel {
         /**
          * <p>The client IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The start command for the container of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 1</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance not found.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>Execution time (UTC+8). If it is left empty, it means to execute immediately.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>142</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
         /**
          * <p>The IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         @NameInMap("ServerIp")
         public String serverIp;
 
         /**
          * <p>The ID of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1123</p>
          */
         @NameInMap("SessionId")
         public Long sessionId;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>:</p>
          */
         @NameInMap("SqlText")
         public String sqlText;
 
         /**
          * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLEEP</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t3ogqv07a56n4</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
          * <p>The database username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oas</p>
          */
         @NameInMap("User")
         public String user;

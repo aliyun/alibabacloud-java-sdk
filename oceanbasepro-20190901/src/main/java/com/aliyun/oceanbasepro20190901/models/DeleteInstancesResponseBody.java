@@ -12,6 +12,9 @@ public class DeleteInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-<strong><strong>-</strong></strong>-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,8 +43,13 @@ public class DeleteInstancesResponseBody extends TeaModel {
     public static class DeleteInstancesResponseBodyData extends TeaModel {
         /**
          * <p>The result of the dry-run request.</p>
-         * <p>- If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.</p>
-         * <p>- If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</p>
+         * <ul>
+         * <li>If the DryRun parameter is set to true and the dry run succeeds, the DryRunResult parameter returns true. Otherwise, an error code is returned.</li>
+         * <li>If the DryRun parameter is set to false, no dry run is performed and the DryRunResult parameter returns false.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DryRunResult")
         public Boolean dryRunResult;

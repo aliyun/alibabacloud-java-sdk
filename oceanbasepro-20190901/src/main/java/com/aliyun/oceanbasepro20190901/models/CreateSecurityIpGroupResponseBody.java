@@ -5,15 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityIpGroupResponseBody extends TeaModel {
     /**
-     * <p>The IP addresses or CIDR blocks in the IP address whitelist group.   </p>
-     * <p>The return values of SecurityIps are strings that are separated with commas (,).</p>
+     * <p>The IP addresses or CIDR blocks in the IP address whitelist group.<br>The return values of SecurityIps are strings that are separated with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **CreateSecurityIpGroup**.</p>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>CreateSecurityIpGroup</strong>.</p>
      */
     @NameInMap("SecurityIpGroup")
     public CreateSecurityIpGroupResponseBodySecurityIpGroup securityIpGroup;
@@ -41,23 +42,32 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
 
     public static class CreateSecurityIpGroupResponseBodySecurityIpGroup extends TeaModel {
         /**
-         * <p>```</p>
-         * <p>http(s)://[Endpoint]/?Action=CreateSecurityIpGroup</p>
-         * <p>&InstanceId=ob317v4uif****</p>
-         * <p>&SecurityIps=192.168.1.1,192.168.0.0.1/8</p>
-         * <p>&SecurityIpGroupName=pay_online</p>
-         * <p>&Common request parameters</p>
-         * <p>```</p>
+         * <pre><code>http(s)://[Endpoint]/?Action=CreateSecurityIpGroup
+         * &amp;InstanceId=ob317v4uif****
+         * &amp;SecurityIps=192.168.1.1,192.168.0.0.1/8
+         * &amp;SecurityIpGroupName=pay_online
+         * &amp;Common request parameters
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p>ob317v4uif****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>You can call this operation to create an IP address whitelist group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pay_online</p>
          */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.1.1,192.168.0.0.1/8</p>
+         */
         @NameInMap("SecurityIps")
         public String securityIps;
 

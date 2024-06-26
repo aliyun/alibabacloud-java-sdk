@@ -4,24 +4,47 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableZoneRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>x86</p>
+     */
     @NameInMap("CpuArch")
     public String cpuArch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>multiple</p>
+     */
     @NameInMap("DeployType")
     public String deployType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3.2.4.4</p>
+     */
     @NameInMap("ObVersion")
     public String obVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("Series")
     public String series;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oceanbase.cluster.cd8.xlarge</p>
+     */
     @NameInMap("Spec")
     public String spec;
 

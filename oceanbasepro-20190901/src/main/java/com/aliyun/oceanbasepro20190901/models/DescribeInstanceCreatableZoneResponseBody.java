@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the cluster is deployed in the zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The operation that you want to perform.   </p>
-     * <p>Set the value to **DescribeInstanceCreatableZone**.</p>
+     * <p>The operation that you want to perform.<br>Set the value to <strong>DescribeInstanceCreatableZone</strong>.</p>
      */
     @NameInMap("ZoneList")
     public java.util.List<DescribeInstanceCreatableZoneResponseBodyZoneList> zoneList;
@@ -39,11 +41,18 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceCreatableZoneResponseBodyZoneList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsInCluster")
         public Boolean isInCluster;
 
         /**
          * <p>DescribeInstanceCreatableZone</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("Zone")
         public String zone;

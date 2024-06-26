@@ -6,30 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeTenantUsersResponseBody extends TeaModel {
     /**
      * <p>The name of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The type of the database account. Valid values:    </p>
-     * <p>- Admin: the super administrator account.   </p>
-     * <p>- NORMAL: a general account.</p>
+     * <ul>
+     * <li>Admin: the super administrator account.   </li>
+     * <li>NORMAL: a general account.</li>
+     * </ul>
      */
     @NameInMap("TenantUsers")
     public java.util.List<DescribeTenantUsersResponseBodyTenantUsers> tenantUsers;
 
     /**
-     * <p>The role of the account.   </p>
-     * <p>In Oracle mode, a role is a schema-level role. Valid values:  </p>
-     * <p>- ReadWrite: a role that has the read and write privileges, including: CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SYNONYM, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SESSION, EXECUTE ANY PROCEDURE, CREATE ANY OUTLINE, ALTER ANY OUTLINE, DROP ANY OUTLINE, CREATE ANY PROCEDURE, ALTER ANY PROCEDURE, DROP ANY PROCEDURE, CREATE ANY SEQUENCE, ALTER ANY SEQUENCE, DROP ANY SEQUENCE, CREATE ANY TYPE, ALTER ANY TYPE, DROP ANY TYPE, SYSKM, CREATE ANY TRIGGER, ALTER ANY TRIGGER, DROP ANY TRIGGER, CREATE PROFILE, ALTER PROFILE, and DROP PROFILE.  </p>
-     * <p>- ReadOnly: a role that has only the read-only privilege SELECT.</p>
-     * <p>In MySQL mode, a role is a database-level role. Valid values: </p>
-     * <p>- ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.   </p>
-     * <p>- ReadOnly: a role that has only the read-only privilege SELECT.   </p>
-     * <p>- DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </p>
-     * <p>- DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.   </p>
-     * <br>
-     * <p>> <br>By default, an Oracle account has the read and write privileges on its own schema, which are not listed here.</p>
+     * <p>The role of the account.<br>In Oracle mode, a role is a schema-level role. Valid values:  </p>
+     * <ul>
+     * <li>ReadWrite: a role that has the read and write privileges, including: CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SYNONYM, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SESSION, EXECUTE ANY PROCEDURE, CREATE ANY OUTLINE, ALTER ANY OUTLINE, DROP ANY OUTLINE, CREATE ANY PROCEDURE, ALTER ANY PROCEDURE, DROP ANY PROCEDURE, CREATE ANY SEQUENCE, ALTER ANY SEQUENCE, DROP ANY SEQUENCE, CREATE ANY TYPE, ALTER ANY TYPE, DROP ANY TYPE, SYSKM, CREATE ANY TRIGGER, ALTER ANY TRIGGER, DROP ANY TRIGGER, CREATE PROFILE, ALTER PROFILE, and DROP PROFILE.  </li>
+     * <li>ReadOnly: a role that has only the read-only privilege SELECT.
+     * In MySQL mode, a role is a database-level role. Valid values: </li>
+     * <li>ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.   </li>
+     * <li>ReadOnly: a role that has only the read-only privilege SELECT.   </li>
+     * <li>DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   </li>
+     * <li>DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.</li>
+     * </ul>
+     * <blockquote>
+     * <p><br>By default, an Oracle account has the read and write privileges on its own schema, which are not listed here.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -64,15 +74,27 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantUsersResponseBodyTenantUsersDatabases extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>db_pay1</p>
+         */
         @NameInMap("Database")
         public String database;
 
         @NameInMap("Privileges")
         public String privileges;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ReadOnly</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tbl_pay1</p>
+         */
         @NameInMap("Table")
         public String table;
 
@@ -119,27 +141,49 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         @NameInMap("Databases")
         public java.util.List<DescribeTenantUsersResponseBodyTenantUsersDatabases> databases;
 
+        /**
+         * <strong>example:</strong>
+         * <p>use for test</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>所属集群Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>obshc32****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>所属租户Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tshfs3****</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pay_test</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("UserStatus")
         public String userStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("UserType")
         public String userType;
 

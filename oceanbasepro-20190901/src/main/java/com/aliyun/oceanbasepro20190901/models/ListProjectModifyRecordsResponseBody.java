@@ -4,12 +4,24 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class ListProjectModifyRecordsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Contact the administrator.</p>
+     */
     @NameInMap("Advice")
     public String advice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INNER_ERROR</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("Cost")
     public String cost;
 
@@ -19,21 +31,45 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     @NameInMap("ErrorDetail")
     public ListProjectModifyRecordsResponseBodyErrorDetail errorDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A system error occurred.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -134,9 +170,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public Integer partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -183,51 +227,115 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataDatabasesSpecificTablesColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>comments</p>
+         */
         @NameInMap("ColumnComment")
         public String columnComment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRI</p>
+         */
         @NameInMap("ColumnKey")
         public String columnKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>col_name</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FLOAT</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataLength")
         public Long dataLength;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataScale")
         public Integer dataScale;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>utf16</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsGenerateField")
         public Boolean isGenerateField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_name</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Nullable")
         public Boolean nullable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RawColumnType")
         public String rawColumnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT8</p>
+         */
         @NameInMap("RecordFieldType")
         public String recordFieldType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DATABASE</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -376,18 +484,34 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_name</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;3</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -466,9 +590,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public Integer partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -515,51 +647,115 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataDatabasesSpecificViewsColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>comments</p>
+         */
         @NameInMap("ColumnComment")
         public String columnComment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRI</p>
+         */
         @NameInMap("ColumnKey")
         public String columnKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>col_name</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FLOAT</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataLength")
         public Long dataLength;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataScale")
         public Integer dataScale;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>utf16</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsGenerateField")
         public Boolean isGenerateField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_name</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Nullable")
         public Boolean nullable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RawColumnType")
         public String rawColumnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT8</p>
+         */
         @NameInMap("RecordFieldType")
         public String recordFieldType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DATABASE</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -708,18 +904,34 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_name</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id &lt; 1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -798,9 +1010,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public Integer partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -847,51 +1067,115 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataDatabasesTablesColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>comments</p>
+         */
         @NameInMap("ColumnComment")
         public String columnComment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRI</p>
+         */
         @NameInMap("ColumnKey")
         public String columnKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>col_name</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FLOAT</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataLength")
         public Long dataLength;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataScale")
         public Integer dataScale;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>utf8</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsGenerateField")
         public Boolean isGenerateField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_col</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Nullable")
         public Boolean nullable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RawColumnType")
         public String rawColumnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT8</p>
+         */
         @NameInMap("RecordFieldType")
         public String recordFieldType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DATABASE</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -1040,18 +1324,34 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_name</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id &lt; 1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -1130,9 +1430,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("DistributedKeys")
         public java.util.List<String> distributedKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PartitionLifeCycle")
         public Integer partitionLifeCycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PARTITION BY VALUE(\&quot;id\&quot;)</p>
+         */
         @NameInMap("PartitionStatement")
         public String partitionStatement;
 
@@ -1179,51 +1487,115 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataDatabasesViewsColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>comments</p>
+         */
         @NameInMap("ColumnComment")
         public String columnComment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRI</p>
+         */
         @NameInMap("ColumnKey")
         public String columnKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>col_name</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FLOAT</p>
+         */
         @NameInMap("ColumnType")
         public String columnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataLength")
         public Long dataLength;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64</p>
+         */
         @NameInMap("DataPrecision")
         public Integer dataPrecision;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DataScale")
         public Integer dataScale;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>utf16</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsGenerateField")
         public Boolean isGenerateField;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_name</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Nullable")
         public Boolean nullable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Position")
         public Integer position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RawColumnType")
         public String rawColumnType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INT8</p>
+         */
         @NameInMap("RecordFieldType")
         public String recordFieldType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DATABASE</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -1372,18 +1744,34 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_view</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&lt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -1459,12 +1847,24 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataDatabases extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>db_id</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_db</p>
+         */
         @NameInMap("MappedName")
         public String mappedName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>db_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -1544,42 +1944,78 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataErrorDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INNER_ERROR</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("ExtraContext")
         public java.util.Map<String, ?> extraContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ERROR</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A system error occurred.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("MessageMcmsContext")
         public java.util.Map<String, String> messageMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("MessageMcmsKey")
         public String messageMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Proposal")
         public String proposal;
 
         @NameInMap("ProposalMcmsContext")
         public java.util.Map<String, String> proposalMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ProposalMcmsKey")
         public String proposalMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         @NameInMap("ReasonMcmsContext")
         public java.util.Map<String, String> reasonMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ReasonMcmsKey")
         public String reasonMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("UpstreamErrorDetail")
         public Object upstreamErrorDetail;
 
@@ -1695,9 +2131,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataMigrationObjectsInfoTables extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>schema_name</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
@@ -1725,9 +2169,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataMigrationObjectsInfoTablesBlack extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>schema_name</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
@@ -1755,9 +2207,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataMigrationObjectsInfoViews extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>view_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>schema_name</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
@@ -1785,9 +2245,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataMigrationObjectsInfoViewsBlack extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>view_name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>schema_name</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
@@ -1827,6 +2295,10 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("ViewsBlack")
         public java.util.List<ListProjectModifyRecordsResponseBodyDataMigrationObjectsInfoViewsBlack> viewsBlack;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("WildcardMode")
         public Boolean wildcardMode;
 
@@ -1878,15 +2350,31 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataOmsProjectMappingInfoColumnMappings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dest_name</p>
+         */
         @NameInMap("DestName")
         public String destName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_name</p>
+         */
         @NameInMap("SourceName")
         public String sourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_schema</p>
+         */
         @NameInMap("SourceSchema")
         public String sourceSchema;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_table</p>
+         */
         @NameInMap("SourceTable")
         public String sourceTable;
 
@@ -1930,9 +2418,17 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataOmsProjectMappingInfoSchemaMappings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mapped_schema</p>
+         */
         @NameInMap("DestName")
         public String destName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_name</p>
+         */
         @NameInMap("SourceName")
         public String sourceName;
 
@@ -1960,12 +2456,24 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataOmsProjectMappingInfoTableMappings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dest_name</p>
+         */
         @NameInMap("DestName")
         public String destName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_name</p>
+         */
         @NameInMap("SourceName")
         public String sourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_schema</p>
+         */
         @NameInMap("SourceSchema")
         public String sourceSchema;
 
@@ -2001,12 +2509,24 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataOmsProjectMappingInfoViewMappings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dest_name</p>
+         */
         @NameInMap("DestName")
         public String destName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_name</p>
+         */
         @NameInMap("SourceName")
         public String sourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>schema_name</p>
+         */
         @NameInMap("SourceSchema")
         public String sourceSchema;
 
@@ -2094,33 +2614,65 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyDataTableEtlList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>db_name</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dest_db</p>
+         */
         @NameInMap("DestDatabase")
         public String destDatabase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dest_name</p>
+         */
         @NameInMap("DestName")
         public String destName;
 
         @NameInMap("FilterColumns")
         public java.util.List<String> filterColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("LogicTableId")
         public String logicTableId;
 
         @NameInMap("ShardColumns")
         public java.util.List<String> shardColumns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("SourceEndpointId")
         public String sourceEndpointId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>table_name</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tenant_name</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id&gt;1</p>
+         */
         @NameInMap("WhereClause")
         public String whereClause;
 
@@ -2218,12 +2770,24 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("ErrorDetail")
         public ListProjectModifyRecordsResponseBodyDataErrorDetail errorDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-07-13T06:26:15</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>344000005</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id</p>
+         */
         @NameInMap("MergeRequestId")
         public Long mergeRequestId;
 
@@ -2233,18 +2797,34 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
         @NameInMap("OmsProjectMappingInfo")
         public ListProjectModifyRecordsResponseBodyDataOmsProjectMappingInfo omsProjectMappingInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PENDING</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>np_598qm***</p>
+         */
         @NameInMap("SubProjectId")
         public String subProjectId;
 
         @NameInMap("TableEtlList")
         public java.util.List<ListProjectModifyRecordsResponseBodyDataTableEtlList> tableEtlList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>INCREASE_OBJECT</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>id</p>
+         */
         @NameInMap("UpdateRequestId")
         public Long updateRequestId;
 
@@ -2352,42 +2932,78 @@ public class ListProjectModifyRecordsResponseBody extends TeaModel {
     }
 
     public static class ListProjectModifyRecordsResponseBodyErrorDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INNER_ERROR</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("ExtraContext")
         public java.util.Map<String, ?> extraContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ERROR</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A system error occurred.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         @NameInMap("MessageMcmsContext")
         public java.util.Map<String, String> messageMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("MessageMcmsKey")
         public String messageMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Contact the administrator.</p>
+         */
         @NameInMap("Proposal")
         public String proposal;
 
         @NameInMap("ProposalMcmsContext")
         public java.util.Map<String, String> proposalMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ProposalMcmsKey")
         public String proposalMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         @NameInMap("ReasonMcmsContext")
         public java.util.Map<String, String> reasonMcmsContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ReasonMcmsKey")
         public String reasonMcmsKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("UpstreamErrorDetail")
         public Object upstreamErrorDetail;
 
