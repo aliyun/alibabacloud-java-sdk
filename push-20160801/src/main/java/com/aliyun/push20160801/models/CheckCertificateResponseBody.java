@@ -4,18 +4,30 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class CheckCertificateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Android")
     public Boolean android;
 
     @NameInMap("DevelopmentCertInfo")
     public CheckCertificateResponseBodyDevelopmentCertInfo developmentCertInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IOS")
     public Boolean IOS;
 
     @NameInMap("ProductionCertInfo")
     public CheckCertificateResponseBodyProductionCertInfo productionCertInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,9 +77,17 @@ public class CheckCertificateResponseBody extends TeaModel {
     }
 
     public static class CheckCertificateResponseBodyDevelopmentCertInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1470024000000</p>
+         */
         @NameInMap("ExipreTime")
         public Long exipreTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EXPIRED</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -95,9 +115,17 @@ public class CheckCertificateResponseBody extends TeaModel {
     }
 
     public static class CheckCertificateResponseBodyProductionCertInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1764561600000</p>
+         */
         @NameInMap("ExipreTime")
         public Long exipreTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Status")
         public String status;
 

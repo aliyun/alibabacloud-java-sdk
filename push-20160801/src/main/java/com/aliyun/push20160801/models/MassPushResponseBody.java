@@ -7,6 +7,10 @@ public class MassPushResponseBody extends TeaModel {
     @NameInMap("MessageIds")
     public MassPushResponseBodyMessageIds messageIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,27 +4,69 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class PushNoticeToiOSRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEV</p>
+     */
     @NameInMap("ApnsEnv")
     public String apnsEnv;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24780725</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello World</p>
+     */
     @NameInMap("Body")
     public String body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;:&quot;ios&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
+     */
     @NameInMap("ExtParameters")
     public String extParameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("JobKey")
     public String jobKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("Target")
     public String target;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("TargetValue")
     public String targetValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>title</p>
+     */
     @NameInMap("Title")
     public String title;
 

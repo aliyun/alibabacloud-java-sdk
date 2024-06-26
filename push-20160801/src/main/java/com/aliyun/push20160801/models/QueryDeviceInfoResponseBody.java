@@ -7,6 +7,10 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
     @NameInMap("DeviceInfo")
     public QueryDeviceInfoResponseBodyDeviceInfo deviceInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6EEF262B-EA7D-41DC-89B9-20F3D1E28194</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,39 +36,79 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDeviceInfoResponseBodyDeviceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
+         */
         @NameInMap("Account")
         public String account;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_alias,test_alias2</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
         @NameInMap("Brand")
         public String brand;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a64ae296f3b04a58a05b30c95****</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5ecc7b4012aaa801b63******5543ccbda6b4930d09629e936e1ac4b762a7df</p>
+         */
         @NameInMap("DeviceToken")
         public String deviceToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iOS</p>
+         */
         @NameInMap("DeviceType")
         public String deviceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-03-27T02:19:40Z</p>
+         */
         @NameInMap("LastOnlineTime")
         public String lastOnlineTime;
 
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 
+        /**
+         * <strong>example:</strong>
+         * <p>133********</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PushEnabled")
         public Boolean pushEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test_tag,test_tag2</p>
+         */
         @NameInMap("Tags")
         public String tags;
 

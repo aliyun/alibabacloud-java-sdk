@@ -4,27 +4,65 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class PushNoticeToAndroidRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23267207</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>body</p>
+     */
     @NameInMap("Body")
     public String body;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;:&quot;value1&quot;,&quot;api_name&quot;:&quot;PushNoticeToAndroidRequest&quot;}</p>
+     */
     @NameInMap("ExtParameters")
     public String extParameters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("JobKey")
     public String jobKey;
 
     @NameInMap("StoreOffline")
     public Boolean storeOffline;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("Target")
     public String target;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
+     */
     @NameInMap("TargetValue")
     public String targetValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>title</p>
+     */
     @NameInMap("Title")
     public String title;
 

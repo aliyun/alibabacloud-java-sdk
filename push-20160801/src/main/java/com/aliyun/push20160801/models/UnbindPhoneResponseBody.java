@@ -4,6 +4,10 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class UnbindPhoneResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0D1126F0-F8FF-513D-BAFA-F140447BDED4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,6 +7,10 @@ public class QueryDevicesByAccountResponseBody extends TeaModel {
     @NameInMap("DeviceIds")
     public QueryDevicesByAccountResponseBodyDeviceIds deviceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A8A24108-2AD0-4F6E-81C7-A8A24C2C2AD0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

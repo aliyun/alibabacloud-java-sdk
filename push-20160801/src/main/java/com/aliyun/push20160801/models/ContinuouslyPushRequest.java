@@ -4,15 +4,39 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class ContinuouslyPushRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23267207</p>
+     */
     @NameInMap("AppKey")
     public Long appKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500131</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEVICE</p>
+     */
     @NameInMap("Target")
     public String target;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a692961a92534047ad3625****</p>
+     */
     @NameInMap("TargetValue")
     public String targetValue;
 

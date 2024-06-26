@@ -4,6 +4,10 @@ package com.aliyun.push20160801.models;
 import com.aliyun.tea.*;
 
 public class RemoveTagResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>23000F3C-0EFE-4C89-82EE-E04F42D37B3C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

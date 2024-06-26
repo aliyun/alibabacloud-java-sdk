@@ -7,6 +7,10 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
     @NameInMap("PushStats")
     public QueryPushStatByMsgResponseBodyPushStats pushStats;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CF195C34-98FB-491A-98D7-19CBC1FA880B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +36,80 @@ public class QueryPushStatByMsgResponseBody extends TeaModel {
     }
 
     public static class QueryPushStatByMsgResponseBodyPushStatsPushStat extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("AcceptCount")
         public Long acceptCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("DeletedCount")
         public Long deletedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>510427</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("OpenedCount")
         public Long openedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("ReceivedCount")
         public Long receivedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SentCount")
         public Long sentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsFailedCount")
         public Long smsFailedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsReceiveFailedCount")
         public Long smsReceiveFailedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsReceiveSuccessCount")
         public Long smsReceiveSuccessCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsSentCount")
         public Long smsSentCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SmsSkipCount")
         public Long smsSkipCount;
 
