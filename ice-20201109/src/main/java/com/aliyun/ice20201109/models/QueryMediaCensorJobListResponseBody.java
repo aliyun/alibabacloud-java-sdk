@@ -7,12 +7,20 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     @NameInMap("MediaCensorJobList")
     public QueryMediaCensorJobListResponseBodyMediaCensorJobList mediaCensorJobList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9b1a42bc6e8d46e6a1383b7e7f01****</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
     @NameInMap("NonExistIds")
     public QueryMediaCensorJobListResponseBodyNonExistIds nonExistIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D1D5C080-8E2F-5030-8AB4-13092F17631B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +62,31 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99.91</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>antispam</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pass</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -106,15 +130,31 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResultResultsResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>live</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pass</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -177,12 +217,24 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResultsCoverImageCensorResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>example-Bucket-****</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test/ai/censor/v2/vme-****.jpg</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -248,15 +300,31 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>antispam</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pass</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -300,12 +368,24 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bucket-test-in-****</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test/ai/censor/test-****.mp4</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -341,15 +421,31 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>meaningless</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>antispam</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -393,15 +489,31 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResultsCensorResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>meaningless</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ad</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pass</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -464,15 +576,31 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResultsCensorResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>porn</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -538,9 +666,17 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         @NameInMap("CensorResults")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultVideoTimelinesVideoTimelineCensorResults censorResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>output{Count}.jpg</p>
+         */
         @NameInMap("Object")
         public String object;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:02:59.999</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
@@ -598,6 +734,10 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         @NameInMap("CensorResults")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVensorCensorResultCensorResults censorResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ea04afcca7cd4e80b9ece8fbb251</p>
+         */
         @NameInMap("NextPageToken")
         public String nextPageToken;
 
@@ -636,12 +776,24 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-bucket-****</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>output{Count}.jpg</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -677,12 +829,20 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     }
 
     public static class QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>common</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
         @NameInMap("OutputFile")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobVideoCensorConfigOutputFile outputFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("VideoCensor")
         public String videoCensor;
 
@@ -721,42 +881,78 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
         @NameInMap("BarrageCensorResult")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobBarrageCensorResult barrageCensorResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter.ResourceNotFound</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("CoverImageCensorResults")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobCoverImageCensorResults coverImageCensorResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-04T07:25:48Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("DescCensorResult")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobDescCensorResult descCensorResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-04T07:25:50Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
         @NameInMap("Input")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobInput input;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f8f166eea7a44e9bb0a4aecf9543</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The resource operated cannot be found</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c5b30b7c0d0e4a0abde1d5f9e751****</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pass</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
         @NameInMap("TitleCensorResult")
         public QueryMediaCensorJobListResponseBodyMediaCensorJobListMediaCensorJobTitleCensorResult titleCensorResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example userdata ****</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

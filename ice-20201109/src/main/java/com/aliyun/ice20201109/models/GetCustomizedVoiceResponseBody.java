@@ -7,9 +7,17 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetCustomizedVoiceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,18 +51,34 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
     }
 
     public static class GetCustomizedVoiceResponseBodyDataCustomizedVoice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>42d3c312402982be65975f5b</strong></strong></p>
+         */
         @NameInMap("DemoAudioMediaId")
         public String demoAudioMediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>female</p>
+         */
         @NameInMap("Gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>interaction</p>
+         */
         @NameInMap("Scenario")
         public String scenario;
 
         @NameInMap("VoiceDesc")
         public String voiceDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
+         */
         @NameInMap("VoiceId")
         public String voiceId;
 

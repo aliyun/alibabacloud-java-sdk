@@ -4,24 +4,52 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetEventCallbackResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TestKey001</p>
+     */
     @NameInMap("AuthKey")
     public String authKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("AuthSwitch")
     public String authSwitch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ice-callback-queue</p>
+     */
     @NameInMap("CallbackQueueName")
     public String callbackQueueName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HTTP</p>
+     */
     @NameInMap("CallbackType")
     public String callbackType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://xxx.yyy/callback">http://xxx.yyy/callback</a></p>
+     */
     @NameInMap("CallbackURL")
     public String callbackURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ProduceMediaComplete,TranscodeComplete</p>
+     */
     @NameInMap("EventTypeList")
     public String eventTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

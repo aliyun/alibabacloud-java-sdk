@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class UpdateLiveTranscodeJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mytest3</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -70,12 +77,18 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
     public static class UpdateLiveTranscodeJobRequestStreamInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://mydomain/app/stream1</p>
          */
         @NameInMap("InputUrl")
         public String inputUrl;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         @NameInMap("Type")
         public String type;
@@ -104,9 +117,17 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
     }
 
     public static class UpdateLiveTranscodeJobRequestTimedConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-05T06:08:31Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-06-19T02:16:41Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -136,12 +157,18 @@ public class UpdateLiveTranscodeJobRequest extends TeaModel {
     public static class UpdateLiveTranscodeJobRequestTranscodeOutput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mydomain</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LiveCenter</p>
          */
         @NameInMap("Type")
         public String type;

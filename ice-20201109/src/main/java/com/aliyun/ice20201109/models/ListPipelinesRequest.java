@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListPipelinesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Standard</p>
+     */
     @NameInMap("Speed")
     public String speed;
 

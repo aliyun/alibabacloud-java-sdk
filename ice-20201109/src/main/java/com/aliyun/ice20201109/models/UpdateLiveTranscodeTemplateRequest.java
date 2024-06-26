@@ -12,6 +12,9 @@ public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -46,18 +49,38 @@ public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
     }
 
     public static class UpdateLiveTranscodeTemplateRequestTemplateConfigAudioParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Channels")
         public String channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAC</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aac_low</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44100</p>
+         */
         @NameInMap("Samplerate")
         public String samplerate;
 
@@ -109,24 +132,52 @@ public class UpdateLiveTranscodeTemplateRequest extends TeaModel {
     }
 
     public static class UpdateLiveTranscodeTemplateRequestTemplateConfigVideoParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2500</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>H.264</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Gop")
         public String gop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("Width")
         public String width;
 

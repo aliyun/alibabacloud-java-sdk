@@ -4,12 +4,20 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListSystemTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SystemTemplateList")
     public java.util.List<ListSystemTemplatesResponseBodySystemTemplateList> systemTemplateList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -43,27 +51,59 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListSystemTemplatesResponseBodySystemTemplateList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Subtype")
         public Integer subtype;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Remux</p>
+         */
         @NameInMap("SubtypeName")
         public String subtypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</p>
+         */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S00000001-000000</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FLV-COPY</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TranscodeTemplate</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 

@@ -7,6 +7,10 @@ public class GetPlayInfoRequest extends TeaModel {
     @NameInMap("InputURL")
     public String inputURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86434e152b7d4f20be480574439fe***</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 

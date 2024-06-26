@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateCategoryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>43</p>
      */
     @NameInMap("CateId")
     public Long cateId;

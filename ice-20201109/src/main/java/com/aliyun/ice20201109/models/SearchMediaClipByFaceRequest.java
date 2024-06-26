@@ -4,24 +4,42 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaClipByFaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2d3bf1e35a1e42b5ab338d701efa****</p>
+     */
     @NameInMap("EntityId")
     public String entityId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zxtest-huangxuan-2023-3-7-V1</p>
      */
     @NameInMap("FaceSearchToken")
     public String faceSearchToken;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3b187b3620c8490886cfc2a9578c****</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

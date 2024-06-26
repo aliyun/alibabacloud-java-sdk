@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveTranscodeJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,11 +7,18 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
     @NameInMap("DeleteFileInfoList")
     public java.util.List<DeleteLiveRecordFilesResponseBodyDeleteFileInfoList> deleteFileInfoList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13cbb83e-043c-4728-ac35-*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,12 +53,24 @@ public class DeleteLiveRecordFilesResponseBody extends TeaModel {
     }
 
     public static class DeleteLiveRecordFilesResponseBodyDeleteFileInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13cbb83e-043c-4728-ac35-*****</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 

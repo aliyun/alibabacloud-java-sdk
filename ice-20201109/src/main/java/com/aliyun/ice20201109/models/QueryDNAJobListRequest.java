@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryDNAJobListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>88c6ca184c0e47098a5b665e2a12****</p>
+     */
     @NameInMap("JobIds")
     public String jobIds;
 

@@ -6,15 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeMeterImsSummaryRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1656995036</p>
      */
     @NameInMap("EndTs")
     public Long endTs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1654403036</p>
      */
     @NameInMap("StartTs")
     public Long startTs;

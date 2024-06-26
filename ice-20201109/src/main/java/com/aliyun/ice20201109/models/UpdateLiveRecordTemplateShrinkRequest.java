@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class UpdateLiveRecordTemplateShrinkRequest extends TeaModel {
     /**
      * <p>代表资源名称的资源属性字段</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test template</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>录制格式</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordFormat")
@@ -22,8 +23,10 @@ public class UpdateLiveRecordTemplateShrinkRequest extends TeaModel {
 
     /**
      * <p>代表资源一级ID的资源属性字段</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

@@ -4,15 +4,31 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaByMultimodalRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-1</p>
+     */
     @NameInMap("SearchLibName")
     public String searchLibName;
 

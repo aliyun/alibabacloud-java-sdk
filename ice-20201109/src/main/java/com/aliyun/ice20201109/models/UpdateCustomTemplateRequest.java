@@ -4,14 +4,25 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomTemplateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test-template</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;param&quot;: &quot;sample&quot;}</p>
+     */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
      */
     @NameInMap("TemplateId")
     public String templateId;

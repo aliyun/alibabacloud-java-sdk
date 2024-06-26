@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class CreateLiveRecordTemplateRequest extends TeaModel {
     /**
      * <p>代表资源名称的资源属性字段</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Name")
@@ -14,7 +13,6 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
 
     /**
      * <p>录制格式</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordFormat")
@@ -42,31 +40,46 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
     }
 
     public static class CreateLiveRecordTemplateRequestRecordFormat extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
         /**
          * <p>格式</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m3u8</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>Oss对象名，不包含后缀</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{JobId}/{Sequence}<em>{EscapedStartTime}</em>{EscapedEndTime}</p>
          */
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
         /**
          * <p>切片时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("SliceDuration")
         public Integer sliceDuration;
 
         /**
          * <p>切片Oss对象名，不包含后缀</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
          */
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;

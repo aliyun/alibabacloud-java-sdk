@@ -4,9 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -15,10 +23,17 @@ public class DescribePlayListResponseBody extends TeaModel {
 
     /**
      * <p>Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B960580D-26FA-5547-8AFC-3CDC812DBF27</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>49</p>
+     */
     @NameInMap("TotalNum")
     public Long totalNum;
 
@@ -68,33 +83,73 @@ public class DescribePlayListResponseBody extends TeaModel {
     }
 
     public static class DescribePlayListResponseBodyPlayList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("FirstFrameDuration")
         public String firstFrameDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("PlayDuration")
         public String playDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1675922209572</p>
+         */
         @NameInMap("PlayTs")
         public String playTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vod</p>
+         */
         @NameInMap("PlayType")
         public String playType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91488be2-8381-40c9-8494-e8afe22c4a2d</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>complete</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("StuckDuration")
         public String stuckDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0b736abf16724820210842673d9543</p>
+         */
         @NameInMap("TraceId")
         public String traceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("VideoDuration")
         public String videoDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>250314203f0171eebff17035d0b20102</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 

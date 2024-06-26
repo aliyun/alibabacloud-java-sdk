@@ -4,11 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaByFaceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2d3bf1e35a1e42b5ab338d701efa****</p>
+     */
     @NameInMap("EntityId")
     public String entityId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zxtest-huangxuan-2023-3-7-V1</p>
      */
     @NameInMap("FaceSearchToken")
     public String faceSearchToken;
@@ -16,14 +23,25 @@ public class SearchMediaByFaceRequest extends TeaModel {
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>https://<strong><strong>.oss-cn-shanghai.aliyuncs.com/input/huangxuan</strong></strong>.jpg</p>
      */
     @NameInMap("PersonImageUrl")
     public String personImageUrl;

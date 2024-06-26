@@ -7,6 +7,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     @NameInMap("MediaInfos")
     public java.util.List<BatchGetMediaInfosResponseBodyMediaInfos> mediaInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +36,80 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
 
     public static class BatchGetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1132.68</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30611502</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("FileStatus")
         public String fileStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_file</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
+         */
         @NameInMap("FormatName")
         public String formatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -180,29 +228,52 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
     }
 
     public static class BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:10Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:10Z</p>
+         */
         @NameInMap("DeletedTime")
         public String deletedTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
+         */
         @NameInMap("InputURL")
         public String inputURL;
 
         /**
          * <p>MediaId</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
          */
         @NameInMap("MediaId")
         public String mediaId;
@@ -210,30 +281,62 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @NameInMap("MediaTags")
         public String mediaTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>video</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:12Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;3&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>f48f0e4154976b2b8c45</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-beijing&quot;,&quot;snapshotRegular&quot;:&quot;example.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e6a6440b29eb60bd7c</strong></strong></strong>&quot;}]</p>
+         */
         @NameInMap("Snapshots")
         public String snapshots;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
+         */
         @NameInMap("SpriteImages")
         public String spriteImages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Init</p>
+         */
         @NameInMap("TranscodeStatus")
         public String transcodeStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>userDataTest</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -398,6 +501,10 @@ public class BatchGetMediaInfosResponseBody extends TeaModel {
         @NameInMap("MediaBasicInfo")
         public BatchGetMediaInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 

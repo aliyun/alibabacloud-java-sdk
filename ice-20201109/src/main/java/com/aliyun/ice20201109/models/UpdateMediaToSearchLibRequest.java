@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class UpdateMediaToSearchLibRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>019b82e24b37a1c2958dec38</strong></strong></p>
      */
     @NameInMap("MediaId")
     public String mediaId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("MsgBody")
     public String msgBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("SearchLibName")
     public String searchLibName;
 

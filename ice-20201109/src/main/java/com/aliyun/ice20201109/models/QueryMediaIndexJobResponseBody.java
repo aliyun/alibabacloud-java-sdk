@@ -4,15 +4,27 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaIndexJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("IndexJobInfoList")
     public java.util.List<QueryMediaIndexJobResponseBodyIndexJobInfoList> indexJobInfoList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -54,15 +66,31 @@ public class QueryMediaIndexJobResponseBody extends TeaModel {
     }
 
     public static class QueryMediaIndexJobResponseBodyIndexJobInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-11-21 11:33:51</p>
+         */
         @NameInMap("GmtFinish")
         public String gmtFinish;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-11-21 11:33:50</p>
+         */
         @NameInMap("GmtSubmit")
         public String gmtSubmit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mm</p>
+         */
         @NameInMap("IndexType")
         public String indexType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 

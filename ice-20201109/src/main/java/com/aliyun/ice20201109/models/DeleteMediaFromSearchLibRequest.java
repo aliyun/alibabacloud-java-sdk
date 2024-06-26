@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteMediaFromSearchLibRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("MsgBody")
     public String msgBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("SearchLibName")
     public String searchLibName;
 

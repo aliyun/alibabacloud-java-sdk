@@ -4,21 +4,45 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitLiveEditingJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.cn-shanghai.aliyuncs.com/test.mp4</a></p>
+     */
     @NameInMap("MediaURL")
     public String mediaURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>d7578s4h75ci945c14b</strong></strong></p>
+     */
     @NameInMap("VodMediaId")
     public String vodMediaId;
 

@@ -4,9 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultStorageLocationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>5A-CAAC-4850-A3AF-B74606</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitLiveSnapshotJobShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com/snapshot/callback">http://www.aliyun.com/snapshot/callback</a></p>
+     */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
@@ -27,6 +31,9 @@ public class SubmitLiveSnapshotJobShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
      */
     @NameInMap("TemplateId")
     public String templateId;

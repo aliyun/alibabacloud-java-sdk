@@ -7,9 +7,17 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
     @NameInMap("Jobs")
     public java.util.List<ListDynamicImageJobsResponseBodyJobs> jobs;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +51,17 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
     }
 
     public static class ListDynamicImageJobsResponseBodyJobsInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/object</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -73,9 +89,17 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
     }
 
     public static class ListDynamicImageJobsResponseBodyJobsOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Media</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -103,39 +127,79 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
     }
 
     public static class ListDynamicImageJobsResponseBodyJobs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:17:54Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:30:54Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
         @NameInMap("Input")
         public ListDynamicImageJobsResponseBodyJobsInput input;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:30:54Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SampleJob</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Output")
         public ListDynamicImageJobsResponseBodyJobsOutput output;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:17:54Z</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("TriggerSource")
         public String triggerSource;
 

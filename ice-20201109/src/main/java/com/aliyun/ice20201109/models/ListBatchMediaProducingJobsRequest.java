@@ -4,27 +4,59 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListBatchMediaProducingJobsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2023-06-05T15:59:59Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Script</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mRZkKAovub0xWVfH14he4Q==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-02T00:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Finished</p>
+     */
     @NameInMap("Status")
     public String status;
 

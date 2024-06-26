@@ -13,18 +13,38 @@ public class CreateAvatarTrainingJobRequest extends TeaModel {
     @NameInMap("AvatarName")
     public String avatarName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2DAvatar</p>
+     */
     @NameInMap("AvatarType")
     public String avatarType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
+     */
     @NameInMap("Portrait")
     public String portrait;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
+     */
     @NameInMap("Thumbnail")
     public String thumbnail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Transparent")
     public Boolean transparent;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
+     */
     @NameInMap("Video")
     public String video;
 

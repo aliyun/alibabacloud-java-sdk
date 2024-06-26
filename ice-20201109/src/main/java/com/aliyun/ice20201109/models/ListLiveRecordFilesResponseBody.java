@@ -7,18 +7,38 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
     @NameInMap("Files")
     public java.util.List<ListLiveRecordFilesResponseBodyFiles> files;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DE24625C-7C0F-4020-8448-****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -76,42 +96,90 @@ public class ListLiveRecordFilesResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordFilesResponseBodyFiles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2016-05-27T09:40:56Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2015-12-01T07:36:10Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>m3u8</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <strong>example:</strong>
+         * <p>640</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c4d7f0a4-b506-43f9-8de3-07732c3f****</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LiveRecordJob***</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c4d7f0a4-b506-43f9-8de3-07732c3f****</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;Type&quot;: &quot;oss&quot;, &quot;Endpoint&quot;:&quot;oss-cn-shanghai.aliyuncs.com&quot;, &quot;Bucket&quot;: &quot;test-bucket&quot; }</p>
+         */
         @NameInMap("RecordOutput")
         public String recordOutput;
 
         @NameInMap("RecordUrl")
         public String recordUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2015-12-01T07:36:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LiveStream***</p>
+         */
         @NameInMap("StreamUrl")
         public String streamUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>480</p>
+         */
         @NameInMap("Width")
         public Integer width;
 

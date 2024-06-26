@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetPublicMediaInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>icepublic-<strong><strong>14e501538aeef0a3140176f6</strong></strong></p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 

@@ -7,9 +7,17 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
     @NameInMap("Data")
     public SubmitCustomizedVoiceJobResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +51,17 @@ public class SubmitCustomizedVoiceJobResponseBody extends TeaModel {
     }
 
     public static class SubmitCustomizedVoiceJobResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
+         */
         @NameInMap("VoiceId")
         public String voiceId;
 

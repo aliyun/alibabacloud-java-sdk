@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDNAFilesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fb712a6890464059b1b2ea7c8647****</p>
      */
     @NameInMap("DBId")
     public String DBId;
@@ -18,6 +21,9 @@ public class DeleteDNAFilesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>41e6536e4f2250e2e9bf26cdea19****</p>
      */
     @NameInMap("PrimaryKeys")
     public String primaryKeys;

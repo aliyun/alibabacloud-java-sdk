@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SubmitIProductionJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cover</p>
      */
     @NameInMap("FunctionName")
     public String functionName;
@@ -16,6 +19,10 @@ public class SubmitIProductionJobRequest extends TeaModel {
     @NameInMap("Input")
     public SubmitIProductionJobRequestInput input;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Model&quot;:&quot;gif&quot;}</p>
+     */
     @NameInMap("JobParams")
     public String jobParams;
 
@@ -31,9 +38,17 @@ public class SubmitIProductionJobRequest extends TeaModel {
     @NameInMap("ScheduleConfig")
     public SubmitIProductionJobRequestScheduleConfig scheduleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;:1}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -109,12 +124,18 @@ public class SubmitIProductionJobRequest extends TeaModel {
     public static class SubmitIProductionJobRequestInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/object</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -145,12 +166,18 @@ public class SubmitIProductionJobRequest extends TeaModel {
     public static class SubmitIProductionJobRequestOutput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/object</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -179,9 +206,17 @@ public class SubmitIProductionJobRequest extends TeaModel {
     }
 
     public static class SubmitIProductionJobRequestScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5246b8d12a62433ab77845074039c3dc</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 

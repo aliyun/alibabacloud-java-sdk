@@ -4,24 +4,52 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetVideoListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>781111</p>
+     */
     @NameInMap("CateId")
     public Long cateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2017-01-11T12:59:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreationTime:Asc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2017-01-11T12:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Uploading,Normal</p>
+     */
     @NameInMap("Status")
     public String status;
 

@@ -10,6 +10,10 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
     @NameInMap("RecordTemplate")
     public GetLiveRecordTemplateResponseBodyRecordTemplate recordTemplate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C892855F-95DF-50D6-A28C-279ABDB76810</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,26 +39,43 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
     }
 
     public static class GetLiveRecordTemplateResponseBodyRecordTemplateRecordFormatList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7200</p>
+         */
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
         /**
          * <p>格式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m3u8</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>Oss对象名，不包含后缀</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{JobId}/{Sequence}{EscapedStartTime}{EscapedEndTime}</p>
          */
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("SliceDuration")
         public Integer sliceDuration;
 
         /**
          * <p>切片Oss对象名，不包含后缀</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
          */
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;
@@ -109,22 +130,29 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
     public static class GetLiveRecordTemplateResponseBodyRecordTemplate extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
-         * <br>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20T03:26:36Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>代表创建时间的资源属性字段</p>
-         * <br>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20T03:26:36Z</p>
          */
         @NameInMap("LastModified")
         public String lastModified;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test template</p>
          */
         @NameInMap("Name")
         public String name;
@@ -137,12 +165,18 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
 
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("Type")
         public String type;

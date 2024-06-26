@@ -4,12 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetMediaInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
+     */
     @NameInMap("InputURL")
     public String inputURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cdn</p>
+     */
     @NameInMap("OutputType")
     public String outputType;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddTemplateResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,30 +38,66 @@ public class AddTemplateResponseBody extends TeaModel {
     }
 
     public static class AddTemplateResponseBodyTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>参见Timeline模板Config文档</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
+         */
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
+         */
         @NameInMap("CreateSource")
         public String createSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
+         */
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>视频添加水印模板</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
+         */
         @NameInMap("PreviewMedia")
         public String previewMedia;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Timeline</p>
+         */
         @NameInMap("Type")
         public String type;
 

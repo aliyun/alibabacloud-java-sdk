@@ -7,6 +7,10 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
     @NameInMap("ContentAnalyzeConfig")
     public GetContentAnalyzeConfigResponseBodyContentAnalyzeConfig contentAnalyzeConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31FEC819-2344-5771-9366-9172DB0D26C9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
     }
 
     public static class GetContentAnalyzeConfigResponseBodyContentAnalyzeConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Auto")
         public Boolean auto;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEXT,FACE</p>
+         */
         @NameInMap("SaveType")
         public String saveType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S00000101-100070</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

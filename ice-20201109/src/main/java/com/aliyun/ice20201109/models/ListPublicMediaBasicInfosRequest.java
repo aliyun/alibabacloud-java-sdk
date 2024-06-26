@@ -7,21 +7,45 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     @NameInMap("BusinessType")
     public String businessType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IncludeFileBasicInfo")
     public Boolean includeFileBasicInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ticker-atmosphere</p>
+     */
     @NameInMap("MediaTagId")
     public String mediaTagId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pSa1SQ0wCe5pzVrQ6mWZEw==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -4,24 +4,52 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveTranscodeTemplatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>customized</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my_template</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>H.264</p>
+     */
     @NameInMap("VideoCodec")
     public String videoCodec;
 

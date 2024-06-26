@@ -10,6 +10,10 @@ public class QuerySearchIndexResponseBody extends TeaModel {
     @NameInMap("IndexStatus")
     public String indexStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mm</p>
+     */
     @NameInMap("IndexType")
     public String indexType;
 
@@ -18,10 +22,17 @@ public class QuerySearchIndexResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("SearchLibName")
     public String searchLibName;
 

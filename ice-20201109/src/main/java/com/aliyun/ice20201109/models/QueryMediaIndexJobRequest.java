@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class QueryMediaIndexJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c2e77390f75271ec802f0674a2ce6***</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("SearchLibName")
     public String searchLibName;
 

@@ -7,6 +7,10 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
     @NameInMap("DataKey")
     public GenerateKMSDataKeyResponseBodyDataKey dataKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class GenerateKMSDataKeyResponseBody extends TeaModel {
     }
 
     public static class GenerateKMSDataKeyResponseBodyDataKey extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ODZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmS7FmDBBQ0BkKsQrtRnidtPwirmDcS0ZuJCU41xxAAWk4Z8qsADfbV0b+i6kQmlvj79dJdGOvtX69Uycs901qOjop4bTS****</p>
+         */
         @NameInMap("CiphertextBlob")
         public String ciphertextBlob;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7906979c-8e06-46a2-be2d-68e3ccbc****</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>QmFzZTY0IGVuY29kZWQgcGxhaW50****</p>
+         */
         @NameInMap("Plaintext")
         public String plaintext;
 

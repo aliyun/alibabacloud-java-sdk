@@ -9,6 +9,9 @@ public class AlterSearchIndexResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;

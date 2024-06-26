@@ -4,21 +4,41 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
     @NameInMap("TemplateList")
     public java.util.List<ListLiveSnapshotTemplatesResponseBodyTemplateList> templateList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,18 +96,34 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListLiveSnapshotTemplatesResponseBodyTemplateList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T02:48:58Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TimeInterval")
         public Integer timeInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>custom</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSystemTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S00000001-100060</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

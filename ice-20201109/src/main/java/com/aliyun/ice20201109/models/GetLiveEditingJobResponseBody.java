@@ -7,6 +7,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     @NameInMap("LiveEditingJob")
     public GetLiveEditingJobResponseBodyLiveEditingJob liveEditingJob;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJobLiveStreamConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>app</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>domain.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>streamName</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 
@@ -73,6 +89,10 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJobMediaProduceConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Accurate</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
@@ -92,24 +112,52 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJobOutputMediaConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Bitrate")
         public Long bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test.mp4</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>480</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://testice-testbucket.oss-cn-shanghai.aliyuncs.com/test.mp4">https://testice-testbucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a></p>
+         */
         @NameInMap("MediaURL")
         public String mediaURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>outin-xxxxxx.oss-cn-shanghai.aliyuncs.com</p>
+         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VOD_NO_TRANSCODE</p>
+         */
         @NameInMap("VodTemplateGroupId")
         public String vodTemplateGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>640</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -177,48 +225,96 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveEditingJobResponseBodyLiveEditingJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[{\&quot;StartTime\&quot;: \&quot; 2021-06-21T08:01:00Z\&quot;,  \&quot;EndTime\&quot;: \&quot; 2021-06-21T08:03:00Z\&quot; }]</p>
+         */
         @NameInMap("Clips")
         public String clips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:52Z</p>
+         */
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:40Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
         @NameInMap("LiveStreamConfig")
         public GetLiveEditingJobResponseBodyLiveEditingJobLiveStreamConfig liveStreamConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>0cc6ba49eab379332c5b</strong></strong></p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
         @NameInMap("MediaProduceConfig")
         public GetLiveEditingJobResponseBodyLiveEditingJobMediaProduceConfig mediaProduceConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4</a></p>
+         */
         @NameInMap("MediaURL")
         public String mediaURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The specific parameter LiveStreamConfig is not valid.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:49Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         @NameInMap("OutputMediaConfig")
         public GetLiveEditingJobResponseBodyLiveEditingJobOutputMediaConfig outputMediaConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;value\&quot;}</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

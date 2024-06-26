@@ -7,9 +7,17 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
     @NameInMap("FileList")
     public java.util.List<ListLiveSnapshotFilesResponseBodyFileList> fileList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-02T22:22:22Z</p>
+     */
     @NameInMap("NextStartTime")
     public String nextStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +51,40 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
     }
 
     public static class ListLiveSnapshotFilesResponseBodyFileList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-02-02T22:22:22Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1619503516000</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsOverlay")
         public Boolean isOverlay;
 
         /**
          * <p>OSS bucket。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testbucket</p>
          */
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai.aliyuncs.com</p>
+         */
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 

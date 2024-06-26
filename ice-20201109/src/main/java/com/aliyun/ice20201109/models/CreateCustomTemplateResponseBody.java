@@ -7,6 +7,10 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
     @NameInMap("CustomTemplate")
     public CreateCustomTemplateResponseBodyCustomTemplate customTemplate;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +36,73 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
     }
 
     public static class CreateCustomTemplateResponseBodyCustomTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-19T02:04:31Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-04-19T02:04:31Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Remux</p>
+         */
         @NameInMap("Subtype")
         public String subtype;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;flv&quot;},&quot;Video&quot;:{},&quot;Audio&quot;:{}}</p>
+         */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-template</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TranscodeTemplate</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 

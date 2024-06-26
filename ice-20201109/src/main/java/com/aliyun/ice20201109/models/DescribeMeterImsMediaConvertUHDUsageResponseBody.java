@@ -7,6 +7,10 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsMediaConvertUHDUsageResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
     }
 
     public static class DescribeMeterImsMediaConvertUHDUsageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>308028</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SuperResolution.Standard.1080P</p>
+         */
         @NameInMap("Specification")
         public String specification;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1656950400</p>
+         */
         @NameInMap("Time")
         public Long time;
 

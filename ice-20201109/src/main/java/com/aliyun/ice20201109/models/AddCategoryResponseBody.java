@@ -7,6 +7,10 @@ public class AddCategoryResponseBody extends TeaModel {
     @NameInMap("Category")
     public AddCategoryResponseBodyCategory category;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,34 @@ public class AddCategoryResponseBody extends TeaModel {
     }
 
     public static class AddCategoryResponseBodyCategory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>45</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Level")
         public Long level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Type")
         public String type;
 

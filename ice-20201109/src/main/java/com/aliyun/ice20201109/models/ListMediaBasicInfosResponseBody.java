@@ -4,18 +4,34 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListMediaBasicInfosResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("MediaInfos")
     public java.util.List<ListMediaBasicInfosResponseBodyMediaInfos> mediaInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EqYpQbZ6Eh7+Zz8DxVYoQ==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>B7-7F87-4792-BFE9-63CD21</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,42 +81,94 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListMediaBasicInfosResponseBodyMediaInfosFileInfoListFileBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1912.13</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-08T16:52:04Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60.00000</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.mp4</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>14340962</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("FileStatus")
         public String fileStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_file</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
+         */
         @NameInMap("FormatName")
         public String formatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-08T16:52:07Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -235,69 +303,145 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
     }
 
     public static class ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ICE</p>
+         */
         @NameInMap("Biz")
         public String biz;
 
+        /**
+         * <strong>example:</strong>
+         * <p>opening</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3049</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-08T16:52:04Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-08T16:52:07Z</p>
+         */
         @NameInMap("DeletedTime")
         public String deletedTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
+         */
         @NameInMap("InputURL")
         public String inputURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>019b82e24b37a1c2958dec38</strong></strong></p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tags,tags2</p>
+         */
         @NameInMap("MediaTags")
         public String mediaTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>video</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-08T16:52:07Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123-123</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;3&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>f48f0e4154976b2b8c45</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-beijing&quot;,&quot;snapshotRegular&quot;:&quot;example.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e6a6440b29eb60bd7c</strong></strong></strong>&quot;}]</p>
+         */
         @NameInMap("Snapshots")
         public String snapshots;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
+         */
         @NameInMap("SpriteImages")
         public String spriteImages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Init</p>
+         */
         @NameInMap("TranscodeStatus")
         public String transcodeStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("UploadSource")
         public String uploadSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>userData</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -497,6 +641,10 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         @NameInMap("MediaBasicInfo")
         public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>019b82e24b37a1c2958dec38</strong></strong></p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 

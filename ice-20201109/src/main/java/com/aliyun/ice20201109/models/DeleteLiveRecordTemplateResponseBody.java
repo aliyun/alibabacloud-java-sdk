@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveRecordTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3E5330CF-B4C8-5BEF-AA6B-8E70BD20FAEE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

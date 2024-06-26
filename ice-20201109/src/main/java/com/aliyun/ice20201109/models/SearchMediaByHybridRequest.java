@@ -4,18 +4,38 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaByHybridRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-1</p>
+     */
     @NameInMap("SearchLibName")
     public String searchLibName;
 

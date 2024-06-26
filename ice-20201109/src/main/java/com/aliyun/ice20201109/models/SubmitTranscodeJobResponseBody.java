@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +39,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobInputGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -65,9 +77,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -97,18 +117,32 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigCombineConfigs extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 或 exclude</p>
          */
         @NameInMap("AudioIndex")
         public String audioIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20.0</p>
+         */
         @NameInMap("Duration")
         public Double duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("Start")
         public Double start;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 或 exclude</p>
          */
         @NameInMap("VideoIndex")
         public String videoIndex;
@@ -153,15 +187,31 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigEncryption extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MTYi00NDU0LTg5O****</p>
+         */
         @NameInMap("CipherText")
         public String cipherText;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://sample.com/path?CipherText=MTYi00NDU0LTg5O">https://sample.com/path?CipherText=MTYi00NDU0LTg5O</a>****</p>
+         */
         @NameInMap("DecryptKeyUri")
         public String decryptKeyUri;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrivateEncryption</p>
+         */
         @NameInMap("EncryptType")
         public String encryptType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>KMS</p>
+         */
         @NameInMap("KeyServiceType")
         public String keyServiceType;
 
@@ -205,9 +255,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsFile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -235,9 +293,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsTimeline extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ToEND</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:00:05</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -265,24 +331,44 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Dx")
         public String dx;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Dy")
         public String dy;
 
         @NameInMap("File")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsFile file;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TopLeft</p>
+         */
         @NameInMap("ReferPos")
         public String referPos;
 
         @NameInMap("Timeline")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParamsTimeline timeline;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -353,6 +439,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigImageWatermarksOverwriteParams overwriteParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -380,9 +470,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParamsFile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -410,12 +508,20 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>UTF-8</p>
+         */
         @NameInMap("CharEnc")
         public String charEnc;
 
         @NameInMap("File")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParamsFile file;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vtt</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -454,6 +560,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigSubtitlesOverwriteParams overwriteParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -481,33 +591,73 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarksOverwriteParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Adaptive")
         public String adaptive;
 
+        /**
+         * <strong>example:</strong>
+         * <p>#006400</p>
+         */
         @NameInMap("BorderColor")
         public String borderColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BorderWidth")
         public Integer borderWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试水印</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("FontAlpha")
         public String fontAlpha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>#006400</p>
+         */
         @NameInMap("FontColor")
         public String fontColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SimSun</p>
+         */
         @NameInMap("FontName")
         public String fontName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Left")
         public String left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Top")
         public String top;
 
@@ -602,6 +752,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTextWatermarksOverwriteParams overwriteParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -629,15 +783,31 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudioVolume extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-6</p>
+         */
         @NameInMap("IntegratedLoudnessTarget")
         public String integratedLoudnessTarget;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("LoudnessRangeTarget")
         public String loudnessRangeTarget;
 
+        /**
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("TruePeak")
         public String truePeak;
 
@@ -681,21 +851,45 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsAudio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Channels")
         public String channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAC</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aac_low</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Remove")
         public String remove;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44100</p>
+         */
         @NameInMap("Samplerate")
         public String samplerate;
 
@@ -766,6 +960,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsContainer extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mp4</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -785,9 +983,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsMuxConfigSegment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2,3</p>
+         */
         @NameInMap("ForceSegTime")
         public String forceSegTime;
 
@@ -930,57 +1136,129 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParamsVideo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("AbrMax")
         public String abrMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("Bufsize")
         public String bufsize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>H.264</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("Crf")
         public String crf;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280:800:0:140</p>
+         */
         @NameInMap("Crop")
         public String crop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>250</p>
+         */
         @NameInMap("Gop")
         public String gop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("LongShortMode")
         public String longShortMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9000</p>
+         */
         @NameInMap("Maxrate")
         public String maxrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280:800:0:140</p>
+         */
         @NameInMap("Pad")
         public String pad;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yuv420p</p>
+         */
         @NameInMap("PixFmt")
         public String pixFmt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>medium</p>
+         */
         @NameInMap("Preset")
         public String preset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Main</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Remove")
         public String remove;
 
+        /**
+         * <strong>example:</strong>
+         * <p>progressive</p>
+         */
         @NameInMap("ScanMode")
         public String scanMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -1202,6 +1480,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroupProcessConfigTranscodeOverwriteParams overwriteParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -1333,9 +1615,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>e37ebee5d98b4781897f6086e89f9c56</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
@@ -1363,12 +1653,24 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("InputUrl")
         public String inputUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -1404,48 +1706,108 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaAudioStreamInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.f</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>stereo</p>
+         */
         @NameInMap("ChannelLayout")
         public String channelLayout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Channels")
         public String channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAC (Advanced Audio Coding)</p>
+         */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aac</p>
+         */
         @NameInMap("CodecName")
         public String codecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0x000f</p>
+         */
         @NameInMap("CodecTag")
         public String codecTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[15][0][0][0]</p>
+         */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/44100</p>
+         */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>403.039989</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fltp</p>
+         */
         @NameInMap("SampleFmt")
         public String sampleFmt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44100</p>
+         */
         @NameInMap("SampleRate")
         public String sampleRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.473556</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/90000</p>
+         */
         @NameInMap("Timebase")
         public String timebase;
 
@@ -1577,39 +1939,87 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaFileBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>888.563</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>403.039999</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>file.m3u8</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31737</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("FileStatus")
         public String fileStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_file</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8</a></p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hls,applehttp</p>
+         */
         @NameInMap("FormatName")
         public String formatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>478</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>73e07de0f77171eca3fc7035d0b26402</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>848</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -1717,72 +2127,164 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutFileMetaVideoStreamInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>25.0</p>
+         */
         @NameInMap("Avg_fps")
         public String avgFps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>888.563</p>
+         */
         @NameInMap("Bit_rate")
         public String bitRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
+         */
         @NameInMap("Codec_long_name")
         public String codecLongName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>h264</p>
+         */
         @NameInMap("Codec_name")
         public String codecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0x001b</p>
+         */
         @NameInMap("Codec_tag")
         public String codecTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[27][0][0][0]</p>
+         */
         @NameInMap("Codec_tag_string")
         public String codecTagString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/50</p>
+         */
         @NameInMap("Codec_time_base")
         public String codecTimeBase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16:9</p>
+         */
         @NameInMap("Dar")
         public String dar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>403.039989</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25.0</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Has_b_frames")
         public String hasBFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>478</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10040</p>
+         */
         @NameInMap("NumFrames")
         public String numFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yuv420p</p>
+         */
         @NameInMap("PixFmt")
         public String pixFmt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>High</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Rotate")
         public String rotate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>478:477</p>
+         */
         @NameInMap("Sar")
         public String sar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.473556</p>
+         */
         @NameInMap("Start_time")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/90000</p>
+         */
         @NameInMap("Time_base")
         public String timeBase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>848</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -2019,12 +2521,24 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/{MediaId}/{JobId}.mp4</p>
+         */
         @NameInMap("OutputUrl")
         public String outputUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -2062,18 +2576,32 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigCombineConfigs extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 或 exclude</p>
          */
         @NameInMap("AudioIndex")
         public String audioIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20.0</p>
+         */
         @NameInMap("Duration")
         public Double duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("Start")
         public Double start;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 或 exclude</p>
          */
         @NameInMap("VideoIndex")
         public String videoIndex;
@@ -2118,15 +2646,31 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigEncryption extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>MTYi00NDU0LTg5O****</p>
+         */
         @NameInMap("CipherText")
         public String cipherText;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://sample.com/path?CipherText=MTYi00NDU0LTg5O">https://sample.com/path?CipherText=MTYi00NDU0LTg5O</a>****</p>
+         */
         @NameInMap("DecryptKeyUri")
         public String decryptKeyUri;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrivateEncryption</p>
+         */
         @NameInMap("EncryptType")
         public String encryptType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>KMS</p>
+         */
         @NameInMap("KeyServiceType")
         public String keyServiceType;
 
@@ -2170,9 +2714,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsFile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -2200,9 +2752,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsTimeline extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ToEND</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>00:00:05</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -2230,24 +2790,44 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Dx")
         public String dx;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Dy")
         public String dy;
 
         @NameInMap("File")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsFile file;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TopLeft</p>
+         */
         @NameInMap("ReferPos")
         public String referPos;
 
         @NameInMap("Timeline")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParamsTimeline timeline;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -2318,6 +2898,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigImageWatermarksOverwriteParams overwriteParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -2345,9 +2929,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParamsFile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -2375,12 +2967,20 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>UTF-8</p>
+         */
         @NameInMap("CharEnc")
         public String charEnc;
 
         @NameInMap("File")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParamsFile file;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vtt</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -2419,6 +3019,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigSubtitlesOverwriteParams overwriteParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -2446,33 +3050,73 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarksOverwriteParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Adaptive")
         public String adaptive;
 
+        /**
+         * <strong>example:</strong>
+         * <p>#006400</p>
+         */
         @NameInMap("BorderColor")
         public String borderColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BorderWidth")
         public Integer borderWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试水印</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("FontAlpha")
         public String fontAlpha;
 
+        /**
+         * <strong>example:</strong>
+         * <p>#006400</p>
+         */
         @NameInMap("FontColor")
         public String fontColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SimSun</p>
+         */
         @NameInMap("FontName")
         public String fontName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("FontSize")
         public Integer fontSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Left")
         public String left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Top")
         public String top;
 
@@ -2567,6 +3211,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTextWatermarksOverwriteParams overwriteParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -2594,15 +3242,31 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudioVolume extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-6</p>
+         */
         @NameInMap("IntegratedLoudnessTarget")
         public String integratedLoudnessTarget;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("LoudnessRangeTarget")
         public String loudnessRangeTarget;
 
+        /**
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("TruePeak")
         public String truePeak;
 
@@ -2646,21 +3310,45 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsAudio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Channels")
         public String channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAC</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aac_low</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Remove")
         public String remove;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44100</p>
+         */
         @NameInMap("Samplerate")
         public String samplerate;
 
@@ -2731,6 +3419,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsContainer extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mp4</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -2750,9 +3442,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsMuxConfigSegment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2,3</p>
+         */
         @NameInMap("ForceSegTime")
         public String forceSegTime;
 
@@ -2895,57 +3595,129 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParamsVideo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("AbrMax")
         public String abrMax;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
         @NameInMap("Bufsize")
         public String bufsize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>H.264</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>23</p>
+         */
         @NameInMap("Crf")
         public String crf;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280:800:0:140</p>
+         */
         @NameInMap("Crop")
         public String crop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>250</p>
+         */
         @NameInMap("Gop")
         public String gop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("LongShortMode")
         public String longShortMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9000</p>
+         */
         @NameInMap("Maxrate")
         public String maxrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280:800:0:140</p>
+         */
         @NameInMap("Pad")
         public String pad;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yuv420p</p>
+         */
         @NameInMap("PixFmt")
         public String pixFmt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>medium</p>
+         */
         @NameInMap("Preset")
         public String preset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Main</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Remove")
         public String remove;
 
+        /**
+         * <strong>example:</strong>
+         * <p>progressive</p>
+         */
         @NameInMap("ScanMode")
         public String scanMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -3167,6 +3939,10 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("OverwriteParams")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfigTranscodeOverwriteParams overwriteParams;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9547c6ad97cb4f2aaa29683ebd18d410</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -3268,9 +4044,17 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>e37ebee5d98b4781897f6086e89f9c56</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
@@ -3298,21 +4082,41 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-12T08:49:41Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-12T08:49:41Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
         @NameInMap("InputGroup")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListInputGroup> inputGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7d6a7e0d4db2457a8d45ff5d43e1bf0a</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("JobIndex")
         public Integer jobIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>transcode-job</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -3322,27 +4126,51 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
         @NameInMap("Output")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListOutput output;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8b2198504dd340b7b3c9842a74fc9baa</p>
+         */
         @NameInMap("ParentJobId")
         public String parentJobId;
 
         @NameInMap("ProcessConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListProcessConfig processConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
         @NameInMap("ScheduleConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobListScheduleConfig scheduleConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Init</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("SubmitResultJson")
         public java.util.Map<String, ?> submitResultJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-12T08:49:41Z</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user-data</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -3482,48 +4310,92 @@ public class SubmitTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class SubmitTranscodeJobResponseBodyTranscodeParentJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-12T08:49:41Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-12T08:49:41Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
         @NameInMap("InputGroup")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobInputGroup> inputGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("JobCount")
         public Integer jobCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>transcode-job</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("OutputGroup")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobOutputGroup> outputGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8b2198504dd340b7b3c9842a74fc9baa</p>
+         */
         @NameInMap("ParentJobId")
         public String parentJobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Percent")
         public Integer percent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
         @NameInMap("ScheduleConfig")
         public SubmitTranscodeJobResponseBodyTranscodeParentJobScheduleConfig scheduleConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-12T08:49:41Z</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
         @NameInMap("TranscodeJobList")
         public java.util.List<SubmitTranscodeJobResponseBodyTranscodeParentJobTranscodeJobList> transcodeJobList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("TriggerSource")
         public String triggerSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user-data</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

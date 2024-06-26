@@ -7,6 +7,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsSummaryResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeMeterImsSummaryResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8722</p>
+         */
         @NameInMap("EditingDuration")
         public String editingDuration;
 
@@ -44,15 +52,31 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
         @NameInMap("LiveSnapshotCount")
         public String liveSnapshotCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12356</p>
+         */
         @NameInMap("LiveTranscodeDuration")
         public Long liveTranscodeDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MpsAiDuration")
         public Long mpsAiDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>17337</p>
+         */
         @NameInMap("MpsTranscodeDuration")
         public Long mpsTranscodeDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("MpsTranscodeUHDDuration")
         public Long mpsTranscodeUHDDuration;
 

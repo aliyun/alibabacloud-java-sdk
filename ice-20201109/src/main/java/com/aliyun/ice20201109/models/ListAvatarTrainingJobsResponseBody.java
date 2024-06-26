@@ -7,9 +7,17 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListAvatarTrainingJobsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -46,33 +54,65 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         @NameInMap("AvatarDescription")
         public String avatarDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Avatar-XXX</p>
+         */
         @NameInMap("AvatarId")
         public String avatarId;
 
         @NameInMap("AvatarName")
         public String avatarName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2DAvatar</p>
+         */
         @NameInMap("AvatarType")
         public String avatarType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:40Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:40Z</p>
+         */
         @NameInMap("FirstTrainingTime")
         public String firstTrainingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><em><strong><strong>aded114489ea02e0addf93</strong></strong></em></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:40Z</p>
+         */
         @NameInMap("LastTrainingTime")
         public String lastTrainingTime;
 
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p><em><strong><strong>aded114489ea02e0addf93</strong></strong></em></p>
+         */
         @NameInMap("Portrait")
         public String portrait;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -175,6 +215,10 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         @NameInMap("AvatarTrainingJobList")
         public java.util.List<ListAvatarTrainingJobsResponseBodyDataAvatarTrainingJobList> avatarTrainingJobList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

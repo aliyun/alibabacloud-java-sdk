@@ -4,15 +4,27 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetSnapshotUrlsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SnapshotUrls")
     public java.util.List<String> snapshotUrls;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/ouoput.vtt">http://test-bucket.oss-cn-shanghai.aliyuncs.com/ouoput.vtt</a></p>
+     */
     @NameInMap("WebVTTUrl")
     public String webVTTUrl;
 

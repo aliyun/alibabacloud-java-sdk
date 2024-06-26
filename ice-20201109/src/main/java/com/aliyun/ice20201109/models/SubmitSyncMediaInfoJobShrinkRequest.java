@@ -10,12 +10,20 @@ public class SubmitSyncMediaInfoJobShrinkRequest extends TeaModel {
     @NameInMap("Input")
     public String inputShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-name</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user-data</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

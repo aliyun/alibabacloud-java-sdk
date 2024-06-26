@@ -4,18 +4,38 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetDefaultStorageLocationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>oss-test-bucket</p>
+     */
     @NameInMap("Bucket")
     public String bucket;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ice/dir</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>normal</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user_oss_bucket</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 

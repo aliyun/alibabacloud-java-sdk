@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetMediaProducingJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

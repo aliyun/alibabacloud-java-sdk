@@ -7,9 +7,17 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectAudioForCustomizedVoiceJobResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,6 +51,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
     }
 
     public static class DetectAudioForCustomizedVoiceJobResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Pass")
         public Boolean pass;
 

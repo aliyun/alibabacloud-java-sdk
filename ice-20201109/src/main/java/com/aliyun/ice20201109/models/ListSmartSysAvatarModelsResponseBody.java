@@ -4,12 +4,20 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SmartSysAvatarModelList")
     public java.util.List<ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList> smartSysAvatarModelList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,6 +51,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
     }
 
     public static class ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>yunqiao</p>
+         */
         @NameInMap("AvatarId")
         public String avatarId;
 
@@ -52,6 +64,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         @NameInMap("Bitrate")
         public Integer bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/coverDemo/yunqiao.mp4</a></p>
+         */
         @NameInMap("CoverUrl")
         public String coverUrl;
 
@@ -61,6 +77,10 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         @NameInMap("OutputMask")
         public Boolean outputMask;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4">http://ice-pub-media.myalicdn.com/smart/avatarModel/videoDemo/yunqiao.mp4</a></p>
+         */
         @NameInMap("VideoUrl")
         public String videoUrl;
 

@@ -6,21 +6,34 @@ import com.aliyun.tea.*;
 public class DescribeMeterImsMediaConvertUsageRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1656995036</p>
      */
     @NameInMap("EndTs")
     public Long endTs;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>86400</p>
      */
     @NameInMap("Interval")
     public Long interval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1654403036</p>
      */
     @NameInMap("StartTs")
     public Long startTs;

@@ -4,24 +4,52 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OpenAPI</p>
+     */
     @NameInMap("CreateSource")
     public String createSource;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreationTime:Desc</p>
+     */
     @NameInMap("SortType")
     public String sortType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Available</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Timeline</p>
+     */
     @NameInMap("Type")
     public String type;
 

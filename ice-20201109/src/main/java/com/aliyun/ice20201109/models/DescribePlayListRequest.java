@@ -6,40 +6,72 @@ import com.aliyun.tea.*;
 public class DescribePlayListRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1676170500011</p>
      */
     @NameInMap("BeginTs")
     public String beginTs;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1682474405173</p>
      */
     @NameInMap("EndTs")
     public String endTs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FirstFrameDuration</p>
+     */
     @NameInMap("OrderName")
     public String orderName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vod</p>
+     */
     @NameInMap("PlayType")
     public String playType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>complete</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0bc5e70516766285805381012d271e</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 

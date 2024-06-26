@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetSystemTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +36,59 @@ public class GetSystemTemplateResponseBody extends TeaModel {
     }
 
     public static class GetSystemTemplateResponseBodySystemTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Subtype")
         public Integer subtype;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("SubtypeName")
         public String subtypeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;m3u8&quot;},&quot;TransConfig&quot;:{&quot;TransMode&quot;:&quot;onepass&quot;},&quot;Video&quot;:{&quot;Codec&quot;:&quot;H.264&quot;,&quot;Maxrate&quot;:8000,&quot;Preset&quot;:&quot;medium&quot;,&quot;PixFmt&quot;:&quot;yuv420p&quot;,&quot;Width&quot;:2048,&quot;Bitrate&quot;:3500},&quot;Audio&quot;:{&quot;Codec&quot;:&quot;aac&quot;,&quot;Bitrate&quot;:160,&quot;Samplerate&quot;:44100,&quot;Channels&quot;:2}}</p>
+         */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S00000001-100060</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>M3U8-2K</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TranscodeTemplate</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 

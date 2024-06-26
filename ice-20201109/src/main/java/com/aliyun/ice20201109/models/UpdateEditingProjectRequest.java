@@ -4,30 +4,53 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateEditingProjectRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Reserving</p>
+     */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
     @NameInMap("ClipsParam")
     public String clipsParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https://<strong><strong>.com/6AB4D0E1E1C7446888</strong></strong>.png</p>
+     */
     @NameInMap("CoverURL")
     public String coverURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testtimeline001desciption</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>4ee4b97e27b525142a6b2</strong></strong></p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("Timeline")
     public String timeline;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testtimeline</p>
+     */
     @NameInMap("Title")
     public String title;
 

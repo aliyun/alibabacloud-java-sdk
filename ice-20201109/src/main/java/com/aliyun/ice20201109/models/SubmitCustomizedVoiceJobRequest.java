@@ -4,11 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitCustomizedVoiceJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/demo.MP3">https://your-bucket.oss-cn-shanghai.aliyuncs.com/demo.MP3</a></p>
+     */
     @NameInMap("DemoAudioMediaURL")
     public String demoAudioMediaURL;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xiaozhuan</p>
      */
     @NameInMap("VoiceId")
     public String voiceId;

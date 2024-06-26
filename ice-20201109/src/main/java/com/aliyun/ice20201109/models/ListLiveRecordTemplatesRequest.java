@@ -4,21 +4,41 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRecordTemplatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test template</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("Type")
     public String type;
 

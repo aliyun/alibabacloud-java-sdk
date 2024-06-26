@@ -4,11 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLiveRecordTemplateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

@@ -7,6 +7,10 @@ public class CreateSearchIndexResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

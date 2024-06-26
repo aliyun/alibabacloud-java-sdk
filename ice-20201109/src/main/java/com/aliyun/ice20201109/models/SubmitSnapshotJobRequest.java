@@ -10,6 +10,10 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     @NameInMap("Input")
     public SubmitSnapshotJobRequestInput input;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SampleJob</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -28,6 +32,10 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     @NameInMap("TemplateConfig")
     public SubmitSnapshotJobRequestTemplateConfig templateConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test parameter&quot;: &quot;test value&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -87,12 +95,18 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     public static class SubmitSnapshotJobRequestInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/object.mp4</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Media</p>
          */
         @NameInMap("Type")
         public String type;
@@ -123,12 +137,18 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     public static class SubmitSnapshotJobRequestOutput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/output-{Count}.jpg</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -157,6 +177,10 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     }
 
     public static class SubmitSnapshotJobRequestScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
@@ -176,24 +200,52 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     }
 
     public static class SubmitSnapshotJobRequestTemplateConfigOverwriteParamsSpriteSnapshotConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>480</p>
+         */
         @NameInMap("CellHeight")
         public Integer cellHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("CellWidth")
         public Integer cellWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>#000000</p>
+         */
         @NameInMap("Color")
         public String color;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Columns")
         public Integer columns;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Lines")
         public Integer lines;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Margin")
         public Integer margin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Padding")
         public Integer padding;
 
@@ -261,36 +313,76 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     }
 
     public static class SubmitSnapshotJobRequestTemplateConfigOverwriteParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("BlackLevel")
         public Integer blackLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>intra</p>
+         */
         @NameInMap("FrameType")
         public String frameType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>480</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Interval")
         public Long interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSptFrag")
         public Boolean isSptFrag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>70</p>
+         */
         @NameInMap("PixelBlackThreshold")
         public Integer pixelBlackThreshold;
 
         @NameInMap("SpriteSnapshotConfig")
         public SubmitSnapshotJobRequestTemplateConfigOverwriteParamsSpriteSnapshotConfig spriteSnapshotConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Time")
         public Long time;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Sprite</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -395,6 +487,9 @@ public class SubmitSnapshotJobRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         @NameInMap("TemplateId")
         public String templateId;

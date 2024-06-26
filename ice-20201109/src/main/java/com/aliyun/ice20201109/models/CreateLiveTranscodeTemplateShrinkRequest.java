@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my template</p>
      */
     @NameInMap("Name")
     public String name;
@@ -15,6 +18,9 @@ public class CreateLiveTranscodeTemplateShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("Type")
     public String type;

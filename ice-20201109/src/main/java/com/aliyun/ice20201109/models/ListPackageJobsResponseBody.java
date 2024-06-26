@@ -7,6 +7,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
     @NameInMap("PackageJobList")
     public ListPackageJobsResponseBodyPackageJobList packageJobList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ListPackageJobsResponseBody extends TeaModel {
     }
 
     public static class ListPackageJobsResponseBodyPackageJobListPackageJobsInputsInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -81,9 +93,17 @@ public class ListPackageJobsResponseBody extends TeaModel {
     }
 
     public static class ListPackageJobsResponseBodyPackageJobListPackageJobsOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -111,48 +131,100 @@ public class ListPackageJobsResponseBody extends TeaModel {
     }
 
     public static class ListPackageJobsResponseBodyPackageJobListPackageJobs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-07T14:00:32Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-07T15:00:32Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
         @NameInMap("Inputs")
         public java.util.List<ListPackageJobsResponseBodyPackageJobListPackageJobsInputs> inputs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7b38a5d86f1e47838927b6e7ccb11cbe</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Resource content bad.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-07T15:00:32Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Output")
         public ListPackageJobsResponseBodyPackageJobListPackageJobsOutput output;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5b40833e4c3e4d4e95a866abb9a42510</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-07T14:00:32Z</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("TriggerSource")
         public String triggerSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;param&quot;: &quot;value&quot;}</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -284,6 +356,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
     }
 
     public static class ListPackageJobsResponseBodyPackageJobList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>019daf5780f74831b0e1a767c9f1c178</p>
+         */
         @NameInMap("NextPageToken")
         public String nextPageToken;
 

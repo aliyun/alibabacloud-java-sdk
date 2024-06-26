@@ -10,9 +10,17 @@ public class AddCategoryRequest extends TeaModel {
     @NameInMap("CateName")
     public String cateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ParentId")
     public Long parentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,11 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitDNAJobShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</p>
+     */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2288c6ca184c0e47098a5b665e2a12****</p>
      */
     @NameInMap("DBId")
     public String DBId;
@@ -25,11 +32,18 @@ public class SubmitDNAJobShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5246b8d12a62433ab77845074039****</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3ca84a39a9024f19853b21be9cf9****</p>
      */
     @NameInMap("PrimaryKey")
     public String primaryKey;
@@ -40,9 +54,17 @@ public class SubmitDNAJobShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S00000101-100060</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>userData</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

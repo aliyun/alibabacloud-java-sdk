@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetEditingProjectRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>fb2101bf24b2754cb318787dc</strong></strong></p>
      */
     @NameInMap("ProjectId")
     public String projectId;

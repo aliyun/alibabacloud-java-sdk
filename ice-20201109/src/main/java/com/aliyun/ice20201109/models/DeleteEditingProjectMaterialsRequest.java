@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteEditingProjectMaterialsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em><strong><strong>cbd721b418a89a7dafb1dc</strong></strong></em>,<em><strong><strong>86f5d534c95997c55c96f</strong></strong></em></p>
      */
     @NameInMap("MaterialIds")
     public String materialIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>video</p>
      */
     @NameInMap("MaterialType")
     public String materialType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em><strong><strong>fb2101cb318</strong></strong></em></p>
      */
     @NameInMap("ProjectId")
     public String projectId;

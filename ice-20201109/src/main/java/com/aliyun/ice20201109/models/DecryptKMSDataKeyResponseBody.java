@@ -7,6 +7,10 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
     @NameInMap("DataKey")
     public DecryptKMSDataKeyResponseBodyDataKey dataKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
     }
 
     public static class DecryptKMSDataKeyResponseBodyDataKey extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>202b9877-5a25-46e3-a763-e20791b5****</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tRYXuCwgja12xxO1N/gZERDDCLw9doZEQiPDk/Bv****</p>
+         */
         @NameInMap("Plaintext")
         public String plaintext;
 

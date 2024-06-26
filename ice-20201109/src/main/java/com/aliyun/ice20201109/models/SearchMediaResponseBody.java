@@ -4,21 +4,37 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("MediaInfoList")
     public java.util.List<SearchMediaResponseBodyMediaInfoList> mediaInfoList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6F61C357-ACC0-57FB-876E-D58795335E59</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ScrollToken")
     public String scrollToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>163</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -76,12 +92,24 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>468.0;67.0;615.0;267.0</p>
+         */
         @NameInMap("Position")
         public String position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50.2</p>
+         */
         @NameInMap("Size")
         public Double size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("Timestamp")
         public Double timestamp;
 
@@ -120,30 +148,58 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10310250338</p>
+         */
         @NameInMap("FinegrainId")
         public String finegrainId;
 
         @NameInMap("FinegrainName")
         public String finegrainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("From")
         public Double from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99C64F6287</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.75287705</p>
+         */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85010D1</p>
+         */
         @NameInMap("TableBatchSeqId")
         public String tableBatchSeqId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.5</p>
+         */
         @NameInMap("To")
         public Double to;
 
         @NameInMap("Tracks")
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks> tracks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+         */
         @NameInMap("clipId")
         public String clipId;
 
@@ -238,9 +294,17 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+         */
         @NameInMap("FaceId")
         public String faceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10310250338</p>
+         */
         @NameInMap("LabelId")
         public String labelId;
 
@@ -253,6 +317,10 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("Occurrences")
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrences> occurrences;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vision</p>
+         */
         @NameInMap("Source")
         public String source;
 
@@ -320,18 +388,34 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaInfoListAiDataAsrInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+         */
         @NameInMap("ClipId")
         public String clipId;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("From")
         public Double from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("Timestamp")
         public Double timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.5</p>
+         */
         @NameInMap("To")
         public Double to;
 
@@ -383,18 +467,34 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaInfoListAiDataOcrInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5FE19530C7A422197535FE74F5DB2B9F</p>
+         */
         @NameInMap("ClipId")
         public String clipId;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("From")
         public Double from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("Timestamp")
         public Double timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.5</p>
+         */
         @NameInMap("To")
         public Double to;
 
@@ -489,19 +589,38 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaInfoListAiRoughData extends TeaModel {
         /**
          * <p>电视剧</p>
+         * 
+         * <strong>example:</strong>
+         * <p>视频AI分类</p>
          */
         @NameInMap("AiCategory")
         public String aiCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cd35b0b0025f71edbfcb472190a9xxxx</p>
+         */
         @NameInMap("AiJobId")
         public String aiJobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.json">http://xxxx.json</a></p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TEXT</p>
+         */
         @NameInMap("SaveType")
         public String saveType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SaveSuccess</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -553,42 +672,94 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaInfoListFileInfoListFileBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1912.13</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-30T02:02:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60.00000</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>164265080291300080527050.wav</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>324784</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("FileStatus")
         public String fileStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_file</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-18180984899.mp4">https://outin-d3f4681ddfd911ec99a600163e1403e7.oss-cn-shanghai.aliyuncs.com/sv/23d5cdd1-18180984899/23d5cdd1-18180984899.mp4</a></p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
+         */
         @NameInMap("FormatName")
         public String formatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>480</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-10T12:19Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -723,72 +894,152 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaInfoListMediaBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>IMS</p>
+         */
         @NameInMap("Biz")
         public String biz;
 
+        /**
+         * <strong>example:</strong>
+         * <p>opening</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>image</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f27b63_large_cover_url.jpg">https://dtlive-bj.oss-cn-beijing.aliyuncs.com/cover/e694372e-4f5b-4821-ae09-efd064f27b63_large_cover_url.jpg</a></p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-01T19:48Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-01T19:48Z</p>
+         */
         @NameInMap("DeletedTime")
         public String deletedTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://clipres/longvideo/material/voice/prod/20220418/07d7c799f6054dc3bbef250854cf84981650248140427</p>
+         */
         @NameInMap("InputURL")
         public String inputURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>132bd600fc3c71ec99476732a78f6402</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tags,tags2</p>
+         */
         @NameInMap("MediaTags")
         public String mediaTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>video</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-01T19:48Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123-123</p>
+         */
         @NameInMap("ReferenceId")
         public String referenceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;3&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>f48f0e4154976b2b8c45</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-beijing&quot;,&quot;snapshotRegular&quot;:&quot;example.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e6a6440b29eb60bd7c</strong></strong></strong>&quot;}]</p>
+         */
         @NameInMap("Snapshots")
         public String snapshots;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
+         */
         @NameInMap("SpriteImages")
         public String spriteImages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Init</p>
+         */
         @NameInMap("TranscodeStatus")
         public String transcodeStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("UploadSource")
         public String uploadSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>userData</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -999,6 +1250,10 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("MediaBasicInfo")
         public SearchMediaResponseBodyMediaInfoListMediaBasicInfo mediaBasicInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3b187b3620c8490886cfc2a9578c3ce6</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 

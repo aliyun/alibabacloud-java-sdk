@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetLiveSnapshotTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
      */
     @NameInMap("TemplateId")
     public String templateId;

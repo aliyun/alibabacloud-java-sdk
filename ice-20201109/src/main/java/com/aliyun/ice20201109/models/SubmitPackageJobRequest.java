@@ -10,6 +10,10 @@ public class SubmitPackageJobRequest extends TeaModel {
     @NameInMap("Inputs")
     public java.util.List<SubmitPackageJobRequestInputs> inputs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-name</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,6 +26,10 @@ public class SubmitPackageJobRequest extends TeaModel {
     @NameInMap("ScheduleConfig")
     public SubmitPackageJobRequestScheduleConfig scheduleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;param&quot;: &quot;value&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -73,12 +81,18 @@ public class SubmitPackageJobRequest extends TeaModel {
     public static class SubmitPackageJobRequestInputsInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -131,12 +145,18 @@ public class SubmitPackageJobRequest extends TeaModel {
     public static class SubmitPackageJobRequestOutput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -165,9 +185,17 @@ public class SubmitPackageJobRequest extends TeaModel {
     }
 
     public static class SubmitPackageJobRequestScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>e37ebee5d98b4781897f6086e89f9c56</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 

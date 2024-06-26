@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetCustomizedVoiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>xiaozhuan</p>
+     */
     @NameInMap("VoiceId")
     public String voiceId;
 

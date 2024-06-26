@@ -7,9 +7,17 @@ public class GetAvatarResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAvatarResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -46,24 +54,44 @@ public class GetAvatarResponseBody extends TeaModel {
         @NameInMap("AvatarDescription")
         public String avatarDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Avatar-XXXX</p>
+         */
         @NameInMap("AvatarId")
         public String avatarId;
 
         @NameInMap("AvatarName")
         public String avatarName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2DAvatar</p>
+         */
         @NameInMap("AvatarType")
         public String avatarType;
 
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
+         */
         @NameInMap("Portrait")
         public String portrait;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
+         */
         @NameInMap("Thumbnail")
         public String thumbnail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Transparent")
         public Boolean transparent;
 

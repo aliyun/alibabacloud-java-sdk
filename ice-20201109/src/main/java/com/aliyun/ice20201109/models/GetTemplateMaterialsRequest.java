@@ -4,11 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateMaterialsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;music.mp3&quot;,&quot;config.json&quot;,&quot;assets/1.jpg&quot;]</p>
+     */
     @NameInMap("FileList")
     public String fileList;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
      */
     @NameInMap("TemplateId")
     public String templateId;

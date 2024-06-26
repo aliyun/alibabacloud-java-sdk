@@ -6,19 +6,38 @@ import com.aliyun.tea.*;
 public class InsertMediaToSearchLibRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://example-test-****.mp4">http://example-test-****.mp4</a></p>
      */
     @NameInMap("Input")
     public String input;
 
+    /**
+     * <strong>example:</strong>
+     * <p>411bed50018971edb60b0764a0ec6***</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("MsgBody")
     public String msgBody;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("SearchLibName")
     public String searchLibName;
 

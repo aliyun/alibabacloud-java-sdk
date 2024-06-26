@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class DropSearchIndexRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mm</p>
      */
     @NameInMap("IndexType")
     public String indexType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1</p>
+     */
     @NameInMap("SearchLibName")
     public String searchLibName;
 

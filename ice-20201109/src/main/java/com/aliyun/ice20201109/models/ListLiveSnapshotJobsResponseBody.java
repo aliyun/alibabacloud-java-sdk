@@ -7,18 +7,38 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     @NameInMap("JobList")
     public java.util.List<ListLiveSnapshotJobsResponseBodyJobList> jobList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,12 +96,24 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     }
 
     public static class ListLiveSnapshotJobsResponseBodyJobListSnapshotOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testbucket</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai.aliyuncs.com</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -117,9 +149,17 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     }
 
     public static class ListLiveSnapshotJobsResponseBodyJobList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T02:48:58Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
@@ -129,15 +169,27 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
         @NameInMap("SnapshotOutput")
         public ListLiveSnapshotJobsResponseBodyJobListSnapshotOutput snapshotOutput;
 
+        /**
+         * <strong>example:</strong>
+         * <p>started</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TimeInterval")
         public Integer timeInterval;
 

@@ -9,6 +9,9 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
 
     /**
      * <p>RequestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +38,17 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetPublicMediaInfoResponseBodyMediaInfoDynamicMetaData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;AuditionUrl&quot;: &quot;<a href="http://example-bucket.cdn.domain.com/example.mp4">http://example-bucket.cdn.domain.com/example.mp4</a>&quot;, &quot;AuditionCount&quot;: 3}</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -65,57 +76,129 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.0</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>stereo</p>
+         */
         @NameInMap("ChannelLayout")
         public String channelLayout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Channels")
         public String channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAC (Advanced Audio Coding)</p>
+         */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aac</p>
+         */
         @NameInMap("CodecName")
         public String codecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0x6134706d</p>
+         */
         @NameInMap("CodecTag")
         public String codecTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mp4a</p>
+         */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/44100</p>
+         */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16.2</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>und</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>162</p>
+         */
         @NameInMap("NumFrames")
         public String numFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>High</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fltp</p>
+         */
         @NameInMap("SampleFmt")
         public String sampleFmt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44100</p>
+         */
         @NameInMap("SampleRate")
         public String sampleRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.000000</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/44100</p>
+         */
         @NameInMap("Timebase")
         public String timebase;
 
@@ -271,36 +354,80 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>192.0</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16.2</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.mp4</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>27007</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("FileStatus")
         public String fileStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_file</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.cdn.domain.com/example.mp4">http://example-bucket.cdn.domain.com/example.mp4</a></p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mp4</p>
+         */
         @NameInMap("FormatName")
         public String formatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -400,33 +527,73 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListSubtitleStreamInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>SubRip Text</p>
+         */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>srt</p>
+         */
         @NameInMap("CodecName")
         public String codecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>unicode</p>
+         */
         @NameInMap("CodecTag")
         public String codecTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>unicode</p>
+         */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>29.97</p>
+         */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>und</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Timebase")
         public String timebase;
 
@@ -518,75 +685,171 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetPublicMediaInfoResponseBodyMediaInfoFileInfoListVideoStreamInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>24.0</p>
+         */
         @NameInMap("AvgFPS")
         public String avgFPS;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001.594</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
+         */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>h264</p>
+         */
         @NameInMap("CodecName")
         public String codecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0x0000</p>
+         */
         @NameInMap("CodecTag")
         public String codecTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[0][0][0][0]</p>
+         */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/48</p>
+         */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0:1</p>
+         */
         @NameInMap("Dar")
         public String dar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>216.206706</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24.0</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("HasBFrames")
         public String hasBFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>540</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>und</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5184</p>
+         */
         @NameInMap("Nb_frames")
         public String nbFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5184</p>
+         */
         @NameInMap("NumFrames")
         public String numFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yuv420p</p>
+         */
         @NameInMap("PixFmt")
         public String pixFmt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>High</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Rotate")
         public String rotate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0:1</p>
+         */
         @NameInMap("Sar")
         public String sar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.081706</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/12288</p>
+         */
         @NameInMap("Timebase")
         public String timebase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>960</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -842,26 +1105,53 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>category</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:08Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:15Z</p>
+         */
         @NameInMap("DeletedTime")
         public String deletedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>MediaId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>icepublic-<strong><strong>14e501538aeef0a3140176f6</strong></strong></p>
          */
         @NameInMap("MediaId")
         public String mediaId;
@@ -869,24 +1159,52 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         @NameInMap("MediaTags")
         public String mediaTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>video</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:10Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
+         */
         @NameInMap("SpriteImages")
         public String spriteImages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>title</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;:&quot;value&quot;}</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -1033,6 +1351,10 @@ public class GetPublicMediaInfoResponseBody extends TeaModel {
         @NameInMap("MediaBasicInfo")
         public GetPublicMediaInfoResponseBodyMediaInfoMediaBasicInfo mediaBasicInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>icepublic-<strong><strong>14e501538aeef0a3140176f6</strong></strong></p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 

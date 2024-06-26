@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteLiveTranscodeTemplateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
      */
     @NameInMap("TemplateId")
     public String templateId;

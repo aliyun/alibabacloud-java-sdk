@@ -10,6 +10,10 @@ public class SubmitPackageJobShrinkRequest extends TeaModel {
     @NameInMap("Inputs")
     public String inputsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-name</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,6 +26,10 @@ public class SubmitPackageJobShrinkRequest extends TeaModel {
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;param&quot;: &quot;value&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

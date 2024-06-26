@@ -7,12 +7,20 @@ public class GetCategoriesResponseBody extends TeaModel {
     @NameInMap("Category")
     public GetCategoriesResponseBodyCategory category;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SubCategories")
     public GetCategoriesResponseBodySubCategories subCategories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("SubTotal")
     public Long subTotal;
 
@@ -54,18 +62,34 @@ public class GetCategoriesResponseBody extends TeaModel {
     }
 
     public static class GetCategoriesResponseBodyCategory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>46</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Level")
         public Long level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -117,21 +141,41 @@ public class GetCategoriesResponseBody extends TeaModel {
     }
 
     public static class GetCategoriesResponseBodySubCategoriesCategory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>129</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Level")
         public Long level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("SubTotal")
         public Long subTotal;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Type")
         public String type;
 

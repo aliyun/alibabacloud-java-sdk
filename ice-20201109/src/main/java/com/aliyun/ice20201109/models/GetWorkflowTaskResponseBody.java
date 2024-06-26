@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetWorkflowTaskResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>0C-7870-15FE-B96F-8880BB</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,21 +38,41 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowTaskResponseBodyWorkflowTaskWorkflow extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-27T10:02:12Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-29T02:06:19Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Common</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>63dca94c609de02ac0d1</strong></strong></strong></p>
+         */
         @NameInMap("WorkflowId")
         public String workflowId;
 
@@ -112,21 +135,48 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
         @NameInMap("ActivityResults")
         public String activityResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-04T02:05:17Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-01-04T02:06:19Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Succeed</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>4215e042b3966ca5441e</strong></strong></strong></p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;Type&quot;: &quot;Media&quot;,
+         *       &quot;Media&quot;: &quot;<strong><strong><strong>30706071edbfe290b488</strong></strong></strong>&quot;
+         * }</p>
+         */
         @NameInMap("TaskInput")
         public String taskInput;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
+         */
         @NameInMap("UserData")
         public String userData;
 

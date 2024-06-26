@@ -4,18 +4,34 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaByAILabelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("MediaList")
     public java.util.List<SearchMediaByAILabelResponseBodyMediaList> mediaList;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -65,12 +81,24 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
     }
 
     public static class SearchMediaByAILabelResponseBodyMediaListAiDataAiLabelInfoOccurrencesTracks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>468.0;67.0;615.0;267.0</p>
+         */
         @NameInMap("Position")
         public String position;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Size")
         public Double size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("Timestamp")
         public Double timestamp;
 
@@ -106,30 +134,58 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
     }
 
     public static class SearchMediaByAILabelResponseBodyMediaListAiDataAiLabelInfoOccurrences extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>158730355E4B82257D8AA1583A58****</p>
+         */
         @NameInMap("ClipId")
         public String clipId;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>103102503**</p>
+         */
         @NameInMap("FinegrainId")
         public String finegrainId;
 
         @NameInMap("FinegrainName")
         public String finegrainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("From")
         public Double from;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://service-****-public.oss-cn-hangzhou.aliyuncs.com/1563457****438522/service-image/f788974f-9595-43b2-a478-7c7a1afb****.jpg">https://service-****-public.oss-cn-hangzhou.aliyuncs.com/1563457****438522/service-image/f788974f-9595-43b2-a478-7c7a1afb****.jpg</a></p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.75287705</p>
+         */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85010D1**</p>
+         */
         @NameInMap("TableBatchSeqId")
         public String tableBatchSeqId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.5</p>
+         */
         @NameInMap("To")
         public Double to;
 
@@ -227,9 +283,17 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5FE19530C7A422197535FE74F5DB****</p>
+         */
         @NameInMap("FaceId")
         public String faceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>103102503**</p>
+         */
         @NameInMap("LabelId")
         public String labelId;
 
@@ -242,6 +306,10 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         @NameInMap("Occurrences")
         public java.util.List<SearchMediaByAILabelResponseBodyMediaListAiDataAiLabelInfoOccurrences> occurrences;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vision</p>
+         */
         @NameInMap("Source")
         public String source;
 
@@ -309,18 +377,34 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
     }
 
     public static class SearchMediaByAILabelResponseBodyMediaListAiDataAsrInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5FE19530C7A422197535FE74F5DB****</p>
+         */
         @NameInMap("ClipId")
         public String clipId;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("From")
         public Double from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("Timestamp")
         public Double timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.5</p>
+         */
         @NameInMap("To")
         public Double to;
 
@@ -372,18 +456,34 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
     }
 
     public static class SearchMediaByAILabelResponseBodyMediaListAiDataOcrInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5FE19530C7A422197535FE74F5DB****</p>
+         */
         @NameInMap("ClipId")
         public String clipId;
 
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("From")
         public Double from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.4</p>
+         */
         @NameInMap("Timestamp")
         public Double timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2.5</p>
+         */
         @NameInMap("To")
         public Double to;
 
@@ -479,36 +579,72 @@ public class SearchMediaByAILabelResponseBody extends TeaModel {
         @NameInMap("AiData")
         public SearchMediaByAILabelResponseBodyMediaListAiData aiData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333">http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333</a>****</p>
+         */
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-11-14T09:15:50Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12.2</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1c6ce34007d571ed94667630a6bc****</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-11-14T09:15:50Z</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10897890</p>
+         */
         @NameInMap("Size")
         public Long size;
 
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
+         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 

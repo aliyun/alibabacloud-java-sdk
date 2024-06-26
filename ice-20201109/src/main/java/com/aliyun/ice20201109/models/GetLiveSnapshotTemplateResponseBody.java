@@ -4,30 +4,62 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-02T22:22:22Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-02T22:22:22Z</p>
+     */
     @NameInMap("LastModified")
     public String lastModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>snapshot/{JobId}.jpg</p>
+     */
     @NameInMap("OverwriteFormat")
     public String overwriteFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
+     */
     @NameInMap("SequenceFormat")
     public String sequenceFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TimeInterval")
     public Integer timeInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>custom</p>
+     */
     @NameInMap("Type")
     public String type;
 

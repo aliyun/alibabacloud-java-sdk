@@ -4,18 +4,34 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaByMultimodalResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("MediaList")
     public java.util.List<SearchMediaByMultimodalResponseBodyMediaList> mediaList;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -65,12 +81,24 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
     }
 
     public static class SearchMediaByMultimodalResponseBodyMediaListClipInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("From")
         public Double from;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.2</p>
+         */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("To")
         public Double to;
 
@@ -109,6 +137,10 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
         @NameInMap("ClipInfo")
         public java.util.List<SearchMediaByMultimodalResponseBodyMediaListClipInfo> clipInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a18936e0e28771edb59ae6f6f47a****</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 

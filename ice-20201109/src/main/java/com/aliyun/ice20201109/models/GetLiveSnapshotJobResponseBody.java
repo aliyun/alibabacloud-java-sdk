@@ -4,45 +4,85 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLiveSnapshotJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com/snapshot/callback">http://www.aliyun.com/snapshot/callback</a></p>
+     */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-02T22:22:22Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-02T22:22:22Z</p>
+     */
     @NameInMap("LastModified")
     public String lastModified;
 
+    /**
+     * <strong>example:</strong>
+     * <p>snapshot/{JobId}.jpg</p>
+     */
     @NameInMap("OverwriteFormat")
     public String overwriteFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
+     */
     @NameInMap("SequenceFormat")
     public String sequenceFormat;
 
     @NameInMap("SnapshotOutput")
     public GetLiveSnapshotJobResponseBodySnapshotOutput snapshotOutput;
 
+    /**
+     * <strong>example:</strong>
+     * <p>started</p>
+     */
     @NameInMap("Status")
     public String status;
 
     @NameInMap("StreamInput")
     public GetLiveSnapshotJobResponseBodyStreamInput streamInput;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TimeInterval")
     public Integer timeInterval;
 
@@ -164,12 +204,24 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveSnapshotJobResponseBodySnapshotOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>testbucket</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai.aliyuncs.com</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -205,9 +257,17 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveSnapshotJobResponseBodyStreamInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp://<a href="http://www.aliyun.com/stream">www.aliyun.com/stream</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

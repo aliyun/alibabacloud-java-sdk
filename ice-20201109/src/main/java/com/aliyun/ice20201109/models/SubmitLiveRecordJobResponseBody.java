@@ -4,9 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitLiveRecordJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

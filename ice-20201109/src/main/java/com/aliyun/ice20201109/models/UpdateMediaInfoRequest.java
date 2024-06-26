@@ -4,39 +4,87 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AppendTags")
     public Boolean appendTags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("BusinessType")
     public String businessType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3048</p>
+     */
     @NameInMap("CateId")
     public Long cateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>defaultCategory</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png</a></p>
+     */
     @NameInMap("CoverURL")
     public String coverURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>defaultDescription</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
+     */
     @NameInMap("InputURL")
     public String inputURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>updateTags1,updateTags2</p>
+     */
     @NameInMap("MediaTags")
     public String mediaTags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
     @NameInMap("ReferenceId")
     public String referenceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>defaultTitle</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>userData</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

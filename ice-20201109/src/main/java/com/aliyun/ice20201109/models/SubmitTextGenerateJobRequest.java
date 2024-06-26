@@ -13,6 +13,10 @@ public class SubmitTextGenerateJobRequest extends TeaModel {
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MarketingCopy</p>
+     */
     @NameInMap("Type")
     public String type;
 
