@@ -10,6 +10,10 @@ public class GetPlayInfoResponseBody extends TeaModel {
     @NameInMap("PlayInfoList")
     public java.util.List<GetPlayInfoResponseBodyPlayInfoList> playInfoList;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,27 +50,51 @@ public class GetPlayInfoResponseBody extends TeaModel {
         @NameInMap("CateId")
         public Long cateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https://***.oss-cn-shanghai.aliyuncs.com/cover/281c64d6-b5fb-4c57-97cd-84da56a8b151_large_cover_url.jpg</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-22T10:07:31+08:00</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2eea77a61c7b4ddd95bec34a6f65b***</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
         @NameInMap("MediaTags")
         public String mediaTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>video</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testTitle</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -150,72 +178,164 @@ public class GetPlayInfoResponseBody extends TeaModel {
     }
 
     public static class GetPlayInfoResponseBodyPlayInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("BitDepth")
         public Integer bitDepth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-10T02:28:49Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HD</p>
+         */
         @NameInMap("Definition")
         public String definition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9.0464</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Encrypt")
         public Long encrypt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliyunVoDEncryption</p>
+         */
         @NameInMap("EncryptType")
         public String encryptType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://outin-***.oss-cn-shanghai.aliyuncs.com/sv/43a68ee9-181809b6aba/43a68ee9-181809b6aba.mpeg">http://outin-***.oss-cn-shanghai.aliyuncs.com/sv/43a68ee9-181809b6aba/43a68ee9-181809b6aba.mpeg</a></p>
+         */
         @NameInMap("FileURL")
         public String fileURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mp4</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HDR</p>
+         */
         @NameInMap("HDRType")
         public String HDRType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36c9d38e70bf43ed9f7f8f48d6356***</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-13T11:39:41.714+08:00</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("NarrowBandType")
         public String narrowBandType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https://***.aliyuncdn.com/sv/756bee1-17f980f0945/756bee1-17f980f0945.mp4</p>
+         */
         @NameInMap("PlayURL")
         public String playURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>418112</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;ims.audioServiceType\&quot;: \&quot;AudioEnhancement\&quot;}&quot;</p>
+         */
         @NameInMap("StreamTags")
         public String streamTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>video</p>
+         */
         @NameInMap("StreamType")
         public String streamType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("TransTemplateType")
         public String transTemplateType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5bed88672b1e2520ead228935ed51***</p>
+         */
         @NameInMap("WatermarkId")
         public String watermarkId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Width")
         public Long width;
 

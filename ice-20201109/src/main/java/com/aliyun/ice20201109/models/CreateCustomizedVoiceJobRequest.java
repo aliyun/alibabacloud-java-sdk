@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateCustomizedVoiceJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>female</p>
      */
     @NameInMap("Gender")
     public String gender;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>story</p>
      */
     @NameInMap("Scenario")
     public String scenario;
@@ -21,6 +27,9 @@ public class CreateCustomizedVoiceJobRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xiaozhuan</p>
      */
     @NameInMap("VoiceId")
     public String voiceId;

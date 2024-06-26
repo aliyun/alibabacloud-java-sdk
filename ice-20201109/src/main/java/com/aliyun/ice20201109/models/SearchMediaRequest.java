@@ -4,15 +4,27 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2d3bf1e35a1e42b5ab338d701efa7603</p>
+     */
     @NameInMap("EntityId")
     public String entityId;
 
     @NameInMap("Match")
     public String match;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -22,6 +34,10 @@ public class SearchMediaRequest extends TeaModel {
     @NameInMap("SearchLibName")
     public String searchLibName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>utcCreate:Desc, utcModified:Desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 

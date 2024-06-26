@@ -7,9 +7,17 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListCustomizedVoicesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +51,24 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
     }
 
     public static class ListCustomizedVoicesResponseBodyDataCustomizedVoiceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>4d5e829d498aaf966b119348</strong></strong></p>
+         */
         @NameInMap("DemoAudioMediaId")
         public String demoAudioMediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>male</p>
+         */
         @NameInMap("Gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>story</p>
+         */
         @NameInMap("Scenario")
         public String scenario;
 
@@ -58,6 +78,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         @NameInMap("VoiceDesc")
         public String voiceDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
+         */
         @NameInMap("VoiceId")
         public String voiceId;
 
@@ -131,6 +155,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         @NameInMap("CustomizedVoiceList")
         public java.util.List<ListCustomizedVoicesResponseBodyDataCustomizedVoiceList> customizedVoiceList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>41</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

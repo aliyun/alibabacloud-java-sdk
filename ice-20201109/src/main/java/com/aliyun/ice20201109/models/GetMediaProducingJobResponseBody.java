@@ -7,6 +7,10 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
     @NameInMap("MediaProducingJob")
     public GetMediaProducingJobResponseBodyMediaProducingJob mediaProducingJob;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>83B7-7F87-4792-BFE9-63CD2137</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,54 +36,114 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
     }
 
     public static class GetMediaProducingJobResponseBodyMediaProducingJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;VideoArray&quot;:[&quot;<strong><strong>05512043f49f697f7425</strong></strong>&quot;,&quot;<strong><strong>05512043f49f697f7425</strong></strong>&quot;,&quot;<strong><strong>05512043f49f697f7425</strong></strong>&quot;]}</p>
+         */
         @NameInMap("ClipsParam")
         public String clipsParam;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ExceededMaximumValue</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:52Z</p>
+         */
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:40Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30.500000</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>0cc6ba49eab379332c5b</strong></strong></p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example2.mp4</a></p>
+         */
         @NameInMap("MediaURL")
         public String mediaURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The specified &quot;Width_Height&quot; has exceeded maximum value.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:49Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Failed</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("SubJobMaterials")
         public String subJobMaterials;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>6e76134d739cc3e85d3e</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;}]}]}</p>
+         */
         @NameInMap("Timeline")
         public String timeline;
 
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>332c5b0cc6ba49eab379</strong></strong></p>
+         */
         @NameInMap("VodMediaId")
         public String vodMediaId;
 

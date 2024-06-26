@@ -7,6 +7,10 @@ public class GetPackageJobResponseBody extends TeaModel {
     @NameInMap("PackageJob")
     public GetPackageJobResponseBodyPackageJob packageJob;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetPackageJobResponseBody extends TeaModel {
     }
 
     public static class GetPackageJobResponseBodyPackageJobInputsInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -81,9 +93,17 @@ public class GetPackageJobResponseBody extends TeaModel {
     }
 
     public static class GetPackageJobResponseBodyPackageJobOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.m3u8</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -111,51 +131,103 @@ public class GetPackageJobResponseBody extends TeaModel {
     }
 
     public static class GetPackageJobResponseBodyPackageJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-08T11:34:05Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-08T11:44:05Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
         @NameInMap("Inputs")
         public java.util.List<GetPackageJobResponseBodyPackageJobInputs> inputs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ab4802364a2e49208c99efab82dfa8e8</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Resource content bad.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-08T11:44:05Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-name</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Output")
         public GetPackageJobResponseBodyPackageJobOutput output;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/output.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/output.m3u8</a></p>
+         */
         @NameInMap("OutputUrl")
         public String outputUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>36f3fee40aa047c0b067d0fb85edc12b</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Init</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-09-08T11:34:05Z</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
         @NameInMap("TriggerSource")
         public String triggerSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;param&quot;: &quot;value&quot;}</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

@@ -7,18 +7,38 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     @NameInMap("LiveRecordJobs")
     public java.util.List<ListLiveRecordJobsResponseBodyLiveRecordJobs> liveRecordJobs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A27DFFA4-F272-5563-8363-CB0BC42740BA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>180</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,12 +96,24 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordJobsResponseBodyLiveRecordJobsRecordOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>imsbucket1</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -117,9 +149,17 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordJobsResponseBodyLiveRecordJobsStreamInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp://example-live.com/live/stream1</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -149,12 +189,18 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     public static class ListLiveRecordJobsResponseBodyLiveRecordJobs extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
-         * <br>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20T03:26:36Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
@@ -166,6 +212,9 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
         /**
          * <p>回调地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
          */
         @NameInMap("NotifyUrl")
         public String notifyUrl;
@@ -173,6 +222,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
         @NameInMap("RecordOutput")
         public ListLiveRecordJobsResponseBodyLiveRecordJobsRecordOutput recordOutput;
 
+        /**
+         * <strong>example:</strong>
+         * <p>paused</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -181,10 +234,17 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
         /**
          * <p>录制模板ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test template</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

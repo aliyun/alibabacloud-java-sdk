@@ -4,15 +4,31 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitStandardCustomizedVoiceJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong>,<strong><strong>571c704445f9a0ee011406c2</strong></strong>,<strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
+     */
     @NameInMap("Audios")
     public String audios;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
+     */
     @NameInMap("Authentication")
     public String authentication;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/demo.mp3">https://your-bucket.oss-cn-shanghai.aliyuncs.com/demo.mp3</a></p>
+     */
     @NameInMap("DemoAudioMediaURL")
     public String demoAudioMediaURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>female</p>
+     */
     @NameInMap("Gender")
     public String gender;
 

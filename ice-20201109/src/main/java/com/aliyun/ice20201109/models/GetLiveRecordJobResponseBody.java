@@ -10,6 +10,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
     @NameInMap("RecordJob")
     public GetLiveRecordJobResponseBodyRecordJob recordJob;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B57A046C-CE33-5FBB-B57A-D2B89ACF6907</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,12 +39,24 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveRecordJobResponseBodyRecordJobRecordOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>imsbucket1</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai.aliyuncs.com</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -76,9 +92,17 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveRecordJobResponseBodyRecordJobStreamInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp://example.com/app/stream</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -108,14 +132,19 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
     public static class GetLiveRecordJobResponseBodyRecordJob extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
-         * <br>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20T02:48:58Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ab0e3e76-1e9d-11ed-ba64-0c42a1b73d66</p>
          */
         @NameInMap("JobId")
         public String jobId;
@@ -128,6 +157,9 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
         /**
          * <p>回调地址</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
          */
         @NameInMap("NotifyUrl")
         public String notifyUrl;
@@ -137,6 +169,9 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>paused</p>
          */
         @NameInMap("Status")
         public String status;
@@ -146,12 +181,18 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
         /**
          * <p>录制模板ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>录制模板ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test template</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

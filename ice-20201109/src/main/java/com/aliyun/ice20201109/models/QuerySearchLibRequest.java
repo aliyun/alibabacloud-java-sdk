@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QuerySearchLibRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1</p>
      */
     @NameInMap("SearchLibName")
     public String searchLibName;

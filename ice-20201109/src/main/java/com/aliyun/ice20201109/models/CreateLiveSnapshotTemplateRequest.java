@@ -4,9 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveSnapshotTemplateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>snapshot/{JobId}.jpg</p>
+     */
     @NameInMap("OverwriteFormat")
     public String overwriteFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
+     */
     @NameInMap("SequenceFormat")
     public String sequenceFormat;
 
@@ -18,6 +26,9 @@ public class CreateLiveSnapshotTemplateRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TimeInterval")
     public Integer timeInterval;

@@ -10,6 +10,10 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     @NameInMap("Input")
     public String inputShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SampleJob</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -28,6 +32,10 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     @NameInMap("TemplateConfig")
     public String templateConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test parameter&quot;: &quot;test value&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

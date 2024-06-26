@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class SubmitLiveRecordJobRequest extends TeaModel {
     /**
      * <p>代表资源名称的资源属性字段</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>live stream record 1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>回调地址</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
      */
     @NameInMap("NotifyUrl")
     public String notifyUrl;
@@ -32,8 +37,10 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
 
     /**
      * <p>录制模板ID</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -84,14 +91,25 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
     }
 
     public static class SubmitLiveRecordJobRequestRecordOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>imsbucket1</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("Type")
         public String type;
@@ -130,10 +148,17 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
     public static class SubmitLiveRecordJobRequestStreamInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp://example.com/live/stream1</p>
+         */
         @NameInMap("Url")
         public String url;
 

@@ -7,6 +7,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
     @NameInMap("JobList")
     public java.util.List<QueryDNAJobListResponseBodyJobList> jobList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class QueryDNAJobListResponseBody extends TeaModel {
     }
 
     public static class QueryDNAJobListResponseBodyJobListInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1b1b9cd148034739af413150fded****</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Media</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -62,39 +74,83 @@ public class QueryDNAJobListResponseBody extends TeaModel {
     }
 
     public static class QueryDNAJobListResponseBodyJobList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;InvalidParameter.ResourceNotFound&quot;</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;&quot;:&quot;video&quot;}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-28T03:21:37Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2288c6ca184c0e47098a5b665e2a12****</p>
+         */
         @NameInMap("DBId")
         public String DBId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://test_bucket.oss-cn-shanghai.aliyuncs.com/fingerprint/video/search_result/5/5.txt">http://test_bucket.oss-cn-shanghai.aliyuncs.com/fingerprint/video/search_result/5/5.txt</a></p>
+         */
         @NameInMap("DNAResult")
         public String DNAResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-12-28T03:21:44Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e47098a5b665e2a12****</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Input")
         public QueryDNAJobListResponseBodyJobListInput input;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;The resource operated \&quot;a887d0b***d805ef6f7f6786302\&quot; cannot be found&quot;</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3ca84a39a9024f19853b21be9cf9****</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Queuing</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testdna</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

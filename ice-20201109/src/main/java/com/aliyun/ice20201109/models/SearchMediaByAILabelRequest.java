@@ -4,27 +4,55 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaByAILabelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Ocr</p>
+     */
     @NameInMap("MultimodalSearchType")
     public String multimodalSearchType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("SearchLibName")
     public String searchLibName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreationTime:Desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SpecificSearch")
     public Boolean specificSearch;
 

@@ -86,8 +86,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建媒资分类
-     *
+     * <b>summary</b> : 
+     * <p>创建媒资分类</p>
+     * 
      * @param request AddCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddCategoryResponse
@@ -125,8 +126,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建媒资分类
-     *
+     * <b>summary</b> : 
+     * <p>创建媒资分类</p>
+     * 
      * @param request AddCategoryRequest
      * @return AddCategoryResponse
      */
@@ -136,8 +138,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 剪辑工程增加素材
-     *
+     * <b>summary</b> : 
+     * <p>剪辑工程增加素材</p>
+     * 
      * @param request AddEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddEditingProjectMaterialsResponse
@@ -171,8 +174,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 剪辑工程增加素材
-     *
+     * <b>summary</b> : 
+     * <p>剪辑工程增加素材</p>
+     * 
      * @param request AddEditingProjectMaterialsRequest
      * @return AddEditingProjectMaterialsResponse
      */
@@ -182,8 +186,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 收藏公共媒资
-     *
+     * <b>summary</b> : 
+     * <p>收藏公共媒资</p>
+     * 
      * @param request AddFavoritePublicMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddFavoritePublicMediaResponse
@@ -213,8 +218,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 收藏公共媒资
-     *
+     * <b>summary</b> : 
+     * <p>收藏公共媒资</p>
+     * 
      * @param request AddFavoritePublicMediaRequest
      * @return AddFavoritePublicMediaResponse
      */
@@ -224,8 +230,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 为媒资增加标注信息
-     *
+     * <b>summary</b> : 
+     * <p>为媒资增加标注信息</p>
+     * 
      * @param request AddMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddMediaMarksResponse
@@ -259,8 +266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 为媒资增加标注信息
-     *
+     * <b>summary</b> : 
+     * <p>为媒资增加标注信息</p>
+     * 
      * @param request AddMediaMarksRequest
      * @return AddMediaMarksResponse
      */
@@ -270,8 +278,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary AddTemplate
-     *
+     * <b>summary</b> : 
+     * <p>AddTemplate</p>
+     * 
      * @param request AddTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddTemplateResponse
@@ -331,8 +340,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary AddTemplate
-     *
+     * <b>summary</b> : 
+     * <p>AddTemplate</p>
+     * 
      * @param request AddTemplateRequest
      * @return AddTemplateResponse
      */
@@ -342,8 +352,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新搜索索引
-     *
+     * <b>summary</b> : 
+     * <p>更新搜索索引</p>
+     * 
      * @param request AlterSearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AlterSearchIndexResponse
@@ -385,8 +396,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新搜索索引
-     *
+     * <b>summary</b> : 
+     * <p>更新搜索索引</p>
+     * 
      * @param request AlterSearchIndexRequest
      * @return AlterSearchIndexResponse
      */
@@ -396,8 +408,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量获取媒资信息
-     *
+     * <b>summary</b> : 
+     * <p>批量获取媒资信息</p>
+     * 
      * @param request BatchGetMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchGetMediaInfosResponse
@@ -431,8 +444,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量获取媒资信息
-     *
+     * <b>summary</b> : 
+     * <p>批量获取媒资信息</p>
+     * 
      * @param request BatchGetMediaInfosRequest
      * @return BatchGetMediaInfosResponse
      */
@@ -442,8 +456,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消DNA作业
-     *
+     * <b>summary</b> : 
+     * <p>取消DNA作业</p>
+     * 
      * @param request CancelDNAJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelDNAJobResponse
@@ -489,8 +504,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消DNA作业
-     *
+     * <b>summary</b> : 
+     * <p>取消DNA作业</p>
+     * 
      * @param request CancelDNAJobRequest
      * @return CancelDNAJobResponse
      */
@@ -500,8 +516,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消收藏公共媒资
-     *
+     * <b>summary</b> : 
+     * <p>取消收藏公共媒资</p>
+     * 
      * @param request CancelFavoritePublicMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelFavoritePublicMediaResponse
@@ -531,8 +548,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消收藏公共媒资
-     *
+     * <b>summary</b> : 
+     * <p>取消收藏公共媒资</p>
+     * 
      * @param request CancelFavoritePublicMediaRequest
      * @return CancelFavoritePublicMediaResponse
      */
@@ -542,8 +560,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交人工审核
-     *
+     * <b>summary</b> : 
+     * <p>提交人工审核</p>
+     * 
      * @param request CreateAuditRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAuditResponse
@@ -573,8 +592,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交人工审核
-     *
+     * <b>summary</b> : 
+     * <p>提交人工审核</p>
+     * 
      * @param request CreateAuditRequest
      * @return CreateAuditResponse
      */
@@ -584,8 +604,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建数字人训练任务
-     *
+     * <b>summary</b> : 
+     * <p>创建数字人训练任务</p>
+     * 
      * @param request CreateAvatarTrainingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAvatarTrainingJobResponse
@@ -639,8 +660,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建数字人训练任务
-     *
+     * <b>summary</b> : 
+     * <p>创建数字人训练任务</p>
+     * 
      * @param request CreateAvatarTrainingJobRequest
      * @return CreateAvatarTrainingJobResponse
      */
@@ -650,8 +672,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建媒体处理自定义模板
-     *
+     * <b>summary</b> : 
+     * <p>创建媒体处理自定义模板</p>
+     * 
      * @param request CreateCustomTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCustomTemplateResponse
@@ -693,8 +716,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建媒体处理自定义模板
-     *
+     * <b>summary</b> : 
+     * <p>创建媒体处理自定义模板</p>
+     * 
      * @param request CreateCustomTemplateRequest
      * @return CreateCustomTemplateResponse
      */
@@ -704,8 +728,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建人声克隆任务
-     *
+     * <b>summary</b> : 
+     * <p>创建人声克隆任务</p>
+     * 
      * @param request CreateCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCustomizedVoiceJobResponse
@@ -751,8 +776,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建人声克隆任务
-     *
+     * <b>summary</b> : 
+     * <p>创建人声克隆任务</p>
+     * 
      * @param request CreateCustomizedVoiceJobRequest
      * @return CreateCustomizedVoiceJobResponse
      */
@@ -762,8 +788,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建指纹库
-     *
+     * <b>summary</b> : 
+     * <p>创建指纹库</p>
+     * 
      * @param request CreateDNADBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDNADBResponse
@@ -817,8 +844,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建指纹库
-     *
+     * <b>summary</b> : 
+     * <p>创建指纹库</p>
+     * 
      * @param request CreateDNADBRequest
      * @return CreateDNADBResponse
      */
@@ -828,8 +856,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建云剪辑工程
-     *
+     * <b>summary</b> : 
+     * <p>创建云剪辑工程</p>
+     * 
      * @param request CreateEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEditingProjectResponse
@@ -897,8 +926,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建云剪辑工程
-     *
+     * <b>summary</b> : 
+     * <p>创建云剪辑工程</p>
+     * 
      * @param request CreateEditingProjectRequest
      * @return CreateEditingProjectResponse
      */
@@ -908,8 +938,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建直播录制模板
-     *
+     * <b>summary</b> : 
+     * <p>创建直播录制模板</p>
+     * 
      * @param tmpReq CreateLiveRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLiveRecordTemplateResponse
@@ -949,8 +980,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建直播录制模板
-     *
+     * <b>summary</b> : 
+     * <p>创建直播录制模板</p>
+     * 
      * @param request CreateLiveRecordTemplateRequest
      * @return CreateLiveRecordTemplateResponse
      */
@@ -960,8 +992,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建直播截图模板
-     *
+     * <b>summary</b> : 
+     * <p>创建直播截图模板</p>
+     * 
      * @param request CreateLiveSnapshotTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLiveSnapshotTemplateResponse
@@ -1003,8 +1036,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建直播截图模板
-     *
+     * <b>summary</b> : 
+     * <p>创建直播截图模板</p>
+     * 
      * @param request CreateLiveSnapshotTemplateRequest
      * @return CreateLiveSnapshotTemplateResponse
      */
@@ -1014,8 +1048,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建转码模版
-     *
+     * <b>summary</b> : 
+     * <p>创建转码模版</p>
+     * 
      * @param tmpReq CreateLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLiveTranscodeTemplateResponse
@@ -1059,8 +1094,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建转码模版
-     *
+     * <b>summary</b> : 
+     * <p>创建转码模版</p>
+     * 
      * @param request CreateLiveTranscodeTemplateRequest
      * @return CreateLiveTranscodeTemplateResponse
      */
@@ -1070,8 +1106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加用户管道配置
-     *
+     * <b>summary</b> : 
+     * <p>添加用户管道配置</p>
+     * 
      * @param request CreatePipelineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePipelineResponse
@@ -1109,8 +1146,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加用户管道配置
-     *
+     * <b>summary</b> : 
+     * <p>添加用户管道配置</p>
+     * 
      * @param request CreatePipelineRequest
      * @return CreatePipelineResponse
      */
@@ -1120,8 +1158,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建搜索索引
-     *
+     * <b>summary</b> : 
+     * <p>创建搜索索引</p>
+     * 
      * @param request CreateSearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSearchIndexResponse
@@ -1163,8 +1202,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建搜索索引
-     *
+     * <b>summary</b> : 
+     * <p>创建搜索索引</p>
+     * 
      * @param request CreateSearchIndexRequest
      * @return CreateSearchIndexResponse
      */
@@ -1174,8 +1214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建库
-     *
+     * <b>summary</b> : 
+     * <p>创建库</p>
+     * 
      * @param request CreateSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSearchLibResponse
@@ -1205,8 +1246,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建库
-     *
+     * <b>summary</b> : 
+     * <p>创建库</p>
+     * 
      * @param request CreateSearchLibRequest
      * @return CreateSearchLibResponse
      */
@@ -1216,8 +1258,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 本地媒资上传
-     *
+     * <b>summary</b> : 
+     * <p>本地媒资上传</p>
+     * 
      * @param request CreateUploadMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUploadMediaResponse
@@ -1271,8 +1314,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 本地媒资上传
-     *
+     * <b>summary</b> : 
+     * <p>本地媒资上传</p>
+     * 
      * @param request CreateUploadMediaRequest
      * @return CreateUploadMediaResponse
      */
@@ -1282,8 +1326,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 本地上传媒体流
-     *
+     * <b>summary</b> : 
+     * <p>本地上传媒体流</p>
+     * 
      * @param request CreateUploadStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUploadStreamResponse
@@ -1329,8 +1374,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 本地上传媒体流
-     *
+     * <b>summary</b> : 
+     * <p>本地上传媒体流</p>
+     * 
      * @param request CreateUploadStreamRequest
      * @return CreateUploadStreamResponse
      */
@@ -1340,8 +1386,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 解密KMS密钥DataKey
-     *
+     * <b>summary</b> : 
+     * <p>解密KMS密钥DataKey</p>
+     * 
      * @param request DecryptKMSDataKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DecryptKMSDataKeyResponse
@@ -1371,8 +1418,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 解密KMS密钥DataKey
-     *
+     * <b>summary</b> : 
+     * <p>解密KMS密钥DataKey</p>
+     * 
      * @param request DecryptKMSDataKeyRequest
      * @return DecryptKMSDataKeyResponse
      */
@@ -1382,8 +1430,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新数字人训练任务信息
-     *
+     * <b>summary</b> : 
+     * <p>更新数字人训练任务信息</p>
+     * 
      * @param request DeleteAvatarTrainingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAvatarTrainingJobResponse
@@ -1413,8 +1462,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新数字人训练任务信息
-     *
+     * <b>summary</b> : 
+     * <p>更新数字人训练任务信息</p>
+     * 
      * @param request DeleteAvatarTrainingJobRequest
      * @return DeleteAvatarTrainingJobResponse
      */
@@ -1424,8 +1474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒资分类
-     *
+     * <b>summary</b> : 
+     * <p>删除媒资分类</p>
+     * 
      * @param request DeleteCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCategoryResponse
@@ -1455,8 +1506,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒资分类
-     *
+     * <b>summary</b> : 
+     * <p>删除媒资分类</p>
+     * 
      * @param request DeleteCategoryRequest
      * @return DeleteCategoryResponse
      */
@@ -1466,8 +1518,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒体处理自定义模板
-     *
+     * <b>summary</b> : 
+     * <p>删除媒体处理自定义模板</p>
+     * 
      * @param request DeleteCustomTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCustomTemplateResponse
@@ -1497,8 +1550,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒体处理自定义模板
-     *
+     * <b>summary</b> : 
+     * <p>删除媒体处理自定义模板</p>
+     * 
      * @param request DeleteCustomTemplateRequest
      * @return DeleteCustomTemplateResponse
      */
@@ -1508,8 +1562,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除用户的专属人声任务
-     *
+     * <b>summary</b> : 
+     * <p>删除用户的专属人声任务</p>
+     * 
      * @param request DeleteCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCustomizedVoiceJobResponse
@@ -1539,8 +1594,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除用户的专属人声任务
-     *
+     * <b>summary</b> : 
+     * <p>删除用户的专属人声任务</p>
+     * 
      * @param request DeleteCustomizedVoiceJobRequest
      * @return DeleteCustomizedVoiceJobResponse
      */
@@ -1550,8 +1606,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除DNA库
-     *
+     * <b>summary</b> : 
+     * <p>删除DNA库</p>
+     * 
      * @param request DeleteDNADBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDNADBResponse
@@ -1597,8 +1654,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除DNA库
-     *
+     * <b>summary</b> : 
+     * <p>删除DNA库</p>
+     * 
      * @param request DeleteDNADBRequest
      * @return DeleteDNADBResponse
      */
@@ -1608,8 +1666,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除DNA文件
-     *
+     * <b>summary</b> : 
+     * <p>删除DNA文件</p>
+     * 
      * @param request DeleteDNAFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteDNAFilesResponse
@@ -1659,8 +1718,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除DNA文件
-     *
+     * <b>summary</b> : 
+     * <p>删除DNA文件</p>
+     * 
      * @param request DeleteDNAFilesRequest
      * @return DeleteDNAFilesResponse
      */
@@ -1670,8 +1730,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除剪辑工程关联素材
-     *
+     * <b>summary</b> : 
+     * <p>删除剪辑工程关联素材</p>
+     * 
      * @param request DeleteEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEditingProjectMaterialsResponse
@@ -1709,8 +1770,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除剪辑工程关联素材
-     *
+     * <b>summary</b> : 
+     * <p>删除剪辑工程关联素材</p>
+     * 
      * @param request DeleteEditingProjectMaterialsRequest
      * @return DeleteEditingProjectMaterialsResponse
      */
@@ -1720,8 +1782,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除云剪辑工程
-     *
+     * <b>summary</b> : 
+     * <p>删除云剪辑工程</p>
+     * 
      * @param request DeleteEditingProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteEditingProjectsResponse
@@ -1751,8 +1814,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除云剪辑工程
-     *
+     * <b>summary</b> : 
+     * <p>删除云剪辑工程</p>
+     * 
      * @param request DeleteEditingProjectsRequest
      * @return DeleteEditingProjectsResponse
      */
@@ -1762,8 +1826,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实时媒体服务-删除录制文件
-     *
+     * <b>summary</b> : 
+     * <p>实时媒体服务-删除录制文件</p>
+     * 
      * @param request DeleteLiveRecordFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLiveRecordFilesResponse
@@ -1797,8 +1862,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 实时媒体服务-删除录制文件
-     *
+     * <b>summary</b> : 
+     * <p>实时媒体服务-删除录制文件</p>
+     * 
      * @param request DeleteLiveRecordFilesRequest
      * @return DeleteLiveRecordFilesResponse
      */
@@ -1808,8 +1874,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除直播录制模板
-     *
+     * <b>summary</b> : 
+     * <p>删除直播录制模板</p>
+     * 
      * @param request DeleteLiveRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLiveRecordTemplateResponse
@@ -1839,8 +1906,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除直播录制模板
-     *
+     * <b>summary</b> : 
+     * <p>删除直播录制模板</p>
+     * 
      * @param request DeleteLiveRecordTemplateRequest
      * @return DeleteLiveRecordTemplateResponse
      */
@@ -1850,8 +1918,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量删除直播截图文件
-     *
+     * <b>summary</b> : 
+     * <p>批量删除直播截图文件</p>
+     * 
      * @param tmpReq DeleteLiveSnapshotFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLiveSnapshotFilesResponse
@@ -1895,8 +1964,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量删除直播截图文件
-     *
+     * <b>summary</b> : 
+     * <p>批量删除直播截图文件</p>
+     * 
      * @param request DeleteLiveSnapshotFilesRequest
      * @return DeleteLiveSnapshotFilesResponse
      */
@@ -1906,8 +1976,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除直播截图模板
-     *
+     * <b>summary</b> : 
+     * <p>删除直播截图模板</p>
+     * 
      * @param request DeleteLiveSnapshotTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLiveSnapshotTemplateResponse
@@ -1937,8 +2008,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除直播截图模板
-     *
+     * <b>summary</b> : 
+     * <p>删除直播截图模板</p>
+     * 
      * @param request DeleteLiveSnapshotTemplateRequest
      * @return DeleteLiveSnapshotTemplateResponse
      */
@@ -1948,8 +2020,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除指定转码任务
-     *
+     * <b>summary</b> : 
+     * <p>删除指定转码任务</p>
+     * 
      * @param request DeleteLiveTranscodeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLiveTranscodeJobResponse
@@ -1979,8 +2052,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除指定转码任务
-     *
+     * <b>summary</b> : 
+     * <p>删除指定转码任务</p>
+     * 
      * @param request DeleteLiveTranscodeJobRequest
      * @return DeleteLiveTranscodeJobResponse
      */
@@ -1990,8 +2064,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除指定转码模版
-     *
+     * <b>summary</b> : 
+     * <p>删除指定转码模版</p>
+     * 
      * @param request DeleteLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLiveTranscodeTemplateResponse
@@ -2021,8 +2096,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除指定转码模版
-     *
+     * <b>summary</b> : 
+     * <p>删除指定转码模版</p>
+     * 
      * @param request DeleteLiveTranscodeTemplateRequest
      * @return DeleteLiveTranscodeTemplateResponse
      */
@@ -2032,8 +2108,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒资从搜索
-     *
+     * <b>summary</b> : 
+     * <p>删除媒资从搜索</p>
+     * 
      * @param request DeleteMediaFromSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMediaFromSearchLibResponse
@@ -2071,8 +2148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒资从搜索
-     *
+     * <b>summary</b> : 
+     * <p>删除媒资从搜索</p>
+     * 
      * @param request DeleteMediaFromSearchLibRequest
      * @return DeleteMediaFromSearchLibResponse
      */
@@ -2082,8 +2160,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒资信息
-     *
+     * <b>summary</b> : 
+     * <p>删除媒资信息</p>
+     * 
      * @param request DeleteMediaInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMediaInfosResponse
@@ -2121,8 +2200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒资信息
-     *
+     * <b>summary</b> : 
+     * <p>删除媒资信息</p>
+     * 
      * @param request DeleteMediaInfosRequest
      * @return DeleteMediaInfosResponse
      */
@@ -2132,8 +2212,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒资标注信息
-     *
+     * <b>summary</b> : 
+     * <p>删除媒资标注信息</p>
+     * 
      * @param request DeleteMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMediaMarksResponse
@@ -2167,8 +2248,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除媒资标注信息
-     *
+     * <b>summary</b> : 
+     * <p>删除媒资标注信息</p>
+     * 
      * @param request DeleteMediaMarksRequest
      * @return DeleteMediaMarksResponse
      */
@@ -2178,8 +2260,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除管道配置
-     *
+     * <b>summary</b> : 
+     * <p>删除管道配置</p>
+     * 
      * @param request DeletePipelineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePipelineResponse
@@ -2209,8 +2292,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除管道配置
-     *
+     * <b>summary</b> : 
+     * <p>删除管道配置</p>
+     * 
      * @param request DeletePipelineRequest
      * @return DeletePipelineResponse
      */
@@ -2220,8 +2304,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除播放信息
-     *
+     * <b>summary</b> : 
+     * <p>删除播放信息</p>
+     * 
      * @param request DeletePlayInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePlayInfoResponse
@@ -2259,8 +2344,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除播放信息
-     *
+     * <b>summary</b> : 
+     * <p>删除播放信息</p>
+     * 
      * @param request DeletePlayInfoRequest
      * @return DeletePlayInfoResponse
      */
@@ -2270,8 +2356,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DeleteSmartJob
-     *
+     * <b>summary</b> : 
+     * <p>DeleteSmartJob</p>
+     * 
      * @param request DeleteSmartJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSmartJobResponse
@@ -2301,8 +2388,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DeleteSmartJob
-     *
+     * <b>summary</b> : 
+     * <p>DeleteSmartJob</p>
+     * 
      * @param request DeleteSmartJobRequest
      * @return DeleteSmartJobResponse
      */
@@ -2312,8 +2400,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DeleteTemplate
-     *
+     * <b>summary</b> : 
+     * <p>DeleteTemplate</p>
+     * 
      * @param request DeleteTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTemplateResponse
@@ -2339,8 +2428,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DeleteTemplate
-     *
+     * <b>summary</b> : 
+     * <p>DeleteTemplate</p>
+     * 
      * @param request DeleteTemplateRequest
      * @return DeleteTemplateResponse
      */
@@ -2450,8 +2540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 智能媒体服务点播转码用量
-     *
+     * <b>summary</b> : 
+     * <p>智能媒体服务点播转码用量</p>
+     * 
      * @param request DescribeMeterImsMediaConvertUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMeterImsMediaConvertUsageResponse
@@ -2493,8 +2584,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 智能媒体服务点播转码用量
-     *
+     * <b>summary</b> : 
+     * <p>智能媒体服务点播转码用量</p>
+     * 
      * @param request DescribeMeterImsMediaConvertUsageRequest
      * @return DescribeMeterImsMediaConvertUsageResponse
      */
@@ -2670,8 +2762,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等
-     *
+     * <b>summary</b> : 
+     * <p>本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等</p>
+     * 
      * @param request DetectAudioForCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetectAudioForCustomizedVoiceJobResponse
@@ -2709,8 +2802,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等
-     *
+     * <b>summary</b> : 
+     * <p>本接口用来检测用户的朗读是否有明显的发音错误、嘈杂的环境等</p>
+     * 
      * @param request DetectAudioForCustomizedVoiceJobRequest
      * @return DetectAudioForCustomizedVoiceJobResponse
      */
@@ -2720,8 +2814,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除搜索索引
-     *
+     * <b>summary</b> : 
+     * <p>删除搜索索引</p>
+     * 
      * @param request DropSearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DropSearchIndexResponse
@@ -2755,8 +2850,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除搜索索引
-     *
+     * <b>summary</b> : 
+     * <p>删除搜索索引</p>
+     * 
      * @param request DropSearchIndexRequest
      * @return DropSearchIndexResponse
      */
@@ -2766,8 +2862,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除库
-     *
+     * <b>summary</b> : 
+     * <p>删除库</p>
+     * 
      * @param request DropSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DropSearchLibResponse
@@ -2797,8 +2894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除库
-     *
+     * <b>summary</b> : 
+     * <p>删除库</p>
+     * 
      * @param request DropSearchLibRequest
      * @return DropSearchLibResponse
      */
@@ -2808,8 +2906,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 生成KMS密钥DataKey
-     *
+     * <b>summary</b> : 
+     * <p>生成KMS密钥DataKey</p>
+     * 
      * @param request GenerateKMSDataKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateKMSDataKeyResponse
@@ -2831,8 +2930,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 生成KMS密钥DataKey
-     *
+     * <b>summary</b> : 
+     * <p>生成KMS密钥DataKey</p>
      * @return GenerateKMSDataKeyResponse
      */
     public GenerateKMSDataKeyResponse generateKMSDataKey() throws Exception {
@@ -2841,8 +2940,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询单个数字人
-     *
+     * <b>summary</b> : 
+     * <p>查询单个数字人</p>
+     * 
      * @param request GetAvatarRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAvatarResponse
@@ -2872,8 +2972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询单个数字人
-     *
+     * <b>summary</b> : 
+     * <p>查询单个数字人</p>
+     * 
      * @param request GetAvatarRequest
      * @return GetAvatarResponse
      */
@@ -2883,8 +2984,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询单个数字人训练任务
-     *
+     * <b>summary</b> : 
+     * <p>查询单个数字人训练任务</p>
+     * 
      * @param request GetAvatarTrainingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAvatarTrainingJobResponse
@@ -2914,8 +3016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询单个数字人训练任务
-     *
+     * <b>summary</b> : 
+     * <p>查询单个数字人训练任务</p>
+     * 
      * @param request GetAvatarTrainingJobRequest
      * @return GetAvatarTrainingJobResponse
      */
@@ -2925,8 +3028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 一键成片-批量获取剪辑任务
-     *
+     * <b>summary</b> : 
+     * <p>一键成片-批量获取剪辑任务</p>
+     * 
      * @param request GetBatchMediaProducingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetBatchMediaProducingJobResponse
@@ -2976,8 +3080,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 一键成片-批量获取剪辑任务
-     *
+     * <b>summary</b> : 
+     * <p>一键成片-批量获取剪辑任务</p>
+     * 
      * @param request GetBatchMediaProducingJobRequest
      * @return GetBatchMediaProducingJobResponse
      */
@@ -2987,8 +3092,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询媒资分类
-     *
+     * <b>summary</b> : 
+     * <p>查询媒资分类</p>
+     * 
      * @param request GetCategoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCategoriesResponse
@@ -3034,8 +3140,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询媒资分类
-     *
+     * <b>summary</b> : 
+     * <p>查询媒资分类</p>
+     * 
      * @param request GetCategoriesRequest
      * @return GetCategoriesResponse
      */
@@ -3045,8 +3152,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取内容分析搜索配置
-     *
+     * <b>summary</b> : 
+     * <p>获取内容分析搜索配置</p>
+     * 
      * @param request GetContentAnalyzeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetContentAnalyzeConfigResponse
@@ -3068,8 +3176,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取内容分析搜索配置
-     *
+     * <b>summary</b> : 
+     * <p>获取内容分析搜索配置</p>
      * @return GetContentAnalyzeConfigResponse
      */
     public GetContentAnalyzeConfigResponse getContentAnalyzeConfig() throws Exception {
@@ -3078,8 +3186,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个媒体处理自定义模板
-     *
+     * <b>summary</b> : 
+     * <p>获取单个媒体处理自定义模板</p>
+     * 
      * @param request GetCustomTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCustomTemplateResponse
@@ -3117,8 +3226,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个媒体处理自定义模板
-     *
+     * <b>summary</b> : 
+     * <p>获取单个媒体处理自定义模板</p>
+     * 
      * @param request GetCustomTemplateRequest
      * @return GetCustomTemplateResponse
      */
@@ -3128,8 +3238,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户的专属人声
-     *
+     * <b>summary</b> : 
+     * <p>获取用户的专属人声</p>
+     * 
      * @param request GetCustomizedVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCustomizedVoiceResponse
@@ -3159,8 +3270,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户的专属人声
-     *
+     * <b>summary</b> : 
+     * <p>获取用户的专属人声</p>
+     * 
      * @param request GetCustomizedVoiceRequest
      * @return GetCustomizedVoiceResponse
      */
@@ -3170,8 +3282,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询单个人声克隆训练任务
-     *
+     * <b>summary</b> : 
+     * <p>查询单个人声克隆训练任务</p>
+     * 
      * @param request GetCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCustomizedVoiceJobResponse
@@ -3201,8 +3314,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询单个人声克隆训练任务
-     *
+     * <b>summary</b> : 
+     * <p>查询单个人声克隆训练任务</p>
+     * 
      * @param request GetCustomizedVoiceJobRequest
      * @return GetCustomizedVoiceJobResponse
      */
@@ -3212,8 +3326,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户默认存储地址
-     *
+     * <b>summary</b> : 
+     * <p>获取用户默认存储地址</p>
+     * 
      * @param request GetDefaultStorageLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDefaultStorageLocationResponse
@@ -3235,8 +3350,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户默认存储地址
-     *
+     * <b>summary</b> : 
+     * <p>获取用户默认存储地址</p>
      * @return GetDefaultStorageLocationResponse
      */
     public GetDefaultStorageLocationResponse getDefaultStorageLocation() throws Exception {
@@ -3245,8 +3360,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通过本接口来获取需要给用户朗读的文本及示例音频
-     *
+     * <b>summary</b> : 
+     * <p>通过本接口来获取需要给用户朗读的文本及示例音频</p>
+     * 
      * @param request GetDemonstrationForCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDemonstrationForCustomizedVoiceJobResponse
@@ -3276,8 +3392,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 通过本接口来获取需要给用户朗读的文本及示例音频
-     *
+     * <b>summary</b> : 
+     * <p>通过本接口来获取需要给用户朗读的文本及示例音频</p>
+     * 
      * @param request GetDemonstrationForCustomizedVoiceJobRequest
      * @return GetDemonstrationForCustomizedVoiceJobResponse
      */
@@ -3287,8 +3404,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询动图任务详情接口
-     *
+     * <b>summary</b> : 
+     * <p>查询动图任务详情接口</p>
+     * 
      * @param request GetDynamicImageJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDynamicImageJobResponse
@@ -3318,8 +3436,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询动图任务详情接口
-     *
+     * <b>summary</b> : 
+     * <p>查询动图任务详情接口</p>
+     * 
      * @param request GetDynamicImageJobRequest
      * @return GetDynamicImageJobResponse
      */
@@ -3329,8 +3448,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个云剪辑工程
-     *
+     * <b>summary</b> : 
+     * <p>获取单个云剪辑工程</p>
+     * 
      * @param request GetEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEditingProjectResponse
@@ -3364,8 +3484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个云剪辑工程
-     *
+     * <b>summary</b> : 
+     * <p>获取单个云剪辑工程</p>
+     * 
      * @param request GetEditingProjectRequest
      * @return GetEditingProjectResponse
      */
@@ -3375,8 +3496,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取剪辑工程关联素材
-     *
+     * <b>summary</b> : 
+     * <p>获取剪辑工程关联素材</p>
+     * 
      * @param request GetEditingProjectMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEditingProjectMaterialsResponse
@@ -3406,8 +3528,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取剪辑工程关联素材
-     *
+     * <b>summary</b> : 
+     * <p>获取剪辑工程关联素材</p>
+     * 
      * @param request GetEditingProjectMaterialsRequest
      * @return GetEditingProjectMaterialsResponse
      */
@@ -3417,8 +3540,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取事件回调地址
-     *
+     * <b>summary</b> : 
+     * <p>获取事件回调地址</p>
+     * 
      * @param request GetEventCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEventCallbackResponse
@@ -3440,8 +3564,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取事件回调地址
-     *
+     * <b>summary</b> : 
+     * <p>获取事件回调地址</p>
      * @return GetEventCallbackResponse
      */
     public GetEventCallbackResponse getEventCallback() throws Exception {
@@ -3450,8 +3574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取直播剪辑m3u8索引文件
-     *
+     * <b>summary</b> : 
+     * <p>获取直播剪辑m3u8索引文件</p>
+     * 
      * @param request GetLiveEditingIndexFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLiveEditingIndexFileResponse
@@ -3493,8 +3618,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取直播剪辑m3u8索引文件
-     *
+     * <b>summary</b> : 
+     * <p>获取直播剪辑m3u8索引文件</p>
+     * 
      * @param request GetLiveEditingIndexFileRequest
      * @return GetLiveEditingIndexFileResponse
      */
@@ -3504,8 +3630,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取直播剪辑任务
-     *
+     * <b>summary</b> : 
+     * <p>获取直播剪辑任务</p>
+     * 
      * @param request GetLiveEditingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLiveEditingJobResponse
@@ -3535,8 +3662,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取直播剪辑任务
-     *
+     * <b>summary</b> : 
+     * <p>获取直播剪辑任务</p>
+     * 
      * @param request GetLiveEditingJobRequest
      * @return GetLiveEditingJobResponse
      */
@@ -3546,8 +3674,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询录制任务明细
-     *
+     * <b>summary</b> : 
+     * <p>查询录制任务明细</p>
+     * 
      * @param request GetLiveRecordJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLiveRecordJobResponse
@@ -3573,8 +3702,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询录制任务明细
-     *
+     * <b>summary</b> : 
+     * <p>查询录制任务明细</p>
+     * 
      * @param request GetLiveRecordJobRequest
      * @return GetLiveRecordJobResponse
      */
@@ -3584,8 +3714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播录制模板详情
-     *
+     * <b>summary</b> : 
+     * <p>查询直播录制模板详情</p>
+     * 
      * @param request GetLiveRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLiveRecordTemplateResponse
@@ -3611,8 +3742,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播录制模板详情
-     *
+     * <b>summary</b> : 
+     * <p>查询直播录制模板详情</p>
+     * 
      * @param request GetLiveRecordTemplateRequest
      * @return GetLiveRecordTemplateResponse
      */
@@ -3622,8 +3754,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图任务
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图任务</p>
+     * 
      * @param request GetLiveSnapshotJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLiveSnapshotJobResponse
@@ -3649,8 +3782,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图任务
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图任务</p>
+     * 
      * @param request GetLiveSnapshotJobRequest
      * @return GetLiveSnapshotJobResponse
      */
@@ -3660,8 +3794,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图模板
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图模板</p>
+     * 
      * @param request GetLiveSnapshotTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLiveSnapshotTemplateResponse
@@ -3687,8 +3822,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图模板
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图模板</p>
+     * 
      * @param request GetLiveSnapshotTemplateRequest
      * @return GetLiveSnapshotTemplateResponse
      */
@@ -3698,8 +3834,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询转码任务详情
-     *
+     * <b>summary</b> : 
+     * <p>查询转码任务详情</p>
+     * 
      * @param request GetLiveTranscodeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLiveTranscodeJobResponse
@@ -3729,8 +3866,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询转码任务详情
-     *
+     * <b>summary</b> : 
+     * <p>查询转码任务详情</p>
+     * 
      * @param request GetLiveTranscodeJobRequest
      * @return GetLiveTranscodeJobResponse
      */
@@ -3740,8 +3878,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询转码模版详情
-     *
+     * <b>summary</b> : 
+     * <p>查询转码模版详情</p>
+     * 
      * @param request GetLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLiveTranscodeTemplateResponse
@@ -3771,8 +3910,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询转码模版详情
-     *
+     * <b>summary</b> : 
+     * <p>查询转码模版详情</p>
+     * 
      * @param request GetLiveTranscodeTemplateRequest
      * @return GetLiveTranscodeTemplateResponse
      */
@@ -3782,8 +3922,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒资内容信息
-     *
+     * <b>summary</b> : 
+     * <p>获取媒资内容信息</p>
+     * 
      * @param request GetMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMediaInfoResponse
@@ -3825,8 +3966,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒资内容信息
-     *
+     * <b>summary</b> : 
+     * <p>获取媒资内容信息</p>
+     * 
      * @param request GetMediaInfoRequest
      * @return GetMediaInfoResponse
      */
@@ -3874,8 +4016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒资标注信息
-     *
+     * <b>summary</b> : 
+     * <p>获取媒资标注信息</p>
+     * 
      * @param request GetMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMediaMarksResponse
@@ -3909,8 +4052,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒资标注信息
-     *
+     * <b>summary</b> : 
+     * <p>获取媒资标注信息</p>
+     * 
      * @param request GetMediaMarksRequest
      * @return GetMediaMarksResponse
      */
@@ -3920,8 +4064,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetMediaProducingJob
-     *
+     * <b>summary</b> : 
+     * <p>GetMediaProducingJob</p>
+     * 
      * @param request GetMediaProducingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMediaProducingJobResponse
@@ -3947,8 +4092,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetMediaProducingJob
-     *
+     * <b>summary</b> : 
+     * <p>GetMediaProducingJob</p>
+     * 
      * @param request GetMediaProducingJobRequest
      * @return GetMediaProducingJobResponse
      */
@@ -3958,8 +4104,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个打包任务信息
-     *
+     * <b>summary</b> : 
+     * <p>获取单个打包任务信息</p>
+     * 
      * @param request GetPackageJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPackageJobResponse
@@ -3989,8 +4136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个打包任务信息
-     *
+     * <b>summary</b> : 
+     * <p>获取单个打包任务信息</p>
+     * 
      * @param request GetPackageJobRequest
      * @return GetPackageJobResponse
      */
@@ -4000,8 +4148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个管道配置
-     *
+     * <b>summary</b> : 
+     * <p>获取单个管道配置</p>
+     * 
      * @param request GetPipelineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPipelineResponse
@@ -4031,8 +4180,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个管道配置
-     *
+     * <b>summary</b> : 
+     * <p>获取单个管道配置</p>
+     * 
      * @param request GetPipelineRequest
      * @return GetPipelineResponse
      */
@@ -4042,8 +4192,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取播放信息
-     *
+     * <b>summary</b> : 
+     * <p>获取播放信息</p>
+     * 
      * @param request GetPlayInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPlayInfoResponse
@@ -4077,8 +4228,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取播放信息
-     *
+     * <b>summary</b> : 
+     * <p>获取播放信息</p>
+     * 
      * @param request GetPlayInfoRequest
      * @return GetPlayInfoResponse
      */
@@ -4088,8 +4240,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取公共媒资内容信息
-     *
+     * <b>summary</b> : 
+     * <p>获取公共媒资内容信息</p>
+     * 
      * @param request GetPublicMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPublicMediaInfoResponse
@@ -4119,8 +4272,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取公共媒资内容信息
-     *
+     * <b>summary</b> : 
+     * <p>获取公共媒资内容信息</p>
+     * 
      * @param request GetPublicMediaInfoRequest
      * @return GetPublicMediaInfoResponse
      */
@@ -4130,8 +4284,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetSmartHandleJob
-     *
+     * <b>summary</b> : 
+     * <p>GetSmartHandleJob</p>
+     * 
      * @param request GetSmartHandleJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSmartHandleJobResponse
@@ -4161,8 +4316,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetSmartHandleJob
-     *
+     * <b>summary</b> : 
+     * <p>GetSmartHandleJob</p>
+     * 
      * @param request GetSmartHandleJobRequest
      * @return GetSmartHandleJobResponse
      */
@@ -4172,8 +4328,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询单个截图任务
-     *
+     * <b>summary</b> : 
+     * <p>查询单个截图任务</p>
+     * 
      * @param request GetSnapshotJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSnapshotJobResponse
@@ -4203,8 +4360,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询单个截图任务
-     *
+     * <b>summary</b> : 
+     * <p>查询单个截图任务</p>
+     * 
      * @param request GetSnapshotJobRequest
      * @return GetSnapshotJobResponse
      */
@@ -4214,8 +4372,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取截图文件URL
-     *
+     * <b>summary</b> : 
+     * <p>获取截图文件URL</p>
+     * 
      * @param request GetSnapshotUrlsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSnapshotUrlsResponse
@@ -4261,8 +4420,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取截图文件URL
-     *
+     * <b>summary</b> : 
+     * <p>获取截图文件URL</p>
+     * 
      * @param request GetSnapshotUrlsRequest
      * @return GetSnapshotUrlsResponse
      */
@@ -4272,8 +4432,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个媒体处理系统模板
-     *
+     * <b>summary</b> : 
+     * <p>获取存储地址列表</p>
+     * 
+     * @param request GetStorageListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetStorageListResponse
+     */
+    public GetStorageListResponse getStorageListWithOptions(GetStorageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetStorageList"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetStorageListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取存储地址列表</p>
+     * 
+     * @param request GetStorageListRequest
+     * @return GetStorageListResponse
+     */
+    public GetStorageListResponse getStorageList(GetStorageListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getStorageListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取单个媒体处理系统模板</p>
+     * 
      * @param request GetSystemTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSystemTemplateResponse
@@ -4303,8 +4516,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取单个媒体处理系统模板
-     *
+     * <b>summary</b> : 
+     * <p>获取单个媒体处理系统模板</p>
+     * 
      * @param request GetSystemTemplateRequest
      * @return GetSystemTemplateResponse
      */
@@ -4314,8 +4528,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetTemplate
-     *
+     * <b>summary</b> : 
+     * <p>GetTemplate</p>
+     * 
      * @param request GetTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTemplateResponse
@@ -4349,8 +4564,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary GetTemplate
-     *
+     * <b>summary</b> : 
+     * <p>GetTemplate</p>
+     * 
      * @param request GetTemplateRequest
      * @return GetTemplateResponse
      */
@@ -4360,8 +4576,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取模板关联素材信息
-     *
+     * <b>summary</b> : 
+     * <p>获取模板关联素材信息</p>
+     * 
      * @param request GetTemplateMaterialsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTemplateMaterialsResponse
@@ -4395,8 +4612,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取模板关联素材信息
-     *
+     * <b>summary</b> : 
+     * <p>获取模板关联素材信息</p>
+     * 
      * @param request GetTemplateMaterialsRequest
      * @return GetTemplateMaterialsResponse
      */
@@ -4406,8 +4624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取模板参数信息
-     *
+     * <b>summary</b> : 
+     * <p>获取模板参数信息</p>
+     * 
      * @param request GetTemplateParamsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTemplateParamsResponse
@@ -4433,8 +4652,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取模板参数信息
-     *
+     * <b>summary</b> : 
+     * <p>获取模板参数信息</p>
+     * 
      * @param request GetTemplateParamsRequest
      * @return GetTemplateParamsResponse
      */
@@ -4482,8 +4702,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取URL上传信息
-     *
+     * <b>summary</b> : 
+     * <p>获取URL上传信息</p>
+     * 
      * @param request GetUrlUploadInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUrlUploadInfosResponse
@@ -4517,8 +4738,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取URL上传信息
-     *
+     * <b>summary</b> : 
+     * <p>获取URL上传信息</p>
+     * 
      * @param request GetUrlUploadInfosRequest
      * @return GetUrlUploadInfosResponse
      */
@@ -4528,8 +4750,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒资新增列表
-     *
+     * <b>summary</b> : 
+     * <p>获取媒资新增列表</p>
+     * 
      * @param request GetVideoListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetVideoListResponse
@@ -4583,8 +4806,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒资新增列表
-     *
+     * <b>summary</b> : 
+     * <p>获取媒资新增列表</p>
+     * 
      * @param request GetVideoListRequest
      * @return GetVideoListResponse
      */
@@ -4594,8 +4818,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流任务
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流任务</p>
+     * 
      * @param request GetWorkflowTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetWorkflowTaskResponse
@@ -4625,8 +4850,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取工作流任务
-     *
+     * <b>summary</b> : 
+     * <p>获取工作流任务</p>
+     * 
      * @param request GetWorkflowTaskRequest
      * @return GetWorkflowTaskResponse
      */
@@ -4636,8 +4862,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 插入媒资到搜索
-     *
+     * <b>summary</b> : 
+     * <p>插入媒资到搜索</p>
+     * 
      * @param request InsertMediaToSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InsertMediaToSearchLibResponse
@@ -4683,8 +4910,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 插入媒资到搜索
-     *
+     * <b>summary</b> : 
+     * <p>插入媒资到搜索</p>
+     * 
      * @param request InsertMediaToSearchLibRequest
      * @return InsertMediaToSearchLibResponse
      */
@@ -4694,8 +4922,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出公共素材库所有标签
-     *
+     * <b>summary</b> : 
+     * <p>列出公共素材库所有标签</p>
+     * 
      * @param request ListAllPublicMediaTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAllPublicMediaTagsResponse
@@ -4729,8 +4958,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出公共素材库所有标签
-     *
+     * <b>summary</b> : 
+     * <p>列出公共素材库所有标签</p>
+     * 
      * @param request ListAllPublicMediaTagsRequest
      * @return ListAllPublicMediaTagsResponse
      */
@@ -4740,8 +4970,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询数字人训练任务列表，列出当前用户的所有数字人训练任务
-     *
+     * <b>summary</b> : 
+     * <p>查询数字人训练任务列表，列出当前用户的所有数字人训练任务</p>
+     * 
      * @param request ListAvatarTrainingJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAvatarTrainingJobsResponse
@@ -4779,8 +5010,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询数字人训练任务列表，列出当前用户的所有数字人训练任务
-     *
+     * <b>summary</b> : 
+     * <p>查询数字人训练任务列表，列出当前用户的所有数字人训练任务</p>
+     * 
      * @param request ListAvatarTrainingJobsRequest
      * @return ListAvatarTrainingJobsResponse
      */
@@ -4790,8 +5022,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询数字人列表，列出当前用户的所有数字人
-     *
+     * <b>summary</b> : 
+     * <p>查询数字人列表，列出当前用户的所有数字人</p>
+     * 
      * @param request ListAvatarsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAvatarsResponse
@@ -4829,8 +5062,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询数字人列表，列出当前用户的所有数字人
-     *
+     * <b>summary</b> : 
+     * <p>查询数字人列表，列出当前用户的所有数字人</p>
+     * 
      * @param request ListAvatarsRequest
      * @return ListAvatarsResponse
      */
@@ -4840,8 +5074,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取一键成片任务列表
-     *
+     * <b>summary</b> : 
+     * <p>获取一键成片任务列表</p>
+     * 
      * @param request ListBatchMediaProducingJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListBatchMediaProducingJobsResponse
@@ -4899,8 +5134,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取一键成片任务列表
-     *
+     * <b>summary</b> : 
+     * <p>获取一键成片任务列表</p>
+     * 
      * @param request ListBatchMediaProducingJobsRequest
      * @return ListBatchMediaProducingJobsResponse
      */
@@ -4910,8 +5146,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒体处理自定义模板列表
-     *
+     * <b>summary</b> : 
+     * <p>获取媒体处理自定义模板列表</p>
+     * 
      * @param request ListCustomTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCustomTemplatesResponse
@@ -4965,8 +5202,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒体处理自定义模板列表
-     *
+     * <b>summary</b> : 
+     * <p>获取媒体处理自定义模板列表</p>
+     * 
      * @param request ListCustomTemplatesRequest
      * @return ListCustomTemplatesResponse
      */
@@ -4976,8 +5214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询人声克隆训练任务列表，列出当前用户的所有人声克隆训练任务
-     *
+     * <b>summary</b> : 
+     * <p>查询人声克隆训练任务列表，列出当前用户的所有人声克隆训练任务</p>
+     * 
      * @param request ListCustomizedVoiceJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCustomizedVoiceJobsResponse
@@ -5015,8 +5254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询人声克隆训练任务列表，列出当前用户的所有人声克隆训练任务
-     *
+     * <b>summary</b> : 
+     * <p>查询人声克隆训练任务列表，列出当前用户的所有人声克隆训练任务</p>
+     * 
      * @param request ListCustomizedVoiceJobsRequest
      * @return ListCustomizedVoiceJobsResponse
      */
@@ -5026,8 +5266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户的专属人声列表
-     *
+     * <b>summary</b> : 
+     * <p>获取用户的专属人声列表</p>
+     * 
      * @param request ListCustomizedVoicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCustomizedVoicesResponse
@@ -5065,8 +5306,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户的专属人声列表
-     *
+     * <b>summary</b> : 
+     * <p>获取用户的专属人声列表</p>
+     * 
      * @param request ListCustomizedVoicesRequest
      * @return ListCustomizedVoicesResponse
      */
@@ -5076,8 +5318,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询DNA库
-     *
+     * <b>summary</b> : 
+     * <p>查询DNA库</p>
+     * 
      * @param request ListDNADBRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDNADBResponse
@@ -5123,8 +5366,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询DNA库
-     *
+     * <b>summary</b> : 
+     * <p>查询DNA库</p>
+     * 
      * @param request ListDNADBRequest
      * @return ListDNADBResponse
      */
@@ -5134,8 +5378,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询DNA文件
-     *
+     * <b>summary</b> : 
+     * <p>查询DNA文件</p>
+     * 
      * @param request ListDNAFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDNAFilesResponse
@@ -5189,8 +5434,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询DNA文件
-     *
+     * <b>summary</b> : 
+     * <p>查询DNA文件</p>
+     * 
      * @param request ListDNAFilesRequest
      * @return ListDNAFilesResponse
      */
@@ -5200,8 +5446,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询截图任务列表接口
-     *
+     * <b>summary</b> : 
+     * <p>查询截图任务列表接口</p>
+     * 
      * @param request ListDynamicImageJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDynamicImageJobsResponse
@@ -5255,8 +5502,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询截图任务列表接口
-     *
+     * <b>summary</b> : 
+     * <p>查询截图任务列表接口</p>
+     * 
      * @param request ListDynamicImageJobsRequest
      * @return ListDynamicImageJobsResponse
      */
@@ -5266,8 +5514,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询录制文件
-     *
+     * <b>summary</b> : 
+     * <p>查询录制文件</p>
+     * 
      * @param request ListLiveRecordFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLiveRecordFilesResponse
@@ -5293,8 +5542,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询录制文件
-     *
+     * <b>summary</b> : 
+     * <p>查询录制文件</p>
+     * 
      * @param request ListLiveRecordFilesRequest
      * @return ListLiveRecordFilesResponse
      */
@@ -5304,8 +5554,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询录制任务
-     *
+     * <b>summary</b> : 
+     * <p>查询录制任务</p>
+     * 
      * @param request ListLiveRecordJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLiveRecordJobsResponse
@@ -5331,8 +5582,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询录制任务
-     *
+     * <b>summary</b> : 
+     * <p>查询录制任务</p>
+     * 
      * @param request ListLiveRecordJobsRequest
      * @return ListLiveRecordJobsResponse
      */
@@ -5342,8 +5594,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播录制模板
-     *
+     * <b>summary</b> : 
+     * <p>查询直播录制模板</p>
+     * 
      * @param request ListLiveRecordTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLiveRecordTemplatesResponse
@@ -5369,8 +5622,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播录制模板
-     *
+     * <b>summary</b> : 
+     * <p>查询直播录制模板</p>
+     * 
      * @param request ListLiveRecordTemplatesRequest
      * @return ListLiveRecordTemplatesResponse
      */
@@ -5380,8 +5634,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图文件列表
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图文件列表</p>
+     * 
      * @param request ListLiveSnapshotFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLiveSnapshotFilesResponse
@@ -5407,8 +5662,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图文件列表
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图文件列表</p>
+     * 
      * @param request ListLiveSnapshotFilesRequest
      * @return ListLiveSnapshotFilesResponse
      */
@@ -5418,8 +5674,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图任务列表
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图任务列表</p>
+     * 
      * @param request ListLiveSnapshotJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLiveSnapshotJobsResponse
@@ -5445,8 +5702,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图任务列表
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图任务列表</p>
+     * 
      * @param request ListLiveSnapshotJobsRequest
      * @return ListLiveSnapshotJobsResponse
      */
@@ -5456,8 +5714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图模板列表
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图模板列表</p>
+     * 
      * @param request ListLiveSnapshotTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLiveSnapshotTemplatesResponse
@@ -5483,8 +5742,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询直播截图模板列表
-     *
+     * <b>summary</b> : 
+     * <p>查询直播截图模板列表</p>
+     * 
      * @param request ListLiveSnapshotTemplatesRequest
      * @return ListLiveSnapshotTemplatesResponse
      */
@@ -5494,8 +5754,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询转码任务列表
-     *
+     * <b>summary</b> : 
+     * <p>查询转码任务列表</p>
+     * 
      * @param request ListLiveTranscodeJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLiveTranscodeJobsResponse
@@ -5549,8 +5810,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询转码任务列表
-     *
+     * <b>summary</b> : 
+     * <p>查询转码任务列表</p>
+     * 
      * @param request ListLiveTranscodeJobsRequest
      * @return ListLiveTranscodeJobsResponse
      */
@@ -5560,8 +5822,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询转码模版列表
-     *
+     * <b>summary</b> : 
+     * <p>查询转码模版列表</p>
+     * 
      * @param request ListLiveTranscodeTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLiveTranscodeTemplatesResponse
@@ -5615,8 +5878,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询转码模版列表
-     *
+     * <b>summary</b> : 
+     * <p>查询转码模版列表</p>
+     * 
      * @param request ListLiveTranscodeTemplatesRequest
      * @return ListLiveTranscodeTemplatesResponse
      */
@@ -5626,8 +5890,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出符合条件的媒资基础信息
-     *
+     * <b>summary</b> : 
+     * <p>列出符合条件的媒资基础信息</p>
+     * 
      * @param request ListMediaBasicInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMediaBasicInfosResponse
@@ -5697,8 +5962,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出符合条件的媒资基础信息
-     *
+     * <b>summary</b> : 
+     * <p>列出符合条件的媒资基础信息</p>
+     * 
      * @param request ListMediaBasicInfosRequest
      * @return ListMediaBasicInfosResponse
      */
@@ -5770,8 +6036,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒资的标注信息
-     *
+     * <b>summary</b> : 
+     * <p>获取媒资的标注信息</p>
+     * 
      * @param request ListMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMediaMarksResponse
@@ -5805,8 +6072,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒资的标注信息
-     *
+     * <b>summary</b> : 
+     * <p>获取媒资的标注信息</p>
+     * 
      * @param request ListMediaMarksRequest
      * @return ListMediaMarksResponse
      */
@@ -5816,8 +6084,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出合成任务列表
-     *
+     * <b>summary</b> : 
+     * <p>列出合成任务列表</p>
+     * 
      * @param request ListMediaProducingJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMediaProducingJobsResponse
@@ -5879,8 +6148,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出合成任务列表
-     *
+     * <b>summary</b> : 
+     * <p>列出合成任务列表</p>
+     * 
      * @param request ListMediaProducingJobsRequest
      * @return ListMediaProducingJobsResponse
      */
@@ -5890,8 +6160,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取打包任务列表
-     *
+     * <b>summary</b> : 
+     * <p>获取打包任务列表</p>
+     * 
      * @param request ListPackageJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPackageJobsResponse
@@ -5945,8 +6216,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取打包任务列表
-     *
+     * <b>summary</b> : 
+     * <p>获取打包任务列表</p>
+     * 
      * @param request ListPackageJobsRequest
      * @return ListPackageJobsResponse
      */
@@ -5956,8 +6228,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取管道配置列表
-     *
+     * <b>summary</b> : 
+     * <p>获取管道配置列表</p>
+     * 
      * @param request ListPipelinesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPipelinesResponse
@@ -5987,8 +6260,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取管道配置列表
-     *
+     * <b>summary</b> : 
+     * <p>获取管道配置列表</p>
+     * 
      * @param request ListPipelinesRequest
      * @return ListPipelinesResponse
      */
@@ -5998,8 +6272,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出公共素材库素材的基础信息
-     *
+     * <b>summary</b> : 
+     * <p>列出公共素材库素材的基础信息</p>
+     * 
      * @param request ListPublicMediaBasicInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPublicMediaBasicInfosResponse
@@ -6053,8 +6328,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出公共素材库素材的基础信息
-     *
+     * <b>summary</b> : 
+     * <p>列出公共素材库素材的基础信息</p>
+     * 
      * @param request ListPublicMediaBasicInfosRequest
      * @return ListPublicMediaBasicInfosResponse
      */
@@ -6064,8 +6340,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListSmartJobs
-     *
+     * <b>summary</b> : 
+     * <p>ListSmartJobs</p>
+     * 
      * @param request ListSmartJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSmartJobsResponse
@@ -6091,8 +6368,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListSmartJobs
-     *
+     * <b>summary</b> : 
+     * <p>ListSmartJobs</p>
+     * 
      * @param request ListSmartJobsRequest
      * @return ListSmartJobsResponse
      */
@@ -6102,8 +6380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出虚拟人官方模特配置
-     *
+     * <b>summary</b> : 
+     * <p>列出虚拟人官方模特配置</p>
+     * 
      * @param request ListSmartSysAvatarModelsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSmartSysAvatarModelsResponse
@@ -6141,8 +6420,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出虚拟人官方模特配置
-     *
+     * <b>summary</b> : 
+     * <p>列出虚拟人官方模特配置</p>
+     * 
      * @param request ListSmartSysAvatarModelsRequest
      * @return ListSmartSysAvatarModelsResponse
      */
@@ -6152,8 +6432,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出智能语音发音人信息
-     *
+     * <b>summary</b> : 
+     * <p>列出智能语音发音人信息</p>
+     * 
      * @param request ListSmartVoiceGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSmartVoiceGroupsResponse
@@ -6175,8 +6456,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 列出智能语音发音人信息
-     *
+     * <b>summary</b> : 
+     * <p>列出智能语音发音人信息</p>
      * @return ListSmartVoiceGroupsResponse
      */
     public ListSmartVoiceGroupsResponse listSmartVoiceGroups() throws Exception {
@@ -6185,8 +6466,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询截图任务列表接口
-     *
+     * <b>summary</b> : 
+     * <p>查询截图任务列表接口</p>
+     * 
      * @param request ListSnapshotJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSnapshotJobsResponse
@@ -6240,8 +6522,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询截图任务列表接口
-     *
+     * <b>summary</b> : 
+     * <p>查询截图任务列表接口</p>
+     * 
      * @param request ListSnapshotJobsRequest
      * @return ListSnapshotJobsResponse
      */
@@ -6251,8 +6534,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒体处理系统模板列表
-     *
+     * <b>summary</b> : 
+     * <p>获取媒体处理系统模板列表</p>
+     * 
      * @param request ListSystemTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSystemTemplatesResponse
@@ -6306,8 +6590,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取媒体处理系统模板列表
-     *
+     * <b>summary</b> : 
+     * <p>获取媒体处理系统模板列表</p>
+     * 
      * @param request ListSystemTemplatesRequest
      * @return ListSystemTemplatesResponse
      */
@@ -6317,8 +6602,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListTemplates
-     *
+     * <b>summary</b> : 
+     * <p>ListTemplates</p>
+     * 
      * @param request ListTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTemplatesResponse
@@ -6372,8 +6658,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListTemplates
-     *
+     * <b>summary</b> : 
+     * <p>ListTemplates</p>
+     * 
      * @param request ListTemplatesRequest
      * @return ListTemplatesResponse
      */
@@ -6445,8 +6732,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询DNA作业
-     *
+     * <b>summary</b> : 
+     * <p>查询DNA作业</p>
+     * 
      * @param request QueryDNAJobListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryDNAJobListResponse
@@ -6492,8 +6780,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询DNA作业
-     *
+     * <b>summary</b> : 
+     * <p>查询DNA作业</p>
+     * 
      * @param request QueryDNAJobListRequest
      * @return QueryDNAJobListResponse
      */
@@ -6503,8 +6792,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询智能生产作业
-     *
+     * <b>summary</b> : 
+     * <p>查询智能生产作业</p>
+     * 
      * @param request QueryIProductionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryIProductionJobResponse
@@ -6538,8 +6828,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询智能生产作业
-     *
+     * <b>summary</b> : 
+     * <p>查询智能生产作业</p>
+     * 
      * @param request QueryIProductionJobRequest
      * @return QueryIProductionJobResponse
      */
@@ -6689,8 +6980,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询索引任务
-     *
+     * <b>summary</b> : 
+     * <p>查询索引任务</p>
+     * 
      * @param request QueryMediaIndexJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryMediaIndexJobResponse
@@ -6724,8 +7016,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询索引任务
-     *
+     * <b>summary</b> : 
+     * <p>查询索引任务</p>
+     * 
      * @param request QueryMediaIndexJobRequest
      * @return QueryMediaIndexJobResponse
      */
@@ -6735,8 +7028,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询搜索索引
-     *
+     * <b>summary</b> : 
+     * <p>查询搜索索引</p>
+     * 
      * @param request QuerySearchIndexRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySearchIndexResponse
@@ -6770,8 +7064,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询搜索索引
-     *
+     * <b>summary</b> : 
+     * <p>查询搜索索引</p>
+     * 
      * @param request QuerySearchIndexRequest
      * @return QuerySearchIndexResponse
      */
@@ -6781,8 +7076,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询库
-     *
+     * <b>summary</b> : 
+     * <p>查询库</p>
+     * 
      * @param request QuerySearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QuerySearchLibResponse
@@ -6812,8 +7108,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询库
-     *
+     * <b>summary</b> : 
+     * <p>查询库</p>
+     * 
      * @param request QuerySearchLibRequest
      * @return QuerySearchLibResponse
      */
@@ -6865,8 +7162,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 刷新媒资上传凭证
-     *
+     * <b>summary</b> : 
+     * <p>刷新媒资上传凭证</p>
+     * 
      * @param request RefreshUploadMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RefreshUploadMediaResponse
@@ -6896,8 +7194,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 刷新媒资上传凭证
-     *
+     * <b>summary</b> : 
+     * <p>刷新媒资上传凭证</p>
+     * 
      * @param request RefreshUploadMediaRequest
      * @return RefreshUploadMediaResponse
      */
@@ -6907,8 +7206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 注册内容库资源
-     *
+     * <b>summary</b> : 
+     * <p>注册内容库资源</p>
+     * 
      * @param request RegisterMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RegisterMediaInfoResponse
@@ -6994,8 +7294,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 注册内容库资源
-     *
+     * <b>summary</b> : 
+     * <p>注册内容库资源</p>
+     * 
      * @param request RegisterMediaInfoRequest
      * @return RegisterMediaInfoResponse
      */
@@ -7005,8 +7306,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 注册媒体流
-     *
+     * <b>summary</b> : 
+     * <p>注册媒体流</p>
+     * 
      * @param request RegisterMediaStreamRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RegisterMediaStreamResponse
@@ -7044,8 +7346,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 注册媒体流
-     *
+     * <b>summary</b> : 
+     * <p>注册媒体流</p>
+     * 
      * @param request RegisterMediaStreamRequest
      * @return RegisterMediaStreamResponse
      */
@@ -7055,8 +7358,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SearchEditingProject
-     *
+     * <b>summary</b> : 
+     * <p>SearchEditingProject</p>
+     * 
      * @param request SearchEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchEditingProjectResponse
@@ -7118,8 +7422,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SearchEditingProject
-     *
+     * <b>summary</b> : 
+     * <p>SearchEditingProject</p>
+     * 
      * @param request SearchEditingProjectRequest
      * @return SearchEditingProjectResponse
      */
@@ -7129,8 +7434,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 媒资搜索
-     *
+     * <b>summary</b> : 
+     * <p>媒资搜索</p>
+     * 
      * @param request SearchMediaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchMediaResponse
@@ -7184,8 +7490,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 媒资搜索
-     *
+     * <b>summary</b> : 
+     * <p>媒资搜索</p>
+     * 
      * @param request SearchMediaRequest
      * @return SearchMediaResponse
      */
@@ -7195,8 +7502,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 智能标签搜索
-     *
+     * <b>summary</b> : 
+     * <p>智能标签搜索</p>
+     * 
      * @param request SearchMediaByAILabelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchMediaByAILabelResponse
@@ -7258,8 +7566,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 智能标签搜索
-     *
+     * <b>summary</b> : 
+     * <p>智能标签搜索</p>
+     * 
      * @param request SearchMediaByAILabelRequest
      * @return SearchMediaByAILabelResponse
      */
@@ -7269,8 +7578,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息
-     *
+     * <b>summary</b> : 
+     * <p>人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息</p>
+     * 
      * @param request SearchMediaByFaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchMediaByFaceResponse
@@ -7324,8 +7634,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息
-     *
+     * <b>summary</b> : 
+     * <p>人脸搜粗搜接口，输入一张人脸图片，搜索该人物所在媒资的相关信息</p>
+     * 
      * @param request SearchMediaByFaceRequest
      * @return SearchMediaByFaceResponse
      */
@@ -7335,8 +7646,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 混合搜索
-     *
+     * <b>summary</b> : 
+     * <p>混合搜索</p>
+     * 
      * @param request SearchMediaByHybridRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchMediaByHybridResponse
@@ -7386,8 +7698,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 混合搜索
-     *
+     * <b>summary</b> : 
+     * <p>混合搜索</p>
+     * 
      * @param request SearchMediaByHybridRequest
      * @return SearchMediaByHybridResponse
      */
@@ -7397,8 +7710,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 多模态搜索
-     *
+     * <b>summary</b> : 
+     * <p>多模态搜索</p>
+     * 
      * @param request SearchMediaByMultimodalRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchMediaByMultimodalResponse
@@ -7444,8 +7758,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 多模态搜索
-     *
+     * <b>summary</b> : 
+     * <p>多模态搜索</p>
+     * 
      * @param request SearchMediaByMultimodalRequest
      * @return SearchMediaByMultimodalResponse
      */
@@ -7455,8 +7770,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息
-     *
+     * <b>summary</b> : 
+     * <p>人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息</p>
+     * 
      * @param request SearchMediaClipByFaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchMediaClipByFaceResponse
@@ -7506,8 +7822,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息
-     *
+     * <b>summary</b> : 
+     * <p>人脸搜精搜接口，基于粗搜结果返回该人物所在媒资的相关人物片段信息</p>
+     * 
      * @param request SearchMediaClipByFaceRequest
      * @return SearchMediaClipByFaceResponse
      */
@@ -7517,8 +7834,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 搜索公共媒资信息
-     *
+     * <b>summary</b> : 
+     * <p>搜索公共媒资信息</p>
+     * 
      * @param request SearchPublicMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchPublicMediaInfoResponse
@@ -7576,8 +7894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 搜索公共媒资信息
-     *
+     * <b>summary</b> : 
+     * <p>搜索公共媒资信息</p>
+     * 
      * @param request SearchPublicMediaInfoRequest
      * @return SearchPublicMediaInfoResponse
      */
@@ -7587,8 +7906,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发送实时截图任务指令
-     *
+     * <b>summary</b> : 
+     * <p>发送实时截图任务指令</p>
+     * 
      * @param request SendLiveSnapshotJobCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SendLiveSnapshotJobCommandResponse
@@ -7622,8 +7942,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 发送实时截图任务指令
-     *
+     * <b>summary</b> : 
+     * <p>发送实时截图任务指令</p>
+     * 
      * @param request SendLiveSnapshotJobCommandRequest
      * @return SendLiveSnapshotJobCommandResponse
      */
@@ -7633,8 +7954,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 给指定转码任务发实时命令
-     *
+     * <b>summary</b> : 
+     * <p>给指定转码任务发实时命令</p>
+     * 
      * @param request SendLiveTranscodeJobCommandRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SendLiveTranscodeJobCommandResponse
@@ -7668,8 +7990,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 给指定转码任务发实时命令
-     *
+     * <b>summary</b> : 
+     * <p>给指定转码任务发实时命令</p>
+     * 
      * @param request SendLiveTranscodeJobCommandRequest
      * @return SendLiveTranscodeJobCommandResponse
      */
@@ -7679,8 +8002,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置内容分析搜索配置
-     *
+     * <b>summary</b> : 
+     * <p>设置内容分析搜索配置</p>
+     * 
      * @param request SetContentAnalyzeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetContentAnalyzeConfigResponse
@@ -7718,8 +8042,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置内容分析搜索配置
-     *
+     * <b>summary</b> : 
+     * <p>设置内容分析搜索配置</p>
+     * 
      * @param request SetContentAnalyzeConfigRequest
      * @return SetContentAnalyzeConfigResponse
      */
@@ -7729,8 +8054,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置默认媒体处理模板
-     *
+     * <b>summary</b> : 
+     * <p>设置默认媒体处理模板</p>
+     * 
      * @param request SetDefaultCustomTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDefaultCustomTemplateResponse
@@ -7760,8 +8086,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置默认媒体处理模板
-     *
+     * <b>summary</b> : 
+     * <p>设置默认媒体处理模板</p>
+     * 
      * @param request SetDefaultCustomTemplateRequest
      * @return SetDefaultCustomTemplateResponse
      */
@@ -7771,8 +8098,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置默认存储路径
-     *
+     * <b>summary</b> : 
+     * <p>设置默认存储路径</p>
+     * 
      * @param request SetDefaultStorageLocationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDefaultStorageLocationResponse
@@ -7810,8 +8138,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 设置默认存储路径
-     *
+     * <b>summary</b> : 
+     * <p>设置默认存储路径</p>
+     * 
      * @param request SetDefaultStorageLocationRequest
      * @return SetDefaultStorageLocationResponse
      */
@@ -7821,8 +8150,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 配置事件回调地址
-     *
+     * <b>summary</b> : 
+     * <p>配置事件回调地址</p>
+     * 
      * @param request SetEventCallbackRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetEventCallbackResponse
@@ -7872,8 +8202,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 配置事件回调地址
-     *
+     * <b>summary</b> : 
+     * <p>配置事件回调地址</p>
+     * 
      * @param request SetEventCallbackRequest
      * @return SetEventCallbackResponse
      */
@@ -7883,8 +8214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动工作流
-     *
+     * <b>summary</b> : 
+     * <p>启动工作流</p>
+     * 
      * @param request StartWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartWorkflowResponse
@@ -7922,8 +8254,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动工作流
-     *
+     * <b>summary</b> : 
+     * <p>启动工作流</p>
+     * 
      * @param request StartWorkflowRequest
      * @return StartWorkflowResponse
      */
@@ -7933,8 +8266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SubmitASRJob
-     *
+     * <b>summary</b> : 
+     * <p>SubmitASRJob</p>
+     * 
      * @param request SubmitASRJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitASRJobResponse
@@ -7984,8 +8318,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SubmitASRJob
-     *
+     * <b>summary</b> : 
+     * <p>SubmitASRJob</p>
+     * 
      * @param request SubmitASRJobRequest
      * @return SubmitASRJobResponse
      */
@@ -7995,8 +8330,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SubmitAudioProduceJob
-     *
+     * <b>summary</b> : 
+     * <p>SubmitAudioProduceJob</p>
+     * 
      * @param request SubmitAudioProduceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitAudioProduceJobResponse
@@ -8050,8 +8386,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SubmitAudioProduceJob
-     *
+     * <b>summary</b> : 
+     * <p>SubmitAudioProduceJob</p>
+     * 
      * @param request SubmitAudioProduceJobRequest
      * @return SubmitAudioProduceJobResponse
      */
@@ -8061,8 +8398,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交数字人训练任务
-     *
+     * <b>summary</b> : 
+     * <p>提交数字人训练任务</p>
+     * 
      * @param request SubmitAvatarTrainingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitAvatarTrainingJobResponse
@@ -8092,8 +8430,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交数字人训练任务
-     *
+     * <b>summary</b> : 
+     * <p>提交数字人训练任务</p>
+     * 
      * @param request SubmitAvatarTrainingJobRequest
      * @return SubmitAvatarTrainingJobResponse
      */
@@ -8103,8 +8442,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交虚拟人视频合成任务
-     *
+     * <b>summary</b> : 
+     * <p>提交虚拟人视频合成任务</p>
+     * 
      * @param request SubmitAvatarVideoJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitAvatarVideoJobResponse
@@ -8154,8 +8494,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交虚拟人视频合成任务
-     *
+     * <b>summary</b> : 
+     * <p>提交虚拟人视频合成任务</p>
+     * 
      * @param request SubmitAvatarVideoJobRequest
      * @return SubmitAvatarVideoJobResponse
      */
@@ -8165,8 +8506,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SubmitBatchMediaProducingJob
-     *
+     * <b>summary</b> : 
+     * <p>SubmitBatchMediaProducingJob</p>
+     * 
      * @param request SubmitBatchMediaProducingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitBatchMediaProducingJobResponse
@@ -8214,8 +8556,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SubmitBatchMediaProducingJob
-     *
+     * <b>summary</b> : 
+     * <p>SubmitBatchMediaProducingJob</p>
+     * 
      * @param request SubmitBatchMediaProducingJobRequest
      * @return SubmitBatchMediaProducingJobResponse
      */
@@ -8225,8 +8568,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交人声克隆训练任务
-     *
+     * <b>summary</b> : 
+     * <p>提交人声克隆训练任务</p>
+     * 
      * @param request SubmitCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitCustomizedVoiceJobResponse
@@ -8260,8 +8604,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交人声克隆训练任务
-     *
+     * <b>summary</b> : 
+     * <p>提交人声克隆训练任务</p>
+     * 
      * @param request SubmitCustomizedVoiceJobRequest
      * @return SubmitCustomizedVoiceJobResponse
      */
@@ -8271,8 +8616,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交DNA作业
-     *
+     * <b>summary</b> : 
+     * <p>提交DNA作业</p>
+     * 
      * @param tmpReq SubmitDNAJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitDNAJobResponse
@@ -8348,8 +8694,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交DNA作业
-     *
+     * <b>summary</b> : 
+     * <p>提交DNA作业</p>
+     * 
      * @param request SubmitDNAJobRequest
      * @return SubmitDNAJobResponse
      */
@@ -8359,8 +8706,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交动态图表任务
-     *
+     * <b>summary</b> : 
+     * <p>提交动态图表任务</p>
+     * 
      * @param request SubmitDynamicChartJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitDynamicChartJobResponse
@@ -8438,8 +8786,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交动态图表任务
-     *
+     * <b>summary</b> : 
+     * <p>提交动态图表任务</p>
+     * 
      * @param request SubmitDynamicChartJobRequest
      * @return SubmitDynamicChartJobResponse
      */
@@ -8449,8 +8798,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交异步动图任务接口
-     *
+     * <b>summary</b> : 
+     * <p>提交异步动图任务接口</p>
+     * 
      * @param tmpReq SubmitDynamicImageJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitDynamicImageJobResponse
@@ -8518,8 +8868,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交异步动图任务接口
-     *
+     * <b>summary</b> : 
+     * <p>提交异步动图任务接口</p>
+     * 
      * @param request SubmitDynamicImageJobRequest
      * @return SubmitDynamicImageJobResponse
      */
@@ -8529,8 +8880,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交智能生产作业
-     *
+     * <b>summary</b> : 
+     * <p>提交智能生产作业</p>
+     * 
      * @param tmpReq SubmitIProductionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitIProductionJobResponse
@@ -8602,8 +8954,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交智能生产作业
-     *
+     * <b>summary</b> : 
+     * <p>提交智能生产作业</p>
+     * 
      * @param request SubmitIProductionJobRequest
      * @return SubmitIProductionJobResponse
      */
@@ -8613,8 +8966,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交直播剪辑任务
-     *
+     * <b>summary</b> : 
+     * <p>提交直播剪辑任务</p>
+     * 
      * @param request SubmitLiveEditingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitLiveEditingJobResponse
@@ -8668,8 +9022,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交直播剪辑任务
-     *
+     * <b>summary</b> : 
+     * <p>提交直播剪辑任务</p>
+     * 
      * @param request SubmitLiveEditingJobRequest
      * @return SubmitLiveEditingJobResponse
      */
@@ -8679,8 +9034,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交录制任务
-     *
+     * <b>summary</b> : 
+     * <p>提交录制任务</p>
+     * 
      * @param tmpReq SubmitLiveRecordJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitLiveRecordJobResponse
@@ -8736,8 +9092,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交录制任务
-     *
+     * <b>summary</b> : 
+     * <p>提交录制任务</p>
+     * 
      * @param request SubmitLiveRecordJobRequest
      * @return SubmitLiveRecordJobResponse
      */
@@ -8747,8 +9104,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建直播截图任务
-     *
+     * <b>summary</b> : 
+     * <p>创建直播截图任务</p>
+     * 
      * @param tmpReq SubmitLiveSnapshotJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitLiveSnapshotJobResponse
@@ -8804,8 +9162,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建直播截图任务
-     *
+     * <b>summary</b> : 
+     * <p>创建直播截图任务</p>
+     * 
      * @param request SubmitLiveSnapshotJobRequest
      * @return SubmitLiveSnapshotJobResponse
      */
@@ -8815,8 +9174,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交转码任务
-     *
+     * <b>summary</b> : 
+     * <p>提交转码任务</p>
+     * 
      * @param tmpReq SubmitLiveTranscodeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitLiveTranscodeJobResponse
@@ -8880,8 +9240,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交转码任务
-     *
+     * <b>summary</b> : 
+     * <p>提交转码任务</p>
+     * 
      * @param request SubmitLiveTranscodeJobRequest
      * @return SubmitLiveTranscodeJobResponse
      */
@@ -9035,8 +9396,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SubmitMediaProducingJob
-     *
+     * <b>summary</b> : 
+     * <p>SubmitMediaProducingJob</p>
+     * 
      * @param request SubmitMediaProducingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitMediaProducingJobResponse
@@ -9112,8 +9474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary SubmitMediaProducingJob
-     *
+     * <b>summary</b> : 
+     * <p>SubmitMediaProducingJob</p>
+     * 
      * @param request SubmitMediaProducingJobRequest
      * @return SubmitMediaProducingJobResponse
      */
@@ -9123,8 +9486,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交打包任务
-     *
+     * <b>summary</b> : 
+     * <p>提交打包任务</p>
+     * 
      * @param tmpReq SubmitPackageJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitPackageJobResponse
@@ -9184,8 +9548,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交打包任务
-     *
+     * <b>summary</b> : 
+     * <p>提交打包任务</p>
+     * 
      * @param request SubmitPackageJobRequest
      * @return SubmitPackageJobResponse
      */
@@ -9279,8 +9644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交异步截图任务
-     *
+     * <b>summary</b> : 
+     * <p>提交异步截图任务</p>
+     * 
      * @param tmpReq SubmitSnapshotJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitSnapshotJobResponse
@@ -9348,8 +9714,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交异步截图任务
-     *
+     * <b>summary</b> : 
+     * <p>提交异步截图任务</p>
+     * 
      * @param request SubmitSnapshotJobRequest
      * @return SubmitSnapshotJobResponse
      */
@@ -9359,8 +9726,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交标准版人声克隆训练任务
-     *
+     * <b>summary</b> : 
+     * <p>提交标准版人声克隆训练任务</p>
+     * 
      * @param request SubmitStandardCustomizedVoiceJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitStandardCustomizedVoiceJobResponse
@@ -9406,8 +9774,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交标准版人声克隆训练任务
-     *
+     * <b>summary</b> : 
+     * <p>提交标准版人声克隆训练任务</p>
+     * 
      * @param request SubmitStandardCustomizedVoiceJobRequest
      * @return SubmitStandardCustomizedVoiceJobResponse
      */
@@ -9477,8 +9846,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交文本生成任务
-     *
+     * <b>summary</b> : 
+     * <p>提交文本生成任务</p>
+     * 
      * @param request SubmitTextGenerateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitTextGenerateJobResponse
@@ -9524,8 +9894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交文本生成任务
-     *
+     * <b>summary</b> : 
+     * <p>提交文本生成任务</p>
+     * 
      * @param request SubmitTextGenerateJobRequest
      * @return SubmitTextGenerateJobResponse
      */
@@ -9607,8 +9978,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新数字人训练任务信息
-     *
+     * <b>summary</b> : 
+     * <p>提交视频翻译任务</p>
+     * 
+     * @param request SubmitVideoTranslationJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitVideoTranslationJobResponse
+     */
+    public SubmitVideoTranslationJobResponse submitVideoTranslationJobWithOptions(SubmitVideoTranslationJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.editingConfig)) {
+            query.put("EditingConfig", request.editingConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputConfig)) {
+            query.put("InputConfig", request.inputConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputConfig)) {
+            query.put("OutputConfig", request.outputConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitVideoTranslationJob"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitVideoTranslationJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交视频翻译任务</p>
+     * 
+     * @param request SubmitVideoTranslationJobRequest
+     * @return SubmitVideoTranslationJobResponse
+     */
+    public SubmitVideoTranslationJobResponse submitVideoTranslationJob(SubmitVideoTranslationJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitVideoTranslationJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新数字人训练任务信息</p>
+     * 
      * @param request UpdateAvatarTrainingJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAvatarTrainingJobResponse
@@ -9662,8 +10102,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新数字人训练任务信息
-     *
+     * <b>summary</b> : 
+     * <p>更新数字人训练任务信息</p>
+     * 
      * @param request UpdateAvatarTrainingJobRequest
      * @return UpdateAvatarTrainingJobResponse
      */
@@ -9673,8 +10114,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新媒资分类
-     *
+     * <b>summary</b> : 
+     * <p>更新媒资分类</p>
+     * 
      * @param request UpdateCategoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCategoryResponse
@@ -9708,8 +10150,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新媒资分类
-     *
+     * <b>summary</b> : 
+     * <p>更新媒资分类</p>
+     * 
      * @param request UpdateCategoryRequest
      * @return UpdateCategoryResponse
      */
@@ -9719,8 +10162,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新媒体处理自定义模板
-     *
+     * <b>summary</b> : 
+     * <p>更新媒体处理自定义模板</p>
+     * 
      * @param request UpdateCustomTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCustomTemplateResponse
@@ -9758,8 +10202,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新媒体处理自定义模板
-     *
+     * <b>summary</b> : 
+     * <p>更新媒体处理自定义模板</p>
+     * 
      * @param request UpdateCustomTemplateRequest
      * @return UpdateCustomTemplateResponse
      */
@@ -9769,8 +10214,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新用户的专属人声
-     *
+     * <b>summary</b> : 
+     * <p>更新用户的专属人声</p>
+     * 
      * @param request UpdateCustomizedVoiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCustomizedVoiceResponse
@@ -9804,8 +10250,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新用户的专属人声
-     *
+     * <b>summary</b> : 
+     * <p>更新用户的专属人声</p>
+     * 
      * @param request UpdateCustomizedVoiceRequest
      * @return UpdateCustomizedVoiceResponse
      */
@@ -9815,8 +10262,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改云剪辑工程
-     *
+     * <b>summary</b> : 
+     * <p>修改云剪辑工程</p>
+     * 
      * @param request UpdateEditingProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateEditingProjectResponse
@@ -9876,8 +10324,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改云剪辑工程
-     *
+     * <b>summary</b> : 
+     * <p>修改云剪辑工程</p>
+     * 
      * @param request UpdateEditingProjectRequest
      * @return UpdateEditingProjectResponse
      */
@@ -9887,8 +10336,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改直播录制模板
-     *
+     * <b>summary</b> : 
+     * <p>修改直播录制模板</p>
+     * 
      * @param tmpReq UpdateLiveRecordTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateLiveRecordTemplateResponse
@@ -9932,8 +10382,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 修改直播录制模板
-     *
+     * <b>summary</b> : 
+     * <p>修改直播录制模板</p>
+     * 
      * @param request UpdateLiveRecordTemplateRequest
      * @return UpdateLiveRecordTemplateResponse
      */
@@ -9943,8 +10394,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新直播截图模板
-     *
+     * <b>summary</b> : 
+     * <p>更新直播截图模板</p>
+     * 
      * @param request UpdateLiveSnapshotTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateLiveSnapshotTemplateResponse
@@ -9990,8 +10442,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新直播截图模板
-     *
+     * <b>summary</b> : 
+     * <p>更新直播截图模板</p>
+     * 
      * @param request UpdateLiveSnapshotTemplateRequest
      * @return UpdateLiveSnapshotTemplateResponse
      */
@@ -10001,8 +10454,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新转码任务配置
-     *
+     * <b>summary</b> : 
+     * <p>更新转码任务配置</p>
+     * 
      * @param tmpReq UpdateLiveTranscodeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateLiveTranscodeJobResponse
@@ -10062,8 +10516,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新转码任务配置
-     *
+     * <b>summary</b> : 
+     * <p>更新转码任务配置</p>
+     * 
      * @param request UpdateLiveTranscodeJobRequest
      * @return UpdateLiveTranscodeJobResponse
      */
@@ -10073,8 +10528,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新转码模版
-     *
+     * <b>summary</b> : 
+     * <p>更新转码模版</p>
+     * 
      * @param tmpReq UpdateLiveTranscodeTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateLiveTranscodeTemplateResponse
@@ -10118,8 +10574,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新转码模版
-     *
+     * <b>summary</b> : 
+     * <p>更新转码模版</p>
+     * 
      * @param request UpdateLiveTranscodeTemplateRequest
      * @return UpdateLiveTranscodeTemplateResponse
      */
@@ -10129,8 +10586,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary UpdateMediaInfo
-     *
+     * <b>summary</b> : 
+     * <p>UpdateMediaInfo</p>
+     * 
      * @param request UpdateMediaInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMediaInfoResponse
@@ -10204,8 +10662,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary UpdateMediaInfo
-     *
+     * <b>summary</b> : 
+     * <p>UpdateMediaInfo</p>
+     * 
      * @param request UpdateMediaInfoRequest
      * @return UpdateMediaInfoResponse
      */
@@ -10215,8 +10674,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 为媒资修改标注信息
-     *
+     * <b>summary</b> : 
+     * <p>为媒资修改标注信息</p>
+     * 
      * @param request UpdateMediaMarksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMediaMarksResponse
@@ -10250,8 +10710,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 为媒资修改标注信息
-     *
+     * <b>summary</b> : 
+     * <p>为媒资修改标注信息</p>
+     * 
      * @param request UpdateMediaMarksRequest
      * @return UpdateMediaMarksResponse
      */
@@ -10261,8 +10722,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新媒资到搜索
-     *
+     * <b>summary</b> : 
+     * <p>更新媒资到搜索</p>
+     * 
      * @param request UpdateMediaToSearchLibRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMediaToSearchLibResponse
@@ -10300,8 +10762,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新媒资到搜索
-     *
+     * <b>summary</b> : 
+     * <p>更新媒资到搜索</p>
+     * 
      * @param request UpdateMediaToSearchLibRequest
      * @return UpdateMediaToSearchLibResponse
      */
@@ -10311,8 +10774,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新管道配置
-     *
+     * <b>summary</b> : 
+     * <p>更新管道配置</p>
+     * 
      * @param request UpdatePipelineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdatePipelineResponse
@@ -10354,8 +10818,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新管道配置
-     *
+     * <b>summary</b> : 
+     * <p>更新管道配置</p>
+     * 
      * @param request UpdatePipelineRequest
      * @return UpdatePipelineResponse
      */
@@ -10365,8 +10830,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary UpdateTemplate
-     *
+     * <b>summary</b> : 
+     * <p>UpdateTemplate</p>
+     * 
      * @param request UpdateTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateTemplateResponse
@@ -10426,8 +10892,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary UpdateTemplate
-     *
+     * <b>summary</b> : 
+     * <p>UpdateTemplate</p>
+     * 
      * @param request UpdateTemplateRequest
      * @return UpdateTemplateResponse
      */
@@ -10437,8 +10904,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary URL拉取上传
-     *
+     * <b>summary</b> : 
+     * <p>URL拉取上传</p>
+     * 
      * @param request UploadMediaByURLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UploadMediaByURLResponse
@@ -10492,8 +10960,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary URL拉取上传
-     *
+     * <b>summary</b> : 
+     * <p>URL拉取上传</p>
+     * 
      * @param request UploadMediaByURLRequest
      * @return UploadMediaByURLResponse
      */
@@ -10503,8 +10972,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary URL拉取上传媒体流
-     *
+     * <b>summary</b> : 
+     * <p>URL拉取上传媒体流</p>
+     * 
      * @param request UploadStreamByURLRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UploadStreamByURLResponse
@@ -10554,8 +11024,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary URL拉取上传媒体流
-     *
+     * <b>summary</b> : 
+     * <p>URL拉取上传媒体流</p>
+     * 
      * @param request UploadStreamByURLRequest
      * @return UploadStreamByURLResponse
      */

@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class SubmitLiveEditingJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;StartTime\&quot;: \&quot; 2021-06-21T08:01:00Z\&quot;,  \&quot;EndTime\&quot;: \&quot; 2021-06-21T08:03:00Z\&quot; ,  &quot;AppName&quot;: &quot;app&quot;, &quot;DomainName&quot;: &quot;domain.com&quot;, &quot;StreamName&quot;: &quot;stream&quot;},  {\&quot;StartTime\&quot;: \&quot; 2021-06-21T08:05:00Z\&quot;,  \&quot;EndTime\&quot;: \&quot; 2021-06-21T08:09:00Z\&quot; }]</p>
      */
     @NameInMap("Clips")
     public String clips;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ &quot;AppName&quot;: &quot;app&quot;, &quot;DomainName&quot;: &quot;domain.com&quot;, &quot;StreamName&quot;: &quot;stream&quot;  }</p>
+     */
     @NameInMap("LiveStreamConfig")
     public String liveStreamConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ &quot;Mode&quot;: &quot;AccurateFast&quot;}</p>
+     */
     @NameInMap("MediaProduceConfig")
     public String mediaProduceConfig;
 
@@ -22,9 +33,17 @@ public class SubmitLiveEditingJobRequest extends TeaModel {
     @NameInMap("OutputMediaTarget")
     public String outputMediaTarget;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

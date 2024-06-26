@@ -4,26 +4,53 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListSystemTemplatesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SampleTemplate</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Subtype")
     public String subtype;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2</p>
      */
     @NameInMap("Type")
     public String type;

@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitMediaProducingJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>12e8864746a0a398</strong></strong></p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,27 +17,53 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     @NameInMap("EditingProduceConfig")
     public String editingProduceConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;Title&quot;:&quot;test-title&quot;,
+     *       &quot;Tags&quot;:&quot;test-tags1,tags2&quot;
+     * }</p>
+     */
     @NameInMap("MediaMetadata")
     public String mediaMetadata;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;MediaURL&quot;:&quot;<a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4%22%7D">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4&quot;}</a></p>
      */
     @NameInMap("OutputMediaConfig")
     public String outputMediaConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-object</p>
+     */
     @NameInMap("OutputMediaTarget")
     public String outputMediaTarget;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxxfb2101cb318xxxxx</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
     @NameInMap("ProjectMetadata")
     public String projectMetadata;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OPENAPI</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

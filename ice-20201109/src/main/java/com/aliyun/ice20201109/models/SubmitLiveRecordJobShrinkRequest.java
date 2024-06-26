@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class SubmitLiveRecordJobShrinkRequest extends TeaModel {
     /**
      * <p>代表资源名称的资源属性字段</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>live stream record 1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>回调地址</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/imsnotify">https://example.com/imsnotify</a></p>
      */
     @NameInMap("NotifyUrl")
     public String notifyUrl;
@@ -32,8 +37,10 @@ public class SubmitLiveRecordJobShrinkRequest extends TeaModel {
 
     /**
      * <p>录制模板ID</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

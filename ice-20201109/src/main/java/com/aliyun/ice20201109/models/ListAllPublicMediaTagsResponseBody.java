@@ -7,6 +7,10 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     @NameInMap("MediaTagList")
     public java.util.List<ListAllPublicMediaTagsResponseBodyMediaTagList> mediaTagList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B45F83B7-7F87-4792-BFE9-63CD2137CAF0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +39,17 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         @NameInMap("OptionChineseName")
         public String optionChineseName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Angry</p>
+         */
         @NameInMap("OptionEnglishName")
         public String optionEnglishName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Angry</p>
+         */
         @NameInMap("OptionId")
         public String optionId;
 
@@ -73,9 +85,17 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     }
 
     public static class ListAllPublicMediaTagsResponseBodyMediaTagList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>sticker-gif</p>
+         */
         @NameInMap("MediaTagId")
         public String mediaTagId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Gif</p>
+         */
         @NameInMap("MediaTagNameChinese")
         public String mediaTagNameChinese;
 

@@ -7,6 +7,10 @@ public class ListDNADBResponseBody extends TeaModel {
     @NameInMap("DBList")
     public java.util.List<ListDNADBResponseBodyDBList> DBList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,34 @@ public class ListDNADBResponseBody extends TeaModel {
     }
 
     public static class ListDNADBResponseBodyDBList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e47098a5b665e2a12****</p>
+         */
         @NameInMap("DBId")
         public String DBId;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Video</p>
+         */
         @NameInMap("Model")
         public Integer model;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example-name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("Status")
         public String status;
 

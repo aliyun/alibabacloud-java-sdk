@@ -9,10 +9,17 @@ public class GetTemplateParamsResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>419c8741c1b4325f035b</strong></strong></strong></p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -52,12 +59,20 @@ public class GetTemplateParamsResponseBody extends TeaModel {
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>video1</p>
+         */
         @NameInMap("Key")
         public String key;
 
         @NameInMap("MediaUrl")
         public String mediaUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Image</p>
+         */
         @NameInMap("Type")
         public String type;
 

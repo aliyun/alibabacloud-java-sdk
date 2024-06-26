@@ -7,9 +7,17 @@ public class ListDNAFilesResponseBody extends TeaModel {
     @NameInMap("FileList")
     public java.util.List<ListDNAFilesResponseBodyFileList> fileList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ae0fd49c0840e14daf0d66a75b83****</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2AE89FA5-E620-56C7-9B80-75D09757385A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +51,24 @@ public class ListDNAFilesResponseBody extends TeaModel {
     }
 
     public static class ListDNAFilesResponseBodyFileListInputFile extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>example-bucket</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example-****.mp4</p>
+         */
         @NameInMap("Object")
         public String object;
 
@@ -87,6 +107,10 @@ public class ListDNAFilesResponseBody extends TeaModel {
         @NameInMap("InputFile")
         public ListDNAFilesResponseBodyFileListInputFile inputFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ae0fd49c0840e14daf0d66a75b83****</p>
+         */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 

@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetSnapshotJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,18 +38,27 @@ public class GetSnapshotJobResponseBody extends TeaModel {
     public static class GetSnapshotJobResponseBodySnapshotJobInputOssFile extends TeaModel {
         /**
          * <p>OSS Bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-bucket</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>OSS Location</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>OSS Object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>object.mp4</p>
          */
         @NameInMap("Object")
         public String object;
@@ -82,12 +95,20 @@ public class GetSnapshotJobResponseBody extends TeaModel {
     }
 
     public static class GetSnapshotJobResponseBodySnapshotJobInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/object.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
         @NameInMap("OssFile")
         public GetSnapshotJobResponseBodySnapshotJobInputOssFile ossFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -125,18 +146,27 @@ public class GetSnapshotJobResponseBody extends TeaModel {
     public static class GetSnapshotJobResponseBodySnapshotJobOutputOssFile extends TeaModel {
         /**
          * <p>OSS Bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-bucket</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>OSS Location</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>OSS Object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>output-{Count}.jpg</p>
          */
         @NameInMap("Object")
         public String object;
@@ -173,12 +203,20 @@ public class GetSnapshotJobResponseBody extends TeaModel {
     }
 
     public static class GetSnapshotJobResponseBodySnapshotJobOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-%7BCount%7D.jpg">http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-{Count}.jpg</a></p>
+         */
         @NameInMap("Media")
         public String media;
 
         @NameInMap("OssFile")
         public GetSnapshotJobResponseBodySnapshotJobOutputOssFile ossFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -214,30 +252,62 @@ public class GetSnapshotJobResponseBody extends TeaModel {
     }
 
     public static class GetSnapshotJobResponseBodySnapshotJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Async")
         public Boolean async;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ResourceNotFound</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:17:54Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:30:54Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
         @NameInMap("Input")
         public GetSnapshotJobResponseBodySnapshotJobInput input;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The specified resource for &quot;Pipeline&quot; could not be found.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:30:54Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
@@ -247,27 +317,59 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         @NameInMap("Output")
         public GetSnapshotJobResponseBodySnapshotJobOutput output;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:17:54Z</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Type&quot;:&quot;Normal&quot;,&quot;FrameType&quot;:&quot;normal&quot;,&quot;Time&quot;:0,&quot;Count&quot;:10}</p>
+         */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("TriggerSource")
         public String triggerSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Sprite</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;test parameter&quot;: &quot;test value&quot;}</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

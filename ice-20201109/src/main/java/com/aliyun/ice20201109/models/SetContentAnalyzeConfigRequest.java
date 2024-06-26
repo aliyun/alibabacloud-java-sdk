@@ -4,12 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SetContentAnalyzeConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Auto")
     public Boolean auto;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEXT,FACE</p>
+     */
     @NameInMap("SaveType")
     public String saveType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S00000101-100070</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

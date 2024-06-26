@@ -7,11 +7,18 @@ public class InsertMediaToSearchLibResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
      */
     @NameInMap("RequestId")
     public String requestId;

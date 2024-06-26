@@ -4,21 +4,41 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRecordTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     @NameInMap("RecordTemplateList")
     public java.util.List<ListLiveRecordTemplatesResponseBodyRecordTemplateList> recordTemplateList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA98A0C-7870-15FE-B96F-8880BB600A2C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,29 +96,45 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>21600</p>
+         */
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
         /**
          * <p>格式</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m3u8</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>Oss对象名，不包含后缀</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{JobId}/{Sequence}<em>{EscapedStartTime}</em>{EscapedEndTime}</p>
          */
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
         /**
          * <p>切片时长</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("SliceDuration")
         public Integer sliceDuration;
 
         /**
          * <p>切片Oss对象名，不包含后缀</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
          */
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;
@@ -153,22 +189,29 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateList extends TeaModel {
         /**
          * <p>代表创建时间的资源属性字段</p>
-         * <br>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20T02:48:58Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>最后修改时间</p>
-         * <br>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-20T03:26:36Z</p>
          */
         @NameInMap("LastModified")
         public String lastModified;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test template</p>
          */
         @NameInMap("Name")
         public String name;
@@ -181,12 +224,18 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>代表资源一级ID的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69e1f9fe-1e97-11ed-ba64-0c42a1b73d66</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>代表资源名称的资源属性字段</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         @NameInMap("Type")
         public String type;

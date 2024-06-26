@@ -4,33 +4,58 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitAudioProduceJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>任务描述  长度不超过1024字节  UTF8编码</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;voice&quot;:&quot;Siqi&quot;,&quot;format&quot;:&quot;MP3&quot;,&quot;volume&quot;:50}</p>
      */
     @NameInMap("EditingConfig")
     public String editingConfig;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>测试文本</p>
      */
     @NameInMap("InputConfig")
     public String inputConfig;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;bucket&quot;:&quot;bucket&quot;,&quot;object&quot;:&quot;objeck&quot;}</p>
      */
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    /**
+     * <strong>example:</strong>
+     * <p>任务标题。若不提供，根据日期自动生成默认title  长度不超过128字节  UTF8编码</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;user&quot;:&quot;data&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

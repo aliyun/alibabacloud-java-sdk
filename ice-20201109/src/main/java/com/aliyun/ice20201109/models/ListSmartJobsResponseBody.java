@@ -4,18 +4,34 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListSmartJobsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CBB6BC61D08</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>9262E3DA-07FA-4862-FCBB6BC61D08</strong></strong>*</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SmartJobList")
     public java.util.List<ListSmartJobsResponseBodySmartJobList> smartJobList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>110</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,9 +81,17 @@ public class ListSmartJobsResponseBody extends TeaModel {
     }
 
     public static class ListSmartJobsResponseBodySmartJobListInputConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
+         */
         @NameInMap("InputFile")
         public String inputFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试关键词</p>
+         */
         @NameInMap("Keyword")
         public String keyword;
 
@@ -97,12 +121,18 @@ public class ListSmartJobsResponseBody extends TeaModel {
     public static class ListSmartJobsResponseBodySmartJobListOutputConfig extends TeaModel {
         /**
          * <p>OSS Bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-bucket</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>OSS Object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-object</p>
          */
         @NameInMap("Object")
         public String object;
@@ -131,39 +161,79 @@ public class ListSmartJobsResponseBody extends TeaModel {
     }
 
     public static class ListSmartJobsResponseBodySmartJobList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:10Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试描述</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;AudioConfig&quot;:{},&quot;InputConfig&quot;:&quot;&quot;}</p>
+         */
         @NameInMap("EditingConfig")
         public String editingConfig;
 
         @NameInMap("InputConfig")
         public ListSmartJobsResponseBodySmartJobListInputConfig inputConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Finished</p>
+         */
         @NameInMap("JobState")
         public String jobState;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ASR</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:10Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         @NameInMap("OutputConfig")
         public ListSmartJobsResponseBodySmartJobListOutputConfig outputConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试标题</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;user&quot;:&quot;data&quot;}</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1084506228******</p>
+         */
         @NameInMap("UserId")
         public Long userId;
 

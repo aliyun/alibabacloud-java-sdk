@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateMediaMarksRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>53afdf003a******6a16b5feac6402</p>
      */
     @NameInMap("MediaId")
     public String mediaId;

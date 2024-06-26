@@ -10,6 +10,10 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     @NameInMap("MediaInfoJob")
     public SubmitSyncMediaInfoJobResponseBodyMediaInfoJob mediaInfoJob;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31E30781-9495-5E2D-A84D-759B0A01E262</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +39,17 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -65,48 +77,108 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoPropertyAudioStreamInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.f</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>stereo</p>
+         */
         @NameInMap("ChannelLayout")
         public String channelLayout;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Channels")
         public String channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAC (Advanced Audio Coding)</p>
+         */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aac</p>
+         */
         @NameInMap("CodecName")
         public String codecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0x000f</p>
+         */
         @NameInMap("CodecTag")
         public String codecTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[15][0][0][0]</p>
+         */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/44100</p>
+         */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>403.039989</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>us</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fltp</p>
+         */
         @NameInMap("SampleFmt")
         public String sampleFmt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44100</p>
+         */
         @NameInMap("SampleRate")
         public String sampleRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.473556</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/90000</p>
+         */
         @NameInMap("Timebase")
         public String timebase;
 
@@ -238,39 +310,87 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoPropertyFileBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>888.563</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>403.039999</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>file.m3u8</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31737</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("FileStatus")
         public String fileStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>source_file</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8</a></p>
+         */
         @NameInMap("FileUrl")
         public String fileUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hls,applehttp</p>
+         */
         @NameInMap("FormatName")
         public String formatName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>478</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>999e68259c924f52a6be603cbb3f91cc</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>848</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -378,72 +498,164 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoPropertyVideoStreamInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>25.0</p>
+         */
         @NameInMap("Avg_fps")
         public String avgFps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>888.563</p>
+         */
         @NameInMap("Bit_rate")
         public String bitRate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
+         */
         @NameInMap("Codec_long_name")
         public String codecLongName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>h264</p>
+         */
         @NameInMap("Codec_name")
         public String codecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0x001b</p>
+         */
         @NameInMap("Codec_tag")
         public String codecTag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[27][0][0][0]</p>
+         */
         @NameInMap("Codec_tag_string")
         public String codecTagString;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/50</p>
+         */
         @NameInMap("Codec_time_base")
         public String codecTimeBase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16:9</p>
+         */
         @NameInMap("Dar")
         public String dar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>403.039989</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25.0</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Has_b_frames")
         public String hasBFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>478</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Index")
         public String index;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zh</p>
+         */
         @NameInMap("Lang")
         public String lang;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10040</p>
+         */
         @NameInMap("NumFrames")
         public String numFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yuv420p</p>
+         */
         @NameInMap("PixFmt")
         public String pixFmt;
 
+        /**
+         * <strong>example:</strong>
+         * <p>High</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Rotate")
         public String rotate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>478:477</p>
+         */
         @NameInMap("Sar")
         public String sar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.473556</p>
+         */
         @NameInMap("Start_time")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1/90000</p>
+         */
         @NameInMap("Time_base")
         public String timeBase;
 
+        /**
+         * <strong>example:</strong>
+         * <p>848</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -680,9 +892,17 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJobScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>e37ebee5d98b4781897f6086e89f9c56</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
@@ -710,42 +930,82 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSyncMediaInfoJobResponseBodyMediaInfoJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Async")
         public Boolean async;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-12T08:49:41Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
         @NameInMap("Input")
         public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobInput input;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ab4802364a2e49208c99efab82dfa8e8</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
         @NameInMap("MediaInfoProperty")
         public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobMediaInfoProperty mediaInfoProperty;
 
+        /**
+         * <strong>example:</strong>
+         * <p>job-name</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4879B9DE-E4B6-19DC-91F5-9D5F4DCE4168</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
         @NameInMap("ScheduleConfig")
         public SubmitSyncMediaInfoJobResponseBodyMediaInfoJobScheduleConfig scheduleConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Init</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("SubmitResultJson")
         public java.util.Map<String, ?> submitResultJson;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-12T08:49:41Z</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("TriggerSource")
         public String triggerSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user-data</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

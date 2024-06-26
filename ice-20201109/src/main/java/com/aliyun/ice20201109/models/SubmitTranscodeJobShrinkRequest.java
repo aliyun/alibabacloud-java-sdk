@@ -13,6 +13,10 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     @NameInMap("InputGroup")
     public String inputGroupShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-name</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -22,9 +26,17 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     @NameInMap("OutputGroup")
     public String outputGroupShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-name</p>
+     */
     @NameInMap("ScheduleConfig")
     public String scheduleConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user-data</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

@@ -4,15 +4,44 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitBatchMediaProducingJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>12e8864746a0a398</strong></strong></p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;MediaConfig&quot;: {
+     *       &quot;Volume&quot;: 0
+     *   },
+     *   &quot;SpeechConfig&quot;: {
+     *       &quot;Volume&quot;: 1
+     *   },
+     *  &quot;BackgroundMusicConfig&quot;: {
+     *       &quot;Volume&quot;: 0.3
+     *   }
+     * }</p>
+     */
     @NameInMap("EditingConfig")
     public String editingConfig;
 
     @NameInMap("InputConfig")
     public String inputConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
+     *   &quot;Count&quot;: 20,
+     *   &quot;MaxDuration&quot;: 15,
+     *   &quot;Width&quot;: 1080,
+     *   &quot;Height&quot;: 1920,
+     *   &quot;Video&quot;: {&quot;Crf&quot;: 27}
+     * }</p>
+     */
     @NameInMap("OutputConfig")
     public String outputConfig;
 

@@ -7,6 +7,10 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
     @NameInMap("NonExists")
     public java.util.List<String> nonExists;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +47,73 @@ public class GetUrlUploadInfosResponseBody extends TeaModel {
     }
 
     public static class GetUrlUploadInfosResponseBodyURLUploadInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-26 21:47:37</p>
+         */
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-07T10:03:37Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>64610</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3829500c0fef429fa4ec1680b122d***</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5014ca70f08171ecbf940764a0fd6***</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http://****.mp4</p>
+         */
         @NameInMap("UploadURL")
         public String uploadURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;MessageCallback&quot;:&quot;{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>&quot;, &quot;Extend&quot;:&quot;{&quot;localId&quot;:&quot;***&quot;, &quot;test&quot;:&quot;www&quot;}&quot;}</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

@@ -7,14 +7,25 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
     @NameInMap("EditingBatchJobList")
     public java.util.List<ListBatchMediaProducingJobsResponseBodyEditingBatchJobList> editingBatchJobList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8EqYpQbZ6Eh7+Zz8DxVYoQ==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,12 +68,34 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
     }
 
     public static class ListBatchMediaProducingJobsResponseBodyEditingBatchJobList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-09T06:38:09Z</p>
+         */
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-09T06:36:48Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;MediaConfig&quot;: {
+         *       &quot;Volume&quot;: 0
+         *   },
+         *   &quot;SpeechConfig&quot;: {
+         *       &quot;Volume&quot;: 1
+         *   },
+         *  &quot;BackgroundMusicConfig&quot;: {
+         *       &quot;Volume&quot;: 0.3
+         *   }
+         * }</p>
+         */
         @NameInMap("EditingConfig")
         public String editingConfig;
 
@@ -72,18 +105,45 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
         @NameInMap("InputConfig")
         public String inputConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>7ecbee4c6d9b8474498e</strong></strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Script</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-09T06:37:58Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
+         *   &quot;Count&quot;: 20,
+         *   &quot;MaxDuration&quot;: 15,
+         *   &quot;Width&quot;: 1080,
+         *   &quot;Height&quot;: 1920,
+         *   &quot;Video&quot;: {&quot;Crf&quot;: 27}
+         * }</p>
+         */
         @NameInMap("OutputConfig")
         public String outputConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Finished</p>
+         */
         @NameInMap("Status")
         public String status;
 

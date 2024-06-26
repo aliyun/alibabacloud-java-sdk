@@ -7,9 +7,17 @@ public class SubmitAvatarTrainingJobResponseBody extends TeaModel {
     @NameInMap("Data")
     public SubmitAvatarTrainingJobResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,6 +51,10 @@ public class SubmitAvatarTrainingJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAvatarTrainingJobResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>29faef8144638ba42eb8e037</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 

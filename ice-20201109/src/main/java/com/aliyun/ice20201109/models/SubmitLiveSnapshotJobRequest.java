@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitLiveSnapshotJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyun.com/snapshot/callback">http://www.aliyun.com/snapshot/callback</a></p>
+     */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
@@ -27,6 +31,9 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
      */
     @NameInMap("TemplateId")
     public String templateId;
@@ -79,18 +86,27 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
     public static class SubmitLiveSnapshotJobRequestSnapshotOutput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testbucket</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("StorageType")
         public String storageType;
@@ -129,12 +145,18 @@ public class SubmitLiveSnapshotJobRequest extends TeaModel {
     public static class SubmitLiveSnapshotJobRequestStreamInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://<a href="http://www.aliyun.com/stream">www.aliyun.com/stream</a></p>
          */
         @NameInMap("Url")
         public String url;

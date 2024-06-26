@@ -4,24 +4,52 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListMediaInfoJobsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-15T00:00:00Z</p>
+     */
     @NameInMap("EndOfCreateTime")
     public String endOfCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7b38a5d86f1e47838927b6e7ccb11cbe</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ab4802364a2e49208c99efab82dfa8e8</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateTimeDesc</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-01T00:00:00Z</p>
+     */
     @NameInMap("StartOfCreateTime")
     public String startOfCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 

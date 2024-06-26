@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SubmitLiveTranscodeJobShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("StartMode")
     public Integer startMode;
@@ -24,6 +30,9 @@ public class SubmitLiveTranscodeJobShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
      */
     @NameInMap("TemplateId")
     public String templateId;

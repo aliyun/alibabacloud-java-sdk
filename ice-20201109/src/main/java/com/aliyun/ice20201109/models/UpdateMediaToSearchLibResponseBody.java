@@ -7,9 +7,17 @@ public class UpdateMediaToSearchLibResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4E84BE44-58A7-<strong><strong>-</strong></strong>-FBEBEA16EF94</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

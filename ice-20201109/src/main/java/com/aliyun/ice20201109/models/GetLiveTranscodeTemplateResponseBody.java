@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
     }
 
     public static class GetLiveTranscodeTemplateResponseBodyTemplateContentTemplateConfigAudioParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Channels")
         public String channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAC</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44100</p>
+         */
         @NameInMap("Samplerate")
         public String samplerate;
 
@@ -95,24 +119,52 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
     }
 
     public static class GetLiveTranscodeTemplateResponseBodyTemplateContentTemplateConfigVideoParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2500</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>H.264</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Gop")
         public String gop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -210,21 +262,41 @@ public class GetLiveTranscodeTemplateResponseBody extends TeaModel {
     }
 
     public static class GetLiveTranscodeTemplateResponseBodyTemplateContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>customized</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-25T06:15:14Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my-template</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("TemplateConfig")
         public GetLiveTranscodeTemplateResponseBodyTemplateContentTemplateConfig templateConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bcfa57950bc649b2abfb476ecd36ea4f</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Type")
         public String type;
 

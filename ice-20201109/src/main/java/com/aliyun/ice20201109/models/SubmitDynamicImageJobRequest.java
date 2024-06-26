@@ -10,6 +10,10 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     @NameInMap("Input")
     public SubmitDynamicImageJobRequestInput input;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SampleJob</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -28,6 +32,10 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     @NameInMap("TemplateConfig")
     public SubmitDynamicImageJobRequestTemplateConfig templateConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;SampleKey&quot;: &quot;SampleValue&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -87,12 +95,18 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     public static class SubmitDynamicImageJobRequestInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/object.mp4</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -123,12 +137,18 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     public static class SubmitDynamicImageJobRequestOutput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Media</p>
          */
         @NameInMap("Type")
         public String type;
@@ -157,9 +177,17 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     }
 
     public static class SubmitDynamicImageJobRequestScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
@@ -228,24 +256,48 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     }
 
     public static class SubmitDynamicImageJobRequestTemplateConfigOverwriteParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>gif</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("Fps")
         public Integer fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("LongShortMode")
         public Boolean longShortMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>progressive</p>
+         */
         @NameInMap("ScanMode")
         public String scanMode;
 
         @NameInMap("TimeSpan")
         public SubmitDynamicImageJobRequestTemplateConfigOverwriteParamsTimeSpan timeSpan;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -318,6 +370,9 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
          */
         @NameInMap("TemplateId")
         public String templateId;

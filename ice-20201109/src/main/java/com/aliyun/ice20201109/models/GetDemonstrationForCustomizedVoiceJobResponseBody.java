@@ -7,9 +7,17 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
     @NameInMap("Data")
     public GetDemonstrationForCustomizedVoiceJobResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +51,17 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
     }
 
     public static class GetDemonstrationForCustomizedVoiceJobResponseBodyDataDemonstrationList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AudioId")
         public Integer audioId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/1.wav">http://bucket.oss-cn-shanghai.aliyuncs.com/1.wav</a></p>
+         */
         @NameInMap("DemoAudio")
         public String demoAudio;
 

@@ -7,9 +7,17 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListCustomizedVoiceJobsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -46,21 +54,41 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>female</p>
+         */
         @NameInMap("Gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-06-27T02:42:28Z</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2245ab99a7fd4116a4fd3f499b7a56c5</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>story</p>
+         */
         @NameInMap("Scenario")
         public String scenario;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -70,6 +98,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         @NameInMap("VoiceDesc")
         public String voiceDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xiaozhuan</p>
+         */
         @NameInMap("VoiceId")
         public String voiceId;
 
@@ -175,6 +207,10 @@ public class ListCustomizedVoiceJobsResponseBody extends TeaModel {
         @NameInMap("CustomizedVoiceJobList")
         public java.util.List<ListCustomizedVoiceJobsResponseBodyDataCustomizedVoiceJobList> customizedVoiceJobList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>271</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

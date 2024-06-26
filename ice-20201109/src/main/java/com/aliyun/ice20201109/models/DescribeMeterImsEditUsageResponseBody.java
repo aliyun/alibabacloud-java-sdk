@@ -7,6 +7,10 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsEditUsageResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7F3AE2C6-5CC6-5712-BAC5-5A735A157687</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
     }
 
     public static class DescribeMeterImsEditUsageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.23</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080P</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1656950400</p>
+         */
         @NameInMap("Time")
         public Long time;
 

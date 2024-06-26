@@ -4,18 +4,38 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetCategoriesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>33</p>
+     */
     @NameInMap("CateId")
     public Long cateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreationTime:Desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("Type")
     public String type;
 

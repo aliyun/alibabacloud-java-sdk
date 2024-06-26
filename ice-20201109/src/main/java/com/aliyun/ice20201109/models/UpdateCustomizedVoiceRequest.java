@@ -4,11 +4,18 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomizedVoiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>4d5e829d498aaf966b119348</strong></strong></p>
+     */
     @NameInMap("DemoAudioMediaId")
     public String demoAudioMediaId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xiaozhuan</p>
      */
     @NameInMap("VoiceId")
     public String voiceId;

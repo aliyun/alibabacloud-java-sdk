@@ -4,18 +4,34 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaByFaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("MediaInfoList")
     public java.util.List<SearchMediaByFaceResponseBodyMediaInfoList> mediaInfoList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7CA7D615-CFB1-5437-9A12-2D185C3EE6CB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>163</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -65,6 +81,10 @@ public class SearchMediaByFaceResponseBody extends TeaModel {
     }
 
     public static class SearchMediaByFaceResponseBodyMediaInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3b187b3620c8490886cfc2a9578c****</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 

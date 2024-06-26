@@ -4,12 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultStorageLocationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>oss-test-bucket</p>
+     */
     @NameInMap("Bucket")
     public String bucket;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ims/dir</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user_oss_bucket</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 

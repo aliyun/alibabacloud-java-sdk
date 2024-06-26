@@ -4,30 +4,66 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchEditingProjectRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>WebSDK</p>
+     */
     @NameInMap("CreateSource")
     public String createSource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2017-01-11T12:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EditingProject</p>
+     */
     @NameInMap("ProjectType")
     public String projectType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreationTime:Desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2017-01-11T12:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Producing</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Timeline</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 

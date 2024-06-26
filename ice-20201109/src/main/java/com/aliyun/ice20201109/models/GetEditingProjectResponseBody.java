@@ -7,6 +7,10 @@ public class GetEditingProjectResponseBody extends TeaModel {
     @NameInMap("Project")
     public GetEditingProjectResponseBodyProject project;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,51 +36,107 @@ public class GetEditingProjectResponseBody extends TeaModel {
     }
 
     public static class GetEditingProjectResponseBodyProject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;OutputMediaConfig&quot; : { &quot;StorageLocation&quot;: &quot;test-bucket.oss-cn-shanghai.aliyuncs.com&quot;, &quot;Path&quot;: &quot;test-path&quot; }, &quot;OutputMediaTarget&quot;: &quot;oss-object&quot;, &quot;ReservationTime&quot;: &quot;2021-06-21T08:05:00Z&quot; }</p>
+         */
         @NameInMap("BusinessConfig")
         public String businessConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Reserving</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         @NameInMap("ClipsParam")
         public String clipsParam;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://example-bucket/example.jpg</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
+         */
         @NameInMap("CreateSource")
         public String createSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-20T12:00:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>24.120000</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
+         */
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-20T13:00:00Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>fb2101bf24b2754cb318787dc</strong></strong></p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EditingProject</p>
+         */
         @NameInMap("ProjectType")
         public String projectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Editing</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Timeline</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>9b4d7cf14dc7b83b0e801cbe</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>9b4d7cf14dc7b83b0e801cbe</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>1656bca4474999c961a6d2a2</strong></strong>&quot;}]}]}</p>
+         */
         @NameInMap("Timeline")
         public String timeline;
 

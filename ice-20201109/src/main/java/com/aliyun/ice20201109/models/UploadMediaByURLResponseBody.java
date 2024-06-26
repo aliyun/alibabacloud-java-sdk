@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UploadMediaByURLResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>83B7-7F87-4792-BFE9-63CD2137</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class UploadMediaByURLResponseBody extends TeaModel {
     }
 
     public static class UploadMediaByURLResponseBodyUploadJobs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20ce1e05dba64576b96e9683879f0***</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>f476988629f54a7b8a4ba90d1a6c7***</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example****.mp4">http://example****.mp4</a></p>
+         */
         @NameInMap("SourceURL")
         public String sourceURL;
 

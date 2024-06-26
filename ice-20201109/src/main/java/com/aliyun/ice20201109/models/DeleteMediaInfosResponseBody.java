@@ -10,6 +10,10 @@ public class DeleteMediaInfosResponseBody extends TeaModel {
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

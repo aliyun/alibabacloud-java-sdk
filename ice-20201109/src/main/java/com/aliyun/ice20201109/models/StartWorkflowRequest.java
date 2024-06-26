@@ -4,12 +4,23 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class StartWorkflowRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;Type&quot;: &quot;Media&quot;,
+     *       &quot;Media&quot;: &quot;<strong><strong><strong>30706071edbfe290b488</strong></strong></strong>&quot;
+     * }</p>
+     */
     @NameInMap("TaskInput")
     public String taskInput;
 
     @NameInMap("UserData")
     public String userData;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>f0e54971ecbffd472190</strong></strong></strong></p>
+     */
     @NameInMap("WorkflowId")
     public String workflowId;
 

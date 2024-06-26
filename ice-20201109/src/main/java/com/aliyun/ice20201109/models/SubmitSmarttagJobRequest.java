@@ -4,12 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmarttagJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>example content ****</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://123.com/testVideo.mp4">http://123.com/testVideo.mp4</a></p>
+     */
     @NameInMap("ContentAddr")
     public String contentAddr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>application/zip</p>
+     */
     @NameInMap("ContentType")
     public String contentType;
 
@@ -19,9 +31,17 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     @NameInMap("Input")
     public SubmitSmarttagJobRequestInput input;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/endpoint/aliyun/ai?id=76401125000">https://example.com/endpoint/aliyun/ai?id=76401125000</a>***</p>
+     */
     @NameInMap("NotifyUrl")
     public String notifyUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;needAsrData&quot;:true, &quot;needOcrData&quot;:false}</p>
+     */
     @NameInMap("Params")
     public String params;
 
@@ -31,12 +51,24 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     @NameInMap("ScheduleConfig")
     public SubmitSmarttagJobRequestScheduleConfig scheduleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>39f8e0bc005e4f309379701645f4</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example-title-****</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{“a”:&quot;test&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -126,9 +158,17 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     }
 
     public static class SubmitSmarttagJobRequestInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>c5c62d8f0361337cab312dce8e77dc6d</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Media</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -156,9 +196,17 @@ public class SubmitSmarttagJobRequest extends TeaModel {
     }
 
     public static class SubmitSmarttagJobRequestScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acdbfe4323bcfdae</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Priority")
         public String priority;
 

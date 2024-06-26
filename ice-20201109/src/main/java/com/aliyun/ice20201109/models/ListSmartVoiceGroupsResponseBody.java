@@ -47,12 +47,24 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhitian</p>
+         */
         @NameInMap("Voice")
         public String voice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Female</p>
+         */
         @NameInMap("VoiceType")
         public String voiceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https://***.com/zhiqing.mp3</p>
+         */
         @NameInMap("VoiceUrl")
         public String voiceUrl;
 

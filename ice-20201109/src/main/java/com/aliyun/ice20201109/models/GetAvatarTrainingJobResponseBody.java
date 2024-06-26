@@ -7,9 +7,17 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAvatarTrainingJobResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -46,39 +54,79 @@ public class GetAvatarTrainingJobResponseBody extends TeaModel {
         @NameInMap("AvatarDescription")
         public String avatarDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Avatar-XXXX</p>
+         */
         @NameInMap("AvatarId")
         public String avatarId;
 
         @NameInMap("AvatarName")
         public String avatarName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2DAvatar</p>
+         */
         @NameInMap("AvatarType")
         public String avatarType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:40Z</p>
+         */
         @NameInMap("FirstTrainingTime")
         public String firstTrainingTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>55d86f7f4587943ce7734d6b</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-23T13:33:40Z</p>
+         */
         @NameInMap("LastTrainingTime")
         public String lastTrainingTime;
 
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
+         */
         @NameInMap("Portrait")
         public String portrait;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/thumbnail.png</a></p>
+         */
         @NameInMap("Thumbnail")
         public String thumbnail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Transparent")
         public Boolean transparent;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
+         */
         @NameInMap("Video")
         public String video;
 

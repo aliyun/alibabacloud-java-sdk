@@ -4,24 +4,52 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListSmartJobsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Finished</p>
+     */
     @NameInMap("JobState")
     public String jobState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASR</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>73f33c91-d59383e8280b</strong></strong></p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreationTime:Desc</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 

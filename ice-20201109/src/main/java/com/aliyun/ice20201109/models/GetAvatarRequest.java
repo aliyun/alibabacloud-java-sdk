@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAvatarRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Avatar-XXXX</p>
      */
     @NameInMap("AvatarId")
     public String avatarId;

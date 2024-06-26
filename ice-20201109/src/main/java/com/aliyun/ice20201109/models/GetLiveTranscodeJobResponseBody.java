@@ -7,6 +7,10 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
     @NameInMap("Job")
     public GetLiveTranscodeJobResponseBodyJob job;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveTranscodeJobResponseBodyJobOutputStreamStreamInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp://mydomain/app/mytranscode1</p>
+         */
         @NameInMap("OutputUrl")
         public String outputUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -81,9 +93,17 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveTranscodeJobResponseBodyJobStreamInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp://mydomain/app/stream1</p>
+         */
         @NameInMap("InputUrl")
         public String inputUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -111,33 +131,65 @@ public class GetLiveTranscodeJobResponseBody extends TeaModel {
     }
 
     public static class GetLiveTranscodeJobResponseBodyJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T02:48:58Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>task1</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("OutputStream")
         public GetLiveTranscodeJobResponseBodyJobOutputStream outputStream;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StartMode")
         public Integer startMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("StreamInput")
         public GetLiveTranscodeJobResponseBodyJobStreamInput streamInput;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b6491d5b3e514b7d895d14b5453ea119</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>basic</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 

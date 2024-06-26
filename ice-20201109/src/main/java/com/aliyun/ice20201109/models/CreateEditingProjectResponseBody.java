@@ -9,6 +9,9 @@ public class CreateEditingProjectResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,57 +38,125 @@ public class CreateEditingProjectResponseBody extends TeaModel {
     }
 
     public static class CreateEditingProjectResponseBodyProject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{ &quot;OutputMediaConfig&quot; :    { &quot;StorageLocation&quot;: &quot;test-bucket.oss-cn-shanghai.aliyuncs.com&quot;, &quot;Path&quot;: &quot;test-path&quot;   }, &quot;OutputMediaTarget&quot;: &quot;oss-object&quot;, &quot;ReservationTime&quot;: &quot;2021-06-21T08:05:00Z&quot; }</p>
+         */
         @NameInMap("BusinessConfig")
         public String businessConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Reserving</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         @NameInMap("ClipsParam")
         public String clipsParam;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WebSDK</p>
+         */
         @NameInMap("CreateSource")
         public String createSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-08T16:52:07Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example_description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3.4200000</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WebSDK</p>
+         */
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-08T16:52:07Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>
+         */
         @NameInMap("ProjectId")
         public String projectId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>LiveEditingProject</p>
+         */
         @NameInMap("ProjectType")
         public String projectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Editing</p>
+         */
         @NameInMap("StatusName")
         public String statusName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Timeline</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;}]}]}</p>
+         */
         @NameInMap("Timeline")
         public String timeline;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example_title</p>
+         */
         @NameInMap("Title")
         public String title;
 

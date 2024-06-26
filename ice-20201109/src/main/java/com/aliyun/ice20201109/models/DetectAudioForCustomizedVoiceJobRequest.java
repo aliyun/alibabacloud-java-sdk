@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DetectAudioForCustomizedVoiceJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AudioRecordId")
     public Integer audioRecordId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://your-bucket.oss-cn-hangzhou.aliyuncs.com/record1.wav">https://your-bucket.oss-cn-hangzhou.aliyuncs.com/record1.wav</a></p>
      */
     @NameInMap("RecordUrl")
     public String recordUrl;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xiaozhuan</p>
      */
     @NameInMap("VoiceId")
     public String voiceId;

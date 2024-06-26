@@ -10,11 +10,18 @@ public class DeleteLiveSnapshotFilesShrinkRequest extends TeaModel {
     @NameInMap("CreateTimestampList")
     public String createTimestampListShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DeleteOriginalFile")
     public Boolean deleteOriginalFile;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
      */
     @NameInMap("JobId")
     public String jobId;

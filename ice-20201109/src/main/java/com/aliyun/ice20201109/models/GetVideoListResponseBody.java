@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetVideoListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -12,13 +16,24 @@ public class GetVideoListResponseBody extends TeaModel {
 
     /**
      * <p>Id of the request。</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>163</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -68,42 +83,82 @@ public class GetVideoListResponseBody extends TeaModel {
     }
 
     public static class GetVideoListResponseBodyMediaList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3679</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333">http://example.aliyundoc.com/snapshot/****.jpg?auth_key=1498476426-0-0-f00b9455c49a423ce69cf4e27333</a>****</p>
+         */
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-11-14T09:15:50Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>135.6</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1c6ce34007d571ed94667630a6bc****</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2017-11-14T09:16:50Z</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10897890</p>
+         */
         @NameInMap("Size")
         public Long size;
 
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
+         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 

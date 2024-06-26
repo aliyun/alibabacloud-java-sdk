@@ -7,6 +7,10 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
     @NameInMap("DynamicImageJob")
     public GetDynamicImageJobResponseBodyDynamicImageJob dynamicImageJob;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,18 +38,27 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
     public static class GetDynamicImageJobResponseBodyDynamicImageJobInputOssFile extends TeaModel {
         /**
          * <p>OSS Bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-bucket</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>OSS Location</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>OSS Object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample-input.mp4</p>
          */
         @NameInMap("Object")
         public String object;
@@ -82,12 +95,20 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
     }
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJobInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/sample-input.mp4</p>
+         */
         @NameInMap("Media")
         public String media;
 
         @NameInMap("OssFile")
         public GetDynamicImageJobResponseBodyDynamicImageJobInputOssFile ossFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -125,18 +146,27 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
     public static class GetDynamicImageJobResponseBodyDynamicImageJobOutputOssFile extends TeaModel {
         /**
          * <p>OSS Bucket</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sample-bucket</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>OSS Location</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>OSS Object</p>
+         * 
+         * <strong>example:</strong>
+         * <p>path/to/object</p>
          */
         @NameInMap("Object")
         public String object;
@@ -173,12 +203,20 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
     }
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJobOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+         */
         @NameInMap("Media")
         public String media;
 
         @NameInMap("OssFile")
         public GetDynamicImageJobResponseBodyDynamicImageJobOutputOssFile ossFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Media</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -214,54 +252,114 @@ public class GetDynamicImageJobResponseBody extends TeaModel {
     }
 
     public static class GetDynamicImageJobResponseBodyDynamicImageJob extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ResourceNotFound</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:17:54Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:30:54Z</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
         @NameInMap("Input")
         public GetDynamicImageJobResponseBodyDynamicImageJobInput input;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The specified resource for &quot;CustomTemplate&quot; could not be found.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:30:54Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SampleJob</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Output")
         public GetDynamicImageJobResponseBodyDynamicImageJobOutput output;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/output.gif">http://test-bucket.oss-cn-shanghai.aliyuncs.com/output.gif</a></p>
+         */
         @NameInMap("OutputUrl")
         public String outputUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-12T16:17:54Z</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Format&quot;:&quot;gif&quot;,&quot;Fps&quot;:5,&quot;Height&quot;:1080,&quot;Width&quot;:1920}</p>
+         */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>API</p>
+         */
         @NameInMap("TriggerSource")
         public String triggerSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;sampleParam&quot;: &quot;sampleValue&quot;}</p>
+         */
         @NameInMap("UserData")
         public String userData;
 

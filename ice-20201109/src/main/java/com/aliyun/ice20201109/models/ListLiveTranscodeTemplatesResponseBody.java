@@ -4,12 +4,20 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TemplateContentList")
     public java.util.List<ListLiveTranscodeTemplatesResponseBodyTemplateContentList> templateContentList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,18 +51,38 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigAudioParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Channels")
         public String channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AAC</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aac_low</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44100</p>
+         */
         @NameInMap("Samplerate")
         public String samplerate;
 
@@ -106,24 +134,52 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfigVideoParams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2500</p>
+         */
         @NameInMap("Bitrate")
         public String bitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>264</p>
+         */
         @NameInMap("Codec")
         public String codec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Fps")
         public String fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Gop")
         public String gop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("Height")
         public String height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Profile")
         public String profile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Width")
         public String width;
 
@@ -221,21 +277,41 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListLiveTranscodeTemplatesResponseBodyTemplateContentList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-20T03:26:36Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my_template</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("TemplateConfig")
         public ListLiveTranscodeTemplatesResponseBodyTemplateContentListTemplateConfig templateConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9b1571b513cb44f7a1ba6ae561ff46f7</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Type")
         public String type;
 

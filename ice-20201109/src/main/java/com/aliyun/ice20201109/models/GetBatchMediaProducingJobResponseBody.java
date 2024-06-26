@@ -7,6 +7,10 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     @NameInMap("EditingBatchJob")
     public GetBatchMediaProducingJobResponseBodyEditingBatchJob editingBatchJob;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     }
 
     public static class GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidMaterial.NotFound</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The specified clips id not found:[&quot;<strong><strong>30d0b5e871eebb2ff7f6c75a</strong></strong>&quot;]</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>8e81933d44e3ae69e2f81485</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>1470b11171ee9d19e7e6c66a</strong></strong></p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>http:/xxx.oss-cn-shanghai.aliyuncs.com/xxx_0.mp4</p>
+         */
         @NameInMap("MediaURL")
         public String mediaURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -112,15 +140,40 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;MediaConfig&quot;: {
+         *       &quot;Volume&quot;: 0
+         *   },
+         *   &quot;SpeechConfig&quot;: {
+         *       &quot;Volume&quot;: 1
+         *   },
+         *  &quot;BackgroundMusicConfig&quot;: {
+         *       &quot;Volume&quot;: 0.3
+         *   }
+         * }</p>
+         */
         @NameInMap("EditingConfig")
         public String editingConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ErrorCode&quot;: &quot;InvalidMaterial.NotFound&quot;,
+         *     &quot;ErrorMessage&quot;: &quot;The specified clips id not found:[\&quot;<strong><strong>30d0b5e871eebb2ff7f6c75a</strong></strong>\&quot;]&quot;
+         * }</p>
+         */
         @NameInMap("Extend")
         public String extend;
 
         @NameInMap("InputConfig")
         public String inputConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>b6b2750d4308892ac3330238</strong></strong></p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
@@ -130,15 +183,34 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
+         *   &quot;Count&quot;: 20,
+         *   &quot;MaxDuration&quot;: 15,
+         *   &quot;Width&quot;: 1080,
+         *   &quot;Height&quot;: 1920,
+         *   &quot;Video&quot;: {&quot;Crf&quot;: 27}
+         * }</p>
+         */
         @NameInMap("OutputConfig")
         public String outputConfig;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Finished</p>
+         */
         @NameInMap("Status")
         public String status;
 
         @NameInMap("SubJobList")
         public java.util.List<GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList> subJobList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
+         */
         @NameInMap("UserData")
         public String userData;
 

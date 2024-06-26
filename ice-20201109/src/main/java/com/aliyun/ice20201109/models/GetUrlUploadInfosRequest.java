@@ -4,9 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetUrlUploadInfosRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>df2ac80b481346daa1db6a7c40edc7f8</p>
+     */
     @NameInMap("JobIds")
     public String jobIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://media.w3.org/2010/05/sintel/trailer.mp4">https://media.w3.org/2010/05/sintel/trailer.mp4</a></p>
+     */
     @NameInMap("UploadURLs")
     public String uploadURLs;
 

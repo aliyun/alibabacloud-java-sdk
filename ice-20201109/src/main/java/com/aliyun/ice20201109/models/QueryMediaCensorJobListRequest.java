@@ -4,15 +4,31 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaCensorJobListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-02-14T02:16:07Z</p>
+     */
     @NameInMap("EndOfJobCreatedTimeRange")
     public String endOfJobCreatedTimeRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fa9c34be3bcf42919ac4d1775239****,78dc866518b843259669df58ed30****</p>
+     */
     @NameInMap("JobIds")
     public String jobIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaximumPageSize")
     public Long maximumPageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79aff3eee82242e092899db5f669</p>
+     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
@@ -22,6 +38,10 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c5b30b7c0d0e4a0abde1d5f9e751****</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
@@ -31,9 +51,17 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-22T03:48:05Z</p>
+     */
     @NameInMap("StartOfJobCreatedTimeRange")
     public String startOfJobCreatedTimeRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>All</p>
+     */
     @NameInMap("State")
     public String state;
 

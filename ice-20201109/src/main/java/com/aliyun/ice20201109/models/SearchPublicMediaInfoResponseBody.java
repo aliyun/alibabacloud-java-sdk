@@ -7,9 +7,17 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     @NameInMap("PublicMediaInfos")
     public java.util.List<SearchPublicMediaInfoResponseBodyPublicMediaInfos> publicMediaInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>3CFB-2767-54FD-B311-BD15A4C1</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,9 +51,17 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoDynamicMetaData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;AuditionUrl\&quot;: \&quot;<a href="http://xxx%5C%5C">http://xxx\\</a>&quot;, \&quot;AuditionCount\&quot;: 3...}&quot;</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>system</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -73,26 +89,53 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>general</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>category</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T06:04:49Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-29T06:04:49Z</p>
+         */
         @NameInMap("DeletedTime")
         public String deletedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>MediaId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>icepublic-<strong><strong>87b921bb4a55908a72a0537e</strong></strong></p>
          */
         @NameInMap("MediaId")
         public String mediaId;
@@ -100,24 +143,52 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         @NameInMap("MediaTags")
         public String mediaTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>audio</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T06:04:50Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;bucket&quot;:&quot;example-bucket&quot;,&quot;count&quot;:&quot;32&quot;,&quot;iceJobId&quot;:&quot;<strong><strong><strong>83ec44d58b2069def2e</strong></strong></strong>&quot;,&quot;location&quot;:&quot;oss-cn-shanghai&quot;,&quot;snapshotRegular&quot;:&quot;example/example-{Count}.jpg&quot;,&quot;spriteRegular&quot;:&quot;example/example-{TileCount}.jpg&quot;,&quot;templateId&quot;:&quot;<strong><strong><strong>e438b14ff39293eaec25</strong></strong></strong>&quot;,&quot;tileCount&quot;:&quot;1&quot;}]</p>
+         */
         @NameInMap("SpriteImages")
         public String spriteImages;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>title</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <strong>example:</strong>
+         * <p>userDataTest</p>
+         */
         @NameInMap("UserData")
         public String userData;
 
@@ -258,6 +329,10 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
         @NameInMap("MediaBasicInfo")
         public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfoMediaBasicInfo mediaBasicInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>icepublic-<strong><strong>87b921bb4a55908a72a0537e</strong></strong></p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
@@ -293,15 +368,27 @@ public class SearchPublicMediaInfoResponseBody extends TeaModel {
     }
 
     public static class SearchPublicMediaInfoResponseBodyPublicMediaInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Authorized")
         public Boolean authorized;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Favorite")
         public Boolean favorite;
 
         @NameInMap("MediaInfo")
         public SearchPublicMediaInfoResponseBodyPublicMediaInfosMediaInfo mediaInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("RemainingAuthTime")
         public String remainingAuthTime;
 

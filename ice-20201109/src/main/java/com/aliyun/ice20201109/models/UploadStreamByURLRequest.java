@@ -4,21 +4,45 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UploadStreamByURLRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>HD</p>
+     */
     @NameInMap("Definition")
     public String definition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mp4</p>
+     */
     @NameInMap("FileExtension")
     public String fileExtension;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HDR10</p>
+     */
     @NameInMap("HDRType")
     public String HDRType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>411bed50018971edb60b0764a0ec6***</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/sample-stream.mp4">https://example.com/sample-stream.mp4</a></p>
+     */
     @NameInMap("StreamURL")
     public String streamURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://test.test.com%22%7D">http://test.test.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

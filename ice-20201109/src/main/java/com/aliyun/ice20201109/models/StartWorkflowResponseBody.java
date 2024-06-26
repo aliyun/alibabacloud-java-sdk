@@ -4,9 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class StartWorkflowResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>42-E8E1-4FBB-8E52-F4225C</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>22dad741d086a50325f9</strong></strong></strong></p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -4,18 +4,34 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SearchMediaClipByFaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("MediaClipList")
     public java.util.List<SearchMediaClipByFaceResponseBodyMediaClipList> mediaClipList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E44FFACD-9E90-555A-A09A-6FD3B7335E39</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -65,15 +81,31 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
     }
 
     public static class SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfosTrackDataBoxPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>168</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <strong>example:</strong>
+         * <p>517</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>409</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -120,6 +152,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         @NameInMap("BoxPosition")
         public SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfosTrackDataBoxPosition boxPosition;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62.03302</p>
+         */
         @NameInMap("Timestamp")
         public Float timestamp;
 
@@ -147,9 +183,17 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
     }
 
     public static class SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>69.06635</p>
+         */
         @NameInMap("EndTime")
         public Float endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>61.066353</p>
+         */
         @NameInMap("StartTime")
         public Float startTime;
 
@@ -188,9 +232,17 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
     }
 
     public static class SearchMediaClipByFaceResponseBodyMediaClipList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>celebrity</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1031025****</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
@@ -200,6 +252,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
         @NameInMap("OccurrencesInfos")
         public java.util.List<SearchMediaClipByFaceResponseBodyMediaClipListOccurrencesInfos> occurrencesInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.99041677</p>
+         */
         @NameInMap("Score")
         public Float score;
 

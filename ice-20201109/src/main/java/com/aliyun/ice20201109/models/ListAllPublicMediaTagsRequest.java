@@ -4,9 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListAllPublicMediaTagsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;sticker&quot;</p>
+     */
     @NameInMap("BusinessType")
     public String businessType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Copyright_Music</p>
+     */
     @NameInMap("EntityId")
     public String entityId;
 

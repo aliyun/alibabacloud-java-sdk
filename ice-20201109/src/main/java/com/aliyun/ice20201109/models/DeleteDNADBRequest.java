@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDNADBRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fb712a6890464059b1b2ea7c8647****</p>
      */
     @NameInMap("DBId")
     public String DBId;

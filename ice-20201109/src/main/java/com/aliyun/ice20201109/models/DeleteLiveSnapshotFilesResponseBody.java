@@ -7,6 +7,10 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     @NameInMap("DeleteFileResultList")
     public java.util.List<DeleteLiveSnapshotFilesResponseBodyDeleteFileResultList> deleteFileResultList;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     }
 
     public static class DeleteLiveSnapshotFilesResponseBodyDeleteFileResultList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1660638613798</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Result")
         public String result;
 

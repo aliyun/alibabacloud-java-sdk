@@ -10,6 +10,10 @@ public class DeleteLiveRecordFilesRequest extends TeaModel {
     @NameInMap("RecordIds")
     public java.util.List<String> recordIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RemoveFile")
     public Boolean removeFile;
 

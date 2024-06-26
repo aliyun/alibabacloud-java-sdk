@@ -4,6 +4,10 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListDNADBRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2288c6ca184c0e47098a5b665e2a12****,78dc866518b843259669df58ed30****</p>
+     */
     @NameInMap("DBIds")
     public String DBIds;
 

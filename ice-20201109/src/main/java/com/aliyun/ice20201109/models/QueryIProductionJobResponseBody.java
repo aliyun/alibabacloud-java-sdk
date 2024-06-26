@@ -4,21 +4,41 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryIProductionJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-07-07T07:16:11Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-26T14:50:25Z</p>
+     */
     @NameInMap("FinishTime")
     public String finishTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cover</p>
+     */
     @NameInMap("FunctionName")
     public String functionName;
 
     @NameInMap("Input")
     public QueryIProductionJobResponseBodyInput input;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Model&quot;:&quot;gif&quot;}</p>
+     */
     @NameInMap("JobParams")
     public String jobParams;
 
@@ -37,18 +57,34 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Result")
     public String result;
 
     @NameInMap("ScheduleConfig")
     public QueryIProductionJobResponseBodyScheduleConfig scheduleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;:1}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -186,9 +222,17 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     }
 
     public static class QueryIProductionJobResponseBodyInput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/object</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -216,9 +260,17 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     }
 
     public static class QueryIProductionJobResponseBodyOutput extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket/object</p>
+         */
         @NameInMap("Media")
         public String media;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -246,9 +298,17 @@ public class QueryIProductionJobResponseBody extends TeaModel {
     }
 
     public static class QueryIProductionJobResponseBodyScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a54fdc9c9aab413caef0d1150f565e86</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 

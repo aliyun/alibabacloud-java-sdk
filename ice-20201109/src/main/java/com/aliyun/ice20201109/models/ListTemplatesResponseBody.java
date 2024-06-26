@@ -4,12 +4,20 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -45,43 +53,94 @@ public class ListTemplatesResponseBody extends TeaModel {
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
         /**
          * <p>ClipsParam</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Media1&quot;:&quot;mediaId&quot;,&quot;Text1&quot;:&quot;text&quot;}</p>
          */
         @NameInMap("ClipsParam")
         public String clipsParam;
 
+        /**
+         * <strong>example:</strong>
+         * <p>参考Timeline模板配置详解</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
+         */
         @NameInMap("CreateSource")
         public String createSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:10Z</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OpenAPI</p>
+         */
         @NameInMap("ModifiedSource")
         public String modifiedSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-12-26T04:11:10Z</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>视频添加水印模板</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+         */
         @NameInMap("PreviewMedia")
         public String previewMedia;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("PreviewMediaStatus")
         public String previewMediaStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Timeline</p>
+         */
         @NameInMap("Type")
         public String type;
 

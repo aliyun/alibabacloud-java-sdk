@@ -10,12 +10,20 @@ public class SubmitSyncMediaInfoJobRequest extends TeaModel {
     @NameInMap("Input")
     public SubmitSyncMediaInfoJobRequestInput input;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job-name</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("ScheduleConfig")
     public SubmitSyncMediaInfoJobRequestScheduleConfig scheduleConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user-data</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -59,12 +67,18 @@ public class SubmitSyncMediaInfoJobRequest extends TeaModel {
     public static class SubmitSyncMediaInfoJobRequestInput extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/path/to/video.mp4</p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;
@@ -93,9 +107,17 @@ public class SubmitSyncMediaInfoJobRequest extends TeaModel {
     }
 
     public static class SubmitSyncMediaInfoJobRequestScheduleConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>e37ebee5d98b4781897f6086e89f9c56</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 

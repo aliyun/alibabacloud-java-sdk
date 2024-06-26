@@ -4,9 +4,17 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class BatchGetMediaInfosRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FileInfo,DynamicMetaData</p>
+     */
     @NameInMap("AdditionType")
     public String additionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong>,<strong><strong><strong>c48fb37407365d4f2cd8</strong></strong></strong></p>
+     */
     @NameInMap("MediaIds")
     public String mediaIds;
 

@@ -7,6 +7,10 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsMpsAiUsageResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0622C702-41BE-467E-AF2E-883D4517962E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeMeterImsMpsAiUsageResponseBody extends TeaModel {
     }
 
     public static class DescribeMeterImsMpsAiUsageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>644</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1656950400</p>
+         */
         @NameInMap("Time")
         public Long time;
 

@@ -4,12 +4,24 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitDynamicChartJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;FontFile&quot;:&quot;Microsoft YaHei&quot;,&quot;XAxisFontSize&quot;:&quot;30&quot;,&quot;YAxisFontSize&quot;:&quot;30&quot;,&quot;XAxisFontInterval&quot;:&quot;30&quot;,&quot;AxisColor&quot;:&quot;30&quot;}</p>
+     */
     @NameInMap("AxisParams")
     public String axisParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Color&quot;:&quot;#000000&quot;,&quot;ImageUrl&quot;:&quot;<a href="http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg%22%7D">http://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.jpg&quot;}</a></p>
+     */
     @NameInMap("Background")
     public String background;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Style&quot;:&quot;Normal&quot;,&quot;TitleStartTime&quot;:&quot;3000&quot;,&quot;ChartStartTime&quot;:&quot;3000&quot;,&quot;VideoDuration&quot;:&quot;15000&quot;}</p>
+     */
     @NameInMap("ChartConfig")
     public String chartConfig;
 
@@ -18,6 +30,9 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Line</p>
      */
     @NameInMap("ChartType")
     public String chartType;
@@ -30,12 +45,18 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;XlsFile&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.xls%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.xls&quot;}</a></p>
      */
     @NameInMap("Input")
     public String input;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;MediaURL&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.mp4%22,%22Bitrate%22:2000,%22Width%22:800,%22Height%22:680%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/obj.mp4&quot;,&quot;Bitrate&quot;:2000,&quot;Width&quot;:800,&quot;Height&quot;:680}</a></p>
      */
     @NameInMap("OutputConfig")
     public String outputConfig;
@@ -49,6 +70,10 @@ public class SubmitDynamicChartJobRequest extends TeaModel {
     @NameInMap("Unit")
     public String unit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;user&quot;:&quot;data&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

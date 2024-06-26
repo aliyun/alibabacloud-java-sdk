@@ -4,12 +4,20 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class DeleteMediaInfosRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DeletePhysicalFiles")
     public Boolean deletePhysicalFiles;
 
     @NameInMap("InputURLs")
     public String inputURLs;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong>,<strong><strong>15d4a4b0448391508f2cb486</strong></strong></p>
+     */
     @NameInMap("MediaIds")
     public String mediaIds;
 

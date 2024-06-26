@@ -4,21 +4,41 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitAvatarVideoJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>测试描述</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;AvatarId&quot;:&quot;yunqiao&quot;}</p>
+     */
     @NameInMap("EditingConfig")
     public String editingConfig;
 
     @NameInMap("InputConfig")
     public String inputConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;MediaURL&quot;:&quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4%22,%22Width%22:1920,%22Height%22:1080%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/xxx.mp4&quot;,&quot;Width&quot;:1920,&quot;Height&quot;:1080}</a></p>
+     */
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>测试标题</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;user&quot;:&quot;data&quot;,&quot;env&quot;:&quot;prod&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

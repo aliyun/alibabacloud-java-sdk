@@ -4,15 +4,31 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetLiveEditingIndexFileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>testrecord</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.alivecdn.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p><em><strong><strong>cb6307a4edea614d8b3f3c</strong></strong></em></p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>teststream</p>
+     */
     @NameInMap("StreamName")
     public String streamName;
 

@@ -4,18 +4,38 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class RegisterMediaInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>opening</p>
+     */
     @NameInMap("BusinessType")
     public String businessType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3048</p>
+     */
     @NameInMap("CateId")
     public Long cateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong>0311a423d11a5f7dee713535</strong></strong></p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png</a></p>
+     */
     @NameInMap("CoverURL")
     public String coverURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>defaultDescription</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -25,15 +45,31 @@ public class RegisterMediaInfoRequest extends TeaModel {
     @NameInMap("InputURL")
     public String inputURL;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tag1,tag2</p>
+     */
     @NameInMap("MediaTags")
     public String mediaTags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("MediaType")
     public String mediaType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123-123</p>
+     */
     @NameInMap("ReferenceId")
     public String referenceId;
 
@@ -43,12 +79,20 @@ public class RegisterMediaInfoRequest extends TeaModel {
     @NameInMap("SmartTagTemplateId")
     public String smartTagTemplateId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>defaultTitle</p>
+     */
     @NameInMap("Title")
     public String title;
 
     @NameInMap("UserData")
     public String userData;
 
+    /**
+     * <strong>example:</strong>
+     * <p><strong><strong><strong>b4fb044839815d4f2cd8</strong></strong></strong></p>
+     */
     @NameInMap("WorkflowId")
     public String workflowId;
 

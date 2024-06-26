@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class QuerySmarttagJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>88c6ca184c0e47098a5b665e2****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;labelResultType&quot;:&quot;auto&quot;}</p>
+     */
     @NameInMap("Params")
     public String params;
 
