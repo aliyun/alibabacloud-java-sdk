@@ -5,62 +5,84 @@ import com.aliyun.tea.*;
 
 public class CreateRouteStrategyRequest extends TeaModel {
     /**
-     * <p>The ID of the application group. You can obtain the ID on the **Application Management** page in the SchedulerX console.</p>
-     * <br>
+     * <p>The ID of the application group. You can obtain the ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSchedulerx.defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The job ID. You can obtain the ID on the **Task Management** page in the SchedulerX console.</p>
+     * <p>The job ID. You can obtain the ID on the <strong>Task Management</strong> page in the SchedulerX console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54978</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
      * <p>The name of the routing policy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-strategy</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
-     * <br>
+     * <p>The namespace ID. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to enable the routing policy. Valid values:</p>
-     * <br>
-     * <p>*   **0**: disables the routing policy.</p>
-     * <p>*   **1**: enables the routing policy.</p>
+     * <ul>
+     * <li><strong>0</strong>: disables the routing policy.</li>
+     * <li><strong>1</strong>: enables the routing policy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
-     * <p>The details of the routing policy. The value is a JSON string. For more information about this parameter, see **the additional information about request parameters** below this table.</p>
+     * <p>The details of the routing policy. The value is a JSON string. For more information about this parameter, see <strong>the additional information about request parameters</strong> below this table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;percentage&quot;:20,&quot;target&quot;:&quot;[\&quot;version1\&quot;]&quot;,&quot;targetType&quot;:&quot;label&quot;}]</p>
      */
     @NameInMap("StrategyContent")
     public String strategyContent;
 
     /**
      * <p>The type of the routing policy. Valid value:</p>
-     * <br>
-     * <p>*   **3**: routes by proportion.</p>
+     * <ul>
+     * <li><strong>3</strong>: routes by proportion.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("Type")
     public Integer type;

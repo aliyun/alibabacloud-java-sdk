@@ -5,39 +5,50 @@ import com.aliyun.tea.*;
 
 public class DeleteJobRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.</p>
-     * <br>
+     * <p>The ID of the application. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSchedulerx.defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the job. You can obtain the ID on the **Task Management** page in the SchedulerX console.</p>
-     * <br>
+     * <p>The ID of the job. You can obtain the ID on the <strong>Task Management</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92583</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the namespace. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.</p>
-     * <br>
+     * <p>The ID of the namespace. You can obtain the ID of the namespace on the <strong>Namespace</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

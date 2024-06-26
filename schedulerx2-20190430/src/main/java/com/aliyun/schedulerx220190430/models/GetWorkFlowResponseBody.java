@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetWorkFlowResponseBody extends TeaModel {
     /**
      * <p>Error codes</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,18 +21,27 @@ public class GetWorkFlowResponseBody extends TeaModel {
 
     /**
      * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workflow is not existed</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45678xxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The result of the API call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,36 +94,54 @@ public class GetWorkFlowResponseBody extends TeaModel {
     public static class GetWorkFlowResponseBodyDataWorkFlowInfo extends TeaModel {
         /**
          * <p>The description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my first workflow</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workflow_111</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The status of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time expression of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 2 * * ?</p>
          */
         @NameInMap("TimeExpression")
         public String timeExpression;
 
         /**
          * <p>The time type of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cron</p>
          */
         @NameInMap("TimeType")
         public String timeType;
 
         /**
          * <p>The ID of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234xxx</p>
          */
         @NameInMap("WorkflowId")
         public Long workflowId;
@@ -174,12 +204,18 @@ public class GetWorkFlowResponseBody extends TeaModel {
     public static class GetWorkFlowResponseBodyDataWorkFlowNodeInfoEdges extends TeaModel {
         /**
          * <p>The ID of the source job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Source")
         public Long source;
 
         /**
          * <p>The ID of the object job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Target")
         public Long target;
@@ -210,18 +246,27 @@ public class GetWorkFlowResponseBody extends TeaModel {
     public static class GetWorkFlowResponseBodyDataWorkFlowNodeInfoNodes extends TeaModel {
         /**
          * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456xxx</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>job_111</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The status of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

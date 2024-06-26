@@ -4,18 +4,34 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetAppGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public GetAppGroupResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>app is not existed, groupId=xxxx, namesapce=xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +81,59 @@ public class GetAppGroupResponseBody extends TeaModel {
     }
 
     public static class GetAppGroupResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>QI4lWMZ+xk1rNB67jFUhaw==</p>
+         */
         @NameInMap("AppKey")
         public String appKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DocTest</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("AppVersion")
+        public String appVersion;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CurJobs")
         public Integer curJobs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testSchedulerx.defaultGroup</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("MaxJobs")
         public Integer maxJobs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;sendChannel&quot;:&quot;sms,mail,ding&quot;}</p>
+         */
         @NameInMap("MonitorConfigJson")
         public String monitorConfigJson;
 
@@ -105,6 +156,14 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public GetAppGroupResponseBodyData setAppVersion(String appVersion) {
+            this.appVersion = appVersion;
+            return this;
+        }
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         public GetAppGroupResponseBodyData setCurJobs(Integer curJobs) {

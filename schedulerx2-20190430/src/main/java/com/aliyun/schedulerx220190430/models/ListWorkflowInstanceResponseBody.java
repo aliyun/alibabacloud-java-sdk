@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListWorkflowInstanceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,21 +21,31 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workflowId=xxx is not existed</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,48 +98,70 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
     public static class ListWorkflowInstanceResponseBodyDataWfInstanceInfos extends TeaModel {
         /**
          * <p>The data timestamp of the workflow instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:00</p>
          */
         @NameInMap("DataTime")
         public String dataTime;
 
         /**
          * <p>The time when the workflow instance stopped running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:21</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The time when the workflow instance was scheduled to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:00</p>
          */
         @NameInMap("ScheduleTime")
         public String scheduleTime;
 
         /**
          * <p>The time when the workflow instance started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:01</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The state of the workflow instance. Valid values:</p>
-         * <br>
-         * <p>*   1: pending</p>
-         * <p>*   2: preparing</p>
-         * <p>*   3: running</p>
-         * <p>*   4: successful</p>
-         * <p>*   5: failed</p>
+         * <ul>
+         * <li>1: pending</li>
+         * <li>2: preparing</li>
+         * <li>3: running</li>
+         * <li>4: successful</li>
+         * <li>5: failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The workflow instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("WfInstanceId")
         public Long wfInstanceId;
 
         /**
          * <p>The workflow ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("WorkflowId")
         public Long workflowId;

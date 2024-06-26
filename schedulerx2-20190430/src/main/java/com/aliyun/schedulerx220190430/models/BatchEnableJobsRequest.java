@@ -5,37 +5,49 @@ import com.aliyun.tea.*;
 
 public class BatchEnableJobsRequest extends TeaModel {
     /**
-     * <p>The application ID. You can obtain the application ID on the **Application Management** page in the SchedulerX console.</p>
+     * <p>The application ID. You can obtain the application ID on the <strong>Application Management</strong> page in the SchedulerX console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSchedulerx.defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The job IDs. Multiple job IDs are separated with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99341</p>
      */
     @NameInMap("JobIdList")
     public java.util.List<Long> jobIdList;
 
     /**
-     * <p>The ID of the namespace to which the job belongs. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
-     * <br>
+     * <p>The ID of the namespace to which the job belongs. You can obtain the namespace ID on the <strong>Namespace</strong> page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The ID of the region to which the job belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

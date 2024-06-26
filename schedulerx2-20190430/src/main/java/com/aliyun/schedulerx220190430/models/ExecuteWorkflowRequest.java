@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class ExecuteWorkflowRequest extends TeaModel {
     /**
      * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSchedulerx.defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The dynamic parameter of the workflow instance. The value of the parameter can be up to 1,000 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("InstanceParameters")
     public String instanceParameters;
 
     /**
      * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
@@ -40,8 +50,10 @@ public class ExecuteWorkflowRequest extends TeaModel {
 
     /**
      * <p>The workflow ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>111</p>
      */
     @NameInMap("WorkflowId")
     public Long workflowId;

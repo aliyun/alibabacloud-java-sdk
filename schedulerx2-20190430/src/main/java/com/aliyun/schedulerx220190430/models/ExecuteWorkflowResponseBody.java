@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ExecuteWorkflowResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,18 +21,27 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned only if the corresponding error occurs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cannot find product according to your domain.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,6 +94,9 @@ public class ExecuteWorkflowResponseBody extends TeaModel {
     public static class ExecuteWorkflowResponseBodyData extends TeaModel {
         /**
          * <p>The workflow instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111</p>
          */
         @NameInMap("WfInstanceId")
         public Long wfInstanceId;

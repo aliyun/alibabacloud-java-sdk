@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetWorkerListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,21 +21,31 @@ public class GetWorkerListResponseBody extends TeaModel {
 
     /**
      * <p>The additional information that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cannot find product according to your domain.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F68ABED-AC31-4412-9297-D9A8F0401108****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call is successful.</p>
-     * <p>*   **false**: The call fails.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,36 +98,54 @@ public class GetWorkerListResponseBody extends TeaModel {
     public static class GetWorkerListResponseBodyDataWorkerInfos extends TeaModel {
         /**
          * <p>The IP address of the worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.225.16.49</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The label of the worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gray</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The port number of the worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60831</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The startup method of the worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>springboot</p>
          */
         @NameInMap("Starter")
         public String starter;
 
         /**
          * <p>The version of the worker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.3.4</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
          * <p>The address of the worker. The address is in the format of ${worker_id}@${worker_ip}:${worker_port}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:030225016049_11734_25917@30.225.16.49">030225016049_11734_25917@30.225.16.49</a>:60831</p>
          */
         @NameInMap("WorkerAddress")
         public String workerAddress;

@@ -5,51 +5,68 @@ import com.aliyun.tea.*;
 
 public class GrantPermissionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to grant the permissions with the GRANT option. Valid values: -**true** -**false**</p>
+     * <p>Specifies whether to grant the permissions with the GRANT option. Valid values: -<strong>true</strong> -<strong>false</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("GrantOption")
     public Boolean grantOption;
 
     /**
      * <p>The application group ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test.defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The namespace ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffcdf01</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The user ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>277641081920123456</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The username.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lilei</p>
      */
     @NameInMap("UserName")
     public String userName;

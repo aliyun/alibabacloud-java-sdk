@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class BatchDeleteJobsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether multiple jobs were deleted at a time. Valid values:</p>
-     * <br>
-     * <p>*   **true**: Multiple jobs were deleted at a time.</p>
-     * <p>*   **false**: Multiple jobs were not deleted at a time.</p>
+     * <ul>
+     * <li><strong>true</strong>: Multiple jobs were deleted at a time.</li>
+     * <li><strong>false</strong>: Multiple jobs were not deleted at a time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

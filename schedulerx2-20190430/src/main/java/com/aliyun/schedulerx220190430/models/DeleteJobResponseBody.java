@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class DeleteJobResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The additional information returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>message</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the job was deleted. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The job was deleted.</p>
-     * <p>*   **false**: The job was not deleted.</p>
+     * <ul>
+     * <li><strong>true</strong>: The job was deleted.</li>
+     * <li><strong>false</strong>: The job was not deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

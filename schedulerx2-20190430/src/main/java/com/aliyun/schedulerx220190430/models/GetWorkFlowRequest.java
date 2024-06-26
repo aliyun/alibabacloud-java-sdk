@@ -6,38 +6,49 @@ import com.aliyun.tea.*;
 public class GetWorkFlowRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hxm.test</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the namespace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4a06d5ea-f576-4326-842c-fb14ea043d8d</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>source</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The region information.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the workflow.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("WorkflowId")
     public Long workflowId;

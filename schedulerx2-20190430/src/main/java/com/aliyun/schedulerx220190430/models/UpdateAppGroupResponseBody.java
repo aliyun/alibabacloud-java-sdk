@@ -4,15 +4,31 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>app is not existed, groupId=xxxx, namesapce=xxxx</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

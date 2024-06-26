@@ -6,46 +6,59 @@ import com.aliyun.tea.*;
 public class StopInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSchedulerx.defaultGroup</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the job instance in the running state.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111111</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
      * <p>The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92583</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
      * <p>The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>schedulerx</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

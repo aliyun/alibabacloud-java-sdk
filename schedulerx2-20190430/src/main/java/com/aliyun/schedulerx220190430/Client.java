@@ -33,17 +33,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes multiple jobs at a time.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
-     * ```xml
-     * <dependency>
-     *     <groupId>com.aliyun</groupId>
-     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *     <version>1.0.4</version>
-     * </dependency>
-     * ```
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.4&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes multiple jobs at a time.</p>
+     * 
      * @param request BatchDeleteJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchDeleteJobsResponse
@@ -91,17 +92,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes multiple jobs at a time.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
-     * ```xml
-     * <dependency>
-     *     <groupId>com.aliyun</groupId>
-     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *     <version>1.0.4</version>
-     * </dependency>
-     * ```
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.4&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes multiple jobs at a time.</p>
+     * 
      * @param request BatchDeleteJobsRequest
      * @return BatchDeleteJobsResponse
      */
@@ -111,8 +113,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The additional information that is returned.
-     *
+     * <b>summary</b> : 
+     * <p>The additional information that is returned.</p>
+     * 
      * @param request BatchDeleteRouteStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchDeleteRouteStrategyResponse
@@ -156,8 +159,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The additional information that is returned.
-     *
+     * <b>summary</b> : 
+     * <p>The additional information that is returned.</p>
+     * 
      * @param request BatchDeleteRouteStrategyRequest
      * @return BatchDeleteRouteStrategyResponse
      */
@@ -167,17 +171,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables multiple jobs at a time.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
-     * ```xml
-     * <dependency>
-     *     <groupId>com.aliyun</groupId>
-     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *     <version>1.0.4</version>
-     * </dependency>
-     * ```
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.4&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables multiple jobs at a time.</p>
+     * 
      * @param request BatchDisableJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchDisableJobsResponse
@@ -225,17 +230,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables multiple jobs at a time.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
-     * ```xml
-     * <dependency>
-     *     <groupId>com.aliyun</groupId>
-     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *     <version>1.0.4</version>
-     * </dependency>
-     * ```
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.4&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables multiple jobs at a time.</p>
+     * 
      * @param request BatchDisableJobsRequest
      * @return BatchDisableJobsResponse
      */
@@ -245,17 +251,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables multiple jobs at a time.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
-     * ```xml
-     * <dependency>
-     *     <groupId>com.aliyun</groupId>
-     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *     <version>1.0.4</version>
-     * </dependency>
-     * ```
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.4&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables multiple jobs at a time.</p>
+     * 
      * @param request BatchEnableJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchEnableJobsResponse
@@ -303,17 +310,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables multiple jobs at a time.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
-     * ```xml
-     * <dependency>
-     *     <groupId>com.aliyun</groupId>
-     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *     <version>1.0.4</version>
-     * </dependency>
-     * ```
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.4&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables multiple jobs at a time.</p>
+     * 
      * @param request BatchEnableJobsRequest
      * @return BatchEnableJobsResponse
      */
@@ -323,8 +331,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application group. The AppKey is returned.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an application group. The AppKey is returned.</p>
+     * 
      * @param request CreateAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppGroupResponse
@@ -350,8 +359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an application group. The AppKey is returned.
-     *
+     * <b>summary</b> : 
+     * <p>Creates an application group. The AppKey is returned.</p>
+     * 
      * @param request CreateAppGroupRequest
      * @return CreateAppGroupResponse
      */
@@ -361,8 +371,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a job and obtains the job ID.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a job and obtains the job ID.</p>
+     * 
      * @param request CreateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateJobResponse
@@ -534,8 +545,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a job and obtains the job ID.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a job and obtains the job ID.</p>
+     * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
      */
@@ -545,8 +557,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a namespace.</p>
+     * 
      * @param request CreateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNamespaceResponse
@@ -588,8 +601,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a namespace.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a namespace.</p>
+     * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
      */
@@ -599,8 +613,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a routing policy.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a routing policy.</p>
+     * 
      * @param request CreateRouteStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRouteStrategyResponse
@@ -658,8 +673,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a routing policy.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a routing policy.</p>
+     * 
      * @param request CreateRouteStrategyRequest
      * @return CreateRouteStrategyResponse
      */
@@ -669,8 +685,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a workflow. By default, the created workflow is disabled. After you update the directed acyclic graph (DAG) of the workflow, you must manually or call the corresponding operation to enable the workflow. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a workflow. By default, the created workflow is disabled. After you update the directed acyclic graph (DAG) of the workflow, you must manually or call the corresponding operation to enable the workflow. You can call this operation only in the professional edition.</p>
+     * 
      * @param request CreateWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateWorkflowResponse
@@ -736,8 +753,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a workflow. By default, the created workflow is disabled. After you update the directed acyclic graph (DAG) of the workflow, you must manually or call the corresponding operation to enable the workflow. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a workflow. By default, the created workflow is disabled. After you update the directed acyclic graph (DAG) of the workflow, you must manually or call the corresponding operation to enable the workflow. You can call this operation only in the professional edition.</p>
+     * 
      * @param request CreateWorkflowRequest
      * @return CreateWorkflowResponse
      */
@@ -747,8 +765,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The additional information that is returned.
-     *
+     * <b>summary</b> : 
+     * <p>The additional information that is returned.</p>
+     * 
      * @param request DeleteAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAppGroupResponse
@@ -790,8 +809,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The additional information that is returned.
-     *
+     * <b>summary</b> : 
+     * <p>The additional information that is returned.</p>
+     * 
      * @param request DeleteAppGroupRequest
      * @return DeleteAppGroupResponse
      */
@@ -801,8 +821,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified job.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a specified job.</p>
+     * 
      * @param request DeleteJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteJobResponse
@@ -828,8 +849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified job.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a specified job.</p>
+     * 
      * @param request DeleteJobRequest
      * @return DeleteJobResponse
      */
@@ -839,8 +861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a routing policy.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a routing policy.</p>
+     * 
      * @param request DeleteRouteStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRouteStrategyResponse
@@ -882,8 +905,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a routing policy.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a routing policy.</p>
+     * 
      * @param request DeleteRouteStrategyRequest
      * @return DeleteRouteStrategyResponse
      */
@@ -893,8 +917,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a workflow.</p>
+     * 
      * @param request DeleteWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteWorkflowResponse
@@ -920,8 +945,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a workflow.</p>
+     * 
      * @param request DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
      */
@@ -931,14 +957,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Returns available regions.
-     *
+     * <b>summary</b> : 
+     * <p>Returns available regions.</p>
+     * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRegionsResponse
      */
-    public DescribeRegionsResponse describeRegionsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeRegions"),
             new TeaPair("version", "2019-04-30"),
@@ -954,18 +989,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Returns available regions.
-     *
+     * <b>summary</b> : 
+     * <p>Returns available regions.</p>
+     * 
+     * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
-    public DescribeRegionsResponse describeRegions() throws Exception {
+    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeRegionsWithOptions(runtime);
+        return this.describeRegionsWithOptions(request, runtime);
     }
 
     /**
-     * @summary Designates machines.
-     *
+     * <b>summary</b> : 
+     * <p>Designates machines.</p>
+     * 
      * @param request DesignateWorkersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DesignateWorkersResponse
@@ -991,8 +1029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Designates machines.
-     *
+     * <b>summary</b> : 
+     * <p>Designates machines.</p>
+     * 
      * @param request DesignateWorkersRequest
      * @return DesignateWorkersResponse
      */
@@ -1002,8 +1041,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables a job.
-     *
+     * <b>summary</b> : 
+     * <p>Disables a job.</p>
+     * 
      * @param request DisableJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableJobResponse
@@ -1029,8 +1069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables a job.
-     *
+     * <b>summary</b> : 
+     * <p>Disables a job.</p>
+     * 
      * @param request DisableJobRequest
      * @return DisableJobResponse
      */
@@ -1040,8 +1081,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables a specified workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Disables a specified workflow.</p>
+     * 
      * @param request DisableWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableWorkflowResponse
@@ -1067,8 +1109,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables a specified workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Disables a specified workflow.</p>
+     * 
      * @param request DisableWorkflowRequest
      * @return DisableWorkflowResponse
      */
@@ -1078,8 +1121,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a job.
-     *
+     * <b>summary</b> : 
+     * <p>Enables a job.</p>
+     * 
      * @param request EnableJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableJobResponse
@@ -1105,8 +1149,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a job.
-     *
+     * <b>summary</b> : 
+     * <p>Enables a job.</p>
+     * 
      * @param request EnableJobRequest
      * @return EnableJobResponse
      */
@@ -1116,8 +1161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a specified workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Enables a specified workflow.</p>
+     * 
      * @param request EnableWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableWorkflowResponse
@@ -1143,8 +1189,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a specified workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Enables a specified workflow.</p>
+     * 
      * @param request EnableWorkflowRequest
      * @return EnableWorkflowResponse
      */
@@ -1154,10 +1201,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Triggers a job to immediately run once.
-     *
-     * @description > The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The combination of the <code>JobID</code> and <code>ScheduleTime</code> parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Triggers a job to immediately run once.</p>
+     * 
      * @param request ExecuteJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExecuteJobResponse
@@ -1183,10 +1234,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Triggers a job to immediately run once.
-     *
-     * @description > The combination of the `JobID` and `ScheduleTime` parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The combination of the <code>JobID</code> and <code>ScheduleTime</code> parameters serves as a unique index. Therefore, after the ExecuteJob operation is called to run a job once, a sleep for one second is required before the ExecuteJob operation is called to run the job again. Otherwise, the job may fail.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Triggers a job to immediately run once.</p>
+     * 
      * @param request ExecuteJobRequest
      * @return ExecuteJobResponse
      */
@@ -1196,8 +1251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Immediately triggers a workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Immediately triggers a workflow.</p>
+     * 
      * @param request ExecuteWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExecuteWorkflowResponse
@@ -1223,8 +1279,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Immediately triggers a workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Immediately triggers a workflow.</p>
+     * 
      * @param request ExecuteWorkflowRequest
      * @return ExecuteWorkflowResponse
      */
@@ -1234,8 +1291,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The configuration of the alert. The value is a JSON string. For more information, see **the additional information about response parameters below this table**.
-     *
+     * <b>summary</b> : 
+     * <p>The configuration of the alert. The value is a JSON string. For more information, see <strong>the additional information about response parameters below this table</strong>.</p>
+     * 
      * @param request GetAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAppGroupResponse
@@ -1273,8 +1331,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The configuration of the alert. The value is a JSON string. For more information, see **the additional information about response parameters below this table**.
-     *
+     * <b>summary</b> : 
+     * <p>The configuration of the alert. The value is a JSON string. For more information, see <strong>the additional information about response parameters below this table</strong>.</p>
+     * 
      * @param request GetAppGroupRequest
      * @return GetAppGroupResponse
      */
@@ -1284,8 +1343,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.</p>
+     * 
      * @param request GetJobInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetJobInfoResponse
@@ -1311,8 +1371,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a job based on the job ID. In most cases, the obtained information is used to update jobs.</p>
+     * 
      * @param request GetJobInfoRequest
      * @return GetJobInfoResponse
      */
@@ -1322,8 +1383,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a job instance. You can view the status and progress of the job instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a job instance. You can view the status and progress of the job instance.</p>
+     * 
      * @param request GetJobInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetJobInstanceResponse
@@ -1349,8 +1411,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a job instance. You can view the status and progress of the job instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a job instance. You can view the status and progress of the job instance.</p>
+     * 
      * @param request GetJobInstanceRequest
      * @return GetJobInstanceResponse
      */
@@ -1360,8 +1423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the most recent 10 execution instances of a job.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the most recent 10 execution instances of a job.</p>
+     * 
      * @param request GetJobInstanceListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetJobInstanceListResponse
@@ -1387,8 +1451,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the most recent 10 execution instances of a job.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the most recent 10 execution instances of a job.</p>
+     * 
      * @param request GetJobInstanceListRequest
      * @return GetJobInstanceListResponse
      */
@@ -1398,8 +1463,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the operational logs of a job. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the operational logs of a job. You can call this operation only in the professional edition.</p>
+     * 
      * @param request GetLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLogResponse
@@ -1425,8 +1491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the operational logs of a job. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the operational logs of a job. You can call this operation only in the professional edition.</p>
+     * 
      * @param request GetLogRequest
      * @return GetLogResponse
      */
@@ -1436,8 +1503,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询概览数据信息
-     *
+     * <b>summary</b> : 
+     * <p>查询概览数据信息</p>
+     * 
      * @param request GetOverviewRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOverviewResponse
@@ -1495,8 +1563,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询概览数据信息
-     *
+     * <b>summary</b> : 
+     * <p>查询概览数据信息</p>
+     * 
      * @param request GetOverviewRequest
      * @return GetOverviewResponse
      */
@@ -1506,8 +1575,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about a workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the information about a workflow.</p>
+     * 
      * @param request GetWorkFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetWorkFlowResponse
@@ -1533,8 +1603,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about a workflow.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the information about a workflow.</p>
+     * 
      * @param request GetWorkFlowRequest
      * @return GetWorkFlowResponse
      */
@@ -1544,8 +1615,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the list of workers that are connected to an application.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the list of workers that are connected to an application.</p>
+     * 
      * @param request GetWorkerListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetWorkerListResponse
@@ -1571,8 +1643,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the list of workers that are connected to an application.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the list of workers that are connected to an application.</p>
+     * 
      * @param request GetWorkerListRequest
      * @return GetWorkerListResponse
      */
@@ -1582,8 +1655,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a specified workflow instance, including the state of the workflow instance, the state of each job instance, and the dependencies between job instances. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified workflow instance, including the state of the workflow instance, the state of each job instance, and the dependencies between job instances. You can call this operation only in the professional edition.</p>
+     * 
      * @param request GetWorkflowInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetWorkflowInstanceResponse
@@ -1609,8 +1683,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a specified workflow instance, including the state of the workflow instance, the state of each job instance, and the dependencies between job instances. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified workflow instance, including the state of the workflow instance, the state of each job instance, and the dependencies between job instances. You can call this operation only in the professional edition.</p>
+     * 
      * @param request GetWorkflowInstanceRequest
      * @return GetWorkflowInstanceResponse
      */
@@ -1620,8 +1695,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants permissions to an application group.
-     *
+     * <b>summary</b> : 
+     * <p>Grants permissions to an application group.</p>
+     * 
      * @param request GrantPermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GrantPermissionResponse
@@ -1675,8 +1751,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Grants permissions to an application group.
-     *
+     * <b>summary</b> : 
+     * <p>Grants permissions to an application group.</p>
+     * 
      * @param request GrantPermissionRequest
      * @return GrantPermissionResponse
      */
@@ -1686,17 +1763,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of applications.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
-     * ```xml
-     * <dependency>
-     *     <groupId>com.aliyun</groupId>
-     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *     <version>1.0.5</version>
-     * </dependency>
-     * ```
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.5&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of applications.</p>
+     * 
      * @param request ListGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGroupsResponse
@@ -1738,17 +1816,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of applications.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
-     * ```xml
-     * <dependency>
-     *     <groupId>com.aliyun</groupId>
-     *     <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
-     *     <version>1.0.5</version>
-     * </dependency>
-     * ```
-     *
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:</p>
+     * <pre><code class="language-xml">&lt;dependency&gt;
+     *     &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+     *     &lt;artifactId&gt;aliyun-java-sdk-schedulerx2&lt;/artifactId&gt;
+     *     &lt;version&gt;1.0.5&lt;/version&gt;
+     * &lt;/dependency&gt;
+     * </code></pre>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of applications.</p>
+     * 
      * @param request ListGroupsRequest
      * @return ListGroupsResponse
      */
@@ -1758,15 +1837,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries jobs.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
      *     <dependency>
      *           <groupId>com.aliyun</groupId>
      *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
      *           <version>1.0.5</version>
-     *     </dependency>
-     *
+     *     </dependency></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries jobs.</p>
+     * 
      * @param request ListJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListJobsResponse
@@ -1792,15 +1873,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries jobs.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
      *     <dependency>
      *           <groupId>com.aliyun</groupId>
      *           <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
      *           <version>1.0.5</version>
-     *     </dependency>
-     *
+     *     </dependency></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries jobs.</p>
+     * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
      */
@@ -1810,15 +1893,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries namespaces.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
      *     <dependency>
      *         <groupId>com.aliyun</groupId>
      *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
      *         <version>1.0.5</version>
-     *     </dependency>
-     *
+     *     </dependency></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries namespaces.</p>
+     * 
      * @param request ListNamespacesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListNamespacesResponse
@@ -1856,15 +1941,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries namespaces.
-     *
-     * @description Before you call this operation, you must add the following dependency to the pom.xml file:
+     * <b>description</b> :
+     * <p>Before you call this operation, you must add the following dependency to the pom.xml file:
      *     <dependency>
      *         <groupId>com.aliyun</groupId>
      *         <artifactId>aliyun-java-sdk-schedulerx2</artifactId>
      *         <version>1.0.5</version>
-     *     </dependency>
-     *
+     *     </dependency></p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries namespaces.</p>
+     * 
      * @param request ListNamespacesRequest
      * @return ListNamespacesResponse
      */
@@ -1874,8 +1961,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution history of a workflow. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the execution history of a workflow. You can call this operation only in the professional edition.</p>
+     * 
      * @param request ListWorkflowInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListWorkflowInstanceResponse
@@ -1901,8 +1989,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution history of a workflow. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the execution history of a workflow. You can call this operation only in the professional edition.</p>
+     * 
      * @param request ListWorkflowInstanceRequest
      * @return ListWorkflowInstanceResponse
      */
@@ -1912,8 +2001,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns a job to obtain the historical data of the job. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns a job to obtain the historical data of the job. You can call this operation only in the professional edition.</p>
+     * 
      * @param request RerunJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RerunJobResponse
@@ -1971,8 +2061,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns a job to obtain the historical data of the job. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns a job to obtain the historical data of the job. You can call this operation only in the professional edition.</p>
+     * 
      * @param request RerunJobRequest
      * @return RerunJobResponse
      */
@@ -1982,8 +2073,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns a successful or failed job instance. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns a successful or failed job instance. You can call this operation only in the professional edition.</p>
+     * 
      * @param request RetryJobInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RetryJobInstanceResponse
@@ -2033,8 +2125,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Reruns a successful or failed job instance. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Reruns a successful or failed job instance. You can call this operation only in the professional edition.</p>
+     * 
      * @param request RetryJobInstanceRequest
      * @return RetryJobInstanceResponse
      */
@@ -2044,8 +2137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes the permissions that are granted to an Alibaba Cloud Resource Access Management (RAM) user.
-     *
+     * <b>summary</b> : 
+     * <p>Revokes the permissions that are granted to an Alibaba Cloud Resource Access Management (RAM) user.</p>
+     * 
      * @param request RevokePermissionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RevokePermissionResponse
@@ -2091,8 +2185,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Revokes the permissions that are granted to an Alibaba Cloud Resource Access Management (RAM) user.
-     *
+     * <b>summary</b> : 
+     * <p>Revokes the permissions that are granted to an Alibaba Cloud Resource Access Management (RAM) user.</p>
+     * 
      * @param request RevokePermissionRequest
      * @return RevokePermissionResponse
      */
@@ -2102,8 +2197,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Forcibly sets the state of a job instance to successful. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Forcibly sets the state of a job instance to successful. You can call this operation only in the professional edition.</p>
+     * 
      * @param request SetJobInstanceSuccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetJobInstanceSuccessResponse
@@ -2153,8 +2249,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Forcibly sets the state of a job instance to successful. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Forcibly sets the state of a job instance to successful. You can call this operation only in the professional edition.</p>
+     * 
      * @param request SetJobInstanceSuccessRequest
      * @return SetJobInstanceSuccessResponse
      */
@@ -2164,8 +2261,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Forcibly sets the state of a workflow instance to successful. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Forcibly sets the state of a workflow instance to successful. You can call this operation only in the professional edition.</p>
+     * 
      * @param request SetWfInstanceSuccessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetWfInstanceSuccessResponse
@@ -2215,8 +2313,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Forcibly sets the state of a workflow instance to successful. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Forcibly sets the state of a workflow instance to successful. You can call this operation only in the professional edition.</p>
+     * 
      * @param request SetWfInstanceSuccessRequest
      * @return SetWfInstanceSuccessResponse
      */
@@ -2226,8 +2325,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops a job instance in the running state.
-     *
+     * <b>summary</b> : 
+     * <p>Stops a job instance in the running state.</p>
+     * 
      * @param request StopInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopInstanceResponse
@@ -2253,8 +2353,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Stops a job instance in the running state.
-     *
+     * <b>summary</b> : 
+     * <p>Stops a job instance in the running state.</p>
+     * 
      * @param request StopInstanceRequest
      * @return StopInstanceResponse
      */
@@ -2264,8 +2365,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The additional information that is returned.
-     *
+     * <b>summary</b> : 
+     * <p>The additional information that is returned.</p>
+     * 
      * @param request UpdateAppGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAppGroupResponse
@@ -2273,6 +2375,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAppGroupResponse updateAppGroupWithOptions(UpdateAppGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appVersion)) {
+            query.put("AppVersion", request.appVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -2293,10 +2399,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            query.put("Version", request.version);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2315,8 +2417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The additional information that is returned.
-     *
+     * <b>summary</b> : 
+     * <p>The additional information that is returned.</p>
+     * 
      * @param request UpdateAppGroupRequest
      * @return UpdateAppGroupResponse
      */
@@ -2326,8 +2429,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configuration information about a job. By default, you need to call the GetJobInfo operation to obtain the original configuration of the job before you call this operation to modify the configuration as required.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configuration information about a job. By default, you need to call the GetJobInfo operation to obtain the original configuration of the job before you call this operation to modify the configuration as required.</p>
+     * 
      * @param request UpdateJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateJobResponse
@@ -2503,8 +2607,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configuration information about a job. By default, you need to call the GetJobInfo operation to obtain the original configuration of the job before you call this operation to modify the configuration as required.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the configuration information about a job. By default, you need to call the GetJobInfo operation to obtain the original configuration of the job before you call this operation to modify the configuration as required.</p>
+     * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse
      */
@@ -2514,8 +2619,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the basic information about a workflow. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the basic information about a workflow. You can call this operation only in the professional edition.</p>
+     * 
      * @param request UpdateWorkflowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateWorkflowResponse
@@ -2579,8 +2685,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the basic information about a workflow. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the basic information about a workflow. You can call this operation only in the professional edition.</p>
+     * 
      * @param request UpdateWorkflowRequest
      * @return UpdateWorkflowResponse
      */
@@ -2590,8 +2697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the nodes and dependencies of a workflow. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the nodes and dependencies of a workflow. You can call this operation only in the professional edition.</p>
+     * 
      * @param request UpdateWorkflowDagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateWorkflowDagResponse
@@ -2643,8 +2751,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the nodes and dependencies of a workflow. You can call this operation only in the professional edition.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies the nodes and dependencies of a workflow. You can call this operation only in the professional edition.</p>
+     * 
      * @param request UpdateWorkflowDagRequest
      * @return UpdateWorkflowDagResponse
      */

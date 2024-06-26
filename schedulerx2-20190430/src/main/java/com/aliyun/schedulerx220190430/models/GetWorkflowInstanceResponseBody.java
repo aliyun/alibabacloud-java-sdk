@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetWorkflowInstanceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,21 +21,31 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workflowId=xxx is not existed</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39090022-1F3B-4797-8518-6B61095F1AF0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public static class GetWorkflowInstanceResponseBodyDataWfInstanceDagEdges extends TeaModel {
         /**
          * <p>The upstream job instance of the current job instance. The value 0 indicates that the upstream job instance is the root node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24058798</p>
          */
         @NameInMap("Source")
         public Long source;
 
         /**
          * <p>The downstream job instance of the current job instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24058796</p>
          */
         @NameInMap("Target")
         public Long target;
@@ -121,30 +140,45 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public static class GetWorkflowInstanceResponseBodyDataWfInstanceDagNodes extends TeaModel {
         /**
          * <p>The number of retries when the job instance failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Attempt")
         public Integer attempt;
 
         /**
          * <p>The data timestamp of the job instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:00</p>
          */
         @NameInMap("DataTime")
         public String dataTime;
 
         /**
          * <p>The time when the job instance stopped running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:21</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1472</p>
          */
         @NameInMap("JobId")
         public Long jobId;
 
         /**
          * <p>The job instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24058796</p>
          */
         @NameInMap("JobInstanceId")
         public Long jobInstanceId;
@@ -154,18 +188,27 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The state of the job instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code=200</p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The time when the job instance was scheduled to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:03</p>
          */
         @NameInMap("ScheduleTime")
         public String scheduleTime;
 
         /**
          * <p>The time when the job instance started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:03</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -175,6 +218,9 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The server on which the job instance was run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.163.0.101:34027</p>
          */
         @NameInMap("WorkAddr")
         public String workAddr;
@@ -313,36 +359,52 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     public static class GetWorkflowInstanceResponseBodyDataWfInstanceInfo extends TeaModel {
         /**
          * <p>The data timestamp of the workflow instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:00</p>
          */
         @NameInMap("DataTime")
         public String dataTime;
 
         /**
          * <p>The time when the workflow instance stopped running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:21</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The time when the workflow instance was scheduled to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:00</p>
          */
         @NameInMap("ScheduleTime")
         public String scheduleTime;
 
         /**
          * <p>The time when the workflow instance started to run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-03 18:00:01</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The state of the workflow instance. Valid values:</p>
-         * <br>
-         * <p>*   1: pending</p>
-         * <p>*   2: preparing</p>
-         * <p>*   3: running</p>
-         * <p>*   4: successful</p>
-         * <p>*   5: failed</p>
+         * <ul>
+         * <li>1: pending</li>
+         * <li>2: preparing</li>
+         * <li>3: running</li>
+         * <li>4: successful</li>
+         * <li>5: failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Status")
         public Integer status;
