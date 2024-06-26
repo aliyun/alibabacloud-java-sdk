@@ -4,15 +4,27 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ListPolicyGroupsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("PolicyGroupModel")
     public java.util.List<ListPolicyGroupsResponseBodyPolicyGroupModel> policyGroupModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,30 +66,62 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
     }
 
     public static class ListPolicyGroupsResponseBodyPolicyGroupModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("CameraRedirect")
         public String cameraRedirect;
 
+        /**
+         * <strong>example:</strong>
+         * <p>readwrite</p>
+         */
         @NameInMap("Clipboard")
         public String clipboard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-06-04 10:28:54</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>download</p>
+         */
         @NameInMap("Html5FileTransfer")
         public String html5FileTransfer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("LocalDrive")
         public String localDrive;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pg-9q6o8qpiy8opkj****</p>
+         */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("SessionResolutionHeight")
         public String sessionResolutionHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("SessionResolutionWidth")
         public String sessionResolutionWidth;
 

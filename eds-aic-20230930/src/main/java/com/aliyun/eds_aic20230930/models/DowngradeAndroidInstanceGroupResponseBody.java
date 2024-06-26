@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DowngradeAndroidInstanceGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>22326560487****</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3AF82CE1-2801-52CE-BF64-B491DD7C****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

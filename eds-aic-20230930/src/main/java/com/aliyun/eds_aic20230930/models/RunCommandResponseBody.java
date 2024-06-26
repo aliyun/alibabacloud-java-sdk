@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RunCommandResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>t-gov2ujrk32v4****</p>
+     */
     @NameInMap("InvokeId")
     public String invokeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>440D7342-5E7C-B2DB-D0B4EAC2BDF1****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

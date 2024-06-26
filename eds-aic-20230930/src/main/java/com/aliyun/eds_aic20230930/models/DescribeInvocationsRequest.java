@@ -12,6 +12,9 @@ public class DescribeInvocationsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-4e98eeb5****</p>
      */
     @NameInMap("InvocationId")
     public String invocationId;

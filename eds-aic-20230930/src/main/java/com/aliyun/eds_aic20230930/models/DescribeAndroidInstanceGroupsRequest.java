@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -16,21 +24,45 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     @NameInMap("InstanceGroupName")
     public String instanceGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>kp-5htf0ymsrnb7q****</p>
+     */
     @NameInMap("KeyPairId")
     public String keyPairId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pg-1b77w6xrqfubi****</p>
+     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
     @NameInMap("SaleMode")
     public String saleMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CREATING</p>
+     */
     @NameInMap("Status")
     public String status;
 

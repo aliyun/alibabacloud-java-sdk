@@ -7,12 +7,24 @@ public class DescribeKeyPairsRequest extends TeaModel {
     @NameInMap("KeyPairIds")
     public java.util.List<String> keyPairIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testKeyPairName</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAYRHtOLVQzCYj17y+OP7LZQBUVVbi0GTu8g5****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

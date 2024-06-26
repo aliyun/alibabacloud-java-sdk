@@ -25,9 +25,17 @@ public class BackupFileRequest extends TeaModel {
     @NameInMap("SourceFilePathList")
     public java.util.List<String> sourceFilePathList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-cn-shanghai-internal.aliyuncs.com</p>
+     */
     @NameInMap("UploadEndpoint")
     public String uploadEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("UploadType")
     public String uploadType;
 

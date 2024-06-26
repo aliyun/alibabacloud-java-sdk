@@ -7,6 +7,10 @@ public class DeleteImagesResponseBody extends TeaModel {
     @NameInMap("Data")
     public DeleteImagesResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4610632D-D661-5982-B3D7-5D3FD183F595</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

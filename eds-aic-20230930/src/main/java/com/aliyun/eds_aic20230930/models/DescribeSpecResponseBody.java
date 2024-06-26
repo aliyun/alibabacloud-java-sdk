@@ -4,15 +4,27 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpecResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D9888DAD-331E-5FBC-B5A0-F2445115****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("SpecInfoModel")
     public java.util.List<DescribeSpecResponseBodySpecInfoModel> specInfoModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,21 +66,45 @@ public class DescribeSpecResponseBody extends TeaModel {
     }
 
     public static class DescribeSpecResponseBodySpecInfoModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("Core")
         public Integer core;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acp.basic.small</p>
+         */
         @NameInMap("SpecId")
         public String specId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("SpecStatus")
         public String specStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ARM</p>
+         */
         @NameInMap("SpecType")
         public String specType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 

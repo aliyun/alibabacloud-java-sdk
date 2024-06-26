@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateKeyPairRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testKeyPairName</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;

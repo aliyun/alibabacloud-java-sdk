@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ImportKeyPairRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestKeyPairName</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABC1234567*****</p>
      */
     @NameInMap("PublicKeyBody")
     public String publicKeyBody;

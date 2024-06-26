@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>imgc-075cllfeuazh0****</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
@@ -12,16 +16,34 @@ public class DescribeImageListRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>System</p>
      */
     @NameInMap("ImageType")
     public String imageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
+     */
     @NameInMap("Status")
     public String status;
 

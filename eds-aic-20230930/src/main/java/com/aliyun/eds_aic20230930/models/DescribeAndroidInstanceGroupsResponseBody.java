@@ -7,12 +7,24 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     @NameInMap("InstanceGroupModel")
     public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel> instanceGroupModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,9 +66,17 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
@@ -84,78 +104,166 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>aig-48xr63m4dybjk****</p>
+         */
         @NameInMap("AppInstanceGroupId")
         public String appInstanceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ARM</p>
+         */
         @NameInMap("ArchitectureType")
         public String architectureType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
+         */
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("Cpu")
         public String cpu;
 
         @NameInMap("Disks")
         public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks> disks;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-01 10:56:36</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2027-06-29 07:25:31</p>
+         */
         @NameInMap("GmtExpired")
         public String gmtExpired;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-02-01 10:56:36</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>imgc-06zyt9m93zwax****</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
         @NameInMap("InstalledAppList")
         public String installedAppList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ag-h67a2cs0zprfdh****</p>
+         */
         @NameInMap("InstanceGroupId")
         public String instanceGroupId;
 
         @NameInMap("InstanceGroupName")
         public String instanceGroupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acp.basic.small</p>
+         */
         @NameInMap("InstanceGroupSpec")
         public String instanceGroupSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ARM-2vCPU4GiB 32GiB</p>
+         */
         @NameInMap("InstanceGroupSpecDescribe")
         public String instanceGroupSpecDescribe;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("InstanceGroupStatus")
         public String instanceGroupStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("NumberOfInstances")
         public String numberOfInstances;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai+dir-030598****</p>
+         */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pg-c6n38xucps8kl****</p>
+         */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("ResolutionHeight")
         public Integer resolutionHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("ResolutionWidth")
         public Integer resolutionWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("SaleMode")
         public String saleMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Android 12</p>
+         */
         @NameInMap("SystemVersion")
         public String systemVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-t4n0yqs009ho024wt****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

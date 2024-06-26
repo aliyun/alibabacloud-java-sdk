@@ -4,18 +4,34 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSpecRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("SpecIds")
     public java.util.List<String> specIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Available</p>
+     */
     @NameInMap("SpecStatus")
     public String specStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ARM</p>
+     */
     @NameInMap("SpecType")
     public String specType;
 

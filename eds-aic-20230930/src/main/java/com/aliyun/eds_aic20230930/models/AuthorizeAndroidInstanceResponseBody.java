@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class AuthorizeAndroidInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

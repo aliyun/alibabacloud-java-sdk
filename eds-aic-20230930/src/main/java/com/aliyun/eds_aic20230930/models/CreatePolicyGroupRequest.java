@@ -4,24 +4,48 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("CameraRedirect")
     public String cameraRedirect;
 
+    /**
+     * <strong>example:</strong>
+     * <p>readwrite</p>
+     */
     @NameInMap("Clipboard")
     public String clipboard;
 
+    /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("Html5FileTransfer")
     public String html5FileTransfer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("LocalDrive")
     public String localDrive;
 
     @NameInMap("PolicyGroupName")
     public String policyGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1280</p>
+     */
     @NameInMap("ResolutionHeight")
     public Integer resolutionHeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>720</p>
+     */
     @NameInMap("ResolutionWidth")
     public Integer resolutionWidth;
 

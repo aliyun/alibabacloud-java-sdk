@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class StartAndroidInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>17C731AB-AAEE-5844-A352-D8D0352D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

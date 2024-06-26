@@ -7,15 +7,31 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeBackupFilesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>91</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,48 +81,96 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupFilesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>acp-34pqe4r0kd9kn****</p>
+         */
         @NameInMap("AndroidInstanceId")
         public String androidInstanceId;
 
         @NameInMap("AndroidInstanceName")
         public String androidInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bf-b0qbg3pbpjkn7****</p>
+         */
         @NameInMap("BackupFileId")
         public String backupFileId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>a-58ftsoo90p0qa****.ab</p>
+         */
         @NameInMap("BackupFileName")
         public String backupFileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://cloudphone-saved-bucket-cn-shanghai/backup/aic-58ftsoo90p0qa****.ab</p>
+         */
         @NameInMap("BackupFilePath")
         public String backupFilePath;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10227168</p>
+         */
         @NameInMap("FileSize")
         public Long fileSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-15 17:33:59</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2024-05-15 17:33:59</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ag-58ftsoo90p0qi****</p>
+         */
         @NameInMap("InstanceGroupId")
         public String instanceGroupId;
 
         @NameInMap("SourceFilePathList")
         public java.util.List<String> sourceFilePathList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("UploadEndpoint")
         public String uploadEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("UploadType")
         public String uploadType;
 

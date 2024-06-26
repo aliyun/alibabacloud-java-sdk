@@ -7,9 +7,17 @@ public class AuthorizeAndroidInstanceRequest extends TeaModel {
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("AuthorizeUserId")
     public String authorizeUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("UnAuthorizeUserId")
     public String unAuthorizeUserId;
 

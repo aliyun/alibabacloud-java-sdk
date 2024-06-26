@@ -12,6 +12,9 @@ public class DistributeImageRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>imgc-075cllfeuazh0****</p>
      */
     @NameInMap("ImageId")
     public String imageId;

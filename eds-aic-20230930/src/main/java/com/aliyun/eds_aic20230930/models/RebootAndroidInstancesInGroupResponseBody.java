@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>227CBB4C-F5DC-589D-A667-C5CA3D52****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

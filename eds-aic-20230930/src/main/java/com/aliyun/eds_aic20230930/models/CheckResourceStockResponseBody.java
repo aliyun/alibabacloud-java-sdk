@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CheckResourceStockResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>805D8FB6-512A-531C-9E4D-2A807D3C****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class CheckResourceStockResponseBody extends TeaModel {
     }
 
     public static class CheckResourceStockResponseBodyResourceStockModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Available</p>
+         */
         @NameInMap("StockStatus")
         public String stockStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai-b</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

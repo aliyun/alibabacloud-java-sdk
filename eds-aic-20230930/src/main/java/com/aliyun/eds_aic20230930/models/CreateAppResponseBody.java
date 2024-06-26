@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1234</p>
+     */
     @NameInMap("AppId")
     public Integer appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E5138F7E-46B5-526A-8C99-82DEAE6B****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

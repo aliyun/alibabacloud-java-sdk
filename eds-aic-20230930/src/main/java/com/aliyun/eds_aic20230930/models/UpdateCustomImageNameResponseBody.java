@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomImageNameResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>552B7EED-D434-511F-B838-29EA4E906034</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,10 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomImageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20393E53-8FF1-524C-B494-B478A5369733</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class BackupFileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

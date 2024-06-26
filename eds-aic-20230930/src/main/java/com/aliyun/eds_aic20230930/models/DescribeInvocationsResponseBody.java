@@ -7,9 +7,17 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeInvocationsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>440D7342-5E7C-B2DB-D0B4EAC2BDF1****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -43,21 +51,45 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     }
 
     public static class DescribeInvocationsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-11 17:45:03</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>acp-uto81vfd8t8z****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t-15775dc8****</p>
+         */
         @NameInMap("InvocationId")
         public String invocationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Output")
         public String output;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-11 17:45:03</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

@@ -4,9 +4,17 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DataImageRegionDistributeMapValue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AVAILABLE</p>
+     */
     @NameInMap("DistributeStatus")
     public String distributeStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100%</p>
+     */
     @NameInMap("Progress")
     public String progress;
 
