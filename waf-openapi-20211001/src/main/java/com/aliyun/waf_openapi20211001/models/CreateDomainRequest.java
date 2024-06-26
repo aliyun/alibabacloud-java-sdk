@@ -544,7 +544,7 @@ public class CreateDomainRequest extends TeaModel {
         public Boolean cnameEnabled;
 
         /**
-         * <p>The timeout period of connections. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period for connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -591,9 +591,9 @@ public class CreateDomainRequest extends TeaModel {
         public Integer keepaliveRequests;
 
         /**
-         * <p>The timeout period of idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
+         * <p>The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.</p>
          * <blockquote>
-         * <p> This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.</p>
+         * <p> This parameter specifies the time for which a reused persistent connection can remain in the Idle state before the persistent connection is closed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -618,7 +618,7 @@ public class CreateDomainRequest extends TeaModel {
         public String loadbalance;
 
         /**
-         * <p>The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -684,7 +684,7 @@ public class CreateDomainRequest extends TeaModel {
         /**
          * <p>The value of the SNI field. If you do not specify this parameter, the value of the <strong>Host</strong> field is automatically used. This parameter is optional. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.</p>
          * <blockquote>
-         * <p> This parameter is required only if you set <strong>SniEnalbed</strong> to <strong>true</strong>.</p>
+         * <p> This parameter is required only if you set <strong>SniEnabled</strong> to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -694,7 +694,7 @@ public class CreateDomainRequest extends TeaModel {
         public String sniHost;
 
         /**
-         * <p>The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.</p>
+         * <p>The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -703,7 +703,7 @@ public class CreateDomainRequest extends TeaModel {
         public Integer writeTimeout;
 
         /**
-         * <p>Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:</p>
+         * <p>Specifies whether to use X-Forward-For-Proto to pass the protocol used by WAF to forward requests to the origin server. Valid values:</p>
          * <ul>
          * <li><strong>true</strong> (default)</li>
          * <li><strong>false</strong></li>

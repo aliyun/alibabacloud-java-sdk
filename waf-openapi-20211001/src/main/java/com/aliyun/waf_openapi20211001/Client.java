@@ -3410,6 +3410,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取用户暂停防护状态</p>
+     * 
+     * @param request DescribePauseProtectionStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePauseProtectionStatusResponse
+     */
+    public DescribePauseProtectionStatusResponse describePauseProtectionStatusWithOptions(DescribePauseProtectionStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePauseProtectionStatus"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePauseProtectionStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取用户暂停防护状态</p>
+     * 
+     * @param request DescribePauseProtectionStatusRequest
+     * @return DescribePauseProtectionStatusResponse
+     */
+    public DescribePauseProtectionStatusResponse describePauseProtectionStatus(DescribePauseProtectionStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePauseProtectionStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the queries per second (QPS) statistics of a WAF instance.</p>
      * 
      * @param request DescribePeakTrendRequest
@@ -6056,6 +6108,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyMemberAccountResponse modifyMemberAccount(ModifyMemberAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyMemberAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改用户暂停防护状态</p>
+     * 
+     * @param request ModifyPauseProtectionStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyPauseProtectionStatusResponse
+     */
+    public ModifyPauseProtectionStatusResponse modifyPauseProtectionStatusWithOptions(ModifyPauseProtectionStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pauseStatus)) {
+            query.put("PauseStatus", request.pauseStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyPauseProtectionStatus"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPauseProtectionStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改用户暂停防护状态</p>
+     * 
+     * @param request ModifyPauseProtectionStatusRequest
+     * @return ModifyPauseProtectionStatusResponse
+     */
+    public ModifyPauseProtectionStatusResponse modifyPauseProtectionStatus(ModifyPauseProtectionStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyPauseProtectionStatusWithOptions(request, runtime);
     }
 
     /**
