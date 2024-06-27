@@ -6,16 +6,19 @@ import com.aliyun.tea.*;
 public class QueryShareListRequest extends TeaModel {
     /**
      * <p>The type of work being shared. Valid values:</p>
-     * <br>
-     * <p>*   product: BI portal</p>
-     * <p>*   dashboard: dashboard</p>
-     * <p>*   worksheet: workbook</p>
-     * <p>*   dashboardOfflineQuery: self-service data retrieval</p>
-     * <p>*   Analysis: Ad hoc analysis</p>
-     * <p>*   DATAFORM</p>
-     * <p>*   SCREEN: Data dashboard</p>
-     * <br>
+     * <ul>
+     * <li>product: BI portal</li>
+     * <li>dashboard: dashboard</li>
+     * <li>worksheet: workbook</li>
+     * <li>dashboardOfflineQuery: self-service data retrieval</li>
+     * <li>Analysis: Ad hoc analysis</li>
+     * <li>DATAFORM</li>
+     * <li>SCREEN: Data dashboard</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6b407e50-e774-406b-9956-da2425c2****</p>
      */
     @NameInMap("ReportId")
     public String reportId;

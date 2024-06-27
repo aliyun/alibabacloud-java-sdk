@@ -6,45 +6,62 @@ import com.aliyun.tea.*;
 public class AuthorizeMenuRequest extends TeaModel {
     /**
      * <p>Authorizes the permissions of the menu. Valid values:</p>
-     * <br>
-     * <p>*   1: view</p>
-     * <p>*   3: View + Export (default)</p>
+     * <ul>
+     * <li>1: view</li>
+     * <li>3: View + Export (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("AuthPointsValue")
     public Integer authPointsValue;
 
     /**
      * <p>The ID of the BI portal.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0d173abb53e84c8ca7495429163b****</p>
      */
     @NameInMap("DataPortalId")
     public String dataPortalId;
 
     /**
      * <p>The menu ID of the BI portal leaf node.</p>
-     * <br>
-     * <p>*   The directory menu cannot be authorized.</p>
-     * <p>*   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</p>
-     * <br>
+     * <ul>
+     * <li>The directory menu cannot be authorized.</li>
+     * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54kqgoa****,pg1n135****</p>
      */
     @NameInMap("MenuIds")
     public String menuIds;
 
     /**
      * <p>The IDs of the user groups.</p>
-     * <br>
-     * <p>*   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</p>
-     * <p>*   UserGroupIds and UserIds cannot be empty at the same time</p>
+     * <ul>
+     * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</li>
+     * <li>UserGroupIds and UserIds cannot be empty at the same time</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>34fd141d-4598-4093-8c33-8e066dcb****,3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
      */
     @NameInMap("UserGroupIds")
     public String userGroupIds;
 
     /**
      * <p>The IDs of the end users. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
-     * <br>
-     * <p>*   You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</p>
+     * <ul>
+     * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 200.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>204627493484****,121344444790****</p>
      */
     @NameInMap("UserIds")
     public String userIds;

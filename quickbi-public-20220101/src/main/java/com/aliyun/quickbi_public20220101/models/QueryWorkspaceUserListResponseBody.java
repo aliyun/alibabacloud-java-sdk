@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryWorkspaceUserListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryWorkspaceUserListResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +51,17 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
     }
 
     public static class QueryWorkspaceUserListResponseBodyResultDataRole extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>role_workspace_admin</p>
+         */
         @NameInMap("RoleCode")
         public String roleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("RoleId")
         public Long roleId;
 
@@ -84,9 +100,17 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
     }
 
     public static class QueryWorkspaceUserListResponseBodyResultData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>16020915****8429</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pop****@aliyunid.test</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
@@ -96,6 +120,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         @NameInMap("Role")
         public QueryWorkspaceUserListResponseBodyResultDataRole role;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de4bc5f9429141cc8091cdd1c15b****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -150,15 +178,31 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         @NameInMap("Data")
         public java.util.List<QueryWorkspaceUserListResponseBodyResultData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalNum")
         public Integer totalNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

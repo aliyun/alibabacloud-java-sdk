@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddWorkspaceUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public AddWorkspaceUsersResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,15 +51,31 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
     }
 
     public static class AddWorkspaceUsersResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Failure")
         public Integer failure;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;2046274934845893&quot; : &quot;AE0150010001: This user already exists.&quot;, &quot;1213444447906552&quot; : &quot;AE0150010001: This user already exists.&quot;}</p>
+         */
         @NameInMap("FailureDetail")
         public java.util.Map<String, ?> failureDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Success")
         public Integer success;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

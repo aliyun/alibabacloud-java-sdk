@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ResultCallbackRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c5ea0db8-<strong><strong>-</strong></strong>-9081-04bc0df4c6a3</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
@@ -18,6 +21,9 @@ public class ResultCallbackRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

@@ -6,21 +6,28 @@ import com.aliyun.tea.*;
 public class QueryDataServiceResponseBody extends TeaModel {
     /**
      * <p>The list of parameter names of the returned parameters. The value is a string of the List type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>78C1AA2D-9201-599E-A0BA-6FC462E57A95</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
      */
     @NameInMap("Result")
     public QueryDataServiceResponseBodyResult result;
 
     /**
-     * <p>{ "area": ["East China", "North China"], "shopping_date": "2019Q1", }</p>
+     * <p>{ &quot;area&quot;: [&quot;East China&quot;, &quot;North China&quot;], &quot;shopping_date&quot;: &quot;2019Q1&quot;, }</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,39 +64,58 @@ public class QueryDataServiceResponseBody extends TeaModel {
     public static class QueryDataServiceResponseBodyResultHeaders extends TeaModel {
         /**
          * <p>The field name, which corresponds to the physical table field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUM</p>
          */
         @NameInMap("Aggregator")
         public String aggregator;
 
         /**
          * <p>The granularity of the dimension field. This field is returned only when the requested field is a date dimension or a geographical dimension. Valid values:</p>
-         * <br>
-         * <p>*   Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)</p>
-         * <p>*   Geographic information granularity: COUNTRY (international level), PROVINCE (provincial level), CITY (municipal level), XIAN (district /county), and REGION (regional level)</p>
+         * <ul>
+         * <li>Date granularity: yearRegion (year), monthRegion (month), weekRegion (week), dayRegion (day), hourRegion (hour), minRegion (minute), secRegion (second)</li>
+         * <li>Geographic information granularity: COUNTRY (international level), PROVINCE (provincial level), CITY (municipal level), XIAN (district /county), and REGION (regional level)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>The alias of the field. The key of the map data row in the result parameter values.</p>
          */
         @NameInMap("Column")
         public String column;
 
         /**
          * <p>The column header.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The field type, which is used to distinguish whether the field type is a dimension or a measure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yearRegion</p>
          */
         @NameInMap("Granularity")
         public String granularity;
 
         /**
          * <p>The data type of the field. generally have number, string, date, datetime, time, and geographic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>area</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>SELECT COMPANY_T_1_.\\"area\\" AS D_AREA_2_, COMPANY_T_1_.\\"city\\" AS D_CITY_3_, SUM(COMPANY_T_1_.\\"profit_amt\\") AS D_PROFIT_4_ FROM \\"quickbi_test\\".\\"company_sales_record_copy\\" AS COMPANY_T_1_ WHERE COMPANY_T_1_.\\"area\\" LIKE \\"% China East %\\" GROUP BY COMPANY_T_1_.\\"area\\", COMPANY_T_1_.\\"city\\" HAVING SUM(COMPANY_T_1_.\\"order_amt\\") > 1 LIMIT 0,10</p>
+         * <p>SELECT COMPANY_T_1_.\&quot;area\&quot; AS D_AREA_2_, COMPANY_T_1_.\&quot;city\&quot; AS D_CITY_3_, SUM(COMPANY_T_1_.\&quot;profit_amt\&quot;) AS D_PROFIT_4_ FROM \&quot;quickbi_test\&quot;.\&quot;company_sales_record_copy\&quot; AS COMPANY_T_1_ WHERE COMPANY_T_1_.\&quot;area\&quot; LIKE \&quot;% China East %\&quot; GROUP BY COMPANY_T_1_.\&quot;area\&quot;, COMPANY_T_1_.\&quot;city\&quot; HAVING SUM(COMPANY_T_1_.\&quot;order_amt\&quot;) &gt; 1 LIMIT 0,10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StandardDimension</p>
          */
         @NameInMap("Type")
         public String type;
@@ -158,6 +184,9 @@ public class QueryDataServiceResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The query result of the API operation is returned.</p>
          */
         @NameInMap("Sql")
         public String sql;

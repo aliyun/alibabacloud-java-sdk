@@ -6,19 +6,33 @@ import com.aliyun.tea.*;
 public class CancelAuthorizationMenuRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0d173abb53e84c8ca7495429163b****</p>
      */
     @NameInMap("DataPortalId")
     public String dataPortalId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54kqgoa****,pg1n135****</p>
      */
     @NameInMap("MenuIds")
     public String menuIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>34fd141d-4598-4093-8c33-8e066dcb****,3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
+     */
     @NameInMap("UserGroupIds")
     public String userGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>204627493484****,121344444790****</p>
+     */
     @NameInMap("UserIds")
     public String userIds;
 

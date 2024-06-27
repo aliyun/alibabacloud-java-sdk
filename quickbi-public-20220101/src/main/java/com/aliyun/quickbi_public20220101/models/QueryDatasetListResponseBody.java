@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryDatasetListResponseBody extends TeaModel {
     /**
      * <p>The keyword used to search for the dataset name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,9 +21,13 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
     /**
      * <p>Whether to recursively wrap the dataset in the subdirectory. Valid values:</p>
-     * <br>
-     * <p>*   true: returns datasets in all recursive subdirectories in the directoryId directory.</p>
-     * <p>*   false: Only datasets in the directory specified by directoryId are returned, excluding subdirectories.</p>
+     * <ul>
+     * <li>true: returns datasets in all recursive subdirectories in the directoryId directory.</li>
+     * <li>false: Only datasets in the directory specified by directoryId are returned, excluding subdirectories.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,18 +64,27 @@ public class QueryDatasetListResponseBody extends TeaModel {
     public static class QueryDatasetListResponseBodyResultDataDataSource extends TeaModel {
         /**
          * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>261b252d-c3c3-498a-a0a7-5d1ec6cd****</p>
          */
         @NameInMap("DsId")
         public String dsId;
 
         /**
          * <p>The time when the scaling group was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the training dataset.</p>
          */
         @NameInMap("DsName")
         public String dsName;
 
         /**
          * <p>The user ID of the dataset owner in the Quick BI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         @NameInMap("DsType")
         public String dsType;
@@ -107,24 +123,36 @@ public class QueryDatasetListResponseBody extends TeaModel {
     public static class QueryDatasetListResponseBodyResultDataDirectory extends TeaModel {
         /**
          * <p>The ID of the directory path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Information about the directory where the dataset is located</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schemaad8aad00-9c55-4984-a767-b4e0ec60****</p>
          */
         @NameInMap("PathId")
         public String pathId;
 
         /**
          * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test a data source</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -171,6 +199,9 @@ public class QueryDatasetListResponseBody extends TeaModel {
     public static class QueryDatasetListResponseBodyResultData extends TeaModel {
         /**
          * <p>The details of the dataset list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-02 10:36:05</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -183,18 +214,27 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5820f58c-c734-4d8a-baf1-7979af4f****</p>
          */
         @NameInMap("DatasetId")
         public String datasetId;
 
         /**
          * <p>Tom</p>
+         * 
+         * <strong>example:</strong>
+         * <p>company_sales_record_copy12</p>
          */
         @NameInMap("DatasetName")
         public String datasetName;
 
         /**
          * <p>The number of rows per page set when the interface is requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The total number of rows in the table.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -207,6 +247,9 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
         /**
          * <p>The nickname of the dataset owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-02 10:36:05</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
@@ -216,33 +259,49 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136516262323****</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>Whether to enable row-level permissions. Valid values:</p>
-         * <br>
-         * <p>*   true: The VIP Netty channel is enabled.</p>
-         * <p>*   false: The incremental log backup feature is disabled.</p>
+         * <ul>
+         * <li>true: The VIP Netty channel is enabled.</li>
+         * <li>false: The incremental log backup feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the workspace.</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
          * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("RowLevel")
         public Boolean rowLevel;
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad06adf</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
         /**
          * <p>The description of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test dataset</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;
@@ -367,33 +426,48 @@ public class QueryDatasetListResponseBody extends TeaModel {
 
         /**
          * <p>The number of rows per page in a paged query.</p>
-         * <br>
-         * <p>*   Default value: 10.</p>
-         * <p>*   Maximum value: 1,000.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * <li>Maximum value: 1,000.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
          * <p>Indicates whether the request is successful. Valid values:</p>
-         * <br>
-         * <p>*   true: The request was successful.</p>
-         * <p>*   false: The request failed.</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalNum")
         public Integer totalNum;
 
         /**
          * <p>Current page number for dataset list:</p>
-         * <br>
-         * <p>*   Pages start from page 1.</p>
-         * <p>*   Default value: 1.</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalPages")
         public Integer totalPages;

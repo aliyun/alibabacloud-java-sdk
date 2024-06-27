@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryWorkspaceRoleConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25</p>
      */
     @NameInMap("RoleId")
     public Long roleId;

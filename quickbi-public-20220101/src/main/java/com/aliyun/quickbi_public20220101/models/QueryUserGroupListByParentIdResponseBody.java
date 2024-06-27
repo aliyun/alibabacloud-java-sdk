@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72B19D61-B37A-5C7A-9389-0856CD7935B3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,9 +21,13 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,12 +64,18 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
     public static class QueryUserGroupListByParentIdResponseBodyResult extends TeaModel {
         /**
          * <p>The time when the sub-user group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-30 10:03:09</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The creator of the sub-user group. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136516262323****</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
@@ -75,36 +88,54 @@ public class QueryUserGroupListByParentIdResponseBody extends TeaModel {
 
         /**
          * <p>The time when the sub-user group was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-16 15:49:08</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The user who modified the subgroup. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>136516262323****</p>
          */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
         /**
          * <p>The ID of the parent user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
          */
         @NameInMap("ParentUserGroupId")
         public String parentUserGroupId;
 
         /**
          * <p>The description of the sub-user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User Group for Testing</p>
          */
         @NameInMap("UserGroupDescription")
         public String userGroupDescription;
 
         /**
          * <p>The ID of the sub-user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f5eeb52e-d9c2-4a8b-80e3-47ab55c2****</p>
          */
         @NameInMap("UserGroupId")
         public String userGroupId;
 
         /**
          * <p>The name of the sub-user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>popapi test group</p>
          */
         @NameInMap("UserGroupName")
         public String userGroupName;

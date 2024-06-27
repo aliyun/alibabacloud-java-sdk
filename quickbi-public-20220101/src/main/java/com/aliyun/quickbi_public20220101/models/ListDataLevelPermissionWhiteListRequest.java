@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListDataLevelPermissionWhiteListRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3d5db23c-e4f2-49dd-a883-92285b48e14a</p>
      */
     @NameInMap("CubeId")
     public String cubeId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ROW_LEVEL</p>
      */
     @NameInMap("RuleType")
     public String ruleType;

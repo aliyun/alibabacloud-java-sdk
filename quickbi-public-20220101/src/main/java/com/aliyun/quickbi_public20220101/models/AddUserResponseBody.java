@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddUserResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public AddUserResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +51,24 @@ public class AddUserResponseBody extends TeaModel {
     }
 
     public static class AddUserResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AdminUser")
         public Boolean adminUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AuthAdminUser")
         public Boolean authAdminUser;
 
@@ -58,9 +78,17 @@ public class AddUserResponseBody extends TeaModel {
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b5d8fd9348cc4327****afb604</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UserType")
         public Integer userType;
 

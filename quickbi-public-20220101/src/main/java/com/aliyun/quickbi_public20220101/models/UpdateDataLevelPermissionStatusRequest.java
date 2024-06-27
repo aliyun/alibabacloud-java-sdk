@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class UpdateDataLevelPermissionStatusRequest extends TeaModel {
     /**
      * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7c7223ae-****-3c744528014b</p>
      */
     @NameInMap("CubeId")
     public String cubeId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("IsOpen")
     public Integer isOpen;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ROW_LEVEL</p>
      */
     @NameInMap("RuleType")
     public String ruleType;

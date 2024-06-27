@@ -6,27 +6,45 @@ import com.aliyun.tea.*;
 public class UpdateUserRequest extends TeaModel {
     /**
      * <p>Indicates whether the organization administrator. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("AdminUser")
     public Boolean adminUser;
 
     /**
      * <p>Indicate whether the RAM user is a permission administrator. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AuthAdminUser")
     public Boolean authAdminUser;
 
+    @NameInMap("IsDeleted")
+    public Boolean isDeleted;
+
     /**
      * <p>The nickname of the account.</p>
-     * <br>
-     * <p>*   Format check: The value can be up to 50 characters in length.</p>
-     * <p>*   Special format verification: Chinese and English digits_ \\ / | () ] [</p>
+     * <ul>
+     * <li>Format check: The value can be up to 50 characters in length.</li>
+     * <li>Special format verification: Chinese and English digits_ \ / | () ] [</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Xiao Zhang</p>
      */
     @NameInMap("NickName")
     public String nickName;
@@ -36,18 +54,24 @@ public class UpdateUserRequest extends TeaModel {
 
     /**
      * <p>The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fe67f61a35a94b7da1a34ba174a7****</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>The role type of the organization member. Valid values:</p>
-     * <br>
-     * <p>*   1 : developer</p>
-     * <p>*   2 : visitors</p>
-     * <p>*   3 : Analyst</p>
+     * <ul>
+     * <li>1 : developer</li>
+     * <li>2 : visitors</li>
+     * <li>3 : Analyst</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserType")
     public Integer userType;
@@ -71,6 +95,14 @@ public class UpdateUserRequest extends TeaModel {
     }
     public Boolean getAuthAdminUser() {
         return this.authAdminUser;
+    }
+
+    public UpdateUserRequest setIsDeleted(Boolean isDeleted) {
+        this.isDeleted = isDeleted;
+        return this;
+    }
+    public Boolean getIsDeleted() {
+        return this.isDeleted;
     }
 
     public UpdateUserRequest setNickName(String nickName) {

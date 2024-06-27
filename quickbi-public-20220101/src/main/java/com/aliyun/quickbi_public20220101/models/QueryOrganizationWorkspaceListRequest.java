@@ -7,12 +7,24 @@ public class QueryOrganizationWorkspaceListRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fe67f61a35a94b7da1a34ba174a7****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

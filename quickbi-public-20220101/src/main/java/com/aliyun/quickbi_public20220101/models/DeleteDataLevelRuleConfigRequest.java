@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteDataLevelRuleConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7c7223ae-****-3c744528014b</p>
      */
     @NameInMap("CubeId")
     public String cubeId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a5bb24da-****-a891683e14da</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryWorksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryWorksResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +51,20 @@ public class QueryWorksResponseBody extends TeaModel {
     }
 
     public static class QueryWorksResponseBodyResultDirectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
+         */
         @NameInMap("PathId")
         public String pathId;
 
@@ -95,6 +111,10 @@ public class QueryWorksResponseBody extends TeaModel {
     }
 
     public static class QueryWorksResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Auth3rdFlag")
         public Integer auth3rdFlag;
 
@@ -104,36 +124,74 @@ public class QueryWorksResponseBody extends TeaModel {
         @NameInMap("Directory")
         public QueryWorksResponseBodyResultDirectory directory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1496651577000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1496651577000</p>
+         */
         @NameInMap("GmtModify")
         public String gmtModify;
 
         @NameInMap("ModifyName")
         public String modifyName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9187a612aa474e2a8ac1414d5529****</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
         @NameInMap("OwnerName")
         public String ownerName;
 
+        @NameInMap("PublicFlag")
+        public Boolean publicFlag;
+
+        @NameInMap("PublicInvalidTime")
+        public Long publicInvalidTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("WorkName")
         public String workName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PAGE</p>
+         */
         @NameInMap("WorkType")
         public String workType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
+         */
         @NameInMap("WorksId")
         public String worksId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
@@ -207,6 +265,22 @@ public class QueryWorksResponseBody extends TeaModel {
         }
         public String getOwnerName() {
             return this.ownerName;
+        }
+
+        public QueryWorksResponseBodyResult setPublicFlag(Boolean publicFlag) {
+            this.publicFlag = publicFlag;
+            return this;
+        }
+        public Boolean getPublicFlag() {
+            return this.publicFlag;
+        }
+
+        public QueryWorksResponseBodyResult setPublicInvalidTime(Long publicInvalidTime) {
+            this.publicInvalidTime = publicInvalidTime;
+            return this;
+        }
+        public Long getPublicInvalidTime() {
+            return this.publicInvalidTime;
         }
 
         public QueryWorksResponseBodyResult setSecurityLevel(String securityLevel) {

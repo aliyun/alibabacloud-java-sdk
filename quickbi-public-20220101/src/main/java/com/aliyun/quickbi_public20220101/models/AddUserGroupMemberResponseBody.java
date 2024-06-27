@@ -4,12 +4,24 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddUserGroupMemberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>B6141A5A-A9EF-5F16-BF34-EFB9C1CCE4F3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

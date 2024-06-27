@@ -6,11 +6,14 @@ import com.aliyun.tea.*;
 public class QueryUserGroupListByParentIdRequest extends TeaModel {
     /**
      * <p>The ID of the parent user group.</p>
-     * <br>
-     * <p>*   If you enter the ID of the parent user group, you can obtain the information of the child user group under this ID.</p>
-     * <p>*   If you enter -1, you can obtain the sub-user group information under the root directory.</p>
-     * <br>
+     * <ul>
+     * <li>If you enter the ID of the parent user group, you can obtain the information of the child user group under this ID.</li>
+     * <li>If you enter -1, you can obtain the sub-user group information under the root directory.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
      */
     @NameInMap("ParentUserGroupId")
     public String parentUserGroupId;

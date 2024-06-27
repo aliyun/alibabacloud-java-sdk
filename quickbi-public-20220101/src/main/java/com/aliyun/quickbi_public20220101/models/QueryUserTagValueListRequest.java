@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryUserTagValueListRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fe67f61a35a94b7da1a34ba174a7****</p>
      */
     @NameInMap("UserId")
     public String userId;

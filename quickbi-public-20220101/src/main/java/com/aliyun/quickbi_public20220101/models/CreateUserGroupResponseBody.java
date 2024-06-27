@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class CreateUserGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36829379-0C38-5BC0-830A-92665BF77D4F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the added user group is returned. An empty string \\"\\" is returned if the add fails.</p>
+     * <p>The ID of the added user group is returned. An empty string \&quot;\&quot; is returned if the add fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f5eeb52e-d9c2-4a8b-80e3-47ab55c2****</p>
      */
     @NameInMap("Result")
     public String result;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

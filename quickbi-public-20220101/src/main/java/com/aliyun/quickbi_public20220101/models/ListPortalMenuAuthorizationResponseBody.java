@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,9 +21,13 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,15 +64,22 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
     public static class ListPortalMenuAuthorizationResponseBodyResultReceivers extends TeaModel {
         /**
          * <p>The ID of the authorization object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121344444790****</p>
          */
         @NameInMap("ReceiverId")
         public String receiverId;
 
         /**
          * <p>The type of the authorization object. Valid values:</p>
-         * <br>
-         * <p>*   0: user</p>
-         * <p>*   1: user group</p>
+         * <ul>
+         * <li>0: user</li>
+         * <li>1: user group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReceiverType")
         public Integer receiverType;
@@ -96,6 +110,9 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
     public static class ListPortalMenuAuthorizationResponseBodyResult extends TeaModel {
         /**
          * <p>The menu ID of the BI portal leaf node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54kqgoa****</p>
          */
         @NameInMap("MenuId")
         public String menuId;
@@ -108,9 +125,13 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
         /**
          * <p>Whether only authorization is visible. Valid values:</p>
-         * <br>
-         * <p>*   true: Only the authorization is visible.</p>
-         * <p>*   false: Both are visible.</p>
+         * <ul>
+         * <li>true: Only the authorization is visible.</li>
+         * <li>false: Both are visible.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ShowOnlyWithAccess")
         public Boolean showOnlyWithAccess;

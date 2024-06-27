@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryCubeOptimizationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<QueryCubeOptimizationResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,66 +51,150 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
     }
 
     public static class QueryCubeOptimizationResponseBodyResultCubePerformanceDiagnoseModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CacheCostTimeAvg")
         public Double cacheCostTimeAvg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CacheQueryCount")
         public Integer cacheQueryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("CostTimeAvg")
         public Double costTimeAvg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3e45b61a-9ba8-4c7c-8248-8dbe69945636</p>
+         */
         @NameInMap("CubeId")
         public String cubeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("CubeName")
         public String cubeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("QueryCount")
         public Integer queryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("QueryCountAvg")
         public Double queryCountAvg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("QueryOverFivePercentNum")
         public Double queryOverFivePercentNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("QueryOverFiveSecPercent")
         public String queryOverFiveSecPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("QueryOverTenSecPercent")
         public String queryOverTenSecPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.3</p>
+         */
         @NameInMap("QueryOverTenSecPercentNum")
         public Double queryOverTenSecPercentNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("QueryTimeoutCount")
         public Integer queryTimeoutCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.3</p>
+         */
         @NameInMap("QueryTimeoutCountPercent")
         public Double queryTimeoutCountPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("QuickIndexCostTimeAvg")
         public Double quickIndexCostTimeAvg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("QuickIndexQueryCount")
         public Integer quickIndexQueryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("RepeatQueryPercent")
         public String repeatQueryPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RepeatQueryPercentNum")
         public Double repeatQueryPercentNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RepeatSqlQueryCount")
         public Integer repeatSqlQueryCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.3</p>
+         */
         @NameInMap("RepeatSqlQueryPercent")
         public String repeatSqlQueryPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6ea74bff-c818-4188-b462-dbb45a24dbac</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eco0sh0prods</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
@@ -282,6 +374,10 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
     }
 
     public static class QueryCubeOptimizationResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OPENQUICKENGINE</p>
+         */
         @NameInMap("AdviceType")
         public String adviceType;
 

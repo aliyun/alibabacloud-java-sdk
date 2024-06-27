@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class SetDataLevelPermissionExtraConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7c7223ae-******-3c744528014b</p>
      */
     @NameInMap("CubeId")
     public String cubeId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NONE</p>
      */
     @NameInMap("MissHitPolicy")
     public String missHitPolicy;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ROW_LEVEL</p>
      */
     @NameInMap("RuleType")
     public String ruleType;

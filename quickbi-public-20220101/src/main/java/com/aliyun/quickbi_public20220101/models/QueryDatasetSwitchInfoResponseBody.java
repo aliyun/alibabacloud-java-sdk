@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FAECEFA8-09BB-58AB-BC58-C8ACEFE4D232</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryDatasetSwitchInfoResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +51,24 @@ public class QueryDatasetSwitchInfoResponseBody extends TeaModel {
     }
 
     public static class QueryDatasetSwitchInfoResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7c7223ae-****-3c744528014b</p>
+         */
         @NameInMap("CubeId")
         public String cubeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsOpenColumnLevelPermission")
         public Integer isOpenColumnLevelPermission;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsOpenRowLevelPermission")
         public Integer isOpenRowLevelPermission;
 

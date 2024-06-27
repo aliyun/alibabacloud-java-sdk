@@ -6,16 +6,29 @@ import com.aliyun.tea.*;
 public class AddUserRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>Add organization members.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("AdminUser")
     public Boolean adminUser;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AuthAdminUser")
     public Boolean authAdminUser;
 
@@ -30,6 +43,9 @@ public class AddUserRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UserType")
     public Integer userType;

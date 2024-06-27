@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class DelayTicketExpireTimeRequest extends TeaModel {
     /**
      * <p>The time to postpone.</p>
-     * <br>
-     * <p>*   Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.</p>
-     * <p>*   Expired bills cannot be extended.</p>
-     * <br>
+     * <ul>
+     * <li>Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.</li>
+     * <li>Expired bills cannot be extended.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
     /**
      * <p>The value of the third-party embedded ticket, that is, the accessTicket value in the URL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>040e6f79d33444838e*****c7206c070</p>
      */
     @NameInMap("Ticket")
     public String ticket;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListWorkspaceRolesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
