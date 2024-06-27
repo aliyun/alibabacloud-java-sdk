@@ -6,31 +6,42 @@ import com.aliyun.tea.*;
 public class DeleteDataLimitRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
      * <p>The ID of the data asset.</p>
-     * <br>
      * <p>You can call the DescribeDataLimits operation to query the IDs of data assets. The value of the Id response parameter indicates the ID of a data asset.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12033</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Chinese</p>
-     * <p>*   **en_us**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Chinese</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39.170.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

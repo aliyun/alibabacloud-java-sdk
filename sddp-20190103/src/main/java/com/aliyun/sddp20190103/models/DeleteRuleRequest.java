@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class DeleteRuleRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
      * <p>The ID of the sensitive data detection rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>122300</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The language of the content within the request and response. Valid values: **zh** and **en**. The value zh indicates Chinese, and the value en indicates English.</p>
+     * <p>The language of the content within the request and response. Valid values: <strong>zh</strong> and <strong>en</strong>. The value zh indicates Chinese, and the value en indicates English.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39.170.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

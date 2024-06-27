@@ -6,19 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeEventDetailRequest extends TeaModel {
     /**
      * <p>The ID of the anomalous event.</p>
-     * <br>
-     * <p>> You can call the **DescribeEvents** operation to query the ID of the anomalous event.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <strong>DescribeEvents</strong> operation to query the ID of the anomalous event.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13456723343</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;

@@ -4,9 +4,17 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataObjectsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("DomainId")
     public Long domainId;
 
@@ -22,6 +30,10 @@ public class DescribeDataObjectsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
@@ -31,29 +43,60 @@ public class DescribeDataObjectsRequest extends TeaModel {
     @NameInMap("ModelIds")
     public String modelIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>101,102</p>
+     */
     @NameInMap("ModelTagIds")
     public String modelTagIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>234,236,238</p>
+     */
     @NameInMap("ParentCategoryIds")
     public String parentCategoryIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1,5</p>
+     */
     @NameInMap("ProductIds")
     public String productIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>t_sddp_selfmysql_pers0</p>
+     */
     @NameInMap("QueryName")
     public String queryName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("RiskLevels")
     public String riskLevels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

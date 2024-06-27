@@ -7,6 +7,10 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
     @NameInMap("OssObjectDetail")
     public DescribeOssObjectDetailV2ResponseBodyOssObjectDetail ossObjectDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleListModelTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>personal sensitive data</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -62,21 +74,41 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Excel</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Count")
         public Long count;
 
         @NameInMap("ModelTags")
         public java.util.List<DescribeOssObjectDetailV2ResponseBodyOssObjectDetailRuleListModelTags> modelTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S1</p>
+         */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -136,18 +168,38 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeOssObjectDetailV2ResponseBodyOssObjectDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>lv-demo</p>
+         */
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Excel file</p>
+         */
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>obj_id</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S1</p>
+         */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 

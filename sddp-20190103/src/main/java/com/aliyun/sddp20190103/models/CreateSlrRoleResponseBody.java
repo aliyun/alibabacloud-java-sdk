@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CreateSlrRoleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the service-linked role was created. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("HasPermission")
     public Boolean hasPermission;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>208B016D-4CB9-4A85-96A5-0B8ED1EBF271</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,6 +4,10 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDocTypesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

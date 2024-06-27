@@ -6,35 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeDataLimitSetRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Simplified Chinese (default)</p>
-     * <p>*   **en_us**: English</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The parent asset ID of the data asset.</p>
-     * <br>
-     * <p>You can call the [DescribeDataLimitDetail](~~DescribeDataLimitDetail~~) or [DescribeDataLimits](~~DescribeDataLimits~~) operation to obtain the parent asset ID of the data asset from the value of the **ParentId** parameter.</p>
+     * <p>You can call the <a href="~~DescribeDataLimitDetail~~">DescribeDataLimitDetail</a> or <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to obtain the parent asset ID of the data asset from the value of the <strong>ParentId</strong> parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db</p>
      */
     @NameInMap("ParentId")
     public String parentId;
 
     /**
      * <p>The type of service to which the data asset belongs. Valid values:</p>
-     * <br>
-     * <p>*   **1**: MaxCompute</p>
-     * <p>*   **2**: OSS</p>
-     * <p>*   **3**: AnalyticDB for MySQL</p>
-     * <p>*   **4**: Tablestore</p>
-     * <p>*   **5**: ApsaraDB RDS</p>
+     * <ul>
+     * <li><strong>1</strong>: MaxCompute</li>
+     * <li><strong>2</strong>: OSS</li>
+     * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+     * <li><strong>4</strong>: Tablestore</li>
+     * <li><strong>5</strong>: ApsaraDB RDS</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ResourceType")
     public Integer resourceType;

@@ -4,24 +4,48 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataObjectColumnDetailRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("FeatureType")
     public Integer featureType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>318248</p>
+     */
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ProductId")
     public Long productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 

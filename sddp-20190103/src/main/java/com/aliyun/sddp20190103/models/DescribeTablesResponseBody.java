@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTablesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeTablesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,34 @@ public class DescribeTablesResponseBody extends TeaModel {
     public static class DescribeTablesResponseBodyItemsRuleList extends TeaModel {
         /**
          * <p>The total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
-         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
-         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
-         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
-         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
@@ -138,78 +160,113 @@ public class DescribeTablesResponseBody extends TeaModel {
     public static class DescribeTablesResponseBodyItems extends TeaModel {
         /**
          * <p>The point in time when the table was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536751124000</p>
          */
         @NameInMap("CreationTime")
         public Long creationTime;
 
         /**
          * <p>The ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The description of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description 1</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
          * <p>The ID of the data asset to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The name of the data asset to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Data Asset 1</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gxdata</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The Alibaba Cloud account to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtdep-239-******</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The name of the service to which the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**. For more information about the types of data assets from which DSC can scan for sensitive data, see [Supported data assets](https://help.aliyun.com/document_detail/212906.html).</p>
+         * <p>The name of the service to which the table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>. For more information about the types of data assets from which DSC can scan for sensitive data, see <a href="https://help.aliyun.com/document_detail/212906.html">Supported data assets</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The ID of the service to which the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
          * <p>The sensitivity level of the table. Each sensitivity level ID corresponds to a sensitivity level name. Valid values:</p>
-         * <br>
-         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
-         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
-         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
-         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
-         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
         /**
          * <p>The name of the sensitivity level for the table. Valid values:</p>
-         * <br>
-         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
-         * <p>*   **S1**: indicates the low sensitivity level.</p>
-         * <p>*   **S2**: indicates the medium sensitivity level.</p>
-         * <p>*   **S3**: indicates the high sensitivity level.</p>
-         * <p>*   **S4**: indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
+         * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+         * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+         * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+         * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S2</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
@@ -222,33 +279,49 @@ public class DescribeTablesResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the table contains sensitive fields. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
         /**
          * <p>The total number of sensitive fields in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
         /**
          * <p>The percentage of sensitive fields in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21%</p>
          */
         @NameInMap("SensitiveRatio")
         public String sensitiveRatio;
 
         /**
          * <p>The name of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tenant 1</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
         /**
          * <p>The total number of fields in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

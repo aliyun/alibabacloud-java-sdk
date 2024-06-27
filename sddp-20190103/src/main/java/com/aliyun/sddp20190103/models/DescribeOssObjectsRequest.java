@@ -6,85 +6,125 @@ import com.aliyun.tea.*;
 public class DescribeOssObjectsRequest extends TeaModel {
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The code of the file type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FileCategoryCode")
     public Long fileCategoryCode;
 
     /**
      * <p>The ID of the instance to which the OSS object belongs.</p>
-     * <br>
-     * <p>> You can call the **DescribeInstances** operation to query the instance ID.</p>
+     * <blockquote>
+     * <p>You can call the <strong>DescribeInstances</strong> operation to query the instance ID.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ins-2222</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The end time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1536751124000</p>
      */
     @NameInMap("LastScanTimeEnd")
     public Long lastScanTimeEnd;
 
     /**
      * <p>The start time of the last scan. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1536751124000</p>
      */
     @NameInMap("LastScanTimeStart")
     public Long lastScanTimeStart;
 
     /**
      * <p>The search keyword. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The sensitivity level of the OSS object. Valid values:</p>
-     * <br>
-     * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
-     * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
-     * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
-     * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
-     * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+     * <ul>
+     * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+     * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+     * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+     * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+     * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("RiskLevelId")
     public Integer riskLevelId;
 
     /**
      * <p>The ID of the sensitive data detection rule that the OSS object hits.</p>
-     * <br>
-     * <p>> You can call the **DescribeRules** operation to query the ID of the sensitive data detection rule.</p>
+     * <blockquote>
+     * <p>You can call the <strong>DescribeRules</strong> operation to query the ID of the sensitive data detection rule.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1222</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
 
     /**
      * <p>The region in which the data asset resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
     /**
      * <p>The ID of the industry-specific rule template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

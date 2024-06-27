@@ -12,6 +12,9 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,17 +42,26 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
     public static class DescribeEventDetailResponseBodyEventDetailChartData extends TeaModel {
         /**
-         * <p>The values of data on the x-axis.</p>
+         * <p>The value of the data item on the X axis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[test1,test2,...]</p>
          */
         @NameInMap("X")
         public java.util.List<String> x;
 
         /**
-         * <p>The values of data on the y-axis.</p>
+         * <p>The value of the data item on the Y axis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[1,2,3,...]</p>
          */
         @NameInMap("Y")
         public java.util.List<String> y;
 
+        /**
+         * <p>The value of the data item for the Z axis.</p>
+         */
         @NameInMap("Z")
         public java.util.List<String> z;
 
@@ -85,6 +97,19 @@ public class DescribeEventDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeEventDetailResponseBodyEventDetailChart extends TeaModel {
+        /**
+         * <p>The type of the chart. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: column chart</li>
+         * <li><strong>2</strong>: line chart</li>
+         * </ul>
+         * <blockquote>
+         * <p>This field will be returned only when NewAlarm is true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ChatType")
         public Integer chatType;
 
@@ -96,34 +121,65 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
         /**
          * <p>The name of the baseline behavior chart of the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline behavior chart</p>
          */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>Icon title.</p>
+         * <blockquote>
+         * <p>This field will be returned only when NewAlarm is true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>misskingm</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the chart. Valid values:</p>
-         * <br>
-         * <p>*   **1**: column chart</p>
-         * <p>*   **2**: line chart</p>
+         * <ul>
+         * <li><strong>1</strong>: column chart</li>
+         * <li><strong>2</strong>: line chart</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The descriptive label of data on the x-axis.</p>
+         * <p>The descriptive label of data items on the X axis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of days</p>
          */
         @NameInMap("XLabel")
         public String XLabel;
 
         /**
-         * <p>The descriptive label of data on the y-axis.</p>
+         * <p>The descriptive label of data items on the Y axis.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Value</p>
          */
         @NameInMap("YLabel")
         public String YLabel;
 
+        /**
+         * <p>The descriptive label of data items on the Z axis.</p>
+         * <blockquote>
+         * <p>This field will be returned only when NewAlarm is true.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>chart description</p>
+         */
         @NameInMap("ZLabel")
         public String ZLabel;
 
@@ -201,15 +257,27 @@ public class DescribeEventDetailResponseBody extends TeaModel {
     public static class DescribeEventDetailResponseBodyEventDetailContent extends TeaModel {
         /**
          * <p>The title of the content in the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Anomaly description</p>
          */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>Exception event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daliaoyuncom</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The description of the content in the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The account was used to access OSS from an unusual terminal whose IP address is 1.2.3.4 from 00:06:45 on September 9, 2019 to 00:57:37 on September 9, 2019.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -248,12 +316,18 @@ public class DescribeEventDetailResponseBody extends TeaModel {
     public static class DescribeEventDetailResponseBodyEventDetailResourceInfo extends TeaModel {
         /**
          * <p>The source title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Risk</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The source description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Based on the record of authentication by using an unusual terminal, an attacker may have obtained the access permission of the account, or an employee accessed data from a personal terminal.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -283,13 +357,13 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
     public static class DescribeEventDetailResponseBodyEventDetail extends TeaModel {
         /**
-         * <p>An array that consists of the baseline behavior chart of the anomalous event.</p>
+         * <p>The baseline behavior chart of the anomalous event.</p>
          */
         @NameInMap("Chart")
         public java.util.List<DescribeEventDetailResponseBodyEventDetailChart> chart;
 
         /**
-         * <p>An array that consists of the content in the anomalous event.</p>
+         * <p>The content in the anomalous event.</p>
          */
         @NameInMap("Content")
         public java.util.List<DescribeEventDetailResponseBodyEventDetailContent> content;
@@ -334,53 +408,78 @@ public class DescribeEventDetailResponseBody extends TeaModel {
     public static class DescribeEventDetailResponseBodyEventHandleInfoList extends TeaModel {
         /**
          * <p>The account that is used to handle the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sddp-test2</p>
          */
         @NameInMap("CurrentValue")
         public String currentValue;
 
         /**
-         * <p>The point in time when the account was locked. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the account is disabled. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611139155000</p>
          */
         @NameInMap("DisableTime")
         public Long disableTime;
 
         /**
-         * <p>The point in time when the account was unlocked. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the disabled account is enabled. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1611139155000</p>
          */
         @NameInMap("EnableTime")
         public Long enableTime;
 
         /**
          * <p>The handling method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Remove from the whitelist</p>
          */
         @NameInMap("HandlerName")
         public String handlerName;
 
         /**
          * <p>The type of the handling method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_security_ip</p>
          */
         @NameInMap("HandlerType")
         public String handlerType;
 
         /**
          * <p>The duration for which the handling operation takes effect. If you leave this parameter empty, the handling operation is permanently valid. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("HandlerValue")
         public Integer handlerValue;
 
         /**
-         * <p>The ID of the handling record.</p>
+         * <p>The ID of the handling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The status of the account that triggered the anomalous event. Valid values:</p>
-         * <br>
-         * <p>*   **0**: locked</p>
-         * <p>*   **1**: unlocked</p>
-         * <p>*   **-1**: failed to unlock the account</p>
-         * <p>*   **-2**: failed to enable the account</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>-1</strong>: failed to disable the account</li>
+         * <li><strong>-2</strong>: failed to enable the account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
@@ -459,53 +558,79 @@ public class DescribeEventDetailResponseBody extends TeaModel {
     public static class DescribeEventDetailResponseBodyEvent extends TeaModel {
         /**
          * <p>The time when the alert for the anomalous event was generated. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545829129000</p>
          */
         @NameInMap("AlertTime")
         public Long alertTime;
 
         /**
          * <p>Indicates whether the handling result of the anomalous event is used to enhance the detection of anomalous events. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         * <br>
-         * <p>> If you enhance the detection of anomalous events, the detection accuracy and the rate of triggering alerts for anomalous events are improved.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you enhance the detection of anomalous events, the detection accuracy and the rate of triggering alerts for anomalous events are improved.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Backed")
         public Boolean backed;
 
         /**
          * <p>The instance name of the service in which the anomalous event was detected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in-222***</p>
          */
         @NameInMap("DataInstance")
         public String dataInstance;
 
         /**
          * <p>The display name of the account that is used to handle the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yundunsr</p>
          */
         @NameInMap("DealDisplayName")
         public String dealDisplayName;
 
         /**
          * <p>The username of the account that is used to handle the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>det1111</p>
          */
         @NameInMap("DealLoginName")
         public String dealLoginName;
 
         /**
          * <p>The reason why the anomalous event is handled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Anomaly confirmed</p>
          */
         @NameInMap("DealReason")
         public String dealReason;
 
         /**
          * <p>The time when the anomalous event was handled. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1230000</p>
          */
         @NameInMap("DealTime")
         public Long dealTime;
 
         /**
          * <p>The ID of the account that is used to handle the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>229157443385014***</p>
          */
         @NameInMap("DealUserId")
         public Long dealUserId;
@@ -518,12 +643,18 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
         /**
          * <p>The display name of the account that triggered the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yundunsr</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The time when the anomalous event occurred. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545829129000</p>
          */
         @NameInMap("EventTime")
         public Long eventTime;
@@ -536,77 +667,122 @@ public class DescribeEventDetailResponseBody extends TeaModel {
 
         /**
          * <p>The unique ID of the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52234</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The details of the alert logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;client_ip&quot;: [&quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;, &quot;106.11.XX.XX&quot;], &quot;start_time&quot;: &quot;2020-05-10 00:00:01&quot;, &quot;instance&quot;: [&quot;omniscience-data&quot;, &quot;punish-beaver-data&quot;], &quot;end_time&quot;: &quot;2020-05-10 00:21:22&quot;, &quot;client_ua&quot;: [&quot;Java/1.8.0_152&quot;, &quot;Java/1.8.0_92&quot;, &quot;aliyun-sdk-java/2.0.0&quot;, &quot;aliyun-sdk-java/2.8.0(Linux/4.9.151-015.ali3000.alios7.x86_64/amd64;1.8.0_152)&quot;], &quot;user_name&quot;: 1512222261295262}</p>
          */
         @NameInMap("LogDetail")
         public String logDetail;
 
         /**
          * <p>The username of the account that triggered the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>det1111</p>
          */
         @NameInMap("LoginName")
         public String loginName;
 
+        /**
+         * <p>Whether it is a new version of the alarm. Value:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes. </li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("NewAlarm")
         public Boolean newAlarm;
 
         /**
-         * <p>The name of the service in which the anomalous event was detected. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+         * <p>The name of the service in which the anomalous event was detected. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The handling status for the anomalous event. Valid values:</p>
-         * <br>
-         * <p>*   **0**: unhandled</p>
-         * <p>*   **1**: confirmed</p>
-         * <p>*   **2**: marked as false positive</p>
+         * <ul>
+         * <li><strong>0</strong>: unhandled</li>
+         * <li><strong>1</strong>: confirmed</li>
+         * <li><strong>2</strong>: marked as false positive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The name of the handling status for the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         @NameInMap("StatusName")
         public String statusName;
 
         /**
          * <p>The code of the anomalous event subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>020008</p>
          */
         @NameInMap("SubTypeCode")
         public String subTypeCode;
 
         /**
          * <p>The name of the anomalous event subtype.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Anomalous volume of downloaded data</p>
          */
         @NameInMap("SubTypeName")
         public String subTypeName;
 
         /**
          * <p>The code of the anomalous event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02</p>
          */
         @NameInMap("TypeCode")
         public String typeCode;
 
         /**
          * <p>The name of the anomalous event type. Valid values:</p>
-         * <br>
-         * <p>*   **01**: anomalous permission usage</p>
-         * <p>*   **02**: anomalous data flow</p>
-         * <p>*   **03**: anomalous data operation</p>
+         * <ul>
+         * <li><strong>01</strong>: anomalous permission usage</li>
+         * <li><strong>02</strong>: anomalous data flow</li>
+         * <li><strong>03</strong>: anomalous data operation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Anomalous data flow</p>
          */
         @NameInMap("TypeName")
         public String typeName;
 
         /**
          * <p>The ID of the account that triggered the anomalous event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>229157443385014***</p>
          */
         @NameInMap("UserId")
         public Long userId;

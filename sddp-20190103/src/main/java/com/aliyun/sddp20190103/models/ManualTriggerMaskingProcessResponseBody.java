@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ManualTriggerMaskingProcessResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-4******</p>
      */
     @NameInMap("RequestId")
     public String requestId;

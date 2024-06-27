@@ -4,6 +4,10 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplateAllRulesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-4******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeTemplateAllRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplateAllRulesResponseBodyRuleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>376</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Model Name</p>
+         */
         @NameInMap("Name")
         public String name;
 

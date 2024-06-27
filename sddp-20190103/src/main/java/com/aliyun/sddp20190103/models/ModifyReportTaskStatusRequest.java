@@ -6,26 +6,38 @@ import com.aliyun.tea.*;
 public class ModifyReportTaskStatusRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Simplified Chinese</p>
-     * <p>*   **en_us**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Simplified Chinese</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>Specifies the status of the report task. Valid values:</p>
-     * <br>
-     * <p>*   **0**: disabled</p>
-     * <p>*   **1**: enabled</p>
-     * <br>
-     * <p>> This parameter is required.</p>
+     * <ul>
+     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: enabled</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ReportTaskStatus")
     public Integer reportTaskStatus;

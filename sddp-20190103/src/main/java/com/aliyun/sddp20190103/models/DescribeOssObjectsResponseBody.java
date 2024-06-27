@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeOssObjectsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,34 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     public static class DescribeOssObjectsResponseBodyItemsRuleList extends TeaModel {
         /**
          * <p>The number of times that the rule is hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The search keyword. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID card</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the sensitivity level of the OSS object. Valid values:</p>
-         * <br>
-         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
-         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
-         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
-         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
-         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
@@ -138,87 +160,133 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     public static class DescribeOssObjectsResponseBodyItems extends TeaModel {
         /**
          * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-duplicate-***</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
-         * <p>The type of the OSS object. Valid values include **900001**, **800015**, or **800005**, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.</p>
+         * <p>The type of the OSS object. Valid values include <strong>900001</strong>, <strong>800015</strong>, or <strong>800005</strong>, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900001</p>
          */
         @NameInMap("Category")
         public Long category;
 
         /**
          * <p>The name of the file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MP4 file</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
          * <p>The code of the file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("FileCategoryCode")
         public Long fileCategoryCode;
 
         /**
          * <p>The name of the file type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text file</p>
          */
         @NameInMap("FileCategoryName")
         public String fileCategoryName;
 
         /**
          * <p>The file ID of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file-22***</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
          * <p>The ID of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17383</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The ID of the instance to which the OSS object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232122</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The time when the file was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536751124000</p>
+         */
         @NameInMap("LastModifiedTime")
         public Long lastModifiedTime;
 
         /**
          * <p>The name of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>obj_id</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The region ID of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-***</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the sensitivity level of the OSS object. Valid values:</p>
-         * <br>
-         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
-         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
-         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
-         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
-         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
         /**
          * <p>The name of the sensitivity level for the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Medium sensitivity level</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
          * <p>The number of rules that are hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("RuleCount")
         public Integer ruleCount;
@@ -231,12 +299,18 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
 
         /**
          * <p>The number of fields that are hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
         /**
          * <p>The size of the file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;

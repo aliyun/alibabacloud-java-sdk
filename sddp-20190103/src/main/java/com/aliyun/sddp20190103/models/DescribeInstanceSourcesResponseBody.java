@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSourcesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5A7E8FB9-5011-5A90-97D9-AE587047****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,174 +94,256 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
     public static class DescribeInstanceSourcesResponseBodyItems extends TeaModel {
         /**
          * <p>Indicates whether the security audit feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AuditStatus")
         public Integer auditStatus;
 
         /**
          * <p>Indicates whether the automatic scan feature is enabled to detect sensitive data. Valid values:</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AutoScan")
         public Integer autoScan;
 
         /**
          * <p>Indicates whether the username and password can be changed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanModifyUserName")
         public Boolean canModifyUserName;
 
         /**
          * <p>The data detection status. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The data detection is ready.</p>
-         * <p>*   **1**: The data detection is running.</p>
-         * <p>*   **2**: The connectivity test is in progress.</p>
-         * <p>*   **3**: The connectivity test passed.</p>
-         * <p>*   **4**: The connectivity test failed.</p>
+         * <ul>
+         * <li><strong>0</strong>: The data detection is ready.</li>
+         * <li><strong>1</strong>: The data detection is running.</li>
+         * <li><strong>2</strong>: The connectivity test is in progress.</li>
+         * <li><strong>3</strong>: The connectivity test passed.</li>
+         * <li><strong>4</strong>: The connectivity test failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("CheckStatus")
         public Integer checkStatus;
 
         /**
          * <p>Indicates whether DSC has the data de-identification permissions on the data asset. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DatamaskStatus")
         public Integer datamaskStatus;
 
         /**
          * <p>The name of the database to which the data asset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>Indicates whether sensitive data detection is enabled for the data asset. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Enable")
         public Integer enable;
 
         /**
-         * <p>The type of the database engine. Valid values: **MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer**.</p>
+         * <p>The type of the database engine. Valid values: <strong>MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineType")
         public String engineType;
 
         /**
          * <p>The reason for the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The password is invalid.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The time when the data asset was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625587423000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The unique ID of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
         /**
          * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The storage space size of the instance. This parameter is valid only if the value of the ProductId parameter is 2. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>409600</p>
          */
         @NameInMap("InstanceSize")
         public Long instanceSize;
 
         /**
          * <p>The time when the data asset was last modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625587423000</p>
          */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
         /**
          * <p>The ID of the account that is last used to modify the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("LastModifyUserId")
         public String lastModifyUserId;
 
         /**
          * <p>The retention period of raw logs. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("LogStoreDay")
         public Integer logStoreDay;
 
         /**
          * <p>Indicates whether the password is used. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PasswordStatus")
         public Integer passwordStatus;
 
         /**
-         * <p>The ID of the service to which the data asset belongs. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * <p>The ID of the service to which the data asset belongs. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ProductId")
         public Long productId;
 
         /**
          * <p>The ID of the region where the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
-         * <p>The number of sensitive data samples. Valid values: **0**, **5**, and **10**. Unit: data entries.</p>
+         * <p>The number of sensitive data samples. Valid values: <strong>0</strong>, <strong>5</strong>, and <strong>10</strong>. Unit: data entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SamplingSize")
         public Integer samplingSize;
 
         /**
          * <p>The ID of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
          * <p>The name of the tenant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
         /**
          * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User01</p>
          */
         @NameInMap("UserName")
         public String userName;

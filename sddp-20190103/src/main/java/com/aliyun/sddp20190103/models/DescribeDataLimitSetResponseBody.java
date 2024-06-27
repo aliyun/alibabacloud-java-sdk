@@ -12,6 +12,9 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,82 +43,118 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
     public static class DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList extends TeaModel {
         /**
          * <p>Indicates whether the test of connectivity between DSC and the data asset is passed.</p>
-         * <br>
-         * <p>*   **2**: The connectivity test is in progress.</p>
-         * <p>*   **3**: The connectivity test is passed.</p>
-         * <p>*   **4**: The connectivity test failed.</p>
+         * <ul>
+         * <li><strong>2</strong>: The connectivity test is in progress.</li>
+         * <li><strong>3</strong>: The connectivity test is passed.</li>
+         * <li><strong>4</strong>: The connectivity test failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("CheckStatus")
         public Integer checkStatus;
 
         /**
          * <p>The name of the data detection status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Connectivity test status</p>
          */
         @NameInMap("CheckStatusName")
         public String checkStatusName;
 
         /**
          * <p>The connection string that is used to access the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Connection string</p>
          */
         @NameInMap("Connector")
         public String connector;
 
         /**
          * <p>The time when the data asset was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625587423000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The ID of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The region in which the data asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The parent asset ID of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         @NameInMap("ParentId")
         public String parentId;
 
         /**
          * <p>The region in which the data asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-****</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The type of service to which the data asset belongs. Valid values:</p>
-         * <br>
-         * <p>*   **1**: MaxCompute</p>
-         * <p>*   **2**: OSS</p>
-         * <p>*   **3**: AnalyticDB for MySQL</p>
-         * <p>*   **4**: Tablestore</p>
-         * <p>*   **5**: ApsaraDB RDS</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: OSS</li>
+         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>4</strong>: Tablestore</li>
+         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ResourceType")
         public Long resourceType;
 
         /**
          * <p>The code of the service to which the data asset belongs. Valid values:</p>
-         * <br>
-         * <p>*   **ODPS**</p>
-         * <p>*   **OSS**</p>
-         * <p>*   **ADS**</p>
-         * <p>*   **OTS**</p>
-         * <p>*   **RDS**</p>
+         * <ul>
+         * <li><strong>ODPS</strong></li>
+         * <li><strong>OSS</strong></li>
+         * <li><strong>ADS</strong></li>
+         * <li><strong>OTS</strong></li>
+         * <li><strong>RDS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("ResourceTypeCode")
         public String resourceTypeCode;
 
         /**
          * <p>The username that is used to access the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tsts</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -218,12 +257,18 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
     public static class DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList extends TeaModel {
         /**
          * <p>The name of the OSS bucket to which the OSS object belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-bucket</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>The region ID of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-****</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -254,12 +299,18 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
     public static class DescribeDataLimitSetResponseBodyDataLimitSetRegionList extends TeaModel {
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-****</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -308,30 +359,41 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
         /**
          * <p>The type of service to which the data asset belongs. Valid values:</p>
-         * <br>
-         * <p>*   **1**: MaxCompute</p>
-         * <p>*   **2**: OSS</p>
-         * <p>*   **3**: AnalyticDB for MySQL</p>
-         * <p>*   **4**: Tablestore</p>
-         * <p>*   **5**: ApsaraDB RDS</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: OSS</li>
+         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>4</strong>: Tablestore</li>
+         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ResourceType")
         public Long resourceType;
 
         /**
          * <p>The service to which the data asset belongs. Valid values:</p>
-         * <br>
-         * <p>*   **ODPS**</p>
-         * <p>*   **OSS**</p>
-         * <p>*   **ADS**</p>
-         * <p>*   **OTS**</p>
-         * <p>*   **RDS**</p>
+         * <ul>
+         * <li><strong>ODPS</strong></li>
+         * <li><strong>OSS</strong></li>
+         * <li><strong>ADS</strong></li>
+         * <li><strong>OTS</strong></li>
+         * <li><strong>RDS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("ResourceTypeCode")
         public String resourceTypeCode;
 
         /**
          * <p>The total number of data objects in the data assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

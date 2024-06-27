@@ -6,91 +6,134 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the security audit feature. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AuditStatus")
     public Integer auditStatus;
 
     /**
      * <p>Specifies whether DSC is authorized to access the data asset.</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AuthStatus")
     public Integer authStatus;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The type of the database engine. Valid values: **MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer**.</p>
+     * <p>The type of the database engine. Valid values: <strong>MySQL, MariaDB, Oracle, PostgreSQL, and SQLServer</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("EngineType")
     public String engineType;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance-demo-****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Simplified Chinese (default)</p>
-     * <p>*   **en_us**: English</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Simplified Chinese (default)</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The name of the service to which the data asset to query belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+     * <p>The name of the service to which the data asset to query belongs. Valid values: <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MaxCompute</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The ID of the service to which the data asset to query belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * <p>The ID of the service to which the data asset to query belongs. Valid values: <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ProductId")
     public Long productId;
 
     /**
      * <p>The content based on which a fuzzy search is performed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
      * <p>The data asset type based on which a fuzzy search is performed.</p>
-     * <br>
-     * <p>*   **InstanceId**: the ID of the instance.</p>
-     * <p>*   **InstanceName**: the name of the instance.</p>
-     * <p>*   **DatabaseName**: the name of the database.</p>
+     * <ul>
+     * <li><strong>InstanceId</strong>: the ID of the instance.</li>
+     * <li><strong>InstanceName</strong>: the name of the instance.</li>
+     * <li><strong>DatabaseName</strong>: the name of the database.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
      */
     @NameInMap("SearchType")
     public String searchType;
 
     /**
-     * <p>The region in which the data asset resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/214257.html).</p>
+     * <p>The region in which the data asset resides. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;

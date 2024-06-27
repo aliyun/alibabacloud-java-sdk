@@ -6,63 +6,92 @@ import com.aliyun.tea.*;
 public class DescribePackagesRequest extends TeaModel {
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the instance to which the package belongs.</p>
-     * <br>
-     * <p>> You can call the **DescribeInstances** operation to query the ID of the instance.</p>
+     * <blockquote>
+     * <p>You can call the <strong>DescribeInstances</strong> operation to query the ID of the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>12321</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Chinese</p>
-     * <p>*   **en_us**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Chinese</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The search keyword. Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the service to which the package belongs.</p>
-     * <br>
-     * <p>> You can call the **DescribeDataAssets** operation to query the ID of the service.</p>
+     * <blockquote>
+     * <p>You can call the <strong>DescribeDataAssets</strong> operation to query the ID of the service.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2566600</p>
      */
     @NameInMap("ProductId")
     public Long productId;
 
     /**
      * <p>The sensitivity level of the package. Valid values:</p>
-     * <br>
-     * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
-     * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
-     * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
-     * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
-     * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+     * <ul>
+     * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+     * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+     * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+     * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+     * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("RiskLevelId")
     public Long riskLevelId;
 
     /**
      * <p>The ID of the sensitive data detection rule that the package hits.</p>
-     * <br>
-     * <p>> You can call the **DescribeRules** operation to query the ID of the sensitive data detection rule.</p>
+     * <blockquote>
+     * <p>You can call the <strong>DescribeRules</strong> operation to query the ID of the sensitive data detection rule.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>266666</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;

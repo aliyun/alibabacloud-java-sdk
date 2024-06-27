@@ -4,18 +4,34 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Items")
     public java.util.List<DescribeDataObjectColumnDetailV2ResponseBodyItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>231</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
     }
 
     public static class DescribeDataObjectColumnDetailV2ResponseBodyItemsModelTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>personal sensitive information</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -98,33 +122,69 @@ public class DescribeDataObjectColumnDetailV2ResponseBody extends TeaModel {
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
+        /**
+         * <strong>example:</strong>
+         * <p>column comment</p>
+         */
         @NameInMap("ColumnComment")
         public String columnComment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hide14</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>varchar</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1392973973691383808</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("ModelTags")
         public java.util.List<DescribeDataObjectColumnDetailV2ResponseBodyItemsModelTags> modelTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S1</p>
+         */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>51</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

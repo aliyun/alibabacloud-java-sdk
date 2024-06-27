@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateDataLimitResponseBody extends TeaModel {
     /**
      * <p>The ID of the data asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Id")
     public Integer id;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C3AC882-E5A8-4855-BE77-B6837B695EF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

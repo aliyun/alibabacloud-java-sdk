@@ -7,6 +7,10 @@ public class DescribeDocTypesResponseBody extends TeaModel {
     @NameInMap("DocTypeList")
     public java.util.List<DescribeDocTypesResponseBodyDocTypeList> docTypeList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-4******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeDocTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeDocTypesResponseBodyDocTypeList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100001</p>
+         */
         @NameInMap("Code")
         public Long code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>C/C++ Source Code</p>
+         */
         @NameInMap("Name")
         public String name;
 

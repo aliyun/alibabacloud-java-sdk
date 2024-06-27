@@ -6,101 +6,145 @@ import com.aliyun.tea.*;
 public class DescribeColumnsRequest extends TeaModel {
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>The ID of the instance to which data in the column of the table belongs.</p>
-     * <br>
-     * <p>> You can call the [DescribeInstances](~~DescribeRules~~) operation to query the IDs of instances.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeRules~~">DescribeInstances</a> operation to query the IDs of instances.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InstanceId")
     public Long instanceId;
 
     /**
      * <p>The name of the instance to which data in the column of the table belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp17t1htja573l5i8****</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Chinese</p>
-     * <p>*   **en_us**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Chinese</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The search keyword. Fuzzy match is supported.</p>
-     * <br>
-     * <p>For example, if you enter **test**, all columns whose names contain **test** are retrieved.</p>
+     * <p>For example, if you enter <strong>test</strong>, all columns whose names contain <strong>test</strong> are retrieved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The name of the service to which data in the column of the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+     * <p>The name of the service to which data in the column of the table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MaxCompute</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
-     * <br>
-     * <p>*   **1**: N/A</p>
-     * <p>*   **2**: S1</p>
-     * <p>*   **3**: S2</p>
-     * <p>*   **4**: S3</p>
-     * <p>*   **5**: S4</p>
+     * <ul>
+     * <li><strong>1</strong>: N/A</li>
+     * <li><strong>2</strong>: S1</li>
+     * <li><strong>3</strong>: S2</li>
+     * <li><strong>4</strong>: S3</li>
+     * <li><strong>5</strong>: S4</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("RiskLevelId")
     public Long riskLevelId;
 
     /**
      * <p>The ID of the sensitive data detection rule that data in the column of the table hits.</p>
-     * <br>
-     * <p>> You can call the [DescribeRules](~~DescribeRules~~) operation to query the IDs of sensitive data detection rules.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to query the IDs of sensitive data detection rules.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>11111</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
 
     /**
      * <p>The name of the sensitive data detection rule that data in the column of the table hits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ID card number (the Chinese mainland)</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
      * <p>The name of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:</p>
-     * <br>
-     * <p>*   **N/A**: No sensitive data is detected.</p>
-     * <p>*   **S1**: indicates the low sensitivity level.</p>
-     * <p>*   **S2**: indicates the medium sensitivity level.</p>
-     * <p>*   **S3**: indicates the high sensitivity level.</p>
-     * <p>*   **S4**: indicates the highest sensitivity level.</p>
+     * <ul>
+     * <li><strong>N/A</strong>: No sensitive data is detected.</li>
+     * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+     * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+     * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+     * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>S2</p>
      */
     @NameInMap("SensLevelName")
     public String sensLevelName;
 
     /**
      * <p>The ID of the table to which the column belongs.</p>
-     * <br>
-     * <p>> You can call the [DescribeTables](~~DescribeTables~~) operation to query the IDs of tables.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeTables~~">DescribeTables</a> operation to query the IDs of tables.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>11132334</p>
      */
     @NameInMap("TableId")
     public Long tableId;
 
     /**
      * <p>The name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>it_table</p>
      */
     @NameInMap("TableName")
     public String tableName;

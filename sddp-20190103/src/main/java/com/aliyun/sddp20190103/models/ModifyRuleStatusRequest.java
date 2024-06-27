@@ -6,36 +6,51 @@ import com.aliyun.tea.*;
 public class ModifyRuleStatusRequest extends TeaModel {
     /**
      * <p>The ID of the sensitive data detection rule.</p>
-     * <br>
-     * <p>> You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.</p>
+     * <blockquote>
+     * <p>You can query the ID of the sensitive data detection rule by calling the <strong>DescribeRules</strong> operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>12341</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>> You can query the ID of the sensitive data detection rule by calling the **DescribeRules** operation.</p>
+     * <blockquote>
+     * <p>You can query the ID of the sensitive data detection rule by calling the <strong>DescribeRules</strong> operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1,2,3,4</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>Specifies whether to enable or disable the sensitive data detection rule. Valid values:</p>
-     * <br>
-     * <p>*   **0**: disables the sensitive data detection rule.</p>
-     * <p>*   **1**: enables the sensitive data detection rule.</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: disables the sensitive data detection rule.</li>
+     * <li><strong>1</strong>: enables the sensitive data detection rule.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyEventTypeStatusRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Valid values: **zh** and **en**. The value zh indicates Chinese, and the value en indicates English.</p>
+     * <p>The language of the content within the request and response. Valid values: <strong>zh</strong> and <strong>en</strong>. The value zh indicates Chinese, and the value en indicates English.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the anomalous event subtype. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>> You can call the **DescribeEventTypes** operation to query the ID of anomalous event subtype.</p>
+     * <blockquote>
+     * <p>You can call the <strong>DescribeEventTypes</strong> operation to query the ID of anomalous event subtype.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>020008</p>
      */
     @NameInMap("SubTypeIds")
     public String subTypeIds;

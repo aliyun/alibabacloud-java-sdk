@@ -4,18 +4,34 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataObjectsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Items")
     public java.util.List<DescribeDataObjectsResponseBodyItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E6F6460E-4330-549A-BD89-C183FB17571E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +81,17 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeDataObjectsResponseBodyItemsModelTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>personal sensitive information</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -95,18 +119,38 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     }
 
     public static class DescribeDataObjectsResponseBodyItemsRuleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>S1</p>
+         */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>590</p>
+         */
         @NameInMap("RuleCount")
         public Integer ruleCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>name</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
@@ -161,18 +205,34 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @NameInMap("Categories")
         public java.util.List<String> categories;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20000</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>instance description</p>
+         */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rm-1234</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("LastModifiedTime")
         public Long lastModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1687676649830</p>
+         */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
@@ -182,33 +242,65 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @NameInMap("ModelTags")
         public java.util.List<DescribeDataObjectsResponseBodyItemsModelTags> modelTags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>t_sddp_selfmysql_pers0</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ObjectFileCategory")
         public String objectFileCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>text type</p>
+         */
         @NameInMap("ObjectType")
         public String objectType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rm-1234.db_test</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RDS</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ProductId")
         public Long productId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
         @NameInMap("RuleList")
         public java.util.List<DescribeDataObjectsResponseBodyItemsRuleList> ruleList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TemplateId")
         public Long templateId;
 

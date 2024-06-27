@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePackagesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribePackagesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,69 +94,101 @@ public class DescribePackagesResponseBody extends TeaModel {
     public static class DescribePackagesResponseBodyItems extends TeaModel {
         /**
          * <p>The point in time when the MaxCompute package was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536751124000</p>
          */
         @NameInMap("CreationTime")
         public Long creationTime;
 
         /**
          * <p>The ID of the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The ID of the instance to which the package belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223453332</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The name of the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gxdata</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The account of the user that owns the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cou-2221</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The sensitivity level of the package. Valid values:</p>
-         * <br>
-         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
-         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
-         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
-         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
-         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
         /**
          * <p>The name of the sensitivity level for the package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Highest sensitivity level</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
          * <p>Indicates whether the package contains sensitive data. Valid values:</p>
-         * <br>
-         * <p>*   true: yes</p>
-         * <p>*   false: no</p>
+         * <ul>
+         * <li>true: yes</li>
+         * <li>false: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
         /**
          * <p>The total volume of sensitive data in the package. For example, the value can be the total number of sensitive tables in the MaxCompute package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
         /**
          * <p>The total volume of data in the package. For example, the value can be the total number of tables in the MaxCompute package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>321</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

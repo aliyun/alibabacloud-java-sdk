@@ -4,39 +4,83 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeParentInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AuthStatus")
     public Integer authStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("CheckStatus")
     public Integer checkStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("ClusterStatus")
     public String clusterStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>db_test</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MySQL</p>
+     */
     @NameInMap("EngineType")
     public String engineType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rm-azfxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("MemberAccount")
     public Long memberAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ResourceType")
     public Long resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
