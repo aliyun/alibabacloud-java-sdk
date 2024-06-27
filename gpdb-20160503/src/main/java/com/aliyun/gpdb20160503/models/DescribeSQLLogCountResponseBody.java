@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSQLLogCountResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The end time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-12-14T11:22Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -24,12 +30,18 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7565770E-7C45-462D-BA4A-8A**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-12-12T11:22Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -126,6 +138,9 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     public static class DescribeSQLLogCountResponseBodyItems extends TeaModel {
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxxx</p>
          */
         @NameInMap("Name")
         public String name;

@@ -12,6 +12,9 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeUserEncryptionKeyListResponseBody extends TeaModel {
     public static class DescribeUserEncryptionKeyListResponseBodyKmsKeys extends TeaModel {
         /**
          * <p>The ID of the KMS key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0b8b1825-fd99-418f-875e-e4dec1dd8715</p>
          */
         @NameInMap("KeyId")
         public String keyId;

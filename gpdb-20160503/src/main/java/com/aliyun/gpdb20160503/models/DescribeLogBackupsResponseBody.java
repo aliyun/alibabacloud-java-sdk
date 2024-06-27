@@ -12,30 +12,45 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of backup sets on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24B9FCAF-2CBC-51C3-B563-F1C70D750187</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
      * <p>The total size of logs in the time range. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>386748</p>
      */
     @NameInMap("TotalLogSize")
     public Long totalLogSize;
@@ -96,36 +111,54 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
     public static class DescribeLogBackupsResponseBodyItems extends TeaModel {
         /**
          * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12413721782</p>
          */
         @NameInMap("BackupId")
         public String backupId;
 
         /**
          * <p>The ID of the coordinator node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp12ga6v69h86****-master</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The name of the log backup set that is stored in Object Storage Service (OSS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000010000000400000012</p>
          */
         @NameInMap("LogFileName")
         public String logFileName;
 
         /**
          * <p>The size of the log backup set. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77350</p>
          */
         @NameInMap("LogFileSize")
         public Long logFileSize;
 
         /**
          * <p>The timestamp of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-12T02:14:26Z</p>
          */
         @NameInMap("LogTime")
         public String logTime;
 
         /**
          * <p>The name of the compute node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>segment-0</p>
          */
         @NameInMap("SegmentName")
         public String segmentName;

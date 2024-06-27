@@ -1,3 +1,19 @@
+2024-06-27 Version: 1.8.0
+- Support API BindDBResourceGroupWithRole.
+- Support API CreateDBResourceGroup.
+- Support API DeleteDBResourceGroup.
+- Support API DescribeDBResourceGroup.
+- Support API DescribeRoles.
+- Support API DisableDBResourceGroup.
+- Support API EnableDBResourceGroup.
+- Support API ModifyDBResourceGroup.
+- Support API PauseDataRedistribute.
+- Support API ResumeDataRedistribute.
+- Support API UnbindDBResourceGroupWithRole.
+- Update API DescribeStreamingDataService: update response param.
+- Update API ListStreamingDataServices: update response param.
+
+
 2024-05-17 Version: 1.7.0
 - Support API CheckHadoopDataSource.
 - Support API CheckHadoopNetConnection.

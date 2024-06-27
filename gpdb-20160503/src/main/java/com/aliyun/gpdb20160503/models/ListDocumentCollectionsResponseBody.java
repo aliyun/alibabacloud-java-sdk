@@ -4,18 +4,49 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListDocumentCollectionsResponseBody extends TeaModel {
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The queried document collections.</p>
+     */
     @NameInMap("Items")
     public ListDocumentCollectionsResponseBodyItems items;
 
+    /**
+     * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>success</strong></li>
+     * <li><strong>fail</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -65,24 +96,66 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
     }
 
     public static class ListDocumentCollectionsResponseBodyItemsCollectionList extends TeaModel {
+        /**
+         * <p>The name of the document collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
+         */
         @NameInMap("CollectionName")
         public String collectionName;
 
+        /**
+         * <p>The number of vector dimensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536</p>
+         */
         @NameInMap("Dimension")
         public Integer dimension;
 
+        /**
+         * <p>The name of the vector algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text-embeddding-v1</p>
+         */
         @NameInMap("EmbeddingModel")
         public String embeddingModel;
 
+        /**
+         * <p>The fields that are used for full-text search. Multiple fields are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title</p>
+         */
         @NameInMap("FullTextRetrievalFields")
         public String fullTextRetrievalFields;
 
+        /**
+         * <p>The metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;page\&quot;: \&quot;int\&quot;, \&quot;title\&quot;: \&quot;text\&quot;}</p>
+         */
         @NameInMap("Metadata")
         public String metadata;
 
+        /**
+         * <p>The vector similarity algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cosine</p>
+         */
         @NameInMap("Metrics")
         public String metrics;
 
+        /**
+         * <p>The analyzer that is used for full-text search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh_cn</p>
+         */
         @NameInMap("Parser")
         public String parser;
 

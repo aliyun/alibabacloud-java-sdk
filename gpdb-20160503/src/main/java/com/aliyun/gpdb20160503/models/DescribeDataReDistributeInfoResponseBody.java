@@ -12,6 +12,9 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04836A02-ADC9-1AA7-AC36-DE5E048BF505</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
     public static class DescribeDataReDistributeInfoResponseBodyDataReDistributeInfo extends TeaModel {
         /**
          * <p>The execution information. If an error occurs, the error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>redistributing</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The progress of data redistribution. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         @NameInMap("Progress")
         public Long progress;
 
         /**
          * <p>The estimated remaining time for data redistribution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:01:28</p>
          */
         @NameInMap("RemainTime")
         public String remainTime;
 
         /**
          * <p>This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of data redistribution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The execution type. The value **immediate** is returned, indicating immediate execution.</p>
+         * <p>The execution type. The value <strong>immediate</strong> is returned, indicating immediate execution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immediate</p>
          */
         @NameInMap("Type")
         public String type;

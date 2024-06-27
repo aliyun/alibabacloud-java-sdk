@@ -4,18 +4,39 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class QueryCollectionDataResponseBody extends TeaModel {
+    /**
+     * <p>The retrieved data.</p>
+     */
     @NameInMap("Matches")
     public QueryCollectionDataResponseBodyMatches matches;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.1234</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The total number of entries that match the search conditions. This parameter is returned only when the Offset parameter is not 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -84,15 +105,33 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     }
 
     public static class QueryCollectionDataResponseBodyMatchesMatch extends TeaModel {
+        /**
+         * <p>The unique ID of the vector data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doca-1234</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
 
+        /**
+         * <p>The similarity score of the data. It is related to the <code>l2, ip, or cosine</code> algorithm that is specified when you create an index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.12345</p>
+         */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>The retrieved vector data.</p>
+         */
         @NameInMap("Values")
         public QueryCollectionDataResponseBodyMatchesMatchValues values;
 

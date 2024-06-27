@@ -4,12 +4,24 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("Performances")
     public DescribeDBInstanceSupportMaxPerformanceResponseBodyPerformances performances;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +55,33 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
     }
 
     public static class DescribeDBInstanceSupportMaxPerformanceResponseBodyPerformancesPerformance extends TeaModel {
+        /**
+         * <p>The performance bottleneck type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs or disk</p>
+         */
         @NameInMap("Bottleneck")
         public String bottleneck;
 
+        /**
+         * <p>The name of the performance metric.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The unit of the performance metric.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The value of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("Value")
         public String value;
 

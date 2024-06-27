@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class ResetAccountPasswordRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testaccount_1</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The name of the account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Testaccount_1</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>Before you call this operation, make sure that the following requirements are met:</p>
-     * <br>
-     * <p>*   The instance is in the running state.</p>
-     * <p>*   The instance is not locked.</p>
-     * <br>
+     * <ul>
+     * <li>The instance is in the running state.</li>
+     * <li>The instance is not locked.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-t4nf48vf15713****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

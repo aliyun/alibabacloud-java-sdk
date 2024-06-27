@@ -6,72 +6,104 @@ import com.aliyun.tea.*;
 public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the backup set.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDataBackups](https://help.aliyun.com/document_detail/210093.html) operation to query the IDs of all backup sets in the instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the IDs of all backup sets in the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1111111111</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/327176.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88**********</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to load a sample dataset after the instance is created. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, no sample dataset is loaded.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, no sample dataset is loaded.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CreateSampleData")
     public Boolean createSampleData;
 
     /**
      * <p>The edition of the instance. Valid values:</p>
-     * <br>
-     * <p>- **HighAvailability**: High-availability Edition.</p>
-     * <p>- **Basic**: Basic Edition.</p>
-     * <br>
-     * <p>> This parameter must be specified when you create an instance in elastic storage mode.</p>
+     * <ul>
+     * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
+     * <li><strong>Basic</strong>: Basic Edition.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter must be specified when you create an instance in elastic storage mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>HighAvailability</p>
      */
     @NameInMap("DBInstanceCategory")
     public String DBInstanceCategory;
 
     /**
-     * <p>The instance type of the instance. For information, see [Instance types](https://help.aliyun.com/document_detail/86942.html).</p>
-     * <br>
-     * <p>> This parameter must be specified when you create an instance in reserved storage mode.</p>
+     * <p>The instance type of the instance. For information, see <a href="https://help.aliyun.com/document_detail/86942.html">Instance types</a>.</p>
+     * <blockquote>
+     * <p>This parameter must be specified when you create an instance in reserved storage mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>gpdb.group.segsdx1</p>
      */
     @NameInMap("DBInstanceClass")
     public String DBInstanceClass;
 
     /**
      * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
      * <p>The number of compute groups. Valid values: 2, 4, 8, 12, 16, 24, 32, 64, 96, and 128.</p>
-     * <br>
-     * <p>> This parameter must be specified when you create an instance in reserved storage mode.</p>
+     * <blockquote>
+     * <p>This parameter must be specified when you create an instance in reserved storage mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("DBInstanceGroupCount")
     public String DBInstanceGroupCount;
 
     /**
      * <p>The resource type of the instance. Valid values:</p>
-     * <br>
-     * <p>- **StorageElastic**: elastic storage mode.</p>
-     * <p>- **Serverless**: Serverless mode.</p>
-     * <p>- **Classic**: reserved storage mode.</p>
-     * <br>
-     * <p>> This parameter must be specified.</p>
-     * <br>
+     * <ul>
+     * <li><strong>StorageElastic</strong>: elastic storage mode.</li>
+     * <li><strong>Serverless</strong>: Serverless mode.</li>
+     * <li><strong>Classic</strong>: reserved storage mode.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter must be specified.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>StorageElastic</p>
      */
     @NameInMap("DBInstanceMode")
     public String DBInstanceMode;
@@ -81,104 +113,139 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the encryption key.</p>
-     * <br>
-     * <p>> If EncryptionType is set to CloudDisk, you must specify an encryption key that resides in the same region as the cloud disk that is specified by EncryptionType. Otherwise, leave this parameter empty.</p>
+     * <blockquote>
+     * <p>If EncryptionType is set to CloudDisk, you must specify an encryption key that resides in the same region as the cloud disk that is specified by EncryptionType. Otherwise, leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0d2470df-da7b-4786-b981-88888888****</p>
      */
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
     /**
      * <p>The encryption type. Valid values:</p>
-     * <br>
-     * <p>- **NULL** (default): Encryption is disabled.</p>
-     * <p>- **CloudDisk**: Encryption is enabled on cloud disks, and EncryptionKey is used to specify an encryption key.</p>
-     * <br>
-     * <p>> Disk encryption cannot be disabled after it is enabled.</p>
+     * <ul>
+     * <li><strong>NULL</strong> (default): Encryption is disabled.</li>
+     * <li><strong>CloudDisk</strong>: Encryption is enabled on cloud disks, and EncryptionKey is used to specify an encryption key.</li>
+     * </ul>
+     * <blockquote>
+     * <p>Disk encryption cannot be disabled after it is enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudDisk</p>
      */
     @NameInMap("EncryptionType")
     public String encryptionType;
 
     /**
      * <p>The database engine of the instance. Set the value to gpdb.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gpdb</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The version of the database engine. Valid values:</p>
-     * <br>
-     * <p>- 6.0</p>
-     * <p>- 7.0</p>
-     * <br>
+     * <ul>
+     * <li>6.0</li>
+     * <li>7.0</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6.0</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The wait time for the instance that has no traffic to become idle. Minimum value: 60. Default value: 600. Unit: seconds.</p>
-     * <br>
-     * <p>> This parameter must be specified only when you create an instance in automatic Serverless mode.</p>
+     * <blockquote>
+     * <p>This parameter must be specified only when you create an instance in automatic Serverless mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
      */
     @NameInMap("IdleTime")
     public Integer idleTime;
 
     /**
-     * <p>The network type of the instance. Set the value to **VPC**.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Only the Virtual Private Cloud (VPC) type is supported in Alibaba Cloud public cloud.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, VPC is used.</p>
+     * <p>The network type of the instance. Set the value to <strong>VPC</strong>.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Only the Virtual Private Cloud (VPC) type is supported in Alibaba Cloud public cloud.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, VPC is used.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
     /**
      * <p>The specifications of compute nodes.</p>
-     * <br>
      * <p>Valid values for High-availability Edition instances in elastic storage mode:</p>
-     * <br>
-     * <p>- **2C16G**</p>
-     * <p>- **4C32G**</p>
-     * <p>- **16C128G**</p>
-     * <br>
+     * <ul>
+     * <li><strong>2C16G</strong></li>
+     * <li><strong>4C32G</strong></li>
+     * <li><strong>16C128G</strong></li>
+     * </ul>
      * <p>Valid values for Basic Edition instances in elastic storage mode:</p>
-     * <br>
-     * <p>- **2C8G**</p>
-     * <p>- **4C16G**</p>
-     * <p>- **8C32G**</p>
-     * <p>- **16C64G**</p>
-     * <br>
+     * <ul>
+     * <li><strong>2C8G</strong></li>
+     * <li><strong>4C16G</strong></li>
+     * <li><strong>8C32G</strong></li>
+     * <li><strong>16C64G</strong></li>
+     * </ul>
      * <p>Valid values for instances in Serverless mode:</p>
-     * <br>
-     * <p>- **4C16G**</p>
-     * <p>- **8C32G**</p>
-     * <br>
-     * <p>> This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.</p>
+     * <ul>
+     * <li><strong>4C16G</strong></li>
+     * <li><strong>8C32G</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2C16G</p>
      */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
     /**
      * <p>The amount of coordinator node resources. Valid values:</p>
-     * <br>
-     * <p>*   2 CU</p>
-     * <p>*   4 CU</p>
-     * <p>*   8 CU</p>
-     * <p>*   16 CU</p>
-     * <p>*   32 CU</p>
-     * <br>
-     * <p>>  You are charged for coordinator node resources of more than 8 CUs.</p>
+     * <ul>
+     * <li>2 CU</li>
+     * <li>4 CU</li>
+     * <li>8 CU</li>
+     * <li>16 CU</li>
+     * <li>32 CU</li>
+     * </ul>
+     * <blockquote>
+     * <p> You are charged for coordinator node resources of more than 8 CUs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>8 CU</p>
      */
     @NameInMap("MasterCU")
     public Integer masterCU;
 
     /**
      * <p>This parameter is no longer used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MasterNodeNum")
     public String masterNodeNum;
@@ -188,31 +255,46 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The billing method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **Postpaid**: pay-as-you-go.</p>
-     * <p>*   **Prepaid**: subscription.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you do not specify this parameter, Postpaid is used.</p>
-     * <br>
-     * <p>*   You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.</p>
+     * <ul>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: subscription.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If you do not specify this parameter, Postpaid is used.</p>
+     * </li>
+     * <li><p>You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The unit of the subscription duration. Valid values:</p>
-     * <br>
-     * <p>- **Month**</p>
-     * <p>- **Year**</p>
-     * <p>> This parameter must be specified when PayType is set to Prepaid.</p>
+     * <ul>
+     * <li><strong>Month</strong></li>
+     * <li><strong>Year</strong><blockquote>
+     * <p>This parameter must be specified when PayType is set to Prepaid.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
      * <p>This parameter is no longer used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.1.*</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -221,100 +303,142 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String prodType;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The IP address whitelist of the instance.</p>
-     * <br>
-     * <p>A value of 127.0.0.1 specifies that no IP address is allowed for external access. You can call the [ModifySecurityIps](https://help.aliyun.com/document_detail/86928.html) operation to modify the IP address whitelist after you create an instance.</p>
+     * <p>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after you create an instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
 
     /**
      * <p>The performance level of ESSDs. Valid values:</p>
-     * <br>
-     * <p>*   **pl0**</p>
-     * <p>*   **pl1**</p>
-     * <p>*   **pl2**</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter takes effect only when SegStorageType is set to cloud_essd.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, pl1 is used.</p>
+     * <ul>
+     * <li><strong>pl0</strong></li>
+     * <li><strong>pl1</strong></li>
+     * <li><strong>pl2</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter takes effect only when SegStorageType is set to cloud_essd.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, pl1 is used.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pl1</p>
      */
     @NameInMap("SegDiskPerformanceLevel")
     public String segDiskPerformanceLevel;
 
     /**
      * <p>The number of compute nodes.</p>
-     * <br>
-     * <p>- Valid values for High-availability Edition instances in elastic storage mode: multiples of 4 in the range of 4 to 512.</p>
-     * <p>- Valid values for Basic Edition instances in elastic storage mode: multiples of 2 in the range of 2 to 512.</p>
-     * <p>- Valid values for instances in Serverless mode: multiples of 2 in the range of 2 to 512.</p>
-     * <br>
-     * <p>> This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.</p>
+     * <ul>
+     * <li>Valid values for High-availability Edition instances in elastic storage mode: multiples of 4 in the range of 4 to 512.</li>
+     * <li>Valid values for Basic Edition instances in elastic storage mode: multiples of 2 in the range of 2 to 512.</li>
+     * <li>Valid values for instances in Serverless mode: multiples of 2 in the range of 2 to 512.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter must be specified when you create an instance in elastic storage mode or Serverless mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("SegNodeNum")
     public String segNodeNum;
 
     /**
      * <p>The disk storage type of the instance. Only enhanced SSDs (ESSDs) are supported. Set the value to cloud_essd.</p>
-     * <br>
-     * <p>> This parameter must be specified when you create an instance in elastic storage mode.</p>
+     * <blockquote>
+     * <p>This parameter must be specified when you create an instance in elastic storage mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("SegStorageType")
     public String segStorageType;
 
     /**
      * <p>The type of the Serverless mode. Valid values:</p>
-     * <br>
-     * <p>- **Manual** (default): manual scheduling.</p>
-     * <p>- **Auto**: automatic scheduling.</p>
-     * <br>
-     * <p>> This parameter must be specified only when you create an instance in Serverless mode.</p>
+     * <ul>
+     * <li><strong>Manual</strong> (default): manual scheduling.</li>
+     * <li><strong>Auto</strong>: automatic scheduling.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter must be specified only when you create an instance in Serverless mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Auto</p>
      */
     @NameInMap("ServerlessMode")
     public String serverlessMode;
 
     /**
      * <p>The threshold of computing resources. Unit: AnalyticDB compute unit (ACU). Valid values: 8 to 32. The value must be in increments of 8 ACUs. Default value: 32.</p>
-     * <br>
-     * <p>> This parameter must be specified only when you create an instance in automatic Serverless mode.</p>
+     * <blockquote>
+     * <p>This parameter must be specified only when you create an instance in automatic Serverless mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
      */
     @NameInMap("ServerlessResource")
     public Integer serverlessResource;
 
     /**
      * <p>The ID of the source instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
      */
     @NameInMap("SrcDbInstanceName")
     public String srcDbInstanceName;
 
     /**
      * <p>The storage capacity of the instance. Unit: GB. Valid values: 50 to 6000.</p>
-     * <br>
-     * <p>>  This parameter must be specified when you create an instance in elastic storage mode.</p>
+     * <blockquote>
+     * <p> This parameter must be specified when you create an instance in elastic storage mode.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("StorageSize")
     public Long storageSize;
 
     /**
      * <p>This parameter is no longer used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("StorageType")
     public String storageType;
@@ -327,57 +451,81 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The subscription duration.</p>
-     * <br>
-     * <p>- Valid values when Period is set to Month: 1 to 9.</p>
-     * <p>- Valid values when Period is set to Year: 1 to 3.</p>
-     * <p>> This parameter must be specified when PayType is set to Prepaid.</p>
+     * <ul>
+     * <li>Valid values when Period is set to Month: 1 to 9.</li>
+     * <li>Valid values when Period is set to Year: 1 to 3.<blockquote>
+     * <p>This parameter must be specified when PayType is set to Prepaid.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UsedTime")
     public String usedTime;
 
     /**
      * <p>The VPC ID of the instance.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   **This parameter** must be specified.</p>
-     * <br>
-     * <p>*   The region where the **VPC** resides must be the same as the region that is specified by **RegionId**.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p><strong>This parameter</strong> must be specified.</p>
+     * </li>
+     * <li><p>The region where the <strong>VPC</strong> resides must be the same as the region that is specified by <strong>RegionId</strong>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp*******************</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
      * <p>The vSwitch ID of the instance.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   **This parameter** must be specified.</p>
-     * <br>
-     * <p>*   The zone where the **vSwitch** resides must be the same as the zone that is specified by **ZoneId**.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p><strong>This parameter</strong> must be specified.</p>
+     * </li>
+     * <li><p>The zone where the <strong>vSwitch</strong> resides must be the same as the zone that is specified by <strong>ZoneId</strong>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp*******************</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>Specifies whether to enable vector search engine optimization. Valid values:</p>
-     * <br>
-     * <p>*   **enabled**</p>
-     * <p>*   **disabled** (default)</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   We recommend that you **do not enable** vector search engine optimization in mainstream analysis, data warehousing, and real-time data warehousing scenarios.</p>
-     * <br>
-     * <p>*   We recommend that you **enable** vector search engine optimization in AI-generated content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</p>
+     * <ul>
+     * <li><strong>enabled</strong></li>
+     * <li><strong>disabled</strong> (default)</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>We recommend that you <strong>do not enable</strong> vector search engine optimization in mainstream analysis, data warehousing, and real-time data warehousing scenarios.</p>
+     * </li>
+     * <li><p>We recommend that you <strong>enable</strong> vector search engine optimization in AI-generated content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("VectorConfigurationStatus")
     public String vectorConfigurationStatus;
 
     /**
-     * <p>The zone ID of the read-only instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent zone list.</p>
-     * <br>
+     * <p>The zone ID of the read-only instance. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent zone list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -710,20 +858,28 @@ public class CreateDBInstanceRequest extends TeaModel {
     public static class CreateDBInstanceRequestTag extends TeaModel {
         /**
          * <p>The key of tag N. Take note of the following requirements:</p>
-         * <br>
-         * <p>- The tag key cannot be an empty string.</p>
-         * <p>- The tag key can be up to 128 characters in length.</p>
-         * <p>- The tag key cannot start with `aliyun` or `acs:`, and contain `http://` or `https://`.</p>
+         * <ul>
+         * <li>The tag key cannot be an empty string.</li>
+         * <li>The tag key can be up to 128 characters in length.</li>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N. Take note of the following requirements:</p>
-         * <br>
-         * <p>- The tag key cannot be an empty string.</p>
-         * <p>- The tag key can be up to 128 characters in length.</p>
-         * <p>- The tag key cannot start with `aliyun` or `acs:`, and contain `http://` or `https://`.</p>
+         * <ul>
+         * <li>The tag key cannot be an empty string.</li>
+         * <li>The tag key can be up to 128 characters in length.</li>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

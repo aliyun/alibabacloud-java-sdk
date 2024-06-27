@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SwitchDBInstanceNetTypeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FA67B751-2A2D-470C-850B-D6B93699D35C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

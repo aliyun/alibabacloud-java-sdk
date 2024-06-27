@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class ModifyVectorConfigurationRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,12 +21,19 @@ public class ModifyVectorConfigurationRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable vector engine optimization. Valid values:</p>
-     * <br>
-     * <p>*   **enabled**</p>
-     * <p>*   **disabled**</p>
-     * <br>
-     * <p>> *   We recommend that you **do not enable** vector engine optimization in mainstream analysis and real-time data warehousing scenarios.</p>
-     * <p>> *   We recommend that you **enable** vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</p>
+     * <ul>
+     * <li><strong>enabled</strong></li>
+     * <li><strong>disabled</strong></li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>We recommend that you <strong>do not enable</strong> vector engine optimization in mainstream analysis and real-time data warehousing scenarios.</li>
+     * <li>We recommend that you <strong>enable</strong> vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("VectorConfigurationStatus")
     public String vectorConfigurationStatus;

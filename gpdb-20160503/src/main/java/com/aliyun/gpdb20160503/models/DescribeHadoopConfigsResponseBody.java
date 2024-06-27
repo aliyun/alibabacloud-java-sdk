@@ -4,12 +4,37 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeHadoopConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The name of the configuration file. Valid values:</p>
+     * <ul>
+     * <li>hdfs-site</li>
+     * <li>core-site</li>
+     * <li>yarn-site</li>
+     * <li>mapred-site</li>
+     * <li>hive-site</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>hdfs-site</p>
+     */
     @NameInMap("ConfigName")
     public String configName;
 
+    /**
+     * <strong>example:</strong>
+     * <?xml version="1.0"?>
+     * <configuration>
+     *     <property>
+     */
     @NameInMap("ConfigValue")
     public String configValue;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

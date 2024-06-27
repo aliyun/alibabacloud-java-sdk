@@ -6,122 +6,171 @@ import com.aliyun.tea.*;
 public class DescribeSQLLogsRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adbpgadmin</p>
      */
     @NameInMap("Database")
     public String database;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
-     * <br>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-03-17T06:30Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The execution duration of the SQL statement. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ExecuteCost")
     public String executeCost;
 
     /**
      * <p>The execution status of the SQL statement. Valid values:</p>
-     * <br>
-     * <p>*   **1**: successful.</p>
-     * <p>*   **0**: failed.</p>
+     * <ul>
+     * <li><strong>1</strong>: successful.</li>
+     * <li><strong>0</strong>: failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("ExecuteState")
     public String executeState;
 
     /**
      * <p>The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("MaxExecuteCost")
     public String maxExecuteCost;
 
     /**
      * <p>The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinExecuteCost")
     public String minExecuteCost;
 
     /**
      * <p>The type of the query language. Valid values:</p>
-     * <br>
-     * <p>*   **DQL**</p>
-     * <p>*   **DML**</p>
-     * <p>*   **DDL**</p>
-     * <p>*   **DCL**</p>
-     * <p>*   **TCL**</p>
+     * <ul>
+     * <li><strong>DQL</strong></li>
+     * <li><strong>DML</strong></li>
+     * <li><strong>DDL</strong></li>
+     * <li><strong>DCL</strong></li>
+     * <li><strong>TCL</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DQL</p>
      */
     @NameInMap("OperationClass")
     public String operationClass;
 
     /**
      * <p>The type of the SQL statement.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If **OperationClass** is specified, the value of **OperationType** must belong to the corresponding query language. For example, if **OperationClass** is set to **DQL**, the value of **OperationType** must be a **DQL** statement such as **SELECT**.</p>
-     * <br>
-     * <p>*   If **OperationClass** is not specified, the value of **OperationType** can be an SQL statement of any query language.</p>
-     * <p>*   If **OperationClass** and **OperationType** are not specified, all types of SQL statements are returned.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If <strong>OperationClass</strong> is specified, the value of <strong>OperationType</strong> must belong to the corresponding query language. For example, if <strong>OperationClass</strong> is set to <strong>DQL</strong>, the value of <strong>OperationType</strong> must be a <strong>DQL</strong> statement such as <strong>SELECT</strong>.</p>
+     * </li>
+     * <li><p>If <strong>OperationClass</strong> is not specified, the value of <strong>OperationType</strong> can be an SQL statement of any query language.</p>
+     * </li>
+     * <li><p>If <strong>OperationClass</strong> and <strong>OperationType</strong> are not specified, all types of SQL statements are returned.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT</p>
      */
     @NameInMap("OperationType")
     public String operationType;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
-     * <br>
-     * <p>Default value: **30**.</p>
+     * <ul>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The keywords of the SQL statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>select 1</p>
      */
     @NameInMap("QueryKeywords")
     public String queryKeywords;
 
     /**
      * <p>The source IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100.<strong>.</strong>.90</p>
      */
     @NameInMap("SourceIP")
     public String sourceIP;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
-     * <br>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-03-10T06:30Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The name of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testadmin</p>
      */
     @NameInMap("User")
     public String user;

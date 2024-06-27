@@ -6,73 +6,102 @@ import com.aliyun.tea.*;
 public class DescribeCollectionResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The number of vector dimensions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("Dimension")
     public Integer dimension;
 
     /**
      * <p>The fields that are used for full-text search. Multiple fields are separated by commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>title,content</p>
      */
     @NameInMap("FullTextRetrievalFields")
     public String fullTextRetrievalFields;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The metadata of vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
-     * <br>
      * <p>**</p>
-     * <br>
-     * <p>**Warning** Reserved fields such as id, vector, and to_tsvector cannot be used.</p>
+     * <p><strong>Warning</strong> Reserved fields such as id, vector, and to_tsvector cannot be used.</p>
      */
     @NameInMap("Metadata")
     public java.util.Map<String, String> metadata;
 
     /**
      * <p>The distance metrics.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cosine</p>
      */
     @NameInMap("Metrics")
     public String metrics;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mynamespace</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The analyzer that is used for full-text search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Parser")
     public String parser;
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **success**</p>
-     * <p>*   **fail**</p>
+     * <ul>
+     * <li><strong>success</strong></li>
+     * <li><strong>fail</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Status")
     public String status;

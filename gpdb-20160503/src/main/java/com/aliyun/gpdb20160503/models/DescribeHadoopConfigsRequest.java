@@ -5,23 +5,46 @@ import com.aliyun.tea.*;
 
 public class DescribeHadoopConfigsRequest extends TeaModel {
     /**
+     * <p>The name of the configuration file. Valid values:</p>
+     * <ul>
+     * <li>hdfs-site</li>
+     * <li>core-site</li>
+     * <li>yarn-site</li>
+     * <li>mapred-site</li>
+     * <li>hive-site</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hdfs-site</p>
      */
     @NameInMap("ConfigName")
     public String configName;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
+     * <p>The E-MapReduce (EMR) Hadoop cluster ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-xxx</p>
      */
     @NameInMap("EmrInstanceId")
     public String emrInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

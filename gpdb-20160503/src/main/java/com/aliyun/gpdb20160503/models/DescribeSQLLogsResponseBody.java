@@ -12,18 +12,27 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7941C94-B92F-46A0-BD3E-2D**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,87 +77,130 @@ public class DescribeSQLLogsResponseBody extends TeaModel {
     public static class DescribeSQLLogsResponseBodyItems extends TeaModel {
         /**
          * <p>The database account that executes the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testadmin</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpgadmin</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
          * <p>The role of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         @NameInMap("DBRole")
         public String DBRole;
 
         /**
          * <p>The execution duration of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ExecuteCost")
         public Float executeCost;
 
         /**
          * <p>The execution status of the SQL statement. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **fail**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("ExecuteState")
         public String executeState;
 
         /**
          * <p>The type of the query language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DQL</p>
          */
         @NameInMap("OperationClass")
         public String operationClass;
 
         /**
          * <p>The time when the SQL statement was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-15T17:02:32Z</p>
          */
         @NameInMap("OperationExecuteTime")
         public String operationExecuteTime;
 
         /**
          * <p>The type of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         @NameInMap("OperationType")
         public String operationType;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
         /**
          * <p>The SQL execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("SQLPlan")
         public String SQLPlan;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 1</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
          * <p>The number of entries scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ScanRowCounts")
         public Long scanRowCounts;
 
         /**
          * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.<strong>.</strong>.90</p>
          */
         @NameInMap("SourceIP")
         public String sourceIP;
 
         /**
          * <p>The number of the source port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50514</p>
          */
         @NameInMap("SourcePort")
         public Integer sourcePort;

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class SetDataShareInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for PostgreSQL instance in Serverless mode.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceList")
@@ -16,11 +16,14 @@ public class SetDataShareInstanceRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable or disable data sharing. Valid values:</p>
-     * <br>
-     * <p>*   **add**: enables data sharing.</p>
-     * <p>*   **remove**: disables data sharing.</p>
-     * <br>
+     * <ul>
+     * <li><strong>add</strong>: enables data sharing.</li>
+     * <li><strong>remove</strong>: disables data sharing.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>add</p>
      */
     @NameInMap("OperationType")
     public String operationType;
@@ -30,10 +33,13 @@ public class SetDataShareInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

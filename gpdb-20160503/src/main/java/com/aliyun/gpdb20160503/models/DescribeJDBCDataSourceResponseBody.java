@@ -4,36 +4,97 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeJDBCDataSourceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2019-09-08T16:00:00Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The description of the service. The description can be up to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql data source config</p>
+     */
     @NameInMap("DataSourceDescription")
     public String dataSourceDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hdfs_pxf</p>
+     */
     @NameInMap("DataSourceName")
     public String dataSourceName;
 
+    /**
+     * <p>The status of the service. Valid values:</p>
+     * <ul>
+     * <li>Init</li>
+     * <li>Running</li>
+     * <li>Exception</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("DataSourceStatus")
     public String dataSourceStatus;
 
+    /**
+     * <p>The type of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>The JDBC connection string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("JDBCConnectionString")
     public String JDBCConnectionString;
 
+    /**
+     * <p>The password of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("JDBCPassword")
     public String JDBCPassword;
 
+    /**
+     * <p>The name of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("JDBCUserName")
     public String JDBCUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("StatusMessage")
     public String statusMessage;
 

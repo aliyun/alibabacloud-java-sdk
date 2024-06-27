@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeDBVersionInfosRequest extends TeaModel {
     /**
      * <p>The resource type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **StorageElastic**: elastic storage mode.</p>
-     * <p>*   **Serverless**: Serverless mode.</p>
+     * <ul>
+     * <li><strong>StorageElastic</strong>: elastic storage mode.</li>
+     * <li><strong>Serverless</strong>: Serverless mode.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>StorageElastic</p>
      */
     @NameInMap("DBInstanceMode")
     public String DBInstanceMode;
 
     /**
      * <p>The minor version number that does not include the prefix.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6.3.10.20</p>
      */
     @NameInMap("DBVersion")
     public String DBVersion;
@@ -24,16 +31,22 @@ public class DescribeDBVersionInfosRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).</p>
+     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

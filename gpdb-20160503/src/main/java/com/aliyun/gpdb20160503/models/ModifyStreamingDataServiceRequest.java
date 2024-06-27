@@ -5,25 +5,56 @@ import com.aliyun.tea.*;
 
 public class ModifyStreamingDataServiceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp10g78o9807yv9h3</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The description of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-adbpgss</p>
+     */
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
+     * <p>The specifications of the service. Unit: capacity units (CUs). Valid values:</p>
+     * <ul>
+     * <li>2</li>
+     * <li>4</li>
+     * <li>8</li>
+     * <li>16</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ServiceSpec")
     public String serviceSpec;

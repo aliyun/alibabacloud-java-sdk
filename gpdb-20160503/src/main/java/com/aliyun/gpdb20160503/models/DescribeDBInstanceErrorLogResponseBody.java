@@ -12,18 +12,27 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,36 +77,54 @@ public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
     public static class DescribeDBInstanceErrorLogResponseBodyItems extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
          * <p>This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The content of the error log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unsupported frontend protocol 2689.28208: server supports 1.0 to 3.0</p>
          */
         @NameInMap("LogContext")
         public String logContext;
 
         /**
          * <p>The level of the queried log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FATAL</p>
          */
         @NameInMap("LogLevel")
         public String logLevel;
 
         /**
          * <p>The time when the log was generated. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-24 11:28:14</p>
          */
         @NameInMap("Time")
         public Long time;
 
         /**
          * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpguser</p>
          */
         @NameInMap("User")
         public String user;

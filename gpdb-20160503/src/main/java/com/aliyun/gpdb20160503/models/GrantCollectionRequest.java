@@ -6,60 +6,86 @@ import com.aliyun.tea.*;
 public class GrantCollectionRequest extends TeaModel {
     /**
      * <p>The name of the collection.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401497.html">CreateCollection</a> operation to create a vector collection and call the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> operation to query a list of vector collections.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>document</p>
      */
     @NameInMap("Collection")
     public String collection;
 
     /**
      * <p>The ID of the instance in reserved storage mode.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the namespace to which you want to grant the vector collection permissions.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>othernamespace</p>
      */
     @NameInMap("GrantToNamespace")
     public String grantToNamespace;
 
     /**
      * <p>The type of the permissions that you want to grant. Valid values:</p>
-     * <br>
-     * <p>*   rw: the read and write permissions.</p>
-     * <p>*   ro: the read-only permission.</p>
-     * <p>*   none: the delete permission.</p>
-     * <br>
+     * <ul>
+     * <li>rw: the read and write permissions.</li>
+     * <li>ro: the read-only permission.</li>
+     * <li>none: the delete permission.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rw</p>
      */
     @NameInMap("GrantType")
     public String grantType;
 
     /**
      * <p>The name of the manager account that has the rds_superuser permission.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testaccount</p>
      */
     @NameInMap("ManagerAccount")
     public String managerAccount;
 
     /**
      * <p>The password of the manager account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testpassword</p>
      */
     @NameInMap("ManagerAccountPassword")
     public String managerAccountPassword;
 
     /**
      * <p>The name of the namespace.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mynamespace</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -69,10 +95,10 @@ public class GrantCollectionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

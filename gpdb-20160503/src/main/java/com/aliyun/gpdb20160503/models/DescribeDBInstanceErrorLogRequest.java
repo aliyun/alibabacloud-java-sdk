@@ -6,75 +6,106 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceErrorLogRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adbtest</p>
      */
     @NameInMap("Database")
     public String database;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC. The end time must be later than the start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-04-25T06:59Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>This parameter is not supported in Alibaba Cloud public cloud.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Host")
     public String host;
 
     /**
      * <p>One or more keywords that are used to query error logs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>error</p>
      */
     @NameInMap("Keywords")
     public String keywords;
 
     /**
      * <p>The level of the logs to query. Valid values:</p>
-     * <br>
-     * <p>*   **ALL**: queries all error logs.</p>
-     * <p>*   **PANIC**: queries only abnormal logs.</p>
-     * <p>*   **FATAL**: queries only critical logs.</p>
-     * <p>*   **ERROR**: queries only error logs.</p>
+     * <ul>
+     * <li><strong>ALL</strong>: queries all error logs.</li>
+     * <li><strong>PANIC</strong>: queries only abnormal logs.</li>
+     * <li><strong>FATAL</strong>: queries only critical logs.</li>
+     * <li><strong>ERROR</strong>: queries only error logs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("LogLevel")
     public String logLevel;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   **20**</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
-     * <br>
-     * <p>Default value: **20**.</p>
+     * <ul>
+     * <li><strong>20</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * <p>Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-04-24T06:59Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adbpguser</p>
      */
     @NameInMap("User")
     public String user;

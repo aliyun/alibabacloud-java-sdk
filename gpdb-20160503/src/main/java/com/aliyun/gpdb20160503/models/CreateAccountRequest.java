@@ -6,47 +6,62 @@ import com.aliyun.tea.*;
 public class CreateAccountRequest extends TeaModel {
     /**
      * <p>The description of the privileged account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc02</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
      * <p>The name of the privileged account.</p>
-     * <br>
-     * <p>*   The name can contain lowercase letters, digits, and underscores (_).</p>
-     * <p>*   The name must start with a lowercase letter and end with a lowercase letter or a digit.</p>
-     * <p>*   The name cannot start with gp.</p>
-     * <p>*   The name must be 2 to 16 characters in length.</p>
-     * <br>
+     * <ul>
+     * <li>The name can contain lowercase letters, digits, and underscores (_).</li>
+     * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+     * <li>The name cannot start with gp.</li>
+     * <li>The name must be 2 to 16 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testacc02</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The password of the privileged account.</p>
-     * <br>
-     * <p>*   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</p>
-     * <p>*   Special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
-     * <p>*   The password must be 8 to 32 characters in length.</p>
-     * <br>
+     * <ul>
+     * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>Special characters include <code>! @ # $ % ^ &amp; * ( ) _ + - =</code></li>
+     * <li>The password must be 8 to 32 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Pw123456</p>
      */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test01</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
@@ -56,6 +71,9 @@ public class CreateAccountRequest extends TeaModel {
 
     /**
      * <p>This parameter is no longer used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

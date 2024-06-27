@@ -12,6 +12,9 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
     public static class DescribeModifyParameterLogResponseBodyChangelogs extends TeaModel {
         /**
          * <p>The effective time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-05T11:22:22Z</p>
          */
         @NameInMap("EffectTime")
         public String effectTime;
 
         /**
          * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>Indicates whether the modification takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ParameterValid")
         public String parameterValid;
 
         /**
          * <p>The original value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ParameterValueAfter")
         public String parameterValueAfter;
 
         /**
          * <p>The new value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("ParameterValueBefore")
         public String parameterValueBefore;

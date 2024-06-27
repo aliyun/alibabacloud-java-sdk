@@ -4,12 +4,25 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The queried SQL records.</p>
+     */
     @NameInMap("Queries")
     public java.util.List<DescribeActiveSQLRecordsResponseBodyQueries> queries;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,36 +56,110 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveSQLRecordsResponseBodyQueries extends TeaModel {
+        /**
+         * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0</p>
+         */
         @NameInMap("ClientAddr")
         public String clientAddr;
 
+        /**
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xg_analyse</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The progress ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6164</p>
+         */
         @NameInMap("PID")
         public String PID;
 
+        /**
+         * <p>The SQL statement of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Select * from t1,t2 where t1.id=t2.id;</p>
+         */
         @NameInMap("Query")
         public String query;
 
+        /**
+         * <p>The execution duration of the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60s</p>
+         */
         @NameInMap("QueryDuration")
         public String queryDuration;
 
+        /**
+         * <p>The start time of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-07T06:59Z</p>
+         */
         @NameInMap("QueryStart")
         public String queryStart;
 
+        /**
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6612</p>
+         */
         @NameInMap("SessionID")
         public String sessionID;
 
+        /**
+         * <p>Indicates whether the SQL statement is truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SqlTruncated")
         public String sqlTruncated;
 
+        /**
+         * <p>The threshold that is used to truncate the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("SqlTruncatedThreshold")
         public String sqlTruncatedThreshold;
 
+        /**
+         * <p>The status of the asynchronous request. Valid values:</p>
+         * <ul>
+         * <li><strong>RUNNING</strong></li>
+         * <li><strong>BLOCK</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
+         */
         @NameInMap("User")
         public String user;
 

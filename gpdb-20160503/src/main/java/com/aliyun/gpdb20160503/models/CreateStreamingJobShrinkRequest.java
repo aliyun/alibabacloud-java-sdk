@@ -4,20 +4,34 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateStreamingJobShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>test-account</p>
+     */
     @NameInMap("Account")
     public String account;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ATLEAST / EXACTLY</p>
+     */
     @NameInMap("Consistency")
     public String consistency;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp10g78o9807yv9h3</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DataSourceId")
     public String dataSourceId;
@@ -25,32 +39,55 @@ public class CreateStreamingJobShrinkRequest extends TeaModel {
     @NameInMap("DestColumns")
     public String destColumnsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dest-db</p>
+     */
     @NameInMap("DestDatabase")
     public String destDatabase;
 
     @NameInMap("DestSchema")
     public String destSchema;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dest-table</p>
+     */
     @NameInMap("DestTable")
     public String destTable;
 
     @NameInMap("ErrorLimitCount")
     public Long errorLimitCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>earliest /  latest</p>
+     */
     @NameInMap("FallbackOffset")
     public String fallbackOffset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>group_name。</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
     @NameInMap("JobConfig")
     public String jobConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-job</p>
+     */
     @NameInMap("JobDescription")
     public String jobDescription;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-job</p>
      */
     @NameInMap("JobName")
     public String jobName;
@@ -58,9 +95,17 @@ public class CreateStreamingJobShrinkRequest extends TeaModel {
     @NameInMap("MatchColumns")
     public String matchColumnsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>basic / professional</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pwd123</p>
+     */
     @NameInMap("Password")
     public String password;
 
@@ -70,12 +115,20 @@ public class CreateStreamingJobShrinkRequest extends TeaModel {
     @NameInMap("SrcColumns")
     public String srcColumnsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("TryRun")
     public Boolean tryRun;
 
     @NameInMap("UpdateColumns")
     public String updateColumnsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>insert/update/merge</p>
+     */
     @NameInMap("WriteMode")
     public String writeMode;
 

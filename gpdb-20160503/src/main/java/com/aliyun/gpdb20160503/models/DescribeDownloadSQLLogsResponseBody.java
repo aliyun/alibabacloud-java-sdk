@@ -12,6 +12,9 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FDE9942A-D919-527B-B559-5D0F6F20CCEC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,18 +41,38 @@ public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeDownloadSQLLogsResponseBodyRecords extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1150</p>
+         */
         @NameInMap("DownloadId")
         public Long downloadId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://perth-download-task.oss-cn-beijing.aliyuncs.com/">https://perth-download-task.oss-cn-beijing.aliyuncs.com/</a>*****</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Error message</p>
+         */
         @NameInMap("ExceptionMsg")
         public String exceptionMsg;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20220509113448-20220509173448.csv</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>finished</p>
+         */
         @NameInMap("Status")
         public String status;
 

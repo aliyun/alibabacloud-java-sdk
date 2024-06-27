@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteExternalDataServiceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp10g78o9807yv9h3</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -15,6 +18,9 @@ public class DeleteExternalDataServiceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;

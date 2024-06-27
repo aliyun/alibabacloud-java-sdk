@@ -5,17 +5,29 @@ import com.aliyun.tea.*;
 
 public class CheckHadoopNetConnectionRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CheckHadoopNetConnection</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
+     * <p>The E-MapReduce (EMR) Hadoop cluster ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-xxx</p>
      */
     @NameInMap("EmrInstanceId")
     public String emrInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

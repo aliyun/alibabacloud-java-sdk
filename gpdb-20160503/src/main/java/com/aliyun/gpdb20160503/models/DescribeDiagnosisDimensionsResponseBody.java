@@ -12,6 +12,9 @@ public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9ADCAACA-E0E8-5319-AE3B-E260E957BDF9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

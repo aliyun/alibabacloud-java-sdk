@@ -12,18 +12,27 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,80 +77,115 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
     public static class DescribeDBInstanceDataBloatResponseBodyItems extends TeaModel {
         /**
          * <p>The coefficient of data bloat. It is calculated by using the following formula:</p>
-         * <br>
          * <p>Bloat coefficient = Number of dead rows/Number of active rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.03</p>
          */
         @NameInMap("BloatCeoff")
         public String bloatCeoff;
 
         /**
          * <p>The bloat size of the table. It indicates the amount of space that can be released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2MB</p>
          */
         @NameInMap("BloatSize")
         public String bloatSize;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The expected size of the table.</p>
-         * <br>
          * <p>It indicates the size of the table that has no data bloat.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1MB</p>
          */
         @NameInMap("ExpectTableSize")
         public String expectTableSize;
 
         /**
          * <p>The actual size of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2MB</p>
          */
         @NameInMap("RealTableSize")
         public String realTableSize;
 
         /**
          * <p>The name of the schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schema1</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The sequence number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Sequence")
         public Integer sequence;
 
         /**
          * <p>The storage type of the table. Valid values:</p>
-         * <br>
-         * <p>*   **Heap Table**</p>
-         * <p>*   **Append-Only Heap Table**</p>
-         * <p>*   **Append-Only Columnar Table**</p>
+         * <ul>
+         * <li><strong>Heap Table</strong></li>
+         * <li><strong>Append-Only Heap Table</strong></li>
+         * <li><strong>Append-Only Columnar Table</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Heap Table</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
          * <p>This parameter is not returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("SuggestedAction")
         public String suggestedAction;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tab1</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The time when the table was last deleted, inserted, or updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-08T20:00:00Z</p>
          */
         @NameInMap("TimeLastUpdated")
         public String timeLastUpdated;
 
         /**
          * <p>The time when the table was last vacuumed. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-08T16:00:00Z</p>
          */
         @NameInMap("TimeLastVacuumed")
         public String timeLastVacuumed;

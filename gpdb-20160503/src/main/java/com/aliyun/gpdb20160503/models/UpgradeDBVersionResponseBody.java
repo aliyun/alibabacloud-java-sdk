@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class UpgradeDBVersionResponseBody extends TeaModel {
     /**
      * <p>This parameter is no longer returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-wz9kmr708m155j***</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-wz9kmr708m155j***</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25C11EE5-B7E8-481A-A07C-BD619971A570</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101450956</p>
      */
     @NameInMap("TaskId")
     public String taskId;

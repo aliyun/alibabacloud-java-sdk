@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class SetDataShareInstanceResponseBody extends TeaModel {
     /**
      * <p>The error message returned if the operation fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>error message</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D5**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The state of the operation. Valid values:</p>
-     * <br>
-     * <p>*   **success**: The operation is successful.</p>
-     * <p>*   **failed**: The operation fails.</p>
+     * <ul>
+     * <li><strong>success</strong>: The operation is successful.</li>
+     * <li><strong>failed</strong>: The operation fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Status")
     public String status;

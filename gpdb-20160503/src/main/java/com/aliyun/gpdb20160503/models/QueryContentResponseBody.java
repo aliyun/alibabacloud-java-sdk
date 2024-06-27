@@ -4,18 +4,34 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class QueryContentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("EmbeddingTokens")
     public String embeddingTokens;
 
     @NameInMap("Matches")
     public QueryContentResponseBodyMatches matches;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -109,15 +125,27 @@ public class QueryContentResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my_doc.txt</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
         @NameInMap("FileURL")
         public String fileURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>doca-1234</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;page_pos&quot;: 1}</p>
+         */
         @NameInMap("LoaderMetadata")
         public String loaderMetadata;
 
@@ -127,9 +155,17 @@ public class QueryContentResponseBody extends TeaModel {
         @NameInMap("RerankScore")
         public Double rerankScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RetrievalSource")
         public Integer retrievalSource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.12345</p>
+         */
         @NameInMap("Score")
         public Double score;
 

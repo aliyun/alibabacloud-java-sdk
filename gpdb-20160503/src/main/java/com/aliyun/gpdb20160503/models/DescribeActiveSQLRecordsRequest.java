@@ -5,32 +5,73 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveSQLRecordsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testdb</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-05-07T07:59Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SELECT</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("MaxDuration")
     public String maxDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("MinDuration")
     public String minDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Field&quot;:&quot;StartTime&quot;,&quot;Type&quot;:&quot;Desc&quot;}</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-08-03T09:30Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The name of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testuser</p>
+     */
     @NameInMap("User")
     public String user;
 

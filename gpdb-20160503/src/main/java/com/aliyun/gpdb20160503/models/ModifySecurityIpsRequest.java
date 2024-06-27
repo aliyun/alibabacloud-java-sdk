@@ -5,53 +5,73 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityIpsRequest extends TeaModel {
     /**
-     * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.</p>
+     * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the <code>hidden</code> attribute does not appear in the console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hidden</p>
      */
     @NameInMap("DBInstanceIPArrayAttribute")
     public String DBInstanceIPArrayAttribute;
 
     /**
      * <p>The name of the whitelist. If you do not enter a name, IP addresses are added to the default whitelist.</p>
-     * <br>
-     * <p>>  You can create up to 50 whitelists for an instance.</p>
+     * <blockquote>
+     * <p> You can create up to 50 whitelists for an instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("DBInstanceIPArrayName")
     public String DBInstanceIPArrayName;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The method of modification. Valid values:</p>
-     * <br>
-     * <p>*   **Cover**: overwrites the whitelist.</p>
-     * <p>*   **Append**: appends data to the whitelist.</p>
-     * <p>*   **Delete**: deletes the whitelist.</p>
+     * <ul>
+     * <li><strong>Cover</strong>: overwrites the whitelist.</li>
+     * <li><strong>Append</strong>: appends data to the whitelist.</li>
+     * <li><strong>Delete</strong>: deletes the whitelist.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ModifyMode")
     public String modifyMode;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).</p>
+     * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The IP addresses listed in the whitelist. You can add up to 1,000 IP addresses to the whitelist. Separate multiple IP addresses with commas (,). The IP addresses must use one of the following formats:</p>
-     * <br>
-     * <p>*   0.0.0.0/0</p>
-     * <p>*   10.23.12.24. This is a standard IP address.</p>
-     * <p>*   10.23.12.24/24. This is a CIDR block. The value `/24` indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of `1 to 32`.</p>
-     * <br>
+     * <ul>
+     * <li>0.0.0.0/0</li>
+     * <li>10.23.12.24. This is a standard IP address.</li>
+     * <li>10.23.12.24/24. This is a CIDR block. The value <code>/24</code> indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of <code>1 to 32</code>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.10.**.**</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;

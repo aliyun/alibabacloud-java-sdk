@@ -6,35 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeDataShareInstancesResponseBody extends TeaModel {
     /**
      * <p>The state of data sharing. Valid values:</p>
-     * <br>
-     * <p>*   **opening**</p>
-     * <p>*   **opened**</p>
-     * <p>*   **closing**</p>
-     * <p>*   **closed**</p>
+     * <ul>
+     * <li><strong>opening</strong></li>
+     * <li><strong>opened</strong></li>
+     * <li><strong>closing</strong></li>
+     * <li><strong>closed</strong></li>
+     * </ul>
      */
     @NameInMap("Items")
     public DescribeDataShareInstancesResponseBodyItems items;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D5**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -87,45 +100,65 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
     public static class DescribeDataShareInstancesResponseBodyItemsDBInstance extends TeaModel {
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The resource type of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **Serverless**: Serverless mode</p>
-         * <p>*   **StorageElasic**: elastic storage mode</p>
-         * <p>*   **Classic**: reserved storage mode</p>
+         * <ul>
+         * <li><strong>Serverless</strong>: Serverless mode</li>
+         * <li><strong>StorageElasic</strong>: elastic storage mode</li>
+         * <li><strong>Classic</strong>: reserved storage mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Serverless</p>
          */
         @NameInMap("DBInstanceMode")
         public String DBInstanceMode;
 
         /**
          * <p>The state of data sharing. Valid values:</p>
-         * <br>
-         * <p>*   **opening**: Data sharing is being enabled.</p>
-         * <p>*   **opened**: Data sharing is enabled.</p>
-         * <p>*   **closing**: Data sharing is being disabled.</p>
-         * <p>*   **closed**: Data sharing is disabled.</p>
+         * <ul>
+         * <li><strong>opening</strong>: Data sharing is being enabled.</li>
+         * <li><strong>opened</strong>: Data sharing is enabled.</li>
+         * <li><strong>closing</strong>: Data sharing is being disabled.</li>
+         * <li><strong>closed</strong>: Data sharing is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>opened</p>
          */
         @NameInMap("DataShareStatus")
         public String dataShareStatus;
 
         /**
          * <p>The description of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp***************</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The zone ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-j</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -6,36 +6,60 @@ import com.aliyun.tea.*;
 public class CreateStreamingDataSourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateExternalDataSource</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;broker_list&quot;:&quot;broker0:9091,broker1:9091&quot;,&quot;topic&quot;:&quot;topic&quot;}</p>
      */
     @NameInMap("DataSourceConfig")
     public String dataSourceConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-kafka</p>
+     */
     @NameInMap("DataSourceDescription")
     public String dataSourceDescription;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-kafka</p>
      */
     @NameInMap("DataSourceName")
     public String dataSourceName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kafka</p>
      */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The real-time data service ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ServiceId")
     public Integer serviceId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RestartDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7356493-7141-4393-8951-CDA8AB5D67EC</p>
      */
     @NameInMap("RequestId")
     public String requestId;

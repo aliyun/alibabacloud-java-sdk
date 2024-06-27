@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class UpgradeDBVersionRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-wz9kmr708m155j***</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>This parameter is no longer used and does not need to be specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("MajorVersion")
     public String majorVersion;
 
     /**
      * <p>The minor version of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6.3.6.1-202112012048</p>
      */
     @NameInMap("MinorVersion")
     public String minorVersion;
@@ -29,18 +37,27 @@ public class UpgradeDBVersionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is no longer used and does not need to be specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("SwitchTime")
     public String switchTime;
 
     /**
      * <p>This parameter is no longer used and does not need to be specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;

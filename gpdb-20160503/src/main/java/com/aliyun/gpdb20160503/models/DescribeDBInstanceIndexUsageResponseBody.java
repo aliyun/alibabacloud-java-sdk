@@ -12,18 +12,27 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,63 +77,94 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
     public static class DescribeDBInstanceIndexUsageResponseBodyItems extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The definition of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE INDEX idx1 ON schema1.tab1_ptr_2010</p>
          */
         @NameInMap("IndexDef")
         public String indexDef;
 
         /**
          * <p>The name of the index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idx1</p>
          */
         @NameInMap("IndexName")
         public String indexName;
 
         /**
          * <p>The number of index scans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000</p>
          */
         @NameInMap("IndexScanTimes")
         public Integer indexScanTimes;
 
         /**
          * <p>The size of the index. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("IndexSize")
         public String indexSize;
 
         /**
          * <p>Indicates whether the table is a partitioned table. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The table is a partitioned table.</p>
-         * <p>*   **false**: The table is not a partitioned table.</p>
+         * <ul>
+         * <li><strong>true</strong>: The table is a partitioned table.</li>
+         * <li><strong>false</strong>: The table is not a partitioned table.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsPartitionTable")
         public Boolean isPartitionTable;
 
         /**
          * <p>The name of the parent table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tab1</p>
          */
         @NameInMap("ParentTableName")
         public String parentTableName;
 
         /**
          * <p>The name of the schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schema1</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tab1_ptr_2010</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The time when the table was last deleted, inserted, or updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-08T20:00:00Z</p>
          */
         @NameInMap("TimeLastUpdated")
         public String timeLastUpdated;

@@ -12,18 +12,27 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,51 +77,76 @@ public class DescribeWaitingSQLRecordsResponseBody extends TeaModel {
     public static class DescribeWaitingSQLRecordsResponseBodyItems extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
          * <p>The ID of the process that uniquely identifies the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("PID")
         public String PID;
 
         /**
          * <p>The SQL statement of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Select * from t1,t2 where t1.id=t2.id;</p>
          */
         @NameInMap("SQLStmt")
         public String SQLStmt;
 
         /**
          * <p>The ID of the session that contains the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("SessionID")
         public String sessionID;
 
         /**
          * <p>The start time of the query. This value is in the timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1660902033374</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The waiting state of the query. Valid values:</p>
-         * <br>
-         * <p>*   **LockWaiting**</p>
-         * <p>*   **ResourceWaiting**</p>
+         * <ul>
+         * <li><strong>LockWaiting</strong></li>
+         * <li><strong>ResourceWaiting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LockWaiting</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The database account that is used to perform the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         @NameInMap("User")
         public String user;
 
         /**
          * <p>The waiting period of the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26911000</p>
          */
         @NameInMap("WaitingTime")
         public Long waitingTime;

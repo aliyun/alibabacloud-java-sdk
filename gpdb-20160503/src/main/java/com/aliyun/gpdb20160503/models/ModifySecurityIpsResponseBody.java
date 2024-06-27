@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifySecurityIpsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>871C698F-B43D-4D1D-ACD6-DF56B0F89978</p>
      */
     @NameInMap("RequestId")
     public String requestId;

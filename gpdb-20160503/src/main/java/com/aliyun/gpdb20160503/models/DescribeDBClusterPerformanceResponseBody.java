@@ -6,30 +6,42 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. The time follows the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format. The time is displayed in UTC.</p>
+     * <p>The end time of the query. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-03T15:10Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The name of the performance metric. For more information, see [Performance parameters](https://help.aliyun.com/document_detail/86943.html).</p>
+     * <p>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
      */
     @NameInMap("PerformanceKeys")
     public java.util.List<DescribeDBClusterPerformanceResponseBodyPerformanceKeys> performanceKeys;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8E8990F0-C81E-4C94-8F51-5F**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The start time of the query. The time follows the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format. The time is displayed in UTC.</p>
+     * <p>The start time of the query. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-03T15:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -104,16 +116,23 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysSeries extends TeaModel {
         /**
          * <p>The name of the compute node or compute group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standby-********-cpu</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The role of the node. Valid values:</p>
-         * <br>
-         * <p>*   **master**: primary coordinator node</p>
-         * <p>*   **standby**: standby coordinator node</p>
-         * <p>*   **segment**: compute node</p>
+         * <ul>
+         * <li><strong>master</strong>: primary coordinator node</li>
+         * <li><strong>standby</strong>: standby coordinator node</li>
+         * <li><strong>segment</strong>: compute node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standby</p>
          */
         @NameInMap("Role")
         public String role;
@@ -157,7 +176,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeys extends TeaModel {
         /**
-         * <p>The name of the performance metric. For more information, see [Performance parameters](https://help.aliyun.com/document_detail/86943.html).</p>
+         * <p>The name of the performance metric. For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpg_group_cpu_used_percent</p>
          */
         @NameInMap("Name")
         public String name;
@@ -170,6 +192,9 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
 
         /**
          * <p>The unit of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>%</p>
          */
         @NameInMap("Unit")
         public String unit;
