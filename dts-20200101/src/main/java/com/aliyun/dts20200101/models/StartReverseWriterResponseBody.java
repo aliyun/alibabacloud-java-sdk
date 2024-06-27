@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class StartReverseWriterResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>291BA4F1-2035-3FAA-6D5A-5D2015CC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

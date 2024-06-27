@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class CreateConsumerGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the consumer group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtswc411cg617p****</p>
      */
     @NameInMap("ConsumerGroupID")
     public String consumerGroupID;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6063641E-BAD1-4BA7-B70B-26FFFD18****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

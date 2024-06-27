@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSubscriptionInstanceAlertRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -27,8 +33,10 @@ public class DescribeSubscriptionInstanceAlertRequest extends TeaModel {
 
     /**
      * <p>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsl8zl9ek6292****</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;

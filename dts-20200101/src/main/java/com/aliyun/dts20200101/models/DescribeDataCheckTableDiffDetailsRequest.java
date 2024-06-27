@@ -6,25 +6,42 @@ import com.aliyun.tea.*;
 public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("CheckType")
     public Integer checkType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db_dtstest</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xd4e4xb419q****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -33,6 +50,9 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_person</p>
      */
     @NameInMap("TbName")
     public String tbName;

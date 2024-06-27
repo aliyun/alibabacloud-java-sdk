@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class CreateSynchronizationJobResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9056C8B0-5799-493A-9655-70F607B8****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
      * <p>The ID of the data synchronization instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtshvj11k25255****</p>
      */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;

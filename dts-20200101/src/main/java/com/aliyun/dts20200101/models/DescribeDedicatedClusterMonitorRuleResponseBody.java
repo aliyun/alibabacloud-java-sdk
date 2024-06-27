@@ -4,39 +4,87 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterMonitorRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("CpuAlarmThreshold")
     public String cpuAlarmThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dtsClustervcwn1oeyu5fx4yf</p>
+     */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("DiskAlarmThreshold")
     public String diskAlarmThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46</p>
+     */
     @NameInMap("DuAlarmThreshold")
     public String duAlarmThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InternalError</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("MemAlarmThreshold")
     public String memAlarmThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NoticeSwitch")
     public String noticeSwitch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>186****7653</p>
+     */
     @NameInMap("Phones")
     public String phones;
 
+    /**
+     * <strong>example:</strong>
+     * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 

@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     /**
      * <p>The total number of data synchronization instances that belong to your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>Indicates whether full data synchronization is performed. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The list of data synchronization instances and the details of each instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92E1E99D-5224-4AD3-8C94-23A3516B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,17 +43,21 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
     /**
      * <p>The status of the data synchronization task. Valid values:</p>
-     * <br>
-     * <p>*   **NotStarted**: The task is not started.</p>
-     * <p>*   **Prechecking**: The task is being prechecked.</p>
-     * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
-     * <p>*   **Initializing**: The task is performing initial synchronization.</p>
-     * <p>*   **InitializeFailed**: Initial synchronization failed.</p>
-     * <p>*   **Synchronizing**: The task is synchronizing data.</p>
-     * <p>*   **Failed**: The task failed to synchronize data.</p>
-     * <p>*   **Suspending**: The task is paused.</p>
-     * <p>*   **Modifying**: The objects in the task are being modified.</p>
-     * <p>*   **Finished**: The task is completed.</p>
+     * <ul>
+     * <li><strong>NotStarted</strong>: The task is not started.</li>
+     * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
+     * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
+     * <li><strong>Initializing</strong>: The task is performing initial synchronization.</li>
+     * <li><strong>InitializeFailed</strong>: Initial synchronization failed.</li>
+     * <li><strong>Synchronizing</strong>: The task is synchronizing data.</li>
+     * <li><strong>Failed</strong>: The task failed to synchronize data.</li>
+     * <li><strong>Suspending</strong>: The task is paused.</li>
+     * <li><strong>Modifying</strong>: The objects in the task are being modified.</li>
+     * <li><strong>Finished</strong>: The task is completed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
@@ -96,30 +110,45 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesDataInitializationStatus extends TeaModel {
         /**
          * <p>The status of incremental data synchronization.</p>
-         * <br>
-         * <p>>  This parameter is no longer available.</p>
+         * <blockquote>
+         * <p> This parameter is no longer available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The status of incremental data synchronization.</p>
-         * <br>
-         * <p>>  This parameter and its sub-parameters are no longer available.</p>
+         * <blockquote>
+         * <p> This parameter and its sub-parameters are no longer available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The synchronization latency.</p>
-         * <br>
-         * <p>>  This parameter is no longer available.</p>
+         * <blockquote>
+         * <p> This parameter is no longer available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200001</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The number of records that have been synchronized during full data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -166,6 +195,9 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesDataSynchronizationStatus extends TeaModel {
         /**
          * <p>The connection settings of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Delay")
         public String delay;
@@ -178,14 +210,21 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The error message returned if incremental data synchronization failed.</p>
-         * <br>
-         * <p>>  This parameter is no longer available.</p>
+         * <blockquote>
+         * <p> This parameter is no longer available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -232,36 +271,54 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesDestinationEndpoint extends TeaModel {
         /**
          * <p>The data traffic that is synchronized per second. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The database account of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The database service port of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp162d4tp0500****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The database type of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The performance of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The number of times SQL statements are synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -324,15 +381,22 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesPerformance extends TeaModel {
         /**
          * <p>The precheck progress. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("FLOW")
         public String FLOW;
 
         /**
          * <p>The precheck result. Valid values:</p>
-         * <br>
-         * <p>*   **Success**: The task passed the precheck.</p>
-         * <p>*   **Failed**: The task failed to pass the precheck.</p>
+         * <ul>
+         * <li><strong>Success</strong>: The task passed the precheck.</li>
+         * <li><strong>Failed</strong>: The task failed to pass the precheck.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("RPS")
         public String RPS;
@@ -363,26 +427,39 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesPrecheckStatusDetail extends TeaModel {
         /**
          * <p>The method to fix the precheck failure.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("CheckStatus")
         public String checkStatus;
 
         /**
          * <p>The connection settings of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Original error: Access denied for user \&quot;dtstest\&quot;@\&quot;100.104.***.**\&quot; (using password: YES)</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC</p>
          */
         @NameInMap("ItemName")
         public String itemName;
 
         /**
          * <p>The endpoint of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
          */
         @NameInMap("RepairMethod")
         public String repairMethod;
@@ -435,17 +512,25 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if the task failed to pass the precheck.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The precheck result. Valid values:</p>
-         * <br>
-         * <p>*   **Success**: The task passed the precheck.</p>
-         * <p>*   **Failed**: The task failed to pass the precheck.</p>
+         * <ul>
+         * <li><strong>Success</strong>: The task passed the precheck.</li>
+         * <li><strong>Failed</strong>: The task failed to pass the precheck.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
@@ -484,41 +569,60 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSourceEndpoint extends TeaModel {
         /**
          * <p>The progress of schema synchronization. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The database account of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The database service port of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1i99e8l7913****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The database type of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The status of schema synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The status of schema synchronization. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: Schema synchronization is not started.</p>
-         * <p>*   **Migrating**: Schema synchronization is in progress.</p>
-         * <p>*   **Failed**: Schema synchronization failed.</p>
-         * <p>*   **Finished**: Schema synchronization is completed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: Schema synchronization is not started.</li>
+         * <li><strong>Migrating</strong>: Schema synchronization is in progress.</li>
+         * <li><strong>Failed</strong>: Schema synchronization failed.</li>
+         * <li><strong>Finished</strong>: Schema synchronization is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -579,17 +683,32 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesStructureInitializationStatus extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The number of tables whose schemas have been synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -636,6 +755,9 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableExcludes extends TeaModel {
         /**
          * <p>The status of full data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -658,6 +780,9 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableIncludes extends TeaModel {
         /**
          * <p>The progress of full data synchronization. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -680,12 +805,18 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjects extends TeaModel {
         /**
          * <p>The name of the excluded table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newdtstestdatabase</p>
          */
         @NameInMap("NewSchemaName")
         public String newSchemaName;
 
         /**
          * <p>The tables that are synchronized by the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdatabase</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
@@ -698,11 +829,12 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
         /**
          * <p>The status of full data synchronization. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: Full data synchronization is not started.</p>
-         * <p>*   **Migrating**: Full data synchronization is in progress.</p>
-         * <p>*   **Failed**: Full data synchronization failed.</p>
-         * <p>*   **Finished**: Full data synchronization is completed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: Full data synchronization is not started.</li>
+         * <li><strong>Migrating</strong>: Full data synchronization is in progress.</li>
+         * <li><strong>Failed</strong>: Full data synchronization failed.</li>
+         * <li><strong>Finished</strong>: Full data synchronization is completed.</li>
+         * </ul>
          */
         @NameInMap("TableIncludes")
         public java.util.List<DescribeSynchronizationJobsResponseBodySynchronizationInstancesSynchronizationObjectsTableIncludes> tableIncludes;
@@ -749,12 +881,18 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstancesTags extends TeaModel {
         /**
          * <p>The database name that is used in the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The name of the synchronized database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -785,12 +923,18 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobsResponseBodySynchronizationInstances extends TeaModel {
         /**
          * <p>The specification of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-28 17:34:53.0</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The synchronization latency, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataInitialization")
         public String dataInitialization;
@@ -803,14 +947,18 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
         /**
          * <p>The progress of incremental data synchronization. Unit: %.</p>
-         * <br>
-         * <p>>  This parameter is no longer available.</p>
+         * <blockquote>
+         * <p> This parameter is no longer available.</p>
+         * </blockquote>
          */
         @NameInMap("DataSynchronizationStatus")
         public DescribeSynchronizationJobsResponseBodySynchronizationInstancesDataSynchronizationStatus dataSynchronizationStatus;
 
         /**
-         * <p>The time when the data synchronization task was created. The time is displayed in the *yyyy-MM-dd* *HH:mm:ss*.0 format (UTC+8).</p>
+         * <p>The time when the data synchronization task was created. The time is displayed in the <em>yyyy-MM-dd</em> <em>HH:mm:ss</em>.0 format (UTC+8).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Delay")
         public String delay;
@@ -823,36 +971,53 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the data synchronization instance. Valid values:</p>
-         * <br>
-         * <p>*   **PrePaid**: subscription</p>
-         * <p>*   **PostPaid**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>Indicates whether schema synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-07T16:00:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
-         * <p>The time when the data synchronization task was created. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.</p>
+         * <p>The time when the data synchronization task was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-28T09:36:32Z</p>
          */
         @NameInMap("InstanceCreateTime")
         public String instanceCreateTime;
 
         /**
          * <p>The tag value that corresponds to the tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-28T09:34:53Z</p>
          */
         @NameInMap("JobCreateTime")
         public String jobCreateTime;
 
         /**
-         * <p>The time when the instance was created. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.</p>
+         * <p>The time when the instance was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -877,12 +1042,18 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>synchronizing</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("StructureInitialization")
         public String structureInitialization;
@@ -895,29 +1066,40 @@ public class DescribeSynchronizationJobsResponseBody extends TeaModel {
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         @NameInMap("SynchronizationDirection")
         public String synchronizationDirection;
 
         /**
          * <p>The synchronization direction. Valid values:</p>
-         * <br>
-         * <p>*   **Forward**</p>
-         * <p>*   **Reverse**</p>
+         * <ul>
+         * <li><strong>Forward</strong></li>
+         * <li><strong>Reverse</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>large</p>
          */
         @NameInMap("SynchronizationJobClass")
         public String synchronizationJobClass;
 
         /**
          * <p>The collection of tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsexjk1alb116****</p>
          */
         @NameInMap("SynchronizationJobId")
         public String synchronizationJobId;
 
         /**
-         * <p>The time when the data synchronization instance expires. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the return value of the **PayType** parameter is **PrePaid**.</p>
+         * <p>The time when the data synchronization instance expires. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the return value of the <strong>PayType</strong> parameter is <strong>PrePaid</strong>.</p>
+         * </blockquote>
          */
         @NameInMap("SynchronizationJobName")
         public String synchronizationJobName;

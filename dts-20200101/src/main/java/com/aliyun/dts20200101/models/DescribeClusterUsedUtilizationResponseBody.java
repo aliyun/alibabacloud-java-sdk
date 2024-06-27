@@ -6,102 +6,153 @@ import com.aliyun.tea.*;
 public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     /**
      * <p>The error code returned by the backend service. The number is incremented.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The CPU utilization of the cluster. Unit: percentage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("CpuTotal")
     public Float cpuTotal;
 
     /**
      * <p>The ID of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtscluster_h3fl1cs217sx952</p>
      */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
     /**
      * <p>The total disk size of the cluster. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("DiskTotal")
     public Float diskTotal;
 
     /**
      * <p>The disk usage of the cluster. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96</p>
      */
     @NameInMap("DiskUsed")
     public Float diskUsed;
 
     /**
      * <p>The total number of DTS units (DUs).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("DuTotal")
     public Integer duTotal;
 
     /**
      * <p>The usage of DUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("DuUsed")
     public Integer duUsed;
 
     /**
      * <p>The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Type</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The total amount of memory. A value of 0 is temporarily returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("MemoryTotal")
     public Float memoryTotal;
 
     /**
      * <p>The memory usage. A value of 0 is temporarily returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("MemoryUsed")
     public Float memoryUsed;
 
     /**
      * <p>The memory usage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("MemoryUsedPercentage")
     public Float memoryUsedPercentage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The number of tasks that are in progress.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TaskRunning")
     public Integer taskRunning;

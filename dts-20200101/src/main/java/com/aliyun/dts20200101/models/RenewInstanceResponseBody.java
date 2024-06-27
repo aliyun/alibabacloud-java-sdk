@@ -5,76 +5,113 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
     /**
-     * <p>The billing method of the DTS instance. **PREPAY** is returned, which indicates the subscription billing method.</p>
+     * <p>The billing method of the DTS instance. <strong>PREPAY</strong> is returned, which indicates the subscription billing method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The error code.</p>
-     * <br>
-     * <p>>  This parameter will be removed in the future.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The ID of the data synchronization or change tracking task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qi0r643lc31****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>DtsJobId</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The time when the DTS instance expires after renewal. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ssZZZ* format. The time is displayed in UTC.</p>
-     * <br>
-     * <p>>  **ZZZ** indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as **+00:00**.</p>
+     * <p>The time when the DTS instance expires after renewal. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZZZ</em> format. The time is displayed in UTC.</p>
+     * <blockquote>
+     * <p> <strong>ZZZ</strong> indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as <strong>+00:00</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-08-04T16:00:00.000+00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the DTS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsqi0r643lc31****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1112E255-0C38-4970-8159-1D54AD92****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

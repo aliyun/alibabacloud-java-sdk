@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StopDtsJobRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsl3m1213ye7l****</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>l3m1213ye7l****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -24,13 +30,19 @@ public class StopDtsJobRequest extends TeaModel {
 
     /**
      * <p>The synchronization direction. Valid values:</p>
-     * <br>
-     * <p>*   **Forward**</p>
-     * <p>*   **Reverse**</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   Default value: **Forward**.</p>
-     * <p>*   You can set this parameter to **Reverse** to stop the reverse synchronization task only when the topology is two-way synchronization.</p>
+     * <ul>
+     * <li><strong>Forward</strong></li>
+     * <li><strong>Reverse</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Default value: <strong>Forward</strong>.</li>
+     * <li>You can set this parameter to <strong>Reverse</strong> to stop the reverse synchronization task only when the topology is two-way synchronization.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;

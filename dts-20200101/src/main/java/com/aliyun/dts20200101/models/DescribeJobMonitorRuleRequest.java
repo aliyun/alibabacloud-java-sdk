@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class DescribeJobMonitorRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
-     * <br>
+     * <p>The ID of the data migration, data synchronization, or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ta7w132u12h****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen</p>
      */
     @NameInMap("RegionId")
     public String regionId;

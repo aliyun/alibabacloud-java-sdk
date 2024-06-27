@@ -6,22 +6,33 @@ import com.aliyun.tea.*;
 public class StopDedicatedClusterRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>>  You must specify one of the **InstanceId** and **DedicatedClusterId** parameters.</p>
+     * <blockquote>
+     * <p> You must specify one of the <strong>InstanceId</strong> and <strong>DedicatedClusterId</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dtscluster_h3fl1cs217sx952</p>
      */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
     /**
      * <p>The name of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtscluster_test_001</p>
      */
     @NameInMap("DedicatedClusterName")
     public String dedicatedClusterName;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  You must specify one of the **InstanceId** and **DedicatedClusterId** parameters.</p>
+     * <blockquote>
+     * <p> You must specify one of the <strong>InstanceId</strong> and <strong>DedicatedClusterId</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1162kryivb8****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -31,6 +42,9 @@ public class StopDedicatedClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

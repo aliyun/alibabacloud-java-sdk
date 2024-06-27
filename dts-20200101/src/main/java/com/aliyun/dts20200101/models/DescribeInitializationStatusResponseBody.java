@@ -12,26 +12,36 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
     /**
      * <p>The details of incremental data synchronization.</p>
-     * <br>
-     * <p>>  This parameter and the parameters it contains will be removed in the future.</p>
+     * <blockquote>
+     * <p> This parameter and the parameters it contains will be removed in the future.</p>
+     * </blockquote>
      */
     @NameInMap("DataSynchronizationDetails")
     public java.util.List<DescribeInitializationStatusResponseBodyDataSynchronizationDetails> dataSynchronizationDetails;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>150DECD9-13FF-4929-A5DE-855BE9CC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -44,6 +54,9 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -112,57 +125,84 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
     public static class DescribeInitializationStatusResponseBodyDataInitializationDetails extends TeaModel {
         /**
          * <p>The name of the database to which the object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DestinationOwnerDBName")
         public String destinationOwnerDBName;
 
         /**
          * <p>The error message returned if initial full data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The total number of rows that are actually synchronized.</p>
-         * <br>
-         * <p>>  This parameter indicates the total number of actually synchronized rows. In contrast, the value of the **TotalRowNum** parameter is calculated based on the system tables in the source database. The values of the two parameters may be different due to time difference.</p>
+         * <blockquote>
+         * <p> This parameter indicates the total number of actually synchronized rows. In contrast, the value of the <strong>TotalRowNum</strong> parameter is calculated based on the system tables in the source database. The values of the two parameters may be different due to time difference.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>9993</p>
          */
         @NameInMap("FinishRowNum")
         public String finishRowNum;
 
         /**
          * <p>The name of the database to which the object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("SourceOwnerDBName")
         public String sourceOwnerDBName;
 
         /**
          * <p>The status of initial full data synchronization. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**</p>
-         * <p>*   **Migrating**</p>
-         * <p>*   **Failed**</p>
-         * <p>*   **Finished**</p>
+         * <ul>
+         * <li><strong>NotStarted</strong></li>
+         * <li><strong>Migrating</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Finished</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The total number of rows that are supposed to be synchronized.</p>
-         * <br>
-         * <p>>  The value of this parameter is calculated based on the system tables in the source database. In contrast, the **FinishRowNum** parameter indicates the total number of actually synchronized rows. The values of the two parameters may be different due to time difference.</p>
+         * <blockquote>
+         * <p> The value of this parameter is calculated based on the system tables in the source database. In contrast, the <strong>FinishRowNum</strong> parameter indicates the total number of actually synchronized rows. The values of the two parameters may be different due to time difference.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>9981</p>
          */
         @NameInMap("TotalRowNum")
         public String totalRowNum;
 
         /**
          * <p>The time spent on full data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("UsedTime")
         public String usedTime;
@@ -241,6 +281,9 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
     public static class DescribeInitializationStatusResponseBodyDataSynchronizationDetails extends TeaModel {
         /**
          * <p>The name of the database to which the object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DestinationOwnerDBName")
         public String destinationOwnerDBName;
@@ -253,23 +296,33 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
         /**
          * <p>The name of the database to which the object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("SourceOwnerDBName")
         public String sourceOwnerDBName;
 
         /**
          * <p>The status of incremental data synchronization. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**</p>
-         * <p>*   **Migrating**</p>
-         * <p>*   **Failed**</p>
-         * <p>*   **Finished**</p>
+         * <ul>
+         * <li><strong>NotStarted</strong></li>
+         * <li><strong>Migrating</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Finished</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Migrating</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -324,47 +377,69 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
     public static class DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints extends TeaModel {
         /**
          * <p>The name of the database to which the object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DestinationOwnerDBName")
         public String destinationOwnerDBName;
 
         /**
          * <p>The error message returned if constraints failed to be created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The syntax to create constraints.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE SEQUENCE &quot;public&quot;.&quot;collections_id_seq&quot;   MINVALUE 1   MAXVALUE 9223372036854775807   START 249   INCREMENT BY 1 ;</p>
          */
         @NameInMap("ObjectDefinition")
         public String objectDefinition;
 
         /**
          * <p>The name of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         @NameInMap("ObjectName")
         public String objectName;
 
         /**
-         * <p>The type of the object. Valid value: **Table**.</p>
+         * <p>The type of the object. Valid value: <strong>Table</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Table</p>
          */
         @NameInMap("ObjectType")
         public String objectType;
 
         /**
          * <p>The name of the database to which the object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("SourceOwnerDBName")
         public String sourceOwnerDBName;
 
         /**
          * <p>The status of constraint creation. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**</p>
-         * <p>*   **Migrating**</p>
-         * <p>*   **Failed**</p>
-         * <p>*   **Finished**</p>
+         * <ul>
+         * <li><strong>NotStarted</strong></li>
+         * <li><strong>Migrating</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Finished</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -435,57 +510,79 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
     public static class DescribeInitializationStatusResponseBodyStructureInitializationDetails extends TeaModel {
         /**
          * <p>The constraints of the synchronization object, such as indexes and foreign keys.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the **ObjectType** parameter is set to **Table** and the synchronization object has constraints.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the <strong>ObjectType</strong> parameter is set to <strong>Table</strong> and the synchronization object has constraints.</p>
+         * </blockquote>
          */
         @NameInMap("Constraints")
         public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> constraints;
 
         /**
          * <p>The name of the database to which the object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DestinationOwnerDBName")
         public String destinationOwnerDBName;
 
         /**
          * <p>The error message returned if initial schema synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: Table \&quot;customer\&quot; already exists</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The schema of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE <code>dtstestdata</code>.<code>customer</code> (\n<code>customer_id</code>  int(10) unsigned   auto_increment  COMMENT \&quot;\&quot;   NOT NULL   , \n<code>customer_title</code>  varchar(100)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>customer_company1216</code>  varchar(40)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>submission_date1216</code>  date     COMMENT \&quot;\&quot;   NULL   \n, PRIMARY KEY (<code>customer_id</code>)) engine=InnoDB AUTO_INCREMENT=200001 DEFAULT CHARSET=<code>utf8</code> DEFAULT COLLATE <code>utf8_general_ci</code> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</p>
          */
         @NameInMap("ObjectDefinition")
         public String objectDefinition;
 
         /**
          * <p>The name of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>customer</p>
          */
         @NameInMap("ObjectName")
         public String objectName;
 
         /**
          * <p>The type of the object. Valid values:</p>
-         * <br>
-         * <p>**Table**, **Constraint**, **Index**, **View**, **Materialize View**, **Type**, **Synonym**, **Trigger**, **Function**, **Procedure**, **Package**, **Default**, **Rule**, **PlanGuide**, and **Sequence**.</p>
+         * <p><strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong>, <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong>, <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong>, and <strong>Sequence</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Table</p>
          */
         @NameInMap("ObjectType")
         public String objectType;
 
         /**
          * <p>The name of the database to which the object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("SourceOwnerDBName")
         public String sourceOwnerDBName;
 
         /**
          * <p>The status of initial schema synchronization. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**</p>
-         * <p>*   **Migrating**</p>
-         * <p>*   **Failed**</p>
-         * <p>*   **Finished**</p>
+         * <ul>
+         * <li><strong>NotStarted</strong></li>
+         * <li><strong>Migrating</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Finished</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;

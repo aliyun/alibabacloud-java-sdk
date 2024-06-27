@@ -6,41 +6,59 @@ import com.aliyun.tea.*;
 public class DescribeClusterUsedUtilizationRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the cluster. If the **MetricType** parameter is set to **CLUSTER**, enter the ID of the exclusive cluster. Otherwise, set this parameter to a node ID.</p>
-     * <br>
+     * <p>The ID of the cluster. If the <strong>MetricType</strong> parameter is set to <strong>CLUSTER</strong>, enter the ID of the exclusive cluster. Otherwise, set this parameter to a node ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nodeid</p>
      */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
     /**
      * <p>The ID of the data migration or synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k2gm967v16f****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The cluster environment. Default value: **ALIYUN**.</p>
+     * <p>The cluster environment. Default value: <strong>ALIYUN</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
      * <p>Specifies whether to query the metrics of the cluster or a node. Default value: CLUSTER. Valid values:</p>
-     * <br>
-     * <p>*   **CLUSTER**: query the metrics of the cluster.</p>
-     * <p>*   **NODE**: query the metrics of a node.</p>
+     * <ul>
+     * <li><strong>CLUSTER</strong>: query the metrics of the cluster.</li>
+     * <li><strong>NODE</strong>: query the metrics of a node.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NODE</p>
      */
     @NameInMap("MetricType")
     public String metricType;
@@ -50,6 +68,9 @@ public class DescribeClusterUsedUtilizationRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

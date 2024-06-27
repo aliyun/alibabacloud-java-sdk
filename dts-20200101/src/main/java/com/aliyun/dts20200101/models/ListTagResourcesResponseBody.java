@@ -6,32 +6,48 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The query token.</p>
-     * <br>
-     * <p>>  If a query does not return all results, you can specify the returned **NextToken** parameter in the next query to obtain more results.</p>
+     * <blockquote>
+     * <p> If a query does not return all results, you can specify the returned <strong>NextToken</strong> parameter in the next query to obtain more results.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86sca4384811e0b5e8707ec2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>609AD332-F2B1-48B7-BF43-41FEE641****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -98,24 +114,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The ID of the DTS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsntk10k6r12v****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The resource type. Valid value: **ALIYUN::DTS::INSTANCE**.</p>
+         * <p>The resource type. Valid value: <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::DTS::INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey1</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value that corresponds to the tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue1</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

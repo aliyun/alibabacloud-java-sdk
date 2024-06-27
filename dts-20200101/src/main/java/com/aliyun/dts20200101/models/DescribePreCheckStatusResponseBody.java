@@ -9,11 +9,15 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     /**
      * <p>The task code that indicates the subtask type. Valid values:</p>
-     * <br>
-     * <p>*   **01**: precheck</p>
-     * <p>*   **02**: schema migration or initial schema synchronization</p>
-     * <p>*   **03**: full data migration or initial full data synchronization</p>
-     * <p>*   **04**: incremental data migration or synchronization</p>
+     * <ul>
+     * <li><strong>01</strong>: precheck</li>
+     * <li><strong>02</strong>: schema migration or initial schema synchronization</li>
+     * <li><strong>03</strong>: full data migration or initial full data synchronization</li>
+     * <li><strong>04</strong>: incremental data migration or synchronization</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>01</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,6 +27,9 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     /**
      * <p>The total number of subtask failures.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ErrorItem")
     public Integer errorItem;
@@ -32,12 +39,18 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the data migration or synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b4my3zg929a****</p>
      */
     @NameInMap("JobId")
     public String jobId;
@@ -58,33 +71,46 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public DescribePreCheckStatusResponseBodyNetworkDiagnosisResult networkDiagnosisResult;
 
     /**
-     * <p>The number of the page returned. The value is an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
+     * <p>The number of the page returned. The value is an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageRecordCount")
     public Long pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C096FA97-B6BA-4575-899D-61E12B59****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the subtask. Valid values:</p>
-     * <br>
-     * <p>*   **NotStarted**: The subtask is not started.</p>
-     * <p>*   **Suspending**: The subtask is paused.</p>
-     * <p>*   **Checking**: The subtask is being checked.</p>
-     * <p>*   **Migrating**: The subtask is in progress. Data is being migrated.</p>
-     * <p>*   **Failed**: The subtask failed.</p>
-     * <p>*   **Catched**: The subtask is in progress. Incremental data is being migrated or synchronized.</p>
-     * <p>*   **Finished**: The subtask is complete.</p>
+     * <ul>
+     * <li><strong>NotStarted</strong>: The subtask is not started.</li>
+     * <li><strong>Suspending</strong>: The subtask is paused.</li>
+     * <li><strong>Checking</strong>: The subtask is being checked.</li>
+     * <li><strong>Migrating</strong>: The subtask is in progress. Data is being migrated.</li>
+     * <li><strong>Failed</strong>: The subtask failed.</li>
+     * <li><strong>Catched</strong>: The subtask is in progress. Incremental data is being migrated or synchronized.</li>
+     * <li><strong>Finished</strong>: The subtask is complete.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Finished</p>
      */
     @NameInMap("State")
     public String state;
@@ -97,18 +123,27 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of subtasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Total")
     public Integer total;
 
     /**
      * <p>The total number of returned records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
@@ -1097,24 +1132,36 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public static class DescribePreCheckStatusResponseBodyJobProgressLogs extends TeaModel {
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE <code>dtstestdata</code>.<code>customer</code> (\n<code>runoob_id</code>  int(10) unsigned   auto_increment  COMMENT \&quot;\&quot;   NOT NULL   , \n<code>runoob_title</code>  varchar(100)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>runoob_author1216</code>  varchar(40)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>submission_date1216</code>  date     COMMENT \&quot;\&quot;   NULL   \n, PRIMARY KEY (<code>runoob_id</code>)) engine=InnoDB AUTO_INCREMENT=200001 DEFAULT CHARSET=<code>utf8</code> DEFAULT COLLATE <code>utf8_general_ci</code> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</p>
          */
         @NameInMap("ErrData")
         public String errData;
 
         /**
          * <p>The error message returned when an error occurs on the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: Table \&quot;customer\&quot; already exists</p>
          */
         @NameInMap("ErrMsg")
         public String errMsg;
 
         /**
          * <p>The error type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForeignKey</p>
          */
         @NameInMap("ErrType")
         public String errType;
 
         /**
          * <p>The level of logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERROR</p>
          */
         @NameInMap("LogLevel")
         public String logLevel;
@@ -1161,89 +1208,133 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public static class DescribePreCheckStatusResponseBodyJobProgress extends TeaModel {
         /**
          * <p>The time when the subtask was started. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-16T08:01:31.000+00:00</p>
          */
         @NameInMap("BootTime")
         public String bootTime;
 
         /**
          * <p>Indicates whether the subtask can be ignored if it fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CanSkip")
         public Boolean canSkip;
 
         /**
          * <p>The number of the subtasks that are running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Current")
         public String current;
 
         /**
          * <p>The DDL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE <code>dtstestdata</code>.<code>order</code> (\n<code>orderid</code>  int(11)     COMMENT \&quot;\&quot;   NOT NULL   , \n<code>username</code>  char(32)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NULL   , \n<code>ordertime</code>  datetime     COMMENT \&quot;\&quot;   NULL   , \n<code>commodity</code>  varchar(32)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NULL   , \n<code>phonenumber</code>  int(11)     COMMENT \&quot;\&quot;   NULL   , \n<code>address</code>  text  CHARSET <code>utf8mb4</code> COLLATE <code>utf8mb4_general_ci</code>    COMMENT \&quot;\&quot;   NULL   \n, PRIMARY KEY (<code>orderid</code>)) engine=InnoDB DEFAULT CHARSET=<code>gbk</code> DEFAULT COLLATE <code>gbk_chinese_ci</code> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</p>
          */
         @NameInMap("DdlSql")
         public String ddlSql;
 
         /**
          * <p>The latency of incremental data migration or synchronization.</p>
-         * <br>
-         * <p>>  For data migration tasks, the unit of this parameter is milliseconds. For data synchronization tasks, the unit of this parameter is seconds.</p>
+         * <blockquote>
+         * <p> For data migration tasks, the unit of this parameter is milliseconds. For data synchronization tasks, the unit of this parameter is seconds.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DelaySeconds")
         public Integer delaySeconds;
 
         /**
          * <p>The name of the database to which the object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata_new</p>
          */
         @NameInMap("DestSchema")
         public String destSchema;
 
         /**
          * <p>This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DiffRow")
         public Long diffRow;
 
         /**
          * <p>The error details of the subtask failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ_DETAIL</p>
          */
         @NameInMap("ErrDetail")
         public String errDetail;
 
         /**
          * <p>The error message of the subtask failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ</p>
          */
         @NameInMap("ErrMsg")
         public String errMsg;
 
         /**
          * <p>The time when the subtask was complete. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-16T08:01:34.000+00:00</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The ID recorded in the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5632</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>Indicates whether DTS ignores the subtask and proceeds with the next subtask. Valid values:</p>
-         * <br>
-         * <p>*   **N**: no</p>
-         * <p>*   **Y**: yes</p>
+         * <ul>
+         * <li><strong>N</strong>: no</li>
+         * <li><strong>Y</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         @NameInMap("IgnoreFlag")
         public String ignoreFlag;
 
         /**
          * <p>The shortened name of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_DEST</p>
          */
         @NameInMap("Item")
         public String item;
 
         /**
          * <p>The ID of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fj1c33ro168****</p>
          */
         @NameInMap("JobId")
         public String jobId;
@@ -1256,72 +1347,105 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
         /**
          * <p>The name of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_DEST_DETAIL</p>
          */
         @NameInMap("Names")
         public String names;
 
         /**
          * <p>The serial number of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("OrderNum")
         public Integer orderNum;
 
         /**
          * <p>This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo</p>
          */
         @NameInMap("ParentObj")
         public String parentObj;
 
         /**
          * <p>The method to fix the subtask failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ_REPAIR</p>
          */
         @NameInMap("RepairMethod")
         public String repairMethod;
 
         /**
          * <p>Indicates whether the subtask is ignored if it fails. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Skip")
         public Boolean skip;
 
         /**
          * <p>The name of the database to which the object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("SourceSchema")
         public String sourceSchema;
 
         /**
          * <p>The status of the subtask. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: The subtask is not started.</p>
-         * <p>*   **Checking**: The subtask is being checked.</p>
-         * <p>*   **Migrating**: The subtask is in progress. Data is being migrated.</p>
-         * <p>*   **Failed**: The subtask failed.</p>
-         * <p>*   **Warning**: The subtask encounters an exception.</p>
-         * <p>*   **Success**: The subtask is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The subtask is not started.</li>
+         * <li><strong>Checking</strong>: The subtask is being checked.</li>
+         * <li><strong>Migrating</strong>: The subtask is in progress. Data is being migrated.</li>
+         * <li><strong>Failed</strong>: The subtask failed.</li>
+         * <li><strong>Warning</strong>: The subtask encounters an exception.</li>
+         * <li><strong>Success</strong>: The subtask is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The sub-item progress of the subtask.</p>
-         * <br>
-         * <p>>  If **[]** is returned, the subtask has no sub-items.</p>
+         * <blockquote>
+         * <p> If <strong>[]</strong> is returned, the subtask has no sub-items.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("Sub")
         public String sub;
 
         /**
          * <p>The names of the objects that are migrated or synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order</p>
          */
         @NameInMap("TargetNames")
         public String targetNames;
 
         /**
          * <p>The total number of subtasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Integer total;
@@ -1629,24 +1753,36 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public static class DescribePreCheckStatusResponseBodySubDistributedJobStatusJobProgressLogs extends TeaModel {
         /**
          * <p>The record of errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE TABLE <code>dtstestdata</code>.<code>customer</code> (\n<code>runoob_id</code> int(10) unsigned auto_increment COMMENT \&quot;\&quot; NOT NULL , \n<code>runoob_title</code> varchar(100) CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code> COMMENT \&quot;\&quot; NOT NULL , \n<code>runoob_author1216</code> varchar(40) CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code> COMMENT \&quot;\&quot; NOT NULL , \n<code>submission_date1216</code> date COMMENT \&quot;\&quot; NULL \n, PRIMARY KEY (<code>runoob_id</code>)) engine=InnoDB AUTO_INCREMENT=200001 DEFAULT CHARSET=<code>utf8</code> DEFAULT COLLATE <code>utf8_general_ci</code> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</p>
          */
         @NameInMap("ErrData")
         public String errData;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>get metric list fail</p>
          */
         @NameInMap("ErrMsg")
         public String errMsg;
 
         /**
          * <p>The error type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForeignKey</p>
          */
         @NameInMap("ErrType")
         public String errType;
 
         /**
          * <p>The level of logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         @NameInMap("LogLevel")
         public String logLevel;
@@ -1692,91 +1828,135 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodySubDistributedJobStatusJobProgress extends TeaModel {
         /**
-         * <p>The time when the subtask was started. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.</p>
+         * <p>The time when the subtask was started. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-30T03:36:11.000+00:00</p>
          */
         @NameInMap("BootTime")
         public String bootTime;
 
         /**
          * <p>Indicates whether the subtask can be ignored if it fails. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CanSkip")
         public Boolean canSkip;
 
         /**
          * <p>The number of the subtasks that are running.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Current")
         public String current;
 
         /**
          * <p>The DDL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("DdlSql")
         public String ddlSql;
 
         /**
          * <p>The latency of incremental data migration or synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DelaySeconds")
         public Integer delaySeconds;
 
         /**
          * <p>The name of the database to which the object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>databasetest</p>
          */
         @NameInMap("DestSchema")
         public String destSchema;
 
         /**
          * <p>This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("DiffRow")
         public Long diffRow;
 
         /**
          * <p>The error details of the subtask failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ_DETAIL</p>
          */
         @NameInMap("ErrDetail")
         public String errDetail;
 
         /**
          * <p>The error message of the subtask failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODPS project does not exist odps.`huijin</p>
          */
         @NameInMap("ErrMsg")
         public String errMsg;
 
         /**
-         * <p>The time when the instance was created. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.</p>
+         * <p>The time when the instance was created. The time is displayed in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-31T03:36:11.000+00:00</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The ID of the entry in the metadatabase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3890</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>Indicates whether DTS ignores the subtask and proceeds with the next subtask. Valid values:</p>
-         * <br>
-         * <p>*   **N**: no</p>
-         * <p>*   **Y**: yes</p>
+         * <ul>
+         * <li><strong>N</strong>: no</li>
+         * <li><strong>Y</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>N</p>
          */
         @NameInMap("IgnoreFlag")
         public String ignoreFlag;
 
         /**
          * <p>The name of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>login_common_time</p>
          */
         @NameInMap("Item")
         public String item;
 
         /**
          * <p>The ID of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>l3m1213ye7l****</p>
          */
         @NameInMap("JobId")
         public String jobId;
@@ -1789,73 +1969,106 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
         /**
          * <p>The name of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>metricRuleTargets-20180308houe</p>
          */
         @NameInMap("Names")
         public String names;
 
         /**
          * <p>The serial number of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OrderNum")
         public Integer orderNum;
 
         /**
          * <p>This parameter will be removed in the future.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("ParentObj")
         public String parentObj;
 
         /**
          * <p>The method used to fix a precheck failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ_REPAIR</p>
          */
         @NameInMap("RepairMethod")
         public String repairMethod;
 
         /**
          * <p>Indicates whether the subtask was skipped. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("Skip")
         public Boolean skip;
 
         /**
          * <p>The name of the database to which the object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>databasetest</p>
          */
         @NameInMap("SourceSchema")
         public String sourceSchema;
 
         /**
          * <p>The status of the subtask. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: The subtask is not started.</p>
-         * <p>*   **Suspending**: The subtask is paused.</p>
-         * <p>*   **Checking**: The subtask is being checked.</p>
-         * <p>*   **Migrating**: The subtask is in progress. Data is being migrated.</p>
-         * <p>*   **Failed**: The subtask failed.</p>
-         * <p>*   **Catched**: The subtask is in progress. Incremental data is being migrated or synchronized.</p>
-         * <p>*   **Finished**: The subtask is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The subtask is not started.</li>
+         * <li><strong>Suspending</strong>: The subtask is paused.</li>
+         * <li><strong>Checking</strong>: The subtask is being checked.</li>
+         * <li><strong>Migrating</strong>: The subtask is in progress. Data is being migrated.</li>
+         * <li><strong>Failed</strong>: The subtask failed.</li>
+         * <li><strong>Catched</strong>: The subtask is in progress. Incremental data is being migrated or synchronized.</li>
+         * <li><strong>Finished</strong>: The subtask is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The sub-item progress of the subtask.</p>
-         * <br>
-         * <p>>  If **[]** is returned, the subtask has no sub-items.</p>
+         * <blockquote>
+         * <p> If <strong>[]</strong> is returned, the subtask has no sub-items.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         @NameInMap("Sub")
         public String sub;
 
         /**
          * <p>The names of the objects that are migrated or synchronized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>order</p>
          */
         @NameInMap("TargetNames")
         public String targetNames;
 
         /**
          * <p>The total number of subtasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Total")
         public Integer total;
@@ -2070,29 +2283,42 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public static class DescribePreCheckStatusResponseBodySubDistributedJobStatus extends TeaModel {
         /**
          * <p>The task code that indicates the subtask type. Valid values:</p>
-         * <br>
-         * <p>*   **01**: precheck</p>
-         * <p>*   **02**: schema migration or initial schema synchronization</p>
-         * <p>*   **03**: full data migration or initial full data synchronization</p>
-         * <p>*   **04**: incremental data migration or synchronization</p>
+         * <ul>
+         * <li><strong>01</strong>: precheck</li>
+         * <li><strong>02</strong>: schema migration or initial schema synchronization</li>
+         * <li><strong>03</strong>: full data migration or initial full data synchronization</li>
+         * <li><strong>04</strong>: incremental data migration or synchronization</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>02</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The number of subtasks that failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ErrorItem")
         public Integer errorItem;
 
         /**
          * <p>The ID of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n0gm1682j6563np</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The name of distributed subtasks associated with the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts.step.struct.load</p>
          */
         @NameInMap("JobName")
         public String jobName;
@@ -2105,20 +2331,27 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
         /**
          * <p>The status of the subtask. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: The subtask is not started.</p>
-         * <p>*   **Suspending**: The subtask is paused.</p>
-         * <p>*   **Checking**: The subtask is being checked.</p>
-         * <p>*   **Migrating**: The subtask is in progress. Data is being migrated.</p>
-         * <p>*   **Failed**: The subtask failed.</p>
-         * <p>*   **Catched**: The subtask is in progress. Incremental data is being migrated or synchronized.</p>
-         * <p>*   **Finished**: The subtask is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The subtask is not started.</li>
+         * <li><strong>Suspending</strong>: The subtask is paused.</li>
+         * <li><strong>Checking</strong>: The subtask is being checked.</li>
+         * <li><strong>Migrating</strong>: The subtask is in progress. Data is being migrated.</li>
+         * <li><strong>Failed</strong>: The subtask failed.</li>
+         * <li><strong>Catched</strong>: The subtask is in progress. Incremental data is being migrated or synchronized.</li>
+         * <li><strong>Finished</strong>: The subtask is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("Total")
         public Integer total;

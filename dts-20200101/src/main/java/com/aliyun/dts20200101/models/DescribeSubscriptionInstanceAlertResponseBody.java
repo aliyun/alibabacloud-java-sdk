@@ -6,72 +6,107 @@ import com.aliyun.tea.*;
 public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     /**
      * <p>The mobile phone numbers that receive latency-related alerts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1361234****,1371234****</p>
      */
     @NameInMap("DelayAlertPhone")
     public String delayAlertPhone;
 
     /**
      * <p>Indicates whether task latency is monitored. Valid values:</p>
-     * <br>
-     * <p>*   **enable**: yes</p>
-     * <p>*   **disable**: no</p>
+     * <ul>
+     * <li><strong>enable</strong>: yes</li>
+     * <li><strong>disable</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("DelayAlertStatus")
     public String delayAlertStatus;
 
     /**
      * <p>The threshold for triggering latency alerts. The unit is seconds and the value is an integer. The recommended value is 10 seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("DelayOverSeconds")
     public String delayOverSeconds;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The mobile phone numbers that receive status-related alerts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1361234****,1371234****</p>
      */
     @NameInMap("ErrorAlertPhone")
     public String errorAlertPhone;
 
     /**
      * <p>Indicates whether task status is monitored. Valid values:</p>
-     * <br>
-     * <p>*   **enable**: yes</p>
-     * <p>*   **disable**: no</p>
+     * <ul>
+     * <li><strong>enable</strong>: yes</li>
+     * <li><strong>disable</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("ErrorAlertStatus")
     public String errorAlertStatus;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>210ec2e116055198849072222d****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the change tracking instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsl8zl9ek6292****</p>
      */
     @NameInMap("SubscriptionInstanceID")
     public String subscriptionInstanceID;
 
     /**
      * <p>The name of the change tracking instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateReverseDtsJobRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n99m9jx822k****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;

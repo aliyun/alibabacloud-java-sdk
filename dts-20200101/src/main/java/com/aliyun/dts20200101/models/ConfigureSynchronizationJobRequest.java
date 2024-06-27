@@ -15,33 +15,47 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The synchronization checkpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1610540493</p>
      */
     @NameInMap("Checkpoint")
     public String checkpoint;
 
     /**
      * <p>Specifies whether to perform initial full data synchronization. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
-     * <br>
-     * <p>>  Default value: **true**.</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * <blockquote>
+     * <p> Default value: <strong>true</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DataInitialization")
     public Boolean dataInitialization;
 
     /**
-     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
-     * <br>
-     * <p>>  This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see [Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances](https://help.aliyun.com/document_detail/155967.html).</p>
+     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+     * <blockquote>
+     * <p> This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see <a href="https://help.aliyun.com/document_detail/155967.html">Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{     &quot;autoStartModulesAfterConfig&quot;: &quot;none&quot;,     &quot;targetTableMode&quot;: 2 }</p>
      */
     @NameInMap("MigrationReserved")
     public String migrationReserved;
@@ -57,50 +71,65 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to perform initial schema synchronization. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
-     * <br>
-     * <p>>  Default value: **true**.</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
+     * <blockquote>
+     * <p> Default value: <strong>true</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("StructureInitialization")
     public Boolean structureInitialization;
 
     /**
      * <p>The synchronization direction. Valid values:</p>
-     * <br>
-     * <p>*   **Forward**</p>
-     * <p>*   **Reverse**</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   Default value: **Forward**.</p>
-     * <p>*   The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.</p>
+     * <ul>
+     * <li><strong>Forward</strong></li>
+     * <li><strong>Reverse</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Default value: <strong>Forward</strong>.</li>
+     * <li>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization instance is two-way synchronization.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
     /**
-     * <p>The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](https://help.aliyun.com/document_detail/49454.html) operation to query the instance ID.</p>
-     * <br>
+     * <p>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsz4ao1dor13d****</p>
      */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;
 
     /**
      * <p>The name of the data synchronization task.</p>
-     * <br>
-     * <p>>  We recommend that you specify an informative name for easy identification. You do not need to use a unique task name.</p>
+     * <blockquote>
+     * <p> We recommend that you specify an informative name for easy identification. You do not need to use a unique task name.</p>
+     * </blockquote>
      */
     @NameInMap("SynchronizationJobName")
     public String synchronizationJobName;
 
     /**
-     * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see [SynchronizationObjects](https://help.aliyun.com/document_detail/141901.html).</p>
-     * <br>
+     * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">SynchronizationObjects</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;DBName&quot;:&quot;dtstestdata&quot;,&quot;TableIncludes&quot;:[{&quot;TableName&quot;:&quot;customer&quot;}]}]</p>
      */
     @NameInMap("SynchronizationObjects")
     public String synchronizationObjects;
@@ -233,71 +262,100 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     public static class ConfigureSynchronizationJobRequestDestinationEndpoint extends TeaModel {
         /**
          * <p>The name of the database to which the synchronization object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DataBaseName")
         public String dataBaseName;
 
         /**
          * <p>The IP address of the destination database.</p>
-         * <br>
-         * <p>>  You must specify this parameter only if the **DestinationEndpoint.InstanceType** parameter is set to **Express**, **dg**, or **cen**.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The ID of the destination instance.</p>
-         * <br>
-         * <p>>  If the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute** or **DataHub**, you must specify the name of the MaxCompute project or the DataHub project.</p>
-         * <br>
+         * <blockquote>
+         * <p> If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong> or <strong>DataHub</strong>, you must specify the name of the MaxCompute project or the DataHub project.</p>
+         * </blockquote>
          * <p>If the destination instance is an AnalyticDB for MySQL cluster, specify the ID of the AnalyticDB for MySQL cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1r46452ai50****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The type of the destination instance. Valid values:</p>
-         * <br>
-         * <p>*   **Redis**: ApsaraDB for Redis instance</p>
-         * <p>*   **RDS**: ApsaraDB RDS instance</p>
-         * <p>*   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster</p>
-         * <p>*   **ECS**: self-managed database that is hosted on ECS</p>
-         * <p>*   **Express**: self-managed database that is connected over Express Connect</p>
-         * <p>*   **DataHub**: DataHub project</p>
-         * <p>*   **MaxCompute**: MaxCompute project</p>
-         * <p>*   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0</p>
-         * <p>*   **Greenplum**: AnalyticDB for PostgreSQL instance</p>
-         * <br>
-         * <p>>  The default value is **RDS**.</p>
+         * <ul>
+         * <li><strong>Redis</strong>: ApsaraDB for Redis instance</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
+         * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster or PolarDB O Edition cluster</li>
+         * <li><strong>ECS</strong>: self-managed database that is hosted on ECS</li>
+         * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
+         * <li><strong>DataHub</strong>: DataHub project</li>
+         * <li><strong>MaxCompute</strong>: MaxCompute project</li>
+         * <li><strong>AnalyticDB</strong>: AnalyticDB for MySQL cluster V3.0 or V2.0</li>
+         * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL instance</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is <strong>RDS</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The password of the destination database account.</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   If the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**, you must specify the DestinationEndpoint.Password parameter.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>, you must specify the DestinationEndpoint.Password parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Test654321</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>The service port number of the destination database.</p>
-         * <br>
-         * <p>>  You must specify this parameter only if the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The database account of the destination database.</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/140954.html).</p>
-         * <p>*   If the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**, you must specify the DestinationEndpoint.UserName parameter.</p>
-         * <p>*   If the **DestinationEndpoint.InstanceType** parameter is set to RDS and the database version is MySQL 5.5 or MySQL 5.6, you do not need to specify the DestinationEndpoint.UserName and **DestinationEndpoint.Password** parameters.</p>
-         * <p>*   If the **DestinationEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the DestinationEndpoint.UserName parameter.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>The permissions that are required for database accounts vary with the synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/140954.html">Overview of data synchronization scenarios</a>.</li>
+         * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>, you must specify the DestinationEndpoint.UserName parameter.</li>
+         * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to RDS and the database version is MySQL 5.5 or MySQL 5.6, you do not need to specify the DestinationEndpoint.UserName and <strong>DestinationEndpoint.Password</strong> parameters.</li>
+         * <li>If the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>Redis</strong>, you do not need to specify the DestinationEndpoint.UserName parameter.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestaccount</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -367,41 +425,61 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
 
     public static class ConfigureSynchronizationJobRequestPartitionKey extends TeaModel {
         /**
-         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_day field. Valid values: **true** and **false**.</p>
-         * <br>
-         * <p>>  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.</p>
+         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_day field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ModifyTime_Day")
         public Boolean modifyTimeDay;
 
         /**
-         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_hour field. Valid values: **true** and **false**.</p>
-         * <br>
-         * <p>>  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.</p>
+         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_hour field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ModifyTime_Hour")
         public Boolean modifyTimeHour;
 
         /**
-         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_minute field. Valid values: **true** and **false**.</p>
-         * <br>
-         * <p>>  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.</p>
+         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_minute field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ModifyTime_Minute")
         public Boolean modifyTimeMinute;
 
         /**
-         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_month field. Valid values: **true** and **false**.</p>
-         * <br>
-         * <p>>  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.</p>
+         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_month field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ModifyTime_Month")
         public Boolean modifyTimeMonth;
 
         /**
-         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_year field. Valid values: **true** and **false**.</p>
-         * <br>
-         * <p>>  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.</p>
+         * <p>Specifies whether the incremental data table contains partitions defined by the modifytime_year field. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * <blockquote>
+         * <p> This parameter is available only if the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ModifyTime_Year")
         public Boolean modifyTimeYear;
@@ -456,79 +534,115 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     public static class ConfigureSynchronizationJobRequestSourceEndpoint extends TeaModel {
         /**
          * <p>The name of the database to which the synchronization object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The IP address of the source database.</p>
-         * <br>
-         * <p>>  You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1i99e8l7913****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The type of the source instance. Valid values:</p>
-         * <br>
-         * <p>*   **RDS**: ApsaraDB RDS instance</p>
-         * <p>*   **Redis**: ApsaraDB for Redis instance</p>
-         * <p>*   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster</p>
-         * <p>*   **ECS**: self-managed database that is hosted on Elastic Compute Service (ECS)</p>
-         * <p>*   **Express**: self-managed database that is connected over Express Connect</p>
-         * <p>*   **dg**: self-managed database that is connected over Database Gateway</p>
-         * <p>*   **cen**: self-managed database that is connected over Cloud Enterprise Network (CEN)</p>
-         * <br>
-         * <p>>  The default value is **RDS**.</p>
+         * <ul>
+         * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
+         * <li><strong>Redis</strong>: ApsaraDB for Redis instance</li>
+         * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster or PolarDB O Edition cluster</li>
+         * <li><strong>ECS</strong>: self-managed database that is hosted on Elastic Compute Service (ECS)</li>
+         * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
+         * <li><strong>dg</strong>: self-managed database that is connected over Database Gateway</li>
+         * <li><strong>cen</strong>: self-managed database that is connected over Cloud Enterprise Network (CEN)</li>
+         * </ul>
+         * <blockquote>
+         * <p> The default value is <strong>RDS</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The ID of the Alibaba Cloud account that owns the source RDS instance.</p>
-         * <br>
-         * <p>>  You can specify this parameter to synchronize data across different Alibaba Cloud accounts. In this case, you also need to specify the **SourceEndpoint.Role** parameter.</p>
+         * <blockquote>
+         * <p> You can specify this parameter to synchronize data across different Alibaba Cloud accounts. In this case, you also need to specify the <strong>SourceEndpoint.Role</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>140692647406****</p>
          */
         @NameInMap("OwnerID")
         public String ownerID;
 
         /**
          * <p>The password of the source database account.</p>
-         * <br>
-         * <p>>  You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>The service port number of the source database.</p>
-         * <br>
-         * <p>>  You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.</p>
+         * <blockquote>
+         * <p> You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.</p>
-         * <br>
-         * <p>>  You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).</p>
+         * <blockquote>
+         * <p> You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ram-for-dts</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The database account of the source database.</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.</p>
-         * <p>*   If the **SourceEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the database account.</p>
-         * <p>*   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](https://help.aliyun.com/document_detail/140954.html).</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>You must specify this parameter only if the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</li>
+         * <li>If the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>Redis</strong>, you do not need to specify the database account.</li>
+         * <li>The permissions that are required for database accounts vary with the synchronization scenario. For more information, see <a href="https://help.aliyun.com/document_detail/140954.html">Overview of data synchronization scenarios</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestaccount</p>
          */
         @NameInMap("UserName")
         public String userName;

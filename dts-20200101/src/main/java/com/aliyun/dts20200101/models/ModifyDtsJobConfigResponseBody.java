@@ -4,6 +4,10 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDtsJobConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>068FA72F-4800-4A54-90BB-94806068****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -12,6 +12,9 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
@@ -27,21 +30,27 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
 
     /**
      * <p>The synchronization direction. Valid values:</p>
-     * <br>
-     * <p>*   **Forward**</p>
-     * <p>*   **Reverse**</p>
-     * <br>
-     * <p>>  Default value: **Forward**.</p>
-     * <br>
-     * <p>The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.</p>
+     * <ul>
+     * <li><strong>Forward</strong></li>
+     * <li><strong>Reverse</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> Default value: <strong>Forward</strong>.</p>
+     * </blockquote>
+     * <p>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization instance is two-way synchronization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
     /**
      * <p>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsexjk1alb116****</p>
      */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;
@@ -118,51 +127,67 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     public static class SwitchSynchronizationEndpointRequestEndpoint extends TeaModel {
         /**
          * <p>The IP address of the database.</p>
-         * <br>
-         * <p>>  You must specify the IP address only if the **Endpoint.InstanceType** parameter is set to **Express**.</p>
+         * <blockquote>
+         * <p> You must specify the IP address only if the <strong>Endpoint.InstanceType</strong> parameter is set to <strong>Express</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>172.15.185.***</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The ID of the ECS instance or the virtual private cloud (VPC).</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   If the **Endpoint.InstanceType** parameter is set to **ECS**, you must specify the ID of the ECS instance.</p>
-         * <p>*   If the **Endpoint.InstanceType** parameter is set to **Express**, you must specify the ID of the VPC.</p>
-         * <br>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>If the <strong>Endpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, you must specify the ID of the ECS instance.</li>
+         * <li>If the <strong>Endpoint.InstanceType</strong> parameter is set to <strong>Express</strong>, you must specify the ID of the VPC.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp11haem1kpkhoup****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The instance type of the database. Valid values:</p>
-         * <br>
-         * <p>*   **LocalInstance**: self-managed database with a public IP address</p>
-         * <p>*   **ECS**: self-managed database that is hosted on ECS</p>
-         * <p>*   **Express**: self-managed database that is connected over Express Connect</p>
-         * <br>
+         * <ul>
+         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
+         * <li><strong>ECS</strong>: self-managed database that is hosted on ECS</li>
+         * <li><strong>Express</strong>: self-managed database that is connected over Express Connect</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The service port number of the database.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>Specifies whether to update the connection settings of the source instance or the destination instance. Valid values:</p>
-         * <br>
-         * <p>*   **Source**</p>
-         * <p>*   **Destination**</p>
-         * <br>
+         * <ul>
+         * <li><strong>Source</strong></li>
+         * <li><strong>Destination</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Destination</p>
          */
         @NameInMap("Type")
         public String type;
@@ -217,14 +242,21 @@ public class SwitchSynchronizationEndpointRequest extends TeaModel {
     public static class SwitchSynchronizationEndpointRequestSourceEndpoint extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the source instance belongs. You must specify this parameter only if the source instance and the destination instance belong to different Alibaba Cloud accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14069264****</p>
          */
         @NameInMap("OwnerID")
         public String ownerID;
 
         /**
          * <p>The authorized Resource Access Management (RAM) role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.</p>
-         * <br>
-         * <p>>  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).</p>
+         * <blockquote>
+         * <p> For information about the permissions and authorization methods of the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ram-for-dts</p>
          */
         @NameInMap("Role")
         public String role;

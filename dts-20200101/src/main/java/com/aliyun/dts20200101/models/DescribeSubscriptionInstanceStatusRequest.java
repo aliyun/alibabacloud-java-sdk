@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSubscriptionInstanceStatusRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
@@ -20,9 +23,11 @@ public class DescribeSubscriptionInstanceStatusRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](https://help.aliyun.com/document_detail/49442.html) operation to query the instance ID.</p>
-     * <br>
+     * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsy0zz3t13h7d****</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;

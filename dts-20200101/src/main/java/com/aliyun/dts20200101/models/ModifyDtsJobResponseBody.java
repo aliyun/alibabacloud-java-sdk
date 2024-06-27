@@ -6,38 +6,57 @@ import com.aliyun.tea.*;
 public class ModifyDtsJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the DTS task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bi6e22a****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
-     * <br>
-     * <p>>  The data type of this parameter is String. Sample value: **The actual sample value is The request processing has failed due to some unknown error.</p>
+     * <blockquote>
+     * <p> The data type of this parameter is String. Sample value: **The actual sample value is The request processing has failed due to some unknown error.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ErrMessage")
     public Boolean errMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1D6ECADF-C5E9-4C96-8811-77602B31****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

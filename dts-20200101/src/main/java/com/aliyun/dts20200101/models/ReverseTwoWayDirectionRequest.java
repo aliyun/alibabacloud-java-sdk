@@ -4,14 +4,25 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ReverseTwoWayDirectionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dtsldy114cy24f****</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IgnoreErrorSubJob")
     public Boolean ignoreErrorSubJob;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

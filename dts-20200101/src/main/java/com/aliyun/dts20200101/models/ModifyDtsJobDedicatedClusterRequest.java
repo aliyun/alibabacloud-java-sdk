@@ -4,15 +4,27 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDtsJobDedicatedClusterRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dtsxxxx</p>
+     */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;dtsxxxx01&quot;, &quot;dtsxxx02&quot;]</p>
+     */
     @NameInMap("DtsJobIds")
     public String dtsJobIds;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

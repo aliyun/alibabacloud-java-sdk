@@ -6,37 +6,60 @@ import com.aliyun.tea.*;
 public class ConfigureDtsJobResponseBody extends TeaModel {
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsk2gm967v16f****</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k2gm967v16f****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
      * <p>The ID of the data migration or synchronization instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
      * <p>The ID of the data migration or synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>224DB9F7-3100-4899-AB9C-C938BCCB****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 

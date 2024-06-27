@@ -4,18 +4,38 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDtsJobEndpointResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DTS.Msg.InvalidEndpoint</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The endpoint is invalid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3FA98DF2-2F81-51FF-8A38-AA5112DD****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

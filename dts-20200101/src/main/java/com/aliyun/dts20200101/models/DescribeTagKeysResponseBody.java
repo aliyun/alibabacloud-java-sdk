@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeTagKeysResponseBody extends TeaModel {
     /**
      * <p>The type of the tag.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The start page of the returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of tags returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AD110813-9AD6-5F07-BFC8-4C841309****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,6 +48,9 @@ public class DescribeTagKeysResponseBody extends TeaModel {
 
     /**
      * <p>The total number of returned tag keys.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

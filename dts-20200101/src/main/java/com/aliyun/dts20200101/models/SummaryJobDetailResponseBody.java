@@ -6,41 +6,58 @@ import com.aliyun.tea.*;
 public class SummaryJobDetailResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the data migration or data synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>l3m1213ye7l****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The returned information about the migrated or synchronized objects in arrays.</p>
-     * <br>
-     * <p>>  The arrays are in the following format: [{"key":"Function","state":5,"totalCount":22},{"key":"Procedure","state":5,"totalCount":26},{"key":"Table","state":0,"totalCount":68},{"key":"View","state":5,"totalCount":100}].</p>
+     * <blockquote>
+     * <p> The arrays are in the following format: [{&quot;key&quot;:&quot;Function&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:22},{&quot;key&quot;:&quot;Procedure&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:26},{&quot;key&quot;:&quot;Table&quot;,&quot;state&quot;:0,&quot;totalCount&quot;:68},{&quot;key&quot;:&quot;View&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:100}].</p>
+     * </blockquote>
      */
     @NameInMap("ProgressSummaryDetails")
     public java.util.List<SummaryJobDetailResponseBodyProgressSummaryDetails> progressSummaryDetails;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9033138C-5AB3-5EB7-BA78-43131F19297C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -100,26 +117,36 @@ public class SummaryJobDetailResponseBody extends TeaModel {
 
     public static class SummaryJobDetailResponseBodyProgressSummaryDetails extends TeaModel {
         /**
-         * <p>The type of migrated or synchronized object. Valid values: **Table**, **Constraint**, **Index**, **View**, **Materialize View**, **Type**, **Synonym**, **Trigger**, **Function**, **Procedure**, **Package**, **Default**, **Rule**, **PlanGuide**, and **Sequence**.</p>
+         * <p>The type of migrated or synchronized object. Valid values: <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong>, <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong>, <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong>, and <strong>Sequence</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Table</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The state of the data migration or data synchronization task. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The task was complete.</p>
-         * <p>*   **1**: The task was waiting to start.</p>
-         * <p>*   **2**: The task was being initialized.</p>
-         * <p>*   **3**: The task was in progress.</p>
-         * <p>*   **4**: An error occurred.</p>
-         * <p>*   **5**: The task failed.</p>
+         * <ul>
+         * <li><strong>0</strong>: The task was complete.</li>
+         * <li><strong>1</strong>: The task was waiting to start.</li>
+         * <li><strong>2</strong>: The task was being initialized.</li>
+         * <li><strong>3</strong>: The task was in progress.</li>
+         * <li><strong>4</strong>: An error occurred.</li>
+         * <li><strong>5</strong>: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("State")
         public Integer state;
 
         /**
          * <p>The total number of migrated or synchronized objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

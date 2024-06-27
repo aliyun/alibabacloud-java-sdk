@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ResetSynchronizationJobRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
@@ -21,21 +24,29 @@ public class ResetSynchronizationJobRequest extends TeaModel {
 
     /**
      * <p>The synchronization direction. Valid values:</p>
-     * <br>
-     * <p>*   **Forward**</p>
-     * <p>*   **Reverse**</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   Default value: **Forward**.</p>
-     * <p>*   You can set this parameter to **Reverse** to stop reverse synchronization only when the topology is two-way synchronization.</p>
+     * <ul>
+     * <li><strong>Forward</strong></li>
+     * <li><strong>Reverse</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Default value: <strong>Forward</strong>.</li>
+     * <li>You can set this parameter to <strong>Reverse</strong> to stop reverse synchronization only when the topology is two-way synchronization.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
     /**
-     * <p>The ID of the data synchronization instance. You can call the **DescribeSynchronizationJobs** operation to query the instance ID.</p>
-     * <br>
+     * <p>The ID of the data synchronization instance. You can call the <strong>DescribeSynchronizationJobs</strong> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsm761239l27m****</p>
      */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;

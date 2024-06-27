@@ -6,69 +6,100 @@ import com.aliyun.tea.*;
 public class ConfigureMigrationJobAlertRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The mobile phone numbers that receive latency-related alerts. Separate mobile phone numbers with commas (,).</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</p>
-     * <p>*   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](https://help.aliyun.com/document_detail/175876.html).</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</li>
+     * <li>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the Cloud Monitor console</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1361234****,1371234****</p>
      */
     @NameInMap("DelayAlertPhone")
     public String delayAlertPhone;
 
     /**
      * <p>Specifies whether to monitor task latency. Valid values:</p>
-     * <br>
-     * <p>*   **enable**: yes</p>
-     * <p>*   **disable**: no</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   The default value is **enable**.</p>
-     * <p>*   You must specify at least one of the DelayAlertStatus and **ErrorAlertStatus** parameters.</p>
+     * <ul>
+     * <li><strong>enable</strong>: yes</li>
+     * <li><strong>disable</strong>: no</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>The default value is <strong>enable</strong>.</li>
+     * <li>You must specify at least one of the DelayAlertStatus and <strong>ErrorAlertStatus</strong> parameters.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("DelayAlertStatus")
     public String delayAlertStatus;
 
     /**
      * <p>The threshold for triggering latency alerts. The unit is seconds and the value must be an integer. You can set the threshold based on your business needs. To avoid delay fluctuations caused by network and database loads, we recommend that you set the threshold to more than 10 seconds.</p>
-     * <br>
-     * <p>>  If the **DelayAlertStatus** parameter is set to **enable**, this parameter must be specified.</p>
+     * <blockquote>
+     * <p> If the <strong>DelayAlertStatus</strong> parameter is set to <strong>enable</strong>, this parameter must be specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("DelayOverSeconds")
     public String delayOverSeconds;
 
     /**
      * <p>The mobile phone numbers that receive status-related alerts. Separate mobile phone numbers with commas (,).</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</p>
-     * <p>*   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](https://help.aliyun.com/document_detail/175876.html).</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.</li>
+     * <li>International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks in the Cloud Monitor console</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1361234****,1371234****</p>
      */
     @NameInMap("ErrorAlertPhone")
     public String errorAlertPhone;
 
     /**
      * <p>Specifies whether to monitor task status. Valid values:</p>
-     * <br>
-     * <p>*   **enable**: yes</p>
-     * <p>*   **disable**: no</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   The default value is **enable**.</p>
-     * <p>*   You must specify at least one of the **DelayAlertStatus** and ErrorAlertStatus parameters.</p>
-     * <p>*   If the task that you monitor enters an abnormal state, an alert is triggered.</p>
+     * <ul>
+     * <li><strong>enable</strong>: yes</li>
+     * <li><strong>disable</strong>: no</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>The default value is <strong>enable</strong>.</li>
+     * <li>You must specify at least one of the <strong>DelayAlertStatus</strong> and ErrorAlertStatus parameters.</li>
+     * <li>If the task that you monitor enters an abnormal state, an alert is triggered.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("ErrorAlertStatus")
     public String errorAlertStatus;
 
     /**
-     * <p>The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.</p>
-     * <br>
+     * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtslb9113qq11n****</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;

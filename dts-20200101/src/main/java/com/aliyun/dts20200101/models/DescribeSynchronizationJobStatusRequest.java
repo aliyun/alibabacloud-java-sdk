@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSynchronizationJobStatusRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -20,7 +26,10 @@ public class DescribeSynchronizationJobStatusRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the region where the data synchronization instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The ID of the region where the data synchronization instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -30,21 +39,27 @@ public class DescribeSynchronizationJobStatusRequest extends TeaModel {
 
     /**
      * <p>The synchronization direction. Valid values:</p>
-     * <br>
-     * <p>*   **Forward**</p>
-     * <p>*   **Reverse**</p>
-     * <br>
-     * <p>>  Default value: **Forward**.</p>
-     * <br>
-     * <p>The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.</p>
+     * <ul>
+     * <li><strong>Forward</strong></li>
+     * <li><strong>Reverse</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> Default value: <strong>Forward</strong>.</p>
+     * </blockquote>
+     * <p>The value <strong>Reverse</strong> takes effect only if the topology of the data synchronization instance is two-way synchronization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
     /**
-     * <p>The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](https://help.aliyun.com/document_detail/49454.html) operation to query the instance ID.</p>
-     * <br>
+     * <p>The ID of the data synchronization instance. You can call the <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsexjk1alb116****</p>
      */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;

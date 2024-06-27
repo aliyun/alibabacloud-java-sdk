@@ -12,26 +12,39 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. The value of this parameter is used to replace the **%s** variable in the value of the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  For example, if the value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the value of the **DynamicMessage** parameter is **Type**, the specified **Type** parameter is invalid.</p>
+     * <p>The dynamic part in the error message. The value of this parameter is used to replace the <strong>%s</strong> variable in the value of the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p> For example, if the value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the value of the <strong>DynamicMessage</strong> parameter is <strong>Type</strong>, the specified <strong>Type</strong> parameter is invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Type</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
@@ -44,36 +57,54 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of DTS tasks that meet the query condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -182,33 +213,49 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus extends TeaModel {
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>framework: DTS-31009: In process of processing data ****</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
-         * <br>
-         * <p>- **true** </p>
-         * <p>- **false**</p>
+         * <ul>
+         * <li><strong>true</strong> </li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
         /**
          * <p>The progress of the task. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of tables that have been migrated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
-         * <p>The state of the task. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         * <p>The state of the task. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Migrating</p>
          */
         @NameInMap("Status")
         public String status;
@@ -263,30 +310,43 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus extends TeaModel {
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task has failed for a long time and cannot be recovered.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of the ETL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of records that have been processed by the ETL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/0</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of the ETL task. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: The task is not started.</p>
-         * <p>*   **Migrating**: The task is in progress.</p>
-         * <p>*   **Failed**: The task failed.</p>
-         * <p>*   **Finished**: The task is complete.</p>
-         * <p>*   **Catched**: The task is not delayed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started.</li>
+         * <li><strong>Migrating</strong>: The task is in progress.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * <li><strong>Catched</strong>: The task is not delayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -333,29 +393,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if full data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of full data synchronization. This is expressed as a percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of records that have been synchronized during full data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44755</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of full data synchronization. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: The task is not started.</p>
-         * <p>*   **Migrating**: The task is in progress.</p>
-         * <p>*   **Failed**: The task failed.</p>
-         * <p>*   **Finished**: The task is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started.</li>
+         * <li><strong>Migrating</strong>: The task is in progress.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -402,41 +475,59 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus extends TeaModel {
         /**
          * <p>The error message returned if incremental data migration or synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task has failed for a long time and cannot be recovered.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
-         * <br>
-         * <p>>  To upgrade a DTS instance, call the [TransferInstanceClass](https://help.aliyun.com/document_detail/281093.html) operation.</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * <blockquote>
+         * <p> To upgrade a DTS instance, call the <a href="https://help.aliyun.com/document_detail/281093.html">TransferInstanceClass</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
         /**
          * <p>The progress of incremental data migration or synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of records that have been migrated or synchronized during incremental data migration or synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/0</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of incremental data migration or synchronization. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: The task is not started.</p>
-         * <p>*   **Migrating**: The task is in progress.</p>
-         * <p>*   **Failed**: The task failed.</p>
-         * <p>*   **Finished**: The task is complete.</p>
-         * <p>*   **Catched**: The task is not delayed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started.</li>
+         * <li><strong>Migrating</strong>: The task is in progress.</li>
+         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * <li><strong>Catched</strong>: The task is not delayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Catched</p>
          */
         @NameInMap("Status")
         public String status;
@@ -491,67 +582,99 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint extends TeaModel {
         /**
          * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database type of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1imrtn6fq7h****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The endpoint of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The SID of the Oracle database.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the **EngineName** parameter of the destination instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the <strong>EngineName</strong> parameter of the destination instance is set to <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("OracleSID")
         public String oracleSID;
 
         /**
          * <p>The database service port of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+         * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **DISABLE**: SSL encryption is disabled.</p>
-         * <p>*   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.</p>
-         * <p>*   **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.</p>
-         * <p>*   **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: SSL encryption is disabled.</li>
+         * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled, and the CA certificate is uploaded.</li>
+         * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.</li>
+         * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
         /**
          * <p>The database account of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -646,12 +769,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListErrorDetails extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-31009</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The URL of the documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<strong>.ali</strong>.com/**</p>
          */
         @NameInMap("HelpUrl")
         public String helpUrl;
@@ -682,29 +811,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus extends TeaModel {
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of the full data verification task. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The progress of the full data verification task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 rows/s (row: 5/5, table: 1/1)</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of the full data verification task. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The verification is not started. </p>
-         * <p>- **Checking**: The verification is in progress. </p>
-         * <p>- **Failed**: The verification failed. </p>
-         * <p>- **Finished**: The verification is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The verification is not started. </li>
+         * <li><strong>Checking</strong>: The verification is in progress. </li>
+         * <li><strong>Failed</strong>: The verification failed. </li>
+         * <li><strong>Finished</strong>: The verification is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Checking</p>
          */
         @NameInMap("Status")
         public String status;
@@ -751,29 +893,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus extends TeaModel {
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of the incremental data verification task. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The progress of the incremental data verification task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 rows/s (row: 5/5, table: 1/1)</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of the incremental data verification task. Valid values:</p>
-         * <br>
-         * <p>- **Catched**: The verification is delayed. </p>
-         * <p>- **NotStarted**: The verification is not started. </p>
-         * <p>- **Checking**: The verification is in progress. </p>
-         * <p>- **Failed**: The verification failed.</p>
+         * <ul>
+         * <li><strong>Catched</strong>: The verification is delayed. </li>
+         * <li><strong>NotStarted</strong>: The verification is not started. </li>
+         * <li><strong>Checking</strong>: The verification is in progress. </li>
+         * <li><strong>Failed</strong>: The verification failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Checking</p>
          */
         @NameInMap("Status")
         public String status;
@@ -820,43 +975,65 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListMigrationMode extends TeaModel {
         /**
          * <p>Indicates whether full data migration or synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
         /**
          * <p>Indicates whether incremental data migration or synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
         /**
          * <p>Indicates whether full data verification is performed. Valid values:</p>
-         * <p>-  **true**: yes</p>
-         * <p>-  **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FullDataCheck")
         public Boolean fullDataCheck;
 
         /**
          * <p>Indicates whether incremental data verification is performed. Valid values:</p>
-         * <p>-  **true**: yes</p>
-         * <p>-  **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IncDataCheck")
         public Boolean incDataCheck;
 
         /**
          * <p>Indicates whether schema migration or schema synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("StructureInitialization")
         public Boolean structureInitialization;
@@ -911,12 +1088,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListPerformance extends TeaModel {
         /**
          * <p>The size of data that is migrated or synchronized per second. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Flow")
         public String flow;
 
         /**
          * <p>The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Rps")
         public String rps;
@@ -947,37 +1130,55 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail extends TeaModel {
         /**
          * <p>The name of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
 
         /**
          * <p>The description of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC_DETAIL</p>
          */
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
         /**
          * <p>The precheck result. Valid values:</p>
-         * <br>
-         * <p>*   **Success**</p>
-         * <p>*   **Failed**</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("CheckResult")
         public String checkResult;
 
         /**
          * <p>The error message returned if the task failed to pass the precheck.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of the **CheckResult** parameter is **Failed**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of the <strong>CheckResult</strong> parameter is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Original error: Access denied for user \&quot;dtstest\&quot;@\&quot;100.104.***.**\&quot; (using password: YES)</p>
          */
         @NameInMap("FailedReason")
         public String failedReason;
 
         /**
          * <p>The method to fix the precheck failure.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of the **CheckResult** parameter is **Failed**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of the <strong>CheckResult</strong> parameter is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
          */
         @NameInMap("RepairMethod")
         public String repairMethod;
@@ -1038,24 +1239,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The cause of the precheck failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The precheck progress. This is expressed as a percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The precheck status. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**</p>
-         * <p>*   **Suspending**:</p>
-         * <p>*   **Checking**</p>
-         * <p>*   **Failed**</p>
-         * <p>*   **Finished**</p>
+         * <ul>
+         * <li><strong>NotStarted</strong></li>
+         * <li><strong>Suspending</strong>:</li>
+         * <li><strong>Checking</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Finished</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -1102,91 +1313,135 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListRetryState extends TeaModel {
         /**
          * <p>The error message returned if these retries failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unexpected error</p>
          */
         @NameInMap("ErrMessage")
         public String errMessage;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bi6e22ay243****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The maximum duration of a retry. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7200</p>
          */
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts.retry.err.0046</p>
          */
         @NameInMap("MigrationErrCode")
         public String migrationErrCode;
 
         /**
          * <p>The ID of the error code-related documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>462133</p>
          */
         @NameInMap("MigrationErrHelpDocId")
         public String migrationErrHelpDocId;
 
         /**
          * <p>The key of the error code-related documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-RETRY-ERR-0046</p>
          */
         @NameInMap("MigrationErrHelpDocKey")
         public String migrationErrHelpDocKey;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts.retry.err.0046.msg</p>
          */
         @NameInMap("MigrationErrMsg")
         public String migrationErrMsg;
 
         /**
          * <p>The type of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForeignKey</p>
          */
         @NameInMap("MigrationErrType")
         public String migrationErrType;
 
         /**
          * <p>The solution to the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts.retry.err.0046.workaround</p>
          */
         @NameInMap("MigrationErrWorkaround")
         public String migrationErrWorkaround;
 
         /**
          * <p>The progress of the instance when DTS retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03</p>
          */
         @NameInMap("Module")
         public String module;
 
         /**
          * <p>The number of retries that have been performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("RetryCount")
         public Integer retryCount;
 
         /**
          * <p>The object on which these retries are performed. Valid values:</p>
-         * <br>
-         * <p>- **srcDB**: the source database </p>
-         * <p>- **destDB**: the destination database </p>
-         * <p>- **inner_module**: an internal module of DTS</p>
+         * <ul>
+         * <li><strong>srcDB</strong>: the source database </li>
+         * <li><strong>destDB</strong>: the destination database </li>
+         * <li><strong>inner_module</strong>: an internal module of DTS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>srcDB</p>
          */
         @NameInMap("RetryTarget")
         public String retryTarget;
 
         /**
          * <p>The time that has elapsed from the time when the first retry starts. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("RetryTime")
         public Integer retryTime;
 
         /**
          * <p>Indicates whether the task is being retried. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Retrying")
         public Boolean retrying;
@@ -1313,29 +1568,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if initial full data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of initial full data synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of entries that have been synchronized during initial full data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43071</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of initial full data synchronization. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The task is not started. </p>
-         * <p>- **Migrating**: The task is in progress. </p>
-         * <p>- **Failed**: The task failed. </p>
-         * <p>- **Finished**: The task is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started. </li>
+         * <li><strong>Migrating</strong>: The task is in progress. </li>
+         * <li><strong>Failed</strong>: The task failed. </li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -1382,35 +1650,52 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus extends TeaModel {
         /**
          * <p>The error message returned if incremental data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task has failed for a long time and cannot be recovered.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
-         * <br>
-         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](https://help.aliyun.com/document_detail/281093.html) operation.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>To upgrade a DTS instance, call the <a href="https://help.aliyun.com/document_detail/281093.html">TransferInstanceClass</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
         /**
          * <p>The progress of incremental data synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of entries that have been migrated or synchronized during incremental data migration or synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20001</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of incremental data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Migrating</p>
          */
         @NameInMap("Status")
         public String status;
@@ -1465,67 +1750,99 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint extends TeaModel {
         /**
          * <p>The name of the database that contains the synchronized objects in the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database engine of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1162kryivb8****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The endpoint of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The SID of the Oracle database. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the destination instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("OracleSID")
         public String oracleSID;
 
         /**
          * <p>The port number of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+         * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-         * <br>
-         * <p>- **DISABLE**: SSL encryption is disabled. </p>
-         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
-         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
-         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+         * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+         * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+         * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
         /**
          * <p>The database account of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -1620,12 +1937,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails extends TeaModel {
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-31009</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The URL of the documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<strong>.ali</strong>.com/**</p>
          */
         @NameInMap("HelpUrl")
         public String helpUrl;
@@ -1656,29 +1979,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus extends TeaModel {
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of the full data verification task. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The progress of the full data verification task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 rows/s (row: 5/5, table: 1/1)</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of the full data verification task. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The verification is not started. </p>
-         * <p>- **Checking**: The verification is in progress. </p>
-         * <p>- **Failed**: The verification failed. </p>
-         * <p>- **Finished**: The verification is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The verification is not started. </li>
+         * <li><strong>Checking</strong>: The verification is in progress. </li>
+         * <li><strong>Failed</strong>: The verification failed. </li>
+         * <li><strong>Finished</strong>: The verification is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Checking</p>
          */
         @NameInMap("Status")
         public String status;
@@ -1725,29 +2061,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobIncDataCheckStatus extends TeaModel {
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of the incremental data verification task. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The progress of the incremental data verification task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1 rows/s (row: 5/5, table: 1/1)</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of the incremental data verification task. Valid values:</p>
-         * <br>
-         * <p>- **Catched**: The verification is delayed. </p>
-         * <p>- **NotStarted**: The verification is not started. </p>
-         * <p>- **Checking**: The verification is in progress. </p>
-         * <p>- **Failed**: The verification failed.</p>
+         * <ul>
+         * <li><strong>Catched</strong>: The verification is delayed. </li>
+         * <li><strong>NotStarted</strong>: The verification is not started. </li>
+         * <li><strong>Checking</strong>: The verification is in progress. </li>
+         * <li><strong>Failed</strong>: The verification failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Checking</p>
          */
         @NameInMap("Status")
         public String status;
@@ -1794,41 +2143,65 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode extends TeaModel {
         /**
          * <p>Indicates whether initial full data synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>-  **true**</p>
-         * <p>-  **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
         /**
          * <p>Indicates whether incremental data synchronization is performed. Valid values:</p>
-         * <p>-  **true**</p>
-         * <p>-  **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
         /**
          * <p>Indicates whether full data verification is performed. Valid values:</p>
-         * <p>-  **true**: yes</p>
-         * <p>-  **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FullDataCheck")
         public Boolean fullDataCheck;
 
         /**
          * <p>Indicates whether incremental data verification is performed. Valid values:</p>
-         * <p>-  **true**: yes</p>
-         * <p>-  **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IncDataCheck")
         public Boolean incDataCheck;
 
         /**
          * <p>Indicates whether initial schema synchronization is performed. Valid values:</p>
-         * <p>-  **true**</p>
-         * <p>-  **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("StructureInitialization")
         public Boolean structureInitialization;
@@ -1883,12 +2256,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance extends TeaModel {
         /**
          * <p>The size of data that is synchronized per second. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Flow")
         public String flow;
 
         /**
          * <p>The number of times that SQL statements are synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Rps")
         public String rps;
@@ -1919,33 +2298,49 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail extends TeaModel {
         /**
          * <p>The name of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
 
         /**
          * <p>The description of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC_DETAIL</p>
          */
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
         /**
          * <p>The precheck result. Valid values:</p>
-         * <br>
-         * <p>- **Success**</p>
-         * <p>- **Failed**</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("CheckResult")
         public String checkResult;
 
         /**
          * <p>The error message returned if the task failed to pass the precheck.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Original error: Access denied for user \&quot;dtstest\&quot;@\&quot;100.104.***.**\&quot; (using password: YES)</p>
          */
         @NameInMap("FailedReason")
         public String failedReason;
 
         /**
          * <p>The method to fix a precheck failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
          */
         @NameInMap("RepairMethod")
         public String repairMethod;
@@ -2006,24 +2401,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if the precheck failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The precheck progress. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The precheck state. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The precheck is not started. </p>
-         * <p>- **Suspending**: The precheck is paused. </p>
-         * <p>- **Checking**: The precheck is in progress. </p>
-         * <p>- **Failed**: The precheck failed. </p>
-         * <p>- **Finished**: The precheck is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The precheck is not started. </li>
+         * <li><strong>Suspending</strong>: The precheck is paused. </li>
+         * <li><strong>Checking</strong>: The precheck is in progress. </li>
+         * <li><strong>Failed</strong>: The precheck failed. </li>
+         * <li><strong>Finished</strong>: The precheck is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -2070,67 +2475,99 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint extends TeaModel {
         /**
          * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database engine of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1imrtn6fq7h****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The endpoint of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The SID of the Oracle database. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the source instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("OracleSID")
         public String oracleSID;
 
         /**
          * <p>The port number of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+         * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-         * <br>
-         * <p>- **DISABLE**: SSL encryption is disabled. </p>
-         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
-         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
-         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+         * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+         * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+         * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
         /**
          * <p>The database account of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -2225,29 +2662,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if initial schema synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of initial schema synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of tables that have been synchronized during initial schema synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of initial schema synchronization. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The task is not started. </p>
-         * <p>- **Migrating**: The task is in progress. </p>
-         * <p>- **Failed**: The task failed. </p>
-         * <p>- **Finished**: The task is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started. </li>
+         * <li><strong>Migrating</strong>: The task is in progress. </li>
+         * <li><strong>Failed</strong>: The task failed. </li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -2294,18 +2744,27 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJob extends TeaModel {
         /**
          * <p>The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616980369</p>
          */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
         /**
          * <p>The CPU utilization of the instance. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         @NameInMap("CpuUsage")
         public String cpuUsage;
 
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-16T08:01:19Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -2324,18 +2783,27 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dtstestdata&quot;: { &quot;name&quot;: &quot;dtstestdata&quot;, &quot;all&quot;: true }}</p>
          */
         @NameInMap("DbObject")
         public String dbObject;
 
         /**
          * <p>The ID of the DTS dedicated cluster on which a DTS task runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtscluster_dpwl3**********</p>
          */
         @NameInMap("DedicatedClusterId")
         public String dedicatedClusterId;
 
         /**
          * <p>The latency of incremental data synchronization. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Delay")
         public Long delay;
@@ -2348,38 +2816,57 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsi03e3zty16i****</p>
          */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
         /**
          * <p>The instance class. </p>
-         * <br>
-         * <p>> For more information about the test performance of each instance class, see [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
+         * <blockquote>
+         * <p>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>large</p>
          */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
         /**
-         * <p>The synchronization direction. **Reverse** is returned.</p>
+         * <p>The synchronization direction. <strong>Reverse</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reverse</p>
          */
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
         /**
          * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i03e3zty16i****</p>
          */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
         /**
          * <p>The name of the data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS_TO_RDS_MIGRATION</p>
          */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
         /**
          * <p>The number of DUs that have been used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("DuUsage")
         public Long duUsage;
@@ -2392,20 +2879,30 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The checkpoint of the ETL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1610540493</p>
          */
         @NameInMap("EtlSafeCheckpoint")
         public String etlSafeCheckpoint;
 
         /**
-         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **PayType** is **PrePaid**.</p>
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC. </p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>PayType</strong> is <strong>PrePaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-16T08:01:19Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -2427,6 +2924,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The memory that has been used. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("MemUsage")
         public String memUsage;
@@ -2442,9 +2942,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the DTS instance. Valid values:</p>
-         * <br>
-         * <p>- **PrePaid**: subscription</p>
-         * <p>- **PostPaid**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -2462,7 +2966,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus precheckStatus;
 
         /**
-         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;srcHostPorts\&quot;:\&quot;\&quot;,\&quot;whitelist.dms.online.ddl.enable\&quot;:false,\&quot;filterDDL\&quot;:false,\&quot;sqlparser.dms.original.ddl\&quot;:true,\&quot;srcOracleType\&quot;:\&quot;sid\&quot;,\&quot;maxRetryTime\&quot;:43200,\&quot;destSSL\&quot;:\&quot;0\&quot;,\&quot;destOracleType\&quot;:\&quot;sid\&quot;,\&quot;srcSSL\&quot;:\&quot;0\&quot;,\&quot;dbListCaseChangeMode\&quot;:\&quot;default\&quot;,\&quot;SourceEngineVersion\&quot;:\&quot;8.0.18\&quot;,\&quot;srcNetType\&quot;:\&quot;VPC\&quot;,\&quot;destNetType\&quot;:\&quot;VPC\&quot;,\&quot;srcVpcNetMappingInst\&quot;:\&quot;172.16.1**.<strong>:10803\&quot;,\&quot;destVpcNetMappingInst\&quot;:\&quot;172.16.1</strong>.**:11077\&quot;,\&quot;useJobTask\&quot;:\&quot;1\&quot;}</p>
          */
         @NameInMap("Reserved")
         public String reserved;
@@ -2474,7 +2981,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint sourceEndpoint;
 
         /**
-         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Synchronizing</p>
          */
         @NameInMap("Status")
         public String status;
@@ -2751,67 +3261,99 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint extends TeaModel {
         /**
          * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database engine of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1162kryivb8****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The endpoint of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The SID of the Oracle database. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the source instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("OracleSID")
         public String oracleSID;
 
         /**
          * <p>The port number of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+         * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-         * <br>
-         * <p>- **DISABLE**: SSL encryption is disabled. </p>
-         * <p>- **ENABLE_WITH_CERTIFICAT**E: SSL encryption is enabled and the CA certificate is uploaded. </p>
-         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
-         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+         * <li><strong>ENABLE_WITH_CERTIFICAT</strong>E: SSL encryption is enabled and the CA certificate is uploaded. </li>
+         * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+         * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
         /**
          * <p>The database account of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -2906,29 +3448,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if schema migration or initial schema synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of schema migration or initial schema synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of schema migration or initial schema synchronization. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The task is not started. </p>
-         * <p>- **Migrating**: The task is in progress. </p>
-         * <p>- **Failed**: The task failed. </p>
-         * <p>- **Finished**: The task is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started. </li>
+         * <li><strong>Migrating</strong>: The task is in progress. </li>
+         * <li><strong>Failed</strong>: The task failed. </li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -2975,12 +3530,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyDtsJobListTagList extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -3010,45 +3571,67 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     public static class DescribeDtsJobsResponseBodyDtsJobList extends TeaModel {
         /**
-         * <p>Indicates whether the **new** change tracking feature is used.</p>
-         * <br>
-         * <p>>  This parameter is returned only for change tracking instances of the new version.</p>
+         * <p>Indicates whether the <strong>new</strong> change tracking feature is used.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for change tracking instances of the new version.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>new</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The start of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-15T08:25:34Z</p>
          */
         @NameInMap("BeginTimestamp")
         public String beginTimestamp;
 
         /**
          * <p>The start offset of incremental data synchronization. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616899019</p>
          */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
         /**
-         * <p>The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-23T07:30:31Z</p>
          */
         @NameInMap("ConsumptionCheckpoint")
         public String consumptionCheckpoint;
 
         /**
-         * <p>The downstream client information, in the following format: \\<IP address of the downstream client>:\\<Random ID generated by DTS>.</p>
+         * <p>The downstream client information, in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114...:dts******</p>
          */
         @NameInMap("ConsumptionClient")
         public String consumptionClient;
 
         /**
          * <p>The CPU utilization of the instance. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CpuUsage")
         public String cpuUsage;
 
         /**
-         * <p>The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The point in time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-16T08:01:19Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -3061,8 +3644,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The state of the extract, transform, and load (ETL) task. Valid values:</p>
-         * <br>
-         * <p>>  This parameter collection is returned only if an ETL task is configured.</p>
+         * <blockquote>
+         * <p> This parameter collection is returned only if an ETL task is configured.</p>
+         * </blockquote>
          */
         @NameInMap("DataEtlStatus")
         public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus dataEtlStatus;
@@ -3080,19 +3664,28 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus dataSynchronizationStatus;
 
         /**
-         * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see "Objects of DTS tasks".</p>
+         * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see &quot;Objects of DTS tasks&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dtstestdata&quot;: { &quot;name&quot;: &quot;dtstestdata&quot;, &quot;all&quot;: true }}</p>
          */
         @NameInMap("DbObject")
         public String dbObject;
 
         /**
          * <p>The ID of the DTS dedicated cluster on which a DTS task runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtscluster_ft7y3**********</p>
          */
         @NameInMap("DedicatedClusterId")
         public String dedicatedClusterId;
 
         /**
          * <p>The latency of incremental data synchronization. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Delay")
         public Long delay;
@@ -3105,53 +3698,79 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The environment tag of the DTS instance. Valid values:</p>
-         * <br>
-         * <p>- **normal**</p>
-         * <p>- **online**</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>online</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("DtsBisLabel")
         public String dtsBisLabel;
 
         /**
          * <p>The ID of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsi03e3zty16i****</p>
          */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
         /**
          * <p>The instance class.</p>
-         * <br>
-         * <p>>  For more information about the test performance of each instance class, see [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
+         * <blockquote>
+         * <p> For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>large</p>
          */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
         /**
-         * <p>The synchronization direction. The value is **Reverse**.</p>
+         * <p>The synchronization direction. The value is <strong>Reverse</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
         /**
          * <p>The ID of the data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i03e3zty16i****</p>
          */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
         /**
          * <p>The name of the data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS_TO_RDS_MIGRATION</p>
          */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
         /**
          * <p>The number of DUs that have been used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("DuUsage")
         public Long duUsage;
 
         /**
-         * <p>The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-26T14:03:21Z</p>
          */
         @NameInMap("EndTimestamp")
         public String endTimestamp;
@@ -3164,20 +3783,30 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The checkpoint of the ETL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1610540493</p>
          */
         @NameInMap("EtlSafeCheckpoint")
         public String etlSafeCheckpoint;
 
         /**
-         * <p>The point in time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the value of the **PayType** parameter is **PrePaid**.</p>
+         * <p>The point in time when the instance expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the value of the <strong>PayType</strong> parameter is <strong>PrePaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-16T08:01:19Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -3196,10 +3825,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the DTS task. Valid values:</p>
-         * <br>
-         * <p>- **MIGRATION**: data migration task </p>
-         * <p>- **SYNC**: data synchronization task </p>
-         * <p>- **SUBSCRIBE**: change tracking task</p>
+         * <ul>
+         * <li><strong>MIGRATION</strong>: data migration task </li>
+         * <li><strong>SYNC</strong>: data synchronization task </li>
+         * <li><strong>SUBSCRIBE</strong>: change tracking task</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MIGRATION</p>
          */
         @NameInMap("JobType")
         public String jobType;
@@ -3209,42 +3842,63 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The memory that has been used. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("MemUsage")
         public String memUsage;
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts.retry.err.0046</p>
          */
         @NameInMap("MigrationErrCode")
         public String migrationErrCode;
 
         /**
          * <p>The ID of the error code-related documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>462133</p>
          */
         @NameInMap("MigrationErrHelpDocId")
         public String migrationErrHelpDocId;
 
         /**
          * <p>The key of the error code-related documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-RETRY-ERR-0046</p>
          */
         @NameInMap("MigrationErrHelpDocKey")
         public String migrationErrHelpDocKey;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts.retry.err.0046.msg</p>
          */
         @NameInMap("MigrationErrMsg")
         public String migrationErrMsg;
 
         /**
          * <p>The type of the error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForeignKey</p>
          */
         @NameInMap("MigrationErrType")
         public String migrationErrType;
 
         /**
          * <p>The solution to the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts.retry.err.0046.workaround</p>
          */
         @NameInMap("MigrationErrWorkaround")
         public String migrationErrWorkaround;
@@ -3260,19 +3914,27 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The source of the task. Valid values:</p>
-         * <br>
-         * <p>*   **PTS**</p>
-         * <p>*   **DMS**</p>
-         * <p>*   **DTS**</p>
+         * <ul>
+         * <li><strong>PTS</strong></li>
+         * <li><strong>DMS</strong></li>
+         * <li><strong>DTS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS</p>
          */
         @NameInMap("OriginType")
         public String originType;
 
         /**
          * <p>The billing method of the DTS instance. Valid values:</p>
-         * <br>
-         * <p>*   **PrePaid**: subscription</p>
-         * <p>*   **PostPaid**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -3290,19 +3952,28 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus precheckStatus;
 
         /**
-         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;srcHostPorts\&quot;:\&quot;\&quot;,\&quot;whitelist.dms.online.ddl.enable\&quot;:false,\&quot;filterDDL\&quot;:false,\&quot;sqlparser.dms.original.ddl\&quot;:true,\&quot;srcOracleType\&quot;:\&quot;sid\&quot;,\&quot;maxRetryTime\&quot;:43200,\&quot;destSSL\&quot;:\&quot;0\&quot;,\&quot;destOracleType\&quot;:\&quot;sid\&quot;,\&quot;srcSSL\&quot;:\&quot;0\&quot;,\&quot;dbListCaseChangeMode\&quot;:\&quot;default\&quot;,\&quot;SourceEngineVersion\&quot;:\&quot;8.0.18\&quot;,\&quot;srcNetType\&quot;:\&quot;VPC\&quot;,\&quot;destNetType\&quot;:\&quot;VPC\&quot;,\&quot;srcVpcNetMappingInst\&quot;:\&quot;172.16.1**.<strong>:10803\&quot;,\&quot;destVpcNetMappingInst\&quot;:\&quot;172.16.1</strong>.**:11077\&quot;,\&quot;useJobTask\&quot;:\&quot;1\&quot;}</p>
          */
         @NameInMap("Reserved")
         public String reserved;
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default resource group</p>
          */
         @NameInMap("ResourceGroupDisplayName")
         public String resourceGroupDisplayName;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -3315,8 +3986,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The details of the data synchronization task in the reverse direction. </p>
-         * <br>
-         * <p>> This parameter is returned only for two-way data synchronization tasks.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for two-way data synchronization tasks.</p>
+         * </blockquote>
          */
         @NameInMap("ReverseJob")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob reverseJob;
@@ -3328,7 +4000,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint sourceEndpoint;
 
         /**
-         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Migrating</p>
          */
         @NameInMap("Status")
         public String status;
@@ -3779,30 +4454,43 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListDataEtlStatus extends TeaModel {
         /**
          * <p>The error message returned if the ETL task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task has failed for a long time and cannot be recovered.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of the ETL task. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of entries that have been processed by the ETL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/0</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of the ETL task. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The task is not started. </p>
-         * <p>- **Migrating**: The task is in progress. </p>
-         * <p>- **Failed**: The task failed. </p>
-         * <p>- **Finished**: The task is complete. </p>
-         * <p>- **Catched**: The task is not delayed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started. </li>
+         * <li><strong>Migrating</strong>: The task is in progress. </li>
+         * <li><strong>Failed</strong>: The task failed. </li>
+         * <li><strong>Finished</strong>: The task is complete. </li>
+         * <li><strong>Catched</strong>: The task is not delayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -3849,29 +4537,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListDataInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if full data migration or initial full data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of full data migration or initial full data synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of entries that have been migrated or synchronized during full data migration or initial full data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44755</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of full data migration or initial full data synchronization. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The task is not started. </p>
-         * <p>- **Migrating**: The task is in progress. </p>
-         * <p>- **Failed**: The task failed. </p>
-         * <p>- **Finished**: The task is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started. </li>
+         * <li><strong>Migrating</strong>: The task is in progress. </li>
+         * <li><strong>Failed</strong>: The task failed. </li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -3918,41 +4619,59 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListDataSynchronizationStatus extends TeaModel {
         /**
          * <p>The error message returned if incremental data migration or synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task has failed for a long time and cannot be recovered.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
-         * <br>
-         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](https://help.aliyun.com/document_detail/281093.html) operation.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>To upgrade a DTS instance, call the <a href="https://help.aliyun.com/document_detail/281093.html">TransferInstanceClass</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
         /**
          * <p>The progress of incremental data migration or synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of entries that have been migrated or synchronized during incremental data migration or synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/0</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of incremental data migration or synchronization. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The task is not started. </p>
-         * <p>- **Migrating**: The task is in progress. </p>
-         * <p>- **Failed**: The task failed. </p>
-         * <p>- **Finished**: The task is complete. </p>
-         * <p>- **Catched**: The task is not delayed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started. </li>
+         * <li><strong>Migrating</strong>: The task is in progress. </li>
+         * <li><strong>Failed</strong>: The task failed. </li>
+         * <li><strong>Finished</strong>: The task is complete. </li>
+         * <li><strong>Catched</strong>: The task is not delayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Catched</p>
          */
         @NameInMap("Status")
         public String status;
@@ -4007,67 +4726,99 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListDestinationEndpoint extends TeaModel {
         /**
          * <p>The name of the database that contains the migrated objects in the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database engine of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1imrtn6fq7h****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The endpoint of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The SID of the Oracle database. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the destination instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("OracleSID")
         public String oracleSID;
 
         /**
          * <p>The port number of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the region in which the destination instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+         * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-         * <br>
-         * <p>- **DISABLE**: SSL encryption is disabled. </p>
-         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
-         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
-         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+         * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+         * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+         * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
         /**
          * <p>The database account of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -4162,27 +4913,39 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListMigrationMode extends TeaModel {
         /**
          * <p>Indicates whether full data migration or initial full data synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
         /**
          * <p>Indicates whether incremental data migration or synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
         /**
          * <p>Indicates whether schema migration or initial schema synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("StructureInitialization")
         public Boolean structureInitialization;
@@ -4221,12 +4984,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListPerformance extends TeaModel {
         /**
          * <p>The size of data that is migrated or synchronized per second. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Flow")
         public String flow;
 
         /**
          * <p>The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Rps")
         public String rps;
@@ -4257,37 +5026,55 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatusDetail extends TeaModel {
         /**
          * <p>The name of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
 
         /**
          * <p>The description of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC_DETAIL</p>
          */
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
         /**
          * <p>The precheck result. Valid values:</p>
-         * <br>
-         * <p>- **Success**</p>
-         * <p>- **Failed**</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("CheckResult")
         public String checkResult;
 
         /**
          * <p>The error message returned if the task failed to pass the precheck. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **CheckResult** is **Failed**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>CheckResult</strong> is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Original error: Access denied for user \&quot;dtstest\&quot;@\&quot;100.104.***.**\&quot; (using password: YES)</p>
          */
         @NameInMap("FailedReason")
         public String failedReason;
 
         /**
          * <p>The method to fix a precheck failure. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **CheckResult** is **Failed**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>CheckResult</strong> is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
          */
         @NameInMap("RepairMethod")
         public String repairMethod;
@@ -4348,24 +5135,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if the precheck failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The precheck progress. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The precheck state. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The precheck is not started. </p>
-         * <p>- **Suspending**: The precheck is paused. </p>
-         * <p>- **Checking**: The precheck is in progress. </p>
-         * <p>- **Failed**: The precheck failed. </p>
-         * <p>- **Finished**: The precheck is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The precheck is not started. </li>
+         * <li><strong>Suspending</strong>: The precheck is paused. </li>
+         * <li><strong>Checking</strong>: The precheck is in progress. </li>
+         * <li><strong>Failed</strong>: The precheck failed. </li>
+         * <li><strong>Finished</strong>: The precheck is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -4412,55 +5209,81 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListRetryState extends TeaModel {
         /**
          * <p>The error message returned if these retries failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Unexpected error</p>
          */
         @NameInMap("ErrMessage")
         public String errMessage;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bi6e22ay243****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The maximum duration of a retry. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7200</p>
          */
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
 
         /**
          * <p>The progress of the instance when DTS retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03</p>
          */
         @NameInMap("Module")
         public String module;
 
         /**
          * <p>The number of retries that have been performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("RetryCount")
         public Integer retryCount;
 
         /**
          * <p>The object on which these retries are performed. Valid values:</p>
-         * <br>
-         * <p>- **srcDB**: the source database </p>
-         * <p>- **destDB**: the destination database </p>
-         * <p>- **inner_module**: an internal module of DTS</p>
+         * <ul>
+         * <li><strong>srcDB</strong>: the source database </li>
+         * <li><strong>destDB</strong>: the destination database </li>
+         * <li><strong>inner_module</strong>: an internal module of DTS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>srcDB</p>
          */
         @NameInMap("RetryTarget")
         public String retryTarget;
 
         /**
          * <p>The time that has elapsed from the time when the first retry starts. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("RetryTime")
         public Integer retryTime;
 
         /**
          * <p>Indicates whether the task is being retried. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Retrying")
         public Boolean retrying;
@@ -4539,29 +5362,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if initial full data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of initial full data synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of entries that have been synchronized during initial full data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43071</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of initial full data synchronization. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The task is not started. </p>
-         * <p>- **Migrating**: The task is in progress. </p>
-         * <p>- **Failed**: The task failed. </p>
-         * <p>- **Finished**: The task is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started. </li>
+         * <li><strong>Migrating</strong>: The task is in progress. </li>
+         * <li><strong>Failed</strong>: The task failed. </li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -4608,35 +5444,52 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataSynchronizationStatus extends TeaModel {
         /**
          * <p>The error message returned if incremental data synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The task has failed for a long time and cannot be recovered.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
-         * <br>
-         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](https://help.aliyun.com/document_detail/281093.html) operation.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>To upgrade a DTS instance, call the <a href="https://help.aliyun.com/document_detail/281093.html">TransferInstanceClass</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
         /**
          * <p>The progress of incremental data synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of entries that have been migrated or synchronized during incremental data migration or synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20001</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of incremental data synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Migrating</p>
          */
         @NameInMap("Status")
         public String status;
@@ -4691,67 +5544,99 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobDestinationEndpoint extends TeaModel {
         /**
          * <p>The name of the database that contains the synchronized objects in the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database engine of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1162kryivb8****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The endpoint of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The SID of the Oracle database. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the destination instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("OracleSID")
         public String oracleSID;
 
         /**
          * <p>The port number of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the region in which the destination instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+         * <p>The ID of the region in which the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-         * <br>
-         * <p>- **DISABLE**: SSL encryption is disabled. </p>
-         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
-         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
-         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+         * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+         * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+         * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
         /**
          * <p>The database account of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -4846,27 +5731,39 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobMigrationMode extends TeaModel {
         /**
          * <p>Indicates whether full data migration or initial full data synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
         /**
          * <p>Indicates whether incremental data migration or synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
         /**
          * <p>Indicates whether schema migration or initial schema synchronization is performed. Valid values:</p>
-         * <br>
-         * <p>- **true**</p>
-         * <p>- **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("StructureInitialization")
         public Boolean structureInitialization;
@@ -4905,12 +5802,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobPerformance extends TeaModel {
         /**
          * <p>The size of data that is migrated or synchronized per second. Unit: MB/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Flow")
         public String flow;
 
         /**
          * <p>The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Rps")
         public String rps;
@@ -4941,37 +5844,55 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatusDetail extends TeaModel {
         /**
          * <p>The name of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC</p>
          */
         @NameInMap("CheckItem")
         public String checkItem;
 
         /**
          * <p>The description of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC_DETAIL</p>
          */
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
         /**
          * <p>The precheck result. Valid values:</p>
-         * <br>
-         * <p>- **Success**</p>
-         * <p>- **Failed**</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("CheckResult")
         public String checkResult;
 
         /**
          * <p>The error message returned if the task failed to pass the precheck. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **CheckResult** is **Failed**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>CheckResult</strong> is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Original error: Access denied for user \&quot;dtstest\&quot;@\&quot;100.104.***.**\&quot; (using password: YES)</p>
          */
         @NameInMap("FailedReason")
         public String failedReason;
 
         /**
          * <p>The method to fix a precheck failure. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **CheckResult** is **Failed**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>CheckResult</strong> is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
          */
         @NameInMap("RepairMethod")
         public String repairMethod;
@@ -5032,24 +5953,34 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if the precheck failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK__ERROR_SAME_OBJ</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The precheck progress. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The precheck state. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The precheck is not started. </p>
-         * <p>- **Suspending**: The precheck is paused. </p>
-         * <p>- **Checking**: The precheck is in progress. </p>
-         * <p>- **Failed**: The precheck failed. </p>
-         * <p>- **Finished**: The precheck is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The precheck is not started. </li>
+         * <li><strong>Suspending</strong>: The precheck is paused. </li>
+         * <li><strong>Checking</strong>: The precheck is in progress. </li>
+         * <li><strong>Failed</strong>: The precheck failed. </li>
+         * <li><strong>Finished</strong>: The precheck is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -5096,67 +6027,99 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobSourceEndpoint extends TeaModel {
         /**
          * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database engine of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1imrtn6fq7h****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The endpoint of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The SID of the Oracle database. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the source instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("OracleSID")
         public String oracleSID;
 
         /**
          * <p>The port number of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+         * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-         * <br>
-         * <p>- **DISABLE**: SSL encryption is disabled. </p>
-         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
-         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
-         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+         * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+         * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+         * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
         /**
          * <p>The database account of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -5251,29 +6214,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobStructureInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if initial schema synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of initial schema synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of tables that have been synchronized during initial schema synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of initial schema synchronization. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The task is not started. </p>
-         * <p>- **Migrating**: The task is in progress. </p>
-         * <p>- **Failed**: The task failed. </p>
-         * <p>- **Finished**: The task is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started. </li>
+         * <li><strong>Migrating</strong>: The task is in progress. </li>
+         * <li><strong>Failed</strong>: The task failed. </li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -5320,12 +6296,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJob extends TeaModel {
         /**
          * <p>The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616980369</p>
          */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-16T08:01:19Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -5344,12 +6326,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dtstestdata&quot;: { &quot;name&quot;: &quot;dtstestdata&quot;, &quot;all&quot;: true }}</p>
          */
         @NameInMap("DbObject")
         public String dbObject;
 
         /**
          * <p>The latency of incremental data synchronization. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Delay")
         public Long delay;
@@ -5362,52 +6350,78 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsi03e3zty16i****</p>
          */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
         /**
          * <p>The instance class. </p>
-         * <br>
-         * <p>> For more information about the test performance of each instance class, see [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
+         * <blockquote>
+         * <p>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>large</p>
          */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
         /**
-         * <p>The synchronization direction. **Reverse** is returned.</p>
+         * <p>The synchronization direction. <strong>Reverse</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reverse</p>
          */
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
         /**
          * <p>The ID of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i03e3zty16i****</p>
          */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
         /**
          * <p>The name of the data synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS_TO_RDS_MIGRATION</p>
          */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The checkpoint of the ETL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1610540493</p>
          */
         @NameInMap("EtlSafeCheckpoint")
         public String etlSafeCheckpoint;
 
         /**
-         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the* yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **PayType** is **PrePaid**.</p>
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the* yyyy-MM-dd<em>T</em>HH:mm:ss*Z format. The time is displayed in UTC. </p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>PayType</strong> is <strong>PrePaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-16T08:01:19Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -5420,9 +6434,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The billing method of the DTS instance. Valid values:</p>
-         * <br>
-         * <p>- **PrePaid**: subscription</p>
-         * <p>- **PostPaid**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -5440,7 +6458,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatus precheckStatus;
 
         /**
-         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;srcHostPorts\&quot;:\&quot;\&quot;,\&quot;whitelist.dms.online.ddl.enable\&quot;:false,\&quot;filterDDL\&quot;:false,\&quot;sqlparser.dms.original.ddl\&quot;:true,\&quot;srcOracleType\&quot;:\&quot;sid\&quot;,\&quot;maxRetryTime\&quot;:43200,\&quot;destSSL\&quot;:\&quot;0\&quot;,\&quot;destOracleType\&quot;:\&quot;sid\&quot;,\&quot;srcSSL\&quot;:\&quot;0\&quot;,\&quot;dbListCaseChangeMode\&quot;:\&quot;default\&quot;,\&quot;SourceEngineVersion\&quot;:\&quot;8.0.18\&quot;,\&quot;srcNetType\&quot;:\&quot;VPC\&quot;,\&quot;destNetType\&quot;:\&quot;VPC\&quot;,\&quot;srcVpcNetMappingInst\&quot;:\&quot;172.16.1**.<strong>:10803\&quot;,\&quot;destVpcNetMappingInst\&quot;:\&quot;172.16.1</strong>.**:11077\&quot;,\&quot;useJobTask\&quot;:\&quot;1\&quot;}</p>
          */
         @NameInMap("Reserved")
         public String reserved;
@@ -5452,7 +6473,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobSourceEndpoint sourceEndpoint;
 
         /**
-         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Synchronizing</p>
          */
         @NameInMap("Status")
         public String status;
@@ -5657,67 +6681,99 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListSourceEndpoint extends TeaModel {
         /**
          * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database engine of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1162kryivb8****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The endpoint of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The SID of the Oracle database. </p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>EngineName</strong> of the source instance is <strong>Oracle</strong> and the Oracle database is deployed in a non-RAC architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("OracleSID")
         public String oracleSID;
 
         /**
          * <p>The port number of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
-         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+         * <p>The ID of the region in which the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
-         * <br>
-         * <p>- **DISABLE**: SSL encryption is disabled. </p>
-         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
-         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
-         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         * <ul>
+         * <li><strong>DISABLE</strong>: SSL encryption is disabled. </li>
+         * <li><strong>ENABLE_WITH_CERTIFICATE</strong>: SSL encryption is enabled and the CA certificate is uploaded. </li>
+         * <li><strong>ENABLE_ONLY_4_MONGODB_ALTAS</strong>: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </li>
+         * <li><strong>ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256</strong>: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLE</p>
          */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
         /**
          * <p>The database account of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -5812,29 +6868,42 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListStructureInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if schema migration or initial schema synchronization failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of schema migration or initial schema synchronization. Unit: percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The state of schema migration or initial schema synchronization. Valid values:</p>
-         * <br>
-         * <p>- **NotStarted**: The task is not started. </p>
-         * <p>- **Migrating**: The task is in progress. </p>
-         * <p>- **Failed**: The task failed. </p>
-         * <p>- **Finished**: The task is complete.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started. </li>
+         * <li><strong>Migrating</strong>: The task is in progress. </li>
+         * <li><strong>Failed</strong>: The task failed. </li>
+         * <li><strong>Finished</strong>: The task is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -5881,12 +6950,18 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     public static class DescribeDtsJobsResponseBodyEtlDemoListTagList extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -5916,47 +6991,67 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     public static class DescribeDtsJobsResponseBodyEtlDemoList extends TeaModel {
         /**
-         * <p>Indicates whether the **new** change tracking feature is used. </p>
-         * <br>
-         * <p>> This parameter is returned only for change tracking instances of the new version.</p>
+         * <p>Indicates whether the <strong>new</strong> change tracking feature is used. </p>
+         * <blockquote>
+         * <p>This parameter is returned only for change tracking instances of the new version.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>new</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The start of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-15T08:25:34Z</p>
          */
         @NameInMap("BeginTimestamp")
         public String beginTimestamp;
 
         /**
          * <p>The start offset of incremental data migration or data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616899019</p>
          */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
         /**
-         * <p>The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-23T07:30:31Z</p>
          */
         @NameInMap("ConsumptionCheckpoint")
         public String consumptionCheckpoint;
 
         /**
          * <p>The downstream client information in the following format: <IP address of the downstream client>:<Random ID generated by DTS>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114...:dts******</p>
          */
         @NameInMap("ConsumptionClient")
         public String consumptionClient;
 
         /**
-         * <p>The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:s*sZ format. The time is displayed in UTC.</p>
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:s</em>sZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-16T08:01:19Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The state of the ETL task. </p>
-         * <br>
-         * <p>> This parameter collection is returned only if an ETL task is configured.</p>
+         * <blockquote>
+         * <p>This parameter collection is returned only if an ETL task is configured.</p>
+         * </blockquote>
          */
         @NameInMap("DataEtlStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListDataEtlStatus dataEtlStatus;
@@ -5974,15 +7069,22 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyEtlDemoListDataSynchronizationStatus dataSynchronizationStatus;
 
         /**
-         * <p>The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).</p>
+         * <p>The objects of the data migration, data synchronization, or change tracking task. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;dtstestdata&quot;: { &quot;name&quot;: &quot;dtstestdata&quot;, &quot;all&quot;: true }}</p>
          */
         @NameInMap("DbObject")
         public String dbObject;
 
         /**
          * <p>The latency of incremental data migration or synchronization. </p>
-         * <br>
-         * <p>> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
+         * <blockquote>
+         * <p>If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Delay")
         public Long delay;
@@ -5995,73 +7097,108 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsi03e3zty16i****</p>
          */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
         /**
          * <p>The instance class. </p>
-         * <br>
-         * <p>> For more information about the test performance of each instance class, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html) and [Specifications of data synchronization instances](https://help.aliyun.com/document_detail/26605.html).</p>
+         * <blockquote>
+         * <p>For more information about the test performance of each instance class, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a> and <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization instances</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>large</p>
          */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
         /**
          * <p>The synchronization direction. Valid values:</p>
-         * <br>
-         * <p>- **Forward**</p>
-         * <p>- **Reverse**</p>
-         * <br>
-         * <p>> This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.</p>
+         * <ul>
+         * <li><strong>Forward</strong></li>
+         * <li><strong>Reverse</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
         /**
          * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i03e3zty16i****</p>
          */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
         /**
          * <p>The name of the data migration, data synchronization, or change tracking task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS_TO_RDS_MIGRATION</p>
          */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
         /**
-         * <p>The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end of the time range for change tracking. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-26T14:03:21Z</p>
          */
         @NameInMap("EndTimestamp")
         public String endTimestamp;
 
         /**
          * <p>The error message returned if the task failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-070211: Connect Source DB failed. cause by [com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException:Could not create connection to database server. Attempted reconnect 3 times. Giving up.][com.mysql.jdbc.exceptions.jdbc4.CommunicationsException:Communications link failure\n\nThe last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.][java.net.ConnectException:Connection timed out (Connection timed out)] About more information in [<a href="https://yq.aliyun.com/articles/499178%5D">https://yq.aliyun.com/articles/499178]</a>.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The checkpoint of the ETL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1610540493</p>
          */
         @NameInMap("EtlSafeCheckpoint")
         public String etlSafeCheckpoint;
 
         /**
-         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         * <br>
-         * <p>> This parameter is returned only if the returned value of **PayType** is **PrePaid**.</p>
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the returned value of <strong>PayType</strong> is <strong>PrePaid</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-16T08:01:19Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The type of the DTS task. Valid values:</p>
-         * <br>
-         * <p>- **MIGRATION**: data migration task </p>
-         * <p>- **SYNC**: data synchronization task </p>
-         * <p>- **SUBSCRIBE**: change tracking task</p>
+         * <ul>
+         * <li><strong>MIGRATION</strong>: data migration task </li>
+         * <li><strong>SYNC</strong>: data synchronization task </li>
+         * <li><strong>SUBSCRIBE</strong>: change tracking task</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MIGRATION</p>
          */
         @NameInMap("JobType")
         public String jobType;
@@ -6074,18 +7211,27 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The source of the task.</p>
-         * <p>- **PTS**</p>
-         * <p>- **DMS**</p>
-         * <p>- **DTS**</p>
+         * <ul>
+         * <li><strong>PTS</strong></li>
+         * <li><strong>DMS</strong></li>
+         * <li><strong>DTS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS</p>
          */
         @NameInMap("OriginType")
         public String originType;
 
         /**
          * <p>The billing method of the DTS instance. Valid values:</p>
-         * <br>
-         * <p>- **PrePaid**: subscription </p>
-         * <p>- **PostPaid**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription </li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PrePaid</p>
          */
         @NameInMap("PayType")
         public String payType;
@@ -6103,19 +7249,28 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatus precheckStatus;
 
         /**
-         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](https://help.aliyun.com/document_detail/176470.html).</p>
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;srcHostPorts\&quot;:\&quot;\&quot;,\&quot;whitelist.dms.online.ddl.enable\&quot;:false,\&quot;filterDDL\&quot;:false,\&quot;sqlparser.dms.original.ddl\&quot;:true,\&quot;srcOracleType\&quot;:\&quot;sid\&quot;,\&quot;maxRetryTime\&quot;:43200,\&quot;destSSL\&quot;:\&quot;0\&quot;,\&quot;destOracleType\&quot;:\&quot;sid\&quot;,\&quot;srcSSL\&quot;:\&quot;0\&quot;,\&quot;dbListCaseChangeMode\&quot;:\&quot;default\&quot;,\&quot;SourceEngineVersion\&quot;:\&quot;8.0.18\&quot;,\&quot;srcNetType\&quot;:\&quot;VPC\&quot;,\&quot;destNetType\&quot;:\&quot;VPC\&quot;,\&quot;srcVpcNetMappingInst\&quot;:\&quot;172.16.1**.<strong>:10803\&quot;,\&quot;destVpcNetMappingInst\&quot;:\&quot;172.16.1</strong>.**:11077\&quot;,\&quot;useJobTask\&quot;:\&quot;1\&quot;}</p>
          */
         @NameInMap("Reserved")
         public String reserved;
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default resource group</p>
          */
         @NameInMap("ResourceGroupDisplayName")
         public String resourceGroupDisplayName;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzawhxxc****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -6128,8 +7283,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
         /**
          * <p>The details of the data synchronization task in the reverse direction. </p>
-         * <br>
-         * <p>> This parameter is returned only for two-way data synchronization tasks.</p>
+         * <blockquote>
+         * <p>This parameter is returned only for two-way data synchronization tasks.</p>
+         * </blockquote>
          */
         @NameInMap("ReverseJob")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJob reverseJob;
@@ -6141,7 +7297,10 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public DescribeDtsJobsResponseBodyEtlDemoListSourceEndpoint sourceEndpoint;
 
         /**
-         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter <strong>Status</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Migrating</p>
          */
         @NameInMap("Status")
         public String status;

@@ -6,47 +6,70 @@ import com.aliyun.tea.*;
 public class UpgradeTwoWayResponseBody extends TeaModel {
     /**
      * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and that of the **DynamicMessage** parameter is **InstanceId**, the specified **InstanceId** parameter is invalid.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and that of the <strong>DynamicMessage</strong> parameter is <strong>InstanceId</strong>, the specified <strong>InstanceId</strong> parameter is invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D3B4615-923F-49AA-AF21-6D8E3967****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

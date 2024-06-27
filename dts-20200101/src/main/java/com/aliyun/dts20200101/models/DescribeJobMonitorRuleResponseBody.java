@@ -6,38 +6,57 @@ import com.aliyun.tea.*;
 public class DescribeJobMonitorRuleResponseBody extends TeaModel {
     /**
      * <p>The error code. This parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ta7w132u12h****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the specified **DtsJobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **DtsJobId** is returned for **DynamicMessage**.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p> If the specified <strong>DtsJobId</strong> parameter is invalid, <strong>The Value of Input Parameter %s is not valid</strong> is returned for <strong>ErrMessage</strong> and <strong>DtsJobId</strong> is returned for <strong>DynamicMessage</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>DtsJobId</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
@@ -50,15 +69,22 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0CA14388-DD89-4A7B-8CDD-884A10CE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**:The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>:The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -157,9 +183,13 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
     public static class DescribeJobMonitorRuleResponseBodyMonitorRules extends TeaModel {
         /**
          * <p>The threshold that triggers the alert.</p>
-         * <br>
-         * <p>*   If the request parameter **Type** of the [CreateJobMonitorRule](https://help.aliyun.com/document_detail/212332.html) operation is set to **delay**, the unit of DelayRuleTime is seconds.</p>
-         * <p>*   If the request parameter **Type** of the [CreateJobMonitorRule](https://help.aliyun.com/document_detail/212332.html) operation is set to **full_timeout**, the unit of DelayRuleTime is hours.</p>
+         * <ul>
+         * <li>If the request parameter <strong>Type</strong> of the <a href="https://help.aliyun.com/document_detail/212332.html">CreateJobMonitorRule</a> operation is set to <strong>delay</strong>, the unit of DelayRuleTime is seconds.</li>
+         * <li>If the request parameter <strong>Type</strong> of the <a href="https://help.aliyun.com/document_detail/212332.html">CreateJobMonitorRule</a> operation is set to <strong>full_timeout</strong>, the unit of DelayRuleTime is hours.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("DelayRuleTime")
         public Long delayRuleTime;
@@ -178,15 +208,22 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
 
         /**
          * <p>The mobile phone numbers that receive alert notifications. Multiple mobile numbers are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1361234****,1371234****</p>
          */
         @NameInMap("Phone")
         public String phone;
 
         /**
          * <p>Indicates whether the monitoring rule is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **Y**: The monitoring rule is enabled.</p>
-         * <p>*   **N**: The monitoring rule is disabled.</p>
+         * <ul>
+         * <li><strong>Y</strong>: The monitoring rule is enabled.</li>
+         * <li><strong>N</strong>: The monitoring rule is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Y</p>
          */
         @NameInMap("State")
         public String state;
@@ -196,9 +233,13 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
 
         /**
          * <p>The type of the monitoring rule. Valid values:</p>
-         * <br>
-         * <p>*   **delay**: If the task latency reaches the threshold, an alert is triggered.</p>
-         * <p>*   **error**: If an exception occurs, an alert is triggered.</p>
+         * <ul>
+         * <li><strong>delay</strong>: If the task latency reaches the threshold, an alert is triggered.</li>
+         * <li><strong>error</strong>: If an exception occurs, an alert is triggered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>delay</p>
          */
         @NameInMap("Type")
         public String type;

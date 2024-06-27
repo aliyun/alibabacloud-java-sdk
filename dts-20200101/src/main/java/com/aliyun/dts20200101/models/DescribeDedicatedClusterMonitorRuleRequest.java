@@ -4,12 +4,20 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterMonitorRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dtsClustervcwn1oeyu5fx4yf</p>
+     */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

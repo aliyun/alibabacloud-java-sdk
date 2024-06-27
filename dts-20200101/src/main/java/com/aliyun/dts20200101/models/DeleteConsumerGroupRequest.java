@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteConsumerGroupRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
-     * <p>The ID of the consumer group. You can call the [DescribeConsumerGroup](https://help.aliyun.com/document_detail/122886.html) operation to query the consumer group ID.</p>
-     * <br>
+     * <p>The ID of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/122886.html">DescribeConsumerGroup</a> operation to query the consumer group ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtssb911ydd192****</p>
      */
     @NameInMap("ConsumerGroupID")
     public String consumerGroupID;
@@ -28,9 +33,11 @@ public class DeleteConsumerGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.</p>
-     * <br>
+     * <p>The ID of the change tracking instance. You can call the <strong>DescribeSubscriptionInstances</strong> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsg2m10r1x15a****</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;

@@ -6,37 +6,55 @@ import com.aliyun.tea.*;
 public class DescribeTagValuesRequest extends TeaModel {
     /**
      * <p>The type of the tag key. Valid values:</p>
-     * <br>
-     * <p>*   **Custom**: The tag key is created by users.</p>
-     * <p>*   **System**: The tag key is created by the system.</p>
-     * <br>
-     * <p>>  By default, if the parameter is left empty, both custom tag keys and system tag keys are returned.</p>
+     * <ul>
+     * <li><strong>Custom</strong>: The tag key is created by users.</li>
+     * <li><strong>System</strong>: The tag key is created by the system.</li>
+     * </ul>
+     * <blockquote>
+     * <p> By default, if the parameter is left empty, both custom tag keys and system tag keys are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The tag key.</p>
-     * <br>
-     * <p>>  This parameter is required.</p>
+     * <blockquote>
+     * <p> This parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>owner</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The page number of the start page to return for a tag key that has multiple values. The valid value ranges from 1 to the maximum value of the INTEGER data type. This parameter is often used with the PageSize parameter. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of tag values to return each time for a tag key that has multiple values. Default value: 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -45,15 +63,22 @@ public class DescribeTagValuesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.</p>
-     * <br>
-     * <p>>  If this parameter is left empty, the values of all tag keys of the current user are returned.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+     * <blockquote>
+     * <p> If this parameter is left empty, the values of all tag keys of the current user are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsl5o11f9029c****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
-     * <p>The resource type. Set the value to **ALIYUN::DTS::INSTANCE**.</p>
+     * <p>The resource type. Set the value to <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::DTS::INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

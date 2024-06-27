@@ -6,68 +6,102 @@ import com.aliyun.tea.*;
 public class SkipPreCheckResponseBody extends TeaModel {
     /**
      * <p>The error code. This parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the specified **JobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **JobId** is returned for **DynamicMessage**.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p> If the specified <strong>JobId</strong> parameter is invalid, <strong>The Value of Input Parameter %s is not valid</strong> is returned for <strong>ErrMessage</strong> and <strong>JobId</strong> is returned for <strong>DynamicMessage</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>JobId</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the DTS task on which the precheck is performed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>kyri3z9w29a****</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8C498360-7892-433C-847A-BA71A850****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the precheck task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b4my3zg929a****</p>
      */
     @NameInMap("ScheduleJobId")
     public String scheduleJobId;
 
     /**
      * <p>The shortened name of the precheck item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CHECK_SAME_OBJ</p>
      */
     @NameInMap("SkipItems")
     public String skipItems;
 
     /**
      * <p>The name of the precheck item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CHECK_SAME_OBJ_DETAIL</p>
      */
     @NameInMap("SkipNames")
     public String skipNames;
 
     /**
      * <p>Indicates whether the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

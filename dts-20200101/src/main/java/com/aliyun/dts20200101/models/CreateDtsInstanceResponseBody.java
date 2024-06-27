@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class CreateDtsInstanceResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The ID of the DTS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsbi6e22ay243****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bi6e22ay243****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C166D79D-436B-45F0-B5A5-25E1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

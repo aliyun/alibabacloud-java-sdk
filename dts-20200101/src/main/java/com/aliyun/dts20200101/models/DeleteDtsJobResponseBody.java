@@ -5,51 +5,74 @@ import com.aliyun.tea.*;
 
 public class DeleteDtsJobResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteDtsJob**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>DeleteDtsJob</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteDtsJob**.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>DeleteDtsJob</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DtsJobId</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The synchronization direction. Valid values:</p>
-     * <br>
-     * <p>*   **Forward**: Data is synchronized from the source database to the destination database.</p>
-     * <p>*   **Reverse**: Data is synchronized from the destination database to the source database.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   Default value: **Forward**.</p>
-     * <p>*   You can set this parameter to **Reverse** to delete the reverse synchronization task only if the topology is two-way synchronization.</p>
+     * <ul>
+     * <li><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</li>
+     * <li><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Default value: <strong>Forward</strong>.</li>
+     * <li>You can set this parameter to <strong>Reverse</strong> to delete the reverse synchronization task only if the topology is two-way synchronization.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>01B6F25-21E7-4484-99D5-3EF2625C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the region in which the data migration or synchronization task resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The ID of the region in which the data migration or synchronization task resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

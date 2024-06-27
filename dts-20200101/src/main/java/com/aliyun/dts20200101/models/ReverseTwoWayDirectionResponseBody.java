@@ -4,24 +4,52 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ReverseTwoWayDirectionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DtsInstanceId</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>403</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AD823BD3-1BA6-4117-A536-165CB280****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

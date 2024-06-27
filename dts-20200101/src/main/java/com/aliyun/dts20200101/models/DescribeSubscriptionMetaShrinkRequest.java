@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSubscriptionMetaShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the distributed change tracking instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsbr4m9luv2******</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
      * <p>The ID of the region in which the change tracking instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,24 +27,34 @@ public class DescribeSubscriptionMetaShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the consumer group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>z38m91gg2******</p>
      */
     @NameInMap("Sid")
     public String sid;
 
     /**
      * <p>The IDs of all subtasks in the distributed change tracking task. Separate multiple subtask IDs with commas (,).</p>
-     * <br>
-     * <p>>  You must specify at least one of the SubMigrationJobIds and **Topics** parameters. We recommend that you specify the SubMigrationJobIds parameter.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the SubMigrationJobIds and <strong>Topics</strong> parameters. We recommend that you specify the SubMigrationJobIds parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>z38m91gg2******</p>
      */
     @NameInMap("SubMigrationJobIds")
     public String subMigrationJobIdsShrink;
 
     /**
      * <p>The topics of all subtasks in the distributed change tracking task. Separate multiple topics with commas (,).</p>
-     * <br>
-     * <p>>  You must specify at least one of the **SubMigrationJobIds** and Topics parameters. We recommend that you specify the **SubMigrationJobIds** parameter.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the <strong>SubMigrationJobIds</strong> and Topics parameters. We recommend that you specify the <strong>SubMigrationJobIds</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn_hangzhou_rm_bp1n0x0x5tz******_dtstestdata_version2</p>
      */
     @NameInMap("Topics")
     public String topicsShrink;

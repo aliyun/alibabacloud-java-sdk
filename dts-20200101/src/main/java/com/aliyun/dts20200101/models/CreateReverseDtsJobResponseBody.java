@@ -4,24 +4,52 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateReverseDtsJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dtsor1f9kr822l****</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>n99m9jx822k****</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InternalError</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public String success;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSynchronizationJobAlertRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCz****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -27,19 +33,26 @@ public class DescribeSynchronizationJobAlertRequest extends TeaModel {
 
     /**
      * <p>The synchronization direction. Valid values:</p>
-     * <br>
-     * <p>*   **Forward**</p>
-     * <p>*   **Reverse**</p>
-     * <br>
-     * <p>>  Default value: **Forward**.</p>
+     * <ul>
+     * <li><strong>Forward</strong></li>
+     * <li><strong>Reverse</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> Default value: <strong>Forward</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
     /**
-     * <p>The ID of the data synchronization instance. You can call the **DescribeSynchronizationJobs** operation to query the instance ID.</p>
-     * <br>
+     * <p>The ID of the data synchronization instance. You can call the <strong>DescribeSynchronizationJobs</strong> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtskxz1170c10p****</p>
      */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;

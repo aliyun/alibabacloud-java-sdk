@@ -5,15 +5,22 @@ import com.aliyun.tea.*;
 
 public class DeleteDtsJobRequest extends TeaModel {
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p> If the return value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> parameter is invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsl3m1213ye7l****</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>l3m1213ye7l****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -23,6 +30,9 @@ public class DeleteDtsJobRequest extends TeaModel {
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -32,6 +42,9 @@ public class DeleteDtsJobRequest extends TeaModel {
 
     /**
      * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;

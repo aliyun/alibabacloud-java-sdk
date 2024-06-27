@@ -9,34 +9,46 @@ public class TransferPayTypeRequest extends TeaModel {
 
     /**
      * <p>The subscription length.</p>
-     * <br>
-     * <p>*   If the **Period** parameter is set to **Year**, the value range is **1** to **5**.</p>
-     * <p>*   If the **Period** parameter is set to **Month**, the value range is **1** to **60**.</p>
-     * <br>
-     * <p>>  You must specify this parameter only if you set the **ChargeType** parameter to **PrePaid**.</p>
+     * <ul>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value range is <strong>1</strong> to <strong>5</strong>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value range is <strong>1</strong> to <strong>60</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify this parameter only if you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("BuyCount")
     public String buyCount;
 
     /**
      * <p>The billing method that you want to use. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</p>
-     * <p>*   If you do not need to change the billing method, specify the current billing method.</p>
-     * <br>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.</li>
+     * <li>If you do not need to change the billing method, specify the current billing method.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The ID of the data synchronization or change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
-     * <br>
+     * <p>The ID of the data synchronization or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>o4nh3g7jg56****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
@@ -49,17 +61,25 @@ public class TransferPayTypeRequest extends TeaModel {
 
     /**
      * <p>The billing cycle of the subscription instance. Valid values:</p>
-     * <br>
-     * <p>*   **Year**</p>
-     * <p>*   **Month** (default value)</p>
-     * <br>
-     * <p>>  You must specify this parameter only if you set the **ChargeType** parameter to **PrePaid**.</p>
+     * <ul>
+     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong> (default value)</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify this parameter only if you set the <strong>ChargeType</strong> parameter to <strong>PrePaid</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

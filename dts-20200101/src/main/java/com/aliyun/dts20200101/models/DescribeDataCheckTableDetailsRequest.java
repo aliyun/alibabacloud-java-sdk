@@ -6,31 +6,42 @@ import com.aliyun.tea.*;
 public class DescribeDataCheckTableDetailsRequest extends TeaModel {
     /**
      * <p>The data verification method. Valid values:</p>
-     * <br>
-     * <p>*   **1**: full data verification.</p>
-     * <p>*   **2**: incremental data verification.</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: full data verification.</li>
+     * <li><strong>2</strong>: incremental data verification.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CheckType")
     public Integer checkType;
 
     /**
-     * <p>The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
-     * <br>
+     * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xd4e4xb419q****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -40,21 +51,31 @@ public class DescribeDataCheckTableDetailsRequest extends TeaModel {
 
     /**
      * <p>The name of the schema whose data is verified in the source database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtstest</p>
      */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
      * <p>The status of the data verification result. Valid values:</p>
-     * <br>
-     * <p>*   **-1** (default): All status.</p>
-     * <p>*   **6**: Inconsistent data detected in the table.</p>
+     * <ul>
+     * <li><strong>-1</strong> (default): All status.</li>
+     * <li><strong>6</strong>: Inconsistent data detected in the table.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The name of the table whose data is verified in the source database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>student</p>
      */
     @NameInMap("TableName")
     public String tableName;
