@@ -76,6 +76,9 @@ public class AddMigrationTaskRequest extends TeaModel {
     @NameInMap("RequestPars")
     public String requestPars;
 
+    @NameInMap("SyncType")
+    public String syncType;
+
     /**
      * <p>The name of the destination instance.</p>
      * 
@@ -162,6 +165,14 @@ public class AddMigrationTaskRequest extends TeaModel {
     }
     public String getRequestPars() {
         return this.requestPars;
+    }
+
+    public AddMigrationTaskRequest setSyncType(String syncType) {
+        this.syncType = syncType;
+        return this;
+    }
+    public String getSyncType() {
+        return this.syncType;
     }
 
     public AddMigrationTaskRequest setTargetClusterName(String targetClusterName) {

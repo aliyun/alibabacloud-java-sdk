@@ -241,6 +241,9 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         @NameInMap("ProjectDesc")
         public String projectDesc;
 
+        @NameInMap("SyncType")
+        public String syncType;
+
         /**
          * <p>The name of the destination instance.</p>
          * 
@@ -344,6 +347,14 @@ public class ListMigrationTaskResponseBody extends TeaModel {
         }
         public String getProjectDesc() {
             return this.projectDesc;
+        }
+
+        public ListMigrationTaskResponseBodyData setSyncType(String syncType) {
+            this.syncType = syncType;
+            return this;
+        }
+        public String getSyncType() {
+            return this.syncType;
         }
 
         public ListMigrationTaskResponseBodyData setTargetClusterName(String targetClusterName) {
