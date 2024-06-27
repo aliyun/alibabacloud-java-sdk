@@ -2667,6 +2667,47 @@ public class CreateEventStreamingRequest extends TeaModel {
 
     }
 
+    public static class CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters self = new CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateEventStreamingRequestSinkSinkPrometheusParametersNetworkType extends TeaModel {
         /**
          * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
@@ -3069,6 +3110,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("Data")
         public CreateEventStreamingRequestSinkSinkPrometheusParametersData data;
 
+        @NameInMap("HeaderParameters")
+        public CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters headerParameters;
+
         /**
          * <p>The network type.</p>
          */
@@ -3130,6 +3174,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkPrometheusParametersData getData() {
             return this.data;
+        }
+
+        public CreateEventStreamingRequestSinkSinkPrometheusParameters setHeaderParameters(CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters headerParameters) {
+            this.headerParameters = headerParameters;
+            return this;
+        }
+        public CreateEventStreamingRequestSinkSinkPrometheusParametersHeaderParameters getHeaderParameters() {
+            return this.headerParameters;
         }
 
         public CreateEventStreamingRequestSinkSinkPrometheusParameters setNetworkType(CreateEventStreamingRequestSinkSinkPrometheusParametersNetworkType networkType) {
