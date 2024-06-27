@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDataAssetsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>71064826-726F-4ADA-B879-05D8055476FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of queried data assets that contain sensitive data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,154 +94,220 @@ public class DescribeDataAssetsResponseBody extends TeaModel {
     public static class DescribeDataAssetsResponseBodyItems extends TeaModel {
         /**
          * <p>The access control list (ACL) that controls the access permissions on the OSS bucket.</p>
-         * <br>
-         * <p>> This parameter is returned only when you set the parameter **RangeId** to **21**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when you set the parameter <strong>RangeId</strong> to <strong>21</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         @NameInMap("Acl")
         public String acl;
 
         /**
          * <p>The time when the data asset was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536751124000</p>
          */
         @NameInMap("CreationTime")
         public Long creationTime;
 
         /**
          * <p>The data type of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS_BUCKET</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The ID of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>268</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The sensitivity tag of the data. The value is fixed as **0**. **0**, **1**, **2**, or **3** is returned for this parameter only when you set the parameter **RangeId** to **1**.</p>
-         * <br>
-         * <p>*   **0**: unclassified</p>
-         * <p>*   **1**: confidential</p>
-         * <p>*   **2**: sensitive</p>
-         * <p>*   **3**: highly sensitive</p>
+         * <p>The sensitivity tag of the data. The value is fixed as <strong>0</strong>. <strong>0</strong>, <strong>1</strong>, <strong>2</strong>, or <strong>3</strong> is returned for this parameter only when you set the parameter <strong>RangeId</strong> to <strong>1</strong>.</p>
+         * <ul>
+         * <li><strong>0</strong>: unclassified</li>
+         * <li><strong>1</strong>: confidential</li>
+         * <li><strong>2</strong>: sensitive</li>
+         * <li><strong>3</strong>: highly sensitive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Labelsec")
         public Boolean labelsec;
 
         /**
          * <p>The name of the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gxdata</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The key value of the OSS object.</p>
-         * <br>
-         * <p>> This parameter is returned only when you set the parameter **RangeId** to **22**.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when you set the parameter <strong>RangeId</strong> to <strong>22</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal</p>
          */
         @NameInMap("ObjectKey")
         public String objectKey;
 
         /**
          * <p>The sensitivity level of the MaxCompute data asset. Valid values:</p>
-         * <br>
-         * <p>*   **S1**: low sensitivity level</p>
-         * <p>*   **S2**: medium sensitivity level</p>
-         * <p>*   **S3**: high sensitivity level</p>
-         * <p>*   **S4**: highest sensitivity level</p>
-         * <br>
-         * <p>> This parameter is returned only when you set the parameter **RangeId** to **1**.</p>
+         * <ul>
+         * <li><strong>S1</strong>: low sensitivity level</li>
+         * <li><strong>S2</strong>: medium sensitivity level</li>
+         * <li><strong>S3</strong>: high sensitivity level</li>
+         * <li><strong>S4</strong>: highest sensitivity level</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is returned only when you set the parameter <strong>RangeId</strong> to <strong>1</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>S4</p>
          */
         @NameInMap("OdpsRiskLevelName")
         public String odpsRiskLevelName;
 
         /**
          * <p>The account that owns the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtdep-239-******</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The name of the service to which the data asset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The ID of the service to which the data asset belongs. Valid values:</p>
-         * <br>
-         * <p>*   **1**: MaxCompute</p>
-         * <p>*   **2**: OSS</p>
-         * <p>*   **3**: AnalyticDB for MySQL</p>
-         * <p>*   **4**: Tablestore</p>
-         * <p>*   **5**: ApsaraDB RDS</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: OSS</li>
+         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>4</strong>: Tablestore</li>
+         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("ProductId")
         public String productId;
 
         /**
-         * <p>Indicates whether the data protection mechanism is enabled for the data asset. The value is fixed as **false**. **true** or **false** is returned for this parameter only when you set the parameter **RangeId** to **1**.</p>
-         * <br>
-         * <p>*   **false**: The data protection mechanism is disabled.</p>
-         * <p>*   **true**: The data protection mechanism is enabled. Only data inbound is supported. Data outbound is not supported.</p>
+         * <p>Indicates whether the data protection mechanism is enabled for the data asset. The value is fixed as <strong>false</strong>. <strong>true</strong> or <strong>false</strong> is returned for this parameter only when you set the parameter <strong>RangeId</strong> to <strong>1</strong>.</p>
+         * <ul>
+         * <li><strong>false</strong>: The data protection mechanism is disabled.</li>
+         * <li><strong>true</strong>: The data protection mechanism is enabled. Only data inbound is supported. Data outbound is not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Protection")
         public Boolean protection;
 
         /**
          * <p>The sensitivity level of the data asset. A higher sensitivity level indicates that the identified data is more sensitive. Valid values:</p>
-         * <br>
-         * <p>*   **1**: No sensitive data is identified.</p>
-         * <p>*   **2**: sensitive data at level 1.</p>
-         * <p>*   **3**: sensitive data at level 2.</p>
-         * <p>*   **3**: sensitive data at level 3.</p>
-         * <p>*   **5**: sensitive data at level 4.</p>
-         * <p>*   **6**: sensitive data at level 5.</p>
-         * <p>*   **7**: sensitive data at level 6.</p>
-         * <p>*   **8**: sensitive data at level 7.</p>
-         * <p>*   **9**: sensitive data at level 8.</p>
-         * <p>*   **10**: sensitive data at level 9.</p>
-         * <p>*   **11**: sensitive data at level 10.</p>
+         * <ul>
+         * <li><strong>1</strong>: No sensitive data is identified.</li>
+         * <li><strong>2</strong>: sensitive data at level 1.</li>
+         * <li><strong>3</strong>: sensitive data at level 2.</li>
+         * <li><strong>3</strong>: sensitive data at level 3.</li>
+         * <li><strong>5</strong>: sensitive data at level 4.</li>
+         * <li><strong>6</strong>: sensitive data at level 5.</li>
+         * <li><strong>7</strong>: sensitive data at level 6.</li>
+         * <li><strong>8</strong>: sensitive data at level 7.</li>
+         * <li><strong>9</strong>: sensitive data at level 8.</li>
+         * <li><strong>10</strong>: sensitive data at level 9.</li>
+         * <li><strong>11</strong>: sensitive data at level 10.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
         /**
          * <p>The name of the sensitivity level for the data asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Medium sensitivity level</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
          * <p>The name of the sensitive data detection rule that the data asset hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\<em>\</em>\* rule</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>Indicates whether the data asset contains sensitive data. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
         /**
          * <p>The total number of sensitive data assets. For example, the value can be the total number of sensitive MaxCompute projects, packages, or tables, the total number of sensitive ApsaraDB RDS databases or tables, or the total number of sensitive OSS buckets or objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         @NameInMap("SensitiveCount")
         public Integer sensitiveCount;
 
         /**
          * <p>The percentage of sensitive data in all data assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45%</p>
          */
         @NameInMap("SensitiveRatio")
         public String sensitiveRatio;
 
         /**
          * <p>The total number of data assets. For example, the value can be the total number of MaxCompute projects, packages, or tables, the total number of ApsaraDB RDS databases or tables, or the total number of OSS buckets or objects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>432</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

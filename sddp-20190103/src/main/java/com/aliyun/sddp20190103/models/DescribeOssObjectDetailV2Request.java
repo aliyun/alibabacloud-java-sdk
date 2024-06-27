@@ -4,9 +4,17 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssObjectDetailV2Request extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12300</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

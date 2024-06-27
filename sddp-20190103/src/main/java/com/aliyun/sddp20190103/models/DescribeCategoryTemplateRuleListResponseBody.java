@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>136082B3-B21F-5E9D-B68E-991FFD205D24</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of rules in the template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,67 +94,93 @@ public class DescribeCategoryTemplateRuleListResponseBody extends TeaModel {
     public static class DescribeCategoryTemplateRuleListResponseBodyItems extends TeaModel {
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rule for identifying ID card numbers</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The unique ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The IDs of sensitive data types. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001,1002</p>
          */
         @NameInMap("IdentificationRuleIds")
         public String identificationRuleIds;
 
         /**
          * <p>The scan scope of the rule. The value is a JSON array of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:</p>
-         * <br>
-         * <p>*   **Asset**: the data asset type. Valid values: RDS, DRDS, PolarDB, OTS, ADB, and OceanBase. The value is of the STRING type.</p>
-         * <br>
-         * <p>*   **Content**: the scan scope. The value is of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:</p>
-         * <br>
-         * <p>    *   **Range**: the matching condition. Valid values: Instance, database, table, column, project, bucket, and object. The value project is valid only for data assets in MaxCompute. The values bucket and object are valid only for data assets in Object Storage Service (OSS). The value of this parameter is of the STRING type.</p>
-         * <p>    *   **Operator**: the operator. Valid values: equals, regex, prefix, and suffix. The operator equals indicates a full match. The operator regex indicates a match by regular expression. The operator prefix indicates a match by prefix. The operator suffix indicates a match by suffix.</p>
-         * <p>    *   **Value**: the matching content. The value is of the STRING type.</p>
+         * <ul>
+         * <li><p><strong>Asset</strong>: the data asset type. Valid values: RDS, DRDS, PolarDB, OTS, ADB, and OceanBase. The value is of the STRING type.</p>
+         * </li>
+         * <li><p><strong>Content</strong>: the scan scope. The value is of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:</p>
+         * <ul>
+         * <li><strong>Range</strong>: the matching condition. Valid values: Instance, database, table, column, project, bucket, and object. The value project is valid only for data assets in MaxCompute. The values bucket and object are valid only for data assets in Object Storage Service (OSS). The value of this parameter is of the STRING type.</li>
+         * <li><strong>Operator</strong>: the operator. Valid values: equals, regex, prefix, and suffix. The operator equals indicates a full match. The operator regex indicates a match by regular expression. The operator prefix indicates a match by prefix. The operator suffix indicates a match by suffix.</li>
+         * <li><strong>Value</strong>: the matching content. The value is of the STRING type.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Asset&quot;:&quot;RDS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;database&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;RDS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;table&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;RDS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;column&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;ODPS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;project&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;ODPS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;table&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]},{&quot;Asset&quot;:&quot;ODPS&quot;,&quot;Content&quot;:[{&quot;Range&quot;:&quot;column&quot;,&quot;Operator&quot;:&quot;regex&quot;,&quot;Value&quot;:&quot;register&quot;}]}]</p>
          */
         @NameInMap("IdentificationScope")
         public String identificationScope;
 
         /**
          * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID card number</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The sensitivity level of the data that is not compliant with the rule. Valid values: **1** to **11**.</p>
-         * <br>
-         * <p>*   **1**: No sensitive data is detected.</p>
-         * <p>*   **2**: indicates the S1 sensitivity level.</p>
-         * <p>*   **3**: indicates the S2 sensitivity level.</p>
-         * <p>*   **4**: indicates the S3 sensitivity level.</p>
-         * <p>*   **5**: indicates the S4 sensitivity level.</p>
-         * <p>*   **6**: indicates the S5 sensitivity level.</p>
-         * <p>*   **7**: indicates the S6 sensitivity level.</p>
-         * <p>*   **8**: indicates the S7 sensitivity level.</p>
-         * <p>*   **9**: indicates the S8 sensitivity level.</p>
-         * <p>*   **10**: indicates the S9 sensitivity level.</p>
-         * <p>*   **11**: indicates the S10 sensitivity level.</p>
-         * <p>*   **null**: indicates all preceding sensitivity levels.</p>
+         * <p>The sensitivity level of the data that is not compliant with the rule. Valid values: <strong>1</strong> to <strong>11</strong>.</p>
+         * <ul>
+         * <li><strong>1</strong>: No sensitive data is detected.</li>
+         * <li><strong>2</strong>: indicates the S1 sensitivity level.</li>
+         * <li><strong>3</strong>: indicates the S2 sensitivity level.</li>
+         * <li><strong>4</strong>: indicates the S3 sensitivity level.</li>
+         * <li><strong>5</strong>: indicates the S4 sensitivity level.</li>
+         * <li><strong>6</strong>: indicates the S5 sensitivity level.</li>
+         * <li><strong>7</strong>: indicates the S6 sensitivity level.</li>
+         * <li><strong>8</strong>: indicates the S7 sensitivity level.</li>
+         * <li><strong>9</strong>: indicates the S8 sensitivity level.</li>
+         * <li><strong>10</strong>: indicates the S9 sensitivity level.</li>
+         * <li><strong>11</strong>: indicates the S10 sensitivity level.</li>
+         * <li><strong>null</strong>: indicates all preceding sensitivity levels.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **null**: all states</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * <li><strong>null</strong>: all states</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;

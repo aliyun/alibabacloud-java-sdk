@@ -7,9 +7,17 @@ public class DescribeTemplateAllRulesRequest extends TeaModel {
     @NameInMap("FeatureType")
     public Integer featureType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TemplateId")
     public Long templateId;
 

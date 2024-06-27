@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeRiskLevelsRequest extends TeaModel {
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   zh_cn: Chinese (default)</p>
-     * <p>*   en_us: English</p>
+     * <ul>
+     * <li>zh_cn: Chinese (default)</li>
+     * <li>en_us: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The ID of the industry-specific rule template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDefaultLevelResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>208B016D-4CB9-4A85-96A5-0B8ED1EBF271</p>
      */
     @NameInMap("RequestId")
     public String requestId;

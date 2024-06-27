@@ -6,161 +6,228 @@ import com.aliyun.tea.*;
 public class CreateDataLimitRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the security audit feature. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AuditStatus")
     public Integer auditStatus;
 
     /**
      * <p>Specifies whether to automatically trigger a re-scan after a rule is modified. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes</p>
-     * <br>
-     * <p>> When a re-scan is triggered, DSC scans all data in your data asset.</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
+     * </ul>
+     * <blockquote>
+     * <p>When a re-scan is triggered, DSC scans all data in your data asset.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AutoScan")
     public Integer autoScan;
 
     /**
      * <p>The permissions. Valid values:</p>
-     * <br>
-     * <p>*   **ReadOnly**: read-only permissions</p>
-     * <p>*   **ReadWrite**: read and write permissions</p>
+     * <ul>
+     * <li><strong>ReadOnly</strong>: read-only permissions</li>
+     * <li><strong>ReadWrite</strong>: read and write permissions</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ReadOnly</p>
      */
     @NameInMap("CertificatePermission")
     public String certificatePermission;
 
     /**
      * <p>Specifies whether to enable sensitive data detection. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
-     * <br>
-     * <p>> If this is your first time to authorize DSC to access the data asset, the default value is 1. If this is not your first time to authorize DSC to access the data asset, the default value is the same as that used in the last authorization operation. Both 1 and 0 are possible.</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * <blockquote>
+     * <p>If this is your first time to authorize DSC to access the data asset, the default value is 1. If this is not your first time to authorize DSC to access the data asset, the default value is the same as that used in the last authorization operation. Both 1 and 0 are possible.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Enable")
     public Integer enable;
 
     /**
      * <p>The database engine that is run by the instance. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **SQLServer**</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("EngineType")
     public String engineType;
 
     /**
      * <p>Specifies whether to enable anomalous event detection. Valid values:</p>
-     * <br>
-     * <p>*   **0**: no</p>
-     * <p>*   **1**: yes (default)</p>
+     * <ul>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EventStatus")
     public Integer eventStatus;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Chinese</p>
-     * <p>*   **en_us**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Chinese</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The retention period of raw logs after you enable the security audit feature. Unit: days. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <p>*   **90**</p>
-     * <p>*   **180**</p>
-     * <p>*   **365**</p>
+     * <ul>
+     * <li><strong>30</strong></li>
+     * <li><strong>90</strong></li>
+     * <li><strong>180</strong></li>
+     * <li><strong>365</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("LogStoreDay")
     public Integer logStoreDay;
 
     /**
      * <p>Specifies whether to enable optical character recognition (OCR). Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("OcrStatus")
     public Integer ocrStatus;
 
     /**
      * <p>The name of the data asset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-11**</p>
      */
     @NameInMap("ParentId")
     public String parentId;
 
     /**
      * <p>The password that is used to access the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>passwd</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The port that is used to connect to the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The type of service to which the data asset belongs. Valid values:</p>
-     * <br>
-     * <p>*   **1** :MaxCompute</p>
-     * <p>*   **2**: Object Storage Service (OSS)</p>
-     * <p>*   **3**: AnalyticDB for MySQL</p>
-     * <p>*   **4** :Tablestore</p>
-     * <p>*   **5**: ApsaraDB RDS</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong> :MaxCompute</li>
+     * <li><strong>2</strong>: Object Storage Service (OSS)</li>
+     * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+     * <li><strong>4</strong> :Tablestore</li>
+     * <li><strong>5</strong>: ApsaraDB RDS</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ResourceType")
     public Integer resourceType;
 
     /**
      * <p>The number of sensitive data samples that are collected after sensitive data detection is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **0**</p>
-     * <p>*   **5**</p>
-     * <p>*   **10**</p>
+     * <ul>
+     * <li><strong>0</strong></li>
+     * <li><strong>5</strong></li>
+     * <li><strong>10</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SamplingSize")
     public Integer samplingSize;
 
     /**
      * <p>The region in which the data asset resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-beijing**: China (Beijing).</p>
-     * <p>*   **cn-zhangjiakou**: China (Zhangjiakou)</p>
-     * <p>*   **cn-huhehaote**: China (Hohhot)</p>
-     * <p>*   **cn-hangzhou**: China (Hangzhou)</p>
-     * <p>*   **cn-shanghai**: China (Shanghai)</p>
-     * <p>*   **cn-shenzhen**: China (Shenzhen)</p>
-     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
+     * <ul>
+     * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+     * <li><strong>cn-zhangjiakou</strong>: China (Zhangjiakou)</li>
+     * <li><strong>cn-huhehaote</strong>: China (Hohhot)</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+     * <li><strong>cn-shenzhen</strong>: China (Shenzhen)</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39.170.XX.XX</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
      * <p>The username that is used to access the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yhm</p>
      */
     @NameInMap("UserName")
     public String userName;

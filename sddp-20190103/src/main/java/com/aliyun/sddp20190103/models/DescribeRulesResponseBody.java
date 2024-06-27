@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRulesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeRulesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,190 +94,277 @@ public class DescribeRulesResponseBody extends TeaModel {
     public static class DescribeRulesResponseBodyItems extends TeaModel {
         /**
          * <p>The content type of the sensitive data detection rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: keyword</p>
-         * <p>*   **2**: regular expression</p>
+         * <ul>
+         * <li><strong>0</strong>: keyword</li>
+         * <li><strong>2</strong>: regular expression</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Category")
         public Integer category;
 
         /**
          * <p>The name of the content type of the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Regular expression</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
          * <p>The content in the sensitive data detection rule.</p>
-         * <br>
-         * <p>>  A built-in detection rule whose CustomType is 0 does not return the content of the rule.</p>
+         * <blockquote>
+         * <p> A built-in detection rule whose CustomType is 0 does not return the content of the rule.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>(?:\\D|^)((?:(?:25[0-4]|2[0-4]\\d|1\\d{2}|[1-9]\\d{1})\\.)(?:(?:25[0-5]|2[0-4]\\d|[01]?\\d?\\d)\\.){2}(?:25[0-5]|2[0-4]\\d|1[0-9]\\d|[1-9]\\d|[1-9]))(?:\\D|$)</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The type of the content in the sensitive data detection rule. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.</p>
+         * <p>The type of the content in the sensitive data detection rule. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ContentCategory")
         public String contentCategory;
 
         /**
          * <p>The type of the sensitive data detection rule.</p>
-         * <br>
-         * <p>*   0: built-in rule</p>
-         * <p>*   1: custom rule</p>
+         * <ul>
+         * <li>0: built-in rule</li>
+         * <li>1: custom rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CustomType")
         public Integer customType;
 
         /**
          * <p>The description of the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The sensitive data detection rule is used to detect IP addresses.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The display name of the account that is used to create the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The time when the sensitive data detection rule is created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545277010000</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
          * <p>The time when the sensitive data detection rule is modified. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545277010000</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The parent group type of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4_1</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The number of times that the sensitive data detection rule is hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("HitTotalCount")
         public Integer hitTotalCount;
 
         /**
          * <p>The ID of the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The username of the account that is used to create the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>det1111</p>
          */
         @NameInMap("LoginName")
         public String loginName;
 
         /**
          * <p>The key of the primary dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("MajorKey")
         public String majorKey;
 
         /**
          * <p>The match type. Valid values:</p>
-         * <br>
-         * <p>*   **1**: rule-based match</p>
-         * <p>*   **2**: dictionary-based match</p>
+         * <ul>
+         * <li><strong>1</strong>: rule-based match</li>
+         * <li><strong>2</strong>: dictionary-based match</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MatchType")
         public Integer matchType;
 
         /**
          * <p>The name of the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP address</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The name of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+         * <p>The name of the service to which the data asset belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
-         * <p>The ID of the service to which the sensitive data detection rule is applied. Valid values include **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * <p>The ID of the service to which the sensitive data detection rule is applied. Valid values include <strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, and <strong>5</strong>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ProductId")
         public Long productId;
 
         /**
          * <p>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</p>
-         * <br>
-         * <p>*   **1**: N/A, which indicates that no sensitive data is detected.</p>
-         * <p>*   **2**: S1, which indicates the low sensitivity level.</p>
-         * <p>*   **3**: S2, which indicates the medium sensitivity level.</p>
-         * <p>*   **4**: S3, which indicates the high sensitivity level.</p>
-         * <p>*   **5**: S4, which indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A, which indicates that no sensitive data is detected.</li>
+         * <li><strong>2</strong>: S1, which indicates the low sensitivity level.</li>
+         * <li><strong>3</strong>: S2, which indicates the medium sensitivity level.</li>
+         * <li><strong>4</strong>: S3, which indicates the high sensitivity level.</li>
+         * <li><strong>5</strong>: S4, which indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
         /**
          * <p>The sensitivity level of data that hits the sensitive data detection rule. Valid values:</p>
-         * <br>
-         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
-         * <p>*   **S1**: indicates the low sensitivity level.</p>
-         * <p>*   **S2**: indicates the medium sensitivity level.</p>
-         * <p>*   **S3**: indicates the high sensitivity level.</p>
-         * <p>*   **S4**: indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
+         * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+         * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+         * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+         * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S2</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
          * <p>The statistical expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("StatExpress")
         public String statExpress;
 
         /**
          * <p>The status of the sensitive data detection rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: disabled</p>
-         * <p>*   **1**: enabled</p>
+         * <ul>
+         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: enabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The data asset type that is supported by the sensitive data detection rule. Valid values:</p>
-         * <br>
-         * <p>*   **0**: all data assets</p>
-         * <p>*   **1**: structured data assets</p>
-         * <p>*   **2**: unstructured data assets</p>
+         * <ul>
+         * <li><strong>0</strong>: all data assets</li>
+         * <li><strong>1</strong>: structured data assets</li>
+         * <li><strong>2</strong>: unstructured data assets</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SupportForm")
         public Integer supportForm;
 
         /**
-         * <p>The name of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+         * <p>The name of the service to which the data asset belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
          * <p>The ID of the account that is used to create the sensitive data detection rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
          * <p>The severity level. Valid values:</p>
-         * <br>
-         * <p>*   **1**: low</p>
-         * <p>*   **2**: medium</p>
-         * <p>*   **3**: high</p>
+         * <ul>
+         * <li><strong>1</strong>: low</li>
+         * <li><strong>2</strong>: medium</li>
+         * <li><strong>3</strong>: high</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("WarnLevel")
         public Integer warnLevel;

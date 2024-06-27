@@ -5,76 +5,108 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
-     * <p>The language of the content within the request and response. Default value: **zh_cn**. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Simplified Chinese</p>
-     * <p>*   **en_us**: English</p>
+     * <p>The language of the content within the request and response. Default value: <strong>zh_cn</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Simplified Chinese</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The keyword that is used to search for data assets. DSC searches for data assets based on the keyword that you specify in fuzzy match mode. For example, if you specify data, all data assets whose names contain data are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>data</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which DSC can scan for sensitive data, see [Supported data assets](https://help.aliyun.com/document_detail/212906.html).</p>
+     * <p>The name of the service to which the data asset belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which DSC can scan for sensitive data, see <a href="https://help.aliyun.com/document_detail/212906.html">Supported data assets</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The ID of the service to which the data asset belongs. You can call the [DescribeDataAssets](~~DescribeDataAssets~~) operation to query the ID of the service.</p>
+     * <p>The ID of the service to which the data asset belongs. You can call the <a href="~~DescribeDataAssets~~">DescribeDataAssets</a> operation to query the ID of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ProductId")
     public Long productId;
 
     /**
      * <p>The sensitivity level ID of the data asset. A higher sensitivity level indicates that the identified data is more sensitive. Valid values:</p>
-     * <br>
-     * <p>*   **1**: No sensitive data is identified.</p>
-     * <p>*   **2**: sensitive data at level 1.</p>
-     * <p>*   **3**: sensitive data at level 2.</p>
-     * <p>*   **4**: sensitive data at level 3</p>
-     * <p>*   **5**: sensitive data at level 4.</p>
-     * <p>*   **6**: sensitive data at level 5.</p>
-     * <p>*   **7**: sensitive data at level 6.</p>
-     * <p>*   **8**: sensitive data at level 7.</p>
-     * <p>*   **9**: sensitive data at level 8.</p>
-     * <p>*   **10**: sensitive data at level 9.</p>
-     * <p>*   **11**: sensitive data at level 10.</p>
+     * <ul>
+     * <li><strong>1</strong>: No sensitive data is identified.</li>
+     * <li><strong>2</strong>: sensitive data at level 1.</li>
+     * <li><strong>3</strong>: sensitive data at level 2.</li>
+     * <li><strong>4</strong>: sensitive data at level 3</li>
+     * <li><strong>5</strong>: sensitive data at level 4.</li>
+     * <li><strong>6</strong>: sensitive data at level 5.</li>
+     * <li><strong>7</strong>: sensitive data at level 6.</li>
+     * <li><strong>8</strong>: sensitive data at level 7.</li>
+     * <li><strong>9</strong>: sensitive data at level 8.</li>
+     * <li><strong>10</strong>: sensitive data at level 9.</li>
+     * <li><strong>11</strong>: sensitive data at level 10.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("RiskLevelId")
     public Long riskLevelId;
 
     /**
-     * <p>The ID of the sensitive data detection rule that the data asset hits. You can call the [DescribeRules](~~DescribeRules~~) operation and obtain the ID of the sensitive data detection rule from the **Id** response parameter.</p>
+     * <p>The ID of the sensitive data detection rule that the data asset hits. You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation and obtain the ID of the sensitive data detection rule from the <strong>Id</strong> response parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1111111</p>
      */
     @NameInMap("RuleId")
     public Long ruleId;
 
     /**
-     * <p>The region where the data asset resides. For more information, see [Supported regions](https://help.aliyun.com/document_detail/214257.html).</p>
+     * <p>The region where the data asset resides. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;

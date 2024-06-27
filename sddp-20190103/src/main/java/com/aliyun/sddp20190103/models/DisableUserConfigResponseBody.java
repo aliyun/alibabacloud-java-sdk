@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DisableUserConfigResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC314611-D907-5EBF-B6D8-70425E5A8643</p>
      */
     @NameInMap("RequestId")
     public String requestId;

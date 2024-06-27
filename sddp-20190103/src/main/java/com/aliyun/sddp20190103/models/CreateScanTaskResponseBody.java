@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateScanTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the custom scan task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Id")
     public Integer id;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B1F2BB1F-04EC-5D36-B136-B4DE17FD8DE0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

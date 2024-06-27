@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyDataLimitResponseBody extends TeaModel {
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C3AC882-E5A8-4855-BE77-B6837B695EF1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

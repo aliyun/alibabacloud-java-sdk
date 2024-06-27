@@ -12,6 +12,9 @@ public class DescribeConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribeConfigsResponseBody extends TeaModel {
     public static class DescribeConfigsResponseBodyConfigList extends TeaModel {
         /**
          * <p>The code of the common configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The description of the default value for the common configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The volume of logs of a specific type that are generated on the current day is less than 30% of the average volume of logs generated in the previous 10 days.</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
         /**
          * <p>The description of the common configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Anomalous log output</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The unique ID of the common configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2133</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The value of the common configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeColumnsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -18,18 +21,27 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-4******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,20 +94,28 @@ public class DescribeColumnsResponseBody extends TeaModel {
     public static class DescribeColumnsResponseBodyItemsModelTags extends TeaModel {
         /**
          * <p>The tag ID.</p>
-         * <br>
-         * <p>*   **101**: sensitive personal information</p>
-         * <p>*   **102**: personal information</p>
-         * <p>*   **103**: important information</p>
+         * <ul>
+         * <li><strong>101</strong>: sensitive personal information</li>
+         * <li><strong>102</strong>: personal information</li>
+         * <li><strong>103</strong>: important information</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The tag name.</p>
-         * <br>
-         * <p>*   Sensitive personal information</p>
-         * <p>*   Personal information</p>
-         * <p>*   Important information</p>
+         * <ul>
+         * <li>Sensitive personal information</li>
+         * <li>Personal information</li>
+         * <li>Important information</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>personal sensitive data</p>
          */
         @NameInMap("Name")
         public String name;
@@ -126,30 +146,45 @@ public class DescribeColumnsResponseBody extends TeaModel {
     public static class DescribeColumnsResponseBodyItems extends TeaModel {
         /**
          * <p>The time when the data in the column of the table is created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536751124000</p>
          */
         @NameInMap("CreationTime")
         public Long creationTime;
 
         /**
          * <p>The type of data in the column of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>String</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The ID of the column of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>268</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The ID of the instance to which data in the column of the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
          * <p>The name of the instance to which data in the column of the table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp17t1htja573l5i8****</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -162,120 +197,169 @@ public class DescribeColumnsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the column of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gxdata</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The name of the sensitivity level for asset. Valid values:</p>
-         * <br>
-         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
-         * <p>*   **S1**: indicates the low sensitivity level.</p>
-         * <p>*   **S2**: indicates the medium sensitivity level.</p>
-         * <p>*   **S3**: indicates the high sensitivity level.</p>
-         * <p>*   **S4**: indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
+         * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+         * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+         * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+         * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S3</p>
          */
         @NameInMap("OdpsRiskLevelName")
         public String odpsRiskLevelName;
 
         /**
          * <p>The ID of the sensitivity level of the asset. Valid values:</p>
-         * <br>
-         * <p>*   **1**: N/A</p>
-         * <p>*   **2**: S1</p>
-         * <p>*   **3**: S2</p>
-         * <p>*   **4**: S3</p>
-         * <p>*   **5**: S4</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A</li>
+         * <li><strong>2</strong>: S1</li>
+         * <li><strong>3</strong>: S2</li>
+         * <li><strong>4</strong>: S3</li>
+         * <li><strong>5</strong>: S4</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("OdpsRiskLevelValue")
         public Integer odpsRiskLevelValue;
 
         /**
-         * <p>The name of the service to which data in the column of the table belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.</p>
+         * <p>The name of the service to which data in the column of the table belongs. Valid values include <strong>MaxCompute, OSS, ADS, OTS, and RDS</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The ID of the revision record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("RevisionId")
         public Long revisionId;
 
         /**
          * <p>Indicates whether the column is revised. Valid values:</p>
-         * <br>
-         * <p>*   1: yes</p>
-         * <p>*   0: no</p>
+         * <ul>
+         * <li>1: yes</li>
+         * <li>0: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RevisionStatus")
         public Long revisionStatus;
 
         /**
          * <p>The ID of the sensitivity level of data in the column of the table. Valid values:</p>
-         * <br>
-         * <p>*   **1**: N/A</p>
-         * <p>*   **2**: S1</p>
-         * <p>*   **3**: S2</p>
-         * <p>*   **4**: S3</p>
-         * <p>*   **5**: S4</p>
+         * <ul>
+         * <li><strong>1</strong>: N/A</li>
+         * <li><strong>2</strong>: S1</li>
+         * <li><strong>3</strong>: S2</li>
+         * <li><strong>4</strong>: S3</li>
+         * <li><strong>5</strong>: S4</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("RiskLevelId")
         public Long riskLevelId;
 
         /**
          * <p>The name of the sensitivity level for data in the column of the table. Valid values:</p>
-         * <br>
-         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
-         * <p>*   **S1**: indicates the low sensitivity level.</p>
-         * <p>*   **S2**: indicates the medium sensitivity level.</p>
-         * <p>*   **S3**: indicates the high sensitivity level.</p>
-         * <p>*   **S4**: indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
+         * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+         * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+         * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+         * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S2</p>
          */
         @NameInMap("RiskLevelName")
         public String riskLevelName;
 
         /**
          * <p>The ID of the sensitive data detection rule that data in the column of the table hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;
 
         /**
          * <p>The name of the sensitive data detection rule that data in the column of the table hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\<em>\</em> rule</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The name of the sensitivity level. Valid values:</p>
-         * <br>
-         * <p>*   **N/A**: indicates that no sensitive data is detected.</p>
-         * <p>*   **S1**: indicates the low sensitivity level.</p>
-         * <p>*   **S2**: indicates the medium sensitivity level.</p>
-         * <p>*   **S3**: indicates the high sensitivity level.</p>
-         * <p>*   **S4**: indicates the highest sensitivity level.</p>
+         * <ul>
+         * <li><strong>N/A</strong>: indicates that no sensitive data is detected.</li>
+         * <li><strong>S1</strong>: indicates the low sensitivity level.</li>
+         * <li><strong>S2</strong>: indicates the medium sensitivity level.</li>
+         * <li><strong>S3</strong>: indicates the high sensitivity level.</li>
+         * <li><strong>S4</strong>: indicates the highest sensitivity level.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>S2</p>
          */
         @NameInMap("SensLevelName")
         public String sensLevelName;
 
         /**
          * <p>Indicates whether the column contains sensitive data. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Sensitive")
         public Boolean sensitive;
 
         /**
          * <p>The ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("TableId")
         public Long tableId;
 
         /**
          * <p>The name of the table to which the revised column belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>it_table</p>
          */
         @NameInMap("TableName")
         public String tableName;

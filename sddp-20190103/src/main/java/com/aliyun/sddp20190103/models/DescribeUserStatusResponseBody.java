@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeUserStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>769FB3C1-F4C9-42DF-9B72-7077A8989C13</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,147 +43,216 @@ public class DescribeUserStatusResponseBody extends TeaModel {
     public static class DescribeUserStatusResponseBodyUserStatus extends TeaModel {
         /**
          * <p>The AccessKey ID of the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI4G67HRBzNRmMhfyv****</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
          * <p>Indicates whether the SQL Explorer feature can be disabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AuditClosable")
         public Boolean auditClosable;
 
         /**
          * <p>Indicates whether the audit resources can be released.</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AuditReleasable")
         public Boolean auditReleasable;
 
         /**
          * <p>Indicates whether DSC has permission to access user resources within the current account. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Authed")
         public Boolean authed;
 
         /**
          * <p>The billing method of DCS that is purchased by using the current account. Valid values:</p>
-         * <br>
-         * <p>*   **PREPAY**: subscription</p>
-         * <p>*   **POSTPAY**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>PREPAY</strong>: subscription</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PREPAY</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The permissions that the current account has. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The current account has the administrative permissions or read-only permissions on Data Security Center.</p>
-         * <p>*   **1**: The current account has the permissions to manage data domains.</p>
+         * <ul>
+         * <li><strong>0</strong>: The current account has the administrative permissions or read-only permissions on Data Security Center.</li>
+         * <li><strong>1</strong>: The current account has the permissions to manage data domains.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DataManagerRole")
         public Integer dataManagerRole;
 
         /**
          * <p>The ID of the data security center instance purchased by the main account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sddp-cn-****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The number of instances within the current account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
         /**
          * <p>The total number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InstanceTotalCount")
         public Long instanceTotalCount;
 
         /**
          * <p>Indicates whether the data security lab feature is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LabStatus")
         public Integer labStatus;
 
         /**
          * <p>OSS total storage capacity. Unit: Bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         @NameInMap("OssTotalSize")
         public Long ossTotalSize;
 
         /**
          * <p>Accumulate the number of days to protect user assets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ProtectionDays")
         public Integer protectionDays;
 
         /**
          * <p>Indicates whether DSC is purchased. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Purchased")
         public Boolean purchased;
 
         /**
          * <p>The grace period between when DSC is expired and when DSC is released. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("ReleaseDays")
         public Integer releaseDays;
 
         /**
          * <p>The time when the audit resources are released. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15000</p>
          */
         @NameInMap("ReleaseTime")
         public Long releaseTime;
 
         /**
          * <p>The remaining period for which the data assets within the current account can be protected by DSC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>131</p>
          */
         @NameInMap("RemainDays")
         public Integer remainDays;
 
         /**
          * <p>Indicates whether the current account uses a free trial of DSC. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Trail")
         public Boolean trail;
 
         /**
          * <p>Indicates whether the agent audit feature is used. Valid values:</p>
-         * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <ul>
+         * <li><strong>1</strong>: yes</li>
+         * <li><strong>0</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UseAgentAudit")
         public Boolean useAgentAudit;
 
         /**
          * <p>The number of instances that are used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>125</p>
          */
         @NameInMap("UseInstanceNum")
         public Integer useInstanceNum;
 
         /**
          * <p>The occupied space of the Object Storage Service (OSS) bucket. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
          */
         @NameInMap("UseOssSize")
         public Long useOssSize;

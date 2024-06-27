@@ -6,116 +6,171 @@ import com.aliyun.tea.*;
 public class DescribeDataLimitsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the security audit feature. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AuditStatus")
     public Integer auditStatus;
 
     /**
      * <p>The data detection status. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The data detection is ready.</p>
-     * <p>*   **1**: The data detection is running.</p>
-     * <p>*   **2**: The connectivity test is in progress.</p>
-     * <p>*   **3**: The connectivity test passed.</p>
-     * <p>*   **4**: The connectivity test failed.</p>
+     * <ul>
+     * <li><strong>0</strong>: The data detection is ready.</li>
+     * <li><strong>1</strong>: The data detection is running.</li>
+     * <li><strong>2</strong>: The connectivity test is in progress.</li>
+     * <li><strong>3</strong>: The connectivity test passed.</li>
+     * <li><strong>4</strong>: The connectivity test failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("CheckStatus")
     public Integer checkStatus;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
      * <p>Specifies whether DSC has the data de-identification permissions on the data asset. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DatamaskStatus")
     public Integer datamaskStatus;
 
     /**
      * <p>Specifies whether DSC has the data detection permissions on the data asset. Valid values:</p>
-     * <br>
-     * <p>*   **1**: yes</p>
-     * <p>*   **0**: no</p>
+     * <ul>
+     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Enable")
     public Integer enable;
 
     /**
      * <p>The end of the time range to query The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1616068534877</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The type of the database engine. Valid values include **MySQL**, **SQLServer**, **Oracle**, **PostgreSQL**, and **MongoDB**.</p>
+     * <p>The type of the database engine. Valid values include <strong>MySQL</strong>, <strong>SQLServer</strong>, <strong>Oracle</strong>, <strong>PostgreSQL</strong>, and <strong>MongoDB</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("EngineType")
     public String engineType;
 
     /**
      * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the member.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>**********8103</p>
+     */
     @NameInMap("MemberAccount")
     public Long memberAccount;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The parent ID of the data asset to be queried. Valid values:</p>
-     * <br>
-     * <p>*   The name or ID of the MaxCompute project.</p>
-     * <p>*   The name or ID of the OSS bucket.</p>
-     * <p>*   The name or ID of the ApsaraDB RDS instance or database.</p>
+     * <ul>
+     * <li>The name or ID of the MaxCompute project.</li>
+     * <li>The name or ID of the OSS bucket.</li>
+     * <li>The name or ID of the ApsaraDB RDS instance or database.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1112</p>
      */
     @NameInMap("ParentId")
     public String parentId;
 
     /**
-     * <p>The type of the service to which the data asset to be queried belongs. Valid values:</p>
-     * <br>
-     * <p>*   **1**: MaxCompute</p>
-     * <p>*   **2**: Object Storage Service (OSS)</p>
-     * <p>*   **3**: AnalyticDB for MySQL</p>
-     * <p>*   **4**: Tablestore</p>
-     * <p>*   **5**: ApsaraDB RDS</p>
-     * <p>*   **6**: self-managed database</p>
+     * <p>The type of the service to which the data asset belongs. This parameter is required. Valid values:</p>
+     * <ul>
+     * <li><strong>1</strong>: MaxCompute</li>
+     * <li><strong>2</strong>: Object Storage Service (OSS)</li>
+     * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+     * <li><strong>4</strong>: Tablestore</li>
+     * <li><strong>5</strong>: ApsaraDB RDS</li>
+     * <li><strong>6</strong>: self-managed database</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ResourceType")
     public Integer resourceType;
 
     /**
      * <p>The region in which the data asset resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("ServiceRegionId")
     public String serviceRegionId;
 
     /**
      * <p>The beginning of the time range to query The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1616068534877</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

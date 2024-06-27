@@ -4,18 +4,34 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeParentInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     @NameInMap("Items")
     public java.util.List<DescribeParentInstanceResponseBodyItems> items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ACEF9334-BB50-525D-8CF3-6CF504E4D1B3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,57 +81,128 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeParentInstanceResponseBodyItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AuditStatus")
         public Integer auditStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AuthStatus")
         public Integer authStatus;
 
+        @NameInMap("AuthTime")
+        public Long authTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("ClusterStatus")
         public String clusterStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Primary</p>
+         */
         @NameInMap("ConnectNode")
         public String connectNode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("DbNum")
         public String dbNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("EngineType")
         public String engineType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>instance description</p>
+         */
         @NameInMap("InstanceDescription")
         public String instanceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rm-2h066mht2vz</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>409600</p>
+         */
         @NameInMap("InstanceSize")
         public Long instanceSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
         @NameInMap("MemberAccount")
         public Long memberAccount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rm-uf6b9897shxxx.test</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>RDS</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Primary,Secondary</p>
+         */
         @NameInMap("SupportConnectNodes")
         public String supportConnectNodes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HBJWDSBE-zh_CN</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user1</p>
+         */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UnConnectDbCount")
         public String unConnectDbCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>engine type not support</p>
+         */
         @NameInMap("UnSupportOneClickAuthReason")
         public String unSupportOneClickAuthReason;
 
@@ -138,6 +225,14 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         }
         public Integer getAuthStatus() {
             return this.authStatus;
+        }
+
+        public DescribeParentInstanceResponseBodyItems setAuthTime(Long authTime) {
+            this.authTime = authTime;
+            return this;
+        }
+        public Long getAuthTime() {
+            return this.authTime;
         }
 
         public DescribeParentInstanceResponseBodyItems setClusterStatus(String clusterStatus) {

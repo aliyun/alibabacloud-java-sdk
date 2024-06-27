@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class ManualTriggerMaskingProcessRequest extends TeaModel {
     /**
      * <p>The ID of the de-identification task.</p>
-     * <br>
      * <p>The ID of the de-identification task is a string. You can call the DescribeDataMaskingTasks operation to query the ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
      * <p>The language of the content within the request and response, default value zh_cn. Valid values:</p>
-     * <br>
-     * <p>*   **zh_cn**: Chinese</p>
-     * <p>*   **en_us**: English</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Chinese</li>
+     * <li><strong>en_us</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_cn</p>
      */
     @NameInMap("Lang")
     public String lang;
