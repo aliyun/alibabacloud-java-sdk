@@ -260,6 +260,9 @@ public class DescribeParametersResponseBody extends TeaModel {
     }
 
     public static class DescribeParametersResponseBodyRunningParametersDBInstanceParameter extends TeaModel {
+        @NameInMap("ParameterDefaultValue")
+        public String parameterDefaultValue;
+
         /**
          * <p>The description of the parameter.</p>
          * 
@@ -287,9 +290,20 @@ public class DescribeParametersResponseBody extends TeaModel {
         @NameInMap("ParameterValue")
         public String parameterValue;
 
+        @NameInMap("ParameterValueRange")
+        public String parameterValueRange;
+
         public static DescribeParametersResponseBodyRunningParametersDBInstanceParameter build(java.util.Map<String, ?> map) throws Exception {
             DescribeParametersResponseBodyRunningParametersDBInstanceParameter self = new DescribeParametersResponseBodyRunningParametersDBInstanceParameter();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeParametersResponseBodyRunningParametersDBInstanceParameter setParameterDefaultValue(String parameterDefaultValue) {
+            this.parameterDefaultValue = parameterDefaultValue;
+            return this;
+        }
+        public String getParameterDefaultValue() {
+            return this.parameterDefaultValue;
         }
 
         public DescribeParametersResponseBodyRunningParametersDBInstanceParameter setParameterDescription(String parameterDescription) {
@@ -314,6 +328,14 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+        public DescribeParametersResponseBodyRunningParametersDBInstanceParameter setParameterValueRange(String parameterValueRange) {
+            this.parameterValueRange = parameterValueRange;
+            return this;
+        }
+        public String getParameterValueRange() {
+            return this.parameterValueRange;
         }
 
     }
