@@ -313,6 +313,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("DBInstanceIds")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds DBInstanceIds;
 
+        @NameInMap("RecoveryModel")
+        public String recoveryModel;
+
         public static DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra self = new DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra();
             return TeaModel.build(map, self);
@@ -324,6 +327,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds getDBInstanceIds() {
             return this.DBInstanceIds;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra setRecoveryModel(String recoveryModel) {
+            this.recoveryModel = recoveryModel;
+            return this;
+        }
+        public String getRecoveryModel() {
+            return this.recoveryModel;
         }
 
     }
