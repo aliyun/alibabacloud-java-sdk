@@ -6,33 +6,47 @@ import com.aliyun.tea.*;
 public class ModifyDtsJobPasswordRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>l3m1213ye7l****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
      * <p>Specifies the database to which the password belongs. Valid values:</p>
-     * <br>
-     * <p>*   **src**: source database</p>
-     * <p>*   **dest**: destination database</p>
-     * <br>
-     * <p>>  This parameter must be specified.</p>
+     * <ul>
+     * <li><strong>src</strong>: source database</li>
+     * <li><strong>dest</strong>: destination database</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter must be specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>src</p>
      */
     @NameInMap("Endpoint")
     public String endpoint;
 
     /**
      * <p>The new password of the account.</p>
-     * <br>
-     * <p>>  This parameter must be specified and cannot be the same as the current password.</p>
+     * <blockquote>
+     * <p> This parameter must be specified and cannot be the same as the current password.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Test123456</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The ID of the region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,8 +56,12 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
 
     /**
      * <p>The account of the source or destination database.</p>
-     * <br>
-     * <p>>  This parameter must be specified.</p>
+     * <blockquote>
+     * <p> This parameter must be specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dtstest</p>
      */
     @NameInMap("UserName")
     public String userName;

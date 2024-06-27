@@ -6,47 +6,68 @@ import com.aliyun.tea.*;
 public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
     /**
      * <p>The alert threshold for CPU utilization. Unit: percentage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("CpuAlarmThreshold")
     public Long cpuAlarmThreshold;
 
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dts-dasd22******</p>
      */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
     /**
      * <p>The alert threshold for disk usage. Unit: percentage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("DiskAlarmThreshold")
     public Long diskAlarmThreshold;
 
     /**
      * <p>The alert threshold for DTS Unit (DU) usage. Unit: percentage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("DuAlarmThreshold")
     public Long duAlarmThreshold;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1162kryivb8****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The alert threshold for memory usage. Unit: percentage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
      */
     @NameInMap("MemAlarmThreshold")
     public Long memAlarmThreshold;
 
     /**
      * <p>Specifies whether to enable the alert feature. Valid values:</p>
-     * <br>
-     * <p>*   **1**: enables the alert feature.</p>
-     * <p>*   **0**: disables the alert feature.</p>
+     * <ul>
+     * <li><strong>1</strong>: enables the alert feature.</li>
+     * <li><strong>0</strong>: disables the alert feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NoticeSwitch")
     public Long noticeSwitch;
@@ -56,14 +77,19 @@ public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
 
     /**
      * <p>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>186****7654</p>
      */
     @NameInMap("Phones")
     public String phones;
 
     /**
      * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

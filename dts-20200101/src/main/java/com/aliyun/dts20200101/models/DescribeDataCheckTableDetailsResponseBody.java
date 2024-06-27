@@ -6,62 +6,93 @@ import com.aliyun.tea.*;
 public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     /**
      * <p>The number of tables that contain inconsistent data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DiffTableCount")
     public Long diffTableCount;
 
     /**
      * <p>The dynamic error code. This parameter will be discontinued in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \\*\\*%s\\*\\* variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>> For example, if the returned value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **Type**, the specified **Type** parameter is invalid.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \<em>\</em>%s\<em>\</em> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <blockquote>
+     * <p>For example, if the returned value of the <strong>ErrMessage</strong> parameter is <strong>The Value of Input Parameter %s is not valid</strong> and the return value of the <strong>DynamicMessage</strong> parameter is <strong>Type</strong>, the specified <strong>Type</strong> parameter is invalid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Type</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The total number of data rows that were verified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("FinishedCount")
     public Long finishedCount;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -74,6 +105,9 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of tables on which data verification was performed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -182,76 +216,111 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public static class DescribeDataCheckTableDetailsResponseBodyTableDetails extends TeaModel {
         /**
          * <p>The time when data verification was performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-18 11:26:59</p>
          */
         @NameInMap("BootTime")
         public String bootTime;
 
         /**
          * <p>The number of data rows that contain inconsistent data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DiffCount")
         public Long diffCount;
 
         /**
          * <p>任务运行出错时，返回报错信息的错误编码。</p>
-         * <br>
-         * <p>- **1**：无主键表数量超过限制。</p>
-         * <p>- **2**：差异数据超过300行。</p>
-         * <p>- **3**：待查询的表不存在。</p>
-         * <p>- **4**：查询数据的SQL语法错误。</p>
+         * <ul>
+         * <li><strong>1</strong>：无主键表数量超过限制。</li>
+         * <li><strong>2</strong>：差异数据超过300行。</li>
+         * <li><strong>3</strong>：待查询的表不存在。</li>
+         * <li><strong>4</strong>：查询数据的SQL语法错误。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ErrorCode")
         public Integer errorCode;
 
         /**
          * <p>The number of data rows that were verified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("FinishCount")
         public Long finishCount;
 
         /**
          * <p>The auto-increment primary key that is used to identify a data record in a verification result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>167401241974****</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The name of the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         @NameInMap("SourceDbName")
         public String sourceDbName;
 
         /**
          * <p>The name of the source table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>student</p>
          */
         @NameInMap("SourceTbName")
         public String sourceTbName;
 
         /**
          * <p>The status of the data verification result. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The data verification task was complete.</p>
-         * <p>*   **2**: The data verification task was initialized.</p>
-         * <p>*   **3**: The data verification task was running.</p>
-         * <p>*   **5**: The data verification task failed.</p>
+         * <ul>
+         * <li><strong>0</strong>: The data verification task was complete.</li>
+         * <li><strong>2</strong>: The data verification task was initialized.</li>
+         * <li><strong>3</strong>: The data verification task was running.</li>
+         * <li><strong>5</strong>: The data verification task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the destination database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         @NameInMap("TargetDbName")
         public String targetDbName;
 
         /**
          * <p>The name of the destination table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>person</p>
          */
         @NameInMap("TargetTbName")
         public String targetTbName;
 
         /**
          * <p>The total number of data rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

@@ -6,45 +6,62 @@ import com.aliyun.tea.*;
 public class DescribePreCheckStatusRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i03e3zty16i****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
      * <p>The task code that specifies the type of the DTS subtask. Valid values:</p>
-     * <br>
-     * <p>*   **01**: precheck</p>
-     * <p>*   **02**: schema migration or initial schema synchronization</p>
-     * <p>*   **03**: full data migration or initial full data synchronization</p>
-     * <p>*   **04**: incremental data migration or synchronization</p>
-     * <br>
+     * <ul>
+     * <li><strong>01</strong>: precheck</li>
+     * <li><strong>02</strong>: schema migration or initial schema synchronization</li>
+     * <li><strong>03</strong>: full data migration or initial full data synchronization</li>
+     * <li><strong>04</strong>: incremental data migration or synchronization</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01</p>
      */
     @NameInMap("JobCode")
     public String jobCode;
 
     /**
      * <p>The filter item used to filter tables in fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dewuprop</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -54,15 +71,22 @@ public class DescribePreCheckStatusRequest extends TeaModel {
 
     /**
      * <p>The filter item used to filter tables, views, and functions during schema migration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>View</p>
      */
     @NameInMap("StructPhase")
     public String structPhase;
 
     /**
      * <p>The type of schema definition. Valid values:</p>
-     * <br>
-     * <p>*   **before**: schema migration or initial schema synchronization</p>
-     * <p>*   **after**: DDL operations performed during incremental data migration or synchronization</p>
+     * <ul>
+     * <li><strong>before</strong>: schema migration or initial schema synchronization</li>
+     * <li><strong>after</strong>: DDL operations performed during incremental data migration or synchronization</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>before</p>
      */
     @NameInMap("StructType")
     public String structType;

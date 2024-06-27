@@ -6,42 +6,61 @@ import com.aliyun.tea.*;
 public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>This parameter is no longer available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0DD6B201-604B-4CAB-B6A8-4B2953B5****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   **NotStarted**: The task is not started.</p>
-     * <p>*   **Initializing**: The task is being initialized.</p>
-     * <p>*   **Switching**: The task is running.</p>
-     * <p>*   **Failed**: The task failed.</p>
-     * <p>*   **Finished**: The task is completed.</p>
+     * <ul>
+     * <li><strong>NotStarted</strong>: The task is not started.</li>
+     * <li><strong>Initializing</strong>: The task is being initialized.</li>
+     * <li><strong>Switching</strong>: The task is running.</li>
+     * <li><strong>Failed</strong>: The task failed.</li>
+     * <li><strong>Finished</strong>: The task is completed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Finished</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

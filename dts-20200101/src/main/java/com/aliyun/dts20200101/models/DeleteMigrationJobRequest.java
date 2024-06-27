@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DeleteMigrationJobRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
-     * <p>The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query all data migration instances.</p>
-     * <br>
+     * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query all data migration instances.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsyiwe9b0gp2p****</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;

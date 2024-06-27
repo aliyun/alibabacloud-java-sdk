@@ -4,36 +4,76 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>db_dtstest</p>
+     */
     @NameInMap("DbName")
     public String dbName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DiffCount")
     public Long diffCount;
 
     @NameInMap("DiffDetails")
     public java.util.List<DescribeDataCheckTableDiffDetailsResponseBodyDiffDetails> diffDetails;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Type</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InvalidParameter</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The value of the parameter tbName is invalid.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dtsog8q1z3tc9t****&quot;</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test_person</p>
+     */
     @NameInMap("TbName")
     public String tbName;
 
@@ -131,12 +171,24 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     }
 
     public static class DescribeDataCheckTableDiffDetailsResponseBodyDiffDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>[     {         &quot;column&quot;: &quot;id&quot;,         &quot;source&quot;: &quot;9511&quot;,         &quot;dest&quot;: &quot;9511&quot;,         &quot;isPrimary&quot;: true     },     {         &quot;column&quot;: &quot;state&quot;,         &quot;source&quot;: &quot;3&quot;,         &quot;dest&quot;: &quot;2&quot;,         &quot;isPrimary&quot;: false     },     {         &quot;column&quot;: &quot;create_time&quot;,         &quot;source&quot;: &quot;2023-04-11 14:07:17.0&quot;,         &quot;dest&quot;: &quot;NULL&quot;,         &quot;isPrimary&quot;: false     },     {         &quot;column&quot;: &quot;update_time&quot;,         &quot;source&quot;: &quot;2023-04-11 06:07:17.0&quot;,         &quot;dest&quot;: &quot;2023-04-11 06:02:29.0&quot;,         &quot;isPrimary&quot;: false     } ]</p>
+         */
         @NameInMap("Diff")
         public String diff;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-23T10:36:05.000+00:00</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13058****</p>
+         */
         @NameInMap("Id")
         public Long id;
 

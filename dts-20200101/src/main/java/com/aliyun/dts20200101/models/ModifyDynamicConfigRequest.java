@@ -4,24 +4,42 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDynamicConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;dts.datamove.source.rps.max\&quot;:5000,\&quot;dts.datamove.source.bps.max\&quot;:10485760}</p>
+     */
     @NameInMap("ConfigList")
     public String configList;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ta7w132u12h****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableLimit")
     public Boolean enableLimit;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>07</p>
      */
     @NameInMap("JobCode")
     public String jobCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

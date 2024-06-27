@@ -5,33 +5,45 @@ import com.aliyun.tea.*;
 
 public class DeleteConsumerChannelRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer group. You can call the [DescribeConsumerChannel](https://help.aliyun.com/document_detail/264169.html) operation to query the consumer group ID.</p>
-     * <br>
+     * <p>The ID of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/264169.html">DescribeConsumerChannel</a> operation to query the consumer group ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsktbb6jdn2******</p>
      */
     @NameInMap("ConsumerGroupId")
     public String consumerGroupId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the instance ID.</p>
-     * <br>
-     * <p>>  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.</p>
+     * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsboss6pn1w73****</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
-     * <br>
-     * <p>>  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.</p>
+     * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <blockquote>
+     * <p> You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>boss6pn1w73****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
-     * <br>
+     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

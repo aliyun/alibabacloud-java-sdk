@@ -24,24 +24,36 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
-     * <p>The specification of the data migration instance. Valid values: **small**, **medium**, **large**, **xlarge**, and **2xlarge**. For more information, see [Specifications of data migration instances](https://help.aliyun.com/document_detail/26606.html).</p>
+     * <p>The specification of the data migration instance. Valid values: <strong>small</strong>, <strong>medium</strong>, <strong>large</strong>, <strong>xlarge</strong>, and <strong>2xlarge</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/26606.html">Specifications of data migration instances</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2xlarge</p>
      */
     @NameInMap("MigrationJobClass")
     public String migrationJobClass;
 
     /**
      * <p>The ID of the data migration instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsz2v12jfo309****</p>
      */
     @NameInMap("MigrationJobId")
     public String migrationJobId;
@@ -54,14 +66,18 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     /**
      * <p>The status of the data migration task. Valid values:</p>
-     * <br>
-     * <p>*   **NotStarted**: The task is not started.</p>
-     * <p>*   **Prechecking**: The task is being prechecked.</p>
-     * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
-     * <p>*   **Migrating**: The task is migrating data.</p>
-     * <p>*   **Suspending**: The task is paused.</p>
-     * <p>*   **MigrationFailed**: The task failed to migrate data.</p>
-     * <p>*   **Finished**: The task is completed.</p>
+     * <ul>
+     * <li><strong>NotStarted</strong>: The task is not started.</li>
+     * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
+     * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
+     * <li><strong>Migrating</strong>: The task is migrating data.</li>
+     * <li><strong>Suspending</strong>: The task is paused.</li>
+     * <li><strong>MigrationFailed</strong>: The task failed to migrate data.</li>
+     * <li><strong>Finished</strong>: The task is completed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Migrating</p>
      */
     @NameInMap("MigrationJobStatus")
     public String migrationJobStatus;
@@ -74,12 +90,18 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     /**
      * <p>The objects that are migrated by the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;DBName\&quot;:\&quot;dtstestdata\&quot;,\&quot;TableIncludes\&quot;:[{\&quot;TableName\&quot;:\&quot;customer\&quot;}]}]</p>
      */
     @NameInMap("MigrationObject")
     public String migrationObject;
 
     /**
-     * <p>The billing method of the data migration instance. The value is **PostPaid** (pay-as-you-go).</p>
+     * <p>The billing method of the data migration instance. The value is <strong>PostPaid</strong> (pay-as-you-go).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -92,6 +114,9 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A032E3B4-929B-48E9-97B9-37587CBF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -110,10 +135,17 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>z2v12jfo309****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
@@ -269,29 +301,42 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     public static class DescribeMigrationJobStatusResponseBodyDataInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if full data migration failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The migration progress. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of records that have been migrated during full data migration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200001</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The status of full data migration. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: Full data migration is not started.</p>
-         * <p>*   **Migrating**: Full data migration is in progress.</p>
-         * <p>*   **Failed**: Full data migration failed.</p>
-         * <p>*   **Finished**: Full data migration is completed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: Full data migration is not started.</li>
+         * <li><strong>Migrating</strong>: Full data migration is in progress.</li>
+         * <li><strong>Failed</strong>: Full data migration failed.</li>
+         * <li><strong>Finished</strong>: Full data migration is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;
@@ -338,12 +383,18 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     public static class DescribeMigrationJobStatusResponseBodyDataSynchronizationStatus extends TeaModel {
         /**
          * <p>The UNIX timestamp generated when the latest incremental data is migrated. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1612507847</p>
          */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
         /**
          * <p>The latency of incremental data migration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Delay")
         public String delay;
@@ -356,18 +407,25 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
         /**
          * <p>The progress of incremental data migration. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The status of incremental data migration. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: Incremental data migration is not started.</p>
-         * <p>*   **Migrating**: Incremental data migration is in progress.</p>
-         * <p>*   **Failed**: Incremental data migration failed.</p>
-         * <p>*   **Finished**: Incremental data migration is completed.</p>
-         * <p>*   **Catched**: Incremental data migration is not delayed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: Incremental data migration is not started.</li>
+         * <li><strong>Migrating</strong>: Incremental data migration is in progress.</li>
+         * <li><strong>Failed</strong>: Incremental data migration failed.</li>
+         * <li><strong>Finished</strong>: Incremental data migration is completed.</li>
+         * <li><strong>Catched</strong>: Incremental data migration is not delayed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Catched</p>
          */
         @NameInMap("Status")
         public String status;
@@ -422,50 +480,75 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     public static class DescribeMigrationJobStatusResponseBodyDestinationEndpoint extends TeaModel {
         /**
          * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database type of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The endpoint of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The ID of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1zc3iyqe3qw****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The type of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The database service port of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The database account of the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The system ID (SID) of the Oracle database.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the database type of the destination instance is **Oracle**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the database type of the destination instance is <strong>Oracle</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("oracleSID")
         public String oracleSID;
@@ -544,27 +627,39 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     public static class DescribeMigrationJobStatusResponseBodyMigrationMode extends TeaModel {
         /**
          * <p>Indicates whether full data migration is performed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("dataInitialization")
         public Boolean dataInitialization;
 
         /**
          * <p>Indicates whether incremental data migration is performed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("dataSynchronization")
         public Boolean dataSynchronization;
 
         /**
          * <p>Indicates whether schema migration is performed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("structureInitialization")
         public Boolean structureInitialization;
@@ -603,31 +698,46 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     public static class DescribeMigrationJobStatusResponseBodyPrecheckStatusDetailCheckItem extends TeaModel {
         /**
          * <p>The precheck result. Valid values:</p>
-         * <br>
-         * <p>*   **Success**: The task passed the precheck.</p>
-         * <p>*   **Failed**: The task failed to pass the precheck.</p>
+         * <ul>
+         * <li><strong>Success</strong>: The task passed the precheck.</li>
+         * <li><strong>Failed</strong>: The task failed to pass the precheck.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("CheckStatus")
         public String checkStatus;
 
         /**
          * <p>The error message returned if the task failed to pass the precheck.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Original error: Access denied for user \&quot;dtstest\&quot;@\&quot;100.104.***.**\&quot; (using password: YES)</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The name of the precheck item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_CONN_SRC</p>
          */
         @NameInMap("ItemName")
         public String itemName;
 
         /**
          * <p>The method to fix the precheck failure.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the return value of the <strong>CheckStatus</strong> parameter is <strong>Failed</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CHECK_ERROR_DEST_CONN_REPAIR2</p>
          */
         @NameInMap("RepairMethod")
         public String repairMethod;
@@ -699,18 +809,25 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
 
         /**
          * <p>The precheck progress. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The precheck status. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**</p>
-         * <p>*   **Suspending**:</p>
-         * <p>*   **Checking**</p>
-         * <p>*   **Failed**</p>
-         * <p>*   **Finished**</p>
+         * <ul>
+         * <li><strong>NotStarted</strong></li>
+         * <li><strong>Suspending</strong>:</li>
+         * <li><strong>Checking</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Finished</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
@@ -749,57 +866,83 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     public static class DescribeMigrationJobStatusResponseBodySourceEndpoint extends TeaModel {
         /**
          * <p>The name of the database to which the migration object in the source instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdatabase</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The database type of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("EngineName")
         public String engineName;
 
         /**
          * <p>The endpoint of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The ID of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1i99e8l7913****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The type of the source instance.</p>
-         * <br>
-         * <p>*   **RDS**: ApsaraDB RDS instance</p>
-         * <p>*   **ECS**: self-managed database that is hosted on Elastic Compute Service (ECS)</p>
-         * <p>*   **LocalInstance**: self-managed database with a public IP address</p>
-         * <p>*   **Express**: self-managed database that is connected over Express Connect, VPN Gateway, or Smart Access Gateway</p>
-         * <p>*   **MongoDB**: ApsaraDB for MongoDB instance</p>
-         * <p>*   **POLARDB**: PolarDB for MySQL cluster (available only for the China site)</p>
+         * <ul>
+         * <li><strong>RDS</strong>: ApsaraDB RDS instance</li>
+         * <li><strong>ECS</strong>: self-managed database that is hosted on Elastic Compute Service (ECS)</li>
+         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
+         * <li><strong>Express</strong>: self-managed database that is connected over Express Connect, VPN Gateway, or Smart Access Gateway</li>
+         * <li><strong>MongoDB</strong>: ApsaraDB for MongoDB instance</li>
+         * <li><strong>POLARDB</strong>: PolarDB for MySQL cluster (available only for the China site)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The database service port of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The database account of the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstest</p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The SID of the Oracle database.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the database type of the source instance is **Oracle**.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the database type of the source instance is <strong>Oracle</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdatabase</p>
          */
         @NameInMap("oracleSID")
         public String oracleSID;
@@ -878,29 +1021,42 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     public static class DescribeMigrationJobStatusResponseBodyStructureInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if schema migration failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist;</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The progress of schema migration. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public String percent;
 
         /**
          * <p>The number of tables whose schemas have been migrated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The status of schema migration. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: Schema migration is not started.</p>
-         * <p>*   **Migrating**: Schema migration is in progress.</p>
-         * <p>*   **Failed**: Schema migration failed.</p>
-         * <p>*   **Finished**: Schema migration is completed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: Schema migration is not started.</li>
+         * <li><strong>Migrating</strong>: Schema migration is in progress.</li>
+         * <li><strong>Failed</strong>: Schema migration failed.</li>
+         * <li><strong>Finished</strong>: Schema migration is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Finished</p>
          */
         @NameInMap("Status")
         public String status;

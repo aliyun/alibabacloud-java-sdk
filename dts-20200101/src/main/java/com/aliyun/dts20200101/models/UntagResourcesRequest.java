@@ -6,21 +6,29 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to unbind all tags from the specified instances. Valid values:</p>
-     * <br>
-     * <p>*   **true**: unbinds all tags from the specified instances.</p>
-     * <p>*   **false**: To unbind only specific tags, you must specify the **TagKey.N** parameter.</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   You must specify at least one of the All and **TagKey.N** parameters.</p>
-     * <p>*   If you specify both the All parameter and the **TagKey.N** parameter, the All parameter does not take effect.</p>
+     * <ul>
+     * <li><strong>true</strong>: unbinds all tags from the specified instances.</li>
+     * <li><strong>false</strong>: To unbind only specific tags, you must specify the <strong>TagKey.N</strong> parameter.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>You must specify at least one of the All and <strong>TagKey.N</strong> parameters.</li>
+     * <li>If you specify both the All parameter and the <strong>TagKey.N</strong> parameter, the All parameter does not take effect.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
-     * <p>The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
-     * <br>
+     * <p>The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -30,16 +38,26 @@ public class UntagResourcesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsntk10k6r12v****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: **ALIYUN::DTS::INSTANCE**.</p>
+     * <p>The resource type. Valid value: <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::DTS::INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testkey1</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

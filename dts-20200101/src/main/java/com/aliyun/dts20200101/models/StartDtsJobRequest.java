@@ -6,20 +6,30 @@ import com.aliyun.tea.*;
 public class StartDtsJobRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeMigrationJobs](https://help.aliyun.com/document_detail/208139.html), [DescribeSubscriptionInstances](https://help.aliyun.com/document_detail/49442.html), or [DescribeSynchronizationJobs](https://help.aliyun.com/document_detail/49454.html) operation to query the instance ID</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/208139.html">DescribeMigrationJobs</a>, <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a>, or <a href="https://help.aliyun.com/document_detail/49454.html">DescribeSynchronizationJobs</a> operation to query the instance ID</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsl3m1213ye7l****</p>
      */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>l3m1213ye7l****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
-     * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,12 +39,18 @@ public class StartDtsJobRequest extends TeaModel {
 
     /**
      * <p>The synchronization direction. Default value: Forward. Valid values:</p>
-     * <br>
-     * <p>*   **Forward**: Data is synchronized from the source database to the destination database.</p>
-     * <br>
-     * <p>*   **Reverse**: Data is synchronized from the destination database to the source database.</p>
-     * <br>
-     * <p>>You can set this parameter to **Reverse** to start the reverse synchronization task only if the topology is two-way synchronization.</p>
+     * <ul>
+     * <li><p><strong>Forward</strong>: Data is synchronized from the source database to the destination database.</p>
+     * </li>
+     * <li><p><strong>Reverse</strong>: Data is synchronized from the destination database to the source database.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization task only if the topology is two-way synchronization.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Forward</p>
      */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;

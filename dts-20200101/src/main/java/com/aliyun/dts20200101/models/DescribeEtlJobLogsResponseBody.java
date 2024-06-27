@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeEtlJobLogsResponseBody extends TeaModel {
     /**
      * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>403</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The dynamic part in the error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>present environment is not support,so skip.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code. This example indicates that the specified ETL task ID is invalid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidJobId</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may be deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The specified dts job id %s is not exists.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
@@ -36,18 +48,27 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful. If the call failed, false is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -124,36 +145,54 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     public static class DescribeEtlJobLogsResponseBodyEtlRunningLogs extends TeaModel {
         /**
          * <p>The state of the ETL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Starting DTS-ETL...</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The module for which the logs are generated, such as the conversion module of ETL tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DTS-ETL</p>
          */
         @NameInMap("ContentKey")
         public String contentKey;
 
         /**
          * <p>The ID of the ETL task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u**********5</p>
          */
         @NameInMap("EtlId")
         public String etlId;
 
         /**
          * <p>The time when the log was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637306503000</p>
          */
         @NameInMap("LogDatetime")
         public String logDatetime;
 
         /**
          * <p>The log level. Valid values: ERROR, WARN, INFO, and DEBUG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INFO</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121323*******454512</p>
          */
         @NameInMap("UserId")
         public String userId;

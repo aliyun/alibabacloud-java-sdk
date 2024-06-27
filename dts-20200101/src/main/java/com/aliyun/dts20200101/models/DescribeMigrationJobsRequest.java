@@ -6,14 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeMigrationJobsRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The name of the data migration task.</p>
-     * <br>
-     * <p>>  Fuzzy match is supported.</p>
+     * <blockquote>
+     * <p> Fuzzy match is supported.</p>
+     * </blockquote>
      */
     @NameInMap("MigrationJobName")
     public String migrationJobName;
@@ -22,19 +26,28 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than <strong>0</strong> and does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the data migration instances reside. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The ID of the region where the data migration instances reside. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -116,23 +129,32 @@ public class DescribeMigrationJobsRequest extends TeaModel {
 
     public static class DescribeMigrationJobsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can call the [ListTagResources](https://help.aliyun.com/document_detail/191187.html) operation to query the tag key.</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</p>
-         * <p>*   This parameter cannot be an empty string.</p>
-         * <br>
+         * <p>The tag key. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag key.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
+         * <li>This parameter cannot be an empty string.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value. You can call the [ListTagResources](https://help.aliyun.com/document_detail/191187.html) operation to query the tag value.</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</p>
-         * <p>*   This parameter can be an empty string.</p>
+         * <p>The tag value. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag value.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
+         * <li>This parameter can be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue1</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of data synchronization instances displayed on one page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1413460B-138A-48D1-836C-B24EDDC1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -48,6 +66,9 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
 
     /**
      * <p>The total number of data synchronization instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
@@ -124,34 +145,46 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     public static class DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusListSynchronizationDirectionInfoList extends TeaModel {
         /**
          * <p>The UNIX timestamp generated when the latest data record was synchronized.</p>
-         * <br>
-         * <p>>  You can use a search engine to obtain a UNIX timestamp converter.</p>
+         * <blockquote>
+         * <p> You can use a search engine to obtain a UNIX timestamp converter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1610524452</p>
          */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
         /**
          * <p>The status of the data synchronization task in this direction. Valid values:</p>
-         * <br>
-         * <p>*   **NotStarted**: The task is not started.</p>
-         * <p>*   **Prechecking**: The task is being prechecked.</p>
-         * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
-         * <p>*   **Initializing**: The task is performing initial synchronization.</p>
-         * <p>*   **InitializeFailed**: Initial synchronization failed.</p>
-         * <p>*   **Synchronizing**: The task is synchronizing data.</p>
-         * <p>*   **Failed**: The task failed to synchronize data.</p>
-         * <p>*   **Suspending**: The task is paused.</p>
-         * <p>*   **Modifying**: The objects in the task are being modified.</p>
-         * <p>*   **Finished**: The task is completed.</p>
+         * <ul>
+         * <li><strong>NotStarted</strong>: The task is not started.</li>
+         * <li><strong>Prechecking</strong>: The task is being prechecked.</li>
+         * <li><strong>PrecheckFailed</strong>: The task failed to pass the precheck.</li>
+         * <li><strong>Initializing</strong>: The task is performing initial synchronization.</li>
+         * <li><strong>InitializeFailed</strong>: Initial synchronization failed.</li>
+         * <li><strong>Synchronizing</strong>: The task is synchronizing data.</li>
+         * <li><strong>Failed</strong>: The task failed to synchronize data.</li>
+         * <li><strong>Suspending</strong>: The task is paused.</li>
+         * <li><strong>Modifying</strong>: The objects in the task are being modified.</li>
+         * <li><strong>Finished</strong>: The task is completed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InitializeFailed</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The synchronization direction. Valid values:</p>
-         * <br>
-         * <p>*   **Forward**</p>
-         * <p>*   **Reverse**</p>
+         * <ul>
+         * <li><strong>Forward</strong></li>
+         * <li><strong>Reverse</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Forward</p>
          */
         @NameInMap("SynchronizationDirection")
         public String synchronizationDirection;
@@ -196,6 +229,9 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the data synchronization instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtsexjk1alb116****</p>
          */
         @NameInMap("SynchronizationJobId")
         public String synchronizationJobId;

@@ -15,6 +15,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
@@ -29,33 +32,48 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
-     * <br>
+     * <p>The ID of the region in which the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtshp8n2ze4r5x****</p>
      */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 
     /**
-     * <p>The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](https://help.aliyun.com/document_detail/49442.html) operation to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/49442.html">DescribeSubscriptionInstances</a> operation to query the instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The name of the change tracking instance.</p>
+     * <blockquote>
+     * <p> We recommend that you specify an informative name for easy identification. You do not need to use a unique name.</p>
+     * </blockquote>
      */
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;
 
     /**
-     * <p>The network type of the change tracking instance. Set the value to **vpc**. A value of vpc indicates the Virtual Private Cloud (VPC) network type.</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the **SubscriptionInstance.VPCId** and **SubscriptionInstance.VSwitchID** parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</p>
-     * <p>*   The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</p>
+     * <p>The network type of the change tracking instance. Set the value to <strong>vpc</strong>. A value of vpc indicates the Virtual Private Cloud (VPC) network type.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the <strong>SubscriptionInstance.VPCId</strong> and <strong>SubscriptionInstance.VSwitchID</strong> parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</li>
+     * <li>The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("SubscriptionInstanceNetworkType")
     public String subscriptionInstanceNetworkType;
 
     /**
-     * <p>The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](https://help.aliyun.com/document_detail/141902.html).</p>
-     * <br>
+     * <p>The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141902.html">SubscriptionObjects</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{     &quot;DBName&quot;: &quot;dtstestdata&quot; }]</p>
      */
     @NameInMap("SubscriptionObject")
     public String subscriptionObject;
@@ -156,84 +174,123 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public static class ConfigureSubscriptionInstanceRequestSourceEndpoint extends TeaModel {
         /**
          * <p>The name of the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestdata</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The IP address of the source database.</p>
-         * <br>
-         * <p>>  This parameter is required only when the source database is a self-managed database.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the source database is a self-managed database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.88.***</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The ID of the source database.</p>
-         * <br>
-         * <p>>  This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-bp1zc3iyqe3qw****</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the source database. Valid values:</p>
-         * <br>
-         * <p>*   **RDS**: ApsaraDB RDS for MySQL instance</p>
-         * <p>*   **PolarDB**: PolarDB for MySQL cluster</p>
-         * <p>*   **LocalInstance**: self-managed database with a public IP address</p>
-         * <p>*   **ECS**: self-managed database hosted on an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **Express**: self-managed database connected over Express Connect</p>
-         * <p>*   **CEN**: self-managed database connected over Cloud Enterprise Network (CEN)</p>
-         * <p>*   **dg**: self-managed database connected over Database Gateway</p>
-         * <br>
-         * <p>>  The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the [CreateSubscriptionInstance](https://help.aliyun.com/document_detail/49436.html) operation.</p>
+         * <ul>
+         * <li><strong>RDS</strong>: ApsaraDB RDS for MySQL instance</li>
+         * <li><strong>PolarDB</strong>: PolarDB for MySQL cluster</li>
+         * <li><strong>LocalInstance</strong>: self-managed database with a public IP address</li>
+         * <li><strong>ECS</strong>: self-managed database hosted on an Elastic Compute Service (ECS) instance</li>
+         * <li><strong>Express</strong>: self-managed database connected over Express Connect</li>
+         * <li><strong>CEN</strong>: self-managed database connected over Cloud Enterprise Network (CEN)</li>
+         * <li><strong>dg</strong>: self-managed database connected over Database Gateway</li>
+         * </ul>
+         * <blockquote>
+         * <p> The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The system ID (SID) of the Oracle database.</p>
-         * <br>
-         * <p>>  This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>testsid</p>
          */
         @NameInMap("OracleSID")
         public String oracleSID;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the source database belongs.</p>
-         * <br>
-         * <p>>  This parameter is required only when you track data changes across different Alibaba Cloud accounts.</p>
+         * <blockquote>
+         * <p> This parameter is required only when you track data changes across different Alibaba Cloud accounts.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>140692647406****</p>
          */
         @NameInMap("OwnerID")
         public String ownerID;
 
         /**
          * <p>The password of the account that is used to connect to the source database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test123456</p>
          */
         @NameInMap("Password")
         public String password;
 
         /**
          * <p>The service port number of the source database.</p>
-         * <br>
-         * <p>>  This parameter is required only when the source database is a self-managed database.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the source database is a self-managed database.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking instance. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</p>
-         * <br>
-         * <p>>  For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](https://help.aliyun.com/document_detail/48468.html).</p>
+         * <blockquote>
+         * <p> For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration and synchronization</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ram-for-dts</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The username of the account that is used to connect to the source database.</p>
-         * <br>
-         * <p>>  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Overview of change tracking scenarios](https://help.aliyun.com/document_detail/145715.html).</p>
+         * <blockquote>
+         * <p> The permissions that are required for the database account vary with the change tracking scenario. For more information, see <a href="https://help.aliyun.com/document_detail/145715.html">Overview of change tracking scenarios</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dtstestaccount</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -328,22 +385,28 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public static class ConfigureSubscriptionInstanceRequestSubscriptionDataType extends TeaModel {
         /**
          * <p>Specifies whether to track DDL statements. Default value: true. Valid values:</p>
-         * <br>
-         * <p>*   **true**: tracks DDL statements.</p>
-         * <p>*   **false**: does not track DDL statements.</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong>: tracks DDL statements.</li>
+         * <li><strong>false</strong>: does not track DDL statements.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DDL")
         public Boolean DDL;
 
         /**
          * <p>Specifies whether to track DML statements. Default value: true. Valid values:</p>
-         * <br>
-         * <p>*   **true**: tracks DML statements.</p>
-         * <p>*   **false**: does not tack DML statements.</p>
-         * <br>
+         * <ul>
+         * <li><strong>true</strong>: tracks DML statements.</li>
+         * <li><strong>false</strong>: does not tack DML statements.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DML")
         public Boolean DML;
@@ -374,16 +437,24 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public static class ConfigureSubscriptionInstanceRequestSubscriptionInstance extends TeaModel {
         /**
          * <p>The ID of the VPC in which the change tracking instance is deployed.</p>
-         * <br>
-         * <p>>  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the <strong>SubscriptionInstanceNetworkType</strong> parameter is set to <strong>vpc</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1vwnn14rqpyiczj****</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
          * <p>The ID of the vSwitch in the specified VPC.</p>
-         * <br>
-         * <p>>  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.</p>
+         * <blockquote>
+         * <p> This parameter is required only when the <strong>SubscriptionInstanceNetworkType</strong> parameter is set to <strong>vpc</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp10df3mxae6lpmku****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

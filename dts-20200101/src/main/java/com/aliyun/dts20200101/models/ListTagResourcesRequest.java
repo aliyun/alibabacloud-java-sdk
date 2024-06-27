@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The query token.</p>
-     * <br>
-     * <p>>  If a query does not return all results, you can specify the returned **NextToken** parameter in the next query to obtain more results.</p>
+     * <blockquote>
+     * <p> If a query does not return all results, you can specify the returned <strong>NextToken</strong> parameter in the next query to obtain more results.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>212db86sca4384811e0b5e8707ec2****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
-     * <br>
+     * <p>The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,13 +29,19 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dtsntk10k6r12v****</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: **ALIYUN::DTS::INSTANCE**.</p>
-     * <br>
+     * <p>The resource type. Valid value: <strong>ALIYUN::DTS::INSTANCE</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::DTS::INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -93,20 +105,30 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</p>
-         * <p>*   You must specify at least one of the **ResourceId.N** and Tag.N.Key parameters. The parameters cannot be empty strings.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
+         * <li>You must specify at least one of the <strong>ResourceId.N</strong> and Tag.N.Key parameters. The parameters cannot be empty strings.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</p>
-         * <p>*   This parameter can be an empty string.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
+         * <li>This parameter can be an empty string.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue1</p>
          */
         @NameInMap("Value")
         public String value;

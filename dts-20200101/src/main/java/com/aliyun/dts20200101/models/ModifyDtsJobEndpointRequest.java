@@ -4,39 +4,77 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDtsJobEndpointRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>150780020300****</p>
+     */
     @NameInMap("AliyunUid")
     public String aliyunUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dtsaw012y2g15q****</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>m4312mab158****</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>src</p>
      */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rm-bp10k50h8374w****</p>
+     */
     @NameInMap("EndpointInstanceId")
     public String endpointInstanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("EndpointInstanceType")
     public String endpointInstanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>172.168.XX.XXX</p>
+     */
     @NameInMap("EndpointIp")
     public String endpointIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3306</p>
+     */
     @NameInMap("EndpointPort")
     public String endpointPort;
 
@@ -46,27 +84,55 @@ public class ModifyDtsJobEndpointRequest extends TeaModel {
     @NameInMap("ModifyAccount")
     public Boolean modifyAccount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DTStest****</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ram-for-dts</p>
+     */
     @NameInMap("RoleName")
     public String roleName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DTStest****</p>
+     */
     @NameInMap("ShardPassword")
     public String shardPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>shard</p>
+     */
     @NameInMap("ShardUsername")
     public String shardUsername;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Forward</p>
+     */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dtstest</p>
+     */
     @NameInMap("Username")
     public String username;
 

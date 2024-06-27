@@ -6,18 +6,25 @@ import com.aliyun.tea.*;
 public class StopDtsJobsRequest extends TeaModel {
     /**
      * <p>The ID of the data migration or data synchronization task.</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   Separate multiple task IDs by **,** (commas).</p>
-     * <p>*   You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query task IDs.</p>
-     * <br>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>Separate multiple task IDs by <strong>,</strong> (commas).</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query task IDs.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>l5o11f9029c****</p>
      */
     @NameInMap("DtsJobIds")
     public String dtsJobIds;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

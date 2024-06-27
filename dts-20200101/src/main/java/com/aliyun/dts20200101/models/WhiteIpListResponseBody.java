@@ -4,50 +4,76 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class WhiteIpListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>403</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Type</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The call was successful.</p>
-     * <p>*   **false**: The call failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The CIDR blocks of DTS servers. Multiple CIDR blocks are separated by commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.151.12.0/24,47.102.181.0/24,47.101.109.0/24,120.55.129.0/24,11.115.103.0/24,47.102.234.0/24</p>
      */
     @NameInMap("IpList")
     public String ipList;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AD823BD3-1BA6-4117-A536-165CB280****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

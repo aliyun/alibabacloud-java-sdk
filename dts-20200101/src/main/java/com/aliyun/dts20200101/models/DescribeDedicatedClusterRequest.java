@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDedicatedClusterRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsCluster****</p>
      */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
@@ -17,6 +19,9 @@ public class DescribeDedicatedClusterRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

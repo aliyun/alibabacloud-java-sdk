@@ -9,12 +9,18 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <strong>ClientToken</strong> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,28 +30,39 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
 
     /**
      * <p>The billing method of the change tracking instance.</p>
-     * <br>
-     * <p>*   **Postpaid**: pay-as-you-go</p>
-     * <p>*   **Prepaid**: subscription</p>
+     * <ul>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Prepaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The billing cycle of the subscription instance. Valid values:</p>
-     * <br>
-     * <p>*   **Year**</p>
-     * <p>*   **Month**</p>
-     * <br>
-     * <p>>  You must specify this parameter only if you set the PayType parameter to **Prepaid**.</p>
+     * <ul>
+     * <li><strong>Year</strong></li>
+     * <li><strong>Month</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify this parameter only if you set the PayType parameter to <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
-     * <br>
+     * <p>The region ID of the change tracking instance. The region ID is the same as that of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
@@ -58,11 +75,16 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
 
     /**
      * <p>The subscription length.</p>
-     * <br>
-     * <p>*   If the billing cycle is **Year**, the value range is **1 to 5**.</p>
-     * <p>*   If the billing cycle is **Month**, the value range is **1 to 60**.</p>
-     * <br>
-     * <p>>  You must specify this parameter only if you set the PayType parameter to **Prepaid**.</p>
+     * <ul>
+     * <li>If the billing cycle is <strong>Year</strong>, the value range is <strong>1 to 5</strong>.</li>
+     * <li>If the billing cycle is <strong>Month</strong>, the value range is <strong>1 to 60</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify this parameter only if you set the PayType parameter to <strong>Prepaid</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("UsedTime")
     public Integer usedTime;
@@ -154,9 +176,13 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
 
     public static class CreateSubscriptionInstanceRequestSourceEndpoint extends TeaModel {
         /**
-         * <p>The type of the source instance. Valid values: **MySQL**, **PolarDB**, **DRDS**, and **Oracle**.</p>
-         * <br>
-         * <p>>  Default value: **MySQL**.</p>
+         * <p>The type of the source instance. Valid values: <strong>MySQL</strong>, <strong>PolarDB</strong>, <strong>DRDS</strong>, and <strong>Oracle</strong>.</p>
+         * <blockquote>
+         * <p> Default value: <strong>MySQL</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;

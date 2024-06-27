@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeSubscriptionMetaResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C12E7A51-09A4-5796-94BE-08B6DA******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,6 +48,9 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -96,32 +111,48 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
     public static class DescribeSubscriptionMetaResponseBodySubscriptionMetaList extends TeaModel {
         /**
          * <p>The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.</p>
-         * <br>
-         * <p>>  You can use a search engine to obtain a UNIX timestamp converter.</p>
+         * <blockquote>
+         * <p> You can use a search engine to obtain a UNIX timestamp converter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1610524452</p>
          */
         @NameInMap("Checkpoint")
         public Long checkpoint;
 
         /**
-         * <p>The objects of the subtask. For more information, see [Objects of DTS tasks](https://help.aliyun.com/document_detail/209545.html).</p>
+         * <p>The objects of the subtask. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;dtstestdata\&quot;:{\&quot;name\&quot;:\&quot;dtstestdata\&quot;,\&quot;all\&quot;:false,\&quot;Table\&quot;:{\&quot;order\&quot;:{\&quot;name\&quot;:\&quot;order\&quot;,\&quot;all\&quot;:true}}}}</p>
          */
         @NameInMap("DBList")
         public String DBList;
 
         /**
          * <p>The endpoint and port number of the change tracking instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dts-cn-hangzhou.aliyuncs.com:18001</p>
          */
         @NameInMap("DProxyUrl")
         public String DProxyUrl;
 
         /**
          * <p>The consumer group ID of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>z38m91gg2******</p>
          */
         @NameInMap("Sid")
         public String sid;
 
         /**
          * <p>The topic of the subtask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn_hangzhou_rm_bp1n0x0x5tz******_dtstestdata_version2</p>
          */
         @NameInMap("Topic")
         public String topic;

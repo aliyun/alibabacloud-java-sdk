@@ -5,9 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDTSIPRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the destination instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
-     * <br>
-     * <p>>  If the destination instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.</p>
+     * <p>The ID of the region where the destination instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <blockquote>
+     * <p> If the destination instance is a self-managed database with a public IP address, you can set the parameter to <strong>cn-hangzhou</strong> or the ID of the closest region.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("DestinationEndpointRegion")
     public String destinationEndpointRegion;
@@ -19,11 +23,14 @@ public class DescribeDTSIPRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the region where the source instance resides. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
-     * <br>
-     * <p>>  If the source instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.</p>
-     * <br>
+     * <p>The ID of the region where the source instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <blockquote>
+     * <p> If the source instance is a self-managed database with a public IP address, you can set the parameter to <strong>cn-hangzhou</strong> or the ID of the closest region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("SourceEndpointRegion")
     public String sourceEndpointRegion;

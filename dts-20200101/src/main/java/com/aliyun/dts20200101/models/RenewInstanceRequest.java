@@ -6,40 +6,55 @@ import com.aliyun.tea.*;
 public class RenewInstanceRequest extends TeaModel {
     /**
      * <p>The subscription duration of the DTS instance after renewal. Default value: 1.</p>
-     * <br>
-     * <p>*   If the **Period** parameter is set to **Year**, the valid values are **1 to 5**.</p>
-     * <p>*   If the **Period** parameter is set to **Month**, the valid values are **1 to 60**.</p>
+     * <ul>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the valid values are <strong>1 to 5</strong>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the valid values are <strong>1 to 60</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BuyCount")
     public String buyCount;
 
     /**
-     * <p>The billing method of the DTS instance. Set the value to **PREPAY**, which indicates the subscription billing method.</p>
-     * <br>
+     * <p>The billing method of the DTS instance. Set the value to <strong>PREPAY</strong>, which indicates the subscription billing method.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The ID of the data synchronization or change tracking task. You can call the [DescribeDtsJobs](https://help.aliyun.com/document_detail/209702.html) operation to query the task ID.</p>
-     * <br>
+     * <p>The ID of the data synchronization or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qi0r643lc31****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
      * <p>The billing cycle of the DTS instance after renewal. Valid values:</p>
-     * <br>
-     * <p>*   **Year**: annual subscription.</p>
-     * <p>*   **Month**: monthly subscription. This is the default value.</p>
+     * <ul>
+     * <li><strong>Year</strong>: annual subscription.</li>
+     * <li><strong>Month</strong>: monthly subscription. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](https://help.aliyun.com/document_detail/141033.html).</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

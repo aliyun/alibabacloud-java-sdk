@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     /**
      * <p>The error code returned by the backend service. The number is incremented.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,54 +21,81 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Type</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The error code returned if the request failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The Value of Input Parameter %s is not valid.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The HTTP status code returned for an exception.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
      * <p>The total number of records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
@@ -166,48 +196,72 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public static class DescribeClusterOperateLogsResponseBodyDataPoints extends TeaModel {
         /**
          * <p>Other description of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The primary key of the log table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>237827</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The time when the operation is recorded. The value is in the UNIX timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1642077211574</p>
          */
         @NameInMap("LogDatetime")
         public Long logDatetime;
 
         /**
          * <p>The value of the parameter after the operation if the operation is an UPDATE operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>105</p>
          */
         @NameInMap("NewValue")
         public String newValue;
 
         /**
          * <p>The value of the parameter before the operation if the operation is an UPDATE operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("OldValue")
         public String oldValue;
 
         /**
          * <p>The type of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modify-oversold-ratio</p>
          */
         @NameInMap("OperationName")
         public String operationName;
 
         /**
          * <p>The user who performed the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("OperationUser")
         public String operationUser;
 
         /**
-         * <p>Indicates whether the request was successful. A value of **1** indicates that the request was successful.</p>
+         * <p>Indicates whether the request was successful. A value of <strong>1</strong> indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Success")
         public Integer success;

@@ -6,53 +6,76 @@ import com.aliyun.tea.*;
 public class DescribeMetricListRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12323344****</p>
      */
     @NameInMap("AccountId")
     public String accountId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the data migration or synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>k2gm967v16f****</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
      * <p>The timestamp that indicates the end of the time range to query. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1642476194000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>Default value: **ALIYUN**.</p>
+     * <p>Default value: <strong>ALIYUN</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN</p>
      */
     @NameInMap("Env")
     public String env;
 
     /**
-     * <p>*   **InternetOut**: the outbound traffic over the Internet. Unit: byte.</p>
-     * <p>*   **diskusage_utilization**: the disk usage.</p>
-     * <p>*   **IntranetInRate**: the inbound traffic over the internal network. Unit: byte.</p>
-     * <p>*   **InternetIn**: the inbound traffic from the Internet. Unit: byte.</p>
-     * <p>*   **cpu_total**: the CPU utilization.</p>
-     * <p>*   **memory_usedutilization**: the memory usage.</p>
-     * <p>*   **IntranetOutRate**: the outbound traffic over the internal network. Unit: byte.</p>
-     * <br>
+     * <ul>
+     * <li><strong>InternetOut</strong>: the outbound traffic over the Internet. Unit: byte.</li>
+     * <li><strong>diskusage_utilization</strong>: the disk usage.</li>
+     * <li><strong>IntranetInRate</strong>: the inbound traffic over the internal network. Unit: byte.</li>
+     * <li><strong>InternetIn</strong>: the inbound traffic from the Internet. Unit: byte.</li>
+     * <li><strong>cpu_total</strong>: the CPU utilization.</li>
+     * <li><strong>memory_usedutilization</strong>: the memory usage.</li>
+     * <li><strong>IntranetOutRate</strong>: the outbound traffic over the internal network. Unit: byte.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cpu_total</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>Specifies whether to query the metrics of the cluster or a node. Valid values:</p>
-     * <br>
-     * <p>*   **CLUSTER**: query the metrics of the cluster.</p>
-     * <p>*   **NODE**: query the metrics of a node.</p>
+     * <ul>
+     * <li><strong>CLUSTER</strong>: query the metrics of the cluster.</li>
+     * <li><strong>NODE</strong>: query the metrics of a node.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NODE</p>
      */
     @NameInMap("MetricType")
     public String metricType;
@@ -61,15 +84,20 @@ public class DescribeMetricListRequest extends TeaModel {
     public String ownerID;
 
     /**
-     * <p>The monitored object. If the **MetricType** parameter is set to **NODE**, set this parameter to the ID of the node that is monitored.</p>
-     * <br>
+     * <p>The monitored object. If the <strong>MetricType</strong> parameter is set to <strong>NODE</strong>, set this parameter to the ID of the node that is monitored.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nodeid</p>
      */
     @NameInMap("Param")
     public String param;
 
     /**
      * <p>The monitoring interval. Unit: seconds. Minimum value: 15.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("Period")
     public Long period;
@@ -79,6 +107,9 @@ public class DescribeMetricListRequest extends TeaModel {
 
     /**
      * <p>The timestamp that indicates the beginning of the time range to query. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1642476144000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

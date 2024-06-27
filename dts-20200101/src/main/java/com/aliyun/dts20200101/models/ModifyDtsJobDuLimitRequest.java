@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class ModifyDtsJobDuLimitRequest extends TeaModel {
     /**
      * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dtsxxx</p>
      */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
     /**
      * <p>The upper limit of DUs for the DTS task.</p>
-     * <br>
-     * <p>>  Minimum value: **1**.</p>
-     * <br>
+     * <blockquote>
+     * <p> Minimum value: <strong>1</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DuLimit")
     public Long duLimit;
@@ -27,6 +32,9 @@ public class ModifyDtsJobDuLimitRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the DTS instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

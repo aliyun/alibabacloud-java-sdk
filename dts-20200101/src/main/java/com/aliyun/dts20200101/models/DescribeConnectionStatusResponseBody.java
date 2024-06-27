@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeConnectionStatusResponseBody extends TeaModel {
     /**
      * <p>The connectivity of DTS servers to the destination database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{     &quot;connectDetail&quot;: [       {         &quot;testName&quot;: &quot;PolarDB_o JDBC Connect&quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Ping &quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Telnet &quot;,         &quot;testSuccess&quot;: true       }     ],     &quot;connectRes&quot;: true,     &quot;connectAdvice&quot;: &quot;&quot;   }</p>
      */
     @NameInMap("DestinationConnectionStatus")
     public java.util.Map<String, ?> destinationConnectionStatus;
 
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InternalError</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
      * <p>The error message returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The request processing has failed due to some unknown error.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A47C784-70EF-4111-8677-369CAA00****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The connectivity of DTS servers to the source database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{     &quot;connectDetail&quot;: [       {         &quot;testName&quot;: &quot;Oracle JDBC Connect&quot;,         &quot;testSuccess&quot;: true       },       {         &quot;testName&quot;: &quot;Ping &quot;,         &quot;testSuccess&quot;: false       },       {         &quot;testName&quot;: &quot;Telnet &quot;,         &quot;testSuccess&quot;: true       }     ],     &quot;connectRes&quot;: true,     &quot;connectAdvice&quot;: &quot;&quot;   }</p>
      */
     @NameInMap("SourceConnectionStatus")
     public java.util.Map<String, ?> sourceConnectionStatus;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
