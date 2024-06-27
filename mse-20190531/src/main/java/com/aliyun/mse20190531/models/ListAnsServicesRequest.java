@@ -27,6 +27,7 @@ public class ListAnsServicesRequest extends TeaModel {
      * <p>mse-09k1q11****</p>
      */
     @NameInMap("ClusterId")
+    @Deprecated
     public String clusterId;
 
     /**

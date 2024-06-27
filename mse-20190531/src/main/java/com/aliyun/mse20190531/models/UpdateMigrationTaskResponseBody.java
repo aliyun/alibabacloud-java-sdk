@@ -190,6 +190,9 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         @NameInMap("ProjectDesc")
         public String projectDesc;
 
+        @NameInMap("SyncType")
+        public String syncType;
+
         /**
          * <p>The name of the destination instance.</p>
          * 
@@ -293,6 +296,14 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         }
         public String getProjectDesc() {
             return this.projectDesc;
+        }
+
+        public UpdateMigrationTaskResponseBodyData setSyncType(String syncType) {
+            this.syncType = syncType;
+            return this;
+        }
+        public String getSyncType() {
+            return this.syncType;
         }
 
         public UpdateMigrationTaskResponseBodyData setTargetClusterName(String targetClusterName) {

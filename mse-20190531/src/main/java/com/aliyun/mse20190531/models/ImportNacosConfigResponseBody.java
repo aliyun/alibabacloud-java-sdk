@@ -166,6 +166,9 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         @NameInMap("Group")
         public String group;
 
+        @NameInMap("Reason")
+        public String reason;
+
         public static ImportNacosConfigResponseBodyDataFailData build(java.util.Map<String, ?> map) throws Exception {
             ImportNacosConfigResponseBodyDataFailData self = new ImportNacosConfigResponseBodyDataFailData();
             return TeaModel.build(map, self);
@@ -185,6 +188,14 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         }
         public String getGroup() {
             return this.group;
+        }
+
+        public ImportNacosConfigResponseBodyDataFailData setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
     }
