@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryShareListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<QueryShareListResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,27 +51,55 @@ public class QueryShareListResponseBody extends TeaModel {
     }
 
     public static class QueryShareListResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("AuthPoint")
         public Integer authPoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640102400000</p>
+         */
         @NameInMap("ExpireDate")
         public Long expireDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6b407e50-e774-406b-9956-da2425c2****</p>
+         */
         @NameInMap("ReportId")
         public String reportId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0ab9659e-29cf-47d7-a364-3a91553b****</p>
+         */
         @NameInMap("ShareId")
         public String shareId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
+         */
         @NameInMap("ShareToId")
         public String shareToId;
 
         @NameInMap("ShareToName")
         public String shareToName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ShareToType")
         public Integer shareToType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>product</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 

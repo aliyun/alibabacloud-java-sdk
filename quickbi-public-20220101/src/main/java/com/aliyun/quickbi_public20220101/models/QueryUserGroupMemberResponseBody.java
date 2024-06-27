@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryUserGroupMemberResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>48C930FF-DFCF-5986-902B-E24C202E2443</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<QueryUserGroupMemberResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,15 +51,27 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
     }
 
     public static class QueryUserGroupMemberResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsUserGroup")
         public Boolean isUserGroup;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
+         */
         @NameInMap("ParentUserGroupId")
         public String parentUserGroupId;
 

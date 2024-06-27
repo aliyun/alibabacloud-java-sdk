@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListByUserGroupIdResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,9 +21,13 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,54 +64,81 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
     public static class ListByUserGroupIdResponseBodyResultUserGroupModels extends TeaModel {
         /**
          * <p>The time when the Secret was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-15 17:13:55</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The UserID of the creator in the Quick BI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e5*******ee22e2a292704c8</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
          * <p>The path of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2fe4fbd8-<strong><strong>-af083ea/34fd1-</strong></strong>-dcbc33f</p>
          */
         @NameInMap("IdentifiedPath")
         public String identifiedPath;
 
         /**
          * <p>The time when the protection policy was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-15 20:36:40</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The UserID of the modifier in the Quick BI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e5*******ee22e2a292704c8</p>
          */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
         /**
          * <p>The ID of the parent user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2fe4fbd8-588f-489a-b3e1-e92c7af083ea</p>
          */
         @NameInMap("ParentUsergroupId")
         public String parentUsergroupId;
 
         /**
          * <p>The description of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         @NameInMap("UsergroupDesc")
         public String usergroupDesc;
 
         /**
          * <p>The ID of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34fd141d-****-4093-8c33-8e066dcbc33f</p>
          */
         @NameInMap("UsergroupId")
         public String usergroupId;
 
         /**
          * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test user group</p>
          */
         @NameInMap("UsergroupName")
         public String usergroupName;

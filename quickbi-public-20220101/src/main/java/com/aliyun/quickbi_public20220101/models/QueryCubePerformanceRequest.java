@@ -4,26 +4,48 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryCubePerformanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CostTimeAvgMin")
     public Integer costTimeAvgMin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7c7223ae-****-3c744528014b</p>
+     */
     @NameInMap("CubeId")
     public String cubeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sevenDays</p>
      */
     @NameInMap("QueryType")
     public String queryType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

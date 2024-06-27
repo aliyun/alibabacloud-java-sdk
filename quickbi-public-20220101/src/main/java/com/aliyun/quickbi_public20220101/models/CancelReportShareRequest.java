@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class CancelReportShareRequest extends TeaModel {
     /**
      * <p>The ID of the work. The works here include BI portal, dashboards, spreadsheets, and self-service access.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6b407e50-e774-406b-9956-da2425c2****</p>
      */
     @NameInMap("ReportId")
     public String reportId;
 
     /**
      * <p>The ID of the person to be shared, which may be the user ID of the Quick BI or the user group ID.</p>
-     * <br>
-     * <p>*   If ShareToType is 0 (user), ShareTo is the user ID.</p>
-     * <p>*   When ShareToType is set to 1 (user group), ShareTo is the user group ID.</p>
-     * <p>*   When ShareToType=2 (organization), ShareTo is the ID of the organization.</p>
-     * <br>
+     * <ul>
+     * <li>If ShareToType is 0 (user), ShareTo is the user ID.</li>
+     * <li>When ShareToType is set to 1 (user group), ShareTo is the user group ID.</li>
+     * <li>When ShareToType=2 (organization), ShareTo is the ID of the organization.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de4bc5f9429141cc8091cdd1c15b****</p>
      */
     @NameInMap("ShareToIds")
     public String shareToIds;
 
     /**
      * <p>The deletion method. Valid values:</p>
-     * <br>
-     * <p>*   0: Delete by user</p>
-     * <p>*   1: Delete by user group</p>
-     * <p>*   2: Delete by organization</p>
-     * <br>
+     * <ul>
+     * <li>0: Delete by user</li>
+     * <li>1: Delete by user group</li>
+     * <li>2: Delete by organization</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ShareToType")
     public Integer shareToType;

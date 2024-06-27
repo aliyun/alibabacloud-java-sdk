@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryUserInfoByAccountResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,9 +21,13 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,48 +64,71 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
     public static class QueryUserInfoByAccountResponseBodyResult extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135****5848</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
-         * <p>The name of the Alibaba Cloud account that corresponds to the member. (If you use a RAM user, the domain name information that follows @ is removed. For example, if you use a <test@test.com>, test is returned.)</p>
+         * <p>The name of the Alibaba Cloud account that corresponds to the member. (If you use a RAM user, the domain name information that follows @ is removed. For example, if you use a <a href="mailto:test@test.com">test@test.com</a>, test is returned.)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1386587****@163.com</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>Whether you are an administrator of the organization. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AdminUser")
         public Boolean adminUser;
 
         /**
          * <p>Whether you are a permission administrator. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AuthAdminUser")
         public Boolean authAdminUser;
 
         /**
          * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1386587****@163.com</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The nickname of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test user</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
          * <p>The phone number of the alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1386587****</p>
          */
         @NameInMap("Phone")
         public String phone;
@@ -108,16 +138,23 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
 
         /**
          * <p>The UserID in the Quick BI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe67f61a35a94b7da1a34ba174a7****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The role type of the organization member. Valid values:</p>
-         * <br>
-         * <p>*   1 : developer</p>
-         * <p>*   2 : visitors</p>
-         * <p>*   3 : Analyst</p>
+         * <ul>
+         * <li>1 : developer</li>
+         * <li>2 : visitors</li>
+         * <li>3 : Analyst</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UserType")
         public Integer userType;

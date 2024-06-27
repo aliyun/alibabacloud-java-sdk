@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class QueryDatasetInfoResponseBody extends TeaModel {
     /**
      * <p>Whether the operation is successfully returned. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <ul>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>a4d1a221d-41za1-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -21,6 +25,9 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
 
     /**
      * <p>The unique ID of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,59 +64,86 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     public static class QueryDatasetInfoResponseBodyResultCubeTableList extends TeaModel {
         /**
          * <p>Indicates whether the data source table is valid. Valid values:</p>
-         * <br>
-         * <p>*   true: data source table</p>
-         * <p>*   false: custom table</p>
+         * <ul>
+         * <li>true: data source table</li>
+         * <li>false: custom table</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>odps_40</p>
          */
         @NameInMap("Caption")
         public String caption;
 
         /**
          * <p>The display name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Customsql")
         public Boolean customsql;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfefd7f4-fc6e-42c9-b4******</p>
          */
         @NameInMap("DatasourceId")
         public String datasourceId;
 
         /**
          * <p>The ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute</p>
          */
         @NameInMap("DsType")
         public String dsType;
 
         /**
          * <p>The unique ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FactTable")
         public Boolean factTable;
 
         /**
          * <p>Indicates whether the table is a custom SQL table. Valid values:</p>
-         * <br>
-         * <p>*   true: custom SQL table</p>
-         * <p>*   false: non-custom SQL table</p>
+         * <ul>
+         * <li>true: custom SQL table</li>
+         * <li>false: non-custom SQL table</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from ****</p>
          */
         @NameInMap("Sql")
         public String sql;
 
         /**
          * <p>The list of tables used by the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>viewdasb8494aab2612473cb74992159fe****</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   mysql</p>
-         * <p>*   odps</p>
-         * <p>*   oracle</p>
-         * <p>*   ... and other data source types supported by Quick BI</p>
+         * <ul>
+         * <li>mysql</li>
+         * <li>odps</li>
+         * <li>oracle</li>
+         * <li>... and other data source types supported by Quick BI</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>7a62530b36</p>
          */
         @NameInMap("UniqueId")
         public String uniqueId;
@@ -188,62 +222,91 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     public static class QueryDatasetInfoResponseBodyResultDimensionList extends TeaModel {
         /**
          * <p>The unique ID of the field that is referenced by the group measure. Non-NULL if and only if the metric is a grouping metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>city</p>
          */
         @NameInMap("Caption")
         public String caption;
 
         /**
          * <p>A list of all dimensions in the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>The actual physical field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group_dimension</p>
          */
         @NameInMap("DimensionType")
         public String dimensionType;
 
         /**
          * <p>Data type; value:</p>
-         * <br>
-         * <p>*   string: character</p>
-         * <p>*   number: a number</p>
-         * <p>*   datetime: time</p>
+         * <ul>
+         * <li>string: character</li>
+         * <li>number: a number</li>
+         * <li>datetime: time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>example_expression</p>
          */
         @NameInMap("Expression")
         public String expression;
 
         /**
          * <p>Expression for a calculated dimension; valid only for calculated dimensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>city</p>
          */
         @NameInMap("FactColumn")
         public String factColumn;
 
         /**
          * <p>The type of the dimension. Valid values:</p>
-         * <br>
-         * <p>*   standard_dimension: General Dimension</p>
-         * <p>*   calculate_dimension: calculating dimensions</p>
-         * <p>*   group_dimension: grouping dimensions</p>
+         * <ul>
+         * <li>standard_dimension: General Dimension</li>
+         * <li>calculate_dimension: calculating dimensions</li>
+         * <li>group_dimension: grouping dimensions</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>example_granularity</p>
          */
         @NameInMap("Granularity")
         public String granularity;
 
         /**
          * <p>The granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>308f7****</p>
          */
         @NameInMap("RefUid")
         public String refUid;
 
         /**
          * <p>The ARN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7a62530***</p>
          */
         @NameInMap("TableUniqueId")
         public String tableUniqueId;
 
         /**
          * <p>The display name of the dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a69774***</p>
          */
         @NameInMap("Uid")
         public String uid;
@@ -330,24 +393,36 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     public static class QueryDatasetInfoResponseBodyResultDirectory extends TeaModel {
         /**
          * <p>Test directory</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3eecab7-618d-4f9f-*****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>Test directory</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the directory.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The information about the directory to which the dataset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88b680****</p>
          */
         @NameInMap("PathId")
         public String pathId;
 
         /**
          * <p>The path of the directory ID, for example, aa/bb/cc/dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The path name of the directory ID, for example, one-level directory /two-level directory.</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -394,49 +469,72 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     public static class QueryDatasetInfoResponseBodyResultMeasureList extends TeaModel {
         /**
          * <p>The actual physical field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>profit_amt</p>
          */
         @NameInMap("Caption")
         public String caption;
 
         /**
          * <p>A list of all measures for the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string</p>
          */
         @NameInMap("DataType")
         public String dataType;
 
         /**
          * <p>Data type; value:</p>
-         * <br>
-         * <p>*   string: character</p>
-         * <p>*   number: a number</p>
-         * <p>*   datetime: time</p>
+         * <ul>
+         * <li>string: character</li>
+         * <li>number: a number</li>
+         * <li>datetime: time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>example_expression</p>
          */
         @NameInMap("Expression")
         public String expression;
 
         /**
          * <p>The type of the measure. Valid values:</p>
-         * <br>
-         * <p>*   standard_measure: General Metrics</p>
-         * <p>*   calculate_measure: Calculating Measures</p>
+         * <ul>
+         * <li>standard_measure: General Metrics</li>
+         * <li>calculate_measure: Calculating Measures</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>profit_amt</p>
          */
         @NameInMap("FactColumn")
         public String factColumn;
 
         /**
          * <p>An expression that calculates a measure; valid only for calculated measures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>calculate_measure</p>
          */
         @NameInMap("MeasureType")
         public String measureType;
 
         /**
          * <p>The display name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7a62530b36</p>
          */
         @NameInMap("TableUniqueId")
         public String tableUniqueId;
 
         /**
          * <p>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88b680****</p>
          */
         @NameInMap("Uid")
         public String uid;
@@ -513,23 +611,33 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
 
         /**
          * <p>The unique ID of the workspace to which the dataset belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CustimzeSql")
         public Boolean custimzeSql;
 
         /**
          * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   mysql</p>
-         * <p>*   odps</p>
-         * <p>*   oracle</p>
-         * <p>*   ... Data source types supported by Quick BI such as</p>
+         * <ul>
+         * <li>mysql</li>
+         * <li>odps</li>
+         * <li>oracle</li>
+         * <li>... Data source types supported by Quick BI such as</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>a201c85c-******</p>
          */
         @NameInMap("DatasetId")
         public String datasetId;
 
         /**
          * <p>The user ID of the dataset owner in the Quick BI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>opds_40</p>
          */
         @NameInMap("DatasetName")
         public String datasetName;
@@ -548,33 +656,49 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
 
         /**
          * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a201c85c-******</p>
          */
         @NameInMap("DsId")
         public String dsId;
 
         /**
          * <p>The time when the dataset was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         @NameInMap("DsName")
         public String dsName;
 
         /**
          * <p>The point in time when the training dataset was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>odps</p>
          */
         @NameInMap("DsType")
         public String dsType;
 
         /**
          * <p>Indicates whether to customize SQL statements. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1629450382000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The information about the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1629450382000</p>
          */
         @NameInMap("GmtModify")
         public String gmtModify;
@@ -590,33 +714,49 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
 
         /**
          * <p>Test Space</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b8494aab26124*****</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The unique ID of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the dataset owner.</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
          * <p>The name of the training dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("RowLevel")
         public Boolean rowLevel;
 
         /**
          * <p>Whether row-level permissions are enabled. Valid values:</p>
-         * <br>
-         * <p>*   true: The VIP Netty channel is enabled.</p>
-         * <p>*   false: The VIP Netty channel is disabled.</p>
+         * <ul>
+         * <li>true: The VIP Netty channel is enabled.</li>
+         * <li>false: The VIP Netty channel is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>420abef4-a79b-4289-b12****</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
         /**
          * <p>Big Baby</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the workspace in which the dataset resides.</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

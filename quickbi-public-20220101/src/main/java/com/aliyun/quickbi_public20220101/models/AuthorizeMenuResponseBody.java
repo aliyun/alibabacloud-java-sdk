@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class AuthorizeMenuResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>188F0B12-00EF-41B3-944A-FB7EF06C9F43</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of authorized menus.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Result")
     public Integer result;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

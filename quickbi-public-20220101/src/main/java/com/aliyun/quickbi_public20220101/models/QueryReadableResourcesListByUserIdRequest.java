@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class QueryReadableResourcesListByUserIdRequest extends TeaModel {
     /**
      * <p>Quick BI the user ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de4bc5f9429141cc8091cdd1c15b****</p>
      */
     @NameInMap("UserId")
     public String userId;

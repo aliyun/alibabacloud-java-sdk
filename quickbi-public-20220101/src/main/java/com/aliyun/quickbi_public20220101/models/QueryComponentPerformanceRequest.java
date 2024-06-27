@@ -4,29 +4,55 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryComponentPerformanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CostTimeAvgMin")
     public Integer costTimeAvgMin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sevenDays</p>
      */
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6b407e50-e774-406b-9956-da2425c2****</p>
+     */
     @NameInMap("ReportId")
     public String reportId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>report</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>89713491-cb4f-4579-b889-e82c35f1****</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

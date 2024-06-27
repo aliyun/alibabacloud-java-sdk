@@ -7,21 +7,45 @@ public class CreateTicketRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AccountType")
     public Integer accountType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0fc6a275c7f64f17b1****a306ce0f31</p>
+     */
     @NameInMap("CmptId")
     public String cmptId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;paramKey&quot;:&quot;price&quot;,&quot;joinType&quot;:&quot;and&quot;,&quot;conditionList&quot;:[{&quot;operate&quot;:&quot;&gt;&quot;,&quot;value&quot;:&quot;0&quot;}]}]</p>
+     */
     @NameInMap("GlobalParam")
     public String globalParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TicketNum")
     public Integer ticketNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46e537466****92704c8</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
@@ -30,6 +54,9 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a206f5f3-****-e9b17c835b03</p>
      */
     @NameInMap("WorksId")
     public String worksId;

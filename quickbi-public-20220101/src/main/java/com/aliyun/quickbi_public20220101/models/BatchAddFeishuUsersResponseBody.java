@@ -4,12 +4,24 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class BatchAddFeishuUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Result")
     public BatchAddFeishuUsersResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,12 +55,20 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
     }
 
     public static class BatchAddFeishuUsersResponseBodyResultFailResultsFailInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ACCOUNT_EXIST</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("CodeDesc")
         public String codeDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Input")
         public String input;
 
@@ -103,12 +123,20 @@ public class BatchAddFeishuUsersResponseBody extends TeaModel {
     }
 
     public static class BatchAddFeishuUsersResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("FailCount")
         public Integer failCount;
 
         @NameInMap("FailResults")
         public java.util.List<BatchAddFeishuUsersResponseBodyResultFailResults> failResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OkCount")
         public Integer okCount;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QuerySharesToUserListResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,9 +21,13 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -57,12 +64,18 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
     public static class QuerySharesToUserListResponseBodyResultDirectory extends TeaModel {
         /**
          * <p>The ID of the directory where the resource is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f7f6e22b-83be-47fd-b49d-9ca686a9****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chart Report</p>
          */
         @NameInMap("Name")
         public String name;
@@ -75,6 +88,9 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
 
         /**
          * <p>The path name of the directory where the resource is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Level -1 Directory /Level -2 Directory</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -121,12 +137,18 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
     public static class QuerySharesToUserListResponseBodyResult extends TeaModel {
         /**
          * <p>The timestamp of the creation time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1530078690000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>Remarks on the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description of the test report</p>
          */
         @NameInMap("Description")
         public String description;
@@ -139,96 +161,138 @@ public class QuerySharesToUserListResponseBody extends TeaModel {
 
         /**
          * <p>The name of the Alibaba Cloud account to which the modifier belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13855265****@163.com</p>
          */
         @NameInMap("ModifyName")
         public String modifyName;
 
         /**
          * <p>The timestamp of the modification time in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1530078690000</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
          * <p>The UserID of the work owner in Quickbi.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74f5527216d14e9892245320ebf2****</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The Alibaba Cloud account name of the work owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w****@aliyun.com</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
          * <p>Security policies for collaborative authorization of works. Valid values:</p>
-         * <br>
-         * <p>*   0: private</p>
-         * <p>*   12: Authorize specified members</p>
-         * <p>*   1 or 11: Authorize all workspace members</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If you use legacy permissions, the return value is 1.</p>
-         * <br>
-         * <p>*   If you use the new permissions, the return value is 11.</p>
+         * <ul>
+         * <li>0: private</li>
+         * <li>12: Authorize specified members</li>
+         * <li>1 or 11: Authorize all workspace members</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you use legacy permissions, the return value is 1.</p>
+         * </li>
+         * <li><p>If you use the new permissions, the return value is 11.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
         /**
          * <p>The publishing status of the report. Valid values:</p>
-         * <br>
-         * <p>*   0: unpublished</p>
-         * <p>*   1: published</p>
-         * <p>*   2: modified but not published</p>
-         * <p>*   3: unpublished</p>
+         * <ul>
+         * <li>0: unpublished</li>
+         * <li>1: published</li>
+         * <li>2: modified but not published</li>
+         * <li>3: unpublished</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>Third-party embedding status. Valid values:</p>
-         * <br>
-         * <p>*   0: No embedding is enabled.</p>
-         * <p>*   1: Embed is enabled.</p>
+         * <ul>
+         * <li>0: No embedding is enabled.</li>
+         * <li>1: Embed is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ThirdPartAuthFlag")
         public Integer thirdPartAuthFlag;
 
         /**
          * <p>The name of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test report</p>
          */
         @NameInMap("WorkName")
         public String workName;
 
         /**
          * <p>The type of the work. Valid values:</p>
-         * <br>
-         * <p>*   DATAPRODUCT: BI portal</p>
-         * <p>*   PAGE: Dashboard</p>
-         * <p>*   FULLPAGE: full-screen dashboards</p>
-         * <p>*   REPORT: workbook</p>
-         * <p>*   dashboardOfflineQuery: self-service data retrieval</p>
+         * <ul>
+         * <li>DATAPRODUCT: BI portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>FULLPAGE: full-screen dashboards</li>
+         * <li>REPORT: workbook</li>
+         * <li>dashboardOfflineQuery: self-service data retrieval</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DATAFORM</p>
          */
         @NameInMap("WorkType")
         public String workType;
 
         /**
          * <p>The ID of the operations report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97f7f4c1-543a-4069-8e8d-a56cfcd6****</p>
          */
         @NameInMap("WorksId")
         public String worksId;
 
         /**
          * <p>The ID of the workspace to which the report belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c5f86ad2-ef53-4c51-8720-162ecfdb****</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
         /**
          * <p>The name of the workspace to which the report belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Return to Professional Edition</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

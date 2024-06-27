@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryOrganizationWorkspaceListResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,42 +51,90 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
     }
 
     public static class QueryOrganizationWorkspaceListResponseBodyResultData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AllowPublishOperation")
         public Boolean allowPublishOperation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AllowShareOperation")
         public Boolean allowShareOperation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-10 17:51:07</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de4bc5f9429141cc8091cdd1c15b****</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pop****@aliyun.com</p>
+         */
         @NameInMap("CreateUserAccountName")
         public String createUserAccountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-10 17:51:07</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de4bc5f9429141cc8091cdd1c15b****</p>
+         */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pop****@aliyun.com</p>
+         */
         @NameInMap("ModifyUserAccountName")
         public String modifyUserAccountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>de4bc5f9429141cc8091cdd1c15b****</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pop****@aliyun.com</p>
+         */
         @NameInMap("OwnerAccountName")
         public String ownerAccountName;
 
         @NameInMap("WorkspaceDescription")
         public String workspaceDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7350a155-0e94-4c6c-8620-57bbec38****</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
@@ -208,15 +264,31 @@ public class QueryOrganizationWorkspaceListResponseBody extends TeaModel {
         @NameInMap("Data")
         public java.util.List<QueryOrganizationWorkspaceListResponseBodyResultData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalNum")
         public Integer totalNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

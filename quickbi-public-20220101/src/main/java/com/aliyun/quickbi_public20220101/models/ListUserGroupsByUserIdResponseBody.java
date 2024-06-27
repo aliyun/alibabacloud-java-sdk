@@ -4,6 +4,10 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListUserGroupsByUserIdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>E2440604-3059-561A-AD68-DEDBC870EB2B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -12,6 +16,9 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
 
     /**
      * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -46,27 +53,51 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
     }
 
     public static class ListUserGroupsByUserIdResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-15 17:13:55</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46e5374665ba4b679ee22e2a2927****</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
         @NameInMap("IdentifiedPath")
         public String identifiedPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-15 20:36:40</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46e5374665ba4b679ee22e2a2927****</p>
+         */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
+         */
         @NameInMap("ParentUsergroupId")
         public String parentUsergroupId;
 
         @NameInMap("UsergroupDesc")
         public String usergroupDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34fd141d-4598-4093-8c33-8e066dcb****</p>
+         */
         @NameInMap("UsergroupId")
         public String usergroupId;
 

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteUserGroupMembersRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34fd141d-4598-4093-8c33-8e066dcb****,3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
      */
     @NameInMap("UserGroupIds")
     public String userGroupIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>204627493484****</p>
      */
     @NameInMap("UserId")
     public String userId;

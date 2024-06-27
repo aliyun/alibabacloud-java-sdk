@@ -7,20 +7,34 @@ public class ListWorkspaceRoleUsersRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25</p>
      */
     @NameInMap("RoleId")
     public Long roleId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>726bee5a-****-43e1-9a8e-b550f0120f35</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryUserListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryUserListResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,17 +51,35 @@ public class QueryUserListResponseBody extends TeaModel {
     }
 
     public static class QueryUserListResponseBodyResultData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1355********</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AdminUser")
         public Boolean adminUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("AuthAdminUser")
         public Boolean authAdminUser;
+
+        @NameInMap("JoinedDate")
+        public Long joinedDate;
+
+        @NameInMap("LastLoginTime")
+        public Long lastLoginTime;
 
         @NameInMap("NickName")
         public String nickName;
@@ -61,9 +87,17 @@ public class QueryUserListResponseBody extends TeaModel {
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fe67f61a35a94b7da1a34ba174a7****</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UserType")
         public Integer userType;
 
@@ -104,6 +138,22 @@ public class QueryUserListResponseBody extends TeaModel {
             return this.authAdminUser;
         }
 
+        public QueryUserListResponseBodyResultData setJoinedDate(Long joinedDate) {
+            this.joinedDate = joinedDate;
+            return this;
+        }
+        public Long getJoinedDate() {
+            return this.joinedDate;
+        }
+
+        public QueryUserListResponseBodyResultData setLastLoginTime(Long lastLoginTime) {
+            this.lastLoginTime = lastLoginTime;
+            return this;
+        }
+        public Long getLastLoginTime() {
+            return this.lastLoginTime;
+        }
+
         public QueryUserListResponseBodyResultData setNickName(String nickName) {
             this.nickName = nickName;
             return this;
@@ -142,15 +192,31 @@ public class QueryUserListResponseBody extends TeaModel {
         @NameInMap("Data")
         public java.util.List<QueryUserListResponseBodyResultData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalNum")
         public Integer totalNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

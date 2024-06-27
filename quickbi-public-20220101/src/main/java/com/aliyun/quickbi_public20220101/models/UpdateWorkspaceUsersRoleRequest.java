@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class UpdateWorkspaceUsersRoleRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25</p>
      */
     @NameInMap("RoleId")
     public Long roleId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>136516262323****,124498444445****</p>
      */
     @NameInMap("UserIds")
     public String userIds;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

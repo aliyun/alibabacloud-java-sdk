@@ -7,21 +7,40 @@ public class CreateTicket4CopilotRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AccountType")
     public Integer accountType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ccd3428c-dd23-460c-a608-26bae29dffee</p>
      */
     @NameInMap("CopilotId")
     public String copilotId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TicketNum")
     public Integer ticketNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9c-asdawf-casxcasd-asdasd</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -7,15 +7,31 @@ public class BatchAddFeishuUsersRequest extends TeaModel {
     @NameInMap("FeishuUsers")
     public String feishuUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("IsAdmin")
     public Boolean isAdmin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAuthAdmin")
     public Boolean isAuthAdmin;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;0d5fb19b-5555-41f0-99da-1248fc27ca51,0f868dd6_68dd_4d13_8422_c5dca3bd4b61&quot;</p>
+     */
     @NameInMap("UserGroupIds")
     public String userGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UserType")
     public Integer userType;
 

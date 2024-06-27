@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteUserTagMetaRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pop_001</p>
      */
     @NameInMap("TagId")
     public String tagId;

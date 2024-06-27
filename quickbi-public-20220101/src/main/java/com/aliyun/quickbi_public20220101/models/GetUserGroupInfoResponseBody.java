@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class GetUserGroupInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D7980306-1F08-5A88-9FE7-ECB8B9C4C0F5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public java.util.List<GetUserGroupInfoResponseBodyResult> result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,27 +51,51 @@ public class GetUserGroupInfoResponseBody extends TeaModel {
     }
 
     public static class GetUserGroupInfoResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-15 17:13:55</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46e5374665ba4b679ee22e2a2927****</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
         @NameInMap("IdentifiedPath")
         public String identifiedPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-03-15 20:36:40</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46e5374665ba4b679ee22e2a2927****</p>
+         */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
+         */
         @NameInMap("ParentUsergroupId")
         public String parentUsergroupId;
 
         @NameInMap("UsergroupDesc")
         public String usergroupDesc;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34fd141d-4598-4093-8c33-8e066dcb****</p>
+         */
         @NameInMap("UsergroupId")
         public String usergroupId;
 

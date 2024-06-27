@@ -4,6 +4,10 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryUserTagMetaListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -12,6 +16,9 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
 
     /**
      * <p>Queries the metadata list of member tags in an organization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -49,6 +56,10 @@ public class QueryUserTagMetaListResponseBody extends TeaModel {
         @NameInMap("TagDescription")
         public String tagDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pop_001</p>
+         */
         @NameInMap("TagId")
         public String tagId;
 

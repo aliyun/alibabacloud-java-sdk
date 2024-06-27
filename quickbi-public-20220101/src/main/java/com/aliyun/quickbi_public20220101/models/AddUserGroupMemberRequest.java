@@ -6,22 +6,28 @@ import com.aliyun.tea.*;
 public class AddUserGroupMemberRequest extends TeaModel {
     /**
      * <p>The result of adding members to a user group is returned. Valid values:</p>
-     * <br>
-     * <p>*   true: The task is added.</p>
-     * <p>*   false: The tag failed to be added.</p>
-     * <br>
+     * <ul>
+     * <li>true: The task is added.</li>
+     * <li>false: The tag failed to be added.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>555c4cd****</p>
      */
     @NameInMap("UserGroupId")
     public String userGroupId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
-     * <br>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46e537a5****,3dadsu****</p>
      */
     @NameInMap("UserIdList")
     public String userIdList;

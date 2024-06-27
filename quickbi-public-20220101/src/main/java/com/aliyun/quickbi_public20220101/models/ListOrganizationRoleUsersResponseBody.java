@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListOrganizationRoleUsersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BCE45E6D-9304-4F94-86BB-5A772B1615FF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public ListOrganizationRoleUsersResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -46,6 +54,10 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b5d8fd9348cc4327****afb604</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -76,15 +88,31 @@ public class ListOrganizationRoleUsersResponseBody extends TeaModel {
         @NameInMap("Data")
         public java.util.List<ListOrganizationRoleUsersResponseBodyResultData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("TotalNum")
         public Integer totalNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class ListCubeDataLevelPermissionConfigRequest extends TeaModel {
     /**
      * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7c7223ae-****-3c744528014b</p>
      */
     @NameInMap("CubeId")
     public String cubeId;
 
     /**
      * <p>The type of the dataset row and column permission. Valid values:</p>
-     * <br>
-     * <p>*   ROW_LEVEL: row-level permissions</p>
-     * <p>*   COLUMN_LEVEL: column-level permissions</p>
-     * <br>
+     * <ul>
+     * <li>ROW_LEVEL: row-level permissions</li>
+     * <li>COLUMN_LEVEL: column-level permissions</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ROW_LEVEL</p>
      */
     @NameInMap("RuleType")
     public String ruleType;

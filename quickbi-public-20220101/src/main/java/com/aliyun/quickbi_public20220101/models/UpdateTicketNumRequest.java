@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateTicketNumRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>040e6f79d33444838***83c7206c070</p>
      */
     @NameInMap("Ticket")
     public String ticket;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TicketNum")
     public Integer ticketNum;

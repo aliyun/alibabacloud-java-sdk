@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryTicketInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryTicketInfoResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,36 +51,72 @@ public class QueryTicketInfoResponseBody extends TeaModel {
     }
 
     public static class QueryTicketInfoResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>a27a9aec-<strong><strong>-</strong></strong>-bd40-1a21ea41d7c5</p>
+         */
         @NameInMap("AccessTicket")
         public String accessTicket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sfdgsds-<strong><strong>-</strong></strong>-a608-mghdgd</p>
+         */
         @NameInMap("CmptId")
         public String cmptId;
 
         @NameInMap("GlobalParam")
         public String globalParam;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-30 03:03:49</p>
+         */
         @NameInMap("InvalidTime")
         public String invalidTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9999</p>
+         */
         @NameInMap("MaxTicketNum")
         public Integer maxTicketNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2fe4fbd8-<strong><strong>-</strong></strong>-b3e1-e92c7af083ea</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-09 22:23:49</p>
+         */
         @NameInMap("RegisterTime")
         public String registerTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>47</p>
+         */
         @NameInMap("UsedTicketNum")
         public Integer usedTicketNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>974e50**********9033f46</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
         @NameInMap("WatermarkParam")
         public String watermarkParam;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>
+         */
         @NameInMap("WorksId")
         public String worksId;
 

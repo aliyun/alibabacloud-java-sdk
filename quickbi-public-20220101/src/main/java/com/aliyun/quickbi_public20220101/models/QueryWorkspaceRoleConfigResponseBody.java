@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryWorkspaceRoleConfigResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -46,6 +54,10 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
         @NameInMap("ActionAuthKeys")
         public java.util.List<String> actionAuthKeys;
 
+        /**
+         * <strong>example:</strong>
+         * <p>portal_create</p>
+         */
         @NameInMap("AuthKey")
         public String authKey;
 
@@ -76,9 +88,17 @@ public class QueryWorkspaceRoleConfigResponseBody extends TeaModel {
         @NameInMap("AuthConfigList")
         public java.util.List<QueryWorkspaceRoleConfigResponseBodyResultAuthConfigList> authConfigList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsSystemRole")
         public Boolean isSystemRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("RoleId")
         public Long roleId;
 

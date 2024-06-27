@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryWorksByWorkspaceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,9 +21,13 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -55,6 +62,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
     }
 
     public static class QueryWorksByWorkspaceResponseBodyResultDataDirectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
+         */
         @NameInMap("Id")
         public String id;
 
@@ -63,12 +74,18 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
 
         /**
          * <p>The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
          */
         @NameInMap("PathId")
         public String pathId;
 
         /**
          * <p>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test directory</p>
          */
         @NameInMap("PathName")
         public String pathName;
@@ -115,15 +132,22 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
     public static class QueryWorksByWorkspaceResponseBodyResultData extends TeaModel {
         /**
          * <p>Third-party embedding status. Valid values:</p>
-         * <br>
-         * <p>*   0: The embed service is not enabled.</p>
-         * <p>*   1: Embed is enabled.</p>
+         * <ul>
+         * <li>0: The embed service is not enabled.</li>
+         * <li>1: Embed is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Auth3rdFlag")
         public Integer auth3rdFlag;
 
         /**
          * <p>Remarks on the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -136,95 +160,142 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp of the creation of the work in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1496651577000</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The timestamp of the modification of the work in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1572334870000</p>
          */
         @NameInMap("GmtModify")
         public String gmtModify;
 
         /**
          * <p>Nickname of the work modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tom</p>
          */
         @NameInMap("ModifyName")
         public String modifyName;
 
         /**
          * <p>The user ID of the work owner in the Quick BI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the workspace to which the work belongs.</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The nickname of the work owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Li Si</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        @NameInMap("PublicFlag")
+        public Boolean publicFlag;
+
+        @NameInMap("PublicInvalidTime")
+        public Long publicInvalidTime;
+
         /**
          * <p>Security policies for collaborative authorization of works. Valid values:</p>
-         * <br>
-         * <p>*   0: private</p>
-         * <p>*   12: Authorize specified members</p>
-         * <p>*   1 or 11: Authorize all workspace members</p>
-         * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If you use legacy permissions, the return value is 1.</p>
-         * <br>
-         * <p>*   If you use the new permissions, the return value is 11.</p>
+         * <ul>
+         * <li>0: private</li>
+         * <li>12: Authorize specified members</li>
+         * <li>1 or 11: Authorize all workspace members</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you use legacy permissions, the return value is 1.</p>
+         * </li>
+         * <li><p>If you use the new permissions, the return value is 11.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SecurityLevel")
         public String securityLevel;
 
         /**
          * <p>Status of dashboards, full-screen dashboards, spreadsheets. The default value of other work types is 1. Valid values:</p>
-         * <br>
-         * <p>*   0: unpublished</p>
-         * <p>*   1: published</p>
-         * <p>*   2: modified but not published</p>
-         * <p>*   3: unpublished</p>
+         * <ul>
+         * <li>0: unpublished</li>
+         * <li>1: published</li>
+         * <li>2: modified but not published</li>
+         * <li>3: unpublished</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The name of the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test report</p>
          */
         @NameInMap("WorkName")
         public String workName;
 
         /**
          * <p>The type of the work. Valid values:</p>
-         * <br>
-         * <p>*   DATAPRODUCT: BI portal</p>
-         * <p>*   PAGE: Dashboard</p>
-         * <p>*   FULLPAGE: full-screen dashboards</p>
-         * <p>*   REPORT: workbook</p>
-         * <p>*   dashboardOfflineQuery: self-service data retrieval</p>
-         * <p>*   Analysis: Ad hoc analysis</p>
-         * <p>*   DATAFORM: form filling</p>
+         * <ul>
+         * <li>DATAPRODUCT: BI portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>FULLPAGE: full-screen dashboards</li>
+         * <li>REPORT: workbook</li>
+         * <li>dashboardOfflineQuery: self-service data retrieval</li>
+         * <li>Analysis: Ad hoc analysis</li>
+         * <li>DATAFORM: form filling</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAGE</p>
          */
         @NameInMap("WorkType")
         public String workType;
 
         /**
          * <p>The ID of the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>897ce25e-f993-4abd-af84-d13c5610****</p>
          */
         @NameInMap("WorksId")
         public String worksId;
 
         /**
          * <p>The ID of the workspace to which the work belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
         /**
          * <p>The name of the workspace to which the work belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Workspace</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;
@@ -298,6 +369,22 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             return this.ownerName;
         }
 
+        public QueryWorksByWorkspaceResponseBodyResultData setPublicFlag(Boolean publicFlag) {
+            this.publicFlag = publicFlag;
+            return this;
+        }
+        public Boolean getPublicFlag() {
+            return this.publicFlag;
+        }
+
+        public QueryWorksByWorkspaceResponseBodyResultData setPublicInvalidTime(Long publicInvalidTime) {
+            this.publicInvalidTime = publicInvalidTime;
+            return this;
+        }
+        public Long getPublicInvalidTime() {
+            return this.publicInvalidTime;
+        }
+
         public QueryWorksByWorkspaceResponseBodyResultData setSecurityLevel(String securityLevel) {
             this.securityLevel = securityLevel;
             return this;
@@ -365,24 +452,36 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
          * <p>The number of rows per page set when the interface is requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of rows in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalNum")
         public Integer totalNum;
 
         /**
          * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalPages")
         public Integer totalPages;

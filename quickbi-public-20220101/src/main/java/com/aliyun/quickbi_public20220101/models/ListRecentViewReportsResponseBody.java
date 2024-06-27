@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListRecentViewReportsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public ListRecentViewReportsResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,21 +51,45 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
     }
 
     public static class ListRecentViewReportsResponseBodyResultData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Favorite")
         public Boolean favorite;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1496651577000</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1640595729000</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasEditAuth")
         public Boolean hasEditAuth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("HasViewAuth")
         public Boolean hasViewAuth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1642067498000</p>
+         */
         @NameInMap("LatestViewTime")
         public String latestViewTime;
 
@@ -67,21 +99,45 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1365*****238860</p>
+         */
         @NameInMap("OwnerNum")
         public String ownerNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PublishStatus")
         public Integer publishStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>977c7698-<strong><strong>-</strong></strong>-****-44b7304d20fc</p>
+         */
         @NameInMap("TreeId")
         public String treeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PAGE</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("ViewCount")
         public Long viewCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>523793cb-<strong><strong>-</strong></strong>-****-aa71c65ffa39</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
@@ -216,21 +272,41 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
     }
 
     public static class ListRecentViewReportsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>当前API返回的分页参数如TotalNum等即将下线，如有使用请及时修改</p>
+         */
         @NameInMap("Attention")
         public String attention;
 
         @NameInMap("Data")
         public java.util.List<ListRecentViewReportsResponseBodyResultData> data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalNum")
         public Integer totalNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

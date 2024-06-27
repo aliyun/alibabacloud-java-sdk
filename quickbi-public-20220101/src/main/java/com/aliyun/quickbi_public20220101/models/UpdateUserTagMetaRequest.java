@@ -9,6 +9,9 @@ public class UpdateUserTagMetaRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e82f6c6c0333431bad0225b2f85e****</p>
      */
     @NameInMap("TagId")
     public String tagId;

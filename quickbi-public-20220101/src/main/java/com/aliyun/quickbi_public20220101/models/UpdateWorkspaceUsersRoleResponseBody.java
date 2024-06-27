@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public UpdateWorkspaceUsersRoleResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,15 +51,27 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
     }
 
     public static class UpdateWorkspaceUsersRoleResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Failure")
         public Integer failure;
 
         @NameInMap("FailureDetail")
         public java.util.Map<String, ?> failureDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Success")
         public Integer success;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

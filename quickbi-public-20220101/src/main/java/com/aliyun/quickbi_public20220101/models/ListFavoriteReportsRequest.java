@@ -7,14 +7,25 @@ public class ListFavoriteReportsRequest extends TeaModel {
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PAGE</p>
+     */
     @NameInMap("TreeType")
     public String treeType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b5d8fd9348cc4327****afb604</p>
      */
     @NameInMap("UserId")
     public String userId;

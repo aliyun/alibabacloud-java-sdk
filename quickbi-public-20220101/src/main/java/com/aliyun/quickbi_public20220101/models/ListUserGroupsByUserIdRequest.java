@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListUserGroupsByUserIdRequest extends TeaModel {
     /**
      * <p>The ID of the user group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46e5374665ba4b679ee22e2a2927****</p>
      */
     @NameInMap("UserId")
     public String userId;

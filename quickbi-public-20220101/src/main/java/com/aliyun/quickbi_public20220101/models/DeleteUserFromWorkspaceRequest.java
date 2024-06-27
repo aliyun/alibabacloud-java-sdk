@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteUserFromWorkspaceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de4bc5f9429141cc8091cdd1c15b****</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

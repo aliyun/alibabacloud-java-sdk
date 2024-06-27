@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class SetDataLevelPermissionWhiteListRequest extends TeaModel {
     /**
-     * <p>{ "ruleType": "ROW_LEVEL", // The row-level permission type. "usersModel": { "userGroups": [ "0d5fb19b- ***-1248 fc27ca51", // The ID of the user group. "3d2c23d4-***-f6390f325c2d" ], "users": [ "4334 ***358", // Quick BI the UserID of the user. "Huang***3fa822" ] }, "cubeId": "7c7223ae-31d1-4d2f-b11f-3c744528014b" }</p>
-     * <br>
+     * <p>{ &quot;ruleType&quot;: &quot;ROW_LEVEL&quot;, // The row-level permission type. &quot;usersModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><strong>-1248 fc27ca51&quot;, // The ID of the user group. &quot;3d2c23d4-</strong></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><strong>358&quot;, // Quick BI the UserID of the user. &quot;Huang</strong></em>3fa822&quot; ] }, &quot;cubeId&quot;: &quot;7c7223ae-31d1-4d2f-b11f-3c744528014b&quot; }</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ruleType&quot;:&quot;ROW_LEVEL&quot;,&quot;usersModel&quot;:{&quot;userGroups&quot;:[&quot;26edcb76-<em><em><strong>-bdbab78267cb&quot;,&quot;187e6dd5-1611-4cf7-a034-1a93bd5fecf9&quot;],&quot;users&quot;:[&quot;4334</strong></em>358&quot;,&quot;Huang</em>**3fa822&quot;]},&quot;cubeId&quot;:&quot;7c7223ae-****44528014b&quot;}</p>
      */
     @NameInMap("WhiteListModel")
     public String whiteListModel;

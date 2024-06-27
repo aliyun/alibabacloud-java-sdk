@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListCollectionsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>162A632E-0A88-51CF-98F8-94FDEE82DB7D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -15,6 +18,9 @@ public class ListCollectionsResponseBody extends TeaModel {
 
     /**
      * <p>The primary key ID of the favorite record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -49,21 +55,41 @@ public class ListCollectionsResponseBody extends TeaModel {
     }
 
     public static class ListCollectionsResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12373</p>
+         */
         @NameInMap("FavoriteId")
         public Integer favoriteId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fe67f61a35a94b7da1a34ba174a7****</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
+         */
         @NameInMap("WorksId")
         public String worksId;
 
         @NameInMap("WorksName")
         public String worksName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dashboardOfflineQuery</p>
+         */
         @NameInMap("WorksType")
         public String worksType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9337d121-a78f-4c1b-a8bc-f81de117****</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 

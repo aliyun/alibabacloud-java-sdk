@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class DeleteUserGroupMemberResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Returns the result of deleting a user group member. Valid values:</p>
-     * <br>
-     * <p>*   true: The task is deleted.</p>
-     * <p>*   false: The deletion failed.</p>
+     * <ul>
+     * <li>true: The task is deleted.</li>
+     * <li>false: The deletion failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Result")
     public Boolean result;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

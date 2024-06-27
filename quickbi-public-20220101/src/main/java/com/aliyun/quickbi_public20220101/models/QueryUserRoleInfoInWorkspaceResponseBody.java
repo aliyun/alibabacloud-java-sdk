@@ -4,12 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Result")
     public QueryUserRoleInfoInWorkspaceResponseBodyResult result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -43,9 +51,17 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
     }
 
     public static class QueryUserRoleInfoInWorkspaceResponseBodyResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>role_workspace_admin</p>
+         */
         @NameInMap("RoleCode")
         public String roleCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("RoleId")
         public Long roleId;
 

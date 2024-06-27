@@ -4,6 +4,10 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryEmbeddedInfoResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -12,9 +16,13 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The request was successful.</p>
-     * <p>*   false: The request failed.</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -49,12 +57,24 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
     }
 
     public static class QueryEmbeddedInfoResponseBodyResultDetail extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DashboardOfflineQuery")
         public Integer dashboardOfflineQuery;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Report")
         public Integer report;
 
@@ -93,9 +113,17 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         @NameInMap("Detail")
         public QueryEmbeddedInfoResponseBodyResultDetail detail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("EmbeddedCount")
         public Integer embeddedCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxCount")
         public Integer maxCount;
 
