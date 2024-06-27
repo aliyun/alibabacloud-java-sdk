@@ -4,15 +4,40 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class HandleActiveSQLRecordResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The processing result of the active query.</p>
+     */
     @NameInMap("Results")
     public java.util.List<HandleActiveSQLRecordResponseBodyResults> results;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -54,9 +79,25 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
     }
 
     public static class HandleActiveSQLRecordResponseBodyResults extends TeaModel {
+        /**
+         * <p>The process ID, which is a unique identifier of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3003925</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>Indicates whether the processing was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Status")
         public String status;
 

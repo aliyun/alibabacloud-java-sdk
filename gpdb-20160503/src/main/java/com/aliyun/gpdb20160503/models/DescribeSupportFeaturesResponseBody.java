@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeSupportFeaturesResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63E5BE60-91FF-57F1-B873-7F1EB734B93D_2724</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The features supported by the instance. Valid values:</p>
-     * <br>
-     * <p>*   sample_data: sample dataset. For more information, see [Sample dataset](https://help.aliyun.com/document_detail/452278.html).</p>
-     * <p>*   diagnose_and_optimize: diagnostics and optimization. For more information, see [Diagnostics and optimization](https://help.aliyun.com/document_detail/323453.html).</p>
+     * <ul>
+     * <li>sample_data: sample dataset. For more information, see <a href="https://help.aliyun.com/document_detail/452278.html">Sample dataset</a>.</li>
+     * <li>diagnose_and_optimize: diagnostics and optimization. For more information, see <a href="https://help.aliyun.com/document_detail/323453.html">Diagnostics and optimization</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[ &quot;sample_data&quot;, &quot;diagnose_and_optimize&quot; ]</p>
      */
     @NameInMap("SupportFeatureList")
     public String supportFeatureList;

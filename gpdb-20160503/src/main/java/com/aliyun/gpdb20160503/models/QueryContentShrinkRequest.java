@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryContentShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>document</p>
      */
     @NameInMap("Collection")
     public String collection;
@@ -15,6 +18,9 @@ public class QueryContentShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,6 +31,10 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>title = \&quot;test\&quot;</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
@@ -40,14 +50,25 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("IncludeVector")
     public Boolean includeVector;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cosine</p>
+     */
     @NameInMap("Metrics")
     public String metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mynamespace</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testpassword</p>
      */
     @NameInMap("NamespacePassword")
     public String namespacePassword;
@@ -60,6 +81,9 @@ public class QueryContentShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -67,9 +91,17 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("RerankFactor")
     public Double rerankFactor;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TopK")
     public Integer topK;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseFullTextRetrieval")
     public Boolean useFullTextRetrieval;
 

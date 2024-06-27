@@ -6,24 +6,34 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     /**
      * <p>The name of the IP address whitelist. If you do not specify this parameter, the default whitelist is queried.</p>
-     * <br>
-     * <p>>  Each instance supports up to 50 IP address whitelists.</p>
+     * <blockquote>
+     * <p> Each instance supports up to 50 IP address whitelists.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("DBInstanceIPArrayName")
     public String DBInstanceIPArrayName;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](https://help.aliyun.com/document_detail/151181.html).</p>
+     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

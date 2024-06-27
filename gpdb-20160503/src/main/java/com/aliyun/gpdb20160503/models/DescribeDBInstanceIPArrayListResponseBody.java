@@ -12,6 +12,9 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CB7AA0BF-BE41-480E-A3DC-C97BF85A391B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,23 +42,33 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceIPArrayListResponseBodyItemsDBInstanceIPArray extends TeaModel {
         /**
-         * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute is not displayed in the console.</p>
+         * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the <code>hidden</code> attribute is not displayed in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hidden</p>
          */
         @NameInMap("DBInstanceIPArrayAttribute")
         public String DBInstanceIPArrayAttribute;
 
         /**
          * <p>The name of the IP address whitelist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("DBInstanceIPArrayName")
         public String DBInstanceIPArrayName;
 
         /**
          * <p>The IP addresses listed in the whitelist. Up to 1,000 IP addresses are contained in a whitelist and separated by commas (,). The IP addresses must use one of the following formats:</p>
-         * <br>
-         * <p>*   0.0.0.0/0</p>
-         * <p>*   10.23.12.24. This is a standard IP address.</p>
-         * <p>*   10.23.12.24/24. This is a CIDR block. The value `/24` indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of `1 to 32`.</p>
+         * <ul>
+         * <li>0.0.0.0/0</li>
+         * <li>10.23.12.24. This is a standard IP address.</li>
+         * <li>10.23.12.24/24. This is a CIDR block. The value <code>/24</code> indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of <code>1 to 32</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;

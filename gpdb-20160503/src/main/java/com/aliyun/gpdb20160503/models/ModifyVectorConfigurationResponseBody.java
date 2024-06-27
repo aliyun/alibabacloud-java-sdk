@@ -6,29 +6,41 @@ import com.aliyun.tea.*;
 public class ModifyVectorConfigurationResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The error message that is returned.</p>
-     * <br>
      * <p>This parameter is returned only if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Failed to modify vector configuration.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>107BE202-D1A2-479E-98E0-A8**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Status")
     public Boolean status;

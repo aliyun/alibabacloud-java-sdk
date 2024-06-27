@@ -6,18 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     /**
      * <p>The endpoint that is used to connect to the instance.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the information about all endpoints of the instance is returned.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the information about all endpoints of the instance is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-0xin9q82c33xc****-master.gpdb.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

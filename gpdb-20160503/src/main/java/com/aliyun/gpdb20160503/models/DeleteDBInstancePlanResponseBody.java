@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class DeleteDBInstancePlanResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The error message returned.</p>
-     * <br>
      * <p>This parameter is returned only when the operation fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The ID of the plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34b32a0a-08ef-4a87-b6be-cdd988888888</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The state of the operation.</p>
-     * <br>
-     * <p>If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.</p>
+     * <p>If the operation is successful, <strong>success</strong> is returned. If the operation fails, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Status")
     public String status;

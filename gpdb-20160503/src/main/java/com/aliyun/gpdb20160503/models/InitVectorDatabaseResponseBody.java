@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class InitVectorDatabaseResponseBody extends TeaModel {
     /**
      * <p>The error message returned if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>failed to connect database, detailMsg: getConnection fail::SQL State: 28P01, Error Code: 0, Error Message: FATAL: password</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **Success**</p>
-     * <p>*   **fail**</p>
+     * <ul>
+     * <li><strong>Success</strong></li>
+     * <li><strong>fail</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Status")
     public String status;

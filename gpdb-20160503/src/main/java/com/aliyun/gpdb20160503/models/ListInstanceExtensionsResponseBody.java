@@ -7,15 +7,39 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
     @NameInMap("Items")
     public java.util.List<ListInstanceExtensionsResponseBodyItems> items;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,27 +89,75 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceExtensionsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
+        /**
+         * <p>The description of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>citext usage</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The extension ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ExtensionId")
         public String extensionId;
 
+        /**
+         * <p>The names of the databases in which the extension is installed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("InstalledDatabases")
         public String installedDatabases;
 
+        /**
+         * <p>Indicates whether an instance restart is required after you install the extension for the extension to take effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsInstallNeedRestart")
         public Boolean isInstallNeedRestart;
 
+        /**
+         * <p>The latest version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
+         */
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        /**
+         * <p>The name of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>citext</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the extension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>installed</p>
+         */
         @NameInMap("Status")
         public String status;
 

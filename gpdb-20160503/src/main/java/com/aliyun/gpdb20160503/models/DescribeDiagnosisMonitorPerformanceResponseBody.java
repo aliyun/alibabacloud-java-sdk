@@ -12,21 +12,31 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The threshold for the number of queries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("PerformancesThreshold")
     public Integer performancesThreshold;
 
     /**
      * <p>Indicates whether the queries are truncated when the number of queries exceeds the threshold. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The queries are truncated.</p>
-     * <p>*   **false**: The queries are not truncated.</p>
+     * <ul>
+     * <li><strong>true</strong>: The queries are truncated.</li>
+     * <li><strong>false</strong>: The queries are not truncated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("PerformancesTruncated")
     public Boolean performancesTruncated;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,39 +81,58 @@ public class DescribeDiagnosisMonitorPerformanceResponseBody extends TeaModel {
     public static class DescribeDiagnosisMonitorPerformanceResponseBodyPerformances extends TeaModel {
         /**
          * <p>The execution duration of the query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Cost")
         public Integer cost;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
          * <p>The ID of the query. It is a unique identifier of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022042612465401000000012903151998970</p>
          */
         @NameInMap("QueryID")
         public String queryID;
 
         /**
          * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651877940000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The execution state of the query. Valid values:</p>
-         * <br>
-         * <p>*   **running**: The query is being executed.</p>
-         * <p>*   **finished**: The query is complete.</p>
+         * <ul>
+         * <li><strong>running</strong>: The query is being executed.</li>
+         * <li><strong>finished</strong>: The query is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finished</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpguser</p>
          */
         @NameInMap("User")
         public String user;

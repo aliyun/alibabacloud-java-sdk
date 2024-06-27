@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class SetDBInstancePlanStatusRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -19,21 +22,27 @@ public class SetDBInstancePlanStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the plan.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstancePlans](https://help.aliyun.com/document_detail/449398.html) operation to query the details of plans, including plan IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/449398.html">DescribeDBInstancePlans</a> operation to query the details of plans, including plan IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
      * <p>Specifies whether to enable or disable the plan. Valid values:</p>
-     * <br>
-     * <p>*   **disable**: disables the plan.</p>
-     * <p>*   **enable**: enables the plan.</p>
-     * <br>
+     * <ul>
+     * <li><strong>disable</strong>: disables the plan.</li>
+     * <li><strong>enable</strong>: enables the plan.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>disable</p>
      */
     @NameInMap("PlanStatus")
     public String planStatus;

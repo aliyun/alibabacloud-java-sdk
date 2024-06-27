@@ -4,9 +4,21 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateExtensionsResponseBody extends TeaModel {
+    /**
+     * <p>The name of the extension that you want to install. Multiple extension names are separated with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>citext, dblink</p>
+     */
     @NameInMap("Extensions")
     public String extensions;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

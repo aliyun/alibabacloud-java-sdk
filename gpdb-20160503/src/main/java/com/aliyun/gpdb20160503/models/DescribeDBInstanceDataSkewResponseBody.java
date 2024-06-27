@@ -12,18 +12,27 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,54 +77,81 @@ public class DescribeDBInstanceDataSkewResponseBody extends TeaModel {
     public static class DescribeDBInstanceDataSkewResponseBodyItems extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The distribution key of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ItemId</p>
          */
         @NameInMap("DistributeKey")
         public String distributeKey;
 
         /**
          * <p>The owner of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpguser</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
          * <p>The name of the schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>schema1</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The sequence number of the data skew case. All data skew cases are sorted by severity in descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Sequence")
         public Integer sequence;
 
         /**
          * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tab1</p>
          */
         @NameInMap("TableName")
         public String tableName;
 
         /**
          * <p>The total number of rows in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("TableSize")
         public String tableSize;
 
         /**
          * <p>The skew ratio of the table. Valid values: 0 to 100. Unit: %. A greater value indicates that the table is more severely skewed. A smaller value indicates less impact on query performance. A value of 0 indicates no data skew.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.23</p>
          */
         @NameInMap("TableSkew")
         public String tableSkew;
 
         /**
          * <p>The time when the table was last deleted, inserted, or updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-08T20:00:00Z</p>
          */
         @NameInMap("TimeLastUpdated")
         public String timeLastUpdated;

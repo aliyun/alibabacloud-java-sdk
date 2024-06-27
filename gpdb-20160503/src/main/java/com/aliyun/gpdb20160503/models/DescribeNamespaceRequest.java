@@ -6,34 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeNamespaceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the manager account that has the rds_superuser permission.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the <a href="https://help.aliyun.com/document_detail/2361789.html">CreateAccount</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testaccount</p>
      */
     @NameInMap("ManagerAccount")
     public String managerAccount;
 
     /**
      * <p>The password of the manager account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testpassword</p>
      */
     @NameInMap("ManagerAccountPassword")
     public String managerAccountPassword;
 
     /**
-     * <p>The name of the namespace.</p>
-     * <br>
+     * <p>The name of the namespace. Default value: public.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mynamespace</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -43,10 +58,10 @@ public class DescribeNamespaceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

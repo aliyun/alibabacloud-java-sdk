@@ -18,12 +18,18 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>070534EC-78D5-5519-83CC-E7B1A9213483</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,6 +42,9 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -96,85 +105,122 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
     public static class DescribeDBInstanceDiagnosisSummaryResponseBodyItems extends TeaModel {
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-t4np568qe9710****-master-100984919</p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
         /**
          * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("NodeAddress")
         public String nodeAddress;
 
         /**
          * <p>The node group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("NodeCID")
         public String nodeCID;
 
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NodeID")
         public String nodeID;
 
         /**
          * <p>The name of the host where the node resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1.i-t4n4c4ryr0yr441d****</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
         /**
          * <p>The port number of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         @NameInMap("NodePort")
         public String nodePort;
 
         /**
          * <p>The initial role of the node. Valid values:</p>
-         * <br>
-         * <p>*   **primary**: primary node.</p>
-         * <p>*   **mirror**: secondary node.</p>
-         * <br>
-         * <p>If the value of this parameter is the same as that of **NodeRole**, no primary/secondary switchover occurs. If the value of this parameter is different from that of **NodeRole**, a primary/secondary switchover occurs.</p>
+         * <ul>
+         * <li><strong>primary</strong>: primary node.</li>
+         * <li><strong>mirror</strong>: secondary node.</li>
+         * </ul>
+         * <p>If the value of this parameter is the same as that of <strong>NodeRole</strong>, no primary/secondary switchover occurs. If the value of this parameter is different from that of <strong>NodeRole</strong>, a primary/secondary switchover occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         @NameInMap("NodePreferredRole")
         public String nodePreferredRole;
 
         /**
          * <p>The data synchronization state of the node. Valid values:</p>
-         * <br>
-         * <p>*   **Synced**: The node data is synchronized.</p>
-         * <p>*   **Not Syncing**: The node data is not synchronized.</p>
-         * <p>*   **No sync required**: Data synchronization is not required. This value may be returned only for the coordinator node.</p>
+         * <ul>
+         * <li><strong>Synced</strong>: The node data is synchronized.</li>
+         * <li><strong>Not Syncing</strong>: The node data is not synchronized.</li>
+         * <li><strong>No sync required</strong>: Data synchronization is not required. This value may be returned only for the coordinator node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Synced</p>
          */
         @NameInMap("NodeReplicationMode")
         public String nodeReplicationMode;
 
         /**
          * <p>The current role of the node. Valid values:</p>
-         * <br>
-         * <p>*   **primary**: primary node.</p>
-         * <p>*   **mirror**: secondary node.</p>
+         * <ul>
+         * <li><strong>primary</strong>: primary node.</li>
+         * <li><strong>mirror</strong>: secondary node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>primary</p>
          */
         @NameInMap("NodeRole")
         public String nodeRole;
 
         /**
          * <p>The running state of the node. Valid values:</p>
-         * <br>
-         * <p>*   **UP**: The node is running.</p>
-         * <p>*   **DOWN**: The node is faulty.</p>
+         * <ul>
+         * <li><strong>UP</strong>: The node is running.</li>
+         * <li><strong>DOWN</strong>: The node is faulty.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UP</p>
          */
         @NameInMap("NodeStatus")
         public String nodeStatus;
 
         /**
          * <p>The type of the node. Valid values:</p>
-         * <br>
-         * <p>*   **master**: primary coordinator node.</p>
-         * <p>*   **slave**: standby coordinator node.</p>
-         * <p>*   **segment**: compute node.</p>
+         * <ul>
+         * <li><strong>master</strong>: primary coordinator node.</li>
+         * <li><strong>slave</strong>: standby coordinator node.</li>
+         * <li><strong>segment</strong>: compute node.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>master</p>
          */
         @NameInMap("NodeType")
         public String nodeType;
@@ -277,36 +323,54 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
     public static class DescribeDBInstanceDiagnosisSummaryResponseBodyMasterStatusInfo extends TeaModel {
         /**
          * <p>The number of abnormal nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExceptionNodeNum")
         public Integer exceptionNodeNum;
 
         /**
          * <p>The number of normal nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("NormalNodeNum")
         public Integer normalNodeNum;
 
         /**
          * <p>The number of nodes whose roles are reversed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NotPreferredNodeNum")
         public Integer notPreferredNodeNum;
 
         /**
          * <p>The number of unsynchronized nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NotSyncingNodeNum")
         public Integer notSyncingNodeNum;
 
         /**
          * <p>The number of nodes whose roles are normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PreferredNodeNum")
         public Integer preferredNodeNum;
 
         /**
          * <p>The number of synchronized nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SyncedNodeNum")
         public Integer syncedNodeNum;
@@ -369,36 +433,54 @@ public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
     public static class DescribeDBInstanceDiagnosisSummaryResponseBodySegmentStatusInfo extends TeaModel {
         /**
          * <p>The number of abnormal nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExceptionNodeNum")
         public Integer exceptionNodeNum;
 
         /**
          * <p>The number of normal nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("NormalNodeNum")
         public Integer normalNodeNum;
 
         /**
          * <p>The number of nodes whose roles are reversed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NotPreferredNodeNum")
         public Integer notPreferredNodeNum;
 
         /**
          * <p>The number of unsynchronized nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("NotSyncingNodeNum")
         public Integer notSyncingNodeNum;
 
         /**
          * <p>The number of nodes whose roles are normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("PreferredNodeNum")
         public Integer preferredNodeNum;
 
         /**
          * <p>The number of synchronized nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SyncedNodeNum")
         public Integer syncedNodeNum;

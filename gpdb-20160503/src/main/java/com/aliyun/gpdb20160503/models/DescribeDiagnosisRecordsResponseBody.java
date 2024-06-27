@@ -12,18 +12,27 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,66 +77,98 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     public static class DescribeDiagnosisRecordsResponseBodyItems extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbtest</p>
          */
         @NameInMap("Database")
         public String database;
 
         /**
          * <p>The execution duration of the query. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Duration")
         public Integer duration;
 
         /**
          * <p>The ID of the query. It is a unique identifier of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022042612465401000000012903151998970</p>
          */
         @NameInMap("QueryID")
         public String queryID;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM t1,t2 WHERE t1.id=t2.id;</p>
          */
         @NameInMap("SQLStmt")
         public String SQLStmt;
 
         /**
          * <p>Indicates whether the SQL statement needs to be truncated. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The SQL statement needs to be truncated.</p>
-         * <p>*   **false**: The SQL statement does not need to be truncated.</p>
+         * <ul>
+         * <li><strong>true</strong>: The SQL statement needs to be truncated.</li>
+         * <li><strong>false</strong>: The SQL statement does not need to be truncated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SQLTruncated")
         public Boolean SQLTruncated;
 
         /**
          * <p>The threshold used to determine whether an SQL statement must be truncated. The value is the number of characters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5120</p>
          */
         @NameInMap("SQLTruncatedThreshold")
         public Integer SQLTruncatedThreshold;
 
         /**
          * <p>The ID of the session that contains the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("SessionID")
         public String sessionID;
 
         /**
          * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651877940000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The execution state of the query. Valid values:</p>
-         * <br>
-         * <p>*   **running**: The query is being executed.</p>
-         * <p>*   **finished**: The query is complete.</p>
+         * <ul>
+         * <li><strong>running</strong>: The query is being executed.</li>
+         * <li><strong>finished</strong>: The query is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finished</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpguser</p>
          */
         @NameInMap("User")
         public String user;

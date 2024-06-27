@@ -12,30 +12,45 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3E387971-33A5-5019-AD7F-DC**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total backup set size. Unit: Byte.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1111111111</p>
      */
     @NameInMap("TotalBackupSize")
     public Long totalBackupSize;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,100 +111,144 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
     public static class DescribeDataBackupsResponseBodyItems extends TeaModel {
         /**
          * <p>The UTC time when the backup ended. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-22T12:01:43Z</p>
          */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
         /**
          * <p>The local time when the backup ended. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-22 20:00:25</p>
          */
         @NameInMap("BackupEndTimeLocal")
         public String backupEndTimeLocal;
 
         /**
          * <p>The method that is used to generate the backup set. Valid values:</p>
-         * <br>
-         * <p>*   **Logical**: logical backup</p>
-         * <p>*   **Physical**: physical backup</p>
-         * <p>*   **Snapshot**: snapshot backup</p>
+         * <ul>
+         * <li><strong>Logical</strong>: logical backup</li>
+         * <li><strong>Physical</strong>: physical backup</li>
+         * <li><strong>Snapshot</strong>: snapshot backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Physical</p>
          */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
         /**
          * <p>The backup mode.</p>
-         * <br>
          * <p>Valid values for full backup:</p>
-         * <br>
-         * <p>*   Automated: automatic backup</p>
-         * <p>*   Manual: manual backup</p>
-         * <br>
+         * <ul>
+         * <li>Automated: automatic backup</li>
+         * <li>Manual: manual backup</li>
+         * </ul>
          * <p>Valid values for point-in-time backup:</p>
-         * <br>
-         * <p>*   Automated: point-in-time backup after full backup</p>
-         * <p>*   Manual: manual point-in-time backup</p>
-         * <p>*   Period: point-in-time backup that is triggered by a backup policy</p>
+         * <ul>
+         * <li>Automated: point-in-time backup after full backup</li>
+         * <li>Manual: manual point-in-time backup</li>
+         * <li>Period: point-in-time backup that is triggered by a backup policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Automated</p>
          */
         @NameInMap("BackupMode")
         public String backupMode;
 
         /**
          * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1111111111</p>
          */
         @NameInMap("BackupSetId")
         public String backupSetId;
 
         /**
          * <p>The size of the backup file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2167808</p>
          */
         @NameInMap("BackupSize")
         public Long backupSize;
 
         /**
          * <p>The UTC time when the backup started. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-22T12:00:25Z</p>
          */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
         /**
          * <p>The local time when the backup started. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2011-05-30 03:29:00</p>
          */
         @NameInMap("BackupStartTimeLocal")
         public String backupStartTimeLocal;
 
         /**
          * <p>The status of the backup set. Valid values:</p>
-         * <br>
-         * <p>*   Success</p>
-         * <p>*   Failure</p>
+         * <ul>
+         * <li>Success</li>
+         * <li>Failure</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
         /**
          * <p>The name of a point-in-time backup set or the full backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpgbackup_555*****_20211222200019</p>
          */
         @NameInMap("BaksetName")
         public String baksetName;
 
         /**
-         * <p>*   For full backup, this parameter indicates the point in time at which the data in the data backup file is consistent.</p>
-         * <p>*   For point-in-time backup, this parameter indicates that the returned point in time is a timestamp.</p>
+         * <ul>
+         * <li>For full backup, this parameter indicates the point in time at which the data in the data backup file is consistent.</li>
+         * <li>For point-in-time backup, this parameter indicates that the returned point in time is a timestamp.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1576506856</p>
          */
         @NameInMap("ConsistentTime")
         public Long consistentTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-bp**************-master</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
          * <p>The type of the backup. Valid values:</p>
-         * <br>
-         * <p>*   DATA: full backup</p>
-         * <p>*   RESTOREPOI: point-in-time backup</p>
+         * <ul>
+         * <li>DATA: full backup</li>
+         * <li>RESTOREPOI: point-in-time backup</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DATA</p>
          */
         @NameInMap("DataType")
         public String dataType;

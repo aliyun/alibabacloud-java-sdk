@@ -12,6 +12,9 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>62506167-D284-562A-B7C2-0A**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,71 @@ public class DescribeParametersResponseBody extends TeaModel {
     public static class DescribeParametersResponseBodyParameters extends TeaModel {
         /**
          * <p>The current value of the configuration parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10800000</p>
          */
         @NameInMap("CurrentValue")
         public String currentValue;
 
         /**
          * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ForceRestartInstance")
         public String forceRestartInstance;
 
         /**
          * <p>Indicates whether the configuration parameter can be modified. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsChangeableConfig")
         public String isChangeableConfig;
 
         /**
          * <p>The valid values of the configuration parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0-2147483647]</p>
          */
         @NameInMap("OptionalRange")
         public String optionalRange;
 
         /**
          * <p>The description of the configuration parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sets the maximum allowed duration of any statement, A value of 0 turns off the timeout.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
          * <p>The name of the configuration parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>statement_timeout</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
          * <p>The default value of the configuration parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10800000</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

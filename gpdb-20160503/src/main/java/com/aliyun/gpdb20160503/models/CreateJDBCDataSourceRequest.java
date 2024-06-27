@@ -6,28 +6,67 @@ import com.aliyun.tea.*;
 public class CreateJDBCDataSourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DataSourceDescription")
     public String dataSourceDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jdbc_pxf</p>
+     */
     @NameInMap("DataSourceName")
     public String dataSourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mysql</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>The JDBC connection string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("JDBCConnectionString")
     public String JDBCConnectionString;
 
+    /**
+     * <p>The password of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("JDBCPassword")
     public String JDBCPassword;
 
+    /**
+     * <p>The name of the database account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("JDBCUserName")
     public String JDBCUserName;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

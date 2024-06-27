@@ -4,12 +4,34 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CheckJDBCSourceNetConnectionResponseBody extends TeaModel {
+    /**
+     * <p>The returned message. If the connection failed, an error message is returned. Otherwise, a pair of double quotation marks (&quot;&quot;) is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("ConnectionMessage")
     public String connectionMessage;
 
+    /**
+     * <p>The connection status. Valid values:</p>
+     * <ul>
+     * <li>Success</li>
+     * <li>Failed</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

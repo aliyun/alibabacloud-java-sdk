@@ -12,12 +12,18 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
 
     /**
      * <p>The description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
      * <p>The instance ID. Separate multiple values with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceIds")
     public String DBInstanceIds;
@@ -42,11 +48,16 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC).</p>
-     * <p>*   **Classic**: classic network.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, instances of all network types are returned.</p>
+     * <ul>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+     * <li><strong>Classic</strong>: classic network.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, instances of all network types are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -55,45 +66,63 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   **30**</p>
-     * <p>*   **50**</p>
-     * <p>*   **100**</p>
-     * <br>
-     * <p>Default value: **30**.</p>
+     * <ul>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * <p>Default value: <strong>30</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The tag value.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesShrinkRequestTag> tag;
 
+    /**
+     * <p>The VPC ID. You can use this parameter to filter instances that reside in the specified VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-t4nqyp3tc5mx7vy6****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -217,12 +246,18 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     public static class DescribeDBInstancesShrinkRequestTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-value</p>
          */
         @NameInMap("Value")
         public String value;

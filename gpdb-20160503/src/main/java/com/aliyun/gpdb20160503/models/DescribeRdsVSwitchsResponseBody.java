@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRdsVSwitchsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B0BA251D-6854-5A99-A964-3C**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,69 +43,103 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
     public static class DescribeRdsVSwitchsResponseBodyVSwitchesVSwitch extends TeaModel {
         /**
          * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("AliUid")
         public String aliUid;
 
         /**
          * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("Bid")
         public String bid;
 
         /**
          * <p>The CIDR block of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.<strong>.</strong>.0/24</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
          * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         @NameInMap("IzNo")
         public String izNo;
 
         /**
          * <p>An invalid parameter. It is no longer returned when you call this operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
-         * <p>The state of the vSwitch. If **Available** is returned, the vSwitch is available.</p>
+         * <p>The state of the vSwitch. If <strong>Available</strong> is returned, the vSwitch is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp*******************</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-name</p>
          */
         @NameInMap("VSwitchName")
         public String vSwitchName;

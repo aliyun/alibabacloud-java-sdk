@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterNodeResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -18,6 +21,9 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>87E44B48-B306-4AD3-A63B-C8**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +60,9 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
     public static class DescribeDBClusterNodeResponseBodyNodes extends TeaModel {
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master-10*******</p>
          */
         @NameInMap("Name")
         public String name;

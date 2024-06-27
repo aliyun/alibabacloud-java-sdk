@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Database")
     public String database;
@@ -18,6 +21,9 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,60 +60,90 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
     public static class DescribeWaitingSQLInfoResponseBodyItems extends TeaModel {
         /**
          * <p>The application that sent the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataGrip 2022.1.5</p>
          */
         @NameInMap("Application")
         public String application;
 
         /**
          * <p>The application that sent the blocking query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataGrip 2022.1.5</p>
          */
         @NameInMap("BlockedByApplication")
         public String blockedByApplication;
 
         /**
          * <p>The process ID of the blocking query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         @NameInMap("BlockedByPID")
         public String blockedByPID;
 
         /**
          * <p>The SQL statement of the blocking query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Select * from t1;</p>
          */
         @NameInMap("BlockedBySQLStmt")
         public String blockedBySQLStmt;
 
         /**
          * <p>The database account that is used to perform the blocking query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser1</p>
          */
         @NameInMap("BlockedByUser")
         public String blockedByUser;
 
         /**
          * <p>The authorized locks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ShareLock,AccessExclusiveLock</p>
          */
         @NameInMap("GrantLocks")
         public String grantLocks;
 
         /**
          * <p>The unauthorized locks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AccessShareLock</p>
          */
         @NameInMap("NotGrantLocks")
         public String notGrantLocks;
 
         /**
          * <p>The ID of the process that uniquely identifies the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("PID")
         public String PID;
 
         /**
          * <p>The SQL statement of the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Select * from t1,t2 where t1.id=t2.id;</p>
          */
         @NameInMap("SQLStmt")
         public String SQLStmt;
 
         /**
          * <p>The database account that is used to perform the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         @NameInMap("User")
         public String user;

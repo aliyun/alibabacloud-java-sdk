@@ -6,43 +6,109 @@ import com.aliyun.tea.*;
 public class CreateHadoopDataSourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pxf for hdfs data source</p>
+     */
     @NameInMap("DataSourceDescription")
     public String dataSourceDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hdfs_pxf</p>
+     */
     @NameInMap("DataSourceName")
     public String dataSourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HDFS</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-1234567</p>
+     */
     @NameInMap("EmrInstanceId")
     public String emrInstanceId;
 
+    /**
+     * <p>The string that specifies the content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("HDFSConf")
     public String HDFSConf;
 
+    /**
+     * <p>The string that specifies the content of the Hadoop core-site.xml file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("HadoopCoreConf")
     public String hadoopCoreConf;
 
+    /**
+     * <strong>example:</strong>
+     * <p>emr</p>
+     */
     @NameInMap("HadoopCreateType")
     public String hadoopCreateType;
 
+    /**
+     * <p>The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1 localhost</p>
+     */
     @NameInMap("HadoopHostsAddress")
     public String hadoopHostsAddress;
 
+    /**
+     * <p>The string that specifies the content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("HiveConf")
     public String hiveConf;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("MapReduceConf")
     public String mapReduceConf;
 
+    /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The string that specifies the content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("YarnConf")
     public String yarnConf;
 

@@ -6,52 +6,68 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterPerformanceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format.</p>
-     * <br>
-     * <p>> The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
-     * <br>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-03T15:10Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The performance metric that you want to query. Separate multiple values with commas (,). For more information, see [Performance parameters](https://help.aliyun.com/document_detail/86943.html).</p>
-     * <br>
+     * <p>The performance metric that you want to query. Separate multiple values with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adbpg_conn_count</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The node type. Valid values:</p>
-     * <br>
-     * <p>*   **master**: coordinator node.</p>
-     * <p>*   **segment**: compute node.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the performance metrics of all nodes are returned.</p>
+     * <ul>
+     * <li><strong>master</strong>: coordinator node.</li>
+     * <li><strong>segment</strong>: compute node.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the performance metrics of all nodes are returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>master</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
 
     /**
-     * <p>The nodes for which you want to query performance metrics. Separate multiple values with commas (,). Example: `master-10******1,master-10******2`. You can call the [DescribeDBClusterNode](https://help.aliyun.com/document_detail/390136.html) operation to query the names of nodes.</p>
-     * <br>
+     * <p>The nodes for which you want to query performance metrics. Separate multiple values with commas (,). Example: <code>master-10******1,master-10******2</code>. You can call the <a href="https://help.aliyun.com/document_detail/390136.html">DescribeDBClusterNode</a> operation to query the names of nodes.</p>
      * <p>You can also filter the nodes based on their metric values. Valid values:</p>
-     * <br>
-     * <p>*   **top10**: the 10 nodes that have the highest metric values.</p>
-     * <p>*   **top20**: the 20 nodes that have the highest metric values.</p>
-     * <p>*   **bottom10**: the 10 nodes that have the lowest metric values.</p>
-     * <p>*   **bottom20**: the 20 nodes that have the lowest metric values.</p>
+     * <ul>
+     * <li><strong>top10</strong>: the 10 nodes that have the highest metric values.</li>
+     * <li><strong>top20</strong>: the 20 nodes that have the highest metric values.</li>
+     * <li><strong>bottom10</strong>: the 10 nodes that have the lowest metric values.</li>
+     * <li><strong>bottom20</strong>: the 20 nodes that have the lowest metric values.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>top10</p>
      */
     @NameInMap("Nodes")
     public String nodes;
@@ -60,11 +76,14 @@ public class DescribeDBClusterPerformanceRequest extends TeaModel {
     public String resourceGroupName;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format.</p>
-     * <br>
-     * <p>> You can query monitoring information only within the last 30 days.</p>
-     * <br>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDTHH:mmZ</code> format.</p>
+     * <blockquote>
+     * <p>You can query monitoring information only within the last 30 days.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-11-03T15:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

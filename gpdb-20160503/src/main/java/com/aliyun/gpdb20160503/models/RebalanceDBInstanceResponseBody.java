@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RebalanceDBInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5414A4E5-4C36-4461-95FC-************</p>
      */
     @NameInMap("RequestId")
     public String requestId;

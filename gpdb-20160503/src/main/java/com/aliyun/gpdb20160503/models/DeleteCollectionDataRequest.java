@@ -6,44 +6,60 @@ import com.aliyun.tea.*;
 public class DeleteCollectionDataRequest extends TeaModel {
     /**
      * <p>The name of the collection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>document</p>
      */
     @NameInMap("Collection")
     public String collection;
 
     /**
      * <p>The data that you want to delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;title&quot;:[&quot;a&quot;,&quot;b&quot;]}</p>
      */
     @NameInMap("CollectionData")
     public String collectionData;
 
     /**
-     * <p>The data filter to delete.</p>
+     * <p>The filter conditions for the data to be deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a &lt; 10</p>
      */
     @NameInMap("CollectionDataFilter")
     public String collectionDataFilter;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The name of the namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mynamespace</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The password of the namespace.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testpassword</p>
      */
     @NameInMap("NamespacePassword")
     public String namespacePassword;
@@ -53,10 +69,13 @@ public class DeleteCollectionDataRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
-     * <p>> You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

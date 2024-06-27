@@ -5,40 +5,55 @@ import com.aliyun.tea.*;
 
 public class DescribeDataSharePerformanceRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-03T15:10Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The name of the performance metric. Separate multiple values with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **adbpg_datashare_topic_count**: the number of shared topics.</p>
-     * <p>*   **adbpg_datashare_data_size_mb**: the amount of data shared.</p>
-     * <br>
+     * <ul>
+     * <li><strong>adbpg_datashare_topic_count</strong>: the number of shared topics.</li>
+     * <li><strong>adbpg_datashare_data_size_mb</strong>: the amount of data shared.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adbpg_datashare_topic_count</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeRegions](https://help.aliyun.com/document_detail/86912.html) operation to query the most recent region list.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is no longer used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-03T15:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -6,21 +6,29 @@ import com.aliyun.tea.*;
 public class DescribeDBClusterNodeRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The node type. Valid values:</p>
-     * <br>
-     * <p>*   **master**: coordinator node.</p>
-     * <p>*   **segment**: compute node.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the information about all nodes is returned.</p>
+     * <ul>
+     * <li><strong>master</strong>: coordinator node.</li>
+     * <li><strong>segment</strong>: compute node.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the information about all nodes is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>master</p>
      */
     @NameInMap("NodeType")
     public String nodeType;

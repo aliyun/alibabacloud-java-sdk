@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DownloadSQLLogsRecordsResponseBody extends TeaModel {
     /**
      * <p>The ID of the download task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("DownloadId")
     public Long downloadId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

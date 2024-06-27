@@ -7,12 +7,30 @@ public class ListDocumentsResponseBody extends TeaModel {
     @NameInMap("Items")
     public ListDocumentsResponseBodyItems items;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Successful</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ABB39CC3-4488-4857-905D-2E4A051D0521</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>success</strong></li>
+     * <li><strong>fail</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -54,9 +72,21 @@ public class ListDocumentsResponseBody extends TeaModel {
     }
 
     public static class ListDocumentsResponseBodyItemsDocumentList extends TeaModel {
+        /**
+         * <p>The name of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>music.txt</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The source of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://oss.xxx/music.txt">http://oss.xxx/music.txt</a></p>
+         */
         @NameInMap("Source")
         public String source;
 

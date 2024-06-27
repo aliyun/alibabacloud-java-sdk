@@ -6,31 +6,39 @@ import com.aliyun.tea.*;
 public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
      * <p>The new description of the database account.</p>
-     * <br>
-     * <p>*   The description must start with a letter.</p>
-     * <p>*   The description cannot start with `http://` or `https://`.</p>
-     * <p>*   The description can contain letters, underscores (_), hyphens (-), and digits.</p>
-     * <p>*   The description must be 2 to 256 characters in length.</p>
-     * <br>
+     * <ul>
+     * <li>The description must start with a letter.</li>
+     * <li>The description cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The description can contain letters, underscores (_), hyphens (-), and digits.</li>
+     * <li>The description must be 2 to 256 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAccoutdescribe</p>
      */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
     /**
      * <p>The name of the database account.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testAccout</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

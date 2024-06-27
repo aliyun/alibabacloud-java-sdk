@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The end time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-09T03:47Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The database engine of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gpdb</p>
      */
     @NameInMap("Engine")
     public String engine;
@@ -30,12 +39,18 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E85244A-AB47-46A3-A3AD-5F307DCB407E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-08T03:47Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

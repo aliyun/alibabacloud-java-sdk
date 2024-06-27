@@ -6,26 +6,34 @@ import com.aliyun.tea.*;
 public class ModifyDBInstanceSSLRequest extends TeaModel {
     /**
      * <p>The encrypted endpoint. By default, the wildcards are used for instances that are hosted on ECS instances. This way, the endpoints that can be resolved to the same IP address are encrypted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxxxx-master.gpdbmaster.singapore.rds.aliyuncs.com</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The status of SSL encryption. Valid values:</p>
-     * <br>
-     * <p>*   0: disables SSL encryption.</p>
-     * <p>*   1: enables SSL encryption.</p>
-     * <p>*   2: updates SSL encryption.</p>
-     * <br>
+     * <ul>
+     * <li>0: disables SSL encryption.</li>
+     * <li>1: enables SSL encryption.</li>
+     * <li>2: updates SSL encryption.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SSLEnabled")
     public Integer SSLEnabled;

@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class CreateDBInstancePlanResponseBody extends TeaModel {
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The error message.</p>
-     * <br>
      * <p>This parameter is returned only if the request fails.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>The plan ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
-     * <br>
-     * <p>If the request was successful, **success** is returned. If the request failed, this parameter is not returned.</p>
+     * <p>If the request was successful, <strong>success</strong> is returned. If the request failed, this parameter is not returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Status")
     public String status;

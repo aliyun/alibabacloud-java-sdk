@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeDBInstancePlansRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -18,39 +21,57 @@ public class DescribeDBInstancePlansRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The time used to filter plans. If you specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format, the plans created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.</p>
+     * <p>The time used to filter plans. If you specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format, the plans created before this time are returned. The time must be in UTC. If you do not specify this parameter, all plans are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-04-17T23:00Z</p>
      */
     @NameInMap("PlanCreateDate")
     public String planCreateDate;
 
     /**
      * <p>The description of the plan.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a test plan</p>
      */
     @NameInMap("PlanDesc")
     public String planDesc;
 
     /**
      * <p>The plan ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstancePlans](https://help.aliyun.com/document_detail/449398.html) operation to query the information about plans, including plan IDs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/449398.html">DescribeDBInstancePlans</a> operation to query the information about plans, including plan IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
      * <p>The execution mode of the plan. Valid values:</p>
-     * <br>
-     * <p>*   **Postpone**: The plan is executed later.</p>
-     * <p>*   **Regular**: The plan is executed periodically.</p>
+     * <ul>
+     * <li><strong>Postpone</strong>: The plan is executed later.</li>
+     * <li><strong>Regular</strong>: The plan is executed periodically.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Regular</p>
      */
     @NameInMap("PlanScheduleType")
     public String planScheduleType;
 
     /**
      * <p>The type of the plan. Valid values:</p>
-     * <br>
-     * <p>*   **PauseResume**: pauses and resumes an instance.</p>
-     * <p>*   **Resize**: scales an instance.</p>
+     * <ul>
+     * <li><strong>PauseResume</strong>: pauses and resumes an instance.</li>
+     * <li><strong>Resize</strong>: scales an instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PauseResume</p>
      */
     @NameInMap("PlanType")
     public String planType;

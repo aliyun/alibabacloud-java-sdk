@@ -5,25 +5,55 @@ import com.aliyun.tea.*;
 
 public class UpsertChunksShrinkRequest extends TeaModel {
     /**
+     * <p>The name of the document collection.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2618448.html">CreateDocumentCollection</a> operation to create a document collection and call the <a href="https://help.aliyun.com/document_detail/2618452.html">ListDocumentCollections</a> operation to query a list of document collections.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>document</p>
      */
     @NameInMap("Collection")
     public String collection;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mydoc.txt</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>The name of the namespace. Default value: public.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation to create a namespace and call the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> operation to query a list of namespaces.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mynamespace</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
+     * <p>The password of the namespace.</p>
+     * <blockquote>
+     * <p> This value is specified when you call the <a href="https://help.aliyun.com/document_detail/2401495.html">CreateNamespace</a> operation.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testpassword</p>
      */
     @NameInMap("NamespacePassword")
     public String namespacePassword;
@@ -33,6 +63,9 @@ public class UpsertChunksShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

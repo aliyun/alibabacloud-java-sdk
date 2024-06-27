@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeHealthStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D97B4191-104D-10CE-8BC5-53**********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The queried performance metrics. Each performance metric consists of the parameter name, status, and metric value. The metric information is returned only for the performance parameters specified by **Key**. For example, if you set **Key** to **adbpg_status**, only the metric information of **adbpg_status** is returned.</p>
-     * <br>
-     * <p>For more information about performance parameters, see [Performance parameters](https://help.aliyun.com/document_detail/86943.html).</p>
+     * <p>The queried performance metrics. Each performance metric consists of the parameter name, status, and metric value. The metric information is returned only for the performance parameters specified by <strong>Key</strong>. For example, if you set <strong>Key</strong> to <strong>adbpg_status</strong>, only the metric information of <strong>adbpg_status</strong> is returned.</p>
+     * <p>For more information about performance parameters, see <a href="https://help.aliyun.com/document_detail/86943.html">Performance parameters</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;node_master_connection_status&quot;:{&quot;Status&quot;:&quot;healthy&quot;,&quot;Value&quot;:1.6}}</p>
      */
     @NameInMap("Status")
     public DescribeHealthStatusResponseBodyStatus status;
@@ -56,18 +64,24 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusAdbgpSegmentDiskUsagePercentMax extends TeaModel {
         /**
          * <p>The status corresponding to the maximum storage usage among all compute nodes. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The compute node storage usage is greater than or equal to 90%. In this case, the instance is locked.</p>
-         * <p>*   **warning**: The compute node storage usage is greater than or equal to 80% and less than 90%.</p>
-         * <p>*   **healthy**: The compute node storage usage is less than 80%.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The compute node storage usage is greater than or equal to 90%. In this case, the instance is locked.</li>
+         * <li><strong>warning</strong>: The compute node storage usage is greater than or equal to 80% and less than 90%.</li>
+         * <li><strong>healthy</strong>: The compute node storage usage is less than 80%.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of maximum compute node storage usage.</p>
-         * <br>
          * <p>Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.52</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -98,20 +112,27 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusAdbpgConnectionStatus extends TeaModel {
         /**
          * <p>The connection health status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The instance connection usage is greater than 95%. In this case, this metric is marked in red in the console.</p>
-         * <p>*   **warning**: The instance connection usage is greater than 90% and less than or equal to 95%. In this case, this metric is marked in yellow in the console.</p>
-         * <p>*   **healthy**: The instance connection usage is less than or equal to 90%. In this case, this metric is marked in green in the console.</p>
-         * <br>
-         * <p>>  The instance connection usage is the maximum connection usage among all the coordinator and compute nodes.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The instance connection usage is greater than 95%. In this case, this metric is marked in red in the console.</li>
+         * <li><strong>warning</strong>: The instance connection usage is greater than 90% and less than or equal to 95%. In this case, this metric is marked in yellow in the console.</li>
+         * <li><strong>healthy</strong>: The instance connection usage is less than or equal to 90%. In this case, this metric is marked in green in the console.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The instance connection usage is the maximum connection usage among all the coordinator and compute nodes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of instance connection usage.</p>
-         * <br>
          * <p>Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.71</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -142,20 +163,27 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusAdbpgDiskStatus extends TeaModel {
         /**
          * <p>The storage status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The instance storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.</p>
-         * <p>*   **warning**: The instance storage usage is greater than or equal to 70% and less than 90%. In this case, this metric is marked in yellow in the console.</p>
-         * <p>*   **healthy**: The instance storage usage is less than 70%. In this case, this metric is marked in green in the console.</p>
-         * <br>
-         * <p>>  The instance storage usage is the average storage usage of all compute nodes.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The instance storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.</li>
+         * <li><strong>warning</strong>: The instance storage usage is greater than or equal to 70% and less than 90%. In this case, this metric is marked in yellow in the console.</li>
+         * <li><strong>healthy</strong>: The instance storage usage is less than 70%. In this case, this metric is marked in green in the console.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The instance storage usage is the average storage usage of all compute nodes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of instance storage usage.</p>
-         * <br>
          * <p>Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.52</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -186,20 +214,27 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusAdbpgDiskUsagePercent extends TeaModel {
         /**
          * <p>The status corresponding to the storage usage of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The instance storage usage is greater than or equal to 90%. In this case, the instance is locked.</p>
-         * <p>*   **warning**: The instance storage usage is greater than or equal to 70% and less than 90%.</p>
-         * <p>*   **healthy**: The instance storage usage is less than 70%.</p>
-         * <br>
-         * <p>>  The instance storage usage is the average storage usage of all compute nodes.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The instance storage usage is greater than or equal to 90%. In this case, the instance is locked.</li>
+         * <li><strong>warning</strong>: The instance storage usage is greater than or equal to 70% and less than 90%.</li>
+         * <li><strong>healthy</strong>: The instance storage usage is less than 70%.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The instance storage usage is the average storage usage of all compute nodes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of instance storage usage.</p>
-         * <br>
          * <p>Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.52</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -287,18 +322,24 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusAdbpgMasterDiskUsagePercentMax extends TeaModel {
         /**
          * <p>The status corresponding to the maximum storage usage of the coordinator node. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The coordinator node storage usage is greater than or equal to 90%. In this case, the instance is locked.</p>
-         * <p>*   **warning**: The coordinator node storage usage is greater than or equal to 70% and less than 90%.</p>
-         * <p>*   **healthy**: The coordinator node storage usage is less than 70%.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The coordinator node storage usage is greater than or equal to 90%. In this case, the instance is locked.</li>
+         * <li><strong>warning</strong>: The coordinator node storage usage is greater than or equal to 70% and less than 90%.</li>
+         * <li><strong>healthy</strong>: The coordinator node storage usage is less than 70%.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of maximum coordinator node storage usage.</p>
-         * <br>
          * <p>Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.34</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -329,16 +370,23 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusAdbpgMasterStatus extends TeaModel {
         /**
          * <p>The availability status of the coordinator node. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: Both the primary and standby coordinator nodes are unavailable. In this case, this metric is marked in red in the console.</p>
-         * <p>*   **warning**: The primary or standby coordinator node is unavailable. In this case, this metric is marked in yellow in the console.</p>
-         * <p>*   **healthy**: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.</p>
+         * <ul>
+         * <li><strong>critical</strong>: Both the primary and standby coordinator nodes are unavailable. In this case, this metric is marked in red in the console.</li>
+         * <li><strong>warning</strong>: The primary or standby coordinator node is unavailable. In this case, this metric is marked in yellow in the console.</li>
+         * <li><strong>healthy</strong>: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of coordinator node availability status. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -369,16 +417,23 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusAdbpgSegmentStatus extends TeaModel {
         /**
          * <p>The availability status of compute nodes. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: All the primary and secondary compute nodes are unavailable. In this case, this metric is marked in red in the console.</p>
-         * <p>*   **warning**: Fifty percent or more than fifty percent of compute nodes are unavailable. In this case, this metric is marked in yellow in the console.</p>
-         * <p>*   **healthy**: All compute nodes are available. In this case, this metric is marked in green in the console.</p>
+         * <ul>
+         * <li><strong>critical</strong>: All the primary and secondary compute nodes are unavailable. In this case, this metric is marked in red in the console.</li>
+         * <li><strong>warning</strong>: Fifty percent or more than fifty percent of compute nodes are unavailable. In this case, this metric is marked in yellow in the console.</li>
+         * <li><strong>healthy</strong>: All compute nodes are available. In this case, this metric is marked in green in the console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of compute node availability status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -409,18 +464,26 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusAdbpgStatus extends TeaModel {
         /**
          * <p>The health status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The coordinator node or a compute node is unavailable. In this case, this metric is marked in red in the console.</p>
-         * <p>*   **healthy**: All nodes are available. In this case, this metric is marked in green in the console.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The coordinator node or a compute node is unavailable. In this case, this metric is marked in red in the console.</li>
+         * <li><strong>healthy</strong>: All nodes are available. In this case, this metric is marked in green in the console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of instance health status. Valid values:</p>
-         * <br>
-         * <p>*   **1**: healthy</p>
-         * <p>*   **0**: critical</p>
+         * <ul>
+         * <li><strong>1</strong>: healthy</li>
+         * <li><strong>0</strong>: critical</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -451,20 +514,27 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusNodeMasterConnectionStatus extends TeaModel {
         /**
          * <p>The connection health status of the coordinator node. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The coordinator node connection usage is greater than 95%. In this case, this metric is marked in red in the console.</p>
-         * <p>*   **warning**: The coordinator node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.</p>
-         * <p>*   **healthy**: The coordinator node connection usage is less than 90%. In this case, this metric is marked in green in the console.</p>
-         * <br>
-         * <p>>  The coordinator node connection usage is the maximum connection usage of the coordinator node.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The coordinator node connection usage is greater than 95%. In this case, this metric is marked in red in the console.</li>
+         * <li><strong>warning</strong>: The coordinator node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.</li>
+         * <li><strong>healthy</strong>: The coordinator node connection usage is less than 90%. In this case, this metric is marked in green in the console.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The coordinator node connection usage is the maximum connection usage of the coordinator node.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of coordinator node connection usage.</p>
-         * <br>
          * <p>Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.71</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -495,18 +565,26 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusNodeMasterStatus extends TeaModel {
         /**
          * <p>The health status of the coordinator node. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The primary or standby coordinator node is unavailable. In this case, this metric is marked in red in the console.</p>
-         * <p>*   **healthy**: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The primary or standby coordinator node is unavailable. In this case, this metric is marked in red in the console.</li>
+         * <li><strong>healthy</strong>: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of coordinator node health status. Valid values:</p>
-         * <br>
-         * <p>*   **1**: healthy</p>
-         * <p>*   **0**: critical</p>
+         * <ul>
+         * <li><strong>1</strong>: healthy</li>
+         * <li><strong>0</strong>: critical</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -537,20 +615,27 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusNodeSegmentConnectionStatus extends TeaModel {
         /**
          * <p>The connection health status of compute nodes. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The compute node connection usage is greater than or equal to 95%. In this case, this metric is marked in red in the console.</p>
-         * <p>*   **warning**: The compute node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.</p>
-         * <p>*   **healthy**: The compute node connection usage is less than 90%. In this case, this metric is marked in green in the console.</p>
-         * <br>
-         * <p>>  The compute node connection usage is the maximum connection usage among all compute nodes.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The compute node connection usage is greater than or equal to 95%. In this case, this metric is marked in red in the console.</li>
+         * <li><strong>warning</strong>: The compute node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.</li>
+         * <li><strong>healthy</strong>: The compute node connection usage is less than 90%. In this case, this metric is marked in green in the console.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The compute node connection usage is the maximum connection usage among all compute nodes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of maximum compute node connection usage.</p>
-         * <br>
          * <p>Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.48</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -581,20 +666,27 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatusNodeSegmentDiskStatus extends TeaModel {
         /**
          * <p>The storage status of compute nodes. Valid values:</p>
-         * <br>
-         * <p>*   **critical**: The compute node storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.</p>
-         * <p>*   **warning**: The compute node storage usage is greater than or equal to 80% and less than 90%. In this case, this metric is marked in yellow in the console.</p>
-         * <p>*   **healthy**: The compute node storage usage is less than 80%. In this case, this metric is marked in green in the console.</p>
-         * <br>
-         * <p>>  The compute node storage usage is the maximum storage usage among all compute nodes.</p>
+         * <ul>
+         * <li><strong>critical</strong>: The compute node storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.</li>
+         * <li><strong>warning</strong>: The compute node storage usage is greater than or equal to 80% and less than 90%. In this case, this metric is marked in yellow in the console.</li>
+         * <li><strong>healthy</strong>: The compute node storage usage is less than 80%. In this case, this metric is marked in green in the console.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The compute node storage usage is the maximum storage usage among all compute nodes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>healthy</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The metric value of maximum compute node storage usage.</p>
-         * <br>
          * <p>Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.52</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -625,8 +717,9 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public static class DescribeHealthStatusResponseBodyStatus extends TeaModel {
         /**
          * <p>The information of maximum compute node storage usage.</p>
-         * <br>
-         * <p>>  This parameter value is returned only for instances in elastic storage mode.</p>
+         * <blockquote>
+         * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+         * </blockquote>
          */
         @NameInMap("adbgp_segment_disk_usage_percent_max")
         public DescribeHealthStatusResponseBodyStatusAdbgpSegmentDiskUsagePercentMax adbgpSegmentDiskUsagePercentMax;
@@ -639,16 +732,18 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The information of instance storage status.</p>
-         * <br>
-         * <p>>  This parameter value is returned only for instances in elastic storage mode.</p>
+         * <blockquote>
+         * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+         * </blockquote>
          */
         @NameInMap("adbpg_disk_status")
         public DescribeHealthStatusResponseBodyStatusAdbpgDiskStatus adbpgDiskStatus;
 
         /**
          * <p>The information of instance storage usage.</p>
-         * <br>
-         * <p>>  This parameter value is returned only for instances in elastic storage mode.</p>
+         * <blockquote>
+         * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+         * </blockquote>
          */
         @NameInMap("adbpg_disk_usage_percent")
         public DescribeHealthStatusResponseBodyStatusAdbpgDiskUsagePercent adbpgDiskUsagePercent;
@@ -664,8 +759,9 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The information of maximum coordinator node storage usage.</p>
-         * <br>
-         * <p>>  This parameter value is returned only for instances in elastic storage mode.</p>
+         * <blockquote>
+         * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+         * </blockquote>
          */
         @NameInMap("adbpg_master_disk_usage_percent_max")
         public DescribeHealthStatusResponseBodyStatusAdbpgMasterDiskUsagePercentMax adbpgMasterDiskUsagePercentMax;
@@ -708,8 +804,9 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
         /**
          * <p>The information of compute node storage status.</p>
-         * <br>
-         * <p>>  This parameter value is returned only for instances in elastic storage mode.</p>
+         * <blockquote>
+         * <p> This parameter value is returned only for instances in elastic storage mode.</p>
+         * </blockquote>
          */
         @NameInMap("node_segment_disk_status")
         public DescribeHealthStatusResponseBodyStatusNodeSegmentDiskStatus nodeSegmentDiskStatus;

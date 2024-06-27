@@ -6,31 +6,40 @@ import com.aliyun.tea.*;
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
     /**
      * <p>The network type of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **primary**: primary endpoint</p>
-     * <p>*   **cluster**: instance endpoint. This value is supported only for an instance that contains multiple coordinator nodes.</p>
-     * <br>
-     * <p>>  The default value is primary.</p>
+     * <ul>
+     * <li><strong>primary</strong>: primary endpoint</li>
+     * <li><strong>cluster</strong>: instance endpoint. This value is supported only for an instance that contains multiple coordinator nodes.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The default value is primary.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>primary</p>
      */
     @NameInMap("AddressType")
     public String addressType;
 
     /**
      * <p>The prefix of the endpoint.</p>
-     * <br>
-     * <p>Specify a prefix for the endpoint. Example: `gp-bp12ga6v69h86****`. In this example, the endpoint is `gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com`.</p>
-     * <br>
+     * <p>Specify a prefix for the endpoint. Example: <code>gp-bp12ga6v69h86****</code>. In this example, the endpoint is <code>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</code>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -40,8 +49,10 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
 
     /**
      * <p>The port number. Example: 5432.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5432</p>
      */
     @NameInMap("Port")
     public String port;

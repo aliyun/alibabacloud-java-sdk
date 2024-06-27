@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDataSharePerformanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp12ga6v69h86****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
      * <p>The end time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-03T15:10Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -24,12 +30,18 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BBE00C04-A3E8-4114-881D-0480A72CB92E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start time of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-03T15:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -104,6 +116,9 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
     public static class DescribeDataSharePerformanceResponseBodyPerformanceKeysSeries extends TeaModel {
         /**
          * <p>The name of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpg_datashare_topic_count</p>
          */
         @NameInMap("Name")
         public String name;
@@ -140,6 +155,9 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
     public static class DescribeDataSharePerformanceResponseBodyPerformanceKeys extends TeaModel {
         /**
          * <p>The name of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adbpg_datashare_topic_count</p>
          */
         @NameInMap("Name")
         public String name;
@@ -152,6 +170,9 @@ public class DescribeDataSharePerformanceResponseBody extends TeaModel {
 
         /**
          * <p>The unit of the performance metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>int</p>
          */
         @NameInMap("Unit")
         public String unit;

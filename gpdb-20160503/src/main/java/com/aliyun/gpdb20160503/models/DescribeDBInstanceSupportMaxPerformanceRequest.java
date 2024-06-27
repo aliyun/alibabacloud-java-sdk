@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSupportMaxPerformanceRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

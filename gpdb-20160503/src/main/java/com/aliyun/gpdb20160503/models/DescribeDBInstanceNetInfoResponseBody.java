@@ -12,15 +12,22 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
 
     /**
      * <p>The network type of the instance. Valid values:</p>
-     * <br>
-     * <p>*   Classic: classic network.</p>
-     * <p>*   VPC: VPC.</p>
+     * <ul>
+     * <li>Classic: classic network.</li>
+     * <li>VPC: VPC.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Classic</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7565770E-7C45-462D-BA4A-8A5396F2CAD1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,51 +64,76 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     public static class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfo extends TeaModel {
         /**
          * <p>The type of the endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         @NameInMap("AddressType")
         public String addressType;
 
         /**
          * <p>The endpoint that is used to connect to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gp-xxxxxxx.gpdb.rds.aliyuncs.com</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
          * <p>The type of the IP address.</p>
-         * <br>
-         * <p>*   Valid values for instances in the classic network: Inner and Public.</p>
-         * <p>*   Valid values for instances in a virtual private cloud (VPC): Private and Public.</p>
+         * <ul>
+         * <li>Valid values for instances in the classic network: Inner and Public.</li>
+         * <li>Valid values for instances in a virtual private cloud (VPC): Private and Public.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Inner</p>
          */
         @NameInMap("IPType")
         public String IPType;
 
         /**
          * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3432</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The VPC ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxx</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
          * <p>The vSwitch ID. Multiple IDs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxxxxxxx</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the instance that is deployed in a VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxxxxxx</p>
          */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;

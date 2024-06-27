@@ -6,43 +6,144 @@ import com.aliyun.tea.*;
 public class ModifyHadoopDataSourceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pxf for hdfs data source</p>
+     */
     @NameInMap("DataSourceDescription")
     public String dataSourceDescription;
 
+    /**
+     * <p>The data source ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
+    /**
+     * <p>The type of the data source. Valid values:</p>
+     * <ul>
+     * <li>mysql</li>
+     * </ul>
+     * <ul>
+     * <li>postgresql</li>
+     * </ul>
+     * <ul>
+     * <li>hdfs</li>
+     * </ul>
+     * <ul>
+     * <li>hive</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c-1234567</p>
+     */
     @NameInMap("EmrInstanceId")
     public String emrInstanceId;
 
+    /**
+     * <p>The content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("HDFSConf")
     public String HDFSConf;
 
+    /**
+     * <p>The content of the Hadoop core-site.xml file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("HadoopCoreConf")
     public String hadoopCoreConf;
 
+    /**
+     * <p>The type of the external service. Valid values:</p>
+     * <ul>
+     * <li>emr: E-MapReduce (EMR) Hadoop cluster.</li>
+     * <li>selfCreate: self-managed Hadoop cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>emr</p>
+     */
     @NameInMap("HadoopCreateType")
     public String hadoopCreateType;
 
+    /**
+     * <p>The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>127.0.0.1 localhost</p>
+     */
     @NameInMap("HadoopHostsAddress")
     public String hadoopHostsAddress;
 
+    /**
+     * <p>The content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("HiveConf")
     public String hiveConf;
 
+    /**
+     * <p>The content of the Hadoop mapred-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+     * 
+     * <strong>example:</strong>
+     * <?xml version="1.0" ?>
+     * <!-- Created at 2023-08-15 13:53:28.962 -->
+     * <configuration>
+     *     <property>
+     *         <name>mapreduce.map.speculative</name>
+     *         <value>true</value>
+     *     </property>
+     *     <property>
+     *         <name>mapreduce.jobhistory.keytab</name>
+     *         <value></value>
+     *     </property>
+     * </configuration>
+     */
     @NameInMap("MapReduceConf")
     public String mapReduceConf;
 
+    /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxxx</p>
+     */
     @NameInMap("YarnConf")
     public String yarnConf;
 

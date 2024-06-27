@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class DescribeIMVInfosRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-xxxxxxxxxx</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
      */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <strong>example:</strong>
+     * <p>public.&quot;mv1&quot;</p>
+     */
     @NameInMap("MVName")
     public String MVName;
 

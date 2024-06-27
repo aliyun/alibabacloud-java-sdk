@@ -6,85 +6,111 @@ import com.aliyun.tea.*;
 public class DescribeDataBackupsRequest extends TeaModel {
     /**
      * <p>The ID of the backup set. If you specify BackupId, the details of the backup set are returned.</p>
-     * <br>
-     * <p>> You can call the [DescribeDataBackups](https://help.aliyun.com/document_detail/210093.html) operation to query the information about all backup sets of an instance, including backup set IDs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the information about all backup sets of an instance, including backup set IDs.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>327329803</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
      * <p>The backup mode. Valid values:</p>
-     * <br>
-     * <p>*   Automated</p>
-     * <p>*   Manual</p>
-     * <br>
+     * <ul>
+     * <li>Automated</li>
+     * <li>Manual</li>
+     * </ul>
      * <p>If you do not specify this parameter, all backup sets are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Automated</p>
      */
     @NameInMap("BackupMode")
     public String backupMode;
 
     /**
      * <p>The state of the backup set. Valid values:</p>
-     * <br>
-     * <p>*   Success</p>
-     * <p>*   Failed</p>
-     * <br>
+     * <ul>
+     * <li>Success</li>
+     * <li>Failed</li>
+     * </ul>
      * <p>If you do not specify this parameter, all backup sets are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("BackupStatus")
     public String backupStatus;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>> You can call the [DescribeDBInstances](https://help.aliyun.com/document_detail/86911.html) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gp-bp***************</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
      * <p>The backup type. Valid values:</p>
-     * <br>
-     * <p>*   **DATA**: full backup.</p>
-     * <p>*   **RESTOREPOI**: point-in-time recovery backup.</p>
-     * <br>
+     * <ul>
+     * <li><strong>DATA</strong>: full backup.</li>
+     * <li><strong>RESTOREPOI</strong>: point-in-time recovery backup.</li>
+     * </ul>
      * <p>If you do not specify this parameter, the backup sets of full backup are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DATA</p>
      */
     @NameInMap("DataType")
     public String dataType;
 
     /**
      * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2011-06-01T16:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Valid values:</p>
-     * <br>
-     * <p>*   30</p>
-     * <p>*   50</p>
-     * <p>*   100</p>
-     * <br>
+     * <ul>
+     * <li>30</li>
+     * <li>50</li>
+     * <li>100</li>
+     * </ul>
      * <p>Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2011-06-01T15:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CheckServiceLinkedRoleResponseBody extends TeaModel {
     /**
      * <p>Indicates whether an SLR is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("HasServiceLinkedRole")
     public String hasServiceLinkedRole;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
