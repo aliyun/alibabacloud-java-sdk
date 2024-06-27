@@ -633,13 +633,11 @@ public class CloneDBInstanceRequest extends TeaModel {
          * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>1 to 12</strong></li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The value of this parameter must be greater than or equal to the value of <strong>MinCapacity</strong> and can be specified only to an <strong>integer</strong>.</p>
-         * </li>
-         * <li><p>This parameter is available only on the China site (aliyun.com).</p>
-         * </li>
+         * <li>The value of this parameter must be greater than or equal to the value of <strong>MinCapacity</strong> and can be specified only to an <strong>integer</strong>.</li>
+         * <li>This parameter is available only on the China site (aliyun.com).</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -655,13 +653,11 @@ public class CloneDBInstanceRequest extends TeaModel {
          * <li>Serverless ApsaraDB RDS for PostgreSQL instances: <strong>0.5 to 12</strong>.</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The value of this parameter must be less than or equal to the value of <strong>MaxCapacity</strong>.</p>
-         * </li>
-         * <li><p>This parameter is available only on the China site (aliyun.com).</p>
-         * </li>
+         * <li>The value of this parameter must be less than or equal to the value of <strong>MaxCapacity</strong>.</li>
+         * <li>This parameter is available only on the China site (aliyun.com).</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>

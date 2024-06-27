@@ -68,11 +68,10 @@ public class RecoveryDBInstanceRequest extends TeaModel {
     public String DBInstanceStorageType;
 
     /**
-     * <p>The name of the database.</p>
-     * <ul>
-     * <li>If you want to restore databases to a new instance, the value is in the format of <code>Original database name 1,New database name 2</code>.</li>
-     * <li>If you want to restore databases to an existing instance, the value is in the format of <code>{&quot;Original database name 1&quot;:&quot;New database name 1&quot;,&quot;Original database name 2&quot;:&quot;New database name 2&quot;</code>.</li>
-     * </ul>
+     * <p>The name of the database. When you restore data to a new instance, the format of the database name is <code>Original database name 1,New database name 2</code>.</p>
+     * <blockquote>
+     * <p> For more information about how to restore data to an existing instance, see <a href="https://help.aliyun.com/document_detail/2628854.html">CopyDatabaseBetweenInstances</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
