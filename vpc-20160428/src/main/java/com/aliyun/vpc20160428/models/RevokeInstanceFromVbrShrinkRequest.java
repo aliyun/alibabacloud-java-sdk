@@ -6,29 +6,35 @@ import com.aliyun.tea.*;
 public class RevokeInstanceFromVbrShrinkRequest extends TeaModel {
     /**
      * <p>The VBRs for which you want to revoke permissions on the VPC. Valid values:</p>
-     * <br>
-     * <p>*   **ALL**: Permissions on the VPC are revoked for all VBRs in the specified region. **VbrInstanceIds** can be left empty.</p>
-     * <p>*   **Specify**: Permissions on the VPC are revoked for the specified VBRs. **VbrInstanceIds** must be assigned a value.</p>
-     * <br>
+     * <ul>
+     * <li><strong>ALL</strong>: Permissions on the VPC are revoked for all VBRs in the specified region. <strong>VbrInstanceIds</strong> can be left empty.</li>
+     * <li><strong>Specify</strong>: Permissions on the VPC are revoked for the specified VBRs. <strong>VbrInstanceIds</strong> must be assigned a value.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("GrantType")
     public String grantType;
 
     /**
      * <p>The VPC ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1brjuegjc88v3u9****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region where the VPC is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -41,16 +47,20 @@ public class RevokeInstanceFromVbrShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1210123456123456</p>
      */
     @NameInMap("VbrOwnerUid")
     public String vbrOwnerUid;
 
     /**
      * <p>The ID of the region where the VBR is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("VbrRegionNo")
     public String vbrRegionNo;

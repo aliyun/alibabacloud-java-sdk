@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateNatIpCidrResponseBody extends TeaModel {
     /**
      * <p>The ID of the NAT CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpcnatcidr-gw8lhqtvdn4qnea****</p>
      */
     @NameInMap("NatIpCidrId")
     public String natIpCidrId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7021BEB1-210F-48A9-AB82-BE9A9110BB89</p>
      */
     @NameInMap("RequestId")
     public String requestId;

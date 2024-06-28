@@ -6,45 +6,61 @@ import com.aliyun.tea.*;
 public class UnassociateEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the EIP that you want to disassociate.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zeerraiwb7uj6i0d****</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default)</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>The ID of the instance from which you want to disassociate the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-hp3akk9irtd69jad****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of instance from which you want to disassociate the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)</p>
-     * <p>*   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC</p>
-     * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI) in a VPC</p>
-     * <p>*   **Nat**: a NAT gateway</p>
-     * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
+     * <ul>
+     * <li><strong>EcsInstance</strong> (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)</li>
+     * <li><strong>SlbInstance</strong>: a Server Load Balancer (SLB) instance in a VPC</li>
+     * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI) in a VPC</li>
+     * <li><strong>Nat</strong>: a NAT gateway</li>
+     * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsInstance</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -57,12 +73,18 @@ public class UnassociateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The private IP address of the ECS instance or the secondary ENI from which you want to disassociate the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.2</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
-     * <p>The ID of the region to which the EIP belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>The ID of the region to which the EIP belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

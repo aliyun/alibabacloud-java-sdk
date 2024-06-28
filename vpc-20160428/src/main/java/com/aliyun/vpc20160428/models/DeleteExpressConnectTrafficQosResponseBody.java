@@ -4,6 +4,10 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteExpressConnectTrafficQosResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>606998F0-B94D-48FE-8316-ACA81BB230DA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

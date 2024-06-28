@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeRouterInterfacesResponseBody extends TeaModel {
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7F6FCBD-F9CC-4501-8EF3-CDC9577CAE45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,16 +94,20 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
     public static class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags extends TeaModel {
         /**
          * <p>The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.</p>
-         * <br>
-         * <p>A tag key can support up to 128 characters, cannot start with \\"aliyun\\" or \\"acs:\\", and cannot contain \\"http://\\" or \\"https://\\".</p>
+         * <p>A tag key can support up to 128 characters, cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</p>
-         * <br>
-         * <p>A maximum of 128 characters are supported, it cannot start with \\"aliyun\\" or \\"acs:\\", and it cannot contain \\"http://\\" or \\"https://\\".</p>
+         * <p>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -141,55 +157,78 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
     public static class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType extends TeaModel {
         /**
          * <p>The ID of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-shanghaiSZ-****</p>
          */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
         /**
          * <p>The bandwidth of the router interface. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The service status of the router interface. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **FinancialLocked**</p>
-         * <p>*   **SecurityLocked**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * <li><strong>SecurityLocked</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The time when the connection was established.</p>
-         * <br>
-         * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-08T12:20:55</p>
          */
         @NameInMap("ConnectedTime")
         public String connectedTime;
 
         /**
          * <p>The time when the route table was created.</p>
-         * <br>
-         * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-08T12:20:55</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>Indicates whether the connection is a cross-border connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CrossBorder")
         public Boolean crossBorder;
 
         /**
+         * <p>The description of the router interface.</p>
+         * 
+         * <strong>example:</strong>
          * <p>The description of the router interface.</p>
          */
         @NameInMap("Description")
@@ -197,202 +236,295 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
         /**
          * <p>The end of the time range during which data was queried.</p>
-         * <br>
-         * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-08T12:20:55</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>Indicates whether the VBR that is created in the Fast Link mode is uplinked to the router interface. The Fast Link mode helps automatically connect router interfaces that are created for the VBR and its peer VPC. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("FastLinkMode")
         public Boolean fastLinkMode;
 
         /**
          * <p>Indicates whether renewal data is included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HasReservationData")
         public String hasReservationData;
 
         /**
          * <p>The rate of heath checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HcRate")
         public Integer hcRate;
 
         /**
          * <p>The health check threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("HcThreshold")
         public Integer hcThreshold;
 
         /**
          * <p>The source IP address that is used for the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.62.XX.XX</p>
          */
         @NameInMap("HealthCheckSourceIp")
         public String healthCheckSourceIp;
 
         /**
          * <p>The destination IP address that is used for the health check.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.62.XX.XX</p>
          */
         @NameInMap("HealthCheckTargetIp")
         public String healthCheckTargetIp;
 
         /**
          * <p>Indicates whether protection against malicious IPv6 traffic is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
-         * <p>*   **unsupport**</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * <li><strong>unsupport</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Ipv6Status")
         public String ipv6Status;
 
         /**
          * <p>The custom name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the peer access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-shanghaiSZ-****</p>
          */
         @NameInMap("OppositeAccessPointId")
         public String oppositeAccessPointId;
 
         /**
          * <p>The maximum bandwidth of the peer router interface. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("OppositeBandwidth")
         public Integer oppositeBandwidth;
 
         /**
          * <p>The service status of the peer router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("OppositeInterfaceBusinessStatus")
         public String oppositeInterfaceBusinessStatus;
 
         /**
          * <p>The ID of the peer router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-bp1itx13bwe6f2wfh****</p>
          */
         @NameInMap("OppositeInterfaceId")
         public String oppositeInterfaceId;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the peer router interface belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>271598332402530847</p>
          */
         @NameInMap("OppositeInterfaceOwnerId")
         public String oppositeInterfaceOwnerId;
 
         /**
          * <p>The specification of the peer router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Large</p>
          */
         @NameInMap("OppositeInterfaceSpec")
         public String oppositeInterfaceSpec;
 
         /**
          * <p>The status of the peer router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("OppositeInterfaceStatus")
         public String oppositeInterfaceStatus;
 
         /**
          * <p>The region ID of the peer router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("OppositeRegionId")
         public String oppositeRegionId;
 
         /**
          * <p>The ID of the router to which the peer router interface belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1d3bxtdv68tfd7g****</p>
          */
         @NameInMap("OppositeRouterId")
         public String oppositeRouterId;
 
         /**
          * <p>The type of the router to which the peer router interface belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VRouter</p>
          */
         @NameInMap("OppositeRouterType")
         public String oppositeRouterType;
 
         /**
          * <p>The ID of the peer VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1qpo0kug3a20qqe****</p>
          */
         @NameInMap("OppositeVpcInstanceId")
         public String oppositeVpcInstanceId;
 
         /**
          * <p>The time when the renewal takes effect.</p>
-         * <br>
-         * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time is displayed in UTC.</p>
+         * <p>The time follows the ISO8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-11T16:00:00Z</p>
          */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
 
         /**
          * <p>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ReservationBandwidth")
         public String reservationBandwidth;
 
         /**
          * <p>The metering method that is used after the renewal takes effect. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
 
         /**
          * <p>The type of the renewal order. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RENEWCHANGE</p>
          */
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
         /**
          * <p>Resource Group ID.</p>
-         * <br>
-         * <p>For more information about resource groups, please refer to [What is a Resource Group?](https://help.aliyun.com/document_detail/94475.html)</p>
+         * <p>For more information about resource groups, please refer to <a href="https://help.aliyun.com/document_detail/94475.html">What is a Resource Group?</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the router interface is the initiator or acceptor of the peering connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InitiatingSide</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
          * <p>The ID of the router to which the route entry belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1d3bxtdv68tfd7g****</p>
          */
         @NameInMap("RouterId")
         public String routerId;
 
         /**
          * <p>The ID of the router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-2zenfgfpyu3v93koa****</p>
          */
         @NameInMap("RouterInterfaceId")
         public String routerInterfaceId;
 
         /**
          * <p>The type of the router to which the route table belongs. Valid values:</p>
-         * <br>
-         * <p>*   **VRouter**</p>
-         * <p>*   **VBR**</p>
+         * <ul>
+         * <li><strong>VRouter</strong></li>
+         * <li><strong>VBR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VRouter</p>
          */
         @NameInMap("RouterType")
         public String routerType;
 
         /**
          * <p>The specification of the router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Large</p>
          */
         @NameInMap("Spec")
         public String spec;
 
         /**
          * <p>The status of the router interface.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("Status")
         public String status;
@@ -405,6 +537,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the local virtual private cloud (VPC) in the peering connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze3tq4uxhysg717x****</p>
          */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;

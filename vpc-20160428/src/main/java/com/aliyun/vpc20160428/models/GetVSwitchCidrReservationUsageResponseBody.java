@@ -12,27 +12,40 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -85,36 +98,54 @@ public class GetVSwitchCidrReservationUsageResponseBody extends TeaModel {
     public static class GetVSwitchCidrReservationUsageResponseBodyCidrReservationUsages extends TeaModel {
         /**
          * <p>The CIDR block allocated to the ENI from the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.64/28</p>
          */
         @NameInMap("IpPrefixCidr")
         public String ipPrefixCidr;
 
         /**
          * <p>The ID of the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcr-bp1m12saqteraw3rp****</p>
          */
         @NameInMap("IpPrefixId")
         public String ipPrefixId;
 
         /**
          * <p>The ID of the elastic network interface (ENI) whose CIDR block is allocated from the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-bp14v2sdd3v8htln****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource to which a CIDR block is allocated from the reserved CIDR block. Only **NetworkInterface** may be returned, which indicates an ENI.</p>
+         * <p>The type of the resource to which a CIDR block is allocated from the reserved CIDR block. Only <strong>NetworkInterface</strong> may be returned, which indicates an ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NetworkInterface</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The ID of the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcr-bp1m12saqteraw3rp****</p>
          */
         @NameInMap("VSwitchCidrReservationId")
         public String vSwitchCidrReservationId;
 
         /**
          * <p>The ID of the vSwitch to which the reserved CIDR block belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-25navfgbue4g****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

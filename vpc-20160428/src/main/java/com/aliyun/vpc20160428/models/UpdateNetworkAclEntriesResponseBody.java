@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateNetworkAclEntriesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1170A5A0-E760-4331-9133-A7D38D973215</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,36 +6,47 @@ import com.aliyun.tea.*;
 public class CreateVSwitchRequest extends TeaModel {
     /**
      * <p>The CIDR block of the vSwitch. Take note of the following limits:</p>
-     * <br>
-     * <p>*   The subnet mask of the CIDR block must be 16 to 29 bits in length.</p>
-     * <p>*   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</p>
-     * <p>*   The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</p>
-     * <br>
+     * <ul>
+     * <li>The subnet mask of the CIDR block must be 16 to 29 bits in length.</li>
+     * <li>The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</li>
+     * <li>The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.0.0/24</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the vSwitch.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vSwitch</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.</p>
+     * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public Integer ipv6CidrBlock;
@@ -48,8 +59,10 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The region ID of the vSwitch.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -68,32 +81,40 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The name of the vSwitch.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vSwitch-1</p>
      */
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
     /**
      * <p>The ID of the VPC where you want to create the vSwitch.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-257gqcdfvx6n****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The IPv6 CIDR block of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:6a::/56</p>
      */
     @NameInMap("VpcIpv6CidrBlock")
     public String vpcIpv6CidrBlock;
 
     /**
      * <p>The zone ID of the vSwitch.</p>
-     * <br>
-     * <p>You can call the [DescribeZones](https://help.aliyun.com/document_detail/36064.html) operation to query the most recent zone list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36064.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-b</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -218,16 +239,20 @@ public class CreateVSwitchRequest extends TeaModel {
     public static class CreateVSwitchRequestTag extends TeaModel {
         /**
          * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length, but cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Value")
         public String value;

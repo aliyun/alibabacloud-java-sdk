@@ -12,36 +12,54 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
 
     /**
      * <p>The ACL ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6transacl-bp1de2****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>The name of the ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl1</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -110,18 +128,27 @@ public class DescribeIPv6TranslatorAclListAttributesResponseBody extends TeaMode
     public static class DescribeIPv6TranslatorAclListAttributesResponseBodyAclEntriesAclEntry extends TeaModel {
         /**
          * <p>The remarks of the ACL entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client IP</p>
          */
         @NameInMap("AclEntryComment")
         public String aclEntryComment;
 
         /**
          * <p>The ID of the ACL entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transaclentry-bp105jrs****</p>
          */
         @NameInMap("AclEntryId")
         public String aclEntryId;
 
         /**
          * <p>The IP address specified in the ACL entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12ab:0:0:XXXX::0102/128</p>
          */
         @NameInMap("AclEntryIp")
         public String aclEntryIp;

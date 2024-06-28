@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateIPv6TranslatorAclListResponseBody extends TeaModel {
     /**
      * <p>The ACL ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6transacl-bp1de2xxxx</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8B2F5262-6B57-43F2-xxxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;

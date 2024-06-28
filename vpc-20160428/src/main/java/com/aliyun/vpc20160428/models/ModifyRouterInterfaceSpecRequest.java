@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -22,10 +25,11 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the router interface is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,31 +42,37 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
 
     /**
      * <p>The ID of the router interface.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ri-2zeo3xzyf38r4urzd****</p>
      */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;
 
     /**
      * <p>The specification of the router interface. Valid specifications and bandwidth values:</p>
-     * <br>
-     * <p>*   **Mini.2**: 2 Mbit/s</p>
-     * <p>*   **Mini.5**: 5 Mbit/s</p>
-     * <p>*   **Small.1**: 10 Mbit/s</p>
-     * <p>*   **Small.2**: 20 Mbit/s</p>
-     * <p>*   **Small.5**: 50 Mbit/s</p>
-     * <p>*   **Middle.1**: 100 Mbit/s</p>
-     * <p>*   **Middle.2**: 200 Mbit/s</p>
-     * <p>*   **Middle.5**: 500 Mbit/s</p>
-     * <p>*   **Large.1**: 1,000 Mbit/s</p>
-     * <p>*   **Large.2**: 2,000 Mbit/s</p>
-     * <p>*   **Large.5**: 5,000 Mbit/s</p>
-     * <p>*   **Xlarge.1**: 10,000 Mbit/s</p>
-     * <br>
-     * <p>>  When **Role** is set to **AcceptingSide**, set **Spec** to **Negative**.</p>
-     * <br>
+     * <ul>
+     * <li><strong>Mini.2</strong>: 2 Mbit/s</li>
+     * <li><strong>Mini.5</strong>: 5 Mbit/s</li>
+     * <li><strong>Small.1</strong>: 10 Mbit/s</li>
+     * <li><strong>Small.2</strong>: 20 Mbit/s</li>
+     * <li><strong>Small.5</strong>: 50 Mbit/s</li>
+     * <li><strong>Middle.1</strong>: 100 Mbit/s</li>
+     * <li><strong>Middle.2</strong>: 200 Mbit/s</li>
+     * <li><strong>Middle.5</strong>: 500 Mbit/s</li>
+     * <li><strong>Large.1</strong>: 1,000 Mbit/s</li>
+     * <li><strong>Large.2</strong>: 2,000 Mbit/s</li>
+     * <li><strong>Large.5</strong>: 5,000 Mbit/s</li>
+     * <li><strong>Xlarge.1</strong>: 10,000 Mbit/s</li>
+     * </ul>
+     * <blockquote>
+     * <p> When <strong>Role</strong> is set to <strong>AcceptingSide</strong>, set <strong>Spec</strong> to <strong>Negative</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Small.1</p>
      */
     @NameInMap("Spec")
     public String spec;

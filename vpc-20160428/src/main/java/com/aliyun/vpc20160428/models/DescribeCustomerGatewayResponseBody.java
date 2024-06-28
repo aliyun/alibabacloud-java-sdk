@@ -6,58 +6,83 @@ import com.aliyun.tea.*;
 public class DescribeCustomerGatewayResponseBody extends TeaModel {
     /**
      * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65535</p>
      */
     @NameInMap("Asn")
     public Long asn;
 
     /**
      * <p>The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AuthKey****</p>
      */
     @NameInMap("AuthKey")
     public String authKey;
 
     /**
      * <p>The timestamp generated when the customer gateway was created. Unit: milliseconds.</p>
-     * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1492747187000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The ID of the customer gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cgw-bp1pvpl9r9adju6l5****</p>
      */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
     /**
      * <p>The description of the customer gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The public IP address of the gateway device in the data center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139.32.XX.XX</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
 
     /**
      * <p>The name of the customer gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A0457BC9-6C0F-4437-AB9D-FB2EABC1D6A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the customer gateway belongs.</p>
-     * <br>
-     * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzs372yg****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -156,12 +181,18 @@ public class DescribeCustomerGatewayResponseBody extends TeaModel {
     public static class DescribeCustomerGatewayResponseBodyTagsTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;

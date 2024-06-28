@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyBgpGroupAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8C3C6D7C-A1CE-4FD8-BC57-DC493A55F76F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

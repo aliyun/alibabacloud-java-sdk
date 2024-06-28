@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteVpcGatewayEndpointResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1122D0F-7B3B-5445-BB19-17F27F97FE1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

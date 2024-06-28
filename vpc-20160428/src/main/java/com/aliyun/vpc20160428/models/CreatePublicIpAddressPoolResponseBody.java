@@ -9,6 +9,9 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the IP address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pippool-6wetvn6fumkgycssx****</p>
      */
     @NameInMap("PulbicIpAddressPoolId")
     @Deprecated
@@ -16,12 +19,18 @@ public class CreatePublicIpAddressPoolResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the IP address pool belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4pcdvf****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

@@ -6,94 +6,124 @@ import com.aliyun.tea.*;
 public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid parameter.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the NAT gateway.</p>
-     * <br>
-     * <p>You can leave this parameter empty or enter a description. If you enter a description, the description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>You can leave this parameter empty or enter a description. If you enter a description, the description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testnat</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid parameter.</p>
      */
     @NameInMap("Duration")
     public String duration;
 
     /**
      * <p>The mode in which the EIP is associated with the NAT gateway. Valid values:</p>
-     * <br>
-     * <p>*   **MULTI_BINDED** (default): Multi-EIP-to-ENI mode.</p>
-     * <br>
-     * <p>*   **NAT**: NAT mode. IPv4 gateways are supported in this mode.</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note** If a NAT gateway is associated with an EIP in NAT mode, the EIP occupies one private IP address in the vSwitch. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, a maximum number of 50 EIPs can be associated with each NAT gateway.</p>
+     * <ul>
+     * <li><p><strong>MULTI_BINDED</strong> (default): Multi-EIP-to-ENI mode.</p>
+     * </li>
+     * <li><p><strong>NAT</strong>: NAT mode. IPv4 gateways are supported in this mode.</p>
+     * <p>**</p>
+     * <p><strong>Note</strong> If a NAT gateway is associated with an EIP in NAT mode, the EIP occupies one private IP address in the vSwitch. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the NAT gateway fails to be associated with the EIP. In NAT mode, a maximum number of 50 EIPs can be associated with each NAT gateway.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MULTI_BINDED</p>
      */
     @NameInMap("EipBindMode")
     public String eipBindMode;
 
     /**
      * <p>Specifies whether to enable ICMP retrieval. Valid values:</p>
-     * <br>
-     * <p>*   **true** (default)</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong> (default)</li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IcmpReplyEnabled")
     public Boolean icmpReplyEnabled;
 
     /**
      * <p>The billing method of the NAT gateway.</p>
-     * <br>
-     * <p>Set the value to **PostPaid** (pay-as-you-go), which is the default value.</p>
-     * <br>
-     * <p>For more information, see [Internet NAT gateway billing](https://help.aliyun.com/document_detail/48126.html) and [VPC NAT gateway billing](https://help.aliyun.com/document_detail/270913.html).</p>
+     * <p>Set the value to <strong>PostPaid</strong> (pay-as-you-go), which is the default value.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Internet NAT gateway billing</a> and <a href="https://help.aliyun.com/document_detail/270913.html">VPC NAT gateway billing</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The metering method of the NAT gateway. Set the value to **PayByLcu**, which specifies the pay-by-CU metering method.</p>
+     * <p>The metering method of the NAT gateway. Set the value to <strong>PayByLcu</strong>, which specifies the pay-by-CU metering method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByLcu</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The name of the NAT gateway.</p>
-     * <br>
      * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
-     * <br>
      * <p>If this parameter is not set, the system assigns a default name to the NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fortest</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The type of NAT gateway. Set the value to **Enhanced**, which specifies enhanced NAT gateway.</p>
+     * <p>The type of NAT gateway. Set the value to <strong>Enhanced</strong>, which specifies enhanced NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enhanced</p>
      */
     @NameInMap("NatType")
     public String natType;
 
     /**
      * <p>The network type of the NAT gateway. Valid values:</p>
-     * <br>
-     * <p>*   **internet**: Internet</p>
-     * <p>*   **intranet**: VPC</p>
+     * <ul>
+     * <li><strong>internet</strong>: Internet</li>
+     * <li><strong>intranet</strong>: VPC</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>internet</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -106,16 +136,20 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid parameter.</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
      * <p>The region ID of the NAT gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -128,8 +162,12 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the firewall feature. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default)>Notice: This parameter is deprecated.</p>
+     * <ul>
+     * <li><strong>false</strong> (default)&gt;Notice: This parameter is deprecated.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SecurityProtectionEnabled")
     @Deprecated
@@ -137,6 +175,9 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>Subscription Internet NAT gateways are no longer available for purchase. Ignore this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid parameter.</p>
      */
     @NameInMap("Spec")
     public String spec;
@@ -149,21 +190,27 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the NAT gateway is attached.</p>
-     * <br>
      * <p>When you create a NAT gateway, you must specify a vSwitch for the NAT gateway. Then, the system assigns an idle private IP address from the vSwitch to the NAT gateway.</p>
-     * <br>
-     * <p>*   To attach the NAT gateway to an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways. In addition, the vSwitch must have idle IP addresses.</p>
-     * <p>*   If no vSwitch exists in the VPC, create a vSwitch in a zone that supports NAT gateways. Then, specify the vSwitch for the NAT gateway.</p>
-     * <br>
-     * <p>>  You can call the [ListEnhanhcedNatGatewayAvailableZones](https://help.aliyun.com/document_detail/182292.html) operation to query zones that support NAT gateways. You can call the [DescribeVSwitches](https://help.aliyun.com/document_detail/35748.html) operation to query idle IP addresses in a vSwitch.</p>
+     * <ul>
+     * <li>To attach the NAT gateway to an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways. In addition, the vSwitch must have idle IP addresses.</li>
+     * <li>If no vSwitch exists in the VPC, create a vSwitch in a zone that supports NAT gateways. Then, specify the vSwitch for the NAT gateway.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/182292.html">ListEnhanhcedNatGatewayAvailableZones</a> operation to query zones that support NAT gateways. You can call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation to query idle IP addresses in a vSwitch.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1e3se98n9fq8hle****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC where you want to create the NAT gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1di7uewzmtvfuq8****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -352,12 +399,18 @@ public class CreateNatGatewayRequest extends TeaModel {
     public static class CreateNatGatewayRequestTag extends TeaModel {
         /**
          * <p>The tag key. The format of Tag.N.Key when you call the operation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. The format of Tag.N.Value when you call the operation. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

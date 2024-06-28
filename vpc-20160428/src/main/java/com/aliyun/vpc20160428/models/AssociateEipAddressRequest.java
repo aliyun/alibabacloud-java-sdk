@@ -6,63 +6,83 @@ import com.aliyun.tea.*;
 public class AssociateEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the EIP that you want to associate with an instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zeerraiwb7ujsxdc****</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the instance with which you want to associate the EIP.</p>
-     * <br>
      * <p>You can enter the ID of a NAT gateway, CLB instance, ECS instance, secondary ENI, HAVIP, or IP address.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-2zebb08phyczzawe****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region in which the instance with which you want to associate the EIP resides.</p>
-     * <br>
-     * <p>>  This parameter is required only when the EIP is added to a shared Global Accelerator (GA) instance.</p>
+     * <blockquote>
+     * <p> This parameter is required only when the EIP is added to a shared Global Accelerator (GA) instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("InstanceRegionId")
     public String instanceRegionId;
 
     /**
      * <p>The type of the instance with which you want to associate the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **Nat**: NAT gateway</p>
-     * <p>*   **SlbInstance**: CLB instance</p>
-     * <p>*   **EcsInstance** (default): ECS instance</p>
-     * <p>*   **NetworkInterface**: secondary ENI</p>
-     * <p>*   **HaVip**: HAVIP</p>
-     * <p>*   **IpAddress**: IP address</p>
-     * <br>
-     * <p>>  The default value is **EcsInstance**. If the instance with which you want to associate the EIP is not an ECS instance, this parameter is required.</p>
+     * <ul>
+     * <li><strong>Nat</strong>: NAT gateway</li>
+     * <li><strong>SlbInstance</strong>: CLB instance</li>
+     * <li><strong>EcsInstance</strong> (default): ECS instance</li>
+     * <li><strong>NetworkInterface</strong>: secondary ENI</li>
+     * <li><strong>HaVip</strong>: HAVIP</li>
+     * <li><strong>IpAddress</strong>: IP address</li>
+     * </ul>
+     * <blockquote>
+     * <p> The default value is <strong>EcsInstance</strong>. If the instance with which you want to associate the EIP is not an ECS instance, this parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsInstance</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The association mode. Valid values:</p>
-     * <br>
-     * <p>*   **NAT** (default): NAT mode</p>
-     * <p>*   **MULTI_BINDED**: multi-EIP-to-ENI mode</p>
-     * <p>*   **BINDED**: cut-network interface controller mode</p>
-     * <br>
-     * <p>>  This parameter is required only when **InstanceType** is set to **NetworkInterface**.</p>
+     * <ul>
+     * <li><strong>NAT</strong> (default): NAT mode</li>
+     * <li><strong>MULTI_BINDED</strong>: multi-EIP-to-ENI mode</li>
+     * <li><strong>BINDED</strong>: cut-network interface controller mode</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required only when <strong>InstanceType</strong> is set to <strong>NetworkInterface</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>NAT</p>
      */
     @NameInMap("Mode")
     public String mode;
@@ -75,16 +95,20 @@ public class AssociateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The IP address in the CIDR block of the vSwitch.</p>
-     * <br>
      * <p>If you leave this parameter empty, the system allocates a private IP address based on the VPC ID and vSwitch ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
      * <p>The ID of the region to which the EIP belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,10 +121,13 @@ public class AssociateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC in which an IPv4 gateway is created. The VPC and the EIP must be in the same region.</p>
-     * <br>
      * <p>When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations.</p>
-     * <br>
-     * <p>>  This parameter is required if **InstanceType** is set to **IpAddress**, which indicates that the EIP is to be associated with an IP address.</p>
+     * <blockquote>
+     * <p> This parameter is required if <strong>InstanceType</strong> is set to <strong>IpAddress</strong>, which indicates that the EIP is to be associated with an IP address.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-257gqcdfvx6n****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class ListVSwitchCidrReservationsRequest extends TeaModel {
     /**
      * <p>The IP version of the reserved CIDR block. Valid values:</p>
-     * <br>
-     * <p>*   **IPv4** (default)</p>
-     * <p>*   **IPv6**</p>
+     * <ul>
+     * <li><strong>IPv4</strong> (default)</li>
+     * <li><strong>IPv6</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -36,10 +47,11 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the vSwitch.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -63,15 +75,22 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
     public java.util.List<String> vSwitchCidrReservationIds;
 
     /**
-     * <p>The type of the reserved CIDR block. Set the value to **prefix**.</p>
-     * <br>
-     * <p>>  When you allocate CIDR blocks, or enable the service to automatically allocate CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks to allocate must fall into the reserved CIDR block. If the reserved CIDR is exhausted, an error message is returned.</p>
+     * <p>The type of the reserved CIDR block. Set the value to <strong>prefix</strong>.</p>
+     * <blockquote>
+     * <p> When you allocate CIDR blocks, or enable the service to automatically allocate CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks to allocate must fall into the reserved CIDR block. If the reserved CIDR is exhausted, an error message is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>prefix</p>
      */
     @NameInMap("VSwitchCidrReservationType")
     public String vSwitchCidrReservationType;
 
     /**
      * <p>The ID of the vSwitch for which you want to query reserved CIDR blocks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-25navfgbue4g****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -180,16 +199,20 @@ public class ListVSwitchCidrReservationsRequest extends TeaModel {
     public static class ListVSwitchCidrReservationsRequestTags extends TeaModel {
         /**
          * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
          * <p>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
          * <p>The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

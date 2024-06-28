@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DiagnoseVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>The ID of the diagnostic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpndgn-uf6kuxbe3iv028k3s****</p>
      */
     @NameInMap("DiagnoseId")
     public String diagnoseId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

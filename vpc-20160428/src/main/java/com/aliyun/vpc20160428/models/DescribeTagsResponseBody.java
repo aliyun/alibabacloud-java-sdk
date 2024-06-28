@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeTagsResponseBody extends TeaModel {
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     * <ul>
+     * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C46FF5A8-C5F0-4024-8262-B16B639225A0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,12 +64,18 @@ public class DescribeTagsResponseBody extends TeaModel {
     public static class DescribeTagsResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

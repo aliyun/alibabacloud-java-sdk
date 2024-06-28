@@ -5,40 +5,57 @@ import com.aliyun.tea.*;
 
 public class AllocateVpcIpv6CidrRequest extends TeaModel {
     /**
-     * <p>The type of the IPv6 address pool. Set the value to **custom**.</p>
-     * <br>
-     * <p>>  This parameter is required.</p>
+     * <p>The type of the IPv6 address pool. Set the value to <strong>custom</strong>.</p>
+     * <blockquote>
+     * <p> This parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>custom</p>
      */
     @NameInMap("AddressPoolType")
     public String addressPoolType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The IPv6 CIDR block that you want to reserve.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:a600::/56</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
     /**
      * <p>The type of IPv6 CIDR block. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default)</p>
-     * <p>*   **ChinaMobile**</p>
-     * <p>*   **ChinaUnicom**</p>
-     * <p>*   **ChinaTelecom**</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.</p>
-     * <br>
-     * <p>*   You can reserve only one IPv6 CIDR block of each type. After a reserved IPv6 CIDR block of a type is allocated to a VPC, you can reserve another IPv6 CIDR of the type.</p>
+     * <ul>
+     * <li><strong>BGP</strong> (default)</li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaTelecom</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, and <strong>ChinaMobile</strong>.</p>
+     * </li>
+     * <li><p>You can reserve only one IPv6 CIDR block of each type. After a reserved IPv6 CIDR block of a type is allocated to a VPC, you can reserve another IPv6 CIDR of the type.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("Ipv6Isp")
     public String ipv6Isp;
@@ -51,10 +68,11 @@ public class AllocateVpcIpv6CidrRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

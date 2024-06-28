@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetVpcPrefixListEntriesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -27,18 +34,21 @@ public class GetVpcPrefixListEntriesRequest extends TeaModel {
 
     /**
      * <p>The ID of the prefix list that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pl-0b7hwu67****</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
      * <p>The region ID of the prefix list.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

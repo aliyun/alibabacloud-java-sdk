@@ -9,10 +9,11 @@ public class ActivateRouterInterfaceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the router interface.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,8 +26,10 @@ public class ActivateRouterInterfaceRequest extends TeaModel {
 
     /**
      * <p>The ID of the router interface.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ri-2zeo3xzyf38r4urz****</p>
      */
     @NameInMap("RouterInterfaceId")
     public String routerInterfaceId;

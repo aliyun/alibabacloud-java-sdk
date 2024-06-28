@@ -12,24 +12,36 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33E480C5-B46F-4CA5-B6FD-D77C746E86AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -120,12 +132,18 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     public static class DescribeHaVipsResponseBodyHaVipsHaVipTagsTag extends TeaModel {
         /**
          * <p>The key of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -181,9 +199,13 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the instance with which the HAVIP is associated. Valid values:</p>
-         * <br>
-         * <p>*   **EcsInstance**: Elastic Compute Service (ECS) instance</p>
-         * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
+         * <ul>
+         * <li><strong>EcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
+         * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsInstance</p>
          */
         @NameInMap("AssociatedInstanceType")
         public String associatedInstanceType;
@@ -196,64 +218,95 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
         /**
          * <p>The parameter is invalid. No value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The time when the HAVIP was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-03T14:25:26Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>My HaVip</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>havip-bp149uyvut73dpld****</p>
          */
         @NameInMap("HaVipId")
         public String haVipId;
 
         /**
          * <p>The private IP address of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.24.5</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The ID of the active instance that is associated with the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp145q7glnuzdvz****</p>
          */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
         /**
          * <p>The name of the HAVIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the region to which the HAVIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the HAVIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the HAVIP. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The server group is being created.</p>
-         * <p>*   **Available**: The FULLNAT entry is available.</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Creating</strong>: The server group is being created.</li>
+         * <li><strong>Available</strong>: The FULLNAT entry is available.</li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -266,12 +319,18 @@ public class DescribeHaVipsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1pkt1fba8e824ez****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The ID of the VPC to which the HAVIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1kcm36tevkpms97****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeTagKeysResponseBody extends TeaModel {
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     * <ul>
+     * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,15 +64,22 @@ public class DescribeTagKeysResponseBody extends TeaModel {
     public static class DescribeTagKeysResponseBodyTagKeysTagKey extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The type of the tag key. Valid values:</p>
-         * <br>
-         * <p>*   **Custom**: custom</p>
-         * <p>*   **System**: system</p>
+         * <ul>
+         * <li><strong>Custom</strong>: custom</li>
+         * <li><strong>System</strong>: system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("Type")
         public String type;

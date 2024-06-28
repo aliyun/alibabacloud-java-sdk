@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSslVpnServersResponseBody extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D350187B-EA41-4577-950B-95434C8302E1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,122 +94,185 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
     public static class DescribeSslVpnServersResponseBodySslVpnServersSslVpnServer extends TeaModel {
         /**
          * <p>The encryption algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AES-128-CBC</p>
          */
         @NameInMap("Cipher")
         public String cipher;
 
         /**
          * <p>The client CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.1.0/24</p>
          */
         @NameInMap("ClientIpPool")
         public String clientIpPool;
 
         /**
          * <p>Indicates whether data compression is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Compress")
         public Boolean compress;
 
         /**
          * <p>The total number of current connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Connections")
         public Integer connections;
 
         /**
          * <p>The timestamp generated when the SSL-VPN server was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1613800884000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>Indicates whether two-factor authentication is enabled.</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false** (default)</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("EnableMultiFactorAuth")
         public Boolean enableMultiFactorAuth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>app_my6g4qmvnwxzj2f****</p>
+         */
         @NameInMap("IDaaSApplicationId")
         public String IDaaSApplicationId;
 
         /**
          * <p>The ID of the IDaaS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas-cn-hangzhou-****</p>
          */
         @NameInMap("IDaaSInstanceId")
         public String IDaaSInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>EIAM 2.0</p>
+         */
         @NameInMap("IDaaSInstanceVersion")
         public String IDaaSInstanceVersion;
 
         /**
          * <p>The region ID of the IDaaS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("IDaaSRegionId")
         public String IDaaSRegionId;
 
         /**
          * <p>The public IP address of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.5.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
          * <p>The local CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
          */
         @NameInMap("LocalSubnet")
         public String localSubnet;
 
         /**
          * <p>The maximum number of connections.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
          * <p>The name of the SSL-VPN server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The port that is used by the SSL-VPN server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1194</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The protocol that is used by the SSL-VPN server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UDP</p>
          */
         @NameInMap("Proto")
         public String proto;
 
         /**
          * <p>The region ID of the SSL-VPN server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The resource group ID of the SSL-VPN server.</p>
-         * <br>
-         * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzs372yg****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the SSL-VPN server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vss-bp15j3du13gq1dgey****</p>
          */
         @NameInMap("SslVpnServerId")
         public String sslVpnServerId;
 
         /**
          * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1on0xae9d771ggi****</p>
          */
         @NameInMap("VpnGatewayId")
         public String vpnGatewayId;

@@ -7,6 +7,10 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
     @NameInMap("QueueList")
     public java.util.List<DescribeExpressConnectTrafficQosQueueResponseBodyQueueList> queueList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>606998F0-B94D-48FE-8316-ACA81BB230DA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,48 +36,108 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
     }
 
     public static class DescribeExpressConnectTrafficQosQueueResponseBodyQueueListRuleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.1.0/24</p>
+         */
         @NameInMap("DstCidr")
         public String dstCidr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2001:0db8:1234:5678::/64</p>
+         */
         @NameInMap("DstIPv6Cidr")
         public String dstIPv6Cidr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1/-1</p>
+         */
         @NameInMap("DstPortRange")
         public String dstPortRange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MatchDscp")
         public Integer matchDscp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-91xz9f8zd7yj8xwknz</p>
+         */
         @NameInMap("QosId")
         public String qosId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-queue-iugg0l9x27f2nocouj</p>
+         */
         @NameInMap("QueueId")
         public String queueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RemarkingDscp")
         public Integer remarkingDscp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-rule-test</p>
+         */
         @NameInMap("RuleDescription")
         public String ruleDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-rule-iugg0l9x27f2nocouj</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-rule-test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.1.0/24</p>
+         */
         @NameInMap("SrcCidr")
         public String srcCidr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2001:0db8:1234:5678::/64</p>
+         */
         @NameInMap("SrcIPv6Cidr")
         public String srcIPv6Cidr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1/-1</p>
+         */
         @NameInMap("SrcPortRange")
         public String srcPortRange;
 
@@ -216,21 +280,45 @@ public class DescribeExpressConnectTrafficQosQueueResponseBody extends TeaModel 
     }
 
     public static class DescribeExpressConnectTrafficQosQueueResponseBodyQueueList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("BandwidthPercent")
         public String bandwidthPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-ncfgzxg40zks5n0qze</p>
+         */
         @NameInMap("QosId")
         public String qosId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-queue-test</p>
+         */
         @NameInMap("QueueDescription")
         public String queueDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+         */
         @NameInMap("QueueId")
         public String queueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-queue-test</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>High</p>
+         */
         @NameInMap("QueueType")
         public String queueType;
 

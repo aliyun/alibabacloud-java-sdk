@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ListBusinessAccessPointsRequest extends TeaModel {
     /**
      * <p>The region ID of the Express Connect circuit.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

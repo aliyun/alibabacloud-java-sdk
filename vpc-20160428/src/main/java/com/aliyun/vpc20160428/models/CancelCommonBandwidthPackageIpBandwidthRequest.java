@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class CancelCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     /**
      * <p>The ID of the Internet Shared Bandwidth instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp-bp13d0m4e2qv8xxxxxxxx</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
      * <p>The ID of the EIP that is associated with the Internet Shared Bandwidth instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zewysoansu0sxxxxxxxx</p>
      */
     @NameInMap("EipId")
     public String eipId;
@@ -27,9 +31,11 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the Internet Shared Bandwidth instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the Internet Shared Bandwidth instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

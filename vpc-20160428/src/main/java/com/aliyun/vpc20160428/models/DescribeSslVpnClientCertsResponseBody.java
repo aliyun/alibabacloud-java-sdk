@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,58 +94,80 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
     public static class DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey extends TeaModel {
         /**
          * <p>The timestamp that indicates when the SSL client certificate was created. Unit: millisecond.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1492747187000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The timestamp that indicates when the SSL client certificate expires. Unit: millisecond.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1494966335000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The name of the SSL client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cert1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The region where the SSL client certificate is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
-         * <br>
-         * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzs372yg****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the SSL client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsc-bp1n8wcf134yl0osr****</p>
          */
         @NameInMap("SslVpnClientCertId")
         public String sslVpnClientCertId;
 
         /**
          * <p>The ID of the SSL server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vss-bp18q7hzj6largv4v****</p>
          */
         @NameInMap("SslVpnServerId")
         public String sslVpnServerId;
 
         /**
          * <p>The status of the SSL client certificate. Valid values:</p>
-         * <br>
-         * <p>*   **expiring-soon**</p>
-         * <p>*   **normal**</p>
-         * <p>*   **expired**</p>
+         * <ul>
+         * <li><strong>expiring-soon</strong></li>
+         * <li><strong>normal</strong></li>
+         * <li><strong>expired</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Status")
         public String status;

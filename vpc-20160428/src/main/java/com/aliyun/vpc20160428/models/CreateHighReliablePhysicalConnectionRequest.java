@@ -4,6 +4,10 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
@@ -13,17 +17,28 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     @NameInMap("ApList")
     public java.util.List<CreateHighReliablePhysicalConnectionRequestApList> apList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DeviceAdvancedCapacity")
     public java.util.List<String> deviceAdvancedCapacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DryRun")
     public String dryRun;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MultiApMultiDevice</p>
      */
     @NameInMap("HighReliableType")
     public String highReliableType;
@@ -36,13 +51,24 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000Base-T</p>
      */
     @NameInMap("PortType")
     public String portType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4p****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -175,40 +201,73 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     public static class CreateHighReliablePhysicalConnectionRequestApList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-beijing-ft-A</p>
          */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>longtel001</p>
+         */
         @NameInMap("CircuitCode")
         public String circuitCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>description</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CT</p>
          */
         @NameInMap("LineOperator")
         public String lineOperator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("PeerLocation")
         public String peerLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("PortNum")
         public Integer portNum;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>VPC</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -300,9 +359,17 @@ public class CreateHighReliablePhysicalConnectionRequest extends TeaModel {
     }
 
     public static class CreateHighReliablePhysicalConnectionRequestTag extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
+         */
         @NameInMap("Value")
         public String value;
 

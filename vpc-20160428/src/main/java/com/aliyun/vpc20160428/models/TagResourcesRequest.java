@@ -12,18 +12,21 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource ID. You can specify at most 20 IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp16qjewdsunr41m1****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -36,24 +39,29 @@ public class TagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: a VPC</p>
-     * <p>*   **VSWITCH**: a vSwitch</p>
-     * <p>*   **ROUTETABLE**: a route table</p>
-     * <p>*   **EIP**: an EIP</p>
-     * <p>*   **VpnGateway**: a VPN gateway</p>
-     * <p>*   **NATGATEWAY**: a NAT gateway</p>
-     * <p>*   **COMMONBANDWIDTHPACKAGE**: an EIP bandwidth plan</p>
-     * <br>
+     * <ul>
+     * <li><strong>VPC</strong>: a VPC</li>
+     * <li><strong>VSWITCH</strong>: a vSwitch</li>
+     * <li><strong>ROUTETABLE</strong>: a route table</li>
+     * <li><strong>EIP</strong>: an EIP</li>
+     * <li><strong>VpnGateway</strong>: a VPN gateway</li>
+     * <li><strong>NATGATEWAY</strong>: a NAT gateway</li>
+     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: an EIP bandwidth plan</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tag information.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TagResources</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -130,20 +138,26 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag that is added to the resource. You can specify at most 20 tag keys.</p>
-         * <br>
-         * <p>The key cannot exceed 128 characters in length. The key cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
-         * <br>
-         * <p>> When you call this operation, the **Tag.N.Key** parameter is required and cannot be an empty string.</p>
+         * <p>The key cannot exceed 128 characters in length. The key cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p>When you call this operation, the <strong>Tag.N.Key</strong> parameter is required and cannot be an empty string.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag that is added to the resource. You can specify at most 20 tag values.</p>
-         * <br>
-         * <p>The tag value cannot exceed 128 characters in length. The value cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
-         * <br>
-         * <p>> When you call this operation, the **Tag.N.Value** parameter is required and can be an empty string.</p>
+         * <p>The tag value cannot exceed 128 characters in length. The value cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p>When you call this operation, the <strong>Tag.N.Value</strong> parameter is required and can be an empty string.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

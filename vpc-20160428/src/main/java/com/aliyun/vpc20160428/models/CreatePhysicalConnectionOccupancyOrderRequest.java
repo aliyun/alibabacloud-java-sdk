@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payments. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.</p>
-     * <p>*   **false**: disables automatic payment. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes Make sure that you have a sufficient balance in your account. Otherwise, your order becomes invalid and is automatically canceled.</li>
+     * <li><strong>false</strong>: disables automatic payment. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CBCE910E-D396-4944</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The billing method. Set the value to</p>
-     * <br>
-     * <p>**PrePaid**, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
+     * <p><strong>PrePaid</strong>, which specifies the subscription billing method. If you choose this billing method, make sure that your Alibaba Cloud account supports balance payments or credit payments.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -37,36 +45,47 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
 
     /**
      * <p>The subscription duration.</p>
-     * <br>
-     * <p>*   If **PricingCycle** is set to **Month**, set **Period** to a value from **1 to 9**.</p>
-     * <p>*   If **PricingCycle** is set to **Year**, set **Period** to a value from **1 to 5**.</p>
+     * <ul>
+     * <li>If <strong>PricingCycle</strong> is set to <strong>Month</strong>, set <strong>Period</strong> to a value from <strong>1 to 9</strong>.</li>
+     * <li>If <strong>PricingCycle</strong> is set to <strong>Year</strong>, set <strong>Period</strong> to a value from <strong>1 to 5</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The ID of the Express Connect circuit.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1hp0wr072f6****</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
      * <p>The billing cycle of the subscription. Valid values:</p>
-     * <br>
-     * <p>*   **Month** (default)</p>
-     * <p>*   **Year**</p>
+     * <ul>
+     * <li><strong>Month</strong> (default)</li>
+     * <li><strong>Year</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
      * <p>The region ID of the Express Connect circuit.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

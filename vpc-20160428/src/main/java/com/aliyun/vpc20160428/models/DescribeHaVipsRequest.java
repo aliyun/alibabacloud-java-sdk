@@ -17,29 +17,39 @@ public class DescribeHaVipsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the HAVIP.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the HAVIP belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -143,23 +153,28 @@ public class DescribeHaVipsRequest extends TeaModel {
 
     public static class DescribeHaVipsRequestFilter extends TeaModel {
         /**
-         * <p>The filter keys. You can specify at most five filter keys. Valid values of **N**: **1 to 5**. The following filter keys are supported:</p>
-         * <br>
-         * <p>*   **VpcId**: virtual private cloud (VPC) ID</p>
-         * <p>*   **VSwitchId**: vSwitch ID</p>
-         * <p>*   **Status**: HAVIP status</p>
-         * <p>*   **HaVipId**: HAVIP ID</p>
-         * <p>*   **HaVipAddress**: HAVIP IP address</p>
-         * <br>
+         * <p>The filter keys. You can specify at most five filter keys. Valid values of <strong>N</strong>: <strong>1 to 5</strong>. The following filter keys are supported:</p>
+         * <ul>
+         * <li><strong>VpcId</strong>: virtual private cloud (VPC) ID</li>
+         * <li><strong>VSwitchId</strong>: vSwitch ID</li>
+         * <li><strong>Status</strong>: HAVIP status</li>
+         * <li><strong>HaVipId</strong>: HAVIP ID</li>
+         * <li><strong>HaVipAddress</strong>: HAVIP IP address</li>
+         * </ul>
          * <p>You can specify multiple values for each filter key. The logical operator among multiple values is OR. If one value is matched, the filter key is matched.</p>
-         * <br>
          * <p>The logical operator among multiple filter keys is AND. HAVIPs can be queried only if all filter keys are matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HaVipId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the filter key. Valid values of **N**: **1 to 5**.</p>
+         * <p>The value of the filter key. Valid values of <strong>N</strong>: <strong>1 to 5</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>havip-bp19o63nequs01i8d****</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -190,16 +205,20 @@ public class DescribeHaVipsRequest extends TeaModel {
     public static class DescribeHaVipsRequestTags extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

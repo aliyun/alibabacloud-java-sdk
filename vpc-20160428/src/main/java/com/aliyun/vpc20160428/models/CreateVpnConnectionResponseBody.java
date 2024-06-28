@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class CreateVpnConnectionResponseBody extends TeaModel {
     /**
      * <p>The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.</p>
-     * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1544666102000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The name of the IPsec-VPN connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>082AD562-B8DB-4BB2-861F-DA1FCA01FD76</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the IPsec-VPN connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-bp15oes1py4i6****</p>
      */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateDhcpOptionsSetResponseBody extends TeaModel {
     /**
      * <p>The ID of the DHCP options set that is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dopt-o6w0df4epg9zo8isy****</p>
      */
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the DHCP options set belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

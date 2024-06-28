@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
     /**
      * <p>The number of entries on the current page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -18,27 +21,40 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the log is accurate. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsCompleted")
     public Boolean isCompleted;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF161502-4959-5C3B-B499-09B87BA931D9</p>
      */
     @NameInMap("RequestId")
     public String requestId;

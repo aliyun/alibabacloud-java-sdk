@@ -4,9 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AddInstanceList")
     public java.util.List<ModifyExpressConnectTrafficQosRequestAddInstanceList> addInstanceList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -16,20 +24,34 @@ public class ModifyExpressConnectTrafficQosRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>qos-test</p>
+     */
     @NameInMap("QosDescription")
     public String qosDescription;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-2giu0a6vd5x0mv4700</p>
      */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>qos-test</p>
+     */
     @NameInMap("QosName")
     public String qosName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

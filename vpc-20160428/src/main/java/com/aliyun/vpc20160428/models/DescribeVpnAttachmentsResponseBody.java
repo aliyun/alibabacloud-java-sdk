@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeVpnAttachmentsResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9F0725BB-186A-3564-91C3-AAE48042F853</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,46 +93,68 @@ public class DescribeVpnAttachmentsResponseBody extends TeaModel {
 
     public static class DescribeVpnAttachmentsResponseBodyVpnAttachments extends TeaModel {
         /**
-         * <p>The type of resource that is associated with the IPsec-VPN connection. The value is set to **CEN**, which indicates that the IPsec-VPN connection is associated with a transit router.</p>
+         * <p>The type of resource that is associated with the IPsec-VPN connection. The value is set to <strong>CEN</strong>, which indicates that the IPsec-VPN connection is associated with a transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CEN</p>
          */
         @NameInMap("AttachType")
         public String attachType;
 
         /**
          * <p>Indicates whether the IPsec-VPN connection is associated with a transit router that belongs to another Alibaba Cloud account. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CrossAccountAuthorized")
         public Boolean crossAccountAuthorized;
 
         /**
          * <p>The description of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-p0w2jpkhi2eeop6q6****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest1</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the transit router with which the IPsec-VPN connection is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-p0wkh4yryb1dnanqw****</p>
          */
         @NameInMap("TransitRouterId")
         public String transitRouterId;
 
         /**
          * <p>The name of the transit router.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest2</p>
          */
         @NameInMap("TransitRouterName")
         public String transitRouterName;

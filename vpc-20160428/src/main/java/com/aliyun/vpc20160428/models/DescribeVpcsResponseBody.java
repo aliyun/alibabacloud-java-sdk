@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeVpcsResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C6532AA8-D0F7-497F-A8EE-094126D441F5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,19 +94,27 @@ public class DescribeVpcsResponseBody extends TeaModel {
     public static class DescribeVpcsResponseBodyVpcsVpcIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
         /**
          * <p>The IPv6 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:a600::/56</p>
          */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
         /**
          * <p>The type of IPv6 CIDR block. Valid values:</p>
-         * <br>
-         * <p>*   **BGP**</p>
-         * <p>*   **ChinaMobile**</p>
-         * <p>*   **ChinaUnicom**</p>
-         * <p>*   **ChinaTelecom**</p>
-         * <br>
-         * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
+         * <ul>
+         * <li><strong>BGP</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaTelecom</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
@@ -201,12 +221,18 @@ public class DescribeVpcsResponseBody extends TeaModel {
     public static class DescribeVpcsResponseBodyVpcsVpcTagsTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal</p>
          */
         @NameInMap("Value")
         public String value;
@@ -293,42 +319,61 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
     public static class DescribeVpcsResponseBodyVpcsVpc extends TeaModel {
         /**
-         * <p>The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached. **Attached** is returned only if the VPC is attached to a CEN instance.</p>
+         * <p>The status of the Cloud Enterprise Network (CEN) instance to which the VPC is attached. <strong>Attached</strong> is returned only if the VPC is attached to a CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Attached</p>
          */
         @NameInMap("CenStatus")
         public String cenStatus;
 
         /**
          * <p>The IPv4 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
          * <p>The time when the VPC was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-18T15:02:37Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my VPC.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dopt-o6w0df4epg9zo8isy****</p>
          */
         @NameInMap("DhcpOptionsSetId")
         public String dhcpOptionsSetId;
 
         /**
          * <p>The status of the DHCP options set. Valid values:</p>
-         * <br>
-         * <p>*   **Available**</p>
-         * <p>*   **InUse**</p>
-         * <p>*   **Deleted**</p>
-         * <p>*   **Pending**</p>
+         * <ul>
+         * <li><strong>Available</strong></li>
+         * <li><strong>InUse</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * <li><strong>Pending</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("DhcpOptionsSetStatus")
         public String dhcpOptionsSetStatus;
@@ -338,6 +383,9 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
         /**
          * <p>The IPv6 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:a600::/56</p>
          */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
@@ -350,9 +398,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the VPC is the default VPC in the region. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
@@ -365,18 +417,27 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253460731706911258</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
         /**
          * <p>The ID of the region to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -395,9 +456,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the VPC. Valid values:</p>
-         * <br>
-         * <p>*   **Pending**</p>
-         * <p>*   **Available**</p>
+         * <ul>
+         * <li><strong>Pending</strong></li>
+         * <li><strong>Available</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -416,26 +481,34 @@ public class DescribeVpcsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the vRouter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1jcg5cmxjbl9xgc****</p>
          */
         @NameInMap("VRouterId")
         public String VRouterId;
 
         /**
          * <p>The vSwitches in the VPC.</p>
-         * <br>
-         * <p>You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the [DescribeVSwitches](https://help.aliyun.com/document_detail/35748.html) operation.</p>
+         * <p>You can query up to 300 vSwitches in the VPC. The information about the latest vSwitches is returned. If you want to query the information about all vSwitches in a VPC, call the <a href="https://help.aliyun.com/document_detail/35748.html">DescribeVSwitches</a> operation.</p>
          */
         @NameInMap("VSwitchIds")
         public DescribeVpcsResponseBodyVpcsVpcVSwitchIds vSwitchIds;
 
         /**
          * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1qpo0kug3a20qqe****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc1</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

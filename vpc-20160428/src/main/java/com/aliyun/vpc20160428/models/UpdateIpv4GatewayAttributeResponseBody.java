@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateIpv4GatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>671CEB03-C98D-5916-950C-C55B0BD06621</p>
      */
     @NameInMap("RequestId")
     public String requestId;

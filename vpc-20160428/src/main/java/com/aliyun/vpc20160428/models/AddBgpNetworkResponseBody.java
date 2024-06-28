@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddBgpNetworkResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9C7FA9D6-72E0-48A9-A9C3-2DA8569CD5EB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

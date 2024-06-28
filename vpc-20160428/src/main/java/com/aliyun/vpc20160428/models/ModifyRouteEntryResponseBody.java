@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>861E6630-AEC0-4B2D-B214-6CB5E44B7F04</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteIpv6InternetBandwidthResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E07E0FE6-5C21-405F-AF82-7613AA81EF92</p>
      */
     @NameInMap("RequestId")
     public String requestId;

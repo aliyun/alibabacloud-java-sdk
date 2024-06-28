@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RecoverPhysicalConnectionResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD14EA74-E9C3-59A9-942A-DFEC7E12818D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

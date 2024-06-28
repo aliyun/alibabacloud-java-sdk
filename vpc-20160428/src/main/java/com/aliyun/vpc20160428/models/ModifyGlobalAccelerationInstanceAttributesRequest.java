@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel {
     /**
      * <p>The description of the GA instance.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My GA</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the GA instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-14fdsf3****</p>
      */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
     /**
      * <p>The name of the GA instance.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GA-1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -36,10 +42,11 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel 
 
     /**
      * <p>The region ID of the GA instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
     /**
      * <p>The BGP autonomous system number (ASN) to be configured for the Smart Access Gateway (SAG) device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sag-ejfge***</p>
      */
     @NameInMap("BgpAs")
     public String bgpAs;
 
     /**
      * <p>The peer IP address when the SAG device is connected to the cloud.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.**.**</p>
      */
     @NameInMap("CeIp")
     public String ceIp;
 
     /**
      * <p>Descriptions of ECC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECC</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the ECC instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecc-bp1t9osmuln*******</p>
      */
     @NameInMap("EccId")
     public String eccId;
 
     /**
      * <p>The name of the ECC instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest</p>
      */
     @NameInMap("Name")
     public String name;
@@ -44,14 +58,19 @@ public class ModifyExpressCloudConnectionAttributeRequest extends TeaModel {
 
     /**
      * <p>The on-premises IP address when the SAG device is connected to the cloud.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.10.**.**</p>
      */
     @NameInMap("PeIp")
     public String peIp;
 
     /**
      * <p>The region ID of the ECC instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

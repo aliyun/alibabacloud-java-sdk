@@ -6,34 +6,43 @@ import com.aliyun.tea.*;
 public class CreateHaVipRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that the value is unique among all requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the HAVIP.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my HaVip.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The IP address of the HAVIP.</p>
-     * <br>
      * <p>The specified IP address must be an idle IP address that falls within the CIDR block of the vSwitch. If this parameter is not set, an idle IP address from the CIDR block of the vSwitch is randomly assigned to the HAVIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.XX.XX.10</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
 
     /**
      * <p>The name of the HAVIP.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -45,15 +54,20 @@ public class CreateHaVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the HAVIP. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the HAVIP. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the HAVIP belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -72,8 +86,10 @@ public class CreateHaVipRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-asdfjlnaue4g****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -182,16 +198,20 @@ public class CreateHaVipRequest extends TeaModel {
     public static class CreateHaVipRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length, but cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

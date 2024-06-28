@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class UnTagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -21,18 +25,21 @@ public class UnTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource ID. You can specify up to 20 resource IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp16qjewdsunr41m1****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -45,24 +52,29 @@ public class UnTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **VSWITCH**</p>
-     * <p>*   **ROUTETABLE**</p>
-     * <p>*   **EIP**</p>
-     * <p>*   **VpnGateway**</p>
-     * <p>*   **NATGATEWAY**</p>
-     * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
-     * <br>
+     * <ul>
+     * <li><strong>VPC</strong></li>
+     * <li><strong>VSWITCH</strong></li>
+     * <li><strong>ROUTETABLE</strong></li>
+     * <li><strong>EIP</strong></li>
+     * <li><strong>VpnGateway</strong></li>
+     * <li><strong>NATGATEWAY</strong></li>
+     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.</p>
-     * <br>
-     * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+     * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FinanceDept</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

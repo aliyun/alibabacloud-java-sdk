@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BF3995A6-FA4F-4C74-B90F-89ECF4BFF4D5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,78 +94,114 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     public static class DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry extends TeaModel {
         /**
          * <p>The AS path of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65501,65001,60011</p>
          */
         @NameInMap("AsPath")
         public String asPath;
 
         /**
          * <p>The community attributes of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65001:1000,65501:2000</p>
          */
         @NameInMap("Community")
         public String community;
 
         /**
          * <p>The timestamp when the route entry was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1563874074000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The next hop of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-bp1tui07ob10fmuro****</p>
          */
         @NameInMap("NextHop")
         public String nextHop;
 
         /**
          * <p>The ID of the tunnel associated with the next hop. </p>
-         * <br>
-         * <br>
-         * <p>> This parameter is returned only if the VPN gateway supports the dual-tunnel mode.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the VPN gateway supports the dual-tunnel mode.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>tun-36cfgpwjn58axj****</p>
          */
         @NameInMap("NextHopTunnelId")
         public String nextHopTunnelId;
 
         /**
          * <p>The destination CIDR block of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         @NameInMap("RouteDest")
         public String routeDest;
 
         /**
          * <p>The type of the route entry. Valid values:</p>
-         * <br>
-         * <p>*   **Custom**: custom</p>
-         * <p>*   **System**: system</p>
+         * <ul>
+         * <li><strong>Custom</strong>: custom</li>
+         * <li><strong>System</strong>: system</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("RouteEntryType")
         public String routeEntryType;
 
         /**
          * <p>The source CIDR block of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.0/24</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The status of the route entry. Valid values:</p>
-         * <br>
-         * <p>*   **published**: advertised</p>
-         * <p>*   **normal**: not advertised</p>
+         * <ul>
+         * <li><strong>published</strong>: advertised</li>
+         * <li><strong>normal</strong>: not advertised</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1cmw7jh1nfe43m9****</p>
          */
         @NameInMap("VpnInstanceId")
         public String vpnInstanceId;
 
         /**
-         * <p>The weight of the route entry. Valid values: **0** and **100**.</p>
-         * <br>
-         * <p>*   **0**: a low priority</p>
-         * <p>*   **100**: a high priority</p>
+         * <p>The weight of the route entry. Valid values: <strong>0</strong> and <strong>100</strong>.</p>
+         * <ul>
+         * <li><strong>0</strong>: a low priority</li>
+         * <li><strong>100</strong>: a high priority</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;

@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha1111</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or [https://](https://。).</p>
+     * <p>The description of IPv6 Translation Service. This parameter is empty by default. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instancedescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the IPv6 Translation Service instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6trans-bp1858ys****</p>
      */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
 
     /**
-     * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or [https://](https://。).</p>
+     * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with http:// or <a href="https://%E3%80%82">https://</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instancename</p>
      */
     @NameInMap("Name")
     public String name;
@@ -39,9 +49,11 @@ public class ModifyIPv6TranslatorAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class MoveVpnResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-8vb3lzn7biepthri8****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the new resource group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzs372yg****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -28,10 +32,11 @@ public class MoveVpnResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -44,18 +49,20 @@ public class MoveVpnResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The type of resource.</p>
-     * <br>
-     * <p>*   **VpnGateway**: VPN gateway</p>
-     * <br>
-     * <p>    After you move a VPN gateway to a new resource group, the following associated resources are also moved to the new resource group: IPsec servers, SSL servers, SSL client certificates, and IPsec-VPN connections.</p>
-     * <br>
-     * <p>*   **CustomerGateway**: customer gateway</p>
-     * <br>
-     * <p>*   **VpnAttachment**: IPsec-VPN connection</p>
-     * <br>
-     * <p>    An IPsec-VPN connection associated with a transit router or not associate with a resource.</p>
-     * <br>
+     * <ul>
+     * <li><p><strong>VpnGateway</strong>: VPN gateway</p>
+     * <p>After you move a VPN gateway to a new resource group, the following associated resources are also moved to the new resource group: IPsec servers, SSL servers, SSL client certificates, and IPsec-VPN connections.</p>
+     * </li>
+     * <li><p><strong>CustomerGateway</strong>: customer gateway</p>
+     * </li>
+     * <li><p><strong>VpnAttachment</strong>: IPsec-VPN connection</p>
+     * <p>An IPsec-VPN connection associated with a transit router or not associate with a resource.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VpnGateway</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

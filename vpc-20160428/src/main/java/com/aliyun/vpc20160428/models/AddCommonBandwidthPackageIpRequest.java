@@ -6,34 +6,43 @@ import com.aliyun.tea.*;
 public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     /**
      * <p>The ID of the Internet Shared Bandwidth instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp-2ze2ic1xd2qeqasdf****</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The EIP ID.</p>
-     * <br>
-     * <p>You can call the [DescribeEipAddresses](https://help.aliyun.com/document_detail/36018.html) operation to query EIP IDs.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> operation to query EIP IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zeerraiwb7uqwed****</p>
      */
     @NameInMap("IpInstanceId")
     public String ipInstanceId;
 
     /**
-     * <p>The type of IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.</p>
+     * <p>The type of IP address. Set the value to <strong>EIP</strong> to associate EIPs with the Internet Shared Bandwidth instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EIP</p>
      */
     @NameInMap("IpType")
     public String ipType;
@@ -46,10 +55,11 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Internet Shared Bandwidth instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -12,24 +12,36 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5BB78C8-5F41-464F-B9FF-5E0A7198BA26</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public static class DescribeGrantRulesToCenResponseBodyCenGrantRulesCbnGrantRule extends TeaModel {
         /**
          * <p>The ID of the authorized CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-9gsm1q2yh1prpt****</p>
          */
         @NameInMap("CenInstanceId")
         public String cenInstanceId;
 
         /**
          * <p>The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132193271328****</p>
          */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-15T09:26:36Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;

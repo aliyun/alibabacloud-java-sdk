@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeRouteTableListResponseBody extends TeaModel {
     /**
      * <p>The ID of the route table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The type of the cloud resource with which the route table is associated. Valid values:</p>
-     * <br>
-     * <p>*   **VSwitch**: vSwitch</p>
-     * <p>*   **Gateway**: IPv4 gateway</p>
+     * <ul>
+     * <li><strong>VSwitch</strong>: vSwitch</li>
+     * <li><strong>Gateway</strong>: IPv4 gateway</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the vRouter to which the route table belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,6 +43,9 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the route table belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -104,16 +117,20 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
          * <p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
          * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingress</p>
          */
         @NameInMap("Value")
         public String value;
@@ -182,21 +199,31 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListType extends TeaModel {
         /**
          * <p>The tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VSwitch</p>
          */
         @NameInMap("AssociateType")
         public String associateType;
 
         /**
          * <p>The type of the router to which the route table belongs. Valid values:</p>
-         * <br>
-         * <p>*   **VRouter**</p>
-         * <p>*   **VBR**</p>
+         * <ul>
+         * <li><strong>VRouter</strong></li>
+         * <li><strong>VBR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-08-22T10:40:25Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The information about the vSwitches.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is Route Table.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -209,58 +236,87 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
         /**
          * <p>The value of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253460731706911258</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
         /**
          * <p>The detailed information about the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Whether to receive the propagation routes. Valid Values:</p>
-         * <br>
-         * <p>*   **True**: The propagation route is received.</p>
-         * <br>
-         * <p>*   **False**: The propagation route is not received.</p>
+         * <ul>
+         * <li><p><strong>True</strong>: The propagation route is received.</p>
+         * </li>
+         * <li><p><strong>False</strong>: The propagation route is not received.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("RoutePropagationEnable")
         public Boolean routePropagationEnable;
 
         /**
          * <p>The key of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
         /**
          * <p>The name of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         @NameInMap("RouteTableName")
         public String routeTableName;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("RouteTableType")
         public String routeTableType;
 
         /**
          * <p>The tag added to the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1lhl0taikrteen8****</p>
          */
         @NameInMap("RouterId")
         public String routerId;
 
         /**
          * <p>The detailed information about the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VRouter</p>
          */
         @NameInMap("RouterType")
         public String routerType;
 
         /**
          * <p>The name of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -279,6 +335,9 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the resource group to which the route table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

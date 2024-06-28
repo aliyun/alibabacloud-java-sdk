@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class DescribeFlowLogsRequest extends TeaModel {
     /**
      * <p>The description of the flow log.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my Flowlog.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the flow log.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fl-bp1f6qqhsrc2c12ta****</p>
      */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
     /**
      * <p>The name of the flow log.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myFlowlog</p>
      */
     @NameInMap("FlowLogName")
     public String flowLogName;
 
     /**
      * <p>The Logstore that stores the captured traffic data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FlowLogStore</p>
      */
     @NameInMap("LogStoreName")
     public String logStoreName;
@@ -39,41 +49,57 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The project that manages the captured traffic data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FlowLogProject</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>The region ID of the flow log.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the flow log belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the resource from which traffic is captured.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-askldfas****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -86,20 +112,28 @@ public class DescribeFlowLogsRequest extends TeaModel {
 
     /**
      * <p>The type of resource from which traffic is captured. Valid values:</p>
-     * <br>
-     * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
-     * <p>*   **VSwitch**: all ENIs in a vSwitch</p>
-     * <p>*   **VPC**: all ENIs in a virtual private cloud (VPC)</p>
+     * <ul>
+     * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
+     * <li><strong>VSwitch</strong>: all ENIs in a vSwitch</li>
+     * <li><strong>VPC</strong>: all ENIs in a virtual private cloud (VPC)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NetworkInterface</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The status of the flow log. Valid values:</p>
-     * <br>
-     * <p>*   **Active**</p>
-     * <p>*   **Activating**</p>
-     * <p>*   **Inactive**</p>
+     * <ul>
+     * <li><strong>Active</strong></li>
+     * <li><strong>Activating</strong></li>
+     * <li><strong>Inactive</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
@@ -112,16 +146,23 @@ public class DescribeFlowLogsRequest extends TeaModel {
 
     /**
      * <p>The type of traffic that is captured. Valid values:</p>
-     * <br>
-     * <p>*   **All**: all traffic</p>
-     * <p>*   **Allow**: traffic that is allowed by access control</p>
-     * <p>*   **Drop**: traffic that is denied by access control</p>
+     * <ul>
+     * <li><strong>All</strong>: all traffic</li>
+     * <li><strong>Allow</strong>: traffic that is allowed by access control</li>
+     * <li><strong>Drop</strong>: traffic that is denied by access control</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
      */
     @NameInMap("TrafficType")
     public String trafficType;
 
     /**
      * <p>The ID of the VPC to which the flow log belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1nwd16gvo1wgs****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -286,16 +327,20 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public static class DescribeFlowLogsRequestTags extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

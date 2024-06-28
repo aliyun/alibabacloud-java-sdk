@@ -4,6 +4,10 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressConnectTrafficQosQueueRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,6 +17,10 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>qos-2giu0a6vd5x0mv4700</p>
+     */
     @NameInMap("QosId")
     public String qosId;
 
@@ -24,6 +32,9 @@ public class DescribeExpressConnectTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

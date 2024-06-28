@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DeleteRouteEntryRequest extends TeaModel {
     /**
      * <p>The destination CIDR block of the route. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.100.XX.XX/16</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
      * <p>The ID of the next hop.</p>
-     * <br>
-     * <p>*   To delete a route other than an equal-cost multi-path (ECMP) route, set the **NextHopId** parameter and ignore the **NextHopList** parameter.</p>
-     * <p>*   To delete an ECMP route, set the **NextHopList** parameter and ignore the **NextHopId** parameter.</p>
+     * <ul>
+     * <li>To delete a route other than an equal-cost multi-path (ECMP) route, set the <strong>NextHopId</strong> parameter and ignore the <strong>NextHopList</strong> parameter.</li>
+     * <li>To delete an ECMP route, set the <strong>NextHopList</strong> parameter and ignore the <strong>NextHopId</strong> parameter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ri-2zeo3xzyf38r4urzd****</p>
      */
     @NameInMap("NextHopId")
     public String nextHopId;
@@ -33,8 +40,10 @@ public class DeleteRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The region ID of the route table.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -47,12 +56,18 @@ public class DeleteRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the route that you want to delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rte-bp1mnnr2al0naomnpv****</p>
      */
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 
     /**
      * <p>The ID of the route table to which the route belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-2ze3jgygk9bmsj23s****</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
@@ -145,12 +160,18 @@ public class DeleteRouteEntryRequest extends TeaModel {
     public static class DeleteRouteEntryRequestNextHopList extends TeaModel {
         /**
          * <p>The ID of the next hop that is configured for ECMP routing. You can specify information about at most 16 next hops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-2zeo3xzyf38r43cd****</p>
          */
         @NameInMap("NextHopId")
         public String nextHopId;
 
         /**
-         * <p>The type of the next hop that is configured for ECMP routing. Set the value to **RouterInterface**. You can specify information about at most 16 next hops.</p>
+         * <p>The type of the next hop that is configured for ECMP routing. Set the value to <strong>RouterInterface</strong>. You can specify information about at most 16 next hops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RouterInterface</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;

@@ -4,9 +4,17 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("BandwidthPercent")
     public String bandwidthPercent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -18,24 +26,41 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-2giu0a6vd5x0mv4700</p>
      */
     @NameInMap("QosId")
     public String qosId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>qos-queue-test</p>
+     */
     @NameInMap("QueueDescription")
     public String queueDescription;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
      */
     @NameInMap("QueueId")
     public String queueId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>qos-queue-test</p>
+     */
     @NameInMap("QueueName")
     public String queueName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

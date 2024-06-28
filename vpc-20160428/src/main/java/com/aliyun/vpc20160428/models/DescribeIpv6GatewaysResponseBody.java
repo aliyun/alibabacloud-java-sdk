@@ -12,24 +12,36 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E3A06196-3E7C-490D-8F39-CB4B5A0CE8AD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
     public static class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6GatewayTagsTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -137,69 +155,100 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
     public static class DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway extends TeaModel {
         /**
          * <p>The status of the IPv6 gateway. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **FinancialLocked**</p>
-         * <p>*   **SecurityLocked**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * <li><strong>SecurityLocked</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
          * <p>The time when the IPv6 gateway was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-20T14:51:23Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the IPv6 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>descriptionforIPv6GW</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The time when the IPv6 gateway expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-20T14:51:23Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The billing method of the IPv6 gateway.</p>
-         * <br>
-         * <p>Only **PostPaid** may be returned, which indicates that the IPv6 gateway uses the pay-as-you-go billing method.</p>
+         * <p>Only <strong>PostPaid</strong> may be returned, which indicates that the IPv6 gateway uses the pay-as-you-go billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
          * <p>The ID of the IPv6 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6gw-hp3rwmtmfhgisipv6gw-hp3rwmtmfhgis****</p>
          */
         @NameInMap("Ipv6GatewayId")
         public String ipv6GatewayId;
 
         /**
          * <p>The name of the IPv6 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6GW</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the region in which the IPv6 gateway is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-huhehaote</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the IPv6 gateway. Valid values:</p>
-         * <br>
-         * <p>*   **Pending**</p>
-         * <p>*   **Available**</p>
+         * <ul>
+         * <li><strong>Pending</strong></li>
+         * <li><strong>Available</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -212,6 +261,9 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC to which the IPv6 gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-123sedrfswd23****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

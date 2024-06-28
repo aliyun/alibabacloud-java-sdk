@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeCustomerGatewayRequest extends TeaModel {
     /**
      * <p>The ID of the customer gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cgw-bp1pvpl9r9adju6l5****</p>
      */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
@@ -20,10 +22,11 @@ public class DescribeCustomerGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the customer gateway is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,46 +6,63 @@ import com.aliyun.tea.*;
 public class ModifyVpcAttributeRequest extends TeaModel {
     /**
      * <p>The new IPv4 CIDR block of the VPC.</p>
-     * <br>
      * <p>You can specify a larger or smaller IPv4 CIDR block than the IPv4 CIDR block of the VPC. The subnet mask must be 8 to 28 bits in length. If you specify a smaller IPv4 CIDR block and existing IP addresses do not fall within the CIDR block, the modification fails.</p>
-     * <br>
-     * <p>>  If you modify the CIDR block of a VPC, your existing services are not affected.</p>
+     * <blockquote>
+     * <p> If you modify the CIDR block of a VPC, your existing services are not affected.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/24</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>The new description of the VPC.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my VPC.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to enable IPv6 CIDR blocks. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableIPv6")
     public Boolean enableIPv6;
 
     /**
      * <p>The IPv6 CIDR block of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:6a::/56</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
     /**
      * <p>The type of IPv6 CIDR block. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default)</p>
-     * <p>*   **ChinaMobile**</p>
-     * <p>*   **ChinaUnicom**</p>
-     * <p>*   **ChinaTelecom**</p>
-     * <br>
-     * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
+     * <ul>
+     * <li><strong>BGP</strong> (default)</li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaTelecom</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("Ipv6Isp")
     public String ipv6Isp;
@@ -58,8 +75,10 @@ public class ModifyVpcAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -72,16 +91,20 @@ public class ModifyVpcAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC that you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1qtbach57ywecf****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The new name of the VPC.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Vpc-1</p>
      */
     @NameInMap("VpcName")
     public String vpcName;

@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DescribeVpcAttributeResponseBody extends TeaModel {
     /**
      * <p>The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.</p>
-     * <br>
      * <p>If the VPC is not attached to a CEN instance, the parameter is not returned.</p>
      */
     @NameInMap("AssociatedCens")
@@ -20,15 +19,22 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The IPv4 CIDR block of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/16</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>Indicates whether the ClassicLink feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ClassicLinkEnabled")
     public Boolean classicLinkEnabled;
@@ -41,49 +47,73 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The time when the VPC was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-10-16T07:31:09Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The description of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the DHCP options set.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dopt-o6w0df4epg9zo8isy****</p>
      */
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
 
     /**
      * <p>The status of the DHCP options set. Valid values:</p>
-     * <br>
-     * <p>*   **Available**</p>
-     * <p>*   **InUse**</p>
-     * <p>*   **Deleted**</p>
-     * <p>*   **Pending**</p>
+     * <ul>
+     * <li><strong>Available</strong></li>
+     * <li><strong>InUse</strong></li>
+     * <li><strong>Deleted</strong></li>
+     * <li><strong>Pending</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
      */
     @NameInMap("DhcpOptionsSetStatus")
     public String dhcpOptionsSetStatus;
 
     /**
      * <p>Indicates whether the VPC enables IPv6 .</p>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnabledIpv6")
     public Boolean enabledIpv6;
 
     /**
      * <p>The ID of the IPv4 gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
      */
     @NameInMap("Ipv4GatewayId")
     public String ipv4GatewayId;
 
     /**
      * <p>The IPv6 CIDR block of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:a600::/56</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
@@ -96,33 +126,49 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the VPC is the default VPC. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28311773240248****</p>
      */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
      * <p>The ID of the region to which the VPC belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7486AE4A-129D-43DB-A714-2432C074BA04</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazbvgb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -135,18 +181,26 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The status of the VPC. Valid values:</p>
-     * <br>
-     * <p>*   **Available**</p>
-     * <p>*   **Pending**</p>
+     * <ul>
+     * <li><strong>Available</strong></li>
+     * <li><strong>Pending</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>Indicates whether the VPC supports IPv4 gateways.</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SupportIpv4Gateway")
     public Boolean supportIpv4Gateway;
@@ -165,6 +219,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the vRouter that belongs to the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vrt-bp1jso6ng1at0ajsc****</p>
      */
     @NameInMap("VRouterId")
     public String VRouterId;
@@ -177,12 +234,18 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp18sth14qii3pnvo****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The name of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest2</p>
      */
     @NameInMap("VpcName")
     public String vpcName;
@@ -411,20 +474,28 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public static class DescribeVpcAttributeResponseBodyAssociatedCensAssociatedCen extends TeaModel {
         /**
          * <p>The ID of the CEN instance to which the VPC is attached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-7qthudw0ll6jmc****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The ID of the account to which the CEN instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28311773240248****</p>
          */
         @NameInMap("CenOwnerId")
         public Long cenOwnerId;
 
         /**
          * <p>The status of the CEN instance.</p>
-         * <br>
-         * <p>**Attached** is returned only when the VPC is attached to a CEN instance.</p>
+         * <p><strong>Attached</strong> is returned only when the VPC is attached to a CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Attached</p>
          */
         @NameInMap("CenStatus")
         public String cenStatus;
@@ -482,39 +553,56 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public static class DescribeVpcAttributeResponseBodyAssociatedPropagationSourcesAssociatedPropagationSources extends TeaModel {
         /**
          * <p>Indicates whether routes are advertised to the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("RoutePropagated")
         public Boolean routePropagated;
 
         /**
          * <p>The instance ID of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-dc4vwznpwbobrl****</p>
          */
         @NameInMap("SourceInstanceId")
         public String sourceInstanceId;
 
         /**
          * <p>The account ID of the source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>153980532164****</p>
          */
         @NameInMap("SourceOwnerId")
         public Long sourceOwnerId;
 
         /**
          * <p>The source type.</p>
-         * <br>
-         * <p>*   **CEN**</p>
-         * <p>*   **VPN**</p>
-         * <p>*   **TR**</p>
-         * <p>*   **ECR**</p>
+         * <ul>
+         * <li><strong>CEN</strong></li>
+         * <li><strong>VPN</strong></li>
+         * <li><strong>TR</strong></li>
+         * <li><strong>ECR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CEN</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
 
         /**
          * <p>The binding status.</p>
-         * <br>
-         * <p>*   **Attaching**</p>
-         * <p>*   **Attached**</p>
-         * <p>*   **Detaching**</p>
+         * <ul>
+         * <li><strong>Attaching</strong></li>
+         * <li><strong>Attached</strong></li>
+         * <li><strong>Detaching</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Attaching</p>
          */
         @NameInMap("Status")
         public String status;
@@ -588,16 +676,23 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public static class DescribeVpcAttributeResponseBodyCloudResourcesCloudResourceSetType extends TeaModel {
         /**
          * <p>The number of resources in the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResourceCount")
         public Integer resourceCount;
 
         /**
          * <p>The type of resource deployed in the VPC. Valid values: Valid values:</p>
-         * <br>
-         * <p>*   **VSwitch**</p>
-         * <p>*   **VRouter**</p>
-         * <p>*   **RouteTable**</p>
+         * <ul>
+         * <li><strong>VSwitch</strong></li>
+         * <li><strong>VRouter</strong></li>
+         * <li><strong>RouteTable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VSwitch</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -647,19 +742,27 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public static class DescribeVpcAttributeResponseBodyIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
         /**
          * <p>The IPv6 CIDR block of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2408:XXXX:0:6a::/56</p>
          */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
         /**
          * <p>The IPv6 CIDR block type of the VPC. Valid values:</p>
-         * <br>
-         * <p>*   **BGP** (default)</p>
-         * <p>*   **ChinaMobile**</p>
-         * <p>*   **ChinaUnicom**</p>
-         * <p>*   **ChinaTelecom**</p>
-         * <br>
-         * <p>>  If you are allowed to use single-ISP bandwidth, valid values are **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**</p>
+         * <ul>
+         * <li><strong>BGP</strong> (default)</li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaTelecom</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> If you are allowed to use single-ISP bandwidth, valid values are <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, and <strong>ChinaMobile</strong></p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
@@ -728,12 +831,18 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public static class DescribeVpcAttributeResponseBodyTagsTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

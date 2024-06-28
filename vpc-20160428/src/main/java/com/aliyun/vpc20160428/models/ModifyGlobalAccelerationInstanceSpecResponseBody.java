@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyGlobalAccelerationInstanceSpecResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BD5BCEE8-F62C-40C2-9AC3-89XXXXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;

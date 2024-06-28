@@ -12,24 +12,36 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -101,51 +113,76 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
     public static class DescribeIPv6TranslatorsResponseBodyIpv6TranslatorsIpv6Translator extends TeaModel {
         /**
          * <p>The IPv4 address allocated to the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.99.XX.XX</p>
          */
         @NameInMap("AllocateIpv4Addr")
         public String allocateIpv4Addr;
 
         /**
          * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2400:3200:1600::XXXX</p>
          */
         @NameInMap("AllocateIpv6Addr")
         public String allocateIpv6Addr;
 
         /**
          * <p>The bandwidth of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AvailableBandwidth")
         public String availableBandwidth;
 
         /**
          * <p>The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The business status of the IPv6 Translation Service instance. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **FinancialLocked**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
          * <p>The timestamp when the IPv6 Translation Service instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1537151540000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The description of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>descriptionforinstance</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The timestamp when IPv6 Translation Service instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1539792000000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
@@ -158,39 +195,58 @@ public class DescribeIPv6TranslatorsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6trans-bp1858ys*****</p>
          */
         @NameInMap("Ipv6TranslatorId")
         public String ipv6TranslatorId;
 
         /**
          * <p>The name of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The billing method of the IPv6 Translation Service instance.</p>
-         * <br>
-         * <p>*   **Prepay**: subscription</p>
-         * <p>*   **Postpay**: pay-as-you-go</p>
+         * <ul>
+         * <li><strong>Prepay</strong>: subscription</li>
+         * <li><strong>Postpay</strong>: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prepay</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The region of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The specification of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>small</p>
          */
         @NameInMap("Spec")
         public String spec;
 
         /**
          * <p>The status of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("Status")
         public String status;

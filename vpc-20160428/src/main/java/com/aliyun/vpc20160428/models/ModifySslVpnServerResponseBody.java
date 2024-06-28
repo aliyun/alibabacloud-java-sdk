@@ -6,119 +6,181 @@ import com.aliyun.tea.*;
 public class ModifySslVpnServerResponseBody extends TeaModel {
     /**
      * <p>The encryption algorithm.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AES-128-CBC</p>
      */
     @NameInMap("Cipher")
     public String cipher;
 
     /**
      * <p>The client IP address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.30.30.0/24</p>
      */
     @NameInMap("ClientIpPool")
     public String clientIpPool;
 
     /**
      * <p>Indicates whether data compression is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Compress")
     public Boolean compress;
 
     /**
      * <p>The total number of current connections.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Connections")
     public Integer connections;
 
     /**
      * <p>The time when the SSL server was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1492753580000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>Indicates whether two-factor authentication is enabled.</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>app_my6g4qmvnwxzj2f****</p>
+     */
     @NameInMap("IDaaSApplicationId")
     public String IDaaSApplicationId;
 
     /**
      * <p>The ID of the IDaaS instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas-cn-hangzhou-****</p>
      */
     @NameInMap("IDaaSInstanceId")
     public String IDaaSInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EIAM 2.0</p>
+     */
     @NameInMap("IDaaSInstanceVersion")
     public String IDaaSInstanceVersion;
 
     /**
      * <p>The public IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.98.XX.XX</p>
      */
     @NameInMap("InternetIp")
     public String internetIp;
 
     /**
      * <p>The CIDR block of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.20.20.0/24</p>
      */
     @NameInMap("LocalSubnet")
     public String localSubnet;
 
     /**
      * <p>The maximum number of connections.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("MaxConnections")
     public Integer maxConnections;
 
     /**
      * <p>The name of the SSL server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The port that is used by the SSL server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1194</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The protocol that is used by the SSL server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UDP</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
      * <p>The ID of the region where the SSL server is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DF11D6F6-E35A-41C3-9B20-6FC8A901FE65</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the SSL server belongs.</p>
-     * <br>
-     * <p>The SSL server and the VPN gateway associated with the SSL server belong to the same resource group. You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
+     * <p>The SSL server and the VPN gateway associated with the SSL server belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzs372yg****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the SSL server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vss-bp18q7hzj6largv4v****</p>
      */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1q8bgx4xnkm2ogj****</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

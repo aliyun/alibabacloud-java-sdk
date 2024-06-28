@@ -12,33 +12,49 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
      * <p>The number of flow logs that are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -99,12 +115,18 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -173,118 +195,174 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLog extends TeaModel {
         /**
          * <p>The sampling interval of the flow log. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("AggregationInterval")
         public Integer aggregationInterval;
 
         /**
          * <p>The business status of the flow log. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **FinancialLocked**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
          * <p>The time when the flow log was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-21T03:08:50Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>If the flow log failed to be delivered, you can troubleshoot based on the following error messages that may be returned:</p>
-         * <br>
-         * <p>*   **UnavaliableTarget**: The Logstore of SLS is unavailable and cannot receive logs. Check whether the Logstore is available.</p>
-         * <p>*   **ProjectNotExist**: The project of SLS does not exist. We recommend that you delete the project and create a new one.</p>
-         * <p>*   **UnknownError**: An internal error occurred. Try again later.</p>
+         * <ul>
+         * <li><strong>UnavaliableTarget</strong>: The Logstore of SLS is unavailable and cannot receive logs. Check whether the Logstore is available.</li>
+         * <li><strong>ProjectNotExist</strong>: The project of SLS does not exist. We recommend that you delete the project and create a new one.</li>
+         * <li><strong>UnknownError</strong>: An internal error occurred. Try again later.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UnavaliableTarget</p>
          */
         @NameInMap("FlowLogDeliverErrorMessage")
         public String flowLogDeliverErrorMessage;
 
         /**
          * <p>Indicates whether the flow log is delivered. Valid values:</p>
-         * <p>- **SUCCESS** </p>
-         * <p>- **FAILED**</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong> </li>
+         * <li><strong>FAILED</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FAILED</p>
          */
         @NameInMap("FlowLogDeliverStatus")
         public String flowLogDeliverStatus;
 
         /**
          * <p>The ID of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fl-bp1f6qqhsrc2c12ta****</p>
          */
         @NameInMap("FlowLogId")
         public String flowLogId;
 
         /**
          * <p>The name of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myFlowlog</p>
          */
         @NameInMap("FlowLogName")
         public String flowLogName;
 
         /**
          * <p>The Logstore that stores the captured traffic data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlowLogStore</p>
          */
         @NameInMap("LogStoreName")
         public String logStoreName;
 
         /**
          * <p>The project that manages the captured traffic data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FlowLogProject</p>
          */
         @NameInMap("ProjectName")
         public String projectName;
 
         /**
          * <p>The region ID of the flow log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the flow log belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the resource from which traffic is captured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-askldfas****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource from which traffic is captured. Valid values:</p>
-         * <br>
-         * <p>*   **NetworkInterface**: ENI</p>
-         * <p>*   **VSwitch**: all ENIs in a vSwitch</p>
-         * <p>*   **VPC**: all ENIs in a VPC</p>
+         * <ul>
+         * <li><strong>NetworkInterface</strong>: ENI</li>
+         * <li><strong>VSwitch</strong>: all ENIs in a vSwitch</li>
+         * <li><strong>VPC</strong>: all ENIs in a VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NetworkInterface</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The hosting type of the cloud service.</p>
-         * <br>
-         * <p>*   This parameter can be empty, which indicates that the flow log is created by the user.</p>
-         * <p>*   If this parameter is not empty, the value is set to **sls**. The value sls indicates that the flow log is created in the Simple Log Service (SLS) console.</p>
-         * <br>
-         * <p>> A flow log that is created in the SLS console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the [SLS console](https://sls.console.aliyun.com) and perform required operations.</p>
+         * <ul>
+         * <li>This parameter can be empty, which indicates that the flow log is created by the user.</li>
+         * <li>If this parameter is not empty, the value is set to <strong>sls</strong>. The value sls indicates that the flow log is created in the Simple Log Service (SLS) console.</li>
+         * </ul>
+         * <blockquote>
+         * <p>A flow log that is created in the SLS console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the <a href="https://sls.console.aliyun.com">SLS console</a> and perform required operations.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>sls</p>
          */
         @NameInMap("ServiceType")
         public String serviceType;
 
         /**
          * <p>The status of the flow log. Valid values:</p>
-         * <br>
-         * <p>*   **Active**</p>
-         * <p>*   **Activating**</p>
-         * <p>*   **Inactive**</p>
+         * <ul>
+         * <li><strong>Active</strong></li>
+         * <li><strong>Activating</strong></li>
+         * <li><strong>Inactive</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
@@ -297,21 +375,27 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
         /**
          * <p>The sampling scope of the traffic that is collected. Valid values:</p>
-         * <br>
-         * <p>*   **all** (default value): all traffic</p>
-         * <p>*   **internetGateway**: Internet traffic</p>
-         * <br>
-         * <p>> By default, the traffic path feature is unavailable. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).</p>
+         * <ul>
+         * <li><strong>all</strong> (default value): all traffic</li>
+         * <li><strong>internetGateway</strong>: Internet traffic</li>
+         * </ul>
+         * <blockquote>
+         * <p>By default, the traffic path feature is unavailable. To use this feature, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex">submit a ticket</a>.</p>
+         * </blockquote>
          */
         @NameInMap("TrafficPath")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath trafficPath;
 
         /**
          * <p>The type of traffic that is captured by the flow log. Valid values:</p>
-         * <br>
-         * <p>*   **All**: all traffic</p>
-         * <p>*   **Allow**: traffic that is allowed by access control</p>
-         * <p>*   **Drop**: traffic that is denied by access control</p>
+         * <ul>
+         * <li><strong>All</strong>: all traffic</li>
+         * <li><strong>Allow</strong>: traffic that is allowed by access control</li>
+         * <li><strong>Drop</strong>: traffic that is denied by access control</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         @NameInMap("TrafficType")
         public String trafficType;

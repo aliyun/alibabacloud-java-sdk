@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateExpressCloudConnectionResponseBody extends TeaModel {
     /**
      * <p>The ID of the ECC instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecc-jg************</p>
      */
     @NameInMap("EccId")
     public String eccId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C004F022-1CC2-4958-9937-675513A2CD7E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

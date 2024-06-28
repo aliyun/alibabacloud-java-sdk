@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeBgpPeersRequest extends TeaModel {
     /**
      * <p>The ID of the BGP group to which the BGP peer that you want to query belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bgpg-2zev8h2wo414sfh****</p>
      */
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
 
     /**
      * <p>The ID of the BGP peer that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bgp-2ze3un0ft1jd1xd****</p>
      */
     @NameInMap("BgpPeerId")
     public String bgpPeerId;
 
     /**
      * <p>Specifies whether the BGP group is the default group. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
@@ -32,23 +42,30 @@ public class DescribeBgpPeersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the BGP group to which the BGP peer that you want to query belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -61,6 +78,9 @@ public class DescribeBgpPeersRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual border router (VBR) that is associated with the BGP peer that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-2zecmmvg5gvu8i4te****</p>
      */
     @NameInMap("RouterId")
     public String routerId;

@@ -6,79 +6,109 @@ import com.aliyun.tea.*;
 public class CreateIPv6TranslatorEntryRequest extends TeaModel {
     /**
      * <p>The ID of the associated ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6transacl-bp1g8bhrdexnrxxxx</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>Specifies whether to enable access control lists (ACLs). Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("AclStatus")
     public String aclStatus;
 
     /**
      * <p>Specifies whether to enable ACLs. Valid values:</p>
-     * <br>
-     * <p>*   **white**: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</p>
-     * <p>*   **black**: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</p>
+     * <ul>
+     * <li><strong>white</strong>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</li>
+     * <li><strong>black</strong>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>white</p>
      */
     @NameInMap("AclType")
     public String aclType;
 
     /**
      * <p>The port that is used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("AllocateIpv6Port")
     public Integer allocateIpv6Port;
 
     /**
      * <p>The public IPv4 address that needs to provide IPv6 services.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46.22.xx.xx</p>
      */
     @NameInMap("BackendIpv4Addr")
     public String backendIpv4Addr;
 
     /**
      * <p>The port of the public IPv4 address that needs to provide IPv6 services.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("BackendIpv4Port")
     public Integer backendIpv4Port;
 
     /**
      * <p>The maximum bandwidth specified in the IPv6 mapping entry. Valid values:</p>
-     * <br>
-     * <p>*   \\-1 (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</p>
-     * <p>*   1 to 200: the bandwidth value specified in the IPv6 mapping entry. Unit: Mbit/s.</p>
-     * <br>
-     * <p>> The sum of the maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.</p>
+     * <ul>
+     * <li>\-1 (default): does not limit the maximum bandwidth specified in the IPv6 mapping entry.</li>
+     * <li>1 to 200: the bandwidth value specified in the IPv6 mapping entry. Unit: Mbit/s.</li>
+     * </ul>
+     * <blockquote>
+     * <p>The sum of the maximum bandwidth values specified in all IPv6 entries cannot exceed the maximum bandwidth supported by the instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("EntryBandwidth")
     public Integer entryBandwidth;
 
     /**
      * <p>The description of the IPv6 mapping entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>description</p>
      */
     @NameInMap("EntryDescription")
     public String entryDescription;
 
     /**
-     * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.</p>
+     * <p>The name of the IPv6 mapping entry. It must be 2 to 100 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name1</p>
      */
     @NameInMap("EntryName")
     public String entryName;
 
     /**
      * <p>The ID of the IPv6 Translation Service instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6trans-bp1858ys57xxxxxx</p>
      */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
@@ -90,9 +120,11 @@ public class CreateIPv6TranslatorEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -105,11 +137,14 @@ public class CreateIPv6TranslatorEntryRequest extends TeaModel {
 
     /**
      * <p>The protocol. Valid values:</p>
-     * <br>
-     * <p>*   **tcp**</p>
-     * <p>*   **udp**</p>
-     * <br>
+     * <ul>
+     * <li><strong>tcp</strong></li>
+     * <li><strong>udp</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("TransProtocol")
     public String transProtocol;

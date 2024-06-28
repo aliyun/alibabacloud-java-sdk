@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeIPv6TranslatorAclListsRequest extends TeaModel {
     /**
      * <p>The ID of the ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6transacl-bp1de2****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>The name of the ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl1</p>
      */
     @NameInMap("AclName")
     public String aclName;
@@ -23,21 +29,29 @@ public class DescribeIPv6TranslatorAclListsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region of the ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

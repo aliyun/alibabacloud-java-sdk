@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B8094E1E-935B-1397-96A8-4F87A5D1BF29</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,60 +94,87 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
     public static class DiagnoseVpnConnectionsResponseBodyVpnConnections extends TeaModel {
         /**
          * <p>The cause of the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Phase1 negotiation timeout</p>
          */
         @NameInMap("FailedReason")
         public String failedReason;
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Phase1NegotiationTimeout</p>
          */
         @NameInMap("FailedReasonCode")
         public String failedReasonCode;
 
         /**
          * <p>The timestamp when the current error occurred on the IPsec-VPN connection. Unit: millisecond.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1673581161000</p>
          */
         @NameInMap("FailedTime")
         public Long failedTime;
 
         /**
          * <p>If the values of the parameters configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameters configured for the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA256</p>
          */
         @NameInMap("MismatchLocalParam")
         public String mismatchLocalParam;
 
         /**
          * <p>If the parameter values configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameter configured for the peer gateway device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA</p>
          */
         @NameInMap("MismatchRemoteParam")
         public String mismatchRemoteParam;
 
         /**
          * <p>The error level. Valid values:</p>
-         * <br>
-         * <p>*   **Critical**</p>
-         * <p>*   **Warn**</p>
-         * <p>*   **Normal**</p>
+         * <ul>
+         * <li><strong>Critical</strong></li>
+         * <li><strong>Warn</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Warn</p>
          */
         @NameInMap("Severity")
         public String severity;
 
         /**
          * <p>The log information about the error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-13 11:39:21 vco-bp1spxu8hlcvpd7ry**** [PROTO_ERR]: ikev1.c:1433:isakmp_ph1resend(): phase1 negotiation failed due to time up. [{remote id:4}{ph1: 172.16.0.88[500] &lt;=&gt; 192.168.0.206[500], 172.16.0.88 &lt;=&gt; 192.168.0.206}]</p>
          */
         @NameInMap("SourceLog")
         public String sourceLog;
 
         /**
          * <p>The tunnel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tun-64n1sr9dig64k6****</p>
          */
         @NameInMap("TunnelId")
         public String tunnelId;
 
         /**
          * <p>The ID of the IPsec-VPN connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vco-bp1spxu8hlcvpd7ry****</p>
          */
         @NameInMap("VpnConnectionId")
         public String vpnConnectionId;

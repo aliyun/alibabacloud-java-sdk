@@ -12,6 +12,9 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,61 +43,86 @@ public class ListBusinessAccessPointsResponseBody extends TeaModel {
     public static class ListBusinessAccessPointsResponseBodyBusinessAccessPoints extends TeaModel {
         /**
          * <p>The ID of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-cn-hangzhou-xs-B</p>
          */
         @NameInMap("AccessPointId")
         public String accessPointId;
 
         /**
          * <p>The name of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>美国-弗吉尼亚-C</p>
          */
         @NameInMap("AccessPointName")
         public String accessPointName;
 
         /**
          * <p>The ID of the cloud box.</p>
-         * <br>
-         * <p>>  You can query this parameter if the Express Connect circuits and access points are of the cloud box type.</p>
+         * <blockquote>
+         * <p> You can query this parameter if the Express Connect circuits and access points are of the cloud box type.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cb-****</p>
          */
         @NameInMap("CloudBoxInstanceIds")
         public String cloudBoxInstanceIds;
 
         /**
          * <p>The latitude of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.198416</p>
          */
         @NameInMap("Latitude")
         public Double latitude;
 
         /**
          * <p>The longitude of the access point.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.247514</p>
          */
         @NameInMap("Longitude")
         public Double longitude;
 
         /**
          * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
-         * <br>
-         * <p>*   **CT**: China Telecom.</p>
-         * <p>*   **CU**: China Unicom.</p>
-         * <p>*   **CM**: China Mobile.</p>
-         * <p>*   **CO**: other connectivity providers in the Chinese mainland.</p>
-         * <p>*   **Equinix**: Equinix.</p>
-         * <p>*   **Other**: other connectivity providers outside the Chinese mainland.</p>
+         * <ul>
+         * <li><strong>CT</strong>: China Telecom.</li>
+         * <li><strong>CU</strong>: China Unicom.</li>
+         * <li><strong>CM</strong>: China Mobile.</li>
+         * <li><strong>CO</strong>: other connectivity providers in the Chinese mainland.</li>
+         * <li><strong>Equinix</strong>: Equinix.</li>
+         * <li><strong>Other</strong>: other connectivity providers outside the Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CT</p>
          */
         @NameInMap("SupportLineOperator")
         public String supportLineOperator;
 
         /**
          * <p>The port type supported by the access point. Valid values:</p>
-         * <br>
-         * <p>*   **100Base-T**: 100 Mbit/s copper Ethernet port</p>
-         * <p>*   **1000Base-T**: 1,000 Mbit/s copper Ethernet port</p>
-         * <p>*   **1000Base-LX**: 1,000 Mbit/s single-mode optical port (10 km)</p>
-         * <p>*   **10GBase-T**: 10,000 Mbit/s copper Ethernet port</p>
-         * <p>*   **10GBase-LR**: 10,000 Mbit/s single-mode optical port (10 km)</p>
-         * <p>*   **40GBase-LR**: 40,000 Mbit/s single-mode optical port</p>
-         * <p>*   **100GBase-LR**: 100,000 Mbit/s single-mode optical port</p>
-         * <br>
-         * <p>>  To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
+         * <ul>
+         * <li><strong>100Base-T</strong>: 100 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-T</strong>: 1,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>1000Base-LX</strong>: 1,000 Mbit/s single-mode optical port (10 km)</li>
+         * <li><strong>10GBase-T</strong>: 10,000 Mbit/s copper Ethernet port</li>
+         * <li><strong>10GBase-LR</strong>: 10,000 Mbit/s single-mode optical port (10 km)</li>
+         * <li><strong>40GBase-LR</strong>: 40,000 Mbit/s single-mode optical port</li>
+         * <li><strong>100GBase-LR</strong>: 100,000 Mbit/s single-mode optical port</li>
+         * </ul>
+         * <blockquote>
+         * <p> To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1000Base-T</p>
          */
         @NameInMap("SupportPortTypes")
         public String supportPortTypes;

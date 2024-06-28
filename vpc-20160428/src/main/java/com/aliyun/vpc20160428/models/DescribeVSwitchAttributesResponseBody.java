@@ -6,72 +6,107 @@ import com.aliyun.tea.*;
 public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     /**
      * <p>The number of available IP addresses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("AvailableIpAddressCount")
     public Long availableIpAddressCount;
 
     /**
      * <p>The CIDR block of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.1/24</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>The time when the vSwitch was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-08-22T10:40:25Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The description of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Indicates whether IPv6 is enabled for the vSwitch. If you enable IPv6, you must configure the IPv6 CIDR block of the vSwitch. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnabledIpv6")
     public Boolean enabledIpv6;
 
     /**
      * <p>The IPv6 CIDR block of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:3c5:44e::/64</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
     /**
      * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
 
     /**
      * <p>The network access control list (ACL) rules.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>287683832402436789</p>
      */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7B48B4B9-1EAD-469F-B488-594DAB4B6A1A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the ACL belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -84,19 +119,27 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the vSwitch is shared.</p>
-     * <br>
-     * <p>*   If no value is returned, the vSwitch is a regular vSwitch.</p>
-     * <p>*   If **Shared** is returned, the vSwitch is shared.</p>
-     * <p>*   If **Sharing** is returned, the vSwitch is being shared.</p>
+     * <ul>
+     * <li>If no value is returned, the vSwitch is a regular vSwitch.</li>
+     * <li>If <strong>Shared</strong> is returned, the vSwitch is shared.</li>
+     * <li>If <strong>Sharing</strong> is returned, the vSwitch is being shared.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Shared</p>
      */
     @NameInMap("ShareType")
     public String shareType;
 
     /**
      * <p>The status of the vSwitch. Valid values:</p>
-     * <br>
-     * <p>*   **Pending**</p>
-     * <p>*   **Available**</p>
+     * <ul>
+     * <li><strong>Pending</strong></li>
+     * <li><strong>Available</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Pending</p>
      */
     @NameInMap("Status")
     public String status;
@@ -109,24 +152,36 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
 
     /**
      * <p>The vSwitch ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-25b7pv15t****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The vSwitch name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
     /**
      * <p>The ID of the VPC to which the vSwitch belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-257gq642n****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The ID of the zone to which the vSwitch belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-a</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -291,15 +346,22 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public static class DescribeVSwitchAttributesResponseBodyRouteTable extends TeaModel {
         /**
          * <p>The ID of the route table that is associated with the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdv****</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
         /**
          * <p>The type of the route table. Valid values:</p>
-         * <br>
-         * <p>*   **System**</p>
-         * <p>*   **Custom**</p>
+         * <ul>
+         * <li><strong>System</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("RouteTableType")
         public String routeTableType;
@@ -330,12 +392,18 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     public static class DescribeVSwitchAttributesResponseBodyTagsTag extends TeaModel {
         /**
          * <p>The key of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

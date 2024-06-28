@@ -6,25 +6,33 @@ import com.aliyun.tea.*;
 public class ModifyVSwitchAttributeRequest extends TeaModel {
     /**
      * <p>The new description for the vSwitch.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my vswitch.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to enable the IPv6 feature for the vSwitch. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables the IPv6 feature.</p>
-     * <p>*   **false**: disables the IPv6 feature. This is the default value.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the IPv6 feature.</li>
+     * <li><strong>false</strong>: disables the IPv6 feature. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableIPv6")
     public Boolean enableIPv6;
 
     /**
-     * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.</p>
-     * <br>
+     * <p>The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
      * <p>You can set this parameter only when the IPv6 feature is enabled for the virtual private cloud (VPC) to which the vSwitch belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public Integer ipv6CidrBlock;
@@ -36,7 +44,10 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the vSwitch is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>The ID of the region where the vSwitch is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,24 +60,30 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-25nacdfvue4****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The new name for the vSwitch.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VSwitch-1</p>
      */
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
     /**
      * <p>The IPv6 CIDR block of the VPC to which the vSwitch belongs.</p>
-     * <br>
      * <p>You can set this parameter only when the IPv6 feature is enabled for the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:312:3e00::/56</p>
      */
     @NameInMap("VpcIpv6CidrBlock")
     public String vpcIpv6CidrBlock;

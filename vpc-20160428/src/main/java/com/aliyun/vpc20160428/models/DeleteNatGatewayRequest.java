@@ -6,28 +6,37 @@ import com.aliyun.tea.*;
 public class DeleteNatGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcefully delete the NAT gateway. Valid values:</p>
-     * <br>
-     * <p>*   **true** If you set the value to **true**:</p>
-     * <br>
-     * <p>    *   If the NAT gateway has SNAT entries, the system automatically deletes them.</p>
-     * <p>    *   If the NAT gateway has DNAT entries, the system automatically deletes them.</p>
-     * <p>    *   If the NAT gateway is associated with an elastic IP address (EIP), the system automatically disassociates the EIP from the NAT gateway.</p>
-     * <p>    *   If the NAT gateway is associated with a NAT bandwidth plan, the system automatically disassociates the NAT bandwidth plan.</p>
-     * <br>
-     * <p>*   **false**(default): no If you set the value to **false**:</p>
-     * <br>
-     * <p>    *   If the NAT gateway is associated with a NAT bandwidth plan, disassociate the NAT bandwidth plan first.</p>
-     * <p>    *   If the NAT gateway has SNAT entries, delete them first.</p>
-     * <p>    *   If the NAT gateway has DNAT entries, delete them first.</p>
-     * <p>    *   If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.</p>
+     * <ul>
+     * <li><p><strong>true</strong> If you set the value to <strong>true</strong>:</p>
+     * <ul>
+     * <li>If the NAT gateway has SNAT entries, the system automatically deletes them.</li>
+     * <li>If the NAT gateway has DNAT entries, the system automatically deletes them.</li>
+     * <li>If the NAT gateway is associated with an elastic IP address (EIP), the system automatically disassociates the EIP from the NAT gateway.</li>
+     * <li>If the NAT gateway is associated with a NAT bandwidth plan, the system automatically disassociates the NAT bandwidth plan.</li>
+     * </ul>
+     * </li>
+     * <li><p><strong>false</strong>(default): no If you set the value to <strong>false</strong>:</p>
+     * <ul>
+     * <li>If the NAT gateway is associated with a NAT bandwidth plan, disassociate the NAT bandwidth plan first.</li>
+     * <li>If the NAT gateway has SNAT entries, delete them first.</li>
+     * <li>If the NAT gateway has DNAT entries, delete them first.</li>
+     * <li>If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>The ID of the NAT gateway that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-bp1uewa15k4iy5770****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -40,10 +49,11 @@ public class DeleteNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The region ID of the NAT gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

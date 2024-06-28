@@ -18,12 +18,18 @@ public class CreateNatGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-112za33e4****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2315DEB7-5E92-423A-91F7-4C1EC9AD97C3</p>
      */
     @NameInMap("RequestId")
     public String requestId;

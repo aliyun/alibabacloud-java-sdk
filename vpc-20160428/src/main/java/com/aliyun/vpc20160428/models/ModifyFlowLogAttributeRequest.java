@@ -5,31 +5,40 @@ import com.aliyun.tea.*;
 
 public class ModifyFlowLogAttributeRequest extends TeaModel {
     /**
-     * <p>The new sampling interval of the flow log. Unit: minutes. Valid values: **1**, **5**, and **10**.</p>
+     * <p>The new sampling interval of the flow log. Unit: minutes. Valid values: <strong>1</strong>, <strong>5</strong>, and <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AggregationInterval")
     public Integer aggregationInterval;
 
     /**
      * <p>The new description of the flow log.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my Flowlog.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the flow log.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fl-m5e8vhz2t21sel1nq****</p>
      */
     @NameInMap("FlowLogId")
     public String flowLogId;
 
     /**
      * <p>The new name of the flow log.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myFlowlog</p>
      */
     @NameInMap("FlowLogName")
     public String flowLogName;
@@ -42,10 +51,11 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the flow log is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;

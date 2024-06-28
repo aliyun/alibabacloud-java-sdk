@@ -12,27 +12,40 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B457</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,50 +98,73 @@ public class ListIpsecServersResponseBody extends TeaModel {
     public static class ListIpsecServersResponseBodyIpsecServersIkeConfig extends TeaModel {
         /**
          * <p>The IKE authentication algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha1</p>
          */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
         /**
          * <p>The IKE encryption algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aes</p>
          */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
         /**
          * <p>The IKE lifetime. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
         /**
          * <p>The IKE negotiation mode. Valid values:</p>
-         * <br>
-         * <p>**main**: This mode offers higher security during negotiations.</p>
+         * <p><strong>main</strong>: This mode offers higher security during negotiations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         @NameInMap("IkeMode")
         public String ikeMode;
 
         /**
          * <p>The Diffie-Hellman key exchange algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group2</p>
          */
         @NameInMap("IkePfs")
         public String ikePfs;
 
         /**
          * <p>The IKE version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ikev2</p>
          */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
         /**
          * <p>The ID of the IPsec server. The default value is the public IP address of the VPN gateway. Both FQDNs and IP addresses are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.64.XX.XX</p>
          */
         @NameInMap("LocalId")
         public String localId;
 
         /**
          * <p>The identifier of the customer gateway. Both fully qualified domain names (FQDNs) and IP addresses are supported. By default, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139.67.XX.XX</p>
          */
         @NameInMap("RemoteId")
         public String remoteId;
@@ -207,24 +243,36 @@ public class ListIpsecServersResponseBody extends TeaModel {
     public static class ListIpsecServersResponseBodyIpsecServersIpsecConfig extends TeaModel {
         /**
          * <p>The IPsec authentication algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sha1</p>
          */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
         /**
          * <p>The IPsec encryption algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aes</p>
          */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
         /**
          * <p>The IPsec lifetime. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
         /**
          * <p>The Diffie-Hellman key exchange algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>group2</p>
          */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
@@ -271,29 +319,41 @@ public class ListIpsecServersResponseBody extends TeaModel {
     public static class ListIpsecServersResponseBodyIpsecServers extends TeaModel {
         /**
          * <p>The client CIDR block. It refers to the CIDR block that is allocated to the virtual interface of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         @NameInMap("ClientIpPool")
         public String clientIpPool;
 
         /**
          * <p>The time when the IPsec server was created.</p>
-         * <br>
          * <p>T is used as a delimiter. Z indicates that the time is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-03T10:11:55Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>Indicates whether the current IPsec tunnel is deleted and negotiations are reinitiated. Valid values:</p>
-         * <br>
-         * <p>*   **true**: immediately initiates negotiations after the configuration is completed.</p>
-         * <p>*   **false**: initiates negotiations when inbound traffic is detected.</p>
+         * <ul>
+         * <li><strong>true</strong>: immediately initiates negotiations after the configuration is completed.</li>
+         * <li><strong>false</strong>: initiates negotiations when inbound traffic is detected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EffectImmediately")
         public Boolean effectImmediately;
 
         /**
          * <p>The ID of the IDaaS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas-cn-hangzhou-****</p>
          */
         @NameInMap("IDaaSInstanceId")
         public String IDaaSInstanceId;
@@ -306,6 +366,9 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
         /**
          * <p>The public IP address of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.22.XX.XX</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
@@ -318,73 +381,107 @@ public class ListIpsecServersResponseBody extends TeaModel {
 
         /**
          * <p>The IPsec server ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iss-bp1bo3xuvcxo7ixll****</p>
          */
         @NameInMap("IpsecServerId")
         public String ipsecServerId;
 
         /**
          * <p>The name of the IPsec server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("IpsecServerName")
         public String ipsecServerName;
 
         /**
          * <p>The local CIDR blocks, which refer to the CIDR blocks on the virtual private cloud (VPC) side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16,172.17.0.0/16</p>
          */
         @NameInMap("LocalSubnet")
         public String localSubnet;
 
         /**
          * <p>The number of SSL-VPN connections supported by the VPN gateway.</p>
-         * <br>
-         * <p>>  The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.</p>
+         * <blockquote>
+         * <p> The number of SSL-VPN connections specified in this parameter includes both SSL-VPN and IPsec-VPN connections. For example, you have five SSL-VPN connections and three SSL clients occupy three SSL-VPN connections. In this case, two clients can connect to the IPsec server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
          * <p>Indicates whether two-factor authentication is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**: The feature is disabled.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong>: The feature is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("MultiFactorAuthEnabled")
         public Boolean multiFactorAuthEnabled;
 
         /**
          * <p>The number of clients that are connected to the IPsec server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OnlineClientCount")
         public Integer onlineClientCount;
 
         /**
          * <p>The pre-shared key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgw6dy7d****</p>
          */
         @NameInMap("Psk")
         public String psk;
 
         /**
-         * <p>Indicates whether pre-shared key authentication is enabled. Only **true** may be returned, which indicates that pre-shared key authentication is enabled.</p>
+         * <p>Indicates whether pre-shared key authentication is enabled. Only <strong>true</strong> may be returned, which indicates that pre-shared key authentication is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("PskEnabled")
         public Boolean pskEnabled;
 
         /**
          * <p>The ID of the region where the IPsec server is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the IPsec server belongs.</p>
-         * <br>
-         * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group information.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzs372yg****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1q8bgx4xnkm2ogj****</p>
          */
         @NameInMap("VpnGatewayId")
         public String vpnGatewayId;

@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
     /**
      * <p>The ID of the shared-bandwidth instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-m5ex47zwya1sejyni****</p>
      */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
     /**
      * <p>The ID of the EIP.</p>
-     * <br>
      * <p>To query the EIP ID, call DescribeEipAddresses.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-bp13e9i2qst4g6jzi****</p>
      */
     @NameInMap("IpInstanceId")
     public String ipInstanceId;
@@ -30,10 +33,11 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the shared-bandwidth instance is located.</p>
-     * <br>
      * <p>To query the region ID, call DescribeRegions.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

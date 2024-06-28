@@ -12,21 +12,31 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If the value of **NextToken** is not returned, it indicates that no next query is to be sent.</p>
-     * <p>*   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.</p>
+     * <ul>
+     * <li>If the value of <strong>NextToken</strong> is not returned, it indicates that no next query is to be sent.</li>
+     * <li>If the value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7479A224-4A28-4895-9604-11F48BCE6A88</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of CIDR blocks that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -71,51 +81,76 @@ public class ListNatIpCidrsResponseBody extends TeaModel {
     public static class ListNatIpCidrsResponseBodyNatIpCidrs extends TeaModel {
         /**
          * <p>The time when the CIDR block was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-28T20:50Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>Indicates whether the CIDR block is the default CIDR block of the NAT gateway. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The CIDR block is the default CIDR block of the NAT gateway.</p>
-         * <p>*   **false**: The CIDR block is not the default CIDR block of the NAT gateway.</p>
+         * <ul>
+         * <li><strong>true</strong>: The CIDR block is the default CIDR block of the NAT gateway.</li>
+         * <li><strong>false</strong>: The CIDR block is not the default CIDR block of the NAT gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
          * <p>The ID of the VPC NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-gw8v16wgvtq26vh59****</p>
          */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
         /**
          * <p>The CIDR block of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0/24</p>
          */
         @NameInMap("NatIpCidr")
         public String natIpCidr;
 
         /**
          * <p>The description of the CIDR block of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("NatIpCidrDescription")
         public String natIpCidrDescription;
 
         /**
          * <p>The ID of the CIDR block of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpcnatcidr-gw8ov42ei6xh1jys2****</p>
          */
         @NameInMap("NatIpCidrId")
         public String natIpCidrId;
 
         /**
          * <p>The name of the CIDR block of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         @NameInMap("NatIpCidrName")
         public String natIpCidrName;
 
         /**
-         * <p>The status of the CIDR block of the NAT gateway. If **Available** is returned, it indicates that the CIDR block is available.</p>
+         * <p>The status of the CIDR block of the NAT gateway. If <strong>Available</strong> is returned, it indicates that the CIDR block is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("NatIpCidrStatus")
         public String natIpCidrStatus;

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnAttachmentsRequest extends TeaModel {
     /**
-     * <p>The type of resource that is associated with the IPsec-VPN connection. Default value: **CEN**.</p>
-     * <br>
-     * <p>Set the value to **CEN**, which specifies to query IPsec-VPN connections associated with the transit router.</p>
+     * <p>The type of resource that is associated with the IPsec-VPN connection. Default value: <strong>CEN</strong>.</p>
+     * <p>Set the value to <strong>CEN</strong>, which specifies to query IPsec-VPN connections associated with the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEN</p>
      */
     @NameInMap("AttachType")
     public String attachType;
@@ -19,23 +21,30 @@ public class DescribeVpnAttachmentsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region where the IPsec-VPN connection is established.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,8 +57,12 @@ public class DescribeVpnAttachmentsRequest extends TeaModel {
 
     /**
      * <p>The ID of the IPsec-VPN connection.</p>
-     * <br>
-     * <p>>  If you do not specify an IPsec-VPN connection ID, all IPsec-VPN connections associated with a transit router in the region are queried.</p>
+     * <blockquote>
+     * <p> If you do not specify an IPsec-VPN connection ID, all IPsec-VPN connections associated with a transit router in the region are queried.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-p0w2jpkhi2eeop6q6****</p>
      */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;

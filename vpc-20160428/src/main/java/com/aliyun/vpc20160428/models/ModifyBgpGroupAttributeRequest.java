@@ -6,72 +6,98 @@ import com.aliyun.tea.*;
 public class ModifyBgpGroupAttributeRequest extends TeaModel {
     /**
      * <p>The authentication key of the BGP group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>!PWZ2****</p>
      */
     @NameInMap("AuthKey")
     public String authKey;
 
     /**
      * <p>The BGP group ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bgpg-wz9f62v4fbg2g****</p>
      */
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
 
     /**
      * <p>Specifies whether to clear the secret key. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ClearAuthKey")
     public Boolean clearAuthKey;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The BGP group description.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Specifies whether to use a fake ASN. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default)</p>
-     * <p>*   **true**</p>
-     * <br>
-     * <p>>  A router that runs BGP typically belongs only to one AS. If you need to replace an existing ASN with a new ASN and you cannot immediately modify BGP configurations, you can use fake ASNs to ensure service continuity.</p>
+     * <p>Specifies whether to use a fake AS number. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p>A router that runs BGP typically belongs to only one AS. If you need to replace an AS with a new one, but you cannot immediately modify BGP configurations due to business requirements, you can specify a fake AS number to establish a connection with the local end. This ensures service continuity in scenarios such as AS migration or AS merging.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsFakeAsn")
     public Boolean isFakeAsn;
 
     /**
      * <p>The custom autonomous system number (ASN) of the BGP on the Alibaba Cloud side. Valid values:</p>
-     * <br>
-     * <p>*   **45104**</p>
-     * <p>*   **64512~65534**</p>
-     * <p>*   **4200000000~4294967294**</p>
-     * <br>
-     * <p>>  **65025** is reserved by Alibaba Cloud. Alibaba Cloud uses **45104** as the **local ASN** by default. Custom **local ASNs** may cause loops in multi-line scenarios. Proceed with caution.</p>
+     * <ul>
+     * <li><strong>45104</strong></li>
+     * <li><strong>64512~65534</strong></li>
+     * <li><strong>4200000000~4294967294</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> <strong>65025</strong> is reserved by Alibaba Cloud. Alibaba Cloud uses <strong>45104</strong> as the <strong>local ASN</strong> by default. Custom <strong>local ASNs</strong> may cause loops in multi-line scenarios. Proceed with caution.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>45104</p>
      */
     @NameInMap("LocalAsn")
     public Long localAsn;
 
     /**
      * <p>The BGP group name.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -84,16 +110,20 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The ASN of the gateway device in the data center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1****</p>
      */
     @NameInMap("PeerAsn")
     public Long peerAsn;
 
     /**
      * <p>The region ID of the BGP group.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -105,7 +135,10 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum number of routes supported by a BGP peer. Default value: **110**.</p>
+     * <p>The maximum number of routes supported by a BGP peer. Default value: <strong>110</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110</p>
      */
     @NameInMap("RouteQuota")
     public Integer routeQuota;

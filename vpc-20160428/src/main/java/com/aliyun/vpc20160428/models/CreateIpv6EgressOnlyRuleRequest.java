@@ -6,50 +6,63 @@ import com.aliyun.tea.*;
 public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the value of RequestId as the client token. The value of RequestId is different for each API request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the value of RequestId as the client token. The value of RequestId is different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the egress-only rule.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ruledescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the IPv6 address for which you want to create an egress-only rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6-hp3nxjkfxn5pnhgl5****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of the instance for which you want to create an egress-only rule.</p>
-     * <br>
-     * <p>Default value: **Ipv6Address**</p>
+     * <p>Default value: <strong>Ipv6Address</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ipv6Address</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The ID of the IPv6 gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6gw-hp3c2paq0ywauasza****</p>
      */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
     /**
      * <p>The name of the egress-only rule.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rulename</p>
      */
     @NameInMap("Name")
     public String name;
@@ -62,10 +75,11 @@ public class CreateIpv6EgressOnlyRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the IPv6 gateway is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;

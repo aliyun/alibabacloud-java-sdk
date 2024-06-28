@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AssociateNetworkAclResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4CF20CC7-D1FC-425B-A15B-DF7C8E2131A7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

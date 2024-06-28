@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class DeleteCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The ID of the Internet Shared Bandwidth instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp-2ze2ic1xd2qeqk145pn4u</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
      * <p>Specifies whether to forcefully delete the Internet Shared Bandwidth instance. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): deletes the Internet Shared Bandwidth instance only when no EIPs are associated with the Internet Shared Bandwidth instance.</p>
-     * <p>*   **true**: disassociates all EIPs from the Internet Shared Bandwidth instance and deletes the Internet Shared Bandwidth instance.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): deletes the Internet Shared Bandwidth instance only when no EIPs are associated with the Internet Shared Bandwidth instance.</li>
+     * <li><strong>true</strong>: disassociates all EIPs from the Internet Shared Bandwidth instance and deletes the Internet Shared Bandwidth instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public String force;
@@ -29,10 +35,11 @@ public class DeleteCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the Internet Shared Bandwidth instance is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
     /**
      * <p>The bandwidth of the ECC instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     /**
      * <p>The ID of the ECC instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecc-xxxxxxxxx</p>
      */
     @NameInMap("EccId")
     public String eccId;
@@ -26,8 +31,10 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

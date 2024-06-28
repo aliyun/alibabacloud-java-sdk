@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class UntagResourcesForExpressConnectRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -21,17 +25,17 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the resource is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The IDs of the resources from which you want to remove tags.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -45,12 +49,15 @@ public class UntagResourcesForExpressConnectRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **PHYSICALCONNECTION**: Express Connect circuit.</p>
-     * <p>*   **VIRTUALBORDERROUTER**: virtual border router (VBR).</p>
-     * <p>*   **ROUTERINTERFACE**: router interface.</p>
-     * <br>
+     * <ul>
+     * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
+     * <li><strong>VIRTUALBORDERROUTER</strong>: virtual border router (VBR).</li>
+     * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PHYSICALCONNECTION</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

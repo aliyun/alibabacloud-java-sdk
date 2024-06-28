@@ -6,77 +6,113 @@ import com.aliyun.tea.*;
 public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>The encryption algorithm that is used in the SSL-VPN connection. Valid values:</p>
-     * <br>
-     * <p>*   **AES-128-CBC** (default)</p>
-     * <p>*   **AES-192-CBC**</p>
-     * <p>*   **AES-256-CBC**</p>
-     * <p>*   **none**</p>
+     * <ul>
+     * <li><strong>AES-128-CBC</strong> (default)</li>
+     * <li><strong>AES-192-CBC</strong></li>
+     * <li><strong>AES-256-CBC</strong></li>
+     * <li><strong>none</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AES-128-CBC</p>
      */
     @NameInMap("Cipher")
     public String cipher;
 
     /**
      * <p>The client IP address pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.30.30.0/24</p>
      */
     @NameInMap("ClientIpPool")
     public String clientIpPool;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** is different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> is different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to enable data compression. Valid values:</p>
-     * <br>
-     * <p>*   **true** (default)</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong> (default)</li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Compress")
     public Boolean compress;
 
     /**
      * <p>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must also specify an IDaaS instance ID. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>> *   Two-factor authentication supports only IDaaS instances of earlier versions. If you do not have and cannot create IDaaS instances of earlier versions, you cannot enable two-factor authentication.</p>
-     * <p>> *   For existing SSL servers, if two-factor authentication is already enabled, you can continue to use two-factor authentication.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>Two-factor authentication supports only IDaaS instances of earlier versions. If you do not have and cannot create IDaaS instances of earlier versions, you cannot enable two-factor authentication.</li>
+     * <li>For existing SSL servers, if two-factor authentication is already enabled, you can continue to use two-factor authentication.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>app_my6g4qmvnwxzj2f****</p>
+     */
     @NameInMap("IDaaSApplicationId")
     public String IDaaSApplicationId;
 
     /**
      * <p>The ID of the Identity as a Service (IDaaS) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idaas-cn-hangzhou-****</p>
      */
     @NameInMap("IDaaSInstanceId")
     public String IDaaSInstanceId;
 
     /**
      * <p>The ID of the region where the IDaaS instance is created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("IDaaSRegionId")
     public String IDaaSRegionId;
 
     /**
      * <p>The CIDR block of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.20.20.0/24</p>
      */
     @NameInMap("LocalSubnet")
     public String localSubnet;
 
     /**
      * <p>The name of the SSL server.</p>
-     * <br>
-     * <p>The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -88,28 +124,35 @@ public class ModifySslVpnServerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port that is used by the SSL server. Valid values of port numbers: **1** to **65535**. Default value: **1194**.</p>
-     * <br>
-     * <p>The following ports are not supported: **22**, **2222**, **22222**, **9000**, **9001**, **9002**, **7505**, **80**, **443**, **53**, **68**, **123**, **4510**, **4560**, **500**, and **4500**.</p>
+     * <p>The port that is used by the SSL server. Valid values of port numbers: <strong>1</strong> to <strong>65535</strong>. Default value: <strong>1194</strong>.</p>
+     * <p>The following ports are not supported: <strong>22</strong>, <strong>2222</strong>, <strong>22222</strong>, <strong>9000</strong>, <strong>9001</strong>, <strong>9002</strong>, <strong>7505</strong>, <strong>80</strong>, <strong>443</strong>, <strong>53</strong>, <strong>68</strong>, <strong>123</strong>, <strong>4510</strong>, <strong>4560</strong>, <strong>500</strong>, and <strong>4500</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1194</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The protocol that is used by the SSL server. Valid values:</p>
-     * <br>
-     * <p>*   **TCP** (default)</p>
-     * <p>*   **UDP**</p>
+     * <ul>
+     * <li><strong>TCP</strong> (default)</li>
+     * <li><strong>UDP</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>UDP</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
      * <p>The region ID of the VPN gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -122,8 +165,10 @@ public class ModifySslVpnServerRequest extends TeaModel {
 
     /**
      * <p>The ID of the SSL server.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vss-bp18q7hzj6largv4v****</p>
      */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;

@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     /**
      * <p>The description of the IPv6 gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the IPv6 gateway that you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6gw-hp39kh1ya51yzp2lu****</p>
      */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
     /**
      * <p>The name of the IPv6 gateway.</p>
-     * <br>
-     * <p>It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>It must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6name</p>
      */
     @NameInMap("Name")
     public String name;
@@ -33,9 +40,11 @@ public class ModifyIpv6GatewayAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the IPv6 gateway. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;

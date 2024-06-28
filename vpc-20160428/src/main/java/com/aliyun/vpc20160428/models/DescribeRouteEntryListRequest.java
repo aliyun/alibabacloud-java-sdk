@@ -12,55 +12,76 @@ public class DescribeRouteEntryListRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the route. IPv4 and IPv6 CIDR blocks are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.2.0/24</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
      * <p>The IP version. Valid values:</p>
-     * <br>
-     * <p>*   **IPv4**</p>
-     * <p>*   **IPv6**</p>
+     * <ul>
+     * <li><strong>IPv4</strong></li>
+     * <li><strong>IPv6</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
     /**
      * <p>The ID of the next hop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp10zyaph5cc8b7c7****</p>
      */
     @NameInMap("NextHopId")
     public String nextHopId;
 
     /**
      * <p>The next hop type. Valid values:</p>
-     * <br>
-     * <p>*   **Instance**: an Elastic Compute Service (ECS) instance. This is the default value.</p>
-     * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP).</p>
-     * <p>*   **VpnGateway**: a VPN gateway.</p>
-     * <p>*   **NatGateway**: a NAT gateway.</p>
-     * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI).</p>
-     * <p>*   **RouterInterface**: a router interface.</p>
-     * <p>*   **IPv6Gateway**: an IPv6 gateway.</p>
-     * <p>*   **Attachment**: a transit router.</p>
-     * <p>*   **Ipv4Gateway**: an IPv4 gateway.</p>
-     * <p>*   **GatewayEndpoint**: a gateway endpoint.</p>
-     * <p>*   **CenBasic**: CEN does not support transit routers.</p>
-     * <p>*   **Ecr**: Express Connect Router (ECR).</p>
+     * <ul>
+     * <li><strong>Instance</strong>: an Elastic Compute Service (ECS) instance. This is the default value.</li>
+     * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP).</li>
+     * <li><strong>VpnGateway</strong>: a VPN gateway.</li>
+     * <li><strong>NatGateway</strong>: a NAT gateway.</li>
+     * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI).</li>
+     * <li><strong>RouterInterface</strong>: a router interface.</li>
+     * <li><strong>IPv6Gateway</strong>: an IPv6 gateway.</li>
+     * <li><strong>Attachment</strong>: a transit router.</li>
+     * <li><strong>Ipv4Gateway</strong>: an IPv4 gateway.</li>
+     * <li><strong>GatewayEndpoint</strong>: a gateway endpoint.</li>
+     * <li><strong>CenBasic</strong>: CEN does not support transit routers.</li>
+     * <li><strong>Ecr</strong>: Express Connect Router (ECR).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -73,10 +94,11 @@ public class DescribeRouteEntryListRequest extends TeaModel {
 
     /**
      * <p>The region ID of the route table.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -89,42 +111,55 @@ public class DescribeRouteEntryListRequest extends TeaModel {
 
     /**
      * <p>The ID of the route that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rte-bp1mnnr2al0naomnp****</p>
      */
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 
     /**
      * <p>The name of the route entry.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
     /**
      * <p>The route type. Valid values:</p>
-     * <br>
-     * <p>*   **Custom**: custom routes.</p>
-     * <p>*   **System**: system routes.</p>
-     * <p>*   **BGP**: BGP routes.</p>
-     * <p>*   **CEN**: Cloud Enterprise Network (CEN) routes.</p>
-     * <p>*   **ECR**: Express Connect Router (ECR) routes.</p>
+     * <ul>
+     * <li><strong>Custom</strong>: custom routes.</li>
+     * <li><strong>System</strong>: system routes.</li>
+     * <li><strong>BGP</strong>: BGP routes.</li>
+     * <li><strong>CEN</strong>: Cloud Enterprise Network (CEN) routes.</li>
+     * <li><strong>ECR</strong>: Express Connect Router (ECR) routes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System</p>
      */
     @NameInMap("RouteEntryType")
     public String routeEntryType;
 
     /**
      * <p>The ID of the route table that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1r9pvl4xen8s9ju****</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
     /**
      * <p>Specifies whether to host the route. If the parameter is empty, the route is not hosted.</p>
-     * <br>
-     * <p>Set the value to **TR**, which specifies that the route is hosted by a transit router.</p>
+     * <p>Set the value to <strong>TR</strong>, which specifies that the route is hosted by a transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TR</p>
      */
     @NameInMap("ServiceType")
     public String serviceType;

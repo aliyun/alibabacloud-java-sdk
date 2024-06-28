@@ -12,24 +12,36 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20E6FD1C-7321-4DAD-BDFD-EC8769E4AA33</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,21 +94,31 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
     public static class DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddressesPublicIpAddresse extends TeaModel {
         /**
          * <p>The ID of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-bp13e9i2qst4g6jzi****</p>
          */
         @NameInMap("AllocationId")
         public String allocationId;
 
         /**
          * <p>Indicates whether the EIP is associated with the Internet Shared Bandwidth instance. Valid values:</p>
-         * <br>
-         * <p>*   **BINDED**</p>
-         * <p>*   **BINDING**</p>
+         * <ul>
+         * <li><strong>BINDED</strong></li>
+         * <li><strong>BINDING</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BINDED</p>
          */
         @NameInMap("BandwidthPackageIpRelationStatus")
         public String bandwidthPackageIpRelationStatus;
 
         /**
          * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.95.XX.XX</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
@@ -173,12 +195,18 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
     public static class DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageTagsTag extends TeaModel {
         /**
          * <p>The tag key that is added to the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyTest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value that is added to the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ValueTest</p>
          */
         @NameInMap("Value")
         public String value;
@@ -228,109 +256,150 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
     public static class DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage extends TeaModel {
         /**
          * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
         /**
          * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-bp1t3sm1ffzmshdki****</p>
          */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
         /**
          * <p>The service type of the Internet Shared Bandwidth instance. Valid values:</p>
-         * <br>
-         * <p>*   **CloudBox** The cloud box. Only cloud box users can select this type.</p>
-         * <p>*   **Default** (default): The general service type.</p>
+         * <ul>
+         * <li><strong>CloudBox</strong> The cloud box. Only cloud box users can select this type.</li>
+         * <li><strong>Default</strong> (default): The general service type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudBox</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
          * <p>The service status of the Internet Shared Bandwidth instance. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The Internet Shared Bandwidth instance runs as expected.</p>
-         * <p>*   **FinancialLocked**: An overdue payment occurs in the Internet Shared Bandwidth instance</p>
-         * <p>*   **Unactivated**: The Internet Shared Bandwidth instance is not activated.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The Internet Shared Bandwidth instance runs as expected.</li>
+         * <li><strong>FinancialLocked</strong>: An overdue payment occurs in the Internet Shared Bandwidth instance</li>
+         * <li><strong>Unactivated</strong>: The Internet Shared Bandwidth instance is not activated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
-         * <p>The time when the Internet Shared Bandwidth instance was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the Internet Shared Bandwidth instance was created. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-06-28T06:39:20Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>Indicates whether deletion protection is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
         /**
          * <p>The description of the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The time when the Internet Shared Bandwidth instance expired. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the Internet Shared Bandwidth instance expired. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-15T03:08:37Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>Indicates whether the information about pending orders is returned. Valid values:</p>
-         * <br>
-         * <p>*   **false**</p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HasReservationData")
         public String hasReservationData;
 
         /**
          * <p>The line type. Valid values:</p>
-         * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro line The BGP (Multi-ISP) Pro line is supported in the China (Hong Kong), Singapore (Singapore), Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
-         * <br>
+         * <ul>
+         * <li><strong>BGP</strong>: BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</li>
+         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line The BGP (Multi-ISP) Pro line is supported in the China (Hong Kong), Singapore (Singapore), Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+         * </ul>
          * <p>If you are allowed to use single-ISP bandwidth, one of the following values is returned:</p>
-         * <br>
-         * <p>*   **ChinaTelecom**</p>
-         * <p>*   **ChinaUnicom**</p>
-         * <p>*   **ChinaMobile**</p>
-         * <p>*   **ChinaTelecom_L2**</p>
-         * <p>*   **ChinaUnicom_L2**</p>
-         * <p>*   **ChinaMobile_L2**</p>
-         * <br>
-         * <p>If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.</p>
+         * <ul>
+         * <li><strong>ChinaTelecom</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaTelecom_L2</strong></li>
+         * <li><strong>ChinaUnicom_L2</strong></li>
+         * <li><strong>ChinaMobile_L2</strong></li>
+         * </ul>
+         * <p>If your services are deployed in China East 1 Finance, <strong>BGP_FinanceCloud</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         @NameInMap("ISP")
         public String ISP;
 
         /**
          * <p>The billing method of the Internet Shared Bandwidth instance. Valid value:</p>
-         * <br>
-         * <p>**PostPaid**: pay-as-you-go</p>
+         * <p><strong>PostPaid</strong>: pay-as-you-go</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
          * <p>The metering method of the Internet Shared Bandwidth instance. Valid value:</p>
-         * <br>
-         * <p>**PayByTraffic**</p>
+         * <p><strong>PayByTraffic</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
          * <p>The name of the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("Name")
         public String name;
@@ -342,78 +411,109 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddresses publicIpAddresses;
 
         /**
-         * <p>The percentage of the minimum bandwidth commitment. Only **20** is returned.</p>
-         * <br>
-         * <p>>  This parameter is supported only on the Alibaba Cloud China site.</p>
+         * <p>The percentage of the minimum bandwidth commitment. Only <strong>20</strong> is returned.</p>
+         * <blockquote>
+         * <p> This parameter is supported only on the Alibaba Cloud China site.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Ratio")
         public Integer ratio;
 
         /**
          * <p>The ID of the region where the Internet Shared Bandwidth instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the renewal took effect. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-30T16:00:00Z</p>
          */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
 
         /**
          * <p>The new maximum bandwidth after the configurations are changed. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("ReservationBandwidth")
         public String reservationBandwidth;
 
         /**
          * <p>The metering method after the configurations are changed. Valid value:</p>
-         * <br>
-         * <p>**PayByTraffic**</p>
+         * <p><strong>PayByTraffic</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
 
         /**
          * <p>The renewal method. Valid values:</p>
-         * <br>
-         * <p>*   **RENEWCHANGE**: renewal with a specification change</p>
-         * <p>*   **TEMP_UPGRADE**: renewal with a temporary upgrade</p>
-         * <p>*   **UPGRADE**: renewal with an upgrade</p>
+         * <ul>
+         * <li><strong>RENEWCHANGE</strong>: renewal with a specification change</li>
+         * <li><strong>TEMP_UPGRADE</strong>: renewal with a temporary upgrade</li>
+         * <li><strong>UPGRADE</strong>: renewal with an upgrade</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RENEWCHANGE</p>
          */
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The editions of Anti-DDoS.</p>
-         * <br>
-         * <p>*   If this parameter is empty, Anti-DDoS Origin Basic is enabled.</p>
-         * <p>*   If **AntiDDoS_Enhanced** is returned, Anti-DDoS Pro/Premium is enabled.</p>
+         * <ul>
+         * <li>If this parameter is empty, Anti-DDoS Origin Basic is enabled.</li>
+         * <li>If <strong>AntiDDoS_Enhanced</strong> is returned, Anti-DDoS Pro/Premium is enabled.</li>
+         * </ul>
          */
         @NameInMap("SecurityProtectionTypes")
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes securityProtectionTypes;
 
         /**
          * <p>Indicates whether the resource is created by the service account. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The resource is not created by the service account.</p>
-         * <p>*   **1**: The resource is created by the service account.</p>
+         * <ul>
+         * <li><strong>0</strong>: The resource is not created by the service account.</li>
+         * <li><strong>1</strong>: The resource is created by the service account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ServiceManaged")
         public Integer serviceManaged;
 
         /**
          * <p>The status of the Internet Shared Bandwidth instance. Valid values:</p>
-         * <br>
-         * <p>*   **Available**: The Internet Shared Bandwidth instance is available.</p>
-         * <p>*   **Modifying**: The Internet Shared Bandwidth instance is being modified.</p>
+         * <ul>
+         * <li><strong>Available</strong>: The Internet Shared Bandwidth instance is available.</li>
+         * <li><strong>Modifying</strong>: The Internet Shared Bandwidth instance is being modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -426,6 +526,9 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
         /**
          * <p>The zone of the Internet Shared Bandwidth instance. This parameter is returned only when BizType is set to CloudBox. If BizType is set to Default, an empty value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1-lzdvn-cb</p>
          */
         @NameInMap("Zone")
         public String zone;

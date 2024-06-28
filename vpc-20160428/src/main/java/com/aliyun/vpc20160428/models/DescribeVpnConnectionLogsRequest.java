@@ -6,16 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeVpnConnectionLogsRequest extends TeaModel {
     /**
      * <p>The start time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
-     * <p>>  If you specify **From**, you must specify **To** or **MinutePeriod**.</p>
+     * <blockquote>
+     * <p> If you specify <strong>From</strong>, you must specify <strong>To</strong> or <strong>MinutePeriod</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1671003744</p>
      */
     @NameInMap("From")
     public Integer from;
 
     /**
-     * <p>The interval at which log data is collected. Valid values: **1** to **10**. Unit: minutes.</p>
-     * <br>
-     * <p>>  If you do not specify **From** and **To**, you must specify **MinutePeriod**.</p>
+     * <p>The interval at which log data is collected. Valid values: <strong>1</strong> to <strong>10</strong>. Unit: minutes.</p>
+     * <blockquote>
+     * <p> If you do not specify <strong>From</strong> and <strong>To</strong>, you must specify <strong>MinutePeriod</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MinutePeriod")
     public Integer minutePeriod;
@@ -27,23 +35,30 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1** to **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the IPsec-VPN connection.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eu-central-1</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -56,24 +71,32 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
 
     /**
      * <p>The end time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
-     * <p>>  If you specify **To**, you must specify **From** or **MinutePeriod**.</p>
+     * <blockquote>
+     * <p> If you specify <strong>To</strong>, you must specify <strong>From</strong> or <strong>MinutePeriod</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1671004344</p>
      */
     @NameInMap("To")
     public Integer to;
 
     /**
      * <p>The ID of the IPsec-VPN connection.</p>
-     * <br>
      * <p>This parameter is available only for a dual-tunnel IPsec-VPN connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tun-opsqc4d97wni27****</p>
      */
     @NameInMap("TunnelId")
     public String tunnelId;
 
     /**
      * <p>The ID of the IPsec-VPN connection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-m5evqnds4y459flt3****</p>
      */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;

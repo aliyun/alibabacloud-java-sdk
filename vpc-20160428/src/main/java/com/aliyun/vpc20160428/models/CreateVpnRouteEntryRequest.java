@@ -6,32 +6,42 @@ import com.aliyun.tea.*;
 public class CreateVpnRouteEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d7d24a21-f4ba-4454-9173-b3828dae****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the destination-based route.</p>
-     * <br>
-     * <p>The description must be **1** to **100** characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be <strong>1</strong> to <strong>100</strong> characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mytest</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The next hop of the destination-based route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-bp15oes1py4i66rmd****</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.</p>
+     * <p>The tunneling protocol. The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ipsec</p>
      */
     @NameInMap("OverlayMode")
     public String overlayMode;
@@ -44,21 +54,25 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to advertise the destination-based route to a virtual private cloud (VPC) route table. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PublishVpc")
     public Boolean publishVpc;
 
     /**
      * <p>The ID of the region where the VPN gateway is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -71,27 +85,34 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the destination-based route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
 
     /**
      * <p>The ID of the VPN gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1a3kqjiiq9legfx****</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
     /**
      * <p>The weight of the destination-based route. Valid values:</p>
-     * <br>
-     * <p>*   **100**: a high priority</p>
-     * <p>*   **0**: a low priority</p>
-     * <br>
+     * <ul>
+     * <li><strong>100</strong>: a high priority</li>
+     * <li><strong>0</strong>: a low priority</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Weight")
     public Integer weight;

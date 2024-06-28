@@ -6,54 +6,69 @@ import com.aliyun.tea.*;
 public class ListPublicIpAddressPoolsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The line type. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default): BGP (Multi-ISP) line</p>
-     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro line</p>
-     * <br>
-     * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the "Line types" section of [What is EIP?](https://help.aliyun.com/document_detail/32321.html)</p>
-     * <br>
+     * <ul>
+     * <li><strong>BGP</strong> (default): BGP (Multi-ISP) line</li>
+     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line</li>
+     * </ul>
+     * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the &quot;Line types&quot; section of <a href="https://help.aliyun.com/document_detail/32321.html">What is EIP?</a></p>
      * <p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
-     * <br>
-     * <p>*   **ChinaTelecom**</p>
-     * <p>*   **ChinaUnicom**</p>
-     * <p>*   **ChinaMobile**</p>
-     * <p>*   **ChinaTelecom_L2**</p>
-     * <p>*   **ChinaUnicom_L2**</p>
-     * <p>*   **ChinaMobile_L2**</p>
-     * <br>
-     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to **BGP_FinanceCloud**.</p>
+     * <ul>
+     * <li><strong>ChinaTelecom</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaTelecom_L2</strong></li>
+     * <li><strong>ChinaUnicom_L2</strong></li>
+     * <li><strong>ChinaMobile_L2</strong></li>
+     * </ul>
+     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to <strong>BGP_FinanceCloud</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("Isp")
     public String isp;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: **10** to **100**. Default value: **10**.</p>
+     * <p>The maximum number of entries to return. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The name of the IP address pool.</p>
-     * <br>
-     * <p>If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AddressPoolName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -66,7 +81,6 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
 
     /**
      * <p>The IDs of the IP address pool.</p>
-     * <br>
      * <p>You can enter up to 100 IDs.</p>
      */
     @NameInMap("PublicIpAddressPoolIds")
@@ -74,16 +88,20 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the IP address pool that you want to query resides.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the IP address pool belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4pcdvf****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -96,19 +114,27 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:</p>
-     * <br>
-     * <p>*   **false**</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SecurityProtectionEnabled")
     public Boolean securityProtectionEnabled;
 
     /**
      * <p>The status of the IP address pool. Valid values:</p>
-     * <br>
-     * <p>*   **Created**</p>
-     * <p>*   **Deleting**</p>
-     * <p>*   **Modifying**</p>
+     * <ul>
+     * <li><strong>Created</strong></li>
+     * <li><strong>Deleting</strong></li>
+     * <li><strong>Modifying</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Created</p>
      */
     @NameInMap("Status")
     public String status;
@@ -247,16 +273,20 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     public static class ListPublicIpAddressPoolsRequestTags extends TeaModel {
         /**
          * <p>The tag key to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

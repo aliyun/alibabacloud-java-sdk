@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListPrefixListsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value indicates the token that is used for the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value indicates the token that is used for the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -27,12 +34,18 @@ public class ListPrefixListsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DF72F7BB-5DFA-529C-887E-B0BB70D89C4F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -85,12 +98,18 @@ public class ListPrefixListsResponseBody extends TeaModel {
     public static class ListPrefixListsResponseBodyPrefixListsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -127,94 +146,138 @@ public class ListPrefixListsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the prefix list was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-07-12T14:22:32Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The IP version of the prefix list. Valid values:</p>
-         * <br>
-         * <p>*   **IPV4**</p>
-         * <p>*   **IPV6**</p>
+         * <ul>
+         * <li><strong>IPV4</strong></li>
+         * <li><strong>IPV6</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPV4</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         /**
          * <p>The maximum number of CIDR blocks that you can specify in the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxEntries")
         public Integer maxEntries;
 
         /**
          * <p>The Alibaba Cloud account to which the prefix list belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
         /**
          * <p>The description of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Created with oss service by system.</p>
          */
         @NameInMap("PrefixListDescription")
         public String prefixListDescription;
 
         /**
          * <p>The ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-m5estsqsdqwg88hjf****</p>
          */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
         /**
          * <p>The name of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("PrefixListName")
         public String prefixListName;
 
         /**
          * <p>The status of the prefix list. Valid values:</p>
-         * <br>
-         * <p>*   **Created**</p>
-         * <p>*   **Deleted**</p>
-         * <p>*   **Modifying**</p>
-         * <br>
-         * <p>>  This parameter is the same as the **Status** parameter.</p>
+         * <ul>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is the same as the <strong>Status</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         @NameInMap("PrefixListStatus")
         public String prefixListStatus;
 
         /**
          * <p>The type of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("PrefixListType")
         public String prefixListType;
 
         /**
          * <p>The region ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the prefix list belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the prefix list is shared. Valid values:</p>
-         * <br>
-         * <p>*   **Shared**: The prefix list is shared.</p>
-         * <p>*   If an empty value is returned, the prefix list is not shared.</p>
+         * <ul>
+         * <li><strong>Shared</strong>: The prefix list is shared.</li>
+         * <li>If an empty value is returned, the prefix list is not shared.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Shared</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The status of the prefix list. Valid values:</p>
-         * <br>
-         * <p>*   **Created**</p>
-         * <p>*   **Deleted**</p>
-         * <p>*   **Modifying**</p>
+         * <ul>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         @NameInMap("Status")
         public String status;

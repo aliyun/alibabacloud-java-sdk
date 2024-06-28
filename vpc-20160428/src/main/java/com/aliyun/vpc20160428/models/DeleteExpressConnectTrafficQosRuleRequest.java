@@ -4,6 +4,10 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteExpressConnectTrafficQosRuleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-00****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -15,18 +19,27 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-2giu0a6vd5x0mv4700</p>
      */
     @NameInMap("QosId")
     public String qosId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
      */
     @NameInMap("QueueId")
     public String queueId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -36,6 +49,9 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>qos-rule-iugg0l9x27f2nocouj</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

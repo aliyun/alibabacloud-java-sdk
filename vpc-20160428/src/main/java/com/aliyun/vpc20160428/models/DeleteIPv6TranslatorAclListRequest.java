@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteIPv6TranslatorAclListRequest extends TeaModel {
     /**
      * <p>The ID of the ACL that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6transacl-bp1de2****</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -28,8 +32,10 @@ public class DeleteIPv6TranslatorAclListRequest extends TeaModel {
 
     /**
      * <p>The region of the IPv6 translation service instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

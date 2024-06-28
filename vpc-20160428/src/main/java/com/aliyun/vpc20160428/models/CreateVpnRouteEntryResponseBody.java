@@ -6,62 +6,90 @@ import com.aliyun.tea.*;
 public class CreateVpnRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The timestamp when the destination-based route was created. Unit: milliseconds.</p>
-     * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1492747187000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The description of the destination-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mytest</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The next hop of the destination-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-bp15oes1py4i66rmd****</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.</p>
+     * <p>The tunneling protocol. The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ipsec</p>
      */
     @NameInMap("OverlayMode")
     public String overlayMode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The destination CIDR block of the destination-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
 
     /**
      * <p>The status of the destination-based route.</p>
-     * <br>
-     * <p>*   **published**: advertised to the VPC route table.</p>
-     * <p>*   **normal**: not advertised to the VPC route table.</p>
+     * <ul>
+     * <li><strong>published</strong>: advertised to the VPC route table.</li>
+     * <li><strong>normal</strong>: not advertised to the VPC route table.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>published</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1a3kqjiiq9legfx****</p>
      */
     @NameInMap("VpnInstanceId")
     public String vpnInstanceId;
 
     /**
      * <p>The weight of the destination-based route. Valid values:</p>
-     * <br>
-     * <p>*   **100**: a high priority</p>
-     * <p>*   **0**: a low priority</p>
+     * <ul>
+     * <li><strong>100</strong>: a high priority</li>
+     * <li><strong>0</strong>: a low priority</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Weight")
     public Integer weight;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyIpv6AddressAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D560AF68-4CE8-4A5C-B3FE-469F558094D0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

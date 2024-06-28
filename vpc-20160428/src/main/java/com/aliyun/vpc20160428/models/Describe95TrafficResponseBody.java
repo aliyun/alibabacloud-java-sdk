@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class Describe95TrafficResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class Describe95TrafficResponseBody extends TeaModel {
     public static class Describe95TrafficResponseBodyTraffic95SummaryTraffic95DetailListTraffic95Detail extends TeaModel {
         /**
          * <p>The sampled bandwidth value, which is the larger bandwidth value in the inbound and outbound directions within a sampling interval. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>118.5090322113037</p>
          */
         @NameInMap("BillBandwidth")
         public String billBandwidth;
 
         /**
          * <p>The inbound bandwidth. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>118.5090322113037</p>
          */
         @NameInMap("InBandwidth")
         public String inBandwidth;
 
         /**
          * <p>The outbound bandwidth. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96.41217480977376</p>
          */
         @NameInMap("OutBandwidth")
         public String outBandwidth;
 
         /**
          * <p>The statistical time. The value is a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01T00:00:00Z</p>
          */
         @NameInMap("Time")
         public String time;
@@ -123,35 +138,51 @@ public class Describe95TrafficResponseBody extends TeaModel {
     public static class Describe95TrafficResponseBodyTraffic95Summary extends TeaModel {
         /**
          * <p>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000.0</p>
          */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
         /**
-         * <p>The daily peak bandwidth. Unit: Mbit/s.</p>
-         * <p><props="china"> For more information, see [Daily peak bandwidth](https://help.aliyun.com/document_detail/89729.html).</p>
+         * <p>The daily peak bandwidth. Unit: Mbit/s.
+         * &lt;props=&quot;china&quot;&gt; For more information, see <a href="https://help.aliyun.com/document_detail/89729.html">Daily peak bandwidth</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1064.244837773641</p>
          */
         @NameInMap("FifthPeakBandwidth")
         public String fifthPeakBandwidth;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-wz9j19xrwf78fvz7*****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The metering method of the Internet Shared Bandwidth instance. Valid values:</p>
-         * <br>
-         * <p>*   PayBy95: pay-by-enhanced-95th-percentile</p>
-         * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-         * <p>*   PayByDominantTraffic: pay-by-dominant-traffic</p>
+         * <ul>
+         * <li>PayBy95: pay-by-enhanced-95th-percentile</li>
+         * <li>PayByBandwidth: pay-by-bandwidth</li>
+         * <li>PayByDominantTraffic: pay-by-dominant-traffic</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayBy95</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
          * <p>The guaranteed bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0</p>
          */
         @NameInMap("MinimumConsumeBandwidth")
         public String minimumConsumeBandwidth;

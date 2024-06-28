@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeTagKeysRequest extends TeaModel {
     /**
      * <p>The tag keys.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>keyword</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResult")
     public Integer maxResult;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <ul>
+     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
+     * <li>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -33,10 +43,11 @@ public class DescribeTagKeysRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,14 +63,18 @@ public class DescribeTagKeysRequest extends TeaModel {
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **VSWITCH**: vSwitch</p>
-     * <p>*   **ROUTETABLE**: route table</p>
-     * <p>*   **EIP**: elastic IP address (EIP)</p>
-     * <p>*   **VpnGateway**: VPN gateway</p>
-     * <p>*   **NATGATEWAY**: NAT gateway</p>
-     * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
+     * <ul>
+     * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+     * <li><strong>VSWITCH</strong>: vSwitch</li>
+     * <li><strong>ROUTETABLE</strong>: route table</li>
+     * <li><strong>EIP</strong>: elastic IP address (EIP)</li>
+     * <li><strong>VpnGateway</strong>: VPN gateway</li>
+     * <li><strong>NATGATEWAY</strong>: NAT gateway</li>
+     * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

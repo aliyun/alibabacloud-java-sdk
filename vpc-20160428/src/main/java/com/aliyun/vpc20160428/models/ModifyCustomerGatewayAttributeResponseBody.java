@@ -6,44 +6,64 @@ import com.aliyun.tea.*;
 public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>The timestamp generated when the customer gateway was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1492747187000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The ID of the customer gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cgw-bp1pvpl9r9adju6l5****</p>
      */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
     /**
      * <p>The description of the customer gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The public IP address of the gateway device in the data center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139.32.XX.XX</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
 
     /**
      * <p>The name of the customer gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8AA5CE21-2E6A-4530-BDF5-F055849476E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the customer gateway belongs.</p>
-     * <br>
-     * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzs372yg****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

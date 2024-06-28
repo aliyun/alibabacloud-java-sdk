@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class ListTrafficMirrorFiltersRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return.</p>
-     * <br>
-     * <p>Valid values: **1** to **100**. Default value: **10**.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -29,16 +35,20 @@ public class ListTrafficMirrorFiltersRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the mirrored traffic belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](https://help.aliyun.com/document_detail/207513.html).</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hongkong</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the mirrored traffic belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -56,13 +66,19 @@ public class ListTrafficMirrorFiltersRequest extends TeaModel {
     public java.util.List<ListTrafficMirrorFiltersRequestTags> tags;
 
     /**
-     * <p>The ID of the traffic mirror filter. The maximum value of **N** is **100**, which specifies that you can query up to 100 filters at a time.</p>
+     * <p>The ID of the traffic mirror filter. The maximum value of <strong>N</strong> is <strong>100</strong>, which specifies that you can query up to 100 filters at a time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tmf-j6cmls82xnc86vtpe****</p>
      */
     @NameInMap("TrafficMirrorFilterIds")
     public java.util.List<String> trafficMirrorFilterIds;
 
     /**
      * <p>The name of the filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("TrafficMirrorFilterName")
     public String trafficMirrorFilterName;
@@ -163,16 +179,20 @@ public class ListTrafficMirrorFiltersRequest extends TeaModel {
     public static class ListTrafficMirrorFiltersRequestTags extends TeaModel {
         /**
          * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

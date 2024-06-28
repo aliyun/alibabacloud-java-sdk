@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RevokeInstanceFromVbrResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45B7AA4A-4658-5FFC-90DD-9B8729F301BB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

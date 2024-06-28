@@ -12,24 +12,36 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,9 +94,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLockReason extends TeaModel {
         /**
          * <p>The reason why the EIP is locked. Valid values:</p>
-         * <br>
-         * <p>*   **financial**: The EIP is locked due to overdue payments.</p>
-         * <p>*   **security**: The EIP is locked for security reasons.</p>
+         * <ul>
+         * <li><strong>financial</strong>: The EIP is locked due to overdue payments.</li>
+         * <li><strong>security</strong>: The EIP is locked for security reasons.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         @NameInMap("LockReason")
         public String lockReason;
@@ -145,12 +161,18 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddressTagsTag extends TeaModel {
         /**
          * <p>The tag key of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KeyTest</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ValueTest</p>
          */
         @NameInMap("Value")
         public String value;
@@ -200,191 +222,272 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddress extends TeaModel {
         /**
          * <p>The ID of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zeerraiwb7ujcdvf****</p>
          */
         @NameInMap("AllocationId")
         public String allocationId;
 
         /**
-         * <p>The time when the EIP was created. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the EIP was created. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-23T01:37:38Z</p>
          */
         @NameInMap("AllocationTime")
         public String allocationTime;
 
         /**
          * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
         /**
          * <p>The maximum bandwidth of the Internet Shared Bandwidth instance with which the EIP is associated. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("BandwidthPackageBandwidth")
         public String bandwidthPackageBandwidth;
 
         /**
          * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-bp1ego3i4j07ccdvf****</p>
          */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
         /**
-         * <p>The type of the bandwidth. Only **CommonBandwidthPackage** may be returned, which indicates Internet Shared Bandwidth.</p>
+         * <p>The type of the bandwidth. Only <strong>CommonBandwidthPackage</strong> may be returned, which indicates Internet Shared Bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonBandwidthPackage</p>
          */
         @NameInMap("BandwidthPackageType")
         public String bandwidthPackageType;
 
         /**
          * <p>The service type. Valid values:</p>
-         * <br>
-         * <p>*   **CloudBox** Only cloud box users can select this type.</p>
-         * <p>*   **Default** (default)</p>
+         * <ul>
+         * <li><strong>CloudBox</strong> Only cloud box users can select this type.</li>
+         * <li><strong>Default</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudBox</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
          * <p>The service state of the EIP. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **FinancialLocked**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
          * <p>The billing method of the EIP. Valid values:</p>
-         * <br>
-         * <p>*   **PostPaid**: pay-as-you-go.</p>
-         * <p>*   **PrePaid**: subscription.</p>
+         * <ul>
+         * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>Indicates whether deletion protection is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
         /**
          * <p>The description of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The maximum bandwidth of the EIP when it is not associated with an Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         @NameInMap("EipBandwidth")
         public String eipBandwidth;
 
         /**
-         * <p>The time when the EIP expires. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the EIP expires. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-23T02:00:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>Indicates whether fine-grained monitoring is enabled for the EIP. Valid values:</p>
-         * <br>
-         * <p>*   **false**</p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HDMonitorStatus")
         public String HDMonitorStatus;
 
         /**
          * <p>Indicates whether renewal data is included. Valid values:</p>
-         * <br>
-         * <p>*   **false**</p>
-         * <p>*   **true** A value of **true** is returned only when **IncludeReservationData** is set to **true** and some orders have not taken effect.</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong> A value of <strong>true</strong> is returned only when <strong>IncludeReservationData</strong> is set to <strong>true</strong> and some orders have not taken effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("HasReservationData")
         public String hasReservationData;
 
         /**
          * <p>The line type. Valid values:</p>
-         * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP). The BGP (Multi-ISP) line is supported in all regions.</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
-         * <br>
-         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](https://help.aliyun.com/document_detail/32321.html) section of the "What is EIP?" topic.</p>
-         * <br>
+         * <ul>
+         * <li><strong>BGP</strong>: BGP (Multi-ISP). The BGP (Multi-ISP) line is supported in all regions.</li>
+         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines. BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+         * </ul>
+         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the <a href="https://help.aliyun.com/document_detail/32321.html">Line types</a> section of the &quot;What is EIP?&quot; topic.</p>
          * <p>If you are allowed to use single-ISP bandwidth, one of the following values may be returned:</p>
-         * <br>
-         * <p>*   **ChinaTelecom**</p>
-         * <p>*   **ChinaUnicom**</p>
-         * <p>*   **ChinaMobile**</p>
-         * <p>*   **ChinaTelecom_L2**</p>
-         * <p>*   **ChinaUnicom_L2**</p>
-         * <p>*   **ChinaMobile_L2**</p>
-         * <br>
-         * <p>If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.</p>
+         * <ul>
+         * <li><strong>ChinaTelecom</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaTelecom_L2</strong></li>
+         * <li><strong>ChinaUnicom_L2</strong></li>
+         * <li><strong>ChinaMobile_L2</strong></li>
+         * </ul>
+         * <p>If your services are deployed in China East 1 Finance, <strong>BGP_FinanceCloud</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         @NameInMap("ISP")
         public String ISP;
 
         /**
          * <p>The ID of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp15zckdt37cdvf****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The region ID of the associated instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("InstanceRegionId")
         public String instanceRegionId;
 
         /**
          * <p>The type of the associated instance. Valid values:</p>
-         * <br>
-         * <p>*   **EcsInstance**: an ECS instance in a VPC.</p>
-         * <p>*   **SlbInstance**: a CLB instance in a VPC.</p>
-         * <p>*   **Nat**: a NAT gateway.</p>
-         * <p>*   **HaVip**: an HAVIP.</p>
-         * <p>*   **NetworkInterface**: a secondary ENI.</p>
-         * <p>*   **IpAddress**: an IP address.</p>
+         * <ul>
+         * <li><strong>EcsInstance</strong>: an ECS instance in a VPC.</li>
+         * <li><strong>SlbInstance</strong>: a CLB instance in a VPC.</li>
+         * <li><strong>Nat</strong>: a NAT gateway.</li>
+         * <li><strong>HaVip</strong>: an HAVIP.</li>
+         * <li><strong>NetworkInterface</strong>: a secondary ENI.</li>
+         * <li><strong>IpAddress</strong>: an IP address.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EcsInstance</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The metering method of the EIP. Valid values:</p>
-         * <br>
-         * <p>*   **PayByBandwidth**</p>
-         * <p>*   **PayByTraffic**</p>
+         * <ul>
+         * <li><strong>PayByBandwidth</strong></li>
+         * <li><strong>PayByTraffic</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
          * <p>The EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.75.XX.XX</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The association mode. Valid values:</p>
-         * <p>- **NAT**: NAT mode</p>
-         * <p>- **MULTI_BINDED**: multi-EIP-to-ENI mode</p>
-         * <p>- **BINDED**: cut-through mode</p>
+         * <ul>
+         * <li><strong>NAT</strong>: NAT mode</li>
+         * <li><strong>MULTI_BINDED</strong>: multi-EIP-to-ENI mode</li>
+         * <li><strong>BINDED</strong>: cut-through mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NAT</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>The name of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP-01</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The network type. Only **public** may be returned.</p>
+         * <p>The network type. Only <strong>public</strong> may be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
          */
         @NameInMap("Netmode")
         public String netmode;
@@ -397,102 +500,143 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         /**
          * <p>The private IP address of the secondary ENI with which the EIP is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
         /**
          * <p>The ID of the IP address pool to which the EIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pippool-2vc0kxcedhquybdsz****</p>
          */
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
 
         /**
          * <p>The region ID of the EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The time when the renewal took effect. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the renewal took effect. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-23T16:00:00Z</p>
          */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
 
         /**
          * <p>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("ReservationBandwidth")
         public String reservationBandwidth;
 
         /**
          * <p>The metering method that is used after the renewal takes effect. Valid values:</p>
-         * <br>
-         * <p>*   **PayByBandwidth**</p>
-         * <p>*   **PayByTraffic**</p>
+         * <ul>
+         * <li><strong>PayByBandwidth</strong></li>
+         * <li><strong>PayByTraffic</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
 
         /**
          * <p>The type of the renewal order. Valid values:</p>
-         * <br>
-         * <p>*   **RENEWCHANGE**: renewal with an upgrade or a downgrade.</p>
-         * <p>*   **TEMP_UPGRADE**: temporary upgrade.</p>
-         * <p>*   **UPGRADE**: upgrade.</p>
+         * <ul>
+         * <li><strong>RENEWCHANGE</strong>: renewal with an upgrade or a downgrade.</li>
+         * <li><strong>TEMP_UPGRADE</strong>: temporary upgrade.</li>
+         * <li><strong>UPGRADE</strong>: upgrade.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RENEWCHANGE</p>
          */
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
         /**
          * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazcdxs****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether level-2 throttling is configured. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SecondLimited")
         public Boolean secondLimited;
 
         /**
          * <p>The edition of Anti-DDoS.</p>
-         * <br>
-         * <p>*   If an empty value is returned, it indicates that Anti-DDoS Origin Basic is used.</p>
-         * <p>*   If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium is used.</p>
+         * <ul>
+         * <li>If an empty value is returned, it indicates that Anti-DDoS Origin Basic is used.</li>
+         * <li>If <strong>AntiDDoS_Enhanced</strong> is returned, it indicates that Anti-DDoS Pro/Premium is used.</li>
+         * </ul>
          */
         @NameInMap("SecurityProtectionTypes")
         public DescribeEipAddressesResponseBodyEipAddressesEipAddressSecurityProtectionTypes securityProtectionTypes;
 
         /**
          * <p>The ID of the contiguous EIP group.</p>
-         * <br>
          * <p>This value is returned only when you query contiguous EIPs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eipsg-t4nr90yik5oy38xd****</p>
          */
         @NameInMap("SegmentInstanceId")
         public String segmentInstanceId;
 
         /**
          * <p>Indicates whether the resource is created by the service account. Valid values:</p>
-         * <br>
-         * <p>*   **0**</p>
-         * <p>*   **1**</p>
+         * <ul>
+         * <li><strong>0</strong></li>
+         * <li><strong>1</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ServiceManaged")
         public Integer serviceManaged;
 
         /**
          * <p>The status of the EIP. Valid values:</p>
-         * <br>
-         * <p>*   **Associating**</p>
-         * <p>*   **Unassociating**</p>
-         * <p>*   **InUse**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Releasing**</p>
+         * <ul>
+         * <li><strong>Associating</strong></li>
+         * <li><strong>Unassociating</strong></li>
+         * <li><strong>InUse</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Releasing</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -505,18 +649,23 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC in which an IPv4 gateway is created and that is deployed in the same region as the EIP.</p>
-         * <br>
          * <p>When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations.</p>
-         * <br>
-         * <p>>  This parameter is returned if the value of **InstanceType** is **IpAddress**. In this case, the EIP is associated with an IP address.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the value of <strong>InstanceType</strong> is <strong>IpAddress</strong>. In this case, the EIP is associated with an IP address.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp15zckdt37pq72zv****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
          * <p>The zone of the EIP.</p>
-         * <br>
          * <p>This parameter is returned only when the service type is CloudBox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         @NameInMap("Zone")
         public String zone;

@@ -12,9 +12,13 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
 
     /**
      * <p>Specifies whether cross-account VBRs are included.</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeCrossAccountVbr")
     public Boolean includeCrossAccountVbr;
@@ -23,29 +27,39 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the VBR is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
-     * <br>
+     * <p>The ID of the region in which the VBR is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
-     * <br>
-     * <p>For more information about resource groups, see [What is a resource group?](https://help.aliyun.com/document_detail/94475.html)</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -150,20 +164,27 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public static class DescribeVirtualBorderRoutersRequestFilter extends TeaModel {
         /**
          * <p>The filter conditions. You can specify up to five filter conditions. Valid values:</p>
-         * <br>
-         * <p>*   **PhysicalConnectionId**: Filter by Express Connect circuit ID.</p>
-         * <p>*   **VbrId**: Filter by VBR ID.</p>
-         * <p>*   **Status**: Filter by VBR status.</p>
-         * <p>*   **Name**: Filter by VBR name.</p>
-         * <p>*   **AccessPointId**: Filter by access point ID.</p>
-         * <p>*   **eccId:** Filter by Express Cloud Connect (ECC) instance ID.</p>
-         * <p>*   **type**: Filter by Express Connect circuit type.</p>
+         * <ul>
+         * <li><strong>PhysicalConnectionId</strong>: Filter by Express Connect circuit ID.</li>
+         * <li><strong>VbrId</strong>: Filter by VBR ID.</li>
+         * <li><strong>Status</strong>: Filter by VBR status.</li>
+         * <li><strong>Name</strong>: Filter by VBR name.</li>
+         * <li><strong>AccessPointId</strong>: Filter by access point ID.</li>
+         * <li><strong>eccId:</strong> Filter by Express Cloud Connect (ECC) instance ID.</li>
+         * <li><strong>type</strong>: Filter by Express Connect circuit type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Status</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The filter values for keys. You can specify multiple filter values for one key. The logical operator between filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -194,16 +215,20 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public static class DescribeVirtualBorderRoutersRequestTags extends TeaModel {
         /**
          * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The key cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The key cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <p>The tag value cannot exceed 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,55 +6,80 @@ import com.aliyun.tea.*;
 public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     /**
      * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-08-27T01:58:37Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The description of the gateway endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("EndpointDescription")
     public String endpointDescription;
 
     /**
      * <p>The ID of the gateway endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpce-bp1w1dmdqjpwul0v3****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
      * <p>The name of the gateway endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
 
     /**
      * <p>The status of the gateway endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Creating**</p>
-     * <p>*   **Created**</p>
-     * <p>*   **Modifying**</p>
-     * <p>*   **Associating**</p>
-     * <p>*   **Dissociating**</p>
-     * <p>*   **Deleting**</p>
+     * <ul>
+     * <li><strong>Creating</strong></li>
+     * <li><strong>Created</strong></li>
+     * <li><strong>Modifying</strong></li>
+     * <li><strong>Associating</strong></li>
+     * <li><strong>Dissociating</strong></li>
+     * <li><strong>Deleting</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Created</p>
      */
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
     /**
      * <p>The access policy for the cloud service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Version&quot; : &quot;1&quot;,   &quot;Statement&quot; : [ {     &quot;Effect&quot; : &quot;Allow&quot;,     &quot;Resource&quot; : [ &quot;<em>&quot; ],     &quot;Action&quot; : [ &quot;</em>&quot; ],     &quot;Principal&quot; : [ &quot;*&quot; ]   } ] }</p>
      */
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1122D0F-7B3B-5445-BB19-17F27F97FE1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the gateway endpoint belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxvfvazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -67,6 +92,9 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The name of the endpoint service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliyun.cn-hangzhou.oss</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
@@ -79,6 +107,9 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1nh86rugg01zol0****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -187,12 +218,18 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     public static class GetVpcGatewayEndpointAttributeResponseBodyTags extends TeaModel {
         /**
          * <p>The key of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteFullNatEntryResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2BCC426F-A9F2-3F03-99D2-1E0D647236DB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

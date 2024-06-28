@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     /**
      * <p>The number of entries to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -85,12 +98,18 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     public static class ListVSwitchCidrReservationsResponseBodyVSwitchCidrReservationsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -121,38 +140,55 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
     public static class ListVSwitchCidrReservationsResponseBodyVSwitchCidrReservations extends TeaModel {
         /**
          * <p>The number of used prefixes in the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("AssignedCidrCount")
         public Integer assignedCidrCount;
 
         /**
          * <p>The number of available prefixes in the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("AvailableCidrCount")
         public Integer availableCidrCount;
 
         /**
          * <p>The time when the reserved CIDR block was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-14T10:02:37Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The IP version of the reserved CIDR block. Valid values:</p>
-         * <br>
-         * <p>*   **IPv4** (default)</p>
-         * <p>*   **IPv6**</p>
+         * <ul>
+         * <li><strong>IPv4</strong> (default)</li>
+         * <li><strong>IPv6</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         /**
          * <p>The status of the reserved CIDR block. Valid values:</p>
-         * <br>
-         * <p>*   **Assigning**</p>
-         * <p>*   **Assigned**</p>
-         * <p>*   **Releasing**</p>
-         * <p>*   **Released**</p>
+         * <ul>
+         * <li><strong>Assigning</strong></li>
+         * <li><strong>Assigned</strong></li>
+         * <li><strong>Releasing</strong></li>
+         * <li><strong>Released</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Assigned</p>
          */
         @NameInMap("Status")
         public String status;
@@ -164,43 +200,64 @@ public class ListVSwitchCidrReservationsResponseBody extends TeaModel {
         public java.util.List<ListVSwitchCidrReservationsResponseBodyVSwitchCidrReservationsTags> tags;
 
         /**
-         * <p>The type of the reserved CIDR block. Valid value: **prefix**. CIDR blocks are allocated from the reserved CIDR block.</p>
+         * <p>The type of the reserved CIDR block. Valid value: <strong>prefix</strong>. CIDR blocks are allocated from the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prefix</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.64/28</p>
          */
         @NameInMap("VSwitchCidrReservationCidr")
         public String vSwitchCidrReservationCidr;
 
         /**
          * <p>The description of the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReservationDescription</p>
          */
         @NameInMap("VSwitchCidrReservationDescription")
         public String vSwitchCidrReservationDescription;
 
         /**
          * <p>The ID of the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcr-bp1m12saqteraw3rp****</p>
          */
         @NameInMap("VSwitchCidrReservationId")
         public String vSwitchCidrReservationId;
 
         /**
          * <p>The name of the reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ReservationName</p>
          */
         @NameInMap("VSwitchCidrReservationName")
         public String vSwitchCidrReservationName;
 
         /**
          * <p>The ID of the vSwitch to which the reserved CIDR block belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-25navfgbue4g****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The virtual private cloud (VPC) to which the reserved CIDR block belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1wdz2pdhgurz1od****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

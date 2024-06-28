@@ -6,45 +6,62 @@ import com.aliyun.tea.*;
 public class CreateVpcRequest extends TeaModel {
     /**
      * <p>The CIDR block of the VPC.</p>
-     * <br>
-     * <p>*   You can specify one of the following CIDR blocks or their subsets as the primary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8. These CIDR blocks are standard private CIDR blocks as defined by Request for Comments (RFC) documents. The subnet mask must be 8 to 28 bits in length.</p>
-     * <p>*   You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, and their subnets as the primary IPv4 CIDR block of the VPC.</p>
+     * <ul>
+     * <li>You can specify one of the following CIDR blocks or their subsets as the primary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8. These CIDR blocks are standard private CIDR blocks as defined by Request for Comments (RFC) documents. The subnet mask must be 8 to 28 bits in length.</li>
+     * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, and their subnets as the primary IPv4 CIDR block of the VPC.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.0.0/12</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the VPC.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my first Vpc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>Specifies whether to enable IPv6. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default)</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
@@ -54,25 +71,36 @@ public class CreateVpcRequest extends TeaModel {
 
     /**
      * <p>The ID of the IP Address Manager (IPAM) pool of the IPv4 type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipam-pool-sycmt3p2a9v63i****</p>
      */
     @NameInMap("Ipv4IpamPoolId")
     public String ipv4IpamPoolId;
 
     /**
      * <p>The IPv6 CIDR block of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:6a::/56</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
     /**
      * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default)</p>
-     * <p>*   **ChinaMobile**</p>
-     * <p>*   **ChinaUnicom**</p>
-     * <p>*   **ChinaTelecom**</p>
-     * <br>
-     * <p>>  If you are allowed to use single-ISP bandwidth, you can set the value to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
+     * <ul>
+     * <li><strong>BGP</strong> (default)</li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaTelecom</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> If you are allowed to use single-ISP bandwidth, you can set the value to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("Ipv6Isp")
     public String ipv6Isp;
@@ -85,18 +113,21 @@ public class CreateVpcRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the VPC belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
-     * <br>
-     * <p>For more information about resource groups, see [What is a resource group?](https://help.aliyun.com/document_detail/94475.html)</p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -115,16 +146,20 @@ public class CreateVpcRequest extends TeaModel {
 
     /**
      * <p>The user CIDR block. Separate user CIDR blocks with commas (,). You can specify up to three user CIDR blocks.</p>
-     * <br>
-     * <p>For more information about user CIDR blocks, see the `What is a user CIDR block?` section in [VPC FAQ](https://help.aliyun.com/document_detail/185311.html).</p>
+     * <p>For more information about user CIDR blocks, see the <code>What is a user CIDR block?</code> section in <a href="https://help.aliyun.com/document_detail/185311.html">VPC FAQ</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/12</p>
      */
     @NameInMap("UserCidr")
     public String userCidr;
 
     /**
      * <p>The name of the VPC.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("VpcName")
     public String vpcName;
@@ -281,16 +316,20 @@ public class CreateVpcRequest extends TeaModel {
     public static class CreateVpcRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length, but cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

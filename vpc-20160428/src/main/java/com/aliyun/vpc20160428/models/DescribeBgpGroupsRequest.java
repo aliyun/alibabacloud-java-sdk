@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeBgpGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the BGP group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bgpg-bp1k25cyp26cllath****</p>
      */
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
 
     /**
      * <p>Specifies whether the BGP group is the default one. Valid values:</p>
-     * <br>
-     * <p>*   **false**</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsDefault")
     public Boolean isDefault;
@@ -26,23 +33,30 @@ public class DescribeBgpGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The maximum value is **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. The maximum value is <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region in which the VBR is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,6 +69,9 @@ public class DescribeBgpGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the virtual border router (VBR) that is associated with the BGP group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-bp1ctxy813985gkuk****</p>
      */
     @NameInMap("RouterId")
     public String routerId;

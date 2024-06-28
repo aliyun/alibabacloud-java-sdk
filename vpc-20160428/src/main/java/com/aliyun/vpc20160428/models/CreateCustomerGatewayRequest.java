@@ -6,52 +6,64 @@ import com.aliyun.tea.*;
 public class CreateCustomerGatewayRequest extends TeaModel {
     /**
      * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
-     * <br>
-     * <p>**Asn** is a 4-byte number. You can enter the number in two segments and separate the first 16 bits from the following 16 bits with a period (.). Enter the number in each segment in the decimal format.</p>
-     * <br>
+     * <p><strong>Asn</strong> is a 4-byte number. You can enter the number in two segments and separate the first 16 bits from the following 16 bits with a period (.). Enter the number in each segment in the decimal format.</p>
      * <p>For example, if you enter 123.456, the ASN is: 123 × 65536 + 456 = 8061384.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>65530</p>
      */
     @NameInMap("Asn")
     public String asn;
 
     /**
      * <p>The authentication key of the BGP routing protocol for the gateway device in the data center.</p>
-     * <br>
      * <p>The key must be 1 to 64 characters in length. It can contain only ASCII characters and cannot contain spaces or question marks (?).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AuthKey****</p>
      */
     @NameInMap("AuthKey")
     public String authKey;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the customer gateway.</p>
-     * <br>
-     * <p>The description must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 100 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The public IP address of the gateway device in the data center.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101.12.XX.XX</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
 
     /**
      * <p>The name of the customer gateway.</p>
-     * <br>
-     * <p>The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 100 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
      */
     @NameInMap("Name")
     public String name;
@@ -64,20 +76,26 @@ public class CreateCustomerGatewayRequest extends TeaModel {
 
     /**
      * <p>The region ID of the customer gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the customer gateway belongs.</p>
-     * <br>
-     * <p>- You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group list.</p>
-     * <br>
-     * <p>- If you do not specify a resource group, the customer gateway will belong to the default resource group after being created.</p>
+     * <ul>
+     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group list.</p>
+     * </li>
+     * <li><p>If you do not specify a resource group, the customer gateway will belong to the default resource group after being created.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2qo2h4jy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -90,9 +108,7 @@ public class CreateCustomerGatewayRequest extends TeaModel {
 
     /**
      * <p>The tag value.</p>
-     * <br>
-     * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
-     * <br>
+     * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
      * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.</p>
      */
     @NameInMap("Tags")
@@ -210,20 +226,22 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     public static class CreateCustomerGatewayRequestTags extends TeaModel {
         /**
          * <p>The tag key. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>It can be at most 64 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. It cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify at most 20 tag keys in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
-         * <br>
-         * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;

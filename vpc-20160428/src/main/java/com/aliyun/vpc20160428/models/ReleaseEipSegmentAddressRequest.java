@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class ReleaseEipSegmentAddressRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001sdfg</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -21,9 +24,11 @@ public class ReleaseEipSegmentAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the contiguous EIPs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the contiguous EIPs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -36,10 +41,11 @@ public class ReleaseEipSegmentAddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the contiguous EIP group to be released.</p>
-     * <br>
      * <p>The system releases all EIPs in the group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eipsg-2zett8ba055tbsxme****</p>
      */
     @NameInMap("SegmentInstanceId")
     public String segmentInstanceId;

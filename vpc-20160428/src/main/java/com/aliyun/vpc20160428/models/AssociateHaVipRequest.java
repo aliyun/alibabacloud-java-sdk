@@ -6,35 +6,46 @@ import com.aliyun.tea.*;
 public class AssociateHaVipRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> in each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the HAVIP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>havip-2zeo05qre24nhrqpy****</p>
      */
     @NameInMap("HaVipId")
     public String haVipId;
 
     /**
      * <p>The ID of the ECS instance to be associated with the HAVIP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-faf344422ffsfad****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of the instance to be associated with the HAVIP. Valid values:</p>
-     * <br>
-     * <p>*   **EcsInstance**: an ECS instance</p>
-     * <p>*   **NetworkInterface**: an ENI. If you want to associate the HAVIP with an ENI, this parameter is required.</p>
+     * <ul>
+     * <li><strong>EcsInstance</strong>: an ECS instance</li>
+     * <li><strong>NetworkInterface</strong>: an ENI. If you want to associate the HAVIP with an ENI, this parameter is required.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsInstance</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -47,10 +58,11 @@ public class AssociateHaVipRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the HAVIP belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

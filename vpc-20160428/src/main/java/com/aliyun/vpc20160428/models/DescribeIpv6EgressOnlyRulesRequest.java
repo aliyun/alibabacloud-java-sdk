@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     /**
      * <p>The ID of the instance that is associated with the IPv6 address to which the egress-only rule is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6gw-bp1rhhs9zjlxukc5e****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of the instance to which you want to apply the egress-only rule. Set the value to</p>
-     * <br>
-     * <p>**Ipv6Address**, which specifies that the egress-only rule applies to an IPv6 address.</p>
+     * <p><strong>Ipv6Address</strong>, which specifies that the egress-only rule applies to an IPv6 address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ipv6Address</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The ID of the egress-only rule that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6py-bp1rr7fq1md8pbb3k****</p>
      */
     @NameInMap("Ipv6EgressOnlyRuleId")
     public String ipv6EgressOnlyRuleId;
 
     /**
      * <p>The ID of the IPv6 gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6gw-bp1rhhs9zjlxukc5e****</p>
      */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
     /**
      * <p>The name of the rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rulename</p>
      */
     @NameInMap("Name")
     public String name;
@@ -45,21 +58,29 @@ public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;

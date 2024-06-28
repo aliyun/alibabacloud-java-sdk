@@ -6,56 +6,78 @@ import com.aliyun.tea.*;
 public class CompletePhysicalConnectionLOARequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> of each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-230e-11e9-8e44-0016e04115b</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether the construction is completed. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("FinishWork")
     public Boolean finishWork;
 
     /**
      * <p>The ID of the Express Connect circuit.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp10tvlhnwkw****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The circuit code provided by the connectivity provider.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aaa111****</p>
      */
     @NameInMap("LineCode")
     public String lineCode;
 
     /**
      * <p>The label of the cable in the data center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bbb222****</p>
      */
     @NameInMap("LineLabel")
     public String lineLabel;
 
     /**
-     * <p>The contact information about line O\\&M.</p>
+     * <p>The contact information about line O\&amp;M.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1388888****</p>
      */
     @NameInMap("LineSPContactInfo")
     public String lineSPContactInfo;
 
     /**
      * <p>The ISP. Valid values:</p>
-     * <br>
-     * <p>*   **China Telecom**</p>
-     * <p>*   **China Unicom**</p>
-     * <p>*   **China Mobile**</p>
-     * <p>*   **Other ISPs in China**</p>
+     * <ul>
+     * <li><strong>China Telecom</strong></li>
+     * <li><strong>China Unicom</strong></li>
+     * <li><strong>China Mobile</strong></li>
+     * <li><strong>Other ISPs in China</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Other ISPs in China</p>
      */
     @NameInMap("LineServiceProvider")
     public String lineServiceProvider;
@@ -68,10 +90,11 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
 
     /**
      * <p>The region ID of the Express Connect circuit.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,55 +6,69 @@ import com.aliyun.tea.*;
 public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     /**
      * <p>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **2** to **10240**.</p>
+     * <p>Valid values: <strong>2</strong> to <strong>10240</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The name of the customer company that requires the Express Connect circuit.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>company</p>
      */
     @NameInMap("CompanyName")
     public String companyName;
 
     /**
      * <p>The time when construction started. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-28T16:00:00Z</p>
      */
     @NameInMap("ConstructionTime")
     public String constructionTime;
 
     /**
      * <p>The ID of the Express Connect circuit.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1qrb3044eqi****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of the Express Connect circuit. Valid values:</p>
-     * <br>
-     * <p>*   **MSTP**: MSTP line</p>
-     * <p>*   **MPLSVPN**: MPLSVPN line</p>
-     * <p>*   **FIBRE**: fiber line</p>
-     * <p>*   **Other**: other types</p>
-     * <br>
+     * <ul>
+     * <li><strong>MSTP</strong>: MSTP line</li>
+     * <li><strong>MPLSVPN</strong>: MPLSVPN line</li>
+     * <li><strong>FIBRE</strong>: fiber line</li>
+     * <li><strong>Other</strong>: other types</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FIBRE</p>
      */
     @NameInMap("LineType")
     public String lineType;
@@ -73,16 +87,20 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
 
     /**
      * <p>The geographic location where the Express Connect circuit is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;
 
     /**
      * <p>The region ID of the Express Connect circuit.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -95,8 +113,10 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
 
     /**
      * <p>The construction company.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>company</p>
      */
     @NameInMap("Si")
     public String si;
@@ -221,35 +241,50 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
     public static class ApplyPhysicalConnectionLOARequestPMInfo extends TeaModel {
         /**
          * <p>The ID number of the construction engineer. You can specify the ID number of an ID card or an international passport.</p>
-         * <br>
          * <p>You can configure information for up to 16 construction engineers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5****************9</p>
          */
         @NameInMap("PMCertificateNo")
         public String PMCertificateNo;
 
         /**
          * <p>The type of the identity document of the construction engineer. Valid values:</p>
-         * <br>
-         * <p>*   **IDCard**</p>
-         * <p>*   **Passport**</p>
+         * <ul>
+         * <li><strong>IDCard</strong></li>
+         * <li><strong>Passport</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>IDCard</p>
          */
         @NameInMap("PMCertificateType")
         public String PMCertificateType;
 
         /**
          * <p>The contact information about the construction engineer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         @NameInMap("PMContactInfo")
         public String PMContactInfo;
 
         /**
          * <p>The gender of the construction engineer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Male</p>
          */
         @NameInMap("PMGender")
         public String PMGender;
 
         /**
          * <p>The name of the construction engineer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhangsan</p>
          */
         @NameInMap("PMName")
         public String PMName;

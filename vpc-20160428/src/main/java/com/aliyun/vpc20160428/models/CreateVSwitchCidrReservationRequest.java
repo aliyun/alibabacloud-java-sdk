@@ -6,28 +6,39 @@ import com.aliyun.tea.*;
 public class CreateVSwitchCidrReservationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run, without performing the actual request. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run, without performing the actual request. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The IP version of the reserved CIDR block. Valid values:</p>
-     * <br>
-     * <p>*   **IPv4** (default)</p>
-     * <p>*   **IPv6**</p>
+     * <ul>
+     * <li><strong>IPv4</strong> (default)</li>
+     * <li><strong>IPv6</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
@@ -40,10 +51,11 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the vSwitch is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -62,54 +74,74 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
 
     /**
      * <p>The reserved CIDR block of the vSwitch.</p>
-     * <br>
-     * <p>*   When **IpVersion** is set to **IPv4**, the reserved CIDR block must be a proper subset of the IPv4 CIDR block of the vSwitch and the subnet mask length of the reserved CIDR block cannot be greater than 28.</p>
-     * <p>*   When **IpVersion** is set to **IPv6**, the reserved CIDR block must be a proper subset of the IPv6 CIDR block of the vSwitch and the subnet mask length of the reserved CIDR block cannot be greater than 80.</p>
-     * <br>
-     * <p>>  You must specify one of **VSwitchCidrReservationMask** and **VSwitchCidrReservationCidr**.</p>
+     * <ul>
+     * <li>When <strong>IpVersion</strong> is set to <strong>IPv4</strong>, the reserved CIDR block must be a proper subset of the IPv4 CIDR block of the vSwitch and the subnet mask length of the reserved CIDR block cannot be greater than 28.</li>
+     * <li>When <strong>IpVersion</strong> is set to <strong>IPv6</strong>, the reserved CIDR block must be a proper subset of the IPv6 CIDR block of the vSwitch and the subnet mask length of the reserved CIDR block cannot be greater than 80.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify one of <strong>VSwitchCidrReservationMask</strong> and <strong>VSwitchCidrReservationCidr</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1.64/28</p>
      */
     @NameInMap("VSwitchCidrReservationCidr")
     public String vSwitchCidrReservationCidr;
 
     /**
      * <p>The description of the reserved CIDR block. This parameter is empty by default.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ReservationDescription</p>
      */
     @NameInMap("VSwitchCidrReservationDescription")
     public String vSwitchCidrReservationDescription;
 
     /**
      * <p>The subnet mask of the reserved CIDR block.</p>
-     * <br>
-     * <p>*   When **IpVersion** is set to **IPv4**, the subnet mask length of the CIDR block must be greater than the IPv4 subnet mask length of the vSwitch and cannot be greater than 28.</p>
-     * <p>*   When **IpVersion** is set to **IPv6**, the subnet mask length of the CIDR block must be greater than the IPv6 subnet mask length of the vSwitch and cannot be greater than 80.</p>
-     * <br>
-     * <p>>  You must specify one of **VSwitchCidrReservationMask** and **VSwitchCidrReservationCidr**.</p>
+     * <ul>
+     * <li>When <strong>IpVersion</strong> is set to <strong>IPv4</strong>, the subnet mask length of the CIDR block must be greater than the IPv4 subnet mask length of the vSwitch and cannot be greater than 28.</li>
+     * <li>When <strong>IpVersion</strong> is set to <strong>IPv6</strong>, the subnet mask length of the CIDR block must be greater than the IPv6 subnet mask length of the vSwitch and cannot be greater than 80.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must specify one of <strong>VSwitchCidrReservationMask</strong> and <strong>VSwitchCidrReservationCidr</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
      */
     @NameInMap("VSwitchCidrReservationMask")
     public String vSwitchCidrReservationMask;
 
     /**
      * <p>The name of the reserved CIDR block.</p>
-     * <br>
      * <p>The name must be 2 to 128 characters in length and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ReservationName</p>
      */
     @NameInMap("VSwitchCidrReservationName")
     public String vSwitchCidrReservationName;
 
     /**
-     * <p>The type of reserved CIDR block. Set the value to **prefix**.</p>
-     * <br>
-     * <p>>  When a user or a cloud service allocates a CIDR block to an elastic network interface (ENI), the CIDR block must be allocated from the reserved CIDR block. If the reserved CIDR block is exhausted, an error is returned.</p>
+     * <p>The type of reserved CIDR block. Set the value to <strong>prefix</strong>.</p>
+     * <blockquote>
+     * <p> When a user or a cloud service allocates a CIDR block to an elastic network interface (ENI), the CIDR block must be allocated from the reserved CIDR block. If the reserved CIDR block is exhausted, an error is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>prefix</p>
      */
     @NameInMap("VSwitchCidrReservationType")
     public String vSwitchCidrReservationType;
 
     /**
      * <p>The ID of the vSwitch to which the reserved CIDR block belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-25navfgbue4g****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -242,16 +274,20 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
     public static class CreateVSwitchCidrReservationRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
          * <p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
          * <p>The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

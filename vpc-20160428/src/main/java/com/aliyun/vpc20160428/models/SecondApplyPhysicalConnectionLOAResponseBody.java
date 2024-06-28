@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SecondApplyPhysicalConnectionLOAResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A47BD386-7FDE-42C4-8D22-C6223D18AA1C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

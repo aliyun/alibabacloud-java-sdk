@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyNatGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AB5F62CF-2B60-4458-A756-42C9DFE108D1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

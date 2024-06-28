@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,25 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
     public static class GetVpcRouteEntrySummaryResponseBodyRouteEntrySummarysEntrySummarys extends TeaModel {
         /**
          * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The type of the route. Valid values:</p>
-         * <br>
-         * <p>*   **All**: all route types</p>
-         * <p>*   **Custom**: a custom route</p>
-         * <p>*   **System**: a system route</p>
-         * <p>*   **BGP**: a BGP route</p>
-         * <p>*   **CEN**: a CEN route</p>
+         * <ul>
+         * <li><strong>All</strong>: all route types</li>
+         * <li><strong>Custom</strong>: a custom route</li>
+         * <li><strong>System</strong>: a system route</li>
+         * <li><strong>BGP</strong>: a BGP route</li>
+         * <li><strong>CEN</strong>: a CEN route</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("RouteEntryType")
         public String routeEntryType;
@@ -88,6 +98,9 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-bp145q7glnuzdvzu2****</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;

@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If <strong>NextToken</strong> is not empty, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>197AF2BD-547F-470C-B29A-8400400233EB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,35 +98,50 @@ public class ListVpnCertificateAssociationsResponseBody extends TeaModel {
     public static class ListVpnCertificateAssociationsResponseBodyVpnCertificateRelations extends TeaModel {
         /**
          * <p>The time when the Anycast EIP was associated.</p>
-         * <br>
          * <p>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-29T09:30:29Z</p>
          */
         @NameInMap("AssociationTime")
         public String associationTime;
 
         /**
          * <p>The certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6bfe4218-ea1d****</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;
 
         /**
          * <p>The type of the certificate.</p>
-         * <br>
-         * <p>*   **Encryption**</p>
-         * <p>*   **Signature**</p>
+         * <ul>
+         * <li><strong>Encryption</strong></li>
+         * <li><strong>Signature</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Signature</p>
          */
         @NameInMap("CertificateType")
         public String certificateType;
 
         /**
          * <p>The ID of the region where the VPN gateway is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the VPN gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpn-bp1usbiorilk51760****</p>
          */
         @NameInMap("VpnGatewayId")
         public String vpnGatewayId;

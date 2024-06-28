@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyVcoRouteEntryWeightResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9496F8A-82F4-3130-A51A-2266ACC799B4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

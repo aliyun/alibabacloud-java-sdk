@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class AddGlobalAccelerationInstanceIpRequest extends TeaModel {
     /**
      * <p>The ID of the shared-bandwidth GA instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-Ldefrgbttnyyf****</p>
      */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
     /**
-     * <p>The EIP ID. You can call the [DescribeEipAddresses](https://help.aliyun.com/document_detail/36018.html) operation to query EIP IDs.</p>
-     * <br>
-     * <p>>  Make sure that the billing method of the EIP is pay-as-you-go, and the EIP and the shared-bandwidth GA instance belong to the same region.</p>
-     * <br>
+     * <p>The EIP ID. You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> operation to query EIP IDs.</p>
+     * <blockquote>
+     * <p> Make sure that the billing method of the EIP is pay-as-you-go, and the EIP and the shared-bandwidth GA instance belong to the same region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-rw434rwfdeaf****</p>
      */
     @NameInMap("IpInstanceId")
     public String ipInstanceId;
@@ -30,10 +35,11 @@ public class AddGlobalAccelerationInstanceIpRequest extends TeaModel {
 
     /**
      * <p>The region of the shared-bandwidth GA instance.</p>
-     * <br>
-     * <p>You can call the **DescribeRegions** operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

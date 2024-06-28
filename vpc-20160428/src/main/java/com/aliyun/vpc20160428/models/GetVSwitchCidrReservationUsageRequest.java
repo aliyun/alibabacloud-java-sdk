@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetVSwitchCidrReservationUsageRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -27,10 +34,11 @@ public class GetVSwitchCidrReservationUsageRequest extends TeaModel {
 
     /**
      * <p>The region ID of the vSwitch.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,8 +51,10 @@ public class GetVSwitchCidrReservationUsageRequest extends TeaModel {
 
     /**
      * <p>The ID of the reserved CIDR block.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vcr-bp1m12saqteraw3rp****</p>
      */
     @NameInMap("VSwitchCidrReservationId")
     public String vSwitchCidrReservationId;

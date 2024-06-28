@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GrantInstanceToVbrResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F99F13AE-D733-5856-AB97-80CC88B1D5A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

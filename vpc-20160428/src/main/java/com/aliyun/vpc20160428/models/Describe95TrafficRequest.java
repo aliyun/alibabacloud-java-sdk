@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class Describe95TrafficRequest extends TeaModel {
     /**
      * <p>The date in UTC+8. Format: year-month-day.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-10-22</p>
      */
     @NameInMap("Day")
     public String day;
 
     /**
      * <p>The resource ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp-wz9j19xrwf78fvz7*****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -28,10 +32,11 @@ public class Describe95TrafficRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -44,8 +49,10 @@ public class Describe95TrafficRequest extends TeaModel {
 
     /**
      * <p>The resource type. Set the value to cbwp, which specifies Internet Shared Bandwidth.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -12,31 +12,42 @@ public class DescribeRouteTableListRequest extends TeaModel {
 
     /**
      * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-     * <br>
-     * <p>The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
+     * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The type of the route table.</p>
-     * <br>
-     * <p>*   **System**</p>
-     * <p>*   **Custom**</p>
+     * <ul>
+     * <li><strong>System</strong></li>
+     * <li><strong>Custom</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-southeast-6</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The details of the route table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -49,34 +60,47 @@ public class DescribeRouteTableListRequest extends TeaModel {
 
     /**
      * <p>The tags.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp145q7glnuzdvzu2****</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
     /**
      * <p>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-     * <br>
-     * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+     * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest</p>
      */
     @NameInMap("RouteTableName")
     public String routeTableName;
 
     /**
      * <p>The time when the route table was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>System</p>
      */
     @NameInMap("RouteTableType")
     public String routeTableType;
 
     /**
      * <p>The region ID of the VPC to which the route table belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vrt-bp1lhl0taikrteen8****</p>
      */
     @NameInMap("RouterId")
     public String routerId;
 
     /**
      * <p>The ID of the resource group to which the route table to be queried belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VRouter</p>
      */
     @NameInMap("RouterType")
     public String routerType;
@@ -89,6 +113,9 @@ public class DescribeRouteTableListRequest extends TeaModel {
 
     /**
      * <p>The tags of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp15zckdt37pq72****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -221,12 +248,18 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public static class DescribeRouteTableListRequestTag extends TeaModel {
         /**
          * <p>The detailed information about the route tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the VPC to which the route table belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

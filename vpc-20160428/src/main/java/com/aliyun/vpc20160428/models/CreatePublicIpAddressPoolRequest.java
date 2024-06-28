@@ -6,66 +6,87 @@ import com.aliyun.tea.*;
 public class CreatePublicIpAddressPoolRequest extends TeaModel {
     /**
      * <p>The service type of the IP address pool. Valid values:</p>
-     * <br>
-     * <p>*   **CloudBox** Only cloud box users can select this type.</p>
-     * <p>*   **Default**: This is the default value.</p>
+     * <ul>
+     * <li><strong>CloudBox</strong> Only cloud box users can select this type.</li>
+     * <li><strong>Default</strong>: This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("BizType")
     public String bizType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** for each API request is different.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The value of <strong>RequestId</strong> for each API request is different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the IP address pool.</p>
-     * <br>
      * <p>This parameter is optional. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AddressPoolDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to precheck only this request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request without creating an IP address pool. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the IP address pool is created.</p>
+     * <ul>
+     * <li><strong>true</strong>: prechecks the request without creating an IP address pool. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the IP address pool is created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The line type. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default)</p>
-     * <p>*   **BGP_PRO**</p>
-     * <br>
-     * <p>For more information about BGP (Multi-ISP) lines and BGP (Multi-ISP) Pro lines, see the "Line types" section in the [What is EIP?](https://help.aliyun.com/document_detail/32321.html) topic.</p>
-     * <br>
-     * <p>*   If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
-     * <br>
-     * <p>    *   **ChinaTelecom**</p>
-     * <p>    *   **ChinaUnicom**</p>
-     * <p>    *   **ChinaMobile**</p>
-     * <p>    *   **ChinaTelecom_L2**</p>
-     * <p>    *   **ChinaUnicom_L2**</p>
-     * <p>    *   **ChinaMobile_L2**</p>
-     * <br>
-     * <p>*   If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.</p>
+     * <ul>
+     * <li><strong>BGP</strong> (default)</li>
+     * <li><strong>BGP_PRO</strong></li>
+     * </ul>
+     * <p>For more information about BGP (Multi-ISP) lines and BGP (Multi-ISP) Pro lines, see the &quot;Line types&quot; section in the <a href="https://help.aliyun.com/document_detail/32321.html">What is EIP?</a> topic.</p>
+     * <ul>
+     * <li><p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
+     * <ul>
+     * <li><strong>ChinaTelecom</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaTelecom_L2</strong></li>
+     * <li><strong>ChinaUnicom_L2</strong></li>
+     * <li><strong>ChinaMobile_L2</strong></li>
+     * </ul>
+     * </li>
+     * <li><p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("Isp")
     public String isp;
 
     /**
      * <p>The name of the IP address pool.</p>
-     * <br>
-     * <p>This parameter is optional. The name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>This parameter is optional. The name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AddressPoolName</p>
      */
     @NameInMap("Name")
     public String name;
@@ -78,14 +99,19 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where you want to create the IP address pool.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the IP address pool belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4pcdvf****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -98,8 +124,10 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
 
     /**
      * <p>The editions of Anti-DDoS.</p>
-     * <p>- If you do not specify this parameter, Anti-DDoS Origin Basic is used.</p>
-     * <p>- If you set the parameter to AntiDDoS_Enhanced, Anti-DDoS Pro/Premium is used.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, Anti-DDoS Origin Basic is used.</li>
+     * <li>If you set the parameter to AntiDDoS_Enhanced, Anti-DDoS Pro/Premium is used.</li>
+     * </ul>
      */
     @NameInMap("SecurityProtectionTypes")
     public java.util.List<String> securityProtectionTypes;
@@ -111,7 +139,7 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     public java.util.List<CreatePublicIpAddressPoolRequestTag> tag;
 
     /**
-     * <p>The zone of the IP address pool. If you set **BizType** to **CloudBox**, this parameter is required.</p>
+     * <p>The zone of the IP address pool. If you set <strong>BizType</strong> to <strong>CloudBox</strong>, this parameter is required.</p>
      */
     @NameInMap("Zones")
     public java.util.List<String> zones;
@@ -244,16 +272,20 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     public static class CreatePublicIpAddressPoolRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>A tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

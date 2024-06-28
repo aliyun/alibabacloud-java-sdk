@@ -6,35 +6,46 @@ import com.aliyun.tea.*;
 public class AssociateRouteTableWithGatewayRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, the system automatically uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> of each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: prechecks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends the request. After the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The ID of the IPv4 gateway.</p>
-     * <br>
-     * <p>The IPv4 gateway must be in the **Activated** state.</p>
-     * <br>
+     * <p>The IPv4 gateway must be in the <strong>Activated</strong> state.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
      */
     @NameInMap("GatewayId")
     public String gatewayId;
 
     /**
      * <p>The type of a gateway to be associated with a route table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ipv4Gateway</p>
      */
     @NameInMap("GatewayType")
     public String gatewayType;
@@ -47,10 +58,11 @@ public class AssociateRouteTableWithGatewayRequest extends TeaModel {
 
     /**
      * <p>The region ID of the IPv4 gateway with which you want to associate the gateway route table.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-southeast-6</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -63,8 +75,10 @@ public class AssociateRouteTableWithGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the gateway route table.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-5ts0ohchwkp3dydt2****</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;

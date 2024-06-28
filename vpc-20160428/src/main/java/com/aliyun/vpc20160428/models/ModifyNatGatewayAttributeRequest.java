@@ -6,23 +6,29 @@ import com.aliyun.tea.*;
 public class ModifyNatGatewayAttributeRequest extends TeaModel {
     /**
      * <p>The description of the NAT gateway.</p>
-     * <br>
-     * <p>The description must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The mode in which the NAT gateway is associated with an elastic IP address (EIP). You can leave this parameter empty. If you want to specify a value for this parameter, set the value to **NAT**, which indicates that the NAT gateway is associated with the EIP in NAT mode.</p>
-     * <br>
+     * <p>The mode in which the NAT gateway is associated with an elastic IP address (EIP). You can leave this parameter empty. If you want to specify a value for this parameter, set the value to <strong>NAT</strong>, which indicates that the NAT gateway is associated with the EIP in NAT mode.</p>
      * <p>**</p>
-     * <br>
-     * <p>**Description**</p>
-     * <br>
-     * <p>*   If EipBindMode is set to MULTI_BINDED when the NAT gateway is created, you can change the value of this parameter from **MULTI_BINDED** to **NAT**. If EipBindMode is set to NAT when the NAT gateway is created, you cannot change the value of this parameter from **NAT** to **MULTI_BINDED**. For more information about **MULTI_BINDED**, see [CreateNatGateway](https://help.aliyun.com/document_detail/120219.html).</p>
-     * <br>
-     * <p>*   When the mode in which the NAT gateway is associated with an EIP is being changed, a transient connection that lasts a few seconds may occur. If the number of EIPs with which the NAT gateway is associated increases, the transient connection lasts longer. You can change the mode only for a NAT gateway that is associated with up to five EIPs. We recommend that you change the mode during off-peak hours.</p>
-     * <p>*   After the mode is changed to **NAT**, the Internet NAT gateway is compatible with the IPv4 gateway. However, if you associate an EIP with the NAT gateway, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the EIP fails to be associated with the NAT gateway.</p>
+     * <p><strong>Description</strong></p>
+     * <ul>
+     * <li><p>If EipBindMode is set to MULTI_BINDED when the NAT gateway is created, you can change the value of this parameter from <strong>MULTI_BINDED</strong> to <strong>NAT</strong>. If EipBindMode is set to NAT when the NAT gateway is created, you cannot change the value of this parameter from <strong>NAT</strong> to <strong>MULTI_BINDED</strong>. For more information about <strong>MULTI_BINDED</strong>, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</p>
+     * </li>
+     * <li><p>When the mode in which the NAT gateway is associated with an EIP is being changed, a transient connection that lasts a few seconds may occur. If the number of EIPs with which the NAT gateway is associated increases, the transient connection lasts longer. You can change the mode only for a NAT gateway that is associated with up to five EIPs. We recommend that you change the mode during off-peak hours.</p>
+     * </li>
+     * <li><p>After the mode is changed to <strong>NAT</strong>, the Internet NAT gateway is compatible with the IPv4 gateway. However, if you associate an EIP with the NAT gateway, the EIP occupies one private IP address on the vSwitch of the NAT gateway. Make sure that the vSwitch has sufficient private IP addresses. Otherwise, the EIP fails to be associated with the NAT gateway.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NAT</p>
      */
     @NameInMap("EipBindMode")
     public String eipBindMode;
@@ -32,9 +38,13 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable the Internet Control Message Protocol (ICMP) non-retrieval feature. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default)</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IcmpReplyEnabled")
     public Boolean icmpReplyEnabled;
@@ -44,16 +54,20 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The name of the NAT gateway.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nat123</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the NAT gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-2ze0dcn4mq31qx2jc****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -66,10 +80,11 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the NAT gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

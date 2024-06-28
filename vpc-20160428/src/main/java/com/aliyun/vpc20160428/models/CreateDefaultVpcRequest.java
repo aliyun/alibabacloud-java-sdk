@@ -6,27 +6,38 @@ import com.aliyun.tea.*;
 public class CreateDefaultVpcRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to enable IPv6. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default)</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
     /**
      * <p>The IPv6 CIDR block of the default VPC.</p>
-     * <br>
-     * <p>> When **EnableIpv6** is set to **true**, this parameter is required.</p>
+     * <blockquote>
+     * <p>When <strong>EnableIpv6</strong> is set to <strong>true</strong>, this parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:346:b600::/56</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
@@ -39,16 +50,20 @@ public class CreateDefaultVpcRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the default VPC belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmystnjq4****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

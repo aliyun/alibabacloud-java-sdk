@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveSourcesFromTrafficMirrorSessionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A33B2C6A-89D1-4DEA-A807-A6E8CC552484</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,21 +4,41 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeFailoverTestJobsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
     @NameInMap("FailoverTestJobList")
     public java.util.List<DescribeFailoverTestJobsResponseBodyFailoverTestJobList> failoverTestJobList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,33 +96,69 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeFailoverTestJobsResponseBodyFailoverTestJobList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("JobDuration")
         public String jobDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ftj-xxxxxxxxx</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>StartNow</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ResourceId")
         public java.util.List<String> resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-11-21T14:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Init</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-11-21T15:00:00Z</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 

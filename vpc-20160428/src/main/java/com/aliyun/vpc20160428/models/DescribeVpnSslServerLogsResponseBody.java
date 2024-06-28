@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
     /**
      * <p>The number of log entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>An array of strings.</p>
-     * <br>
      * <p>Each item in the array is a log entry.</p>
      */
     @NameInMap("Data")
@@ -20,27 +22,40 @@ public class DescribeVpnSslServerLogsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the log is accurate. Valid values:</p>
-     * <br>
-     * <p>*   **true**: accurate</p>
-     * <p>*   **false**: inaccurate</p>
+     * <ul>
+     * <li><strong>true</strong>: accurate</li>
+     * <li><strong>false</strong>: inaccurate</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsCompleted")
     public Boolean isCompleted;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEDAC5B1-9292-5BF7-BDDF-61BA58CFB2FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

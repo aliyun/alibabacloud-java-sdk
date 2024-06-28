@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeVpnGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to include the data about pending orders. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default)</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
@@ -21,10 +25,11 @@ public class DescribeVpnGatewayRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPN gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -37,8 +42,10 @@ public class DescribeVpnGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPN gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1r3v1xqkl0w519g****</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

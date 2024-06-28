@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeCustomerGatewaysRequest extends TeaModel {
     /**
      * <p>The ID of the customer gateway.</p>
-     * <br>
-     * <p>> If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.</p>
+     * <blockquote>
+     * <p>If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cgw-bp1pvpl9r9adju6l5****</p>
      */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
@@ -19,31 +23,40 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region where the customer gateway is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the customer gateway belongs.</p>
-     * <br>
-     * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query the resource group list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzs372yg****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -148,20 +161,22 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
     public static class DescribeCustomerGatewaysRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
-         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
          * <p>You can specify at most 20 tag keys at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
-         * <br>
+         * <p>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;

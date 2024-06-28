@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteNatIpCidrResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7021BEB1-210F-48A9-AB82-BE9A9110BB89</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateIpsecServerResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B61C08E5-403A-46A2-96C1-F7B1216DB10C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

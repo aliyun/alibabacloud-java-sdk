@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class DeletionProtectionRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the instance for which you want to enable deletion protection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-uf6id7gvguruxe41v****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -27,19 +32,24 @@ public class DeletionProtectionRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to enable deletion protection. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ProtectionEnable")
     public Boolean protectionEnable;
 
     /**
-     * <p>The ID of the region where the instance for which you want to enable deletion protection is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The ID of the region where the instance for which you want to enable deletion protection is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -52,12 +62,15 @@ public class DeletionProtectionRequest extends TeaModel {
 
     /**
      * <p>The type of instance. Valid values:</p>
-     * <br>
-     * <p>*   **EIP**: Elastic IP Address (EIP)</p>
-     * <p>*   **CBWP**: EIP bandwidth plan</p>
-     * <p>*   **NATGW**: NAT gateway</p>
-     * <br>
+     * <ul>
+     * <li><strong>EIP</strong>: Elastic IP Address (EIP)</li>
+     * <li><strong>CBWP</strong>: EIP bandwidth plan</li>
+     * <li><strong>NATGW</strong>: NAT gateway</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EIP</p>
      */
     @NameInMap("Type")
     public String type;

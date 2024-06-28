@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateRouteTableResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>62172DD5-6BAC-45DF-8D44-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The IDs of the route tables.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp145q7glnuzdvzu2****</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
