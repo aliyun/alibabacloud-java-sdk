@@ -4,18 +4,34 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Successful！</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,120 +81,268 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
     }
 
     public static class DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>202210</p>
+         */
         @NameInMap("AmortizationPeriod")
         public String amortizationPeriod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>amortized</p>
+         */
         @NameInMap("AmortizationStatus")
         public String amortizationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>185xxxxx489</p>
+         */
         @NameInMap("BillAccountID")
         public Long billAccountID;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
+         */
         @NameInMap("BillAccountName")
         public String billAccountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>185xxxxx489</p>
+         */
         @NameInMap("BillOwnerID")
         public Long billOwnerID;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
+         */
         @NameInMap("BillOwnerName")
         public String billOwnerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>trusteeship</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>202210</p>
+         */
         @NameInMap("ConsumePeriod")
         public String consumePeriod;
 
         @NameInMap("CostUnit")
         public String costUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("CostUnitCode")
         public String costUnitCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CurrentAmortizationDeductedByCashCoupons")
         public Double currentAmortizationDeductedByCashCoupons;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CurrentAmortizationDeductedByCoupons")
         public Double currentAmortizationDeductedByCoupons;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CurrentAmortizationDeductedByPrepaidCard")
         public Double currentAmortizationDeductedByPrepaidCard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CurrentAmortizationExpenditureAmount")
         public Double currentAmortizationExpenditureAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CurrentAmortizationInvoiceDiscount")
         public Double currentAmortizationInvoiceDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CurrentAmortizationPretaxAmount")
         public Double currentAmortizationPretaxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CurrentAmortizationPretaxGrossAmount")
         public Double currentAmortizationPretaxGrossAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("CurrentAmortizationRoundDownDiscount")
         public Double currentAmortizationRoundDownDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DeductedByCashCoupons")
         public Double deductedByCashCoupons;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DeductedByCoupons")
         public Double deductedByCoupons;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DeductedByPrepaidCard")
         public Double deductedByPrepaidCard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ExpenditureAmount")
         public Double expenditureAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-kjhdskjgshfdlkjfdh</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>34.xx.x.x</p>
+         */
         @NameInMap("InternetIP")
         public String internetIP;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.xx.xx.xx</p>
+         */
         @NameInMap("IntranetIP")
         public String intranetIP;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("InvoiceDiscount")
         public Double invoiceDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PretaxAmount")
         public Double pretaxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PretaxGrossAmount")
         public Double pretaxGrossAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
         public Double previouslyAmortizedDeductedByCashCoupons;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PreviouslyAmortizedDeductedByCoupons")
         public Double previouslyAmortizedDeductedByCoupons;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PreviouslyAmortizedDeductedByPrepaidCard")
         public Double previouslyAmortizedDeductedByPrepaidCard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PreviouslyAmortizedExpenditureAmount")
         public Double previouslyAmortizedExpenditureAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PreviouslyAmortizedInvoiceDiscount")
         public Double previouslyAmortizedInvoiceDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PreviouslyAmortizedPretaxAmount")
         public Double previouslyAmortizedPretaxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PreviouslyAmortizedPretaxGrossAmount")
         public Double previouslyAmortizedPretaxGrossAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PreviouslyAmortizedRoundDownDiscount")
         public Double previouslyAmortizedRoundDownDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
         @NameInMap("ProductDetail")
         public String productDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("ProductDetailCode")
         public String productDetailCode;
 
@@ -188,51 +352,111 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemainingAmortizationDeductedByCashCoupons")
         public Double remainingAmortizationDeductedByCashCoupons;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemainingAmortizationDeductedByCoupons")
         public Double remainingAmortizationDeductedByCoupons;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemainingAmortizationDeductedByPrepaidCard")
         public Double remainingAmortizationDeductedByPrepaidCard;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemainingAmortizationExpenditureAmount")
         public Double remainingAmortizationExpenditureAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemainingAmortizationInvoiceDiscount")
         public Double remainingAmortizationInvoiceDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemainingAmortizationPretaxAmount")
         public Double remainingAmortizationPretaxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemainingAmortizationPretaxGrossAmount")
         public Double remainingAmortizationPretaxGrossAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RemainingAmortizationRoundDownDiscount")
         public Double remainingAmortizationRoundDownDiscount;
 
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RoundDownDiscount")
         public Double roundDownDiscount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test**1122</p>
+         */
         @NameInMap("SplitAccountName")
         public String splitAccountName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>i-28bycvyb4</p>
+         */
         @NameInMap("SplitItemID")
         public String splitItemID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>iZ28bycvyb4Z</p>
+         */
         @NameInMap("SplitItemName")
         public String splitItemName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rds</p>
+         */
         @NameInMap("SplitProductDetail")
         public String splitProductDetail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
+         */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
@@ -711,21 +935,41 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
     }
 
     public static class DescribeInstanceAmortizedCostByConsumePeriodResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>185766xxxx</p>
+         */
         @NameInMap("AccountID")
         public String accountID;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
         @NameInMap("Items")
         public java.util.List<DescribeInstanceAmortizedCostByConsumePeriodResponseBodyDataItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetCustomerAccountInfoResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94017C56-1725-5DD9-AB41-B3BAE791D600</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,48 +94,60 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
     public static class GetCustomerAccountInfoResponseBodyData extends TeaModel {
         /**
          * <p>The type of the account. A value of 1 indicates an enterprise account. A value of 0 indicates an individual account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
          * <p>The business status of the customer. Valid values:</p>
-         * <br>
          * <p>Freeze: The business is frozen.</p>
-         * <br>
          * <p>Thaw: The business is unfrozen.</p>
-         * <br>
          * <p>Trusteeship: The business is hosted.</p>
-         * <br>
          * <p>TrusteeshipCancel: The business is not hosted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Freeze</p>
          */
         @NameInMap("CreditLimitStatus")
         public String creditLimitStatus;
 
         /**
          * <p>The hosting status of the credit information and instances of the customer. If the credit information and instances of the customer are managed on Alibaba Cloud, Alibaba Cloud suspends a customer service upon overdue payment. Valid values:</p>
-         * <br>
          * <p>FREEZE: The business of the customer is frozen.</p>
-         * <br>
          * <p>TRUSTEESHIP: The business of the customer is hosted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FREEZE</p>
          */
         @NameInMap("HostingStatus")
         public String hostingStatus;
 
         /**
          * <p>Indicates whether the account passes the real-name verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsCertified")
         public Boolean isCertified;
 
         /**
          * <p>The email address of the customer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:xxxx@aliyun.com">xxxx@aliyun.com</a></p>
          */
         @NameInMap("LoginEmail")
         public String loginEmail;
 
         /**
          * <p>The ID of the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1051360339779133</p>
          */
         @NameInMap("Mpk")
         public Long mpk;

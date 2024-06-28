@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryRelationListResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryRelationListResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7FC5D662-37FD-40A6-85B1-33442D815184</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,60 +94,90 @@ public class QueryRelationListResponseBody extends TeaModel {
     public static class QueryRelationListResponseBodyDataFinancialRelationInfoList extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1851253838840762</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
          * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>caiwuyun_test4</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The display name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test4</p>
          */
         @NameInMap("AccountNickName")
         public String accountNickName;
 
         /**
          * <p>The type of the account. Valid values: MASTER and MEMBER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MEMBER</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
          * <p>The time when the relationship became invalid. If no value is returned, the relationship is still valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-08T15:12Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The ID of the relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51463</p>
          */
         @NameInMap("RelationId")
         public Long relationId;
 
         /**
          * <p>The type of the relationship. Valid values: FinancialManagement and FinancialTrusteeship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinancialManagement</p>
          */
         @NameInMap("RelationType")
         public String relationType;
 
         /**
          * <p>The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-02T15:12Z</p>
          */
         @NameInMap("SetupTime")
         public String setupTime;
 
         /**
          * <p>The time when the relationship became valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-02T15:12Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The state of the relationship. One of the enumeration members of the RelationshipStatusEnum data type is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELATED</p>
          */
         @NameInMap("State")
         public String state;
@@ -236,18 +278,27 @@ public class QueryRelationListResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

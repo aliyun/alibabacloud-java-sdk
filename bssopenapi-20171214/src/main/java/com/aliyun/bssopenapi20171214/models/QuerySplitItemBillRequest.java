@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class QuerySplitItemBillRequest extends TeaModel {
     /**
      * <p>The ID of the member. If you specify a value for this parameter, you can query the split bills of the specified member. If you leave this parameter empty, the split bills of the current account are queried by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
     /**
      * <p>The billing cycle, in the YYYY-MM format.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-03</p>
      */
     @NameInMap("BillingCycle")
     public String billingCycle;
@@ -21,30 +28,45 @@ public class QuerySplitItemBillRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The code of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The type of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
      * <p>The billing method. Valid values: Subscription: subscription PayAsYouGo: pay-as-you-go This parameter must be used together with the ProductCode parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
      */
     @NameInMap("SubscriptionType")
     public String subscriptionType;

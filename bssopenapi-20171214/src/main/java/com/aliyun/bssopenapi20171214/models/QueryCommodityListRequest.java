@@ -9,6 +9,10 @@ public class QueryCommodityListRequest extends TeaModel {
 
     /**
      * <p>The code of the service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;

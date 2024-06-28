@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetOrderDetailRequest extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32453453</p>
      */
     @NameInMap("OrderId")
     public String orderId;

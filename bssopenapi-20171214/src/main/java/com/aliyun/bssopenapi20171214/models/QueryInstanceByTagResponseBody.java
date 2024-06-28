@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class QueryInstanceByTagResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PARAM_ERROR</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>param is null</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAESEgoQCg4KCm</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9EC6C0B7-3397-5FAE-9915-8972CDDB1211</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,12 +111,18 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     public static class QueryInstanceByTagResponseBodyTagResourceTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Value")
         public String value;
@@ -132,12 +153,18 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
     public static class QueryInstanceByTagResponseBodyTagResource extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spn-xxxxx</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource. The returned resource type indicates a savings plan instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful！</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,354 +94,530 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
     public static class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyDataItems extends TeaModel {
         /**
          * <p>The allocation month. Format: YYYYMM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202210</p>
          */
         @NameInMap("AmortizationPeriod")
         public String amortizationPeriod;
 
         /**
          * <p>The allocation status. Valid values:</p>
-         * <br>
-         * <p>*   amortized: allocated</p>
-         * <p>*   unAmortized: not allocated</p>
+         * <ul>
+         * <li>amortized: allocated</li>
+         * <li>unAmortized: not allocated</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>amortized</p>
          */
         @NameInMap("AmortizationStatus")
         public String amortizationStatus;
 
         /**
          * <p>The ID of the account to which the bill belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185xxxxx489</p>
          */
         @NameInMap("BillAccountID")
         public Long billAccountID;
 
         /**
          * <p>The name of the account to which the bill belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
         @NameInMap("BillAccountName")
         public String billAccountName;
 
         /**
          * <p>The ID of the account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185xxxxx489</p>
          */
         @NameInMap("BillOwnerID")
         public Long billOwnerID;
 
         /**
          * <p>The name of the account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
         @NameInMap("BillOwnerName")
         public String billOwnerName;
 
         /**
          * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trusteeship</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
          * <p>The billing cycle. Format: YYYYMM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202210</p>
          */
         @NameInMap("ConsumePeriod")
         public String consumePeriod;
 
         /**
          * <p>The cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not allocated</p>
          */
         @NameInMap("CostUnit")
         public String costUnit;
 
         /**
          * <p>The code of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("CostUnitCode")
         public String costUnitCode;
 
         /**
          * <p>The amount deducted by using vouchers and allocated to the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurrentAmortizationDeductedByCashCoupons")
         public Double currentAmortizationDeductedByCashCoupons;
 
         /**
          * <p>The amount deducted by using coupons and allocated to the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurrentAmortizationDeductedByCoupons")
         public Double currentAmortizationDeductedByCoupons;
 
         /**
          * <p>The amount deducted by using prepaid cards and allocated to the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurrentAmortizationDeductedByPrepaidCard")
         public Double currentAmortizationDeductedByPrepaidCard;
 
         /**
          * <p>The expenditure amount allocated to the current allocation month. Invoicing is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurrentAmortizationExpenditureAmount")
         public Double currentAmortizationExpenditureAmount;
 
         /**
          * <p>The discount amount allocated to the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurrentAmortizationInvoiceDiscount")
         public Double currentAmortizationInvoiceDiscount;
 
         /**
          * <p>The pretax amount allocated to the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurrentAmortizationPretaxAmount")
         public Double currentAmortizationPretaxAmount;
 
         /**
          * <p>The pretax gross amount allocated to the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurrentAmortizationPretaxGrossAmount")
         public Double currentAmortizationPretaxGrossAmount;
 
         /**
          * <p>The round-off amount allocated to the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurrentAmortizationRoundDownDiscount")
         public Double currentAmortizationRoundDownDiscount;
 
         /**
          * <p>The amount deducted by using vouchers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeductedByCashCoupons")
         public Double deductedByCashCoupons;
 
         /**
          * <p>The amount deducted by using coupons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeductedByCoupons")
         public Double deductedByCoupons;
 
         /**
          * <p>The amount deducted by using prepaid cards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeductedByPrepaidCard")
         public Double deductedByPrepaidCard;
 
         /**
          * <p>The expenditure amount. Invoicing is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExpenditureAmount")
         public Double expenditureAmount;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-kjhdskjgshfdlkjfdh</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The public IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34.xx.x.x</p>
          */
         @NameInMap("InternetIP")
         public String internetIP;
 
         /**
          * <p>The private IP address of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.xx.xx.xx</p>
          */
         @NameInMap("IntranetIP")
         public String intranetIP;
 
         /**
          * <p>The discount amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InvoiceDiscount")
         public Double invoiceDiscount;
 
         /**
          * <p>The pretax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PretaxAmount")
         public Double pretaxAmount;
 
         /**
          * <p>The pretax gross amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PretaxGrossAmount")
         public Double pretaxGrossAmount;
 
         /**
          * <p>The amount deducted by using vouchers and allocated before the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
         public Double previouslyAmortizedDeductedByCashCoupons;
 
         /**
          * <p>The amount deducted by using coupons and allocated before the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreviouslyAmortizedDeductedByCoupons")
         public Double previouslyAmortizedDeductedByCoupons;
 
         /**
          * <p>The amount deducted by using prepaid cards and allocated before the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreviouslyAmortizedDeductedByPrepaidCard")
         public Double previouslyAmortizedDeductedByPrepaidCard;
 
         /**
          * <p>The expenditure amount allocated before the allocation month. Invoicing is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreviouslyAmortizedExpenditureAmount")
         public Double previouslyAmortizedExpenditureAmount;
 
         /**
          * <p>The discount amount allocated before the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreviouslyAmortizedInvoiceDiscount")
         public Double previouslyAmortizedInvoiceDiscount;
 
         /**
          * <p>The pretax amount allocated before the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreviouslyAmortizedPretaxAmount")
         public Double previouslyAmortizedPretaxAmount;
 
         /**
          * <p>The pretax gross amount allocated before the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreviouslyAmortizedPretaxGrossAmount")
         public Double previouslyAmortizedPretaxGrossAmount;
 
         /**
          * <p>The round-off amount allocated before the current allocation month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PreviouslyAmortizedRoundDownDiscount")
         public Double previouslyAmortizedRoundDownDiscount;
 
         /**
          * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The specific service resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApsaraDB RDS</p>
          */
         @NameInMap("ProductDetail")
         public String productDetail;
 
         /**
          * <p>The code of the specific service resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("ProductDetailCode")
         public String productDetailCode;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApsaraDB RDS</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The amount deducted by using vouchers and to be allocated to one or more future allocation months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingAmortizationDeductedByCashCoupons")
         public Double remainingAmortizationDeductedByCashCoupons;
 
         /**
          * <p>The amount deducted by using coupons and to be allocated to one or more future allocation months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingAmortizationDeductedByCoupons")
         public Double remainingAmortizationDeductedByCoupons;
 
         /**
          * <p>The amount deducted by using prepaid cards and to be allocated to one or more future allocation months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingAmortizationDeductedByPrepaidCard")
         public Double remainingAmortizationDeductedByPrepaidCard;
 
         /**
          * <p>The expenditure amount to be allocated to one or more future allocation months. Invoicing is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingAmortizationExpenditureAmount")
         public Double remainingAmortizationExpenditureAmount;
 
         /**
          * <p>The discount amount to be allocated to one or more future allocation months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingAmortizationInvoiceDiscount")
         public Double remainingAmortizationInvoiceDiscount;
 
         /**
          * <p>The pretax amount to be allocated to one or more future allocation months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingAmortizationPretaxAmount")
         public Double remainingAmortizationPretaxAmount;
 
         /**
          * <p>The pretax gross amount to be allocated to one or more future allocation months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingAmortizationPretaxGrossAmount")
         public Double remainingAmortizationPretaxGrossAmount;
 
         /**
          * <p>The round-off amount to be allocated to one or more future allocation months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RemainingAmortizationRoundDownDiscount")
         public Double remainingAmortizationRoundDownDiscount;
 
         /**
          * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default resource group</p>
          */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
         /**
          * <p>The round-off amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RoundDownDiscount")
         public Double roundDownDiscount;
 
         /**
          * <p>The name of the account to which the split item belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test**1122</p>
          */
         @NameInMap("SplitAccountName")
         public String splitAccountName;
 
         /**
          * <p>The ID of the split item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-28bycvyb4</p>
          */
         @NameInMap("SplitItemID")
         public String splitItemID;
 
         /**
          * <p>The name of the split item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iZ28bycvyb4Z</p>
          */
         @NameInMap("SplitItemName")
         public String splitItemName;
 
         /**
          * <p>The name of the specific service resource to which the split item belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("SplitProductDetail")
         public String splitProductDetail;
 
         /**
          * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   Subscription: the subscription billing method</p>
-         * <p>*   PayAsYouGo: the pay-as-you-go billing method</p>
+         * <ul>
+         * <li>Subscription: the subscription billing method</li>
+         * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
         /**
          * <p>The tag of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>The ID of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Zone")
         public String zone;
@@ -908,12 +1096,18 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
     public static class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185766xxxx</p>
          */
         @NameInMap("AccountID")
         public String accountID;
 
         /**
          * <p>The name of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
         @NameInMap("AccountName")
         public String accountName;
@@ -926,18 +1120,27 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
 
         /**
          * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>The position from which the results started to return. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

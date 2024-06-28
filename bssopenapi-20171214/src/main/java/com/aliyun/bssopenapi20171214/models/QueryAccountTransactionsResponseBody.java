@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryAccountTransactionsResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful！</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8634E02D-0942-4B1D-8295-5352FE9A1F39</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,104 +94,147 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
     public static class QueryAccountTransactionsResponseBodyDataAccountTransactionsListAccountTransactionsList extends TeaModel {
         /**
          * <p>The amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Amount")
         public String amount;
 
         /**
          * <p>The balance of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Balance")
         public String balance;
 
         /**
          * <p>The billing cycle. Format: YYYY-MM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03</p>
          */
         @NameInMap("BillingCycle")
         public String billingCycle;
 
         /**
          * <p>The type of transaction payment. Valid values:</p>
-         * <br>
-         * <p>*   Cash: pay for the transaction in cash.</p>
-         * <p>*   Deposit: pay for the transaction with deposit.</p>
-         * <p>*   RegularBankCreditRefund: pay for the transaction with credit refund controlled by a bank.</p>
-         * <p>*   DirectPay: directly pay for the transaction.</p>
+         * <ul>
+         * <li>Cash: pay for the transaction in cash.</li>
+         * <li>Deposit: pay for the transaction with deposit.</li>
+         * <li>RegularBankCreditRefund: pay for the transaction with credit refund controlled by a bank.</li>
+         * <li>DirectPay: directly pay for the transaction.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Cash</p>
          */
         @NameInMap("FundType")
         public String fundType;
 
         /**
          * <p>The number of the order or bill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020030242</p>
          */
         @NameInMap("RecordID")
         public String recordID;
 
         /**
          * <p>The remarks on the transaction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NAT_GW</p>
          */
         @NameInMap("Remarks")
         public String remarks;
 
         /**
          * <p>The transaction account. For example, the account is a recharge account in Alipay or a transfer account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>213562146</p>
          */
         @NameInMap("TransactionAccount")
         public String transactionAccount;
 
         /**
          * <p>The transaction channel.</p>
-         * <br>
-         * <p>*   AccountBalance</p>
-         * <p>*   BankTransfer</p>
-         * <p>*   Alipay</p>
-         * <p>*   AntCreditPay</p>
-         * <p>*   OfflineRemittance</p>
-         * <p>*   RegularBankCreditRefund</p>
-         * <p>*   CreditCard</p>
-         * <p>*   MyBankCredit</p>
-         * <p>*   HuaxiaBankCInstallment</p>
-         * <p>*   ApplePay</p>
+         * <ul>
+         * <li>AccountBalance</li>
+         * <li>BankTransfer</li>
+         * <li>Alipay</li>
+         * <li>AntCreditPay</li>
+         * <li>OfflineRemittance</li>
+         * <li>RegularBankCreditRefund</li>
+         * <li>CreditCard</li>
+         * <li>MyBankCredit</li>
+         * <li>HuaxiaBankCInstallment</li>
+         * <li>ApplePay</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AccountBalance</p>
          */
         @NameInMap("TransactionChannel")
         public String transactionChannel;
 
         /**
          * <p>The serial number of the transaction channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234354325</p>
          */
         @NameInMap("TransactionChannelSN")
         public String transactionChannelSN;
 
         /**
          * <p>The type of the transaction flow.</p>
-         * <br>
-         * <p>*   Income</p>
-         * <p>*   Expense</p>
+         * <ul>
+         * <li>Income</li>
+         * <li>Expense</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Expense</p>
          */
         @NameInMap("TransactionFlow")
         public String transactionFlow;
 
         /**
          * <p>The number of the transaction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43342334</p>
          */
         @NameInMap("TransactionNumber")
         public String transactionNumber;
 
         /**
          * <p>The time when the transaction was made.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-10T02:03:20Z</p>
          */
         @NameInMap("TransactionTime")
         public String transactionTime;
 
         /**
          * <p>The type of the transaction.</p>
-         * <br>
-         * <p>*   Payment</p>
-         * <p>*   Withdraw</p>
-         * <p>*   Refund</p>
-         * <p>*   Consumption</p>
-         * <p>*   Transfer</p>
-         * <p>*   Adjust</p>
+         * <ul>
+         * <li>Payment</li>
+         * <li>Withdraw</li>
+         * <li>Refund</li>
+         * <li>Consumption</li>
+         * <li>Transfer</li>
+         * <li>Adjust</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Consumption</p>
          */
         @NameInMap("TransactionType")
         public String transactionType;
@@ -317,6 +372,9 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
     public static class QueryAccountTransactionsResponseBodyData extends TeaModel {
         /**
          * <p>The name of your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
         @NameInMap("AccountName")
         public String accountName;
@@ -329,18 +387,27 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

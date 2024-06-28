@@ -6,22 +6,35 @@ import com.aliyun.tea.*;
 public class SetResellerUserQuotaRequest extends TeaModel {
     /**
      * <p>The quota of a quota ledger. Unit: CNY.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>750</p>
      */
     @NameInMap("Amount")
     public String amount;
 
     /**
      * <p>You do not need to set the parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>N/A</p>
      */
     @NameInMap("Currency")
     public String currency;
 
     /**
      * <p>The ID of the business.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OD2022040818295234777795624764689</p>
      */
     @NameInMap("OutBizId")
     public String outBizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 

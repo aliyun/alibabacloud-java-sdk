@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryAccountBalanceResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16176743-6DC7-4CB3-BB25-A13982D8DFAD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,34 +94,50 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
     public static class QueryAccountBalanceResponseBodyData extends TeaModel {
         /**
          * <p>The available balance of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000.00</p>
          */
         @NameInMap("AvailableAmount")
         public String availableAmount;
 
         /**
          * <p>The available balance in cash.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000.00</p>
          */
         @NameInMap("AvailableCashAmount")
         public String availableCashAmount;
 
         /**
          * <p>The credit balance of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00</p>
          */
         @NameInMap("CreditAmount")
         public String creditAmount;
 
         /**
          * <p>The type of the currency. Valid values:</p>
-         * <br>
-         * <p>*   CNY: Chinese Yuan</p>
-         * <p>*   USD: US dollar</p>
-         * <p>*   JPY: Japanese Yen</p>
+         * <ul>
+         * <li>CNY: Chinese Yuan</li>
+         * <li>USD: US dollar</li>
+         * <li>JPY: Japanese Yen</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The credit line controlled by MYbank.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.00</p>
          */
         @NameInMap("MybankCreditAmount")
         public String mybankCreditAmount;

@@ -6,45 +6,75 @@ import com.aliyun.tea.*;
 public class ChangeResellerConsumeAmountRequest extends TeaModel {
     /**
      * <p>The type of the consumption amount adjustment. Valid values: increase: The consumption amount increases because new consumption occurs. decrease: The consumption amount decreases because funds are added to the account. This parameter is required.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>increase/decrease</p>
      */
     @NameInMap("AdjustType")
     public String adjustType;
 
     /**
      * <p>The amount to be adjusted. Unit: CNY</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.00</p>
      */
     @NameInMap("Amount")
     public String amount;
 
     /**
      * <p>The type of the business.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quota_amount_adjust</p>
      */
     @NameInMap("BusinessType")
     public String businessType;
 
     /**
      * <p>The type of the currency.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CNY</p>
      */
     @NameInMap("Currency")
     public String currency;
 
     /**
      * <p>The extended field of a message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
      */
     @NameInMap("ExtendMap")
     public String extendMap;
 
     /**
      * <p>The ID of the primary key for external business. The ID is used for idempotence verification.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1647396865</p>
      */
     @NameInMap("OutBizId")
     public String outBizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
      * <p>The source of the request. Specify the system name for the parameter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system</p>
      */
     @NameInMap("Source")
     public String source;

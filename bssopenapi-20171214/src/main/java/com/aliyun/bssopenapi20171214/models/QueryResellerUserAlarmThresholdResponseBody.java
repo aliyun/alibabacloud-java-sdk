@@ -4,21 +4,41 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
     @NameInMap("Data")
     public java.util.List<QueryResellerUserAlarmThresholdResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EAE08A27-386C-579E-966D-8853EC3C5D0E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,15 +96,31 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
     }
 
     public static class QueryResellerUserAlarmThresholdResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Denominator")
         public Integer denominator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Numerator")
         public Integer numerator;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ThresholdAmount")
         public String thresholdAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ThresholdType")
         public Integer thresholdType;
 

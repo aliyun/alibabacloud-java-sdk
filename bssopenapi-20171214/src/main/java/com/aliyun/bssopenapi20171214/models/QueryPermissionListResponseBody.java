@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryPermissionListResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryPermissionListResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6E29451-A3CD-4705-806D-0112D08F5C49</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class QueryPermissionListResponseBody extends TeaModel {
     public static class QueryPermissionListResponseBodyDataPermissionList extends TeaModel {
         /**
          * <p>The time when the permission expired. If no value is returned, the permission is still valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the permission expired at 20:00:00 on May 23, 2016 (UTC+8).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-05T15:12Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The code of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allow_synchronize_finance_identity</p>
          */
         @NameInMap("PermissionCode")
         public String permissionCode;
 
         /**
          * <p>The name of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The management account shares the credit control identity with the member.</p>
          */
         @NameInMap("PermissionName")
         public String permissionName;
 
         /**
          * <p>The time when the permission took effect. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the permission took effect at 20:00:00 on May 23, 2016 (UTC+8).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-02T15:12Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -146,18 +170,27 @@ public class QueryPermissionListResponseBody extends TeaModel {
     public static class QueryPermissionListResponseBodyData extends TeaModel {
         /**
          * <p>The time when the relationship expired. If no value is returned, the relationship is still valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-06T15:12Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The ID of the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1990699401005016</p>
          */
         @NameInMap("MasterId")
         public Long masterId;
 
         /**
          * <p>The ID of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1851253838840762</p>
          */
         @NameInMap("MemberId")
         public Long memberId;
@@ -170,24 +203,36 @@ public class QueryPermissionListResponseBody extends TeaModel {
 
         /**
          * <p>The type of the relationship. Valid values: FinancialManagement and FinancialTrusteeship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinancialManagement</p>
          */
         @NameInMap("RelationType")
         public String relationType;
 
         /**
          * <p>The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the relationship was established at 20:00:00 on May 23, 2016 (UTC+8).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-02T15:12Z</p>
          */
         @NameInMap("SetupTime")
         public String setupTime;
 
         /**
          * <p>The time when the relationship took effect. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the relationship took effect at 20:00:00 on May 23, 2016 (UTC+8).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-02T15:12Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the relationship. For more information about valid values of this parameter, see the enumeration values of the RelationshipStatusEnum type in the following table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELATED</p>
          */
         @NameInMap("State")
         public String state;

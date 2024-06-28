@@ -6,30 +6,46 @@ import com.aliyun.tea.*;
 public class RelieveAccountRelationRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account that is used as the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1512996702208737</p>
      */
     @NameInMap("ChildUserId")
     public Long childUserId;
 
     /**
      * <p>The ID of the Alibaba Cloud account that is used as the management account. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1738376485192612</p>
      */
     @NameInMap("ParentUserId")
     public Long parentUserId;
 
     /**
      * <p>The ID of the financial relationship between the management account and the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RelationId</p>
      */
     @NameInMap("RelationId")
     public Long relationId;
 
     /**
      * <p>The type of the financial relationship. Set the value to enterprise_group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enterprise_group</p>
      */
     @NameInMap("RelationType")
     public String relationType;
 
     /**
      * <p>The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request_id</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,6 +4,10 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryResellerUserAlarmThresholdRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>quota_low_balance</p>
+     */
     @NameInMap("AlarmType")
     public String alarmType;
 

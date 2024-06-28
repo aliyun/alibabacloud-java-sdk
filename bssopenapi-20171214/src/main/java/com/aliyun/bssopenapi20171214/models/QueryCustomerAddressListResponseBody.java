@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryCustomerAddressListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,72 +94,108 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
     public static class QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress extends TeaModel {
         /**
          * <p>The addressee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Addressee")
         public String addressee;
 
         /**
          * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
          * <p>The city to which the invoice is mailed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         @NameInMap("City")
         public String city;
 
         /**
          * <p>The name of the district to which the invoice is mailed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test District</p>
          */
         @NameInMap("County")
         public String county;
 
         /**
          * <p>The detailed address to which the invoice is mailed. This parameter is returned after fields are concatenated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Address</p>
          */
         @NameInMap("DeliveryAddress")
         public String deliveryAddress;
 
         /**
          * <p>The ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>311601051</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The phone number of the addressee.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>138xxxxxxxx</p>
          */
         @NameInMap("Phone")
         public String phone;
 
         /**
          * <p>The postcode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000</p>
          */
         @NameInMap("PostalCode")
         public String postalCode;
 
         /**
          * <p>The province to which the invoice is mailed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
          */
         @NameInMap("Province")
         public String province;
 
         /**
          * <p>The name of the street to which the invoice is mailed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Street</p>
          */
         @NameInMap("Street")
         public String street;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4382956342857</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
          * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNick</p>
          */
         @NameInMap("UserNick")
         public String userNick;

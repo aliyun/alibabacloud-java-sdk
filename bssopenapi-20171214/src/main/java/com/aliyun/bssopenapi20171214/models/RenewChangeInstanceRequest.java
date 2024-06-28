@@ -4,9 +4,19 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class RenewChangeInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>JASIOFKVNVIXXXXXX</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-skjdhaskjdh</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,12 +26,28 @@ public class RenewChangeInstanceRequest extends TeaModel {
     @NameInMap("Parameter")
     public java.util.List<RenewChangeInstanceRequestParameter> parameter;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("RenewPeriod")
     public Long renewPeriod;
 
@@ -87,9 +113,21 @@ public class RenewChangeInstanceRequest extends TeaModel {
     }
 
     public static class RenewChangeInstanceRequestParameter extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bandwidth</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disk</p>
+         */
         @NameInMap("Value")
         public String value;
 

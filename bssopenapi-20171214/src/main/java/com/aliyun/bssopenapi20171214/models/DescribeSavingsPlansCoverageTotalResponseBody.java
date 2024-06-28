@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,14 +94,19 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
     public static class DescribeSavingsPlansCoverageTotalResponseBodyDataPeriodCoverage extends TeaModel {
         /**
          * <p>The coverage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Percentage")
         public Float percentage;
 
         /**
          * <p>The period.</p>
-         * <br>
          * <p>The value is in the format of yyyyMMddHH.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021071500</p>
          */
         @NameInMap("Period")
         public String period;
@@ -120,12 +137,18 @@ public class DescribeSavingsPlansCoverageTotalResponseBody extends TeaModel {
     public static class DescribeSavingsPlansCoverageTotalResponseBodyDataTotalCoverage extends TeaModel {
         /**
          * <p>The total coverage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
         /**
          * <p>The total deducted amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("DeductAmount")
         public Float deductAmount;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryCostUnitResourceResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful！</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04332CB7-9A57-4461-97E0-02821D044414</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
     public static class QueryCostUnitResourceResponseBodyDataCostUnit extends TeaModel {
         /**
          * <p>The user ID of the cost center owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>321432</p>
          */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
         /**
          * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23421</p>
          */
         @NameInMap("ParentUnitId")
         public Long parentUnitId;
 
         /**
          * <p>The ID of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123412</p>
          */
         @NameInMap("UnitId")
         public Long unitId;
 
         /**
          * <p>The name of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("UnitName")
         public String unitName;
@@ -146,42 +170,63 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
     public static class QueryCostUnitResourceResponseBodyDataCostUnitStatisInfo extends TeaModel {
         /**
          * <p>The number of resource instances in the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResourceCount")
         public Long resourceCount;
 
         /**
          * <p>The number of resource groups in the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResourceGroupCount")
         public Long resourceGroupCount;
 
         /**
          * <p>The number of sub-cost centers in the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SubUnitCount")
         public Long subUnitCount;
 
         /**
          * <p>The total number of resource instances, including resource instances of sub-cost centers, in the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TotalResourceCount")
         public Long totalResourceCount;
 
         /**
          * <p>The total number of resource groups, including resource groups of sub-cost centers, in the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalResourceGroupCount")
         public Long totalResourceGroupCount;
 
         /**
          * <p>The total number of the associated accounts, including associated accounts of sub-cost centers, in the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalUserCount")
         public Long totalUserCount;
 
         /**
          * <p>The number of sub-cost centers in the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UserCount")
         public Long userCount;
@@ -252,78 +297,123 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
     public static class QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList extends TeaModel {
         /**
          * <p>The split code of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ApportionCode")
         public String apportionCode;
 
         /**
          * <p>The split name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ApportionName")
         public String apportionName;
 
         /**
          * <p>The product code of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The commodity name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApsaraDB</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
 
+        @NameInMap("PipCode")
+        public String pipCode;
+
         /**
          * <p>The resources related to the resource instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("RelatedResources")
         public String relatedResources;
 
         /**
          * <p>The resource group to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default Resource Group</p>
          */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
         /**
          * <p>The instance ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSSBAG-cn-v0h1s4hma018</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The custom name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testResource</p>
          */
         @NameInMap("ResourceNick")
         public String resourceNick;
 
+        @NameInMap("ResourceSource")
+        public String resourceSource;
+
         /**
          * <p>The status of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
         /**
          * <p>The tags of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testResource</p>
          */
         @NameInMap("ResourceTag")
         public String resourceTag;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FPT_ossbag_absolute_Storage_bj</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The user ID of the resource owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2424242134</p>
          */
         @NameInMap("ResourceUserId")
         public Long resourceUserId;
 
         /**
          * <p>The username of the resource owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyun.com">test@test.aliyun.com</a></p>
          */
         @NameInMap("ResourceUserName")
         public String resourceUserName;
@@ -365,6 +455,14 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             return this.commodityName;
         }
 
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setPipCode(String pipCode) {
+            this.pipCode = pipCode;
+            return this;
+        }
+        public String getPipCode() {
+            return this.pipCode;
+        }
+
         public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setRelatedResources(String relatedResources) {
             this.relatedResources = relatedResources;
             return this;
@@ -395,6 +493,14 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
         public String getResourceNick() {
             return this.resourceNick;
+        }
+
+        public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceSource(String resourceSource) {
+            this.resourceSource = resourceSource;
+            return this;
+        }
+        public String getResourceSource() {
+            return this.resourceSource;
         }
 
         public QueryCostUnitResourceResponseBodyDataResourceInstanceDtoList setResourceStatus(String resourceStatus) {
@@ -454,12 +560,18 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -472,6 +584,9 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

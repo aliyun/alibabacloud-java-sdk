@@ -5,31 +5,46 @@ import com.aliyun.tea.*;
 
 public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call failed. For more information, see the "Error codes" section of the topic.</p>
+     * <p>The error code returned if the call failed. For more information, see the &quot;Error codes&quot; section of the topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The consumption quota for the quota ledger after adjustment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300.00</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D6E068C3-25BC-455A-85FE-45F0B22ECB1F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

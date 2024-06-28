@@ -4,21 +4,36 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class RenewChangeInstanceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public RenewChangeInstanceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Successful!</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -68,9 +83,17 @@ public class RenewChangeInstanceResponseBody extends TeaModel {
     }
 
     public static class RenewChangeInstanceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100.100.64.1:8150</p>
+         */
         @NameInMap("HostId")
         public String hostId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>202407022550621</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 

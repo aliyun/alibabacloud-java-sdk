@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryCashCouponsResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryCashCouponsResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>147B566E-DB4C-4E43-BDBB-5DB1D9D268DB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,30 +94,45 @@ public class QueryCashCouponsResponseBody extends TeaModel {
     public static class QueryCashCouponsResponseBodyDataCashCoupon extends TeaModel {
         /**
          * <p>The service to which the voucher is applicable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All Alibaba Cloud services</p>
          */
         @NameInMap("ApplicableProducts")
         public String applicableProducts;
 
         /**
          * <p>The scenario to which the voucher is applicable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pay for the pay-as-you-go bills of Alibaba Cloud services or purchase an instance of an Alibaba Cloud service</p>
          */
         @NameInMap("ApplicableScenarios")
         public String applicableScenarios;
 
         /**
          * <p>The remaining quota of the voucher.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         @NameInMap("Balance")
         public String balance;
 
         /**
          * <p>The ID of the voucher.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34534253254325</p>
          */
         @NameInMap("CashCouponId")
         public Long cashCouponId;
 
         /**
          * <p>The code of the voucher.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Q-b1485def8f04a</p>
          */
         @NameInMap("CashCouponNo")
         public String cashCouponNo;
@@ -115,34 +142,50 @@ public class QueryCashCouponsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the voucher took effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:15:50Z</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
          * <p>The time when the voucher expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-29T15:15:50Z</p>
          */
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
         /**
          * <p>The time when the voucher was released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:15:50Z</p>
          */
         @NameInMap("GrantedTime")
         public String grantedTime;
 
         /**
          * <p>The denomination of the voucher.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         @NameInMap("NominalValue")
         public String nominalValue;
 
         /**
          * <p>The state of the voucher. Valid values:</p>
-         * <br>
-         * <p>*   Available: The voucher is valid.</p>
-         * <p>*   Expired: The voucher has expired.</p>
-         * <p>*   Cancelled: The voucher is canceled.</p>
+         * <ul>
+         * <li>Available: The voucher is valid.</li>
+         * <li>Expired: The voucher has expired.</li>
+         * <li>Cancelled: The voucher is canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;

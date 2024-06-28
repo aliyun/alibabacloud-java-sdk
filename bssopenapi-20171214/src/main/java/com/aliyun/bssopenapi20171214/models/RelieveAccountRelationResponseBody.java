@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RelieveAccountRelationResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Message returned</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The unique ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>request_id</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,6 +94,9 @@ public class RelieveAccountRelationResponseBody extends TeaModel {
     public static class RelieveAccountRelationResponseBodyData extends TeaModel {
         /**
          * <p>hostid</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HostId</p>
          */
         @NameInMap("HostId")
         public String hostId;

@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteCostUnitRequest extends TeaModel {
     /**
      * <p>The user ID of the cost center owner.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2135342</p>
      */
     @NameInMap("OwnerUid")
     public Long ownerUid;
 
     /**
      * <p>The ID of the cost center. A value of -1 indicates the root cost center.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>376348</p>
      */
     @NameInMap("UnitId")
     public Long unitId;

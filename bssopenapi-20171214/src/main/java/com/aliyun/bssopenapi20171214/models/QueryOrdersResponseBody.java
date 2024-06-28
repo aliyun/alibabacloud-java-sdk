@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryOrdersResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryOrdersResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61293E7A-3406-4447-8620-EC88B0AA66AD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,116 +94,171 @@ public class QueryOrdersResponseBody extends TeaModel {
     public static class QueryOrdersResponseBodyDataOrderListOrder extends TeaModel {
         /**
          * <p>The aftertax amount of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("AfterTaxAmount")
         public String afterTaxAmount;
 
         /**
          * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The time when the order was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-06-08T09:41:30Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The currency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The ID of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34532532</p>
          */
         @NameInMap("OrderId")
         public String orderId;
 
         /**
          * <p>The type of the order. Valid values:</p>
-         * <br>
-         * <p>*   New: purchases an instance.</p>
-         * <p>*   Renew: renews an instance.</p>
-         * <p>*   Upgrade: upgrades the configurations of an instance.</p>
-         * <p>*   Refund: applies for a refund.</p>
+         * <ul>
+         * <li>New: purchases an instance.</li>
+         * <li>Renew: renews an instance.</li>
+         * <li>Upgrade: upgrades the configurations of an instance.</li>
+         * <li>Refund: applies for a refund.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>New</p>
          */
         @NameInMap("OrderType")
         public String orderType;
 
         /**
          * <p>The currency of payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("PaymentCurrency")
         public String paymentCurrency;
 
         /**
          * <p>The status of payment. Valid values for a non-refund order:</p>
-         * <br>
-         * <p>*   Unpaid: The order is not paid.</p>
-         * <p>*   Paid: The order is paid.</p>
-         * <p>*   Cancelled: The order is canceled.</p>
-         * <br>
-         * <p>> : The value is NULL for a refund order.</p>
+         * <ul>
+         * <li>Unpaid: The order is not paid.</li>
+         * <li>Paid: The order is paid.</li>
+         * <li>Cancelled: The order is canceled.</li>
+         * </ul>
+         * <blockquote>
+         * <p>: The value is NULL for a refund order.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Paid</p>
          */
         @NameInMap("PaymentStatus")
         public String paymentStatus;
 
         /**
          * <p>The time of payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-06-08T09:41:30Z</p>
          */
         @NameInMap("PaymentTime")
         public String paymentTime;
 
         /**
          * <p>The pretax amount of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PretaxAmount")
         public String pretaxAmount;
 
         /**
          * <p>The pretax amount of the order in local currency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PretaxAmountLocal")
         public String pretaxAmountLocal;
 
         /**
          * <p>The pretax gross amount of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PretaxGrossAmount")
         public String pretaxGrossAmount;
 
         /**
          * <p>The code of the main service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The type of the main service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("ProductType")
         public String productType;
 
         /**
          * <p>The ID of the associated order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234535345345342</p>
          */
         @NameInMap("RelatedOrderId")
         public String relatedOrderId;
 
         /**
          * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   Subscription: subscription</p>
-         * <p>*   PayAsYouGo: pay-as-you-go</p>
+         * <ul>
+         * <li>Subscription: subscription</li>
+         * <li>PayAsYouGo: pay-as-you-go</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
         /**
          * <p>The tax of the order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Tax")
         public String tax;
@@ -361,6 +428,9 @@ public class QueryOrdersResponseBody extends TeaModel {
     public static class QueryOrdersResponseBodyData extends TeaModel {
         /**
          * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("HostName")
         public String hostName;
@@ -373,18 +443,27 @@ public class QueryOrdersResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

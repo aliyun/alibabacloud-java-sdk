@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetResourcePackagePriceResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,12 +94,18 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     public static class GetResourcePackagePriceResponseBodyDataPromotionsPromotion extends TeaModel {
         /**
          * <p>The ID of the promotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000680914</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The description of the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A discount of 17% is offered if you purchase a resource plan for six months.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -137,18 +155,27 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     public static class GetResourcePackagePriceResponseBodyData extends TeaModel {
         /**
          * <p>The type of the currency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The discounted amount. Unit: CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>215040</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
         /**
          * <p>The original price. Unit: CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1290240</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
@@ -161,6 +188,9 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
 
         /**
          * <p>The price at which the transaction is made. Unit: CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1075200</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;

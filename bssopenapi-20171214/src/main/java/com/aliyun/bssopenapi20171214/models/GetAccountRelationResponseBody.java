@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAccountRelationResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class GetAccountRelationResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Message returned</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RequestId</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,48 +94,72 @@ public class GetAccountRelationResponseBody extends TeaModel {
     public static class GetAccountRelationResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account that is used as a member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID of the Alibaba Cloud account that is used as a member</p>
          */
         @NameInMap("ChildUserId")
         public Long childUserId;
 
         /**
          * <p>The time when the financial relationship between the management account and the member was terminated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-01</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The time when the financial relationship between the management account and the member was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-01</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
          * <p>The ID of the financial relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID of the financial relationship</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used as the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ID of the Alibaba Cloud account that is used as the management account</p>
          */
         @NameInMap("ParentUserId")
         public Long parentUserId;
 
         /**
          * <p>The time when the financial relationship between the management account and the member was established.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The status of the financial relationship between the management account and the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RELATED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the financial relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise_group</p>
          */
         @NameInMap("Type")
         public String type;

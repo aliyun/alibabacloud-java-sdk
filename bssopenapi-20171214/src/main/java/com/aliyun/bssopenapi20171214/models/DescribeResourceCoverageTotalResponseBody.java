@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,14 +94,19 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
     public static class DescribeResourceCoverageTotalResponseBodyDataPeriodCoverage extends TeaModel {
         /**
          * <p>The coverage rate of deduction plans within the specified period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
         /**
          * <p>The period.</p>
-         * <br>
          * <p>The value is in the format of yyyyMMddHH.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020110100</p>
          */
         @NameInMap("Period")
         public String period;
@@ -126,18 +143,27 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
 
         /**
          * <p>The total coverage rate of deduction plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
         /**
          * <p>The total amount of the resources deducted from deduction plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
         /**
          * <p>The total amount of resources consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalQuantity")
         public Float totalQuantity;

@@ -7,6 +7,9 @@ public class QueryResellerAvailableQuotaRequest extends TeaModel {
     @NameInMap("ItemCodes")
     public String itemCodes;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 

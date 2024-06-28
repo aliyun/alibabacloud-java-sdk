@@ -6,25 +6,36 @@ import com.aliyun.tea.*;
 public class QueryUserOmsDataRequest extends TeaModel {
     /**
      * <p>The time type of the usage data. Set the parameter based on the description in the documentation of the specified service. Valid values:</p>
-     * <br>
-     * <p>*   Raw</p>
-     * <p>*   Hour</p>
-     * <p>*   Day</p>
-     * <p>*   Month</p>
+     * <ul>
+     * <li>Raw</li>
+     * <li>Hour</li>
+     * <li>Day</li>
+     * <li>Month</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hour</p>
      */
     @NameInMap("DataType")
     public String dataType;
 
     /**
      * <p>The end of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-21T12:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The name of the record from which the usage data starts to return. The usage data records whose names are alphabetically after the value of the Marker parameter are returned. By default, the usage data starts to return from the earliest record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NextToken</p>
      */
     @NameInMap("Marker")
     public String marker;
@@ -34,20 +45,30 @@ public class QueryUserOmsDataRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 200. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-20T12:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The service whose usage data you want to query and the details of the usage data. The parameter value is usually set to the code of a service. Various usage models are provided for different services.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("Table")
     public String table;

@@ -6,30 +6,46 @@ import com.aliyun.tea.*;
 public class GetResourcePackagePriceRequest extends TeaModel {
     /**
      * <p>The validity period of the resource plan. The value must be the same as the duration of the resource plan specified in the specifications.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
-     * <p>The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default. Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default. 
+     * When the <strong>OrderType</strong> is <strong>BUY</strong>, resource packs with the <strong>EffectiveDate longer than the current time of 6 months</strong> are not supported. 
+     * If the <strong>OrderType</strong> is <strong>UPGRADE</strong>, the <strong>EffectiveDate</strong> <strong>must be less than or equal to</strong> the actual expiration time of the upgraded instance.
+     * Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-10T12:00:00Z</p>
      */
     @NameInMap("EffectiveDate")
     public String effectiveDate;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance. <strong>This parameter is required when the order type is renewal or upgrade.</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSSBAG-cn-0xl0002</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of the order. Valid values:</p>
-     * <br>
-     * <p>*   BUY: You place the order to purchase an instance.</p>
-     * <p>*   UPGRADE: You place the order to upgrade an instance.</p>
-     * <p>*   RENEW: You place the order to renew an instance.</p>
-     * <br>
+     * <ul>
+     * <li>BUY: You place the order to purchase an instance.</li>
+     * <li>UPGRADE: You place the order to upgrade an instance.</li>
+     * <li>RENEW: You place the order to renew an instance.</li>
+     * </ul>
      * <p>Default value: BUY.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BUY</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -38,28 +54,44 @@ public class GetResourcePackagePriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The type of the resource plan. The value must be the same as the value of the **ProductCode** parameter that is returned when you call the **DescribeResourcePackageProduct** operation.</p>
+     * <p>The type of the resource plan. The value must be the same as the value of the <strong>ProductCode</strong> parameter that is returned when you call the <strong>DescribeResourcePackageProduct</strong> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FPT_ossbag_periodMonthlyAcc_NetworkOut_finance_common</p>
      */
     @NameInMap("PackageType")
     public String packageType;
 
     /**
      * <p>The unit of validity period of the resource plan. Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <p>*   Year</p>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
-     * <p>The code of service. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud Services**.</p>
+     * <p>The code of service. You can query the service code by calling the <strong>QueryProductList</strong> operation or viewing <strong>Codes of Alibaba Cloud Services</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ossbag</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The specifications of the resource plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("Specification")
     public String specification;

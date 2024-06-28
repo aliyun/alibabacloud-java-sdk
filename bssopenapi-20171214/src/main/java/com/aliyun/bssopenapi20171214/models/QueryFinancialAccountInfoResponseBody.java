@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryFinancialAccountInfoResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97426BC2-792E-41F5-92B8-73C710DA7779</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,36 +94,54 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
     public static class QueryFinancialAccountInfoResponseBodyData extends TeaModel {
         /**
          * <p>The type of the financial account. A value of MASTER indicates that the account is a management account. A value of MEMBER indicates that the account is a member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MEMBER</p>
          */
         @NameInMap("AccountType")
         public String accountType;
 
         /**
          * <p>Indicates whether the account is a financial account. A value of true indicates that the account is a financial account. A value of false indicates that the account is not a financial account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsFinancialAccount")
         public Boolean isFinancialAccount;
 
         /**
          * <p>The ID of the group to which the member belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124</p>
          */
         @NameInMap("MemberGroupId")
         public Long memberGroupId;
 
         /**
          * <p>The name of the group to which the member belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test group</p>
          */
         @NameInMap("MemberGroupName")
         public String memberGroupName;
 
         /**
          * <p>The display name of the member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("MemberNickName")
         public String memberNickName;
 
         /**
          * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>killortop3</p>
          */
         @NameInMap("UserName")
         public String userName;

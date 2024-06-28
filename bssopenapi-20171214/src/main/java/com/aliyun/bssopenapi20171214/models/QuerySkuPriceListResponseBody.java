@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QuerySkuPriceListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     public static class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceListRangeList extends TeaModel {
         /**
          * <p>The code of the pricing factor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>212fbd27866307fc79ecf06934a88b2c</p>
          */
         @NameInMap("FactorCode")
         public String factorCode;
 
         /**
          * <p>The maximum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Max")
         public String max;
 
         /**
          * <p>The minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Min")
         public String min;
 
         /**
          * <p>The closure type of the interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LORC</p>
          */
         @NameInMap("Type")
         public String type;
@@ -146,36 +170,54 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     public static class QuerySkuPriceListResponseBodyDataSkuPricePageSkuPriceListCskuPriceList extends TeaModel {
         /**
          * <p>The unique code of the SKU price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac74dd7b52ae6389ddef099283fb8275</p>
          */
         @NameInMap("CskuCode")
         public String cskuCode;
 
         /**
          * <p>The currency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Price")
         public String price;
 
         /**
          * <p>The pricing mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STEP_ARRIVE</p>
          */
         @NameInMap("PriceMode")
         public String priceMode;
 
         /**
          * <p>The pricing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hourPrice</p>
          */
         @NameInMap("PriceType")
         public String priceType;
 
         /**
          * <p>The unit of the price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USD (per unit)</p>
          */
         @NameInMap("PriceUnit")
         public String priceUnit;
@@ -188,6 +230,9 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
         /**
          * <p>The usage unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Count</p>
          */
         @NameInMap("UsageUnit")
         public String usageUnit;
@@ -272,6 +317,9 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
         /**
          * <p>The code of the SKU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>017c15a31507bc6de22aa93777461adc</p>
          */
         @NameInMap("SkuCode")
         public String skuCode;
@@ -316,6 +364,9 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
     public static class QuerySkuPriceListResponseBodyDataSkuPricePage extends TeaModel {
         /**
          * <p>The token that is used to query the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>080112060a0422020800180022490a470342000000315333303332363436363336333433393636333136333338333733373333333133373336363336323634363336363337333836333636333636313336363433363332</p>
          */
         @NameInMap("NextPageToken")
         public String nextPageToken;
@@ -328,6 +379,9 @@ public class QuerySkuPriceListResponseBody extends TeaModel {
 
         /**
          * <p>The total number of SKUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18732</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

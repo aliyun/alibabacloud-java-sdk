@@ -18,6 +18,10 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Tea
 
     /**
      * <p>The allocation month. Format: YYYY-MM.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-10</p>
      */
     @NameInMap("BillingCycle")
     public String billingCycle;
@@ -30,39 +34,58 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Tea
 
     /**
      * <p>The code of the cost center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123#</p>
      */
     @NameInMap("CostUnitCode")
     public String costUnitCode;
 
     /**
      * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The position from which the query starts. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The code of the service. You can obtain the value of this parameter by calling the QueryProductList operation or the DescribeResourcePackageProduct operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The specific service resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductDetail")
     public String productDetail;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   Subscription: the subscription billing method</p>
-     * <p>*   PayAsYouGo: the pay-as-you-go billing method</p>
+     * <ul>
+     * <li>Subscription: the subscription billing method</li>
+     * <li>PayAsYouGo: the pay-as-you-go billing method</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Subscription</p>
      */
     @NameInMap("SubscriptionType")
     public String subscriptionType;

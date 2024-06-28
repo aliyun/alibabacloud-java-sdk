@@ -6,49 +6,68 @@ import com.aliyun.tea.*;
 public class ReleaseInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-xxxxxxxxxxxx</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
      * <p>The code of the service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The type of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
      * <p>The region in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The method that is used to renew the instance. Valid values:</p>
-     * <br>
      * <p>AutoRenewal: automatically renews the instance.</p>
-     * <br>
      * <p>ManualRenewal: manually renews the instance.</p>
-     * <br>
      * <p>NotRenewal: does not renew the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AutoRenewal</p>
      */
     @NameInMap("RenewStatus")
     public String renewStatus;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
      * <p>Subscription: the subscription billing method.</p>
-     * <br>
      * <p>PayAsYouGo: the pay-as-you-go billing method.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
      */
     @NameInMap("SubscriptionType")
     public String subscriptionType;

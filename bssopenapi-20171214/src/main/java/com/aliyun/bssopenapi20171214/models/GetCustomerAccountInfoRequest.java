@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetCustomerAccountInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 

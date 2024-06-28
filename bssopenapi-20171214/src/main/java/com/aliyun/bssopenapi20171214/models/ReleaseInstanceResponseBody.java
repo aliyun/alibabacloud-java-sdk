@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ReleaseInstanceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Invalid_Product_Code</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,20 +21,28 @@ public class ReleaseInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The description of the execution result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request, which can be used for troubleshooting.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UUID</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>A value of true indicates that the execution is complete.</p>
-     * <br>
      * <p>A value of false indicates that an error occurs during the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,12 +95,18 @@ public class ReleaseInstanceResponseBody extends TeaModel {
     public static class ReleaseInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The site of the execution host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>Indicates whether the instance is released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ReleaseResult")
         public Boolean releaseResult;

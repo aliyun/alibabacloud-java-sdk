@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryRIUtilizationDetailResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful！</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DF58589C-A06C-4224-8615-7797E6474FA3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,54 +94,81 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
     public static class QueryRIUtilizationDetailResponseBodyDataDetailListDetailList extends TeaModel {
         /**
          * <p>The time when the fees are deducted by using the RI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-05-23 12:00:00</p>
          */
         @NameInMap("DeductDate")
         public String deductDate;
 
         /**
          * <p>The total amount of computing power of the RI or capacity of SCU in the time period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DeductFactorTotal")
         public Float deductFactorTotal;
 
         /**
          * <p>The deduct factor. This parameter is returned only if the RICommodityCode parameter is set to ecsRi.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         @NameInMap("DeductHours")
         public String deductHours;
 
         /**
          * <p>The computing power or capacity of the pay-as-you-go instance whose fees are deducted by using the RI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
         /**
          * <p>The code of the service whose fees are deducted by using the RI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("DeductedCommodityCode")
         public String deductedCommodityCode;
 
         /**
          * <p>The ID of the instance whose fees are deducted by using the RI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>safdffghfgh</p>
          */
         @NameInMap("DeductedInstanceId")
         public String deductedInstanceId;
 
         /**
          * <p>The name of the service whose fees are deducted by using the RI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApsaraDB RDS</p>
          */
         @NameInMap("DeductedProductDetail")
         public String deductedProductDetail;
 
         /**
          * <p>The instance type of the instance whose fees are deducted by using the RI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds.mysql.s3.large</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
         /**
          * <p>The ID of the RI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324253645</p>
          */
         @NameInMap("RIInstanceId")
         public String RIInstanceId;
@@ -241,18 +280,27 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
 
         /**
          * <p>The number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Long pageNum;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

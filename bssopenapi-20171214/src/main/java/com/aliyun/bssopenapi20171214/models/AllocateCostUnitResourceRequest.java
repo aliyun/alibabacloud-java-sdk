@@ -6,36 +6,55 @@ import com.aliyun.tea.*;
 public class AllocateCostUnitResourceRequest extends TeaModel {
     /**
      * <p>The ID of the source cost center.</p>
-     * <br>
-     * <p>*   A value of 0 indicates that the resources to be transferred have not been allocated to a cost center.</p>
-     * <p>*   A value greater than 0 indicates the ID of an existing cost center.</p>
+     * <ul>
+     * <li>A value of 0 indicates that the resources to be transferred have not been allocated to a cost center.</li>
+     * <li>A value greater than 0 indicates the ID of an existing cost center.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("FromUnitId")
     public Long fromUnitId;
 
     /**
      * <p>The user ID of the owner of the source cost center.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>273394581313325532</p>
      */
     @NameInMap("FromUnitUserId")
     public Long fromUnitUserId;
 
     /**
      * <p>The resource instances to be transferred.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceInstanceList")
     public java.util.List<AllocateCostUnitResourceRequestResourceInstanceList> resourceInstanceList;
 
     /**
      * <p>The ID of the destination cost center.</p>
-     * <br>
-     * <p>*   A value of -1 indicates that the allocated resources are changed to unallocated.</p>
-     * <p>*   A value greater than 0 indicates the ID of an existing cost center.</p>
+     * <ul>
+     * <li>A value of -1 indicates that the allocated resources are changed to unallocated.</li>
+     * <li>A value greater than 0 indicates the ID of an existing cost center.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>186419</p>
      */
     @NameInMap("ToUnitId")
     public Long toUnitId;
 
     /**
      * <p>The user ID of the owner of the destination cost center.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>241021678450941490</p>
      */
     @NameInMap("ToUnitUserId")
     public Long toUnitUserId;
@@ -88,27 +107,43 @@ public class AllocateCostUnitResourceRequest extends TeaModel {
     public static class AllocateCostUnitResourceRequestResourceInstanceList extends TeaModel {
         /**
          * <p>The split item of the shared instance. This parameter is required only for shared instances.</p>
-         * <br>
-         * <p>*   Eight cloud services support bill splitting. The commodity codes of the eight services are oss, dcdn, snapshot, vod, cdn, live, cbwp, and pcdn.</p>
-         * <p>*   You can obtain the split item of a shared instance by calling QueryCostUnitResource operation to obtain all resource instances within a cost center.</p>
+         * <ul>
+         * <li>Eight cloud services support bill splitting. The commodity codes of the eight services are oss, dcdn, snapshot, vod, cdn, live, cbwp, and pcdn.</li>
+         * <li>You can obtain the split item of a shared instance by calling QueryCostUnitResource operation to obtain all resource instances within a cost center.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>qwer1-cn-beijing</p>
          */
         @NameInMap("ApportionCode")
         public String apportionCode;
 
         /**
          * <p>The commodity code of the resource instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The ID of the resource instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou;standard</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The user ID of the resource instance owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>273394581313325532</p>
          */
         @NameInMap("ResourceUserId")
         public Long resourceUserId;

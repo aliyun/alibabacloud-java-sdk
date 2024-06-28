@@ -6,23 +6,33 @@ import com.aliyun.tea.*;
 public class QueryOrdersRequest extends TeaModel {
     /**
      * <p>The end time of the period during which the orders were created. By default, orders within the last hour are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-05-23T12:00:00Z</p>
      */
     @NameInMap("CreateTimeEnd")
     public String createTimeEnd;
 
     /**
      * <p>The start time of the period during which the orders were created. By default, orders within the last hour are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-05-23T13:00:00Z</p>
      */
     @NameInMap("CreateTimeStart")
     public String createTimeStart;
 
     /**
      * <p>The type of the order. Valid values:</p>
-     * <br>
-     * <p>*   New: purchases an instance.</p>
-     * <p>*   Renew: renews an instance.</p>
-     * <p>*   Upgrade: upgrades the configurations of an instance.</p>
-     * <p>*   Refund: applies for a refund.</p>
+     * <ul>
+     * <li>New: purchases an instance.</li>
+     * <li>Renew: renews an instance.</li>
+     * <li>Upgrade: upgrades the configurations of an instance.</li>
+     * <li>Refund: applies for a refund.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>New</p>
      */
     @NameInMap("OrderType")
     public String orderType;
@@ -32,45 +42,66 @@ public class QueryOrdersRequest extends TeaModel {
 
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The status of payment. Valid values for a non-refund order:</p>
-     * <br>
-     * <p>*   Unpaid: The order is not paid.</p>
-     * <p>*   Paid: The order is paid.</p>
-     * <p>*   Cancelled: The order is canceled.</p>
-     * <br>
-     * <p>> : You can set this parameter to NULL for a refund order.</p>
+     * <ul>
+     * <li>Unpaid: The order is not paid.</li>
+     * <li>Paid: The order is paid.</li>
+     * <li>Cancelled: The order is canceled.</li>
+     * </ul>
+     * <blockquote>
+     * <p>: You can set this parameter to NULL for a refund order.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Paid</p>
      */
     @NameInMap("PaymentStatus")
     public String paymentStatus;
 
     /**
      * <p>The code of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The type of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   Subscription: subscription</p>
-     * <p>*   PayAsYouGo: pay-as-you-go</p>
+     * <ul>
+     * <li>Subscription: subscription</li>
+     * <li>PayAsYouGo: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Subscription</p>
      */
     @NameInMap("SubscriptionType")
     public String subscriptionType;

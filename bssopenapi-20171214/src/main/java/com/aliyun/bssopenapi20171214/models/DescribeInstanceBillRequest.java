@@ -6,68 +6,97 @@ import com.aliyun.tea.*;
 public class DescribeInstanceBillRequest extends TeaModel {
     /**
      * <p>The ID of the member. If you specify this parameter, the bills of the member are queried. If you do not specify this parameter, the bills of the current account are queried by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>122</p>
      */
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
     /**
-     * <p>The billing cycle. Specify the parameter in the YYYY-MM format.</p>
-     * <p>Only the latest 18 month billing cycle is supported.</p>
+     * <p>The billing cycle. Specify the parameter in the YYYY-MM format.
+     * Only the latest 18 month billing cycle is supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-03</p>
      */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
     /**
      * <p>The billing date. This parameter is required only when the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-03-02</p>
      */
     @NameInMap("BillingDate")
     public String billingDate;
 
     /**
      * <p>The granularity at which bills are queried. Valid values:</p>
-     * <br>
-     * <p>*   MONTHLY: queries bills on a monthly basis. The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.</p>
-     * <p>*   DAILY: queries bills on a daily basis. The data that you query is the same as the data searched by days on the Billing Details tab of the Bill Details page in the User Center console.</p>
-     * <br>
+     * <ul>
+     * <li>MONTHLY: queries bills on a monthly basis. The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.</li>
+     * <li>DAILY: queries bills on a daily basis. The data that you query is the same as the data searched by days on the Billing Details tab of the Bill Details page in the User Center console.</li>
+     * </ul>
      * <p>The BillingDate parameter is required if you set the Granularity parameter to DAILY.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MONTHLY</p>
      */
     @NameInMap("Granularity")
     public String granularity;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("InstanceID")
     public String instanceID;
 
     /**
      * <p>Specifies whether to query data by billable items. Valid values:</p>
-     * <br>
-     * <p>*   false: The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.</p>
-     * <p>*   true: The data that you query is the same as the data searched by billable items on the Billing Details tab of the Bill Details page in the User Center console.</p>
-     * <br>
+     * <ul>
+     * <li>false: The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.</li>
+     * <li>true: The data that you query is the same as the data searched by billable items on the Billing Details tab of the Bill Details page in the User Center console.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsBillingItem")
     public Boolean isBillingItem;
 
     /**
      * <p>Specifies whether to filter bills if both the pretax gross amount and pretax amount are 0. Valid values:</p>
-     * <br>
-     * <p>*   false: does not filter bills.</p>
-     * <p>*   true: filters bills.</p>
+     * <ul>
+     * <li>false: does not filter bills.</li>
+     * <li>true: filters bills.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsHideZeroCharge")
     public Boolean isHideZeroCharge;
 
     /**
      * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to indicate the position where the results for the current call start. The parameter must be left empty or set to the value of the NextToken parameter that is returned from the last call. Otherwise, an error is returned. If the parameter is left empty, data is queried from the first item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAESEgoQCg4KCm</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -80,21 +109,31 @@ public class DescribeInstanceBillRequest extends TeaModel {
 
     /**
      * <p>The code of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The type of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   Subscription: the subscription billing method.</p>
-     * <p>*   PayAsYouGo: the pay-as-you-go billing method.</p>
+     * <ul>
+     * <li>Subscription: the subscription billing method.</li>
+     * <li>PayAsYouGo: the pay-as-you-go billing method.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
      */
     @NameInMap("SubscriptionType")
     public String subscriptionType;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9EEAE43F-1E4D-4734-AE93-5049878AC103</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,50 +94,72 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     public static class QueryBillToOSSSubscriptionResponseBodyDataItemsItem extends TeaModel {
         /**
          * <p>The owner ID of the Object Storage Service (OSS) bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1369168081849304</p>
          */
         @NameInMap("BucketOwnerId")
         public Long bucketOwnerId;
 
         /**
          * <p>The path in the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Billing/BillingItemDetailMonthly/</p>
          */
         @NameInMap("BucketPath")
         public String bucketPath;
 
         /**
          * <p>The maximum number of data rows in a single file. If the number of data rows in a bill exceeds the upper limit, the bill is split into multiple files. Then, multiple files are merged and compressed into a package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300000</p>
          */
         @NameInMap("RowLimitPerFile")
         public Integer rowLimitPerFile;
 
         /**
          * <p>The ID of the OSS bucket that stores the subscribed bill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>billingtestbucket</p>
          */
         @NameInMap("SubscribeBucket")
         public String subscribeBucket;
 
         /**
          * <p>The code of the language.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   en: English</p>
-         * <p>*   zh: Chinese</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh: Chinese</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("SubscribeLanguage")
         public String subscribeLanguage;
 
         /**
          * <p>The time when the subscribed bill was stored in the OSS bucket. The time is displayed in the YYYY-MM-DD hh:mm:ss format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-30 15:40:11</p>
          */
         @NameInMap("SubscribeTime")
         public String subscribeTime;
 
         /**
          * <p>The type of the subscribed bill. Valid values:</p>
-         * <br>
-         * <p>*   BillingItemDetailForBillingPeriod: the bill of a billable item.</p>
-         * <p>*   InstanceDetailForBillingPeriod: the bill of an instance.</p>
+         * <ul>
+         * <li>BillingItemDetailForBillingPeriod: the bill of a billable item.</li>
+         * <li>InstanceDetailForBillingPeriod: the bill of an instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BillingItemDetailForBillingPeriod</p>
          */
         @NameInMap("SubscribeType")
         public String subscribeType;
@@ -215,12 +249,18 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     public static class QueryBillToOSSSubscriptionResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the account used to perform the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185xxxxx03489</p>
          */
         @NameInMap("AccountID")
         public String accountID;
 
         /**
          * <p>The name of the account used to perform the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
         @NameInMap("AccountName")
         public String accountName;
