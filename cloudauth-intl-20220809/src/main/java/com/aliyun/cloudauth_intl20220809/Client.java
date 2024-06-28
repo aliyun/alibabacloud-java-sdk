@@ -691,6 +691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IdOcrPictureUrl", request.idOcrPictureUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.idThreshold)) {
+            query.put("IdThreshold", request.idThreshold);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
             query.put("MerchantBizId", request.merchantBizId);
         }
@@ -783,6 +787,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.idOcrPictureUrl)) {
             query.put("IdOcrPictureUrl", request.idOcrPictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idThreshold)) {
+            query.put("IdThreshold", request.idThreshold);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
@@ -1119,6 +1127,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DocType", request.docType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.docVideo)) {
+            query.put("DocVideo", request.docVideo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.experienceCode)) {
             query.put("ExperienceCode", request.experienceCode);
         }
@@ -1135,6 +1147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IdSpoof", request.idSpoof);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.idThreshold)) {
+            query.put("IdThreshold", request.idThreshold);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.languageConfig)) {
             query.put("LanguageConfig", request.languageConfig);
         }
@@ -1149,6 +1165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.metaInfo)) {
             query.put("MetaInfo", request.metaInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ocr)) {

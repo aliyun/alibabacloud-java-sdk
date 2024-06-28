@@ -32,6 +32,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("DocType")
     public String docType;
 
+    @NameInMap("DocVideo")
+    public String docVideo;
+
     @NameInMap("ExperienceCode")
     public String experienceCode;
 
@@ -61,6 +64,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("IdSpoof")
     public String idSpoof;
 
+    @NameInMap("IdThreshold")
+    public String idThreshold;
+
     @NameInMap("LanguageConfig")
     public String languageConfig;
 
@@ -84,6 +90,9 @@ public class InitializeRequest extends TeaModel {
      */
     @NameInMap("MetaInfo")
     public String metaInfo;
+
+    @NameInMap("Model")
+    public String model;
 
     /**
      * <p>OCR。</p>
@@ -179,6 +188,14 @@ public class InitializeRequest extends TeaModel {
         return this.docType;
     }
 
+    public InitializeRequest setDocVideo(String docVideo) {
+        this.docVideo = docVideo;
+        return this;
+    }
+    public String getDocVideo() {
+        return this.docVideo;
+    }
+
     public InitializeRequest setExperienceCode(String experienceCode) {
         this.experienceCode = experienceCode;
         return this;
@@ -219,6 +236,14 @@ public class InitializeRequest extends TeaModel {
         return this.idSpoof;
     }
 
+    public InitializeRequest setIdThreshold(String idThreshold) {
+        this.idThreshold = idThreshold;
+        return this;
+    }
+    public String getIdThreshold() {
+        return this.idThreshold;
+    }
+
     public InitializeRequest setLanguageConfig(String languageConfig) {
         this.languageConfig = languageConfig;
         return this;
@@ -249,6 +274,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getMetaInfo() {
         return this.metaInfo;
+    }
+
+    public InitializeRequest setModel(String model) {
+        this.model = model;
+        return this;
+    }
+    public String getModel() {
+        return this.model;
     }
 
     public InitializeRequest setOcr(String ocr) {
