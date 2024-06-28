@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AllocateCostUnitResourceResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful！</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>845C629F-47A7-4F46-A470-ED5047C4C250</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,21 +94,31 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
     public static class AllocateCostUnitResourceResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether resources are allocated to the specified cost center. Valid values:</p>
-         * <br>
-         * <p>*   true: The resources are allocated to the specified cost center.</p>
-         * <p>*   false: The resources fail to be allocated to the specified cost center.</p>
+         * <ul>
+         * <li>true: The resources are allocated to the specified cost center.</li>
+         * <li>false: The resources fail to be allocated to the specified cost center.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
         /**
          * <p>The ID of the destination cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32857346527</p>
          */
         @NameInMap("ToUnitId")
         public Long toUnitId;
 
         /**
          * <p>The user ID of the owner of the destination cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34857693874</p>
          */
         @NameInMap("ToUnitUserId")
         public Long toUnitUserId;

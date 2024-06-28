@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,14 +94,19 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     public static class DescribeSavingsPlansUsageTotalResponseBodyDataPeriodCoverage extends TeaModel {
         /**
          * <p>The usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Percentage")
         public Float percentage;
 
         /**
          * <p>The period.</p>
-         * <br>
          * <p>The value is in the format of yyyyMMddHH.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021041500</p>
          */
         @NameInMap("Period")
         public String period;
@@ -120,24 +137,36 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     public static class DescribeSavingsPlansUsageTotalResponseBodyDataTotalUsage extends TeaModel {
         /**
          * <p>The total amount of the savings plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("PoolValue")
         public Float poolValue;
 
         /**
          * <p>The pay-as-you-go cost.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("PostpaidCost")
         public Float postpaidCost;
 
         /**
          * <p>The amount that is saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("SavedCost")
         public Float savedCost;
 
         /**
          * <p>The total usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UsagePercentage")
         public Float usagePercentage;

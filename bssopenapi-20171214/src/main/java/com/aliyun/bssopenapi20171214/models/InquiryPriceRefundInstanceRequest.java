@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class InquiryPriceRefundInstanceRequest extends TeaModel {
     /**
      * <p>This parameter is required for scenarios that need idempotence. The UUID that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>793F021C-B589-1225-82A9-99232AEBE494</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the instance. This parameter is required for unsubscription scenarios.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1etb69sqxgl4*******</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The code of the service. This parameter is required for unsubscription scenarios.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The type of the service. This parameter is required for unsubscription scenarios. Unless otherwise specified, set this parameter to an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>”“</p>
      */
     @NameInMap("ProductType")
     public String productType;

@@ -6,48 +6,71 @@ import com.aliyun.tea.*;
 public class QuerySavingsPlansInstanceRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-01 00:00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the savings plan instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spn-xxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The language of the return data. Valid values:</p>
-     * <br>
-     * <p>*   ZH: Chinese</p>
-     * <p>*   EN: English</p>
+     * <ul>
+     * <li>ZH: Chinese</li>
+     * <li>EN: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ZH</p>
      */
     @NameInMap("Locale")
     public String locale;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-01-01 00:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The status of the Instance. </p>
-     * <br>
-     * <p>*  NORMAL</p>
-     * <p>* RELEASE</p>
+     * <ul>
+     * <li>NORMAL</li>
+     * <li>RELEASE</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("Status")
     public String status;
@@ -130,12 +153,18 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
     public static class QuerySavingsPlansInstanceRequestTag extends TeaModel {
         /**
          * <p>The key of the tag to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         @NameInMap("Value")
         public String value;

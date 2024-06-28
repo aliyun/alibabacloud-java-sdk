@@ -4,39 +4,85 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySettleBillRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-07</p>
+     */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IsDisplayLocalCurrency")
     public Boolean isDisplayLocalCurrency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsHideZeroCharge")
     public Boolean isHideZeroCharge;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12233</p>
+     */
     @NameInMap("RecordID")
     public String recordID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Subscription</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SubscriptionOrder</p>
+     */
     @NameInMap("Type")
     public String type;
 

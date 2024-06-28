@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryUserOmsDataResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful！</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,12 +94,18 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
     public static class QueryUserOmsDataResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>Indicates that the returned usage data starts from the next page. If no value is returned for this parameter or this parameter is not returned, no data can be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NextToken</p>
          */
         @NameInMap("Marker")
         public String marker;

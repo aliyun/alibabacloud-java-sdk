@@ -6,60 +6,94 @@ import com.aliyun.tea.*;
 public class QuerySavingsPlansDiscountRequest extends TeaModel {
     /**
      * <p>The code of the service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
      * <p>The cycle based on which queries are performed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1:Year</p>
      */
     @NameInMap("Cycle")
     public String cycle;
 
     /**
      * <p>The identifier of the language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZH</p>
      */
     @NameInMap("Locale")
     public String locale;
 
     /**
      * <p>The code of the pricing module.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance_type</p>
      */
     @NameInMap("ModuleCode")
     public String moduleCode;
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The payment mode.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>total</p>
      */
     @NameInMap("PayMode")
     public String payMode;
 
     /**
      * <p>The ID of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The type of the resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g6</p>
      */
     @NameInMap("Spec")
     public String spec;
 
     /**
      * <p>The type of the savings plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>universal</p>
      */
     @NameInMap("SpnType")
     public String spnType;

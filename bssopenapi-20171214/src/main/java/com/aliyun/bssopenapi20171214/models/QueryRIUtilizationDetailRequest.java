@@ -6,51 +6,79 @@ import com.aliyun.tea.*;
 public class QueryRIUtilizationDetailRequest extends TeaModel {
     /**
      * <p>The ID of the instance whose fees are deducted by using the RI. If this parameter is left empty, the usage details of all instances are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jsdgfsdhgsdjh</p>
      */
     @NameInMap("DeductedInstanceId")
     public String deductedInstanceId;
 
     /**
      * <p>The time when the RI expires. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-23 12:00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The instance type of the RI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instancetyp</p>
      */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The code of the service to which the RI is applied. Default value: ecsRi. Valid values:</p>
-     * <br>
-     * <p>*   ecsRi: ECS RI.</p>
-     * <p>*   scu_bag: storage capacity unit (SCU).</p>
+     * <ul>
+     * <li>ecsRi: ECS RI.</li>
+     * <li>scu_bag: storage capacity unit (SCU).</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecsRi</p>
      */
     @NameInMap("RICommodityCode")
     public String RICommodityCode;
 
     /**
      * <p>The ID of the RI. If this parameter is left empty, the usage details of all RIs are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dsudfgdsjh</p>
      */
     @NameInMap("RIInstanceId")
     public String RIInstanceId;
 
     /**
      * <p>The time when the RI was created. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-23 12:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;

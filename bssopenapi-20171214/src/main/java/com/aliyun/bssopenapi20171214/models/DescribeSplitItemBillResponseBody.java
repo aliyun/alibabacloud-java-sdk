@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSplitItemBillResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,324 +94,486 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
     public static class DescribeSplitItemBillResponseBodyDataItems extends TeaModel {
         /**
          * <p>The amount deducted with credit refund.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AdjustAmount")
         public Float adjustAmount;
 
         /**
          * <p>The ID of the account to which the bill belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185xxxx3489</p>
          */
         @NameInMap("BillAccountID")
         public String billAccountID;
 
         /**
          * <p>The name of the account to which the bill belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
         @NameInMap("BillAccountName")
         public String billAccountName;
 
         /**
          * <p>The billing date. Format: YYYY-MM-DD. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-20</p>
          */
         @NameInMap("BillingDate")
         public String billingDate;
 
         /**
          * <p>The billable item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bandwidth</p>
          */
         @NameInMap("BillingItem")
         public String billingItem;
 
         /**
          * <p>The code of the billable item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disk</p>
          */
         @NameInMap("BillingItemCode")
         public String billingItemCode;
 
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Other</p>
          */
         @NameInMap("BillingType")
         public String billingType;
 
         /**
          * <p>The type of the business.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trusteeship</p>
          */
         @NameInMap("BizType")
         public String bizType;
 
         /**
          * <p>The amount paid in cash. The amount deducted with credit refund is not included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CashAmount")
         public Float cashAmount;
 
         /**
          * <p>The code of the commodity. The code is the same as that displayed in the Split Bill module of the User Center console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not allocated</p>
          */
         @NameInMap("CostUnit")
         public String costUnit;
 
         /**
          * <p>The type of currency. Valid values: CNY, USD, and JPY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The amount deducted with vouchers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeductedByCashCoupons")
         public Float deductedByCashCoupons;
 
         /**
          * <p>The amount deducted with coupons.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeductedByCoupons")
         public Float deductedByCoupons;
 
         /**
          * <p>The amount deducted with prepaid cards.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeductedByPrepaidCard")
         public Float deductedByPrepaidCard;
 
         /**
          * <p>The amount deducted with resource plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DeductedByResourcePackage")
         public String deductedByResourcePackage;
 
         /**
          * <p>The configurations of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU:12</p>
          */
         @NameInMap("InstanceConfig")
         public String instanceConfig;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-kjhdskjgshfdlkjfdh</p>
          */
         @NameInMap("InstanceID")
         public String instanceID;
 
         /**
          * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.sn1ne.3xlarge</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
         /**
          * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34.xx.x.x</p>
          */
         @NameInMap("InternetIP")
         public String internetIP;
 
         /**
          * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.xx.xx.xx</p>
          */
         @NameInMap("IntranetIP")
         public String intranetIP;
 
         /**
          * <p>The discount amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
         /**
          * <p>The type of the bill. Valid values: SubscriptionOrder: the subscription bill. PayAsYouGoBill: the pay-as-you-go bill. Refund: the refund. Adjustment: the adjustment bill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGoBill</p>
          */
         @NameInMap("Item")
         public String item;
 
         /**
          * <p>The name of the split item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iZ28bycvyb4Z</p>
          */
         @NameInMap("ItemName")
         public String itemName;
 
         /**
          * <p>The unit price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.12</p>
          */
         @NameInMap("ListPrice")
         public String listPrice;
 
         /**
          * <p>The unit of the unit price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY/GB</p>
          */
         @NameInMap("ListPriceUnit")
         public String listPriceUnit;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nick</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
          * <p>The amount that is unsettled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("OutstandingAmount")
         public Float outstandingAmount;
 
         /**
          * <p>The ID of the account that owns the resource. This parameter is returned in multi-account scenario.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>169***013</p>
          */
         @NameInMap("OwnerID")
         public String ownerID;
 
         /**
          * <p>The amount paid in cash. The amount deducted with credit refund is included.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PaymentAmount")
         public Float paymentAmount;
 
         /**
          * <p>The code of the service. The code is the same as that displayed in the Split Bill module of the User Center console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("PipCode")
         public String pipCode;
 
         /**
          * <p>The pretax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PretaxAmount")
         public Float pretaxAmount;
 
         /**
          * <p>The pretax gross amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PretaxGrossAmount")
         public Float pretaxGrossAmount;
 
         /**
          * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The details of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApsaraDB RDS</p>
          */
         @NameInMap("ProductDetail")
         public String productDetail;
 
         /**
          * <p>The name of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApsaraDB RDS</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("ProductType")
         public String productType;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default resource group</p>
          */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
         /**
          * <p>The duration of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ServicePeriod")
         public String servicePeriod;
 
         /**
          * <p>The unit of the service duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         @NameInMap("ServicePeriodUnit")
         public String servicePeriodUnit;
 
         /**
          * <p>The ID of the account to which the split bill belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**122</p>
          */
         @NameInMap("SplitAccountID")
         public String splitAccountID;
 
         /**
          * <p>The name of the account to which the split item belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test**1122</p>
          */
         @NameInMap("SplitAccountName")
         public String splitAccountName;
 
         /**
          * <p>The billing cycle in which the bill is split.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06</p>
          */
         @NameInMap("SplitBillingCycle")
         public String splitBillingCycle;
 
         /**
          * <p>The day on which the bill is split.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-01</p>
          */
         @NameInMap("SplitBillingDate")
         public String splitBillingDate;
 
         /**
          * <p>The code of the split item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         @NameInMap("SplitCommodityCode")
         public String splitCommodityCode;
 
         /**
          * <p>The ID of the split item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-28bycvyb4</p>
          */
         @NameInMap("SplitItemID")
         public String splitItemID;
 
         /**
          * <p>The name of the split item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iZ28bycvyb4Z</p>
          */
         @NameInMap("SplitItemName")
         public String splitItemName;
 
         /**
          * <p>The details of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApsaraDB RDS</p>
          */
         @NameInMap("SplitProductDetail")
         public String splitProductDetail;
 
         /**
          * <p>The billing method. Valid values: Subscription: the subscription billing method. PayAsYouGo: the pay-as-you-go billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
          */
         @NameInMap("SubscriptionType")
         public String subscriptionType;
 
         /**
          * <p>The tag of the resource. If tags added to resources change, the bills generated during the period in which resources and tags are associated are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key:testKey value:testValue; key:testKey1 value:testValues1</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
          * <p>The amount of resource usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Usage")
         public String usage;
 
         /**
          * <p>The unit of usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GB</p>
          */
         @NameInMap("UsageUnit")
         public String usageUnit;
 
         /**
          * <p>The zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qingdao Zone B</p>
          */
         @NameInMap("Zone")
         public String zone;
@@ -846,18 +1020,27 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
     public static class DescribeSplitItemBillResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>185xxxx3489</p>
          */
         @NameInMap("AccountID")
         public String accountID;
 
         /**
          * <p>The ID of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The billing cycle. Format: YYYY-MM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03</p>
          */
         @NameInMap("BillingCycle")
         public String billingCycle;
@@ -870,18 +1053,27 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
 
         /**
          * <p>The maximum number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>The token used for the next query. If this parameter is empty, all the results are returned. When you perform the next query, you must set the NextToken parameter to this value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAESEgoQCg4K</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

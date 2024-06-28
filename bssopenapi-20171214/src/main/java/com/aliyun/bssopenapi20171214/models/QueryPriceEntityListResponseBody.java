@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryPriceEntityListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful！</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,12 +94,18 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
     public static class QueryPriceEntityListResponseBodyDataPriceEntityInfoListPriceFactorList extends TeaModel {
         /**
          * <p>The code of the factor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vm_region_no</p>
          */
         @NameInMap("PriceFactorCode")
         public String priceFactorCode;
 
         /**
          * <p>The name of the factor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Region</p>
          */
         @NameInMap("PriceFactorName")
         public String priceFactorName;
@@ -132,12 +150,18 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
     public static class QueryPriceEntityListResponseBodyDataPriceEntityInfoList extends TeaModel {
         /**
          * <p>The code of the billable item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance_type</p>
          */
         @NameInMap("PriceEntityCode")
         public String priceEntityCode;
 
         /**
          * <p>The name of the billable item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service (ECS) instance</p>
          */
         @NameInMap("PriceEntityName")
         public String priceEntityName;

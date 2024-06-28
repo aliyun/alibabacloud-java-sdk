@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeResourcePackageProductResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,24 +21,36 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72353765387</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BBEF51A3-E933-4F40-A534-C673CBDB9C80</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,12 +111,18 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty extends TeaModel {
         /**
          * <p>The name of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the property.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         @NameInMap("Value")
         public String value;
@@ -151,23 +172,32 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration extends TeaModel {
         /**
          * <p>The name of the validity period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6 Month</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the validity period for the resource plan. Valid values:</p>
-         * <br>
-         * <p>*   Month</p>
-         * <p>*   Year</p>
-         * <br>
+         * <ul>
+         * <li>Month</li>
+         * <li>Year</li>
+         * </ul>
          * <p>Default value: Month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the validity period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Value")
         public Integer value;
@@ -231,12 +261,18 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
         /**
          * <p>The name of the specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1TB</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("Value")
         public String value;
@@ -294,12 +330,18 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackagePackageTypesPackageType extends TeaModel {
         /**
          * <p>The code of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FPT_ossbag_deadlineAcc_CdnOut_common_sz</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The name of the resource plan type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Back-to-origin traffic plan - China (Shenzhen)</p>
          */
         @NameInMap("Name")
         public String name;
@@ -377,6 +419,9 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     public static class DescribeResourcePackageProductResponseBodyDataResourcePackagesResourcePackage extends TeaModel {
         /**
          * <p>The name of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Object Storage Service (OSS) resource plan (monthly)</p>
          */
         @NameInMap("Name")
         public String name;
@@ -389,12 +434,18 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
         /**
          * <p>The code of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ossbag</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The type of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ossbag</p>
          */
         @NameInMap("ProductType")
         public String productType;

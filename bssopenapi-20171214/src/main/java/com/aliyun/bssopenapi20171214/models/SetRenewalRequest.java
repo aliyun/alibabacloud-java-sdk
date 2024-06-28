@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class SetRenewalRequest extends TeaModel {
     /**
      * <p>The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-askjdhaskfjh</p>
      */
     @NameInMap("InstanceIDs")
     public String instanceIDs;
@@ -15,56 +19,82 @@ public class SetRenewalRequest extends TeaModel {
 
     /**
      * <p>The code of the service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The type of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
      * <p>The auto-renewal period. Valid values:</p>
-     * <br>
-     * <p>*   1</p>
-     * <p>*   2</p>
-     * <p>*   3</p>
-     * <p>*   6</p>
-     * <p>*   12</p>
-     * <br>
-     * <p>>  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+     * <ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>6</li>
+     * <li>12</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RenewalPeriod")
     public Integer renewalPeriod;
 
     /**
      * <p>The unit of the auto-renewal period. Valid values:</p>
-     * <br>
-     * <p>*   M: months</p>
-     * <p>*   Y: years</p>
-     * <br>
-     * <p>>  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+     * <ul>
+     * <li>M: months</li>
+     * <li>Y: years</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required if the RenewalStatus parameter is set to AutoRenewal.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>M</p>
      */
     @NameInMap("RenewalPeriodUnit")
     public String renewalPeriodUnit;
 
     /**
      * <p>The status of renewal. Valid values:</p>
-     * <br>
-     * <p>*   AutoRenewal: The instance is automatically renewed.</p>
-     * <p>*   ManualRenewal: The instance is manually renewed.</p>
-     * <p>*   NotRenewal: The instance is not renewed.</p>
+     * <ul>
+     * <li>AutoRenewal: The instance is automatically renewed.</li>
+     * <li>ManualRenewal: The instance is manually renewed.</li>
+     * <li>NotRenewal: The instance is not renewed.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AutoRenewal</p>
      */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   Subscription: subscription</p>
-     * <p>*   PayAsYouGo: pay-as-you-go</p>
+     * <ul>
+     * <li>Subscription: subscription</li>
+     * <li>PayAsYouGo: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
      */
     @NameInMap("SubscriptionType")
     public String subscriptionType;

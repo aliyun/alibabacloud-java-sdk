@@ -4,15 +4,34 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateResellerUserQuotaRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Amount")
     public String amount;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CNY</p>
+     */
     @NameInMap("Currency")
     public String currency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7ed0bedc-056e-4a71-9249-4581615c028f</p>
+     */
     @NameInMap("OutBizId")
     public String outBizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 

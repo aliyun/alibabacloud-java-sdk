@@ -13,27 +13,57 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends TeaMode
     @NameInMap("BillUserIdList")
     public java.util.List<String> billUserIdList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-10</p>
+     */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123#</p>
+     */
     @NameInMap("CostUnitCode")
     public String costUnitCode;
 
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CAESEgoQCg4KCmdtdF9jcmVhdGUEARgBIkgKCQBwhGmPcAEAAAo7AzYAAAAxTDgwMDcxMjg3ZDJhNmM3ZDguTDgwMDAwMDAwMDAwMzE1MTIuTDgwMDcyZDMyZTJkYzg3N2U</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rds</p>
+     */
     @NameInMap("ProductDetail")
     public String productDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Subscription</p>
+     */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 

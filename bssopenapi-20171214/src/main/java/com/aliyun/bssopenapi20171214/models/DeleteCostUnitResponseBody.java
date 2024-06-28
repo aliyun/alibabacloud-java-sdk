@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteCostUnitResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DeleteCostUnitResponseBody extends TeaModel {
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful！</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F5B803CF-94D8-43AF-ADB3-D819AAD30E27</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,18 +94,27 @@ public class DeleteCostUnitResponseBody extends TeaModel {
     public static class DeleteCostUnitResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the call is complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
         /**
          * <p>The user ID of the cost center owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12431</p>
          */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
         /**
          * <p>The ID of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123412343</p>
          */
         @NameInMap("UnitId")
         public Long unitId;

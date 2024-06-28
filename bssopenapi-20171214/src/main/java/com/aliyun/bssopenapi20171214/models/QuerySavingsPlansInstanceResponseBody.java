@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61293E7A-3406-4447-8620-EC88B0AA66AD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -118,114 +130,190 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     public static class QuerySavingsPlansInstanceResponseBodyDataItems extends TeaModel {
         /**
          * <p>The allocation status. Valid values:</p>
-         * <br>
-         * <p>*   unallocated</p>
-         * <p>*   allocated</p>
-         * <p>*   beAllocated</p>
+         * <ul>
+         * <li>unallocated</li>
+         * <li>allocated</li>
+         * <li>beAllocated</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>unallocated</p>
          */
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>savingplan_common_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The currency. Valid values: CNY and USD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("CurrentPoolValue")
         public String currentPoolValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1:Year</p>
+         */
         @NameInMap("Cycle")
         public String cycle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>HOUR</p>
+         */
         @NameInMap("DeductCycleType")
         public String deductCycleType;
 
         /**
          * <p>The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-01 00:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1663135741039</p>
+         */
         @NameInMap("EndTimestamp")
         public Long endTimestamp;
 
         /**
          * <p>The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.g6</p>
          */
         @NameInMap("InstanceFamily")
         public String instanceFamily;
 
         /**
          * <p>The ID of the savings plan instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spn-xxxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("LastBillTotalUsage")
         public String lastBillTotalUsage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.8</p>
+         */
         @NameInMap("LastBillUtilization")
         public String lastBillUtilization;
 
         /**
          * <p>The payment type. Valid values:</p>
-         * <br>
-         * <p>*   total: All Upfront</p>
-         * <p>*   half: Partial Upfront</p>
-         * <p>*   zero: No Upfront</p>
+         * <ul>
+         * <li>total: All Upfront</li>
+         * <li>half: Partial Upfront</li>
+         * <li>zero: No Upfront</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>total</p>
          */
         @NameInMap("PayMode")
         public String payMode;
 
         /**
          * <p>The commitment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.00</p>
          */
         @NameInMap("PoolValue")
         public String poolValue;
 
         /**
          * <p>The prepaid amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8760.00</p>
          */
         @NameInMap("PrepayFee")
         public String prepayFee;
 
         /**
          * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou-na62-a01</p>
          */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100.0</p>
+         */
         @NameInMap("RestPoolValue")
         public String restPoolValue;
 
         /**
          * <p>The type of the savings plan. Valid values:</p>
-         * <br>
-         * <p>*   universal: general-purpose</p>
-         * <p>*   ecs: ECS compute</p>
+         * <ul>
+         * <li>universal: general-purpose</li>
+         * <li>ecs: ECS compute</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("SavingsType")
         public String savingsType;
 
         /**
          * <p>The time when the instance takes effect. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-01-01 00:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1663135741039</p>
+         */
         @NameInMap("StartTimestamp")
         public Long startTimestamp;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   NORMAL: normal</p>
-         * <p>*   LIMIT: stopped due to overdue payment</p>
-         * <p>*   RELEASE: released</p>
+         * <ul>
+         * <li>NORMAL: normal</li>
+         * <li>LIMIT: stopped due to overdue payment</li>
+         * <li>RELEASE: released</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("Status")
         public String status;
@@ -238,12 +326,18 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The total amount that is saved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.00</p>
          */
         @NameInMap("TotalSave")
         public String totalSave;
 
         /**
          * <p>The total usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("Utilization")
         public String utilization;
@@ -456,18 +550,27 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

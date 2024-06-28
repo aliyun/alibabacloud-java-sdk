@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeResourceUsageTotalResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
 
     /**
      * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>364C7C81-5E5E-51A0-B738-1969D2671B05</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,12 +94,18 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
     public static class DescribeResourceUsageTotalResponseBodyDataPeriodCoverage extends TeaModel {
         /**
          * <p>The period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021071500</p>
          */
         @NameInMap("Period")
         public String period;
 
         /**
          * <p>The usage of resource plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("UsagePercentage")
         public Float usagePercentage;
@@ -118,30 +136,45 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
     public static class DescribeResourceUsageTotalResponseBodyDataTotalUsage extends TeaModel {
         /**
          * <p>The total costs of pay-as-you-go instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("PostpaidCost")
         public Float postpaidCost;
 
         /**
          * <p>The total potential savings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("PotentialSavedCost")
         public Float potentialSavedCost;
 
         /**
          * <p>The fee of purchased resource plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ReservationCost")
         public Float reservationCost;
 
         /**
          * <p>The total savings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("SavedCost")
         public Float savedCost;
 
         /**
          * <p>The total usage of resource plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UsagePercentage")
         public Float usagePercentage;

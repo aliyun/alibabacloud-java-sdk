@@ -12,6 +12,10 @@ public class QueryInstanceByTagRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Specify the savings plan instance as the type of the resource.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -54,12 +58,18 @@ public class QueryInstanceByTagRequest extends TeaModel {
     public static class QueryInstanceByTagRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         @NameInMap("Value")
         public String value;

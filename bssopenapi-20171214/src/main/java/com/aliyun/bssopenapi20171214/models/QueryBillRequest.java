@@ -6,27 +6,41 @@ import com.aliyun.tea.*;
 public class QueryBillRequest extends TeaModel {
     /**
      * <p>The ID of the member.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
     /**
      * <p>The billing cycle, in the YYYY-MM format.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-07</p>
      */
     @NameInMap("BillingCycle")
     public String billingCycle;
 
     /**
      * <p>Specifies whether to display local currency information in bills. The parameter will be discontinued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsDisplayLocalCurrency")
     public Boolean isDisplayLocalCurrency;
 
     /**
      * <p>Specifies whether to filter out a bill whose pretax gross amount is 0. By default, a bill whose pretax gross amount is 0 is not filtered out. Valid values:</p>
-     * <br>
-     * <p>*   true: filters out a bill whose pretax gross amount is 0.</p>
-     * <p>*   false: does not filter out a bill whose pretax gross amount is 0.</p>
+     * <ul>
+     * <li>true: filters out a bill whose pretax gross amount is 0.</li>
+     * <li>false: does not filter out a bill whose pretax gross amount is 0.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsHideZeroCharge")
     public Boolean isHideZeroCharge;
@@ -36,48 +50,66 @@ public class QueryBillRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The code of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The type of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   Subscription</p>
-     * <p>*   PayAsYouGo</p>
-     * <br>
+     * <ul>
+     * <li>Subscription</li>
+     * <li>PayAsYouGo</li>
+     * </ul>
      * <p>**</p>
-     * <br>
      * <p>****This parameter must be used together with the ProductCode parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Subscription</p>
      */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
 
     /**
      * <p>The type of the bill. Valid values:</p>
-     * <br>
-     * <p>*   SubscriptionOrder</p>
-     * <p>*   PayAsYouGoBill</p>
-     * <p>*   Refund</p>
-     * <p>*   Adjustment</p>
+     * <ul>
+     * <li>SubscriptionOrder</li>
+     * <li>PayAsYouGoBill</li>
+     * <li>Refund</li>
+     * <li>Adjustment</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SubscriptionOrder</p>
      */
     @NameInMap("Type")
     public String type;

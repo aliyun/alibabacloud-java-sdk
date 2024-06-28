@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class GetPayAsYouGoPriceRequest extends TeaModel {
     /**
      * <p>The details of pricing modules.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ModuleList")
     public java.util.List<GetPayAsYouGoPriceRequestModuleList> moduleList;
@@ -15,24 +16,38 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
 
     /**
      * <p>The code of the service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The type of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The billing method. Set the value to PayAsYouGo.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
      */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
@@ -93,29 +108,45 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
     public static class GetPayAsYouGoPriceRequestModuleList extends TeaModel {
         /**
          * <p>The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.</p>
-         * <br>
-         * <p>>  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the configuration parameters of the pricing module.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceType:ecs.g5.xlarge,IoOptimized:IoOptimized,ImageOs:linux</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
          * <p>The code of the Nth pricing module.</p>
-         * <br>
-         * <p>>  You can call the [DescribePricingModule](~~96469~~) operation to obtain the module code.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the module code.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceType</p>
          */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
         /**
          * <p>The price type of the Nth pricing module. Valid values:</p>
-         * <br>
-         * <p>*   Hour: hourly price</p>
-         * <p>*   Usage: usage price</p>
-         * <p>*   Month: monthly price</p>
-         * <p>*   Year: annual price</p>
-         * <br>
-         * <p>>  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.</p>
+         * <ul>
+         * <li>Hour: hourly price</li>
+         * <li>Usage: usage price</li>
+         * <li>Month: monthly price</li>
+         * <li>Year: annual price</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/96469.html">DescribePricingModule</a> operation to obtain the configuration parameters of the pricing module.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         @NameInMap("PriceType")
         public String priceType;

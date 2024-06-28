@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeResourceUsageDetailResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -88,48 +100,72 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
 
         /**
          * <p>The currency in which deduction plans were priced.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The amount of the resources deducted from deduction plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
         /**
          * <p>The end of the time range in which the usage details were queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-01 01:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("ImageType")
         public String imageType;
 
         /**
          * <p>The specifications of a deduction plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.t5-lc2m1.nano</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
         /**
          * <p>The equivalent of pay-as-you-go costs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.06</p>
          */
         @NameInMap("PostpaidCost")
         public String postpaidCost;
 
         /**
          * <p>The potential net savings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.13</p>
          */
         @NameInMap("PotentialSavedCost")
         public String potentialSavedCost;
 
         /**
          * <p>The number of deduction plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Quantity")
         public Long quantity;
@@ -142,36 +178,54 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
 
         /**
          * <p>The code of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-dg-a01</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The fee of purchased deduction plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReservationCost")
         public String reservationCost;
 
         /**
          * <p>The ID of a deduction plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecsri-bp147nnfz21225k9mpix00</p>
          */
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
         /**
          * <p>The net savings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.06</p>
          */
         @NameInMap("SavedCost")
         public String savedCost;
 
         /**
          * <p>The beginning of the time range in which the usage details were queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-01 00:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the deduction plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Valid</p>
          */
         @NameInMap("Status")
         public String status;
@@ -184,30 +238,45 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
 
         /**
          * <p>The total capacity of deduction plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalQuantity")
         public Float totalQuantity;
 
         /**
          * <p>The usage of deduction plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("UsagePercentage")
         public Float usagePercentage;
 
         /**
          * <p>The ID of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123745698925000</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The username of the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
          */
         @NameInMap("UserName")
         public String userName;
 
         /**
          * <p>The code of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         @NameInMap("Zone")
         public String zone;
@@ -418,18 +487,27 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
 
         /**
          * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
          * <p>The token of the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJwYWdlTnVtIjoyLCJwYWdlU2l6ZSI6MTB9</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

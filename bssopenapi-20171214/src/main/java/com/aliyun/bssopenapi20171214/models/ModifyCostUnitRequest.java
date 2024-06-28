@@ -26,18 +26,30 @@ public class ModifyCostUnitRequest extends TeaModel {
     public static class ModifyCostUnitRequestUnitEntityList extends TeaModel {
         /**
          * <p>The new name of the cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>newTest</p>
          */
         @NameInMap("NewUnitName")
         public String newUnitName;
 
         /**
          * <p>The user ID of the cost center owner.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1321312312</p>
          */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
         /**
          * <p>The ID of the cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2524352</p>
          */
         @NameInMap("UnitId")
         public Long unitId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSubscriptionPriceResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidConfigCod</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30E7066E-AE6F-4E59-AFE6-11386CE3AFA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,30 +94,45 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     public static class GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail extends TeaModel {
         /**
          * <p>The discount price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CostAfterDiscount")
         public Float costAfterDiscount;
 
         /**
          * <p>The discount that was applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
         /**
          * <p>The identifier of the pricing module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PackageCode</p>
          */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
         /**
          * <p>The original price of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("OriginalCost")
         public Float originalCost;
 
         /**
          * <p>The unit price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UnitPrice")
         public Float unitPrice;
@@ -179,18 +206,27 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     public static class GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail extends TeaModel {
         /**
          * <p>The description of the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
          * <p>The ID of the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1021199213</p>
          */
         @NameInMap("PromotionId")
         public Long promotionId;
 
         /**
          * <p>The name of the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -248,16 +284,23 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     public static class GetSubscriptionPriceResponseBodyData extends TeaModel {
         /**
          * <p>The type of currency. Valid values:</p>
-         * <br>
-         * <p>*   CNY: Chinese Yuan</p>
-         * <p>*   USD: US dollar</p>
-         * <p>*   JPY: Japanese Yen</p>
+         * <ul>
+         * <li>CNY: Chinese Yuan</li>
+         * <li>USD: US dollar</li>
+         * <li>JPY: Japanese Yen</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The discount that was applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
@@ -270,6 +313,9 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
         /**
          * <p>The original price of the service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
@@ -282,12 +328,18 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
         /**
          * <p>The quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Quantity")
         public Integer quantity;
 
         /**
          * <p>The discount price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;

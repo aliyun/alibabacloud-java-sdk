@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1537A007-72D7-4165-8A26-8694A38E219A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,30 +94,45 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     public static class GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail extends TeaModel {
         /**
          * <p>The discount price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("CostAfterDiscount")
         public Float costAfterDiscount;
 
         /**
          * <p>The discount that was applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("InvoiceDiscount")
         public Float invoiceDiscount;
 
         /**
          * <p>The code of the pricing module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceType</p>
          */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.77</p>
          */
         @NameInMap("OriginalCost")
         public Float originalCost;
 
         /**
          * <p>The unit price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UnitPrice")
         public Float unitPrice;
@@ -179,18 +206,27 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     public static class GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail extends TeaModel {
         /**
          * <p>The description of the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This discount allows you to use a service at the minimum price and is provided for testing purposes only.</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
          * <p>The ID of the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10200210</p>
          */
         @NameInMap("PromotionId")
         public Long promotionId;
 
         /**
          * <p>The name of the discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This discount allows you to use a service at the minimum price and is provided for testing purposes only.</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
@@ -248,10 +284,14 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     public static class GetPayAsYouGoPriceResponseBodyData extends TeaModel {
         /**
          * <p>The type of the currency. Valid values:</p>
-         * <br>
-         * <p>*   CNY: Chinese Yuan</p>
-         * <p>*   USD: US dollar</p>
-         * <p>*   JPY: Japanese Yen</p>
+         * <ul>
+         * <li>CNY: Chinese Yuan</li>
+         * <li>USD: US dollar</li>
+         * <li>JPY: Japanese Yen</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;

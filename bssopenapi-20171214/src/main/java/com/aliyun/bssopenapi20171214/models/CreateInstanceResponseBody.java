@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateInstanceResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful！</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C880B065-A781-4F19-B6DD-3E0E3B715C64</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,12 +94,18 @@ public class CreateInstanceResponseBody extends TeaModel {
     public static class CreateInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the instance for which the order was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSSBAG-cn-v1hxxxxx23</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the order that was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20240xxxx21</p>
          */
         @NameInMap("OrderId")
         public String orderId;

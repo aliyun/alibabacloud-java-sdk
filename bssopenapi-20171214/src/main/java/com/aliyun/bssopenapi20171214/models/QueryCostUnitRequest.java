@@ -6,24 +6,38 @@ import com.aliyun.tea.*;
 public class QueryCostUnitRequest extends TeaModel {
     /**
      * <p>The user ID of the cost center owner.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28394563429587</p>
      */
     @NameInMap("OwnerUid")
     public Long ownerUid;
 
     /**
      * <p>The page number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries per page. A maximum of 300 entries can be returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("ParentUnitId")
     public Long parentUnitId;

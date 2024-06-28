@@ -6,77 +6,121 @@ import com.aliyun.tea.*;
 public class CreateSavingsPlansInstanceRequest extends TeaModel {
     /**
      * <p>The code of the service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>savingplan_common_public_cn</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
      * <p>The service duration. This parameter is used together with the PricingCycle parameter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public String duration;
 
     /**
      * <p>The time when the savings plan takes effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-31T00:00:00Z</p>
      */
     @NameInMap("EffectiveDate")
     public String effectiveDate;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ExtendMap")
     public java.util.Map<String, String> extendMap;
 
     /**
      * <p>The payment mode. Valid values:</p>
-     * <br>
-     * <p>*   total: all upfront</p>
-     * <p>*   half: partial upfront</p>
-     * <p>*   zero: no upfront</p>
+     * <ul>
+     * <li>total: all upfront</li>
+     * <li>half: partial upfront</li>
+     * <li>zero: no upfront</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>total</p>
      */
     @NameInMap("PayMode")
     public String payMode;
 
     /**
      * <p>The contracted amount. unit: CNY</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1</p>
      */
     @NameInMap("PoolValue")
     public String poolValue;
 
     /**
      * <p>The unit of the service duration. This parameter is used together with the During parameter. Valid values:</p>
-     * <br>
-     * <p>*   Year</p>
-     * <p>*   Month</p>
+     * <ul>
+     * <li>Year</li>
+     * <li>Month</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Year</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
      * <p>The ID of the region in which you create the savings plan. You must specify this parameter if the Type parameter is not set to universal.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The specification type. This parameter is used together with the Specification parameter. You must specify this parameter if the Type parameter is not set to universal. Valid values:</p>
-     * <br>
-     * <p>*   group: specification group</p>
-     * <p>*   family: specification family</p>
+     * <ul>
+     * <li>group: specification group</li>
+     * <li>family: specification family</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>family</p>
      */
     @NameInMap("SpecType")
     public String specType;
 
     /**
      * <p>The specifications of the savings plan. This parameter is used together with the SpecType parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g6</p>
      */
     @NameInMap("Specification")
     public String specification;
 
     /**
      * <p>The type of the savings plan. Valid values:</p>
-     * <br>
-     * <p>*   universal: general-purpose type</p>
-     * <p>*   ecs: ECS compute type</p>
-     * <p>*   elasticy: elastic type</p>
+     * <ul>
+     * <li>universal: general-purpose type</li>
+     * <li>ecs: ECS compute type</li>
+     * <li>elasticy: elastic type</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>universal</p>
      */
     @NameInMap("Type")
     public String type;

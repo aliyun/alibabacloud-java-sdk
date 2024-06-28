@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class QueryResourcePackageInstancesRequest extends TeaModel {
     /**
      * <p>The end of the expiration time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-02T13:00:00Z</p>
      */
     @NameInMap("ExpiryTimeEnd")
     public String expiryTimeEnd;
 
     /**
      * <p>The beginning of the expiration time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-02-02T12:00:00Z</p>
      */
     @NameInMap("ExpiryTimeStart")
     public String expiryTimeStart;
 
     /**
      * <p>Specifies whether partners are involved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludePartner")
     public Boolean includePartner;
@@ -27,18 +36,27 @@ public class QueryResourcePackageInstancesRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The code of the service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductCode")
     public String productCode;

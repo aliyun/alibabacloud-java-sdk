@@ -6,21 +6,32 @@ import com.aliyun.tea.*;
 public class ModifyInstanceRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JAKSJFHFAKJSF</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the instance for which you want to modify the configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-akjhkdsjhfskjfhd</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of configuration modifications. Valid values:</p>
-     * <br>
-     * <p>*   Upgrade: upgrades the configurations of the instance.</p>
-     * <p>*   Downgrade: downgrades the configurations of the instance.</p>
+     * <ul>
+     * <li>Upgrade: upgrades the configurations of the instance.</li>
+     * <li>Downgrade: downgrades the configurations of the instance.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Upgrade</p>
      */
     @NameInMap("ModifyType")
     public String modifyType;
@@ -36,21 +47,33 @@ public class ModifyInstanceRequest extends TeaModel {
 
     /**
      * <p>The code of the service to which the instance belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The type of the service to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rds</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   Subscription: subscription</p>
-     * <p>*   PayAsYouGo: pay-as-you-go</p>
+     * <ul>
+     * <li>Subscription: subscription</li>
+     * <li>PayAsYouGo: pay-as-you-go</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Subscription</p>
      */
     @NameInMap("SubscriptionType")
     public String subscriptionType;
@@ -127,14 +150,23 @@ public class ModifyInstanceRequest extends TeaModel {
     public static class ModifyInstanceRequestParameter extends TeaModel {
         /**
          * <p>The code of the parameter n. Valid values of n: 1 to 100. Multiple parameters are concatenated in the order of n.</p>
-         * <br>
-         * <p>>  Only the parameters of the attributes that you want to modify for the instance must be configured. For example, if the instance has Attribute A and Attribute B and only Attribute A must be modified, configure only the parameter of Attribute A.</p>
+         * <blockquote>
+         * <p> Only the parameters of the attributes that you want to modify for the instance must be configured. For example, if the instance has Attribute A and Attribute B and only Attribute A must be modified, configure only the parameter of Attribute A.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The value of the parameter n. Valid values of n: 1 to 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Value")
         public String value;

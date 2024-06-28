@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The description of the execution result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UUID</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
     public static class InquiryPriceRefundInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The currency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY. CNY: Chinese Yuan. USD: United States dollar. JPY: Japanese Yen.</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The site of the execution host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1etb69sqxgl4*******</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The refundable amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.34</p>
          */
         @NameInMap("RefundAmount")
         public Double refundAmount;

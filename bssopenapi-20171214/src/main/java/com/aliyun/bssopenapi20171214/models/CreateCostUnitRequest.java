@@ -26,18 +26,30 @@ public class CreateCostUnitRequest extends TeaModel {
     public static class CreateCostUnitRequestUnitEntityList extends TeaModel {
         /**
          * <p>The user ID of the owner of the cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>982375623</p>
          */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
         /**
          * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("ParentUnitId")
         public Long parentUnitId;
 
         /**
          * <p>The name of the cost center.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("UnitName")
         public String unitName;

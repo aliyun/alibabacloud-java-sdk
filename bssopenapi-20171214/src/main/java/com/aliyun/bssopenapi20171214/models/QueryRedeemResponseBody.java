@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryRedeemResponseBody extends TeaModel {
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryRedeemResponseBody extends TeaModel {
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E503DC7B-E4F0-4B3C-BC89-BCECF1338F0B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,71 +94,102 @@ public class QueryRedeemResponseBody extends TeaModel {
     public static class QueryRedeemResponseBodyDataRedeemRedeem extends TeaModel {
         /**
          * <p>The services to which the redemption coupon is applicable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service (ECS)</p>
          */
         @NameInMap("ApplicableProducts")
         public String applicableProducts;
 
         /**
          * <p>The balance of the redemption coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Balance")
         public String balance;
 
         /**
          * <p>The time when the redemption coupon took effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-14 20:25:00</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
          * <p>The time when the redemption coupon expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-13 20:25:00</p>
          */
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
         /**
          * <p>The time when the redemption coupon was issued.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-14 20:25:00</p>
          */
         @NameInMap("GrantedTime")
         public String grantedTime;
 
         /**
          * <p>The nominal value of the redemption coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NominalValue")
         public String nominalValue;
 
         /**
          * <p>The ID of the redemption coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1342</p>
          */
         @NameInMap("RedeemId")
         public String redeemId;
 
         /**
          * <p>The number of the redemption coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4889*****1610</p>
          */
         @NameInMap("RedeemNo")
         public String redeemNo;
 
         /**
          * <p>The specifications of the redemption coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N/A</p>
          */
         @NameInMap("Specification")
         public String specification;
 
         /**
          * <p>The status of the redemption coupon. Valid values:</p>
-         * <br>
-         * <p>*   Generated</p>
-         * <p>*   CallBack</p>
-         * <p>*   RefundPending</p>
-         * <p>*   Canceled</p>
-         * <p>*   Order_Canceled</p>
-         * <p>*   ActivePending</p>
-         * <p>*   ActiveSuccess</p>
-         * <p>*   ExchangePending</p>
-         * <p>*   ExchangeSuccess</p>
-         * <p>*   Expired</p>
+         * <ul>
+         * <li>Generated</li>
+         * <li>CallBack</li>
+         * <li>RefundPending</li>
+         * <li>Canceled</li>
+         * <li>Order_Canceled</li>
+         * <li>ActivePending</li>
+         * <li>ActiveSuccess</li>
+         * <li>ExchangePending</li>
+         * <li>ExchangeSuccess</li>
+         * <li>Expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Generated</p>
          */
         @NameInMap("Status")
         public String status;
@@ -260,12 +303,18 @@ public class QueryRedeemResponseBody extends TeaModel {
     public static class QueryRedeemResponseBodyData extends TeaModel {
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Long pageNum;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
@@ -278,6 +327,9 @@ public class QueryRedeemResponseBody extends TeaModel {
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

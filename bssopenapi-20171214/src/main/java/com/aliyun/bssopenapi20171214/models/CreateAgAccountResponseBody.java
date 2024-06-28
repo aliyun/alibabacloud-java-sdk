@@ -12,24 +12,36 @@ public class CreateAgAccountResponseBody extends TeaModel {
 
     /**
      * <p>The status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LOGIN_EMAIL_HAS_BEEN_USED</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>loginEmail=<a href="mailto:685741089H@chinaunicom.cn">685741089H@chinaunicom.cn</a>,has used</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EAE08A27-386C-579E-966D-8853EC3C5D0E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class CreateAgAccountResponseBody extends TeaModel {
     public static class CreateAgAccountResponseBodyAgRelationDto extends TeaModel {
         /**
          * <p>The ID of the account that is used to call the CreateAgAccount operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1785287436011964</p>
          */
         @NameInMap("Mpk")
         public String mpk;
 
         /**
          * <p>The ID of the account that is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1728240534507590</p>
          */
         @NameInMap("Pk")
         public String pk;
 
         /**
          * <p>The role of the account that is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin-role</p>
          */
         @NameInMap("RamAdminRoleName")
         public String ramAdminRoleName;
 
         /**
          * <p>The type of the relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FINACE_CLOUD</p>
          */
         @NameInMap("Type")
         public String type;

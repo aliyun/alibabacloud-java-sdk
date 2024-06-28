@@ -6,63 +6,97 @@ import com.aliyun.tea.*;
 public class QueryDPUtilizationDetailRequest extends TeaModel {
     /**
      * <p>The code of the resource, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect for the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecsRi</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
     /**
      * <p>The ID of the deducted instance. If this parameter is not specified, the details of all instances are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-123123</p>
      */
     @NameInMap("DeductedInstanceId")
     public String deductedInstanceId;
 
     /**
      * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-23 12:00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>Specifies whether to query the resource plan usage of linked accounts. Valid values:</p>
-     * <br>
-     * <p>*   true: queries the resource plan usage of linked accounts.</p>
-     * <p>*   false: does not query the resource plan usage of linked accounts.</p>
+     * <ul>
+     * <li>true: queries the resource plan usage of linked accounts.</li>
+     * <li>false: does not query the resource plan usage of linked accounts.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeShare")
     public Boolean includeShare;
 
     /**
      * <p>The ID of the instance to query. If this parameter is not specified, the details of all used instances are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-123123</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The instance type of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instancetyp</p>
      */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
     /**
      * <p>The token that is used to retrieve the next page of results. For the first query, set the value to null. For subsequent queries, set the value to the token that is obtained from the NextToken parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAESF***zNTAw</p>
      */
     @NameInMap("LastToken")
     public String lastToken;
 
     /**
      * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Limit")
     public Integer limit;
 
     /**
      * <p>The code of the service. Example: ecs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
      */
     @NameInMap("ProdCode")
     public String prodCode;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-23 12:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;

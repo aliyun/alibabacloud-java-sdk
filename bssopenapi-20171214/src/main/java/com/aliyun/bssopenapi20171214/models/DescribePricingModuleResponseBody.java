@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePricingModuleResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This API is not applicable for caller.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C40A8EE0-8084-49FE-B66E-5E1C3B6AE025</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,29 +94,43 @@ public class DescribePricingModuleResponseBody extends TeaModel {
     public static class DescribePricingModuleResponseBodyDataAttributeListAttributeValuesAttributeValue extends TeaModel {
         /**
          * <p>The attribute value that corresponds to the module code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2 Cores and 4 GB Memory (Basic Edition)</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The description of the module values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Connections: 4,000 IOPS is related to storage space</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
          * <p>The type of the attribute value that corresponds to the module code. Valid values:</p>
-         * <br>
-         * <p>*   single_float: single value</p>
-         * <p>*   range_float: range value</p>
+         * <ul>
+         * <li>single_float: single value</li>
+         * <li>range_float: range value</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>single_string</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The attribute value that corresponds to the module code.</p>
-         * <br>
-         * <p>>  If the Type parameter is set to range_float, the valid values of this parameter range from 1024 to 1024000. A value of 1024 indicates that the step size is 1024.</p>
+         * <blockquote>
+         * <p> If the Type parameter is set to range_float, the valid values of this parameter range from 1024 to 1024000. A value of 1024 indicates that the step size is 1024.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n2.medium.1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -170,18 +196,27 @@ public class DescribePricingModuleResponseBody extends TeaModel {
     public static class DescribePricingModuleResponseBodyDataAttributeListAttribute extends TeaModel {
         /**
          * <p>The code of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DBInstanceStorage</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The name of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Capacity</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GB</p>
          */
         @NameInMap("Unit")
         public String unit;
@@ -275,31 +310,44 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
         /**
          * <p>The currency. Default value: CNY.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The code of the pricing module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceType</p>
          */
         @NameInMap("ModuleCode")
         public String moduleCode;
 
         /**
          * <p>The name of the pricing module.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
          * <p>The price type. Valid values:</p>
-         * <br>
-         * <p>*   Usage: usage price</p>
-         * <p>*   Hour: hourly price</p>
-         * <p>*   Day: daily price</p>
-         * <p>*   Week: weekly price</p>
-         * <p>*   Month: monthly price</p>
-         * <p>*   Year: annual price</p>
+         * <ul>
+         * <li>Usage: usage price</li>
+         * <li>Hour: hourly price</li>
+         * <li>Day: daily price</li>
+         * <li>Week: weekly price</li>
+         * <li>Month: monthly price</li>
+         * <li>Year: annual price</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         @NameInMap("PriceType")
         public String priceType;

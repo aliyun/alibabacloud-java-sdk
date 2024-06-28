@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryCostUnitResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class QueryCostUnitResponseBody extends TeaModel {
 
     /**
      * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful!</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,24 +94,36 @@ public class QueryCostUnitResponseBody extends TeaModel {
     public static class QueryCostUnitResponseBodyDataCostUnitDtoList extends TeaModel {
         /**
          * <p>The user ID of the cost center owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2343464</p>
          */
         @NameInMap("OwnerUid")
         public Long ownerUid;
 
         /**
          * <p>The ID of the parent cost center. A value of -1 indicates the root cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("ParentUnitId")
         public Long parentUnitId;
 
         /**
          * <p>The ID of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23534</p>
          */
         @NameInMap("UnitId")
         public Long unitId;
 
         /**
          * <p>The name of the cost center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("UnitName")
         public String unitName;
@@ -152,18 +176,27 @@ public class QueryCostUnitResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

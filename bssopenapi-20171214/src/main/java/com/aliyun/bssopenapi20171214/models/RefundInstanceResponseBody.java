@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RefundInstanceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ResourceNotExists</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,18 +21,27 @@ public class RefundInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The description of the execution result.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UUID</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -82,12 +94,18 @@ public class RefundInstanceResponseBody extends TeaModel {
     public static class RefundInstanceResponseBodyData extends TeaModel {
         /**
          * <p>The site of the execution host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn</p>
          */
         @NameInMap("HostId")
         public String hostId;
 
         /**
          * <p>The ID of the refund order that is returned only if the instance is unsubscribed from.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2100000000***</p>
          */
         @NameInMap("OrderId")
         public Long orderId;

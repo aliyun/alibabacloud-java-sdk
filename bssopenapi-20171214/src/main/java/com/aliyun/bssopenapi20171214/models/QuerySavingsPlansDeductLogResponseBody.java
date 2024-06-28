@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PARAM_ERROR</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,12 +27,18 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61293E7A-3406-4447-8620-EC88B0AA66AD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -100,18 +109,27 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
         /**
          * <p>The deducted amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.52</p>
          */
         @NameInMap("DeductFee")
         public String deductFee;
 
         /**
          * <p>The ID of the instance for which the fee is deducted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-XXXXXXXXX</p>
          */
         @NameInMap("DeductInstanceId")
         public String deductInstanceId;
 
         /**
          * <p>The deduction rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("DeductRate")
         public String deductRate;
@@ -121,18 +139,27 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
         /**
          * <p>The discount used for the current deduction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.069</p>
          */
         @NameInMap("DiscountRate")
         public String discountRate;
 
         /**
          * <p>The end of the billing cycle for which the fee is deducted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-01 01:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The ID of the savings plan instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spn-xxxxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -143,6 +170,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1906589291020438</p>
+         */
         @NameInMap("OwnerId")
         public Long ownerId;
 
@@ -151,21 +182,31 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
         /**
          * <p>The type of the savings plan. Valid values:</p>
-         * <br>
-         * <p>*   universal: general-purpose</p>
-         * <p>*   ecs: ECS compute</p>
+         * <ul>
+         * <li>universal: general-purpose</li>
+         * <li>ecs: ECS compute</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("SavingsType")
         public String savingsType;
 
         /**
          * <p>The beginning of the billing cycle for which the fee is deducted. The time is in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-01 00:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1906589291020438</p>
          */
         @NameInMap("UserId")
         public Long userId;
@@ -330,18 +371,27 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
