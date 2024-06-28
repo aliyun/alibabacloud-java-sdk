@@ -23,6 +23,9 @@ public class DeleteContainerGroupRequest extends TeaModel {
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -64,6 +67,14 @@ public class DeleteContainerGroupRequest extends TeaModel {
     }
     public String getContainerGroupId() {
         return this.containerGroupId;
+    }
+
+    public DeleteContainerGroupRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public DeleteContainerGroupRequest setOwnerAccount(String ownerAccount) {

@@ -1210,6 +1210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ContainerGroupId", request.containerGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
