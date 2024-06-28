@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddServiceSharedAccountsRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
      * <strong>example:</strong>
      * <p>BBBAAfu+XtuBE55iRLHEYYuojI4=</p>
      */
@@ -12,6 +14,7 @@ public class AddServiceSharedAccountsRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class AddServiceSharedAccountsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The service ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,12 +34,19 @@ public class AddServiceSharedAccountsRequest extends TeaModel {
     public String serviceId;
 
     /**
+     * <p>The shared account and permissions of the service.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SharedAccounts")
     public java.util.List<AddServiceSharedAccountsRequestSharedAccounts> sharedAccounts;
 
     /**
+     * <p>The share type of the service. Default value: SharedAccount. Valid values:</p>
+     * <ul>
+     * <li>SharedAccount: The service is shared by multiple accounts.</li>
+     * <li>Reseller: The service is distributed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>SharedAccount</p>
      */
@@ -89,6 +100,11 @@ public class AddServiceSharedAccountsRequest extends TeaModel {
 
     public static class AddServiceSharedAccountsRequestSharedAccounts extends TeaModel {
         /**
+         * <p>The permissions on the service. Valid values:</p>
+         * <ul>
+         * <li>Deployable: Permissions to deploy the service.</li>
+         * <li>Accessible: Permissions to access the service.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -98,6 +114,7 @@ public class AddServiceSharedAccountsRequest extends TeaModel {
         public String permission;
 
         /**
+         * <p>The Alibaba Cloud account ID of the user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

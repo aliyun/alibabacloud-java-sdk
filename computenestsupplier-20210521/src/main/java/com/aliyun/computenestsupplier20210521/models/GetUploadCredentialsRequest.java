@@ -10,6 +10,9 @@ public class GetUploadCredentialsRequest extends TeaModel {
     @NameInMap("FileName")
     public String fileName;
 
+    @NameInMap("Visibility")
+    public String visibility;
+
     public static GetUploadCredentialsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUploadCredentialsRequest self = new GetUploadCredentialsRequest();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class GetUploadCredentialsRequest extends TeaModel {
     }
     public String getFileName() {
         return this.fileName;
+    }
+
+    public GetUploadCredentialsRequest setVisibility(String visibility) {
+        this.visibility = visibility;
+        return this;
+    }
+    public String getVisibility() {
+        return this.visibility;
     }
 
 }

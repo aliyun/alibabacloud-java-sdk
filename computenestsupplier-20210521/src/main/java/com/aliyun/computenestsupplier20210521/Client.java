@@ -27,6 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds a shared account of a service.</p>
+     * 
      * @param request AddServiceSharedAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddServiceSharedAccountsResponse
@@ -72,6 +75,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds a shared account of a service.</p>
+     * 
      * @param request AddServiceSharedAccountsRequest
      * @return AddServiceSharedAccountsResponse
      */
@@ -507,6 +513,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a service.</p>
+     * 
      * @param request DeleteServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteServiceResponse
@@ -548,6 +557,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a service.</p>
+     * 
      * @param request DeleteServiceRequest
      * @return DeleteServiceResponse
      */
@@ -1026,6 +1038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             query.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.visibility)) {
+            query.put("Visibility", request.visibility);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1606,7 +1622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布部署物</p>
+     * <p>Publishes an artifact.</p>
      * 
      * @param request ReleaseArtifactRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1638,7 +1654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布部署物</p>
+     * <p>Publishes an artifact.</p>
      * 
      * @param request ReleaseArtifactRequest
      * @return ReleaseArtifactResponse
@@ -2056,7 +2072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>变配服务实例</p>
+     * <p>Updates the configurations of a service instance.</p>
      * 
      * @param tmpReq UpdateServiceInstanceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2114,7 +2130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>变配服务实例</p>
+     * <p>Updates the configurations of a service instance.</p>
      * 
      * @param request UpdateServiceInstanceSpecRequest
      * @return UpdateServiceInstanceSpecResponse

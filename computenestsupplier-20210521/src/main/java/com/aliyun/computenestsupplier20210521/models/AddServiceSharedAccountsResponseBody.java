@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddServiceSharedAccountsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2815213-EA4F-5759-8EA1-56DD051BB3FD</p>
      */

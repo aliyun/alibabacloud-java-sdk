@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReleaseArtifactResponseBody extends TeaModel {
     /**
+     * <p>The ID of the artifact.</p>
+     * 
      * <strong>example:</strong>
      * <p>artifact-9feded91880e4c78xxxx</p>
      */
@@ -12,6 +14,8 @@ public class ReleaseArtifactResponseBody extends TeaModel {
     public String artifactId;
 
     /**
+     * <p>The content of the artifact.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;{\&quot;Url\&quot;:\&quot;<a href="https://computenest-artifacts-draft-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/130920852836xxxx/cn-hangzhou/service-8072a04e5a134382xxxx/165095355xxxx/changes.txt%5C%5C%22,%5C%5C%22ConfigurationMetadata%5C%5C%22:%5C%5C%22%7B%5C%5C%5C%5C%5C%5C%22WorkDir%5C%5C%5C%5C%5C%5C%22:%5C%5C%5C%5C%5C%5C%22/root%5C%5C%5C%5C%5C%5C%22,%5C%5C%5C%5C%5C%5C%22Platform%5C%5C%5C%5C%5C%5C%22:%5C%5C%5C%5C%5C%5C%22Linux%5C%5C%5C%5C%5C%5C%22,%5C%5C%5C%5C%5C%5C%22CommandType%5C%5C%5C%5C%5C%5C%22:%5C%5C%5C%5C%5C%5C%22RunShellScript%5C%5C%5C%5C%5C%5C%22,%5C%5C%5C%5C%5C%5C%22UpgradeScript%5C%5C%5C%5C%5C%5C%22:%5C%5C%5C%5C%5C%5C%22cd">https://computenest-artifacts-draft-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/130920852836xxxx/cn-hangzhou/service-8072a04e5a134382xxxx/165095355xxxx/changes.txt\\&quot;,\\&quot;ConfigurationMetadata\\&quot;:\\&quot;{\\\\\\&quot;WorkDir\\\\\\&quot;:\\\\\\&quot;/root\\\\\\&quot;,\\\\\\&quot;Platform\\\\\\&quot;:\\\\\\&quot;Linux\\\\\\&quot;,\\\\\\&quot;CommandType\\\\\\&quot;:\\\\\\&quot;RunShellScript\\\\\\&quot;,\\\\\\&quot;UpgradeScript\\\\\\&quot;:\\\\\\&quot;cd</a> /root\\\\ncp changes.txt cpchanges.txt\\\\nmv changes.txt mvchangge.txt\\\&quot;}\&quot;}&quot;</p>
      */
@@ -19,6 +23,8 @@ public class ReleaseArtifactResponseBody extends TeaModel {
     public String artifactProperty;
 
     /**
+     * <p>The type of the artifact.</p>
+     * 
      * <strong>example:</strong>
      * <p>File</p>
      */
@@ -26,16 +32,23 @@ public class ReleaseArtifactResponseBody extends TeaModel {
     public String artifactType;
 
     /**
+     * <p>The version of the artifact.</p>
+     * 
      * <strong>example:</strong>
      * <p>draft</p>
      */
     @NameInMap("ArtifactVersion")
     public String artifactVersion;
 
+    /**
+     * <p>The description of the artifact.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The time when the artifact was modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1650954178000</p>
      */
@@ -43,6 +56,8 @@ public class ReleaseArtifactResponseBody extends TeaModel {
     public String gmtModified;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3818BA7D-3F50-1A44-9FF3-04A52A59XXXX</p>
      */
@@ -50,12 +65,25 @@ public class ReleaseArtifactResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The state of the artifact. Valid values:</p>
+     * <ul>
+     * <li>Created: The artifact is created.</li>
+     * <li>Scanning: The artifact is being scanned.</li>
+     * <li>ScanFailed: The artifact failed to be scanned.</li>
+     * <li>Delivering: The artifact is being distributed.</li>
+     * <li>Available: The artifact is available.</li>
+     * <li>Deleted: The artifact is deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Created</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The version name of the artifact.</p>
+     */
     @NameInMap("VersionName")
     public String versionName;
 
