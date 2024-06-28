@@ -28,6 +28,9 @@ public class DocOcrRequest extends TeaModel {
     @NameInMap("IdOcrPictureUrl")
     public String idOcrPictureUrl;
 
+    @NameInMap("IdThreshold")
+    public String idThreshold;
+
     /**
      * <strong>example:</strong>
      * <p>dso9322***dsjsd22</p>
@@ -94,6 +97,14 @@ public class DocOcrRequest extends TeaModel {
     }
     public String getIdOcrPictureUrl() {
         return this.idOcrPictureUrl;
+    }
+
+    public DocOcrRequest setIdThreshold(String idThreshold) {
+        this.idThreshold = idThreshold;
+        return this;
+    }
+    public String getIdThreshold() {
+        return this.idThreshold;
     }
 
     public DocOcrRequest setMerchantBizId(String merchantBizId) {

@@ -55,6 +55,9 @@ public class EkycVerifyRequest extends TeaModel {
     @NameInMap("IdOcrPictureUrl")
     public String idOcrPictureUrl;
 
+    @NameInMap("IdThreshold")
+    public String idThreshold;
+
     /**
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
@@ -151,6 +154,14 @@ public class EkycVerifyRequest extends TeaModel {
     }
     public String getIdOcrPictureUrl() {
         return this.idOcrPictureUrl;
+    }
+
+    public EkycVerifyRequest setIdThreshold(String idThreshold) {
+        this.idThreshold = idThreshold;
+        return this;
+    }
+    public String getIdThreshold() {
+        return this.idThreshold;
     }
 
     public EkycVerifyRequest setMerchantBizId(String merchantBizId) {
