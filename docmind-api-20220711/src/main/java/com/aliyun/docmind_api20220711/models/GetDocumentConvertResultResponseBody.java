@@ -4,21 +4,42 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class GetDocumentConvertResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>noPermission</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Completed")
     public Boolean completed;
 
     @NameInMap("Data")
     public java.util.List<GetDocumentConvertResultResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>43A29C77-405E-4CC0-BC55-EE694AD00655</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -76,15 +97,31 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
     }
 
     public static class GetDocumentConvertResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>e6d83e55df218650b9a296bfbc300076</p>
+         */
         @NameInMap("Md5")
         public String md5;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2355965</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pdf</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/convert/docmind-20220816-15bc7965/0.pdf?Expires=1660722412&OSSAccessKeyId=LTAI5tFEK2uEApeeYzxNMEci&Signature=f%2FKluINWMuuVyA5w22Z1wkoRjEg%3D">http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/convert/docmind-20220816-15bc7965/0.pdf?Expires=1660722412&amp;OSSAccessKeyId=LTAI5tFEK2uEApeeYzxNMEci&amp;Signature=f%2FKluINWMuuVyA5w22Z1wkoRjEg%3D</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

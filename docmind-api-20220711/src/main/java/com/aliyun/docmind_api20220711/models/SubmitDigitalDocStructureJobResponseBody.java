@@ -4,6 +4,10 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitDigitalDocStructureJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>noPermission</p>
+     */
     @NameInMap("Code")
     public String code;
 
@@ -13,9 +17,17 @@ public class SubmitDigitalDocStructureJobResponseBody extends TeaModel {
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>You are not authorized to perform this operation.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>43A29C77-405E-4CC0-BC55-EE694AD00655</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,9 +7,17 @@ public class SubmitDocumentExtractJobRequest extends TeaModel {
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pdf</p>
+     */
     @NameInMap("FileNameExtension")
     public String fileNameExtension;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://gw.alipayobjects.com/os/basement_prod/598b9edf-5287-4065-9e36-464305c60698.pdf">https://gw.alipayobjects.com/os/basement_prod/598b9edf-5287-4065-9e36-464305c60698.pdf</a></p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 

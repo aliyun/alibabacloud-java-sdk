@@ -4,12 +4,27 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocStructureJobRequest extends TeaModel {
+    @NameInMap("AllowPptFormat")
+    public Boolean allowPptFormat;
+
+    /**
+     * <strong>example:</strong>
+     * <p>docStructure.pdf</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pdf</p>
+     */
     @NameInMap("FileNameExtension")
     public String fileNameExtension;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://gw.alipayobjects.com/os/basement_prod/598b9edf-5287-4065-9e36-464305c60698.pdf">https://gw.alipayobjects.com/os/basement_prod/598b9edf-5287-4065-9e36-464305c60698.pdf</a></p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
@@ -22,6 +37,14 @@ public class SubmitDocStructureJobRequest extends TeaModel {
     public static SubmitDocStructureJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocStructureJobRequest self = new SubmitDocStructureJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitDocStructureJobRequest setAllowPptFormat(Boolean allowPptFormat) {
+        this.allowPptFormat = allowPptFormat;
+        return this;
+    }
+    public Boolean getAllowPptFormat() {
+        return this.allowPptFormat;
     }
 
     public SubmitDocStructureJobRequest setFileName(String fileName) {

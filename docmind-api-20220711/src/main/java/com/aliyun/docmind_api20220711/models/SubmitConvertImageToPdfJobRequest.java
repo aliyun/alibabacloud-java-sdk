@@ -4,6 +4,10 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitConvertImageToPdfJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>JPG</p>
+     */
     @NameInMap("ImageNameExtension")
     public String imageNameExtension;
 
