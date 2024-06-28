@@ -7,6 +7,10 @@ public class SubmitConvertImageToExcelJobRequest extends TeaModel {
     @NameInMap("ForceMergeExcel")
     public Boolean forceMergeExcel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jpg</p>
+     */
     @NameInMap("ImageNameExtension")
     public String imageNameExtension;
 

@@ -84,6 +84,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>整票识别</p>
+     * 
+     * @param tmpReq AyncTradeDocumentPackageExtractSmartAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AyncTradeDocumentPackageExtractSmartAppResponse
+     */
     public AyncTradeDocumentPackageExtractSmartAppResponse ayncTradeDocumentPackageExtractSmartAppWithOptions(AyncTradeDocumentPackageExtractSmartAppRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AyncTradeDocumentPackageExtractSmartAppShrinkRequest request = new AyncTradeDocumentPackageExtractSmartAppShrinkRequest();
@@ -130,11 +138,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AyncTradeDocumentPackageExtractSmartAppResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>整票识别</p>
+     * 
+     * @param request AyncTradeDocumentPackageExtractSmartAppRequest
+     * @return AyncTradeDocumentPackageExtractSmartAppResponse
+     */
     public AyncTradeDocumentPackageExtractSmartAppResponse ayncTradeDocumentPackageExtractSmartApp(AyncTradeDocumentPackageExtractSmartAppRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.ayncTradeDocumentPackageExtractSmartAppWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档智能解析结果查询</p>
+     * 
+     * @param request GetDocStructureResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocStructureResultResponse
+     */
     public GetDocStructureResultResponse getDocStructureResultWithOptions(GetDocStructureResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -167,11 +190,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocStructureResultResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档智能解析结果查询</p>
+     * 
+     * @param request GetDocStructureResultRequest
+     * @return GetDocStructureResultResponse
+     */
     public GetDocStructureResultResponse getDocStructureResult(GetDocStructureResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDocStructureResultWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档对比结果查询</p>
+     * 
+     * @param request GetDocumentCompareResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocumentCompareResultResponse
+     */
     public GetDocumentCompareResultResponse getDocumentCompareResultWithOptions(GetDocumentCompareResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -196,11 +234,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocumentCompareResultResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档对比结果查询</p>
+     * 
+     * @param request GetDocumentCompareResultRequest
+     * @return GetDocumentCompareResultResponse
+     */
     public GetDocumentCompareResultResponse getDocumentCompareResult(GetDocumentCompareResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDocumentCompareResultWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档转换结果查询</p>
+     * 
+     * @param request GetDocumentConvertResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocumentConvertResultResponse
+     */
     public GetDocumentConvertResultResponse getDocumentConvertResultWithOptions(GetDocumentConvertResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -225,11 +278,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocumentConvertResultResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档转换结果查询</p>
+     * 
+     * @param request GetDocumentConvertResultRequest
+     * @return GetDocumentConvertResultResponse
+     */
     public GetDocumentConvertResultResponse getDocumentConvertResult(GetDocumentConvertResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDocumentConvertResultWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档抽取结果查询</p>
+     * 
+     * @param request GetDocumentExtractResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDocumentExtractResultResponse
+     */
     public GetDocumentExtractResultResponse getDocumentExtractResultWithOptions(GetDocumentExtractResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -254,11 +322,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetDocumentExtractResultResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档抽取结果查询</p>
+     * 
+     * @param request GetDocumentExtractResultRequest
+     * @return GetDocumentExtractResultResponse
+     */
     public GetDocumentExtractResultResponse getDocumentExtractResult(GetDocumentExtractResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDocumentExtractResultWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>openmind</p>
+     * 
+     * @param request GetPageNumRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPageNumResponse
+     */
     public GetPageNumResponse getPageNumWithOptions(GetPageNumRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -283,11 +366,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetPageNumResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>openmind</p>
+     * 
+     * @param request GetPageNumRequest
+     * @return GetPageNumResponse
+     */
     public GetPageNumResponse getPageNum(GetPageNumRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPageNumWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>表格智能解析结果查询</p>
+     * 
+     * @param request GetTableUnderstandingResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTableUnderstandingResultResponse
+     */
     public GetTableUnderstandingResultResponse getTableUnderstandingResultWithOptions(GetTableUnderstandingResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -312,11 +410,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableUnderstandingResultResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>表格智能解析结果查询</p>
+     * 
+     * @param request GetTableUnderstandingResultRequest
+     * @return GetTableUnderstandingResultResponse
+     */
     public GetTableUnderstandingResultResponse getTableUnderstandingResult(GetTableUnderstandingResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTableUnderstandingResultWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>图片转excel</p>
+     * 
+     * @param tmpReq SubmitConvertImageToExcelJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitConvertImageToExcelJobResponse
+     */
     public SubmitConvertImageToExcelJobResponse submitConvertImageToExcelJobWithOptions(SubmitConvertImageToExcelJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitConvertImageToExcelJobShrinkRequest request = new SubmitConvertImageToExcelJobShrinkRequest();
@@ -363,11 +476,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitConvertImageToExcelJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>图片转excel</p>
+     * 
+     * @param request SubmitConvertImageToExcelJobRequest
+     * @return SubmitConvertImageToExcelJobResponse
+     */
     public SubmitConvertImageToExcelJobResponse submitConvertImageToExcelJob(SubmitConvertImageToExcelJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitConvertImageToExcelJobWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>图片转markdown</p>
+     * 
+     * @param tmpReq SubmitConvertImageToMarkdownJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitConvertImageToMarkdownJobResponse
+     */
     public SubmitConvertImageToMarkdownJobResponse submitConvertImageToMarkdownJobWithOptions(SubmitConvertImageToMarkdownJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitConvertImageToMarkdownJobShrinkRequest request = new SubmitConvertImageToMarkdownJobShrinkRequest();
@@ -410,11 +538,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitConvertImageToMarkdownJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>图片转markdown</p>
+     * 
+     * @param request SubmitConvertImageToMarkdownJobRequest
+     * @return SubmitConvertImageToMarkdownJobResponse
+     */
     public SubmitConvertImageToMarkdownJobResponse submitConvertImageToMarkdownJob(SubmitConvertImageToMarkdownJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitConvertImageToMarkdownJobWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>图片转pdf</p>
+     * 
+     * @param tmpReq SubmitConvertImageToPdfJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitConvertImageToPdfJobResponse
+     */
     public SubmitConvertImageToPdfJobResponse submitConvertImageToPdfJobWithOptions(SubmitConvertImageToPdfJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitConvertImageToPdfJobShrinkRequest request = new SubmitConvertImageToPdfJobShrinkRequest();
@@ -457,11 +600,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitConvertImageToPdfJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>图片转pdf</p>
+     * 
+     * @param request SubmitConvertImageToPdfJobRequest
+     * @return SubmitConvertImageToPdfJobResponse
+     */
     public SubmitConvertImageToPdfJobResponse submitConvertImageToPdfJob(SubmitConvertImageToPdfJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitConvertImageToPdfJobWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>图片转word</p>
+     * 
+     * @param tmpReq SubmitConvertImageToWordJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitConvertImageToWordJobResponse
+     */
     public SubmitConvertImageToWordJobResponse submitConvertImageToWordJobWithOptions(SubmitConvertImageToWordJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitConvertImageToWordJobShrinkRequest request = new SubmitConvertImageToWordJobShrinkRequest();
@@ -504,11 +662,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitConvertImageToWordJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>图片转word</p>
+     * 
+     * @param request SubmitConvertImageToWordJobRequest
+     * @return SubmitConvertImageToWordJobResponse
+     */
     public SubmitConvertImageToWordJobResponse submitConvertImageToWordJob(SubmitConvertImageToWordJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitConvertImageToWordJobWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>pdf转excel</p>
+     * 
+     * @param request SubmitConvertPdfToExcelJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitConvertPdfToExcelJobResponse
+     */
     public SubmitConvertPdfToExcelJobResponse submitConvertPdfToExcelJobWithOptions(SubmitConvertPdfToExcelJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -545,6 +718,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitConvertPdfToExcelJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>pdf转excel</p>
+     * 
+     * @param request SubmitConvertPdfToExcelJobRequest
+     * @return SubmitConvertPdfToExcelJobResponse
+     */
     public SubmitConvertPdfToExcelJobResponse submitConvertPdfToExcelJob(SubmitConvertPdfToExcelJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitConvertPdfToExcelJobWithOptions(request, runtime);
@@ -557,7 +737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -581,12 +761,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -624,6 +805,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return submitConvertPdfToExcelJobResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>pdf转图片</p>
+     * 
+     * @param request SubmitConvertPdfToImageJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitConvertPdfToImageJobResponse
+     */
     public SubmitConvertPdfToImageJobResponse submitConvertPdfToImageJobWithOptions(SubmitConvertPdfToImageJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -652,6 +841,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitConvertPdfToImageJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>pdf转图片</p>
+     * 
+     * @param request SubmitConvertPdfToImageJobRequest
+     * @return SubmitConvertPdfToImageJobResponse
+     */
     public SubmitConvertPdfToImageJobResponse submitConvertPdfToImageJob(SubmitConvertPdfToImageJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitConvertPdfToImageJobWithOptions(request, runtime);
@@ -664,7 +860,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -688,12 +884,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -731,6 +928,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return submitConvertPdfToImageJobResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>pdf转markdown</p>
+     * 
+     * @param request SubmitConvertPdfToMarkdownJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitConvertPdfToMarkdownJobResponse
+     */
     public SubmitConvertPdfToMarkdownJobResponse submitConvertPdfToMarkdownJobWithOptions(SubmitConvertPdfToMarkdownJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -759,6 +964,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitConvertPdfToMarkdownJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>pdf转markdown</p>
+     * 
+     * @param request SubmitConvertPdfToMarkdownJobRequest
+     * @return SubmitConvertPdfToMarkdownJobResponse
+     */
     public SubmitConvertPdfToMarkdownJobResponse submitConvertPdfToMarkdownJob(SubmitConvertPdfToMarkdownJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitConvertPdfToMarkdownJobWithOptions(request, runtime);
@@ -771,7 +983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -795,12 +1007,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -838,6 +1051,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return submitConvertPdfToMarkdownJobResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>pdf转word</p>
+     * 
+     * @param request SubmitConvertPdfToWordJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitConvertPdfToWordJobResponse
+     */
     public SubmitConvertPdfToWordJobResponse submitConvertPdfToWordJobWithOptions(SubmitConvertPdfToWordJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -870,6 +1091,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitConvertPdfToWordJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>pdf转word</p>
+     * 
+     * @param request SubmitConvertPdfToWordJobRequest
+     * @return SubmitConvertPdfToWordJobResponse
+     */
     public SubmitConvertPdfToWordJobResponse submitConvertPdfToWordJob(SubmitConvertPdfToWordJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitConvertPdfToWordJobWithOptions(request, runtime);
@@ -882,7 +1110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -906,12 +1134,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -949,6 +1178,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return submitConvertPdfToWordJobResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>电子解析</p>
+     * 
+     * @param request SubmitDigitalDocStructureJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitDigitalDocStructureJobResponse
+     */
     public SubmitDigitalDocStructureJobResponse submitDigitalDocStructureJobWithOptions(SubmitDigitalDocStructureJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -989,6 +1226,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDigitalDocStructureJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>电子解析</p>
+     * 
+     * @param request SubmitDigitalDocStructureJobRequest
+     * @return SubmitDigitalDocStructureJobResponse
+     */
     public SubmitDigitalDocStructureJobResponse submitDigitalDocStructureJob(SubmitDigitalDocStructureJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitDigitalDocStructureJobWithOptions(request, runtime);
@@ -1001,7 +1245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1025,12 +1269,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1068,9 +1313,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return submitDigitalDocStructureJobResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档智能解析</p>
+     * 
+     * @param request SubmitDocStructureJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitDocStructureJobResponse
+     */
     public SubmitDocStructureJobResponse submitDocStructureJobWithOptions(SubmitDocStructureJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowPptFormat)) {
+            query.put("AllowPptFormat", request.allowPptFormat);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             query.put("FileName", request.fileName);
         }
@@ -1108,6 +1365,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocStructureJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档智能解析</p>
+     * 
+     * @param request SubmitDocStructureJobRequest
+     * @return SubmitDocStructureJobResponse
+     */
     public SubmitDocStructureJobResponse submitDocStructureJob(SubmitDocStructureJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitDocStructureJobWithOptions(request, runtime);
@@ -1120,7 +1384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1144,12 +1408,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1187,47 +1452,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return submitDocStructureJobResp;
     }
 
-    public SubmitDocumentCompareJobResponse submitDocumentCompareJobWithOptions(SubmitDocumentCompareJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.compareFileName)) {
-            query.put("CompareFileName", request.compareFileName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.compareFileUrl)) {
-            query.put("CompareFileUrl", request.compareFileUrl);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.originFileName)) {
-            query.put("OriginFileName", request.originFileName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.originFileUrl)) {
-            query.put("OriginFileUrl", request.originFileUrl);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "SubmitDocumentCompareJob"),
-            new TeaPair("version", "2022-07-11"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocumentCompareJobResponse());
-    }
-
-    public SubmitDocumentCompareJobResponse submitDocumentCompareJob(SubmitDocumentCompareJobRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.submitDocumentCompareJobWithOptions(request, runtime);
-    }
-
+    /**
+     * <b>summary</b> : 
+     * <p>文档抽取</p>
+     * 
+     * @param request SubmitDocumentExtractJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitDocumentExtractJobResponse
+     */
     public SubmitDocumentExtractJobResponse submitDocumentExtractJobWithOptions(SubmitDocumentExtractJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1260,6 +1492,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDocumentExtractJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>文档抽取</p>
+     * 
+     * @param request SubmitDocumentExtractJobRequest
+     * @return SubmitDocumentExtractJobResponse
+     */
     public SubmitDocumentExtractJobResponse submitDocumentExtractJob(SubmitDocumentExtractJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitDocumentExtractJobWithOptions(request, runtime);
@@ -1272,7 +1511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1296,12 +1535,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1339,6 +1579,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return submitDocumentExtractJobResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>表格智能解析</p>
+     * 
+     * @param request SubmitTableUnderstandingJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitTableUnderstandingJobResponse
+     */
     public SubmitTableUnderstandingJobResponse submitTableUnderstandingJobWithOptions(SubmitTableUnderstandingJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1371,6 +1619,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitTableUnderstandingJobResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>表格智能解析</p>
+     * 
+     * @param request SubmitTableUnderstandingJobRequest
+     * @return SubmitTableUnderstandingJobResponse
+     */
     public SubmitTableUnderstandingJobResponse submitTableUnderstandingJob(SubmitTableUnderstandingJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitTableUnderstandingJobWithOptions(request, runtime);
@@ -1383,7 +1638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1407,12 +1662,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();

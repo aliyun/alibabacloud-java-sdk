@@ -4,6 +4,10 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitConvertImageToMarkdownJobShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>jpg</p>
+     */
     @NameInMap("ImageNameExtension")
     public String imageNameExtension;
 

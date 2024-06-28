@@ -10,6 +10,9 @@ public class AyncTradeDocumentPackageExtractSmartAppShrinkRequest extends TeaMod
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
