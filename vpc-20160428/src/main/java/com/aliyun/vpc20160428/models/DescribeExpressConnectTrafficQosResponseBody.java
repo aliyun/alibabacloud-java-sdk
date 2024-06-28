@@ -4,21 +4,41 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Count")
     public String count;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("QosList")
     public java.util.List<DescribeExpressConnectTrafficQosResponseBodyQosList> qosList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4CF20CC7-D1FC-425B-A15B-DF7C8E2131A7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,15 +96,31 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
     }
 
     public static class DescribeExpressConnectTrafficQosResponseBodyQosListAssociatedInstanceList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pc-bp159zj8zujwy3p07j83e</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("InstanceProgressing")
         public Integer instanceProgressing;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -128,21 +164,45 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
     }
 
     public static class DescribeExpressConnectTrafficQosResponseBodyQosListQueueList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("BandwidthPercent")
         public String bandwidthPercent;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-pksbqfmotl5hzqmhf8</p>
+         */
         @NameInMap("QosId")
         public String qosId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-queue-test</p>
+         */
         @NameInMap("QueueDescription")
         public String queueDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+         */
         @NameInMap("QueueId")
         public String queueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-queue-test</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>High</p>
+         */
         @NameInMap("QueueType")
         public String queueType;
 
@@ -216,21 +276,41 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         @NameInMap("AssociatedInstanceList")
         public java.util.List<DescribeExpressConnectTrafficQosResponseBodyQosListAssociatedInstanceList> associatedInstanceList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Progressing")
         public Integer progressing;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-test</p>
+         */
         @NameInMap("QosDescription")
         public String qosDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-pksbqfmotl5hzqmhf8</p>
+         */
         @NameInMap("QosId")
         public String qosId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-test</p>
+         */
         @NameInMap("QosName")
         public String qosName;
 
         @NameInMap("QueueList")
         public java.util.List<DescribeExpressConnectTrafficQosResponseBodyQosListQueueList> queueList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateTrafficMirrorSessionAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64DCAF03-E2C7-479A-ACEA-38B79876B006</p>
      */
     @NameInMap("RequestId")
     public String requestId;

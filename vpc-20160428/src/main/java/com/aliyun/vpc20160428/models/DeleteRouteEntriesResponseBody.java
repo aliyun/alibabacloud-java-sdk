@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteRouteEntriesResponseBody extends TeaModel {
     /**
      * <p>The number of route entries that failed to be deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FailedCount")
     public Integer failedCount;
@@ -18,12 +21,18 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of route entries that were deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("SuccessCount")
     public Integer successCount;
@@ -68,30 +77,45 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
     public static class DeleteRouteEntriesResponseBodyFailedRouteEntries extends TeaModel {
         /**
          * <p>The destination CIDR block of the route entry that failed to be deleted. IPv4 and IPv6 CIDR blocks are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX/24</p>
          */
         @NameInMap("DstCidrBlock")
         public String dstCidrBlock;
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC_ROUTER_ENTRY_NOT_EXIST</p>
          */
         @NameInMap("FailedCode")
         public String failedCode;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vRouterEntry not exists</p>
          */
         @NameInMap("FailedMessage")
         public String failedMessage;
 
         /**
          * <p>The ID of the next hop that failed to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-j6c2fp57q8rr4jlu****</p>
          */
         @NameInMap("NextHop")
         public String nextHop;
 
         /**
          * <p>The ID of the route entry that failed to be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-bp1mnnr2al0naomnpv****</p>
          */
         @NameInMap("RouteEntryId")
         public String routeEntryId;

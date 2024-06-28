@@ -10,6 +10,10 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
     @NameInMap("PhysicalConnectionList")
     public CreateHighReliablePhysicalConnectionResponseBodyPhysicalConnectionList physicalConnectionList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +47,24 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
     }
 
     public static class CreateHighReliablePhysicalConnectionResponseBodyErrorInfoListErrorInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pconn.high.reliable.dryrun.error.disable.outbound.data.transfer.billing</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pc-j5e5qqo616p81ncspbll1</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -103,9 +119,17 @@ public class CreateHighReliablePhysicalConnectionResponseBody extends TeaModel {
     }
 
     public static class CreateHighReliablePhysicalConnectionResponseBodyPhysicalConnectionListPhysicalConnectionList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>pc-j5e5qqo616p81ncspbll1</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 

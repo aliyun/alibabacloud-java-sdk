@@ -6,51 +6,64 @@ import com.aliyun.tea.*;
 public class GrantInstanceToVbrRequest extends TeaModel {
     /**
      * <p>The VBRs that need to acquire permissions on the VPC. Valid values:</p>
-     * <br>
-     * <p>*   **All**: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave **VbrInstanceIds** empty.</p>
-     * <p>*   **Specify**: Permissions on the VPC are granted to the specified VBRs. **VbrInstanceIds** must be assigned a value.</p>
-     * <br>
+     * <ul>
+     * <li><strong>All</strong>: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave <strong>VbrInstanceIds</strong> empty.</li>
+     * <li><strong>Specify</strong>: Permissions on the VPC are granted to the specified VBRs. <strong>VbrInstanceIds</strong> must be assigned a value.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
      */
     @NameInMap("GrantType")
     public String grantType;
 
     /**
      * <p>The ID of the VPC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1lqhq93q8evjpky****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the region where the VPC is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The information about the VBRs.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("VbrInstanceIds")
     public java.util.List<String> vbrInstanceIds;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1210123456123456</p>
      */
     @NameInMap("VbrOwnerUid")
     public Long vbrOwnerUid;
 
     /**
      * <p>The ID of the region where the VBR is deployed.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("VbrRegionNo")
     public String vbrRegionNo;

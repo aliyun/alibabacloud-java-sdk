@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     /**
      * <p>The number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Long count;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value indicates the token that is used for the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value indicates the token that is used for the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -27,12 +34,18 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -85,24 +98,36 @@ public class GetVpcPrefixListEntriesResponseBody extends TeaModel {
     public static class GetVpcPrefixListEntriesResponseBodyPrefixListEntry extends TeaModel {
         /**
          * <p>The CIDR blocks specified in the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         @NameInMap("Cidr")
         public String cidr;
 
         /**
          * <p>The description of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-0b7hwu67****</p>
          */
         @NameInMap("PrefixListId")
         public String prefixListId;
 
         /**
          * <p>The region ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;

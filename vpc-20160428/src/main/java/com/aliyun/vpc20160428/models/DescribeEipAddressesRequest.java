@@ -9,107 +9,141 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     /**
      * <p>The ID of the EIP that you want to query.</p>
-     * <br>
      * <p>You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>>  If both **EipAddress** and **AllocationId** are specified, you can specify up to 50 EIP IDs for **AllocationId**, and specify up to 50 EIPs for **EipAddress**.</p>
+     * <blockquote>
+     * <p> If both <strong>EipAddress</strong> and <strong>AllocationId</strong> are specified, you can specify up to 50 EIP IDs for <strong>AllocationId</strong>, and specify up to 50 EIPs for <strong>EipAddress</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zeerraiwb7ujxscd****</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
      * <p>The ID of the instance associated with the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-2zebb08phyccdvf****</p>
      */
     @NameInMap("AssociatedInstanceId")
     public String associatedInstanceId;
 
     /**
      * <p>The type of the cloud resource with which you want to associate the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</p>
-     * <p>*   **SlbInstance**: a CLB instance in a VPC.</p>
-     * <p>*   **Nat**: a NAT gateway.</p>
-     * <p>*   **HaVip**: an HAVIP.</p>
-     * <p>*   **NetworkInterface**: a secondary ENI.</p>
-     * <p>*   **IpAddress**: an IP address.</p>
-     * <br>
-     * <p>>  Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [Associate EIPs with and disassociate EIPs from cloud resources](https://help.aliyun.com/document_detail/72125.html).</p>
+     * <ul>
+     * <li><strong>EcsInstance</strong> (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</li>
+     * <li><strong>SlbInstance</strong>: a CLB instance in a VPC.</li>
+     * <li><strong>Nat</strong>: a NAT gateway.</li>
+     * <li><strong>HaVip</strong>: an HAVIP.</li>
+     * <li><strong>NetworkInterface</strong>: a secondary ENI.</li>
+     * <li><strong>IpAddress</strong>: an IP address.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Each ECS instance, CLB instance, HAVIP, and IP address can be associated with only one EIP. A NAT gateway can be associated with multiple EIPs. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see <a href="https://help.aliyun.com/document_detail/72125.html">Associate EIPs with and disassociate EIPs from cloud resources</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsInstance</p>
      */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
 
     /**
      * <p>The billing method of the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **PostPaid**: pay-as-you-go.</p>
-     * <p>*   **PrePaid**: subscription.</p>
+     * <ul>
+     * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The EIP that you want to query.</p>
-     * <br>
      * <p>You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</p>
-     * <br>
-     * <p>>  If both **EipAddress** and **AllocationId** are specified, you can specify up to 50 EIPs for **EipAddress**, and specify up to 50 EIP IDs for **AllocationId**.</p>
+     * <blockquote>
+     * <p> If both <strong>EipAddress</strong> and <strong>AllocationId</strong> are specified, you can specify up to 50 EIPs for <strong>EipAddress</strong>, and specify up to 50 EIP IDs for <strong>AllocationId</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>47.75.XX.XX</p>
      */
     @NameInMap("EipAddress")
     public String eipAddress;
 
     /**
      * <p>The name of the EIP.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EIP-01</p>
      */
     @NameInMap("EipName")
     public String eipName;
 
     /**
      * <p>The line type. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default): Border Gateway Protocol (BGP) (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</p>
-     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</p>
-     * <br>
-     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](https://help.aliyun.com/document_detail/32321.html) section of the "What is EIP?" topic.</p>
-     * <br>
+     * <ul>
+     * <li><strong>BGP</strong> (default): Border Gateway Protocol (BGP) (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
+     * </ul>
+     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the <a href="https://help.aliyun.com/document_detail/32321.html">Line types</a> section of the &quot;What is EIP?&quot; topic.</p>
      * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
-     * <br>
-     * <p>*   **ChinaTelecom**</p>
-     * <p>*   **ChinaUnicom**</p>
-     * <p>*   **ChinaMobile**</p>
-     * <p>*   **ChinaTelecom_L2**</p>
-     * <p>*   **ChinaUnicom_L2**</p>
-     * <p>*   **ChinaMobile_L2**</p>
-     * <br>
-     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.</p>
+     * <ul>
+     * <li><strong>ChinaTelecom</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaTelecom_L2</strong></li>
+     * <li><strong>ChinaUnicom_L2</strong></li>
+     * <li><strong>ChinaMobile_L2</strong></li>
+     * </ul>
+     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("ISP")
     public String ISP;
 
     /**
      * <p>Specifies whether to return information about pending orders. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default)</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong> (default)</li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
 
     /**
      * <p>The reason why the EIP is locked. Valid values:</p>
-     * <br>
-     * <p>*   **financial**: The EIP is locked due to overdue payments.</p>
-     * <p>*   **security**: The EIP is locked for security reasons.</p>
+     * <ul>
+     * <li><strong>financial</strong>: The EIP is locked due to overdue payments.</li>
+     * <li><strong>security</strong>: The EIP is locked for security reasons.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>financial</p>
      */
     @NameInMap("LockReason")
     public String lockReason;
@@ -121,35 +155,48 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to **100**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: 1 to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The IP address pool to which the EIP that you want to query belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pippool-2vc0kxcedhquybdsz****</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
     /**
      * <p>The region ID of the EIP.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the EIP belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4pcdvf****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -162,15 +209,22 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to activate Anti-DDoS Pro/Premium. Valid values:</p>
-     * <br>
-     * <p>*   **false**</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SecurityProtectionEnabled")
     public Boolean securityProtectionEnabled;
 
     /**
      * <p>The ID of the contiguous EIP group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eipsg-t4nr90yik5oy38xdy****</p>
      */
     @NameInMap("SegmentInstanceId")
     public String segmentInstanceId;
@@ -180,12 +234,16 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     /**
      * <p>The state of the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **Associating**</p>
-     * <p>*   **Unassociating**</p>
-     * <p>*   **InUse**</p>
-     * <p>*   **Available**</p>
-     * <p>*   **Releasing**</p>
+     * <ul>
+     * <li><strong>Associating</strong></li>
+     * <li><strong>Unassociating</strong></li>
+     * <li><strong>InUse</strong></li>
+     * <li><strong>Available</strong></li>
+     * <li><strong>Releasing</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
      */
     @NameInMap("Status")
     public String status;
@@ -403,13 +461,19 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     public static class DescribeEipAddressesRequestFilter extends TeaModel {
         /**
-         * <p>The filter key used to query resources. Set the value to **CreationStartTime**, which specifies the time when the system started to create the resource.</p>
+         * <p>The filter key used to query resources. Set the value to <strong>CreationStartTime</strong>, which specifies the time when the system started to create the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreationStartTime</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The filter value used to query resources. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time must be in Coordinated Universal Time (UTC).</p>
+         * <p>The filter value used to query resources. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mmZ</code> format. The time must be in Coordinated Universal Time (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-01T01:00Z</p>
          */
         @NameInMap("Value")
         public String value;
@@ -440,16 +504,20 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public static class DescribeEipAddressesRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

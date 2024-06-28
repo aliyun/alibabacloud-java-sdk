@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteIpv6EgressOnlyRuleResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DFEDBEE-E5AB-49E8-A2DC-CC114C67AF75</p>
      */
     @NameInMap("RequestId")
     public String requestId;

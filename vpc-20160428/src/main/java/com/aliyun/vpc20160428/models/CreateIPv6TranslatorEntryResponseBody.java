@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateIPv6TranslatorEntryResponseBody extends TeaModel {
     /**
      * <p>The ID of the IPv6 Translation Service instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6transentry-xxxxxxxx</p>
      */
     @NameInMap("Ipv6TranslatorEntryId")
     public String ipv6TranslatorEntryId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DCE5D25-FFC9-492A-8371-12A4E0EE2E05</p>
      */
     @NameInMap("RequestId")
     public String requestId;

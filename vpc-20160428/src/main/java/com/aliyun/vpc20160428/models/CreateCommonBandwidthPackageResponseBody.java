@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
     /**
      * <p>The ID of the Internet Shared Bandwidth instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp-bp1vevu8h3ieh****</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FF39F653-033E-4CD9-9EDF-3CCA5A71FBC3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazdjdhd****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

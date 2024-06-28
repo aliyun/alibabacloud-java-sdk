@@ -11,9 +11,11 @@ public class DescribeSslVpnClientCertRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the SSL client certificate. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the SSL client certificate. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -26,8 +28,10 @@ public class DescribeSslVpnClientCertRequest extends TeaModel {
 
     /**
      * <p>The ID of the SSL client certificate that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsc-bp17r58rjf5r1gjyr****</p>
      */
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;

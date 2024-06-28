@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9654534-5A38-5545-813F-0403D49042FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

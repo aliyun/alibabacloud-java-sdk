@@ -12,39 +12,58 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the FULLNAT table to which the queried FULLNAT entries belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fullnat-gw8fz23jezpbblf1j****</p>
      */
     @NameInMap("FullNatTableId")
     public String fullNatTableId;
 
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The ID of the VPC NAT gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-gw8054kn57y3hq3bv****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>Indicates whether the token for the next query exists. Valid values:</p>
-     * <br>
-     * <p>*   If the value of **NextToken** is empty, no next queries are sent.</p>
-     * <p>*   If the value of **NextToken** is returned, the value indicates the token that is used for the next query.</p>
+     * <ul>
+     * <li>If the value of <strong>NextToken</strong> is empty, no next queries are sent.</li>
+     * <li>If the value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F03E41F6-1A74-311F-8D98-124EEE9F37B8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of FULLNAT entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -113,90 +132,129 @@ public class ListFullNatEntriesResponseBody extends TeaModel {
     public static class ListFullNatEntriesResponseBodyFullNatEntries extends TeaModel {
         /**
          * <p>The backend IP address that is used for FULLNAT address translation in FULLNAT entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("AccessIp")
         public String accessIp;
 
         /**
-         * <p>The backend port that is used for port mapping in FULLNAT entries. Valid values: **1** to **65535**.</p>
+         * <p>The backend port that is used for port mapping in FULLNAT entries. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("AccessPort")
         public String accessPort;
 
         /**
          * <p>The time when the FULLNAT entry was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-27T02:44:40Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the FULLNAT entry.</p>
-         * <br>
-         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+         * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("FullNatEntryDescription")
         public String fullNatEntryDescription;
 
         /**
          * <p>The ID of the FULLNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fullnat-gw8fz23jezpbblf1j****</p>
          */
         @NameInMap("FullNatEntryId")
         public String fullNatEntryId;
 
         /**
          * <p>The name of the FULLNAT entry.</p>
-         * <br>
          * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("FullNatEntryName")
         public String fullNatEntryName;
 
         /**
          * <p>The status of the FULLNAT entry. Valid values:</p>
-         * <br>
-         * <p>*   **Pending**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Deleting**</p>
-         * <p>*   **Deleted**</p>
+         * <ul>
+         * <li><strong>Pending</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("FullNatEntryStatus")
         public String fullNatEntryStatus;
 
         /**
          * <p>The ID of the FULLNAT table to which the FULLNAT entry belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fulltb-gw88z7hhlv43rmb26****</p>
          */
         @NameInMap("FullNatTableId")
         public String fullNatTableId;
 
         /**
          * <p>The protocol of the packets that are forwarded. Valid values:</p>
-         * <br>
-         * <p>*   **TCP**</p>
-         * <p>*   **UDP**</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
         /**
          * <p>The NAT IP address that is used for address translation in FULLNAT entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("NatIp")
         public String natIp;
 
         /**
-         * <p>The frontend port that is used for port mapping in FULLNAT entries. Valid values: **1** to **65535**.</p>
+         * <p>The frontend port that is used for port mapping in FULLNAT entries. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("NatIpPort")
         public String natIpPort;
 
         /**
          * <p>The ID of the elastic network interface (ENI).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-gw80wedm8pq0tpr2****</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
         /**
-         * <p>The type of the ENI. The value is set to **Endpoint**, which indicates a reverse endpoint.</p>
+         * <p>The type of the ENI. The value is set to <strong>Endpoint</strong>, which indicates a reverse endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Endpoint</p>
          */
         @NameInMap("NetworkInterfaceType")
         public String networkInterfaceType;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
     /**
      * <p>The CIDR blocks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.0.XX.XX/28</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

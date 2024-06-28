@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,12 +64,18 @@ public class DescribeTagKeysForExpressConnectResponseBody extends TeaModel {
     public static class DescribeTagKeysForExpressConnectResponseBodyTagKeysTagKey extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The type of the resource. The value is set to **PHYSICALCONNECTION**, which indicates an Express Connect circuit.</p>
+         * <p>The type of the resource. The value is set to <strong>PHYSICALCONNECTION</strong>, which indicates an Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
          */
         @NameInMap("Type")
         public String type;

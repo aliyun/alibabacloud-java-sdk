@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     /**
      * <p>The version of the private IP address. Valid values:</p>
-     * <br>
-     * <p>*   **ipv4** If you want to query an IPv4 address, this parameter is optional.</p>
-     * <p>*   **ipv6** If you want to query an IPv6 address, this parameter is required.</p>
+     * <ul>
+     * <li><strong>ipv4</strong> If you want to query an IPv4 address, this parameter is optional.</li>
+     * <li><strong>ipv6</strong> If you want to query an IPv6 address, this parameter is required.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
@@ -20,19 +24,22 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.</p>
-     * <br>
+     * <p>To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the <strong>VSwitchId</strong> parameter.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.7</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
      * <p>The region ID of the vSwitch to which the private IP address that you want to query belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -45,8 +52,10 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the private IP address to be queried belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-m5ew3t46z2drmifnt****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

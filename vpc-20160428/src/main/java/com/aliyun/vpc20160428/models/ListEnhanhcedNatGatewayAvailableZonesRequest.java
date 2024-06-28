@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
     /**
      * <p>The language to display the results. Valid values:</p>
-     * <br>
-     * <p>*   **zh-CN** (default): Chinese</p>
-     * <p>*   **en-US**: English</p>
+     * <ul>
+     * <li><strong>zh-CN</strong> (default): Chinese</li>
+     * <li><strong>en-US</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -27,12 +31,12 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
 
     /**
      * <p>The ID of the region that you want to query.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>In this example, zones that support NAT gateways in the UAE (Dubai) region are queried.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>me-east-1</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -106,15 +110,22 @@ public class ListEnhanhcedNatGatewayAvailableZonesRequest extends TeaModel {
 
     public static class ListEnhanhcedNatGatewayAvailableZonesRequestFilter extends TeaModel {
         /**
-         * <p>The filter key. Only **PrivateLinkEnabled** is supported.</p>
+         * <p>The filter key. Only <strong>PrivateLinkEnabled</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PrivateLinkEnabled</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the filter key.</p>
-         * <br>
-         * <p>>  If the filter key is set to **PrivateLinkEnabled**, you must specify a filter value. Valid values: **true** and **false**.</p>
+         * <blockquote>
+         * <p> If the filter key is set to <strong>PrivateLinkEnabled</strong>, you must specify a filter value. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Value")
         public String value;

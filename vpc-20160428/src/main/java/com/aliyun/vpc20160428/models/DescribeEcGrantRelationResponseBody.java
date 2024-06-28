@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEcGrantRelationResponseBody extends TeaModel {
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
@@ -18,24 +21,36 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6E90F6B-2B41-5AAF-ABEB-236ADBAAD91D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,72 +111,107 @@ public class DescribeEcGrantRelationResponseBody extends TeaModel {
     public static class DescribeEcGrantRelationResponseBodyEcGrantRelations extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1250123456123456</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
          * <p>The time when permissions on the VPC were granted to the VBR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-02T11:46Z</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The VBRs that have permissions on the VPC. Valid values:</p>
-         * <br>
-         * <p>*   **All**: VBRs that reside in the specified region and belong to the specified Alibaba Cloud account all have permissions on the VPC.</p>
-         * <p>*   **Specify**: Only the specified VBR has permissions on the VPC.</p>
+         * <ul>
+         * <li><strong>All</strong>: VBRs that reside in the specified region and belong to the specified Alibaba Cloud account all have permissions on the VPC.</li>
+         * <li><strong>Specify</strong>: Only the specified VBR has permissions on the VPC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         @NameInMap("GrantType")
         public String grantType;
 
         /**
          * <p>The ID of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1brjuegjc88v3u9****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPCname</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The ID of the vRouter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1i0yzgjd8ra05ec****</p>
          */
         @NameInMap("InstanceRouterId")
         public String instanceRouterId;
 
         /**
          * <p>The ID of the region where the VPC is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
          * <p>The query result. Valid values:</p>
-         * <br>
-         * <p>*   **Created**: The VBR has permissions on the VPC.</p>
-         * <p>*   **Deleted**: The VBR does not have permissions on the VPC.</p>
+         * <ul>
+         * <li><strong>Created</strong>: The VBR has permissions on the VPC.</li>
+         * <li><strong>Deleted</strong>: The VBR does not have permissions on the VPC.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the VBR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-m5ex0xf63xk8s5bob****</p>
          */
         @NameInMap("VbrInstanceId")
         public String vbrInstanceId;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the VBR belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1210123456123456</p>
          */
         @NameInMap("VbrOwnerUid")
         public Long vbrOwnerUid;
 
         /**
          * <p>The ID of the region where the VBR is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("VbrRegionNo")
         public String vbrRegionNo;

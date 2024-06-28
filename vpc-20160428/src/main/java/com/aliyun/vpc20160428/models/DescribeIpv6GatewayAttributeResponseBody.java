@@ -6,81 +6,120 @@ import com.aliyun.tea.*;
 public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the IPv6 gateway. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**</p>
-     * <p>*   **FinancialLocked**</p>
-     * <p>*   **SecurityLocked**</p>
+     * <ul>
+     * <li><strong>Normal</strong></li>
+     * <li><strong>FinancialLocked</strong></li>
+     * <li><strong>SecurityLocked</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
     /**
      * <p>The time when the IPv6 gateway was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-12-05T09:21:35Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The description of the IPv6 gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The time when the IPv6 gateway expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-1-05T09:21:35Z</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
     /**
      * <p>The ID of the gateway route table associated with the IPv6 gateway.</p>
-     * <br>
-     * <p>>  This parameter is available only when the IPv6 gateway is associated with a gateway route table.</p>
+     * <blockquote>
+     * <p> This parameter is available only when the IPv6 gateway is associated with a gateway route table.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-5ts0ohchwkp3dydt2****</p>
      */
     @NameInMap("GatewayRouteTableId")
     public String gatewayRouteTableId;
 
     /**
      * <p>The metering method of the IPv6 gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The ID of the IPv6 gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6gw-hp3y0l3ln89j8cdvf****</p>
      */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
     /**
      * <p>The name of the IPv6 gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the region where the IPv6 gateway is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The status of the IPv6 gateway. Valid values:</p>
-     * <br>
-     * <p>*   **Pending**</p>
-     * <p>*   **Available**</p>
+     * <ul>
+     * <li><strong>Pending</strong></li>
+     * <li><strong>Available</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
      */
     @NameInMap("Status")
     public String status;
@@ -93,6 +132,9 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the IPv6 gateway belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-123sedrfswd23****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -217,16 +259,20 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     public static class DescribeIpv6GatewayAttributeResponseBodyTagsTag extends TeaModel {
         /**
          * <p>The key of tag N. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

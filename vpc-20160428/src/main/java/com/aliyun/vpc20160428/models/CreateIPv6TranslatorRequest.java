@@ -5,36 +5,53 @@ import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values: **true and false**.</p>
+     * <p>Specifies whether to enable automatic payment. Valid values: <strong>true and false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s. Valid values: **1** to **200**. If you do not specify the bandwidth for the mapping entry, the bandwidth is shared with the mapping entry.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the default bandwidth is 10 Mbit/s.</p>
+     * <p>The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s. Valid values: <strong>1</strong> to <strong>200</strong>. If you do not specify the bandwidth for the mapping entry, the bandwidth is shared with the mapping entry.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the default bandwidth is 10 Mbit/s.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sha111</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The subscription duration.</p>
-     * <br>
-     * <p>*   If the billing cycle is **Month**, valid values are **1** to **9**.</p>
-     * <p>*   If the billing cycle is **Year**, set the value to **3**.</p>
+     * <ul>
+     * <li>If the billing cycle is <strong>Month</strong>, valid values are <strong>1</strong> to <strong>9</strong>.</li>
+     * <li>If the billing cycle is <strong>Year</strong>, set the value to <strong>3</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
-     * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with `http://` or `https://`.</p>
+     * <p>The name of the IPv6 Translation Service instance. The default name is the instance ID. It must be 2 to 100 characters in length and must start with a letter. It can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6_1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -47,26 +64,36 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
 
     /**
      * <p>The billing method of the IPv6 Translation Service instance. Valid values:</p>
-     * <br>
-     * <p>*   **PREPAY**: subscription</p>
-     * <p>*   **POSTPAY**: pay-as-you-go</p>
+     * <ul>
+     * <li><strong>PREPAY</strong>: subscription</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The billing cycle of the subscription. Valid values:</p>
-     * <br>
-     * <p>*   **Month** (default)</p>
-     * <p>*   **Year**</p>
+     * <ul>
+     * <li><strong>Month</strong> (default)</li>
+     * <li><strong>Year</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region of the IPv6 Translation Service instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cm-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -78,7 +105,10 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The specification of the IPv6 Translation Service instance. Set the value to **small**.</p>
+     * <p>The specification of the IPv6 Translation Service instance. Set the value to <strong>small</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>small</p>
      */
     @NameInMap("Spec")
     public String spec;

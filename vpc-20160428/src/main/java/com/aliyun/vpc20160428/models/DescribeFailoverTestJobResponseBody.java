@@ -7,6 +7,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
     @NameInMap("FailoverTestJobModel")
     public DescribeFailoverTestJobResponseBodyFailoverTestJobModel failoverTestJobModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C44F62BE-9CE7-4277-B117-69243F3988BF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +36,69 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
     }
 
     public static class DescribeFailoverTestJobResponseBodyFailoverTestJobModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("JobDuration")
         public String jobDuration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ftj-xxxxxxxxx</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>StartNow</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
         @NameInMap("ResourceId")
         public java.util.List<String> resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PHYSICALCONNECTION</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-11-21T14:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Init</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-11-21T15:00:00Z</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 

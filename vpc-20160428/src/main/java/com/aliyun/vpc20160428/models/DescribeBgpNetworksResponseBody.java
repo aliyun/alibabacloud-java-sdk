@@ -12,24 +12,36 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6F513A15-669F-419D-B511-08A85292059B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of advertised BGP networks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class DescribeBgpNetworksResponseBody extends TeaModel {
     public static class DescribeBgpNetworksResponseBodyBgpNetworksBgpNetwork extends TeaModel {
         /**
          * <p>The CIDR block of the advertised BGP network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.1.XX.XX/24</p>
          */
         @NameInMap("DstCidrBlock")
         public String dstCidrBlock;
 
         /**
          * <p>The ID of the VBR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-bp1lhl0taikrteen8****</p>
          */
         @NameInMap("RouterId")
         public String routerId;
 
         /**
          * <p>The status of the advertised BGP network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) in which the master instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1qpo0kug3a2*****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

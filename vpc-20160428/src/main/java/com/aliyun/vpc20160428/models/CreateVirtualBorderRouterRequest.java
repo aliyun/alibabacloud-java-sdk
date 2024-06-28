@@ -6,68 +6,91 @@ import com.aliyun.tea.*;
 public class CreateVirtualBorderRouterRequest extends TeaModel {
     /**
      * <p>The bandwidth of the VBR. Unit: Mbit/s.</p>
-     * <br>
-     * <p>*   When you create a VBR for a dedicated connection, valid values are **50**, **100**, **200**, **300**, **400**, **500**, **1000**, **2048**, **5120**, **8192**, **10240**, **20480**, **40960**, **50120**, **61440**, and **102400**.</p>
-     * <p>*   You do not need to set this parameter when you create a VBR for a hosted connection. The bandwidth is already configured when the hosted connection is created.</p>
+     * <ul>
+     * <li>When you create a VBR for a dedicated connection, valid values are <strong>50</strong>, <strong>100</strong>, <strong>200</strong>, <strong>300</strong>, <strong>400</strong>, <strong>500</strong>, <strong>1000</strong>, <strong>2048</strong>, <strong>5120</strong>, <strong>8192</strong>, <strong>10240</strong>, <strong>20480</strong>, <strong>40960</strong>, <strong>50120</strong>, <strong>61440</strong>, and <strong>102400</strong>.</li>
+     * <li>You do not need to set this parameter when you create a VBR for a hosted connection. The bandwidth is already configured when the hosted connection is created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
     /**
      * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
-     * <br>
-     * <p>>  Only the owner of the Express Connect circuit can set this parameter.</p>
+     * <blockquote>
+     * <p> Only the owner of the Express Connect circuit can set this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>longtel001</p>
      */
     @NameInMap("CircuitCode")
     public String circuitCode;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system automatically sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, the system automatically sets <strong>ClientToken</strong> to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> may be different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the VBR.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to enable IPv6. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables IPv6.</p>
-     * <p>*   **false** (default): disables IPv6.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables IPv6.</li>
+     * <li><strong>false</strong> (default): disables IPv6.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
     /**
      * <p>The IP address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
-     * <br>
      * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("LocalGatewayIp")
     public String localGatewayIp;
 
     /**
      * <p>The IPv6 address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
-     * <br>
      * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
      */
     @NameInMap("LocalIpv6GatewayIp")
     public String localIpv6GatewayIp;
 
     /**
      * <p>The name of the VBR.</p>
-     * <br>
      * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -80,60 +103,72 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
 
     /**
      * <p>The IP address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.</p>
-     * <br>
      * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>116.62.XX.XX</p>
      */
     @NameInMap("PeerGatewayIp")
     public String peerGatewayIp;
 
     /**
      * <p>The IPv6 address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.</p>
-     * <br>
      * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2001:XXXX:4:4:4:4:4:4</p>
      */
     @NameInMap("PeerIpv6GatewayIp")
     public String peerIpv6GatewayIp;
 
     /**
      * <p>The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.</p>
-     * <br>
      * <p>The two IPv6 addresses must fall within the same subnet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:4004:cc:400::/56</p>
      */
     @NameInMap("PeeringIpv6SubnetMask")
     public String peeringIpv6SubnetMask;
 
     /**
      * <p>The subnet mask of the IP addresses of the VBR and the gateway device in the data center.</p>
-     * <br>
      * <p>The two IP addresses must fall within the same subnet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>255.255.255.252</p>
      */
     @NameInMap("PeeringSubnetMask")
     public String peeringSubnetMask;
 
     /**
      * <p>The ID of the Express Connect circuit.</p>
-     * <br>
      * <p>You can create a VBR for a dedicated connection or a hosted connection.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-2zextbehcx****</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
      * <p>The region ID of the Express Connect circuit.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
-     * <br>
-     * <p>For more information about resource group, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)</p>
+     * <p>For more information about resource group, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -152,18 +187,23 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
 
     /**
      * <p>The account ID of the VBR owner.</p>
-     * <br>
      * <p>The default value is the ID of the current Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>168811111****</p>
      */
     @NameInMap("VbrOwnerId")
     public Long vbrOwnerId;
 
     /**
-     * <p>The VLAN ID of the VBR. Valid values: **0 to 2999**.</p>
-     * <br>
-     * <p>>  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.</p>
-     * <br>
+     * <p>The VLAN ID of the VBR. Valid values: <strong>0 to 2999</strong>.</p>
+     * <blockquote>
+     * <p> Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("VlanId")
     public Integer vlanId;
@@ -352,16 +392,20 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     public static class CreateVirtualBorderRouterRequestTags extends TeaModel {
         /**
          * <p>The tag key. You must enter at least one tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>A tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>A tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

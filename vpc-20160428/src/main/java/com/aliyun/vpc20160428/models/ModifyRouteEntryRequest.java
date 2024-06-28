@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyRouteEntryRequest extends TeaModel {
     /**
      * <p>The description of the route entry.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EntryDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the new next hop instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-bp17y37ytsenqyim****</p>
      */
     @NameInMap("NewNextHopId")
     public String newNextHopId;
 
     /**
      * <p>The new next hop type of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NetworkInterface</p>
      */
     @NameInMap("NewNextHopType")
     public String newNextHopType;
@@ -32,10 +40,11 @@ public class ModifyRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the route belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,16 +57,20 @@ public class ModifyRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The ID of the custom route entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rte-acfvgfsghfdd****</p>
      */
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 
     /**
      * <p>The name of the route entry.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EntryName</p>
      */
     @NameInMap("RouteEntryName")
     public String routeEntryName;

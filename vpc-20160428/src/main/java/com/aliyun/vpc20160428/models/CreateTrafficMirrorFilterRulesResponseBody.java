@@ -18,6 +18,9 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>07F272E2-6AD5-433A-8207-A607C76F1676</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
     public static class CreateTrafficMirrorFilterRulesResponseBodyEgressRules extends TeaModel {
         /**
          * <p>The ID of the outbound rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmr-j6cok23ugp53eeib5****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -76,6 +82,9 @@ public class CreateTrafficMirrorFilterRulesResponseBody extends TeaModel {
     public static class CreateTrafficMirrorFilterRulesResponseBodyIngressRules extends TeaModel {
         /**
          * <p>The ID of the inbound rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmr-j6c6rtallo51ouzv3****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

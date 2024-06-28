@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateIpv6GatewayResponseBody extends TeaModel {
     /**
      * <p>The ID of the IPv6 gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6gw-hp3y0l3ln89j8cdvf****</p>
      */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the resource group to which the IPv6 gateway belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

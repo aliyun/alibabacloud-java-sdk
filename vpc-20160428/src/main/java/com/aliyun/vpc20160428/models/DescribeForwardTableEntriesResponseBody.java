@@ -12,24 +12,36 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A6C4A8B1-7561-4509-949C-20DEB40D71E6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,75 +93,114 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
 
     public static class DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry extends TeaModel {
         /**
-         * <p>*   The EIPs that can be accessed over the Internet when you query DNAT entries of Internet NAT gateways.</p>
-         * <p>*   The NAT IP addresses that can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</p>
+         * <ul>
+         * <li>The EIPs that can be accessed over the Internet when you query DNAT entries of Internet NAT gateways.</li>
+         * <li>The NAT IP addresses that can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>139.79.XX.XX</p>
          */
         @NameInMap("ExternalIp")
         public String externalIp;
 
         /**
-         * <p>*   The external port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</p>
-         * <p>*   The port that is used when the NAT IP address can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</p>
+         * <ul>
+         * <li>The external port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</li>
+         * <li>The port that is used when the NAT IP address can be accessed by external networks when you query DNAT entries of VPC NAT gateways.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ExternalPort")
         public String externalPort;
 
         /**
          * <p>The ID of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fwd-119smw5tk****</p>
          */
         @NameInMap("ForwardEntryId")
         public String forwardEntryId;
 
         /**
          * <p>The name of the DNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ForwardEntry-1</p>
          */
         @NameInMap("ForwardEntryName")
         public String forwardEntryName;
 
         /**
          * <p>The ID of the DNAT table to which the DNAT entry belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ftb-11tc6xgmv****</p>
          */
         @NameInMap("ForwardTableId")
         public String forwardTableId;
 
         /**
          * <p>The private IP address.</p>
-         * <br>
-         * <p>*   The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you query DNAT entries of Internet NAT gateways.</p>
-         * <p>*   The private IP address that uses DNAT entries when you query DNAT entries of VPC NAT gateways.</p>
+         * <ul>
+         * <li>The private IP address of the ECS instance that uses DNAT entries to communicate with the Internet when you query DNAT entries of Internet NAT gateways.</li>
+         * <li>The private IP address that uses DNAT entries when you query DNAT entries of VPC NAT gateways.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("InternalIp")
         public String internalIp;
 
         /**
-         * <p>*   The internal port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</p>
-         * <p>*   The destination ECS instance port to be mapped when you query DNAT entries of VPC NAT gateways.</p>
+         * <ul>
+         * <li>The internal port or port range that is used for port forwarding when you query DNAT entries of Internet NAT gateways.</li>
+         * <li>The destination ECS instance port to be mapped when you query DNAT entries of VPC NAT gateways.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("InternalPort")
         public String internalPort;
 
         /**
          * <p>The protocol. Valid values:</p>
-         * <br>
-         * <p>*   **TCP**</p>
-         * <p>*   **UDP**</p>
-         * <p>*   **Any**</p>
+         * <ul>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * <li><strong>Any</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
         /**
          * <p>The ID of the NAT gateway to which the DNAT entry belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
         /**
          * <p>The status of the DNAT entry. Valid values:</p>
-         * <br>
-         * <p>*   **Pending**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Pending</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteVcoRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9208DDD8-0930-3CE6-AF7F-732B4E67B3DD</p>
      */
     @NameInMap("RequestId")
     public String requestId;

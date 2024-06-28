@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyHaVipAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C44F62BE-9CE7-4277-B117-69243F3988BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

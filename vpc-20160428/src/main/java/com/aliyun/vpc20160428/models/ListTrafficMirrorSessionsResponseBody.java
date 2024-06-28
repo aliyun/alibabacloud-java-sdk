@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>739CA01C-92EB-4C69-BCC0-280149C6F41E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -71,12 +81,18 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
     public static class ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessionsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -107,35 +123,50 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
     public static class ListTrafficMirrorSessionsResponseBodyTrafficMirrorSessions extends TeaModel {
         /**
          * <p>The time when the session is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-05T15:26Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>Indicates whether the traffic mirror session was enabled.</p>
-         * <br>
-         * <p>*   **false** </p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong> </li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The maximum transmission unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         @NameInMap("PacketLength")
         public Integer packetLength;
 
         /**
          * <p>The priority of the traffic mirror session.</p>
-         * <br>
          * <p>A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The ID of the resource group to which the traffic mirror session belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -148,44 +179,64 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tmf-j6cmls82xnc86vtpe****</p>
          */
         @NameInMap("TrafficMirrorFilterId")
         public String trafficMirrorFilterId;
 
         /**
          * <p>The status of the traffic mirror session.</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **FinancialLocked**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("TrafficMirrorSessionBusinessStatus")
         public String trafficMirrorSessionBusinessStatus;
 
         /**
          * <p>The description of the traffic mirror session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a session.</p>
          */
         @NameInMap("TrafficMirrorSessionDescription")
         public String trafficMirrorSessionDescription;
 
         /**
          * <p>The ID of the traffic mirror session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tms-j6cla50buc44ap8tu****</p>
          */
         @NameInMap("TrafficMirrorSessionId")
         public String trafficMirrorSessionId;
 
         /**
          * <p>The name of the traffic mirror session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("TrafficMirrorSessionName")
         public String trafficMirrorSessionName;
 
         /**
          * <p>The status of the traffic mirror session. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Created**</p>
-         * <p>*   **Modifying**</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         @NameInMap("TrafficMirrorSessionStatus")
         public String trafficMirrorSessionStatus;
@@ -198,21 +249,31 @@ public class ListTrafficMirrorSessionsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the traffic mirror destination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-j6c2fp57q8rr47rp****</p>
          */
         @NameInMap("TrafficMirrorTargetId")
         public String trafficMirrorTargetId;
 
         /**
          * <p>The type of the traffic mirror destination. Valid values:</p>
-         * <br>
-         * <p>*   **NetworkInterface**: an elastic network interface (ENI)</p>
-         * <p>*   **SLB**: an internal-facing Server Load Balancer (SLB) instance</p>
+         * <ul>
+         * <li><strong>NetworkInterface</strong>: an elastic network interface (ENI)</li>
+         * <li><strong>SLB</strong>: an internal-facing Server Load Balancer (SLB) instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NetworkInterface</p>
          */
         @NameInMap("TrafficMirrorTargetType")
         public String trafficMirrorTargetType;
 
         /**
          * <p>You can specify VNIs to distinguish different mirrored traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("VirtualNetworkId")
         public Integer virtualNetworkId;

@@ -6,74 +6,108 @@ import com.aliyun.tea.*;
 public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The time when the policy-based route was created.</p>
-     * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1492747187000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The description of the policy-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The next hop of the policy-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-bp15oes1py4i66rmd****</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. The value is **Ipsec**.</p>
+     * <p>The tunneling protocol. The value is <strong>Ipsec</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ipsec</p>
      */
     @NameInMap("OverlayMode")
     public String overlayMode;
 
     /**
      * <p>The priority of the policy-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The destination CIDR block of the policy-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
 
     /**
      * <p>The source CIDR block of the policy-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1.0/24</p>
      */
     @NameInMap("RouteSource")
     public String routeSource;
 
     /**
      * <p>The status of the policy-based route. Valid values:</p>
-     * <br>
-     * <p>*   **published**: advertised to the VPC route table.</p>
-     * <p>*   **normal**: not advertised to the VPC route table.</p>
+     * <ul>
+     * <li><strong>published</strong>: advertised to the VPC route table.</li>
+     * <li><strong>normal</strong>: not advertised to the VPC route table.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>normal</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>The VPN gateway ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1cmw7jh1nfe43m9****</p>
      */
     @NameInMap("VpnInstanceId")
     public String vpnInstanceId;
 
     /**
      * <p>The weight of the policy-based route. Valid values:</p>
-     * <br>
-     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
-     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
+     * <ul>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Weight")
     public Integer weight;

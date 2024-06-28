@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateVbrHaResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the VBR failover group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbrha-sa1sxheuxtd98****</p>
      */
     @NameInMap("VbrHaId")
     public String vbrHaId;

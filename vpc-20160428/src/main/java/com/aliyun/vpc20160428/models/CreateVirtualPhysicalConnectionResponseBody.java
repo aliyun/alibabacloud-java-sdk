@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateVirtualPhysicalConnectionResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CD14EA74-E9C3-59A9-942A-DFEC7E12818D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the hosted connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1mrgfbtmc9brre7****</p>
      */
     @NameInMap("VirtualPhysicalConnection")
     public String virtualPhysicalConnection;

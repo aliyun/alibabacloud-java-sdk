@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeSslVpnServersRequest extends TeaModel {
     /**
      * <p>The SSL server name.</p>
-     * <br>
-     * <p>The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -19,33 +21,41 @@ public class DescribeSslVpnServersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the SSL server.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the SSL server belongs.</p>
-     * <br>
      * <p>The SSL server has the same resource group as its associated VPN gateway instance.</p>
-     * <br>
-     * <p>You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/2526915.html) operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzs372yg****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -58,12 +68,18 @@ public class DescribeSslVpnServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the SSL server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vss-bp15j3du13gq1dgey****</p>
      */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1on0xae9d771ggi****</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

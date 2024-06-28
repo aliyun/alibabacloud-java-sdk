@@ -12,6 +12,9 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8252014-D8DE-4D85-AF35-AFEXXXXXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeServerRelatedGlobalAccelerationInstancesResponseBody extend
     public static class DescribeServerRelatedGlobalAccelerationInstancesResponseBodyGlobalAccelerationInstancesGlobalAccelerationInstance extends TeaModel {
         /**
          * <p>The ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga-t4nku6vv9****</p>
          */
         @NameInMap("GlobalAccelerationInstanceId")
         public String globalAccelerationInstanceId;
 
         /**
          * <p>The public IP address of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.34.56.78</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The region ID of the GA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The IP address of the backend service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.24.52.234</p>
          */
         @NameInMap("ServerIpAddress")
         public String serverIpAddress;

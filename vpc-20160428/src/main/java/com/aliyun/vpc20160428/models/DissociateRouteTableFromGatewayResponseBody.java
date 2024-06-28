@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DissociateRouteTableFromGatewayResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5644C9A-7480-13B6-AECB-30FF142E3724</p>
      */
     @NameInMap("RequestId")
     public String requestId;

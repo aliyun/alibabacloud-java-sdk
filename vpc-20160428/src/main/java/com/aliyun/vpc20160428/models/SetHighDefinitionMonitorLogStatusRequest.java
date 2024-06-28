@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     /**
      * <p>The ID of the instance for which you want to configure fine-grained monitoring.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-wz9fi6qboho9fwgx7****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The instance type. Set the value to **EIP**.</p>
+     * <p>The instance type. Set the value to <strong>EIP</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EIP</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The name of the Simple Log Service (SLS) project.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hdmonitor-cn-shenzhen</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
     /**
      * <p>The name of the Logstore.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hdmonitor</p>
      */
     @NameInMap("LogStore")
     public String logStore;
@@ -42,10 +51,11 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -58,11 +68,14 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
 
     /**
      * <p>The status of fine-grained monitoring. Valid values:</p>
-     * <br>
-     * <p>*   **ON**</p>
-     * <p>*   **OFF**</p>
-     * <br>
+     * <ul>
+     * <li><strong>ON</strong></li>
+     * <li><strong>OFF</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ON</p>
      */
     @NameInMap("Status")
     public String status;

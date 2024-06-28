@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class CheckCanAllocateVpcPrivateIpAddressResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the private IP address is available. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("CanAllocate")
     public Boolean canAllocate;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93360B0-2969-40BF-8542-EBB34FD358AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

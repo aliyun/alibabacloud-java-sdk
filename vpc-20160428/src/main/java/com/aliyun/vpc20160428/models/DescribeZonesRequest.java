@@ -5,11 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeZonesRequest extends TeaModel {
     /**
-     * <p>The language used in the **LocalName** parameter. Valid values:</p>
-     * <br>
-     * <p>*   **zh-cn**: Chinese</p>
-     * <p>*   **en-us**: English</p>
-     * <p>*   **ja**: Japanese</p>
+     * <p>The language used in the <strong>LocalName</strong> parameter. Valid values:</p>
+     * <ul>
+     * <li><strong>zh-cn</strong>: Chinese</li>
+     * <li><strong>en-us</strong>: English</li>
+     * <li><strong>ja</strong>: Japanese</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-cn</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -21,9 +25,11 @@ public class DescribeZonesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the zone. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the zone. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,7 +41,10 @@ public class DescribeZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The zone type. Default value: **AvailabilityZone**.</p>
+     * <p>The zone type. Default value: <strong>AvailabilityZone</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AvailabilityZone</p>
      */
     @NameInMap("ZoneType")
     public String zoneType;

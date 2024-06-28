@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
     /**
      * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **1** to **1000**.</p>
-     * <br>
+     * <p>Valid values: <strong>1</strong> to <strong>1000</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     /**
      * <p>The ID of the Internet Shared Bandwidth instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cbwp-2ze2ic1xd2qeqk145****</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
@@ -30,10 +33,11 @@ public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Internet Shared Bandwidth instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

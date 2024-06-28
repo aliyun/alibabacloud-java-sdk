@@ -6,43 +6,54 @@ import com.aliyun.tea.*;
 public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d7d24a21-f4ba-4454-9173-b3****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The new priority of the policy-based route. Valid values: **1** to **100**.</p>
-     * <br>
+     * <p>The new priority of the policy-based route. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * <p>A smaller value indicates a higher priority.</p>
-     * <br>
      * <p>If you do not specify this parameter, the priority of the policy-based route is not modified.</p>
-     * <br>
-     * <p>>  You must specify at least one of **NewPriority** and **NewWeight**.</p>
+     * <blockquote>
+     * <p> You must specify at least one of <strong>NewPriority</strong> and <strong>NewWeight</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("NewPriority")
     public Integer newPriority;
 
     /**
      * <p>The new weight of the policy-based route. Valid values:</p>
-     * <br>
-     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</p>
-     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</p>
-     * <br>
+     * <ul>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</li>
+     * </ul>
      * <p>If you do not specify this parameter, the weight of the policy-based route is not modified.</p>
-     * <br>
-     * <p>>  You must specify at least one of **NewPriority** and **NewWeight**.</p>
+     * <blockquote>
+     * <p> You must specify at least one of <strong>NewPriority</strong> and <strong>NewWeight</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("NewWeight")
     public Integer newWeight;
 
     /**
      * <p>The next hop of the policy-based route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-bp15oes1py4i66rmd****</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
@@ -54,21 +65,23 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The original priority of the policy-based route. Valid values: **1** to **100**.</p>
-     * <br>
+     * <p>The original priority of the policy-based route. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * <p>A smaller value indicates a higher priority.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
      * <p>The region ID of the VPN gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-heyuan</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -81,35 +94,44 @@ public class ModifyVpnPbrRouteEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the policy-based route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
 
     /**
      * <p>The source CIDR block of the policy-based route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1.0/24</p>
      */
     @NameInMap("RouteSource")
     public String routeSource;
 
     /**
      * <p>The ID of the VPN gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1a3kqjiiq9legfx****</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
     /**
      * <p>The original weight of the policy-based route. Valid values:</p>
-     * <br>
-     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
-     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
-     * <br>
+     * <ul>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Weight")
     public Integer weight;

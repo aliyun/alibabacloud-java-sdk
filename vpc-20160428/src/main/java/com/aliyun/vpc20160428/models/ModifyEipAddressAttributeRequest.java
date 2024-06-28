@@ -6,33 +6,43 @@ import com.aliyun.tea.*;
 public class ModifyEipAddressAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the pay-as-you-go EIP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zeerraiwb7uj6i0d****</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
      * <p>The new maximum bandwidth of the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **1** to **200** if the metering method is pay-by-data-transfer. Unit: Mbit/s.</p>
-     * <p>*   **1** to **500** if the metering method is pay-by-bandwidth. Unit: Mbit/s.</p>
+     * <ul>
+     * <li><strong>1</strong> to <strong>200</strong> if the metering method is pay-by-data-transfer. Unit: Mbit/s.</li>
+     * <li><strong>1</strong> to <strong>500</strong> if the metering method is pay-by-bandwidth. Unit: Mbit/s.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     /**
      * <p>The new description of the EIP.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length and start with a letter. The description cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length and start with a letter. The description cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The new name of the EIP.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test123</p>
      */
     @NameInMap("Name")
     public String name;
@@ -45,8 +55,10 @@ public class ModifyEipAddressAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the EIP.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

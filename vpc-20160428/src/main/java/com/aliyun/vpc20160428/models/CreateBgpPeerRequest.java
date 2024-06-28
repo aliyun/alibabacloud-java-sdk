@@ -5,47 +5,61 @@ import com.aliyun.tea.*;
 
 public class CreateBgpPeerRequest extends TeaModel {
     /**
-     * <p>The BFD hop count. Valid values: **1** to **255**.</p>
-     * <br>
+     * <p>The BFD hop count. Valid values: <strong>1</strong> to <strong>255</strong>.</p>
      * <p>This parameter is required only if you enable BFD.</p>
-     * <br>
      * <p>The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("BfdMultiHop")
     public Integer bfdMultiHop;
 
     /**
      * <p>The ID of the BGP group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bgpg-wz9f62v4fbg****</p>
      */
     @NameInMap("BgpGroupId")
     public String bgpGroupId;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** for each API request is different.</p>
+     * <blockquote>
+     * <p> If you do not set this parameter, the system uses the value of <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> for each API request is different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables BFD.</p>
-     * <p>*   **false**: disables BFD.</p>
+     * <ul>
+     * <li><strong>true</strong>: enables BFD.</li>
+     * <li><strong>false</strong>: disables BFD.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableBfd")
     public Boolean enableBfd;
 
     /**
      * <p>The IP version. Valid values:</p>
-     * <br>
-     * <p>*   **IPv4**: This is the default value.</p>
-     * <p>*   **IPv6**: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.</p>
+     * <ul>
+     * <li><strong>IPv4</strong>: This is the default value.</li>
+     * <li><strong>IPv6</strong>: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPv4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
@@ -58,16 +72,20 @@ public class CreateBgpPeerRequest extends TeaModel {
 
     /**
      * <p>The IP address of the BGP peer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>116.62.XX.XX</p>
      */
     @NameInMap("PeerIpAddress")
     public String peerIpAddress;
 
     /**
      * <p>The ID of the region to which the BGP group belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

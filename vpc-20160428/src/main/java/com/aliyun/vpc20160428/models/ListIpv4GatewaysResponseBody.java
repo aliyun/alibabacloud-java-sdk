@@ -12,21 +12,31 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value is the token that is used for the subsequent query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D265800-E306-529C-8418-84B0A1D201DB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -71,12 +81,18 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
     public static class ListIpv4GatewaysResponseBodyIpv4GatewayModelsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -107,57 +123,83 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
     public static class ListIpv4GatewaysResponseBodyIpv4GatewayModels extends TeaModel {
         /**
          * <p>Indicates whether the IPv4 gateway is activated. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <ul>
+         * <li><strong>true</strong>: yes</li>
+         * <li><strong>false</strong>: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Enabled")
         public Boolean enabled;
 
         /**
          * <p>The time when the IPv4 gateway was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-02T07:07:35Z</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The description of the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Ipv4GatewayDescription")
         public String ipv4GatewayDescription;
 
         /**
          * <p>The ID of the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4gw-5tsnc6s4ogsedtp3k****</p>
          */
         @NameInMap("Ipv4GatewayId")
         public String ipv4GatewayId;
 
         /**
          * <p>The name of the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("Ipv4GatewayName")
         public String ipv4GatewayName;
 
         /**
          * <p>The ID of the route table associated with the IPv4 gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-5ts0ohchwkp3dydt2****</p>
          */
         @NameInMap("Ipv4GatewayRouteTableId")
         public String ipv4GatewayRouteTableId;
 
         /**
          * <p>The ID of the resource group to which the IPv4 gateway belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the IPv4 gateway. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**</p>
-         * <p>*   **Created**</p>
-         * <p>*   **Modifying**</p>
-         * <p>*   **Deleting**</p>
-         * <p>*   **Deleted**</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         @NameInMap("Status")
         public String status;
@@ -170,6 +212,9 @@ public class ListIpv4GatewaysResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the VPC with which the IPv4 gateways are associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-5tsrxlw7dv074gci4****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

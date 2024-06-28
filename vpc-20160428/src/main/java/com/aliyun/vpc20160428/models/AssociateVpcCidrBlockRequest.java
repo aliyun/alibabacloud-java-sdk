@@ -6,36 +6,52 @@ import com.aliyun.tea.*;
 public class AssociateVpcCidrBlockRequest extends TeaModel {
     /**
      * <p>The IPv6 CIDR block to be added.</p>
-     * <br>
-     * <p>>  You must and can specify only one of **SecondaryCidrBlock** and **Ipv6CidrBlock**.</p>
+     * <blockquote>
+     * <p> You must and can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:6a::/56</p>
      */
     @NameInMap("IPv6CidrBlock")
     public String IPv6CidrBlock;
 
     /**
      * <p>The version of the IP address. Valid values:</p>
-     * <br>
-     * <p>*   **IPV4**: the IPv4 address.</p>
-     * <p>*   **IPV6**: the IPv6 address. If you set **IpVersion** to **IPV6** and do not specify **SecondaryCidrBlock**, you can add a secondary IPv6 CIDR block to the VPC.</p>
+     * <ul>
+     * <li><strong>IPV4</strong>: the IPv4 address.</li>
+     * <li><strong>IPV6</strong>: the IPv6 address. If you set <strong>IpVersion</strong> to <strong>IPV6</strong> and do not specify <strong>SecondaryCidrBlock</strong>, you can add a secondary IPv6 CIDR block to the VPC.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPV4</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
 
     /**
      * <p>The ID of the IP Address Manager (IPAM) pool that contains IPv4 addresses.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipam-pool-sycmt3p2a9v63i****</p>
      */
     @NameInMap("IpamPoolId")
     public String ipamPoolId;
 
     /**
      * <p>The type of the IPv6 CIDR block. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default)</p>
-     * <p>*   **ChinaMobile**</p>
-     * <p>*   **ChinaUnicom**</p>
-     * <p>*   **ChinaTelecom**</p>
-     * <br>
-     * <p>>  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
+     * <ul>
+     * <li><strong>BGP</strong> (default)</li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaTelecom</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, or <strong>ChinaMobile</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("Ipv6Isp")
     public String ipv6Isp;
@@ -48,10 +64,11 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC to which you want to add a secondary CIDR block.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ch-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -64,16 +81,21 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The IPv4 CIDR block to be added. Take note of the following requirements:</p>
-     * <br>
-     * <p>*   You can specify one of the following standard IPv4 CIDR blocks or their subnets as the secondary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8.</p>
-     * <p>*   You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the secondary IPv4 CIDR block of the VPC.</p>
-     * <br>
+     * <ul>
+     * <li>You can specify one of the following standard IPv4 CIDR blocks or their subnets as the secondary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8.</li>
+     * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the secondary IPv4 CIDR block of the VPC.</li>
+     * </ul>
      * <p>The CIDR block must meet the following requirements:</p>
-     * <br>
-     * <p>*   The CIDR block cannot start with 0. The subnet mask must be 8 to 28 bits in length.</p>
-     * <p>*   The CIDR block cannot overlap with the primary CIDR block or an existing secondary CIDR block of the VPC.</p>
-     * <br>
-     * <p>>  You must and can specify only one of **SecondaryCidrBlock** and **Ipv6CidrBlock**.</p>
+     * <ul>
+     * <li>The CIDR block cannot start with 0. The subnet mask must be 8 to 28 bits in length.</li>
+     * <li>The CIDR block cannot overlap with the primary CIDR block or an existing secondary CIDR block of the VPC.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You must and can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/16</p>
      */
     @NameInMap("SecondaryCidrBlock")
     public String secondaryCidrBlock;
@@ -83,8 +105,10 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC to which you want to add a secondary CIDR block.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-o6wrloqsdqc9io3mg****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

@@ -12,21 +12,31 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd********</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -71,30 +81,44 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     public static class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions extends TeaModel {
         /**
          * <p>The suffix of the hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The IP address of the DNS server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("DomainNameServers")
         public String domainNameServers;
 
         /**
          * <p>The lease time of the IPv6 addresses for the DHCP options set.</p>
-         * <br>
-         * <p>*   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.</p>
-         * <p>*   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.</p>
+         * <ul>
+         * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
+         * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3650d</p>
          */
         @NameInMap("Ipv6LeaseTime")
         public String ipv6LeaseTime;
 
         /**
          * <p>The lease time of the IPv4 addresses for the DHCP options set.</p>
-         * <br>
-         * <p>*   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.</p>
-         * <p>*   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.</p>
+         * <ul>
+         * <li>If you use hours as the unit, valid values are <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</li>
+         * <li>If you use days as the unit, valid values are <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3650d</p>
          */
         @NameInMap("LeaseTime")
         public String leaseTime;
@@ -141,12 +165,18 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     public static class ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsTags extends TeaModel {
         /**
          * <p>The key of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N added to the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -177,6 +207,9 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
     public static class ListDhcpOptionsSetsResponseBodyDhcpOptionsSets extends TeaModel {
         /**
          * <p>The number of VPCs with which the DHCP options set is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AssociateVpcCount")
         public Integer associateVpcCount;
@@ -189,41 +222,60 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
         /**
          * <p>The description of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DhcpOptionsSetDescription")
         public String dhcpOptionsSetDescription;
 
         /**
          * <p>The ID of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dopt-o6w0df4epg9zo8isy****</p>
          */
         @NameInMap("DhcpOptionsSetId")
         public String dhcpOptionsSetId;
 
         /**
          * <p>The name of the DHCP options set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DhcpOptionsSetName")
         public String dhcpOptionsSetName;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the DHCP options set belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253460731706911258</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
         /**
          * <p>The ID of the resource group to which the DHCP options set belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The status of the DHCP options set. Valid values:</p>
-         * <br>
-         * <p>*   **Available**</p>
-         * <p>*   **InUse**</p>
-         * <p>*   **Pending**</p>
-         * <p>*   **Deleted**</p>
+         * <ul>
+         * <li><strong>Available</strong></li>
+         * <li><strong>InUse</strong></li>
+         * <li><strong>Pending</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;

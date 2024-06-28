@@ -6,50 +6,66 @@ import com.aliyun.tea.*;
 public class ListVpnCertificateAssociationsRequest extends TeaModel {
     /**
      * <p>The list of certificate IDs.</p>
-     * <br>
      * <p>You can query the association between at most 20 SSL certificates and VPN gateways.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6bfe4218-ea1d****</p>
      */
     @NameInMap("CertificateId")
     public java.util.List<String> certificateId;
 
     /**
      * <p>The certificate type. Valid values:</p>
-     * <br>
-     * <p>*   **Encryption**</p>
-     * <p>*   **Signature**</p>
+     * <ul>
+     * <li><strong>Encryption</strong></li>
+     * <li><strong>Signature</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Signature</p>
      */
     @NameInMap("CertificateType")
     public String certificateType;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **20**. Default value: **1**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>20</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be0****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The region ID of the VPN gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The list of VPN gateway IDs.</p>
-     * <br>
      * <p>You can query the association between at most 20 VPN gateways and SSL certificates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1q8bgx4xnkm****</p>
      */
     @NameInMap("VpnGatewayId")
     public java.util.List<String> vpnGatewayId;

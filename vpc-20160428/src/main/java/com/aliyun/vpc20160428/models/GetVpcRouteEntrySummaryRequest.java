@@ -12,10 +12,11 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
 
     /**
      * <p>The region ID of the route table.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,28 +29,36 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
 
     /**
      * <p>The type of the route. Valid values:</p>
-     * <br>
-     * <p>*   **All**: all route types</p>
-     * <p>*   **Custom**: a custom route</p>
-     * <p>*   **System**: a system route</p>
-     * <p>*   **BGP**: a BGP route</p>
-     * <p>*   **CEN**: a Cloud Enterprise Network (CEN) route</p>
-     * <br>
+     * <ul>
+     * <li><strong>All</strong>: all route types</li>
+     * <li><strong>Custom</strong>: a custom route</li>
+     * <li><strong>System</strong>: a system route</li>
+     * <li><strong>BGP</strong>: a BGP route</li>
+     * <li><strong>CEN</strong>: a Cloud Enterprise Network (CEN) route</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("RouteEntryType")
     public String routeEntryType;
 
     /**
      * <p>The ID of the route table that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp145q7glnuzdvzu2****</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp15zckdt37pq72****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

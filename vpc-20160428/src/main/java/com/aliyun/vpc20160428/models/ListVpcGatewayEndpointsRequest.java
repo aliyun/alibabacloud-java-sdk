@@ -6,29 +6,41 @@ import com.aliyun.tea.*;
 public class ListVpcGatewayEndpointsRequest extends TeaModel {
     /**
      * <p>The ID of the gateway endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpce-bp1i1212ss2whuwyw****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
      * <p>The name of the gateway endpoint.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
 
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -41,16 +53,20 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the gateway endpoint.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the gateway endpoint belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxvfvazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -63,6 +79,9 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
 
     /**
      * <p>The name of the endpoint service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com.aliyun.cn-hangzhou.oss</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
@@ -177,16 +196,20 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public static class ListVpcGatewayEndpointsRequestTags extends TeaModel {
         /**
          * <p>The key of tag N added to the resource. You can specify at most 20 tag keys. It cannot be an empty string.</p>
-         * <br>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

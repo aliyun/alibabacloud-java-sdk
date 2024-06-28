@@ -12,24 +12,36 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E82612A9-CB90-4D7E-B394-1DB7F6509B29</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     public static class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TagValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -137,52 +155,74 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     public static class DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway extends TeaModel {
         /**
          * <p>The autonomous system number (ASN) of the gateway device in the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65530</p>
          */
         @NameInMap("Asn")
         public Long asn;
 
         /**
          * <p>The authentication key that is used to connect to the gateway device in the data center by using Border Gateway Protocol (BGP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AuthKey****</p>
          */
         @NameInMap("AuthKey")
         public String authKey;
 
         /**
          * <p>The time when the customer gateway was created. Unit: millisecond.</p>
-         * <br>
          * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1492747187000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The customer gateway ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cgw-bp1pvpl9r9adju6l5****</p>
          */
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
 
         /**
          * <p>The description of the customer gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desctest</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The IP address of the gateway device in the data center.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139.32.XX.XX</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The name of the customer gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nametest</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the resource group to which the customer gateway belongs.</p>
-         * <br>
-         * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzs372yg****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;

@@ -6,48 +6,65 @@ import com.aliyun.tea.*;
 public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     /**
      * <p>Specifies whether the hosted connection is accepted by the tenant. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsConfirmed")
     public Boolean isConfirmed;
 
     /**
-     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   You do not need to specify this parameter for the first request.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>dd20****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the Express Connect circuit over which the hosted connections are created.</p>
-     * <br>
      * <p>Express Connect circuits in this topic refer to Express Connect circuits over which hosted connections are created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1ciz7ekd2grn1as****</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
      * <p>The region ID of the hosted connection.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the hosted connection belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4p****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -60,34 +77,50 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
 
     /**
      * <p>The information about the Alibaba Cloud account that owns the hosted connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>189xxx</p>
      */
     @NameInMap("VirtualPhysicalConnectionAliUids")
     public java.util.List<String> virtualPhysicalConnectionAliUids;
 
     /**
      * <p>The business status of the hosted connection. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**</p>
-     * <p>*   **FinancialLocked**</p>
-     * <p>*   **SecurityLocked**</p>
+     * <ul>
+     * <li><strong>Normal</strong></li>
+     * <li><strong>FinancialLocked</strong></li>
+     * <li><strong>SecurityLocked</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("VirtualPhysicalConnectionBusinessStatus")
     public String virtualPhysicalConnectionBusinessStatus;
 
     /**
      * <p>The information about the hosted connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-xxx</p>
      */
     @NameInMap("VirtualPhysicalConnectionIds")
     public java.util.List<String> virtualPhysicalConnectionIds;
 
     /**
      * <p>The business status of the hosted connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-xxx</p>
      */
     @NameInMap("VirtualPhysicalConnectionStatuses")
     public java.util.List<String> virtualPhysicalConnectionStatuses;
 
     /**
      * <p>The VLAN ID of the hosted connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-xxx</p>
      */
     @NameInMap("VlanIds")
     public java.util.List<String> vlanIds;
@@ -196,16 +229,20 @@ public class ListVirtualPhysicalConnectionsRequest extends TeaModel {
     public static class ListVirtualPhysicalConnectionsRequestTags extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

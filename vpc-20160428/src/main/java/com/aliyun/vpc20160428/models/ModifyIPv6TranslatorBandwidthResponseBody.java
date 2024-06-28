@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyIPv6TranslatorBandwidthResponseBody extends TeaModel {
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>202304500950739</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF8198EE-8FC9-49C2-A22E-xxxx</p>
      */
     @NameInMap("RequestId")
     public String requestId;

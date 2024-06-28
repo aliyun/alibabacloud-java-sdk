@@ -6,114 +6,149 @@ import com.aliyun.tea.*;
 public class UpdateIpsecServerRequest extends TeaModel {
     /**
      * <p>The client CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client.</p>
-     * <br>
-     * <p>>  The client CIDR block must not overlap with the CIDR blocks of the VPC.</p>
+     * <blockquote>
+     * <p> The client CIDR block must not overlap with the CIDR blocks of the VPC.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("ClientIpPool")
     public String clientIpPool;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the value of <strong>ClientToken</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to only precheck this request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request without modifying the configurations of the IPsec server. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. This is the default value. If the request passes the precheck, the system modifies the configurations of the IPsec server.</p>
+     * <ul>
+     * <li><strong>true</strong>: prechecks the request without modifying the configurations of the IPsec server. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: sends the request. This is the default value. If the request passes the precheck, the system modifies the configurations of the IPsec server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public String dryRun;
 
     /**
      * <p>Specifies whether to delete the negotiated IPsec tunnel and initiate the negotiation again. Valid values:</p>
-     * <br>
-     * <p>*   **true**: immediately initiates negotiations after the configuration is complete.</p>
-     * <p>*   **false**: initiates negotiations when inbound traffic is detected.</p>
+     * <ul>
+     * <li><strong>true</strong>: immediately initiates negotiations after the configuration is complete.</li>
+     * <li><strong>false</strong>: initiates negotiations when inbound traffic is detected.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EffectImmediately")
     public Boolean effectImmediately;
 
     /**
      * <p>The configuration of Phase 1 negotiations. Valid values:</p>
-     * <br>
-     * <p>*   **IkeVersion**: The IKE version. Valid values: **ikev1** and **ikev2**.</p>
-     * <p>*   **IkeMode**: The IKE negotiation mode. Default value: **main**.</p>
-     * <p>*   **IkeEncAlg**: the encryption algorithm that is used in Phase 1 negotiation. Default value: **aes**.</p>
-     * <p>*   **IkeAuthAlg**: the authentication algorithm that is used in Phase 1 negotiation. Default value: **sha1**.</p>
-     * <p>*   **IkePfs**: The Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Default value: **group2**.</p>
-     * <p>*   **IkeLifetime**: The SA lifetime determined by Phase 1 negotiations. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.</p>
-     * <p>*   **LocalId**: The identifier of the IPsec server. Only FQDN and IP address formats are supported.</p>
-     * <p>*   **RemoteId**: the peer identifier. Only FQDN and IP address formats are supported.</p>
+     * <ul>
+     * <li><strong>IkeVersion</strong>: The IKE version. Valid values: <strong>ikev1</strong> and <strong>ikev2</strong>.</li>
+     * <li><strong>IkeMode</strong>: The IKE negotiation mode. Default value: <strong>main</strong>.</li>
+     * <li><strong>IkeEncAlg</strong>: the encryption algorithm that is used in Phase 1 negotiation. Default value: <strong>aes</strong>.</li>
+     * <li><strong>IkeAuthAlg</strong>: the authentication algorithm that is used in Phase 1 negotiation. Default value: <strong>sha1</strong>.</li>
+     * <li><strong>IkePfs</strong>: The Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Default value: <strong>group2</strong>.</li>
+     * <li><strong>IkeLifetime</strong>: The SA lifetime determined by Phase 1 negotiations. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
+     * <li><strong>LocalId</strong>: The identifier of the IPsec server. Only FQDN and IP address formats are supported.</li>
+     * <li><strong>RemoteId</strong>: the peer identifier. Only FQDN and IP address formats are supported.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;IkeVersion&quot;:&quot;ikev2&quot;,&quot;IkeMode&quot;:&quot;main&quot;,&quot;IkeEncAlg&quot;:&quot;aes&quot;,&quot;IkeAuthAlg&quot;:&quot;sha1&quot;,&quot;IkePfs&quot;:&quot;group2&quot;,&quot;IkeLifetime&quot;:86400}</p>
      */
     @NameInMap("IkeConfig")
     public String ikeConfig;
 
     /**
      * <p>The configuration of Phase 2 negotiation. Valid values:</p>
-     * <br>
-     * <p>*   **IpsecEncAlg**: the encryption algorithm that is used in Phase 2 negotiation. Default value: **aes**.</p>
-     * <p>*   **IpsecAuthAlg**: the authentication algorithm that is used in Phase 2 negotiation. Default value: **sha1**.</p>
-     * <p>*   **IpsecPfs**: forwards packets of all protocols. The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiation. Default value: **group2**.</p>
-     * <p>*   **IpsecLifetime**: the SA lifetime determined by Phase 2 negotiation. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.</p>
+     * <ul>
+     * <li><strong>IpsecEncAlg</strong>: the encryption algorithm that is used in Phase 2 negotiation. Default value: <strong>aes</strong>.</li>
+     * <li><strong>IpsecAuthAlg</strong>: the authentication algorithm that is used in Phase 2 negotiation. Default value: <strong>sha1</strong>.</li>
+     * <li><strong>IpsecPfs</strong>: forwards packets of all protocols. The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiation. Default value: <strong>group2</strong>.</li>
+     * <li><strong>IpsecLifetime</strong>: the SA lifetime determined by Phase 2 negotiation. Unit: seconds. Valid values: <strong>0</strong> to <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;IpsecEncAlg&quot;:&quot;aes&quot;,&quot;IpsecAuthAlg&quot;:&quot;sha1&quot;,&quot;IpsecPfs&quot;:&quot;group2&quot;,&quot;IpsecLifetime&quot;:86400}</p>
      */
     @NameInMap("IpsecConfig")
     public String ipsecConfig;
 
     /**
      * <p>The IPsec server ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iss-bp1bo3xuvcxo7ixll****</p>
      */
     @NameInMap("IpsecServerId")
     public String ipsecServerId;
 
     /**
      * <p>The name of the IPsec server.</p>
-     * <br>
      * <p>It must be 1 to 100 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("IpsecServerName")
     public String ipsecServerName;
 
     /**
      * <p>The local CIDR blocks, which are the CIDR blocks of the virtual private cloud (VPC) for the client to access.</p>
-     * <br>
      * <p>Multiple CIDR blocks are separated with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/24,172.17.0.0/16</p>
      */
     @NameInMap("LocalSubnet")
     public String localSubnet;
 
     /**
      * <p>The pre-shared key.</p>
-     * <br>
      * <p>The pre-shared key that is used for authentication between the IPsec-VPN server and the client. It must be 1 to 100 characters in length.</p>
-     * <br>
-     * <p>You can call [ListIpsecServers](https://help.aliyun.com/document_detail/2794120.html) to query keys generated by the system.</p>
-     * <br>
-     * <p>>  The pre-shared key of the IPsec server key must be the same as that of the client. Otherwise, the connection between the IPsec server and the client cannot be established.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/2794120.html">ListIpsecServers</a> to query keys generated by the system.</p>
+     * <blockquote>
+     * <p> The pre-shared key of the IPsec server key must be the same as that of the client. Otherwise, the connection between the IPsec server and the client cannot be established.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Cfd123****</p>
      */
     @NameInMap("Psk")
     public String psk;
 
     /**
-     * <p>Specifies whether to enable pre-shared key authentication. If you set the value to **true**, pre-shared key authentication is enabled.</p>
+     * <p>Specifies whether to enable pre-shared key authentication. If you set the value to <strong>true</strong>, pre-shared key authentication is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PskEnabled")
     public Boolean pskEnabled;
 
     /**
      * <p>The ID of the region where the IPsec server is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

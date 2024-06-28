@@ -6,10 +6,13 @@ import com.aliyun.tea.*;
 public class MoveResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the resource group to which you want to move the resource.</p>
-     * <br>
-     * <p>>  You can use resource groups to facilitate resource grouping and permission management for an Alibaba Cloud. For more information, see [What is resource management?](https://help.aliyun.com/document_detail/94475.html)</p>
-     * <br>
+     * <blockquote>
+     * <p> You can use resource groups to facilitate resource grouping and permission management for an Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm3peow3k****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
@@ -22,18 +25,21 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the cloud resource belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-hp31psbg8ec3023s6****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -46,22 +52,25 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The type of the resource for which you want to modify the resource group. Valid values:</p>
-     * <br>
-     * <p>*   **Vpc**</p>
-     * <p>*   **Eip**</p>
-     * <p>*   **BandwidthPackage**</p>
-     * <p>*   **PrefixList**</p>
-     * <p>*   **PublicIpAddressPool**</p>
-     * <p>*   **FlowLog**</p>
-     * <p>*   **HaVip**</p>
-     * <p>*   **TrafficMirrorFilter**</p>
-     * <p>*   **TrafficMirrorSession**</p>
-     * <p>*   **IPv4Gateway**</p>
-     * <p>*   **IPv6Gateway**</p>
-     * <p>*   **DhcpOptionsSet**</p>
-     * <p>*   **GatewayEndpoint**</p>
-     * <br>
+     * <ul>
+     * <li><strong>Vpc</strong></li>
+     * <li><strong>Eip</strong></li>
+     * <li><strong>BandwidthPackage</strong></li>
+     * <li><strong>PrefixList</strong></li>
+     * <li><strong>PublicIpAddressPool</strong></li>
+     * <li><strong>FlowLog</strong></li>
+     * <li><strong>HaVip</strong></li>
+     * <li><strong>TrafficMirrorFilter</strong></li>
+     * <li><strong>TrafficMirrorSession</strong></li>
+     * <li><strong>IPv4Gateway</strong></li>
+     * <li><strong>IPv6Gateway</strong></li>
+     * <li><strong>DhcpOptionsSet</strong></li>
+     * <li><strong>GatewayEndpoint</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

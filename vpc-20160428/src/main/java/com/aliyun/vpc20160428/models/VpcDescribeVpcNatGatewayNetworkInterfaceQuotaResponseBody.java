@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponseBody extends TeaModel {
     /**
      * <p>The number of endpoints that can be created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Quota")
     public Long quota;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>611CB80C-B6A9-43DB-9E38-0B0AC3D9B58F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

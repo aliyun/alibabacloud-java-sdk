@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteIpv4GatewayResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21133AC0-0636-521B-A400-253818691A56</p>
      */
     @NameInMap("RequestId")
     public String requestId;

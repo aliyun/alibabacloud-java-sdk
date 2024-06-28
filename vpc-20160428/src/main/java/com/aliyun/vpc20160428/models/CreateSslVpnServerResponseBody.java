@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateSslVpnServerResponseBody extends TeaModel {
     /**
      * <p>The SSL server name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E98A9651-7098-40C7-8F85-C818D1EBBA85</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the SSL server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vss-bp18q7hzj6largv4v****</p>
      */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;

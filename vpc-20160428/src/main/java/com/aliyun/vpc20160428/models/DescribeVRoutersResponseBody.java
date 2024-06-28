@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeVRoutersResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -101,18 +113,27 @@ public class DescribeVRoutersResponseBody extends TeaModel {
     public static class DescribeVRoutersResponseBodyVRoutersVRouter extends TeaModel {
         /**
          * <p>The time when the vRouter was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-22T07:46:20Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the vRouter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The region to which the vRouter belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -125,18 +146,27 @@ public class DescribeVRoutersResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the vRouter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vrt-rj98khsezfqpjrxmv****</p>
          */
         @NameInMap("VRouterId")
         public String VRouterId;
 
         /**
          * <p>The name of the vRouter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doctest</p>
          */
         @NameInMap("VRouterName")
         public String VRouterName;
 
         /**
          * <p>The ID of the virtual private cloud (VPC) to which the vRouter belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-rj905wotv6y030t1****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

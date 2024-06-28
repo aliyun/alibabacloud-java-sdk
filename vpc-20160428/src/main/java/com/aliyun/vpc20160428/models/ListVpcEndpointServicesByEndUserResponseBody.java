@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
      * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If **NextToken** is returned, the value is the token that is used for the next query.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value is the token that is used for the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AB1129F-32C1-5E4D-9E22-E4A859CA46EB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -33,6 +43,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -85,33 +98,49 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     public static class ListVpcEndpointServicesByEndUserResponseBodyServices extends TeaModel {
         /**
          * <p>The default access policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{   \&quot;Version\&quot; : \&quot;1\&quot;,   \&quot;Statement\&quot; : [ {     \&quot;Effect\&quot; : \&quot;Allow\&quot;,     \&quot;Action\&quot; : \&quot;<em>\&quot;,     \&quot;Principal\&quot; : \&quot;</em>\&quot;,     \&quot;Resource\&quot; : \&quot;*\&quot;   } ] }</p>
          */
         @NameInMap("DefaultPolicyDocument")
         public String defaultPolicyDocument;
 
         /**
          * <p>The domain name of the cloud service to which the endpoint service belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-admin.aliyuncs.com</p>
          */
         @NameInMap("ServiceDomain")
         public String serviceDomain;
 
         /**
          * <p>The ID of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpces-m5enwdmilo210aibo9****</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
          * <p>The name of the endpoint service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.aliyun.cn-hangzhou.oss</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
          * <p>Indicate whether the endpoint service supports the access policy. Valid values:</p>
-         * <br>
-         * <p>*   **false**</p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportPolicy")
         public Boolean supportPolicy;

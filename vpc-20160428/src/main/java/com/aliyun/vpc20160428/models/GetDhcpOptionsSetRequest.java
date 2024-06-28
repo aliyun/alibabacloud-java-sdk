@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetDhcpOptionsSetRequest extends TeaModel {
     /**
      * <p>The ID of the DHCP options set.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dopt-o6w0df4epg9zo8isy****</p>
      */
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
@@ -20,10 +22,11 @@ public class GetDhcpOptionsSetRequest extends TeaModel {
 
     /**
      * <p>The region ID of the DHCP options set that you want to query.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

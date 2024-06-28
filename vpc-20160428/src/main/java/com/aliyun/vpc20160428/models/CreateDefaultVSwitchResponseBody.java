@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateDefaultVSwitchResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the default vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1a4b5qhmxftjimq****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

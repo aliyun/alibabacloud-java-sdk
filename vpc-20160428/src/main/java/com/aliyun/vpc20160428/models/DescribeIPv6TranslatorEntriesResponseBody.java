@@ -12,24 +12,36 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,93 +94,139 @@ public class DescribeIPv6TranslatorEntriesResponseBody extends TeaModel {
     public static class DescribeIPv6TranslatorEntriesResponseBodyIpv6TranslatorEntriesIpv6TranslatorEntry extends TeaModel {
         /**
          * <p>The ID of the associated ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transacl-bp1de2****</p>
          */
         @NameInMap("AclId")
         public String aclId;
 
         /**
          * <p>Indicates whether ACLs are enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("AclStatus")
         public String aclStatus;
 
         /**
          * <p>The ACL type.</p>
-         * <br>
-         * <p>*   **white**: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</p>
-         * <p>*   **black**: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</p>
+         * <ul>
+         * <li><strong>white</strong>: a whitelist. IPv6 addresses in the ACL are allowed to access backend services.</li>
+         * <li><strong>black</strong>: a blacklist. IPv6 addresses in the ACL are not allowed to access backend services.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>white</p>
          */
         @NameInMap("AclType")
         public String aclType;
 
         /**
          * <p>The IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2400:3200:1600::XX</p>
          */
         @NameInMap("AllocateIpv6Addr")
         public String allocateIpv6Addr;
 
         /**
          * <p>The port used by the IPv6 address allocated to the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("AllocateIpv6Port")
         public Integer allocateIpv6Port;
 
         /**
          * <p>The public IP address of the backend IPv4 server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.99.XX.XX</p>
          */
         @NameInMap("BackendIpv4Addr")
         public String backendIpv4Addr;
 
         /**
          * <p>The public IPv4 port used by the IPv4 server that needs to provide IPv6 access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("BackendIpv4Port")
         public String backendIpv4Port;
 
         /**
          * <p>The bandwidth specified in the IPv6 mapping entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EntryBandwidth")
         public String entryBandwidth;
 
         /**
          * <p>The description of the IPv6 mapping entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         @NameInMap("EntryDescription")
         public String entryDescription;
 
         /**
          * <p>The name of the IPv6 mapping entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         @NameInMap("EntryName")
         public String entryName;
 
         /**
          * <p>The status of the IPv6 mapping entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("EntryStatus")
         public String entryStatus;
 
         /**
          * <p>The ID of the IPv6 mapping entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6transentry-bp1g8bhrde****</p>
          */
         @NameInMap("Ipv6TranslatorEntryId")
         public String ipv6TranslatorEntryId;
 
         /**
          * <p>The ID of the IPv6 Translation Service instance to which the IPv6 mapping entry belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv6trans-bp1858ys****</p>
          */
         @NameInMap("Ipv6TranslatorId")
         public String ipv6TranslatorId;
 
         /**
          * <p>The region of the IPv6 Translation Service instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("TransProtocol")
         public String transProtocol;

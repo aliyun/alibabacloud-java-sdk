@@ -6,127 +6,163 @@ import com.aliyun.tea.*;
 public class AllocateEipAddressRequest extends TeaModel {
     /**
      * <p>The promotion code. This parameter is not required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("ActivityId")
     public Long activityId;
 
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</p>
-     * <p>*   **true**: The automatic payment is enabled. Payments are automatically complete after an order is generated.</p>
-     * <br>
-     * <p>If **InstanceChargeType** is set to **PrePaid**, this parameter is required. If **InstanceChargeType** is set to **PostPaid**, this parameter is not required.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): The automatic payment is disabled. If you select this option, you must go to the Order Center to complete the payment after an order is generated.</li>
+     * <li><strong>true</strong>: The automatic payment is enabled. Payments are automatically complete after an order is generated.</li>
+     * </ul>
+     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, this parameter is required. If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, this parameter is not required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
-     * <br>
-     * <p>*   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**: **1** to **500**.****</p>
-     * <p>*   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**: **1** to **200**.****</p>
-     * <p>*   Valid values when **InstanceChargeType** is set to **PrePaid**: **1** to **1000**.****</p>
-     * <br>
-     * <p>Default value: **5**. Unit: Mbit/s.</p>
+     * <ul>
+     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>: <strong>1</strong> to <strong>500</strong>.****</li>
+     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>: <strong>1</strong> to <strong>200</strong>.****</li>
+     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>: <strong>1</strong> to <strong>1000</strong>.****</li>
+     * </ul>
+     * <p>Default value: <strong>5</strong>. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The **client token** can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the **client token**. The value of **RequestId** is different for each API request.</p>
+     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The <strong>client token</strong> can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the value of <strong>RequestId</strong> as the <strong>client token</strong>. The value of <strong>RequestId</strong> is different for each API request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe637760</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the EIP.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
-     * <br>
-     * <p>>  You cannot specify this parameter if you create a subscription EIP.</p>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <blockquote>
+     * <p> You cannot specify this parameter if you create a subscription EIP.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The line type. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default): BGP (Multi-ISP) All regions support BGP (Multi-ISP) EIPs.</p>
-     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</p>
-     * <br>
-     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the "Line types" section of [What is EIP?](https://help.aliyun.com/document_detail/32321.html)</p>
-     * <br>
-     * <p>*   If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
-     * <br>
-     * <p>    *   **ChinaTelecom**</p>
-     * <p>    *   **ChinaUnicom**</p>
-     * <p>    *   **ChinaMobile**</p>
-     * <p>    *   **ChinaTelecom_L2**</p>
-     * <p>    *   **ChinaUnicom_L2**</p>
-     * <p>    *   **ChinaMobile_L2**</p>
-     * <br>
-     * <p>*   If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.</p>
+     * <ul>
+     * <li><strong>BGP</strong> (default): BGP (Multi-ISP) All regions support BGP (Multi-ISP) EIPs.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</li>
+     * </ul>
+     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the &quot;Line types&quot; section of <a href="https://help.aliyun.com/document_detail/32321.html">What is EIP?</a></p>
+     * <ul>
+     * <li><p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
+     * <ul>
+     * <li><strong>ChinaTelecom</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaTelecom_L2</strong></li>
+     * <li><strong>ChinaUnicom_L2</strong></li>
+     * <li><strong>ChinaMobile_L2</strong></li>
+     * </ul>
+     * </li>
+     * <li><p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to <strong>BGP_FinanceCloud</strong>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("ISP")
     public String ISP;
 
     /**
      * <p>The billing method of the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription</p>
-     * <p>*   **PostPaid** (default): pay-as-you-go</p>
-     * <br>
-     * <p>If **InstanceChargeType** is set to **PrePaid**, set **InternetChargeType** to **PayByBandwidth**. If **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription</li>
+     * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
+     * </ul>
+     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>. If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The EIP ID.</p>
-     * <br>
-     * <p>Specify **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.</p>
+     * <p>Specify <strong>IpAddress</strong> or <strong>InstanceId</strong>. If you leave both parameters empty, the system randomly allocates an EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-25877c70gddh****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The metering method of the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **PayByBandwidth** (default): pay-by-bandwidth</p>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <br>
-     * <p>When **InstanceChargeType** is set to **PrePaid**, set **InternetChargeType** to **PayByBandwidth**.</p>
-     * <br>
-     * <p>When **InstanceChargeType** is set to **PostPaid**, set **InternetChargeType** to **PayByBandwidth** or **PayByTraffic**.</p>
+     * <ul>
+     * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth</li>
+     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+     * </ul>
+     * <p>When <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong>.</p>
+     * <p>When <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, set <strong>InternetChargeType</strong> to <strong>PayByBandwidth</strong> or <strong>PayByTraffic</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The IP address of the EIP that you want to request.</p>
-     * <br>
-     * <p>Specify **IpAddress** or **InstanceId**. If you leave both parameters empty, the system randomly allocates an EIP.</p>
+     * <p>Specify <strong>IpAddress</strong> or <strong>InstanceId</strong>. If you leave both parameters empty, the system randomly allocates an EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
 
     /**
      * <p>The EIP name.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length and start with a letter, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
-     * <br>
-     * <p>>  You cannot specify this parameter if you create a subscription EIP.</p>
+     * <blockquote>
+     * <p> You cannot specify this parameter if you create a subscription EIP.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>EIP1</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The network type. Default value: **public**.</p>
+     * <p>The network type. Default value: <strong>public</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("Netmode")
     public String netmode;
@@ -139,49 +175,57 @@ public class AllocateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The subscription duration of the EIP.</p>
-     * <br>
-     * <p>Valid values when **PricingCycle** is set to **Month**: **1** to **9**.****</p>
-     * <br>
-     * <p>Valid values when **PricingCycle** is set to **Year**: **1** to **5**.****</p>
-     * <br>
-     * <p>This parameter must be specified when **InstanceChargeType** is set to **PrePaid**. This parameter is optional when **InstanceChargeType** is set to **PostPaid**.</p>
+     * <p>Valid values when <strong>PricingCycle</strong> is set to <strong>Month</strong>: <strong>1</strong> to <strong>9</strong>.****</p>
+     * <p>Valid values when <strong>PricingCycle</strong> is set to <strong>Year</strong>: <strong>1</strong> to <strong>5</strong>.****</p>
+     * <p>This parameter must be specified when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>. This parameter is optional when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The billing cycle of the subscription EIP. Valid values:</p>
-     * <br>
-     * <p>*   **Month** (default)</p>
-     * <p>*   **Year**</p>
-     * <br>
-     * <p>If **InstanceChargeType** is set to **PrePaid**, this parameter is required. If **InstanceChargeType** is set to **PostPaid**, this parameter is not required.</p>
+     * <ul>
+     * <li><strong>Month</strong> (default)</li>
+     * <li><strong>Year</strong></li>
+     * </ul>
+     * <p>If <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>, this parameter is required. If <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>, this parameter is not required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
      * <p>The ID of the IP address pool.</p>
-     * <br>
      * <p>The EIP is allocated from the IP address pool.</p>
-     * <br>
-     * <p>By default, the IP address pool feature is unavailable. To use the IP address pool, apply for the privilege in the Quota Center console. For more information, see the "Request a quota increase in the Quota Center console" section in [Manage EIP quotas](https://help.aliyun.com/document_detail/108213.html).</p>
+     * <p>By default, the IP address pool feature is unavailable. To use the IP address pool, apply for the privilege in the Quota Center console. For more information, see the &quot;Request a quota increase in the Quota Center console&quot; section in <a href="https://help.aliyun.com/document_detail/108213.html">Manage EIP quotas</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pippool-2vc0kxcedhquybdsz****</p>
      */
     @NameInMap("PublicIpAddressPoolId")
     public String publicIpAddressPoolId;
 
     /**
      * <p>The ID of the region to which the EIP belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazffggds****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -194,21 +238,25 @@ public class AllocateEipAddressRequest extends TeaModel {
 
     /**
      * <p>The editions of Anti-DDoS.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, Anti-DDoS Origin Basic is used.</p>
-     * <p>*   If you set the parameter to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.</p>
-     * <br>
+     * <ul>
+     * <li>If you do not specify this parameter, Anti-DDoS Origin Basic is used.</li>
+     * <li>If you set the parameter to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Pro/Premium is used.</li>
+     * </ul>
      * <p>You can specify up to 10 editions of Anti-DDoS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AntiDDoS_Enhanced</p>
      */
     @NameInMap("SecurityProtectionTypes")
     public java.util.List<String> securityProtectionTypes;
 
     /**
      * <p>The zone of the EIP.</p>
-     * <br>
-     * <p>When the service type of the IP address pool specified by **PublicIpAddressPoolId** is CloudBox, the default value is the zone of the IP address pool.</p>
-     * <br>
-     * <p>For more information, see [ListPublicIpAddressPools](https://help.aliyun.com/document_detail/429433.html).</p>
+     * <p>When the service type of the IP address pool specified by <strong>PublicIpAddressPoolId</strong> is CloudBox, the default value is the zone of the IP address pool.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-a</p>
      */
     @NameInMap("Zone")
     public String zone;

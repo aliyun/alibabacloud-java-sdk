@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UnassociateVpcCidrBlockResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C1221A1F-2ACD-4592-8F27-474E02883159</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,8 +12,10 @@ public class DeleteRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the route table.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -86,32 +88,46 @@ public class DeleteRouteEntriesRequest extends TeaModel {
     public static class DeleteRouteEntriesRequestRouteEntries extends TeaModel {
         /**
          * <p>The destination CIDR block of the route that you want to delete. IPv4 and IPv6 CIDR blocks are supported. You can specify up to 50 destination CIDR blocks.</p>
-         * <br>
-         * <p>>  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.</p>
+         * <blockquote>
+         * <p> If <strong>RouteEntryId</strong> is not specified, <strong>DstCidrBlock</strong> and <strong>NextHop</strong> are required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX/24</p>
          */
         @NameInMap("DstCidrBlock")
         public String dstCidrBlock;
 
         /**
          * <p>The ID of the next hop that you want to delete. You can specify up to 50 next hop IDs.</p>
-         * <br>
-         * <p>>  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.</p>
+         * <blockquote>
+         * <p> If <strong>RouteEntryId</strong> is not specified, <strong>DstCidrBlock</strong> and <strong>NextHop</strong> are required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>i-j6c2fp57q8rr4jlu****</p>
          */
         @NameInMap("NextHop")
         public String nextHop;
 
         /**
          * <p>The ID of the route that you want to delete. You can specify up to 50 route IDs.</p>
-         * <br>
-         * <p>>  If **RouteEntryId** is not specified, **DstCidrBlock** and **NextHop** are required.</p>
+         * <blockquote>
+         * <p> If <strong>RouteEntryId</strong> is not specified, <strong>DstCidrBlock</strong> and <strong>NextHop</strong> are required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-bp1mnnr2al0naomnpv****</p>
          */
         @NameInMap("RouteEntryId")
         public String routeEntryId;
 
         /**
          * <p>The ID of the route table to which the routes to be deleted belongs. You can specify up to 50 route table IDs.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-2ze3jgygk9bmsj23s****</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;

@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class UnassociateGlobalAccelerationInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the GA instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ga-1sxeedefrr33****</p>
      */
     @NameInMap("GlobalAccelerationInstanceId")
     public String globalAccelerationInstanceId;
 
     /**
      * <p>The backend server type. Valid values:</p>
-     * <br>
-     * <p>*   **RemoteEcsInstance**: Elastic Compute Service (ECS) instance</p>
-     * <p>*   **RemoteSlbInstance**: Server Load Balancer (SLB) instance</p>
-     * <p>*   **RemoteEniInstance**: elastic network interface (ENI)</p>
+     * <ul>
+     * <li><strong>RemoteEcsInstance</strong>: Elastic Compute Service (ECS) instance</li>
+     * <li><strong>RemoteSlbInstance</strong>: Server Load Balancer (SLB) instance</li>
+     * <li><strong>RemoteEniInstance</strong>: elastic network interface (ENI)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RemoteEcsInstance</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -30,10 +36,11 @@ public class UnassociateGlobalAccelerationInstanceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the GA instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

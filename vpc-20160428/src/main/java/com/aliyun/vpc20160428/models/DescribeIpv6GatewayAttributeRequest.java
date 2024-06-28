@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeIpv6GatewayAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the IPv6 gateway that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6gw-hp3y0l3ln89j8cdvf****</p>
      */
     @NameInMap("Ipv6GatewayId")
     public String ipv6GatewayId;
@@ -19,9 +21,11 @@ public class DescribeIpv6GatewayAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-huhehaote</p>
      */
     @NameInMap("RegionId")
     public String regionId;

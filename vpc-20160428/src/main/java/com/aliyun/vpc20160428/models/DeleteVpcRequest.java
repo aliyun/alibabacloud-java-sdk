@@ -6,23 +6,31 @@ import com.aliyun.tea.*;
 public class DeleteVpcRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <br>
-     * <p>- **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>- **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>Specifies whether to forcefully delete the VPC. Valid values:</p>
-     * <br>
-     * <p>- **true**: yes</p>
-     * <p>- **false** (default): no</p>
-     * <br>
+     * <ul>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong> (default): no</li>
+     * </ul>
      * <p>You can forcefully delete a VPC in the following scenarios:</p>
-     * <br>
-     * <p>- Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.</p>
-     * <p>- Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.</p>
+     * <ul>
+     * <li>Only an IPv4 gateway and routes that point to the IPv4 gateway exist in the VPC.</li>
+     * <li>Only an IPv6 gateway and routes that point to the IPv6 gateway exist in the VPC.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceDelete")
     public Boolean forceDelete;
@@ -35,8 +43,10 @@ public class DeleteVpcRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the VPC is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,8 +59,10 @@ public class DeleteVpcRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPC that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1m7v25emi1h5mtc****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

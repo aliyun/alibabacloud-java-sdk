@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8AE6F367-52EA-535D-9A3D-EF23D70527C8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
     public static class ListEnhanhcedNatGatewayAvailableZonesResponseBodyZones extends TeaModel {
         /**
          * <p>The name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dubai Zone A</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
          * <p>The ID of the zone where the instance is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>me-east-1a</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyVRouterAttributeRequest extends TeaModel {
     /**
      * <p>The description of the vRouter.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>My VRouter</p>
      */
     @NameInMap("Description")
     public String description;
@@ -20,8 +22,10 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the vRouter.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,16 +38,20 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
 
     /**
      * <p>The vRouter ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vrt-gw0p7zigake75znix****</p>
      */
     @NameInMap("VRouterId")
     public String VRouterId;
 
     /**
      * <p>The name of the vRouter.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VRouter-1</p>
      */
     @NameInMap("VRouterName")
     public String VRouterName;

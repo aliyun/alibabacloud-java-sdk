@@ -6,18 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeEipMonitorDataRequest extends TeaModel {
     /**
      * <p>The ID of the EIP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-2zeerraiwb7uj6idcfv****</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
-     * <p>The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
-     * <br>
+     * <p>The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. For example, <code>2013-01-10T12:00:00Z</code> specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
      * <p>If the value of seconds (ss) is not 00, the end time is automatically rounded up to the next minute.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-01-05T03:05:10Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,16 +32,23 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The duration of each monitoring data entry. Unit: seconds. Valid values: **60** (default), **300**, **900**, and **3600**.</p>
-     * <br>
-     * <p>*   If the value of **(EndTime** - **StartTime**)/**Period** is greater than 200, a maximum of 200 monitoring data entries are returned at a time.</p>
-     * <p>*   If the value of (**EndTime** - **StartTime**)/**Period** is less than or equal to 200, only the monitoring data collected between the start time and end time is returned.</p>
+     * <p>The duration of each monitoring data entry. Unit: seconds. Valid values: <strong>60</strong> (default), <strong>300</strong>, <strong>900</strong>, and <strong>3600</strong>.</p>
+     * <ul>
+     * <li>If the value of <strong>(EndTime</strong> - <strong>StartTime</strong>)/<strong>Period</strong> is greater than 200, a maximum of 200 monitoring data entries are returned at a time.</li>
+     * <li>If the value of (<strong>EndTime</strong> - <strong>StartTime</strong>)/<strong>Period</strong> is less than or equal to 200, only the monitoring data collected between the start time and end time is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The ID of the region to which the EIP belongs. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>The ID of the region to which the EIP belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -50,11 +60,12 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
-     * <br>
+     * <p>The beginning of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in <code>YYYY-MM-DDThh:mm:ssZ</code> format. For example, <code>2013-01-10T12:00:00Z</code> specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
      * <p>If the value of seconds (ss) is not 00, the start time is automatically rounded up to the next minute.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-01-05T01:05:05Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

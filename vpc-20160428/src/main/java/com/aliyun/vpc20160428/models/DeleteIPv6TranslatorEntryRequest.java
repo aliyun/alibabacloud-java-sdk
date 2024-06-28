@@ -6,22 +6,31 @@ import com.aliyun.tea.*;
 public class DeleteIPv6TranslatorEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the IPv6 mapping entry to be deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6transentry-bp1g8bhrde****</p>
      */
     @NameInMap("Ipv6TranslatorEntryId")
     public String ipv6TranslatorEntryId;
 
     /**
      * <p>The ID of the IPv6 Translation Service instance.</p>
-     * <br>
-     * <p>> If you do not specify **Ipv6TranslatorEntryId**, all mapping entries in the specified instance are deleted.</p>
+     * <blockquote>
+     * <p>If you do not specify <strong>Ipv6TranslatorEntryId</strong>, all mapping entries in the specified instance are deleted.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6trans-bp1858ys****</p>
      */
     @NameInMap("Ipv6TranslatorId")
     public String ipv6TranslatorId;
@@ -33,9 +42,11 @@ public class DeleteIPv6TranslatorEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the **DescribeRegions** operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

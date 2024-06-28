@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If no value is returned for <strong>NextToken</strong>, no next queries are sent.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,32 +64,45 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16qjewdsunr41m1****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource. Valid values:</p>
-         * <br>
-         * <p>*   **VPC**: virtual private cloud (VPC)</p>
-         * <p>*   **VSWITCH**: vSwitch</p>
-         * <p>*   **ROUTETABLE**: route table</p>
-         * <p>*   **EIP**: EIP</p>
-         * <p>*   **VpnGateWay**: VPN gateway</p>
-         * <p>*   **NATGATEWAY**: NAT gateway</p>
-         * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
+         * <ul>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
+         * <li><strong>VSWITCH</strong>: vSwitch</li>
+         * <li><strong>ROUTETABLE</strong>: route table</li>
+         * <li><strong>EIP</strong>: EIP</li>
+         * <li><strong>VpnGateWay</strong>: VPN gateway</li>
+         * <li><strong>NATGATEWAY</strong>: NAT gateway</li>
+         * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: EIP bandwidth plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

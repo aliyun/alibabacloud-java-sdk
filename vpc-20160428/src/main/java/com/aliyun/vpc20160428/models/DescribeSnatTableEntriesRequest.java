@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeSnatTableEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the NAT gateway.</p>
-     * <br>
-     * <p>>  You must specify at least one of **SnatTableId** and **NatGatewayId**.</p>
+     * <blockquote>
+     * <p> You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-bp1uewa15k4iy5770****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -19,23 +23,30 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the region where you want to create the NAT gateway.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -48,44 +59,65 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
 
     /**
      * <p>The ID of the SNAT entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snat-8vbae8uqh7rjpk7d2****</p>
      */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
     /**
      * <p>The name of the SNAT entry.</p>
-     * <br>
      * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SnatEntry-1</p>
      */
     @NameInMap("SnatEntryName")
     public String snatEntryName;
 
     /**
-     * <p>*   When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.</p>
-     * <p>*   When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.</p>
+     * <ul>
+     * <li>When you query SNAT entries of Internet NAT gateways, this parameter specifies the EIP in an SNAT entry.</li>
+     * <li>When you query SNAT entries of VPC NAT gateways, this parameter specifies the NAT IP address in an SNAT entry.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>116.22.XX.XX</p>
      */
     @NameInMap("SnatIp")
     public String snatIp;
 
     /**
      * <p>The ID of the SNAT table.</p>
-     * <br>
-     * <p>>  You must specify at least one of **SnatTableId** and **NatGatewayId**.</p>
+     * <blockquote>
+     * <p> You must specify at least one of <strong>SnatTableId</strong> and <strong>NatGatewayId</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>stb-8vbczigrhop8x5u3t****</p>
      */
     @NameInMap("SnatTableId")
     public String snatTableId;
 
     /**
      * <p>The source CIDR block specified in the SNAT entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>116.22.XX.XX/24</p>
      */
     @NameInMap("SourceCIDR")
     public String sourceCIDR;
 
     /**
      * <p>The ID of the vSwitch.</p>
-     * <br>
-     * <p>*   When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.</p>
-     * <p>*   When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.</p>
+     * <ul>
+     * <li>When you query SNAT entries of Internet NAT gateways, this parameter specifies that Elastic Compute Service (ECS) instances in the vSwitch can use SNAT entries to access the Internet.</li>
+     * <li>When you query SNAT entries of virtual private cloud (VPC) NAT gateways, this parameter specifies that ECS instances in the vSwitch can use SNAT entries to access external networks.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-3xbjkhjshjdf****</p>
      */
     @NameInMap("SourceVSwitchId")
     public String sourceVSwitchId;

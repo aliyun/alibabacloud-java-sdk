@@ -6,26 +6,31 @@ import com.aliyun.tea.*;
 public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
     /**
      * <p>The remarks of the ACL rule.</p>
-     * <br>
      * <p>It must be 2 to 100 characters in length, and can contain digits, underscores (_), and hyphens (-). It must start with a letter.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client IP</p>
      */
     @NameInMap("AclEntryComment")
     public String aclEntryComment;
 
     /**
      * <p>The ID of the ACL rule to which the IP entry belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6transaclentry-bp1jzyn7ra8pyxehd****</p>
      */
     @NameInMap("AclEntryId")
     public String aclEntryId;
 
     /**
      * <p>The ID of the ACL to which the IP entry belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6transacl-bp1b4z3tleyhq1s50****</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -38,8 +43,10 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
 
     /**
      * <p>The region of the ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -4,6 +4,10 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9C7FA9D6-72E0-48A9-A9C3-2DA8569CD5EB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,48 +36,108 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeExpressConnectTrafficQosRuleResponseBodyRuleList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.1.0/24</p>
+         */
         @NameInMap("DstCidr")
         public String dstCidr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2001:0db8:1234:5678::/64</p>
+         */
         @NameInMap("DstIPv6Cidr")
         public String dstIPv6Cidr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1/-1</p>
+         */
         @NameInMap("DstPortRange")
         public String dstPortRange;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MatchDscp")
         public Integer matchDscp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-pksbqfmotl5hzqmhf8</p>
+         */
         @NameInMap("QosId")
         public String qosId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-queue-9nyx2u7n71s2rcy4n5</p>
+         */
         @NameInMap("QueueId")
         public String queueId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RemarkingDscp")
         public Integer remarkingDscp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-rule-test</p>
+         */
         @NameInMap("RuleDescription")
         public String ruleDescription;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-rule-iugg0l9x27f2nocouj</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>qos-rule-test</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.1.1.0/24</p>
+         */
         @NameInMap("SrcCidr")
         public String srcCidr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2001:0db8:1234:5678::/64</p>
+         */
         @NameInMap("SrcIPv6Cidr")
         public String srcIPv6Cidr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-1/-1</p>
+         */
         @NameInMap("SrcPortRange")
         public String srcPortRange;
 

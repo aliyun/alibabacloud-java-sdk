@@ -6,35 +6,46 @@ import com.aliyun.tea.*;
 public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically advertise BGP routes to the virtual private cloud (VPC). Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPropagate")
     public Boolean autoPropagate;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-4266****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The new description of the VPN gateway.</p>
-     * <br>
-     * <p>The description must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The new name of the VPN gateway.</p>
-     * <br>
-     * <p>The name must be 2 to 100 characters in length and cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, underscores (_), hyphens (-), and periods (.). Other characters are not supported.</p>
+     * <p>The name must be 2 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>. It must start with a letter and can contain letters, digits, underscores (_), hyphens (-), and periods (.). Other characters are not supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myvpn</p>
      */
     @NameInMap("Name")
     public String name;
@@ -46,9 +57,11 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The ID of the region where the VPN gateway is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -61,8 +74,10 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the VPN gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1q8bgx4xnkm2ogj****</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

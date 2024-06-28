@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is used to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -21,12 +25,18 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -71,12 +81,18 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags extends TeaModel {
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Value")
         public String value;
@@ -107,9 +123,13 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList extends TeaModel {
         /**
          * <p>The service type of the IP address pool.</p>
-         * <br>
-         * <p>*   **CloudBox** Only cloud box users can select this type.</p>
-         * <p>*   **Default** (default)</p>
+         * <ul>
+         * <li><strong>CloudBox</strong> Only cloud box users can select this type.</li>
+         * <li><strong>Default</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudBox</p>
          */
         @NameInMap("BizType")
         public String bizType;
@@ -118,102 +138,138 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
-         * <p>The time when the IP address pool was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the IP address pool was created. The time is displayed in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-10T01:37:38Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddressPoolDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether idle IP addresses exist.</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IpAddressRemaining")
         public Boolean ipAddressRemaining;
 
         /**
          * <p>The line type.</p>
-         * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP)</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro</p>
-         * <br>
-         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](https://help.aliyun.com/document_detail/32321.html).</p>
-         * <br>
+         * <ul>
+         * <li><strong>BGP</strong>: BGP (Multi-ISP)</li>
+         * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro</li>
+         * </ul>
+         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
          * <p>If you are allowed to use single-ISP bandwidth, one of the following values may be returned:</p>
-         * <br>
-         * <p>*   **ChinaTelecom**</p>
-         * <p>*   **ChinaUnicom**</p>
-         * <p>*   **ChinaMobile**</p>
-         * <p>*   **ChinaTelecom_L2**</p>
-         * <p>*   **ChinaUnicom_L2**</p>
-         * <p>*   **ChinaMobile_L2**</p>
-         * <br>
-         * <p>If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.</p>
+         * <ul>
+         * <li><strong>ChinaTelecom</strong></li>
+         * <li><strong>ChinaUnicom</strong></li>
+         * <li><strong>ChinaMobile</strong></li>
+         * <li><strong>ChinaTelecom_L2</strong></li>
+         * <li><strong>ChinaUnicom_L2</strong></li>
+         * <li><strong>ChinaMobile_L2</strong></li>
+         * </ul>
+         * <p>If your services are deployed in China East 1 Finance, <strong>BGP_FinanceCloud</strong> is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BGP</p>
          */
         @NameInMap("Isp")
         public String isp;
 
         /**
          * <p>The name of the IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AddressPoolName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The Alibaba Cloud account to which the IP address pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121012345612****</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
         /**
          * <p>The ID of the IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pippool-6wetvn6fumkgycssx****</p>
          */
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
 
         /**
          * <p>The region ID of the IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the resource group to which the IP address pool belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4pcdvf****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The edition of Anti-DDoS.</p>
-         * <br>
-         * <p>*   If you do not set this parameter, Anti-DDoS Origin Basic is used.</p>
-         * <p>*   If the value is set to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.</p>
+         * <ul>
+         * <li>If you do not set this parameter, Anti-DDoS Origin Basic is used.</li>
+         * <li>If the value is set to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Pro/Premium is used.</li>
+         * </ul>
          */
         @NameInMap("SecurityProtectionTypes")
         public java.util.List<String> securityProtectionTypes;
 
         /**
          * <p>The sharing type of the IP address pool.</p>
-         * <br>
-         * <p>*   If **Shared** is returned, the IP address pool is shared.</p>
-         * <p>*   If an empty value is returned, the IP address pool is not shared.</p>
+         * <ul>
+         * <li>If <strong>Shared</strong> is returned, the IP address pool is shared.</li>
+         * <li>If an empty value is returned, the IP address pool is not shared.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Shared</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
          * <p>The status of the IP address pool.</p>
-         * <br>
-         * <p>*   **Created**</p>
-         * <p>*   **Deleting**</p>
-         * <p>*   **Modifying**</p>
+         * <ul>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         @NameInMap("Status")
         public String status;
@@ -226,21 +282,31 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of available IP addresses in the public IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("TotalIpNum")
         public Integer totalIpNum;
 
         /**
          * <p>The number of used IP addresses in the public IP address pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("UsedIpNum")
         public Integer usedIpNum;
 
         /**
          * <p>The user type. Valid values:</p>
-         * <br>
-         * <p>*   **admin**: An administrator can delete, modify, and query IP address pools, and can assign elastic IP addresses (EIPs) to the pool.</p>
-         * <p>*   **user**: A user can only assign EIPs to the IP address pool and query the IP address pool, but cannot modify or delete the IP address pool.</p>
+         * <ul>
+         * <li><strong>admin</strong>: An administrator can delete, modify, and query IP address pools, and can assign elastic IP addresses (EIPs) to the pool.</li>
+         * <li><strong>user</strong>: A user can only assign EIPs to the IP address pool and query the IP address pool, but cannot modify or delete the IP address pool.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         @NameInMap("UserType")
         public Boolean userType;

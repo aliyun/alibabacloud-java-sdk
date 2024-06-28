@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateIpv6EgressOnlyRuleResponseBody extends TeaModel {
     /**
      * <p>The ID of the egress-only rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6py-hp3w98rmlbqp01245****</p>
      */
     @NameInMap("Ipv6EgressRuleId")
     public String ipv6EgressRuleId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DFEDBEE-E5AB-49E8-A2DC-CC114C67AF75</p>
      */
     @NameInMap("RequestId")
     public String requestId;

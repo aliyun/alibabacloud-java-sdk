@@ -6,35 +6,46 @@ import com.aliyun.tea.*;
 public class CreateRouteEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the custom route entry.</p>
-     * <br>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination CIDR block of the custom route entry. Both IPv4 and IPv6 CIDR blocks are supported. Make sure that the destination CIDR block meets the following requirements:</p>
-     * <br>
-     * <p>*   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</p>
-     * <p>*   The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.</p>
-     * <br>
+     * <ul>
+     * <li>The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</li>
+     * <li>The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/24</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
      * <p>The ID of the next hop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-j6c2fp57q8rr4jlu****</p>
      */
     @NameInMap("NextHopId")
     public String nextHopId;
@@ -47,16 +58,20 @@ public class CreateRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The type of next hop of the custom route entry. Valid values:</p>
-     * <br>
-     * <p>*   **Instance**: an Elastic Compute Service (ECS) instance. This is the default value.</p>
-     * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP).</p>
-     * <p>*   **RouterInterface**: a router interface.</p>
-     * <p>*   **NetworkInterface**: an elastic network interface (ENI).</p>
-     * <p>*   **VpnGateway**: a VPN gateway.</p>
-     * <p>*   **IPv6Gateway**: an IPv6 gateway.</p>
-     * <p>*   **NatGateway**: a NAT gateway.</p>
-     * <p>*   **Attachment**: a transit router.</p>
-     * <p>*   **VpcPeer**: a VPC peering connection.</p>
+     * <ul>
+     * <li><strong>Instance</strong>: an Elastic Compute Service (ECS) instance. This is the default value.</li>
+     * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP).</li>
+     * <li><strong>RouterInterface</strong>: a router interface.</li>
+     * <li><strong>NetworkInterface</strong>: an elastic network interface (ENI).</li>
+     * <li><strong>VpnGateway</strong>: a VPN gateway.</li>
+     * <li><strong>IPv6Gateway</strong>: an IPv6 gateway.</li>
+     * <li><strong>NatGateway</strong>: a NAT gateway.</li>
+     * <li><strong>Attachment</strong>: a transit router.</li>
+     * <li><strong>VpcPeer</strong>: a VPC peering connection.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RouterInterface</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;
@@ -69,8 +84,10 @@ public class CreateRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The region ID of the route table.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -83,16 +100,20 @@ public class CreateRouteEntryRequest extends TeaModel {
 
     /**
      * <p>The name of the custom route entry that you want to add.</p>
-     * <br>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
     /**
      * <p>The ID of the route table to which you want to add a custom route entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp145q7glnuzd****</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;
@@ -209,18 +230,27 @@ public class CreateRouteEntryRequest extends TeaModel {
     public static class CreateRouteEntryRequestNextHopList extends TeaModel {
         /**
          * <p>The ID of the next hop of the ECMP route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ri-2zeo3xzyf3cd8r4****</p>
          */
         @NameInMap("NextHopId")
         public String nextHopId;
 
         /**
-         * <p>The type of next hop of the ECMP route entry. Set the value to **RouterInterface**.</p>
+         * <p>The type of next hop of the ECMP route entry. Set the value to <strong>RouterInterface</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RouterInterface</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
 
         /**
          * <p>The weight of the next hop of the ECMP route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Weight")
         public Integer weight;

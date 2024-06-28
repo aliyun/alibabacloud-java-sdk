@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSslVpnClientCertsRequest extends TeaModel {
     /**
      * <p>The name of the SSL client certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cert1</p>
      */
     @NameInMap("Name")
     public String name;
@@ -17,32 +20,41 @@ public class DescribeSslVpnClientCertsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: **10**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the SSL client certificate.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the SSL client certificate belongs.</p>
-     * <br>
-     * <p>The SSL client certificate is the same as the resource group of the SSL server associated with it.</p>
-     * <p>You can call the [DescribeSslVpnServers](https://help.aliyun.com/document_detail/2794078.html) operation to query the ID of the resource group to which the SSL server belongs.</p>
+     * <p>The SSL client certificate is the same as the resource group of the SSL server associated with it.
+     * You can call the <a href="https://help.aliyun.com/document_detail/2794078.html">DescribeSslVpnServers</a> operation to query the ID of the resource group to which the SSL server belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzs372yg****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -55,12 +67,18 @@ public class DescribeSslVpnClientCertsRequest extends TeaModel {
 
     /**
      * <p>The ID of the SSL client certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsc-bp1n8wcf134yl0osr****</p>
      */
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;
 
     /**
      * <p>The ID of the SSL server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vss-bp18q7hzj6largv4v****</p>
      */
     @NameInMap("SslVpnServerId")
     public String sslVpnServerId;

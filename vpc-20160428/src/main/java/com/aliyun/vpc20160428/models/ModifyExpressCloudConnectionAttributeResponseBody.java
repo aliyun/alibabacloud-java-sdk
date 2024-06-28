@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyExpressCloudConnectionAttributeResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E6385514-B0CC-48E3-B9F9-F7BFF64460A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

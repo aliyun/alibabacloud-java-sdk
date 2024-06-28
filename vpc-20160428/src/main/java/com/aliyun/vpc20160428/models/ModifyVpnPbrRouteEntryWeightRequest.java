@@ -6,35 +6,46 @@ import com.aliyun.tea.*;
 public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>d7d24a21-f4ba-4454-9173-b3828dae492b</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The new weight of the policy-based route. Valid values:</p>
-     * <br>
-     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
-     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
-     * <br>
+     * <ul>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("NewWeight")
     public Integer newWeight;
 
     /**
      * <p>The next hop of the policy-based route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-bp15oes1py4i66rmd****</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.</p>
+     * <p>The tunneling protocol. The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ipsec</p>
      */
     @NameInMap("OverlayMode")
     public String overlayMode;
@@ -47,20 +58,27 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
 
     /**
      * <p>The priority of the policy-based route.</p>
-     * <br>
-     * <p>*   If the route was not assigned a priority, this parameter is optional.</p>
-     * <br>
-     * <p>*   If the route was assigned a priority, this parameter is optional.</p>
-     * <br>
-     * <p>        If you specify this parameter, set the value to the priority that was assigned to the policy-based route. Otherwise, the operation fails.</p>
+     * <ul>
+     * <li><p>If the route was not assigned a priority, this parameter is optional.</p>
+     * </li>
+     * <li><p>If the route was assigned a priority, this parameter is optional.</p>
+     * <pre><code>If you specify this parameter, set the value to the priority that was assigned to the policy-based route. Otherwise, the operation fails.
+     * </code></pre>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The ID of the region where the VPN gateway is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -73,35 +91,44 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
 
     /**
      * <p>The destination CIDR block of the policy-based route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
 
     /**
      * <p>The source CIDR block of the policy-based route.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.1.0/24</p>
      */
     @NameInMap("RouteSource")
     public String routeSource;
 
     /**
      * <p>The ID of the VPN gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1a3kqjiiq9legfx****</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
     /**
      * <p>The original weight of the policy-based route. Valid values:</p>
-     * <br>
-     * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
-     * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
-     * <br>
+     * <ul>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Weight")
     public Integer weight;

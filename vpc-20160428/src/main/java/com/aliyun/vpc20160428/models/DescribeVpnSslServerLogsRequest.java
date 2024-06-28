@@ -6,16 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeVpnSslServerLogsRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.</p>
-     * <br>
-     * <p>>  If you specify **From**, you must also specify **To** or **MinutePeriod**.</p>
+     * <blockquote>
+     * <p> If you specify <strong>From</strong>, you must also specify <strong>To</strong> or <strong>MinutePeriod</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1600738962</p>
      */
     @NameInMap("From")
     public Integer from;
 
     /**
      * <p>The interval at which log data is queried. Unit: minutes.</p>
-     * <br>
-     * <p>>  If both **From** and **To** are not specified, you must specify **MinutePeriod**.</p>
+     * <blockquote>
+     * <p> If both <strong>From</strong> and <strong>To</strong> are not specified, you must specify <strong>MinutePeriod</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MinutePeriod")
     public Integer minutePeriod;
@@ -27,21 +35,29 @@ public class DescribeVpnSslServerLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the SSL server is created. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The ID of the region where the SSL server is created. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -54,22 +70,31 @@ public class DescribeVpnSslServerLogsRequest extends TeaModel {
 
     /**
      * <p>The ID of the SSL client certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsc-m5euof6s5jy8vs5kd****</p>
      */
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;
 
     /**
      * <p>The end of the time range to query. The value must be a unix timestamp. For example, 1600738962 specifies 09:42:42 (UTC+8) on September 22, 2020.</p>
-     * <br>
-     * <p>>  If you specify **To**, you must also specify **From** or **MinutePeriod**.</p>
+     * <blockquote>
+     * <p> If you specify <strong>To</strong>, you must also specify <strong>From</strong> or <strong>MinutePeriod</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1600738962</p>
      */
     @NameInMap("To")
     public Integer to;
 
     /**
      * <p>The ID of the SSL server.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vss-bp155e9yclsg1xgq4****</p>
      */
     @NameInMap("VpnSslServerId")
     public String vpnSslServerId;

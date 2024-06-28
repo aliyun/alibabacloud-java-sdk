@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class AllocateIpv6InternetBandwidthResponseBody extends TeaModel {
     /**
      * <p>The ID of the Internet bandwidth that you purchased for the IPv6 gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
      */
     @NameInMap("InternetBandwidthId")
     public String internetBandwidthId;
 
     /**
      * <p>The ID of the IPv6 address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv6-2zen5j4axcp5l5qyy****</p>
      */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6972A26E-99B1-4367-9890-FBDEBB0F5E7D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

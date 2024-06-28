@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateBgpPeerResponseBody extends TeaModel {
     /**
      * <p>The ID of the BGP peer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bgp-m5eoyp2mwegk8ce9v****</p>
      */
     @NameInMap("BgpPeerId")
     public String bgpPeerId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D4B7649A-61BB-4C64-A586-1DFF1EDA6A42</p>
      */
     @NameInMap("RequestId")
     public String requestId;

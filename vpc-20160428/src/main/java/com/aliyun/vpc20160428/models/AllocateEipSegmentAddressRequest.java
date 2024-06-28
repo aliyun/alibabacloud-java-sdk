@@ -6,75 +6,94 @@ import com.aliyun.tea.*;
 public class AllocateEipSegmentAddressRequest extends TeaModel {
     /**
      * <p>The maximum bandwidth of the contiguous EIP group. Unit: Mbit/s.</p>
-     * <br>
-     * <p>*   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**: **1** to **500**.****</p>
-     * <p>*   Valid values when **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**: **1** to **200**.****</p>
-     * <p>*   Valid values when **InstanceChargeType** is set to **PrePaid**: **1** to **1000**.****</p>
-     * <br>
-     * <p>Default value: **5**. Unit: Mbit/s.</p>
+     * <ul>
+     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>: <strong>1</strong> to <strong>500</strong>.****</li>
+     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong> and <strong>InternetChargeType</strong> is set to <strong>PayByTraffic</strong>: <strong>1</strong> to <strong>200</strong>.****</li>
+     * <li>Valid values when <strong>InstanceChargeType</strong> is set to <strong>PrePaid</strong>: <strong>1</strong> to <strong>1000</strong>.****</li>
+     * </ul>
+     * <p>Default value: <strong>5</strong>. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. **ClientToken** can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The subnet mask of the contiguous EIP group. Valid values:</p>
-     * <br>
-     * <p>*   **28**: applies for 16 contiguous EIPs in each call.</p>
-     * <p>*   **27**: applies for 32 contiguous EIPs in each call.</p>
-     * <p>*   **26**: applies for 64 contiguous EIPs in each call.</p>
-     * <p>*   **25**: applies for 128 contiguous EIPs in each call.</p>
-     * <p>*   **24**: applies for 256 contiguous EIPs in each call.</p>
-     * <br>
-     * <p>>  Some IP address are reserved for specific purposes. Therefore, the actual number of the contiguous EIPs may be one, three, or four less than the expected number.</p>
-     * <br>
+     * <ul>
+     * <li><strong>28</strong>: applies for 16 contiguous EIPs in each call.</li>
+     * <li><strong>27</strong>: applies for 32 contiguous EIPs in each call.</li>
+     * <li><strong>26</strong>: applies for 64 contiguous EIPs in each call.</li>
+     * <li><strong>25</strong>: applies for 128 contiguous EIPs in each call.</li>
+     * <li><strong>24</strong>: applies for 256 contiguous EIPs in each call.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Some IP address are reserved for specific purposes. Therefore, the actual number of the contiguous EIPs may be one, three, or four less than the expected number.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
      */
     @NameInMap("EipMask")
     public String eipMask;
 
     /**
      * <p>The metering method of the contiguous EIP group. Valid values:</p>
-     * <br>
-     * <p>*   **PayByBandwidth** (default)</p>
-     * <p>*   **PayByTraffic**</p>
+     * <ul>
+     * <li><strong>PayByBandwidth</strong> (default)</li>
+     * <li><strong>PayByTraffic</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByBandwidth</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The line type. Valid values:</p>
-     * <br>
-     * <p>*   **BGP** (default): BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</p>
-     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro line BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
-     * <br>
-     * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see [EIP line types](https://help.aliyun.com/document_detail/32321.html).</p>
-     * <br>
+     * <ul>
+     * <li><strong>BGP</strong> (default): BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line BGP (Multi-ISP) Pro line is supported only in the China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+     * </ul>
+     * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
      * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
-     * <br>
-     * <p>*   **ChinaTelecom**</p>
-     * <p>*   **ChinaUnicom**</p>
-     * <p>*   **ChinaMobile**</p>
-     * <p>*   **ChinaTelecom_L2**</p>
-     * <p>*   **ChinaUnicom_L2**</p>
-     * <p>*   **ChinaMobile_L2**</p>
-     * <br>
-     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to **BGP_FinanceCloud**.</p>
+     * <ul>
+     * <li><strong>ChinaTelecom</strong></li>
+     * <li><strong>ChinaUnicom</strong></li>
+     * <li><strong>ChinaMobile</strong></li>
+     * <li><strong>ChinaTelecom_L2</strong></li>
+     * <li><strong>ChinaUnicom_L2</strong></li>
+     * <li><strong>ChinaMobile_L2</strong></li>
+     * </ul>
+     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to <strong>BGP_FinanceCloud</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BGP</p>
      */
     @NameInMap("Isp")
     public String isp;
 
     /**
-     * <p>The network type. Set the value to **public**, which specifies the public network type.</p>
+     * <p>The network type. Set the value to <strong>public</strong>, which specifies the public network type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("Netmode")
     public String netmode;
@@ -87,16 +106,20 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the contiguous EIP group resides.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4ph****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -109,6 +132,9 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
 
     /**
      * <p>The zone of the contiguous EIP group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-a</p>
      */
     @NameInMap("Zone")
     public String zone;

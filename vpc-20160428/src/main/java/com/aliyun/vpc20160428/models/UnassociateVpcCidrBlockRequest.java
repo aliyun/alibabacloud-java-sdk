@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class UnassociateVpcCidrBlockRequest extends TeaModel {
     /**
      * <p>The secondary IPv6 CIDR block to be deleted.</p>
-     * <br>
-     * <p>>  You must set one of the **Ipv6CidrBlock** and **SecondaryCidrBlock** parameters.</p>
+     * <blockquote>
+     * <p> You must set one of the <strong>Ipv6CidrBlock</strong> and <strong>SecondaryCidrBlock</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:XXXX:0:6a::/56</p>
      */
     @NameInMap("IPv6CidrBlock")
     public String IPv6CidrBlock;
@@ -20,10 +24,11 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC to which the secondary CIDR block to be deleted belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ch-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -36,16 +41,22 @@ public class UnassociateVpcCidrBlockRequest extends TeaModel {
 
     /**
      * <p>The secondary IPv4 CIDR block to be deleted.</p>
-     * <br>
-     * <p>>  You must set one of the **SecondaryCidrBlock** and **Ipv6CidrBlock** parameters.</p>
+     * <blockquote>
+     * <p> You must set one of the <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong> parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/16</p>
      */
     @NameInMap("SecondaryCidrBlock")
     public String secondaryCidrBlock;
 
     /**
      * <p>The ID of the VPC from which you want to delete a secondary CIDR block.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-o6wrloqsdqc9io3mg****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

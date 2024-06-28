@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeHighDefinitionMonitorLogAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the instance whose fine-grained monitoring configurations you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-wz9fi6qboho9fwgx7****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The type of the instance. Set the value to **EIP**.</p>
+     * <p>The type of the instance. Set the value to <strong>EIP</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EIP</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -26,10 +31,11 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the instance.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

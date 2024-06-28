@@ -6,79 +6,106 @@ import com.aliyun.tea.*;
 public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the gateway route table.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination CIDR block of the route entry in the gateway route table.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.100.XX.XX/16</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
      * <p>Specifies whether to precheck only this request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: prechecks the request without modifying the gateway route table. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the gateway route table is modified.</p>
+     * <ul>
+     * <li><strong>true</strong>: prechecks the request without modifying the gateway route table. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the gateway route table is modified.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The ID of the gateway route table that you want to modify.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-5ts0ohchwkp3dydt2****</p>
      */
     @NameInMap("GatewayRouteTableId")
     public String gatewayRouteTableId;
 
     /**
      * <p>The ID of the gateway route table that you want to modify.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-5ts0ohchwkp3dydt2****</p>
      */
     @NameInMap("IPv4GatewayRouteTableId")
     public String IPv4GatewayRouteTableId;
 
     /**
      * <p>The name of the gateway route table.</p>
-     * <br>
      * <p>The name must be 2 to 128 characters in length and can contain letter, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The new next hop ID of the route entry.</p>
-     * <br>
-     * <p>*   If you set **NextHopType** to **Instance**, specify an ECS instance ID for **NextHopId**.</p>
-     * <p>*   If you set **NextHopType** to **NetworkInterface**, specify an ENI ID for **NextHopId**.</p>
-     * <p>*   If you set **NextHopType** to **Local**, leave **NextHopId** empty. This indicates a local next hop.</p>
-     * <br>
-     * <p>>  If the value of NextHopType is **Instance** or **NetworkInterface**, and you want to modify the next hop, you must set **NextHopType** to **Local** first. Then, set **NextHopType** to **Instance** or **NetworkInterface** and specify **NextHopId** based on your requirements. If the next hop type of a route entry is Instance or NetworkInterface, you cannot directly specify a different ENI ID or ECS instance ID for the NextHopId parameter.</p>
+     * <ul>
+     * <li>If you set <strong>NextHopType</strong> to <strong>Instance</strong>, specify an ECS instance ID for <strong>NextHopId</strong>.</li>
+     * <li>If you set <strong>NextHopType</strong> to <strong>NetworkInterface</strong>, specify an ENI ID for <strong>NextHopId</strong>.</li>
+     * <li>If you set <strong>NextHopType</strong> to <strong>Local</strong>, leave <strong>NextHopId</strong> empty. This indicates a local next hop.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If the value of NextHopType is <strong>Instance</strong> or <strong>NetworkInterface</strong>, and you want to modify the next hop, you must set <strong>NextHopType</strong> to <strong>Local</strong> first. Then, set <strong>NextHopType</strong> to <strong>Instance</strong> or <strong>NetworkInterface</strong> and specify <strong>NextHopId</strong> based on your requirements. If the next hop type of a route entry is Instance or NetworkInterface, you cannot directly specify a different ENI ID or ECS instance ID for the NextHopId parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp18xq9yguxoxe7m****</p>
      */
     @NameInMap("NextHopId")
     public String nextHopId;
 
     /**
      * <p>The new next hop type of the route. Valid values:</p>
-     * <br>
-     * <p>*   **Instance**: Elastic Compute Service (ECS) instance</p>
-     * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
-     * <p>*   **Local**: local next hop</p>
-     * <br>
+     * <ul>
+     * <li><strong>Instance</strong>: Elastic Compute Service (ECS) instance</li>
+     * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
+     * <li><strong>Local</strong>: local next hop</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsInstance</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;
@@ -91,10 +118,11 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the gateway route table that you want to modify belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-southeast-6</p>
      */
     @NameInMap("RegionId")
     public String regionId;

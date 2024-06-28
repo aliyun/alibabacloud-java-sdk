@@ -5,45 +5,62 @@ import com.aliyun.tea.*;
 
 public class UnassociateHaVipRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>token</code> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to forcefully disassociate the HAVIP from the ECS instance or ENI. Valid values:</p>
-     * <br>
-     * <p>*   **True**</p>
-     * <p>*   **False** (default)</p>
-     * <br>
-     * <p>>  If you set the value to **False**, you cannot disassociate the HAVIP from the primary instance.</p>
+     * <ul>
+     * <li><strong>True</strong></li>
+     * <li><strong>False</strong> (default)</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you set the value to <strong>False</strong>, you cannot disassociate the HAVIP from the primary instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("Force")
     public String force;
 
     /**
      * <p>The ID of the HAVIP that you want to disassociate.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>havip-2zeo05qre24nhrqpy****</p>
      */
     @NameInMap("HaVipId")
     public String haVipId;
 
     /**
      * <p>The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-faf344422ffsfad****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of the instance from which you want to disassociate the HAVIP. Valid values:</p>
-     * <br>
-     * <p>*   **EcsInstance**: an ECS instance</p>
-     * <p>*   **NetworkInterface**: an ENI</p>
-     * <br>
-     * <p>>  If you want to disassociate the HAVIP from an ENI, this parameter is required.</p>
+     * <ul>
+     * <li><strong>EcsInstance</strong>: an ECS instance</li>
+     * <li><strong>NetworkInterface</strong>: an ENI</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you want to disassociate the HAVIP from an ENI, this parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>EcsInstance</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -56,10 +73,11 @@ public class UnassociateHaVipRequest extends TeaModel {
 
     /**
      * <p>The region ID of the HAVIP.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;

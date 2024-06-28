@@ -6,55 +6,72 @@ import com.aliyun.tea.*;
 public class ListIpsecServersRequest extends TeaModel {
     /**
      * <p>The ID of the IPsec server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>iss-bp1bo3xuvcxo7ixll****</p>
      */
     @NameInMap("IpsecServerId")
     public java.util.List<String> ipsecServerId;
 
     /**
      * <p>The name of the IPsec server.</p>
-     * <br>
-     * <p>The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("IpsecServerName")
     public String ipsecServerName;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **20**. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>20</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
+     * <ul>
+     * <li>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region where the IPsec server is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the IPsec server belongs.</p>
-     * <br>
      * <p>The IPsec server has the same resource group as its associated VPN gateway instance.</p>
-     * <br>
-     * <p>You can call the [DescribeVpnGateway](https://help.aliyun.com/document_detail/2526915.html) operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2526915.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzs372yg****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1q8bgx4xnkm2ogj****</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

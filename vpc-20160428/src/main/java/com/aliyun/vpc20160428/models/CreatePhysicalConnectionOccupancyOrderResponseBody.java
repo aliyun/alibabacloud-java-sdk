@@ -12,6 +12,9 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B9300FE-11E2-4E3B-949C-BED3B44DD26D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
     public static class CreatePhysicalConnectionOccupancyOrderResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the order that is placed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50187055895****</p>
          */
         @NameInMap("OrderId")
         public String orderId;

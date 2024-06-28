@@ -12,10 +12,11 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the vSwitch is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,24 +29,30 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends TeaModel {
 
     /**
      * <p>The new description of the reserved CIDR block. The default value is empty.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ReservationDescription</p>
      */
     @NameInMap("VSwitchCidrReservationDescription")
     public String vSwitchCidrReservationDescription;
 
     /**
      * <p>The ID of the reserved CIDR block.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vcr-bp1m12saqteraw3rp****</p>
      */
     @NameInMap("VSwitchCidrReservationId")
     public String vSwitchCidrReservationId;
 
     /**
      * <p>The new name of the reserved CIDR block.</p>
-     * <br>
      * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ReservationName</p>
      */
     @NameInMap("VSwitchCidrReservationName")
     public String vSwitchCidrReservationName;

@@ -6,40 +6,49 @@ import com.aliyun.tea.*;
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the new resource group.</p>
-     * <br>
-     * <p>>  You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see [What is Resource Management?](https://help.aliyun.com/document_detail/94475.html)</p>
-     * <br>
+     * <blockquote>
+     * <p> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a></p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp1drpcfz9srr393h****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
      * <p>The ID of the region to which the new resource group belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the Express Connect circuit whose resource group you want to modify.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp16qjewdsunr41m1****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **PHYSICALCONNECTION**: Express Connect circuit.</p>
-     * <p>*   **VIRTUALBORDERROUTER**: virtual border router (VBR).</p>
-     * <p>*   **ROUTERINTERFACE**: router interface.</p>
-     * <br>
+     * <ul>
+     * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
+     * <li><strong>VIRTUALBORDERROUTER</strong>: virtual border router (VBR).</li>
+     * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PHYSICALCONNECTION</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

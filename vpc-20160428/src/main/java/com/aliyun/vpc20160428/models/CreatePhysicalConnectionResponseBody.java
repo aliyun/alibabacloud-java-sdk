@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreatePhysicalConnectionResponseBody extends TeaModel {
     /**
      * <p>The ID of the Express Connect circuit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1ciz7ekd2grn1as****</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8A6A5EC5-6F6C-4906-9689-56ACE58A13E0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

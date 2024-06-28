@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ReleaseEipAddressResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>748C38F6-9A3D-482E-83FB-DB6C39C68AEA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

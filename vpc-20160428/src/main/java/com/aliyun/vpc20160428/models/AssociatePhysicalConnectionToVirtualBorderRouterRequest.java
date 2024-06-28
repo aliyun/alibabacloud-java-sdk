@@ -6,39 +6,56 @@ import com.aliyun.tea.*;
 public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends TeaModel {
     /**
      * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
-     * <br>
-     * <p>>  Only the Express Connect circuit owner can specify this parameter.</p>
+     * <blockquote>
+     * <p> Only the Express Connect circuit owner can specify this parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>longtel001</p>
      */
     @NameInMap("CircuitCode")
     public String circuitCode;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to enable IPv6. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableIpv6")
     public String enableIpv6;
 
     /**
      * <p>The IP address of the gateway device on the Alibaba Cloud side.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("LocalGatewayIp")
     public String localGatewayIp;
 
     /**
      * <p>The IPv6 address of the gateway device on the Alibaba Cloud side.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
      */
     @NameInMap("LocalIpv6GatewayIp")
     public String localIpv6GatewayIp;
@@ -51,52 +68,67 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
 
     /**
      * <p>The IP address of the gateway device on the user side.</p>
-     * <br>
-     * <p>*   Only the owner of the VBR can set or modify this parameter.</p>
-     * <p>*   When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * <ul>
+     * <li>Only the owner of the VBR can set or modify this parameter.</li>
+     * <li>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("PeerGatewayIp")
     public String peerGatewayIp;
 
     /**
      * <p>The IPv6 address of the gateway device in the data center.</p>
-     * <br>
-     * <p>*   Only the owner of the VBR can specify or modify this parameter.</p>
-     * <p>*   When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * <ul>
+     * <li>Only the owner of the VBR can specify or modify this parameter.</li>
+     * <li>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2001:XXXX:4:4:4:4:4:4</p>
      */
     @NameInMap("PeerIpv6GatewayIp")
     public String peerIpv6GatewayIp;
 
     /**
      * <p>The subnet mask of the IPv6 addresses of the gateway devices on the user side and Alibaba Cloud side.</p>
-     * <br>
      * <p>The two IPv6 addresses must fall within the same subnet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2408:4004:cc:400::/56</p>
      */
     @NameInMap("PeeringIpv6SubnetMask")
     public String peeringIpv6SubnetMask;
 
     /**
      * <p>The subnet mask of the IP addresses of the VBR and the gateway device in the data center.</p>
-     * <br>
      * <p>The two IP addresses must fall within the same subnet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>255.255.255.0</p>
      */
     @NameInMap("PeeringSubnetMask")
     public String peeringSubnetMask;
 
     /**
      * <p>The ID of the Express Connect circuit.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-bp1qrb3044eqixog****</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
      * <p>The region ID of the Express Connect circuit.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -109,18 +141,23 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
 
     /**
      * <p>The ID of the VBR.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-bp186tnz6rijyhj******</p>
      */
     @NameInMap("VbrId")
     public String vbrId;
 
     /**
-     * <p>The VLAN ID of the VBR. Valid values: **0 to 2999**.</p>
-     * <br>
-     * <p>>  Only the Express Connect circuit owner can specify this parameter. Two VBRs associated with the same Express Connect circuit cannot use the same VLAN ID.</p>
-     * <br>
+     * <p>The VLAN ID of the VBR. Valid values: <strong>0 to 2999</strong>.</p>
+     * <blockquote>
+     * <p> Only the Express Connect circuit owner can specify this parameter. Two VBRs associated with the same Express Connect circuit cannot use the same VLAN ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("VlanId")
     public String vlanId;

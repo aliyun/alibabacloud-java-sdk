@@ -6,59 +6,86 @@ import com.aliyun.tea.*;
 public class DescribeVbrHaResponseBody extends TeaModel {
     /**
      * <p>The time when the VBR was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-06-08T12:20:55</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The description of the VBR failover group.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the VBR failover group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VBRHa</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the other VBR in the VBR failover group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-bp12mw1f8k3jgygk9****</p>
      */
     @NameInMap("PeerVbrId")
     public String peerVbrId;
 
     /**
      * <p>The ID of the region in which the VBR is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the VBR failover group.</p>
-     * <br>
-     * <p>*   **Creating**</p>
-     * <p>*   **Active**</p>
+     * <ul>
+     * <li><strong>Creating</strong></li>
+     * <li><strong>Active</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the VBR failover group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbrha-sa1sxheuxtd98****</p>
      */
     @NameInMap("VbrHaId")
     public String vbrHaId;
 
     /**
      * <p>The VBR ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-bp1jcg5cmxjbl9xgc****</p>
      */
     @NameInMap("VbrId")
     public String vbrId;

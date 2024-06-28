@@ -6,63 +6,88 @@ import com.aliyun.tea.*;
 public class CreateVcoRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The timestamp when the destination-based route was created. Unit: milliseconds.</p>
-     * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1658387202664</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The description of the destination-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The next hop of the destination-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-p0w2jpkhi2eeop6q6****</p>
      */
     @NameInMap("NextHop")
     public String nextHop;
 
     /**
      * <p>The tunneling protocol.</p>
-     * <br>
-     * <p>The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.</p>
+     * <p>The value is set to <strong>Ipsec</strong>, which indicates the IPsec tunneling protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ipsec</p>
      */
     @NameInMap("OverlayMode")
     public String overlayMode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFC4D13B-E680-3985-95B1-87AA155481DF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The destination CIDR block of the destination-based route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.10.0/24</p>
      */
     @NameInMap("RouteDest")
     public String routeDest;
 
     /**
      * <p>The status of the destination-based route.</p>
-     * <br>
-     * <p>Only **published** is returned, which indicates that the current route is published to the transit router.</p>
+     * <p>Only <strong>published</strong> is returned, which indicates that the current route is published to the transit router.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>published</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>The ID of the IPsec-VPN connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vco-p0w2jpkhi2eeop6q6****</p>
      */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;
 
     /**
      * <p>The weight of the destination-based route. Valid values:</p>
-     * <br>
-     * <p>*   **0**: a low priority.</p>
-     * <p>*   **100**: a high priority.</p>
+     * <ul>
+     * <li><strong>0</strong>: a low priority.</li>
+     * <li><strong>100</strong>: a high priority.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Weight")
     public Integer weight;

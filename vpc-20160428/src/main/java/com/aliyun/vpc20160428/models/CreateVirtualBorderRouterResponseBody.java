@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateVirtualBorderRouterResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the VBR.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vbr-bp1jcg5cmxjbl9xgc****</p>
      */
     @NameInMap("VbrId")
     public String vbrId;

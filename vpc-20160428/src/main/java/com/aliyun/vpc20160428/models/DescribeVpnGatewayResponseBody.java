@@ -6,203 +6,278 @@ import com.aliyun.tea.*;
 public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>Indicates whether BGP routes are automatically advertised to the VPC. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPropagate")
     public Boolean autoPropagate;
 
     /**
      * <p>The payment status of the VPN gateway. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**</p>
-     * <p>*   **FinancialLocked**</p>
+     * <ul>
+     * <li><strong>Normal</strong></li>
+     * <li><strong>FinancialLocked</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
     /**
      * <p>The billing method. Valid value:</p>
-     * <br>
-     * <p>**POSTPAY**: pay-as-you-go</p>
+     * <p><strong>POSTPAY</strong>: pay-as-you-go</p>
+     * 
+     * <strong>example:</strong>
+     * <p>China site (aliyun.com): Prepay. International site (alibabacloud.com): POSTPAY.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The timestamp when the VPN gateway was created. Unit: milliseconds.</p>
-     * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1495382400000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The description of the VPN gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpngatewaydescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The second IP address assigned by the system to create an IPsec-VPN connection.</p>
-     * <br>
      * <p>This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.91.XX.XX</p>
      */
     @NameInMap("DisasterRecoveryInternetIp")
     public String disasterRecoveryInternetIp;
 
     /**
      * <p>The ID of the second vSwitch associated with the VPN gateway.</p>
-     * <br>
      * <p>This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-p0w95ql6tmr2ludkt****</p>
      */
     @NameInMap("DisasterRecoveryVSwitchId")
     public String disasterRecoveryVSwitchId;
 
     /**
      * <p>Indicates whether BGP is enabled for the VPN gateway. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableBgp")
     public Boolean enableBgp;
 
     /**
      * <p>The timestamp when the VPN gateway expires. Unit: milliseconds.</p>
-     * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1544666102000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The ENIs created by the system for the VPN gateway.</p>
+     */
     @NameInMap("EniInstanceIds")
     public DescribeVpnGatewayResponseBodyEniInstanceIds eniInstanceIds;
 
     /**
-     * <p>*   If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.</p>
-     * <br>
-     * <p>*   If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection.</p>
-     * <br>
-     * <p>    If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.</p>
+     * <ul>
+     * <li><p>If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.</p>
+     * </li>
+     * <li><p>If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection.</p>
+     * <p>If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>47.22.XX.XX</p>
      */
     @NameInMap("InternetIp")
     public String internetIp;
 
     /**
      * <p>Indicates whether the IPsec-VPN feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **enable**</p>
-     * <p>*   **disable**</p>
+     * <ul>
+     * <li><strong>enable</strong></li>
+     * <li><strong>disable</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("IpsecVpn")
     public String ipsecVpn;
 
     /**
      * <p>The name of the VPN gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpngatewayname</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The network type of the VPN gateway.</p>
-     * <br>
-     * <p>*   **public**</p>
-     * <p>*   **private**</p>
+     * <ul>
+     * <li><strong>public</strong></li>
+     * <li><strong>private</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27E4E088-8DE0-4672-BF5C-0A412389DB9E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The information about pending orders.</p>
-     * <br>
-     * <p>> This set of parameters is returned only when **IncludeReservationData** is set to **true**.</p>
+     * <blockquote>
+     * <p>This set of parameters is returned only when <strong>IncludeReservationData</strong> is set to <strong>true</strong>.</p>
+     * </blockquote>
      */
     @NameInMap("ReservationData")
     public DescribeVpnGatewayResponseBodyReservationData reservationData;
 
     /**
      * <p>The ID of the resource group to which the VPN gateway belongs.</p>
-     * <br>
-     * <p>You can call the [ListResourceGroups](https://help.aliyun.com/document_detail/158855.html) operation to query resource groups.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzs372yg****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The maximum bandwidth of the VPN gateway. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Spec")
     public String spec;
 
     /**
      * <p>The maximum number of concurrent SSL-VPN connections.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("SslMaxConnections")
     public Long sslMaxConnections;
 
     /**
      * <p>The status of the SSL-VPN feature. Valid values:</p>
-     * <br>
-     * <p>*   **enable**</p>
-     * <p>*   **disable**</p>
+     * <ul>
+     * <li><strong>enable</strong></li>
+     * <li><strong>disable</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enable</p>
      */
     @NameInMap("SslVpn")
     public String sslVpn;
 
     /**
      * <p>The IP address of the SSL-VPN connection.</p>
-     * <br>
      * <p>This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.74.XX.XX</p>
      */
     @NameInMap("SslVpnInternetIp")
     public String sslVpnInternetIp;
 
     /**
      * <p>The status of the VPN gateway. Valid values:</p>
-     * <br>
-     * <p>*   **init**</p>
-     * <p>*   **provisioning**</p>
-     * <p>*   **active**</p>
-     * <p>*   **updating**</p>
-     * <p>*   **deleting**</p>
+     * <ul>
+     * <li><strong>init</strong></li>
+     * <li><strong>provisioning</strong></li>
+     * <li><strong>active</strong></li>
+     * <li><strong>updating</strong></li>
+     * <li><strong>deleting</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>init</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The automatically generated tag of the VPN gateway.</p>
-     * <br>
-     * <p>*   **VpnEnableBgp**: indicates whether the VPN gateway supports BGP. Valid values:</p>
-     * <br>
-     * <p>    *   **true**</p>
-     * <p>    *   **false**</p>
-     * <br>
-     * <p>*   **VisuallySsl**: indicates whether the VPN gateway allows you to view information about connected SSL clients.</p>
-     * <br>
-     * <p>    *   **true**</p>
-     * <p>    *   **false**</p>
-     * <br>
-     * <p>*   **PbrPriority**: indicates whether the VPN gateway allows you to configure priorities for policy-based routes.</p>
-     * <br>
-     * <p>    *   **true**</p>
-     * <p>    *   **false**</p>
-     * <br>
-     * <p>*   **VpnNewImage**: indicates whether the VPN gateway is upgraded.</p>
-     * <br>
-     * <p>    *   **true**</p>
-     * <p>    *   **false**</p>
-     * <br>
-     * <p>*   **description**</p>
-     * <br>
-     * <p>*   **VpnVersion**</p>
+     * <ul>
+     * <li><p><strong>VpnEnableBgp</strong>: indicates whether the VPN gateway supports BGP. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * </li>
+     * <li><p><strong>VisuallySsl</strong>: indicates whether the VPN gateway allows you to view information about connected SSL clients.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * </li>
+     * <li><p><strong>PbrPriority</strong>: indicates whether the VPN gateway allows you to configure priorities for policy-based routes.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * </li>
+     * <li><p><strong>VpnNewImage</strong>: indicates whether the VPN gateway is upgraded.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * </li>
+     * <li><p><strong>description</strong></p>
+     * </li>
+     * <li><p><strong>VpnVersion</strong></p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;VpnEnableBgp\&quot;:\&quot;true\&quot;,\&quot;VisuallySsl\&quot;:\&quot;true\&quot;,\&quot;PbrPriority\&quot;:\&quot;true\&quot;,\&quot;VpnNewImage\&quot;:\&quot;true\&quot;,\&quot;description\&quot;:\&quot;forwarding1.3.7\&quot;,\&quot;VpnVersion\&quot;:\&quot;v1.2.4\&quot;}</p>
      */
     @NameInMap("Tag")
     public String tag;
@@ -215,26 +290,37 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the VPN gateway belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1dmzugdikc6hdgx****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The ID of the VPC to which the VPN gateway belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp19m2yx1m5q0avyq****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The ID of the VPN gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpn-bp1r3v1xqkl0w519g****</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
     /**
      * <p>The type of the VPN gateway.</p>
-     * <br>
-     * <p>Only **Normal** may be returned, which indicates a standard VPN gateway.</p>
+     * <p>Only <strong>Normal</strong> may be returned, which indicates a standard VPN gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("VpnType")
     public String vpnType;
@@ -489,58 +575,82 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
     public static class DescribeVpnGatewayResponseBodyReservationData extends TeaModel {
         /**
-         * <p>If the order type is **TEMP_UPGRADE** (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.</p>
-         * <br>
-         * <p>If the order type is **RENEWCHANGE** (renewal with a specification change) or **RENEW** (renewal), this parameter indicates the time when the renewal or renewal with a specification change takes effect.</p>
+         * <p>If the order type is <strong>TEMP_UPGRADE</strong> (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.</p>
+         * <p>If the order type is <strong>RENEWCHANGE</strong> (renewal with a specification change) or <strong>RENEW</strong> (renewal), this parameter indicates the time when the renewal or renewal with a specification change takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-20T16:00:00Z</p>
          */
         @NameInMap("ReservationEndTime")
         public String reservationEndTime;
 
         /**
          * <p>The IPsec-VPN status of the pending order. Valid values:</p>
-         * <br>
-         * <p>*   **enable**</p>
-         * <p>*   **disable**</p>
+         * <ul>
+         * <li><strong>enable</strong></li>
+         * <li><strong>disable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         @NameInMap("ReservationIpsec")
         public String reservationIpsec;
 
         /**
          * <p>The maximum number of concurrent SSL-VPN connections of the pending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("ReservationMaxConnections")
         public Integer reservationMaxConnections;
 
         /**
          * <p>The type of the pending order. Valid values:</p>
-         * <br>
-         * <p>*   **RENEWCHANGE**: renewal with upgrade or downgrade</p>
-         * <p>*   **TEMP_UPGRADE**: temporary upgrade</p>
-         * <p>*   **RENEW**: renewal</p>
+         * <ul>
+         * <li><strong>RENEWCHANGE</strong>: renewal with upgrade or downgrade</li>
+         * <li><strong>TEMP_UPGRADE</strong>: temporary upgrade</li>
+         * <li><strong>RENEW</strong>: renewal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TEMP_UPGRADE</p>
          */
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
         /**
          * <p>The bandwidth of the pending order. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("ReservationSpec")
         public String reservationSpec;
 
         /**
          * <p>The SSL-VPN status of the pending order. Valid values:</p>
-         * <br>
-         * <p>*   **enable**</p>
-         * <p>*   **disable**</p>
+         * <ul>
+         * <li><strong>enable</strong></li>
+         * <li><strong>disable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         @NameInMap("ReservationSsl")
         public String reservationSsl;
 
         /**
          * <p>The status of the pending order. Valid values:</p>
-         * <br>
-         * <p>*   **1**: indicates that the order of the renewal or specification change has not taken effect.</p>
-         * <p>*   **2**: indicates that the order is an order for temporary upgrade and the order has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specification.</p>
+         * <ul>
+         * <li><strong>1</strong>: indicates that the order of the renewal or specification change has not taken effect.</li>
+         * <li><strong>2</strong>: indicates that the order is an order for temporary upgrade and the order has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, <strong>ReservationIpsec</strong>, <strong>ReservationMaxConnections</strong>, <strong>ReservationSpec</strong>, and <strong>ReservationSsl</strong> indicate the previous specification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public String status;
@@ -610,13 +720,19 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
     public static class DescribeVpnGatewayResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaa</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bbb</p>
          */
         @NameInMap("Value")
         public String value;

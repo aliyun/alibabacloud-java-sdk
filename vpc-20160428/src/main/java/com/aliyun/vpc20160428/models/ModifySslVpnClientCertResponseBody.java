@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ModifySslVpnClientCertResponseBody extends TeaModel {
     /**
      * <p>The name of the SSL client certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cert2</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>606998F0-B94D-48FE-8316-ACA81BB230DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the SSL client certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsc-bp1n8wcf134yl0osr****</p>
      */
     @NameInMap("SslVpnClientCertId")
     public String sslVpnClientCertId;

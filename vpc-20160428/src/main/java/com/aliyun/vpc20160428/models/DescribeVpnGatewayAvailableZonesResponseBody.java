@@ -7,9 +7,17 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
     @NameInMap("AvailableZoneIdList")
     public java.util.List<DescribeVpnGatewayAvailableZonesResponseBodyAvailableZoneIdList> availableZoneIdList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>29784052-931F-543D-A612-36B3838163FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +51,17 @@ public class DescribeVpnGatewayAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnGatewayAvailableZonesResponseBodyAvailableZoneIdList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 

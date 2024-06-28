@@ -12,24 +12,36 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7A6301A-64BA-41EC-8284-8F4838C15D1F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,58 +94,86 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
     public static class DescribeEipSegmentResponseBodyEipSegmentsEipSegment extends TeaModel {
         /**
          * <p>The time when the contiguous EIP group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-03-06T12:30:07Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the contiguous EIP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyEipSegment</p>
          */
         @NameInMap("Descritpion")
         public String descritpion;
 
         /**
          * <p>The ID of the contiguous EIP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eipsg-2zett8ba055tbsxme****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The number of EIPs in the contiguous EIP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("IpCount")
         public String ipCount;
 
         /**
          * <p>The name of the contiguous EIP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyEipSegment</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the region to which the contiguous EIP group belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The CIDR block and mask of the contiguous EIP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>161.xx.xx.32/28</p>
          */
         @NameInMap("Segment")
         public String segment;
 
         /**
          * <p>The status of the contiguous EIP group. Valid values:</p>
-         * <br>
-         * <p>*   **Allocating**</p>
-         * <p>*   **Allocated**</p>
-         * <p>*   **Releasing**</p>
+         * <ul>
+         * <li><strong>Allocating</strong></li>
+         * <li><strong>Allocated</strong></li>
+         * <li><strong>Releasing</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Allocated</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The zone of the contiguous EIP group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-a</p>
          */
         @NameInMap("Zone")
         public String zone;

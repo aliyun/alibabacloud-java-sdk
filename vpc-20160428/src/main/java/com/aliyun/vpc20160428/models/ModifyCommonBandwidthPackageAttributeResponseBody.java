@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyCommonBandwidthPackageAttributeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B450CAD8-50BC-4506-ADA7-35C6CE63E96B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

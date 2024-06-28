@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     /**
      * <p>The number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6D7E89B1-1C5B-412B-8585-4908E222EED5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -85,54 +97,83 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the NAT gateway to which the SNAT entry belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ngw-bp1uewa15k4iy5770****</p>
          */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
         /**
          * <p>The ID of the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-kmd6nv8fy****</p>
          */
         @NameInMap("SnatEntryId")
         public String snatEntryId;
 
         /**
          * <p>The name of the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SnatEntry-1</p>
          */
         @NameInMap("SnatEntryName")
         public String snatEntryName;
 
         /**
-         * <p>*   When you query SNAT entries of Internet NAT gateways, this parameter indicates the EIP in an SNAT entry.</p>
-         * <p>*   When you query SNAT entries of VPC NAT gateways, this parameter indicates the NAT IP address in an SNAT entry.</p>
+         * <ul>
+         * <li>When you query SNAT entries of Internet NAT gateways, this parameter indicates the EIP in an SNAT entry.</li>
+         * <li>When you query SNAT entries of VPC NAT gateways, this parameter indicates the NAT IP address in an SNAT entry.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>116.22.XX.XX</p>
          */
         @NameInMap("SnatIp")
         public String snatIp;
 
         /**
          * <p>The ID of the SNAT table to which the SNAT entry belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stb-gz3r3odawdgffde****</p>
          */
         @NameInMap("SnatTableId")
         public String snatTableId;
 
         /**
          * <p>The source CIDR block specified in the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>116.22.XX.XX/24</p>
          */
         @NameInMap("SourceCIDR")
         public String sourceCIDR;
 
         /**
-         * <p>*   When you query SNAT entries of Internet NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access the Internet.</p>
-         * <p>*   When you query SNAT entries of VPC NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access external networks.</p>
+         * <ul>
+         * <li>When you query SNAT entries of Internet NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access the Internet.</li>
+         * <li>When you query SNAT entries of VPC NAT gateways, this parameter indicates the ID of the vSwitch that uses SNAT to access external networks.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-3xbdsffvfgdfds****</p>
          */
         @NameInMap("SourceVSwitchId")
         public String sourceVSwitchId;
 
         /**
          * <p>The status of the SNAT entry. Valid values:</p>
-         * <br>
-         * <p>*   **Pending**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Deleting**</p>
+         * <ul>
+         * <li><strong>Pending</strong></li>
+         * <li><strong>Available</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pending</p>
          */
         @NameInMap("Status")
         public String status;

@@ -12,17 +12,17 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
 
     /**
      * <p>The ID of the region in which the resource is deployed.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to obtain the region ID.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs. You can specify up to 20 resource IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -36,19 +36,21 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   **PHYSICALCONNECTION**: Express Connect circuit.</p>
-     * <p>*   **VIRTUALBORDERROUTER**: virtual border router (VBR).</p>
-     * <p>*   **ROUTERINTERFACE**: router interface.</p>
-     * <br>
+     * <ul>
+     * <li><strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</li>
+     * <li><strong>VIRTUALBORDERROUTER</strong>: virtual border router (VBR).</li>
+     * <li><strong>ROUTERINTERFACE</strong>: router interface.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PHYSICALCONNECTION</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags to add to the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -126,16 +128,20 @@ public class TagResourcesForExpressConnectRequest extends TeaModel {
     public static class TagResourcesForExpressConnectRequestTag extends TeaModel {
         /**
          * <p>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

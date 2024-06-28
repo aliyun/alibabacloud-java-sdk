@@ -12,9 +12,13 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether renewal data is included. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
@@ -23,31 +27,40 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the router interface.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](https://help.aliyun.com/document_detail/36063.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Resource Group ID.</p>
-     * <br>
-     * <p>For more information about resource groups, please refer to [What is a Resource Group?](https://help.aliyun.com/document_detail/94475.html)</p>
+     * <p>For more information about resource groups, please refer to <a href="https://help.aliyun.com/document_detail/94475.html">What is a Resource Group?</a></p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -152,25 +165,33 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     public static class DescribeRouterInterfacesRequestFilter extends TeaModel {
         /**
          * <p>The filter conditions. You can specify up to five filter conditions. The following filter conditions are supported:</p>
-         * <br>
-         * <p>*   **RouterInterfaceId**: the ID of the router interface.</p>
-         * <p>*   **RouterId**: the ID of the router.</p>
-         * <p>*   **RouterType**: the router type. Valid values: **VRouter** and **VBR**.</p>
-         * <p>*   **RouterInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the router interface belongs.</p>
-         * <p>*   **OppositeInterfaceId**: the ID of the peer router interface.</p>
-         * <p>*   **OppositeRouterType**: the type of the peer router interface. Valid values: **VRouter** and **VBR**.</p>
-         * <p>*   **OppositeRouterId**: the ID of the peer router.</p>
-         * <p>*   **OppositeInterfaceOwnerId**: the ID of the Alibaba Cloud account to which the peer router interface belongs.</p>
-         * <p>*   **Status**: the status of the router interface.</p>
-         * <p>*   **Name**: the name of the router interface.</p>
-         * <br>
-         * <p>>  The logical operator among multiple values in a filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator among filter conditions is AND. Only routers that meet all the filter conditions are queried.</p>
+         * <ul>
+         * <li><strong>RouterInterfaceId</strong>: the ID of the router interface.</li>
+         * <li><strong>RouterId</strong>: the ID of the router.</li>
+         * <li><strong>RouterType</strong>: the router type. Valid values: <strong>VRouter</strong> and <strong>VBR</strong>.</li>
+         * <li><strong>RouterInterfaceOwnerId</strong>: the ID of the Alibaba Cloud account to which the router interface belongs.</li>
+         * <li><strong>OppositeInterfaceId</strong>: the ID of the peer router interface.</li>
+         * <li><strong>OppositeRouterType</strong>: the type of the peer router interface. Valid values: <strong>VRouter</strong> and <strong>VBR</strong>.</li>
+         * <li><strong>OppositeRouterId</strong>: the ID of the peer router.</li>
+         * <li><strong>OppositeInterfaceOwnerId</strong>: the ID of the Alibaba Cloud account to which the peer router interface belongs.</li>
+         * <li><strong>Status</strong>: the status of the router interface.</li>
+         * <li><strong>Name</strong>: the name of the router interface.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The logical operator among multiple values in a filter condition is OR. In this case, the filter condition is met if one of the values is matched. The logical operator among filter conditions is AND. Only routers that meet all the filter conditions are queried.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Filter.1.Status</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>Specifies the value in the filter condition based on the key. You can specify multiple filter values for one key. The logical operator among filter values is OR. If one filter value is matched, the filter condition is matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Filter.1.Active 1</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -201,16 +222,20 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     public static class DescribeRouterInterfacesRequestTags extends TeaModel {
         /**
          * <p>The key of the resource tag. At least one tag key must be entered, and a maximum of 20 tag keys are supported. If this value needs to be passed in, it cannot be an empty string.</p>
-         * <br>
-         * <p>A tag key can support up to 128 characters, cannot start with \\"aliyun\\" or \\"acs:\\", and cannot contain \\"http://\\" or \\"https://\\".</p>
+         * <p>A tag key can support up to 128 characters, cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the resource tag. A maximum of 20 tag values can be entered. If this value needs to be passed in, an empty string can be entered.</p>
-         * <br>
-         * <p>A maximum of 128 characters are supported, it cannot start with \\"aliyun\\" or \\"acs:\\", and it cannot contain \\"http://\\" or \\"https://\\".</p>
+         * <p>A maximum of 128 characters are supported, it cannot start with \&quot;aliyun\&quot; or \&quot;acs:\&quot;, and it cannot contain \&quot;http://\&quot; or \&quot;https://\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

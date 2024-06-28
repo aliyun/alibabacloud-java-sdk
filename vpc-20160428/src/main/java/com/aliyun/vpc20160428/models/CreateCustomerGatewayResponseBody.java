@@ -6,38 +6,55 @@ import com.aliyun.tea.*;
 public class CreateCustomerGatewayResponseBody extends TeaModel {
     /**
      * <p>The timestamp generated when the customer gateway was created. Unit: milliseconds.</p>
-     * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1493363486000</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>The ID of the customer gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cgw-bp1jrawp82av6bws9****</p>
      */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
     /**
      * <p>The description of the customer gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desctest</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The public IP address of the gateway device in the data center.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101.12.XX.XX</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
 
     /**
      * <p>The name of the customer gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nametest</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D32B3C26-6C6C-4988-93E9-D2A6444CE6AE</p>
      */
     @NameInMap("RequestId")
     public String requestId;

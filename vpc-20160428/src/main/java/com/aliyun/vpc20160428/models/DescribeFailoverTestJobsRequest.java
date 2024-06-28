@@ -4,15 +4,27 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeFailoverTestJobsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("Filter")
     public java.util.List<DescribeFailoverTestJobsRequestFilter> filter;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -22,6 +34,10 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -98,6 +114,10 @@ public class DescribeFailoverTestJobsRequest extends TeaModel {
     }
 
     public static class DescribeFailoverTestJobsRequestFilter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>JobId</p>
+         */
         @NameInMap("Key")
         public String key;
 

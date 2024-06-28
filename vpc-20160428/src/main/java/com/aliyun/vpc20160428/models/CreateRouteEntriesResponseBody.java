@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateRouteEntriesResponseBody extends TeaModel {
     /**
      * <p>The number of custom route entries that failed to be added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("FailedCount")
     public Integer failedCount;
@@ -18,6 +21,9 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +36,9 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The number of custom route entries that were successfully added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("SuccessCount")
     public Integer successCount;
@@ -82,24 +91,36 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
     public static class CreateRouteEntriesResponseBodyFailedRouteEntries extends TeaModel {
         /**
          * <p>The destination CIDR block of the custom route entry that failed to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/24</p>
          */
         @NameInMap("DstCidrBlock")
         public String dstCidrBlock;
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC_ROUTE_ENTRY_CIDR_BLOCK_DUPLICATE</p>
          */
         @NameInMap("FailedCode")
         public String failedCode;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Specified CIDR block is already exists, entry.cidrBlock=xxxx</p>
          */
         @NameInMap("FailedMessage")
         public String failedMessage;
 
         /**
          * <p>The ID of the next hop of the custom route entry that failed to be added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-j6c2fp57q8rr4jlu****</p>
          */
         @NameInMap("NextHop")
         public String nextHop;
