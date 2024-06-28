@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReleaseArtifactRequest extends TeaModel {
     /**
+     * <p>The ID of the artifact.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

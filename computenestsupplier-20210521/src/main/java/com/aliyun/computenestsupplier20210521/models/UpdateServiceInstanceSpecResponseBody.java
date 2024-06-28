@@ -4,10 +4,18 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceSpecResponseBody extends TeaModel {
+    /**
+     * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2306175xxxxxxxx</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DF0F666F-FBBC-55C3-A368-C955DE7B4839</p>
      */

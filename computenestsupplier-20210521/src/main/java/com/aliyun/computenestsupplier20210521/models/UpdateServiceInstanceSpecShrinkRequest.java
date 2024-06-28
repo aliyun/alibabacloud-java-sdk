@@ -4,30 +4,52 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceInstanceSpecShrinkRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10CM943JP0EN9D51H</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
+     * <p>Specifies whether to enable Prometheus on the customer side. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableUserPrometheus")
     public Boolean enableUserPrometheus;
 
+    /**
+     * <p>The name of the configuration update operation.</p>
+     */
     @NameInMap("OperationName")
     public String operationName;
 
     /**
+     * <p>The configuration parameters of the service instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;EcsInstanceParameter\&quot;:\&quot;4vCPU 8GiB\&quot;,\&quot;ZoneId\&quot;:\&quot;cn-heyuan-a\&quot;,\&quot;SystemDiskSize\&quot;:50,\&quot;DataDiskSize\&quot;:150,\&quot;InternetMaxBandwidthOut\&quot;:2,\&quot;RegionId\&quot;:\&quot;cn-heyuan\&quot;}</p>
      */
     @NameInMap("Parameters")
     public String parametersShrink;
 
+    /**
+     * <p>The name of the specification package.</p>
+     */
     @NameInMap("PredefinedParametersName")
     public String predefinedParametersName;
 
     /**
+     * <p>The service instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>si-0e6fca6a51a54420****</p>
      */
