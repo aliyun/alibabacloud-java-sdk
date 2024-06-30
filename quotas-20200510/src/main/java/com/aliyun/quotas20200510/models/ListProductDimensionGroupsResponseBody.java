@@ -12,24 +12,36 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>057D210F-F2FC-5329-A536-26C16628BB09</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -88,18 +100,27 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The code of the dimension group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss_wf1ngqmd7q</p>
          */
         @NameInMap("GroupCode")
         public String groupCode;
 
         /**
          * <p>The name of the dimension group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS_Group</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("ProductCode")
         public String productCode;

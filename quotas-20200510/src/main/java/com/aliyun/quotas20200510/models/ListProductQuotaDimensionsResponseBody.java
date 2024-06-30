@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     /**
      * <p>The maximum number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,12 +30,18 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ED584FB-ECBF-4A2A-969D-F54D25EFABF9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,9 +92,21 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions extends TeaModel {
+        /**
+         * <p>The key of the quota dimension on which the quota dimension that you want to query is dependent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the quota dimension on which the quota dimension that you want to query is dependent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -110,17 +134,26 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail extends TeaModel {
+        /**
+         * <p>The quota dimensions on which the quota dimension that you want to query is dependent.</p>
+         */
         @NameInMap("DependentDimensions")
         public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions> dependentDimensions;
 
         /**
          * <p>The name of the quota dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the quota dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Value")
         public String value;
@@ -165,11 +198,15 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
         /**
          * <p>The key of the quota dimension. Valid values:</p>
-         * <br>
-         * <p>*   regionId: the region ID.</p>
-         * <p>*   zoneId: the zone ID.</p>
-         * <p>*   chargeType: the billing method.</p>
-         * <p>*   networkType: the network type.</p>
+         * <ul>
+         * <li>regionId: the region ID.</li>
+         * <li>zoneId: the zone ID.</li>
+         * <li>chargeType: the billing method.</li>
+         * <li>networkType: the network type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zoneId</p>
          */
         @NameInMap("DimensionKey")
         public String dimensionKey;
@@ -188,15 +225,22 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the quota dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zone</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>Indicates whether the quota dimension is required when you query quota dimensions. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Requisite")
         public Boolean requisite;

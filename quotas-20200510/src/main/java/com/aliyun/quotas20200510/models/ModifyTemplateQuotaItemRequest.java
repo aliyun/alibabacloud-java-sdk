@@ -4,33 +4,71 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ModifyTemplateQuotaItemRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>804</p>
+     */
     @NameInMap("DesireValue")
     public Float desireValue;
 
     @NameInMap("Dimensions")
     public java.util.List<ModifyTemplateQuotaItemRequestDimensions> dimensions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-19T09:25:56Z</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("EnvLanguage")
     public String envLanguage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-20T09:25:56Z</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1****</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("NoticeType")
     public Long noticeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>q_security-groups</p>
+     */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CommonQuota</p>
+     */
     @NameInMap("QuotaCategory")
     public String quotaCategory;
 
@@ -120,9 +158,17 @@ public class ModifyTemplateQuotaItemRequest extends TeaModel {
     }
 
     public static class ModifyTemplateQuotaItemRequestDimensions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>regionId</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
     /**
      * <p>The maximum number of records returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position at which the query ends.</p>
-     * <br>
-     * <p>> An empty value indicates that all data is returned.</p>
+     * <blockquote>
+     * <p>An empty value indicates that all data is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,12 +33,18 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of records returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -84,18 +97,25 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
     public static class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod extends TeaModel {
         /**
          * <p>The unit of the calculation cycle. Valid values:</p>
-         * <br>
-         * <p>*   second</p>
-         * <p>*   minute</p>
-         * <p>*   hour</p>
-         * <p>*   day</p>
-         * <p>*   week</p>
+         * <ul>
+         * <li>second</li>
+         * <li>minute</li>
+         * <li>hour</li>
+         * <li>day</li>
+         * <li>week</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>day</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
         /**
          * <p>The value of the calculation cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PeriodValue")
         public Integer periodValue;
@@ -132,59 +152,85 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The type of the adjustable value. Valid values:</p>
-         * <br>
-         * <p>*   continuous</p>
-         * <p>*   discontinuous</p>
+         * <ul>
+         * <li>continuous</li>
+         * <li>discontinuous</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>continuous</p>
          */
         @NameInMap("ApplicableType")
         public String applicableType;
 
         /**
          * <p>The requested value of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>802</p>
          */
         @NameInMap("DesireValue")
         public Float desireValue;
 
         /**
          * <p>The quota dimensions.</p>
-         * <br>
-         * <p>Format: {"regionId":"Region"}.</p>
+         * <p>Format: {&quot;regionId&quot;:&quot;Region&quot;}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
          */
         @NameInMap("Dimensions")
         public java.util.Map<String, ?> dimensions;
 
         /**
          * <p>The start time of the validity period of the quota. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-28T06:07:00Z</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
          * <p>The language of the quota alert notification. Valid values:</p>
-         * <br>
-         * <p>*   zh: Chinese</p>
-         * <p>*   en: English</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("EnvLanguage")
         public String envLanguage;
 
         /**
          * <p>The end time of the validity period of the quota. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-29T06:07:00Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The ID of the quota template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
-         * <br>
-         * <p>*   0: no</p>
-         * <p>*   3: yes</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>3: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NoticeType")
         public Integer noticeType;
@@ -197,34 +243,50 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
 
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The ID of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_security-groups</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
         /**
          * <p>The type of the quota. Valid values:</p>
-         * <br>
-         * <p>*   CommonQuota: general quota</p>
-         * <p>*   FlowControl: API rate limit</p>
-         * <p>*   WhiteListLabel: privilege</p>
+         * <ul>
+         * <li>CommonQuota: general quota</li>
+         * <li>FlowControl: API rate limit</li>
+         * <li>WhiteListLabel: privilege</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         @NameInMap("QuotaCategory")
         public String quotaCategory;
 
         /**
          * <p>The description of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The maximum number of security groups that can be created by the current account.</p>
          */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
         /**
          * <p>The name of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Maximum Number of Security Groups</p>
          */
         @NameInMap("QuotaName")
         public String quotaName;

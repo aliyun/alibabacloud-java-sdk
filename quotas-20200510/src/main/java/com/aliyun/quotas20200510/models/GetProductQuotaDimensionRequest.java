@@ -12,14 +12,22 @@ public class GetProductQuotaDimensionRequest extends TeaModel {
 
     /**
      * <p>The key of the quota dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>regionId</p>
      */
     @NameInMap("DimensionKey")
     public String dimensionKey;
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <br>
-     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     * <blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs-spec</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
@@ -56,16 +64,24 @@ public class GetProductQuotaDimensionRequest extends TeaModel {
     public static class GetProductQuotaDimensionRequestDependentDimensions extends TeaModel {
         /**
          * <p>The key of the quota dimension on which the quota dimension that you want to query is dependent.</p>
-         * <br>
-         * <p>> The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p>The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the quota dimension on which the quota dimension that you want to query is dependent.</p>
-         * <br>
-         * <p>> The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p>The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Value")
         public String value;

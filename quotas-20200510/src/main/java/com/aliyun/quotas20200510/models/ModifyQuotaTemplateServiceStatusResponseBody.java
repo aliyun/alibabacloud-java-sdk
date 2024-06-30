@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyQuotaTemplateServiceStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class ModifyQuotaTemplateServiceStatusResponseBody extends TeaModel {
     public static class ModifyQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus extends TeaModel {
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-pG****</p>
          */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
         /**
-         * <p>The state of the quota template. Valid values:</p>
-         * <br>
-         * <p>*   \-1: The quota template is disabled.</p>
-         * <p>*   1: The quota template is enabled.</p>
+         * <p>The status of the quota template. Valid values:</p>
+         * <ul>
+         * <li>\-1: The quota template is disabled.</li>
+         * <li>1: The quota template is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;

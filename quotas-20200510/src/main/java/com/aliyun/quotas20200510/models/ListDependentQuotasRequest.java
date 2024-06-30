@@ -6,14 +6,23 @@ import com.aliyun.tea.*;
 public class ListDependentQuotasRequest extends TeaModel {
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <br>
-     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     * <blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>csk</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The quota ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q_i5uzm3</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;

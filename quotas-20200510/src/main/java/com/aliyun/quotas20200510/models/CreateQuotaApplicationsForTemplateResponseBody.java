@@ -12,6 +12,9 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the quota application batch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
      */
     @NameInMap("BatchQuotaApplicationId")
     public String batchQuotaApplicationId;
@@ -24,6 +27,9 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8FF8CAF0-29D9-4F11-B6A4-FD2CBCA016D3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +74,18 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
     public static class CreateQuotaApplicationsForTemplateResponseBodyFailResults extends TeaModel {
         /**
          * <p>The Alibaba Cloud account of the members in a resource directory whose quota increase request is rejected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135048337611****</p>
          */
         @NameInMap("AliyunUid")
         public String aliyunUid;
 
         /**
          * <p>The reason for the rejection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The quota adjustment application is being processed. Please try again later.</p>
          */
         @NameInMap("Reason")
         public String reason;

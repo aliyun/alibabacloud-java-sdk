@@ -12,6 +12,9 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>81B9D511-F3DD-43B1-9A81-1795DDB52ADF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
     public static class GetQuotaAlarmResponseBodyQuotaAlarm extends TeaModel {
         /**
          * <p>The ID of the quota alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78d7e436-4b25-4897-84b5-d7b656bb****</p>
          */
         @NameInMap("AlarmId")
         public String alarmId;
 
         /**
          * <p>The name of the quota alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tf-testacccn-hangzhouquotasquotaalarm81611</p>
          */
         @NameInMap("AlarmName")
         public String alarmName;
 
         /**
          * <p>The time when the quota alert was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-21T03:47:28Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -64,63 +76,94 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
 
         /**
          * <p>The alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accountContact</p>
          */
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
         /**
          * <p>The abbreviation of the cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The ID of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_security-groups</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
         /**
          * <p>The quota dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
          */
         @NameInMap("QuotaDimension")
         public java.util.Map<String, ?> quotaDimension;
 
         /**
          * <p>The used quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
 
         /**
          * <p>The quota value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>804</p>
          */
         @NameInMap("QuotaValue")
         public Float quotaValue;
 
         /**
          * <p>The numeric value of the alert threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("Threshold")
         public Float threshold;
 
         /**
          * <p>The percentage of the alert threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("ThresholdPercent")
         public Float thresholdPercent;
 
         /**
          * <p>The type of the quota alert. Valid values:</p>
-         * <br>
-         * <p>*   used: The alert is created for the used quota.</p>
-         * <p>*   usable: The alert is created for the available quota.</p>
+         * <ul>
+         * <li>used: The alert is created for the used quota.</li>
+         * <li>usable: The alert is created for the available quota.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>used</p>
          */
         @NameInMap("ThresholdType")
         public String thresholdType;
 
         /**
          * <p>The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://alert.aliyun.com/callback">https://alert.aliyun.com/callback</a></p>
          */
         @NameInMap("Webhook")
         public String webhook;

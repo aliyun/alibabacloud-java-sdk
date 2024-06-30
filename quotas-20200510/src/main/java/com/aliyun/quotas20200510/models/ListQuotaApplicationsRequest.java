@@ -12,55 +12,75 @@ public class ListQuotaApplicationsRequest extends TeaModel {
 
     /**
      * <p>The keyword that you want to use to search for the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cluster</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
      * <p>The maximum number of records that can be returned for the query.</p>
-     * <br>
      * <p>Valid values: 1 to 200. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <br>
-     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>csk</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The ID of the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q_i5uzm3</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
     /**
      * <p>The type of the quota. Valid values:</p>
-     * <br>
-     * <p>*   CommonQuota: general quota</p>
-     * <p>*   FlowControl: API rate limit</p>
-     * <p>*   WhiteListLabel: whitelist quota</p>
+     * <ul>
+     * <li>CommonQuota: general quota</li>
+     * <li>FlowControl: API rate limit</li>
+     * <li>WhiteListLabel: whitelist quota</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CommonQuota</p>
      */
     @NameInMap("QuotaCategory")
     public String quotaCategory;
 
     /**
      * <p>The status of the application. Valid values:</p>
-     * <br>
-     * <p>*   Disagree: rejects the application.</p>
-     * <p>*   Agree: approves the application.</p>
-     * <p>*   Process: reviews the application.</p>
-     * <p>*   Cancel: cancels the application.</p>
+     * <ul>
+     * <li>Disagree: rejects the application.</li>
+     * <li>Agree: approves the application.</li>
+     * <li>Process: reviews the application.</li>
+     * <li>Cancel: cancels the application.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Agree</p>
      */
     @NameInMap("Status")
     public String status;
@@ -137,16 +157,24 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public static class ListQuotaApplicationsRequestDimensions extends TeaModel {
         /**
          * <p>The key of the dimension.</p>
-         * <br>
-         * <p>> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the dimension.</p>
-         * <br>
-         * <p>> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Value")
         public String value;

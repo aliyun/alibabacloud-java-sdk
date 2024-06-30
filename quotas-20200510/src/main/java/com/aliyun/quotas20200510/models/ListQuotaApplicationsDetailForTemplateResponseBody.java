@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel {
     /**
      * <p>The maximum number of records that can be returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position from which you want to start the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,12 +30,18 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     public static class ListQuotaApplicationsDetailForTemplateResponseBodyQuotaApplicationsPeriod extends TeaModel {
         /**
          * <p>The unit of the calculation cycle of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>second</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
         /**
          * <p>The value of the calculation cycle of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PeriodValue")
         public Integer periodValue;
@@ -118,72 +136,107 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     public static class ListQuotaApplicationsDetailForTemplateResponseBodyQuotaApplications extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>175376458581****</p>
          */
         @NameInMap("AliyunUid")
         public String aliyunUid;
 
         /**
          * <p>The ID of the quota increase application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b926571d-cc09-4711-b547-58a615f0****</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
          * <p>The time when the quota increase application was submitted. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-15T09:13:53Z</p>
          */
         @NameInMap("ApplyTime")
         public String applyTime;
 
         /**
          * <p>The quota value that is approved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
          */
         @NameInMap("ApproveValue")
         public Double approveValue;
 
         /**
          * <p>The approval result of the quota increase application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agree</p>
          */
         @NameInMap("AuditReason")
         public String auditReason;
 
         /**
          * <p>The ID of the quota application batch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
          */
         @NameInMap("BatchQuotaApplicationId")
         public String batchQuotaApplicationId;
 
         /**
          * <p>The requested value of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("DesireValue")
         public Double desireValue;
 
         /**
          * <p>The start time of the validity period of the quota. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-15T11:46:25Z</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
          * <p>The language of the quota alert notification. Valid values:</p>
-         * <br>
-         * <p>*   zh: Chinese</p>
-         * <p>*   en: English</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         @NameInMap("EnvLanguage")
         public String envLanguage;
 
         /**
          * <p>The end time of the validity period of the quota. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-17T11:46:25Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
-         * <br>
-         * <p>*   0: no</p>
-         * <p>*   3: yes</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>3: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("NoticeType")
         public Integer noticeType;
@@ -196,34 +249,50 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
 
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.n1.large</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:quotas:<em>:120886317861</em>***:quota/csk/q_i5uzm3</p>
          */
         @NameInMap("QuotaArn")
         public String quotaArn;
 
         /**
          * <p>The quota type. Valid values:</p>
-         * <br>
-         * <p>*   CommonQuota (default): general quota</p>
-         * <p>*   WhiteListLabel: privilege</p>
-         * <p>*   FlowControl: API rate limit</p>
+         * <ul>
+         * <li>CommonQuota (default): general quota</li>
+         * <li>WhiteListLabel: privilege</li>
+         * <li>FlowControl: API rate limit</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
          */
         @NameInMap("QuotaCategory")
         public String quotaCategory;
 
         /**
          * <p>The description of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The maximum number of nodes in a cluster</p>
          */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
@@ -236,29 +305,42 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
 
         /**
          * <p>The quota name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Maximum Number of Nodes</p>
          */
         @NameInMap("QuotaName")
         public String quotaName;
 
         /**
          * <p>The unit of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GiB</p>
          */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
         /**
          * <p>The reason for the quota increase application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Business expansion</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The approval status of the quota increase application. Valid values:</p>
-         * <br>
-         * <p>*   Disagree: The application is rejected.</p>
-         * <p>*   Agree: The application is approved.</p>
-         * <p>*   Process: The application is pending approval.</p>
-         * <p>*   Cancel: The application is canceled.</p>
+         * <ul>
+         * <li>Disagree: The application is rejected.</li>
+         * <li>Agree: The application is approved.</li>
+         * <li>Process: The application is pending approval.</li>
+         * <li>Cancel: The application is canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Agree</p>
          */
         @NameInMap("Status")
         public String status;

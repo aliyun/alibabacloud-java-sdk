@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteQuotaAlarmResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A95C65B3-7CF4-469E-B1D5-1CA0628A6411</p>
      */
     @NameInMap("RequestId")
     public String requestId;

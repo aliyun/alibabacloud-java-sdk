@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteTemplateQuotaItemResponseBody extends TeaModel {
     /**
      * <p>The ID of the quota template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1****</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
      */
     @NameInMap("RequestId")
     public String requestId;

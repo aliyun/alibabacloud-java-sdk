@@ -12,69 +12,106 @@ public class ListProductQuotasRequest extends TeaModel {
 
     /**
      * <p>The code of the dimension group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>entconsole_w1j3msbo2g</p>
      */
     @NameInMap("GroupCode")
     public String groupCode;
 
     /**
      * <p>The keyword that you want to use to search for the quotas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs-spec</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
      * <p>The maximum number of records that can be returned for the query.</p>
-     * <br>
      * <p>Valid values: 1 to 100. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <br>
-     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     * <blockquote>
+     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of the <code>ProductCode</code> parameter.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs-spec</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The ID of the quota.</p>
+     * <p>The quota ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g5.2xlarge</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
     /**
      * <p>The type of the quota. Valid values:</p>
-     * <br>
-     * <p>*   CommonQuota (default value): general quota</p>
-     * <p>*   FlowControl: API rate limit</p>
-     * <p>*   WhiteListLabel: whitelist quota</p>
+     * <ul>
+     * <li>CommonQuota (default value): general quota</li>
+     * <li>FlowControl: API rate limit</li>
+     * <li>WhiteListLabel: whitelist quota</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FlowControl</p>
      */
     @NameInMap("QuotaCategory")
     public String quotaCategory;
 
     /**
-     * <p>The field based on which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:</p>
-     * <br>
-     * <p>*   TIME: The returned records are sorted by the last update time.</p>
-     * <p>*   TOTAL: The returned records are sorted by the usage of the total quota.</p>
-     * <p>*   RESERVED: The returned records are sorted by the usage of the reserved quota.</p>
+     * <p>The field based on which you want to sort the returned records. Valid values:</p>
+     * <ul>
+     * <li>TIME: The returned records are sorted by the last update time.</li>
+     * <li>TOTAL: The returned records are sorted by the usage of the total quota.</li>
+     * <li>RESERVED: The returned records are sorted by the usage of the reserved quota.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>TIME</p>
      */
     @NameInMap("SortField")
     public String sortField;
 
     /**
-     * <p>The order in which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:</p>
-     * <br>
-     * <p>*   Ascending: ascending order</p>
-     * <p>*   Descending: descending order</p>
+     * <p>The order in which you want to sort the returned records. Valid values:</p>
+     * <ul>
+     * <li>Ascending: ascending order</li>
+     * <li>Descending: descending order</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Ascending</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
@@ -167,16 +204,24 @@ public class ListProductQuotasRequest extends TeaModel {
     public static class ListProductQuotasRequestDimensions extends TeaModel {
         /**
          * <p>The key of the dimension.</p>
-         * <br>
-         * <p>> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the dimension.</p>
-         * <br>
-         * <p>> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <blockquote>
+         * <p> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,20 +6,31 @@ import com.aliyun.tea.*;
 public class ListProductDimensionGroupsRequest extends TeaModel {
     /**
      * <p>The maximum number of records that can be returned for the query. Valid values: 1 to 200. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The service code.</p>
-     * <br>
-     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     * <blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
      */
     @NameInMap("ProductCode")
     public String productCode;

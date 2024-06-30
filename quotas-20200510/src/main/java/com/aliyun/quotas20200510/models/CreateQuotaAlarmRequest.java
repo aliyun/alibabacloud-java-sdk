@@ -4,27 +4,58 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class CreateQuotaAlarmRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AlarmName")
     public String alarmName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>config</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q_hvnoqv</p>
+     */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
     @NameInMap("QuotaDimensions")
     public java.util.List<CreateQuotaAlarmRequestQuotaDimensions> quotaDimensions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>150</p>
+     */
     @NameInMap("Threshold")
     public Float threshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("ThresholdPercent")
     public Float thresholdPercent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>used</p>
+     */
     @NameInMap("ThresholdType")
     public String thresholdType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://alert.aliyun.com/callback">https://alert.aliyun.com/callback</a></p>
+     */
     @NameInMap("WebHook")
     public String webHook;
 
@@ -98,9 +129,17 @@ public class CreateQuotaAlarmRequest extends TeaModel {
     }
 
     public static class CreateQuotaAlarmRequestQuotaDimensions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>regionId</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("Value")
         public String value;
 

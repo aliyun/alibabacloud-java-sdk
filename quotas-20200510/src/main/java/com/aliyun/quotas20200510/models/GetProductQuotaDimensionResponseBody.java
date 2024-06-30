@@ -12,6 +12,9 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1FA5F0E2-368E-4BA4-A8D0-6060FC6BB8F3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
     public static class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail extends TeaModel {
         /**
          * <p>The name of the quota dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The value of the quota dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Value")
         public String value;
@@ -82,11 +91,15 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
 
         /**
          * <p>The key of the quota dimension. Valid values:</p>
-         * <br>
-         * <p>*   regionId: the region ID.</p>
-         * <p>*   zoneId: the zone ID.</p>
-         * <p>*   chargeType: the billing method.</p>
-         * <p>*   networkType: the network type.</p>
+         * <ul>
+         * <li>regionId: the region ID.</li>
+         * <li>zoneId: the zone ID.</li>
+         * <li>chargeType: the billing method.</li>
+         * <li>networkType: the network type.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
          */
         @NameInMap("DimensionKey")
         public String dimensionKey;
@@ -105,6 +118,9 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
 
         /**
          * <p>The name of the quota dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>region</p>
          */
         @NameInMap("Name")
         public String name;
