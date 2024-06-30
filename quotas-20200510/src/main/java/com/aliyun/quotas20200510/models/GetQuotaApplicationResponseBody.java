@@ -12,6 +12,9 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7BBD1D37-094C-4485-8B7D-64682F82BC18</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,113 +43,165 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
     public static class GetQuotaApplicationResponseBodyQuotaApplication extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
         /**
          * <p>The time when the application was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-19T09:25:56Z</p>
          */
         @NameInMap("ApplyTime")
         public String applyTime;
 
         /**
          * <p>The approved quota value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ApproveValue")
         public Float approveValue;
 
         /**
          * <p>The result of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Agree</p>
          */
         @NameInMap("AuditReason")
         public String auditReason;
 
         /**
          * <p>The expected value of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>804</p>
          */
         @NameInMap("DesireValue")
         public Integer desireValue;
 
         /**
          * <p>The dimension.</p>
-         * <br>
-         * <p>Format: `{"regionId":"Region"}`.</p>
+         * <p>Format: <code>{&quot;regionId&quot;:&quot;Region&quot;}</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cn-shanghai&quot;,&quot;cn-hangzhou&quot;]</p>
          */
         @NameInMap("Dimension")
         public java.util.Map<String, ?> dimension;
 
         /**
          * <p>The time when the new quota value takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-19 15:30:00</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
          * <p>The time when the new quota expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-29 15:30:00</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The method of that is used to send alert notifications. Valid values:</p>
-         * <br>
-         * <p>*   0: Quota Center does not send a notification.</p>
-         * <p>*   1: Quota Center sends an email notification.</p>
-         * <p>*   2: Quota Center sends an SMS notification.</p>
+         * <ul>
+         * <li>0: Quota Center does not send a notification.</li>
+         * <li>1: Quota Center sends an email notification.</li>
+         * <li>2: Quota Center sends an SMS notification.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NoticeType")
         public Long noticeType;
 
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The ID of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_security-groups</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:quotas:cn-hangzhou:120886317861****:quota/ecs/q_security-groups/</p>
          */
         @NameInMap("QuotaArn")
         public String quotaArn;
 
         /**
          * <p>The description of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The maximum number of security groups that can be owned by the current account</p>
          */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
         /**
          * <p>The name of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Maximum Number of Security Groups</p>
          */
         @NameInMap("QuotaName")
         public String quotaName;
 
         /**
          * <p>The unit of the new quota value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Count</p>
          */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
         /**
          * <p>The reason for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Scale Out</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The status of the application. Valid values:</p>
-         * <br>
-         * <p>*   Disagree: The application is rejected.</p>
-         * <p>*   Agree: The application is approved.</p>
-         * <p>*   Process: The application is being reviewed.</p>
-         * <p>*   Cancel: The application is closed.</p>
+         * <ul>
+         * <li>Disagree: The application is rejected.</li>
+         * <li>Agree: The application is approved.</li>
+         * <li>Process: The application is being reviewed.</li>
+         * <li>Cancel: The application is closed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Agree</p>
          */
         @NameInMap("Status")
         public String status;

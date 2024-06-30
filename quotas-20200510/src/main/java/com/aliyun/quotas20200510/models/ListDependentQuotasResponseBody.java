@@ -12,6 +12,9 @@ public class ListDependentQuotasResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>920D8A47-26BB-49FA-A09F-F98D7DAA55F3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,6 +49,9 @@ public class ListDependentQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The key of the quota dimension.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
          */
         @NameInMap("DimensionKey")
         public String dimensionKey;
@@ -96,18 +102,27 @@ public class ListDependentQuotasResponseBody extends TeaModel {
 
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_elastic-network-interfaces</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
         /**
          * <p>The relationship percentage between the specified quota and the quotas on which the specified quota depends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Scale")
         public Float scale;

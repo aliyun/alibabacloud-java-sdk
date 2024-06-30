@@ -6,6 +6,11 @@ import com.aliyun.tea.*;
 public class DeleteTemplateQuotaItemRequest extends TeaModel {
     /**
      * <p>The ID of the quota template.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/450403.html">ListQuotaApplicationTemplates</a> operation to obtain the ID of a quota template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1****</p>
      */
     @NameInMap("Id")
     public String id;

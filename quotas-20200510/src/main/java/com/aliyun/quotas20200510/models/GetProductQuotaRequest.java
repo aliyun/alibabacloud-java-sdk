@@ -6,20 +6,32 @@ import com.aliyun.tea.*;
 public class GetProductQuotaRequest extends TeaModel {
     /**
      * <p>The quota dimensions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;regionId\&quot;:\&quot;cn-beijing\&quot;}</p>
      */
     @NameInMap("Dimensions")
     public java.util.List<GetProductQuotaRequestDimensions> dimensions;
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <br>
-     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     * <blockquote>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The ID of the quota.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q_security-groups</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
@@ -56,18 +68,30 @@ public class GetProductQuotaRequest extends TeaModel {
     public static class GetProductQuotaRequestDimensions extends TeaModel {
         /**
          * <p>The key of the dimension.</p>
-         * <br>
-         * <p>>- The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * <p>>- If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, Enterprise Distributed Application Service (EDAS) whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling (ESS) whose service code is ess.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</li>
+         * <li>If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, Enterprise Distributed Application Service (EDAS) whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling (ESS) whose service code is ess.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the dimension.</p>
-         * <br>
-         * <p>> - The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * <p>> - If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the `Dimensions.N.Key` and `Dimensions.N.Value` parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, EDAS whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and ESS whose service code is ess.</p>
+         * <blockquote>
+         * <ul>
+         * <li>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</li>
+         * <li>If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, EDAS whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and ESS whose service code is ess.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Value")
         public String value;

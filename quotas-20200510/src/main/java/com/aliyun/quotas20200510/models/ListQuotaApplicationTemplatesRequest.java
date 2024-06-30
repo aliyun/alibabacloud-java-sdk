@@ -12,44 +12,65 @@ public class ListQuotaApplicationTemplatesRequest extends TeaModel {
 
     /**
      * <p>The ID of the quota item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1****</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>The maximum number of records that can be returned for the query. Valid values: 1 to 100. Default value: 30.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position from which you want to start the query.</p>
-     * <br>
-     * <p>> If you leave this parameter empty, the query starts from the beginning.</p>
+     * <blockquote>
+     * <p>If you leave this parameter empty, the query starts from the beginning.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <br>
-     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     * <blockquote>
+     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The ID of the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q_security-groups</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
     /**
      * <p>The type of the quota. Valid values:</p>
-     * <br>
-     * <p>*   CommonQuota: general quota</p>
-     * <p>*   WhiteListLabel: privilege</p>
-     * <p>*   FlowControl: API rate limit</p>
+     * <ul>
+     * <li>CommonQuota: general quota</li>
+     * <li>WhiteListLabel: privilege</li>
+     * <li>FlowControl: API rate limit</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CommonQuota</p>
      */
     @NameInMap("QuotaCategory")
     public String quotaCategory;
@@ -118,16 +139,34 @@ public class ListQuotaApplicationTemplatesRequest extends TeaModel {
     public static class ListQuotaApplicationTemplatesRequestDimensions extends TeaModel {
         /**
          * <p>The key of the dimension.</p>
-         * <br>
-         * <p>> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </li>
+         * <li><p>You must specify both Key and Value for each quota dimension.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the dimension.</p>
-         * <br>
-         * <p>> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </li>
+         * <li><p>You must specify both Key and Value for each quota dimension.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Value")
         public String value;

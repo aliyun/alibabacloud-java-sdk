@@ -4,9 +4,17 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class CreateQuotaAlarmResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>18b3be23-b7b0-4d45-91bc-d0c331aa****</p>
+     */
     @NameInMap("AlarmId")
     public String alarmId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BD219E2B-E687-45EE-B5F3-61FB730551B1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

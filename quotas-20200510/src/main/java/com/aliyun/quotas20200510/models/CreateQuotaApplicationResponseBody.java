@@ -6,116 +6,172 @@ import com.aliyun.tea.*;
 public class CreateQuotaApplicationResponseBody extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
      */
     @NameInMap("ApplicationId")
     public String applicationId;
 
     /**
      * <p>The time when the application was submitted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-19T09:25:56Z</p>
      */
     @NameInMap("ApplyTime")
     public String applyTime;
 
     /**
      * <p>The quota value that is approved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>804</p>
      */
     @NameInMap("ApproveValue")
     public Float approveValue;
 
     /**
      * <p>The result of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Agree</p>
      */
     @NameInMap("AuditReason")
     public String auditReason;
 
     /**
      * <p>The requested value of the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("DesireValue")
     public Integer desireValue;
 
     /**
      * <p>The quota dimension.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
      */
     @NameInMap("Dimension")
     public java.util.Map<String, ?> dimension;
 
     /**
      * <p>The time when the new quota value takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-19T09:25:56Z</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
      * <p>The time when the new quota expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-20T09:25:56Z</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
     /**
      * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
-     * <br>
-     * <p>*   0: Quota Center does not send a notification.</p>
-     * <p>*   3: Quota Center sends a notification.</p>
+     * <ul>
+     * <li>0: Quota Center does not send a notification.</li>
+     * <li>3: Quota Center sends a notification.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("NoticeType")
     public Long noticeType;
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs-spec</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The ID of the quota.</p>
+     * <p>The quota ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c5.large</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:quotas:cn-hangzhou:*:quota/ecs/ecs.m2.medium/prepaid/classic/instancetype/cn-hangzhou-b</p>
      */
     @NameInMap("QuotaArn")
     public String quotaArn;
 
     /**
      * <p>The description of the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c5.large</p>
      */
     @NameInMap("QuotaDescription")
     public String quotaDescription;
 
     /**
      * <p>The name of the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c5.large</p>
      */
     @NameInMap("QuotaName")
     public String quotaName;
 
     /**
-     * <p>The unit of the new quota value.</p>
+     * <p>The unit of the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AMOUNT</p>
      */
     @NameInMap("QuotaUnit")
     public String quotaUnit;
 
     /**
      * <p>The reason for the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Scale Out</p>
      */
     @NameInMap("Reason")
     public String reason;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the application. Valid values:</p>
-     * <br>
-     * <p>*   Disagree: The application is rejected.</p>
-     * <p>*   Agree: The application is approved.</p>
-     * <p>*   Process: The application is being reviewed.</p>
-     * <p>*   Cancel: The application is canceled.</p>
+     * <ul>
+     * <li>Disagree: The application is rejected.</li>
+     * <li>Agree: The application is approved.</li>
+     * <li>Process: The application is being reviewed.</li>
+     * <li>Cancel: The application is canceled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Process</p>
      */
     @NameInMap("Status")
     public String status;

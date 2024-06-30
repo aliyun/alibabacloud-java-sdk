@@ -6,6 +6,18 @@ import com.aliyun.tea.*;
 public class CreateTemplateQuotaItemRequest extends TeaModel {
     /**
      * <p>The requested value of the quota.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can specify DesireValue based on the values of <code>TotalUsage</code> and <code>ApplicableRange</code> in the response to the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation.</p>
+     * </li>
+     * <li><p>Applications are reviewed by the technical support team for each cloud service. To increase the success rate of your application, specify a reasonable quota value and a detailed reason.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>804</p>
      */
     @NameInMap("DesireValue")
     public Float desireValue;
@@ -18,58 +30,90 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
 
     /**
      * <p>The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
-     * <br>
-     * <p>> If you leave this parameter empty, the quota takes effect immediately.</p>
+     * <blockquote>
+     * <p>If you leave this parameter empty, the quota takes effect immediately.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-19T09:25:56Z</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
      * <p>The language of the quota alert notification. Valid values:</p>
-     * <br>
-     * <p>*   zh (default value): Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh (default value): Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("EnvLanguage")
     public String envLanguage;
 
     /**
      * <p>The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
-     * <br>
-     * <p>> If you leave this parameter empty, no end time is specified.</p>
+     * <blockquote>
+     * <p>If you leave this parameter empty, no end time is specified.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-20T09:25:56Z</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
     /**
      * <p>Specifies whether to send a notification about the application result. Valid values:</p>
-     * <br>
-     * <p>*   0 (default value): no</p>
-     * <p>*   3: yes</p>
+     * <ul>
+     * <li>0 (default value): no</li>
+     * <li>3: yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("NoticeType")
     public Long noticeType;
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <br>
-     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     * <blockquote>
+     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The ID of the quota.</p>
+     * <p>The quota ID.</p>
+     * <blockquote>
+     * <p> To obtain the quota ID of an Alibaba Cloud service, call the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation and check the value of <code>QuotaActionCode</code> in the response.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q_security-groups</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
     /**
      * <p>The quota type. Valid values:</p>
-     * <br>
-     * <p>*   CommonQuota: general quota</p>
-     * <p>*   WhiteListLabel: privilege</p>
-     * <p>*   FlowControl: API rate limit</p>
+     * <ul>
+     * <li>CommonQuota: general quota</li>
+     * <li>WhiteListLabel: privilege</li>
+     * <li>FlowControl: API rate limit</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CommonQuota</p>
      */
     @NameInMap("QuotaCategory")
     public String quotaCategory;
@@ -154,20 +198,34 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
     public static class CreateTemplateQuotaItemRequestDimensions extends TeaModel {
         /**
          * <p>The key of the dimension.</p>
-         * <br>
-         * <p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * <br>
-         * <p>> This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </li>
+         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the dimension.</p>
-         * <br>
-         * <p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * <br>
-         * <p>> This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </li>
+         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Value")
         public String value;

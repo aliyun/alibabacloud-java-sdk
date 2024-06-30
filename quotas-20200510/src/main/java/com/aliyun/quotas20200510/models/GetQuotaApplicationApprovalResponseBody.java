@@ -4,33 +4,95 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether retries are allowed. Valid values:</p>
+     * <ul>
+     * <li>false</li>
+     * <li>true</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
+    /**
+     * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PARAMETER.ILLEGALL</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Parameter[%s] is required.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The parameters whose values are invalid.</p>
+     */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RAM.PERMISSION.DENIED</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are not authorized to do this action or the API input parameter is invalid.</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The information about quota application approval.</p>
+     */
     @NameInMap("Module")
     public GetQuotaApplicationApprovalResponseBodyModule module;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ED584FB-ECBF-4A2A-969D-F54D25EFABF9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -120,15 +182,43 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
     }
 
     public static class GetQuotaApplicationApprovalResponseBodyModule extends TeaModel {
+        /**
+         * <p>The average amount of time required to approve quota applications. Unit: hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
         @NameInMap("ApprovalHours")
         public Integer approvalHours;
 
+        /**
+         * <p>The interval between two consecutive approval reminders. Unit: hour.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
         @NameInMap("ReminderIntervalHours")
         public Integer reminderIntervalHours;
 
+        /**
+         * <p>Indicates whether approval reminders are supported for quota applications. Valid values:</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SupportReminder")
         public Boolean supportReminder;
 
+        /**
+         * <p>The reason why approval reminders are not supported for quota applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>can only be remind once within the interval</p>
+         */
         @NameInMap("UnsupportReminderReason")
         public String unsupportReminderReason;
 

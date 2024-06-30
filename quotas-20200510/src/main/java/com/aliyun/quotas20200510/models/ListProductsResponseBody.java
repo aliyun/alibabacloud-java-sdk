@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListProductsResponseBody extends TeaModel {
     /**
      * <p>The maximum number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,12 +30,18 @@ public class ListProductsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1DA9C136-11BC-4C39-ADC6-B86276128072</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,72 +94,106 @@ public class ListProductsResponseBody extends TeaModel {
     public static class ListProductsResponseBodyProductInfo extends TeaModel {
         /**
          * <p>Indicates whether the Alibaba Cloud service supports general quotas. Valid values:</p>
-         * <br>
-         * <p>*   support: The Alibaba Cloud service supports general quotas.</p>
-         * <p>*   unsupport: The Alibaba Cloud service does not support general quotas.</p>
+         * <ul>
+         * <li>support: The Alibaba Cloud service supports general quotas.</li>
+         * <li>unsupport: The Alibaba Cloud service does not support general quotas.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>support</p>
          */
         @NameInMap("CommonQuotaSupport")
         public String commonQuotaSupport;
 
         /**
          * <p>Indicates whether the Alibaba Cloud service supports dynamic quota adjustment. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Dynamic")
         public Boolean dynamic;
 
         /**
          * <p>Indicates whether the Alibaba Cloud service supports API rate limits. Valid values:</p>
-         * <br>
-         * <p>*   support: The Alibaba Cloud service supports API rate limits.</p>
-         * <p>*   unsupport: The Alibaba Cloud service does not support API rate limits.</p>
+         * <ul>
+         * <li>support: The Alibaba Cloud service supports API rate limits.</li>
+         * <li>unsupport: The Alibaba Cloud service does not support API rate limits.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>unsupport</p>
          */
         @NameInMap("FlowControlSupport")
         public String flowControlSupport;
 
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The name of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service (ECS)</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
          * <p>The English name of the Alibaba Cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute Service</p>
          */
         @NameInMap("ProductNameEn")
         public String productNameEn;
 
         /**
          * <p>The ID of the service category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("SecondCategoryId")
         public Long secondCategoryId;
 
         /**
          * <p>The name of the service category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute</p>
          */
         @NameInMap("SecondCategoryName")
         public String secondCategoryName;
 
         /**
          * <p>The English name of the service category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Elastic Compute</p>
          */
         @NameInMap("SecondCategoryNameEn")
         public String secondCategoryNameEn;
 
         /**
          * <p>Indicates whether the Alibaba Cloud service supports whitelist quotas. Valid values:</p>
-         * <br>
-         * <p>*   support: The Alibaba Cloud service supports whitelist quotas.</p>
-         * <p>*   unsupport: The Alibaba Cloud service does not support whitelist quotas.</p>
+         * <ul>
+         * <li>support: The Alibaba Cloud service supports whitelist quotas.</li>
+         * <li>unsupport: The Alibaba Cloud service does not support whitelist quotas.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>support</p>
          */
         @NameInMap("WhiteListLabelQuotaSupport")
         public String whiteListLabelQuotaSupport;

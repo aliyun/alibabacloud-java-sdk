@@ -6,19 +6,34 @@ import com.aliyun.tea.*;
 public class CreateQuotaApplicationRequest extends TeaModel {
     /**
      * <p>The mode in which you want the application to be reviewed. Valid values:</p>
-     * <br>
-     * <p>*   Sync: The application is reviewed in a synchronous manner. Quota Center automatically reviews the application. The result is returned immediately after you submit the application. However, the chance of an approval for an application that is reviewed in Sync mode is lower than the chance of an approval for an application that is reviewed in Async mode. The validity period of the new quota value is 1 hour.</p>
-     * <p>*   Async: The application is reviewed in an asynchronous manner. An Alibaba Cloud support engineer reviews the application. The chance of an approval for an application that is reviewed in Async mode is higher than the chance of an approval for an application that is reviewed in Sync mode. The validity period of the new quota value is one month.</p>
-     * <br>
-     * <p>> This parameter is available only for ECS Quotas by Instance Type.</p>
+     * <ul>
+     * <li>Sync: The application is reviewed in a synchronous manner. Quota Center automatically reviews the application. The result is returned immediately after you submit the application. However, the chance of an approval for an application that is reviewed in Sync mode is lower than the chance of an approval for an application that is reviewed in Async mode. The validity period of the new quota value is 1 hour.</li>
+     * <li>Async: The application is reviewed in an asynchronous manner. An Alibaba Cloud support engineer reviews the application. The chance of an approval for an application that is reviewed in Async mode is higher than the chance of an approval for an application that is reviewed in Sync mode. The validity period of the new quota value is one month.</li>
+     * </ul>
+     * <blockquote>
+     * <p>This parameter is available only for ECS Quotas by Instance Type.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Sync</p>
      */
     @NameInMap("AuditMode")
     public String auditMode;
 
     /**
      * <p>The requested value of the quota.</p>
-     * <br>
-     * <p>> Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can specify the DesireValue parameter based on the values of the <code>TotalUsage</code> and <code>ApplicableRange</code> parameters that are returned by the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation.</p>
+     * </li>
+     * <li><p>Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>804</p>
      */
     @NameInMap("DesireValue")
     public Float desireValue;
@@ -31,66 +46,103 @@ public class CreateQuotaApplicationRequest extends TeaModel {
 
     /**
      * <p>The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
-     * <br>
-     * <p>> If you do not specify an end time, the default end time is 99 years after the quota application is submitted.</p>
+     * <blockquote>
+     * <p> If you do not specify an end time, the default end time is 99 years after the quota application is submitted.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-19T09:25:56Z</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
      * <p>The language of the quota alert notification. Valid values:</p>
-     * <br>
-     * <p>*   zh (default value): Chinese</p>
-     * <p>*   en: English</p>
+     * <ul>
+     * <li>zh (default value): Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("EnvLanguage")
     public String envLanguage;
 
     /**
      * <p>The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
-     * <br>
-     * <p>> If you do not specify a start time, the default start time is the time when the quota application is submitted.</p>
+     * <blockquote>
+     * <p> If you do not specify a start time, the default start time is the time when the quota application is submitted.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-20T09:25:56Z</p>
      */
     @NameInMap("ExpireTime")
     public String expireTime;
 
     /**
      * <p>Specifies whether to send a notification about the application result. Valid values:</p>
-     * <br>
-     * <p>*   0 (default value): sends a notification about the application result.</p>
-     * <p>*   3: A notification about the application result is sent.</p>
+     * <ul>
+     * <li>0 (default value): sends a notification about the application result.</li>
+     * <li>3: A notification about the application result is sent.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("NoticeType")
     public Integer noticeType;
 
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
-     * <br>
-     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     * <blockquote>
+     * <p> To query the abbreviation of an Alibaba Cloud service name, check the <code>ProductCode</code> parameter that is described in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The ID of the quota.</p>
+     * <p>The quota ID.</p>
+     * <blockquote>
+     * <p> To query the quota ID of an Alibaba Cloud service, check the <code>QuotaActionCode</code> parameter that is described in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>q_security-groups</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
     /**
      * <p>The type of the quota.</p>
-     * <br>
-     * <p>*   CommonQuota (default value): general quota</p>
-     * <p>*   FlowControl: API rate limit</p>
-     * <p>*   WhiteListLabel: whitelist quota</p>
+     * <ul>
+     * <li>CommonQuota (default value): general quota</li>
+     * <li>FlowControl: API rate limit</li>
+     * <li>WhiteListLabel: whitelist quota</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CommonQuota</p>
      */
     @NameInMap("QuotaCategory")
     public String quotaCategory;
 
     /**
      * <p>The reason for the application.</p>
-     * <br>
-     * <p>> Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.</p>
+     * <blockquote>
+     * <p>Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Scale Out</p>
      */
     @NameInMap("Reason")
     public String reason;
@@ -191,20 +243,34 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public static class CreateQuotaApplicationRequestDimensions extends TeaModel {
         /**
          * <p>The key of the dimension.</p>
-         * <br>
-         * <p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * <br>
-         * <p>> This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </li>
+         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>regionId</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the dimension.</p>
-         * <br>
-         * <p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * <br>
-         * <p>> This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * </li>
+         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Value")
         public String value;

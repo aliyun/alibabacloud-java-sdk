@@ -1,3 +1,14 @@
+2024-06-30 Version: 1.2.1
+- Update API GetProductQuota: update param Dimensions.
+- Update API GetProductQuota: update response param.
+- Update API ListProductQuotas: update param Dimensions.
+- Update API ListProductQuotas: update param KeyWord.
+- Update API ListProductQuotas: update param MaxResults.
+- Update API ListProductQuotas: update param NextToken.
+- Update API ListProductQuotas: update param QuotaActionCode.
+- Update API ListProductQuotas: update response param.
+
+
 2024-02-01 Version: 1.2.0
 - Support API GetQuotaApplicationApproval.
 - Support API RemindQuotaApplicationApproval.

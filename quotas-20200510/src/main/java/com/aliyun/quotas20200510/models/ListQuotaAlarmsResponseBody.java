@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class ListQuotaAlarmsResponseBody extends TeaModel {
     /**
      * <p>The maximum number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position at which the query ends.</p>
-     * <br>
-     * <p>> An empty value indicates that all data is returned.</p>
+     * <blockquote>
+     * <p>An empty value indicates that all data is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,12 +33,18 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>87F3B755-3BD2-4C76-B36A-93247002918C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of quota alerts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -84,27 +97,40 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
     public static class ListQuotaAlarmsResponseBodyQuotaAlarms extends TeaModel {
         /**
          * <p>The ID of the alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2efa7fc-832f-47bb-8054-39e28012****</p>
          */
         @NameInMap("AlarmId")
         public String alarmId;
 
         /**
          * <p>The name of the alert event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rules</p>
          */
         @NameInMap("AlarmName")
         public String alarmName;
 
         /**
          * <p>The time when the quota alert was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-27T07:23:34Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>Indicates whether the alert threshold was reached. Valid values:</p>
-         * <br>
-         * <p>*   false</p>
-         * <p>*   true</p>
+         * <ul>
+         * <li>false</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ExceedThreshold")
         public Boolean exceedThreshold;
@@ -117,63 +143,94 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
 
         /**
          * <p>The alert contact. The value is accountContact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accountContact</p>
          */
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>config</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The ID of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_hvnoqv</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
         /**
          * <p>The quota dimensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
          */
         @NameInMap("QuotaDimensions")
         public java.util.Map<String, ?> quotaDimensions;
 
         /**
          * <p>The used quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>73</p>
          */
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
 
         /**
          * <p>The value of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("QuotaValue")
         public Float quotaValue;
 
         /**
          * <p>The numeric value of the alert threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>160</p>
          */
         @NameInMap("Threshold")
         public Float threshold;
 
         /**
          * <p>The percentage of the alert threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ThresholdPercent")
         public Float thresholdPercent;
 
         /**
          * <p>The type of the quota alert. Valid values:</p>
-         * <br>
-         * <p>*   used: The alert is created for the used quota.</p>
-         * <p>*   usable: The alert is created for the available quota.</p>
+         * <ul>
+         * <li>used: The alert is created for the used quota.</li>
+         * <li>usable: The alert is created for the available quota.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>used</p>
          */
         @NameInMap("ThresholdType")
         public String thresholdType;
 
         /**
          * <p>The webhook URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.aliyun.com/webhook">https://www.aliyun.com/webhook</a></p>
          */
         @NameInMap("WebHook")
         public String webHook;

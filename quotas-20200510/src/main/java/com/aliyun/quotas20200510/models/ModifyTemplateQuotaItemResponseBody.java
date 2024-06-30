@@ -4,9 +4,17 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ModifyTemplateQuotaItemResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1****</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

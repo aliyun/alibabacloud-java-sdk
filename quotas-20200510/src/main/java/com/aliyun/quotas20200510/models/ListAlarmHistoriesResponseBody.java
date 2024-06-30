@@ -12,24 +12,36 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CB38DDF9-B1E0-48C1-9966-19C443C2841E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of records that are returned for the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     public static class ListAlarmHistoriesResponseBodyAlarmHistories extends TeaModel {
         /**
          * <p>The name of the quota alert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>security_groups</p>
          */
         @NameInMap("AlarmName")
         public String alarmName;
 
         /**
          * <p>The time when the quota alert rule was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-24T09:20:09Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -100,36 +118,54 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
 
         /**
          * <p>The quota alert contact.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accountContact</p>
          */
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
         /**
          * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
          * <p>The quota ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>q_security-groups</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
         /**
          * <p>The used quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
 
         /**
          * <p>The threshold to trigger quota alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("Threshold")
         public Float threshold;
 
         /**
          * <p>The percentage of the quota alert threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("ThresholdPercent")
         public Float thresholdPercent;
