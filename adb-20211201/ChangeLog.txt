@@ -1,3 +1,191 @@
+2024-07-01 Version: 2.0.0
+- Support API AttachUserENI.
+- Support API BindDBResourceGroupWithUser.
+- Support API CheckSampleDataSet.
+- Support API CreatePerformanceView.
+- Support API DeletePerformanceView.
+- Support API DescribeAllDataSource.
+- Support API DescribeClusterResourceDetail.
+- Support API DescribeClusterResourceUsage.
+- Support API DescribeColumns.
+- Support API DescribeComputeResourceUsage.
+- Support API DescribeDBClusterSpaceSummary.
+- Support API DescribeDBClusterStatus.
+- Support API DescribeExcessivePrimaryKeys.
+- Support API DescribeJobResourceUsage.
+- Support API DescribePerformanceViewAttribute.
+- Support API DescribePerformanceViews.
+- Support API DescribeSchemas.
+- Support API DescribeStorageResourceUsage.
+- Support API DescribeTables.
+- Support API DescribeUserQuota.
+- Support API DetachUserENI.
+- Support API ExistRunningSQLEngine.
+- Support API GetSparkDefinitions.
+- Support API LoadSampleDataSet.
+- Support API ModifyPerformanceView.
+- Support API RenameSparkTemplateFile.
+- Support API UnbindDBResourceGroupWithUser.
+- Delete API DescribeAuditLogConfig.
+- Delete API DescribeDBClusterForecast.
+- Delete API DescribeSQLPatternAttribute.
+- Delete API GetLakehouseValidResourceGroups.
+- Update API AllocateClusterPublicConnection: add param Engine.
+- Update API CreateAccount: add param Engine.
+- Update API CreateDBCluster: add param BackupSetId.
+- Update API CreateDBCluster: add param DiskEncryption.
+- Update API CreateDBCluster: add param KmsId.
+- Update API CreateDBCluster: add param ProductForm.
+- Update API CreateDBCluster: add param ReservedNodeCount.
+- Update API CreateDBCluster: add param ReservedNodeSize.
+- Update API CreateDBCluster: add param ResourceGroupId.
+- Update API CreateDBCluster: add param RestoreToTime.
+- Update API CreateDBCluster: add param RestoreType.
+- Update API CreateDBCluster: add param SourceDbClusterId.
+- Update API CreateDBCluster: add param Tag.
+- Update API CreateDBCluster: update param ComputeResource.
+- Update API CreateDBCluster: update param StorageResource.
+- Update API CreateDBResourceGroup: add param ClusterMode.
+- Update API CreateDBResourceGroup: add param ClusterSizeResource.
+- Update API CreateDBResourceGroup: add param EnableSpot.
+- Update API CreateDBResourceGroup: add param MaxClusterCount.
+- Update API CreateDBResourceGroup: add param MinClusterCount.
+- Update API CreateDBResourceGroup: add param RegionId.
+- Update API CreateDBResourceGroup: add param Rules.
+- Update API CreateDBResourceGroup: update param MinComputeResource.
+- Update API CreateElasticPlan: update response param.
+- Update API CreateOssSubDirectory: update param DBClusterId.
+- Update API DeleteAccount: add param Engine.
+- Update API DeleteDBCluster: update response param.
+- Update API DeleteElasticPlan: update response param.
+- Update API DescribeAccountPrivilegeObjects: update param PrivilegeType.
+- Update API DescribeAccountPrivileges: update param PrivilegeType.
+- Update API DescribeAccounts: add param Engine.
+- Update API DescribeAccounts: update response param.
+- Update API DescribeAdbMySqlColumns: update param Schema.
+- Update API DescribeAdbMySqlColumns: update param TableName.
+- Update API DescribeAdbMySqlColumns: update response param.
+- Update API DescribeAdbMySqlTables: update param Schema.
+- Update API DescribeApsActionLogs: delete param Action.
+- Update API DescribeApsActionLogs: delete param ProxyUser.
+- Update API DescribeApsActionLogs: update response param.
+- Update API DescribeApsResourceGroups: add param RegionId.
+- Update API DescribeApsResourceGroups: add param WorkloadId.
+- Update API DescribeApsResourceGroups: update response param.
+- Update API DescribeAuditLogRecords: update param Action.
+- Update API DescribeAuditLogRecords: update param EndTime.
+- Update API DescribeAuditLogRecords: update param StartTime.
+- Update API DescribeClusterNetInfo: add param Engine.
+- Update API DescribeClusterNetInfo: update response param.
+- Update API DescribeDBClusterAttribute: update response param.
+- Update API DescribeDBClusterHealthStatus: update response param.
+- Update API DescribeDBClusterPerformance: update param EndTime.
+- Update API DescribeDBClusterPerformance: update param Key.
+- Update API DescribeDBClusterPerformance: update param StartTime.
+- Update API DescribeDBClusters: add param DBClusterVersion.
+- Update API DescribeDBClusters: add param ProductVersion.
+- Update API DescribeDBClusters: add param Tag.
+- Update API DescribeDBClusters: update response param.
+- Update API DescribeDBResourceGroup: add param RegionId.
+- Update API DescribeDBResourceGroup: update response param.
+- Update API DescribeDiagnosisDimensions: update param EndTime.
+- Update API DescribeDiagnosisDimensions: update param QueryCondition.
+- Update API DescribeDiagnosisDimensions: update param StartTime.
+- Update API DescribeDiagnosisRecords: update param EndTime.
+- Update API DescribeDiagnosisRecords: update param QueryCondition.
+- Update API DescribeDiagnosisRecords: update param StartTime.
+- Update API DescribeDiagnosisRecords: update response param.
+- Update API DescribeDiagnosisSQLInfo: update param Lang.
+- Update API DescribeDiagnosisSQLInfo: update param ProcessId.
+- Update API DescribeDiagnosisSQLInfo: update param ProcessStartTime.
+- Update API DescribeDiagnosisSQLInfo: update param ProcessState.
+- Update API DescribeDiagnosisSQLInfo: update response param.
+- Update API DescribeDownloadRecords: update response param.
+- Update API DescribeElasticPlanAttribute: update response param.
+- Update API DescribeElasticPlanJobs: update response param.
+- Update API DescribeElasticPlanSpecifications: update response param.
+- Update API DescribeElasticPlans: add param Type.
+- Update API DescribeElasticPlans: update response param.
+- Update API DescribeEnabledPrivileges: add param AccountName.
+- Update API DescribePatternPerformance: delete param Key.
+- Update API DescribePatternPerformance: update param EndTime.
+- Update API DescribePatternPerformance: update param PatternId.
+- Update API DescribePatternPerformance: update param StartTime.
+- Update API DescribeSQLPatterns: update param EndTime.
+- Update API DescribeSQLPatterns: update param Order.
+- Update API DescribeSQLPatterns: update param StartTime.
+- Update API DescribeSQLPatterns: update response param.
+- Update API DescribeSqlPattern: update param StartTime.
+- Update API DescribeTableAccessCount: update param StartTime.
+- Update API DisableElasticPlan: update response param.
+- Update API DownloadDiagnosisRecords: update param EndTime.
+- Update API DownloadDiagnosisRecords: update param QueryCondition.
+- Update API DownloadDiagnosisRecords: update param StartTime.
+- Update API EnableElasticPlan: update response param.
+- Update API GetDatabaseObjects: update param DBClusterId.
+- Update API GetDatabaseObjects: update param PageNumber.
+- Update API GetDatabaseObjects: update param PageSize.
+- Update API GetSparkAppAttemptLog: add param PageNumber.
+- Update API GetSparkAppAttemptLog: add param PageSize.
+- Update API GetSparkAppAttemptLog: update response param.
+- Update API GetSparkAppInfo: add param DBClusterId.
+- Update API GetSparkAppLog: add param DBClusterId.
+- Update API GetSparkAppLog: add param PageNumber.
+- Update API GetSparkAppLog: add param PageSize.
+- Update API GetSparkAppLog: update response param.
+- Update API GetSparkAppMetrics: add param DBClusterId.
+- Update API GetSparkAppState: add param DBClusterId.
+- Update API GetSparkAppState: update response param.
+- Update API GetSparkAppWebUiAddress: add param DBClusterId.
+- Update API GetSparkAppWebUiAddress: update response param.
+- Update API GetSparkLogAnalyzeTask: update response param.
+- Update API GetTable: update param DbName.
+- Update API GetTable: update param TableName.
+- Update API GetTableColumns: update param PageNumber.
+- Update API GetTableColumns: update param PageSize.
+- Update API GetTableColumns: update param SchemaName.
+- Update API GetTableColumns: update param TableName.
+- Update API GetTableDDL: update param SchemaName.
+- Update API GetTableDDL: update param TableName.
+- Update API GetTableObjects: update param PageNumber.
+- Update API GetTableObjects: update param PageSize.
+- Update API GetTableObjects: update param SchemaName.
+- Update API GetViewDDL: update param SchemaName.
+- Update API GetViewDDL: update param ViewName.
+- Update API GetViewObjects: update param PageNumber.
+- Update API GetViewObjects: update param PageSize.
+- Update API GetViewObjects: update param SchemaName.
+- Update API KillSparkApp: add param DBClusterId.
+- Update API KillSparkApp: update response param.
+- Update API ListSparkAppAttempts: add param DBClusterId.
+- Update API ListSparkAppAttempts: update response param.
+- Update API ListSparkLogAnalyzeTasks: update response param.
+- Update API ModifyAccountDescription: add param Engine.
+- Update API ModifyAccountPrivileges: update param AccountPrivileges.
+- Update API ModifyAuditLogConfig: update param Action.
+- Update API ModifyClusterAccessWhiteList: update response param.
+- Update API ModifyDBCluster: add param EnableDefaultResourcePool.
+- Update API ModifyDBCluster: add param ReservedNodeCount.
+- Update API ModifyDBCluster: add param ReservedNodeSize.
+- Update API ModifyDBCluster: update param ComputeResource.
+- Update API ModifyDBCluster: update param StorageResource.
+- Update API ModifyDBResourceGroup: add param ClusterMode.
+- Update API ModifyDBResourceGroup: add param ClusterSizeResource.
+- Update API ModifyDBResourceGroup: add param EnableSpot.
+- Update API ModifyDBResourceGroup: add param MaxClusterCount.
+- Update API ModifyDBResourceGroup: add param MinClusterCount.
+- Update API ModifyDBResourceGroup: add param RegionId.
+- Update API ModifyDBResourceGroup: add param Rules.
+- Update API ModifyDBResourceGroup: update param MinComputeResource.
+- Update API ModifyElasticPlan: update response param.
+- Update API PreloadSparkAppMetrics: add param DBClusterId.
+- Update API ReleaseClusterPublicConnection: add param Engine.
+- Update API ResetAccountPassword: add param Engine.
+- Update API SubmitSparkApp: update param AppName.
+- Update API SubmitSparkApp: update param AppType.
+- Update API SubmitSparkApp: update response param.
+
+
 2023-03-24 Version: 1.0.16
 - Supported privilege management for Lakehouse Edition.
 - Make api public.

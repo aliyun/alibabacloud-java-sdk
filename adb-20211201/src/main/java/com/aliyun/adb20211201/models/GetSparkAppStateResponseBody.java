@@ -4,9 +4,18 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetSparkAppStateResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetSparkAppStateResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +41,61 @@ public class GetSparkAppStateResponseBody extends TeaModel {
     }
 
     public static class GetSparkAppStateResponseBodyData extends TeaModel {
+        /**
+         * <p>The Spark application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202204191546hzpread6a896000****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-clusterxxx</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The alert message returned for the operation, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Insufficient resources.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The execution state of the application. Valid values:</p>
+         * <ul>
+         * <li><strong>SUBMITTED</strong></li>
+         * <li><strong>STARTING</strong></li>
+         * <li><strong>RUNNING</strong></li>
+         * <li><strong>FAILING</strong></li>
+         * <li><strong>FAILED</strong></li>
+         * <li><strong>KILLING</strong></li>
+         * <li><strong>KILLED</strong></li>
+         * <li><strong>SUCCEEDING</strong></li>
+         * <li><strong>COMPLETED</strong></li>
+         * <li><strong>FATAL</strong></li>
+         * <li><strong>UNKNOWN</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
+         */
         @NameInMap("State")
         public String state;
 

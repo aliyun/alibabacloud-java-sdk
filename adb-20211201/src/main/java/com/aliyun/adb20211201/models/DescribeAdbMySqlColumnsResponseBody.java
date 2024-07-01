@@ -4,24 +4,71 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
+    /**
+     * <p>The total number of columns.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ColumnCount")
     public Integer columnCount;
 
+    /**
+     * <p>Details of the columns.</p>
+     */
     @NameInMap("Columns")
     public java.util.List<DescribeAdbMySqlColumnsResponseBodyColumns> columns;
 
+    /**
+     * <p>The message returned for the operation. Valid values:</p>
+     * <ul>
+     * <li><strong>Success</strong> is returned if the operation is successful.</li>
+     * <li>An error message is returned if the operation fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A9F013CD-0222-595E-8157-445969B97F03</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>adb_demo</p>
+     */
     @NameInMap("Schema")
     public String schema;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The operation is successful.</li>
+     * <li><strong>false</strong>: The operation fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The name of the table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 
@@ -87,12 +134,30 @@ public class DescribeAdbMySqlColumnsResponseBody extends TeaModel {
     }
 
     public static class DescribeAdbMySqlColumnsResponseBodyColumns extends TeaModel {
+        /**
+         * <p>The comments of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The data type of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bigint</p>
+         */
         @NameInMap("Type")
         public String type;
 

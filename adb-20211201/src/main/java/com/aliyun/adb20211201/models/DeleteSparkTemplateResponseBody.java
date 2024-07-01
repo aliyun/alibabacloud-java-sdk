@@ -4,9 +4,18 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DeleteSparkTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public DeleteSparkTemplateResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +41,16 @@ public class DeleteSparkTemplateResponseBody extends TeaModel {
     }
 
     public static class DeleteSparkTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("Succeeded")
         public Boolean succeeded;
 

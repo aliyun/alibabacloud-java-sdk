@@ -4,9 +4,23 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetTableDDLResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>863D51B7-5321-41D8-A0B6-A088B0******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The SQL statement.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>create table (
+     *  id varchar(32)
+     * );</p>
+     */
     @NameInMap("SQL")
     public String SQL;
 

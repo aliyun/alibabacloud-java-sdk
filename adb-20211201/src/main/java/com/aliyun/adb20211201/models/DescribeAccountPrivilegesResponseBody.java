@@ -4,18 +4,45 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountPrivilegesResponseBody extends TeaModel {
+    /**
+     * <p>Details of the permissions.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeAccountPrivilegesResponseBodyData> data;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DA32480A-E3E5-1BE7-BA98-724551DC04C8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,15 +92,39 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountPrivilegesResponseBodyDataPrivilegeObject extends TeaModel {
+        /**
+         * <p>The name of the column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>column1</p>
+         */
         @NameInMap("Column")
         public String column;
 
+        /**
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db1</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The description of the permission object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a test column</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tabl1</p>
+         */
         @NameInMap("Table")
         public String table;
 
@@ -117,12 +168,24 @@ public class DescribeAccountPrivilegesResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountPrivilegesResponseBodyData extends TeaModel {
+        /**
+         * <p>The objects on which the permission takes effect, including databases, tables, columns, and additional descriptions.</p>
+         */
         @NameInMap("PrivilegeObject")
         public DescribeAccountPrivilegesResponseBodyDataPrivilegeObject privilegeObject;
 
+        /**
+         * <p>The permission level of the permission. Valid values: <code>Global</code>, <code>Database</code>, <code>Table</code>, and <code>Column</code>. You can call the <code>DescribeEnabledPrivileges</code> parameter to query the permission level of a specific permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Column</p>
+         */
         @NameInMap("PrivilegeType")
         public String privilegeType;
 
+        /**
+         * <p>The name of the permission. You can call the <code>DescribeEnabledPrivileges</code> operation to query the name of the permission.</p>
+         */
         @NameInMap("Privileges")
         public java.util.List<String> privileges;
 

@@ -4,12 +4,33 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class BindAccountRequest extends TeaModel {
+    /**
+     * <p>The standard account of the cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_accout</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amv-wz99d9nh532****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the RAM user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1444832459****</p>
+     */
     @NameInMap("RamUser")
     public String ramUser;
 

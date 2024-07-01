@@ -4,42 +4,94 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class Statement extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1111111</p>
+     */
     @NameInMap("AliyunUid")
     public Long aliyunUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SELECT * FROM table</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Waiting</p>
+     */
     @NameInMap("CodeState")
     public String codeState;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SQL</p>
+     */
     @NameInMap("CodeType")
     public String codeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1658987911000</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Disk is full</p>
+     */
     @NameInMap("Error")
     public String error;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("HaveRows")
     public Boolean haveRows;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Spark is running, the ouput is...</p>
+     */
     @NameInMap("Output")
     public String output;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg1</p>
+     */
     @NameInMap("ResourceGroup")
     public String resourceGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("SessionId")
     public Long sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1658977911000</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("StatementId")
     public Long statementId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

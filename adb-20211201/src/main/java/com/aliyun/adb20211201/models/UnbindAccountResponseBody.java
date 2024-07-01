@@ -4,6 +4,12 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class UnbindAccountResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93E85E5C-C805-5837-8713-05B69A504EE5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

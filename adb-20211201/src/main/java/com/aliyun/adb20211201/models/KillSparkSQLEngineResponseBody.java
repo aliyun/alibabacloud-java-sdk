@@ -4,9 +4,21 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class KillSparkSQLEngineResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,11 +4,17 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetSparkConfigLogPathResponseBody extends TeaModel {
+    /**
+     * <p>The queried Spark log configuration.</p>
+     */
     @NameInMap("Data")
     public GetSparkConfigLogPathResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1919-xxx-ssdfsdff</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,18 +41,48 @@ public class GetSparkConfigLogPathResponseBody extends TeaModel {
     }
 
     public static class GetSparkConfigLogPathResponseBodyData extends TeaModel {
+        /**
+         * <p>The default log path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://aliyun-oa-adb-spark-1111-oss-cn-hanghzou/spark-logs</p>
+         */
         @NameInMap("DefaultLogPath")
         public String defaultLogPath;
 
+        /**
+         * <p>Indicates whether a log path exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsLogPathExists")
         public Boolean isLogPathExists;
 
+        /**
+         * <p>The last modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1675654361000</p>
+         */
         @NameInMap("ModifiedTimestamp")
         public String modifiedTimestamp;
 
+        /**
+         * <p>The account ID of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10130223128xxx</p>
+         */
         @NameInMap("ModifiedUid")
         public String modifiedUid;
 
+        /**
+         * <p>The recorded log path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test/spark-logs/</p>
+         */
         @NameInMap("RecordedLogPath")
         public String recordedLogPath;
 

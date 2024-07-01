@@ -4,15 +4,53 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>The number of days for which to retain full backup files. Valid values: 7 to 730.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the default value 7 is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-bp1xxxxxxxx47</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Specifies whether to enable log backup. Valid values:</p>
+     * <ul>
+     * <li><strong>Enable</strong></li>
+     * <li><strong>Disable</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the default value Enable is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Enable</p>
+     */
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
+    /**
+     * <p>The number of days for which to retain log backup files. Valid values: 7 to 730.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the default value 7 is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
+     */
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
 
@@ -22,9 +60,38 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The days of the week on which to perform a full backup. Separate multiple values with commas (,). Valid values:</p>
+     * <ul>
+     * <li><strong>Monday</strong></li>
+     * <li><strong>Tuesday</strong></li>
+     * <li><strong>Wednesday</strong></li>
+     * <li><strong>Thursday</strong></li>
+     * <li><strong>Friday</strong></li>
+     * <li><strong>Saturday</strong></li>
+     * <li><strong>Sunday</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> To ensure data security, we recommend that you specify at least two values.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Monday,Wednesday,Friday,Sunday</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <p>The start time to perform a full backup. Specify the time in the HH:mmZ-HH:mmZ format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> The time range must be 1 hour.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18:00Z-19:00Z</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 

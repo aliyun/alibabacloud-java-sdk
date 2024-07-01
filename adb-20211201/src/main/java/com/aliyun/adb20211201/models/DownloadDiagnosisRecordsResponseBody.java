@@ -4,9 +4,21 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The download ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25494</p>
+     */
     @NameInMap("DownloadId")
     public Integer downloadId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>845774AC-5D43-53A2-AAB8-C73828E68508</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

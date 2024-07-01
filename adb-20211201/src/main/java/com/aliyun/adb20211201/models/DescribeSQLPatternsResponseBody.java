@@ -4,24 +4,62 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLPatternsResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The queried SQL pattern.</p>
+     */
     @NameInMap("PatternDetails")
     public java.util.List<DescribeSQLPatternsResponseBodyPatternDetails> patternDetails;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F3174013-5B7A-5A47-9FE0-6B5D397BD86B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     public static DescribeSQLPatternsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLPatternsResponseBody self = new DescribeSQLPatternsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSQLPatternsResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DescribeSQLPatternsResponseBody setPageNumber(Integer pageNumber) {
@@ -65,54 +103,163 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLPatternsResponseBodyPatternDetails extends TeaModel {
+        /**
+         * <p>The IP address of the SQL client that commits the SQL pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.xx.xx</p>
+         */
         @NameInMap("AccessIp")
         public String accessIp;
 
+        /**
+         * <p>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234.78</p>
+         */
         @NameInMap("AverageExecutionTime")
         public Double averageExecutionTime;
 
+        /**
+         * <p>The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234.22</p>
+         */
         @NameInMap("AveragePeakMemory")
         public Double averagePeakMemory;
 
+        /**
+         * <p>The average total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("AverageQueryTime")
         public Double averageQueryTime;
 
+        /**
+         * <p>The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234149.23</p>
+         */
         @NameInMap("AverageScanSize")
         public Double averageScanSize;
 
+        /**
+         * <p>Indicates whether the execution of the SQL pattern can be intercepted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * <blockquote>
+         * <p> Only SELECT and INSERT statements can be intercepted.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Blockable")
         public Boolean blockable;
 
+        /**
+         * <p>The number of failed queries executed in association with the SQL pattern within the query time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2142</p>
+         */
         @NameInMap("MaxExecutionTime")
         public Long maxExecutionTime;
 
+        /**
+         * <p>The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234149</p>
+         */
         @NameInMap("MaxPeakMemory")
         public Long maxPeakMemory;
 
+        /**
+         * <p>The maximum total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2341</p>
+         */
         @NameInMap("MaxQueryTime")
         public Long maxQueryTime;
 
+        /**
+         * <p>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32212254</p>
+         */
         @NameInMap("MaxScanSize")
         public Long maxScanSize;
 
+        /**
+         * <p>The earliest commit time of the SQL pattern within the query time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-06 05:06:00</p>
+         */
         @NameInMap("PatternCreationTime")
         public String patternCreationTime;
 
+        /**
+         * <p>The ID of the SQL pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5575924945138******</p>
+         */
         @NameInMap("PatternId")
         public String patternId;
 
+        /**
+         * <p>The number of queries executed in association with the SQL pattern within the query time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>345</p>
+         */
         @NameInMap("QueryCount")
         public Long queryCount;
 
+        /**
+         * <p>The statement of the SQL pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM KEPLER_META_NODE_STATIC_INFO WHERE elastic_node = ? OR (elastic_node = ? AND enable = ?)</p>
+         */
         @NameInMap("SQLPattern")
         public String SQLPattern;
 
+        /**
+         * <p>The tables scanned based on the SQL pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpch.orders</p>
+         */
         @NameInMap("Tables")
         public String tables;
 
+        /**
+         * <p>The name of the database account that is used to commit the SQL pattern.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("User")
         public String user;
 

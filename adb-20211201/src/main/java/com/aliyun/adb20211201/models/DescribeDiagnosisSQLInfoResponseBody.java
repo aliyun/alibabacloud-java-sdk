@@ -4,12 +4,24 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
+    /**
+     * <p>The queried execution information, including the SQL statement, statistics, execution plan, and operator information.</p>
+     */
     @NameInMap("DiagnosisSQLInfo")
     public String diagnosisSQLInfo;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried execution information by stage.</p>
+     */
     @NameInMap("StageInfos")
     public java.util.List<DescribeDiagnosisSQLInfoResponseBodyStageInfos> stageInfos;
 
@@ -43,30 +55,84 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisSQLInfoResponseBodyStageInfos extends TeaModel {
+        /**
+         * <p>The total amount of input data in the stage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2341</p>
+         */
         @NameInMap("InputDataSize")
         public Long inputDataSize;
 
+        /**
+         * <p>The total number of input rows in the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2341</p>
+         */
         @NameInMap("InputRows")
         public Long inputRows;
 
+        /**
+         * <p>The total amount of time consumed by all operators in the stage. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2341</p>
+         */
         @NameInMap("OperatorCost")
         public Long operatorCost;
 
+        /**
+         * <p>The total amount of output data in the stage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2341</p>
+         */
         @NameInMap("OutputDataSize")
         public Long outputDataSize;
 
+        /**
+         * <p>The total number of output rows in the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2341</p>
+         */
         @NameInMap("OutputRows")
         public Long outputRows;
 
+        /**
+         * <p>The total peak memory of the stage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2341</p>
+         */
         @NameInMap("PeakMemory")
         public Long peakMemory;
 
+        /**
+         * <p>The execution progress of the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.3</p>
+         */
         @NameInMap("Progress")
         public Double progress;
 
+        /**
+         * <p>The stage ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Stage[26]</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>The state of the stage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("State")
         public String state;
 

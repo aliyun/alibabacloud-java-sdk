@@ -4,9 +4,18 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
+    /**
+     * <p>The queried permission level and permissions.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeEnabledPrivilegesResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>246F42E0-A475-15FF-96D2-8DC47FC2F289</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,18 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
     }
 
     public static class DescribeEnabledPrivilegesResponseBodyDataPrivileges extends TeaModel {
+        /**
+         * <p>The description of the permission.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -62,12 +80,27 @@ public class DescribeEnabledPrivilegesResponseBody extends TeaModel {
     }
 
     public static class DescribeEnabledPrivilegesResponseBodyData extends TeaModel {
+        /**
+         * <p>The description of the permission level.</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The queried permissions.</p>
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Privileges")
         public java.util.List<DescribeEnabledPrivilegesResponseBodyDataPrivileges> privileges;
 
+        /**
+         * <p>The permission level.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Global</p>
+         */
         @NameInMap("Scope")
         public String scope;
 

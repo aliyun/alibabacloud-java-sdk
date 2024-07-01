@@ -4,9 +4,18 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetSparkTemplateFileContentResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetSparkTemplateFileContentResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +41,57 @@ public class GetSparkTemplateFileContentResponseBody extends TeaModel {
     }
 
     public static class GetSparkTemplateFileContentResponseBodyData extends TeaModel {
+        /**
+         * <p>The application type. Valid values:</p>
+         * <ul>
+         * <li><strong>SQL</strong></li>
+         * <li><strong>STREAMING</strong></li>
+         * <li><strong>BATCH</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <p>The content of the application template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set spark.driver.resourceSpec=medium;set spark.executor.instances=2;set spark.executor.resourceSpec=medium;set spark.app.name=Spark SQL Test;</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The application template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>725204</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
+        /**
+         * <p>The file type. Valid values:</p>
+         * <ul>
+         * <li><strong>folder</strong></li>
+         * <li><strong>file</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
+         */
         @NameInMap("Type")
         public String type;
 

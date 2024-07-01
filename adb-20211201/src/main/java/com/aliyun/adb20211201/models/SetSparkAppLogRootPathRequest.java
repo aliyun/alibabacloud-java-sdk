@@ -4,12 +4,31 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class SetSparkAppLogRootPathRequest extends TeaModel {
+    /**
+     * <p>The database ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>am-dbclusterid</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The Object Storage Service (OSS) log path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://path/to/log</p>
+     */
     @NameInMap("OssLogPath")
     public String ossLogPath;
 
+    /**
+     * <p>Specifies whether to use the default OSS log path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("UseDefaultOss")
     public Boolean useDefaultOss;
 

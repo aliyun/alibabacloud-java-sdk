@@ -4,9 +4,26 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amv-bp11q28kvl688****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612410.html">DescribeDBResourceGroup</a> operation to query the information about resource groups of an AnalyticDB for MySQL cluster, including resource group names.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_group</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
