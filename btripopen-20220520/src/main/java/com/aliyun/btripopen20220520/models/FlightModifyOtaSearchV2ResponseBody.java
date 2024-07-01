@@ -98,6 +98,445 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo extends TeaModel {
+        @NameInMap("cabin_class")
+        public String cabinClass;
+
+        @NameInMap("class_name")
+        public String className;
+
+        @NameInMap("inner_cabin_class")
+        public Integer innerCabinClass;
+
+        @NameInMap("quantity")
+        public String quantity;
+
+        public static FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo build(java.util.Map<String, ?> map) throws Exception {
+            FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo self = new FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo setCabinClass(String cabinClass) {
+            this.cabinClass = cabinClass;
+            return this;
+        }
+        public String getCabinClass() {
+            return this.cabinClass;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo setClassName(String className) {
+            this.className = className;
+            return this;
+        }
+        public String getClassName() {
+            return this.className;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo setInnerCabinClass(Integer innerCabinClass) {
+            this.innerCabinClass = innerCabinClass;
+            return this;
+        }
+        public Integer getInnerCabinClass() {
+            return this.innerCabinClass;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo setQuantity(String quantity) {
+            this.quantity = quantity;
+            return this;
+        }
+        public String getQuantity() {
+            return this.quantity;
+        }
+
+    }
+
+    public static class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO extends TeaModel {
+        @NameInMap("re_shop_adult_change_fee")
+        public Integer reShopAdultChangeFee;
+
+        @NameInMap("re_shop_adult_price")
+        public Integer reShopAdultPrice;
+
+        @NameInMap("re_shop_adult_price_gap")
+        public Integer reShopAdultPriceGap;
+
+        @NameInMap("re_shop_child_change_fee")
+        public Integer reShopChildChangeFee;
+
+        @NameInMap("re_shop_child_price")
+        public Integer reShopChildPrice;
+
+        @NameInMap("re_shop_child_price_gap")
+        public Integer reShopChildPriceGap;
+
+        @NameInMap("re_shop_inf_change_fee")
+        public Integer reShopInfChangeFee;
+
+        @NameInMap("re_shop_inf_price")
+        public Integer reShopInfPrice;
+
+        @NameInMap("re_shop_inf_price_gap")
+        public Integer reShopInfPriceGap;
+
+        public static FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO build(java.util.Map<String, ?> map) throws Exception {
+            FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO self = new FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO setReShopAdultChangeFee(Integer reShopAdultChangeFee) {
+            this.reShopAdultChangeFee = reShopAdultChangeFee;
+            return this;
+        }
+        public Integer getReShopAdultChangeFee() {
+            return this.reShopAdultChangeFee;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO setReShopAdultPrice(Integer reShopAdultPrice) {
+            this.reShopAdultPrice = reShopAdultPrice;
+            return this;
+        }
+        public Integer getReShopAdultPrice() {
+            return this.reShopAdultPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO setReShopAdultPriceGap(Integer reShopAdultPriceGap) {
+            this.reShopAdultPriceGap = reShopAdultPriceGap;
+            return this;
+        }
+        public Integer getReShopAdultPriceGap() {
+            return this.reShopAdultPriceGap;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO setReShopChildChangeFee(Integer reShopChildChangeFee) {
+            this.reShopChildChangeFee = reShopChildChangeFee;
+            return this;
+        }
+        public Integer getReShopChildChangeFee() {
+            return this.reShopChildChangeFee;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO setReShopChildPrice(Integer reShopChildPrice) {
+            this.reShopChildPrice = reShopChildPrice;
+            return this;
+        }
+        public Integer getReShopChildPrice() {
+            return this.reShopChildPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO setReShopChildPriceGap(Integer reShopChildPriceGap) {
+            this.reShopChildPriceGap = reShopChildPriceGap;
+            return this;
+        }
+        public Integer getReShopChildPriceGap() {
+            return this.reShopChildPriceGap;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO setReShopInfChangeFee(Integer reShopInfChangeFee) {
+            this.reShopInfChangeFee = reShopInfChangeFee;
+            return this;
+        }
+        public Integer getReShopInfChangeFee() {
+            return this.reShopInfChangeFee;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO setReShopInfPrice(Integer reShopInfPrice) {
+            this.reShopInfPrice = reShopInfPrice;
+            return this;
+        }
+        public Integer getReShopInfPrice() {
+            return this.reShopInfPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO setReShopInfPriceGap(Integer reShopInfPriceGap) {
+            this.reShopInfPriceGap = reShopInfPriceGap;
+            return this;
+        }
+        public Integer getReShopInfPriceGap() {
+            return this.reShopInfPriceGap;
+        }
+
+    }
+
+    public static class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO extends TeaModel {
+        @NameInMap("adult_price")
+        public Integer adultPrice;
+
+        @NameInMap("adult_tax")
+        public Integer adultTax;
+
+        @NameInMap("adult_total_price")
+        public Integer adultTotalPrice;
+
+        @NameInMap("before_control_price")
+        public Integer beforeControlPrice;
+
+        @NameInMap("child_price")
+        public Integer childPrice;
+
+        @NameInMap("child_tax")
+        public Integer childTax;
+
+        @NameInMap("child_total_price")
+        public Integer childTotalPrice;
+
+        @NameInMap("infant_price")
+        public Integer infantPrice;
+
+        @NameInMap("infant_tax")
+        public Integer infantTax;
+
+        @NameInMap("infant_total_price")
+        public Integer infantTotalPrice;
+
+        @NameInMap("original_adult_price")
+        public Integer originalAdultPrice;
+
+        @NameInMap("original_adult_total_price")
+        public Integer originalAdultTotalPrice;
+
+        @NameInMap("re_shop_price_info_d_t_o")
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO reShopPriceInfoDTO;
+
+        public static FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO build(java.util.Map<String, ?> map) throws Exception {
+            FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO self = new FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setAdultPrice(Integer adultPrice) {
+            this.adultPrice = adultPrice;
+            return this;
+        }
+        public Integer getAdultPrice() {
+            return this.adultPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setAdultTax(Integer adultTax) {
+            this.adultTax = adultTax;
+            return this;
+        }
+        public Integer getAdultTax() {
+            return this.adultTax;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setAdultTotalPrice(Integer adultTotalPrice) {
+            this.adultTotalPrice = adultTotalPrice;
+            return this;
+        }
+        public Integer getAdultTotalPrice() {
+            return this.adultTotalPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setBeforeControlPrice(Integer beforeControlPrice) {
+            this.beforeControlPrice = beforeControlPrice;
+            return this;
+        }
+        public Integer getBeforeControlPrice() {
+            return this.beforeControlPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setChildPrice(Integer childPrice) {
+            this.childPrice = childPrice;
+            return this;
+        }
+        public Integer getChildPrice() {
+            return this.childPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setChildTax(Integer childTax) {
+            this.childTax = childTax;
+            return this;
+        }
+        public Integer getChildTax() {
+            return this.childTax;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setChildTotalPrice(Integer childTotalPrice) {
+            this.childTotalPrice = childTotalPrice;
+            return this;
+        }
+        public Integer getChildTotalPrice() {
+            return this.childTotalPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setInfantPrice(Integer infantPrice) {
+            this.infantPrice = infantPrice;
+            return this;
+        }
+        public Integer getInfantPrice() {
+            return this.infantPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setInfantTax(Integer infantTax) {
+            this.infantTax = infantTax;
+            return this;
+        }
+        public Integer getInfantTax() {
+            return this.infantTax;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setInfantTotalPrice(Integer infantTotalPrice) {
+            this.infantTotalPrice = infantTotalPrice;
+            return this;
+        }
+        public Integer getInfantTotalPrice() {
+            return this.infantTotalPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setOriginalAdultPrice(Integer originalAdultPrice) {
+            this.originalAdultPrice = originalAdultPrice;
+            return this;
+        }
+        public Integer getOriginalAdultPrice() {
+            return this.originalAdultPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setOriginalAdultTotalPrice(Integer originalAdultTotalPrice) {
+            this.originalAdultTotalPrice = originalAdultTotalPrice;
+            return this;
+        }
+        public Integer getOriginalAdultTotalPrice() {
+            return this.originalAdultTotalPrice;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO setReShopPriceInfoDTO(FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO reShopPriceInfoDTO) {
+            this.reShopPriceInfoDTO = reShopPriceInfoDTO;
+            return this;
+        }
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTOReShopPriceInfoDTO getReShopPriceInfoDTO() {
+            return this.reShopPriceInfoDTO;
+        }
+
+    }
+
+    public static class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos extends TeaModel {
+        @NameInMap("attribute_show_info_map")
+        public java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap;
+
+        @NameInMap("best_discount")
+        public Double bestDiscount;
+
+        @NameInMap("cabin_class_info")
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo cabinClassInfo;
+
+        @NameInMap("cabin_code")
+        public Integer cabinCode;
+
+        @NameInMap("cabin_name")
+        public String cabinName;
+
+        @NameInMap("item_id")
+        public String itemId;
+
+        @NameInMap("modify_type_desc")
+        public String modifyTypeDesc;
+
+        @NameInMap("modify_type_name")
+        public String modifyTypeName;
+
+        @NameInMap("price_info_d_t_o")
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO priceInfoDTO;
+
+        @NameInMap("quantity")
+        public Integer quantity;
+
+        @NameInMap("support_child_ticket")
+        public Boolean supportChildTicket;
+
+        public static FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos build(java.util.Map<String, ?> map) throws Exception {
+            FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos self = new FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setAttributeShowInfoMap(java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> attributeShowInfoMap) {
+            this.attributeShowInfoMap = attributeShowInfoMap;
+            return this;
+        }
+        public java.util.Map<String, java.util.List<ModuleAgentInfosAttributeShowInfoMapValue>> getAttributeShowInfoMap() {
+            return this.attributeShowInfoMap;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setBestDiscount(Double bestDiscount) {
+            this.bestDiscount = bestDiscount;
+            return this;
+        }
+        public Double getBestDiscount() {
+            return this.bestDiscount;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setCabinClassInfo(FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo cabinClassInfo) {
+            this.cabinClassInfo = cabinClassInfo;
+            return this;
+        }
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosCabinClassInfo getCabinClassInfo() {
+            return this.cabinClassInfo;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setCabinCode(Integer cabinCode) {
+            this.cabinCode = cabinCode;
+            return this;
+        }
+        public Integer getCabinCode() {
+            return this.cabinCode;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setCabinName(String cabinName) {
+            this.cabinName = cabinName;
+            return this;
+        }
+        public String getCabinName() {
+            return this.cabinName;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setItemId(String itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public String getItemId() {
+            return this.itemId;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setModifyTypeDesc(String modifyTypeDesc) {
+            this.modifyTypeDesc = modifyTypeDesc;
+            return this;
+        }
+        public String getModifyTypeDesc() {
+            return this.modifyTypeDesc;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setModifyTypeName(String modifyTypeName) {
+            this.modifyTypeName = modifyTypeName;
+            return this;
+        }
+        public String getModifyTypeName() {
+            return this.modifyTypeName;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setPriceInfoDTO(FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO priceInfoDTO) {
+            this.priceInfoDTO = priceInfoDTO;
+            return this;
+        }
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfosPriceInfoDTO getPriceInfoDTO() {
+            return this.priceInfoDTO;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setQuantity(Integer quantity) {
+            this.quantity = quantity;
+            return this;
+        }
+        public Integer getQuantity() {
+            return this.quantity;
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos setSupportChildTicket(Boolean supportChildTicket) {
+            this.supportChildTicket = supportChildTicket;
+            return this;
+        }
+        public Boolean getSupportChildTicket() {
+            return this.supportChildTicket;
+        }
+
+    }
+
     public static class FlightModifyOtaSearchV2ResponseBodyModuleAgentInfoCabinClassInfo extends TeaModel {
         @NameInMap("cabin_class")
         public String cabinClass;
@@ -1389,6 +1828,9 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
     }
 
     public static class FlightModifyOtaSearchV2ResponseBodyModule extends TeaModel {
+        @NameInMap("agentInfos")
+        public java.util.List<FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos> agentInfos;
+
         @NameInMap("agent_info")
         public FlightModifyOtaSearchV2ResponseBodyModuleAgentInfo agentInfo;
 
@@ -1415,6 +1857,14 @@ public class FlightModifyOtaSearchV2ResponseBody extends TeaModel {
         public static FlightModifyOtaSearchV2ResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             FlightModifyOtaSearchV2ResponseBodyModule self = new FlightModifyOtaSearchV2ResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public FlightModifyOtaSearchV2ResponseBodyModule setAgentInfos(java.util.List<FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos> agentInfos) {
+            this.agentInfos = agentInfos;
+            return this;
+        }
+        public java.util.List<FlightModifyOtaSearchV2ResponseBodyModuleAgentInfos> getAgentInfos() {
+            return this.agentInfos;
         }
 
         public FlightModifyOtaSearchV2ResponseBodyModule setAgentInfo(FlightModifyOtaSearchV2ResponseBodyModuleAgentInfo agentInfo) {

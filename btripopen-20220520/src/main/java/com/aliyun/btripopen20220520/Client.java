@@ -75,6 +75,230 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建企业部门</p>
+     * 
+     * @param tmpReq AddDepartmentRequest
+     * @param headers AddDepartmentHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddDepartmentResponse
+     */
+    public AddDepartmentResponse addDepartmentWithOptions(AddDepartmentRequest tmpReq, AddDepartmentHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddDepartmentShrinkRequest request = new AddDepartmentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.managerEmployeeIdList)) {
+            request.managerEmployeeIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.managerEmployeeIdList, "manager_employee_id_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deptName)) {
+            body.put("dept_name", request.deptName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerEmployeeIdListShrink)) {
+            body.put("manager_employee_id_list", request.managerEmployeeIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outDeptId)) {
+            body.put("out_dept_id", request.outDeptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outDeptPid)) {
+            body.put("out_dept_pid", request.outDeptPid);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddDepartment"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/department/v2/add"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddDepartmentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建企业部门</p>
+     * 
+     * @param request AddDepartmentRequest
+     * @return AddDepartmentResponse
+     */
+    public AddDepartmentResponse addDepartment(AddDepartmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        AddDepartmentHeaders headers = new AddDepartmentHeaders();
+        return this.addDepartmentWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加员工</p>
+     * 
+     * @param tmpReq AddEmployeeRequest
+     * @param headers AddEmployeeHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddEmployeeResponse
+     */
+    public AddEmployeeResponse addEmployeeWithOptions(AddEmployeeRequest tmpReq, AddEmployeeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddEmployeeShrinkRequest request = new AddEmployeeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.baseCityCodeList)) {
+            request.baseCityCodeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.baseCityCodeList, "base_city_code_list", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.certList)) {
+            request.certListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.certList, "cert_list", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customRoleCodeList)) {
+            request.customRoleCodeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customRoleCodeList, "custom_role_code_list", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outDeptIdList)) {
+            request.outDeptIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outDeptIdList, "out_dept_id_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.avatar)) {
+            body.put("avatar", request.avatar);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.baseCityCodeListShrink)) {
+            body.put("base_city_code_list", request.baseCityCodeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.birthday)) {
+            body.put("birthday", request.birthday);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certListShrink)) {
+            body.put("cert_list", request.certListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customRoleCodeListShrink)) {
+            body.put("custom_role_code_list", request.customRoleCodeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            body.put("email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gender)) {
+            body.put("gender", request.gender);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAdmin)) {
+            body.put("is_admin", request.isAdmin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isBoss)) {
+            body.put("is_boss", request.isBoss);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDeptLeader)) {
+            body.put("is_dept_leader", request.isDeptLeader);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobNo)) {
+            body.put("job_no", request.jobNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerUserId)) {
+            body.put("manager_user_id", request.managerUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outDeptIdListShrink)) {
+            body.put("out_dept_id_list", request.outDeptIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.positionLevel)) {
+            body.put("position_level", request.positionLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realName)) {
+            body.put("real_name", request.realName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realNameEn)) {
+            body.put("real_name_en", request.realNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unionId)) {
+            body.put("union_id", request.unionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userNick)) {
+            body.put("user_nick", request.userNick);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddEmployee"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/employee/v2/add"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddEmployeeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加员工</p>
+     * 
+     * @param request AddEmployeeRequest
+     * @return AddEmployeeResponse
+     */
+    public AddEmployeeResponse addEmployee(AddEmployeeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        AddEmployeeHeaders headers = new AddEmployeeHeaders();
+        return this.addEmployeeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>批量新增企业自定义角色下人员</p>
      * 
      * @param tmpReq AddEmployeesToCustomRoleRequest
@@ -2930,6 +3154,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除企业部门</p>
+     * 
+     * @param request DeleteDepartmentRequest
+     * @param headers DeleteDepartmentHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDepartmentResponse
+     */
+    public DeleteDepartmentResponse deleteDepartmentWithOptions(DeleteDepartmentRequest request, DeleteDepartmentHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.outDeptId)) {
+            body.put("out_dept_id", request.outDeptId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDepartment"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/department/v2/delete"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDepartmentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除企业部门</p>
+     * 
+     * @param request DeleteDepartmentRequest
+     * @return DeleteDepartmentResponse
+     */
+    public DeleteDepartmentResponse deleteDepartment(DeleteDepartmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteDepartmentHeaders headers = new DeleteDepartmentHeaders();
+        return this.deleteDepartmentWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>批量删除企业自定义角色下人员</p>
      * 
      * @param tmpReq DeleteEmployeesFromCustomRoleRequest
@@ -3488,6 +3768,224 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ExceedApplySyncHeaders headers = new ExceedApplySyncHeaders();
         return this.exceedApplySyncWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加外部出行人与证件信息</p>
+     * 
+     * @param tmpReq ExternalUserAddRequest
+     * @param headers ExternalUserAddHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExternalUserAddResponse
+     */
+    public ExternalUserAddResponse externalUserAddWithOptions(ExternalUserAddRequest tmpReq, ExternalUserAddHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ExternalUserAddShrinkRequest request = new ExternalUserAddShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.certRequestList)) {
+            request.certRequestListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.certRequestList, "cert_request_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.birthday)) {
+            body.put("birthday", request.birthday);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certRequestListShrink)) {
+            body.put("cert_request_list", request.certRequestListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            body.put("email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalUserId)) {
+            body.put("external_user_id", request.externalUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realName)) {
+            body.put("real_name", request.realName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realNameEn)) {
+            body.put("real_name_en", request.realNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userType)) {
+            body.put("user_type", request.userType);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExternalUserAdd"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/user/v1/externalUsers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExternalUserAddResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加外部出行人与证件信息</p>
+     * 
+     * @param request ExternalUserAddRequest
+     * @return ExternalUserAddResponse
+     */
+    public ExternalUserAddResponse externalUserAdd(ExternalUserAddRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ExternalUserAddHeaders headers = new ExternalUserAddHeaders();
+        return this.externalUserAddWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除外部出行人</p>
+     * 
+     * @param headers ExternalUserDeleteHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExternalUserDeleteResponse
+     */
+    public ExternalUserDeleteResponse externalUserDeleteWithOptions(String externalUserId, ExternalUserDeleteHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExternalUserDelete"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/user/v1/externalUsers/" + com.aliyun.openapiutil.Client.getEncodeParam(externalUserId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExternalUserDeleteResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除外部出行人</p>
+     * @return ExternalUserDeleteResponse
+     */
+    public ExternalUserDeleteResponse externalUserDelete(String externalUserId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ExternalUserDeleteHeaders headers = new ExternalUserDeleteHeaders();
+        return this.externalUserDeleteWithOptions(externalUserId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改外部出行人与证件信息</p>
+     * 
+     * @param tmpReq ExternalUserUpdateRequest
+     * @param headers ExternalUserUpdateHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExternalUserUpdateResponse
+     */
+    public ExternalUserUpdateResponse externalUserUpdateWithOptions(String externalUserId, ExternalUserUpdateRequest tmpReq, ExternalUserUpdateHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ExternalUserUpdateShrinkRequest request = new ExternalUserUpdateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.certRequestList)) {
+            request.certRequestListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.certRequestList, "cert_request_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.birthday)) {
+            body.put("birthday", request.birthday);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certRequestListShrink)) {
+            body.put("cert_request_list", request.certRequestListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            body.put("email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realName)) {
+            body.put("real_name", request.realName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realNameEn)) {
+            body.put("real_name_en", request.realNameEn);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExternalUserUpdate"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/user/v1/externalUsers/" + com.aliyun.openapiutil.Client.getEncodeParam(externalUserId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExternalUserUpdateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改外部出行人与证件信息</p>
+     * 
+     * @param request ExternalUserUpdateRequest
+     * @return ExternalUserUpdateResponse
+     */
+    public ExternalUserUpdateResponse externalUserUpdate(String externalUserId, ExternalUserUpdateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ExternalUserUpdateHeaders headers = new ExternalUserUpdateHeaders();
+        return this.externalUserUpdateWithOptions(externalUserId, request, headers, runtime);
     }
 
     /**
@@ -7756,6 +8254,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         HotelStaticInfoHeaders headers = new HotelStaticInfoHeaders();
         return this.hotelStaticInfoWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店关键词搜索</p>
+     * 
+     * @param request HotelSuggestRequest
+     * @param headers HotelSuggestHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HotelSuggestResponse
+     */
+    public HotelSuggestResponse hotelSuggestWithOptions(HotelSuggestRequest request, HotelSuggestHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            query.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkIn)) {
+            query.put("check_in", request.checkIn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkOut)) {
+            query.put("check_out", request.checkOut);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cityCode)) {
+            query.put("city_code", request.cityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchType)) {
+            query.put("search_type", request.searchType);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripSoCorpToken)) {
+            realHeaders.put("x-acs-btrip-so-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripSoCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HotelSuggest"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-hotel/v1/suggest-infos"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HotelSuggestResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>酒店关键词搜索</p>
+     * 
+     * @param request HotelSuggestRequest
+     * @return HotelSuggestResponse
+     */
+    public HotelSuggestResponse hotelSuggest(HotelSuggestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        HotelSuggestHeaders headers = new HotelSuggestHeaders();
+        return this.hotelSuggestWithOptions(request, headers, runtime);
     }
 
     /**
@@ -13198,6 +13772,286 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         UpdateCustomRoleHeaders headers = new UpdateCustomRoleHeaders();
         return this.updateCustomRoleWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改企业部门</p>
+     * 
+     * @param tmpReq UpdateDepartmentRequest
+     * @param headers UpdateDepartmentHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDepartmentResponse
+     */
+    public UpdateDepartmentResponse updateDepartmentWithOptions(UpdateDepartmentRequest tmpReq, UpdateDepartmentHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateDepartmentShrinkRequest request = new UpdateDepartmentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.managerEmployeeIdList)) {
+            request.managerEmployeeIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.managerEmployeeIdList, "manager_employee_id_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deptName)) {
+            body.put("dept_name", request.deptName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerEmployeeIdListShrink)) {
+            body.put("manager_employee_id_list", request.managerEmployeeIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outDeptId)) {
+            body.put("out_dept_id", request.outDeptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outDeptPid)) {
+            body.put("out_dept_pid", request.outDeptPid);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDepartment"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/department/v2/update"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDepartmentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改企业部门</p>
+     * 
+     * @param request UpdateDepartmentRequest
+     * @return UpdateDepartmentResponse
+     */
+    public UpdateDepartmentResponse updateDepartment(UpdateDepartmentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateDepartmentHeaders headers = new UpdateDepartmentHeaders();
+        return this.updateDepartmentWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新员工信息</p>
+     * 
+     * @param tmpReq UpdateEmployeeRequest
+     * @param headers UpdateEmployeeHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEmployeeResponse
+     */
+    public UpdateEmployeeResponse updateEmployeeWithOptions(UpdateEmployeeRequest tmpReq, UpdateEmployeeHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateEmployeeShrinkRequest request = new UpdateEmployeeShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.baseCityCodeList)) {
+            request.baseCityCodeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.baseCityCodeList, "base_city_code_list", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.certList)) {
+            request.certListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.certList, "cert_list", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customRoleCodeList)) {
+            request.customRoleCodeListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customRoleCodeList, "custom_role_code_list", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.outDeptIdList)) {
+            request.outDeptIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.outDeptIdList, "out_dept_id_list", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.avatar)) {
+            body.put("avatar", request.avatar);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.baseCityCodeListShrink)) {
+            body.put("base_city_code_list", request.baseCityCodeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.birthday)) {
+            body.put("birthday", request.birthday);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certListShrink)) {
+            body.put("cert_list", request.certListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customRoleCodeListShrink)) {
+            body.put("custom_role_code_list", request.customRoleCodeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.email)) {
+            body.put("email", request.email);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gender)) {
+            body.put("gender", request.gender);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isAdmin)) {
+            body.put("is_admin", request.isAdmin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isBoss)) {
+            body.put("is_boss", request.isBoss);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDeptLeader)) {
+            body.put("is_dept_leader", request.isDeptLeader);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobNo)) {
+            body.put("job_no", request.jobNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerUserId)) {
+            body.put("manager_user_id", request.managerUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outDeptIdListShrink)) {
+            body.put("out_dept_id_list", request.outDeptIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phone)) {
+            body.put("phone", request.phone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.positionLevel)) {
+            body.put("position_level", request.positionLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realName)) {
+            body.put("real_name", request.realName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realNameEn)) {
+            body.put("real_name_en", request.realNameEn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userNick)) {
+            body.put("user_nick", request.userNick);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEmployee"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/employee/v2/update"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEmployeeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新员工信息</p>
+     * 
+     * @param request UpdateEmployeeRequest
+     * @return UpdateEmployeeResponse
+     */
+    public UpdateEmployeeResponse updateEmployee(UpdateEmployeeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateEmployeeHeaders headers = new UpdateEmployeeHeaders();
+        return this.updateEmployeeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新员工在职状态</p>
+     * 
+     * @param request UpdateEmployeeLeaveStatusRequest
+     * @param headers UpdateEmployeeLeaveStatusHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEmployeeLeaveStatusResponse
+     */
+    public UpdateEmployeeLeaveStatusResponse updateEmployeeLeaveStatusWithOptions(UpdateEmployeeLeaveStatusRequest request, UpdateEmployeeLeaveStatusHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isLeave)) {
+            body.put("is_leave", request.isLeave);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("user_id", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEmployeeLeaveStatus"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/employee/v2/updateLeaveStatus"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEmployeeLeaveStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新员工在职状态</p>
+     * 
+     * @param request UpdateEmployeeLeaveStatusRequest
+     * @return UpdateEmployeeLeaveStatusResponse
+     */
+    public UpdateEmployeeLeaveStatusResponse updateEmployeeLeaveStatus(UpdateEmployeeLeaveStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateEmployeeLeaveStatusHeaders headers = new UpdateEmployeeLeaveStatusHeaders();
+        return this.updateEmployeeLeaveStatusWithOptions(request, headers, runtime);
     }
 
     /**

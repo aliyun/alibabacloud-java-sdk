@@ -327,6 +327,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("machine_code")
         public String machineCode;
 
+        @NameInMap("ofd_oss_url")
+        public String ofdOssUrl;
+
         /**
          * <strong>example:</strong>
          * <p><a href="https://www.testurl.com">https://www.testurl.com</a></p>
@@ -543,6 +546,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getMachineCode() {
             return this.machineCode;
+        }
+
+        public VatInvoiceScanQueryResponseBodyModuleItems setOfdOssUrl(String ofdOssUrl) {
+            this.ofdOssUrl = ofdOssUrl;
+            return this;
+        }
+        public String getOfdOssUrl() {
+            return this.ofdOssUrl;
         }
 
         public VatInvoiceScanQueryResponseBodyModuleItems setOssUrl(String ossUrl) {

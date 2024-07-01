@@ -568,6 +568,9 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         @NameInMap("status")
         public Integer status;
 
+        @NameInMap("thirdPart_business_id")
+        public String thirdPartBusinessId;
+
         /**
          * <strong>example:</strong>
          * <p>CS-SKPFDS</p>
@@ -849,6 +852,14 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public TrainOrderListQueryResponseBodyModule setThirdPartBusinessId(String thirdPartBusinessId) {
+            this.thirdPartBusinessId = thirdPartBusinessId;
+            return this;
+        }
+        public String getThirdPartBusinessId() {
+            return this.thirdPartBusinessId;
         }
 
         public TrainOrderListQueryResponseBodyModule setThirdPartProjectId(String thirdPartProjectId) {
