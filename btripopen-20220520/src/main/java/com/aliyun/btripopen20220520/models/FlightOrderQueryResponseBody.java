@@ -1398,6 +1398,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
+        @NameInMap("thirdpart_business_id")
+        public String thirdpartBusinessId;
+
         @NameInMap("thirdpart_corp_id")
         public String thirdpartCorpId;
 
@@ -1541,6 +1544,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
         public String getThirdpartApplyId() {
             return this.thirdpartApplyId;
+        }
+
+        public FlightOrderQueryResponseBodyModuleOrderBaseInfo setThirdpartBusinessId(String thirdpartBusinessId) {
+            this.thirdpartBusinessId = thirdpartBusinessId;
+            return this;
+        }
+        public String getThirdpartBusinessId() {
+            return this.thirdpartBusinessId;
         }
 
         public FlightOrderQueryResponseBodyModuleOrderBaseInfo setThirdpartCorpId(String thirdpartCorpId) {

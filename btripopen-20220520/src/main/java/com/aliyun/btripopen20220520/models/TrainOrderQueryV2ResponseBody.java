@@ -553,6 +553,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("order_status")
         public Integer orderStatus;
 
+        @NameInMap("thirdPart_business_id")
+        public String thirdPartBusinessId;
+
         /**
          * <strong>example:</strong>
          * <p>01-2023-01214</p>
@@ -714,6 +717,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public Integer getOrderStatus() {
             return this.orderStatus;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleOrderBaseInfo setThirdPartBusinessId(String thirdPartBusinessId) {
+            this.thirdPartBusinessId = thirdPartBusinessId;
+            return this;
+        }
+        public String getThirdPartBusinessId() {
+            return this.thirdPartBusinessId;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleOrderBaseInfo setThirdpartApplyId(String thirdpartApplyId) {

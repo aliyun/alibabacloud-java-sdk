@@ -92,6 +92,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class HotelBillSettlementQueryResponseBodyModuleDataList extends TeaModel {
+        @NameInMap("agreement_promotion_fee")
+        public Double agreementPromotionFee;
+
         /**
          * <strong>example:</strong>
          * <p>234432432</p>
@@ -472,6 +475,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         public static HotelBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             HotelBillSettlementQueryResponseBodyModuleDataList self = new HotelBillSettlementQueryResponseBodyModuleDataList();
             return TeaModel.build(map, self);
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setAgreementPromotionFee(Double agreementPromotionFee) {
+            this.agreementPromotionFee = agreementPromotionFee;
+            return this;
+        }
+        public Double getAgreementPromotionFee() {
+            return this.agreementPromotionFee;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setAlipayTradeNo(String alipayTradeNo) {

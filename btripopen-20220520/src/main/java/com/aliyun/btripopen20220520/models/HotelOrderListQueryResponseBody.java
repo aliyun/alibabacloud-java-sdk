@@ -518,6 +518,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         @NameInMap("thirdpart_apply_id")
         public String thirdpartApplyId;
 
+        @NameInMap("thirdpart_business_id")
+        public String thirdpartBusinessId;
+
         /**
          * <strong>example:</strong>
          * <p>CS-ITINEARY</p>
@@ -800,6 +803,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         }
         public String getThirdpartApplyId() {
             return this.thirdpartApplyId;
+        }
+
+        public HotelOrderListQueryResponseBodyModule setThirdpartBusinessId(String thirdpartBusinessId) {
+            this.thirdpartBusinessId = thirdpartBusinessId;
+            return this;
+        }
+        public String getThirdpartBusinessId() {
+            return this.thirdpartBusinessId;
         }
 
         public HotelOrderListQueryResponseBodyModule setThirdpartItineraryId(String thirdpartItineraryId) {
