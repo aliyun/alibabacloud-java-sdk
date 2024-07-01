@@ -4,9 +4,15 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class ConfirmTransferInEmailRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public java.util.List<String> domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Email")
     public String email;
 

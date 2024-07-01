@@ -7,9 +7,15 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     @NameInMap("AddTransferLock")
     public Boolean addTransferLock;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactType")
     public String contactType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -19,6 +25,9 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 

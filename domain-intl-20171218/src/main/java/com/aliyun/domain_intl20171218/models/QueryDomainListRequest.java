@@ -4,48 +4,115 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainListRequest extends TeaModel {
+    @NameInMap("Ccompany")
+    public String ccompany;
+
+    /**
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("EndExpirationDate")
     public Long endExpirationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("EndRegistrationDate")
     public Long endRegistrationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("OrderByType")
     public String orderByType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ExpirationDate</p>
+     */
     @NameInMap("OrderKeyType")
     public String orderKeyType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gTLD</p>
+     */
     @NameInMap("ProductDomainType")
     public String productDomainType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("StartExpirationDate")
     public Long startExpirationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1522080000000</p>
+     */
     @NameInMap("StartRegistrationDate")
     public Long startRegistrationDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     public static QueryDomainListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainListRequest self = new QueryDomainListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDomainListRequest setCcompany(String ccompany) {
+        this.ccompany = ccompany;
+        return this;
+    }
+    public String getCcompany() {
+        return this.ccompany;
     }
 
     public QueryDomainListRequest setDomainName(String domainName) {

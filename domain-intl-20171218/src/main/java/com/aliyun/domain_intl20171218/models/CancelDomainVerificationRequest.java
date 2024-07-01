@@ -4,9 +4,15 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class CancelDomainVerificationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ActionType")
     public String actionType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

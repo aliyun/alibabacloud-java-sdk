@@ -10,6 +10,9 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends TeaModel {
     @NameInMap("Dimensions")
     public String dimensions;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

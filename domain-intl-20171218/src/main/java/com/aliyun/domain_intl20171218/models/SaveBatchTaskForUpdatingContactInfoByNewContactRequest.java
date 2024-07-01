@@ -10,12 +10,18 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends TeaM
     @NameInMap("City")
     public String city;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactType")
     public String contactType;
 
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public java.util.List<String> domainName;
 

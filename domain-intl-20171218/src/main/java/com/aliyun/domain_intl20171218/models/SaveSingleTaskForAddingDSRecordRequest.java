@@ -4,18 +4,33 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForAddingDSRecordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Algorithm")
     public Integer algorithm;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DigestType")
     public Integer digestType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("KeyTag")
     public Integer keyTag;
 

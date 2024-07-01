@@ -4,27 +4,55 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class QueryDomainListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public QueryDomainListResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>False</p>
+     */
     @NameInMap("NextPage")
     public Boolean nextPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("PrePage")
     public Boolean prePage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -98,45 +126,101 @@ public class QueryDomainListResponseBody extends TeaModel {
     }
 
     public static class QueryDomainListResponseBodyDataDomain extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>FAILED</p>
+         */
         @NameInMap("DomainAuditStatus")
         public String domainAuditStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>jwssc8.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>New gTLD</p>
+         */
         @NameInMap("DomainType")
         public String domainType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-30</p>
+         */
         @NameInMap("ExpirationCurrDateDiff")
         public Integer expirationCurrDateDiff;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Nov 02,2019 04:00:45</p>
+         */
         @NameInMap("ExpirationDate")
         public String expirationDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
+         */
         @NameInMap("ExpirationDateLong")
         public Long expirationDateLong;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ExpirationDateStatus")
         public String expirationDateStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ST49P7TZLDAWSH2</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("Premium")
         public Boolean premium;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RegistrantType")
         public String registrantType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Nov 02,2017 04:00:45</p>
+         */
         @NameInMap("RegistrationDate")
         public String registrationDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
+         */
         @NameInMap("RegistrationDateLong")
         public Long registrationDateLong;
 

@@ -4,21 +4,47 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class CheckDomainRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test**.xin</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>create</p>
+     */
     @NameInMap("FeeCommand")
     public String feeCommand;
 
+    /**
+     * <strong>example:</strong>
+     * <p>USD</p>
+     */
     @NameInMap("FeeCurrency")
     public String feeCurrency;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FeePeriod")
     public Integer feePeriod;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

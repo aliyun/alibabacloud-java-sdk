@@ -4,9 +4,15 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class QueryContactInfoRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactType")
     public String contactType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

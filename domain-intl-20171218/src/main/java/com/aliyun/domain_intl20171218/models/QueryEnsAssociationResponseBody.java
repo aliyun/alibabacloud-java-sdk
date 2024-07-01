@@ -4,9 +4,17 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class QueryEnsAssociationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0x0000000000000000000000000000000000000003</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

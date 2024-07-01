@@ -4,6 +4,9 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public java.util.List<String> domainName;
 
@@ -13,6 +16,9 @@ public class SaveBatchTaskForDomainNameProxyServiceRequest extends TeaModel {
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("status")
     public Boolean status;
 
