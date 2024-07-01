@@ -78,6 +78,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceAutoPay")
+    public Boolean resourceAutoPay;
+
     /**
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4p****</p>
@@ -224,6 +227,14 @@ public class CreateServiceInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateServiceInstanceRequest setResourceAutoPay(Boolean resourceAutoPay) {
+        this.resourceAutoPay = resourceAutoPay;
+        return this;
+    }
+    public Boolean getResourceAutoPay() {
+        return this.resourceAutoPay;
     }
 
     public CreateServiceInstanceRequest setResourceGroupId(String resourceGroupId) {
