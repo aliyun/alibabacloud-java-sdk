@@ -4,6 +4,12 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountPrivilegesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9DD88DE7-824F-1082-AA57-575AFC6517A8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

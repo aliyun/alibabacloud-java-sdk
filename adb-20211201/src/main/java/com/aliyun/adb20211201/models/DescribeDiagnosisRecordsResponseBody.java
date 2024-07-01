@@ -4,18 +4,50 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The queried SQL statements.</p>
+     */
     @NameInMap("Querys")
     public java.util.List<DescribeDiagnosisRecordsResponseBodyQuerys> querys;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7F88BEFA-CF0B-5C95-8BB1-92EC9F09E40D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,72 +97,228 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisRecordsResponseBodyQuerys extends TeaModel {
+        /**
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59.82.XX.XX</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The total execution duration. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p> This value is the cumulative value of the <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code> parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Cost")
         public Long cost;
 
+        /**
+         * <p>The name of the database on which the SQL statement is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The number of rows written to the table by an extract-transform-load (ETL) job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EtlWriteRows")
         public Long etlWriteRows;
 
+        /**
+         * <p>The execution duration. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("ExecutionTime")
         public Long executionTime;
 
+        /**
+         * <p>The amount of returned data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("OutputDataSize")
         public Long outputDataSize;
 
+        /**
+         * <p>The number of rows returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OutputRows")
         public Long outputRows;
 
+        /**
+         * <p>The peak memory. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16648</p>
+         */
         @NameInMap("PeakMemory")
         public Long peakMemory;
 
+        /**
+         * <p>The query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021093000414401000000023503151******</p>
+         */
         @NameInMap("ProcessId")
         public String processId;
 
+        /**
+         * <p>The amount of time that is consumed for queuing. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("QueueTime")
         public Long queueTime;
 
+        /**
+         * <p>The IP address and port number of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.XX.XX:3004</p>
+         */
         @NameInMap("RcHost")
         public String rcHost;
 
+        /**
+         * <p>The execution duration rank of operators that are used in the SQL statement.</p>
+         * <blockquote>
+         * <p> This parameter is returned only for SQL statements whose <code>Status</code> parameter is <code>running</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ResourceCostRank")
         public Integer resourceCostRank;
 
+        /**
+         * <p>The resource group to which the SQL statement belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_default</p>
+         */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
+        /**
+         * <p>The queried SQL statement.</p>
+         * <blockquote>
+         * <p> For performance considerations, an SQL statement cannot exceed 5,120 characters in length. Otherwise, the SQL statement is truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster, including the complete SQL statements.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT count(*)\nFROM nation</p>
+         */
         @NameInMap("SQL")
         public String SQL;
 
+        /**
+         * <p>Indicates whether the SQL statement is truncated. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("SQLTruncated")
         public Boolean SQLTruncated;
 
+        /**
+         * <p>The maximum length of the SQL statement. 5120 is returned. Unit: characters. SQL statements that exceed this limit are truncated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5120</p>
+         */
         @NameInMap("SQLTruncatedThreshold")
         public Long SQLTruncatedThreshold;
 
+        /**
+         * <p>The number of rows scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ScanRows")
         public Long scanRows;
 
+        /**
+         * <p>The amount of scanned data. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
+         */
         @NameInMap("ScanSize")
         public Long scanSize;
 
+        /**
+         * <p>The execution start time of the SQL statement. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1632933704000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The state of the SQL statement. Valid values:</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>finished</strong></li>
+         * <li><strong>failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>finished</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The amount of time that is consumed to generate an execution plan. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("TotalPlanningTime")
         public Long totalPlanningTime;
 
+        /**
+         * <p>The total number of stages generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("TotalStages")
         public Integer totalStages;
 
+        /**
+         * <p>The username that is used to execute the SQL statements.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

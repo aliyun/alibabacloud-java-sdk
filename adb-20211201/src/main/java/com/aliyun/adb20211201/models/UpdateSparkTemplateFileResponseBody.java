@@ -4,9 +4,18 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class UpdateSparkTemplateFileResponseBody extends TeaModel {
+    /**
+     * <p>The update result.</p>
+     */
     @NameInMap("Data")
     public UpdateSparkTemplateFileResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C3A9594F-1D40-4472-A96C-8FB8AA20D38C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +41,16 @@ public class UpdateSparkTemplateFileResponseBody extends TeaModel {
     }
 
     public static class UpdateSparkTemplateFileResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the application template is updated.</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("Succeeded")
         public Boolean succeeded;
 

@@ -4,18 +4,45 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetTableResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The error message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the query succeeded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The queried table.</p>
+     */
     @NameInMap("Table")
     public TableModel table;
 

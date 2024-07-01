@@ -4,11 +4,17 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetSparkSQLEngineStateResponseBody extends TeaModel {
+    /**
+     * <p>The state information about the Spark SQL engine.</p>
+     */
     @NameInMap("Data")
     public GetSparkSQLEngineStateResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxx-xxx-xx</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,27 +41,88 @@ public class GetSparkSQLEngineStateResponseBody extends TeaModel {
     }
 
     public static class GetSparkSQLEngineStateResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202207151211hz0c****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The configuration of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The third-party JAR package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test.jar</p>
+         */
         @NameInMap("Jars")
         public String jars;
 
+        /**
+         * <p>The maximum number of started Spark executors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("MaxExecutor")
         public String maxExecutor;
 
+        /**
+         * <p>The minimum number of started Spark executors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinExecutor")
         public String minExecutor;
 
+        /**
+         * <p>The slot number of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("SlotNum")
         public String slotNum;
 
+        /**
+         * <p>The execution state of the application. Valid values:</p>
+         * <ul>
+         * <li>SUBMITTED</li>
+         * <li>STARTING</li>
+         * <li>RUNNING</li>
+         * <li>FAILING</li>
+         * <li>FAILED</li>
+         * <li>KILLING</li>
+         * <li>KILLED</li>
+         * <li>SUCCEEDING</li>
+         * <li>COMPLETED</li>
+         * <li>FATAL</li>
+         * <li>UNKNOWN</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The timestamp when the Spark SQL application was submitted. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1651213645000</p>
+         */
         @NameInMap("SubmittedTimeInMillis")
         public String submittedTimeInMillis;
 

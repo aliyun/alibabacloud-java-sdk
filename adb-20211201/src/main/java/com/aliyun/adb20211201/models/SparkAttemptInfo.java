@@ -4,18 +4,34 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class SparkAttemptInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>s202207151211hz0cb4200*****-0001</p>
+     */
     @NameInMap("AttemptId")
     public String attemptId;
 
     @NameInMap("Detail")
     public Detail detail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WARN: Disk is full</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("Priority")
     public String priority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
+     */
     @NameInMap("State")
     public String state;
 

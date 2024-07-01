@@ -4,9 +4,23 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class KillSparkSQLEngineRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amv-8vbn8pq537k8w****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spark_test</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 

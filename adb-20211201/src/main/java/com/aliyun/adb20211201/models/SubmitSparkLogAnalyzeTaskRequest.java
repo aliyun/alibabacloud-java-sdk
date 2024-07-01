@@ -4,6 +4,13 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class SubmitSparkLogAnalyzeTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the Spark application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s202301121553hzd9c6f7xxxx</p>
+     */
     @NameInMap("AppId")
     public String appId;
 

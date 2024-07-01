@@ -4,11 +4,17 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetSparkAppMetricsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetSparkAppMetricsResponseBodyData data;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,9 +41,21 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
     }
 
     public static class GetSparkAppMetricsResponseBodyDataScanMetrics extends TeaModel {
+        /**
+         * <p>The number of scanned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("OutputRowsCount")
         public Long outputRowsCount;
 
+        /**
+         * <p>The number of scanned bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("TotalReadFileSizeInByte")
         public Long totalReadFileSizeInByte;
 
@@ -65,18 +83,49 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
     }
 
     public static class GetSparkAppMetricsResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202302051515shfa865f80003691</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The attempt ID of the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202301061000hz57d797b0000201-0001</p>
+         */
         @NameInMap("AttemptId")
         public String attemptId;
 
+        /**
+         * <p>The path of the event log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://path/to/eventLog</p>
+         */
         @NameInMap("EventLogPath")
         public String eventLogPath;
 
+        /**
+         * <p>Indicates whether parsing is complete. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("Finished")
         public Boolean finished;
 
+        /**
+         * <p>The metrics.</p>
+         */
         @NameInMap("ScanMetrics")
         public GetSparkAppMetricsResponseBodyDataScanMetrics scanMetrics;
 

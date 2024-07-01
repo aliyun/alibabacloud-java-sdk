@@ -4,15 +4,46 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterConnectionStringRequest extends TeaModel {
+    /**
+     * <p>The prefix of the public endpoint.</p>
+     * <ul>
+     * <li>The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</li>
+     * <li>The prefix can be up to 30 characters in length.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-123</p>
+     */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
+    /**
+     * <p>The public endpoint of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amv-bp11q28kvl688****.ads.aliyuncs.com</p>
+     */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amv-bp11q28kvl688****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The port number. Set the value to <strong>3306</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
+     */
     @NameInMap("Port")
     public Integer port;
 

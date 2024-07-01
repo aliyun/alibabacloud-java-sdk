@@ -4,6 +4,17 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The language that is used for the region and zone names indicated by the LocalName parameter in the response parameters. Valid values:</p>
+     * <ul>
+     * <li><strong>zh-CN</strong> (default): simplified Chinese.</li>
+     * <li><strong>en-US</strong>: English.</li>
+     * <li><strong>ja</strong>: Japanese.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

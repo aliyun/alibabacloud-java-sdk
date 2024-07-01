@@ -4,18 +4,50 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetDatabaseObjectsResponseBody extends TeaModel {
+    /**
+     * <p>The queried databases.</p>
+     */
     @NameInMap("Data")
     public GetDatabaseObjectsResponseBodyData data;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>863D51B7-5321-41D8-A0B6-A088B0******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,15 +97,42 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
     }
 
     public static class GetDatabaseObjectsResponseBodyData extends TeaModel {
+        /**
+         * <p>The queried database.</p>
+         */
         @NameInMap("DatabaseSummaryModels")
         public java.util.List<DatabaseSummaryModel> databaseSummaryModels;
 
+        /**
+         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries per page. Valid values:</p>
+         * <ul>
+         * <li>30</li>
+         * <li>50</li>
+         * <li>100</li>
+         * </ul>
+         * <p>Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

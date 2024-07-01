@@ -4,9 +4,18 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The queried scaling plan.</p>
+     */
     @NameInMap("ElasticPlan")
     public DescribeElasticPlanAttributeResponseBodyElasticPlan elasticPlan;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5C433C2-001F-58E3-99F5-3274C14DF8BD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +41,93 @@ public class DescribeElasticPlanAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticPlanAttributeResponseBodyElasticPlan extends TeaModel {
+        /**
+         * <p>Indicates whether <strong>Default Proportional Scaling for EIUs</strong> is enabled. Valid values: true: Default Proportional Scaling for EIUs is enabled. If you set this parameter to true, storage resources are scaled along with computing resources. false: Default Proportional Scaling for EIUs is not enabled.</p>
+         * <blockquote>
+         * <p> You can enable Default Proportional Scaling for EIUs for only a single scaling plan of a cluster. After you enable a scaling plan of the Default Proportional Scaling for EIUs type, you cannot enable scaling plans of other types.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AutoScale")
         public Boolean autoScale;
 
+        /**
+         * <p>A CORN expression that indicates the scaling cycle and time for the scaling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 20 14 * * ?</p>
+         */
         @NameInMap("CronExpression")
         public String cronExpression;
 
+        /**
+         * <p>The name of the scaling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ElasticPlanName")
         public String elasticPlanName;
 
+        /**
+         * <p>Indicates whether the scaling plan is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The end time of the scaling plan.</p>
+         * <blockquote>
+         * <p> The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01T12:01:00Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The name of the resource group used by the scaling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
+        /**
+         * <p>The start time of the scaling plan.</p>
+         * <blockquote>
+         * <p> The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-01T12:01:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The amount of elastic resources after scaling.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32ACU</p>
+         */
         @NameInMap("TargetSize")
         public String targetSize;
 
+        /**
+         * <p>The type of the scaling plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXECUTOR</p>
+         */
         @NameInMap("Type")
         public String type;
 

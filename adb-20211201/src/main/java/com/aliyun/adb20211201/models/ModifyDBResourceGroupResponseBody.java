@@ -4,6 +4,12 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>805F14E1-0186-520E-A6D5-30188D94E8DA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

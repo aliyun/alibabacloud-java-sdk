@@ -4,15 +4,31 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class SparkSession extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Active")
     public String active;
 
+    /**
+     * <strong>example:</strong>
+     * <p>11123123</p>
+     */
     @NameInMap("AliyunUid")
     public Long aliyunUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15</p>
+     */
     @NameInMap("SessionId")
     public Long sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>idle</p>
+     */
     @NameInMap("State")
     public String state;
 

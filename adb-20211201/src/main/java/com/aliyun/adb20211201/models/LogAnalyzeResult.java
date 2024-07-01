@@ -7,9 +7,17 @@ public class LogAnalyzeResult extends TeaModel {
     @NameInMap("AppErrorAdvice")
     public String appErrorAdvice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EXCEEDED_QUOTA</p>
+     */
     @NameInMap("AppErrorCode")
     public String appErrorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>exception: xxxx</p>
+     */
     @NameInMap("AppErrorLog")
     public String appErrorLog;
 

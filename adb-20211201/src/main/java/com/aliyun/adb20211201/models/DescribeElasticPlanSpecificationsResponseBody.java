@@ -4,18 +4,45 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5C433C2-001F-58E3-99F5-3274C14DF8BD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried resource specifications.</p>
+     */
     @NameInMap("Specifications")
     public java.util.List<String> specifications;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

@@ -4,9 +4,18 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetSparkAppWebUiAddressResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +41,39 @@ public class GetSparkAppWebUiAddressResponseBody extends TeaModel {
     }
 
     public static class GetSparkAppWebUiAddressResponseBodyData extends TeaModel {
+        /**
+         * <p>The Spark application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s202205201533hz1209892000****</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amv-clusterxxx</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The expiration time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1655801973000</p>
+         */
         @NameInMap("ExpirationTimeInMillis")
         public Long expirationTimeInMillis;
 
+        /**
+         * <p>The URL of the web UI for the Spark application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=">https://adbsparkui-cn-hangzhou.aliyuncs.com/?token=</a>****</p>
+         */
         @NameInMap("WebUiAddress")
         public String webUiAddress;
 

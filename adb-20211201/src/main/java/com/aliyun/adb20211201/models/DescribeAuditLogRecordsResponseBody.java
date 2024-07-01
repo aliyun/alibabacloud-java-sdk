@@ -4,21 +4,54 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditLogRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>amv-t4nj8619bz2w3****</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The queried SQL audit logs.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAuditLogRecordsResponseBodyItems> items;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8A564B7F-8C00-43C0-8EC5-919FBB70573</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6974</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -76,33 +109,97 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeAuditLogRecordsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14356****</p>
+         */
         @NameInMap("ConnId")
         public String connId;
 
+        /**
+         * <p>The name of the database on which the SQL statement was executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-12 10:10:00</p>
+         */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
+        /**
+         * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX:43908</p>
+         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
+        /**
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202106081752021720161662490345362390</p>
+         */
         @NameInMap("ProcessID")
         public String processID;
 
+        /**
+         * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM adb_hdfs_import_source</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The type of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
+         */
         @NameInMap("SQLType")
         public String SQLType;
 
+        /**
+         * <p>Indicates whether the SQL statement was successfully executed. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Succeed")
         public String succeed;
 
+        /**
+         * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>216</p>
+         */
         @NameInMap("TotalTime")
         public String totalTime;
 
+        /**
+         * <p>The username that is used to execute the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("User")
         public String user;
 
