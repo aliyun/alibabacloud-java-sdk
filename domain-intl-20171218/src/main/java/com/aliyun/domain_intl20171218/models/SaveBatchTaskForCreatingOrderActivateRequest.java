@@ -10,6 +10,9 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderActivateParam")
     public java.util.List<SaveBatchTaskForCreatingOrderActivateRequestOrderActivateParam> orderActivateParam;
 

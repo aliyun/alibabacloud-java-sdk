@@ -4,12 +4,18 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AuthorizationCode")
     public String authorizationCode;
 
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -22,6 +28,9 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends TeaModel {
     @NameInMap("PromotionNo")
     public String promotionNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 

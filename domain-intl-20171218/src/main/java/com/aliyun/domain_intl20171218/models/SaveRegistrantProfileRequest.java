@@ -4,54 +4,122 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class SaveRegistrantProfileRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>long yan shi</p>
+     */
     @NameInMap("City")
     public String city;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CN</p>
+     */
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DefaultRegistrantProfile")
     public Boolean defaultRegistrantProfile;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>236300</p>
+     */
     @NameInMap("PostalCode")
     public String postalCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fu jian</p>
+     */
     @NameInMap("Province")
     public String province;
 
+    /**
+     * <strong>example:</strong>
+     * <p>chen zi chen</p>
+     */
     @NameInMap("RegistrantName")
     public String registrantName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>liu yang</p>
+     */
     @NameInMap("RegistrantOrganization")
     public String registrantOrganization;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12659727</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>common</p>
+     */
     @NameInMap("RegistrantProfileType")
     public String registrantProfileType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("RegistrantType")
     public String registrantType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86</p>
+     */
     @NameInMap("TelArea")
     public String telArea;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7381</p>
+     */
     @NameInMap("TelExt")
     public String telExt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1829756****</p>
+     */
     @NameInMap("Telephone")
     public String telephone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

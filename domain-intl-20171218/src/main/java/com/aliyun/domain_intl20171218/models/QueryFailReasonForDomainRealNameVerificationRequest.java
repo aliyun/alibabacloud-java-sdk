@@ -4,12 +4,18 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class QueryFailReasonForDomainRealNameVerificationRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RealNameVerificationAction")
     public String realNameVerificationAction;
 

@@ -7,15 +7,24 @@ public class SaveBatchTaskForUpdatingContactInfoRequest extends TeaModel {
     @NameInMap("AddTransferLock")
     public Boolean addTransferLock;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ContactType")
     public String contactType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public java.util.List<String> domainName;
 
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 

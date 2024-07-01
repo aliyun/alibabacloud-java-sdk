@@ -4,15 +4,27 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredentialRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public java.util.List<String> domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdentityCredential")
     public String identityCredential;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdentityCredentialNo")
     public String identityCredentialNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdentityCredentialType")
     public String identityCredentialType;
 

@@ -4,15 +4,35 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class SaveSingleTaskForAssociatingEnsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0x0000000000000000000000000000000000000003</p>
+     */
     @NameInMap("Address")
     public String address;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc.luxe</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>127.0.0.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 

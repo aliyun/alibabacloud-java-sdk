@@ -13,18 +13,30 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     @NameInMap("Country")
     public String country;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public java.util.List<String> domainName;
 
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdentityCredential")
     public String identityCredential;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdentityCredentialNo")
     public String identityCredentialNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("IdentityCredentialType")
     public String identityCredentialType;
 
@@ -43,18 +55,30 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
     @NameInMap("RegistrantOrganization")
     public String registrantOrganization;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RegistrantType")
     public String registrantType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TelArea")
     public String telArea;
 
     @NameInMap("TelExt")
     public String telExt;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Telephone")
     public String telephone;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TransferOutProhibited")
     public Boolean transferOutProhibited;
 

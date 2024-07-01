@@ -7,6 +7,9 @@ public class AcknowledgeTaskResultRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskDetailNo")
     public java.util.List<String> taskDetailNo;
 

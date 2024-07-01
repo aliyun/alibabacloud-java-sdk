@@ -4,9 +4,17 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class SaveRegistrantProfileResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12380891</p>
+     */
     @NameInMap("RegistrantProfileId")
     public Long registrantProfileId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A9C35C47-3366-482E-B872-8C9EA4733FE9</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

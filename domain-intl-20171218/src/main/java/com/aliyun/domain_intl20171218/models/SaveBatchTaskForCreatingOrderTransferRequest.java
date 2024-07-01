@@ -10,6 +10,9 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrderTransferParam")
     public java.util.List<SaveBatchTaskForCreatingOrderTransferRequestOrderTransferParam> orderTransferParam;
 

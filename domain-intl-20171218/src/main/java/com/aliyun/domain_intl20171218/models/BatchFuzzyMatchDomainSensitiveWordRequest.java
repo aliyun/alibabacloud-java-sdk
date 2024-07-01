@@ -4,6 +4,9 @@ package com.aliyun.domain_intl20171218.models;
 import com.aliyun.tea.*;
 
 public class BatchFuzzyMatchDomainSensitiveWordRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 

@@ -7,9 +7,15 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends TeaModel {
     @NameInMap("CouponNo")
     public String couponNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CurrentExpirationDate")
     public Long currentExpirationDate;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -19,6 +25,9 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends TeaModel {
     @NameInMap("PromotionNo")
     public String promotionNo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SubscriptionDuration")
     public Integer subscriptionDuration;
 

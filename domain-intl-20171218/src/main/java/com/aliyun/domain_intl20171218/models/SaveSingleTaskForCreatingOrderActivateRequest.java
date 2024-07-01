@@ -25,6 +25,9 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends TeaModel {
     @NameInMap("Dns2")
     public String dns2;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
