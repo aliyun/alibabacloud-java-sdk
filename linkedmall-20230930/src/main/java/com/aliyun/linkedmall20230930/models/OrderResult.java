@@ -4,27 +4,55 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class OrderResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-11T12:22:24.000+08:00</p>
+     */
     @NameInMap("createDate")
     public String createDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12****01</p>
+     */
     @NameInMap("distributorId")
     public String distributorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("logisticsStatus")
     public String logisticsStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("orderAmount")
     public Long orderAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5457</p>
+     */
     @NameInMap("orderId")
     public String orderId;
 
     @NameInMap("orderLineList")
     public java.util.List<OrderLineResult> orderLineList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("orderStatus")
     public String orderStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>841471F6-5D61-1331-8C38-2****B55</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

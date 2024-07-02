@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ProductExtendProperty extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ss_picture_scene</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>场景图</p>
+     */
     @NameInMap("value")
     public String value;
 

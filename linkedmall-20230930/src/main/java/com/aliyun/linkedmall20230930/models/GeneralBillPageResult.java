@@ -13,9 +13,17 @@ public class GeneralBillPageResult extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("total")
     public Integer total;
 

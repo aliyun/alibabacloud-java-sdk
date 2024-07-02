@@ -4,14 +4,32 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Good extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>儿童学习桌</p>
+     */
     @NameInMap("goodName")
     public String goodName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6600****6736</p>
+     */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("quantity")
     public Integer quantity;
+
+    @NameInMap("skuId")
+    public String skuId;
+
+    @NameInMap("skuTitle")
+    public String skuTitle;
 
     public static Good build(java.util.Map<String, ?> map) throws Exception {
         Good self = new Good();
@@ -40,6 +58,22 @@ public class Good extends TeaModel {
     }
     public Integer getQuantity() {
         return this.quantity;
+    }
+
+    public Good setSkuId(String skuId) {
+        this.skuId = skuId;
+        return this;
+    }
+    public String getSkuId() {
+        return this.skuId;
+    }
+
+    public Good setSkuTitle(String skuTitle) {
+        this.skuTitle = skuTitle;
+        return this;
+    }
+    public String getSkuTitle() {
+        return this.skuTitle;
     }
 
 }

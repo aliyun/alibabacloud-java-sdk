@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SkuQueryParam extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>660460842235822080</p>
      */
     @NameInMap("productId")
     public String productId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>660460842235822081</p>
      */
     @NameInMap("skuId")
     public String skuId;

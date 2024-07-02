@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class ProductQuery extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22000009</p>
      */
     @NameInMap("distributorShopId")
     public String distributorShopId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>110000</p>
+     */
     @NameInMap("divisionCode")
     public String divisionCode;
 

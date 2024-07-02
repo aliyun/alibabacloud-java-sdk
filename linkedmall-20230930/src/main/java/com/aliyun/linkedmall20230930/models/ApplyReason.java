@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ApplyReason extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>403769</p>
+     */
     @NameInMap("reasonTextId")
     public Long reasonTextId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>不想要了</p>
+     */
     @NameInMap("reasonTips")
     public String reasonTips;
 

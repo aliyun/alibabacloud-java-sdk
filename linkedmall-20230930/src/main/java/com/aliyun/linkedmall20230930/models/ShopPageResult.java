@@ -4,12 +4,20 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ShopPageResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("shopList")
     public java.util.List<ShopPageDataResult> shopList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("total")
     public Integer total;
 

@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class RefundFeeData extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("maxRefundFee")
     public Long maxRefundFee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("minRefundFee")
     public Long minRefundFee;
 

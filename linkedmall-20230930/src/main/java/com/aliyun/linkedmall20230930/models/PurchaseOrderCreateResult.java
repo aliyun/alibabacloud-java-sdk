@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class PurchaseOrderCreateResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5696</p>
+     */
     @NameInMap("purchaseOrderId")
     public String purchaseOrderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class MemberAccountResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;yue***@newburn.cn&quot;</p>
+     */
     @NameInMap("accountNo")
     public java.util.List<String> accountNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("shopId")
     public String shopId;
 

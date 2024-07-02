@@ -4,26 +4,43 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ShopCreateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12344335</p>
+     */
     @NameInMap("afterSaleDingTalkId")
     public String afterSaleDingTalkId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>店铺描述</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12344335</p>
      */
     @NameInMap("operatorDingTalkId")
     public String operatorDingTalkId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12344335</p>
+     */
     @NameInMap("preSaleDingTalkId")
     public String preSaleDingTalkId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>店铺名称</p>
      */
     @NameInMap("shopName")
     public String shopName;

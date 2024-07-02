@@ -4,36 +4,76 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ProductSaleInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("canSell")
     public Boolean canSell;
 
+    /**
+     * <strong>example:</strong>
+     * <p>110000</p>
+     */
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>有货</p>
+     */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21000017-4580902812</p>
+     */
     @NameInMap("lmItemId")
     public String lmItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>660460842235822080</p>
+     */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Online</p>
+     */
     @NameInMap("productStatus")
     public String productStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("quantity")
     public Long quantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21000017</p>
+     */
     @NameInMap("shopId")
     public String shopId;
 
     @NameInMap("skus")
     public java.util.List<SkuSaleInfo> skus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>发财树</p>
+     */
     @NameInMap("title")
     public String title;
 

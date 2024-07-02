@@ -4,6 +4,10 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class OrderRenderResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("canSell")
     public Boolean canSell;
 
@@ -13,6 +17,10 @@ public class OrderRenderResult extends TeaModel {
     @NameInMap("extInfo")
     public java.util.Map<String, ?> extInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>库存为0</p>
+     */
     @NameInMap("message")
     public String message;
 

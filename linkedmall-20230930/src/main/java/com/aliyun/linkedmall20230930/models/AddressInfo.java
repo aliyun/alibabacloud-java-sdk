@@ -6,28 +6,49 @@ import com.aliyun.tea.*;
 public class AddressInfo extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>陕西省西安市新城区xxx大厦xx室</p>
      */
     @NameInMap("addressDetail")
     public String addressDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("addressId")
     public Long addressId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>610102</p>
+     */
     @NameInMap("divisionCode")
     public String divisionCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>任先生</p>
      */
     @NameInMap("receiver")
     public String receiver;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>182***5674</p>
      */
     @NameInMap("receiverPhone")
     public String receiverPhone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>61010212</p>
+     */
     @NameInMap("townDivisionCode")
     public String townDivisionCode;
 

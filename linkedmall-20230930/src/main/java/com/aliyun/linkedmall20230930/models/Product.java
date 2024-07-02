@@ -4,75 +4,147 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Product extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Apple/苹果</p>
+     */
     @NameInMap("brandName")
     public String brandName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("canSell")
     public Boolean canSell;
 
     @NameInMap("categoryChain")
     public java.util.List<Category> categoryChain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>201856501</p>
+     */
     @NameInMap("categoryLeafId")
     public Long categoryLeafId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/descpath/O1CN01wciRDp22AEU14435dsf34">https://img.alicdn.com/descpath/O1CN01wciRDp22AEU14435dsf34</a></p>
+     */
     @NameInMap("descPath")
     public String descPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>110000</p>
+     */
     @NameInMap("divisionCode")
     public String divisionCode;
 
     @NameInMap("extendProperties")
     public java.util.List<ProductExtendProperty> extendProperties;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100+</p>
+     */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
     @NameInMap("images")
     public java.util.List<String> images;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21000017-4580902812</p>
+     */
     @NameInMap("lmItemId")
     public String lmItemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://img.alicdn.com/imgextra/i3/2214281521988/O1CN01w4vomR1QYYEx6nyr5_!!2214281521988.jpg">https://img.alicdn.com/imgextra/i3/2214281521988/O1CN01w4vomR1QYYEx6nyr5_!!2214281521988.jpg</a></p>
+     */
     @NameInMap("picUrl")
     public String picUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>660460842235822080</p>
+     */
     @NameInMap("productId")
     public String productId;
 
     @NameInMap("productSpecs")
     public java.util.List<ProductSpec> productSpecs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Online</p>
+     */
     @NameInMap("productStatus")
     public String productStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Normal</p>
+     */
     @NameInMap("productType")
     public String productType;
 
     @NameInMap("properties")
     public java.util.List<ProductProperty> properties;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("quantity")
     public Long quantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21000017</p>
+     */
     @NameInMap("shopId")
     public String shopId;
 
     @NameInMap("skus")
     public java.util.List<Sku> skus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100+</p>
+     */
     @NameInMap("soldQuantity")
     public String soldQuantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3040203000000000000</p>
+     */
     @NameInMap("taxCode")
     public String taxCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>600</p>
+     */
     @NameInMap("taxRate")
     public Integer taxRate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>发财树</p>
+     */
     @NameInMap("title")
     public String title;
 

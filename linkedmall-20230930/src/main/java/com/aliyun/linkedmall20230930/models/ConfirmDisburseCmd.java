@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ConfirmDisburseCmd extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5457</p>
+     */
     @NameInMap("orderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5696</p>
+     */
     @NameInMap("purchaseOrderId")
     public String purchaseOrderId;
 

@@ -4,15 +4,31 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class RefundReason extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("proofRequired")
     public Boolean proofRequired;
 
+    /**
+     * <strong>example:</strong>
+     * <p>47683</p>
+     */
     @NameInMap("reasonTextId")
     public String reasonTextId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>不想要了</p>
+     */
     @NameInMap("reasonTips")
     public String reasonTips;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("refundDescRequired")
     public Boolean refundDescRequired;
 

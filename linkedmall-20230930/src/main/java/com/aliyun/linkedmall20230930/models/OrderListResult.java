@@ -7,9 +7,17 @@ public class OrderListResult extends TeaModel {
     @NameInMap("orderList")
     public java.util.List<OrderResult> orderList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
     @NameInMap("total")
     public Integer total;
 
