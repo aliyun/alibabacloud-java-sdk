@@ -7,6 +7,10 @@ public class RunCompletionMessageResponseBody extends TeaModel {
     @NameInMap("FinishReason")
     public String finishReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17204B98-xxxx-4F9A-8464-2446A84821CA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

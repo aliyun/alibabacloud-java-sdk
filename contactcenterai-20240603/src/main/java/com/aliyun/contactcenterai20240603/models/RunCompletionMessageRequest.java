@@ -10,9 +10,17 @@ public class RunCompletionMessageRequest extends TeaModel {
     @NameInMap("Messages")
     public java.util.List<RunCompletionMessageRequestMessages> messages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccai-14b</p>
+     */
     @NameInMap("ModelCode")
     public String modelCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Stream")
     public Boolean stream;
 
@@ -54,6 +62,9 @@ public class RunCompletionMessageRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("Role")
         public String role;
