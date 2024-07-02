@@ -1390,6 +1390,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ValidityDate", request.validityDate);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.videoEvidence)) {
+            query.put("VideoEvidence", request.videoEvidence);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.voluntaryCustomizedContent)) {
             query.put("VoluntaryCustomizedContent", request.voluntaryCustomizedContent);
         }
