@@ -163,6 +163,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("ValidityDate")
     public String validityDate;
 
+    @NameInMap("VideoEvidence")
+    public String videoEvidence;
+
     @NameInMap("VoluntaryCustomizedContent")
     public String voluntaryCustomizedContent;
 
@@ -433,6 +436,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getValidityDate() {
         return this.validityDate;
+    }
+
+    public InitFaceVerifyRequest setVideoEvidence(String videoEvidence) {
+        this.videoEvidence = videoEvidence;
+        return this;
+    }
+    public String getVideoEvidence() {
+        return this.videoEvidence;
     }
 
     public InitFaceVerifyRequest setVoluntaryCustomizedContent(String voluntaryCustomizedContent) {
