@@ -4,54 +4,118 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Sku extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6922454329176</p>
+     */
     @NameInMap("barcode")
     public String barcode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("canSell")
     public Boolean canSell;
 
+    /**
+     * <strong>example:</strong>
+     * <p>110000</p>
+     */
     @NameInMap("divisionCode")
     public String divisionCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>有货</p>
+     */
     @NameInMap("fuzzyQuantity")
     public String fuzzyQuantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>999900</p>
+     */
     @NameInMap("markPrice")
     public Long markPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https:////img.alicdn.com/imgextra///img.alicdn.com/imgextra/i2/2216003305543/O1CN010DEQCX1qokFYGRfPE_!!2216003305543.png</p>
+     */
     @NameInMap("picUrl")
     public String picUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>999900</p>
+     */
     @NameInMap("platformPrice")
     public Long platformPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>19800</p>
+     */
     @NameInMap("price")
     public Long price;
 
+    /**
+     * <strong>example:</strong>
+     * <p>660460842235822080</p>
+     */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("quantity")
     public Long quantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("rankValue")
     public Long rankValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>21000017</p>
+     */
     @NameInMap("shopId")
     public String shopId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>660460842235822081</p>
+     */
     @NameInMap("skuId")
     public String skuId;
 
     @NameInMap("skuSpecs")
     public java.util.List<SkuSpec> skuSpecs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>颜色分类:天蓝色</p>
+     */
     @NameInMap("skuSpecsCode")
     public String skuSpecsCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Online</p>
+     */
     @NameInMap("skuStatus")
     public String skuStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>天蓝色</p>
+     */
     @NameInMap("title")
     public String title;
 

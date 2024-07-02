@@ -6,37 +6,60 @@ import com.aliyun.tea.*;
 public class RefundOrderCmd extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47821</p>
      */
     @NameInMap("applyReasonTextId")
     public Long applyReasonTextId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>不想要了</p>
+     */
     @NameInMap("applyReasonTips")
     public String applyReasonTips;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("applyRefundCount")
     public Integer applyRefundCount;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("applyRefundFee")
     public Long applyRefundFee;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("bizClaimType")
     public Integer bizClaimType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("goodsStatus")
     public Integer goodsStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>不想要了</p>
+     */
     @NameInMap("leaveMessage")
     public String leaveMessage;
 
@@ -45,6 +68,9 @@ public class RefundOrderCmd extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6692****5458</p>
      */
     @NameInMap("orderLineId")
     public String orderLineId;

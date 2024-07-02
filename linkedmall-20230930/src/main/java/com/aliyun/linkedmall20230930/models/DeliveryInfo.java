@@ -4,15 +4,31 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class DeliveryInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>快递 免邮</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("postFee")
     public Long postFee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-4</p>
+     */
     @NameInMap("serviceType")
     public Long serviceType;
 

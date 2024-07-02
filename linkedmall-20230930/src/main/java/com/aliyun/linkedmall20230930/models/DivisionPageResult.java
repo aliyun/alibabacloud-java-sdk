@@ -7,6 +7,10 @@ public class DivisionPageResult extends TeaModel {
     @NameInMap("divisionList")
     public java.util.List<Division> divisionList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

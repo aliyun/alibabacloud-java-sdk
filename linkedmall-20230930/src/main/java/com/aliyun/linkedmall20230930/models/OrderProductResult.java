@@ -4,36 +4,76 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class OrderProductResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("canSell")
     public Boolean canSell;
 
     @NameInMap("features")
     public java.util.Map<String, ?> features;
 
+    /**
+     * <strong>example:</strong>
+     * <p>库存为0</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("price")
     public Long price;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6600****6736</p>
+     */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>//img.alicdn.com/imgextra/i4/2216003305543/O1CN01bip3Un1qokG0</p>
+     */
     @NameInMap("productPicUrl")
     public String productPicUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>儿童学习桌</p>
+     */
     @NameInMap("productTitle")
     public String productTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>56****2304</p>
+     */
     @NameInMap("purchaserId")
     public String purchaserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("quantity")
     public Integer quantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6600****6737</p>
+     */
     @NameInMap("skuId")
     public String skuId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>浅绿色</p>
+     */
     @NameInMap("skuTitle")
     public String skuTitle;
 

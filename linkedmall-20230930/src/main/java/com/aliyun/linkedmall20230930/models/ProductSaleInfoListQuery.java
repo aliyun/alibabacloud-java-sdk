@@ -4,6 +4,10 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ProductSaleInfoListQuery extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>110000</p>
+     */
     @NameInMap("divisionCode")
     public String divisionCode;
 
@@ -15,6 +19,9 @@ public class ProductSaleInfoListQuery extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22000009</p>
      */
     @NameInMap("purchaserId")
     public String purchaserId;

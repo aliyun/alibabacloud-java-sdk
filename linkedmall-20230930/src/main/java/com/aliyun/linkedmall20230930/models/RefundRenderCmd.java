@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class RefundRenderCmd extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("bizClaimType")
     public Integer bizClaimType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("goodsStatus")
     public Integer goodsStatus;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6692****5458</p>
      */
     @NameInMap("orderLineId")
     public String orderLineId;

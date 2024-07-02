@@ -7,6 +7,10 @@ public class CategoryListQuery extends TeaModel {
     @NameInMap("categoryIds")
     public java.util.List<Long> categoryIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5200001</p>
+     */
     @NameInMap("parentCategoryId")
     public Long parentCategoryId;
 

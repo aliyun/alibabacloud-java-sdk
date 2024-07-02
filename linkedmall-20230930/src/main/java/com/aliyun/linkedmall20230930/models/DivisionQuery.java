@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DivisionQuery extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("divisionCode")
     public String divisionCode;

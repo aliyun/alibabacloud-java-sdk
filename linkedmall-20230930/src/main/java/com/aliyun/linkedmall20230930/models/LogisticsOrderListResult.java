@@ -7,6 +7,10 @@ public class LogisticsOrderListResult extends TeaModel {
     @NameInMap("logisticsOrderList")
     public java.util.List<LogisticsOrderResult> logisticsOrderList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

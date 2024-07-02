@@ -7,6 +7,10 @@ public class ProductSaleInfoListResult extends TeaModel {
     @NameInMap("productSaleInfos")
     public java.util.List<ProductSaleInfo> productSaleInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

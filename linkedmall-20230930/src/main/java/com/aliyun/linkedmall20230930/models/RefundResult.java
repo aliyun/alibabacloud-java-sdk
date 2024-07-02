@@ -4,69 +4,149 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class RefundResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>多拍不想要</p>
+     */
     @NameInMap("applyDisputeDesc")
     public String applyDisputeDesc;
 
     @NameInMap("applyReason")
     public ApplyReason applyReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("bizClaimType")
     public Integer bizClaimType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-02T00:00:00.000Z</p>
+     */
     @NameInMap("disputeCreateTime")
     public String disputeCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>多拍不想要</p>
+     */
     @NameInMap("disputeDesc")
     public String disputeDesc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-02T12:00:00.000Z</p>
+     */
     @NameInMap("disputeEndTime")
     public String disputeEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6693****4352</p>
+     */
     @NameInMap("disputeId")
     public String disputeId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("disputeStatus")
     public Integer disputeStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5457</p>
+     */
     @NameInMap("orderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5458</p>
+     */
     @NameInMap("orderLineId")
     public String orderLineId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("orderLogisticsStatus")
     public Integer orderLogisticsStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("refundFee")
     public Long refundFee;
 
     @NameInMap("refundFeeData")
     public RefundFeeData refundFeeData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>阿里云云谷</p>
+     */
     @NameInMap("refunderAddress")
     public String refunderAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>赵先生</p>
+     */
     @NameInMap("refunderName")
     public String refunderName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>182****1334</p>
+     */
     @NameInMap("refunderTel")
     public String refunderTel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>331001</p>
+     */
     @NameInMap("refunderZipCode")
     public String refunderZipCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>841471F6-5D61-1331-8C38-2****B55</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("returnGoodLogisticsStatus")
     public Integer returnGoodLogisticsStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>同意退款</p>
+     */
     @NameInMap("sellerAgreeMsg")
     public String sellerAgreeMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>不同意退款</p>
+     */
     @NameInMap("sellerRefuseAgreementMessage")
     public String sellerRefuseAgreementMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>商品没问题，买家举证无效</p>
+     */
     @NameInMap("sellerRefuseReason")
     public String sellerRefuseReason;
 

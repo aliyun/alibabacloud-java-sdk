@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ShopStatusChangeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("shopId")
     public String shopId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WORKING</p>
      */
     @NameInMap("shopStatus")
     public String shopStatus;

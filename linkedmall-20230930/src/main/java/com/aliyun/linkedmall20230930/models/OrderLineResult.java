@@ -4,36 +4,80 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class OrderLineResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("logisticsStatus")
     public String logisticsStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("number")
     public String number;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5457</p>
+     */
     @NameInMap("orderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5458</p>
+     */
     @NameInMap("orderLineId")
     public String orderLineId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("orderLineStatus")
     public String orderLineStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("payFee")
     public Long payFee;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6600****6736</p>
+     */
     @NameInMap("productId")
     public String productId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>//img.alicdn.com/imgextra/i4/2216003305543/O1CN01bip3Un1qokG0</p>
+     */
     @NameInMap("productPic")
     public String productPic;
 
+    /**
+     * <strong>example:</strong>
+     * <p>儿童学习桌</p>
+     */
     @NameInMap("productTitle")
     public String productTitle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6600****6737</p>
+     */
     @NameInMap("skuId")
     public String skuId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>浅绿色</p>
+     */
     @NameInMap("skuTitle")
     public String skuTitle;
 

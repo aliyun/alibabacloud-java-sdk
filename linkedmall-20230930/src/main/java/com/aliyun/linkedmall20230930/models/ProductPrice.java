@@ -4,6 +4,10 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ProductPrice extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>120</p>
+     */
     @NameInMap("fundAmountMoney")
     public String fundAmountMoney;
 

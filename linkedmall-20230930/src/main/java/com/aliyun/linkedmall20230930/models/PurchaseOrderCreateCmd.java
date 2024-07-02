@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PurchaseOrderCreateCmd extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>buyer2138237</p>
      */
     @NameInMap("buyerId")
     public String buyerId;
@@ -21,6 +24,9 @@ public class PurchaseOrderCreateCmd extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>outer123456</p>
      */
     @NameInMap("outerPurchaseOrderId")
     public String outerPurchaseOrderId;

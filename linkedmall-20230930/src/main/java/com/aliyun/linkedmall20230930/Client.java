@@ -83,8 +83,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消逆向单
-     *
+     * <b>summary</b> : 
+     * <p>取消逆向单</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelRefundOrderResponse
@@ -108,8 +109,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消逆向单
-     *
+     * <b>summary</b> : 
+     * <p>取消逆向单</p>
      * @return CancelRefundOrderResponse
      */
     public CancelRefundOrderResponse cancelRefundOrder(String disputeId) throws Exception {
@@ -119,8 +120,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 确认收货（订单）
-     *
+     * <b>summary</b> : 
+     * <p>确认收货（订单）</p>
+     * 
      * @param request ConfirmDisburseRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -147,8 +149,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 确认收货（订单）
-     *
+     * <b>summary</b> : 
+     * <p>确认收货（订单）</p>
+     * 
      * @param request ConfirmDisburseRequest
      * @return ConfirmDisburseResponse
      */
@@ -159,8 +162,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交运单信息
-     *
+     * <b>summary</b> : 
+     * <p>提交运单信息</p>
+     * 
      * @param request CreateGoodsShippingNoticeRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -187,8 +191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 提交运单信息
-     *
+     * <b>summary</b> : 
+     * <p>提交运单信息</p>
+     * 
      * @param request CreateGoodsShippingNoticeRequest
      * @return CreateGoodsShippingNoticeResponse
      */
@@ -199,8 +204,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建采购单
-     *
+     * <b>summary</b> : 
+     * <p>创建采购单</p>
+     * 
      * @param request CreatePurchaseOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -227,8 +233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建采购单
-     *
+     * <b>summary</b> : 
+     * <p>创建采购单</p>
+     * 
      * @param request CreatePurchaseOrderRequest
      * @return CreatePurchaseOrderResponse
      */
@@ -239,8 +246,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建逆向单
-     *
+     * <b>summary</b> : 
+     * <p>创建逆向单</p>
+     * 
      * @param request CreateRefundOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -267,8 +275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建逆向单
-     *
+     * <b>summary</b> : 
+     * <p>创建逆向单</p>
+     * 
      * @param request CreateRefundOrderRequest
      * @return CreateRefundOrderResponse
      */
@@ -279,8 +288,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询主单详情
-     *
+     * <b>summary</b> : 
+     * <p>查询主单详情</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOrderResponse
@@ -304,8 +314,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询主单详情
-     *
+     * <b>summary</b> : 
+     * <p>查询主单详情</p>
      * @return GetOrderResponse
      */
     public GetOrderResponse getOrder(String orderId) throws Exception {
@@ -315,8 +325,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询采购单状态
-     *
+     * <b>summary</b> : 
+     * <p>查询采购单状态</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPurchaseOrderStatusResponse
@@ -340,8 +351,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询采购单状态
-     *
+     * <b>summary</b> : 
+     * <p>查询采购单状态</p>
      * @return GetPurchaseOrderStatusResponse
      */
     public GetPurchaseOrderStatusResponse getPurchaseOrderStatus(String purchaseOrderId) throws Exception {
@@ -351,8 +362,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询分销商店铺
-     *
+     * <b>summary</b> : 
+     * <p>查询分销商店铺</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPurchaserShopResponse
@@ -376,8 +388,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询分销商店铺
-     *
+     * <b>summary</b> : 
+     * <p>查询分销商店铺</p>
      * @return GetPurchaserShopResponse
      */
     public GetPurchaserShopResponse getPurchaserShop(String purchaserId) throws Exception {
@@ -387,8 +399,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询逆向单详情
-     *
+     * <b>summary</b> : 
+     * <p>查询逆向单详情</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRefundOrderResponse
@@ -412,8 +425,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询逆向单详情
-     *
+     * <b>summary</b> : 
+     * <p>查询逆向单详情</p>
      * @return GetRefundOrderResponse
      */
     public GetRefundOrderResponse getRefundOrder(String disputeId) throws Exception {
@@ -423,8 +436,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询选品池商品详情
-     *
+     * <b>summary</b> : 
+     * <p>查询选品池商品详情</p>
+     * 
      * @param request GetSelectionProductRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -460,8 +474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询选品池商品详情
-     *
+     * <b>summary</b> : 
+     * <p>查询选品池商品详情</p>
+     * 
      * @param request GetSelectionProductRequest
      * @return GetSelectionProductResponse
      */
@@ -472,8 +487,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询选品池商品库存
-     *
+     * <b>summary</b> : 
+     * <p>查询选品池商品库存</p>
+     * 
      * @param request GetSelectionProductSaleInfoRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -509,8 +525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询选品池商品库存
-     *
+     * <b>summary</b> : 
+     * <p>查询选品池商品库存</p>
+     * 
      * @param request GetSelectionProductSaleInfoRequest
      * @return GetSelectionProductSaleInfoResponse
      */
@@ -521,8 +538,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询类目
-     *
+     * <b>summary</b> : 
+     * <p>查询类目</p>
+     * 
      * @param request ListCategoriesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -549,8 +567,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询类目
-     *
+     * <b>summary</b> : 
+     * <p>查询类目</p>
+     * 
      * @param request ListCategoriesRequest
      * @return ListCategoriesResponse
      */
@@ -561,8 +580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询物流信息（订单）
-     *
+     * <b>summary</b> : 
+     * <p>查询物流信息（订单）</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListLogisticsOrdersResponse
@@ -586,8 +606,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询物流信息（订单）
-     *
+     * <b>summary</b> : 
+     * <p>查询物流信息（订单）</p>
      * @return ListLogisticsOrdersResponse
      */
     public ListLogisticsOrdersResponse listLogisticsOrders(String orderId) throws Exception {
@@ -597,8 +617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 采购方店铺列表查询
-     *
+     * <b>summary</b> : 
+     * <p>采购方店铺列表查询</p>
+     * 
      * @param request ListPurchaserShopsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -634,8 +655,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 采购方店铺列表查询
-     *
+     * <b>summary</b> : 
+     * <p>采购方店铺列表查询</p>
+     * 
      * @param request ListPurchaserShopsRequest
      * @return ListPurchaserShopsResponse
      */
@@ -646,8 +668,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询选品池商品库存
-     *
+     * <b>summary</b> : 
+     * <p>批量查询选品池商品库存</p>
+     * 
      * @param request ListSelectionProductSaleInfosRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -674,8 +697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询选品池商品库存
-     *
+     * <b>summary</b> : 
+     * <p>批量查询选品池商品库存</p>
+     * 
      * @param request ListSelectionProductSaleInfosRequest
      * @return ListSelectionProductSaleInfosResponse
      */
@@ -686,8 +710,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询商品列表
-     *
+     * <b>summary</b> : 
+     * <p>查询商品列表</p>
+     * 
      * @param request ListSelectionProductsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -727,8 +752,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询商品列表
-     *
+     * <b>summary</b> : 
+     * <p>查询商品列表</p>
+     * 
      * @param request ListSelectionProductsRequest
      * @return ListSelectionProductsResponse
      */
@@ -739,8 +765,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询选品池商品SKU库存
-     *
+     * <b>summary</b> : 
+     * <p>批量查询选品池商品SKU库存</p>
+     * 
      * @param request ListSelectionSkuSaleInfosRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -767,8 +794,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 批量查询选品池商品SKU库存
-     *
+     * <b>summary</b> : 
+     * <p>批量查询选品池商品SKU库存</p>
+     * 
      * @param request ListSelectionSkuSaleInfosRequest
      * @return ListSelectionSkuSaleInfosResponse
      */
@@ -779,8 +807,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询地址divisionCode
-     *
+     * <b>summary</b> : 
+     * <p>查询地址divisionCode</p>
+     * 
      * @param request QueryChildDivisionCodeRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -807,8 +836,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询地址divisionCode
-     *
+     * <b>summary</b> : 
+     * <p>查询地址divisionCode</p>
+     * 
      * @param request QueryChildDivisionCodeRequest
      * @return QueryChildDivisionCodeResponse
      */
@@ -819,8 +849,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询主单列表
-     *
+     * <b>summary</b> : 
+     * <p>查询主单列表</p>
+     * 
      * @param request QueryOrdersRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -847,8 +878,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询主单列表
-     *
+     * <b>summary</b> : 
+     * <p>查询主单列表</p>
+     * 
      * @param request QueryOrdersRequest
      * @return QueryOrdersResponse
      */
@@ -859,8 +891,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 渲染采购单
-     *
+     * <b>summary</b> : 
+     * <p>渲染采购单</p>
+     * 
      * @param request RenderPurchaseOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -887,8 +920,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 渲染采购单
-     *
+     * <b>summary</b> : 
+     * <p>渲染采购单</p>
+     * 
      * @param request RenderPurchaseOrderRequest
      * @return RenderPurchaseOrderResponse
      */
@@ -899,8 +933,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 逆向单渲染
-     *
+     * <b>summary</b> : 
+     * <p>逆向单渲染</p>
+     * 
      * @param request RenderRefundOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -927,8 +962,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 逆向单渲染
-     *
+     * <b>summary</b> : 
+     * <p>逆向单渲染</p>
+     * 
      * @param request RenderRefundOrderRequest
      * @return RenderRefundOrderResponse
      */
@@ -939,8 +975,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 渲染拆分采购单
-     *
+     * <b>summary</b> : 
+     * <p>渲染拆分采购单</p>
+     * 
      * @param request SplitPurchaseOrderRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -967,8 +1004,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 渲染拆分采购单
-     *
+     * <b>summary</b> : 
+     * <p>渲染拆分采购单</p>
+     * 
      * @param request SplitPurchaseOrderRequest
      * @return SplitPurchaseOrderResponse
      */

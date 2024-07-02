@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PurchaseOrderRenderQuery extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1234567</p>
      */
     @NameInMap("buyerId")
     public String buyerId;
@@ -16,6 +19,10 @@ public class PurchaseOrderRenderQuery extends TeaModel {
     @NameInMap("deliveryAddress")
     public AddressInfo deliveryAddress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("extInfo")
     public java.util.Map<String, ?> extInfo;
 

@@ -4,18 +4,38 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Division extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>310000</p>
+     */
     @NameInMap("divisionCode")
     public Long divisionCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("divisionLevel")
     public Long divisionLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>上海</p>
+     */
     @NameInMap("divisionName")
     public String divisionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("parentId")
     public Long parentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>shang hai</p>
+     */
     @NameInMap("pinyin")
     public String pinyin;
 

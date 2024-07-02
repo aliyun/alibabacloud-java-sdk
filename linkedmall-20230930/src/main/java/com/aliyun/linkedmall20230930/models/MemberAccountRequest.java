@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class MemberAccountRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("shopId")
     public String shopId;

@@ -4,15 +4,38 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SkuSpec extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>颜色分类</p>
+     */
     @NameInMap("key")
     public String key;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("keyId")
     public Long keyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>天蓝色</p>
+     */
     @NameInMap("value")
     public String value;
 
+    /**
+     * <strong>example:</strong>
+     * <p>秘色</p>
+     */
+    @NameInMap("valueAlias")
+    public String valueAlias;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("valueId")
     public Long valueId;
 
@@ -43,6 +66,14 @@ public class SkuSpec extends TeaModel {
     }
     public String getValue() {
         return this.value;
+    }
+
+    public SkuSpec setValueAlias(String valueAlias) {
+        this.valueAlias = valueAlias;
+        return this;
+    }
+    public String getValueAlias() {
+        return this.valueAlias;
     }
 
     public SkuSpec setValueId(Long valueId) {

@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class LogisticsDetail extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-01 00:00:00</p>
+     */
     @NameInMap("ocurrTimeStr")
     public String ocurrTimeStr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>已签收</p>
+     */
     @NameInMap("standerdDesc")
     public String standerdDesc;
 

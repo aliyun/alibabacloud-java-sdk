@@ -4,18 +4,30 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class RefundRenderResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("bizClaimType")
     public Integer bizClaimType;
 
     @NameInMap("maxRefundFeeData")
     public DistributionMaxRefundFee maxRefundFeeData;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6692****5458</p>
+     */
     @NameInMap("orderLineId")
     public String orderLineId;
 
     @NameInMap("refundReasonList")
     public java.util.List<RefundReason> refundReasonList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3239281273464326823</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -4,27 +4,59 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ShopPageDataResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>12****01</p>
+     */
     @NameInMap("cooperationShops")
     public java.util.List<CooperationShop> cooperationShops;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-01 00:00:00</p>
+     */
     @NameInMap("endDate")
     public String endDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PID56****2304</p>
+     */
     @NameInMap("purchaserId")
     public String purchaserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22****09</p>
+     */
     @NameInMap("shopId")
     public String shopId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>儿童座椅分销店铺</p>
+     */
     @NameInMap("shopName")
     public String shopName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DistributorQYG</p>
+     */
     @NameInMap("shopType")
     public String shopType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-09-01 00:00:00</p>
+     */
     @NameInMap("startDate")
     public String startDate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Working</p>
+     */
     @NameInMap("status")
     public String status;
 

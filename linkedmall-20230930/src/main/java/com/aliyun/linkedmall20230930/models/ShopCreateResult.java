@@ -4,9 +4,17 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ShopCreateResult extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>123</p>
+     */
     @NameInMap("shopId")
     public String shopId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>WORKING</p>
+     */
     @NameInMap("shopStatus")
     public String shopStatus;
 
