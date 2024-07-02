@@ -80,6 +80,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息</p>
+     * 
+     * @param request BatchKillSessionListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchKillSessionListResponse
+     */
+    public BatchKillSessionListResponse batchKillSessionListWithOptions(BatchKillSessionListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionList)) {
+            body.put("SessionList", request.sessionList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchKillSessionList"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchKillSessionListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>异步关闭集群租户的会话信息；关闭oceanbase云服务和业务之间的会话信息</p>
+     * 
+     * @param request BatchKillSessionListRequest
+     * @return BatchKillSessionListResponse
+     */
+    public BatchKillSessionListResponse batchKillSessionList(BatchKillSessionListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchKillSessionListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>根据记录id取消修改操作 （仅支持处于 PENDING 状态的修改记录）</p>
      * 
      * @param request CancelProjectModifyRecordRequest
@@ -4458,6 +4510,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息</p>
+     * 
+     * @param request DescribeSessionListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSessionListResponse
+     */
+    public DescribeSessionListResponse describeSessionListWithOptions(DescribeSessionListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSessionList"),
+            new TeaPair("version", "2019-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSessionListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询集群租户的会话信息；展示oceanbase云服务和业务之间的会话信息</p>
+     * 
+     * @param request DescribeSessionListRequest
+     * @return DescribeSessionListResponse
+     */
+    public DescribeSessionListResponse describeSessionList(DescribeSessionListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSessionListWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>You can call this operation to query the execution history of an SQL statement by SQL ID that is determined as a slow SQL statement during a specified period of time.</p>
      * 
      * @param request DescribeSlowSQLHistoryListRequest
@@ -4856,7 +4956,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询租户同步位点信息</p>
+     * <p>You can call this operation to query the maximum readable timestamp of a tenant.</p>
      * 
      * @param request DescribeTenantReadableScnRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4892,7 +4992,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询租户同步位点信息</p>
+     * <p>You can call this operation to query the maximum readable timestamp of a tenant.</p>
      * 
      * @param request DescribeTenantReadableScnRequest
      * @return DescribeTenantReadableScnResponse
