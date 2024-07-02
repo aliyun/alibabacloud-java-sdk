@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary CCAI服务面API
-     *
+     * <b>summary</b> : 
+     * <p>CCAI服务面API</p>
+     * 
      * @param request RunCompletionRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -41,16 +42,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Dialogue", request.dialogue);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.dimensions)) {
-            body.put("Dimensions", request.dimensions);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.fields)) {
             body.put("Fields", request.fields);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.modelCode)) {
             body.put("ModelCode", request.modelCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInspection)) {
+            body.put("ServiceInspection", request.serviceInspection);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.stream)) {
@@ -80,8 +81,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary CCAI服务面API
-     *
+     * <b>summary</b> : 
+     * <p>CCAI服务面API</p>
+     * 
      * @param request RunCompletionRequest
      * @return RunCompletionResponse
      */
@@ -92,8 +94,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary CCAI服务面API
-     *
+     * <b>summary</b> : 
+     * <p>CCAI服务面API</p>
+     * 
      * @param request RunCompletionMessageRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -133,8 +136,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary CCAI服务面API
-     *
+     * <b>summary</b> : 
+     * <p>CCAI服务面API</p>
+     * 
      * @param request RunCompletionMessageRequest
      * @return RunCompletionMessageResponse
      */

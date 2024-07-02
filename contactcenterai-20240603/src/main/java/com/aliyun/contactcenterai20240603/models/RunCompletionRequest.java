@@ -10,15 +10,23 @@ public class RunCompletionRequest extends TeaModel {
     @NameInMap("Dialogue")
     public RunCompletionRequestDialogue dialogue;
 
-    @NameInMap("Dimensions")
-    public java.util.List<RunCompletionRequestDimensions> dimensions;
-
     @NameInMap("Fields")
     public java.util.List<RunCompletionRequestFields> fields;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ccai-14b</p>
+     */
     @NameInMap("ModelCode")
     public String modelCode;
 
+    @NameInMap("ServiceInspection")
+    public RunCompletionRequestServiceInspection serviceInspection;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Stream")
     public Boolean stream;
 
@@ -41,14 +49,6 @@ public class RunCompletionRequest extends TeaModel {
         return this.dialogue;
     }
 
-    public RunCompletionRequest setDimensions(java.util.List<RunCompletionRequestDimensions> dimensions) {
-        this.dimensions = dimensions;
-        return this;
-    }
-    public java.util.List<RunCompletionRequestDimensions> getDimensions() {
-        return this.dimensions;
-    }
-
     public RunCompletionRequest setFields(java.util.List<RunCompletionRequestFields> fields) {
         this.fields = fields;
         return this;
@@ -63,6 +63,14 @@ public class RunCompletionRequest extends TeaModel {
     }
     public String getModelCode() {
         return this.modelCode;
+    }
+
+    public RunCompletionRequest setServiceInspection(RunCompletionRequestServiceInspection serviceInspection) {
+        this.serviceInspection = serviceInspection;
+        return this;
+    }
+    public RunCompletionRequestServiceInspection getServiceInspection() {
+        return this.serviceInspection;
     }
 
     public RunCompletionRequest setStream(Boolean stream) {
@@ -87,6 +95,9 @@ public class RunCompletionRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("Role")
         public String role;
@@ -132,6 +143,10 @@ public class RunCompletionRequest extends TeaModel {
         @NameInMap("Sentences")
         public java.util.List<RunCompletionRequestDialogueSentences> sentences;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d25zc9c7004f8dad2b454d</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 
@@ -158,22 +173,22 @@ public class RunCompletionRequest extends TeaModel {
 
     }
 
-    public static class RunCompletionRequestDimensions extends TeaModel {
+    public static class RunCompletionRequestFieldsEnumValues extends TeaModel {
         @NameInMap("Desc")
         public String desc;
 
         /**
          * <p>This parameter is required.</p>
          */
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("EnumValue")
+        public String enumValue;
 
-        public static RunCompletionRequestDimensions build(java.util.Map<String, ?> map) throws Exception {
-            RunCompletionRequestDimensions self = new RunCompletionRequestDimensions();
+        public static RunCompletionRequestFieldsEnumValues build(java.util.Map<String, ?> map) throws Exception {
+            RunCompletionRequestFieldsEnumValues self = new RunCompletionRequestFieldsEnumValues();
             return TeaModel.build(map, self);
         }
 
-        public RunCompletionRequestDimensions setDesc(String desc) {
+        public RunCompletionRequestFieldsEnumValues setDesc(String desc) {
             this.desc = desc;
             return this;
         }
@@ -181,25 +196,29 @@ public class RunCompletionRequest extends TeaModel {
             return this.desc;
         }
 
-        public RunCompletionRequestDimensions setName(String name) {
-            this.name = name;
+        public RunCompletionRequestFieldsEnumValues setEnumValue(String enumValue) {
+            this.enumValue = enumValue;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getEnumValue() {
+            return this.enumValue;
         }
 
     }
 
     public static class RunCompletionRequestFields extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>phoneNumber</p>
+         */
         @NameInMap("Code")
         public String code;
 
         @NameInMap("Desc")
         public String desc;
 
-        @NameInMap("Enums")
-        public java.util.List<String> enums;
+        @NameInMap("EnumValues")
+        public java.util.List<RunCompletionRequestFieldsEnumValues> enumValues;
 
         /**
          * <p>This parameter is required.</p>
@@ -228,12 +247,12 @@ public class RunCompletionRequest extends TeaModel {
             return this.desc;
         }
 
-        public RunCompletionRequestFields setEnums(java.util.List<String> enums) {
-            this.enums = enums;
+        public RunCompletionRequestFields setEnumValues(java.util.List<RunCompletionRequestFieldsEnumValues> enumValues) {
+            this.enumValues = enumValues;
             return this;
         }
-        public java.util.List<String> getEnums() {
-            return this.enums;
+        public java.util.List<RunCompletionRequestFieldsEnumValues> getEnumValues() {
+            return this.enumValues;
         }
 
         public RunCompletionRequestFields setName(String name) {
@@ -242,6 +261,80 @@ public class RunCompletionRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class RunCompletionRequestServiceInspectionInspectionContents extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Title")
+        public String title;
+
+        public static RunCompletionRequestServiceInspectionInspectionContents build(java.util.Map<String, ?> map) throws Exception {
+            RunCompletionRequestServiceInspectionInspectionContents self = new RunCompletionRequestServiceInspectionInspectionContents();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCompletionRequestServiceInspectionInspectionContents setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public RunCompletionRequestServiceInspectionInspectionContents setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class RunCompletionRequestServiceInspection extends TeaModel {
+        @NameInMap("InspectionContents")
+        public java.util.List<RunCompletionRequestServiceInspectionInspectionContents> inspectionContents;
+
+        @NameInMap("InspectionIntroduction")
+        public String inspectionIntroduction;
+
+        @NameInMap("SceneIntroduction")
+        public String sceneIntroduction;
+
+        public static RunCompletionRequestServiceInspection build(java.util.Map<String, ?> map) throws Exception {
+            RunCompletionRequestServiceInspection self = new RunCompletionRequestServiceInspection();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCompletionRequestServiceInspection setInspectionContents(java.util.List<RunCompletionRequestServiceInspectionInspectionContents> inspectionContents) {
+            this.inspectionContents = inspectionContents;
+            return this;
+        }
+        public java.util.List<RunCompletionRequestServiceInspectionInspectionContents> getInspectionContents() {
+            return this.inspectionContents;
+        }
+
+        public RunCompletionRequestServiceInspection setInspectionIntroduction(String inspectionIntroduction) {
+            this.inspectionIntroduction = inspectionIntroduction;
+            return this;
+        }
+        public String getInspectionIntroduction() {
+            return this.inspectionIntroduction;
+        }
+
+        public RunCompletionRequestServiceInspection setSceneIntroduction(String sceneIntroduction) {
+            this.sceneIntroduction = sceneIntroduction;
+            return this;
+        }
+        public String getSceneIntroduction() {
+            return this.sceneIntroduction;
         }
 
     }
