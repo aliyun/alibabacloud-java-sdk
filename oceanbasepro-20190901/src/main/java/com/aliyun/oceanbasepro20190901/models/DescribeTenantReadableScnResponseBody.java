@@ -4,10 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantReadableScnResponseBody extends TeaModel {
+    /**
+     * <p>The data in the return result of the request.</p>
+     */
     @NameInMap("Data")
     public DescribeTenantReadableScnResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>8442BB1E-3171-1192-B9DC-F6F4E53B2673</p>
      */
@@ -37,6 +42,8 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
 
     public static class DescribeTenantReadableScnResponseBodyData extends TeaModel {
         /**
+         * <p>The maximum readable timestamp.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715329164977</p>
          */

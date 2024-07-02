@@ -3,9 +3,8 @@ package com.aliyun.oceanbasepro20190901.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeTenantReadableScnRequest extends TeaModel {
+public class DescribeSessionListRequest extends TeaModel {
     /**
-     * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,21 +14,20 @@ public class DescribeTenantReadableScnRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>t33h8y08k****</p>
+     * <p>t4louaeei****</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
-    public static DescribeTenantReadableScnRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeTenantReadableScnRequest self = new DescribeTenantReadableScnRequest();
+    public static DescribeSessionListRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSessionListRequest self = new DescribeSessionListRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTenantReadableScnRequest setInstanceId(String instanceId) {
+    public DescribeSessionListRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -37,7 +35,7 @@ public class DescribeTenantReadableScnRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeTenantReadableScnRequest setTenantId(String tenantId) {
+    public DescribeSessionListRequest setTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
