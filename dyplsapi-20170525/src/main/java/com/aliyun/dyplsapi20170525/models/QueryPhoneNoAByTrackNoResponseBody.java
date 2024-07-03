@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other status codes indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
@@ -27,6 +34,9 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8906582E-6722</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,18 +81,27 @@ public class QueryPhoneNoAByTrackNoResponseBody extends TeaModel {
     public static class QueryPhoneNoAByTrackNoResponseBodyModule extends TeaModel {
         /**
          * <p>The extension of phone number X.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130</p>
          */
         @NameInMap("Extension")
         public String extension;
 
         /**
          * <p>Phone number A.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1310000****</p>
          */
         @NameInMap("PhoneNoA")
         public String phoneNoA;
 
         /**
          * <p>The private number, that is, phone number X.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710000****</p>
          */
         @NameInMap("PhoneNoX")
         public String phoneNoX;

@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class CreateAxgGroupRequest extends TeaModel {
     /**
      * <p>The name of number group G. If the name of number group G is not specified, the ID of number group G is used as the name of number group G.</p>
-     * <br>
-     * <p>>  The value must be 1 to 128 characters in length.</p>
+     * <blockquote>
+     * <p> The value must be 1 to 128 characters in length.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The phone numbers that you add to number group G. Separate multiple phone numbers with commas (,). A maximum of 200 phone numbers can be added to number group G.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****,1380000****</p>
      */
     @NameInMap("Numbers")
     public String numbers;
@@ -22,15 +29,20 @@ public class CreateAxgGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
-     * <br>
+     * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC123456</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
 
     /**
      * <p>The remarks of number group G. The value must be 0 to 256 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Remark")
     public String remark;

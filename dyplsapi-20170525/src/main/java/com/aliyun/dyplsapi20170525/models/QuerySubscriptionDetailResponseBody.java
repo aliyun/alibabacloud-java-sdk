@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class QuerySubscriptionDetailResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other status codes indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>066E6E47-04CB-4774-A976-4F73CB76D4A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,90 +81,133 @@ public class QuerySubscriptionDetailResponseBody extends TeaModel {
     public static class QuerySubscriptionDetailResponseBodySecretBindDetailDTO extends TeaModel {
         /**
          * <p>The ID of the ASR model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("ASRModelId")
         public String ASRModelId;
 
         /**
          * <p>Indicates whether automatic speech recognition (ASR) is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **false**: ASR is disabled.</p>
-         * <p>*   **true**: ASR is enabled.</p>
+         * <ul>
+         * <li><strong>false</strong>: ASR is disabled.</li>
+         * <li><strong>true</strong>: ASR is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ASRStatus")
         public Boolean ASRStatus;
 
         /**
          * <p>The status of one-way call restrictions. No value is returned for this parameter if one-way call restrictions are not set. Valid values:</p>
-         * <br>
-         * <p>*   **CONTROL_AX_DISABLE**: Phone number A cannot be used to call phone number X.</p>
-         * <p>*   **CONTROL_BX_DISABLE**: Phone number B cannot be used to call phone number X.</p>
+         * <ul>
+         * <li><strong>CONTROL_AX_DISABLE</strong>: Phone number A cannot be used to call phone number X.</li>
+         * <li><strong>CONTROL_BX_DISABLE</strong>: Phone number B cannot be used to call phone number X.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTROL_BX_DISABLE</p>
          */
         @NameInMap("CallRestrict")
         public String callRestrict;
 
         /**
          * <p>The expiration time of the binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-05 12:00:00</p>
          */
         @NameInMap("ExpireDate")
         public String expireDate;
 
         /**
          * <p>The extension in the AXG extension binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>130</p>
          */
         @NameInMap("Extension")
         public String extension;
 
         /**
          * <p>The creation time of the binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-05 12:00:00</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The ID of number group G in the binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000000130001</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
         /**
          * <p>Indicates whether all calls made by the bound phone numbers are recorded. Valid values:</p>
-         * <br>
-         * <p>*   **false**</p>
-         * <p>*   **true**</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("NeedRecord")
         public Boolean needRecord;
 
         /**
          * <p>Phone number A in the binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900001111</p>
          */
         @NameInMap("PhoneNoA")
         public String phoneNoA;
 
         /**
          * <p>Phone number B in the binding.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900002222</p>
          */
         @NameInMap("PhoneNoB")
         public String phoneNoB;
 
         /**
          * <p>The private number in the binding, that is, phone number X.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13900001234</p>
          */
         @NameInMap("PhoneNoX")
         public String phoneNoX;
 
         /**
          * <p>The binding status. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The binding expired.</p>
-         * <p>*   **1**: The binding is in effect.</p>
+         * <ul>
+         * <li><strong>0</strong>: The binding expired.</li>
+         * <li><strong>1</strong>: The binding is in effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Long status;
 
         /**
          * <p>The binding ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000076879****</p>
          */
         @NameInMap("SubsId")
         public String subsId;

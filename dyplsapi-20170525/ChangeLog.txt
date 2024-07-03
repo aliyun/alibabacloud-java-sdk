@@ -1,3 +1,6 @@
+2024-07-03 Version: 2.0.7
+- Generated java 2017-05-25 for Dyplsapi.
+
 2024-06-07 Version: 2.0.6
 - Update API BindAxnExtension: add param Extend.
 

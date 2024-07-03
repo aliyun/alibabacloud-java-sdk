@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
     /**
      * <p>The cabinet number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25689****</p>
      */
     @NameInMap("CabinetNo")
     public String cabinetNo;
@@ -15,6 +18,9 @@ public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
 
     /**
      * <p>Phone number X returned by the API operation for creating a binding.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1710000****</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
@@ -27,8 +33,10 @@ public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
 
     /**
      * <p>The tracking number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22573****</p>
      */
     @NameInMap("trackNo")
     public String trackNo;

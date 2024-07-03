@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class CreateAxgGroupResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of number group G. The value of this parameter is required when the [BindAxg](https://help.aliyun.com/document_detail/110249.html) operation is called to add an AXG binding.</p>
+     * <p>The ID of number group G. The value of this parameter is required when the <a href="https://help.aliyun.com/document_detail/110249.html">BindAxg</a> operation is called to add an AXG binding.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000000000001</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>635C0FDA-9EBC-43D7-B368-9F583C08A126</p>
      */
     @NameInMap("RequestId")
     public String requestId;

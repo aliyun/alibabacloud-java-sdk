@@ -4,12 +4,24 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class BindBatchAxgResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5DCCA8CD-6C0A-50B4-A496-B1D2AB48A1C3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +66,52 @@ public class BindBatchAxgResponseBody extends TeaModel {
     }
 
     public static class BindBatchAxgResponseBodySecretBindListSecretBind extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>isv.INVALID_PARAMETERS</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>257</p>
+         */
         @NameInMap("Extension")
         public String extension;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ringConfig invalid</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13333333333</p>
+         */
         @NameInMap("PhoneNoA")
         public String phoneNoA;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13333333333</p>
+         */
         @NameInMap("SecretNo")
         public String secretNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000085060515673</p>
+         */
         @NameInMap("SubsId")
         public String subsId;
 

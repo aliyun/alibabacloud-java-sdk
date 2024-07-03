@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class QuerySubsIdResponseBody extends TeaModel {
     /**
      * <p>The response code. The value OK indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7F99446-8191-43C0-99B5-F58A6AEAD779</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The binding ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11111111****</p>
      */
     @NameInMap("SubsId")
     public String subsId;
