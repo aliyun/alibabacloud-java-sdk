@@ -370,6 +370,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("Encryption")
         public String encryption;
 
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("EngineVersion")
+        public String engineVersion;
+
         /**
          * <p>The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</p>
          * 
@@ -583,6 +589,22 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getEncryption() {
             return this.encryption;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setEngineVersion(String engineVersion) {
+            this.engineVersion = engineVersion;
+            return this;
+        }
+        public String getEngineVersion() {
+            return this.engineVersion;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setHostInstanceID(String hostInstanceID) {

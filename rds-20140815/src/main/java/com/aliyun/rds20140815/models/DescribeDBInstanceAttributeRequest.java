@@ -20,8 +20,8 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether the instance expires. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong>: The instance expires.</li>
-     * <li><strong>False:</strong> The instance does not expire.</li>
+     * <li><strong>True</strong></li>
+     * <li><strong>False</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

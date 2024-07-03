@@ -108,24 +108,23 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <ul>
      * <li><p>Regular RDS instance</p>
      * <ul>
-     * <li><strong>Basic</strong>: RDS Basic Edition.</li>
-     * <li><strong>HighAvailability</strong>: RDS High-availability Edition.</li>
-     * <li><strong>cluster</strong>: RDS Cluster Edition for ApsaraDB RDS for MySQL.</li>
-     * <li><strong>AlwaysOn</strong>: RDS Cluster Edition for ApsaraDB RDS for SQL Server.</li>
-     * <li><strong>Finance</strong>: RDS Enterprise Edition.</li>
+     * <li><strong>Basic</strong>: RDS Basic Edition</li>
+     * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+     * <li><strong>cluster</strong>: RDS Cluster Edition for ApsaraDB RDS for MySQL or PostgreSQL</li>
+     * <li><strong>AlwaysOn</strong>: RDS Cluster Edition for ApsaraDB RDS for SQL Server</li>
+     * <li><strong>Finance</strong>: RDS Basic Edition for serverless instances</li>
      * </ul>
      * </li>
      * <li><p>Serverless instance</p>
      * <ul>
-     * <li><strong>serverless_basic</strong>: RDS Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</li>
-     * <li><strong>serverless_standard</strong>: RDS High-availability Edition. This edition is available only for instances that run MySQL and PostgreSQL.</li>
-     * <li><strong>serverless_ha</strong>: RDS High-availability Edition for ApsaraDB RDS for SQL Server.</li>
+     * <li><strong>serverless_basic</strong>: RDS Basic Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
+     * <li><strong>serverless_standard</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
+     * <li><strong>serverless_ha</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</li>
      * </ul>
+     * <p>**</p>
+     * <p><strong>Note</strong> This parameter is required when you create a serverless instance.</p>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is required when you create a serverless instance.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>HighAvailability</p>

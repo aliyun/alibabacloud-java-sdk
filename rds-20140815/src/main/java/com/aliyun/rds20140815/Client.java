@@ -2944,6 +2944,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建实例主机安全组规则</p>
+     * 
+     * @param request CreateDBInstanceSecurityGroupRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDBInstanceSecurityGroupRuleResponse
+     */
+    public CreateDBInstanceSecurityGroupRuleResponse createDBInstanceSecurityGroupRuleWithOptions(CreateDBInstanceSecurityGroupRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipProtocol)) {
+            query.put("IpProtocol", request.ipProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portRange)) {
+            query.put("PortRange", request.portRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCidrIp)) {
+            query.put("SourceCidrIp", request.sourceCidrIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDBInstanceSecurityGroupRule"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDBInstanceSecurityGroupRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建实例主机安全组规则</p>
+     * 
+     * @param request CreateDBInstanceSecurityGroupRuleRequest
+     * @return CreateDBInstanceSecurityGroupRuleResponse
+     */
+    public CreateDBInstanceSecurityGroupRuleResponse createDBInstanceSecurityGroupRule(CreateDBInstanceSecurityGroupRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDBInstanceSecurityGroupRuleWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <p>MySQL</p>
@@ -5537,6 +5613,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDBInstanceEndpointAddressResponse deleteDBInstanceEndpointAddress(DeleteDBInstanceEndpointAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBInstanceEndpointAddressWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实例主机安全组规则</p>
+     * 
+     * @param request DeleteDBInstanceSecurityGroupRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDBInstanceSecurityGroupRuleResponse
+     */
+    public DeleteDBInstanceSecurityGroupRuleResponse deleteDBInstanceSecurityGroupRuleWithOptions(DeleteDBInstanceSecurityGroupRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupRuleIds)) {
+            query.put("SecurityGroupRuleIds", request.securityGroupRuleIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDBInstanceSecurityGroupRule"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDBInstanceSecurityGroupRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实例主机安全组规则</p>
+     * 
+     * @param request DeleteDBInstanceSecurityGroupRuleRequest
+     * @return DeleteDBInstanceSecurityGroupRuleResponse
+     */
+    public DeleteDBInstanceSecurityGroupRuleResponse deleteDBInstanceSecurityGroupRule(DeleteDBInstanceSecurityGroupRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDBInstanceSecurityGroupRuleWithOptions(request, runtime);
     }
 
     /**
@@ -10337,6 +10485,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDBInstanceSSLResponse describeDBInstanceSSL(DescribeDBInstanceSSLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBInstanceSSLWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>描述实例主机安全组规则</p>
+     * 
+     * @param request DescribeDBInstanceSecurityGroupRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDBInstanceSecurityGroupRuleResponse
+     */
+    public DescribeDBInstanceSecurityGroupRuleResponse describeDBInstanceSecurityGroupRuleWithOptions(DescribeDBInstanceSecurityGroupRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBInstanceSecurityGroupRule"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBInstanceSecurityGroupRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>描述实例主机安全组规则</p>
+     * 
+     * @param request DescribeDBInstanceSecurityGroupRuleRequest
+     * @return DescribeDBInstanceSecurityGroupRuleResponse
+     */
+    public DescribeDBInstanceSecurityGroupRuleResponse describeDBInstanceSecurityGroupRule(DescribeDBInstanceSecurityGroupRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBInstanceSecurityGroupRuleWithOptions(request, runtime);
     }
 
     /**
@@ -16443,18 +16651,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>MySQL
+     * <li>RDS MySQL
      * **
      * <strong>Note</strong> This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</li>
-     * <li>SQL Server
+     * <li>RDS SQL Server
      * **
      * <strong>Note</strong> This operation is supported only for RDS instances that run SQL Server 2008 R2.</li>
-     * <li>MariaDB</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <ul>
      * <li>Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.</li>
-     * <li>If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.</li>
+     * <li>If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.</li>
+     * <li>Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different <strong>SQLHash</strong> values are generated for the same SQLText before and after optimization. For more information, see <a href="~~2637024~~">[Notice] Optimization of the template algorithm for slow queries</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -16532,18 +16741,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
-     * <li>MySQL
+     * <li>RDS MySQL
      * **
      * <strong>Note</strong> This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.</li>
-     * <li>SQL Server
+     * <li>RDS SQL Server
      * **
      * <strong>Note</strong> This operation is supported only for RDS instances that run SQL Server 2008 R2.</li>
-     * <li>MariaDB</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * <h3><a href="#"></a>Precautions</h3>
      * <ul>
      * <li>Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.</li>
-     * <li>If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.</li>
+     * <li>If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.</li>
+     * <li>Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different <strong>SQLHash</strong> values are generated for the same SQLText before and after optimization. For more information, see <a href="~~2637024~~">[Notice] Optimization of the template algorithm for slow queries</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -16814,18 +17024,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>PostgreSQL</p>
+     * <p>MySQL
+     * PostgreSQL</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2794383.html">Check report for the major engine version upgrade of an ApsaraDB RDS for MySQL instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/218391.html">Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the check report for a major engine version upgrade of an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16890,18 +17102,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>PostgreSQL</p>
+     * <p>MySQL
+     * PostgreSQL</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
-     * <p>Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
      * </blockquote>
      * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2794383.html">Check report for the major engine version upgrade of an ApsaraDB RDS for MySQL instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/218391.html">Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the check report for a major engine version upgrade of an ApsaraDB RDS for MySQL instance or ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
      * @return DescribeUpgradeMajorVersionPrecheckTaskResponse
@@ -21353,6 +21567,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBInstanceSSLResponse modifyDBInstanceSSL(ModifyDBInstanceSSLRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBInstanceSSLWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例主机安全组规则</p>
+     * 
+     * @param request ModifyDBInstanceSecurityGroupRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDBInstanceSecurityGroupRuleResponse
+     */
+    public ModifyDBInstanceSecurityGroupRuleResponse modifyDBInstanceSecurityGroupRuleWithOptions(ModifyDBInstanceSecurityGroupRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipProtocol)) {
+            query.put("IpProtocol", request.ipProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.portRange)) {
+            query.put("PortRange", request.portRange);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupRuleId)) {
+            query.put("SecurityGroupRuleId", request.securityGroupRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceCidrIp)) {
+            query.put("SourceCidrIp", request.sourceCidrIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBInstanceSecurityGroupRule"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBInstanceSecurityGroupRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例主机安全组规则</p>
+     * 
+     * @param request ModifyDBInstanceSecurityGroupRuleRequest
+     * @return ModifyDBInstanceSecurityGroupRuleResponse
+     */
+    public ModifyDBInstanceSecurityGroupRuleResponse modifyDBInstanceSecurityGroupRule(ModifyDBInstanceSecurityGroupRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBInstanceSecurityGroupRuleWithOptions(request, runtime);
     }
 
     /**
