@@ -135,6 +135,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks> disks;
 
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         /**
          * <strong>example:</strong>
          * <p>2024-02-01 10:56:36</p>
@@ -310,6 +313,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelDisks> getDisks() {
             return this.disks;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setGmtCreate(String gmtCreate) {

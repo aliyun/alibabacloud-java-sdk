@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateAndroidInstanceGroupRequest extends TeaModel {
+    @NameInMap("Amount")
+    public Integer amount;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -102,6 +105,14 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     public static CreateAndroidInstanceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAndroidInstanceGroupRequest self = new CreateAndroidInstanceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAndroidInstanceGroupRequest setAmount(Integer amount) {
+        this.amount = amount;
+        return this;
+    }
+    public Integer getAmount() {
+        return this.amount;
     }
 
     public CreateAndroidInstanceGroupRequest setAutoPay(Boolean autoPay) {
