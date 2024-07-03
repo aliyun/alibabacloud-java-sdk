@@ -98,8 +98,9 @@ public class CreateCollectionRequest extends TeaModel {
 
     /**
      * <p>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
-     * <p>**</p>
-     * <p><strong>Warning</strong>Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
+     * <blockquote>
+     * <p>Warning: Reserved fields such as id, vector, to_tsvector, and source cannot be used.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

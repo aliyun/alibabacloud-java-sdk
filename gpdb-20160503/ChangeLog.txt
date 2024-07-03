@@ -1,3 +1,7 @@
+2024-07-03 Version: 1.8.1
+- Update API DescribeDocument: update response param.
+
+
 2024-06-27 Version: 1.8.0
 - Support API BindDBResourceGroupWithRole.
 - Support API CreateDBResourceGroup.
