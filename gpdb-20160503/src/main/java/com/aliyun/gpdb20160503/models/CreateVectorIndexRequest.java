@@ -33,8 +33,6 @@ public class CreateVectorIndexRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.</p>
-     * <blockquote>
-     * </blockquote>
      * <ul>
      * <li><p>0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.</p>
      * </li>
@@ -89,7 +87,15 @@ public class CreateVectorIndexRequest extends TeaModel {
     public String managerAccountPassword;
 
     /**
-     * <p>Distance Metrics。</p>
+     * <p>The method that is used to create vector indexes.Valid values:</p>
+     * <ul>
+     * <li><p>l2: Euclidean distance.</p>
+     * </li>
+     * <li><p>ip: inner product distance.</p>
+     * </li>
+     * <li><p>cosine: cosine similarity.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cosine</p>

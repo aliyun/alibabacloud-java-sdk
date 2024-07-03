@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDocumentResponseBody extends TeaModel {
+    @NameInMap("ChunkFileUrl")
+    public String chunkFileUrl;
+
     /**
      * <strong>example:</strong>
      * <p>100</p>
@@ -53,6 +56,9 @@ public class DescribeDocumentResponseBody extends TeaModel {
     @NameInMap("FileSize")
     public Long fileSize;
 
+    @NameInMap("FileUrl")
+    public String fileUrl;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -66,6 +72,9 @@ public class DescribeDocumentResponseBody extends TeaModel {
      */
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("PlainChunkFileUrl")
+    public String plainChunkFileUrl;
 
     /**
      * <strong>example:</strong>
@@ -98,6 +107,14 @@ public class DescribeDocumentResponseBody extends TeaModel {
     public static DescribeDocumentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDocumentResponseBody self = new DescribeDocumentResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDocumentResponseBody setChunkFileUrl(String chunkFileUrl) {
+        this.chunkFileUrl = chunkFileUrl;
+        return this;
+    }
+    public String getChunkFileUrl() {
+        return this.chunkFileUrl;
     }
 
     public DescribeDocumentResponseBody setDocsCount(Integer docsCount) {
@@ -156,6 +173,14 @@ public class DescribeDocumentResponseBody extends TeaModel {
         return this.fileSize;
     }
 
+    public DescribeDocumentResponseBody setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
+        return this;
+    }
+    public String getFileUrl() {
+        return this.fileUrl;
+    }
+
     public DescribeDocumentResponseBody setFileVersion(Integer fileVersion) {
         this.fileVersion = fileVersion;
         return this;
@@ -170,6 +195,14 @@ public class DescribeDocumentResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DescribeDocumentResponseBody setPlainChunkFileUrl(String plainChunkFileUrl) {
+        this.plainChunkFileUrl = plainChunkFileUrl;
+        return this;
+    }
+    public String getPlainChunkFileUrl() {
+        return this.plainChunkFileUrl;
     }
 
     public DescribeDocumentResponseBody setRequestId(String requestId) {
