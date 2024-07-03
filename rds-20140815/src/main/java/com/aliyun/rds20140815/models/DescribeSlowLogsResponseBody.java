@@ -162,8 +162,9 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public static class DescribeSlowLogsResponseBodyItemsSQLSlowLog extends TeaModel {
         /**
          * <p>The average execution duration per SQL statement in the query. Unit: seconds.</p>
-         * <p>**</p>
-         * <hr>
+         * <blockquote>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -174,7 +175,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average number of I/O writes per SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,7 +187,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average number of rows that were affected by the last SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -198,7 +199,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average number of logical reads per SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -210,7 +211,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average number of physical reads per SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -222,7 +223,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average number of rows that were affected per SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -270,7 +271,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest number of I/O writes that were performed by a specific SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -282,7 +283,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest number of rows that were affected by the last SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -312,7 +313,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest number of logical reads that were performed by a specific SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -324,7 +325,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest number of physical reads that were performed by a specific SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -336,7 +337,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest number of rows that were affected by a specific SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -348,7 +349,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of I/O writes that were performed by a specific SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -360,7 +361,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of rows that were affected by the last SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -372,7 +373,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of logical reads that were performed by a specific SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -384,7 +385,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of physical reads that were performed by a specific SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -396,7 +397,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of rows that were affected by a specific SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -489,7 +490,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average amount of CPU time per SQL statement in the query. Unit: seconds.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -501,7 +502,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average execution duration per SQL statement in the query. Unit: seconds.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -513,7 +514,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest amount of CPU time that was used by a specific SQL statement in the query. Unit: seconds.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -523,9 +524,9 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         public Long SQLServerMaxCpuTime;
 
         /**
-         * <p>The smallest amount of CPU time that was used by a specific SQL statement. Unit: seconds.</p>
+         * <p>The smallest amount of CPU time that was used by a specific SQL statement in the query. Unit: seconds.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -537,7 +538,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest execution duration of a specific SQL statement in the query. Unit: seconds.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -549,7 +550,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The total amount of CPU time that was used by all SQL statements in the query. Unit: seconds.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -597,7 +598,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The total number of I/O writes that were performed by all SQL statements in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -609,7 +610,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The total number of rows that were affected by the last SQL statement in the query.</p>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run SQL Server.</p>
+         * <p> This parameter is returned only for instances that run SQL Server.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -637,7 +638,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         public Long totalLogicalReadCounts;
 
         /**
-         * <p>The total number of physical reads that were performed by all SQL statements in the query .</p>
+         * <p>The total number of physical reads that were performed by all SQL statements in the query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

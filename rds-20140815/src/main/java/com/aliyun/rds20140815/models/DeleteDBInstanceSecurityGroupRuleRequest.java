@@ -3,23 +3,19 @@ package com.aliyun.rds20140815.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSlotsRequest extends TeaModel {
+public class DeleteDBInstanceSecurityGroupRuleRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
-     * 
      * <strong>example:</strong>
-     * <p>ETnLKlblzczshOTUbOC****</p>
+     * <p>ETnLKlblzczshOTUbOC******</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pgm-bp102g323jd4****</p>
+     * <p>rm-bp15i4hn07r******</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -28,13 +24,11 @@ public class DescribeSlotsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("OwnerId")
-    public Long ownerId;
+    public String ownerId;
 
     /**
-     * <p>The resource group ID. You can leave this parameter empty.</p>
-     * 
      * <strong>example:</strong>
-     * <p>rg-acfmy*****</p>
+     * <p>rg-acfmy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -45,12 +39,21 @@ public class DescribeSlotsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static DescribeSlotsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSlotsRequest self = new DescribeSlotsRequest();
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sgr-2ze17u******</p>
+     */
+    @NameInMap("SecurityGroupRuleIds")
+    public String securityGroupRuleIds;
+
+    public static DeleteDBInstanceSecurityGroupRuleRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteDBInstanceSecurityGroupRuleRequest self = new DeleteDBInstanceSecurityGroupRuleRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSlotsRequest setClientToken(String clientToken) {
+    public DeleteDBInstanceSecurityGroupRuleRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -58,7 +61,7 @@ public class DescribeSlotsRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DescribeSlotsRequest setDBInstanceId(String DBInstanceId) {
+    public DeleteDBInstanceSecurityGroupRuleRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -66,7 +69,7 @@ public class DescribeSlotsRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeSlotsRequest setOwnerAccount(String ownerAccount) {
+    public DeleteDBInstanceSecurityGroupRuleRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -74,15 +77,15 @@ public class DescribeSlotsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeSlotsRequest setOwnerId(Long ownerId) {
+    public DeleteDBInstanceSecurityGroupRuleRequest setOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
-    public Long getOwnerId() {
+    public String getOwnerId() {
         return this.ownerId;
     }
 
-    public DescribeSlotsRequest setResourceGroupId(String resourceGroupId) {
+    public DeleteDBInstanceSecurityGroupRuleRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -90,7 +93,7 @@ public class DescribeSlotsRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeSlotsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DeleteDBInstanceSecurityGroupRuleRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -98,12 +101,20 @@ public class DescribeSlotsRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeSlotsRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DeleteDBInstanceSecurityGroupRuleRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DeleteDBInstanceSecurityGroupRuleRequest setSecurityGroupRuleIds(String securityGroupRuleIds) {
+        this.securityGroupRuleIds = securityGroupRuleIds;
+        return this;
+    }
+    public String getSecurityGroupRuleIds() {
+        return this.securityGroupRuleIds;
     }
 
 }

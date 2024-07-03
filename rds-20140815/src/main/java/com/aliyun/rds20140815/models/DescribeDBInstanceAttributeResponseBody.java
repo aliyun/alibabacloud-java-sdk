@@ -174,7 +174,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String nodeZoneId;
 
         /**
-         * <p>The node status. Default value: true. Valid values:</p>
+         * <p>The node status. Valid values:</p>
          * <ul>
          * <li>active</li>
          * <li>creating</li>
@@ -590,6 +590,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Boolean burstingEnabled;
 
         /**
+         * <p>Indicates whether the conditions for a temporary upgrade are met.</p>
+         * <blockquote>
+         * <p> Pay-as-you-go instances do not support temporary upgrades.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -614,7 +619,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -798,7 +803,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <ul>
          * <li><strong>local_ssd</strong> or <strong>ephemeral_ssd</strong>: local SSD</li>
          * <li><strong>cloud_ssd</strong>: standard SSD</li>
-         * <li><strong>cloud_essd</strong>: Enterprise SSD (ESSD)</li>
+         * <li><strong>cloud_essd</strong>: Enterprise SSD (ESSD).</li>
          * <li><strong>general_essd</strong>: general ESSD</li>
          * </ul>
          * 
@@ -809,7 +814,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBInstanceStorageType;
 
         /**
-         * <p>The instance type. Valid values:</p>
+         * <p>The type of the instance. Valid values:</p>
          * <ul>
          * <li><strong>Primary</strong>: primary instance</li>
          * <li><strong>Readonly</strong>: read-only instance</li>
@@ -833,7 +838,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer DBMaxQuantity;
 
         /**
-         * <p>The ID of the dedicated cluster to which the instances belong.</p>
+         * <p>The ID of the dedicated cluster to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>dhg-7a9*****</p>
@@ -1076,7 +1081,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Postpaid</strong>: pay-as-you-go</li>
          * <li><strong>Prepaid</strong>: subscription</li>
-         * <li><strong>SERVERLESS</strong>: serverless</li>
+         * <li><strong>SERVERLESS</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1198,6 +1203,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String tempDBInstanceId;
 
         /**
+         * <p>The end time of the temporary upgrade of the instance.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable for pay-as-you-go instances.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-30 00:00:00</p>
          */
@@ -1205,6 +1215,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String tempUpgradeTimeEnd;
 
         /**
+         * <p>The start time of the temporary upgrade of the instance.</p>
+         * <blockquote>
+         * <p> This parameter is unavailable for pay-as-you-go instances.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>2024-05-29 00:00:00</p>
          */
@@ -1252,7 +1267,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the instance. This parameter is returned only when the instance resides in a VPC.</p>
+         * <p>The ID of the VPC. This parameter is returned only when the instance resides in a VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-23rsxdf*****</p>
