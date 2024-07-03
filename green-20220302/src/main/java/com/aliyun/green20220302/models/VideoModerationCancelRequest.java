@@ -4,9 +4,17 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class VideoModerationCancelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>videoDetection</p>
+     */
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;taskId\&quot;:\&quot;vi_s_4O9gp7GfNQdx9GOqdekFmk-1z2RJT\&quot;}</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 

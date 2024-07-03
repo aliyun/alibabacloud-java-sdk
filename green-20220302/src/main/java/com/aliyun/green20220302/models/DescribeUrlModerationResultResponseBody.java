@@ -4,15 +4,27 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class DescribeUrlModerationResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public DescribeUrlModerationResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01F9144A-2088-5D87-935B-2DB865284B1A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -84,9 +96,17 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeUrlModerationResultResponseBodyDataResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>81.22</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sexual_url</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -114,12 +134,20 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeUrlModerationResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>26769ada6e264e7ba9aa048241e12be9</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
         @NameInMap("ExtraInfo")
         public DescribeUrlModerationResultResponseBodyDataExtraInfo extraInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
+         */
         @NameInMap("ReqId")
         public String reqId;
 

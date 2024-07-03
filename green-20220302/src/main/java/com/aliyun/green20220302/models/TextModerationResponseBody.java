@@ -4,15 +4,27 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class TextModerationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public TextModerationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -60,6 +72,10 @@ public class TextModerationResponseBody extends TeaModel {
         @NameInMap("deviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>porn</p>
+         */
         @NameInMap("labels")
         public String labels;
 

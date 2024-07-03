@@ -4,15 +4,27 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageModerationResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public DescribeImageModerationResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeImageModerationResultResponseBodyDataResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>81.22</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>violent_explosion</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -84,12 +104,24 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeImageModerationResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2a5389eb-4ff8-4584-ac99-644e2a539aa1</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[{&quot;result&quot;:[{&quot;confidence&quot;:81.22,&quot;label&quot;:&quot;violent_explosion&quot;}]}]</p>
+         */
         @NameInMap("Frame")
         public String frame;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FrameNum")
         public Integer frameNum;
 
@@ -98,6 +130,9 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
 
         @NameInMap("Result")
         public java.util.List<DescribeImageModerationResultResponseBodyDataResult> result;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
 
         public static DescribeImageModerationResultResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageModerationResultResponseBodyData self = new DescribeImageModerationResultResponseBodyData();
@@ -142,6 +177,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
         public java.util.List<DescribeImageModerationResultResponseBodyDataResult> getResult() {
             return this.result;
+        }
+
+        public DescribeImageModerationResultResponseBodyData setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
     }

@@ -4,17 +4,28 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class VideoModerationResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public VideoModerationResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success finished</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,36 +98,76 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataAudioResultSliceDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1685245261939</p>
+         */
         @NameInMap("EndTimestamp")
         public Long endTimestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;consoleProduct\&quot;:\&quot;slbnext\&quot;}</p>
+         */
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <strong>example:</strong>
+         * <p>porn</p>
+         */
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("RiskTips")
         public String riskTips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("RiskWords")
         public String riskWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1659935002123</p>
+         */
         @NameInMap("StartTimestamp")
         public Long startTimestamp;
 
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.abc.img">http://xxxx.abc.img</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -325,9 +376,17 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>bloody</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -364,6 +423,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("Result")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsResult> result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tonalityImprove</p>
+         */
         @NameInMap("Service")
         public String service;
 
@@ -418,12 +481,20 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFrames extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>338</p>
+         */
         @NameInMap("Offset")
         public Float offset;
 
         @NameInMap("Results")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResults> results;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxxx.abc.jpg">http://xxxx.abc.jpg</a></p>
+         */
         @NameInMap("TempUrl")
         public String tempUrl;
 
@@ -470,6 +541,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("FrameNum")
         public Integer frameNum;
 
@@ -514,12 +589,20 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("AudioResult")
         public VideoModerationResultResponseBodyDataAudioResult audioResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>product_content-2055763</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
         @NameInMap("FrameResult")
         public VideoModerationResultResponseBodyDataFrameResult frameResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p>liveId</p>
+         */
         @NameInMap("LiveId")
         public String liveId;
 

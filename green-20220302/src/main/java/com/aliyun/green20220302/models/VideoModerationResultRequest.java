@@ -4,9 +4,17 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class VideoModerationResultRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>videoDetection</p>
+     */
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;taskId\&quot;:\&quot;au_f_8PoWiZKoLbczp5HRn69VdT-1y8@U5\&quot;}</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 

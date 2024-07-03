@@ -4,15 +4,27 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class ImageModerationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public ImageModerationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -598,9 +610,17 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyDataResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>81.22</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>violent_explosion</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -628,6 +648,10 @@ public class ImageModerationResponseBody extends TeaModel {
     }
 
     public static class ImageModerationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>fb5ffab1-993b-449f-b8d6-b97d5e3331f2</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
@@ -636,6 +660,9 @@ public class ImageModerationResponseBody extends TeaModel {
 
         @NameInMap("Result")
         public java.util.List<ImageModerationResponseBodyDataResult> result;
+
+        @NameInMap("RiskLevel")
+        public String riskLevel;
 
         public static ImageModerationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ImageModerationResponseBodyData self = new ImageModerationResponseBodyData();
@@ -664,6 +691,14 @@ public class ImageModerationResponseBody extends TeaModel {
         }
         public java.util.List<ImageModerationResponseBodyDataResult> getResult() {
             return this.result;
+        }
+
+        public ImageModerationResponseBodyData setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
     }

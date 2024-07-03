@@ -4,17 +4,28 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class DescribeFileModerationResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public DescribeFileModerationResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,9 +68,17 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyDataPageResultImageResultLabelResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>25.0</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>nonlabel</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -87,15 +106,31 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyDataPageResultImageResultLocation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>44</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <strong>example:</strong>
+         * <p>33</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -148,6 +183,10 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @NameInMap("Location")
         public DescribeFileModerationResultResponseBodyDataPageResultImageResultLocation location;
 
+        /**
+         * <strong>example:</strong>
+         * <p>baselineCheck</p>
+         */
         @NameInMap("Service")
         public String service;
 
@@ -194,21 +233,41 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>porn</p>
+         */
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("RiskTips")
         public String riskTips;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("RiskWords")
         public String riskWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>chat_detection</p>
+         */
         @NameInMap("Service")
         public String service;
 
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[0,999]</p>
+         */
         @NameInMap("TextSegment")
         public String textSegment;
 
@@ -279,15 +338,27 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @NameInMap("ImageResult")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultImageResult> imageResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.jpg</a></p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         @NameInMap("TextResult")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResultTextResult> textResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.txt</a></p>
+         */
         @NameInMap("TextUrl")
         public String textUrl;
 
@@ -339,15 +410,27 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>26769ada6e264e7ba9aa048241e12be9</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>doc</p>
+         */
         @NameInMap("DocType")
         public String docType;
 
         @NameInMap("PageResult")
         public java.util.List<DescribeFileModerationResultResponseBodyDataPageResult> pageResult;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf</a></p>
+         */
         @NameInMap("Url")
         public String url;
 

@@ -4,9 +4,17 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class FileModerationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>document_detection</p>
+     */
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;url&quot;:&quot;<a href="https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf%22%7D">https://detect-obj.oss-cn-hangzhou.aliyuncs.com/sample/xxxx.pdf&quot;}</a></p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 

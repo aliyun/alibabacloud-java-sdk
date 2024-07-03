@@ -4,15 +4,27 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageResultExtResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public DescribeImageResultExtResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6CF2815C-C8C7-4A01-B52E-FF6E24F53492</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -56,18 +68,27 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
     public static class DescribeImageResultExtResponseBodyDataCustomImage extends TeaModel {
         /**
          * <p>图片ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>图库ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("LibId")
         public String libId;
 
         /**
          * <p>图库名。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>图库123</p>
          */
         @NameInMap("LibName")
         public String libName;
@@ -106,6 +127,9 @@ public class DescribeImageResultExtResponseBody extends TeaModel {
     public static class DescribeImageResultExtResponseBodyDataPublicFigure extends TeaModel {
         /**
          * <p>人物ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yzazhzou</p>
          */
         @NameInMap("FigureId")
         public String figureId;

@@ -47,8 +47,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文档审核结果
-     *
+     * <b>summary</b> : 
+     * <p>文档审核结果</p>
+     * 
      * @param request DescribeFileModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFileModerationResultResponse
@@ -82,8 +83,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文档审核结果
-     *
+     * <b>summary</b> : 
+     * <p>文档审核结果</p>
+     * 
      * @param request DescribeFileModerationResultRequest
      * @return DescribeFileModerationResultResponse
      */
@@ -93,8 +95,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询异步检测结果
-     *
+     * <b>summary</b> : 
+     * <p>查询异步检测结果</p>
+     * 
      * @param request DescribeImageModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeImageModerationResultResponse
@@ -124,8 +127,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询异步检测结果
-     *
+     * <b>summary</b> : 
+     * <p>查询异步检测结果</p>
+     * 
      * @param request DescribeImageModerationResultRequest
      * @return DescribeImageModerationResultResponse
      */
@@ -135,8 +139,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询检测结果辅助信息
-     *
+     * <b>summary</b> : 
+     * <p>查询检测结果辅助信息</p>
+     * 
      * @param request DescribeImageResultExtRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeImageResultExtResponse
@@ -170,8 +175,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询检测结果辅助信息
-     *
+     * <b>summary</b> : 
+     * <p>查询检测结果辅助信息</p>
+     * 
      * @param request DescribeImageResultExtRequest
      * @return DescribeImageResultExtResponse
      */
@@ -181,8 +187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询上传token
-     *
+     * <b>summary</b> : 
+     * <p>查询上传token</p>
+     * 
      * @param request DescribeUploadTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUploadTokenResponse
@@ -204,8 +211,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询上传token
-     *
+     * <b>summary</b> : 
+     * <p>查询上传token</p>
      * @return DescribeUploadTokenResponse
      */
     public DescribeUploadTokenResponse describeUploadToken() throws Exception {
@@ -214,8 +221,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询 url 检测结果
-     *
+     * <b>summary</b> : 
+     * <p>查询 url 检测结果</p>
+     * 
      * @param request DescribeUrlModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUrlModerationResultResponse
@@ -245,8 +253,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询 url 检测结果
-     *
+     * <b>summary</b> : 
+     * <p>查询 url 检测结果</p>
+     * 
      * @param request DescribeUrlModerationResultRequest
      * @return DescribeUrlModerationResultResponse
      */
@@ -256,8 +265,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文档审核
-     *
+     * <b>summary</b> : 
+     * <p>文档审核</p>
+     * 
      * @param request FileModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return FileModerationResponse
@@ -291,8 +301,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文档审核
-     *
+     * <b>summary</b> : 
+     * <p>文档审核</p>
+     * 
      * @param request FileModerationRequest
      * @return FileModerationResponse
      */
@@ -302,8 +313,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 图片异步检测
-     *
+     * <b>summary</b> : 
+     * <p>图片异步检测</p>
+     * 
      * @param request ImageAsyncModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImageAsyncModerationResponse
@@ -337,8 +349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 图片异步检测
-     *
+     * <b>summary</b> : 
+     * <p>图片异步检测</p>
+     * 
      * @param request ImageAsyncModerationRequest
      * @return ImageAsyncModerationResponse
      */
@@ -348,8 +361,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 图片审核
-     *
+     * <b>summary</b> : 
+     * <p>图片审核</p>
+     * 
      * @param request ImageModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ImageModerationResponse
@@ -383,8 +397,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 图片审核
-     *
+     * <b>summary</b> : 
+     * <p>图片审核</p>
+     * 
      * @param request ImageModerationRequest
      * @return ImageModerationResponse
      */
@@ -394,8 +409,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文本审核
-     *
+     * <b>summary</b> : 
+     * <p>文本审核</p>
+     * 
      * @param request TextModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TextModerationResponse
@@ -429,8 +445,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文本审核
-     *
+     * <b>summary</b> : 
+     * <p>文本审核</p>
+     * 
      * @param request TextModerationRequest
      * @return TextModerationResponse
      */
@@ -440,8 +457,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文本检测Plus版
-     *
+     * <b>summary</b> : 
+     * <p>文本检测Plus版</p>
+     * 
      * @param request TextModerationPlusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TextModerationPlusResponse
@@ -475,8 +493,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 文本检测Plus版
-     *
+     * <b>summary</b> : 
+     * <p>文本检测Plus版</p>
+     * 
      * @param request TextModerationPlusRequest
      * @return TextModerationPlusResponse
      */
@@ -486,8 +505,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary url异步检测
-     *
+     * <b>summary</b> : 
+     * <p>url异步检测</p>
+     * 
      * @param request UrlAsyncModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UrlAsyncModerationResponse
@@ -521,8 +541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary url异步检测
-     *
+     * <b>summary</b> : 
+     * <p>url异步检测</p>
+     * 
      * @param request UrlAsyncModerationRequest
      * @return UrlAsyncModerationResponse
      */
@@ -532,8 +553,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 视频检测任务提交
-     *
+     * <b>summary</b> : 
+     * <p>视频检测任务提交</p>
+     * 
      * @param request VideoModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VideoModerationResponse
@@ -567,8 +589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 视频检测任务提交
-     *
+     * <b>summary</b> : 
+     * <p>视频检测任务提交</p>
+     * 
      * @param request VideoModerationRequest
      * @return VideoModerationResponse
      */
@@ -578,8 +601,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消视频直播流检测
-     *
+     * <b>summary</b> : 
+     * <p>取消视频直播流检测</p>
+     * 
      * @param request VideoModerationCancelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VideoModerationCancelResponse
@@ -613,8 +637,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消视频直播流检测
-     *
+     * <b>summary</b> : 
+     * <p>取消视频直播流检测</p>
+     * 
      * @param request VideoModerationCancelRequest
      * @return VideoModerationCancelResponse
      */
@@ -624,8 +649,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取视频检测结果
-     *
+     * <b>summary</b> : 
+     * <p>获取视频检测结果</p>
+     * 
      * @param request VideoModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VideoModerationResultResponse
@@ -659,8 +685,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取视频检测结果
-     *
+     * <b>summary</b> : 
+     * <p>获取视频检测结果</p>
+     * 
      * @param request VideoModerationResultRequest
      * @return VideoModerationResultResponse
      */
@@ -670,8 +697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 语音审核
-     *
+     * <b>summary</b> : 
+     * <p>语音审核</p>
+     * 
      * @param request VoiceModerationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VoiceModerationResponse
@@ -705,8 +733,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 语音审核
-     *
+     * <b>summary</b> : 
+     * <p>语音审核</p>
+     * 
      * @param request VoiceModerationRequest
      * @return VoiceModerationResponse
      */
@@ -716,8 +745,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消检测
-     *
+     * <b>summary</b> : 
+     * <p>取消检测</p>
+     * 
      * @param request VoiceModerationCancelRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VoiceModerationCancelResponse
@@ -751,8 +781,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消检测
-     *
+     * <b>summary</b> : 
+     * <p>取消检测</p>
+     * 
      * @param request VoiceModerationCancelRequest
      * @return VoiceModerationCancelResponse
      */
@@ -762,8 +793,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 语音检测结果获取接口
-     *
+     * <b>summary</b> : 
+     * <p>语音检测结果获取接口</p>
+     * 
      * @param request VoiceModerationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VoiceModerationResultResponse
@@ -797,8 +829,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 语音检测结果获取接口
-     *
+     * <b>summary</b> : 
+     * <p>语音检测结果获取接口</p>
+     * 
      * @param request VoiceModerationResultRequest
      * @return VoiceModerationResultResponse
      */

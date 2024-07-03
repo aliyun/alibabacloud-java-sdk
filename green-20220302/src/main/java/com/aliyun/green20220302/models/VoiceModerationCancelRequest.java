@@ -4,9 +4,19 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class VoiceModerationCancelRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>nickname_detection</p>
+     */
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *         &quot;taskId&quot;: &quot;xxxxx-xxxx&quot;
+     *     }</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 

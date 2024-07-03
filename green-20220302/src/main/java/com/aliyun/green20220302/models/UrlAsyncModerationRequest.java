@@ -7,6 +7,13 @@ public class UrlAsyncModerationRequest extends TeaModel {
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *         &quot;url&quot;: &quot;<a href="https://help.aliyun.com/">https://help.aliyun.com/</a>&quot;,
+     *         &quot;dataId&quot;: &quot;url123******&quot;
+     * }</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 

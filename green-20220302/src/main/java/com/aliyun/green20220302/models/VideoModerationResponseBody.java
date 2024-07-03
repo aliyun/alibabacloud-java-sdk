@@ -4,17 +4,28 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class VideoModerationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public VideoModerationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -60,6 +71,10 @@ public class VideoModerationResponseBody extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxx-xxxxx</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
