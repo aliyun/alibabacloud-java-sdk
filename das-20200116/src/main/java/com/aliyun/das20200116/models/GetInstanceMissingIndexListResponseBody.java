@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetInstanceMissingIndexListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -85,114 +98,171 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
     public static class GetInstanceMissingIndexListResponseBodyDataList extends TeaModel {
         /**
          * <p>The average cost savings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.67</p>
          */
         @NameInMap("AvgTotalUserCost")
         public Double avgTotalUserCost;
 
         /**
          * <p>The performance improvement, in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98.3</p>
          */
         @NameInMap("AvgUserImpact")
         public Double avgUserImpact;
 
         /**
          * <p>The statement used to create the missing indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE INDEX [IX_CLOUDDBA_school_dbo_stu@col1_@col2] ON [school].[dbo].<a href="%5Bcol1%5D,%5Bcol2%5D,%5Bcol3%5D">stu</a> INCLUDE ([col4],[col5]) WITH (FILLFACTOR = 90, ONLINE = OFF);</p>
          */
         @NameInMap("CreateIndex")
         public String createIndex;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>school</p>
          */
         @NameInMap("DatabaseName")
         public String databaseName;
 
         /**
          * <p>The index columns included in the equal operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col1,col2,col3</p>
          */
         @NameInMap("EqualityColumns")
         public String equalityColumns;
 
         /**
          * <p>The columns on which indexes are missing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>col3,col4</p>
          */
         @NameInMap("IncludedColumns")
         public String includedColumns;
 
         /**
          * <p>The number of indexes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("IndexCount")
         public Long indexCount;
 
         /**
          * <p>The index columns included in the not equal operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2392</p>
          */
         @NameInMap("InequalityColumns")
         public String inequalityColumns;
 
         /**
          * <p>The last seek time of a user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1702023327000</p>
          */
         @NameInMap("LastUserSeek")
         public Long lastUserSeek;
 
         /**
          * <p>The object name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stu</p>
          */
         @NameInMap("ObjectName")
         public String objectName;
 
         /**
          * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5025</p>
          */
         @NameInMap("ReservedPages")
         public Long reservedPages;
 
         /**
          * <p>The table size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>39.26</p>
          */
         @NameInMap("ReservedSize")
         public Double reservedSize;
 
         /**
          * <p>The number of table rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>226945</p>
          */
         @NameInMap("RowCount")
         public Long rowCount;
 
         /**
          * <p>The schema name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbo</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
          * <p>The number of scans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SystemScans")
         public Long systemScans;
 
         /**
          * <p>The number of seeks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SystemSeeks")
         public Long systemSeeks;
 
         /**
          * <p>The number of compilations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2392</p>
          */
         @NameInMap("UniqueCompiles")
         public Long uniqueCompiles;
 
         /**
          * <p>The number of scans performed by users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UserScans")
         public Long userScans;
 
         /**
          * <p>The number of seeks performed by users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1081</p>
          */
         @NameInMap("UserSeeks")
         public Long userSeeks;
@@ -365,18 +435,27 @@ public class GetInstanceMissingIndexListResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNo")
         public Long pageNo;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("Total")
         public Long total;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     /**
      * <p>The message that is returned for the request.</p>
-     * <br>
-     * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,48 +101,72 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     public static class DescribeCacheAnalysisJobResponseBodyDataBigKeysKeyInfo extends TeaModel {
         /**
          * <p>The number of bytes that are occupied by the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("Bytes")
         public Long bytes;
 
         /**
          * <p>The number of elements in the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
          * <p>The data type of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hashtable</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
          * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596256542547</p>
          */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
         /**
          * <p>The name of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_x****</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the data node on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The data type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         @NameInMap("Type")
         public String type;
@@ -226,48 +264,72 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     public static class DescribeCacheAnalysisJobResponseBodyDataBigKeysOfNumKeyInfo extends TeaModel {
         /**
          * <p>The number of bytes that are occupied by the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("Bytes")
         public Long bytes;
 
         /**
          * <p>The number of elements in the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
          * <p>The data type of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hashtable</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
          * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596256542547</p>
          */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
         /**
          * <p>The name of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_x****</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the data node on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The data type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         @NameInMap("Type")
         public String type;
@@ -436,30 +498,45 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     public static class DescribeCacheAnalysisJobResponseBodyDataKeyPrefixesPrefix extends TeaModel {
         /**
          * <p>The number of bytes that are occupied by the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("Bytes")
         public Long bytes;
 
         /**
          * <p>The number of elements in the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The number of keys that contain the prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("KeyNum")
         public Long keyNum;
 
         /**
          * <p>The prefix of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_</p>
          */
         @NameInMap("Prefix")
         public String prefix;
 
         /**
          * <p>The data type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         @NameInMap("Type")
         public String type;
@@ -533,48 +610,72 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     public static class DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfBytesKeyInfo extends TeaModel {
         /**
          * <p>The number of bytes that are occupied by the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("Bytes")
         public Long bytes;
 
         /**
          * <p>The number of elements in the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
          * <p>The data type of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hashtable</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
          * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596256542547</p>
          */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
         /**
          * <p>The name of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_x****</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the data node on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The data type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         @NameInMap("Type")
         public String type;
@@ -672,48 +773,72 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     public static class DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfNumKeyInfo extends TeaModel {
         /**
          * <p>The number of bytes that are occupied by the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         @NameInMap("Bytes")
         public Long bytes;
 
         /**
          * <p>The number of elements in the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
          * <p>The data type of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hashtable</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
          * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596256542547</p>
          */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
         /**
          * <p>The name of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_x****</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The ID of the data node on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The data type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hash</p>
          */
         @NameInMap("Type")
         public String type;
@@ -826,12 +951,18 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-bp18ff4a195d****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the cache analysis task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sf79-sd99-sa37-****</p>
          */
         @NameInMap("JobId")
         public String jobId;
@@ -844,25 +975,36 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
         /**
          * <p>The message that is returned for the request.</p>
-         * <br>
-         * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * <blockquote>
+         * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The ID of the data node on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The state of the cache analysis task. Valid values:</p>
-         * <br>
-         * <p>*   **BACKUP**: The data is being backed up.</p>
-         * <p>*   **ANALYZING**: The data is being analyzed.</p>
-         * <p>*   **FINISHED**: The data is analyzed.</p>
-         * <p>*   **FAILED**: An error occurred.</p>
+         * <ul>
+         * <li><strong>BACKUP</strong>: The data is being backed up.</li>
+         * <li><strong>ANALYZING</strong>: The data is being analyzed.</li>
+         * <li><strong>FINISHED</strong>: The data is analyzed.</li>
+         * <li><strong>FAILED</strong>: An error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BACKUP</p>
          */
         @NameInMap("TaskState")
         public String taskState;

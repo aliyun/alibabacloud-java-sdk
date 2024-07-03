@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSqlLogStatisticResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,36 +101,54 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
     public static class DescribeSqlLogStatisticResponseBodyData extends TeaModel {
         /**
          * <p>The size of the SQL Explorer and Audit data that is stored in cold storage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8585901</p>
          */
         @NameInMap("ColdSqlSize")
         public Long coldSqlSize;
 
         /**
          * <p>The free quota for cold data storage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5041450</p>
          */
         @NameInMap("FreeColdSqlSize")
         public Long freeColdSqlSize;
 
         /**
          * <p>The free quota for hot data storage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>297245</p>
          */
         @NameInMap("FreeHotSqlSize")
         public Long freeHotSqlSize;
 
         /**
          * <p>The size of the SQL Explorer and Audit data that is stored in hot storage. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1118042</p>
          */
         @NameInMap("HotSqlSize")
         public Long hotSqlSize;
 
         /**
          * <p>The size of the SQL Explorer and Audit data that was generated in the most recent day. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23</p>
          */
         @NameInMap("ImportSqlSize")
         public Long importSqlSize;
 
         /**
          * <p>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1712568564928</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;

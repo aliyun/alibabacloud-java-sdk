@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DataSessionStatDbStatsValue extends TeaModel {
     /**
      * <p>The number of active namespaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ActiveCount")
     public Long activeCount;
 
     /**
      * <p>The total number of namespaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;

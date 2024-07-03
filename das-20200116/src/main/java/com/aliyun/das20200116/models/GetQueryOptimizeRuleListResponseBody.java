@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -85,18 +98,27 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
     public static class GetQueryOptimizeRuleListResponseBodyDataList extends TeaModel {
         /**
          * <p>The name of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LARGE_ROWS_EXAMINED</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("RuleId")
         public String ruleId;
 
         /**
-         * <p>The type of the tag. **Predefined** is returned, which indicates that the tag is added by the system.</p>
+         * <p>The type of the tag. <strong>Predefined</strong> is returned, which indicates that the tag is added by the system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Predefined</p>
          */
         @NameInMap("Type")
         public String type;
@@ -135,6 +157,9 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
     public static class GetQueryOptimizeRuleListResponseBodyData extends TeaModel {
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Extra")
         public String extra;
@@ -147,18 +172,27 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageNo")
         public Integer pageNo;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Total")
         public Long total;

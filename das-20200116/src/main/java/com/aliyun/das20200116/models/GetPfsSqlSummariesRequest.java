@@ -5,77 +5,112 @@ import com.aliyun.tea.*;
 
 public class GetPfsSqlSummariesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort the returned entries in ascending order. Default value: **false**. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <p>Specifies whether to sort the returned entries in ascending order. Default value: <strong>false</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Asc")
     public Boolean asc;
 
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time. You can view the data of up to seven days within the last month.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time. You can view the data of up to seven days within the last month.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1679297005999</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf61swc4cru0b****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The keywords of the SQL template. Separate multiple keywords with spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>select update</p>
      */
     @NameInMap("Keywords")
     public String keywords;
 
     /**
      * <p>The node ID.</p>
-     * <br>
-     * <p>>  This parameter must be specified if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+     * <blockquote>
+     * <p> This parameter must be specified if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-****-db-0</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>The field by which to sort the returned entries. Default value: **count**.</p>
-     * <br>
-     * <p>*   **count**: the number of executions.</p>
-     * <p>*   **avgRt**: the average execution duration.</p>
-     * <p>*   **rtRate**: the execution duration percentage.</p>
-     * <p>*   **rowsExamined**: the total number of scanned rows.</p>
-     * <p>*   **avgRowsExamined**: the average number of scanned rows.</p>
-     * <p>*   **avgRowsReturned**: the average number of returned rows.</p>
+     * <p>The field by which to sort the returned entries. Default value: <strong>count</strong>.</p>
+     * <ul>
+     * <li><strong>count</strong>: the number of executions.</li>
+     * <li><strong>avgRt</strong>: the average execution duration.</li>
+     * <li><strong>rtRate</strong>: the execution duration percentage.</li>
+     * <li><strong>rowsExamined</strong>: the total number of scanned rows.</li>
+     * <li><strong>avgRowsExamined</strong>: the average number of scanned rows.</li>
+     * <li><strong>avgRowsReturned</strong>: the average number of returned rows.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>count</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The SQL ID.</p>
-     * <br>
-     * <p>>  If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</p>
+     * <blockquote>
+     * <p> If this parameter is specified, the full request statistics of the specified SQL query are collected. If this parameter is left empty, the full request statistics of the entire database instance are collected.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>651b56fe9418d48edb8fdf0980ec****</p>
      */
     @NameInMap("SqlId")
     public String sqlId;
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1675833788056</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

@@ -6,22 +6,28 @@ import com.aliyun.tea.*;
 public class UpdateAutoSqlOptimizeStatusRequest extends TeaModel {
     /**
      * <p>The database instance IDs. Separate multiple IDs with commas (,).</p>
-     * <br>
-     * <p>>  You can specify up to 50 instance IDs.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can specify up to 50 instance IDs.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp10usoc1erj7****,rm-bp10usoc1erj7****</p>
      */
     @NameInMap("Instances")
     public String instances;
 
     /**
      * <p>The status of the automatic SQL optimization feature. Valid values:</p>
-     * <br>
-     * <p>*   **0**: The automatic SQL optimization feature is disabled.</p>
-     * <p>*   **1**: **SQL diagnosis and automatic index creation** is specified.</p>
-     * <p>*   **3**: **SQL diagnosis only** is specified.</p>
-     * <br>
+     * <ul>
+     * <li><strong>0</strong>: The automatic SQL optimization feature is disabled.</li>
+     * <li><strong>1</strong>: <strong>SQL diagnosis and automatic index creation</strong> is specified.</li>
+     * <li><strong>3</strong>: <strong>SQL diagnosis only</strong> is specified.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;

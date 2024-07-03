@@ -5,132 +5,184 @@ import com.aliyun.tea.*;
 
 public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort the returned entries in ascending order. Default value: **true**. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <p>Specifies whether to sort the returned entries in ascending order. Default value: <strong>true</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Asc")
     public Boolean asc;
 
     /**
      * <p>The name of the database to be queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb01</p>
      */
     @NameInMap("DbNames")
     public String dbNames;
 
     /**
      * <p>The database engine. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**: ApsaraDB RDS for MySQL</p>
-     * <p>*   **PolarDBMySQL**: PolarDB for MySQL</p>
-     * <p>*   **PostgreSQL**: ApsaraDB RDS for PostgreSQL</p>
-     * <br>
+     * <ul>
+     * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL</li>
+     * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
+     * <li><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The instance IDs. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze1jdv45i7l6****</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
      * <p>The keywords of the SQL template. Separate multiple keywords with spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>select update</p>
      */
     @NameInMap("Keywords")
     public String keywords;
 
     /**
      * <p>The logical relationship between multiple keywords. Valid values:</p>
-     * <br>
-     * <p>*   **or**</p>
-     * <p>*   **and**</p>
+     * <ul>
+     * <li><strong>or</strong></li>
+     * <li><strong>and</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>or</p>
      */
     @NameInMap("LogicalOperator")
     public String logicalOperator;
 
     /**
-     * <p>Specifies whether to query only SQL templates that need to be optimized. Default value: **false**. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <p>Specifies whether to query only SQL templates that need to be optimized. Default value: <strong>false</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("OnlyOptimizedSql")
     public Boolean onlyOptimizedSql;
 
     /**
-     * <p>The field by which to sort the returned entries. Default value: **count**. Valid values:</p>
-     * <br>
-     * <p>*   **count**: the number of executions.</p>
-     * <p>*   **maxQueryTime**: the longest execution duration.</p>
-     * <p>*   **avgQueryTime**: the average execution duration.</p>
-     * <p>*   **maxLockTime**: the longest lock wait duration.</p>
-     * <p>*   **avgLockTime**: the average lock wait duration.</p>
-     * <p>*   **maxRowsExamined**: the largest number of scanned rows.</p>
-     * <p>*   **avgRowsExamined**: the average number of scanned rows.</p>
-     * <p>*   **maxRowsSent**: the largest number of returned rows.</p>
-     * <p>*   **avgRowsSent**: the average number of returned rows.</p>
+     * <p>The field by which to sort the returned entries. Default value: <strong>count</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>count</strong>: the number of executions.</li>
+     * <li><strong>maxQueryTime</strong>: the longest execution duration.</li>
+     * <li><strong>avgQueryTime</strong>: the average execution duration.</li>
+     * <li><strong>maxLockTime</strong>: the longest lock wait duration.</li>
+     * <li><strong>avgLockTime</strong>: the average lock wait duration.</li>
+     * <li><strong>maxRowsExamined</strong>: the largest number of scanned rows.</li>
+     * <li><strong>avgRowsExamined</strong>: the average number of scanned rows.</li>
+     * <li><strong>maxRowsSent</strong>: the largest number of returned rows.</li>
+     * <li><strong>avgRowsSent</strong>: the average number of returned rows.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>count</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region in which the instance resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-china**: Chinese mainland</p>
-     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
-     * <br>
-     * <p>This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region set by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect and the system obtains data from the region in which the first specified instance resides.****</p>
-     * <br>
-     * <p>>  If your instances reside in the regions in the Chinese mainland, set this parameter to **cn-china**.</p>
+     * <ul>
+     * <li><strong>cn-china</strong>: Chinese mainland</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * </ul>
+     * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.****</p>
+     * <blockquote>
+     * <p> If your instances reside in the regions in the Chinese mainland, set this parameter to <strong>cn-china</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-china</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see [Query governance](https://help.aliyun.com/document_detail/290038.html).</p>
+     * <p>The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/290038.html">Query governance</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DAS_NOT_IMPORTANT</p>
      */
     @NameInMap("Rules")
     public String rules;
 
     /**
-     * <p>The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](https://help.aliyun.com/document_detail/405261.html) operation to obtain the SQL template IDs.</p>
+     * <p>The SQL template IDs. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeExecErrorStats</a> operation to obtain the SQL template IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0****</p>
      */
     @NameInMap("SqlIds")
     public String sqlIds;
 
     /**
      * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("TagNames")
     public String tagNames;
 
     /**
      * <p>The date to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1642953600000</p>
      */
     @NameInMap("Time")
     public Long time;
 
     /**
      * <p>The account of the database to be queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testUser</p>
      */
     @NameInMap("User")
     public String user;

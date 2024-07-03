@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class DisableSqlConcurrencyControlRequest extends TeaModel {
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
-     * <br>
+     * <blockquote>
+     * <p> The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze1jdv45i7l6****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the throttling rule that is applied to the instance. You can call the [GetRunningSqlConcurrencyControlRules](https://help.aliyun.com/document_detail/223538.html) operation to query the ID.</p>
-     * <br>
+     * <p>The ID of the throttling rule that is applied to the instance. You can call the <a href="https://help.aliyun.com/document_detail/223538.html">GetRunningSqlConcurrencyControlRules</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ItemId")
     public Long itemId;

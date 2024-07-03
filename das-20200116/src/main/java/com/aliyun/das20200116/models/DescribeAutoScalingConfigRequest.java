@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeAutoScalingConfigRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-2ze1prap1k46r****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

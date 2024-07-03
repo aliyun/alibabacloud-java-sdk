@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetBlockingDetailListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,72 +101,108 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
     public static class GetBlockingDetailListResponseBodyDataList extends TeaModel {
         /**
          * <p>The batch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683530096156</p>
          */
         @NameInMap("BatchId")
         public Long batchId;
 
         /**
          * <p>The client name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>.Net SqlClient Data Provider</p>
          */
         @NameInMap("ClientAppName")
         public String clientAppName;
 
         /**
          * <p>The time when the blocking data was collected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700065800000</p>
          */
         @NameInMap("CurrentCollectionTime")
         public Long currentCollectionTime;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>school</p>
          */
         @NameInMap("DataBase")
         public String dataBase;
 
         /**
          * <p>The client hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALLBNMGTAPPRD01</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>The username that is used for the logon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cheney603</p>
          */
         @NameInMap("LoginId")
         public String loginId;
 
         /**
          * <p>The hash value of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6977DD06CD9CAFF2</p>
          */
         @NameInMap("QueryHash")
         public String queryHash;
 
         /**
          * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1717</p>
          */
         @NameInMap("Spid")
         public String spid;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from test1</p>
          */
         @NameInMap("SqlText")
         public String sqlText;
 
         /**
          * <p>The time when the execution started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608888296000</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The blocking duration. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000</p>
          */
         @NameInMap("WaitTimeMs")
         public Long waitTimeMs;
 
         /**
          * <p>The wait type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MISCELLANEOUS</p>
          */
         @NameInMap("WaitType")
         public String waitType;
@@ -269,18 +319,27 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the page returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNo")
         public Long pageNo;
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("Total")
         public Long total;

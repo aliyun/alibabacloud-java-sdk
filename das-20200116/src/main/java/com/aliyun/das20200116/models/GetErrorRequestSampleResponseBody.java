@@ -6,35 +6,52 @@ import com.aliyun.tea.*;
 public class GetErrorRequestSampleResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
 
     /**
      * <p>The returned data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[         {             &quot;sqlId&quot;: &quot;2cd4432556c3dab9d825ba363637****&quot;,             &quot;database&quot;: &quot;dbgateway&quot;,             &quot;originHost&quot;: &quot;172.16.1****&quot;,             &quot;tables&quot;: [                 &quot;meter_****&quot;             ],             &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,             &quot;errorCode&quot;: &quot;1062&quot;,             &quot;user&quot;: &quot;dbgat****&quot;,             &quot;sql&quot;: &quot;insert into meter_****\n        ( \n        <strong><strong>\n     )\n        values (now(), now(), \&quot;bbbc8624-5e19-455a-9714-8466f688</strong></strong>\&quot;, \&quot;2022-02-10 14:00:00\&quot;, \&quot;{\&quot;endTime\&quot;:\&quot;2022-02-10 14:00:00\&quot;,\&quot;endTimestamp\&quot;:1644472800,\&quot;startTime\&quot;:\&quot;2022-02-10 13:00:00\&quot;,\&quot;startTimestamp\&quot;:1644469200}\&quot;, null, null)&quot;,             &quot;timestamp&quot;: 1644476100435         }]</p>
      */
     @NameInMap("Data")
     public java.util.List<GetErrorRequestSampleResponseBodyData> data;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7172BECE-588A-5961-8126-C216E16B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,36 +104,54 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
     public static class GetErrorRequestSampleResponseBodyData extends TeaModel {
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbgateway</p>
          */
         @NameInMap("database")
         public String database;
 
         /**
          * <p>The error code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1062</p>
          */
         @NameInMap("errorCode")
         public String errorCode;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The IP address of the client that executes the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.1****</p>
          */
         @NameInMap("originHost")
         public String originHost;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>insert into meter_****</p>
          */
         @NameInMap("sql")
         public String sql;
 
         /**
          * <p>The SQL query ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2cd4432556c3dab9d825ba363637****</p>
          */
         @NameInMap("sqlId")
         public String sqlId;
@@ -129,12 +164,18 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
 
         /**
          * <p>The time when the SQL query was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1644476100435</p>
          */
         @NameInMap("timestamp")
         public Long timestamp;
 
         /**
          * <p>The username of the account that is used to log on to the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbgat****</p>
          */
         @NameInMap("user")
         public String user;

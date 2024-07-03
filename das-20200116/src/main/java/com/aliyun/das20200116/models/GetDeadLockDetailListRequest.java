@@ -6,42 +6,57 @@ import com.aliyun.tea.*;
 public class GetDeadLockDetailListRequest extends TeaModel {
     /**
      * <p>The database name list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>school1,school2</p>
      */
     @NameInMap("DbNameList")
     public String dbNameList;
 
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1702360530292</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze2016723b328gs2</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1701755730292</p>
      */
     @NameInMap("StartTime")
     public String startTime;

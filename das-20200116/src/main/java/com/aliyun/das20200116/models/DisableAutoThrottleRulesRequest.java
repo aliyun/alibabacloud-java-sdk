@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class DisableAutoThrottleRulesRequest extends TeaModel {
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
     /**
      * <p>The database instance IDs.</p>
-     * <br>
-     * <p>>  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\\"Instance ID1\\",\\"Instance ID2\\"]`.</p>
-     * <br>
+     * <blockquote>
+     * <p> Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <code>[\\&quot;Instance ID1\\&quot;,\\&quot;Instance ID2\\&quot;]</code>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;rm-2ze8g2am97624****\&quot;,\&quot;rm-2ze9xrhze0709****\&quot;]</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

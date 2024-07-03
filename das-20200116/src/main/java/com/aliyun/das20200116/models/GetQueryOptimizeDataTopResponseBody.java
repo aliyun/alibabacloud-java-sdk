@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -85,21 +98,31 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
     public static class GetQueryOptimizeDataTopResponseBodyDataList extends TeaModel {
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The metric name. Valid values:</p>
-         * <br>
-         * <p>* **sqlExecuteCount**: the number of slow SQL executions.</p>
-         * <p>* **optimizedSqlExecuteCount**: the number of slow SQL executions that need to be optimized.</p>
+         * <ul>
+         * <li><strong>sqlExecuteCount</strong>: the number of slow SQL executions.</li>
+         * <li><strong>optimizedSqlExecuteCount</strong>: the number of slow SQL executions that need to be optimized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sqlExecuteCount</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Value")
         public Double value;
@@ -138,6 +161,9 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
     public static class GetQueryOptimizeDataTopResponseBodyData extends TeaModel {
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Extra")
         public String extra;
@@ -150,18 +176,27 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
 
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageNo")
         public Integer pageNo;
 
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Total")
         public Long total;

@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class GetRedisAllSessionRequest extends TeaModel {
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
     /**
      * <p>The database instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-2zemyfd1sh1u2i****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAutoThrottleRulesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,23 +21,34 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7172BECE-588A-5961-8126-C216E16B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,77 +101,114 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
     public static class GetAutoThrottleRulesResponseBodyDataEnableAutoThrottleList extends TeaModel {
         /**
          * <p>The maximum period of time during which an exception occurs when automatic SQL throttling is triggered. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AbnormalDuration")
         public Double abnormalDuration;
 
         /**
          * <p>The maximum number of active sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("ActiveSessions")
         public Long activeSessions;
 
         /**
          * <p>The end time of the throttling window. The value of this parameter is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23:59Z</p>
          */
         @NameInMap("AllowThrottleEndTime")
         public String allowThrottleEndTime;
 
         /**
          * <p>The start time of the throttling window. The value of this parameter is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00Z</p>
          */
         @NameInMap("AllowThrottleStartTime")
         public String allowThrottleStartTime;
 
         /**
          * <p>Indicates whether abnormal SQL statements in execution are terminated at a time. Valid values:</p>
-         * <br>
-         * <p>> Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</p>
-         * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <blockquote>
+         * <p>Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoKillSession")
         public Boolean autoKillSession;
 
         /**
          * <p>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</p>
-         * <br>
-         * <p>* **AND**</p>
-         * <p>* **OR**</p>
+         * <ul>
+         * <li><strong>AND</strong></li>
+         * <li><strong>OR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AND</p>
          */
         @NameInMap("CpuSessionRelation")
         public String cpuSessionRelation;
 
         /**
          * <p>The CPU utilization threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("CpuUsage")
         public Double cpuUsage;
 
         /**
          * <p>The database instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The maximum throttling duration. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxThrottleTime")
         public Double maxThrottleTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140692647406****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>Indicates whether the automatic SQL throttling feature is enabled. Valid values:</p>
-         * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Visible")
         public Boolean visible;
@@ -260,77 +311,114 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
     public static class GetAutoThrottleRulesResponseBodyDataTurnOffAutoThrottleList extends TeaModel {
         /**
          * <p>The maximum period of time during which the automatic SQL throttling feature is triggered. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AbnormalDuration")
         public Double abnormalDuration;
 
         /**
          * <p>The maximum number of active sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64</p>
          */
         @NameInMap("ActiveSessions")
         public Long activeSessions;
 
         /**
          * <p>The end time of the throttling window. The value of this parameter is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23:59Z</p>
          */
         @NameInMap("AllowThrottleEndTime")
         public String allowThrottleEndTime;
 
         /**
          * <p>The start time of the throttling window. The value of this parameter is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00Z</p>
          */
         @NameInMap("AllowThrottleStartTime")
         public String allowThrottleStartTime;
 
         /**
          * <p>Indicates whether abnormal SQL statements in execution are terminated at a time. Valid values:</p>
-         * <br>
-         * <p>> Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</p>
-         * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <blockquote>
+         * <p>Abnormal SQL statements use the same template as the SQL statements that need to be throttled.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AutoKillSession")
         public Boolean autoKillSession;
 
         /**
          * <p>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</p>
-         * <br>
-         * <p>* **AND**</p>
-         * <p>* **OR**</p>
+         * <ul>
+         * <li><strong>AND</strong></li>
+         * <li><strong>OR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OR</p>
          */
         @NameInMap("CpuSessionRelation")
         public String cpuSessionRelation;
 
         /**
          * <p>The CPU utilization threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("CpuUsage")
         public Double cpuUsage;
 
         /**
          * <p>The database instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze9xrhze0709****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The maximum throttling duration. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxThrottleTime")
         public Double maxThrottleTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>140692647406****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>Indicates whether the automatic SQL throttling feature is enabled. Valid values:</p>
-         * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Visible")
         public Boolean visible;
@@ -433,6 +521,9 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
     public static class GetAutoThrottleRulesResponseBodyData extends TeaModel {
         /**
          * <p>The number of database instances for which the automatic SQL throttling feature is currently enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EnableAutoThrottleCount")
         public Long enableAutoThrottleCount;
@@ -445,28 +536,39 @@ public class GetAutoThrottleRulesResponseBody extends TeaModel {
 
         /**
          * <p>The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.</p>
-         * <br>
-         * <p>>  If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+         * <blockquote>
+         * <p> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NeverEnableAutoThrottleOrReleasedInstanceCount")
         public Long neverEnableAutoThrottleOrReleasedInstanceCount;
 
         /**
          * <p>The number of database instances that do not exist or for which the automatic SQL throttling feature has never been enabled.</p>
-         * <br>
-         * <p>>  If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+         * <blockquote>
+         * <p> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+         * </blockquote>
          */
         @NameInMap("NeverEnableAutoThrottleOrReleasedInstanceIdList")
         public java.util.List<String> neverEnableAutoThrottleOrReleasedInstanceIdList;
 
         /**
          * <p>The number of databases for which the automatic SQL throttling feature has been enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("TotalAutoThrottleRulesCount")
         public Long totalAutoThrottleRulesCount;
 
         /**
          * <p>The number of database instances for which the automatic SQL throttling feature was once enabled but is currently disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TurnOffAutoThrottleCount")
         public Long turnOffAutoThrottleCount;

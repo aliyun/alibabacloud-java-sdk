@@ -6,39 +6,57 @@ import com.aliyun.tea.*;
 public class GetPfsMetricTrendsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</p>
+     * <blockquote>
+     * <p> The end time must be later than the start time. You can view the data of up to seven days in the previous 30 days.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1678432430967</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-m5ea73876ukci****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The metric whose trend you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **count**: the number of executions.</p>
-     * <p>*   **avgRt**: the average execution duration.</p>
-     * <p>*   **rtRate**: the execution duration percentage.</p>
-     * <p>*   **rowsExamined**: the total number of scanned rows.</p>
+     * <ul>
+     * <li><strong>count</strong>: the number of executions.</li>
+     * <li><strong>avgRt</strong>: the average execution duration.</li>
+     * <li><strong>rtRate</strong>: the execution duration percentage.</li>
+     * <li><strong>rowsExamined</strong>: the total number of scanned rows.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Count</p>
      */
     @NameInMap("Metric")
     public String metric;
 
     /**
      * <p>The node ID.</p>
-     * <br>
-     * <p>>  You must specify this parameter for an ApsaraDB RDS for MySQL cluster instance and a PolarDB for MySQL cluster.</p>
+     * <blockquote>
+     * <p> You must specify this parameter for an ApsaraDB RDS for MySQL cluster instance and a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-x****-db-0</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1677461663092</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

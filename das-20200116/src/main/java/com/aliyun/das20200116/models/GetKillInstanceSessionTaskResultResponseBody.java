@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,23 +21,34 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,77 +101,112 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
     public static class GetKillInstanceSessionTaskResultResponseBodyDataResult extends TeaModel {
         /**
          * <p>Indicates whether the session is active.</p>
-         * <br>
-         * <p>> If the type of the command is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <blockquote>
+         * <p>If the type of the command is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
          * <p>The type of the command executed in the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sleep</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbTest</p>
          */
         @NameInMap("Db")
         public String db;
 
         /**
          * <p>The IP address and port number of the host that initiated the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX:23428</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8357518</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The SQL statement executed in the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT sleep(60)</p>
          */
         @NameInMap("Info")
         public String info;
 
         /**
          * <p>The description of the session when the session was terminated.</p>
-         * <br>
-         * <p>*   **SESSION_KILLED**: The session is terminated.</p>
-         * <p>*   **SESSION_EXPIRED**: The session has expired.</p>
-         * <p>*   **SESSION_NO_PERMISSION**: The account used to terminate the session has insufficient permissions.</p>
-         * <p>*   **SESSION_ACCOUNT_ERROR**: The account or password used to terminate the session is invalid.</p>
-         * <p>*   **SESSION_IGNORED_USER**: The session of the account does not need to be terminated.</p>
-         * <p>*   **SESSION_INTERNAL_USER_OR_COMMAND**: The session is a session initiated by or a command run by an Alibaba Cloud O\\&M account.</p>
-         * <p>*   **SESSION_KILL_TASK_TIMEOUT**: Timeout occurs when the session is terminated.</p>
-         * <p>*   **SESSION_OTHER_ERROR**: Other errors occurred.</p>
+         * <ul>
+         * <li><strong>SESSION_KILLED</strong>: The session is terminated.</li>
+         * <li><strong>SESSION_EXPIRED</strong>: The session has expired.</li>
+         * <li><strong>SESSION_NO_PERMISSION</strong>: The account used to terminate the session has insufficient permissions.</li>
+         * <li><strong>SESSION_ACCOUNT_ERROR</strong>: The account or password used to terminate the session is invalid.</li>
+         * <li><strong>SESSION_IGNORED_USER</strong>: The session of the account does not need to be terminated.</li>
+         * <li><strong>SESSION_INTERNAL_USER_OR_COMMAND</strong>: The session is a session initiated by or a command run by an Alibaba Cloud O\&amp;M account.</li>
+         * <li><strong>SESSION_KILL_TASK_TIMEOUT</strong>: Timeout occurs when the session is terminated.</li>
+         * <li><strong>SESSION_OTHER_ERROR</strong>: Other errors occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SESSION_KILLED</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
          * <p>The status of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sending data</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The ID of the subtask that terminates the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_d9e94107-6116-4ac3-b874-81466aff****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The execution duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Time")
         public Long time;
 
         /**
          * <p>The account of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         @NameInMap("User")
         public String user;
@@ -259,33 +308,49 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
 
     public static class GetKillInstanceSessionTaskResultResponseBodyData extends TeaModel {
         /**
-         * <p>The number of ignored sessions, including sessions of the accounts that are specified by IgnoredUsers, sessions of internal O\\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions.</p>
+         * <p>The number of ignored sessions, including sessions of the accounts that are specified by IgnoredUsers, sessions of internal O\&amp;M accounts of Alibaba Cloud, and <strong>Binlog Dump</strong> sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("IgnoredUserSessionCount")
         public Long ignoredUserSessionCount;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The number of sessions that failed to be terminated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("KillFailCount")
         public Long killFailCount;
 
         /**
          * <p>The number of sessions that were terminated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("KillSuccessCount")
         public Long killSuccessCount;
 
         /**
          * <p>The node ID.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the instance is a PolarDB for MySQL cluster.</p>
+         * <blockquote>
+         * <p> This parameter is returned only if the instance is a PolarDB for MySQL cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-bp1h12rv501cv****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -298,31 +363,42 @@ public class GetKillInstanceSessionTaskResultResponseBody extends TeaModel {
 
         /**
          * <p>The session IDs.</p>
-         * <br>
-         * <p>>  If all sessions are terminated, the IDs of all sessions on the instance or node are returned.</p>
+         * <blockquote>
+         * <p> If all sessions are terminated, the IDs of all sessions on the instance or node are returned.</p>
+         * </blockquote>
          */
         @NameInMap("Sessions")
         public java.util.List<Long> sessions;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f77d535b45405bd462b21caa3ee8****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The state of the task that terminates sessions.</p>
-         * <br>
-         * <p>*   **RUNNING**: The task is in progress.</p>
-         * <p>*   **SUCCESS**: The task is successful.</p>
-         * <p>*   **FAILURE**: The task failed.</p>
-         * <p>*   **ERROR**: Other errors occur.</p>
+         * <ul>
+         * <li><strong>RUNNING</strong>: The task is in progress.</li>
+         * <li><strong>SUCCESS</strong>: The task is successful.</li>
+         * <li><strong>FAILURE</strong>: The task failed.</li>
+         * <li><strong>ERROR</strong>: Other errors occur.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("TaskState")
         public String taskState;
 
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>164882191396****</p>
          */
         @NameInMap("UserId")
         public String userId;

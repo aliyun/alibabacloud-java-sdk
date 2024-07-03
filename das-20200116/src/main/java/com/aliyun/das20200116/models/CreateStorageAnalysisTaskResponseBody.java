@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,23 +21,34 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,21 +101,31 @@ public class CreateStorageAnalysisTaskResponseBody extends TeaModel {
     public static class CreateStorageAnalysisTaskResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the task is created. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("CreateTaskSuccess")
         public Boolean createTaskSuccess;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unknown error</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>910f83f4b96df0524ddc5749f61539f8</p>
          */
         @NameInMap("TaskId")
         public String taskId;

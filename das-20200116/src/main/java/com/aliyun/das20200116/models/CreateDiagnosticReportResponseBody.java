@@ -6,35 +6,52 @@ import com.aliyun.tea.*;
 public class CreateDiagnosticReportResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The data returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70af71852fcdf2c5dc7b90596e2cf05b</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac544623-f6ad-45fd-9a74-9be3db65****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

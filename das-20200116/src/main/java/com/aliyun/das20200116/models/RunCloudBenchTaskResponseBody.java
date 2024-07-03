@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RunCloudBenchTaskResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,49 +101,70 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
     public static class RunCloudBenchTaskResponseBodyDataPreCheckItem extends TeaModel {
         /**
          * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public Integer code;
 
         /**
          * <p>The detailed information of the check item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Data&quot;: { &quot;total&quot;: 1, &quot;list&quot;:[...] }, &quot;Code&quot;: 200, &quot;Success&quot;: true }</p>
          */
         @NameInMap("Details")
         public String details;
 
         /**
          * <p>The returned message.</p>
-         * <br>
-         * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <blockquote>
+         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The name of the check item. Valid values:</p>
-         * <br>
-         * <p>* **SqlArchiveStatusChecker**: checks whether SQL Explorer is available.</p>
-         * <p>* **BenchClientEnvChecker**: checks whether the runtime environment for programs on the stress testing client is available.</p>
-         * <p>* **SpecChecker**: checks whether the destination instance type and the instance type of the stress testing client support this API operation.</p>
-         * <p>* **SourceInstanceChecker**: checks whether the account of the source instance is available and whether the source instance is connected to the destination instance.</p>
-         * <p>* **BenchTargetChecker**: checks whether the account of the destination instance is available and whether the source instance is connected to the destination instance.</p>
+         * <ul>
+         * <li><strong>SqlArchiveStatusChecker</strong>: checks whether SQL Explorer is available.</li>
+         * <li><strong>BenchClientEnvChecker</strong>: checks whether the runtime environment for programs on the stress testing client is available.</li>
+         * <li><strong>SpecChecker</strong>: checks whether the destination instance type and the instance type of the stress testing client support this API operation.</li>
+         * <li><strong>SourceInstanceChecker</strong>: checks whether the account of the source instance is available and whether the source instance is connected to the destination instance.</li>
+         * <li><strong>BenchTargetChecker</strong>: checks whether the account of the destination instance is available and whether the source instance is connected to the destination instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BenchTargetChecker</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The sequence number of the check item. Valid values: **0** to **10**.</p>
+         * <p>The sequence number of the check item. Valid values: <strong>0</strong> to <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Order")
         public Integer order;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **SUCCESS**: The task is successful.</p>
-         * <p>*   **IGNORED**: The task is ignored.</p>
-         * <p>*   **RUNNING**: The task is running.</p>
-         * <p>*   **EXCEPTION**: An error occurred.</p>
+         * <ul>
+         * <li><strong>SUCCESS</strong>: The task is successful.</li>
+         * <li><strong>IGNORED</strong>: The task is ignored.</li>
+         * <li><strong>RUNNING</strong>: The task is running.</li>
+         * <li><strong>EXCEPTION</strong>: An error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;

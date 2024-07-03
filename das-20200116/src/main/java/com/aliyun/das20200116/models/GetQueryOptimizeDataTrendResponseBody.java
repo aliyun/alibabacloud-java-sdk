@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -85,27 +98,37 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
     public static class GetQueryOptimizeDataTrendResponseBodyDataList extends TeaModel {
         /**
          * <p>The name of the metric. Valid values:</p>
-         * <br>
-         * <p>* **sqlExecuteCount**: the number of executions of slow SQL queries.</p>
-         * <p>* **sqlExecuteCountDiff**: the difference in the number of executions of slow SQL queries compared to the previous day.</p>
-         * <p>* **sqlCount**: the number of slow SQL templates.</p>
-         * <p>* **sqlCountDiff**: the difference in the number of slow SQL templates compared to the previous day.</p>
-         * <p>* **optimizedSqlExecuteCount**: the number of optimizable executions of slow SQL queries.</p>
-         * <p>* **optimizedSqlExecuteCountDiff**: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.</p>
-         * <p>* **optimizedSqlCount**: the number of optimizable slow SQL templates.</p>
-         * <p>* **optimizedSqlCountDiff**: the difference in the number of optimizable slow SQL templates compared to the previous day.</p>
+         * <ul>
+         * <li><strong>sqlExecuteCount</strong>: the number of executions of slow SQL queries.</li>
+         * <li><strong>sqlExecuteCountDiff</strong>: the difference in the number of executions of slow SQL queries compared to the previous day.</li>
+         * <li><strong>sqlCount</strong>: the number of slow SQL templates.</li>
+         * <li><strong>sqlCountDiff</strong>: the difference in the number of slow SQL templates compared to the previous day.</li>
+         * <li><strong>optimizedSqlExecuteCount</strong>: the number of optimizable executions of slow SQL queries.</li>
+         * <li><strong>optimizedSqlExecuteCountDiff</strong>: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.</li>
+         * <li><strong>optimizedSqlCount</strong>: the number of optimizable slow SQL templates.</li>
+         * <li><strong>optimizedSqlCountDiff</strong>: the difference in the number of optimizable slow SQL templates compared to the previous day.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sqlExecuteCount</p>
          */
         @NameInMap("Kpi")
         public String kpi;
 
         /**
          * <p>The data timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1643040000000</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Value")
         public Double value;
@@ -144,6 +167,9 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
     public static class GetQueryOptimizeDataTrendResponseBodyData extends TeaModel {
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Extra")
         public String extra;
@@ -156,18 +182,27 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
 
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageNo")
         public Integer pageNo;
 
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Total")
         public Long total;

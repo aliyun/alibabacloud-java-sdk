@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetMongoDBCurrentOpResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,23 +21,34 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC6C0929-29E1-59FD-8DFE-70D9D41E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,116 +101,180 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
     public static class GetMongoDBCurrentOpResponseBodyDataSessionList extends TeaModel {
         /**
          * <p>Indicates whether the operation is active. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Active")
         public Boolean active;
 
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>219.143.177.4:52324</p>
          */
         @NameInMap("Client")
         public String client;
 
         /**
          * <p>The document that contains the complete command object associated with the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;command&quot; : {
+         *   &quot;find&quot; : &quot;items&quot;,
+         *   &quot;filter&quot; : {
+         *     &quot;sku&quot; : 1403978
+         *   },
+         *   ...
+         *   &quot;$db&quot; : &quot;test&quot;
+         * }</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66378736</p>
          */
         @NameInMap("ConnectionId")
         public Long connectionId;
 
         /**
          * <p>The description of the connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn1013858</p>
          */
         @NameInMap("Desc")
         public String desc;
 
         /**
          * <p>The driver for MongoDB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mongo-java-driver|<a href="mailto:legacy@3.11.2">legacy@3.11.2</a></p>
          */
         @NameInMap("Driver")
         public String driver;
 
         /**
          * <p>The host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a79******.cloud.et15:3328</p>
          */
         @NameInMap("Host")
         public String host;
 
         /**
          * <p>Indicates whether the operation is marked as terminated.</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("KillPending")
         public Boolean killPending;
 
         /**
          * <p>The namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin.cmd</p>
          */
         @NameInMap("Ns")
         public String ns;
 
         /**
          * <p>The type of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update</p>
          */
         @NameInMap("Op")
         public String op;
 
         /**
          * <p>The operation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14508</p>
          */
         @NameInMap("OpId")
         public String opId;
 
         /**
          * <p>The architecture of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amd64</p>
          */
         @NameInMap("OsArch")
         public String osArch;
 
         /**
          * <p>The name of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("OsName")
         public String osName;
 
         /**
          * <p>The type of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
          * <p>The description of the execution plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PlanSummary")
         public String planSummary;
 
         /**
          * <p>The platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Java/Alibaba/1.8.0_152-b5</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The duration of the operation. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("SecsRunning")
         public Long secsRunning;
 
         /**
          * <p>The ID of the data shard.</p>
-         * <br>
-         * <p>>  This parameter is returned for sharded cluster instances.</p>
+         * <blockquote>
+         * <p> This parameter is returned for sharded cluster instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp1689995b78****</p>
          */
         @NameInMap("Shard")
         public String shard;
@@ -355,6 +433,9 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
     public static class GetMongoDBCurrentOpResponseBodyDataSessionStat extends TeaModel {
         /**
          * <p>The number of active sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
@@ -373,12 +454,18 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
 
         /**
          * <p>The longest duration of a session. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LongestSecsRunning")
         public Long longestSecsRunning;
 
         /**
          * <p>The total number of sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -445,6 +532,9 @@ public class GetMongoDBCurrentOpResponseBody extends TeaModel {
 
         /**
          * <p>The time when the database sessions were returned. The value is in the UNIX timestamp format. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1692029584428</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;

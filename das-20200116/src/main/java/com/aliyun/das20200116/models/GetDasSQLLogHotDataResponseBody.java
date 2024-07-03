@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDasSQLLogHotDataResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>> If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,118 +101,176 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
     public static class GetDasSQLLogHotDataResponseBodyDataList extends TeaModel {
         /**
          * <p>The account of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testuser</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
          * <p>The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-23 T12:11:20Z</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
         /**
          * <p>The extended information. This parameter is a reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Ext")
         public String ext;
 
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
          * <p>The execution duration. Unit: microseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("Latancy")
         public Long latancy;
 
         /**
          * <p>The lock wait duration. Unit: microseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("LockTime")
         public Long lockTime;
 
         /**
          * <p>The number of logical reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("LogicRead")
         public Long logicRead;
 
         /**
          * <p>The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-23 T12:11:20.999Z</p>
          */
         @NameInMap("OriginTime")
         public String originTime;
 
         /**
          * <p>The number of physical asynchronous reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PhysicAsyncRead")
         public Long physicAsyncRead;
 
         /**
          * <p>The number of physical synchronous reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PhysicSyncRead")
         public Long physicSyncRead;
 
         /**
          * <p>The number of rows returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ReturnRows")
         public Long returnRows;
 
         /**
          * <p>The content of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 1</p>
          */
         @NameInMap("SQLText")
         public String SQLText;
 
         /**
          * <p>The number of rows scanned by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         @NameInMap("ScanRows")
         public Long scanRows;
 
         /**
          * <p>The type of the SQL statement. Valid values:</p>
-         * <br>
-         * <p>* **SELECT**</p>
-         * <p>* **UPDATE**</p>
-         * <p>* **DELETE**</p>
+         * <ul>
+         * <li><strong>SELECT</strong></li>
+         * <li><strong>UPDATE</strong></li>
+         * <li><strong>DELETE</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
-         * <p>The execution result. If a **0** is returned, the SQL statement was successfully executed. If an error code is returned, the SQL statement failed to be executed.</p>
+         * <p>The execution result. If a <strong>0</strong> is returned, the SQL statement was successfully executed. If an error code is returned, the SQL statement failed to be executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The thread ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>657</p>
          */
         @NameInMap("ThreadID")
         public Long threadID;
 
         /**
          * <p>The transaction ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TransactionId")
         public String transactionId;
 
         /**
          * <p>The number of updated rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("UpdateRows")
         public Long updateRows;
@@ -365,6 +437,9 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
     public static class GetDasSQLLogHotDataResponseBodyData extends TeaModel {
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Extra")
         public Object extra;
@@ -377,18 +452,27 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PageNo")
         public Long pageNo;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Total")
         public Long total;

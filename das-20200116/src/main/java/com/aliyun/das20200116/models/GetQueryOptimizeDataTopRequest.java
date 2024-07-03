@@ -6,57 +6,75 @@ import com.aliyun.tea.*;
 public class GetQueryOptimizeDataTopRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **PolarDBMySQL**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <br>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PolarDBMySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The instance IDs. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze8g2am97624****</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
      * <p>The region in which the instance resides. Valid values:</p>
-     * <br>
-     * <p>*   **cn-china**: Chinese mainland</p>
-     * <p>*   **cn-hongkong**: China (Hong Kong)</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
-     * <br>
-     * <p>This parameter takes effect only if **InstanceIds** is left empty. If you leave **InstanceIds** empty, the system obtains data from the region set by **Region**. By default, Region is set to **cn-china**. If you specify **InstanceIds**, **Region** does not take effect and the system obtains data from the region in which the first specified instance resides.****</p>
-     * <br>
-     * <p>>  Set this parameter to **cn-china** for all your instances that reside in the regions in the Chinese mainland.</p>
+     * <ul>
+     * <li><strong>cn-china</strong>: Chinese mainland</li>
+     * <li><strong>cn-hongkong</strong>: China (Hong Kong)</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * </ul>
+     * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.****</p>
+     * <blockquote>
+     * <p> Set this parameter to <strong>cn-china</strong> for all your instances that reside in the regions in the Chinese mainland.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-china</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("TagNames")
     public String tagNames;
 
     /**
      * <p>The time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1642953600000</p>
      */
     @NameInMap("Time")
     public String time;
 
     /**
      * <p>The type of instances that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **RED**: the best-performing instances</p>
-     * <p>*   **BLACK**: the worst-performing instances</p>
-     * <br>
+     * <ul>
+     * <li><strong>RED</strong>: the best-performing instances</li>
+     * <li><strong>BLACK</strong>: the worst-performing instances</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RED</p>
      */
     @NameInMap("Type")
     public String type;

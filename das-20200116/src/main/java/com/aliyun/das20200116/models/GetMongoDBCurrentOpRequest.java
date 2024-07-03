@@ -5,29 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetMongoDBCurrentOpRequest extends TeaModel {
     /**
-     * <p>The `db.currentOp()` command that is used to filter sessions. For more information, see [db.currentOp()](https://docs.mongodb.com/manual/reference/method/db.currentOp/) of MongoDB Documentation.</p>
+     * <p>The <code>db.currentOp()</code> command that is used to filter sessions. For more information, see <a href="https://docs.mongodb.com/manual/reference/method/db.currentOp/">db.currentOp()</a> of MongoDB Documentation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{ &quot;active&quot; : true }</p>
      */
     @NameInMap("FilterDoc")
     public String filterDoc;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dds-uf608087********</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The node ID.</p>
-     * <br>
-     * <p>>  If you do not specify a node ID, the sessions of the primary node are queried by default.</p>
+     * <blockquote>
+     * <p> If you do not specify a node ID, the sessions of the primary node are queried by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>23302531</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>A reserved parameter. You do not need to specify the parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Role")
     public String role;

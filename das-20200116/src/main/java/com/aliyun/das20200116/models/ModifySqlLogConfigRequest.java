@@ -6,11 +6,16 @@ import com.aliyun.tea.*;
 public class ModifySqlLogConfigRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable DAS Enterprise Edition. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>>  This parameter is required if you want to enable DAS Enterprise Edition. By default, the latest version of DAS Enterprise Edition that supports the database instance is enabled.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required if you want to enable DAS Enterprise Edition. By default, the latest version of DAS Enterprise Edition that supports the database instance is enabled.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Enable")
     public Boolean enable;
@@ -23,40 +28,56 @@ public class ModifySqlLogConfigRequest extends TeaModel {
 
     /**
      * <p>The number of days for which the SQL Explorer and Audit data is stored in hot storage. Valid values: 1 to 7.</p>
-     * <br>
-     * <p>>  This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</p>
+     * <blockquote>
+     * <p> This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("HotRetention")
     public Integer hotRetention;
 
     /**
      * <p>The ID of the database instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rr-2ze770smbq3tpr2o9</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>Specifies whether to enable the SQL Explorer feature. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>>  This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RequestEnable")
     public Boolean requestEnable;
 
     /**
      * <p>The total storage duration of the SQL Explorer and Audit data. Unit: day. Valid values:</p>
-     * <br>
-     * <p>*   7</p>
-     * <p>*   30</p>
-     * <p>*   180</p>
-     * <p>*   365</p>
-     * <br>
-     * <p>>  If you want to enable DAS Enterprise Edition V3, the value of this parameter must be greater than or equal to 30.</p>
+     * <ul>
+     * <li>7</li>
+     * <li>30</li>
+     * <li>180</li>
+     * <li>365</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you want to enable DAS Enterprise Edition V3, the value of this parameter must be greater than or equal to 30.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("Retention")
     public Integer retention;
@@ -117,12 +138,18 @@ public class ModifySqlLogConfigRequest extends TeaModel {
     public static class ModifySqlLogConfigRequestFilters extends TeaModel {
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Value")
         public String value;

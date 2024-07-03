@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class KillInstanceAllSessionRequest extends TeaModel {
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-8vbcyr4sw0c4yc****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

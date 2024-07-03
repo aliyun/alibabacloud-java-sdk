@@ -6,48 +6,62 @@ import com.aliyun.tea.*;
 public class GetRequestDiagnosisPageRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1634972640000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-0iwhhl8gx0ld6****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The node ID.</p>
-     * <br>
-     * <p>>  You must specify the node ID if your database instance is a PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB instance.</p>
+     * <blockquote>
+     * <p> You must specify the node ID if your database instance is a PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), or ApsaraDB for MongoDB instance.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>202****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The page number. The value must be a positive integer. Default value: 1.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page. The value must be a positive integer. Default value: 10.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1633071840000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

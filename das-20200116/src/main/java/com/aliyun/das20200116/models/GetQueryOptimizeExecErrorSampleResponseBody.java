@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -85,42 +98,63 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
     public static class GetQueryOptimizeExecErrorSampleResponseBodyDataList extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb01</p>
          */
         @NameInMap("Dbname")
         public String dbname;
 
         /**
          * <p>The error code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1146</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The IP address of the client that executes the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.104.XX.XX</p>
          */
         @NameInMap("OrigHost")
         public String origHost;
 
         /**
          * <p>The SQL template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e8147b5ca2dfc640dfd5e43d96a****</p>
          */
         @NameInMap("SqlId")
         public String sqlId;
 
         /**
          * <p>The content of the SQL statement that failed to be executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from test1</p>
          */
         @NameInMap("SqlText")
         public String sqlText;
 
         /**
          * <p>The point in time when the failed SQL statement was executed. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1643020306739</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The username of the client that executes the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         @NameInMap("User")
         public String user;
@@ -191,6 +225,9 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
     public static class GetQueryOptimizeExecErrorSampleResponseBodyData extends TeaModel {
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Extra")
         public String extra;
@@ -203,18 +240,27 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageNo")
         public Integer pageNo;
 
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Total")
         public Long total;

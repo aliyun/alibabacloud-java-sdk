@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,73 +101,108 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
     public static class GetSqlConcurrencyControlRulesHistoryResponseBodyDataListRules extends TeaModel {
         /**
          * <p>The duration within which the SQL throttling rule takes effect. Unit: seconds.</p>
-         * <br>
-         * <p>>  The throttling rule takes effect only within this duration.</p>
+         * <blockquote>
+         * <p> The throttling rule takes effect only within this duration.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("ConcurrencyControlTime")
         public Long concurrencyControlTime;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the throttling rule that is applied to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("ItemId")
         public Long itemId;
 
         /**
          * <p>The hash value of the SQL keywords. The SQL keywords are contained in the SQL statements to which the throttling rule is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b0b8aceeb43baea87b219c81767b****</p>
          */
         @NameInMap("KeywordsHash")
         public String keywordsHash;
 
         /**
          * <p>The maximum number of concurrent SQL statements. Set this parameter to a positive integer.</p>
-         * <br>
-         * <p>>  When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</p>
+         * <blockquote>
+         * <p> When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("MaxConcurrency")
         public Long maxConcurrency;
 
         /**
          * <p>The keywords that are used to identify the SQL statements that need to be throttled.</p>
-         * <br>
-         * <p>> SQL keywords are separated with tildes (~). When the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</p>
+         * <blockquote>
+         * <p>SQL keywords are separated with tildes (~). When the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>call<del>open</del>api<del>test</del>4<del>from</del>POP</p>
          */
         @NameInMap("SqlKeywords")
         public String sqlKeywords;
 
         /**
          * <p>The type of the SQL statements. Valid values:</p>
-         * <br>
-         * <p>* **SELECT**</p>
-         * <p>* **UPDATE**</p>
-         * <p>* **DELETE**</p>
+         * <ul>
+         * <li><strong>SELECT</strong></li>
+         * <li><strong>UPDATE</strong></li>
+         * <li><strong>DELETE</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
          * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608888296000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The state of the throttling rule. Valid values:</p>
-         * <br>
-         * <p>* **Open**: The throttling rule is in effect.</p>
-         * <p>* **Closed**: The throttling rule was in effect.</p>
+         * <ul>
+         * <li><strong>Open</strong>: The throttling rule is in effect.</li>
+         * <li><strong>Closed</strong>: The throttling rule was in effect.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testxxx</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -273,6 +322,9 @@ public class GetSqlConcurrencyControlRulesHistoryResponseBody extends TeaModel {
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Total")
         public Long total;

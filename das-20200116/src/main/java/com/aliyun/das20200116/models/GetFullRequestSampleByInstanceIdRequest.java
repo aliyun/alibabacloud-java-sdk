@@ -6,53 +6,71 @@ import com.aliyun.tea.*;
 public class GetFullRequestSampleByInstanceIdRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time. The interval between the start time and the end time must be equal to or greater than 1 hour.</p>
-     * <br>
+     * <blockquote>
+     * <p> The end time must be later than the start time. The interval between the start time and the end time must be equal to or greater than 1 hour.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1660104621000</p>
      */
     @NameInMap("End")
     public Long end;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze8g2am97624****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The role of the PolarDB-X 2.0 node. Valid values:</p>
-     * <br>
-     * <p>*   **polarx_cn**: compute node.</p>
-     * <p>*   **polarx_en**: data node.</p>
+     * <ul>
+     * <li><strong>polarx_cn</strong>: compute node.</li>
+     * <li><strong>polarx_en</strong>: data node.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>polarx_cn</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
      * <p>The SQL statement ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>651b56fe9418d48edb8fdf0980ec****</p>
      */
     @NameInMap("SqlId")
     public String sqlId;
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
-     * <p>>  The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</p>
-     * <br>
+     * <blockquote>
+     * <p> The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1660097421000</p>
      */
     @NameInMap("Start")
     public Long start;
 
     /**
      * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
-     * <br>
-     * <p>>  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     * <blockquote>
+     * <p> This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>196278346919****</p>
      */
     @NameInMap("UserId")
     public String userId;

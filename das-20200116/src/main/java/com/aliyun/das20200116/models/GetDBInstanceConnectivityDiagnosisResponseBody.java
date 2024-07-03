@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>> If the request was successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,48 +101,66 @@ public class GetDBInstanceConnectivityDiagnosisResponseBody extends TeaModel {
     public static class GetDBInstanceConnectivityDiagnosisResponseBodyData extends TeaModel {
         /**
          * <p>The exception detection items:</p>
-         * <br>
-         * <p>*   **SRC_IP_NOT_IN_USER_WHITELIST**: The source IP address is not added to the whitelist of the user.</p>
-         * <p>*   **VIP_NOT_EXISTS**: The Application Load Balancer (ALB) instance corresponding to the virtual IP address (VIP) does not exist.</p>
-         * <p>*   **RS_NOT_EXISTS**: The resource sharing (RS) is not properly mounted.</p>
-         * <p>*   **VIP_TUNNEL_ID_NOT_CONSISTENT**: The tunnel ID used by the VIP of the virtual private cloud (VPC) type is different from the tunnel ID of the VPC.</p>
-         * <p>*   **VIP_VPC_CLOUD_INSTANCE_NOT_EXISTS**: The VIP of the VPC type does not exist.</p>
-         * <p>*   **VIP_IS_NOT_NGLB**: The NGLB mode is disabled for the VIP.</p>
-         * <p>*   **CUSTINS_NOT_ASSOCIATE_ECS_SECURITY_GROUP**: No security group is associated with the instance.</p>
-         * <p>*   **SRC_IP_NOT_IN_USER_WHITELIST**: The source IP address is not added to the whitelist of the user.</p>
-         * <p>*   **SRC_IP_NOT_IN_ADMIN_WHITELIST**: The source IP address is not added to the whitelist of the instance.</p>
-         * <p>*   **SRC_IP_NOT_IN_ECS_SECURITY_GROUP**: The source IP address is not added to the security group that is associated with the instance.</p>
-         * <p>*   **VPC_INSTANCE_IP_NOT_WORKING_STATUS**: The IP address in the VPC is in an abnormal state.</p>
+         * <ul>
+         * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist of the user.</li>
+         * <li><strong>VIP_NOT_EXISTS</strong>: The Application Load Balancer (ALB) instance corresponding to the virtual IP address (VIP) does not exist.</li>
+         * <li><strong>RS_NOT_EXISTS</strong>: The resource sharing (RS) is not properly mounted.</li>
+         * <li><strong>VIP_TUNNEL_ID_NOT_CONSISTENT</strong>: The tunnel ID used by the VIP of the virtual private cloud (VPC) type is different from the tunnel ID of the VPC.</li>
+         * <li><strong>VIP_VPC_CLOUD_INSTANCE_NOT_EXISTS</strong>: The VIP of the VPC type does not exist.</li>
+         * <li><strong>VIP_IS_NOT_NGLB</strong>: The NGLB mode is disabled for the VIP.</li>
+         * <li><strong>CUSTINS_NOT_ASSOCIATE_ECS_SECURITY_GROUP</strong>: No security group is associated with the instance.</li>
+         * <li><strong>SRC_IP_NOT_IN_USER_WHITELIST</strong>: The source IP address is not added to the whitelist of the user.</li>
+         * <li><strong>SRC_IP_NOT_IN_ADMIN_WHITELIST</strong>: The source IP address is not added to the whitelist of the instance.</li>
+         * <li><strong>SRC_IP_NOT_IN_ECS_SECURITY_GROUP</strong>: The source IP address is not added to the security group that is associated with the instance.</li>
+         * <li><strong>VPC_INSTANCE_IP_NOT_WORKING_STATUS</strong>: The IP address in the VPC is in an abnormal state.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SRC_IP_NOT_IN_USER_WHITELIST</p>
          */
         @NameInMap("connCheckErrorCode")
         public String connCheckErrorCode;
 
         /**
          * <p>The details of the exception detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Src ip:47.110.180.62 not in user whitelist</p>
          */
         @NameInMap("connCheckErrorMessage")
         public String connCheckErrorMessage;
 
         /**
          * <p>The type of the exception:</p>
-         * <br>
-         * <p>*   **0**: an exception that can be handled by the user.</p>
-         * <p>*   **1**: an exception that can be handled by a technical engineer.</p>
+         * <ul>
+         * <li><strong>0</strong>: an exception that can be handled by the user.</li>
+         * <li><strong>1</strong>: an exception that can be handled by a technical engineer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("failType")
         public String failType;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>Indicates whether the connectivity test was passed:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("success")
         public Boolean success;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -85,15 +98,22 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
     public static class GetQueryOptimizeDataStatsResponseBodyDataListRuleList extends TeaModel {
         /**
          * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAS_NOT_IMPORTANT</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>* **Predefined**</p>
-         * <p>* **UserDefined**</p>
+         * <ul>
+         * <li><strong>Predefined</strong></li>
+         * <li><strong>UserDefined</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Predefined</p>
          */
         @NameInMap("Type")
         public String type;
@@ -124,88 +144,132 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
     public static class GetQueryOptimizeDataStatsResponseBodyDataList extends TeaModel {
         /**
          * <p>The average lock wait time. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("AvgLockTime")
         public Double avgLockTime;
 
         /**
          * <p>The average query execution time. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
          */
         @NameInMap("AvgQueryTime")
         public Double avgQueryTime;
 
         /**
          * <p>The average number of rows affected by the SQL statement.</p>
-         * <br>
-         * <p>> A value of -1 indicates that this parameter is not collected.</p>
+         * <blockquote>
+         * <p>A value of -1 indicates that this parameter is not collected.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100.1</p>
          */
         @NameInMap("AvgRowsAffected")
         public Double avgRowsAffected;
 
         /**
          * <p>The average number of scanned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.1</p>
          */
         @NameInMap("AvgRowsExamined")
         public Double avgRowsExamined;
 
         /**
          * <p>The average number of returned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.1</p>
          */
         @NameInMap("AvgRowsSent")
         public Double avgRowsSent;
 
         /**
          * <p>The number of times that the SQL template is executed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The name of the database to which the SQL template belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb01</p>
          */
         @NameInMap("Dbname")
         public String dbname;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The longest lock wait time. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("MaxLockTime")
         public Double maxLockTime;
 
         /**
          * <p>The longest query execution time. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1</p>
          */
         @NameInMap("MaxQueryTime")
         public Double maxQueryTime;
 
         /**
          * <p>The largest number of rows affected by the SQL template.</p>
-         * <br>
-         * <p>> A value of -1 indicates that this parameter is not collected.</p>
+         * <blockquote>
+         * <p>A value of -1 indicates that this parameter is not collected.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("MaxRowsAffected")
         public Long maxRowsAffected;
 
         /**
          * <p>The largest number of scanned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("MaxRowsExamined")
         public Long maxRowsExamined;
 
         /**
          * <p>The largest number of returned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("MaxRowsSent")
         public Long maxRowsSent;
 
         /**
          * <p>The SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 1</p>
          */
         @NameInMap("Psql")
         public String psql;
@@ -218,24 +282,36 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
 
         /**
          * <p>The SQL template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e8147b5ca2dfc640dfd5e43d96a****</p>
          */
         @NameInMap("SqlId")
         public String sqlId;
 
         /**
          * <p>The sample query that took the longest time to execute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select 2</p>
          */
         @NameInMap("SqlSample")
         public String sqlSample;
 
         /**
          * <p>The type of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERT</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
          * <p>The account of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         @NameInMap("User")
         public String user;
@@ -402,6 +478,9 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
     public static class GetQueryOptimizeDataStatsResponseBodyData extends TeaModel {
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Extra")
         public String extra;
@@ -414,18 +493,27 @@ public class GetQueryOptimizeDataStatsResponseBody extends TeaModel {
 
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageNo")
         public Integer pageNo;
 
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Total")
         public Long total;

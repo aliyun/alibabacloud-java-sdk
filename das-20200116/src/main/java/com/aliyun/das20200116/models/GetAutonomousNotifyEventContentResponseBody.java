@@ -6,35 +6,52 @@ import com.aliyun.tea.*;
 public class GetAutonomousNotifyEventContentResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The details of the notification events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;taskId\&quot;:\&quot;7e1ba595-0889-48ff-a6ff-010f54991d****\&quot;,\&quot;taskType\&quot;:\&quot;SQL_OPTIMIZE\&quot;,\&quot;advisorId\&quot;:\&quot;636dc5f34664dd56ff0****\&quot;,\&quot;sqlId\&quot;:\&quot;e2b1d6c1ee1bb29555a828b59f16****\&quot;,\&quot;indexAdviceCount\&quot;:1,\&quot;indexAdvices\&quot;:[{\&quot;schemaName\&quot;:\&quot;das\&quot;,\&quot;tableName\&quot;:\&quot;students\&quot;,\&quot;indexName\&quot;:\&quot;idx_name\&quot;,\&quot;columns\&quot;:[\&quot;name\&quot;],\&quot;unique\&quot;:false,\&quot;ddlAddIndex\&quot;:\&quot;ALTER TABLE <code>das</code>.<code>students</code> ADD INDEX <code>idx_name</code> (<code>name</code>)\&quot;,\&quot;priority\&quot;:0,\&quot;optimizeId\&quot;:\&quot;96232794517277511\&quot;}],\&quot;tuningAdvices\&quot;:[],\&quot;improvement\&quot;:8127.25,\&quot;supportLevel\&quot;:3,\&quot;priority\&quot;:\&quot;HIGH\&quot;}</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;

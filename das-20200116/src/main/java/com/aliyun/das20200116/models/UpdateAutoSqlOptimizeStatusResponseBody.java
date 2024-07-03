@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A52AD37C-35ED-581A-AC23-2232BE54****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,24 +101,35 @@ public class UpdateAutoSqlOptimizeStatusResponseBody extends TeaModel {
     public static class UpdateAutoSqlOptimizeStatusResponseBodyData extends TeaModel {
         /**
          * <p>The error code. Valid values:</p>
-         * <br>
-         * <p>*   **-1001**: indicates that the specified parameter is invalid.</p>
-         * <p>*   **-91029**: indicates that a system error occurred.</p>
+         * <ul>
+         * <li><strong>-1001</strong>: indicates that the specified parameter is invalid.</li>
+         * <li><strong>-91029</strong>: indicates that a system error occurred.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1001</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>invalid param</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>Indicates whether the request initiated to configure the automatic SQL optimization feature was successful. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Success")
         public String success;

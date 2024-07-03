@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSqlLogTasksResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,14 +101,21 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
     public static class DescribeSqlLogTasksResponseBodyDataListFilters extends TeaModel {
         /**
          * <p>The name of the filter parameter.</p>
-         * <br>
-         * <p>>  For more information about the filter parameters, see the **Valid values of Key** section of this topic.</p>
+         * <blockquote>
+         * <p> For more information about the filter parameters, see the <strong>Valid values of Key</strong> section of this topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>delimiter</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the filter parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>,</p>
          */
         @NameInMap("Value")
         public String value;
@@ -125,35 +146,52 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
     public static class DescribeSqlLogTasksResponseBodyDataList extends TeaModel {
         /**
          * <p>The time when the analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1712751923000</p>
          */
         @NameInMap("AnalysisTaskFinishTime")
         public Long analysisTaskFinishTime;
 
         /**
          * <p>The state of the analysis task.</p>
-         * <br>
-         * <p>>  This parameter is a system parameter. You do not need to pay attention to the parameter.</p>
+         * <blockquote>
+         * <p> This parameter is a system parameter. You do not need to pay attention to the parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SCAN_ANALYZE_COMPLETED</p>
          */
         @NameInMap("AnalysisTaskStatus")
         public String analysisTaskStatus;
 
         /**
          * <p>The time when the task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1681363254423</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>The time when the task ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1705975320000</p>
          */
         @NameInMap("End")
         public Long end;
 
         /**
          * <p>Indicates whether the task expired. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Expire")
         public Boolean expire;
@@ -166,71 +204,104 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2zew761kf7ho18752</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The number of log records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99999</p>
          */
         @NameInMap("LogCount")
         public Long logCount;
 
         /**
          * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The task progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
-         * <p>The URL that is returned if the value of TaskType is **Export**.</p>
+         * <p>The URL that is returned if the value of TaskType is <strong>Export</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://das-sqllog-download-cn-shanghai.oss-cn-shanghai.aliyuncs.com/la">https://das-sqllog-download-cn-shanghai.oss-cn-shanghai.aliyuncs.com/la</a></p>
          */
         @NameInMap("Result")
         public String result;
 
         /**
          * <p>The number of files that are scanned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
          */
         @NameInMap("ScanFileSize")
         public Long scanFileSize;
 
         /**
          * <p>The time when the task started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683859555482</p>
          */
         @NameInMap("Start")
         public Long start;
 
         /**
          * <p>The task state. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is to be scheduled.</p>
-         * <p>*   **RUNNING**: The task is running.</p>
-         * <p>*   **FAILED**: The task failed.</p>
-         * <p>*   **CANCELED**: The task is canceled.</p>
-         * <p>*   **COMPLETED**: The task is complete.</p>
-         * <br>
-         * <p>>  If a task is in the **COMPLETED** state, you can view the results of the task.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is to be scheduled.</li>
+         * <li><strong>RUNNING</strong>: The task is running.</li>
+         * <li><strong>FAILED</strong>: The task failed.</li>
+         * <li><strong>CANCELED</strong>: The task is canceled.</li>
+         * <li><strong>COMPLETED</strong>: The task is complete.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If a task is in the <strong>COMPLETED</strong> state, you can view the results of the task.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9a4f5c4494dbd6713185d87a97aa53e8</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The task type. Valid values:</p>
-         * <br>
-         * <p>*   **Export**</p>
-         * <p>*   **Query**</p>
+         * <ul>
+         * <li><strong>Export</strong></li>
+         * <li><strong>Query</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Export</p>
          */
         @NameInMap("TaskType")
         public String taskType;
@@ -379,18 +450,27 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNo")
         public Long pageNo;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("Total")
         public Long total;

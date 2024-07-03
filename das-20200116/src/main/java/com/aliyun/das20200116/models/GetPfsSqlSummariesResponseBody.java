@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetPfsSqlSummariesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,23 +21,34 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>54F3DBAE-9420-511A-9C29-265E8C04****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,329 +101,491 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
     public static class GetPfsSqlSummariesResponseBodyDataList extends TeaModel {
         /**
          * <p>The average execution latency. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1717</p>
          */
         @NameInMap("AvgLatency")
         public Double avgLatency;
 
         /**
          * <p>The total number of executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The percentage of the number of executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0586</p>
          */
         @NameInMap("CountRate")
         public Double countRate;
 
         /**
          * <p>The ratio of the CPU execution duration to the total execution duration of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CpuRate")
         public Double cpuRate;
 
         /**
          * <p>The CPU execution duration. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CpuTime")
         public Double cpuTime;
 
         /**
          * <p>The data read duration. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataReadTime")
         public Double dataReadTime;
 
         /**
          * <p>The number of nodes from which data can be read.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataReads")
         public Integer dataReads;
 
         /**
          * <p>The data write duration. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataWriteTime")
         public Double dataWriteTime;
 
         /**
          * <p>The number of nodes to which data can be written.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DataWrites")
         public Integer dataWrites;
 
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDB</p>
          */
         @NameInMap("Db")
         public String db;
 
         /**
          * <p>The execution duration. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ElapsedTime")
         public Double elapsedTime;
 
         /**
          * <p>The number of errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ErrCount")
         public Long errCount;
 
         /**
          * <p>The time when the SQL statement was executed for the first time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1659308149000</p>
          */
         @NameInMap("FirstTime")
         public Long firstTime;
 
         /**
          * <p>Indicates whether full table scan was enabled. Valid values:</p>
-         * <br>
-         * <p>* **true**</p>
-         * <p>* **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("FullScan")
         public Boolean fullScan;
 
         /**
          * <p>The primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26186357</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The time when the SQL statement was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1661306520000</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
          * <p>The average lock wait latency. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LockLatencyAvg")
         public Double lockLatencyAvg;
 
         /**
          * <p>The logical database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58275984</p>
          */
         @NameInMap("LogicId")
         public Long logicId;
 
         /**
          * <p>The number of logical nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LogicReads")
         public Long logicReads;
 
         /**
          * <p>The maximum execution latency. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36.233</p>
          */
         @NameInMap("MaxLatency")
         public Double maxLatency;
 
         /**
          * <p>The number of mutex spins.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MutexSpins")
         public Integer mutexSpins;
 
         /**
          * <p>The number of mutex waits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MutexWaits")
         public Integer mutexWaits;
 
         /**
          * <p>The node ID.</p>
-         * <br>
-         * <p>> This parameter is returned only if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+         * <blockquote>
+         * <p>This parameter is returned only if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The number of physical asynchronous nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PhysicalAsyncReads")
         public Long physicalAsyncReads;
 
         /**
          * <p>The number of physical nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PhysicalReads")
         public Long physicalReads;
 
         /**
          * <p>The SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select ?</p>
          */
         @NameInMap("Psql")
         public String psql;
 
         /**
          * <p>The number of redo nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RedoWrites")
         public Long redoWrites;
 
         /**
          * <p>The number of rows that are affected by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RowsAffected")
         public Long rowsAffected;
 
         /**
          * <p>The average number of rows affected by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RowsAffectedAvg")
         public Double rowsAffectedAvg;
 
         /**
          * <p>The total number of scanned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("RowsExamined")
         public Long rowsExamined;
 
         /**
          * <p>The average number of scanned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RowsExaminedAvg")
         public Double rowsExaminedAvg;
 
         /**
          * <p>The average number of returned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RowsSendAvg")
         public Double rowsSendAvg;
 
         /**
          * <p>The number of rows returned by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RowsSent")
         public Long rowsSent;
 
         /**
          * <p>The average number of rows returned for the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.52</p>
          */
         @NameInMap("RowsSentAvg")
         public Double rowsSentAvg;
 
         /**
          * <p>The number of sorted rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RowsSorted")
         public Long rowsSorted;
 
         /**
          * <p>The execution duration percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1384</p>
          */
         @NameInMap("RtRate")
         public Double rtRate;
 
         /**
          * <p>Indicates whether read/write splitting was enabled. Valid values:</p>
-         * <br>
-         * <p>* **0:** Read/write splitting was disabled.</p>
-         * <p>* **1:** Read/write splitting was enabled.</p>
+         * <ul>
+         * <li><strong>0:</strong> Read/write splitting was disabled.</li>
+         * <li><strong>1:</strong> Read/write splitting was enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RwlockOsWaits")
         public Integer rwlockOsWaits;
 
         /**
          * <p>The read/write splitting parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RwlockSpinRounds")
         public Integer rwlockSpinRounds;
 
         /**
          * <p>Indices whether multi-index scanning was enabled. Valid values:</p>
-         * <br>
-         * <p>* **0:** Multi-index scanning was disabled.</p>
-         * <p>* **1:** Multi-index scanning was enabled.</p>
+         * <ul>
+         * <li><strong>0:</strong> Multi-index scanning was disabled.</li>
+         * <li><strong>1:</strong> Multi-index scanning was enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RwlockSpinWaits")
         public Integer rwlockSpinWaits;
 
         /**
          * <p>The average number of joins that performed table scans without using indexes.</p>
-         * <br>
-         * <p>> If the value of this parameter is not 0, check the table indexes.</p>
+         * <blockquote>
+         * <p>If the value of this parameter is not 0, check the table indexes.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SelectFullJoinAvg")
         public Double selectFullJoinAvg;
 
         /**
          * <p>The average number of joins that selected a range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SelectFullRangeJoinAvg")
         public Double selectFullRangeJoinAvg;
 
         /**
          * <p>The average selected range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SelectRangeAvg")
         public Double selectRangeAvg;
 
         /**
          * <p>The average number of scanned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SelectScanAvg")
         public Double selectScanAvg;
 
         /**
          * <p>The semi-synchronous replication latency. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.12</p>
          */
         @NameInMap("SemisyncDelayTime")
         public Double semisyncDelayTime;
 
         /**
          * <p>The amount of time consumed for locking the server. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ServerLockTime")
         public Double serverLockTime;
 
         /**
          * <p>The number of merges that the sorting algorithm must perform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SortMergePasses")
         public Long sortMergePasses;
 
         /**
          * <p>The average number of sorts that were performed by using a range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SortRangeAvg")
         public Double sortRangeAvg;
 
         /**
          * <p>The average number of sorted rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SortRowsAvg")
         public Double sortRowsAvg;
 
         /**
          * <p>The average number of sorts that were performed during table scans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SortScanAvg")
         public Double sortScanAvg;
 
         /**
          * <p>The SQL template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e8147b5ca2dfc640dfd5e43d96a****</p>
          */
         @NameInMap("SqlId")
         public String sqlId;
 
         /**
          * <p>The type of the SQL statement. Valid values:</p>
-         * <br>
-         * <p>* **SELECT**</p>
-         * <p>* **UPDATE**</p>
-         * <p>* **DELETE**</p>
+         * <ul>
+         * <li><strong>SELECT</strong></li>
+         * <li><strong>UPDATE</strong></li>
+         * <li><strong>DELETE</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
@@ -422,60 +598,90 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
 
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("TimerWaitAvg")
         public Double timerWaitAvg;
 
         /**
          * <p>The data timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1643040000000</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
 
         /**
          * <p>The number of on-disk temporary tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TmpDiskTables")
         public Long tmpDiskTables;
 
         /**
          * <p>The average number of on-disk temporary tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TmpDiskTablesAvg")
         public Double tmpDiskTablesAvg;
 
         /**
          * <p>The number of temporary tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TmpTables")
         public Long tmpTables;
 
         /**
          * <p>The average number of temporary tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TmpTablesAvg")
         public Double tmpTablesAvg;
 
         /**
          * <p>The execution latency. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60913.256</p>
          */
         @NameInMap("TotalLatency")
         public Double totalLatency;
 
         /**
          * <p>The amount of time consumed for locking the storage transaction. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("TransactionLockTime")
         public Double transactionLockTime;
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>196278346919****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The number of warnings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("WarnCount")
         public Long warnCount;
@@ -994,6 +1200,9 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
     public static class GetPfsSqlSummariesResponseBodyData extends TeaModel {
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Extra")
         public Object extra;
@@ -1006,18 +1215,27 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNo")
         public Long pageNo;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>264</p>
          */
         @NameInMap("Total")
         public Long total;

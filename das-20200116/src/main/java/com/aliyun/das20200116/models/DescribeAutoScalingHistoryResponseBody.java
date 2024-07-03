@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>> If the request was successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p>If the request was successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,71 +101,104 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
     public static class DescribeAutoScalingHistoryResponseBodyDataSpecHistory extends TeaModel {
         /**
          * <p>The error code returned by the scaling task. Valid values:</p>
-         * <br>
-         * <p>*   **Insufficient_Balance**: The account has insufficient balance or an unpaid order.</p>
-         * <p>*   **REACH_SPEC_UPPERBOUND**: The instance type reaches the upper limit.</p>
-         * <p>*   **Control_Error_Timeout_Msg**: The management task timed out.</p>
-         * <p>*   **Invoke_Rds_Api_Error_Msg**: Failed to call the ApsaraDB RDS API.</p>
+         * <ul>
+         * <li><strong>Insufficient_Balance</strong>: The account has insufficient balance or an unpaid order.</li>
+         * <li><strong>REACH_SPEC_UPPERBOUND</strong>: The instance type reaches the upper limit.</li>
+         * <li><strong>Control_Error_Timeout_Msg</strong>: The management task timed out.</li>
+         * <li><strong>Invoke_Rds_Api_Error_Msg</strong>: Failed to call the ApsaraDB RDS API.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Insufficient_Balance</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The original number of CPU cores of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("OriginCore")
         public Integer originCore;
 
         /**
          * <p>The original instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n2.large.2c</p>
          */
         @NameInMap("OriginInstanceClass")
         public String originInstanceClass;
 
         /**
          * <p>The original memory size of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("OriginMemory")
         public Double originMemory;
 
         /**
          * <p>The type of the automatic performance scaling task. Valid values:</p>
-         * <br>
-         * <p>*   **SCALE_UP**: automatic instance type scale-up task.</p>
-         * <p>*   **SCALE_DOWN**: automatic instance type scale-down task.</p>
+         * <ul>
+         * <li><strong>SCALE_UP</strong>: automatic instance type scale-up task.</li>
+         * <li><strong>SCALE_DOWN</strong>: automatic instance type scale-down task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SCALE_UP</p>
          */
         @NameInMap("ScaleType")
         public String scaleType;
 
         /**
          * <p>The destination number of CPU cores of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("TargetCore")
         public Integer targetCore;
 
         /**
          * <p>The destination instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.n2.xlarge.2c</p>
          */
         @NameInMap("TargetInstanceClass")
         public String targetInstanceClass;
 
         /**
          * <p>The destination memory size of the instance. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("TargetMemory")
         public Double targetMemory;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The task was successful.</p>
-         * <p>*   **false**: The task failed.</p>
+         * <ul>
+         * <li><strong>true</strong>: The task was successful.</li>
+         * <li><strong>false</strong>: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TaskExcuteStatus")
         public Boolean taskExcuteStatus;
 
         /**
          * <p>The time when the task was run. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684830763000</p>
          */
         @NameInMap("TaskTime")
         public Long taskTime;
@@ -252,6 +299,9 @@ public class DescribeAutoScalingHistoryResponseBody extends TeaModel {
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

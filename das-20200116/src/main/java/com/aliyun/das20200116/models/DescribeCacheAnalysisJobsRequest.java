@@ -6,38 +6,51 @@ import com.aliyun.tea.*;
 public class DescribeCacheAnalysisJobsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time.</p>
-     * <br>
+     * <blockquote>
+     * <p> The end time must be later than the start time.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1596177993001</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp18ff4a195d****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1596177993000</p>
      */
     @NameInMap("StartTime")
     public String startTime;

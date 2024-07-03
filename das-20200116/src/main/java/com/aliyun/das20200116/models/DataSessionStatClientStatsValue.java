@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DataSessionStatClientStatsValue extends TeaModel {
     /**
      * <p>The number of clients whose IP addresses are active.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("ActiveCount")
     public Long activeCount;
 
     /**
      * <p>The total number of IP addresses of clients.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,23 +21,34 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request is successful, **Successful** is returned. Otherwise, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,36 +101,54 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
     public static class GetAutoIncrementUsageStatisticResponseBodyDataAutoIncrementUsageList extends TeaModel {
         /**
          * <p>The latest auto-increment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2147483647</p>
          */
         @NameInMap("AutoIncrementCurrentValue")
         public Long autoIncrementCurrentValue;
 
         /**
          * <p>The usage ratio of auto-increment IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("AutoIncrementRatio")
         public Double autoIncrementRatio;
 
         /**
          * <p>The column name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id</p>
          */
         @NameInMap("ColumnName")
         public String columnName;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>db01</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>The maximum auto-increment ID that is supported by the current data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2147483647</p>
          */
         @NameInMap("MaximumValue")
         public Long maximumValue;
 
         /**
          * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -185,32 +217,46 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
 
         /**
          * <p>The error message returned if the task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the given database name list invalid, none of the database names in the list exist on the instance</p>
          */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
         /**
          * <p>Indicates whether the task is complete. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Finish")
         public Boolean finish;
 
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   **INIT**: The task is being initialized.</p>
-         * <p>*   **RUNNING**: The task is being executed.</p>
-         * <p>*   **SUCCESS**: The task succeeds.</p>
-         * <p>*   **FAIL**: The task fails.</p>
+         * <ul>
+         * <li><strong>INIT</strong>: The task is being initialized.</li>
+         * <li><strong>RUNNING</strong>: The task is being executed.</li>
+         * <li><strong>SUCCESS</strong>: The task succeeds.</li>
+         * <li><strong>FAIL</strong>: The task fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
         /**
          * <p>The time when the request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1697183353000</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;
