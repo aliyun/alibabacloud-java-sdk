@@ -4,9 +4,17 @@ package com.aliyun.nlp_automl20190701.models;
 import com.aliyun.tea.*;
 
 public class PredictMTModelByDocResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("DocId")
     public String docId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>86D18195-D89C-4C8C-9DC4-5FCE789CE6D5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

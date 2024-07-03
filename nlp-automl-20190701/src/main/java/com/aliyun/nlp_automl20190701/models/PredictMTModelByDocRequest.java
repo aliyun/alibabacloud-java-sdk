@@ -4,23 +4,48 @@ package com.aliyun.nlp_automl20190701.models;
 import com.aliyun.tea.*;
 
 public class PredictMTModelByDocRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[base64 encode content]</p>
+     */
     @NameInMap("FileContent")
     public String fileContent;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>docx</p>
+     */
     @NameInMap("FileType")
     public String fileType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ModelId")
     public Integer modelId;
 
-    @NameInMap("NeedXLIFF")
-    public Boolean needXLIFF;
-
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("ModelVersion")
     public String modelVersion;
 
-    @NameInMap("Product")
-    public String product;
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("NeedXLIFF")
+    public Boolean needXLIFF;
 
     public static PredictMTModelByDocRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictMTModelByDocRequest self = new PredictMTModelByDocRequest();
@@ -51,14 +76,6 @@ public class PredictMTModelByDocRequest extends TeaModel {
         return this.modelId;
     }
 
-    public PredictMTModelByDocRequest setNeedXLIFF(Boolean needXLIFF) {
-        this.needXLIFF = needXLIFF;
-        return this;
-    }
-    public Boolean getNeedXLIFF() {
-        return this.needXLIFF;
-    }
-
     public PredictMTModelByDocRequest setModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
@@ -67,12 +84,12 @@ public class PredictMTModelByDocRequest extends TeaModel {
         return this.modelVersion;
     }
 
-    public PredictMTModelByDocRequest setProduct(String product) {
-        this.product = product;
+    public PredictMTModelByDocRequest setNeedXLIFF(Boolean needXLIFF) {
+        this.needXLIFF = needXLIFF;
         return this;
     }
-    public String getProduct() {
-        return this.product;
+    public Boolean getNeedXLIFF() {
+        return this.needXLIFF;
     }
 
 }
