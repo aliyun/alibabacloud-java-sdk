@@ -6,36 +6,42 @@ import com.aliyun.tea.*;
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
      * <p>The ID of the region in which the instance resides.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group to which the instance is changed.</p>
-     * <br>
-     * <p>You can call the [ListResourceGroups](https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups) operation to query existing resource groups.</p>
-     * <br>
+     * <p>You can call the <a href="https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups">ListResourceGroups</a> operation to query existing resource groups.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-9gLOoK****</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the resource. Set this parameter to the ID of the ApsaraMQ for RocketMQ instance whose resource group you want to change.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c2c5d1274a8d4317a13bc5b0d4******</p>
      */
     @NameInMap("resourceId")
     public String resourceId;
 
     /**
      * <p>The type of resource.</p>
-     * <br>
-     * <p>Set this parameter to **instance**. The value of this parameter cannot be changed.</p>
-     * <br>
+     * <p>Set this parameter to <strong>instance</strong>. The value of this parameter cannot be changed.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instance</p>
      */
     @NameInMap("resourceType")
     public String resourceType;

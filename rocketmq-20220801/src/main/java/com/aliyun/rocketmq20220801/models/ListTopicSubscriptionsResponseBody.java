@@ -4,27 +4,55 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListTopicSubscriptionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>MissingInstanceId</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public java.util.List<ListTopicSubscriptionsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Topic</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>instanceId</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The instance cannot be found.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>92A9BE4E-B794-50C8-979C-0456E4D32943</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -101,21 +129,47 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         @NameInMap("consistency")
         public String consistency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CID-TEST</p>
+         */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("filterExpression")
         public String filterExpression;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SQL</p>
+         */
         @NameInMap("filterExpressionType")
         public String filterExpressionType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BROADCASTING</p>
+         */
         @NameInMap("messageModel")
         public String messageModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("subscriptionStatus")
         public String subscriptionStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>topic_test</p>
+         */
         @NameInMap("topicName")
         public String topicName;
 

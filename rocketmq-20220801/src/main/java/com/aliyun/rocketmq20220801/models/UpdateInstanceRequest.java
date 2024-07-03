@@ -12,6 +12,9 @@ public class UpdateInstanceRequest extends TeaModel {
 
     /**
      * <p>The updated name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_instance</p>
      */
     @NameInMap("instanceName")
     public String instanceName;
@@ -30,6 +33,9 @@ public class UpdateInstanceRequest extends TeaModel {
 
     /**
      * <p>The updated description of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is the remark for test.</p>
      */
     @NameInMap("remark")
     public String remark;
@@ -87,11 +93,13 @@ public class UpdateInstanceRequest extends TeaModel {
         public java.util.List<String> aclTypes;
 
         /**
-         * <p>Indicates whether the authentication-free in VPCs feature is enabled.</p>
-         * <p>Indicates whether the authentication-free in VPCs feature is enabled.</p>
-         * <p>Valid values:</p>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <p>Indicates whether the authentication-free in VPCs feature is enabled.
+         * Indicates whether the authentication-free in VPCs feature is enabled.
+         * Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          */
         @NameInMap("defaultVpcAuthFree")
         public Boolean defaultVpcAuthFree;
@@ -122,9 +130,10 @@ public class UpdateInstanceRequest extends TeaModel {
     public static class UpdateInstanceRequestNetworkInfoInternetInfo extends TeaModel {
         /**
          * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
-         * <br>
-         * <p>*   If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
-         * <p>*   If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <ul>
+         * <li>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+         * <li>If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+         * </ul>
          */
         @NameInMap("ipWhitelist")
         public java.util.List<String> ipWhitelist;
@@ -169,44 +178,53 @@ public class UpdateInstanceRequest extends TeaModel {
     public static class UpdateInstanceRequestProductInfo extends TeaModel {
         /**
          * <p>Specifies whether to enable the elastic transactions per second (TPS) feature for the instance.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
-         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](https://help.aliyun.com/document_detail/427237.html).</p>
-         * <br>
-         * <p>>  The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance editions](https://help.aliyun.com/document_detail/444715.html).</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fees</a>.</p>
+         * <blockquote>
+         * <p> The elastic TPS feature is supported only by specific instance editions. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("autoScaling")
         public Boolean autoScaling;
 
         /**
          * <p>The retention period of messages. Unit: hours.</p>
-         * <br>
-         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](https://help.aliyun.com/document_detail/440347.html) topic.</p>
-         * <br>
-         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](https://help.aliyun.com/document_detail/427238.html).</p>
+         * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</p>
+         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fees</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72</p>
          */
         @NameInMap("messageRetentionTime")
         public Integer messageRetentionTime;
 
         /**
          * <p>The ratio of the number of messages that you can send to the number of messages that you can receive on the instance.</p>
-         * <br>
          * <p>Value values: 0.25 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("sendReceiveRatio")
         public Float sendReceiveRatio;
 
         /**
          * <p>Specifies whether to enable the message trace feature.</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("traceOn")
         public Boolean traceOn;

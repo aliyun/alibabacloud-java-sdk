@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -72,8 +73,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.
-     *
+     * <b>summary</b> : 
+     * <p>Changes the resource group to which a ApsaraMQ for RocketMQ instance belongs.</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -84,10 +86,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a consumer group.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a consumer group.</p>
+     * 
      * @param request CreateConsumerGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -127,10 +133,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a consumer group.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a consumer group.</p>
+     * 
      * @param request CreateConsumerGroupRequest
      * @return CreateConsumerGroupResponse
      */
@@ -141,10 +151,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an ApsaraMQ for RocketMQ 5.x instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an ApsaraMQ for RocketMQ 5.x instance.</p>
+     * 
      * @param request CreateInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -234,10 +248,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates an ApsaraMQ for RocketMQ 5.x instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an ApsaraMQ for RocketMQ 5.x instance.</p>
+     * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
      */
@@ -248,8 +266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a topic.</p>
+     * 
      * @param request CreateTopicRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -285,8 +304,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a topic.</p>
+     * 
      * @param request CreateTopicRequest
      * @return CreateTopicResponse
      */
@@ -297,11 +317,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified consumer group.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+     * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified consumer group.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteConsumerGroupResponse
@@ -325,11 +349,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified consumer group.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+     * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified consumer group.</p>
      * @return DeleteConsumerGroupResponse
      */
     public DeleteConsumerGroupResponse deleteConsumerGroup(String instanceId, String consumerGroupId) throws Exception {
@@ -339,12 +366,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a ApsaraMQ for RocketMQ instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     * *   After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.
-     * *   This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * <ul>
+     * <li>After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.</li>
+     * <li>This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a ApsaraMQ for RocketMQ instance.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceResponse
@@ -368,12 +401,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a ApsaraMQ for RocketMQ instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     * *   After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.
-     * *   This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * <ul>
+     * <li>After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.</li>
+     * <li>This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a ApsaraMQ for RocketMQ instance.</p>
      * @return DeleteInstanceResponse
      */
     public DeleteInstanceResponse deleteInstance(String instanceId) throws Exception {
@@ -383,10 +421,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified topic.
-     *
-     * @description If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified topic.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteTopicResponse
@@ -410,10 +450,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified topic.
-     *
-     * @description If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.
-     *
+     * <b>description</b> :
+     * <p>If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified topic.</p>
      * @return DeleteTopicResponse
      */
     public DeleteTopicResponse deleteTopic(String instanceId, String topicName) throws Exception {
@@ -423,10 +464,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a specified consumer group.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified consumer group.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetConsumerGroupResponse
@@ -450,10 +495,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a specified consumer group.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified consumer group.</p>
      * @return GetConsumerGroupResponse
      */
     public GetConsumerGroupResponse getConsumerGroup(String instanceId, String consumerGroupId) throws Exception {
@@ -463,10 +511,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the detailed information about an instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the detailed information about an instance.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceResponse
@@ -490,10 +542,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the detailed information about an instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the detailed information about an instance.</p>
      * @return GetInstanceResponse
      */
     public GetInstanceResponse getInstance(String instanceId) throws Exception {
@@ -503,8 +558,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a specified topic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified topic.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTopicResponse
@@ -528,8 +584,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details of a specified topic.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the details of a specified topic.</p>
      * @return GetTopicResponse
      */
     public GetTopicResponse getTopic(String instanceId, String topicName) throws Exception {
@@ -539,8 +595,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询支持的可用区
-     *
+     * <b>summary</b> : 
+     * <p>查询支持的可用区</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAvailableZonesResponse
@@ -564,8 +621,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询支持的可用区
-     *
+     * <b>summary</b> : 
+     * <p>查询支持的可用区</p>
      * @return ListAvailableZonesResponse
      */
     public ListAvailableZonesResponse listAvailableZones() throws Exception {
@@ -575,8 +632,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询消费者客户端连接信息
-     *
+     * <b>summary</b> : 
+     * <p>查询消费者客户端连接信息</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConsumerConnectionsResponse
@@ -600,8 +658,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询消费者客户端连接信息
-     *
+     * <b>summary</b> : 
+     * <p>查询消费者客户端连接信息</p>
      * @return ListConsumerConnectionsResponse
      */
     public ListConsumerConnectionsResponse listConsumerConnections(String instanceId, String consumerGroupId) throws Exception {
@@ -611,8 +669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the subscriptions of a consumer group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the subscriptions of a consumer group.</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListConsumerGroupSubscriptionsResponse
@@ -636,8 +695,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the subscriptions of a consumer group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the subscriptions of a consumer group.</p>
      * @return ListConsumerGroupSubscriptionsResponse
      */
     public ListConsumerGroupSubscriptionsResponse listConsumerGroupSubscriptions(String instanceId, String consumerGroupId) throws Exception {
@@ -647,10 +706,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the consumer groups in a specified instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the consumer groups in a specified instance.</p>
+     * 
      * @param request ListConsumerGroupsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -690,10 +753,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the consumer groups in a specified instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the consumer groups in a specified instance.</p>
+     * 
      * @param request ListConsumerGroupsRequest
      * @return ListConsumerGroupsResponse
      */
@@ -704,10 +771,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries instances.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instances.</p>
+     * 
      * @param request ListInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -755,10 +826,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries instances.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries instances.</p>
+     * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
      */
@@ -769,8 +844,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询region列表
-     *
+     * <b>summary</b> : 
+     * <p>查询region列表</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRegionsResponse
@@ -794,8 +870,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询region列表
-     *
+     * <b>summary</b> : 
+     * <p>查询region列表</p>
      * @return ListRegionsResponse
      */
     public ListRegionsResponse listRegions() throws Exception {
@@ -805,8 +881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询主题订阅关系列表
-     *
+     * <b>summary</b> : 
+     * <p>查询主题订阅关系列表</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTopicSubscriptionsResponse
@@ -830,8 +907,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询主题订阅关系列表
-     *
+     * <b>summary</b> : 
+     * <p>查询主题订阅关系列表</p>
      * @return ListTopicSubscriptionsResponse
      */
     public ListTopicSubscriptionsResponse listTopicSubscriptions(String instanceId, String topicName) throws Exception {
@@ -841,8 +918,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topics in a specified instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topics in a specified instance.</p>
+     * 
      * @param tmpReq ListTopicsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -892,8 +970,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the topics in a specified instance.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the topics in a specified instance.</p>
+     * 
      * @param request ListTopicsRequest
      * @return ListTopicsResponse
      */
@@ -904,8 +983,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the consumer offset of a consumer group.
-     *
+     * <b>summary</b> : 
+     * <p>Resets the consumer offset of a consumer group.</p>
+     * 
      * @param request ResetConsumeOffsetRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -941,8 +1021,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Resets the consumer offset of a consumer group.
-     *
+     * <b>summary</b> : 
+     * <p>Resets the consumer offset of a consumer group.</p>
+     * 
      * @param request ResetConsumeOffsetRequest
      * @return ResetConsumeOffsetResponse
      */
@@ -953,10 +1034,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the basic information about and the consumption retry policy of a consumer group.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the basic information about and the consumption retry policy of a consumer group.</p>
+     * 
      * @param request UpdateConsumerGroupRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -996,10 +1081,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the basic information about and the consumption retry policy of a consumer group.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the basic information about and the consumption retry policy of a consumer group.</p>
+     * 
      * @param request UpdateConsumerGroupRequest
      * @return UpdateConsumerGroupResponse
      */
@@ -1010,10 +1099,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</p>
+     * 
      * @param request UpdateInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1061,10 +1154,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.
-     *
-     * @description > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the basic information and specifications of an ApsaraMQ for RocketMQ instance.</p>
+     * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
      */
@@ -1075,8 +1172,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the basic information about a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the basic information about a topic.</p>
+     * 
      * @param request UpdateTopicRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1108,8 +1206,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the basic information about a topic.
-     *
+     * <b>summary</b> : 
+     * <p>Updates the basic information about a topic.</p>
+     * 
      * @param request UpdateTopicRequest
      * @return UpdateTopicResponse
      */

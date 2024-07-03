@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetConsumerGroupResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidConsumerGroupId</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,36 +21,54 @@ public class GetConsumerGroupResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ConsumerGroupId</p>
      */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>consumerGroupId</p>
      */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Parameter consumerGroupId is invalid.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7F94090-3358-506A-97DC-34BC803C****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -124,50 +145,53 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     public static class GetConsumerGroupResponseBodyDataConsumeRetryPolicy extends TeaModel {
         /**
          * <p>The dead-letter topic.</p>
-         * <br>
-         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](https://help.aliyun.com/document_detail/440356.html).</p>
+         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DLQ_mqtest</p>
          */
         @NameInMap("deadLetterTargetTopic")
         public String deadLetterTargetTopic;
 
         /**
          * <p>The maximum number of retries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         @NameInMap("maxRetryTimes")
         public Integer maxRetryTimes;
 
         /**
          * <p>The retry policy.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   FixedRetryPolicy</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Failed messages are retried at a fixed interval</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   DefaultRetryPolicy</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    Failed messages are retried at incremental intervals as the number of retries increases</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <ul>
+         * <li><p>FixedRetryPolicy</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>Failed messages are retried at a fixed interval</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>DefaultRetryPolicy</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>Failed messages are retried at incremental intervals as the number of retries increases</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DefaultRetryPolicy</p>
          */
         @NameInMap("retryPolicy")
         public String retryPolicy;
@@ -205,111 +229,124 @@ public class GetConsumerGroupResponseBody extends TeaModel {
 
     public static class GetConsumerGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](https://help.aliyun.com/document_detail/440356.html).</p>
+         * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
          */
         @NameInMap("consumeRetryPolicy")
         public GetConsumerGroupResponseBodyDataConsumeRetryPolicy consumeRetryPolicy;
 
         /**
          * <p>The ID of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CID-TEST</p>
          */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
         /**
          * <p>The time when the consumer group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The message delivery order of the consumer group.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Concurrently</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    concurrent delivery</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Orderly</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    ordered delivery</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Concurrently</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>concurrent delivery</p>
+         * <!-- -->
+         * </li>
+         * <li><p>Orderly</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>ordered delivery</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Concurrently</p>
          */
         @NameInMap("deliveryOrderType")
         public String deliveryOrderType;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
         /**
          * <p>The remarks on the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the remark for test.</p>
          */
         @NameInMap("remark")
         public String remark;
 
         /**
          * <p>The state of the consumer group.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   RUNNING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    : The consumer group is</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    running</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   CREATING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    : The consumer group is</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    being created</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <ul>
+         * <li><p>RUNNING</p>
+         * <!-- -->
+         * 
+         * <p>: The consumer group is</p>
+         * <!-- -->
+         * 
+         * <p>running</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>CREATING</p>
+         * <!-- -->
+         * 
+         * <p>: The consumer group is</p>
+         * <!-- -->
+         * 
+         * <p>being created</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The time when the consumer group was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
          */
         @NameInMap("updateTime")
         public String updateTime;

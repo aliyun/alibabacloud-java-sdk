@@ -4,27 +4,55 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListAvailableZonesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Topic.NotFound</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public java.util.List<ListAvailableZonesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Parameter instanceId is mandatory for this action .</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -98,15 +126,31 @@ public class ListAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class ListAvailableZonesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-qingdao-b</p>
+         */
         @NameInMap("zoneId")
         public String zoneId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ha-cn-t9b30w902vm_qrs</p>
+         */
         @NameInMap("zoneName")
         public String zoneName;
 

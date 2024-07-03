@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class ResetConsumeOffsetResponseBody extends TeaModel {
     /**
      * <p>The returned error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>The returned dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
      */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The returned dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instanceId</p>
      */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The returned HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The instance cannot be found.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9A95891-EAD4-5A2B-8A30-676CD18921AF</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;

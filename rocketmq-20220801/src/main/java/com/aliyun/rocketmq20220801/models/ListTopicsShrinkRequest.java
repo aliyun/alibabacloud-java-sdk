@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTopicsShrinkRequest extends TeaModel {
     /**
      * <p>The condition that you want to use to filter topics in the instance. If you leave this parameter empty, all topics in the instance are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topic_test</p>
      */
     @NameInMap("filter")
     public String filter;
@@ -18,12 +21,18 @@ public class ListTopicsShrinkRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("pageSize")
     public Integer pageSize;
