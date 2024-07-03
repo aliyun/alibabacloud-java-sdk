@@ -5,36 +5,50 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogRecordsResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data that is returned.</p>
      */
     @NameInMap("Data")
     public DescribeSqlLogRecordsResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, error information such as an error code is returned.</p>
+     * <p>The message that is returned.</p>
+     * <blockquote>
+     * <p> If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F43E7FB3-CE67-5FFD-A59C-EFD278BCD7BE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,204 +101,305 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
     public static class DescribeSqlLogRecordsResponseBodyDataItemsSQLLogRecord extends TeaModel {
         /**
          * <p>The account of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testname</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
-         * <p>This is a reserved parameter.</p>
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Collection")
         public String collection;
 
         /**
-         * <p>The duration of the query. Unit: milliseconds.</p>
+         * <p>The amount of time that is consumed to execute the SQL statement. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58</p>
          */
         @NameInMap("Consume")
         public Long consume;
 
         /**
-         * <p>The CPU execution duration. Unit: microseconds.</p>
+         * <p>The CPU execution duration. Unit: microsecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("CpuTime")
         public Long cpuTime;
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb</p>
          */
         @NameInMap("DBName")
         public String DBName;
 
         /**
-         * <p>The time when the query was performed. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the SQL statement was executed. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-12-07T02:15:32Z</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
         /**
          * <p>The extended information. This parameter is a reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Ext")
         public String ext;
 
         /**
-         * <p>The number of rows that are pulled by the compute nodes of the PolarDB-X 2.0 database instance.</p>
+         * <p>The number of rows that are pulled by the compute nodes of the PolarDB-X 2.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Frows")
         public Long frows;
 
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.197.XX.XX</p>
          */
         @NameInMap("HostAddress")
         public String hostAddress;
 
         /**
-         * <p>The lock wait duration. Unit: milliseconds.</p>
+         * <p>The lock wait duration. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LockTime")
         public Long lockTime;
 
         /**
          * <p>The number of logical reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LogicRead")
         public Long logicRead;
 
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-uf6k5f6g3912i****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The time when the query was performed. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the SQL statement was executed. The value of this parameter is a UNIX timestamp. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1701886532000</p>
          */
         @NameInMap("OriginTime")
         public Long originTime;
 
         /**
-         * <p>The parallel queue time of the PolarDB for MySQL instance. Unit: milliseconds.</p>
+         * <p>The parallel queue time of the PolarDB for MySQL instance. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ParallelDegree")
         public String parallelDegree;
 
         /**
-         * <p>The parallelism of the PolarDB for MySQL instance.</p>
+         * <p>The parallelism of the PolarDB for MySQL cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ParallelQueueTime")
         public String parallelQueueTime;
 
         /**
          * <p>The number of physical asynchronous reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PhysicAsyncRead")
         public Long physicAsyncRead;
 
         /**
-         * <p>The number of physical reads.</p>
+         * <p>The total number of physical reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PhysicRead")
         public Long physicRead;
 
         /**
          * <p>The number of physical synchronous reads.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("PhysicSyncRead")
         public Long physicSyncRead;
 
         /**
-         * <p>The number of rows that are returned.</p>
+         * <p>The number of rows returned by the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReturnRows")
         public Long returnRows;
 
         /**
-         * <p>The total number of rows that are updated or returned by the compute nodes of the PolarDB-X 2.0 database instance.</p>
+         * <p>The total number of rows that are updated or returned by the compute nodes of the PolarDB-X 2.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Rows")
         public Long rows;
 
         /**
-         * <p>The number of rows that are scanned.</p>
+         * <p>The number of scanned rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ScanRows")
         public Long scanRows;
 
         /**
-         * <p>The number of requests that are sent to the data nodes by the compute nodes of the PolarDB-X 2.0 database instance.</p>
+         * <p>The number of requests that are sent from the compute nodes to the data nodes of the PolarDB-X 2.0 instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Scnt")
         public Long scnt;
 
         /**
          * <p>The SQL statement ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c67649d4a7fb62c4f8c7a447c52b5b17</p>
          */
         @NameInMap("SqlId")
         public String sqlId;
 
         /**
          * <p>The SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select resource_id as cluster_id, tpl_name \n\tfrom dbfree_alert_resource_tpl_ref\n\twhere user_id=? and type=\&quot;cluster\&quot; group by resource_id, tpl_name</p>
          */
         @NameInMap("SqlText")
         public String sqlText;
 
         /**
          * <p>The type of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
-         * <p>The state of the query. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The query was successful.</p>
-         * <p>*   **1**: The query failed to be performed.</p>
+         * <p>The execution status of the SQL statement.</p>
+         * <ul>
+         * <li><strong>0</strong>: The execution was successful.</li>
+         * <li><strong>1</strong>: The execution failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The thread ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("ThreadId")
         public Long threadId;
 
         /**
-         * <p>The trace ID of the PolarDB-X 2.0 database instance. The value is the execution ID of the SQL statement on the data nodes.</p>
+         * <p>The trace ID of the PolarDB-X 2.0 instance. The value is the execution ID of the SQL statement on the data node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14c93b7c7bf00000</p>
          */
         @NameInMap("TraceId")
         public String traceId;
 
         /**
          * <p>The transaction ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200000</p>
          */
         @NameInMap("TrxId")
         public String trxId;
 
         /**
          * <p>The number of rows that are updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("UpdateRows")
         public Long updateRows;
 
         /**
-         * <p>Indicates whether the In-Memory Column Index (IMCI) feature is enabled for the PolarDB for MySQL instance. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <p>Indicates whether the In-Memory Column Index (IMCI) feature is enabled for the PolarDB for MySQL cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("UseImciEngine")
         public String useImciEngine;
 
         /**
          * <p>The IP address that is resolved from the endpoint of the query link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.115.XX.XX</p>
          */
         @NameInMap("Vip")
         public String vip;
 
         /**
-         * <p>The number of writes that are performed by the ApsaraDB RDS for SQL Server engine.</p>
+         * <p>The number of writes to the ApsaraDB RDS for SQL Server instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Writes")
         public Long writes;
@@ -584,18 +699,26 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
 
     public static class DescribeSqlLogRecordsResponseBodyData extends TeaModel {
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608888296000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>Indicates whether the task was complete. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The task failed.</p>
-         * <p>*   **1**: The task was complete.</p>
-         * <br>
-         * <p>>  If the value of **Finish** is 0 and the value of **JobId** is returned, the request is an asynchronous request and the return result cannot be directly obtained. You must query the return result by using the value of **JobId**. Specify JobId as the key of **Filters** and the value of **JobId** as the value of Filters. Example: `Filters=[{"Key": "JobId", "Value": "******"}]`.</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the value of <strong>Finish</strong> is 0 and the value of <strong>JobId</strong> is returned, the request is an asynchronous request and the return result cannot be directly obtained. You must query the return result based on the value of <strong>JobId</strong>. Specify JobId as the key of <strong>Filters</strong> and the value of <strong>JobId</strong> as the value of Filters. Example: <code>Filters=[{&quot;Key&quot;: &quot;JobId&quot;, &quot;Value&quot;: &quot;******&quot;}]</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Finish")
         public String finish;
@@ -608,18 +731,27 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MzI4NTZfUUlOR0RBT19DTTlfTlUyMF9NWVNRTF9PREJTX0xWU18zMjg1Nl9teXNxbF9XZWQgTWFyIDA2IDE0OjUwOjQ3IENTVCAyMDI0XzBfMzBfRXhlY3V0ZVRpbWVfREVTQ19XZWQgTWFyIDA2IDE0OjM1OjQ3IENTVCAyMDI0Xw==_1709708406465</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
-         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1596177993000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalRecords")
         public Long totalRecords;

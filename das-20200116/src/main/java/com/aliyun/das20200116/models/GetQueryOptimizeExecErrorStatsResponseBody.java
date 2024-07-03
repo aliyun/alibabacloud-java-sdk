@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -85,42 +98,63 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
     public static class GetQueryOptimizeExecErrorStatsResponseBodyDataList extends TeaModel {
         /**
          * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testdb01</p>
          */
         @NameInMap("Dbname")
         public String dbname;
 
         /**
          * <p>The error code returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1146</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The number of errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ErrorCount")
         public Long errorCount;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The alias of the database instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The SQL template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2e8147b5ca2dfc640dfd5e43d96a****</p>
          */
         @NameInMap("SqlId")
         public String sqlId;
 
         /**
          * <p>The content of the SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * from test1</p>
          */
         @NameInMap("SqlText")
         public String sqlText;
@@ -191,6 +225,9 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
     public static class GetQueryOptimizeExecErrorStatsResponseBodyData extends TeaModel {
         /**
          * <p>The reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         @NameInMap("Extra")
         public String extra;
@@ -203,18 +240,27 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
 
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNo")
         public Integer pageNo;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19</p>
          */
         @NameInMap("Total")
         public Long total;

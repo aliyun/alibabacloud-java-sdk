@@ -6,28 +6,35 @@ import com.aliyun.tea.*;
 public class GetQueryOptimizeTagRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**: ApsaraDB RDS for MySQL</p>
-     * <p>*   **PolarDBMySQL**: PolarDB for MySQL</p>
-     * <p>*   **PostgreSQL**: ApsaraDB RDS for PostgreSQL</p>
-     * <br>
+     * <ul>
+     * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL</li>
+     * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
+     * <li><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze8g2am97624****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The SQL template ID. You can call the [GetQueryOptimizeDataStats](https://help.aliyun.com/document_detail/405261.html) operation to query the SQL template ID.</p>
-     * <br>
+     * <p>The SQL template ID. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query the SQL template ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>29d9fef63e347d39c3436658a5fe5f2b</p>
      */
     @NameInMap("SqlId")
     public String sqlId;

@@ -6,35 +6,49 @@ import com.aliyun.tea.*;
 public class DescribeTopBigKeysResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The detailed information about the large keys.</p>
-     * <br>
-     * <p>> This parameter is left empty If no large keys exist within the specified time range.</p>
+     * <blockquote>
+     * <p>This parameter is left empty If no large keys exist within the specified time range.</p>
+     * </blockquote>
      */
     @NameInMap("Data")
     public DescribeTopBigKeysResponseBodyData data;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,30 +101,45 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
     public static class DescribeTopBigKeysResponseBodyDataBigKey extends TeaModel {
         /**
          * <p>The database in which the key is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
          * <p>The key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc:def:eng</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The type of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zset</p>
          */
         @NameInMap("KeyType")
         public String keyType;
 
         /**
          * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The number of elements in the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Size")
         public Long size;

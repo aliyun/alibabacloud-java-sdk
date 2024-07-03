@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,23 +21,34 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,14 +101,21 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionDataClientStats extends TeaModel {
         /**
          * <p>The number of active sessions that belong to the client IP address.</p>
-         * <br>
-         * <p>>  If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <blockquote>
+         * <p> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         @NameInMap("Key")
         public String key;
@@ -107,6 +128,9 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
         /**
          * <p>The total number of sessions that belong to the client IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -167,14 +191,21 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionDataDbStats extends TeaModel {
         /**
          * <p>The number of active sessions of the database.</p>
-         * <br>
-         * <p>>  If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <blockquote>
+         * <p> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbTest</p>
          */
         @NameInMap("Key")
         public String key;
@@ -187,6 +218,9 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
         /**
          * <p>The total number of sessions of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -247,74 +281,111 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionDataSessionList extends TeaModel {
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47.100.XX.XX</p>
          */
         @NameInMap("Client")
         public String client;
 
         /**
          * <p>The type of the command executed in the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Query</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbTest</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
          * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14521783</p>
          */
         @NameInMap("SessionId")
         public Long sessionId;
 
         /**
          * <p>The SQL template ID.</p>
-         * <br>
-         * <p>>  This parameter is returned only when you use a PolarDB-X 2.0 instance.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when you use a PolarDB-X 2.0 instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a7cac1a9</p>
          */
         @NameInMap("SqlTemplateId")
         public String sqlTemplateId;
 
         /**
          * <p>The SQL statement executed in the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERT INTO ...</p>
          */
         @NameInMap("SqlText")
         public String sqlText;
 
         /**
          * <p>The status of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>starting</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The execution duration of the session. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Time")
         public Long time;
 
         /**
          * <p>The duration of the transaction. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("TrxDuration")
         public Long trxDuration;
 
         /**
          * <p>The ID of the transaction to which the session belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>754300775132</p>
          */
         @NameInMap("TrxId")
         public String trxId;
 
         /**
          * <p>The username of the database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         @NameInMap("User")
         public String user;
 
         /**
          * <p>The alias of the IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>master-shanghai</p>
          */
         @NameInMap("UserClientAlias")
         public String userClientAlias;
@@ -425,14 +496,21 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionDataUserStats extends TeaModel {
         /**
          * <p>The number of active sessions within the account.</p>
-         * <br>
-         * <p>>  If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * <blockquote>
+         * <p> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
         /**
          * <p>The database account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         @NameInMap("Key")
         public String key;
@@ -445,6 +523,9 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
         /**
          * <p>The total number of sessions within the account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -505,6 +586,9 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionData extends TeaModel {
         /**
          * <p>The total number of active sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("ActiveSessionCount")
         public Long activeSessionCount;
@@ -523,6 +607,9 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
         /**
          * <p>The maximum execution duration of an active session. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("MaxActiveTime")
         public Long maxActiveTime;
@@ -535,12 +622,18 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
         /**
          * <p>The time when the session was queried. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1659581514000020</p>
          */
         @NameInMap("TimeStamp")
         public Long timeStamp;
 
         /**
          * <p>The total number of sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>988</p>
          */
         @NameInMap("TotalSessionCount")
         public Long totalSessionCount;
@@ -625,33 +718,48 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     public static class GetMySQLAllSessionAsyncResponseBodyData extends TeaModel {
         /**
          * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Complete")
         public Boolean complete;
 
         /**
          * <p>Indicates whether the asynchronous request failed. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Fail")
         public Boolean fail;
 
         /**
          * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsFinish")
         public Boolean isFinish;
 
         /**
          * <p>The ID of the asynchronous request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>async__507044db6c4eadfa2dab9b084e80****</p>
          */
         @NameInMap("ResultId")
         public String resultId;
@@ -664,16 +772,23 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
 
         /**
          * <p>The state of the asynchronous request. Valid values:</p>
-         * <br>
-         * <p>*   **RUNNING**</p>
-         * <p>*   **SUCCESS**</p>
-         * <p>*   **FAIL**</p>
+         * <ul>
+         * <li><strong>RUNNING</strong></li>
+         * <li><strong>SUCCESS</strong></li>
+         * <li><strong>FAIL</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1660100753556</p>
          */
         @NameInMap("Timestamp")
         public Long timestamp;

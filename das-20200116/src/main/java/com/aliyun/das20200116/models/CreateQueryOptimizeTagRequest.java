@@ -6,60 +6,75 @@ import com.aliyun.tea.*;
 public class CreateQueryOptimizeTagRequest extends TeaModel {
     /**
      * <p>The remarks.</p>
-     * <br>
      * <p>The remarks can be 1 to 300 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Slow SQL queries of offline synchronization. No optimization is required.</p>
      */
     @NameInMap("Comments")
     public String comments;
 
     /**
      * <p>The database engine. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**: ApsaraDB RDS for MySQL</p>
-     * <p>*   **PolarDBMySQL**: PolarDB for MySQL</p>
-     * <p>*   **PostgreSQL**: ApsaraDB RDS for PostgreSQL</p>
-     * <br>
+     * <ul>
+     * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL</li>
+     * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
+     * <li><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze1jdv45i7l6****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](https://help.aliyun.com/document_detail/405261.html) operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).</p>
-     * <br>
+     * <p>The SQL template IDs. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeExecErrorStats</a> operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0e941</p>
      */
     @NameInMap("SqlIds")
     public String sqlIds;
 
     /**
-     * <p>The status of **Tags**. Valid values:</p>
-     * <br>
-     * <p>*   **0**: removes all tags added to the SQL templates that are specified by **SqlIds** and leaves **Tags** empty.</p>
-     * <p>*   **1**: adds the tags specified by **Tags** to the SQL templates that are specified by **SqlIds**.</p>
-     * <br>
+     * <p>The status of <strong>Tags</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: removes all tags added to the SQL templates that are specified by <strong>SqlIds</strong> and leaves <strong>Tags</strong> empty.</li>
+     * <li><strong>1</strong>: adds the tags specified by <strong>Tags</strong> to the SQL templates that are specified by <strong>SqlIds</strong>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
      * <p>The SQL tags. Separate multiple SQL tags with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **DAS_IMPORTANT**: The SQL template is important.</p>
-     * <p>*   **DAS_NOT_IMPORTANT**: The SQL template is unimportant.</p>
-     * <p>*   **USER_IGNORE**: The scheduling of the SQL template does not need to be optimized.</p>
-     * <p>*   **DAS_IN_PLAN**: The scheduling of the SQL template needs to be optimized.</p>
-     * <br>
+     * <ul>
+     * <li><strong>DAS_IMPORTANT</strong>: The SQL template is important.</li>
+     * <li><strong>DAS_NOT_IMPORTANT</strong>: The SQL template is unimportant.</li>
+     * <li><strong>USER_IGNORE</strong>: The scheduling of the SQL template does not need to be optimized.</li>
+     * <li><strong>DAS_IN_PLAN</strong>: The scheduling of the SQL template needs to be optimized.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DAS_IN_PLAN,DAS_NOT_IMPORTANT</p>
      */
     @NameInMap("Tags")
     public String tags;

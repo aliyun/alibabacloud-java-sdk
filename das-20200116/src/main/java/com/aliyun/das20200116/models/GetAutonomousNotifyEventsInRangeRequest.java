@@ -6,78 +6,110 @@ import com.aliyun.tea.*;
 public class GetAutonomousNotifyEventsInRangeRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time.</p>
-     * <br>
+     * <blockquote>
+     * <p> The end time must be later than the start time.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1568265711221</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("EventContext")
     public String eventContext;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-18ff4a195d****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The urgency level of the events. If you specify this parameter, the MinLevel parameter does not take effect. Valid values:</p>
-     * <br>
-     * <p>*   **Notice**: events for which the system sends notifications.</p>
-     * <p>*   **Optimization**: events that need to be optimized.</p>
-     * <p>*   **Warn**: events for which the system sends warnings.</p>
-     * <p>*   **Critical**: critical events.</p>
+     * <ul>
+     * <li><strong>Notice</strong>: events for which the system sends notifications.</li>
+     * <li><strong>Optimization</strong>: events that need to be optimized.</li>
+     * <li><strong>Warn</strong>: events for which the system sends warnings.</li>
+     * <li><strong>Critical</strong>: critical events.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Warn</p>
      */
     @NameInMap("Level")
     public String level;
 
     /**
      * <p>The minimum urgency level of the events. Valid values:</p>
-     * <br>
-     * <p>*   **Notice**: events for which the system sends notifications.</p>
-     * <p>*   **Optimization**: events that need to be optimized.</p>
-     * <p>*   **Warn**: events for which the system sends warnings.</p>
-     * <p>*   **Critical**: critical events.</p>
+     * <ul>
+     * <li><strong>Notice</strong>: events for which the system sends notifications.</li>
+     * <li><strong>Optimization</strong>: events that need to be optimized.</li>
+     * <li><strong>Warn</strong>: events for which the system sends warnings.</li>
+     * <li><strong>Critical</strong>: critical events.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Notice</p>
      */
     @NameInMap("MinLevel")
     public String minLevel;
 
     /**
-     * <p>The ID of the node in a PolarDB for MySQL cluster. You can call the [DescribeDBClusters](https://help.aliyun.com/document_detail/98094.html) operation to query the node ID returned by the DBNodeId response parameter.</p>
-     * <br>
-     * <p>>  You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</p>
+     * <p>The ID of the node in a PolarDB for MySQL cluster. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the node ID returned by the DBNodeId response parameter.</p>
+     * <blockquote>
+     * <p> You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>r-x****-db-0</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageOffset")
     public String pageOffset;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1568269711000</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("__context")
     public String context;

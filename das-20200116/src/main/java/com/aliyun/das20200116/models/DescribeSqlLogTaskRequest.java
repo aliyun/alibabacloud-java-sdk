@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeSqlLogTaskRequest extends TeaModel {
     /**
      * <p>The ID of the database instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>r-bp1nti25tc7bq5****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a4f5c4494dbd6713185d87a97aa53e8</p>
      */
     @NameInMap("TaskId")
     public String taskId;

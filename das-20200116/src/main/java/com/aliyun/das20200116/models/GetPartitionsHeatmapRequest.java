@@ -6,40 +6,54 @@ import com.aliyun.tea.*;
 public class GetPartitionsHeatmapRequest extends TeaModel {
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-hzrciqy62c****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The time range to be queried. Valid values:</p>
-     * <br>
-     * <p>*   **LAST_ONE_HOURS**: the last hour.</p>
-     * <p>*   **LAST_SIX_HOURS**: the last six hours.</p>
-     * <p>*   **LAST_ONE_DAYS**: the last day.</p>
-     * <p>*   **LAST_THREE_DAYS**: the last three days.</p>
-     * <p>*   **LAST_SEVEN_DAYS**: the last seven days.</p>
+     * <ul>
+     * <li><strong>LAST_ONE_HOURS</strong>: the last hour.</li>
+     * <li><strong>LAST_SIX_HOURS</strong>: the last six hours.</li>
+     * <li><strong>LAST_ONE_DAYS</strong>: the last day.</li>
+     * <li><strong>LAST_THREE_DAYS</strong>: the last three days.</li>
+     * <li><strong>LAST_SEVEN_DAYS</strong>: the last seven days.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LAST_SIX_HOURS</p>
      */
     @NameInMap("TimeRange")
     public String timeRange;
 
     /**
      * <p>The type of the data to be queried. Valid values:</p>
-     * <br>
-     * <p>*   **READ_ROWS**: the read rows.</p>
-     * <p>*   **WRITTEN_ROWS**: the written rows.</p>
-     * <p>*   **READ_WRITTEN_ROWS**: the read and written rows.</p>
-     * <p>*   **UPDATE_ROWS**: the updated rows.</p>
-     * <p>*   **INSERTED_ROWS**: the inserted rows.</p>
-     * <p>*   **DELETED_ROWS**: the deleted rows.</p>
-     * <p>*   **READ_ROWS_WITH_DN**: the read rows returned from a data node.</p>
-     * <p>*   **WRITTEN_ROWS_WITH_DN**: the written rows returned from a data node.</p>
-     * <p>*   **READ_WRITTEN_ROWS_WITH_DN**: the read and written rows returned from a data node.</p>
+     * <ul>
+     * <li><strong>READ_ROWS</strong>: the read rows.</li>
+     * <li><strong>WRITTEN_ROWS</strong>: the written rows.</li>
+     * <li><strong>READ_WRITTEN_ROWS</strong>: the read and written rows.</li>
+     * <li><strong>UPDATE_ROWS</strong>: the updated rows.</li>
+     * <li><strong>INSERTED_ROWS</strong>: the inserted rows.</li>
+     * <li><strong>DELETED_ROWS</strong>: the deleted rows.</li>
+     * <li><strong>READ_ROWS_WITH_DN</strong>: the read rows returned from a data node.</li>
+     * <li><strong>WRITTEN_ROWS_WITH_DN</strong>: the written rows returned from a data node.</li>
+     * <li><strong>READ_WRITTEN_ROWS_WITH_DN</strong>: the read and written rows returned from a data node.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>WRITTEN_ROWS_WITH_DN</p>
      */
     @NameInMap("Type")
     public String type;

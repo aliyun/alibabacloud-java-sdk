@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetQueryOptimizeTagResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,18 +101,27 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
     public static class GetQueryOptimizeTagResponseBodyData extends TeaModel {
         /**
          * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Slow SQL queries of offline synchronization. No optimization is required.</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
          * <p>The SQL template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>651b56fe9418d48edb8fdf0980ec****</p>
          */
         @NameInMap("SqlId")
         public String sqlId;
 
         /**
          * <p>The SQL tags. Multiple tags are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAS_IN_PLAN,DAS_NOT_IMPORTANT</p>
          */
         @NameInMap("Tags")
         public String tags;

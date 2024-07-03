@@ -6,96 +6,137 @@ import com.aliyun.tea.*;
 public class AddHDMInstanceRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
-     * <br>
-     * <p>*   **MySQL**</p>
-     * <p>*   **PostgreSQL**</p>
-     * <p>*   **SQLServer**</p>
-     * <p>*   **PolarDBMySQL**</p>
-     * <p>*   **PolarDBPostgreSQL**</p>
-     * <p>*   **Redis**</p>
-     * <p>*   **MongoDB**</p>
-     * <p>*   **PolarDBOracle**</p>
-     * <p>*   **PolarDBX**</p>
+     * <ul>
+     * <li><strong>MySQL</strong></li>
+     * <li><strong>PostgreSQL</strong></li>
+     * <li><strong>SQLServer</strong></li>
+     * <li><strong>PolarDBMySQL</strong></li>
+     * <li><strong>PolarDBPostgreSQL</strong></li>
+     * <li><strong>Redis</strong></li>
+     * <li><strong>MongoDB</strong></li>
+     * <li><strong>PolarDBOracle</strong></li>
+     * <li><strong>PolarDBX</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("FlushAccount")
     public String flushAccount;
 
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yuecq--test****</p>
      */
     @NameInMap("InstanceAlias")
     public String instanceAlias;
 
     /**
      * <p>The type of the instance on which the database is deployed. Valid values:</p>
-     * <br>
-     * <p>*   **RDS**: an Alibaba Cloud database instance.</p>
-     * <p>*   **ECS**: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</p>
-     * <p>*   **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
-     * <br>
-     * <p>>  IDC refers to your data center.</p>
-     * <br>
+     * <ul>
+     * <li><strong>RDS</strong>: an Alibaba Cloud database instance.</li>
+     * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</li>
+     * <li><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</li>
+     * </ul>
+     * <blockquote>
+     * <p> IDC refers to your data center.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
      */
     @NameInMap("InstanceArea")
     public String instanceArea;
 
     /**
      * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze1jdv45i7l6****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The endpoint that is used to access the instance over internal networks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze1jdv45i7l6****.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>The network type of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VPC</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The password for the username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>122****</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The port that is used to access the instance over internal networks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("Port")
     public String port;
 
     /**
      * <p>The ID of the region in which the instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The username that is used to log on to the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test****</p>
      */
     @NameInMap("Username")
     public String username;
 
     /**
      * <p>The virtual private cloud (VPC) ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-m5e666n89m2bx8jar****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("__context")
     public String context;

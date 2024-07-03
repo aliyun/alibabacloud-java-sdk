@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTopHotKeysResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -85,36 +98,54 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
     public static class DescribeTopHotKeysResponseBodyDataHotKey extends TeaModel {
         /**
          * <p>The database in which the key is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
          * <p>The frequency at which the key is accessed, which indicates the QPS of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5500~6000</p>
          */
         @NameInMap("Hot")
         public String hot;
 
         /**
          * <p>The key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc:def:eng</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The type of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zset</p>
          */
         @NameInMap("KeyType")
         public String keyType;
 
         /**
          * <p>The statistical value that is calculated based on the least frequently used (LFU) caching algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>253</p>
          */
         @NameInMap("Lfu")
         public Integer lfu;
 
         /**
          * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         @NameInMap("NodeId")
         public String nodeId;

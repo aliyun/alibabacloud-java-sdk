@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DisableAutoThrottleRulesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public Long code;
@@ -18,23 +21,34 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -87,22 +101,33 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
     public static class DisableAutoThrottleRulesResponseBodyDataConfigFailInstanceList extends TeaModel {
         /**
          * <p>Indicates whether the automatic SQL throttling feature is disabled. Valid values:</p>
-         * <br>
-         * <p>* **true**</p>
-         * <br>
-         * <p>* **false**</p>
+         * <ul>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ConfigSuccess")
         public Boolean configSuccess;
 
         /**
          * <p>The error message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cannot found instance by rm-2ze9xrhze0709****</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The database instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze9xrhze0709****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -141,16 +166,24 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
     public static class DisableAutoThrottleRulesResponseBodyDataConfigSuccessInstanceList extends TeaModel {
         /**
          * <p>Indicates whether the automatic SQL throttling feature is disabled. Valid values:</p>
-         * <br>
-         * <p>* **true**</p>
-         * <br>
-         * <p>* **false**</p>
+         * <ul>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ConfigSuccess")
         public Boolean configSuccess;
 
         /**
          * <p>The database instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-2ze8g2am97624****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -181,6 +214,9 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
     public static class DisableAutoThrottleRulesResponseBodyData extends TeaModel {
         /**
          * <p>The number of database instances for which the automatic SQL throttling feature failed to be disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ConfigFailInstanceCount")
         public Long configFailInstanceCount;
@@ -193,6 +229,9 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
 
         /**
          * <p>The number of database instances for which the automatic SQL throttling feature is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ConfigSuccessInstanceCount")
         public Long configSuccessInstanceCount;
@@ -205,6 +244,9 @@ public class DisableAutoThrottleRulesResponseBody extends TeaModel {
 
         /**
          * <p>The total number of database instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalInstanceCount")
         public Long totalInstanceCount;

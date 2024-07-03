@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class GetAutonomousNotifyEventContentRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-18ff4a195d****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The unique identifier of the event. You can call the [GetAutonomousNotifyEventsInRange](https://help.aliyun.com/document_detail/288371.html) operation to query the unique identifier returned by the SpanId response parameter.</p>
-     * <br>
+     * <p>The unique identifier of the event. You can call the <a href="https://help.aliyun.com/document_detail/288371.html">GetAutonomousNotifyEventsInRange</a> operation to query the unique identifier returned by the SpanId response parameter.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7e7b2774-95b8-4fa3-bd9c-0ab47cb7****</p>
      */
     @NameInMap("SpanId")
     public String spanId;
 
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("__context")
     public String context;

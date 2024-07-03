@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogRecordsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1608888296000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -17,45 +20,64 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
     public java.util.List<DescribeSqlLogRecordsRequestFilters> filters;
 
     /**
-     * <p>The ID of the database instance.</p>
-     * <br>
+     * <p>The database instance ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pc-2ze8g2am97624****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The node ID.</p>
-     * <br>
-     * <p>*   For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter is available only for Cluster Edition instances. By default, if this parameter is not specified, the information about the logs of the primary node is returned.</p>
-     * <p>*   Set this parameter to **polarx_cn** or **polarx_dn** if the node that you want to query belongs to a PolarDB-X 2.0 database instance. A value of polarx_cn indicates a compute node. A value of polarx_dn indicates a data node.</p>
+     * <ul>
+     * <li>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter is valid only for instances of the Cluster Edition. If you do not specify this parameter, the log details of the primary node is queried by default.</li>
+     * <li>For PolarDB-X 2.0 instances, set this parameter to <strong>polarx_cn</strong> if the node is a compute node, or <strong>polarx_dn</strong> if the node is a data node.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pi-uf6k5f6g3912i****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The role of the node of the PolarDB-X 2.0 database instance. Valid values:</p>
-     * <br>
-     * <p>*   \\*\\*polarx_cn\\*\\*: compute node</p>
-     * <p>*   \\*\\*polarx_dn\\*\\*: data node</p>
+     * <p>The role of the node of the PolarDB-X 2.0 instance. Valid values:</p>
+     * <ul>
+     * <li>\<em>\<em>polarx_cn\</em>\</em>: compute node</li>
+     * <li>\<em>\<em>polarx_dn\</em>\</em>: data node</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>polarx_cn</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1596177993000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -131,15 +153,22 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
 
     public static class DescribeSqlLogRecordsRequestFilters extends TeaModel {
         /**
-         * <p>The name of the filter parameter.</p>
-         * <br>
-         * <p>>  For more information about the supported filter parameters and their valid values, see the following **supplement about the Key parameter**.</p>
+         * <p>The filter parameter.</p>
+         * <blockquote>
+         * <p> For more information about the supported filter parameters and their valid values, see the <strong>Supported parameters and values for Key</strong> section of this topic.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>keyWords</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the filter parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeHotKeysResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,23 +21,34 @@ public class DescribeHotKeysResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
@@ -87,30 +101,45 @@ public class DescribeHotKeysResponseBody extends TeaModel {
     public static class DescribeHotKeysResponseBodyDataHotKey extends TeaModel {
         /**
          * <p>The database in which the key is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
          * <p>The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5500~6000</p>
          */
         @NameInMap("Hot")
         public String hot;
 
         /**
          * <p>The name of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc:def:eng</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The type of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zset</p>
          */
         @NameInMap("KeyType")
         public String keyType;
 
         /**
          * <p>The number of elements in the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Size")
         public Long size;

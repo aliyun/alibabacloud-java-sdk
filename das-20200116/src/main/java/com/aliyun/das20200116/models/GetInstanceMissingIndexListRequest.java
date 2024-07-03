@@ -6,94 +6,155 @@ import com.aliyun.tea.*;
 public class GetInstanceMissingIndexListRequest extends TeaModel {
     /**
      * <p>The query condition based on the average cost savings.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&lt;=|8</p>
      */
     @NameInMap("AvgTotalUserCost")
     public String avgTotalUserCost;
 
     /**
      * <p>The query condition based on the performance improvement.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * <p>|10000</p>
+     * </blockquote>
      */
     @NameInMap("AvgUserImpact")
     public String avgUserImpact;
 
     /**
      * <p>The end time of the last seek.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1681869544000</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The query condition based on the number of indexes.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * <p>=|8</p>
+     * </blockquote>
      */
     @NameInMap("IndexCount")
     public String indexCount;
 
     /**
      * <p>The database instance ID.</p>
-     * <br>
-     * <p>>  Only ApsaraDB RDS for SQL Server instances are supported.</p>
-     * <br>
+     * <blockquote>
+     * <p> Only ApsaraDB RDS for SQL Server instances are supported.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-************</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The object name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bas_customer</p>
      */
     @NameInMap("ObjectName")
     public String objectName;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public String pageNo;
 
     /**
      * <p>The number of entries per page. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The query condition based on the total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * <p>=|100</p>
+     * </blockquote>
      */
     @NameInMap("ReservedPages")
     public String reservedPages;
 
     /**
      * <p>The query condition based on the table size.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * <p>=|100</p>
+     * </blockquote>
      */
     @NameInMap("ReservedSize")
     public String reservedSize;
 
     /**
      * <p>The query condition based on the number of table rows.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * <p>=|100000</p>
+     * </blockquote>
      */
     @NameInMap("RowCount")
     public String rowCount;
 
     /**
      * <p>The start time of the last seek.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1679414400000</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The query condition based on the number of compilations.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * <p>=|10000</p>
+     * </blockquote>
      */
     @NameInMap("UniqueCompiles")
     public String uniqueCompiles;
 
     /**
      * <p>The query condition based on the number of scans.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * <p>=|10000</p>
+     * </blockquote>
      */
     @NameInMap("UserScans")
     public String userScans;
 
     /**
      * <p>The query condition based on the number of seeks.</p>
+     * 
+     * <strong>example:</strong>
+     * <blockquote>
+     * <p>=|1000</p>
+     * </blockquote>
      */
     @NameInMap("UserSeeks")
     public String userSeeks;

@@ -6,16 +6,22 @@ import com.aliyun.tea.*;
 public class GetDasProServiceUsageRequest extends TeaModel {
     /**
      * <p>The database instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze8g2am97624****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
-     * <br>
-     * <p>>  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     * <blockquote>
+     * <p> This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>196278346919****</p>
      */
     @NameInMap("UserId")
     public String userId;

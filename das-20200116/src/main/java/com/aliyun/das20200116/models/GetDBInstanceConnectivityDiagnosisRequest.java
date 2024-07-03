@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetDBInstanceConnectivityDiagnosisRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze8g2am97624****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The source IP address.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.110.180.62</p>
      */
     @NameInMap("SrcIp")
     public String srcIp;

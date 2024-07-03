@@ -6,58 +6,76 @@ import com.aliyun.tea.*;
 public class EnableSqlConcurrencyControlRequest extends TeaModel {
     /**
      * <p>The duration within which the SQL throttling rule takes effect. Unit: seconds.</p>
-     * <br>
-     * <p>>  The throttling rule takes effect only within this duration.</p>
-     * <br>
+     * <blockquote>
+     * <p> The throttling rule takes effect only within this duration.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("ConcurrencyControlTime")
     public Long concurrencyControlTime;
 
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
     /**
      * <p>The instance ID.</p>
-     * <br>
-     * <p>>  You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
-     * <br>
+     * <blockquote>
+     * <p> You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-2ze1jdv45i7l6****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The maximum number of concurrent SQL statements. Set this parameter to a positive integer.</p>
-     * <br>
-     * <p>>  When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</p>
-     * <br>
+     * <blockquote>
+     * <p> When the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("MaxConcurrency")
     public Long maxConcurrency;
 
     /**
      * <p>The keywords that are used to identify the SQL statements that need to be throttled.</p>
-     * <br>
-     * <p>>  If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</p>
-     * <br>
+     * <blockquote>
+     * <p> If you specify multiple SQL keywords, separate them with tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>call<del>open</del>api<del>test</del>4<del>from</del>POP</p>
      */
     @NameInMap("SqlKeywords")
     public String sqlKeywords;
 
     /**
      * <p>The type of the SQL statements. Valid values:</p>
-     * <br>
-     * <p>*   **SELECT**</p>
-     * <p>*   **UPDATE**</p>
-     * <p>*   **DELETE**</p>
-     * <br>
+     * <ul>
+     * <li><strong>SELECT</strong></li>
+     * <li><strong>UPDATE</strong></li>
+     * <li><strong>DELETE</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT</p>
      */
     @NameInMap("SqlType")
     public String sqlType;

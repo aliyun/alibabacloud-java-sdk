@@ -6,47 +6,68 @@ import com.aliyun.tea.*;
 public class DescribeDiagnosticReportListResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The information of the diagnostics reports. Valid values:</p>
-     * <br>
-     * <p>*   **total**: the number of diagnostics reports.</p>
-     * <p>*   **score**: the health score.</p>
-     * <p>*   **diagnosticTime**: the time when the diagnostics report was generated. The time is displayed in UTC.</p>
-     * <p>*   **startTime**: the start time of the query. The time is displayed in UTC.</p>
-     * <p>*   **endTime**: the end time of the query. The time is displayed in UTC.</p>
+     * <ul>
+     * <li><strong>total</strong>: the number of diagnostics reports.</li>
+     * <li><strong>score</strong>: the health score.</li>
+     * <li><strong>diagnosticTime</strong>: the time when the diagnostics report was generated. The time is displayed in UTC.</li>
+     * <li><strong>startTime</strong>: the start time of the query. The time is displayed in UTC.</li>
+     * <li><strong>endTime</strong>: the end time of the query. The time is displayed in UTC.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{     &quot;total&quot;: 1,     &quot;list&quot;: [       {         &quot;score&quot;: 100,         &quot;diagnosticTime&quot;: &quot;2022-11-14T08:17:00Z&quot;,         &quot;startTime&quot;: &quot;2022-11-14T07:16:59Z&quot;,         &quot;endTime&quot;: &quot;2022-11-14T08:16:59Z&quot;       }     ]   }</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The returned message.</p>
-     * <br>
-     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <blockquote>
+     * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D00DB161-FEF6-5428-B37A-8D29A4C2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
      * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("Synchro")
     public String synchro;
