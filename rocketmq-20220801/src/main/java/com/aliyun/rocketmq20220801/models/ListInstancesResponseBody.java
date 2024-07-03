@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListInstancesResponseBody extends TeaModel {
     /**
      * <p>The error code returned if the call failed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingPageNumber</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,36 +21,54 @@ public class ListInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PageNumber</p>
      */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pageNumber</p>
      */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Parameter pageNumber is mandatory for this action .</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>84445A20-2B50-5306-A3C0-AF99FC1833C6</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -124,6 +145,9 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyDataListProductInfo extends TeaModel {
         /**
          * <p>Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("traceOn")
         public Boolean traceOn;
@@ -146,12 +170,18 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyDataListTags extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>The tag value of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("value")
         public String value;
@@ -182,47 +212,68 @@ public class ListInstancesResponseBody extends TeaModel {
     public static class ListInstancesResponseBodyDataList extends TeaModel {
         /**
          * <p>The commodity code of the instance. The commodity code of ApsaraMQ for RocketMQ 5.0 instances has a similar format to ons_rmqsub_public_cn.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ons_rmqsub_public_cn</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-01 00:00:00</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-01 00:00:00</p>
          */
         @NameInMap("expireTime")
         public String expireTime;
 
         /**
          * <p>The number of consumer groups that are created on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("groupCount")
         public Long groupCount;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test instance</p>
          */
         @NameInMap("instanceName")
         public String instanceName;
 
         /**
          * <p>The billing method of the instance.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   PayAsYouGo</p>
-         * <p>*   Subscription</p>
+         * <ul>
+         * <li>PayAsYouGo</li>
+         * <li>Subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         @NameInMap("paymentType")
         public String paymentType;
@@ -235,73 +286,100 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
         /**
          * <p>The time when the instance was released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-07 00:00:00</p>
          */
         @NameInMap("releaseTime")
         public String releaseTime;
 
         /**
          * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is remark for instance.</p>
          */
         @NameInMap("remark")
         public String remark;
 
         /**
          * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmx7caj******</p>
          */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The primary edition of the instance.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   standard: Standard Edition</p>
-         * <p>*   ultimate: Enterprise Platinum Edition</p>
-         * <p>*   professional: Professional Edition</p>
+         * <ul>
+         * <li>standard: Standard Edition</li>
+         * <li>ultimate: Enterprise Platinum Edition</li>
+         * <li>professional: Professional Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("seriesCode")
         public String seriesCode;
 
         /**
          * <p>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq</p>
          */
         @NameInMap("serviceCode")
         public String serviceCode;
 
         /**
          * <p>The time when the instance was started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-01 00:00:00</p>
          */
         @NameInMap("startTime")
         public String startTime;
 
         /**
          * <p>The instance status.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   RELEASED</p>
-         * <p>*   RUNNING</p>
-         * <p>*   STOPPED</p>
-         * <p>*   CHANGING</p>
-         * <p>*   CREATING</p>
+         * <ul>
+         * <li>RELEASED</li>
+         * <li>RUNNING</li>
+         * <li>STOPPED</li>
+         * <li>CHANGING</li>
+         * <li>CREATING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The sub-category edition of the instance.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   cluster_ha: Cluster High-availability Edition</p>
-         * <p>*   single_node: Standalone Edition</p>
+         * <ul>
+         * <li>cluster_ha: Cluster High-availability Edition</li>
+         * <li>single_node: Standalone Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster_ha</p>
          */
         @NameInMap("subSeriesCode")
         public String subSeriesCode;
@@ -314,18 +392,27 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The number of topics that are created on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("topicCount")
         public Long topicCount;
 
         /**
          * <p>The time when the instance was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-02 00:00:00</p>
          */
         @NameInMap("updateTime")
         public String updateTime;
 
         /**
          * <p>The ID of the user who owns the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6W0xz2uPfiwp****</p>
          */
         @NameInMap("userId")
         public String userId;
@@ -514,18 +601,27 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("pageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("totalCount")
         public Long totalCount;

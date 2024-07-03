@@ -6,48 +6,72 @@ import com.aliyun.tea.*;
 public class UpdateTopicResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
 
     /**
      * <p>The result data that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("data")
     public Boolean data;
 
     /**
      * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TopicName</p>
      */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topicName</p>
      */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The topic cannot be found.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;

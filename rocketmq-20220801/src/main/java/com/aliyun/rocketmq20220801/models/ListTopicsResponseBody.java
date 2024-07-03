@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTopicsResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Topic.NotFound</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,36 +21,54 @@ public class ListTopicsResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TopicName</p>
      */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topicName</p>
      */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The topic cannot be found.</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AF9A8B10-C426-530F-A0DD-96320B39****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -124,128 +145,135 @@ public class ListTopicsResponseBody extends TeaModel {
     public static class ListTopicsResponseBodyDataList extends TeaModel {
         /**
          * <p>The time when the topic was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The message type of the topic.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   TRANSACTION</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    transactional message</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   FIFO</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    ordered message</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DELAY</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    scheduled or delayed message</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   NORMAL</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    normal message</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>TRANSACTION</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>transactional message</p>
+         * <!-- -->
+         * </li>
+         * <li><p>FIFO</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>ordered message</p>
+         * <!-- -->
+         * </li>
+         * <li><p>DELAY</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>scheduled or delayed message</p>
+         * <!-- -->
+         * </li>
+         * <li><p>NORMAL</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>normal message</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("messageType")
         public String messageType;
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
         /**
          * <p>The remarks on the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the remark for test.</p>
          */
         @NameInMap("remark")
         public String remark;
 
         /**
          * <p>The state of the topic.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   RUNNING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    : The topic is</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    running</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   CREATING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    : The topic is</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    being created</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <ul>
+         * <li><p>RUNNING</p>
+         * <!-- -->
+         * 
+         * <p>: The topic is</p>
+         * <!-- -->
+         * 
+         * <p>running</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>CREATING</p>
+         * <!-- -->
+         * 
+         * <p>: The topic is</p>
+         * <!-- -->
+         * 
+         * <p>being created</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_test</p>
          */
         @NameInMap("topicName")
         public String topicName;
 
         /**
          * <p>The time when the topic was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
          */
         @NameInMap("updateTime")
         public String updateTime;
@@ -330,18 +358,27 @@ public class ListTopicsResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("pageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("totalCount")
         public Long totalCount;

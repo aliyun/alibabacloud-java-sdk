@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListConsumerGroupsResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,36 +21,54 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
      */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>instanceId</p>
      */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Parameter InstanceId is mandatory for this action .</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5503A460-98ED-5543-92CF-4853DE28****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -124,72 +145,88 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
     public static class ListConsumerGroupsResponseBodyDataList extends TeaModel {
         /**
          * <p>The ID of the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID-TEST</p>
          */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
         /**
          * <p>The time when the consumer group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
          */
         @NameInMap("createTime")
         public String createTime;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
         /**
          * <p>The remarks on the consumer group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is the remark for test.</p>
          */
         @NameInMap("remark")
         public String remark;
 
         /**
          * <p>The state of the consumer group.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   RUNNING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    : The consumer group is</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    running</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   CREATING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    : The consumer group is</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    being created</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <ul>
+         * <li><p>RUNNING</p>
+         * <!-- -->
+         * 
+         * <p>: The consumer group is</p>
+         * <!-- -->
+         * 
+         * <p>running</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>CREATING</p>
+         * <!-- -->
+         * 
+         * <p>: The consumer group is</p>
+         * <!-- -->
+         * 
+         * <p>being created</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("status")
         public String status;
 
         /**
          * <p>The time when the consumer group was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
          */
         @NameInMap("updateTime")
         public String updateTime;
@@ -266,18 +303,27 @@ public class ListConsumerGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("pageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("pageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("totalCount")
         public Long totalCount;

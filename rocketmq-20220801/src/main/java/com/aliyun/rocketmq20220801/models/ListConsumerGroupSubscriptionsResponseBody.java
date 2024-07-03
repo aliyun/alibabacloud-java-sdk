@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     /**
      * <p>The returned error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingInstanceId</p>
      */
     @NameInMap("code")
     public String code;
@@ -18,36 +21,54 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
 
     /**
      * <p>The returned dynamic error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
      */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
     /**
      * <p>The returned dynamic error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
      */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
     /**
      * <p>The returned HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Parameter instanceId is mandatory for this action .</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5F4D9D5F-625B-59FF-BD4F-DA8284575DB4</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -127,42 +148,65 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
 
         /**
          * <p>The consumer group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CID-TEST</p>
          */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
         /**
          * <p>The filter expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("filterExpression")
         public String filterExpression;
 
         /**
          * <p>The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         @NameInMap("filterExpressionType")
         public String filterExpressionType;
 
         /**
          * <p>The consumption mode. Valid values: BROADCASTING and CLUSTERING.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BROADCASTING</p>
          */
         @NameInMap("messageModel")
         public String messageModel;
 
         /**
          * <p>The subscription status. Valid values: ONLINE and OFFLINE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
          */
         @NameInMap("subscriptionStatus")
         public String subscriptionStatus;
 
         /**
          * <p>Indicates whether the topic is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("topicCreated")
         public Boolean topicCreated;
 
         /**
          * <p>The topic to which the consumer group subscribes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic_test</p>
          */
         @NameInMap("topicName")
         public String topicName;

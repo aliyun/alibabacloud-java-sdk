@@ -4,27 +4,55 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>MissingPageNumber</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public java.util.List<ListRegionsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ConsumerGroupId</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>instanceId</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Parameter instanceId is mandatory for this action .</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0B962390-D84B-5D44-8C11-79DF40299D41</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -98,9 +126,17 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static class ListRegionsResponseBodyDataTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("tagCode")
         public String tagCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx</p>
+         */
         @NameInMap("tagValue")
         public Object tagValue;
 
@@ -128,24 +164,44 @@ public class ListRegionsResponseBody extends TeaModel {
     }
 
     public static class ListRegionsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
         @NameInMap("regionName")
         public String regionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("supportRocketmqV4")
         public Boolean supportRocketmqV4;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("supportRocketmqV5")
         public Boolean supportRocketmqV5;
 
         @NameInMap("tags")
         public java.util.List<ListRegionsResponseBodyDataTags> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-08-01 20:05:50</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 

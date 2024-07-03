@@ -6,43 +6,55 @@ import com.aliyun.tea.*;
 public class CreateInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal for the instance. This parameter takes effect only if you set PaymentType to Subscription.</p>
-     * <br>
-     * <p>*   true: enable</p>
-     * <p>*   false: disable</p>
+     * <ul>
+     * <li>true: enable</li>
+     * <li>false: disable</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("autoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The auto-renewal cycle of the instance. This parameter takes effect only if you set autoRenew to true. Unit: months.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Monthly renewal: 1, 2, 3, 6, and 12</p>
+     * <ul>
+     * <li>Monthly renewal: 1, 2, 3, 6, and 12</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("autoRenewPeriod")
     public Integer autoRenewPeriod;
 
     /**
      * <p>The commodity code.</p>
-     * <br>
-     * <p>*   ons_rmqpost_public_intl: pay-as-you-go</p>
-     * <p>*   ons_rmqsub_public_intl: subscription</p>
+     * <ul>
+     * <li>ons_rmqpost_public_intl: pay-as-you-go</li>
+     * <li>ons_rmqsub_public_intl: subscription</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ons_ rmqpost_public_cn</p>
      */
     @NameInMap("commodityCode")
     public String commodityCode;
 
     /**
      * <p>The name of the instance that you want to create.</p>
-     * <br>
      * <p>If you do not configure this parameter, the instance ID is used as the instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rmq-cn-72u3048uxxx</p>
      */
     @NameInMap("instanceName")
     public String instanceName;
 
     /**
      * <p>The network configurations.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("networkInfo")
@@ -50,37 +62,44 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The billing method of the instance. ApsaraMQ for RocketMQ supports the subscription and pay-as-you-go billing methods.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   PayAsYouGo: This billing method allows you to use resources before you pay for the resources.</p>
-     * <p>*   Subscription: This billing method allows you to use resources after you pay for the resources.</p>
-     * <br>
-     * <p>For more information, see [Billing methods](https://help.aliyun.com/document_detail/427234.html).</p>
-     * <br>
+     * <ul>
+     * <li>PayAsYouGo: This billing method allows you to use resources before you pay for the resources.</li>
+     * <li>Subscription: This billing method allows you to use resources after you pay for the resources.</li>
+     * </ul>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/427234.html">Billing methods</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Subscription</p>
      */
     @NameInMap("paymentType")
     public String paymentType;
 
     /**
      * <p>The subscription duration of the instance. This parameter takes effect only if you set PaymentType to Subscription.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Monthly subscription: 1, 2, 3, 4, 5, and 6</p>
-     * <p>*   Yearly subscription: 1, 2, and 3</p>
+     * <ul>
+     * <li>Monthly subscription: 1, 2, 3, 4, 5, and 6</li>
+     * <li>Yearly subscription: 1, 2, and 3</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("period")
     public Integer period;
 
     /**
      * <p>The unit of the subscription duration.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <p>*   Year</p>
+     * <ul>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("periodUnit")
     public String periodUnit;
@@ -93,60 +112,76 @@ public class CreateInstanceRequest extends TeaModel {
 
     /**
      * <p>The instance description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is the remark for test.</p>
      */
     @NameInMap("remark")
     public String remark;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aekzy6pist7uuna</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](https://help.aliyun.com/document_detail/444722.html).</p>
-     * <br>
+     * <p>The primary edition of the instance. For information about the differences between primary edition instances, see <a href="https://help.aliyun.com/document_detail/444722.html">Instance selection</a>.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   standard: Standard Edition</p>
-     * <p>*   ultimate: Enterprise Platinum Edition</p>
-     * <p>*   professional: Professional Edition</p>
-     * <br>
-     * <p>>  After an instance is created, you can only upgrade the primary edition of the instance. The following editions are sorted in ascending order: Standard Edition, Professional Edition, Enterprise Platinum Edition. For example, you can upgrade an instance of Standard Edition to Professional Edition, but cannot downgrade an instance of Professional Edition to Standard Edition.</p>
-     * <br>
+     * <ul>
+     * <li>standard: Standard Edition</li>
+     * <li>ultimate: Enterprise Platinum Edition</li>
+     * <li>professional: Professional Edition</li>
+     * </ul>
+     * <blockquote>
+     * <p> After an instance is created, you can only upgrade the primary edition of the instance. The following editions are sorted in ascending order: Standard Edition, Professional Edition, Enterprise Platinum Edition. For example, you can upgrade an instance of Standard Edition to Professional Edition, but cannot downgrade an instance of Professional Edition to Standard Edition.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("seriesCode")
     public String seriesCode;
 
     /**
      * <p>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rmq</p>
      */
     @NameInMap("serviceCode")
     public String serviceCode;
 
     /**
-     * <p>The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](https://help.aliyun.com/document_detail/444722.html).</p>
-     * <br>
+     * <p>The sub-category edition of the instance. For information about the differences between sub-category edition instances, see <a href="https://help.aliyun.com/document_detail/444722.html">Instance selection</a>.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   cluster_ha: High-availability Cluster Edition</p>
-     * <p>*   single_node: Standalone Edition</p>
-     * <p>*   serverless: Serverless Edition</p>
-     * <br>
+     * <ul>
+     * <li>cluster_ha: High-availability Cluster Edition</li>
+     * <li>single_node: Standalone Edition</li>
+     * <li>serverless: Serverless Edition</li>
+     * </ul>
      * <p>If you set seriesCode to ultimate, you can set this parameter to only cluster_ha.</p>
-     * <br>
-     * <p>>  After an instance is created, you cannot change the sub-category edition of the instance.</p>
-     * <br>
+     * <blockquote>
+     * <p> After an instance is created, you cannot change the sub-category edition of the instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster_ha</p>
      */
     @NameInMap("subSeriesCode")
     public String subSeriesCode;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value of this parameter, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c2c5d1274a8d4317a13bc5b0d4******</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
@@ -279,48 +314,53 @@ public class CreateInstanceRequest extends TeaModel {
     public static class CreateInstanceRequestNetworkInfoInternetInfo extends TeaModel {
         /**
          * <p>The Internet bandwidth. Unit: MB/s.</p>
-         * <br>
          * <p>This parameter is required only if you set flowOutType to payByBandwidth.</p>
-         * <br>
          * <p>Valid values: 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("flowOutBandwidth")
         public Integer flowOutBandwidth;
 
         /**
          * <p>The billing method of Internet usage.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   payByBandwidth: pay-by-bandwidth. If Internet access is enabled for an instance, specify this value for the parameter.</p>
-         * <p>*   payByTraffic: pay-by-traffic. If Internet access is enabled for an instance, specify this value for the parameter.</p>
-         * <p>*   uninvolved: No billing method is involved. If Internet access is disabled for an instance, specify this value for the parameter.</p>
-         * <br>
+         * <ul>
+         * <li>payByBandwidth: pay-by-bandwidth. If Internet access is enabled for an instance, specify this value for the parameter.</li>
+         * <li>payByTraffic: pay-by-traffic. If Internet access is enabled for an instance, specify this value for the parameter.</li>
+         * <li>uninvolved: No billing method is involved. If Internet access is disabled for an instance, specify this value for the parameter.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uninvolved</p>
          */
         @NameInMap("flowOutType")
         public String flowOutType;
 
         /**
          * <p>Specifies whether to enable the Internet access feature.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   enable</p>
-         * <p>*   disable</p>
-         * <br>
-         * <p>By default, ApsaraMQ for RocketMQ allows you to access instances in VPCs. If you enable Internet access for an instance, you can access the instance over the Internet. After you enable this feature, you are charged for outbound Internet traffic. For more information, see [Internet access fee](https://help.aliyun.com/document_detail/427240.html).</p>
-         * <br>
+         * <ul>
+         * <li>enable</li>
+         * <li>disable</li>
+         * </ul>
+         * <p>By default, ApsaraMQ for RocketMQ allows you to access instances in VPCs. If you enable Internet access for an instance, you can access the instance over the Internet. After you enable this feature, you are charged for outbound Internet traffic. For more information, see <a href="https://help.aliyun.com/document_detail/427240.html">Internet access fee</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disable</p>
          */
         @NameInMap("internetSpec")
         public String internetSpec;
 
         /**
          * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the instance.</p>
-         * <br>
-         * <p>*   If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
-         * <p>*   If configure an IP address whitlist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <ul>
+         * <li>If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+         * <li>If configure an IP address whitlist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</li>
+         * </ul>
          */
         @NameInMap("ipWhitelist")
         public java.util.List<String> ipWhitelist;
@@ -364,29 +404,60 @@ public class CreateInstanceRequest extends TeaModel {
 
     }
 
+    public static class CreateInstanceRequestNetworkInfoVpcInfoVSwitches extends TeaModel {
+        @NameInMap("vSwitchId")
+        public String vSwitchId;
+
+        public static CreateInstanceRequestNetworkInfoVpcInfoVSwitches build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestNetworkInfoVpcInfoVSwitches self = new CreateInstanceRequestNetworkInfoVpcInfoVSwitches();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestNetworkInfoVpcInfoVSwitches setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+    }
+
     public static class CreateInstanceRequestNetworkInfoVpcInfo extends TeaModel {
         /**
          * <p>The ID of the security group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp17hpmgz96tvnsdy6so</p>
          */
         @NameInMap("securityGroupIds")
         public String securityGroupIds;
 
         /**
-         * <p>The ID of the vSwitch with which you want to associate the instance, If there are multiple vSwitchs, please concatenate them using the "|" character.</p>
-         * <br>
-         * <p>>  After an ApsaraMQ for RocketMQ instance is created, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.</p>
-         * <br>
-         * <p>This parameter is required.</p>
+         * <p>The ID of the vSwitch with which you want to associate the instance, If there are multiple vSwitchs, please concatenate them using the &quot;|&quot; character.</p>
+         * <blockquote>
+         * <p> After an ApsaraMQ for RocketMQ instance is created, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6gwtbn6etadpv*******</p>
          */
         @NameInMap("vSwitchId")
+        @Deprecated
         public String vSwitchId;
+
+        @NameInMap("vSwitches")
+        public java.util.List<CreateInstanceRequestNetworkInfoVpcInfoVSwitches> vSwitches;
 
         /**
          * <p>The ID of the VPC in which you want to deploy the instance.</p>
-         * <br>
-         * <p>>  After an ApsaraMQ for RocketMQ instance is created, you cannot change the VPC in which the instance is deployed. If you want to change the VPC in which the instance is deployed, you must release the instance and create a new instance.</p>
-         * <br>
+         * <blockquote>
+         * <p> After an ApsaraMQ for RocketMQ instance is created, you cannot change the VPC in which the instance is deployed. If you want to change the VPC in which the instance is deployed, you must release the instance and create a new instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-wz9qt50xhtj9krb******</p>
          */
         @NameInMap("vpcId")
         public String vpcId;
@@ -412,6 +483,14 @@ public class CreateInstanceRequest extends TeaModel {
             return this.vSwitchId;
         }
 
+        public CreateInstanceRequestNetworkInfoVpcInfo setVSwitches(java.util.List<CreateInstanceRequestNetworkInfoVpcInfoVSwitches> vSwitches) {
+            this.vSwitches = vSwitches;
+            return this;
+        }
+        public java.util.List<CreateInstanceRequestNetworkInfoVpcInfoVSwitches> getVSwitches() {
+            return this.vSwitches;
+        }
+
         public CreateInstanceRequestNetworkInfoVpcInfo setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
@@ -425,7 +504,6 @@ public class CreateInstanceRequest extends TeaModel {
     public static class CreateInstanceRequestNetworkInfo extends TeaModel {
         /**
          * <p>The Internet-related configurations.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("internetInfo")
@@ -433,7 +511,6 @@ public class CreateInstanceRequest extends TeaModel {
 
         /**
          * <p>The virtual private cloud (VPC)-related configurations.</p>
-         * <br>
          * <p>This parameter is required.</p>
          */
         @NameInMap("vpcInfo")
@@ -465,60 +542,73 @@ public class CreateInstanceRequest extends TeaModel {
     public static class CreateInstanceRequestProductInfo extends TeaModel {
         /**
          * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: enable</p>
-         * <p>*   false: disable</p>
-         * <br>
-         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see [Computing fees](https://help.aliyun.com/document_detail/427237.html).</p>
-         * <br>
-         * <p>>  The elastic TPS feature is supported only by instances of specific editions. For more information, see [Instance editions](https://help.aliyun.com/document_detail/444715.html).</p>
+         * <ul>
+         * <li>true: enable</li>
+         * <li>false: disable</li>
+         * </ul>
+         * <p>After you enable the elastic TPS feature for an ApsaraMQ for RocketMQ instance, you can use a specific number of TPS that exceeds the specification limit. You are charged for using the elastic TPS feature. For more information, see <a href="https://help.aliyun.com/document_detail/427237.html">Computing fees</a>.</p>
+         * <blockquote>
+         * <p> The elastic TPS feature is supported only by instances of specific editions. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("autoScaling")
         public Boolean autoScaling;
 
         /**
          * <p>The billing method.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   provisioned</p>
-         * <p>*   ondemand</p>
+         * <ul>
+         * <li>provisioned</li>
+         * <li>ondemand</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>provisioned</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
          * <p>This parameter is no longer used. You do not need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         @NameInMap("intranetSpec")
         public String intranetSpec;
 
         /**
          * <p>The retention period of messages. Unit: hours.</p>
-         * <br>
-         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section of the [Limits](https://help.aliyun.com/document_detail/440347.html) topic.</p>
-         * <br>
-         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see [Storage fees](https://help.aliyun.com/document_detail/427238.html).</p>
+         * <p>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</p>
+         * <p>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fees</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>72</p>
          */
         @NameInMap("messageRetentionTime")
         public Integer messageRetentionTime;
 
         /**
-         * <p>The computing specification that specifies the messaging transactions per second (TPS) of the instance. For information about computing specification limits, see [Instance specifications](https://help.aliyun.com/document_detail/444715.html).</p>
-         * <br>
+         * <p>The computing specification that specifies the messaging transactions per second (TPS) of the instance. For information about computing specification limits, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance specifications</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rmq.s2.2xlarge</p>
          */
         @NameInMap("msgProcessSpec")
         public String msgProcessSpec;
 
         /**
          * <p>The proportion of message sending TPS to the messaging TPS on the instance.</p>
-         * <br>
          * <p>For example, you create an instance whose peak messaging TPS is specified as 1,000 and the proportion of message sending TPS is specified as 0.8. In this case, the peak message sending TPS is 800 and the peak message receiving TPS is 200 on the instance.</p>
-         * <br>
          * <p>Valid values: 0 to 1. Default value: 0.5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("sendReceiveRatio")
         public Float sendReceiveRatio;

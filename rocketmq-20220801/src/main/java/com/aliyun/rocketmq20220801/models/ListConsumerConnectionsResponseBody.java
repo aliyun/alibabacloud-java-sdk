@@ -4,27 +4,55 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListConsumerConnectionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>MissingPageNumber</p>
+     */
     @NameInMap("code")
     public String code;
 
     @NameInMap("data")
     public ListConsumerConnectionsResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InstanceId</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>instanceId</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The instance cannot be found.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A3620115-6F1F-5CFB-AA3F-BBD4853B2EC4</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -98,21 +126,45 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConsumerConnectionsResponseBodyDataConnections extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>172.17.135.197@17392#1936705963#551717232#9873695589062458</p>
+         */
         @NameInMap("clientId")
         public String clientId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xx.xx.xx.xx</p>
+         */
         @NameInMap("egressIp")
         public String egressIp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vos</p>
+         */
         @NameInMap("hostname")
         public String hostname;
 
+        /**
+         * <strong>example:</strong>
+         * <p>java</p>
+         */
         @NameInMap("language")
         public String language;
 
+        /**
+         * <strong>example:</strong>
+         * <p>BROADCASTING</p>
+         */
         @NameInMap("messageModel")
         public String messageModel;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -175,12 +227,24 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         @NameInMap("connections")
         public java.util.List<ListConsumerConnectionsResponseBodyDataConnections> connections;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CID-TEST</p>
+         */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rmq-cn-7e22ody****</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
