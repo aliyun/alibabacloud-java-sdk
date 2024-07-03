@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class BindAxgResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F655A8D5-B967-440B-8683-DAD6FF8DE990</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,20 +81,30 @@ public class BindAxgResponseBody extends TeaModel {
     public static class BindAxgResponseBodySecretBindDTO extends TeaModel {
         /**
          * <p>The extension of the phone number.</p>
-         * <br>
-         * <p>>  The BindAxg operation does not involve an extension. Ignore this parameter.</p>
+         * <blockquote>
+         * <p> The BindAxg operation does not involve an extension. Ignore this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>139****0000</p>
          */
         @NameInMap("Extension")
         public String extension;
 
         /**
          * <p>The private number, that is, phone number X.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139****0000</p>
          */
         @NameInMap("SecretNo")
         public String secretNo;
 
         /**
          * <p>The binding ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1************3</p>
          */
         @NameInMap("SubsId")
         public String subsId;

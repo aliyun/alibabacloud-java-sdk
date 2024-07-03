@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class QuerySecretNoRemainResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other status codes indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>Other status codes indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FC30594-3841-43AD-9008-03393BCB5CD2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,12 +81,18 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
     public static class QuerySecretNoRemainResponseBodySecretRemainDTORemainDTOListRemainDTO extends TeaModel {
         /**
          * <p>The quantity of remaining phone numbers available for online purchase for the city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("Amount")
         public Long amount;
 
         /**
          * <p>The home location of the phone numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Wuhan</p>
          */
         @NameInMap("City")
         public String city;
@@ -126,12 +142,18 @@ public class QuerySecretNoRemainResponseBody extends TeaModel {
     public static class QuerySecretNoRemainResponseBodySecretRemainDTO extends TeaModel {
         /**
          * <p>The quantity of remaining phone numbers available for online purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Amount")
         public Long amount;
 
         /**
          * <p>The home location of the phone numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
          */
         @NameInMap("City")
         public String city;

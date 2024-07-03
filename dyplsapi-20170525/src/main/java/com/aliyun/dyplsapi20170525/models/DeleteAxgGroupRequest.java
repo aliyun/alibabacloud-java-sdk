@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAxgGroupRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -15,6 +18,9 @@ public class DeleteAxgGroupRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC2235****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;

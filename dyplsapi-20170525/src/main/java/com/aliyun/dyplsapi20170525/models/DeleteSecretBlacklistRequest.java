@@ -5,50 +5,64 @@ import com.aliyun.tea.*;
 
 public class DeleteSecretBlacklistRequest extends TeaModel {
     /**
-     * <p>The phone numbers in the blacklist. A point-to-point blacklist has a pair of numbers separated by a colon (":"). A number pool blacklist or a platform blacklist has only one single number.</p>
-     * <br>
+     * <p>The phone numbers in the blacklist. A point-to-point blacklist has a pair of numbers separated by a colon (&quot;:&quot;). A number pool blacklist or a platform blacklist has only one single number.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18252<em><strong>383:18252</strong></em>483</p>
      */
     @NameInMap("BlackNo")
     public String blackNo;
 
     /**
      * <p>The blacklist type. Valid values:</p>
-     * <br>
-     * <p>*   **POINT_TO_POINT_BLACK**: point-to-point blacklist</p>
-     * <p>*   **PARTNER_GLOBAL_NUMBER_BLACK**: number pool blacklist</p>
-     * <br>
+     * <ul>
+     * <li><strong>POINT_TO_POINT_BLACK</strong>: point-to-point blacklist</li>
+     * <li><strong>PARTNER_GLOBAL_NUMBER_BLACK</strong>: number pool blacklist</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POINT_TO_POINT_BLACK</p>
      */
     @NameInMap("BlackType")
     public String blackType;
 
     /**
-     * <p>The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
-     * <br>
+     * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC1232****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
 
     /**
      * <p>The remarks for the blacklist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fragile</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The control on the call direction.</p>
-     * <br>
-     * <p>*   **PHONEA_REJECT**: The first phone number in the blacklist can be used to call the second phone number, but the second phone number in the blacklist cannot be used to call the first phone number.</p>
-     * <p>*   **PHONEB_REJECT**: The first phone number in the blacklist cannot be used to call the second phone number, but the second phone number in the blacklist can be used to call the first phone number.</p>
-     * <p>*   If this parameter is not specified, the two phone numbers in the blacklist cannot be used to call each other.</p>
-     * <br>
+     * <ul>
+     * <li><strong>PHONEA_REJECT</strong>: The first phone number in the blacklist can be used to call the second phone number, but the second phone number in the blacklist cannot be used to call the first phone number.</li>
+     * <li><strong>PHONEB_REJECT</strong>: The first phone number in the blacklist cannot be used to call the second phone number, but the second phone number in the blacklist can be used to call the first phone number.</li>
+     * <li>If this parameter is not specified, the two phone numbers in the blacklist cannot be used to call each other.</li>
+     * </ul>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   DUPLEX_REJECT</p>
-     * <p>*   PHONEA_REJECT</p>
-     * <p>*   PHONEB_REJECT</p>
+     * <ul>
+     * <li>DUPLEX_REJECT</li>
+     * <li>PHONEA_REJECT</li>
+     * <li>PHONEB_REJECT</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PHONEA_REJECT</p>
      */
     @NameInMap("WayControl")
     public String wayControl;

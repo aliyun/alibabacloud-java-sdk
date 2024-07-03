@@ -8,9 +8,11 @@ public class ReleaseSecretNoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
-     * <br>
+     * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC123456</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -22,11 +24,14 @@ public class ReleaseSecretNoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The prefix of phone numbers. When you call the ReleaseSecretNo operation with **SecretNo** specified, the system performs fuzzy matching against phone numbers based on the prefix.</p>
-     * <br>
-     * <p>>  Up to 18 digits of a phone number prefix can be specified.</p>
-     * <br>
+     * <p>The prefix of phone numbers. When you call the ReleaseSecretNo operation with <strong>SecretNo</strong> specified, the system performs fuzzy matching against phone numbers based on the prefix.</p>
+     * <blockquote>
+     * <p> Up to 18 digits of a phone number prefix can be specified.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>130</p>
      */
     @NameInMap("SecretNo")
     public String secretNo;

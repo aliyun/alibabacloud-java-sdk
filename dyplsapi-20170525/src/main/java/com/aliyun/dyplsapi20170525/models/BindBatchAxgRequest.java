@@ -13,6 +13,10 @@ public class BindBatchAxgRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FC2235****</p>
+     */
     @NameInMap("PoolKey")
     public String poolKey;
 
@@ -68,51 +72,101 @@ public class BindBatchAxgRequest extends TeaModel {
     }
 
     public static class BindBatchAxgRequestAxgBindList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7ee372834d2f4cc7ac0d0ab2d0ae1aac</p>
+         */
         @NameInMap("ASRModelId")
         public String ASRModelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("ASRStatus")
         public Boolean ASRStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CallDisplayType")
         public Integer callDisplayType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CONTROL_AX_DISABLE</p>
+         */
         @NameInMap("CallRestrict")
         public String callRestrict;
 
         @NameInMap("ExpectCity")
         public String expectCity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-07-11 01:05:15</p>
+         */
         @NameInMap("Expiration")
         public String expiration;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("IsRecordingEnabled")
         public Boolean isRecordingEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18223ad447910fd</p>
+         */
         @NameInMap("OutId")
         public String outId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20220824021816883677</p>
+         */
         @NameInMap("OutOrderId")
         public String outOrderId;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13333333333</p>
          */
         @NameInMap("PhoneNoA")
         public String phoneNoA;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13333333333</p>
+         */
         @NameInMap("PhoneNoB")
         public String phoneNoB;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13333333333</p>
+         */
         @NameInMap("PhoneNoX")
         public String phoneNoX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;AXBRing_B\&quot;:\&quot;100000002\&quot;,\&quot;AXBRing_A\&quot;:\&quot;100000001\&quot;}</p>
+         */
         @NameInMap("RingConfig")
         public String ringConfig;
 

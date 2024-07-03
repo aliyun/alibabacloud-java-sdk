@@ -12,18 +12,27 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FC30594-3841-43AD-9008-03393BCB5CD2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,36 +77,54 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
     public static class CreatePickUpWaybillResponseBodyData extends TeaModel {
         /**
          * <p>The code of the courier company.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YTO</p>
          */
         @NameInMap("CpCode")
         public String cpCode;
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The pickup code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3524</p>
          */
         @NameInMap("GotCode")
         public String gotCode;
 
         /**
          * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>77312345629****</p>
          */
         @NameInMap("MailNo")
         public String mailNo;
 
         /**
          * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public String success;

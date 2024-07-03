@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class QuerySecretNoRemainRequest extends TeaModel {
     /**
      * <p>The home location of the phone number.</p>
-     * <br>
-     * <p>*   If **SpecId** is set to 1 or 2, you can specify the **City** parameter to query the quantity of available phone numbers.</p>
-     * <br>
-     * <p>1.  You can enter a single city name to perform a query.</p>
-     * <p>2.  You can enter National to query the quantity of remaining phone numbers available in the Chinese mainland for online purchase.</p>
-     * <p>3.  You can enter National List to query the cities with available phone numbers and the quantities of remaining phone numbers in the Chinese mainland. Cities without available phone numbers will not be returned.</p>
-     * <br>
-     * <p>*   If **SpecId** is set to 3, home locations are not distinguished for phone numbers that start with 95 and only the quantity of all the remaining phone numbers that start with 95 and are available for online purchase can be queried. If SpecId is set to 3, **City** must be set to **Nationwide**.</p>
-     * <br>
-     * <p>>  Home locations can be set to only locations in the Chinese mainland.</p>
-     * <br>
+     * <ul>
+     * <li>If <strong>SpecId</strong> is set to 1 or 2, you can specify the <strong>City</strong> parameter to query the quantity of available phone numbers.</li>
+     * </ul>
+     * <ol>
+     * <li>You can enter a single city name to perform a query.</li>
+     * <li>You can enter National to query the quantity of remaining phone numbers available in the Chinese mainland for online purchase.</li>
+     * <li>You can enter National List to query the cities with available phone numbers and the quantities of remaining phone numbers in the Chinese mainland. Cities without available phone numbers will not be returned.</li>
+     * </ol>
+     * <ul>
+     * <li>If <strong>SpecId</strong> is set to 3, home locations are not distinguished for phone numbers that start with 95 and only the quantity of all the remaining phone numbers that start with 95 and are available for online purchase can be queried. If SpecId is set to 3, <strong>City</strong> must be set to <strong>Nationwide</strong>.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Home locations can be set to only locations in the Chinese mainland.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hangzhou</p>
      */
     @NameInMap("City")
     public String city;
@@ -32,21 +38,26 @@ public class QuerySecretNoRemainRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The prefix of the phone number. When you call the QuerySecretNoRemain operation with **SecretNo** specified, the quantity of remaining phone numbers with the specified prefix that are available for online purchase is queried.</p>
-     * <br>
+     * <p>The prefix of the phone number. When you call the QuerySecretNoRemain operation with <strong>SecretNo</strong> specified, the quantity of remaining phone numbers with the specified prefix that are available for online purchase is queried.</p>
      * <p>Up to 18 digits of a phone number prefix can be specified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>130</p>
      */
     @NameInMap("SecretNo")
     public String secretNo;
 
     /**
      * <p>The type of the phone number. Valid values:</p>
-     * <br>
-     * <p>*   **1**: a phone number assigned by a virtual network operator, that is, a phone number that belongs to the 170 or 171 number segment.</p>
-     * <p>*   **2**: a phone number provided by a carrier.</p>
-     * <p>*   **3**: a phone number that starts with 95.</p>
-     * <br>
+     * <ul>
+     * <li><strong>1</strong>: a phone number assigned by a virtual network operator, that is, a phone number that belongs to the 170 or 171 number segment.</li>
+     * <li><strong>2</strong>: a phone number provided by a carrier.</li>
+     * <li><strong>3</strong>: a phone number that starts with 95.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SpecId")
     public Long specId;

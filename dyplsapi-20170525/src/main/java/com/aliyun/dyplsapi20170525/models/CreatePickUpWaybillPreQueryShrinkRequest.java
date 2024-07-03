@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class CreatePickUpWaybillPreQueryShrinkRequest extends TeaModel {
     /**
      * <p>The consignee information.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ConsigneeInfo")
@@ -14,35 +13,46 @@ public class CreatePickUpWaybillPreQueryShrinkRequest extends TeaModel {
 
     /**
      * <p>The code of the courier company. If no courier company is specified, the system allocates a courier company.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YTO</p>
      */
     @NameInMap("CpCode")
     public String cpCode;
 
     /**
      * <p>The identifier of the external channel source. It cannot contain underscores.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("OrderChannels")
     public String orderChannels;
 
     /**
      * <p>The order number of the access system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>787DFHHDS989****</p>
      */
     @NameInMap("OuterOrderCode")
     public String outerOrderCode;
 
     /**
      * <p>The estimated weight. Unit: gram.</p>
-     * <br>
-     * <p>>  If you need to query the estimated price, this parameter is required.</p>
+     * <blockquote>
+     * <p> If you need to query the estimated price, this parameter is required.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("PreWeight")
     public String preWeight;
 
     /**
      * <p>The sender information.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SenderInfo")

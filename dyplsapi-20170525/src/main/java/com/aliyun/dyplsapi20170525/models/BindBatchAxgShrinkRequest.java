@@ -13,6 +13,10 @@ public class BindBatchAxgShrinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FC2235****</p>
+     */
     @NameInMap("PoolKey")
     public String poolKey;
 

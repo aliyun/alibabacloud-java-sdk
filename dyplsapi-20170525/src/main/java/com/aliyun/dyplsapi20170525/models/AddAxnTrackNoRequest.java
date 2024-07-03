@@ -9,18 +9,21 @@ public class AddAxnTrackNoRequest extends TeaModel {
 
     /**
      * <p>The private number in the AXN binding, that is, phone number X.</p>
-     * <br>
-     * <p>You can call the [BindAxn](https://help.aliyun.com/document_detail/110258.html) operation to obtain the value of PhoneNoX.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/110258.html">BindAxn</a> operation to obtain the value of PhoneNoX.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1700000****</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
 
     /**
-     * <p>The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
-     * <br>
+     * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC2235****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -33,18 +36,21 @@ public class AddAxnTrackNoRequest extends TeaModel {
 
     /**
      * <p>The binding ID.</p>
-     * <br>
-     * <p>You can call the [BindAxn](https://help.aliyun.com/document_detail/110258.html) operation to obtain the value of SubsId.</p>
-     * <br>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/110258.html">BindAxn</a> operation to obtain the value of SubsId.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15678890****</p>
      */
     @NameInMap("SubsId")
     public String subsId;
 
     /**
      * <p>The tracking number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcde*****</p>
      */
     @NameInMap("trackNo")
     public String trackNo;

@@ -12,18 +12,27 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9FC30594-3841-43AD-9008-03393BCB5CD2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
     public static class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimesTimeList extends TeaModel {
         /**
          * <p>The end of the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12:00:00</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The tip displayed when the scheduled pickup is not available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Appointment Full</p>
          */
         @NameInMap("SelectDisableTip")
         public String selectDisableTip;
 
         /**
          * <p>Indicates whether the time range can be selected for the scheduled pickup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Selectable")
         public Boolean selectable;
 
         /**
          * <p>The beginning of the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10:00:00</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -132,12 +153,18 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
     public static class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListAppointTimes extends TeaModel {
         /**
          * <p>The date in the YYYY-MM-DD format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-28</p>
          */
         @NameInMap("Date")
         public String date;
 
         /**
          * <p>Indicates whether the date is selectable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DateSelectable")
         public Boolean dateSelectable;
@@ -182,18 +209,27 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
     public static class CreatePickUpWaybillPreQueryResponseBodyDataCpTimeSelectListRealTime extends TeaModel {
         /**
          * <p>The name of the real-time order type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The tip displayed when the real-time order cannot be placed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exceeding the real-time ordering time range.</p>
          */
         @NameInMap("SelectDisableTip")
         public String selectDisableTip;
 
         /**
          * <p>Indicates whether the real-time order can be placed after the deadline for placing a real-time order is reached.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Selectable")
         public Boolean selectable;
@@ -238,6 +274,9 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
 
         /**
          * <p>The estimated price. Unit: CNY. The value is accurate to two decimal places. The value of this parameter is displayed if an estimated weight is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.50</p>
          */
         @NameInMap("PrePrice")
         public String prePrice;
@@ -282,6 +321,9 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
     public static class CreatePickUpWaybillPreQueryResponseBodyData extends TeaModel {
         /**
          * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Code")
         public String code;
@@ -294,24 +336,36 @@ public class CreatePickUpWaybillPreQueryResponseBody extends TeaModel {
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
          * <p>The response content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

@@ -5,33 +5,44 @@ import com.aliyun.tea.*;
 
 public class CreatePickUpWaybillRequest extends TeaModel {
     /**
-     * <p>The end time of the door-to-door pickup in the appointment. The value of **AppointGotEndTime** is the value of **EndTime** of **AppointTimes** in **CpTimeSelectList** returned by the [CreatePickUpWaybillPreQuery](~~CreatePickUpWaybillPreQuery~~#resultMapping) operation.</p>
-     * <br>
-     * <p>>  This parameter is required when **BizType** is set to **1**.</p>
+     * <p>The end time of the door-to-door pickup in the appointment. The value of <strong>AppointGotEndTime</strong> is the value of <strong>EndTime</strong> of <strong>AppointTimes</strong> in <strong>CpTimeSelectList</strong> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</p>
+     * <blockquote>
+     * <p> This parameter is required when <strong>BizType</strong> is set to <strong>1</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-01 12:00:00</p>
      */
     @NameInMap("AppointGotEndTime")
     public String appointGotEndTime;
 
     /**
-     * <p>The start time of the door-to-door pickup in the appointment. The value of **AppointGotStartTime** is the value of **StartTime** of **AppointTimes** in **CpTimeSelectList** returned by the [CreatePickUpWaybillPreQuery](~~CreatePickUpWaybillPreQuery~~#resultMapping) operation.</p>
-     * <br>
-     * <p>>  This parameter is required when **BizType** is set to **1**.</p>
+     * <p>The start time of the door-to-door pickup in the appointment. The value of <strong>AppointGotStartTime</strong> is the value of <strong>StartTime</strong> of <strong>AppointTimes</strong> in <strong>CpTimeSelectList</strong> returned by the <a href="~~CreatePickUpWaybillPreQuery~~#resultMapping">CreatePickUpWaybillPreQuery</a> operation.</p>
+     * <blockquote>
+     * <p> This parameter is required when <strong>BizType</strong> is set to <strong>1</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-01 10:00:00</p>
      */
     @NameInMap("AppointGotStartTime")
     public String appointGotStartTime;
 
     /**
      * <p>The pickup mode. Valid values:</p>
-     * <br>
-     * <p>*   **0** (default): real-time order.</p>
-     * <p>*   **1**: appointment order.</p>
+     * <ul>
+     * <li><strong>0</strong> (default): real-time order.</li>
+     * <li><strong>1</strong>: appointment order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("BizType")
     public Integer bizType;
 
     /**
      * <p>The address of the consignee.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ConsigneeAddress")
@@ -39,30 +50,43 @@ public class CreatePickUpWaybillRequest extends TeaModel {
 
     /**
      * <p>The mobile phone number of the consignee.</p>
-     * <br>
-     * <p>>  Either ConsigneeMobile or ConsigneePhone must be set.</p>
+     * <blockquote>
+     * <p> Either ConsigneeMobile or ConsigneePhone must be set.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1580000****</p>
      */
     @NameInMap("ConsigneeMobile")
     public String consigneeMobile;
 
     /**
      * <p>The name of the consignee.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Li</p>
      */
     @NameInMap("ConsigneeName")
     public String consigneeName;
 
     /**
      * <p>The landline phone number of the consignee.</p>
-     * <br>
-     * <p>>  Either ConsigneeMobile or ConsigneePhone must be set.</p>
+     * <blockquote>
+     * <p> Either ConsigneeMobile or ConsigneePhone must be set.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0570000****</p>
      */
     @NameInMap("ConsigneePhone")
     public String consigneePhone;
 
     /**
      * <p>The code of the courier company.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YTO</p>
      */
     @NameInMap("CpCode")
     public String cpCode;
@@ -75,29 +99,35 @@ public class CreatePickUpWaybillRequest extends TeaModel {
 
     /**
      * <p>The external channel sources.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YUN_DIAN_SHANG</p>
      */
     @NameInMap("OrderChannels")
     public String orderChannels;
 
     /**
      * <p>The ID of the external order.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>143234234266****</p>
      */
     @NameInMap("OuterOrderCode")
     public String outerOrderCode;
 
     /**
      * <p>The additional information about the order. The additional information will be printed on the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fragile</p>
      */
     @NameInMap("Remark")
     public String remark;
 
     /**
      * <p>The address of the sender.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SendAddress")
@@ -105,24 +135,34 @@ public class CreatePickUpWaybillRequest extends TeaModel {
 
     /**
      * <p>The mobile phone number of the sender.</p>
-     * <br>
-     * <p>>  Either SendMobile or SendPhone must be set.</p>
+     * <blockquote>
+     * <p> Either SendMobile or SendPhone must be set.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1596714****</p>
      */
     @NameInMap("SendMobile")
     public String sendMobile;
 
     /**
      * <p>The name of the sender.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Wang</p>
      */
     @NameInMap("SendName")
     public String sendName;
 
     /**
      * <p>The landline phone number of the sender.</p>
-     * <br>
-     * <p>>  Either SendMobile or SendPhone must be set.</p>
+     * <blockquote>
+     * <p> Either SendMobile or SendPhone must be set.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>05718845****</p>
      */
     @NameInMap("SendPhone")
     public String sendPhone;
@@ -263,38 +303,49 @@ public class CreatePickUpWaybillRequest extends TeaModel {
     public static class CreatePickUpWaybillRequestConsigneeAddress extends TeaModel {
         /**
          * <p>The detailed address of the consignee.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX community</p>
          */
         @NameInMap("AddressDetail")
         public String addressDetail;
 
         /**
          * <p>The district where the consignee is located.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xihu</p>
          */
         @NameInMap("AreaName")
         public String areaName;
 
         /**
          * <p>The city where the consignee is located.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
          */
         @NameInMap("CityName")
         public String cityName;
 
         /**
          * <p>The province where the consignee is located.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhejiang</p>
          */
         @NameInMap("ProvinceName")
         public String provinceName;
 
         /**
          * <p>The street where the consignee is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX Street</p>
          */
         @NameInMap("TownName")
         public String townName;
@@ -349,18 +400,27 @@ public class CreatePickUpWaybillRequest extends TeaModel {
     public static class CreatePickUpWaybillRequestGoodsInfos extends TeaModel {
         /**
          * <p>The item name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhang</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The item quantity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Quantity")
         public String quantity;
 
         /**
          * <p>The item weight. Unit: gram.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -399,38 +459,49 @@ public class CreatePickUpWaybillRequest extends TeaModel {
     public static class CreatePickUpWaybillRequestSendAddress extends TeaModel {
         /**
          * <p>The detailed address of the sender.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX community</p>
          */
         @NameInMap("AddressDetail")
         public String addressDetail;
 
         /**
          * <p>The district where the sender is located.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wenjiang</p>
          */
         @NameInMap("AreaName")
         public String areaName;
 
         /**
          * <p>The city where the sender is located.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chengdu</p>
          */
         @NameInMap("CityName")
         public String cityName;
 
         /**
          * <p>The province where the sender is located.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sichuan</p>
          */
         @NameInMap("ProvinceName")
         public String provinceName;
 
         /**
          * <p>The street where the sender is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XX Street</p>
          */
         @NameInMap("TownName")
         public String townName;

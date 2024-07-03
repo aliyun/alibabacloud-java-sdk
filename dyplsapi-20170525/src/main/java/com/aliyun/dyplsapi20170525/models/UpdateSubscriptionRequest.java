@@ -6,86 +6,121 @@ import com.aliyun.tea.*;
 public class UpdateSubscriptionRequest extends TeaModel {
     /**
      * <p>The ID of the ASR model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>980abddb908f48e8b987cb2cd303****</p>
      */
     @NameInMap("ASRModelId")
     public String ASRModelId;
 
     /**
      * <p>Specifies whether to enable automatic speech recognition (ASR). Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): disables ASR.</p>
-     * <p>*   **true**: enables ASR.</p>
+     * <ul>
+     * <li><strong>false</strong> (default): disables ASR.</li>
+     * <li><strong>true</strong>: enables ASR.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ASRStatus")
     public Boolean ASRStatus;
 
     /**
-     * <p>Re-sets the phone number display logic in the phone number binding. Fixed value: **1**, indicating that phone number X is displayed on both the calling phone and the called phone.</p>
-     * <br>
-     * <p>>  Due to the regulatory restrictions imposed by carriers, the setting to display real phone numbers during calls does not take effect.</p>
+     * <p>Re-sets the phone number display logic in the phone number binding. Fixed value: <strong>1</strong>, indicating that phone number X is displayed on both the calling phone and the called phone.</p>
+     * <blockquote>
+     * <p> Due to the regulatory restrictions imposed by carriers, the setting to display real phone numbers during calls does not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CallDisplayType")
     public Integer callDisplayType;
 
     /**
      * <p>One-way call restrictions. Valid values:</p>
-     * <br>
-     * <p>*   **CONTROL_AX_DISABLE**: Phone number A cannot be used to call phone number X.</p>
-     * <p>*   **CONTROL_BX_DISABLE**: Phone number B cannot be used to call phone number X.</p>
-     * <p>*   **CONTROL_CLEAR_DISABLE**: The call restrictions are cleared.</p>
-     * <br>
-     * <p>>  This parameter is required when **OperateType** is set to **updateCallRestrict**.</p>
+     * <ul>
+     * <li><strong>CONTROL_AX_DISABLE</strong>: Phone number A cannot be used to call phone number X.</li>
+     * <li><strong>CONTROL_BX_DISABLE</strong>: Phone number B cannot be used to call phone number X.</li>
+     * <li><strong>CONTROL_CLEAR_DISABLE</strong>: The call restrictions are cleared.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required when <strong>OperateType</strong> is set to <strong>updateCallRestrict</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>CONTROL_BX_DISABLE</p>
      */
     @NameInMap("CallRestrict")
     public String callRestrict;
 
     /**
      * <p>Re-sets the expiration time of the phone number binding.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is required when **OperateType** is set to **updateExpire**.</p>
-     * <br>
-     * <p>*   The expiration time must be more than 1 minute later than the time when you call this API operation.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter is required when <strong>OperateType</strong> is set to <strong>updateExpire</strong>.</p>
+     * </li>
+     * <li><p>The expiration time must be more than 1 minute later than the time when you call this API operation.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-09-05 12:00:00</p>
      */
     @NameInMap("Expiration")
     public String expiration;
 
     /**
      * <p>The ID of number group G in the phone number binding.</p>
-     * <br>
-     * <p>>  This parameter is required when **OperateType** is set to **updateAxgGroup**.</p>
+     * <blockquote>
+     * <p> This parameter is required when <strong>OperateType</strong> is set to <strong>updateAxgGroup</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1234</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>Re-sets the recording status in the phone number binding.</p>
-     * <br>
-     * <p>>  This parameter does not have a default value. If you do not specify this parameter, the value of the corresponding field is not updated.</p>
+     * <blockquote>
+     * <p> This parameter does not have a default value. If you do not specify this parameter, the value of the corresponding field is not updated.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsRecordingEnabled")
     public Boolean isRecordingEnabled;
 
     /**
      * <p>The operation to modify the phone number binding. Valid values:</p>
-     * <br>
-     * <p>*   **updateNoA**: modifies phone number A.</p>
-     * <p>*   **updateNoB**: modifies phone number B.</p>
-     * <p>*   **updateExpire**: modifies the validity period of the binding.</p>
-     * <p>*   **updateAxgGroup**: modifies number group G.</p>
-     * <p>*   **updateCallRestrict**: modifies one-way call restrictions.</p>
-     * <p>*   **updateCallDisplayType**: updates the number display logic for calls.</p>
-     * <p>*   **updateOutId**: updates the value of the OutId parameter.</p>
-     * <p>*   **updateIsRecordingEnabled**: updates the status of the recording feature in the binding.</p>
-     * <br>
+     * <ul>
+     * <li><strong>updateNoA</strong>: modifies phone number A.</li>
+     * <li><strong>updateNoB</strong>: modifies phone number B.</li>
+     * <li><strong>updateExpire</strong>: modifies the validity period of the binding.</li>
+     * <li><strong>updateAxgGroup</strong>: modifies number group G.</li>
+     * <li><strong>updateCallRestrict</strong>: modifies one-way call restrictions.</li>
+     * <li><strong>updateCallDisplayType</strong>: updates the number display logic for calls.</li>
+     * <li><strong>updateOutId</strong>: updates the value of the OutId parameter.</li>
+     * <li><strong>updateIsRecordingEnabled</strong>: updates the status of the recording feature in the binding.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>updateNoA</p>
      */
     @NameInMap("OperateType")
     public String operateType;
 
     /**
      * <p>Re-sets the value of the OutId parameter in the phone number binding.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcdef</p>
      */
     @NameInMap("OutId")
     public String outId;
@@ -95,51 +130,70 @@ public class UpdateSubscriptionRequest extends TeaModel {
 
     /**
      * <p>Phone number A in the phone number binding.</p>
-     * <br>
-     * <p>>  This parameter is required when **OperateType** is set to **updateNoA**.</p>
+     * <blockquote>
+     * <p> This parameter is required when <strong>OperateType</strong> is set to <strong>updateNoA</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("PhoneNoA")
     public String phoneNoA;
 
     /**
      * <p>Phone number B in the phone number binding.</p>
-     * <br>
-     * <p>>  This parameter is required when **OperateType** is set to **updateNoB**.</p>
+     * <blockquote>
+     * <p> This parameter is required when <strong>OperateType</strong> is set to <strong>updateNoB</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("PhoneNoB")
     public String phoneNoB;
 
     /**
      * <p>Phone number X in the phone number binding.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
 
     /**
      * <p>The key of the phone number pool.</p>
-     * <br>
-     * <p>Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
-     * <br>
-     * <p>>  This parameter is required when **ProductType** is left empty.</p>
+     * <p>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+     * <blockquote>
+     * <p> This parameter is required when <strong>ProductType</strong> is left empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>FC122356****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
 
     /**
      * <p>The product type. Valid values:</p>
-     * <br>
-     * <p>*   **AXB_170**</p>
-     * <p>*   **AXN_170**</p>
-     * <p>*   **AXN_95**</p>
-     * <p>*   **AXN_EXTENSION_REUSE**</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.</p>
-     * <br>
-     * <p>*   This parameter is required when **PoolKey** is left empty.</p>
+     * <ul>
+     * <li><strong>AXB_170</strong></li>
+     * <li><strong>AXN_170</strong></li>
+     * <li><strong>AXN_95</strong></li>
+     * <li><strong>AXN_EXTENSION_REUSE</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.</p>
+     * </li>
+     * <li><p>This parameter is required when <strong>PoolKey</strong> is left empty.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AXB_170</p>
      */
     @NameInMap("ProductType")
     public String productType;
@@ -152,37 +206,41 @@ public class UpdateSubscriptionRequest extends TeaModel {
 
     /**
      * <p>Updates the ringtone code for enterprise Color Ring Back Tone (CRBT) in the phone number binding.</p>
-     * <br>
      * <p>AXB product:</p>
-     * <br>
-     * <p>*   Ringtone setting when phone number A is used to call phone number X in the AXB binding: AXBRing_A</p>
-     * <p>*   Ringtone setting when phone number B is used to call phone number X in the AXB binding: AXBRing_B</p>
-     * <br>
+     * <ul>
+     * <li>Ringtone setting when phone number A is used to call phone number X in the AXB binding: AXBRing_A</li>
+     * <li>Ringtone setting when phone number B is used to call phone number X in the AXB binding: AXBRing_B</li>
+     * </ul>
      * <p>AXN product:</p>
-     * <br>
-     * <p>*   Ringtone setting (with a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_AB</p>
-     * <p>*   Ringtone setting (without a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_A</p>
-     * <p>*   Ringtone setting when phone number N is used to call phone number X in the AXN extension binding: AXNRing_N</p>
-     * <br>
+     * <ul>
+     * <li>Ringtone setting (with a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_AB</li>
+     * <li>Ringtone setting (without a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_A</li>
+     * <li>Ringtone setting when phone number N is used to call phone number X in the AXN extension binding: AXNRing_N</li>
+     * </ul>
      * <p>AXG product:</p>
-     * <br>
-     * <p>*   Ringtone setting (with a callback number) when phone number A is used to call phone number X in the AXG binding: AXGRing_AB</p>
-     * <p>*   Ringtone setting (without a callback number) when phone number A is used to call phone number X in the AXG binding: AXGRing_A</p>
-     * <p>*   Ringtone setting when a phone number in number group G is used to call phone number X in the AXG binding: AXGRing_G</p>
-     * <br>
-     * <p>Enterprise CRBT codes: Enterprise CRBT codes can be queried in the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). You can choose **Number Pool Management** > **Enterprise CRBT Management** to view and manage enterprise CRBT codes. You can also upload, delete, or perform other operations on enterprise CRBT codes.</p>
-     * <br>
-     * <p>>  The bound enterprise CRBTs are preferentially used. If no enterprise CRBT is set or the setting does not take effect, the enterprise CRBTs at the phone number pool level are used.</p>
+     * <ul>
+     * <li>Ringtone setting (with a callback number) when phone number A is used to call phone number X in the AXG binding: AXGRing_AB</li>
+     * <li>Ringtone setting (without a callback number) when phone number A is used to call phone number X in the AXG binding: AXGRing_A</li>
+     * <li>Ringtone setting when a phone number in number group G is used to call phone number X in the AXG binding: AXGRing_G</li>
+     * </ul>
+     * <p>Enterprise CRBT codes: Enterprise CRBT codes can be queried in the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a>. You can choose <strong>Number Pool Management</strong> &gt; <strong>Enterprise CRBT Management</strong> to view and manage enterprise CRBT codes. You can also upload, delete, or perform other operations on enterprise CRBT codes.</p>
+     * <blockquote>
+     * <p> The bound enterprise CRBTs are preferentially used. If no enterprise CRBT is set or the setting does not take effect, the enterprise CRBTs at the phone number pool level are used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AXBRing_B&quot;:&quot;100000001&quot;,&quot;AXBRing_A&quot;:&quot;100000001&quot;}</p>
      */
     @NameInMap("RingConfig")
     public String ringConfig;
 
     /**
      * <p>The binding ID.</p>
-     * <br>
-     * <p>Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account), choose **Number and Number Pool** > **Number Management**. On the Number Management page, select the desired record and click Details to view the binding ID. Alternatively, you can view the value of the **SubsId** parameter returned by an API operation for a phone number binding such as BindAxb. The value of this parameter indicates a binding ID.</p>
-     * <br>
+     * <p>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a>, choose <strong>Number and Number Pool</strong> &gt; <strong>Number Management</strong>. On the Number Management page, select the desired record and click Details to view the binding ID. Alternatively, you can view the value of the <strong>SubsId</strong> parameter returned by an API operation for a phone number binding such as BindAxb. The value of this parameter indicates a binding ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000076879****</p>
      */
     @NameInMap("SubsId")
     public String subsId;

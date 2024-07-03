@@ -9,16 +9,20 @@ public class QuerySubsIdRequest extends TeaModel {
 
     /**
      * <p>The private number in the binding, that is, phone number X.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("PhoneNoX")
     public String phoneNoX;
 
     /**
      * <p>The key of the phone number pool.</p>
-     * <br>
-     * <p>Log on to the [Phone Number Protection console](https://dyplsnext.console.aliyun.com/overview) and view the key of the phone number pool on the Number Pool Management page.</p>
+     * <p>Log on to the <a href="https://dyplsnext.console.aliyun.com/overview">Phone Number Protection console</a> and view the key of the phone number pool on the Number Pool Management page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC123456</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;

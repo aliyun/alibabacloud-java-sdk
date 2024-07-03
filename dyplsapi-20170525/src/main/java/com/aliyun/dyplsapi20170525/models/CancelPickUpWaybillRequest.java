@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class CancelPickUpWaybillRequest extends TeaModel {
     /**
      * <p>The cancellation reason.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;action\&quot;:\&quot;UPDATE_DESC\&quot;,\&quot;value\&quot;:\&quot;The courier is unable to pick up the package.\&quot;}</p>
      */
     @NameInMap("CancelDesc")
     public String cancelDesc;
 
     /**
      * <p>The ID of the external order.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1145678823****</p>
      */
     @NameInMap("OuterOrderCode")
     public String outerOrderCode;

@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class OperateAxgGroupResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>986BCB6D-C9BF-42F9-91CE-3A9901233D36</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class QueryRecordFileDownloadUrlRequest extends TeaModel {
     /**
-     * <p>The ID of the call record. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view **Call Record ID** on the **Call Record Query** page.</p>
-     * <br>
+     * <p>The ID of the call record. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view <strong>Call Record ID</strong> on the <strong>Call Record Query</strong> page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcedf1234</p>
      */
     @NameInMap("CallId")
     public String callId;
 
     /**
-     * <p>The call initiation time in the call record. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). View **Call Initiated At** on the **Call Record Query** page, or view the call_time field in the Call Detail Record (CDR) receipt.</p>
+     * <p>The call initiation time in the call record. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a>. View <strong>Call Initiated At</strong> on the <strong>Call Record Query</strong> page, or view the call_time field in the Call Detail Record (CDR) receipt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-03-05 12:00:00</p>
      */
     @NameInMap("CallTime")
     public String callTime;
@@ -22,26 +27,36 @@ public class QueryRecordFileDownloadUrlRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
-     * <br>
-     * <p>>  This parameter is required when **ProductType** is left empty.</p>
+     * <p>The key of the phone number pool. Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
+     * <blockquote>
+     * <p> This parameter is required when <strong>ProductType</strong> is left empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>FC123456</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
 
     /**
      * <p>The product type. Valid values:</p>
-     * <br>
-     * <p>*   **AXB_170**.</p>
-     * <p>*   **AXN_170**.</p>
-     * <p>*   **AXN_95**.</p>
-     * <p>*   **AXN_EXTENSION_REUSE**</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.</p>
-     * <br>
-     * <p>*   This parameter is required when **PoolKey** is left empty.</p>
+     * <ul>
+     * <li><strong>AXB_170</strong>.</li>
+     * <li><strong>AXN_170</strong>.</li>
+     * <li><strong>AXN_95</strong>.</li>
+     * <li><strong>AXN_EXTENSION_REUSE</strong></li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.</p>
+     * </li>
+     * <li><p>This parameter is required when <strong>PoolKey</strong> is left empty.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AXB_170</p>
      */
     @NameInMap("ProductType")
     public String productType;

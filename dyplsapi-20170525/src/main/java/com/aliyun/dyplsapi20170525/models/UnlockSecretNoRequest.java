@@ -9,10 +9,11 @@ public class UnlockSecretNoRequest extends TeaModel {
 
     /**
      * <p>The key of the phone number pool.</p>
-     * <br>
-     * <p>Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.</p>
-     * <br>
+     * <p>Log on to the <a href="https://dypls.console.aliyun.com/dypls.htm#/account">Phone Number Protection console</a> and view the key of the phone number pool on the <strong>Number Pool Management</strong> page.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC2256****</p>
      */
     @NameInMap("PoolKey")
     public String poolKey;
@@ -25,8 +26,10 @@ public class UnlockSecretNoRequest extends TeaModel {
 
     /**
      * <p>The private number that you want to unlock. You must enter a complete mobile phone number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1300000****</p>
      */
     @NameInMap("SecretNo")
     public String secretNo;
