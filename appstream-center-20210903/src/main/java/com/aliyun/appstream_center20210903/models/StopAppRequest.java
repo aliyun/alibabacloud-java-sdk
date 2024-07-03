@@ -4,66 +4,150 @@ package com.aliyun.appstream_center20210903.models;
 import com.aliyun.tea.*;
 
 public class StopAppRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1924794279035094</p>
+     */
     @NameInMap("AliUid")
     public Long aliUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AnonymousUserAPI</p>
+     */
     @NameInMap("ApiType")
     public String apiType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ca-fxwp4koywsglzvvex</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aig-89ibriac2wudyph38</p>
+     */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ai-d297eyf83g5niwnjl</p>
+     */
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pc</p>
+     */
     @NameInMap("ClientChannel")
     public String clientChannel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>91b79184-51d0-42ad-8475-78cae95b0aa6</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22.21.2.79</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>windows_&quot;Windows 10 Enterprise&quot; 10.0 (Build 19042)</p>
+     */
     @NameInMap("ClientOS")
     public String clientOS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3.1.1-R-20211022.144255</p>
+     */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.test</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
+    /**
+     * <strong>example:</strong>
+     * <p>idp-9ie5smicnct2xodn2</p>
+     */
     @NameInMap("IdpId")
     public String idpId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("LoginRegionId")
     public String loginRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v185fdd7f6d39fa7861981639366085772e150a390a5bb7b43c4e62440d94fc392b945770e1596cebe90085ce0af4d330e</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>597e869d-ea14-4b83-9490-714f68bfe935</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2943802884B27030B6759F9132B26903</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ac3cb49059261898</p>
+     */
     @NameInMap("WyId")
     public String wyId;
 

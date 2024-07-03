@@ -4,45 +4,97 @@ package com.aliyun.appstream_center20210903.models;
 import com.aliyun.tea.*;
 
 public class ListPublishedAppInfoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Microsoft Word</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CategoryId")
     public Long categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CategoryType")
     public Long categoryType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>17b38aaa-761f-44c5-9862-2ad0f5025d15</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>125.80.132.13</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>windows_\&quot;Windows 10 Enterprise\&quot; 10.0 (Build 14393)</p>
+     */
     @NameInMap("ClientOS")
     public String clientOS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.0.1-D-20211008.101607</p>
+     */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.test</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("LoginRegionId")
     public String loginRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v189fa78c1aff77a0483b16497517322299131027b85bb84bbdc0871988ce8296d8fd891e2fdeaded3bd75f81f639acee8</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
     @NameInMap("OrderParam")
     public String orderParam;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c261a6a1-e242-4f4b-813c-5fe807e49f03</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

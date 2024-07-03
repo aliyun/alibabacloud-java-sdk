@@ -4,39 +4,87 @@ package com.aliyun.appstream_center20210903.models;
 import com.aliyun.tea.*;
 
 public class ListRunningAppsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("BizRegionId")
     public String bizRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>370b56f8-2812-4b6c-bfa6-2560791cad88</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22.21.2.32</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>windows_&quot;Windows 10 Enterprise&quot; 10.0 (Build 18363)</p>
+     */
     @NameInMap("ClientOS")
     public String clientOS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.1.0-R-20220512.175656</p>
+     */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.test</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("LoginRegionId")
     public String loginRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1124500957832f30b3e716406562071655aa43b2a723ed2be0837815483d54e025db13ba5469f06f2410d0efc4d302e36</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>a863f4c3-2f1d-4971-8cf7-e2b92ae97764</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1735953493960828</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>470E8C12AB78CE9C3F6627DD0409E51D</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 
