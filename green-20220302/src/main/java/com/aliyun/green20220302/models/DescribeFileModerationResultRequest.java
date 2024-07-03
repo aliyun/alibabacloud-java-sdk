@@ -4,9 +4,17 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class DescribeFileModerationResultRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>document_detection</p>
+     */
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;taskId\&quot;:\&quot;vi_f_hPgx9PFIQISdlfA888hOFG-1yJq8v\&quot;}</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 

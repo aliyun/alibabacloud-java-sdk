@@ -4,17 +4,28 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class VoiceModerationResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public VoiceModerationResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2881AD4F-638B-52A3-BA20-F74C5B1CEAE3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,6 +68,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
     }
 
     public static class VoiceModerationResultResponseBodyDataSliceDetails extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
@@ -66,6 +81,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sexual_sounds</p>
+         */
         @NameInMap("Labels")
         public String labels;
 
@@ -78,9 +97,17 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("RiskWords")
         public String riskWords;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87.01</p>
+         */
         @NameInMap("Score")
         public Float score;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
@@ -200,12 +227,20 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>liveId</p>
+         */
         @NameInMap("LiveId")
         public String liveId;
 
         @NameInMap("SliceDetails")
         public java.util.List<VoiceModerationResultResponseBodyDataSliceDetails> sliceDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>kw24ihd0WGkdi5nniVZM@qOj-1x5Ibb</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

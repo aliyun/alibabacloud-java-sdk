@@ -4,6 +4,10 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class TextModerationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>nickname_detection</p>
+     */
     @NameInMap("Service")
     public String service;
 

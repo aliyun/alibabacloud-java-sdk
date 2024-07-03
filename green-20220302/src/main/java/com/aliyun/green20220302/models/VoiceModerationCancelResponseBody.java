@@ -4,14 +4,25 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class VoiceModerationCancelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A926AE2-4C96-573F-824F-0532960799F8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

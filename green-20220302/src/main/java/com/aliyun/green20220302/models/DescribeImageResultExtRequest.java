@@ -4,9 +4,17 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageResultExtRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>customImage,textInImage</p>
+     */
     @NameInMap("InfoType")
     public String infoType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>638EDDC65C82AB39319A9F60</p>
+     */
     @NameInMap("ReqId")
     public String reqId;
 

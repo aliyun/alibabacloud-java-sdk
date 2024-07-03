@@ -4,17 +4,28 @@ package com.aliyun.green20220302.models;
 import com.aliyun.tea.*;
 
 public class TextModerationPlusResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
     @NameInMap("Data")
     public TextModerationPlusResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,6 +68,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
     }
 
     public static class TextModerationPlusResponseBodyDataAdvice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("Answer")
         public String answer;
 
@@ -98,6 +113,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
     }
 
     public static class TextModerationPlusResponseBodyDataResultCustomizedHit extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("KeyWords")
         public String keyWords;
 
@@ -128,15 +147,27 @@ public class TextModerationPlusResponseBody extends TeaModel {
     }
 
     public static class TextModerationPlusResponseBodyDataResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>81.22</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
         @NameInMap("CustomizedHit")
         public java.util.List<TextModerationPlusResponseBodyDataResultCustomizedHit> customizedHit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>porn</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>XXX</p>
+         */
         @NameInMap("RiskWords")
         public String riskWords;
 
@@ -186,6 +217,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @NameInMap("Result")
         public java.util.List<TextModerationPlusResponseBodyDataResult> result;
 
+        @NameInMap("RiskLevel")
+        public String riskLevel;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -208,6 +246,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public java.util.List<TextModerationPlusResponseBodyDataResult> getResult() {
             return this.result;
+        }
+
+        public TextModerationPlusResponseBodyData setRiskLevel(String riskLevel) {
+            this.riskLevel = riskLevel;
+            return this;
+        }
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         public TextModerationPlusResponseBodyData setScore(Float score) {
