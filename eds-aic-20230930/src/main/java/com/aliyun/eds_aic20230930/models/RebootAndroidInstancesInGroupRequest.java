@@ -7,6 +7,9 @@ public class RebootAndroidInstancesInGroupRequest extends TeaModel {
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    @NameInMap("ForceStop")
+    public Boolean forceStop;
+
     public static RebootAndroidInstancesInGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RebootAndroidInstancesInGroupRequest self = new RebootAndroidInstancesInGroupRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class RebootAndroidInstancesInGroupRequest extends TeaModel {
     }
     public java.util.List<String> getAndroidInstanceIds() {
         return this.androidInstanceIds;
+    }
+
+    public RebootAndroidInstancesInGroupRequest setForceStop(Boolean forceStop) {
+        this.forceStop = forceStop;
+        return this;
+    }
+    public Boolean getForceStop() {
+        return this.forceStop;
     }
 
 }

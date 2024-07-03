@@ -7,6 +7,9 @@ public class StopAndroidInstanceRequest extends TeaModel {
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
+    @NameInMap("ForceStop")
+    public Boolean forceStop;
+
     public static StopAndroidInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopAndroidInstanceRequest self = new StopAndroidInstanceRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class StopAndroidInstanceRequest extends TeaModel {
     }
     public java.util.List<String> getAndroidInstanceIds() {
         return this.androidInstanceIds;
+    }
+
+    public StopAndroidInstanceRequest setForceStop(Boolean forceStop) {
+        this.forceStop = forceStop;
+        return this;
+    }
+    public Boolean getForceStop() {
+        return this.forceStop;
     }
 
 }
