@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListRunningAppsResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2DC3521C-3820-5EA5-9A9A-00BB7AF4E8E5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -35,36 +38,80 @@ public class ListRunningAppsResponseBody extends TeaModel {
     }
 
     public static class ListRunningAppsResponseBodyRunningCloudApps extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ca-dln05y44ze6esfl8x</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aig-dk8p95irk9xs5xi6a</p>
+         */
         @NameInMap("AppInstanceGroupId")
         public String appInstanceGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ai-gc1gemx6vpa6vlync</p>
+         */
         @NameInMap("AppInstanceId")
         public String appInstanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alihealth-keeper</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11.1</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test1.0</p>
+         */
         @NameInMap("AppVersionName")
         public String appVersionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://app-icon-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/187465/18_bf1.jpg">https://app-icon-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/187465/18_bf1.jpg</a></p>
+         */
         @NameInMap("IconUrl")
         public String iconUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Windows</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1642748400</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

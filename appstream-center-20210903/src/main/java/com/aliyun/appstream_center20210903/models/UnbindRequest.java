@@ -4,42 +4,98 @@ package com.aliyun.appstream_center20210903.models;
 import com.aliyun.tea.*;
 
 public class UnbindRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ca-fxwp4koxs8hopi94e</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aig-e1l4kqqykxt4uzdx9</p>
+     */
     @NameInMap("AppInstanceGroupId")
     public String appInstanceGroupId;
 
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eac19bef-1e45-4190-a03a-4ea74b699ca7</p>
+     */
     @NameInMap("ClientId")
     public String clientId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>139.129.223.122</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>windows_\&quot;Windows 10 Pro\&quot; 10.0 (Build 19041)</p>
+     */
     @NameInMap("ClientOS")
     public String clientOS;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.0.1-D-20220303.171122</p>
+     */
     @NameInMap("ClientVersion")
     public String clientVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.test</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("LoginRegionId")
     public String loginRegionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1e9c8e83d83ea11270871640059145702bde8c5be8c6b9a854ffb6a43bd2673c19a5551c83800724e024f488dbfb0b247</p>
+     */
     @NameInMap("LoginToken")
     public String loginToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CloudApp</p>
+     */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11040139-4fb4-4b35-9b44-6c07c746a43e</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1569416393841402</p>
+     */
     @NameInMap("TenantId")
     public Long tenantId;
 

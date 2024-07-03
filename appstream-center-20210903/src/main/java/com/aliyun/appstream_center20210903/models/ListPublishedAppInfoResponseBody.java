@@ -10,11 +10,18 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
     @NameInMap("AppModels")
     public java.util.List<ListPublishedAppInfoResponseBodyAppModels> appModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2NVfhLfgy5b3J5iJyoLQ6x4EULMg1hbhgB9NfnvdK9oj5zwxd17j4TuQkZze3RvhEvBinZYjknujF3Q1M</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DB70F8FE-63A3-587B-8560-CEC258E8B944</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -49,39 +56,79 @@ public class ListPublishedAppInfoResponseBody extends TeaModel {
     }
 
     public static class ListPublishedAppInfoResponseBodyAppModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>img-f37nddbjc1lje14st</p>
+         */
         @NameInMap("AppCenterImageId")
         public String appCenterImageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ca-fxwp4koyr5y2sp4mz</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Microsoft Word</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
         @NameInMap("AppThemeColor")
         public String appThemeColor;
 
+        /**
+         * <strong>example:</strong>
+         * <p>R2021a</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v1.0</p>
+         */
         @NameInMap("AppVersionName")
         public String appVersionName;
 
         @NameInMap("AuthTime")
         public String authTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("CategoryId")
         public Long categoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CategoryType")
         public Long categoryType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://app-streaming-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1973619010349344/1634523814270_Matlab.png">https://app-streaming-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1973619010349344/1634523814270_Matlab.png</a></p>
+         */
         @NameInMap("IconUrl")
         public String iconUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("IsAuth")
         public Boolean isAuth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("UsedInSession")
         public Boolean usedInSession;
 

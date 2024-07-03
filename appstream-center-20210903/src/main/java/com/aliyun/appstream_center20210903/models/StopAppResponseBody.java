@@ -4,6 +4,10 @@ package com.aliyun.appstream_center20210903.models;
 import com.aliyun.tea.*;
 
 public class StopAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>83A9075B-C646-59A9-8232-CAE41AF4B9E3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
