@@ -12,15 +12,22 @@ public class CopySnapshotResponseBody extends TeaModel {
 
     /**
      * <p>Success status code.</p>
-     * <br>
-     * <p>*   **PartSuccess**: partially succeeded.</p>
-     * <p>*   **AllSuccess**: all succeeded.</p>
+     * <ul>
+     * <li><strong>PartSuccess</strong>: partially succeeded.</li>
+     * <li><strong>AllSuccess</strong>: all succeeded.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AllSuccess</p>
      */
     @NameInMap("BizStatusCode")
     public String bizStatusCode;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EA3758E0-8899-17D3-9526-5F62CF33A586</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,6 +78,9 @@ public class CopySnapshotResponseBody extends TeaModel {
     public static class CopySnapshotResponseBodyAllocationId extends TeaModel {
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom-4</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
@@ -107,6 +117,9 @@ public class CopySnapshotResponseBody extends TeaModel {
     public static class CopySnapshotResponseBodyUnAllocationId extends TeaModel {
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-26</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;

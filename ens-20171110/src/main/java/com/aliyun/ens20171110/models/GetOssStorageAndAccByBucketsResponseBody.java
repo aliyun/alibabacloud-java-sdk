@@ -12,6 +12,9 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>112F4860-F1B2-58DD-8FC0-75F19DA1C4BF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     public static class GetOssStorageAndAccByBucketsResponseBodyBucketList extends TeaModel {
         /**
          * <p>The number of times that the bucket is accessed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Acc")
         public Long acc;
 
         /**
          * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-bucket</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>The storage usage of the bucket. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("StorageUsageByte")
         public Long storageUsageByte;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
 
     /**
      * <p>The number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops extends TeaModel {
         /**
          * <p>The ID of the next hop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1111yup9991890woxq</p>
          */
         @NameInMap("NextHopId")
         public String nextHopId;
 
         /**
          * <p>The type of the next hop. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
@@ -124,6 +142,9 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
 
         /**
          * <p>The destination CIDR block of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.0.45.0/24</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
@@ -136,30 +157,45 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rte-2zeksx7h436f5unk349m1</p>
          */
         @NameInMap("RouteEntryId")
         public String routeEntryId;
 
         /**
          * <p>The name of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         @NameInMap("RouteEntryName")
         public String routeEntryName;
 
         /**
          * <p>The ID of the route table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vtb-uf62p9o5cn35fi8xgurnm</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
         /**
          * <p>The status of the route entry. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the route entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("Type")
         public String type;

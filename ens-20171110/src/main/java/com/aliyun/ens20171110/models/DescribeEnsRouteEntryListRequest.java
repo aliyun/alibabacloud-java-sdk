@@ -6,61 +6,89 @@ import com.aliyun.tea.*;
 public class DescribeEnsRouteEntryListRequest extends TeaModel {
     /**
      * <p>The destination Classless Inter-Domain Routing (CIDR) block of the route entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11.0.0.0/16</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
      * <p>The ID of the next hop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-2zecshuv3axtr2gc4noa</p>
      */
     @NameInMap("NextHopId")
     public String nextHopId;
 
     /**
      * <p>The type of next hop of the custom route entry. Valid values:</p>
-     * <br>
-     * <p>*   Instance: an ENS instance.</p>
+     * <ul>
+     * <li>Instance: an ENS instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;
 
     /**
      * <p>The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Default value: 10. Valid values: 10 to 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the route that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rte-8vbdw66evgv44u2u7v3hx</p>
      */
     @NameInMap("RouteEntryId")
     public String routeEntryId;
 
     /**
      * <p>The name of the route.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test0</p>
      */
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
     /**
      * <p>The route type. Valid values:</p>
-     * <br>
-     * <p>*   Custom: custom route</p>
-     * <p>*   System: system route</p>
+     * <ul>
+     * <li>Custom: custom route</li>
+     * <li>System: system route</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("RouteEntryType")
     public String routeEntryType;
 
     /**
      * <p>The ID of the route table that you want to query.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-hp3wdhynneo7fsclox8hs</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;

@@ -6,56 +6,80 @@ import com.aliyun.tea.*;
 public class ListApplicationsRequest extends TeaModel {
     /**
      * <p>The version number of the application. Separate multiple version numbers with commas (,). If you want to query data of all versions of applications, specify All for this parameter. By default, only data of applications in the stable versions are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v1,v2</p>
      */
     @NameInMap("AppVersions")
     public String appVersions;
 
     /**
      * <p>The name of the application cluster. Separate multiple names with commas (,). If you want to query applications of all clusters in your account, specify All for this parameter. Default value: All.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>poc,pre</p>
      */
     @NameInMap("ClusterNames")
     public String clusterNames;
 
     /**
      * <p>The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:</p>
-     * <br>
-     * <p>*   National: Chinese mainland</p>
-     * <p>*   Big: area</p>
-     * <p>*   Middle: province</p>
-     * <p>*   Small: city</p>
-     * <p>*   RegionId: edge node</p>
-     * <br>
+     * <ul>
+     * <li>National: Chinese mainland</li>
+     * <li>Big: area</li>
+     * <li>Middle: province</li>
+     * <li>Small: city</li>
+     * <li>RegionId: edge node</li>
+     * </ul>
      * <p>Default value: National.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>National</p>
      */
     @NameInMap("Level")
     public String level;
 
     /**
      * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-20</p>
      */
     @NameInMap("MaxDate")
     public String maxDate;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-15</p>
      */
     @NameInMap("MinDate")
     public String minDate;
 
     /**
      * <p>Specifies whether to return other information about the application, such as statistics on resource instances and pods. The value must be a JSON string. By default, all information is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;appInfo\&quot;:true,\&quot;detailStat\&quot;: true, \&quot;appVersionStat\&quot;: true, \&quot;districtStat\&quot;:true ,\&quot;instanceStat\&quot;: true, \&quot;podCountStat\&quot;: true}</p>
      */
     @NameInMap("OutAppInfoParams")
     public String outAppInfoParams;
 
     /**
      * <p>The page number. Pages start from page 1. This parameter is optional if you want to return all information about the applications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. This parameter is optional if you want to return all information about the applications.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

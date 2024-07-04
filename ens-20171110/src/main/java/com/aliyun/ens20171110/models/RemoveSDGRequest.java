@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class RemoveSDGRequest extends TeaModel {
     /**
      * <p>IDs of Android in Container (AIC) instances.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")

@@ -6,44 +6,54 @@ import com.aliyun.tea.*;
 public class CreateVSwitchRequest extends TeaModel {
     /**
      * <p>The CIDR block of the vSwitch. Take note of the following limits:</p>
-     * <br>
-     * <p>*   The subnet mask must be 16 to 29 bits in length.</p>
-     * <p>*   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</p>
-     * <p>*   The CIDR block of the vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</p>
-     * <br>
+     * <ul>
+     * <li>The subnet mask must be 16 to 29 bits in length.</li>
+     * <li>The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.</li>
+     * <li>The CIDR block of the vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.0.0/24</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>The description of the vSwitch.</p>
-     * <br>
      * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my vswitch.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the edge node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-xian-unicom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the network to which the vSwitch that you want to create belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-257gqcdfvx6n****</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The name of the vSwitch. The name must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name must be 2 to 128 characters in length.</p>
-     * <p>*   The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * <br>
+     * <ul>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * </ul>
      * <p>Default value: null.</p>
      */
     @NameInMap("VSwitchName")

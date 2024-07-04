@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AttachDiskResponseBody extends TeaModel {
     /**
      * <p>The returned service code. 0 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>916777D9-42D3-5928-92CE-373B1874B674</p>
      */
     @NameInMap("RequestId")
     public String requestId;

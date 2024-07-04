@@ -6,21 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeEnsNetSaleDistrictRequest extends TeaModel {
     /**
      * <p>The region code.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, only nodes under the area level that is specified by NetLevelCode are queried.</p>
-     * <p>*   If you specify this parameter, only child nodes in the area that is specified by NetDistrictCode are queried.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, only nodes under the area level that is specified by NetLevelCode are queried.</li>
+     * <li>If you specify this parameter, only child nodes in the area that is specified by NetDistrictCode are queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100105</p>
      */
     @NameInMap("NetDistrictCode")
     public String netDistrictCode;
 
     /**
      * <p>The network level. Valid values:</p>
-     * <br>
-     * <p>*   **Big**: area</p>
-     * <p>*   **Middle**: province</p>
-     * <p>*   **Small**: city</p>
-     * <br>
+     * <ul>
+     * <li><strong>Big</strong>: area</li>
+     * <li><strong>Middle</strong>: province</li>
+     * <li><strong>Small</strong>: city</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Big</p>
      */
     @NameInMap("NetLevelCode")
     public String netLevelCode;

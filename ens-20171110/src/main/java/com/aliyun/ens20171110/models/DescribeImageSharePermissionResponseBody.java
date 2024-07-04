@@ -12,30 +12,45 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-5qkf6jv9a0tzd5ipwx5fi****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A44EE357-6174-5E37-A801-48F5790F9ACE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of Alibaba Cloud accounts with which you share the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

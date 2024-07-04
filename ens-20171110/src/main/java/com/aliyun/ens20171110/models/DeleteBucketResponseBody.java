@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteBucketResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2180AB96-57CF-1C68-9FEE-D60E547FD79C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

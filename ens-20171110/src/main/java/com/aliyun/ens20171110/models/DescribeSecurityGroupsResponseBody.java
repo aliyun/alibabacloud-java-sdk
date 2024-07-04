@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSecurityGroupsResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,30 +94,45 @@ public class DescribeSecurityGroupsResponseBody extends TeaModel {
     public static class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup extends TeaModel {
         /**
          * <p>The time when the security group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-01T06:08:46Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The number of associated instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp67acfmxazb4ph***</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
          * <p>The name of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DocTest</p>
          */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;

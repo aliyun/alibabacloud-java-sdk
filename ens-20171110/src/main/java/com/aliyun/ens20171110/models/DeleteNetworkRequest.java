@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteNetworkRequest extends TeaModel {
     /**
      * <p>The ID of the network.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-5***</p>
      */
     @NameInMap("NetworkId")
     public String networkId;

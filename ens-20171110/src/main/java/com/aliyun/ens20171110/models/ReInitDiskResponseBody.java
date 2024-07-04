@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ReInitDiskResponseBody extends TeaModel {
     /**
      * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4DD66F05-3116-4BAA-B588-52EB2E7F431D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

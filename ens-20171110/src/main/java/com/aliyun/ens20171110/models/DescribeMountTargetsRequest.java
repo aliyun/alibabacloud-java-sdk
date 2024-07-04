@@ -6,34 +6,47 @@ import com.aliyun.tea.*;
 public class DescribeMountTargetsRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-cmcc</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c50f8*****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The name of the mount target.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestMountPath</p>
      */
     @NameInMap("MountTargetName")
     public String mountTargetName;
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. The maximum value is 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

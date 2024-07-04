@@ -12,24 +12,36 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
     public static class DescribeLoadBalancerSpecResponseBodyLoadBalancerSpecs extends TeaModel {
         /**
          * <p>The display name of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elb.s1.small</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The specifications of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elb.s1.small</p>
          */
         @NameInMap("LoadBalancerSpec")
         public String loadBalancerSpec;

@@ -4,32 +4,43 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RenewARMServerInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The ID of the instance that you want to renew.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourInstance ID</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The renewal period. By default, instances are renewed on a monthly basis. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The unit of the renewal period. Valid values:</p>
-     * <br>
-     * <p>*   Month (default)</p>
-     * <p>*   Year</p>
-     * <br>
+     * <ul>
+     * <li>Month (default)</li>
+     * <li>Year</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;

@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyImageSharePermissionRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account with which you want to share the image. You can specify multiple Alibaba Cloud IDs. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1122334455**</p>
      */
     @NameInMap("AddAccounts")
     public String addAccounts;
 
     /**
      * <p>The ID of the image. You can specify only one image ID. Custom images and public images are supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-5s7qotzavwbrnzaqh4unm****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The ID of the Alibaba Cloud account from which you want to unshare the image. You can specify only one Alibaba Cloud account ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>113355**</p>
      */
     @NameInMap("RemoveAccounts")
     public String removeAccounts;

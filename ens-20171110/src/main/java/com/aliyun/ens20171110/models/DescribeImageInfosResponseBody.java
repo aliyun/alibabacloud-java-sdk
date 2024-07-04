@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeImageInfosResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class DescribeImageInfosResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5568A08C-10A9-47F3-902F-647298B463FB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,47 +60,69 @@ public class DescribeImageInfosResponseBody extends TeaModel {
     public static class DescribeImageInfosResponseBodyImagesImage extends TeaModel {
         /**
          * <p>The computing type of the image. Valid values:</p>
-         * <br>
-         * <p>*   ens_vm: x86 computing.</p>
-         * <p>*   arm_vm: ARM computing.</p>
-         * <p>*   bare_metal: x86 bare machine.</p>
-         * <p>*   pcfarm: heterogeneous computing.</p>
+         * <ul>
+         * <li>ens_vm: x86 computing.</li>
+         * <li>arm_vm: ARM computing.</li>
+         * <li>bare_metal: x86 bare machine.</li>
+         * <li>pcfarm: heterogeneous computing.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ens_vm</p>
          */
         @NameInMap("ComputeType")
         public String computeType;
 
         /**
          * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_alibase_2017****</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_alibase_2017****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The size of the image. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ImageSize")
         public String imageSize;
 
         /**
          * <p>The version of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.8</p>
          */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
         /**
-         * <p>The type of the image. Valid values: **centos**, **debian**, **ubuntu**, and **windows**.</p>
+         * <p>The type of the image. Valid values: <strong>centos</strong>, <strong>debian</strong>, <strong>ubuntu</strong>, and <strong>windows</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos</p>
          */
         @NameInMap("OSName")
         public String OSName;
 
         /**
          * <p>The type of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>linux</p>
          */
         @NameInMap("OSType")
         public String OSType;

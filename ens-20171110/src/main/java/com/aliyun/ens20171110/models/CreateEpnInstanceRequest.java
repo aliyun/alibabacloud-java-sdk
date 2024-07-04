@@ -6,49 +6,61 @@ import com.aliyun.tea.*;
 public class CreateEpnInstanceRequest extends TeaModel {
     /**
      * <p>The name of the EPN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test EPNInstanceName</p>
      */
     @NameInMap("EPNInstanceName")
     public String EPNInstanceName;
 
     /**
-     * <p>The type of the EPN instance. Set the value to **EdgeToEdge**.</p>
-     * <br>
+     * <p>The type of the EPN instance. Set the value to <strong>EdgeToEdge</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EdgeToEdge</p>
      */
     @NameInMap("EPNInstanceType")
     public String EPNInstanceType;
 
     /**
      * <p>The billing method for network usage. Valid values:</p>
-     * <br>
-     * <p>*   **BandwidthByDay**: Pay by daily peak bandwidth.</p>
-     * <p>*   **95BandwidthByMonth**: Pay by monthly 95th percentile bandwidth.</p>
-     * <p>*   **PayByBandwidth4thMonth**: Pay by monthly fourth peak bandwidth.</p>
-     * <p>*   **PayByBandwidth**: Pay by fixed bandwidth.</p>
-     * <br>
+     * <ul>
+     * <li><strong>BandwidthByDay</strong>: Pay by daily peak bandwidth.</li>
+     * <li><strong>95BandwidthByMonth</strong>: Pay by monthly 95th percentile bandwidth.</li>
+     * <li><strong>PayByBandwidth4thMonth</strong>: Pay by monthly fourth peak bandwidth.</li>
+     * <li><strong>PayByBandwidth</strong>: Pay by fixed bandwidth.</li>
+     * </ul>
      * <p>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BandwidthByDay</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 100.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
     /**
      * <p>The networking mode. Valid values:</p>
-     * <br>
-     * <p>*   **SpeedUp**: intelligent acceleration network (Internet)</p>
-     * <p>*   **Connection**: internal network</p>
-     * <p>*   **SpeedUpAndConnection**: intelligent acceleration network and internal network</p>
-     * <br>
+     * <ul>
+     * <li><strong>SpeedUp</strong>: intelligent acceleration network (Internet)</li>
+     * <li><strong>Connection</strong>: internal network</li>
+     * <li><strong>SpeedUpAndConnection</strong>: intelligent acceleration network and internal network</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SpeedUp</p>
      */
     @NameInMap("NetworkingModel")
     public String networkingModel;

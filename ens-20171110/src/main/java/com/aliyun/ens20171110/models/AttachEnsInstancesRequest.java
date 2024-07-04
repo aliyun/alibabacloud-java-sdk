@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class AttachEnsInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the instance. You can specify only one instance ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testInstacneId</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The command that you want to execute on the instance. The command must be encoded in Base64 or UTF-8.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wget d2dldCBodHRwOi8vYWxpYWNzLWs4cy1jbxxxx</p>
      */
     @NameInMap("Scripts")
     public String scripts;

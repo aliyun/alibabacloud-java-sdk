@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteFileSystemRequest extends TeaModel {
     /**
      * <p>The ID of the node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu-telecom-4</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the file system that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>e42640****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

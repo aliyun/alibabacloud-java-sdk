@@ -11,25 +11,37 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets networkInterfaceSets;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>708AF9CE-FF92-5DF9-93F8-B7754AB1061A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries in the list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,15 +94,22 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet extends TeaModel {
         /**
          * <p>Specifies whether the private IP address is the primary private IP address. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Primary")
         public Boolean primary;
 
         /**
          * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.130</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
@@ -159,63 +178,94 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet extends TeaModel {
         /**
          * <p>The time when the ENI was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-22T03:53:25Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id-jakarta-1</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The ID of the instance to which the ENI is bound.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5siavnr3</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The MAC address of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:16:3e:08:60:0a</p>
          */
         @NameInMap("MacAddress")
         public String macAddress;
 
         /**
          * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5w0qd03adw****</p>
          */
         @NameInMap("NetworkId")
         public String networkId;
 
         /**
          * <p>The ID of the ENI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eni-uf686a5</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
         /**
          * <p>The ENI name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>primaryTest</p>
          */
         @NameInMap("NetworkInterfaceName")
         public String networkInterfaceName;
 
         /**
          * <p>The private IP address of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.23.3.4</p>
          */
         @NameInMap("PrimaryIp")
         public String primaryIp;
 
         /**
          * <p>The primary private IP address. Valid values:</p>
-         * <br>
-         * <p>*   **Public**: public IP address.</p>
-         * <p>*   **Private**: internal IP address.</p>
+         * <ul>
+         * <li><strong>Public</strong>: public IP address.</li>
+         * <li><strong>Private</strong>: internal IP address.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         @NameInMap("PrimaryIpType")
         public String primaryIpType;
@@ -234,27 +284,38 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
         /**
          * <p>The status of the ENI. Valid values:</p>
-         * <br>
-         * <p>*   Available: The ENI is available.</p>
-         * <p>*   Attaching: The ENI is being attached to an instance.</p>
-         * <p>*   InUse: The ENI is attached to an instance.</p>
-         * <p>*   Detaching: The ENI is being detached from an instance.</p>
-         * <p>*   Deleting: The ENI is being deleted.</p>
+         * <ul>
+         * <li>Available: The ENI is available.</li>
+         * <li>Attaching: The ENI is being attached to an instance.</li>
+         * <li>InUse: The ENI is attached to an instance.</li>
+         * <li>Detaching: The ENI is being detached from an instance.</li>
+         * <li>Deleting: The ENI is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>In_use</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the ENI. Valid values:</p>
-         * <br>
-         * <p>*   Primary</p>
-         * <p>*   Secondary</p>
+         * <ul>
+         * <li>Primary</li>
+         * <li>Secondary</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Primary</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5rqswx1trlsj9</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

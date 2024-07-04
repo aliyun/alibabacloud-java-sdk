@@ -12,6 +12,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CCFD3F24-44AF-5508-B18D-5100BFC68602</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
     public static class DescribeEipAddressesResponseBodyEipAddressesEipAddress extends TeaModel {
         /**
          * <p>The information about an EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         @NameInMap("Eip")
         public String eip;
 
         /**
          * <p>The public IP address of the ENS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.XX.XX</p>
          */
         @NameInMap("InstanceIdInternetIp")
         public String instanceIdInternetIp;

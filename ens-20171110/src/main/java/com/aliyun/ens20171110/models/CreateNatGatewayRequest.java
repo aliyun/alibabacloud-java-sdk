@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-suzhou-telecom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
-     * <p>The instance type of the NAT gateway. Set the value to **enat.default**.</p>
+     * <p>The instance type of the NAT gateway. Set the value to <strong>enat.default</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enat.default</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The name of the NAT gateway. The name must be 1 to 128 characters in length. The name cannot start with `http://` or `https://`.</p>
+     * <p>The name of the NAT gateway. The name must be 1 to 128 characters in length. The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the network.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-5qj7ykuxmjn7k96l090sp****</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The ID of the vSwitch.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-5savh5ngxh8sbj14bu7n****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

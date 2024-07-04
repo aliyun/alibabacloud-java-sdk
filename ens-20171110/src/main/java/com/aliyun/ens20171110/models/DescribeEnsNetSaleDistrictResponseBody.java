@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
     /**
      * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1707B55C-A12F-43EF-BC66-14FFDB9253C3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -60,34 +66,50 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
 
         /**
          * <p>The information about the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{                         &quot;count&quot;:2,                         &quot;code&quot;:&quot;multiCarrier&quot;                     }</p>
          */
         @NameInMap("InstanceCount")
         public String instanceCount;
 
         /**
          * <p>The region code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100101</p>
          */
         @NameInMap("NetDistrictCode")
         public String netDistrictCode;
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>northEast</p>
          */
         @NameInMap("NetDistrictEnName")
         public String netDistrictEnName;
 
         /**
          * <p>The parent code of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         @NameInMap("NetDistrictFatherCode")
         public String netDistrictFatherCode;
 
         /**
          * <p>The region level. Valid values:</p>
-         * <br>
-         * <p>*   **Big**: area</p>
-         * <p>*   **Middle**: province</p>
-         * <p>*   **Small**: city</p>
+         * <ul>
+         * <li><strong>Big</strong>: area</li>
+         * <li><strong>Middle</strong>: province</li>
+         * <li><strong>Small</strong>: city</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Big</p>
          */
         @NameInMap("NetDistrictLevel")
         public String netDistrictLevel;

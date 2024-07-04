@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the security group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4ph***</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

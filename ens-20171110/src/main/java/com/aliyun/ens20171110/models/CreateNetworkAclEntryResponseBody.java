@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateNetworkAclEntryResponseBody extends TeaModel {
     /**
      * <p>The ID of the network ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nae-5****</p>
      */
     @NameInMap("NetworkAclEntryId")
     public String networkAclEntryId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;

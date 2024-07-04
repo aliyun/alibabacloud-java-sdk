@@ -12,24 +12,36 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>476600B1-C9E2-4245-A26F-DC7EA8071425</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of queried nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
     public static class DescribeEnsRegionIdResourceResponseBodyEnsRegionIdResourcesEnsRegionIdResource extends TeaModel {
         /**
          * <p>The region. Set the value to West.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>West</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The code of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300100</p>
          */
         @NameInMap("AreaCode")
         public String areaCode;
 
         /**
          * <p>The date when the transaction was processed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-30</p>
          */
         @NameInMap("BizDate")
         public String bizDate;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-telecom</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
@@ -112,29 +136,42 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
 
         /**
          * <p>The number of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
          * <p>The public bandwidth of the instance. Unit: Bits/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("InternetBandwidth")
         public Long internetBandwidth;
 
         /**
          * <p>The ISP. Valid values:</p>
-         * <br>
-         * <p>*   cmcc: China Mobile</p>
-         * <p>*   unicom: China Unicom</p>
-         * <p>*   telecom: China Telecom</p>
-         * <p>*   multiCarrier: multi-line ISP</p>
+         * <ul>
+         * <li>cmcc: China Mobile</li>
+         * <li>unicom: China Unicom</li>
+         * <li>telecom: China Telecom</li>
+         * <li>multiCarrier: multi-line ISP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cmcc</p>
          */
         @NameInMap("Isp")
         public String isp;
 
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("VCpu")
         public Integer VCpu;

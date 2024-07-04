@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class AddNetworkInterfaceToInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to specify the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoStart")
     public Boolean autoStart;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourInstance ID</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The network. The value is a JSON string. Only IPv6 is supported. Sample code of an IPv6 network: [{ "ipType": "public", "ipAddressType": "ipv6" }]</p>
-     * <br>
+     * <p>The network. The value is a JSON string. Only IPv6 is supported. Sample code of an IPv6 network: [{ &quot;ipType&quot;: &quot;public&quot;, &quot;ipAddressType&quot;: &quot;ipv6&quot; }]</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;ipType&quot;: &quot;public&quot;, &quot;ipAddressType&quot;: &quot;ipv6&quot; }]</p>
      */
     @NameInMap("Networks")
     public String networks;

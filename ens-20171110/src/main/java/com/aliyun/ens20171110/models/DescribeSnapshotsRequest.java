@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeSnapshotsRequest extends TeaModel {
     /**
      * <p>The ID of the disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-bp67acfmxazb4p****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
-     * <p>The region ID of the disk. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/25609.html) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the disk. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the snapshot. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-bp67acfmxazb4p****</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

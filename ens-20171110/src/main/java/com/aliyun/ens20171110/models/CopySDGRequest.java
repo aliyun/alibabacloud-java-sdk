@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class CopySDGRequest extends TeaModel {
     /**
      * <p>The destination nodes.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionIds")
@@ -14,8 +13,10 @@ public class CopySDGRequest extends TeaModel {
 
     /**
      * <p>The ID of the SDG that you want to copy.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdg-xxx</p>
      */
     @NameInMap("SDGId")
     public String SDGId;

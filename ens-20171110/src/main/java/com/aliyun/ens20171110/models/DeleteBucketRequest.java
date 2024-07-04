@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteBucketRequest extends TeaModel {
     /**
      * <p>The name of the bucket that you want to delete. You can delete only one bucket at a time.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("BucketName")
     public String bucketName;

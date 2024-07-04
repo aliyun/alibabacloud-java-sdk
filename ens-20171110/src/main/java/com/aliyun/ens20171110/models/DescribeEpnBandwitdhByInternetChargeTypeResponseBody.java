@@ -6,31 +6,43 @@ import com.aliyun.tea.*;
 public class DescribeEpnBandwitdhByInternetChargeTypeResponseBody extends TeaModel {
     /**
      * <p>The bandwidth. Unit: bit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("BandwidthValue")
     public Long bandwidthValue;
 
     /**
      * <p>The metering method. Valid values:</p>
-     * <br>
-     * <p>*   BandwidthByDay: Pay by daily peak bandwidth</p>
-     * <p>*   95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</p>
-     * <p>*   PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</p>
-     * <p>*   PayByBandwidth: Pay by fixed bandwidth</p>
-     * <br>
+     * <ul>
+     * <li>BandwidthByDay: Pay by daily peak bandwidth</li>
+     * <li>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</li>
+     * <li>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</li>
+     * <li>PayByBandwidth: Pay by fixed bandwidth</li>
+     * </ul>
      * <p>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BandwidthByDay</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>216BCED0-E055-5DDB-8E06-4084A62A4A44</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The timestamp when the monitoring data was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-10-12T05:45:00Z</p>
      */
     @NameInMap("TimeStamp")
     public String timeStamp;

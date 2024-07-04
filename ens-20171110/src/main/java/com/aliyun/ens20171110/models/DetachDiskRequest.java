@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DetachDiskRequest extends TeaModel {
     /**
      * <p>The ID of the disk.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-5r7v69e0bejrnzger09w7****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5inkeimcipxk26yqtzm4q****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

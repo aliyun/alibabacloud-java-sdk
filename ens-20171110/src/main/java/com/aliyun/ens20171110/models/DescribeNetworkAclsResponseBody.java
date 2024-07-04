@@ -12,24 +12,36 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1707FC0-430C-423A-B624-284046B20399</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -82,68 +94,99 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     public static class DescribeNetworkAclsResponseBodyNetworkAclsEgressAclEntries extends TeaModel {
         /**
          * <p>The destination CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
          * <p>The description of the outbound rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is EgressAclEntries.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the outbound rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae-a2d447uw4tillfvgb****</p>
          */
         @NameInMap("NetworkAclEntryId")
         public String networkAclEntryId;
 
         /**
          * <p>The name of the outbound rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-2</p>
          */
         @NameInMap("NetworkAclEntryName")
         public String networkAclEntryName;
 
         /**
          * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
-         * <br>
-         * <p>*   **accept**: allows the network traffic.</p>
-         * <p>*   **drop**: blocks the network traffic.</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows the network traffic.</li>
+         * <li><strong>drop</strong>: blocks the network traffic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
          * <p>The destination port range of the outbound rule.</p>
-         * <br>
-         * <p>*   If **Protocol** of the outbound rule is set to **all** or **icmp** the port range is **-1/-1**, which indicates all ports.</p>
-         * <p>*   If **Protocol** of the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1 to 65535**.</p>
+         * <ul>
+         * <li>If <strong>Protocol</strong> of the outbound rule is set to <strong>all</strong> or <strong>icmp</strong> the port range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * <li>If <strong>Protocol</strong> of the outbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is in the following format: <strong>1/200</strong> or <strong>80/80</strong>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <strong>1 to 65535</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1/-1</p>
          */
         @NameInMap("PortRange")
         public String portRange;
 
         /**
-         * <p>The priority of the rule. Valid values: **1 to 100**. Default value: **1**.</p>
+         * <p>The priority of the rule. Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The protocol type. Valid values:</p>
-         * <br>
-         * <p>*   **icmp**: ICMP.</p>
-         * <p>*   **tcp**: TCP.</p>
-         * <p>*   **udp**: UDP.</p>
-         * <p>*   **all**: all protocols.</p>
+         * <ul>
+         * <li><strong>icmp</strong>: ICMP.</li>
+         * <li><strong>tcp</strong>: TCP.</li>
+         * <li><strong>udp</strong>: UDP.</li>
+         * <li><strong>all</strong>: all protocols.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **system**: The rule is created by the system.</p>
-         * <p>*   **custom**: The rule is created by a user.</p>
+         * <ul>
+         * <li><strong>system</strong>: The rule is created by the system.</li>
+         * <li><strong>custom</strong>: The rule is created by a user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("Type")
         public String type;
@@ -230,68 +273,99 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     public static class DescribeNetworkAclsResponseBodyNetworkAclsIngressAclEntries extends TeaModel {
         /**
          * <p>The source CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/24</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
          * <p>The description of the inbound rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is IngressAclEntries.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the inbound rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae-5dk86arlydmezasw****</p>
          */
         @NameInMap("NetworkAclEntryId")
         public String networkAclEntryId;
 
         /**
          * <p>The name of the inbound rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-3</p>
          */
         @NameInMap("NetworkAclEntryName")
         public String networkAclEntryName;
 
         /**
          * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
-         * <br>
-         * <p>*   **accept**: allows the network traffic.</p>
-         * <p>*   **drop**: blocks the network traffic.</p>
+         * <ul>
+         * <li><strong>accept</strong>: allows the network traffic.</li>
+         * <li><strong>drop</strong>: blocks the network traffic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>accept</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
          * <p>The destination port range of the inbound rule.</p>
-         * <br>
-         * <p>*   If **Protocol** of the inbound rule is set to **all** or **icmp**, the port range is **-1/-1**, which indicates all ports.</p>
-         * <p>*   If **Protocol** of the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1 to 65535**.</p>
+         * <ul>
+         * <li>If <strong>Protocol</strong> of the inbound rule is set to <strong>all</strong> or <strong>icmp</strong>, the port range is <strong>-1/-1</strong>, which indicates all ports.</li>
+         * <li>If <strong>Protocol</strong> of the inbound rule is set to <strong>tcp</strong> or <strong>udp</strong>, the port range is in the following format: <strong>1/200</strong> or <strong>80/80</strong>. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: <strong>1 to 65535</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1/-1</p>
          */
         @NameInMap("PortRange")
         public String portRange;
 
         /**
-         * <p>The priority of the rule. Valid values: **1 to 100**. Default value: **1**.</p>
+         * <p>The priority of the rule. Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The protocol type. Valid values:</p>
-         * <br>
-         * <p>*   **icmp**: ICMP.</p>
-         * <p>*   **tcp**: TCP.</p>
-         * <p>*   **udp**: UDP.</p>
-         * <p>*   **all**: all protocols.</p>
+         * <ul>
+         * <li><strong>icmp</strong>: ICMP.</li>
+         * <li><strong>tcp</strong>: TCP.</li>
+         * <li><strong>udp</strong>: UDP.</li>
+         * <li><strong>all</strong>: all protocols.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The type of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **system**: The rule is created by the system.</p>
-         * <p>*   **custom**: The rule is created by a user.</p>
+         * <ul>
+         * <li><strong>system</strong>: The rule is created by the system.</li>
+         * <li><strong>custom</strong>: The rule is created by a user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("Type")
         public String type;
@@ -378,28 +452,41 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     public static class DescribeNetworkAclsResponseBodyNetworkAclsResources extends TeaModel {
         /**
          * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-fuzhou-telecom</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The ID of the associated resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the associated resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Network</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The association status of the resource. Valid values:</p>
-         * <br>
-         * <p>*   **BINDED**: The resource is associated with the network ACL.</p>
-         * <p>*   **BINDING**: The resource is being associated with the network ACL.</p>
-         * <p>*   **UNBINDING**: The resource is being disassociated from the network ACL.</p>
+         * <ul>
+         * <li><strong>BINDED</strong>: The resource is associated with the network ACL.</li>
+         * <li><strong>BINDING</strong>: The resource is being associated with the network ACL.</li>
+         * <li><strong>UNBINDING</strong>: The resource is being disassociated from the network ACL.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BINDING</p>
          */
         @NameInMap("Status")
         public String status;
@@ -445,13 +532,19 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
     public static class DescribeNetworkAclsResponseBodyNetworkAcls extends TeaModel {
         /**
-         * <p>The time when the network ACL was created. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the network ACL was created. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-01T06:08:46Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is my NetworkAcl.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -470,12 +563,18 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-a2do9e413e0spxscd****</p>
          */
         @NameInMap("NetworkAclId")
         public String networkAclId;
 
         /**
          * <p>The name of the network ACL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl-8</p>
          */
         @NameInMap("NetworkAclName")
         public String networkAclName;
@@ -488,9 +587,13 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the network ACL. Valid values:</p>
-         * <br>
-         * <p>*   **Available**: The network ACL is available.</p>
-         * <p>*   **Modifying**: The network ACL is being configured.</p>
+         * <ul>
+         * <li><strong>Available</strong>: The network ACL is available.</li>
+         * <li><strong>Modifying</strong>: The network ACL is being configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;

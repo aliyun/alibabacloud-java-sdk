@@ -6,54 +6,81 @@ import com.aliyun.tea.*;
 public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
     /**
      * <p>The number of resources that you can purchase.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>84</p>
      */
     @NameInMap("AvaliableCount")
     public Integer avaliableCount;
 
     /**
      * <p>The number of vCPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Cores")
     public Integer cores;
 
     /**
      * <p>The size of the data disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("DataDiskSize")
     public Integer dataDiskSize;
 
     /**
      * <p>The ID of the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-suzhou-telecom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ens.sn1.stiny</p>
      */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
     /**
      * <p>The memory size. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2048</p>
      */
     @NameInMap("Memory")
     public Integer memory;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>007833C8-E819-4122-B636-0D48D7BF6DFB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The reasons for resource scarcity</p>
+     * 
+     * <strong>example:</strong>
+     * <p>StockNotEnough</p>
      */
     @NameInMap("ResourceGap")
     public String resourceGap;
 
     /**
      * <p>The size of the system disk. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;

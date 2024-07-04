@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateClassicNetworkResponseBody extends TeaModel {
     /**
      * <p>The ID of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-5s9ayrxsd9hszrlt5fgv2****</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A004E06-AC1B-5806-BA5E-41AB6B02DE83</p>
      */
     @NameInMap("RequestId")
     public String requestId;

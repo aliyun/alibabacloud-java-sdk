@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDisksResponseBody extends TeaModel {
     /**
      * <p>The returned service code. 0 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,24 +21,36 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries returned per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -96,65 +111,95 @@ public class DescribeDisksResponseBody extends TeaModel {
     public static class DescribeDisksResponseBodyDisksDisks extends TeaModel {
         /**
          * <p>The category of the disk.</p>
-         * <br>
-         * <p>*   cloud_efficiency: ultra disk.</p>
-         * <p>*   cloud_ssd: all-flash disk.</p>
-         * <p>*   local_hdd: local HDD.</p>
-         * <p>*   local_ssd: local SSD.</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: all-flash disk.</li>
+         * <li>local_hdd: local HDD.</li>
+         * <li>local_ssd: local SSD.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>local_ssd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The time when the disk was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-11T14:34:55+08:00</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The billing method of the cloud disk or local disk. Valid values:</p>
-         * <br>
-         * <p>*   **prepaid**: subscription.</p>
-         * <p>*   **postpaid**: pay-as-you-go.</p>
+         * <ul>
+         * <li><strong>prepaid</strong>: subscription.</li>
+         * <li><strong>postpaid</strong>: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>prepaid</p>
          */
         @NameInMap("DiskChargeType")
         public String diskChargeType;
 
         /**
          * <p>The ID of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-5svum1dx1w4a4spr54lgr****</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
          * <p>The name of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fvt-ecs-5cf0****</p>
          */
         @NameInMap("DiskName")
         public String diskName;
 
         /**
          * <p>Indicates whether the cloud disk is encrypted. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         @NameInMap("Encrypted")
         public Boolean encrypted;
 
         /**
          * <p>The ID of the Key Management Service (KMS) key that is used for the cloud disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05467897a-4262-4802-b8cb-00d3fb40****</p>
          */
         @NameInMap("EncryptedKeyId")
         public String encryptedKeyId;
 
         /**
          * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou-10</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5t77rb0yoz79m28ku60sx****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -167,55 +212,76 @@ public class DescribeDisksResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the cloud disk or local disk is removable. Valid values:</p>
-         * <br>
-         * <p>*   true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.</p>
-         * <p>*   false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.</p>
-         * <br>
-         * <p>If disks are of the following categories or types, the **Portable** value is **false** and the disks have the same lifecycle as their attached instances:</p>
-         * <br>
-         * <p>*   Local HDDs</p>
-         * <p>*   Local SSDs</p>
-         * <p>*   Data disks that use the subscription billing method</p>
+         * <ul>
+         * <li>true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.</li>
+         * <li>false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.</li>
+         * </ul>
+         * <p>If disks are of the following categories or types, the <strong>Portable</strong> value is <strong>false</strong> and the disks have the same lifecycle as their attached instances:</p>
+         * <ul>
+         * <li>Local HDDs</li>
+         * <li>Local SSDs</li>
+         * <li>Data disks that use the subscription billing method</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Portable")
         public Boolean portable;
 
         /**
          * <p>The serial number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("SerialId")
         public String serialId;
 
         /**
          * <p>The size of the disk. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
          * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp67acfmxazb4p****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The status of the disk. Valid values:</p>
-         * <br>
-         * <p>*   In-use: The disk is in use.</p>
-         * <p>*   Available: The disk can be attached.</p>
-         * <p>*   Attaching: The disk is being attached.</p>
-         * <p>*   Detaching: The disk is being detached.</p>
-         * <p>*   Creating: The disk is being created.</p>
-         * <p>*   ReIniting: The disk is being reset.</p>
+         * <ul>
+         * <li>In-use: The disk is in use.</li>
+         * <li>Available: The disk can be attached.</li>
+         * <li>Attaching: The disk is being attached.</li>
+         * <li>Detaching: The disk is being detached.</li>
+         * <li>Creating: The disk is being created.</li>
+         * <li>ReIniting: The disk is being reset.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the cloud disk or local disk. Valid values:</p>
-         * <br>
-         * <p>*   1: system disk.</p>
-         * <p>*   2: data disk.</p>
+         * <ul>
+         * <li>1: system disk.</li>
+         * <li>2: data disk.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Type")
         public String type;

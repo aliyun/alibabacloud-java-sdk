@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     /**
      * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C8B26B44-0189-443E-9816-D951F59623A9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +60,18 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     public static class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData extends TeaModel {
         /**
          * <p>The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.02</p>
          */
         @NameInMap("CPU")
         public String CPU;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourInstance ID</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

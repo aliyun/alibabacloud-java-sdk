@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class RollbackApplicationRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>474bdef0-d149-4695-abfb-52912d9143f0</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The current version number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v2-1</p>
      */
     @NameInMap("FromAppVersion")
     public String fromAppVersion;
 
     /**
      * <p>The timeout period of the asynchronous rollback operation. Unit: seconds. Default value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1800</p>
      */
     @NameInMap("Timeout")
     public Integer timeout;
 
     /**
      * <p>The target version number. By default, the system automatically rolls back the container version to the previous version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
      */
     @NameInMap("ToAppVersion")
     public String toAppVersion;

@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeDataDownloadURLRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>474bdef0-d149-4695-abfb-52912d9143f0</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the data file.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mirror_file/pk-1642597182026-878199448832413.tar</p>
      */
     @NameInMap("DataName")
     public String dataName;
 
     /**
      * <p>The version number of the data file.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7895</p>
      */
     @NameInMap("DataVersion")
     public String dataVersion;
 
     /**
      * <p>This parameter is reserved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
      */
     @NameInMap("ExpireTimeout")
     public Long expireTimeout;
 
     /**
      * <p>The condition that you want to use to filter file servers. You can specify multiple canary release policies. By default, all resources are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;name\&quot;: \&quot;ScheduleToRegionId\&quot;,\&quot;parameters\&quot;:{\&quot;operator\&quot;: \&quot;In\&quot;,\&quot;values\&quot;: [\&quot;cn-shijiazhuang-telecom_unicom_cmcc\&quot;]}}</p>
      */
     @NameInMap("ServerFilterStrategy")
     public String serverFilterStrategy;

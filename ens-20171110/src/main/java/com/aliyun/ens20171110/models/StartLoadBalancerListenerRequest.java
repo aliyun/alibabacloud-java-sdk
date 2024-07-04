@@ -5,38 +5,49 @@ import com.aliyun.tea.*;
 
 public class StartLoadBalancerListenerRequest extends TeaModel {
     /**
-     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You cannot specify port 250, 4789, or 4790 for UDP listeners. The preceding ports are system reserved ports.</p>
-     * <br>
-     * <p>*   We recommend that you use port 80 for HTTP.</p>
-     * <br>
-     * <p>*   We recommend that you use port 443 for HTTPS.</p>
-     * <br>
+     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You cannot specify port 250, 4789, or 4790 for UDP listeners. The preceding ports are system reserved ports.</p>
+     * </li>
+     * <li><p>We recommend that you use port 80 for HTTP.</p>
+     * </li>
+     * <li><p>We recommend that you use port 443 for HTTPS.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The frontend protocol that is used by the ELB instance. Valid values:</p>
-     * <br>
-     * <p>*   tcp</p>
-     * <p>*   udp</p>
-     * <p>*   http</p>
-     * <p>*   https</p>
-     * <br>
-     * <p>>  This parameter is required if the same port is used by listeners that use different protocols.</p>
+     * <ul>
+     * <li>tcp</li>
+     * <li>udp</li>
+     * <li>http</li>
+     * <li>https</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is required if the same port is used by listeners that use different protocols.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
      * <p>The ID of the ELB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5saivuir6b1mupxjfbhmk****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     /**
      * <p>The description of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription1</p>
      */
     @NameInMap("Description")
     public String description;
@@ -18,18 +21,27 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the destination security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1gxw6bznjjvhu3****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The name of the destination security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testSecurityGroupName2</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
@@ -82,60 +94,90 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     public static class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission extends TeaModel {
         /**
          * <p>The time at which the security group rule was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-12-12T07:28:38Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription1</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The range of destination IP addresses for outbound access control.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         @NameInMap("DestCidrIp")
         public String destCidrIp;
 
         /**
          * <p>The direction in which the security group rule is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ingress</p>
          */
         @NameInMap("Direction")
         public String direction;
 
         /**
          * <p>The transport layer protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
         /**
          * <p>The policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Accept</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
          * <p>The source port range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80/80</p>
          */
         @NameInMap("PortRange")
         public String portRange;
 
         /**
          * <p>The priority of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
          * <p>The range of source IP addresses for inbound access control.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
 
         /**
          * <p>The source port number range for the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22/22</p>
          */
         @NameInMap("SourcePortRange")
         public String sourcePortRange;

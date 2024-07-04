@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class SetBackendServersRequest extends TeaModel {
     /**
      * <p>The list of backend servers that you want to add. You can modify at most 20 backend servers.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
@@ -14,8 +13,10 @@ public class SetBackendServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5s7crik3yo3bp03gqrbp5****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -44,27 +45,36 @@ public class SetBackendServersRequest extends TeaModel {
     public static class SetBackendServersRequestBackendServers extends TeaModel {
         /**
          * <p>The ID of the instance that you want to use as the backend server.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5ze0o05xccvbljtn****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The type of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ens**: ENS instance.</p>
-         * <p>*   **eni**: Elastic Network Interface (ENI) instance.</p>
+         * <ul>
+         * <li><strong>ens</strong>: ENS instance.</li>
+         * <li><strong>eni</strong>: Elastic Network Interface (ENI) instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ens</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server. Default value: 100. Valid values: **0** to **100**.</p>
-         * <br>
-         * <p>>  The value 0 indicates that requests are not forwarded to the backend server.</p>
-         * <br>
+         * <p>The weight of the backend server. Default value: 100. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+         * <blockquote>
+         * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Weight")
         public Integer weight;

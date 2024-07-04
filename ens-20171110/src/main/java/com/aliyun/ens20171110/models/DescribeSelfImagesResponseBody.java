@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSelfImagesResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A8B8EB73-B4FD-4262-8EF6-680DF39C9BA0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,94 +60,134 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
     public static class DescribeSelfImagesResponseBodyImagesImage extends TeaModel {
         /**
          * <p>The image architecture. Valid values:</p>
-         * <br>
-         * <p>*   i386</p>
-         * <p>*   x86_64</p>
+         * <ul>
+         * <li>i386</li>
+         * <li>x86_64</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x86_64</p>
          */
         @NameInMap("Architecture")
         public String architecture;
 
         /**
          * <p>Computing type. ens_vm/ens: x86 computing. bare_metal: x86 bare machine or x86 bare metal. arm_vm: ARM computing. arm_bare_metal: ARM bare machine or ARM bare metal. pcfarm: heterogeneous computing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens_vm</p>
          */
         @NameInMap("ComputeType")
         public String computeType;
 
         /**
          * <p>The image creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-08T12:10:03Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_a****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_a****</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The source of the image. Valid values:</p>
-         * <br>
-         * <p>*   **system**: public images</p>
-         * <p>*   **self**: your custom images</p>
+         * <ul>
+         * <li><strong>system</strong>: public images</li>
+         * <li><strong>self</strong>: your custom images</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
 
         /**
          * <p>The size of the image. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ImageSize")
         public String imageSize;
 
         /**
          * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5iqczfxps7csjrxeca****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The operating system version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.2</p>
          */
         @NameInMap("OsVersion")
         public String osVersion;
 
         /**
          * <p>The platform.</p>
-         * <br>
-         * <p>*   centos</p>
-         * <p>*   ubuntu</p>
-         * <p>*   alios</p>
-         * <p>*   debian</p>
-         * <p>*   rhel</p>
-         * <p>*   windows</p>
+         * <ul>
+         * <li>centos</li>
+         * <li>ubuntu</li>
+         * <li>alios</li>
+         * <li>debian</li>
+         * <li>rhel</li>
+         * <li>windows</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>centos</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-5yt3bdedxzdz6t6uuw****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The state of the image.</p>
-         * <br>
-         * <p>*   Creating.</p>
-         * <p>*   Packing.</p>
-         * <p>*   Uploading.</p>
-         * <p>*   Pack_failed.</p>
-         * <p>*   Upload_failed.</p>
-         * <p>*   Available: Only images in the Available state can be used and operated.</p>
-         * <p>*   Unavailable.</p>
-         * <p>*   Copying.</p>
+         * <ul>
+         * <li>Creating.</li>
+         * <li>Packing.</li>
+         * <li>Uploading.</li>
+         * <li>Pack_failed.</li>
+         * <li>Upload_failed.</li>
+         * <li>Available: Only images in the Available state can be used and operated.</li>
+         * <li>Unavailable.</li>
+         * <li>Copying.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Creating</p>
          */
         @NameInMap("Status")
         public String status;

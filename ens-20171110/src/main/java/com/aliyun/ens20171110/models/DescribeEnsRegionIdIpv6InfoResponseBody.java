@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3703C4AC-9396-458C-8F25-1D701334D309</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
     public static class DescribeEnsRegionIdIpv6InfoResponseBodySupportIpv6Info extends TeaModel {
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-xxxx-4</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>Specifies whether IPv6 is supported. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportIpv6")
         public Boolean supportIpv6;

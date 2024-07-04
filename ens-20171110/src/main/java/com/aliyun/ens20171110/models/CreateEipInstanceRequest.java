@@ -6,52 +6,71 @@ import com.aliyun.tea.*;
 public class CreateEipInstanceRequest extends TeaModel {
     /**
      * <p>The peak bandwidth of the EIP. Default value: 5. Valid values: 5 to 10000. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
     /**
      * <p>The description of the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-suzhou-telecom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
-     * <p>The billing method of the EIP. Set the value to **PostPaid**.</p>
-     * <br>
+     * <p>The billing method of the EIP. Set the value to <strong>PostPaid</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The metering method of the EIP. Set the value to **95BandwidthByMonth**.</p>
-     * <br>
+     * <p>The metering method of the EIP. Set the value to <strong>95BandwidthByMonth</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95BandwidthByMonth</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The Internet service provider. Valid values:</p>
-     * <br>
-     * <p>*   **cmcc**: China Mobile</p>
-     * <p>*   **unicom**: China Unicom</p>
-     * <p>*   **telecom**: China Telecom</p>
+     * <ul>
+     * <li><strong>cmcc</strong>: China Mobile</li>
+     * <li><strong>unicom</strong>: China Unicom</li>
+     * <li><strong>telecom</strong>: China Telecom</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cmcc</p>
      */
     @NameInMap("Isp")
     public String isp;
 
     /**
      * <p>The name of the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EIP1</p>
      */
     @NameInMap("Name")
     public String name;

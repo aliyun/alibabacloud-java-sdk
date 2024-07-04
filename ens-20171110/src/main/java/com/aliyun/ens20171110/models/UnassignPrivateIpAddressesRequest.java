@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
     /**
      * <p>The ID of the ENI.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-f8z57orgmt6d144t20dw</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
     /**
      * <p>The secondary private IP addresses that you want to unassign.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PrivateIpAddress")

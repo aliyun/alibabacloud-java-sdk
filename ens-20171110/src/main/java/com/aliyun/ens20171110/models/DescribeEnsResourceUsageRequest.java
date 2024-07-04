@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeEnsResourceUsageRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-06-15T09:07:23Z</p>
      */
     @NameInMap("ExpiredEndTime")
     public String expiredEndTime;
 
     /**
      * <p>The beginning of the time range to query. Format: yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-06-15T09:07:23Z</p>
      */
     @NameInMap("ExpiredStartTime")
     public String expiredStartTime;

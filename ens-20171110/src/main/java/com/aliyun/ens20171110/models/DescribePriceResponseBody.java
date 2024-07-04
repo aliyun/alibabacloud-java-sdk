@@ -12,6 +12,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>694EB8FF-446C-5B1E-8146-9629E492551F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,27 +43,40 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
          * <p>The type of currency.</p>
-         * <br>
-         * <p>*   USD: US dollar</p>
-         * <p>*   JPY: Japanese Yen</p>
+         * <ul>
+         * <li>USD: US dollar</li>
+         * <li>JPY: Japanese Yen</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USD</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The discount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16125.00</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
         /**
          * <p>The final price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>126.75</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;

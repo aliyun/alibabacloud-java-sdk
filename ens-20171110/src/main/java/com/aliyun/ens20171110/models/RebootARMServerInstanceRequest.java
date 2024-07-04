@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RebootARMServerInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cas-instance****</p>
      */
     @NameInMap("ServerId")
     public String serverId;

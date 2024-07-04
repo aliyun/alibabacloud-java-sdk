@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class JoinSecurityGroupRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4ph***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-58z57orgmt6d1****</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
     /**
      * <p>The ID of the security group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4ph***</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

@@ -12,55 +12,81 @@ public class DescribeAICImagesRequest extends TeaModel {
 
     /**
      * <p>The image ID of the AIC instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-ad0ddaddc2d54adeaa09b7c0f1e****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The type of the image. Valid values:</p>
-     * <br>
-     * <p>*   **public**: public image</p>
-     * <p>*   **private**: custom image</p>
+     * <ul>
+     * <li><strong>public</strong>: public image</li>
+     * <li><strong>private</strong>: custom image</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>public</p>
      */
     @NameInMap("ImageType")
     public String imageType;
 
     /**
      * <p>The URL of the AIC image repository.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>****.alibaba-inc.com/aic/socimage:test</p>
      */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
     /**
      * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-02-02</p>
      */
     @NameInMap("MaxDate")
     public String maxDate;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-01-02</p>
      */
     @NameInMap("MinDate")
     public String minDate;
 
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. The maximum value is **100**. Default value: **10**.</p>
+     * <p>The number of entries per page. The maximum value is <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The status of the image. Valid values:</p>
-     * <br>
-     * <p>*   **verifying**</p>
-     * <p>*   **disable**</p>
-     * <p>*   **available**</p>
+     * <ul>
+     * <li><strong>verifying</strong></li>
+     * <li><strong>disable</strong></li>
+     * <li><strong>available</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>available</p>
      */
     @NameInMap("Status")
     public String status;

@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The information about the EIPs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;eip-5rd9i3pftfgbavl4y1b7hm4a3\&quot;]</p>
      */
     @NameInMap("Eips")
     public String eips;
 
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-nanjing-cmcc</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;

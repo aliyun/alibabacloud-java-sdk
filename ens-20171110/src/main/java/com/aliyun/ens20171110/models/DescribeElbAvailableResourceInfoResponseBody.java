@@ -12,6 +12,9 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25AAD194-4A37-51CF-B1CA-1E86FDAC23A6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     public static class DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo extends TeaModel {
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SouthEast</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The number of resources that you can purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CanBuyCount")
         public String canBuyCount;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangdong-10</p>
          */
         @NameInMap("EnName")
         public String enName;
 
         /**
          * <p>The ID of the Edge Node Service (ENS) node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangdong-10</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
@@ -70,12 +85,18 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
 
         /**
          * <p>The Chinese name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The province where the node is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Shanghai</p>
          */
         @NameInMap("Province")
         public String province;

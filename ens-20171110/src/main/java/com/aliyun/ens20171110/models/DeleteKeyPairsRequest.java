@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteKeyPairsRequest extends TeaModel {
     /**
      * <p>The ID of the SSH key pair.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ssh-5lywanlkih1zo9yl8eg****</p>
      */
     @NameInMap("KeyPairId")
     public String keyPairId;
 
     /**
      * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
-     * <br>
-     * <p>*   The name must be 2 to 128 characters in length.</p>
-     * <p>*   The name must start with a letter and cannot start with `http://` or `https://`.</p>
-     * <p>*   The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * <br>
+     * <ul>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * </ul>
      * <p>Before you delete a key pair, you can call the DescribeKeyPairs operation to query existing key pairs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestKeyPairName</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;

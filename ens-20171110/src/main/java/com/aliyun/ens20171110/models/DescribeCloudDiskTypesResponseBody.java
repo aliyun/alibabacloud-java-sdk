@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCloudDiskTypesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>77990CEE-B714-5702-BDE6-943F702277DD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
     public static class DescribeCloudDiskTypesResponseBodySupportResourcesSupportResource extends TeaModel {
         /**
          * <p>The category of the disk.</p>
-         * <br>
-         * <p>*   cloud_efficiency: ultra disk.</p>
-         * <p>*   cloud_ssd: all-flash disk.</p>
-         * <p>*   local_hdd: local HDD.</p>
-         * <p>*   local_ssd: local SSD.</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: all-flash disk.</li>
+         * <li>local_hdd: local HDD.</li>
+         * <li>local_ssd: local SSD.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-guangzhou-10</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;

@@ -6,52 +6,74 @@ import com.aliyun.tea.*;
 public class CreateSnatEntryRequest extends TeaModel {
     /**
      * <p>The ID of the Network Address Translation (NAT) gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nat-5tawjw5j7sgd2deujxuk0****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
-     * <p>The name of the SNAT entry. The name must be 1 to 128 characters in length. The name cannot start with `http://` or `https://`.</p>
+     * <p>The name of the SNAT entry. The name must be 1 to 128 characters in length. The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test0</p>
      */
     @NameInMap("SnatEntryName")
     public String snatEntryName;
 
     /**
      * <p>The elastic IP address (EIP) in the SNAT entry. Separate multiple EIPs with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120.XXX.XXX.71</p>
      */
     @NameInMap("SnatIp")
     public String snatIp;
 
     /**
      * <p>The CIDR block. You can specify the CIDR block of a network, a vSwitch, or an instance. You can also specify a custom CIDR block. All instances within the CIDR block can access the Internet or external networks by using SNAT.</p>
-     * <br>
-     * <p>>  If you specify **SourceVSwitchId** and **SourceCIDR**, **SourceVSwitchId** does not take effect. The value that you specified for **SourceCIDR** takes precedence.</p>
+     * <blockquote>
+     * <p> If you specify <strong>SourceVSwitchId</strong> and <strong>SourceCIDR</strong>, <strong>SourceVSwitchId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("SourceCIDR")
     public String sourceCIDR;
 
     /**
      * <p>The ID of the network. This parameter specifies that all ENS instances in the network can use the SNAT entry to access the Internet.</p>
-     * <br>
-     * <p>>  If you specify **SourceNetworkId** and **SourceVSwitchId** or **SourceCIDR**, **SourceNetworkId** does not take effect. The value that you specified for **SourceCIDR** takes precedence. Priority: **SourceCIDR** > **SourceVSwitchId** > **SourceNetworkId**.</p>
+     * <blockquote>
+     * <p> If you specify <strong>SourceNetworkId</strong> and <strong>SourceVSwitchId</strong> or <strong>SourceCIDR</strong>, <strong>SourceNetworkId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence. Priority: <strong>SourceCIDR</strong> &gt; <strong>SourceVSwitchId</strong> &gt; <strong>SourceNetworkId</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>n-2zeuphj08tt7q3brd****</p>
      */
     @NameInMap("SourceNetworkId")
     public String sourceNetworkId;
 
     /**
      * <p>The ID of the vSwitch that you need to access over the Internet. This parameter specifies that Edge Node Service (ENS) instances in the vSwitch can use the SNAT entry to access the Internet.</p>
-     * <br>
-     * <p>>  If you specify **SourceVSwitchId** and **SourceCIDR**, **SourceVSwitchId** does not take effect. The value that you specified for **SourceCIDR** takes precedence.</p>
+     * <blockquote>
+     * <p> If you specify <strong>SourceVSwitchId</strong> and <strong>SourceCIDR</strong>, <strong>SourceVSwitchId</strong> does not take effect. The value that you specified for <strong>SourceCIDR</strong> takes precedence.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1hwx7gi495q260p****</p>
      */
     @NameInMap("SourceVSwitchId")
     public String sourceVSwitchId;
 
     /**
      * <p>The secondary EIP in the SNAT entry. Separate multiple secondary EIPs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101.XXX.XXX.7</p>
      */
     @NameInMap("StandbySnatIp")
     public String standbySnatIp;

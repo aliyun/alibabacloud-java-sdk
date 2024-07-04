@@ -6,48 +6,65 @@ import com.aliyun.tea.*;
 public class CreateEnsRouteEntryRequest extends TeaModel {
     /**
      * <p>The description of the custom route entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The destination CIDR block of the custom route entry. Make sure that the destination CIDR block meets the following requirements:</p>
-     * <br>
-     * <p>*   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</p>
-     * <p>*   The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.</p>
-     * <p>*   0.0.0.0/0 indicates the default CIDR block.</p>
-     * <br>
+     * <ul>
+     * <li>The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.</li>
+     * <li>The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.</li>
+     * <li>0.0.0.0/0 indicates the default CIDR block.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.0.0/0</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
      * <p>The ID of the next hop of the custom route entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5vb7leks9z4mxy1ay258</p>
      */
     @NameInMap("NextHopId")
     public String nextHopId;
 
     /**
      * <p>The type of next hop of the custom route entry. Valid values:</p>
-     * <br>
-     * <p>*   Instance (default): an ENS instance.</p>
+     * <ul>
+     * <li>Instance (default): an ENS instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;
 
     /**
      * <p>The name of the custom route entry that you want to add. The name must be 1 to 128 characters in length. It cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("RouteEntryName")
     public String routeEntryName;
 
     /**
      * <p>The ID of the route table to which you want to add a custom route entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vtb-bp1cifr72dioje82lse2j</p>
      */
     @NameInMap("RouteTableId")
     public String routeTableId;

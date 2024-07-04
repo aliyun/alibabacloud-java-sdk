@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ResizeDiskRequest extends TeaModel {
     /**
      * <p>The ID of the disk that you want to resize.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-5tzm9wnhzlhjzcbtxo465****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
      * <p>The size of the disk that you want to resize. Unit: GiB.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("NewSize")
     public String newSize;

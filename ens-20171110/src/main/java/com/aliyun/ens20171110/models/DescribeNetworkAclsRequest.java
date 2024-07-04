@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeNetworkAclsRequest extends TeaModel {
     /**
      * <p>The ID of the network ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacl-bp1lhl0taikrbgnh****</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
     /**
      * <p>The name of the network ACL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-1</p>
      */
     @NameInMap("NetworkAclName")
     public String networkAclName;
 
     /**
-     * <p>The page number. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the associated instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-5****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

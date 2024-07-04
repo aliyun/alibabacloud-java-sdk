@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class ListObjectsResponseBody extends TeaModel {
     /**
      * <p>The name of the bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
-     * <p>The container for all object names between Prefix and the next occurrence of the string specified by a delimiter. A response can contain CommonPrefixes only if you specify a delimiter.</p>
+     * <p>If the delimiter parameter is specified in the request, the response contains CommonPrefixes. Objects whose names contain the same string from the prefix to the next occurrence of the delimiter are grouped as a single result element in CommonPrefixes.</p>
      */
     @NameInMap("CommonPrefixes")
     public java.util.List<String> commonPrefixes;
@@ -24,69 +27,103 @@ public class ListObjectsResponseBody extends TeaModel {
 
     /**
      * <p>The token used in this list operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1.txt</p>
      */
     @NameInMap("ContinuationToken")
     public String continuationToken;
 
     /**
      * <p>The character used to group objects by name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
      */
     @NameInMap("Delimiter")
     public String delimiter;
 
     /**
      * <p>The encoding type of the object names in the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>N/A</p>
      */
     @NameInMap("EncodingType")
     public String encodingType;
 
     /**
      * <p>Indicates whether the listed objects are truncated. Valid values:</p>
-     * <br>
-     * <p>*   **false**</p>
-     * <p>*   **true**</p>
+     * <ul>
+     * <li><strong>false</strong></li>
+     * <li><strong>true</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The number of objects returned for this request.</p>
+     * <p>The number of keys returned for this request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("KeyCount")
     public Long keyCount;
 
     /**
      * <p>The position from which the list operation starts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ceshi.txt1617853707991</p>
      */
     @NameInMap("Marker")
     public String marker;
 
     /**
      * <p>The maximum number of objects returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxKeys")
     public Long maxKeys;
 
     /**
      * <p>The token used in the next list operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CgJiYw--</p>
      */
     @NameInMap("NextContinuationToken")
     public String nextContinuationToken;
 
     /**
      * <p>The position from which the next list operation starts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ceshi.txt1617853707991</p>
      */
     @NameInMap("NextMarker")
     public String nextMarker;
 
     /**
      * <p>The prefix contained in the names of returned objects.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b</p>
      */
     @NameInMap("Prefix")
     public String prefix;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4833C4AC-9396-458C-8F25-1D701334E560</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -211,28 +248,41 @@ public class ListObjectsResponseBody extends TeaModel {
     public static class ListObjectsResponseBodyContents extends TeaModel {
         /**
          * <p>The entity tag (ETag). When an object is created, an ETag is created to identify the content of the object.</p>
-         * <br>
-         * <p>*   For an object that is created by calling the PutObject operation, the ETag value of the object is the MD5 hash of the object content.</p>
-         * <p>*   If an object is created by using other methods, the ETag value of the object is the UUID of the object content.</p>
-         * <p>*   The ETag of an object can be used to check whether the object content is modified. However, we recommend that you use the MD5 hash of an object rather than the ETag value of the object to verify data integrity.</p>
+         * <ul>
+         * <li>For an object that is created by calling the PutObject operation, the ETag value of the object is the MD5 hash of the object content.</li>
+         * <li>For an object that is not created by calling the PutObject operation, the ETag value of the object is the UUID of the object content.</li>
+         * <li>The ETag of an object can be used to check whether the object content is modified. However, we recommend that you use the MD5 hash of an object rather than the ETag value of the object to verify data integrity.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5B3C1A2E053D763E1B002CC607C5****</p>
          */
         @NameInMap("ETag")
         public String ETag;
 
         /**
          * <p>The name of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceshi.txt1617853706546</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The time when the object was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-08T03:48:47.488Z</p>
          */
         @NameInMap("LastModified")
         public String lastModified;
 
         /**
          * <p>The size of the returned object. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("Size")
         public Long size;

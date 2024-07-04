@@ -4,39 +4,78 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class BucketInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>private</p>
+     */
     @NameInMap("BucketAcl")
     public String bucketAcl;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bucket001</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>this is a bucket</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2011-12-01T12:27:13.000Z</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LRS</p>
+     */
     @NameInMap("DataRedundancyType")
     public String dataRedundancyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>global</p>
+     */
     @NameInMap("DispatcherType")
     public String dispatcherType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eos.aliyuncs.com</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2011-12-01T12:27:13.000Z</p>
+     */
     @NameInMap("ModifyTime")
     public String modifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>general</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Standard</p>
+     */
     @NameInMap("StorageClass")
     public String storageClass;
 

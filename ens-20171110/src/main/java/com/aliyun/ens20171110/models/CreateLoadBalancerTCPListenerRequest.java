@@ -5,139 +5,197 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     /**
-     * <p>The backend port that is used by the ELB instance. Valid values: **1** to **65535**.</p>
+     * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
 
     /**
-     * <p>The description of the listener. The description must be **1** to **80** characters in length.</p>
-     * <br>
-     * <p>>  The value cannot start with `http://` or `https://`.</p>
+     * <p>The description of the listener. The description must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <blockquote>
+     * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether to enable Elastic IP address (EIP) pass-through. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off** (default)</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("EipTransmit")
     public String eipTransmit;
 
     /**
-     * <p>The timeout period of a connection. Valid values: **10** to **900**. Default value: **900**. Unit: seconds.</p>
+     * <p>The timeout period of a connection. Valid values: <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("EstablishedTimeout")
     public Integer establishedTimeout;
 
     /**
-     * <p>The port that is used for health checks. Valid values: **1** to **65535**. If you leave this parameter empty, the port specified for BackendServerPort is used for health checks.</p>
+     * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified for BackendServerPort is used for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("HealthCheckConnectPort")
     public Integer healthCheckConnectPort;
 
     /**
      * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
-     * <br>
-     * <p>*   Default value: 5.</p>
-     * <p>*   Valid values: **1** to **300**.</p>
-     * <p>*   Unit: seconds.</p>
-     * <br>
-     * <p>>  If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.</p>
+     * <ul>
+     * <li>Default value: 5.</li>
+     * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
+     * <li>Unit: seconds.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("HealthCheckConnectTimeout")
     public Integer healthCheckConnectTimeout;
 
     /**
      * <p>The domain name that you want to use for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
      */
     @NameInMap("HealthCheckDomain")
     public String healthCheckDomain;
 
     /**
      * <p>The HTTP status codes for a successful health check. Valid values:</p>
-     * <br>
-     * <p>*   **http_2xx** (default)</p>
-     * <p>*   **http_3xx**.</p>
-     * <p>*   **http_4xx**</p>
-     * <p>*   **http_5xx**</p>
+     * <ul>
+     * <li><strong>http_2xx</strong> (default)</li>
+     * <li><strong>http_3xx</strong>.</li>
+     * <li><strong>http_4xx</strong></li>
+     * <li><strong>http_5xx</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>http_2xx</p>
      */
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
 
     /**
-     * <p>The interval at which health checks are performed. Valid values: **1** to **50**. Default value: **2**. Unit: seconds.</p>
+     * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>2</strong>. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
     /**
      * <p>The type of health checks. Valid values:</p>
-     * <br>
-     * <p>*   **tcp** (default)</p>
-     * <p>*   **http**</p>
+     * <ul>
+     * <li><strong>tcp</strong> (default)</li>
+     * <li><strong>http</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
     /**
-     * <p>The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be **1** to **80** characters in length.</p>
-     * <br>
-     * <p>>  The URL must start with `/` and contain characters other than `/`.</p>
+     * <p>The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
+     * <blockquote>
+     * <p> The URL must start with <code>/</code> and contain characters other than <code>/</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>/checkpreload.htm</p>
      */
     @NameInMap("HealthCheckURI")
     public String healthCheckURI;
 
     /**
-     * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: **2** to **10**. Default value: **3**.</p>
+     * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
     /**
-     * <p>The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.</p>
-     * <br>
+     * <p>The frontend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5ovkn1piwqmoqrfjdyhq4****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The timeout period of session persistence.</p>
-     * <br>
-     * <p>*   Default value: 0. If the default value is used, the system disables session persistence.</p>
-     * <p>*   Valid values: **0** to **3600**.</p>
-     * <p>*   Unit: seconds.</p>
+     * <ul>
+     * <li>Default value: 0. If the default value is used, the system disables session persistence.</li>
+     * <li>Valid values: <strong>0</strong> to <strong>3600</strong>.</li>
+     * <li>Unit: seconds.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("PersistenceTimeout")
     public Integer persistenceTimeout;
 
     /**
      * <p>The scheduling algorithm. Valid values:</p>
-     * <br>
-     * <p>*   **wrr** (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</p>
-     * <p>*   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</p>
-     * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
-     * <p>*   **sch**: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</p>
-     * <p>*   **qch**: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</p>
-     * <p>*   **iqch**: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</p>
+     * <ul>
+     * <li><strong>wrr</strong> (default): Backend servers with higher weights receive more requests than backend servers with lower weights.</li>
+     * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
+     * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+     * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+     * <li><strong>qch</strong>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</li>
+     * <li><strong>iqch</strong>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>wrr</p>
      */
     @NameInMap("Scheduler")
     public String scheduler;
 
     /**
-     * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: **2** to **10**. Default value: **3**.</p>
+     * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>. Default value: <strong>3</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;

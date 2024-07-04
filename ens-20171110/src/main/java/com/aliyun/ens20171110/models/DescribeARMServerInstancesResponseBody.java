@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeARMServerInstancesResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
     public static class DescribeARMServerInstancesResponseBodyServersAICInstancesNetworkAttributes extends TeaModel {
         /**
          * <p>The IP address of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The network ID of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-*****</p>
          */
         @NameInMap("NetworkId")
         public String networkId;
 
         /**
          * <p>The vSwitch ID of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -132,16 +153,23 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
     public static class DescribeARMServerInstancesResponseBodyServersAICInstancesSdgDeployInfo extends TeaModel {
         /**
          * <p>The ID of the SDG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-xxxxx</p>
          */
         @NameInMap("SDGId")
         public String SDGId;
 
         /**
          * <p>The deployment status of the SDG. Valid values:</p>
-         * <br>
-         * <p>*   **sdg_deploying**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **success**</p>
+         * <ul>
+         * <li><strong>sdg_deploying</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>success</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
@@ -172,30 +200,45 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
     public static class DescribeARMServerInstancesResponseBodyServersAICInstances extends TeaModel {
         /**
          * <p>The refresh rate of the AIC instance. Unit: Hz.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("Frequency")
         public Long frequency;
 
         /**
          * <p>The ID of the AIC image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The ID of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic-instance****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The operation that was most recently performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServerCreate</p>
          */
         @NameInMap("LatestAction")
         public String latestAction;
 
         /**
          * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AIC-Name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -208,6 +251,9 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The resolution of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1920*1080</p>
          */
         @NameInMap("Resolution")
         public String resolution;
@@ -220,29 +266,40 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The specification of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic.cf53r.c2.np</p>
          */
         @NameInMap("Spec")
         public String spec;
 
         /**
          * <p>The operation status of the AIC instance. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **creating**</p>
-         * <p>*   **releasing**</p>
-         * <p>*   **rebooting**</p>
-         * <p>*   **reseting**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>creating</strong></li>
+         * <li><strong>releasing</strong></li>
+         * <li><strong>rebooting</strong></li>
+         * <li><strong>reseting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The running status of the AIC instance. Valid values:</p>
-         * <br>
-         * <p>*   **running**</p>
-         * <p>*   **pending**</p>
-         * <p>*   **terminating**</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>pending</strong></li>
+         * <li><strong>terminating</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("Status")
         public String status;
@@ -351,78 +408,113 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-07 11:59:09</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the ENS node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hanghzou-27</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2027-05-07 11:59:09</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The operation that was most recently performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServerCreate</p>
          */
         @NameInMap("LatestAction")
         public String latestAction;
 
         /**
          * <p>The name of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Server-Name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The namespace of the cluster to which the server belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
          * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prepay</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The ID of the server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-******</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The server specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas.cf53r</p>
          */
         @NameInMap("SpecName")
         public String specName;
 
         /**
          * <p>The operation status of the server. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **creating**</p>
-         * <p>*   **releasing**</p>
-         * <p>*   **rebooting**</p>
-         * <p>*   **upgrading**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>creating</strong></li>
+         * <li><strong>releasing</strong></li>
+         * <li><strong>rebooting</strong></li>
+         * <li><strong>upgrading</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The running status of the server. Valid values:</p>
-         * <br>
-         * <p>*   **running**</p>
-         * <p>*   **stopping**</p>
-         * <p>*   **down**</p>
-         * <p>*   **starting**</p>
+         * <ul>
+         * <li><strong>running</strong></li>
+         * <li><strong>stopping</strong></li>
+         * <li><strong>down</strong></li>
+         * <li><strong>starting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
          */
         @NameInMap("Status")
         public String status;

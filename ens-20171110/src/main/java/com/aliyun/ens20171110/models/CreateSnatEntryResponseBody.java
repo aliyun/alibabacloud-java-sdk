@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateSnatEntryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>018EED6A-69CA-58C8-A345-498927D5D34E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the SNAT entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snat-5tc08qfj5ecblfdn2rqr9****</p>
      */
     @NameInMap("SnatEntryId")
     public String snatEntryId;

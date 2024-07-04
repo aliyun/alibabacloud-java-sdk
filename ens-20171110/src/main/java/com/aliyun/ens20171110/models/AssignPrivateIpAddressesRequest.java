@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class AssignPrivateIpAddressesRequest extends TeaModel {
     /**
      * <p>The ID of the ENI.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eni-uf6533jbifugr5fo2j1w</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-5rllcjb3ol6duzjdnbm1ombn7</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

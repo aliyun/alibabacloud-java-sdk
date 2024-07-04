@@ -5,21 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeSDGDeploymentStatusRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the SDG.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdg-xxxx</p>
      */
     @NameInMap("SDGId")
     public String SDGId;

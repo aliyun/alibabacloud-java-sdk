@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * <p>The IP address that the ELB instance uses to provide services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.1</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
      * <p>The IP version of the ELB instance. Valid values: ipv4 and ipv6.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipv4</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
@@ -23,25 +29,37 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServers> backendServers;
 
     /**
-     * <p>The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: **5** to **10000**. Unit: Mbit/s.</p>
+     * <p>The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: <strong>5</strong> to <strong>10000</strong>. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The time when the ELB instance was created. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-05-21T12:22:00Z</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
      * <p>The time when the ELB instance was disabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-05-21T12:22:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the ENS node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu-telecom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
@@ -60,54 +78,80 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the ELB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5rcvo1n1t3hykfhhjwjgqp****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The name of the ELB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
     /**
      * <p>The specifications of the ELB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>elb.s2.medium</p>
      */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
     /**
      * <p>The status of the ELB instance. Valid values:</p>
-     * <br>
-     * <p>*   **Active** (default): The listener for the instance can forward the received traffic based on the rule.</p>
-     * <p>*   **InActive**: The listener for the instance does not forward the received traffic.</p>
+     * <ul>
+     * <li><strong>Active</strong> (default): The listener for the instance can forward the received traffic based on the rule.</li>
+     * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
     /**
      * <p>The ID of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-5rwbi3g9zvgxcsiufwhw8****</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The billing method. Valid values:</p>
-     * <br>
-     * <p>*   **PrePaid**: subscription.</p>
-     * <p>*   **PostPaid**: pay-as-you-go. Only this billing method is supported.</p>
+     * <ul>
+     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PostPaid</strong>: pay-as-you-go. Only this billing method is supported.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-5s78m2pdr9osa0j64bn78****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -256,30 +300,45 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public static class DescribeLoadBalancerAttributeResponseBodyBackendServers extends TeaModel {
         /**
          * <p>The IP address of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.5</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The port that is used by the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Port")
         public String port;
 
         /**
          * <p>The ID of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5vb5h5njxiuhn48a****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The type of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -334,30 +393,45 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocols extends TeaModel {
         /**
          * <p>The description of the listener.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The destination listening port to which requests are forwarded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ForwardPort")
         public Integer forwardPort;
 
         /**
          * <p>Indicates whether the listener is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("ListenerForward")
         public String listenerForward;
 
         /**
          * <p>The listener port of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
         /**
          * <p>The listener protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tcp</p>
          */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;

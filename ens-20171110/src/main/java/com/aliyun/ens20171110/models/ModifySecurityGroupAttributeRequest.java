@@ -6,24 +6,33 @@ import com.aliyun.tea.*;
 public class ModifySecurityGroupAttributeRequest extends TeaModel {
     /**
      * <p>The description of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the security group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4p****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The name of the security group. The name of a bucket must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name must be 2 to 128 characters in length.</p>
-     * <p>*   The name must start with a letter but cannot start with http:// or https://.</p>
-     * <p>*   The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <ul>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name must start with a letter but cannot start with http:// or https://.</li>
+     * <li>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;

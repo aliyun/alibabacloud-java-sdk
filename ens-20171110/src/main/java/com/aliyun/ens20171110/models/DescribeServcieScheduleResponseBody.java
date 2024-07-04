@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeServcieScheduleResponseBody extends TeaModel {
     /**
      * <p>The index number of the scheduled virtual device (pod).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Index")
     public Integer index;
 
     /**
      * <p>The ID of the scheduled instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5myukg7hnpbto7m024002w8qd</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the scheduled instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120.26.79.96</p>
      */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
     /**
      * <p>The start port of the scheduled instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3306</p>
      */
     @NameInMap("InstancePort")
     public Integer instancePort;
@@ -36,18 +48,27 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is repeated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RequestRepeated")
     public Boolean requestRepeated;
 
     /**
      * <p>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80-88</p>
      */
     @NameInMap("TcpPorts")
     public String tcpPorts;
@@ -124,12 +145,18 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     public static class DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatusesContainerStatus extends TeaModel {
         /**
          * <p>The ID of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>container_e79_1638372147094_158091_02_000001</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
 
         /**
          * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         @NameInMap("Name")
         public String name;
@@ -179,6 +206,9 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     public static class DescribeServcieScheduleResponseBodyPodAbstractInfo extends TeaModel {
         /**
          * <p>The name of the container service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
          */
         @NameInMap("ContainerService")
         public Boolean containerService;
@@ -191,24 +221,36 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
 
         /**
          * <p>The name of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gcs-prod-websocket-eip-telecom</p>
          */
         @NameInMap("Name")
         public Boolean name;
 
         /**
          * <p>The name of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-aliyun</p>
          */
         @NameInMap("Namespace")
         public Boolean namespace;
 
         /**
          * <p>The pod scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDN</p>
          */
         @NameInMap("ResourceScope")
         public Boolean resourceScope;
 
         /**
          * <p>The status of the pod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("Status")
         public Boolean status;

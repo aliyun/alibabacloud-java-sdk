@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AE4F26E-7527-569F-A987-E3CF269A3C11</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,41 +43,60 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
     public static class DescribeCloudDiskAvailableResourceInfoResponseBodySupportResourcesSupportResource extends TeaModel {
         /**
          * <p>The number of disks that you can purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CanBuyCount")
         public Long canBuyCount;
 
         /**
          * <p>The type of the disk.</p>
-         * <br>
-         * <p>*   cloud_efficiency: ultra disk.</p>
-         * <p>*   cloud_ssd: all-flash disk.</p>
-         * <p>*   local_hdd: local HDD.</p>
-         * <p>*   local_ssd: local SSD.</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk.</li>
+         * <li>cloud_ssd: all-flash disk.</li>
+         * <li>local_hdd: local HDD.</li>
+         * <li>local_ssd: local SSD.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The default size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("DefaultDiskSize")
         public Long defaultDiskSize;
 
         /**
          * <p>The maximum size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("DiskMaxSize")
         public Long diskMaxSize;
 
         /**
          * <p>The minimum size of the disk size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("DiskMinSize")
         public Long diskMinSize;
 
         /**
          * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-cmcc</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;

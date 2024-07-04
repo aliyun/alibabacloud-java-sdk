@@ -6,20 +6,25 @@ import com.aliyun.tea.*;
 public class PutBucketAclRequest extends TeaModel {
     /**
      * <p>The access control list (ACL) of the bucket.</p>
-     * <br>
-     * <p>*   **public-read-write**</p>
-     * <p>*   **public-read**</p>
-     * <p>*   **private** (default)</p>
-     * <br>
+     * <ul>
+     * <li><strong>public-read-write</strong></li>
+     * <li><strong>public-read</strong></li>
+     * <li><strong>private</strong> (default)</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>private</p>
      */
     @NameInMap("BucketAcl")
     public String bucketAcl;
 
     /**
      * <p>The name of the bucket.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("BucketName")
     public String bucketName;

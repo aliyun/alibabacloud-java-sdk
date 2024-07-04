@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeInstanceVncUrlRequest extends TeaModel {
     /**
      * <p>The ID of the instance</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5bp1hzoinajzkh91h****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

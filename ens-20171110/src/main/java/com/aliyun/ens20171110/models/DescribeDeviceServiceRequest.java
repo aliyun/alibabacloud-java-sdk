@@ -6,36 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeDeviceServiceRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a2bac6f4-75dc-455e-8389-2dc8e47526d3</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter does not take effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chongqing-10</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5sg1owx0g4ojy66ab2tez77r2</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2661b1dd-3453-418d-8182-bb34f79e8d3c</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chongqing-11</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Service ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-cxxxxx</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;

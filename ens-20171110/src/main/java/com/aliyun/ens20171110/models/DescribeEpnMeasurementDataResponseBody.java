@@ -12,6 +12,9 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A6328C33-6304-5291-8641-0A00A99D0DD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
     public static class DescribeEpnMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatasBandWidthFeeData extends TeaModel {
         /**
          * <p>The code of the billable item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-cmcc-1</p>
          */
         @NameInMap("CostCode")
         public String costCode;
@@ -52,15 +58,22 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
 
         /**
          * <p>Metering method</p>
-         * <br>
-         * <p>*   SpeedUp: bandwidth of intelligent acceleration</p>
-         * <p>*   IntranetConnection: internal bandwidth</p>
+         * <ul>
+         * <li>SpeedUp: bandwidth of intelligent acceleration</li>
+         * <li>IntranetConnection: internal bandwidth</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SpeedUp</p>
          */
         @NameInMap("CostType")
         public String costType;
 
         /**
          * <p>The value of the billable item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16486</p>
          */
         @NameInMap("CostVal")
         public Integer costVal;
@@ -146,27 +159,40 @@ public class DescribeEpnMeasurementDataResponseBody extends TeaModel {
 
         /**
          * <p>The metering method. Valid values:</p>
-         * <br>
-         * <p>*   ChargeByUnified: unified metering.</p>
-         * <p>*   ChargeByGrade: differential metering.</p>
+         * <ul>
+         * <li>ChargeByUnified: unified metering.</li>
+         * <li>ChargeByGrade: differential metering.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ChargeByGrade</p>
          */
         @NameInMap("ChargeModel")
         public String chargeModel;
 
         /**
          * <p>The metering cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-30</p>
          */
         @NameInMap("CostCycle")
         public String costCycle;
 
         /**
          * <p>The end time of the metering cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-30T16:00:00Z</p>
          */
         @NameInMap("CostEndTime")
         public String costEndTime;
 
         /**
          * <p>The start time of the metering cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-29T16:00:00Z</p>
          */
         @NameInMap("CostStartTime")
         public String costStartTime;

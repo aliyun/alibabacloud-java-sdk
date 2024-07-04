@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeEnsRegionsRequest extends TeaModel {
     /**
      * <p>The ID of the node.</p>
-     * <br>
      * <p>By default, all available node IDs are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-dalian-unicom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;

@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class JoinPublicIpsToEpnInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the EPN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epn-xxxx</p>
      */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;
 
     /**
      * <p>The information about the public IP address that you want to add to the EPN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceInfos=[{&quot;PublicIpAddress&quot;:&quot;2.230.XX.XX&quot;},{&quot;PublicIpAddress&quot;:&quot;2.230.XX.XX&quot;}]</p>
      */
     @NameInMap("InstanceInfos")
     public String instanceInfos;

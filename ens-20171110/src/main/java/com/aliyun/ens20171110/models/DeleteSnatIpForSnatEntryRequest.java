@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteSnatIpForSnatEntryRequest extends TeaModel {
     /**
      * <p>The ID of the SNAT entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snat-5tfi6f8gds82mjmlofeym****</p>
      */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
     /**
      * <p>The EIP that you want to delete from the SNAT entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120.72.56.71</p>
      */
     @NameInMap("SnatIp")
     public String snatIp;

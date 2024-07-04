@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ResizeDiskResponseBody extends TeaModel {
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21522202681****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>689412F2-8402-181E-8C87-1EF62331DCC4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

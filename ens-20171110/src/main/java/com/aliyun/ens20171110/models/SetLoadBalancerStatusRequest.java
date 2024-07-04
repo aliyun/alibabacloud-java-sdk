@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class SetLoadBalancerStatusRequest extends TeaModel {
     /**
      * <p>The ID of the ELB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5t18quoohsrc3xkf86spmnu77</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The status of the ELB instance. Valid values:</p>
-     * <br>
-     * <p>*   **Active** (default): The listener for the instance can forward the received traffic based on the rule.</p>
-     * <p>*   **InActive**: The listener for the instance does not forward the received traffic.</p>
-     * <br>
+     * <ul>
+     * <li><strong>Active</strong> (default): The listener for the instance can forward the received traffic based on the rule.</li>
+     * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;

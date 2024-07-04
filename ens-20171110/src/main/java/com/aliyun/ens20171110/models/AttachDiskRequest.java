@@ -6,26 +6,34 @@ import com.aliyun.tea.*;
 public class AttachDiskRequest extends TeaModel {
     /**
      * <p>Specifies whether the disk to be attached is released with the instance. Valid values:</p>
-     * <br>
-     * <p>*   true: The disk will be released when the ECS instance is released.</p>
-     * <p>*   false: The disk will be retained when the ECS instance is released.</p>
-     * <p>*   If you leave this parameter empty, the default value is used.</p>
+     * <ul>
+     * <li>true: The disk will be released when the ECS instance is released.</li>
+     * <li>false: The disk will be retained when the ECS instance is released.</li>
+     * <li>If you leave this parameter empty, the default value is used.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DeleteWithInstance")
     public String deleteWithInstance;
 
     /**
      * <p>The ID of the disk to be attached. The cloud disk and the instance must belong to the same node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-5saf13yy6sopmmg88mzsg****</p>
      */
     @NameInMap("DiskId")
     public String diskId;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5rr19av7tkpgi9os52ag1****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -6,18 +6,20 @@ import com.aliyun.tea.*;
 public class AddBackendServersShrinkRequest extends TeaModel {
     /**
      * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
-     * <br>
-     * <p>>  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
-     * <br>
+     * <blockquote>
+     * <p> Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
     public String backendServersShrink;
 
     /**
-     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.</p>
-     * <br>
+     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5qzdmxefgrpxd7oz2mefonvtx</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

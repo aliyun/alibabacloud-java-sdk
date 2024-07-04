@@ -6,24 +6,33 @@ import com.aliyun.tea.*;
 public class ReinitInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the image file that is used to reset the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-5wn1dhz5syoo9b48f440ntvad</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5vn4n3y4laeb2ii9zxxltlvzi</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The password of the instance.</p>
-     * <br>
-     * <p>It must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letters, lowercase letters, digits, and special characters. The following special character are supported: `()\\"~! @#$%^&*-_+={}[]:;\\"<>,.?/`</p>
+     * <p>It must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letters, lowercase letters, digits, and special characters. The following special character are supported: <code>()\\&quot;~! @#$%^&amp;*-_+={}[]:;\\&quot;&lt;&gt;,.?/</code></p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("Password")
     public String password;

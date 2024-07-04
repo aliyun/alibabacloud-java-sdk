@@ -6,18 +6,23 @@ import com.aliyun.tea.*;
 public class ModifyLoadBalancerAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the ELB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5q73cv04zeyh43lh74lp4gtm8</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The name of the ELB instance. The name must be **2** to **128** characters in length.</p>
-     * <br>
-     * <p>>  The value cannot start with `http://` or `https://`.</p>
-     * <br>
+     * <p>The name of the ELB instance. The name must be <strong>2</strong> to <strong>128</strong> characters in length.</p>
+     * <blockquote>
+     * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;

@@ -6,75 +6,100 @@ import com.aliyun.tea.*;
 public class CreateForwardEntryRequest extends TeaModel {
     /**
      * <p>The elastic IP address (EIP) that is used to access the Internet.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>121.11.36.28</p>
      */
     @NameInMap("ExternalIp")
     public String externalIp;
 
     /**
      * <p>The external port or port range that is used for port forwarding.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 65535.</p>
-     * <p>*   To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</p>
-     * <p>*   If you set ExternalPort to a port range, you must also set InternalPort to a port range, and the number of ports specified must be the same for both parameters. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</p>
-     * <br>
+     * <ul>
+     * <li>Valid values: 1 to 65535.</li>
+     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+     * <li>If you set ExternalPort to a port range, you must also set InternalPort to a port range, and the number of ports specified must be the same for both parameters. For example, if you set ExternalPort to 10/20, you can set InternalPort to 80/90.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
      */
     @NameInMap("ExternalPort")
     public String externalPort;
 
     /**
-     * <p>The name of the DNAT entry. The name must be 2 to 128 characters in length. The name cannot start with `http://` or `https://`.</p>
+     * <p>The name of the DNAT entry. The name must be 2 to 128 characters in length. The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test0</p>
      */
     @NameInMap("ForwardEntryName")
     public String forwardEntryName;
 
     /**
      * <p>The probe port. The port must be within the internal port range. By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("HealthCheckPort")
     public Integer healthCheckPort;
 
     /**
      * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.13</p>
      */
     @NameInMap("InternalIp")
     public String internalIp;
 
     /**
      * <p>The internal port or port range that is used for port forwarding.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 65535.</p>
-     * <p>*   To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</p>
-     * <br>
+     * <ul>
+     * <li>Valid values: 1 to 65535.</li>
+     * <li>To specify a port range, separate the first port and the last port with a forward slash (/), such as 10/20.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
      */
     @NameInMap("InternalPort")
     public String internalPort;
 
     /**
      * <p>The protocol. Valid values:</p>
-     * <br>
-     * <p>*   **TCP**: forwards TCP packets.</p>
-     * <p>*   **UDP**: forwards UDP packets.</p>
-     * <p>*   **Any** (default): forwards all packets.</p>
+     * <ul>
+     * <li><strong>TCP</strong>: forwards TCP packets.</li>
+     * <li><strong>UDP</strong>: forwards UDP packets.</li>
+     * <li><strong>Any</strong> (default): forwards all packets.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Any</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
     /**
      * <p>The ID of the Network Address Translation (NAT) gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nat-5t7nh1cfm6kxiszlttr383xpo</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>The secondary EIP that is used to access the Internet. You need to select a secondary EIP that is bound to NAT. After the DNAT entry is created, the secondary EIP takes effect.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101.XXX.XXX.4</p>
      */
     @NameInMap("StandbyExternalIp")
     public String standbyExternalIp;

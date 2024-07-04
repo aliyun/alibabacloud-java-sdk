@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FD94C8E8-128E-525C-A0C3-60E063B70330</p>
      */
     @NameInMap("RequestId")
     public String requestId;

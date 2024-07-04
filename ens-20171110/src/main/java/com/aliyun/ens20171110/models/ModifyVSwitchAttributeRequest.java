@@ -6,26 +6,36 @@ import com.aliyun.tea.*;
 public class ModifyVSwitchAttributeRequest extends TeaModel {
     /**
      * <p>The description of the vSwitch.</p>
-     * <br>
-     * <p>*   The description must be 2 to 256 characters in length.</p>
-     * <p>*   The description cannot start with http:// or https://.</p>
+     * <ul>
+     * <li>The description must be 2 to 256 characters in length.</li>
+     * <li>The description cannot start with http:// or https://.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>this is my first network</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the vSwitch.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>The name of the vSwitch.</p>
-     * <br>
-     * <p>*   The name must be 2 to 128 characters in length.</p>
-     * <p>*   The name must start with a letter and cannot start with http:// or https://.</p>
+     * <ul>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name must start with a letter and cannot start with http:// or https://.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Test-switch</p>
      */
     @NameInMap("VSwitchName")
     public String vSwitchName;

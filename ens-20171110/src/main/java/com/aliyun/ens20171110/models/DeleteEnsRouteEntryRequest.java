@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteEnsRouteEntryRequest extends TeaModel {
     /**
      * <p>The ID of the route that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rte-8vbmb2890wiret5maqq25</p>
      */
     @NameInMap("RouteEntryId")
     public String routeEntryId;

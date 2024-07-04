@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9635ED2E-3103-1606-84D4-9F8E816B19F9</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of snapshots.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,86 +93,125 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
         /**
-         * <p>The creation time. The time follows the [ISO 8601](https://help.aliyun.com/document_detail/25696.html) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-20T14:52:28Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-15</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The capacity of the disk. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("Size")
         public String size;
 
         /**
          * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bp67acfmxazb4p****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
         /**
          * <p>The type of the disk. Valid value:</p>
-         * <br>
-         * <p>*   cloud_efficiency: ultra disk</p>
-         * <p>*   cloud_ssd: all-flash disk</p>
-         * <p>*   local_hdd: local HDD</p>
-         * <p>*   local_ssd: local SSD</p>
+         * <ul>
+         * <li>cloud_efficiency: ultra disk</li>
+         * <li>cloud_ssd: all-flash disk</li>
+         * <li>local_hdd: local HDD</li>
+         * <li>local_ssd: local SSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("SourceDiskCategory")
         public String sourceDiskCategory;
 
         /**
          * <p>The ID of the source disk. This parameter is retained even after the source disk for which the snapshot was created is released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-bp67acfmxazb4ph****</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
         /**
          * <p>The type of the disk. Valid value:</p>
-         * <br>
-         * <p>*   1: system disk</p>
-         * <p>*   2: data disk</p>
+         * <ul>
+         * <li>1: system disk</li>
+         * <li>2: data disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
         /**
          * <p>The ID of the source edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-27</p>
          */
         @NameInMap("SourceEnsRegionId")
         public String sourceEnsRegionId;
 
         /**
          * <p>The ID of the source snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-bpdfer893jfkdqe****</p>
          */
         @NameInMap("SourceSnapshotId")
         public String sourceSnapshotId;
 
         /**
          * <p>The status of the snapshot. Valid value:</p>
-         * <br>
-         * <p>*   creating: The snapshot is being created.</p>
-         * <p>*   Available: The snapshot is available.</p>
-         * <p>*   deleting: The snapshot is being deleted.</p>
-         * <p>*   error: An error occurred on the snapshot.</p>
+         * <ul>
+         * <li>creating: The snapshot is being created.</li>
+         * <li>Available: The snapshot is available.</li>
+         * <li>deleting: The snapshot is being deleted.</li>
+         * <li>error: An error occurred on the snapshot.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         @NameInMap("Status")
         public String status;

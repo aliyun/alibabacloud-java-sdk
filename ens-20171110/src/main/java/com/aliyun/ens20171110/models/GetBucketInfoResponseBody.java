@@ -12,6 +12,9 @@ public class GetBucketInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5831388-2D4B-46F4-A96B-D4E6BD06E7521</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,40 +43,59 @@ public class GetBucketInfoResponseBody extends TeaModel {
     public static class GetBucketInfoResponseBodyBucketInfo extends TeaModel {
         /**
          * <p>The ACL of the bucket.</p>
-         * <br>
-         * <p>*   **public-read-write**</p>
-         * <p>*   **public-read**</p>
-         * <p>*   **private** (default)</p>
+         * <ul>
+         * <li><strong>public-read-write</strong></li>
+         * <li><strong>public-read</strong></li>
+         * <li><strong>private</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>private</p>
          */
         @NameInMap("BucketAcl")
         public String bucketAcl;
 
         /**
          * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("BucketName")
         public String bucketName;
 
         /**
          * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>das</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
          * <p>The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-12T05:45:00Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>Single-node storage. Set the value to sink.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sink</p>
          */
         @NameInMap("LogicalBucketType")
         public String logicalBucketType;
 
         /**
          * <p>The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-12T06:45:00Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;

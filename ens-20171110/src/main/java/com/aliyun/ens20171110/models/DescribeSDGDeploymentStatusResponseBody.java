@@ -12,24 +12,36 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1. Default value: 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68B85217-03B8-5141-9216-EA4D7C496B9A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of queried deployment records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,86 +94,93 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
     public static class DescribeSDGDeploymentStatusResponseBodyDeploymentStatus extends TeaModel {
         /**
          * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic-xxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The deployment type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   overlay</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    read/write splitting</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
-         * <br>
-         * <p>*   common</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    common deployment</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    .</p>
+         * <ul>
+         * <li><p>overlay</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>read/write splitting</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * <li><p>common</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>common deployment</p>
+         * <!-- -->
+         * 
+         * <p>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>overlay</p>
          */
         @NameInMap("MountType")
         public String mountType;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The deployment status of the SDG.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   sdg_deploying</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   success</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   failed</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>sdg_deploying</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>success</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>failed</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the status was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-17T02:44:31Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

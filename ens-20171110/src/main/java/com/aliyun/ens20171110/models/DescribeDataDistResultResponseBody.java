@@ -12,24 +12,36 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50373E71-7710-4620-8AAB-133CCE49451C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,12 +94,18 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     public static class DescribeDataDistResultResponseBodyDistResultsDistResultStatusStatsStatusStatInstancesInstance extends TeaModel {
         /**
          * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5qzje8f5un1wmi341m2yetaxv</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The start time of the distribution. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-19T07:24:52Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -100,6 +118,9 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
         /**
          * <p>The time when the distribution status was last updated. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-11T02:38:19Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -165,6 +186,9 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     public static class DescribeDataDistResultResponseBodyDistResultsDistResultStatusStatsStatusStat extends TeaModel {
         /**
          * <p>The number of associated edge instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("InstanceCount")
         public String instanceCount;
@@ -177,12 +201,16 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
         /**
          * <p>The distribution status. The value is of the enumeration type. Valid values:</p>
-         * <br>
-         * <p>*   SUCCESS: The distribution is successful.</p>
-         * <p>*   FAILED: The distribution failed.</p>
-         * <p>*   DISTING: The data is being distributed.</p>
-         * <p>*   POD_RESTARTING: The idle pod is being restarted.</p>
-         * <p>*   DELETED: The data is cleared or removed.</p>
+         * <ul>
+         * <li>SUCCESS: The distribution is successful.</li>
+         * <li>FAILED: The distribution failed.</li>
+         * <li>DISTING: The data is being distributed.</li>
+         * <li>POD_RESTARTING: The idle pod is being restarted.</li>
+         * <li>DELETED: The data is cleared or removed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("Status")
         public String status;
@@ -240,6 +268,9 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     public static class DescribeDataDistResultResponseBodyDistResultsDistResult extends TeaModel {
         /**
          * <p>The name of the data file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gcs-prod-websocket-eip-unicom</p>
          */
         @NameInMap("Name")
         public String name;
@@ -252,6 +283,9 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
         /**
          * <p>The version number of the data file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("Version")
         public String version;

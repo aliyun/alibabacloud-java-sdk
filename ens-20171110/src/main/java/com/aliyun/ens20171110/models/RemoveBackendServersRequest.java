@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class RemoveBackendServersRequest extends TeaModel {
     /**
      * <p>The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
@@ -14,8 +13,10 @@ public class RemoveBackendServersRequest extends TeaModel {
 
     /**
      * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5ovkn1piwqmoqrfjdyhq4****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -44,35 +45,50 @@ public class RemoveBackendServersRequest extends TeaModel {
     public static class RemoveBackendServersRequestBackendServers extends TeaModel {
         /**
          * <p>The IP address of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The backend port that is used by the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The instance ID of the backend server.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5uf68ts0fqexe1a4n****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The type of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ens**: an Edge Node Service (ENS) instance.</p>
-         * <p>*   **eni**: an elastic network interface (ENI).</p>
+         * <ul>
+         * <li><strong>ens</strong>: an Edge Node Service (ENS) instance.</li>
+         * <li><strong>eni</strong>: an elastic network interface (ENI).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ens</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;

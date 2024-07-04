@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateSecurityGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>760bad53276431c499e30dc36f6b26be</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1fg655nh68xyz9i***</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

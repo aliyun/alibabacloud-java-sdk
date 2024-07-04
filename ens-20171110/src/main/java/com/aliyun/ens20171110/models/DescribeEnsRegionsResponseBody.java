@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEnsRegionsResponseBody extends TeaModel {
     /**
      * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +60,27 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
     public static class DescribeEnsRegionsResponseBodyEnsRegionsEnsRegions extends TeaModel {
         /**
          * <p>The code of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NorthEastChina</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The name of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NorthChina</p>
          */
         @NameInMap("EnName")
         public String enName;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-dalian-unicom</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;

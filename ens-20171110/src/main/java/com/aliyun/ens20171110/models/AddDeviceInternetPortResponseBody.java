@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddDeviceInternetPortResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0F9185F6-B6FA-514C-9E05-FFD5F0D7D156</p>
      */
     @NameInMap("RequestId")
     public String requestId;

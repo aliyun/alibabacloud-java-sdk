@@ -12,6 +12,9 @@ public class DeploySDGResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A331CA96-3948-4BD2-B067-F6174F5C17EA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DeploySDGResponseBody extends TeaModel {
     public static class DeploySDGResponseBodyDataResultFailedItems extends TeaModel {
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg not found</p>
          */
         @NameInMap("ErrMessage")
         public String errMessage;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic-xxxxx-0</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -76,6 +85,9 @@ public class DeploySDGResponseBody extends TeaModel {
     public static class DeploySDGResponseBodyDataResult extends TeaModel {
         /**
          * <p>The number of failed tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FailedCount")
         public Long failedCount;
@@ -88,6 +100,9 @@ public class DeploySDGResponseBody extends TeaModel {
 
         /**
          * <p>The number of successful tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SuccessCount")
         public Long successCount;
@@ -126,6 +141,9 @@ public class DeploySDGResponseBody extends TeaModel {
     public static class DeploySDGResponseBodyData extends TeaModel {
         /**
          * <p>The response message. Success is returned for a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
@@ -138,9 +156,13 @@ public class DeploySDGResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether all tasks are successful. Valid values:</p>
-         * <br>
-         * <p>*   true: All tasks are successful.</p>
-         * <p>*   false: Failed tasks exist.</p>
+         * <ul>
+         * <li>true: All tasks are successful.</li>
+         * <li>false: Failed tasks exist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

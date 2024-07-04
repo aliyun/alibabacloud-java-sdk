@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListBucketsRequest extends TeaModel {
     /**
-     * <p>The number of the page. Pages start from page 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The maximum number of returned buckets. If this parameter is not specified, the default value is 10. The value cannot be greater than 100.</p>
+     * <p>The maximum number of returned buckets. You can leave this parameter empty. The default value is 10. The value cannot be greater than 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>Specifies the prefix that returned bucket names must contain. If this parameter is not specified, prefix information will not be used as a filter.</p>
+     * <p>The prefix that returned bucket names must contain. If this parameter is not specified, prefix information will not be used as a filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image</p>
      */
     @NameInMap("Prefix")
     public String prefix;

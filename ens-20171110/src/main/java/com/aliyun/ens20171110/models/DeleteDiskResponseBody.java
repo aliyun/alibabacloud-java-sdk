@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteDiskResponseBody extends TeaModel {
     /**
      * <p>The returned service code. 0 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3ABEEB76-1976-55AB-B884-3D65CA6A4743</p>
      */
     @NameInMap("RequestId")
     public String requestId;

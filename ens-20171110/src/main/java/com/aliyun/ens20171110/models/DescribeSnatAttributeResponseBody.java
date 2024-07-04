@@ -6,48 +6,72 @@ import com.aliyun.tea.*;
 public class DescribeSnatAttributeResponseBody extends TeaModel {
     /**
      * <p>The time when the entry was created. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-04-26T15:38:27Z</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
     /**
      * <p>The destination CIDR block. The rule takes effect only on requests that access the destination CIDR block.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101.10. XX.XX/24</p>
      */
     @NameInMap("DestCIDR")
     public String destCIDR;
 
     /**
      * <p>Timeout period.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
     /**
      * <p>The ID of the Network Address Translation (NAT) gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the SNAT entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snat-5tfi6f8gds82mjmlofeym****</p>
      */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
     /**
      * <p>The name of the SNAT entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test0</p>
      */
     @NameInMap("SnatEntryName")
     public String snatEntryName;
 
     /**
      * <p>The EIP specified in the SNAT entry. Multiple EIPs are separated by commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>120.72.XX.XX</p>
      */
     @NameInMap("SnatIp")
     public String snatIp;
@@ -60,43 +84,62 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The source CIDR block specified in the SNAT entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.XX.XX/24</p>
      */
     @NameInMap("SourceCIDR")
     public String sourceCIDR;
 
     /**
      * <p>The secondary EIP specified in the SNAT entry. Multiple secondary EIPs are separated by commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101.23. XX.XX</p>
      */
     @NameInMap("StandbySnatIp")
     public String standbySnatIp;
 
     /**
      * <p>The status of the secondary EIP.</p>
-     * <br>
-     * <p>*   Running</p>
-     * <p>*   Stopping</p>
-     * <p>*   Stopped</p>
-     * <p>*   Starting</p>
+     * <ul>
+     * <li>Running</li>
+     * <li>Stopping</li>
+     * <li>Stopped</li>
+     * <li>Starting</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Stopped</p>
      */
     @NameInMap("StandbyStatus")
     public String standbyStatus;
 
     /**
      * <p>The status of the SNAT entry.</p>
-     * <br>
-     * <p>*   Pending: The SNAT entry is being created or modified.</p>
-     * <p>*   Available: The SNAT entry is available.</p>
-     * <p>*   Deleting: The SNAT entry is being deleted.</p>
+     * <ul>
+     * <li>Pending: The SNAT entry is being created or modified.</li>
+     * <li>Available: The SNAT entry is available.</li>
+     * <li>Deleting: The SNAT entry is being deleted.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The type of the NAT. Valid values: </p>
-     * <br>
-     * <p>- Empty: symmetric NAT.</p>
-     * <br>
-     * <p>- FullCone: full cone NAT.</p>
+     * <ul>
+     * <li><p>Empty: symmetric NAT.</p>
+     * </li>
+     * <li><p>FullCone: full cone NAT.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FullCone</p>
      */
     @NameInMap("Type")
     public String type;
@@ -221,24 +264,34 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     public static class DescribeSnatAttributeResponseBodySnatIps extends TeaModel {
         /**
          * <p>The time when the IP address was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-04-26T15:38:27Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.132.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The status of the IP address.</p>
-         * <br>
-         * <p>*   Running</p>
-         * <p>*   Stopping</p>
-         * <p>*   Stopped</p>
-         * <p>*   Starting</p>
-         * <p>*   Releasing</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * <li>Stopped</li>
+         * <li>Starting</li>
+         * <li>Releasing</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
