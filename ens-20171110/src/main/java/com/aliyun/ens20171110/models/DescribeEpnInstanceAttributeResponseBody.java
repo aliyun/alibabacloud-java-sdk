@@ -12,12 +12,18 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the EPN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epn-xxxx</p>
      */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;
 
     /**
      * <p>The name of the EPN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epn-test</p>
      */
     @NameInMap("EPNInstanceName")
     public String EPNInstanceName;
@@ -30,16 +36,23 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The networking mode. Valid values:</p>
-     * <br>
-     * <p>*   SpeedUp: intelligent acceleration network (Internet)</p>
-     * <p>*   Connection: internal network</p>
-     * <p>*   SpeedUpAndConnection: intelligent acceleration network and internal network</p>
+     * <ul>
+     * <li>SpeedUp: intelligent acceleration network (Internet)</li>
+     * <li>Connection: internal network</li>
+     * <li>SpeedUpAndConnection: intelligent acceleration network and internal network</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SpeedUp</p>
      */
     @NameInMap("NetworkingModel")
     public String networkingModel;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -114,12 +127,18 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeEpnInstanceAttributeResponseBodyConfVersions extends TeaModel {
         /**
          * <p>The version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-10-11</p>
          */
         @NameInMap("ConfVersion")
         public String confVersion;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
@@ -150,50 +169,73 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeEpnInstanceAttributeResponseBodyInstances extends TeaModel {
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom-4</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-xxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>epn-test</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
          * <p>The ISP. Valid values:</p>
-         * <br>
-         * <p>*   cmcc: China Mobile</p>
-         * <p>*   unicom: China Unicom</p>
-         * <p>*   telecom: China Telecom</p>
+         * <ul>
+         * <li>cmcc: China Mobile</li>
+         * <li>unicom: China Unicom</li>
+         * <li>telecom: China Telecom</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cmcc</p>
          */
         @NameInMap("Isp")
         public String isp;
 
         /**
          * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.12</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
         /**
          * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.3.XX.XX</p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
         /**
          * <p>The status of the instance. Valid values:</p>
-         * <br>
-         * <p>*   Running</p>
-         * <p>*   Stopped</p>
-         * <p>*   Expired</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Stopped</li>
+         * <li>Expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
@@ -264,24 +306,36 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     public static class DescribeEpnInstanceAttributeResponseBodyVSwitches extends TeaModel {
         /**
          * <p>The CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.1/24</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom-4</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vs-xxxx</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
          * <p>The name of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vs-test</p>
          */
         @NameInMap("VSwitchName")
         public String vSwitchName;

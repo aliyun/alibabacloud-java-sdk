@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class ModifyImageAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the image.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-5t4xwkfkbs0uxv0kymdb6uip7</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The name of the image.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ImageName")

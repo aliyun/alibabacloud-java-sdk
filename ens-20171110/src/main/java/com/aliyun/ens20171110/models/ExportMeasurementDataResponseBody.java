@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ExportMeasurementDataResponseBody extends TeaModel {
     /**
      * <p>The download path of the exported file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://test-oss.com/image_01.jpeg">http://test-oss.com/image_01.jpeg</a></p>
      */
     @NameInMap("FilePath")
     public String filePath;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

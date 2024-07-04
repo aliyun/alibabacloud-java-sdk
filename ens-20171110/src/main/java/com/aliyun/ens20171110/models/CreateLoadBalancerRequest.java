@@ -6,48 +6,62 @@ import com.aliyun.tea.*;
 public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu-telecom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The name of the ELB instance. The name must be 1 to 80 characters in length. If you leave this parameter empty, the system randomly allocates a name as the value of this parameter.</p>
-     * <br>
-     * <p>>  The value cannot start with `http://` or `https://`.</p>
+     * <blockquote>
+     * <p> The value cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>gcs-pre-websocket-eslb-telecom</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
     /**
      * <p>The specification of the ELB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>elb.s2.medium</p>
      */
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
     /**
      * <p>The network ID of the created ELB instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-5sax03dh2eyagujgsn7z9****</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The billing method of the instance. Valid value: PostPaid. PostPaid specifies the pay-as-you-go billing method.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
      * <p>The ID of the vSwitch to which the internal-facing ELB instance belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-5s78haoys9oylle6ln71m****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

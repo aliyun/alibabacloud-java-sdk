@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ResetDeviceInstanceResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60C0D889-9C80-5D68-8645-6A55C58E72CF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

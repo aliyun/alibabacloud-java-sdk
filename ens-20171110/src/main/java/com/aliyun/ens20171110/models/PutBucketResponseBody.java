@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class PutBucketResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>85123E71-7710-4620-8AAB-133CCE49EC83</p>
      */
     @NameInMap("RequestId")
     public String requestId;

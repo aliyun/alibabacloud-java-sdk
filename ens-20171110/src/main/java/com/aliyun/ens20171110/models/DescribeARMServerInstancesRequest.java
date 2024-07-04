@@ -12,9 +12,13 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
 
     /**
      * <p>Spcifies whether the result contains the container information. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DescribeAICInstances")
     public Boolean describeAICInstances;
@@ -27,48 +31,66 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
 
     /**
      * <p>The end of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2006-01-03</p>
      */
     @NameInMap("MaxDate")
     public String maxDate;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the 2006-01-02 format. By default, the time range to query is not restricted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2006-01-02</p>
      */
     @NameInMap("MinDate")
     public String minDate;
 
     /**
      * <p>The name of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Server-Name</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The namespace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
      * <p>The sorting order of the results to return. Valid values: ServerIdSort, ServerNameSort, ExpireTimeSort, CreationTimeSort, and EnsRegionIdSort.</p>
-     * <br>
      * <p>asc: ascending order. desc: descending order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;ServerIdSort&quot;:&quot;desc&quot;,&quot;ServerNameSort&quot;:&quot;desc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;asc&quot;,&quot;EnsRegionIdSort&quot;:&quot;asc&quot;}</p>
      */
     @NameInMap("OrderByParams")
     public String orderByParams;
 
     /**
-     * <p>The page number. Pages start from page **1**.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The maximum value is **100**.</p>
-     * <br>
-     * <p>Default value: **10**.</p>
+     * <p>The number of entries per page. The maximum value is <strong>100</strong>.</p>
+     * <p>Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

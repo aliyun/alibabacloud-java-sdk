@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class UpdateEnsSaleControlRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("AliUidAccount")
     public String aliUidAccount;
 
@@ -15,6 +12,9 @@ public class UpdateEnsSaleControlRequest extends TeaModel {
      */
     @NameInMap("CommodityCode")
     public String commodityCode;
+
+    @NameInMap("CustomAccount")
+    public String customAccount;
 
     /**
      * <p>This parameter is required.</p>
@@ -41,6 +41,14 @@ public class UpdateEnsSaleControlRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public UpdateEnsSaleControlRequest setCustomAccount(String customAccount) {
+        this.customAccount = customAccount;
+        return this;
+    }
+    public String getCustomAccount() {
+        return this.customAccount;
     }
 
     public UpdateEnsSaleControlRequest setSaleControls(java.util.List<UpdateEnsSaleControlRequestSaleControls> saleControls) {

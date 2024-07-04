@@ -6,30 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <br>
-     * <p>*   Pages start from page 1.</p>
-     * <p>*   Default value: 1.</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Maximum value: 50.</p>
-     * <p>*   Default value: 10</p>
+     * <ul>
+     * <li>Maximum value: 50.</li>
+     * <li>Default value: 10</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp67acfmxazb4ph***</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The name of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DocTest</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;

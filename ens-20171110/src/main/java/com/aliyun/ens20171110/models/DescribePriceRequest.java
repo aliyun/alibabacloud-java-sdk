@@ -18,58 +18,74 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The ID of the ENS node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai-unicom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The specifications of instances.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ens.sn1.tiny</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The bandwidth metering method of the instance. Valid values:</p>
-     * <br>
-     * <p>*   BandwidthByDay: Pay by daily peak bandwidth</p>
-     * <p>*   95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</p>
-     * <p>*   PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</p>
-     * <p>*   PayByBandwidth: Pay by fixed bandwidth</p>
-     * <br>
+     * <ul>
+     * <li>BandwidthByDay: Pay by daily peak bandwidth</li>
+     * <li>95BandwidthByMonth: Pay by monthly 95th percentile bandwidth</li>
+     * <li>PayByBandwidth4thMonth: Pay by monthly fourth peak bandwidth</li>
+     * <li>PayByBandwidth: Pay by fixed bandwidth</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95BandwidthByMonth</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The subscription duration of the instance.</p>
-     * <br>
-     * <p>*   If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</p>
-     * <p>*   If you set PeriodUnit to Day, you can set Period only to 3.</p>
-     * <p>*   If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</p>
-     * <br>
+     * <ul>
+     * <li>If you leave the PeriodUnit parameter empty, the instance is purchased on a monthly basis. Valid values: Day and Month.</li>
+     * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
+     * <li>If you set PeriodUnit to Month, you can set Period to a number from 1 to 9, or set Period to 12.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The billing cycle of the ENS instance. Valid values:</p>
-     * <br>
-     * <p>*   Month (default):</p>
-     * <p>*   Day</p>
+     * <ul>
+     * <li>Month (default):</li>
+     * <li>Day</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>The number of instances.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Quantity")
     public Integer quantity;
@@ -154,6 +170,9 @@ public class DescribePriceRequest extends TeaModel {
     public static class DescribePriceRequestDataDisk extends TeaModel {
         /**
          * <p>The size of the data disk. Unit: GB. If you specify this parameter, this parameter takes precedence over the Size property in DataDisks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -176,8 +195,10 @@ public class DescribePriceRequest extends TeaModel {
     public static class DescribePriceRequestSystemDisk extends TeaModel {
         /**
          * <p>The size of the system disk. Unit: GB.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -200,12 +221,18 @@ public class DescribePriceRequest extends TeaModel {
     public static class DescribePriceRequestDataDisks extends TeaModel {
         /**
          * <p>The category of the disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_efficiency</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The size of the data disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Size")
         public Long size;

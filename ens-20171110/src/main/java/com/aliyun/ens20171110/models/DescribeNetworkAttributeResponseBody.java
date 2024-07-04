@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeNetworkAttributeResponseBody extends TeaModel {
     /**
      * <p>The IPv4 CIDR block of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
@@ -18,57 +21,85 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The time when the network was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-06-01T00:00:00Z</p>
      */
     @NameInMap("CreatedTime")
     public String createdTime;
 
     /**
      * <p>The description of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the edge node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the network access control list (ACL).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacl-a2do9e413e0sp****</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
     /**
      * <p>The ID of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-5***</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The name of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc</p>
      */
     @NameInMap("NetworkName")
     public String networkName;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the route table.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtb-5***</p>
      */
     @NameInMap("RouterTableId")
     public String routerTableId;
 
     /**
      * <p>The status of the network. Valid values:</p>
-     * <br>
-     * <p>*   Pending</p>
-     * <p>*   Available</p>
+     * <ul>
+     * <li>Pending</li>
+     * <li>Available</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
      */
     @NameInMap("Status")
     public String status;
@@ -183,12 +214,18 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     public static class DescribeNetworkAttributeResponseBodyCloudResourcesCloudResourceSetType extends TeaModel {
         /**
          * <p>The number of resources in the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("ResourceCount")
         public Integer resourceCount;
 
         /**
          * <p>The resource type. VSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VSwitch</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

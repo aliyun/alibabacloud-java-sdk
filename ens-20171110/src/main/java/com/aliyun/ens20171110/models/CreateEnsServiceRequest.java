@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class CreateEnsServiceRequest extends TeaModel {
     /**
      * <p>The ID of the resource that you want to obtain. You can specify only one ID in a request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ens-20190806****</p>
      */
     @NameInMap("EnsServiceId")
     public String ensServiceId;
 
     /**
      * <p>The operation to perform after you preview the created edge service. Valid values:</p>
-     * <br>
-     * <p>*   **Buy**: create</p>
-     * <p>*   **Upgrade**: change</p>
-     * <br>
+     * <ul>
+     * <li><strong>Buy</strong>: create</li>
+     * <li><strong>Upgrade</strong>: change</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Buy</p>
      */
     @NameInMap("OrderType")
     public String orderType;

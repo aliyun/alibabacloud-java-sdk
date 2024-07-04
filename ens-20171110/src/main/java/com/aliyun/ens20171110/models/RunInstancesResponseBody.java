@@ -12,12 +12,18 @@ public class RunInstancesResponseBody extends TeaModel {
 
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>213177957850399</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91E4AFBE-4E35-5D2A-A886-BB477C9953D2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

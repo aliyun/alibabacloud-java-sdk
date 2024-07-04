@@ -6,11 +6,14 @@ import com.aliyun.tea.*;
 public class CreateKeyPairRequest extends TeaModel {
     /**
      * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
-     * <br>
-     * <p>*   The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * <p>*   It must start with a letter but cannot start with `http://` or `https://`.</p>
-     * <br>
+     * <ul>
+     * <li>The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li>It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestKeyPairName</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;

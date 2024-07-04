@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class UnAssociateEnsEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the EIP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-5sqa431nx3vee8heqxfxp4e4r</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;

@@ -6,29 +6,33 @@ import com.aliyun.tea.*;
 public class RenewInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-56789acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The renewal duration of the subscription instance.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   1</p>
-     * <p>*   2</p>
-     * <p>*   3</p>
-     * <p>*   4</p>
-     * <p>*   5</p>
-     * <p>*   6</p>
-     * <p>*   7</p>
-     * <p>*   8</p>
-     * <p>*   9</p>
-     * <p>*   12</p>
-     * <br>
+     * <ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>4</li>
+     * <li>5</li>
+     * <li>6</li>
+     * <li>7</li>
+     * <li>8</li>
+     * <li>9</li>
+     * <li>12</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Long period;

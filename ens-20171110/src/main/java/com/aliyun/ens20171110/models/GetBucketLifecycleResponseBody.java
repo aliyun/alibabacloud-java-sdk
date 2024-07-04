@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetBucketLifecycleResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A2583E8B-B930-4F59-ADC0-0E209A90C46E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
     public static class GetBucketLifecycleResponseBodyRuleExpiration extends TeaModel {
         /**
          * <p>The expiration date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yyy-MM-DDThh:mm:ssZ</p>
          */
         @NameInMap("CreatedBeforeDate")
         public String createdBeforeDate;
 
         /**
          * <p>The validity period, in days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Days")
         public String days;
@@ -82,21 +91,31 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
 
         /**
          * <p>The unique ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ID")
         public String ID;
 
         /**
          * <p>The prefix that is applied to the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         @NameInMap("Prefix")
         public String prefix;
 
         /**
          * <p>The status of the rule. Valid values:</p>
-         * <br>
-         * <p>*   **Enabled**: The rule is periodically executed.</p>
-         * <p>*   **Disabled**: The rule is ignored.</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: The rule is periodically executed.</li>
+         * <li><strong>Disabled</strong>: The rule is ignored.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;

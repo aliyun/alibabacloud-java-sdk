@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class StopSnatIpForSnatEntryResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A415CB9-7591-566F-924B-32709578756B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

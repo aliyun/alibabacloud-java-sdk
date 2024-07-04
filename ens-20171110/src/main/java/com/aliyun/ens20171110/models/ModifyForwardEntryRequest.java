@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class ModifyForwardEntryRequest extends TeaModel {
     /**
      * <p>The ID of the DNAT entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dnat-5tfjp3537mi6iokl59g5c****</p>
      */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
     /**
-     * <p>The name of the DNAT entry. The name must be 2 to 128 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <p>The name of the DNAT entry. The name must be 2 to 128 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test0</p>
      */
     @NameInMap("ForwardEntryName")
     public String forwardEntryName;
 
     /**
      * <p>The probe port. The port must be within the internal port range. By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("HealthCheckPort")
     public Integer healthCheckPort;

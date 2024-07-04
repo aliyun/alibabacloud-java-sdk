@@ -12,12 +12,18 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b3b5bb9a-4e0b-4cac-8ebf-e5e015726723</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3F3F3570-E721-53F6-853F-37B7725AC6CB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,48 +74,72 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     public static class RescaleDeviceServiceResponseBodyResourceDetailInfos extends TeaModel {
         /**
          * <p>The ID of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>h-uf6009zoa6hdbjyqxcn1</p>
          */
         @NameInMap("ID")
         public String ID;
 
         /**
          * <p>The IP address of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.152.196.36</p>
          */
         @NameInMap("IP")
         public String IP;
 
         /**
          * <p>The Internet service provider (ISP) to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom</p>
          */
         @NameInMap("ISP")
         public String ISP;
 
         /**
          * <p>The media access control (MAC) address of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24:0B:88:04:71:E0</p>
          */
         @NameInMap("Mac")
         public String mac;
 
         /**
          * <p>The ID of the edge node to which the device belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chongqing-1</p>
          */
         @NameInMap("RegionID")
         public String regionID;
 
         /**
          * <p>The name of the server on which the device is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens-nc2</p>
          */
         @NameInMap("Server")
         public String server;
 
         /**
          * <p>The status of the device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.ac6.large</p>
          */
         @NameInMap("Type")
         public String type;

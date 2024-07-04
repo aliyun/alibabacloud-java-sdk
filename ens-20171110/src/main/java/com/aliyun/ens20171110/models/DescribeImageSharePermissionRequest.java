@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class DescribeImageSharePermissionRequest extends TeaModel {
     /**
      * <p>The ID of the Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>171710408091****</p>
      */
     @NameInMap("AliyunId")
     public Long aliyunId;
 
     /**
      * <p>The ID of the image.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-5s7qotzavwbrnzaqh4unm****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The page number. Pages start from page **1**.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **100**.</p>
-     * <br>
-     * <p>Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>100</strong>.</p>
+     * <p>Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

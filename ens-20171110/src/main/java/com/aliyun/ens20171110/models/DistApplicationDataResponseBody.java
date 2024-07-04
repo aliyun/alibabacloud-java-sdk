@@ -12,6 +12,9 @@ public class DistApplicationDataResponseBody extends TeaModel {
 
     /**
      * <p>The total number of ENS instance IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("DistInstanceTotalCount")
     public Integer distInstanceTotalCount;
@@ -24,6 +27,9 @@ public class DistApplicationDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,24 +93,36 @@ public class DistApplicationDataResponseBody extends TeaModel {
     public static class DistApplicationDataResponseBodyDistResultsDistResult extends TeaModel {
         /**
          * <p>The name of the data file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gcs-prod-websocket-eip-unicom</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The error code. The value is of the enumerated data type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         @NameInMap("ResultCode")
         public Integer resultCode;
 
         /**
          * <p>The description of the distribution result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("ResultDescrip")
         public String resultDescrip;
 
         /**
          * <p>The version number of the data file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("Version")
         public String version;

@@ -6,60 +6,89 @@ import com.aliyun.tea.*;
 public class DescribeEnsEipAddressesRequest extends TeaModel {
     /**
      * <p>The ID of the EIP that you want to query. You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-5q9uwkd9bznjpxz8hr6cirnjk</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
      * <p>The ID of the instance with which you want to associate the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5t18quoohsrc3xkf86spmnu77</p>
      */
     @NameInMap("AssociatedInstanceId")
     public String associatedInstanceId;
 
     /**
      * <p>The type of the instance with which you want to associate the EIP. Valid values:</p>
-     * <br>
-     * <p>*   **EnsInstance**: ENS instance in a VPC</p>
-     * <p>*   **SlbInstance**: Edge Load Balancer (ELB) instance</p>
+     * <ul>
+     * <li><strong>EnsInstance</strong>: ENS instance in a VPC</li>
+     * <li><strong>SlbInstance</strong>: Edge Load Balancer (ELB) instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SlbInstance</p>
      */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
 
     /**
      * <p>The EIP that you want to query. You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.1</p>
      */
     @NameInMap("EipAddress")
     public String eipAddress;
 
     /**
      * <p>The name of the EIP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("EipName")
     public String eipName;
 
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu-telecom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>Specifies whether the EIP is a secondary EIP. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Standby")
     public String standby;

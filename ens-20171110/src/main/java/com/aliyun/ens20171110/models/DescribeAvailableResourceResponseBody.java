@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeAvailableResourceResponseBody extends TeaModel {
     /**
      * <p>The returned service code. 0 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request. This is a common parameter. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +74,18 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodyImagesImage extends TeaModel {
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_alibase_20171208</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_alibase_****</p>
          */
         @NameInMap("ImageName")
         public String imageName;
@@ -123,30 +135,45 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static class DescribeAvailableResourceResponseBodySupportResourcesSupportResource extends TeaModel {
         /**
          * <p>The size of the data disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
         /**
          * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-cmcc</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The specifications of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.stiny</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
         /**
          * <p>The number of resources that you can purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("SupportResourcesCount")
         public String supportResourcesCount;
 
         /**
          * <p>The size of the system disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("SystemDiskSize")
         public String systemDiskSize;

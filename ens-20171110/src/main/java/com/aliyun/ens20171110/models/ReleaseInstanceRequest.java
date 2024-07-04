@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ReleaseInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the EIP.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

@@ -12,6 +12,9 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8629F679-B51D-4194-A1CC-5D8F504C362B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +57,27 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     public static class DescribeAvailableResourceInfoResponseBodyImagesImage extends TeaModel {
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_a****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_a****</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The size of the image. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ImageSize")
         public Integer imageSize;
@@ -161,24 +173,36 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     public static class DescribeAvailableResourceInfoResponseBodySupportResourcesSupportResourceEnsRegionIdsExtendsEnsRegionId extends TeaModel {
         /**
          * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EastChina</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The name. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EnName</p>
          */
         @NameInMap("EnName")
         public String enName;
 
         /**
          * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-chengdu-telecom-4</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The information about the Internet service provider (ISP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         @NameInMap("Isp")
         public String isp;
@@ -313,12 +337,18 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
         /**
          * <p>The maximum capacity of a data disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("DataDiskMaxSize")
         public Integer dataDiskMaxSize;
 
         /**
          * <p>The minimum data disk size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("DataDiskMinSize")
         public Integer dataDiskMinSize;
@@ -340,12 +370,18 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
         /**
          * <p>The maximum size of the system disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("SystemDiskMaxSize")
         public Integer systemDiskMaxSize;
 
         /**
          * <p>The minimum capacity of a system disk. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("SystemDiskMinSize")
         public Integer systemDiskMinSize;

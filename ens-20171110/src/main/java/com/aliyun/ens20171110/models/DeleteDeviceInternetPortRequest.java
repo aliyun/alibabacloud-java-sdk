@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class DeleteDeviceInternetPortRequest extends TeaModel {
     /**
      * <p>The ID of the instance. You can specify the ID of the server or container.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5scdmgpdegymqyugf85q66l1a</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The type of the NAT gateway. The value must be of the enumerated data type. Valid values:</p>
-     * <br>
-     * <p>*   SNAT</p>
-     * <p>*   DNAT</p>
-     * <br>
+     * <ul>
+     * <li>SNAT</li>
+     * <li>DNAT</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DNAT</p>
      */
     @NameInMap("NatType")
     public String natType;
 
     /**
      * <p>The ID of the rule.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snat-5rfzxah5gzfo869fl6epvon3y</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

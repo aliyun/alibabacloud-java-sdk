@@ -12,27 +12,40 @@ public class DescribeBandWithdChargeTypeResponseBody extends TeaModel {
 
     /**
      * <p>The metering type.</p>
-     * <br>
-     * <p>*   ChargeByUnified: unified metering.</p>
-     * <p>*   ChargeByGrade: differential metering.</p>
+     * <ul>
+     * <li>ChargeByUnified: unified metering.</li>
+     * <li>ChargeByGrade: differential metering.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ChargeByGrade</p>
      */
     @NameInMap("ChargeContractType")
     public String chargeContractType;
 
     /**
      * <p>The metering cycle. Currently, this parameter is empty in the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{null}</p>
      */
     @NameInMap("ChargeCycleInfo")
     public String chargeCycleInfo;
 
     /**
      * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>791049FD-49CE-4667-BD6C-F23094DEDA7A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

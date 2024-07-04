@@ -6,32 +6,45 @@ import com.aliyun.tea.*;
 public class ModifyEpnInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the EPN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epn-****</p>
      */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;
 
     /**
      * <p>The name of the EPN instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ens_test_epn</p>
      */
     @NameInMap("EPNInstanceName")
     public String EPNInstanceName;
 
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 Mbit/s to 100 Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
 
     /**
      * <p>The networking mode. Valid values:</p>
-     * <br>
-     * <p>*   **SpeedUp**: Intelligent acceleration network (Internet).</p>
-     * <p>*   **Connection**: Internal network.</p>
-     * <p>*   **SpeedUpAndConnection**: Intelligent acceleration network and internal network.</p>
-     * <br>
-     * <p>>  The internal network supports only **Connection** and **SpeedUpAndConnection**.</p>
+     * <ul>
+     * <li><strong>SpeedUp</strong>: Intelligent acceleration network (Internet).</li>
+     * <li><strong>Connection</strong>: Internal network.</li>
+     * <li><strong>SpeedUpAndConnection</strong>: Intelligent acceleration network and internal network.</li>
+     * </ul>
+     * <blockquote>
+     * <p> The internal network supports only <strong>Connection</strong> and <strong>SpeedUpAndConnection</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>SpeedUp</p>
      */
     @NameInMap("NetworkingModel")
     public String networkingModel;

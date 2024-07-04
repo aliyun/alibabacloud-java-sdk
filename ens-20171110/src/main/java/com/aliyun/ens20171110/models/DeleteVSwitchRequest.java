@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteVSwitchRequest extends TeaModel {
     /**
      * <p>The ID of the vSwitch.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-5m9xhl****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

@@ -12,6 +12,9 @@ public class PushApplicationDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class PushApplicationDataResponseBody extends TeaModel {
     public static class PushApplicationDataResponseBodyPushResultsPushResult extends TeaModel {
         /**
          * <p>The name of the data file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gcs-pre-websocket-eip-telecom</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The push result. The value is of the enumeration type. Valid values:</p>
-         * <br>
-         * <p>*   0: The push operation is successful.</p>
-         * <p>*   100: The push operation has been performed and the file is pushed.</p>
-         * <p>*   200: The push operation has been performed and the file is being pushed to specific file servers.</p>
-         * <p>*   300: The push operation failed. You must trigger the push operation again. The ResultDescrip parameter indicates the error description.</p>
+         * <ul>
+         * <li>0: The push operation is successful.</li>
+         * <li>100: The push operation has been performed and the file is pushed.</li>
+         * <li>200: The push operation has been performed and the file is being pushed to specific file servers.</li>
+         * <li>300: The push operation failed. You must trigger the push operation again. The ResultDescrip parameter indicates the error description.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("ResultCode")
         public Integer resultCode;
@@ -63,6 +73,9 @@ public class PushApplicationDataResponseBody extends TeaModel {
 
         /**
          * <p>The version number of the data file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("Version")
         public String version;

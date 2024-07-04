@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class CreateInstanceResponseBody extends TeaModel {
     /**
      * <p>The return code. A value of 0 indicates that the request is successful.</p>
-     * <br>
-     * <p>>  If you call this operation by using SDKs, the return value is of the integer type. If you call this operation by using common methods or HTTP requests, the return value is of the string type.</p>
+     * <blockquote>
+     * <p> If you call this operation by using SDKs, the return value is of the integer type. If you call this operation by using common methods or HTTP requests, the return value is of the string type.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -20,6 +24,9 @@ public class CreateInstanceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4A431388-2D4B-46F4-A96B-D4E6BD0688C1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateSecurityGroupRequest extends TeaModel {
     /**
      * <p>The description of the security group. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDescription</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). By default, this parameter is empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dcdn1:2_3-4</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;

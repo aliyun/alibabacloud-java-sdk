@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeEpnInstanceAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the EPN instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>epn-xxxx</p>
      */
     @NameInMap("EPNInstanceId")
     public String EPNInstanceId;

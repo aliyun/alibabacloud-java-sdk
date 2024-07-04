@@ -6,58 +6,80 @@ import com.aliyun.tea.*;
 public class DescribeForwardTableEntriesRequest extends TeaModel {
     /**
      * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>36.XXX.XXX.72</p>
      */
     @NameInMap("ExternalIp")
     public String externalIp;
 
     /**
      * <p>The ID of the DNAT entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fwd-5tfi6f0rutmd00xrhkag7****</p>
      */
     @NameInMap("ForwardEntryId")
     public String forwardEntryId;
 
     /**
      * <p>The name of the DNAT entry.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test0</p>
      */
     @NameInMap("ForwardEntryName")
     public String forwardEntryName;
 
     /**
      * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.XXX.XXX.50</p>
      */
     @NameInMap("InternalIp")
     public String internalIp;
 
     /**
      * <p>The protocol. Valid values:</p>
-     * <br>
-     * <p>*   **TCP**: forwards TCP packets.</p>
-     * <p>*   **UDP**: forwards UDP packets.</p>
-     * <p>*   **Any**: forwards all packets.</p>
+     * <ul>
+     * <li><strong>TCP</strong>: forwards TCP packets.</li>
+     * <li><strong>UDP</strong>: forwards UDP packets.</li>
+     * <li><strong>Any</strong>: forwards all packets.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TCP</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
     /**
      * <p>The ID of the NAT gateway.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
-     * <p>The page number. Pages start from page **1**.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **100**.</p>
-     * <br>
-     * <p>Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>100</strong>.</p>
+     * <p>Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

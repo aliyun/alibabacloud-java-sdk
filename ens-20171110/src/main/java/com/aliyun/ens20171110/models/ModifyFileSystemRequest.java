@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyFileSystemRequest extends TeaModel {
     /**
      * <p>The description of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fileSystemTest</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-cmcc</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the file system.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c50f8*****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;

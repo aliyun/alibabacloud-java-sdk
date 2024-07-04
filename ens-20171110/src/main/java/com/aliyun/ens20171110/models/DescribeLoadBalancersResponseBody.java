@@ -12,24 +12,36 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: **10** to **100**.</p>
+     * <p>The number of entries per page. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,66 +94,98 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public static class DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer extends TeaModel {
         /**
          * <p>The IP address that the ELB instance uses to provide services.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.10.10</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
          * <p>The version of the IP address. Valid values: ipv4 and ipv6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipv4</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
         /**
          * <p>The time when the ELB instance was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-06T11:13:41Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the ENS node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-wuhan-telecom</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The ID of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-5snthcyu1x10g7tywj7iu****</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
         /**
          * <p>The name of the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("LoadBalancerName")
         public String loadBalancerName;
 
         /**
          * <p>The status of the ELB instance. Valid values:</p>
-         * <br>
-         * <p>*   **Active** (default): The listener for the instance can forward the received traffic based on the rule.</p>
-         * <p>*   **InActive**: The listener for the instance does not forward the received traffic.</p>
+         * <ul>
+         * <li><strong>Active</strong> (default): The listener for the instance can forward the received traffic based on the rule.</li>
+         * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InActive</p>
          */
         @NameInMap("LoadBalancerStatus")
         public String loadBalancerStatus;
 
         /**
          * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5rz0rj1caexauilpsjx0w****</p>
          */
         @NameInMap("NetworkId")
         public String networkId;
 
         /**
          * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   **PrePaid**: subscription.</p>
-         * <p>*   **PostPaid**: pay-as-you-go. Only this billing method is supported.</p>
+         * <ul>
+         * <li><strong>PrePaid</strong>: subscription.</li>
+         * <li><strong>PostPaid</strong>: pay-as-you-go. Only this billing method is supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5rllcjb3ol6duzjdnbm1om****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

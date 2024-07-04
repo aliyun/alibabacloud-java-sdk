@@ -7,6 +7,10 @@ public class HttpConfig extends TeaModel {
     @NameInMap("Cookie")
     public String cookie;
 
+    /**
+     * <strong>example:</strong>
+     * <p>500</p>
+     */
     @NameInMap("CookieTimeout")
     public Integer cookieTimeout;
 
@@ -22,12 +26,24 @@ public class HttpConfig extends TeaModel {
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
     @NameInMap("StickySession")
     public String stickySession;
 
+    /**
+     * <strong>example:</strong>
+     * <p>insert</p>
+     */
     @NameInMap("StickySessionType")
     public String stickySessionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("XForwardedFor")
     public String XForwardedFor;
 

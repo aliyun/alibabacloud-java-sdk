@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class SetBackendServersShrinkRequest extends TeaModel {
     /**
      * <p>The list of backend servers that you want to add. You can modify at most 20 backend servers.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
@@ -14,8 +13,10 @@ public class SetBackendServersShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5s7crik3yo3bp03gqrbp5****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

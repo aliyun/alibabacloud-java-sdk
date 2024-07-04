@@ -11,27 +11,38 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     public java.util.List<DescribeAICImagesResponseBodyImages> images;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>72DC6C0A-D9A8-5345-A2BE-FE354CC728A0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -84,6 +95,9 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     public static class DescribeAICImagesResponseBodyImages extends TeaModel {
         /**
          * <p>The time when the image was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-22 10:54:34</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -96,24 +110,36 @@ public class DescribeAICImagesResponseBody extends TeaModel {
 
         /**
          * <p>The image ID of the AIC instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-ad0ddaddc2d54adeaa09b7c0f1e****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The URL of the AIC image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****.alibaba-inc.com/aic/socimage:test</p>
          */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
         /**
-         * <p>The status of the image. **Available** is returned for this parameter. Available indicates that the image is available.</p>
+         * <p>The status of the image. <strong>Available</strong> is returned for this parameter. Available indicates that the image is available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>available</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The username of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("User")
         public String user;

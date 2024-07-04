@@ -5,136 +5,195 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaModel {
     /**
-     * <p>The backend port that is used by the ELB instance. Valid values: **1** to **65535**.</p>
+     * <p>The backend port that is used by the ELB instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
      */
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
 
     /**
      * <p>The maximum bandwidth of the elastic IP address (EIP).</p>
-     * <br>
-     * <p>*   Default value: 5.</p>
-     * <p>*   Valid values: **5** to **10000**.</p>
-     * <p>*   Unit: Mbit/s.</p>
+     * <ul>
+     * <li>Default value: 5.</li>
+     * <li>Valid values: <strong>5</strong> to <strong>10000</strong>.</li>
+     * <li>Unit: Mbit/s.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The description of the listener.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Indicates whether EIP pass-through is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off** (default)</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("EipTransmit")
     public String eipTransmit;
 
     /**
      * <p>Specifies whether to enable the health check feature. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("HealthCheck")
     public String healthCheck;
 
     /**
-     * <p>The port that is used for health checks. Valid values: **1** to **65535**. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</p>
+     * <p>The port that is used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If you leave this parameter empty, the port specified by BackendServerPort is used for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8000</p>
      */
     @NameInMap("HealthCheckConnectPort")
     public Integer healthCheckConnectPort;
 
     /**
      * <p>The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.</p>
-     * <br>
-     * <p>*   Default value: 5.</p>
-     * <p>*   Valid values: **1** to **300**.</p>
-     * <p>*   Unit: seconds.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter takes effect only if you set HealthCheck to on.</p>
-     * <br>
-     * <p>*   If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+     * <ul>
+     * <li>Default value: 5.</li>
+     * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
+     * <li>Unit: seconds.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>This parameter takes effect only if you set HealthCheck to on.</p>
+     * </li>
+     * <li><p>If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("HealthCheckConnectTimeout")
     public Integer healthCheckConnectTimeout;
 
     /**
      * <p>The response string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ok</p>
      */
     @NameInMap("HealthCheckExp")
     public String healthCheckExp;
 
     /**
-     * <p>The interval at which health checks are performed. Valid values: **1** to **50**. Unit: seconds.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>The interval at which health checks are performed. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("HealthCheckInterval")
     public Integer healthCheckInterval;
 
     /**
      * <p>The request string for UDP listener health checks. The string can be up to 64 characters in length and can contain only letters and digits.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hello</p>
      */
     @NameInMap("HealthCheckReq")
     public String healthCheckReq;
 
     /**
-     * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: **2** to **10**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>The number of consecutive successful health checks that must occur before an unhealthy and inaccessible backend server is declared healthy and accessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
     /**
      * <p>The frontend port that is used by the ELB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5D7597CF-1630-54EC-A945-624A33F2E7E8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The routing algorithm. Valid values:</p>
-     * <br>
-     * <p>*   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.</p>
-     * <p>*   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</p>
-     * <p>*   **rr**: Requests are distributed to backend servers in sequence.</p>
-     * <p>*   **sch**: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</p>
-     * <p>*   **qch**: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</p>
-     * <p>*   **iqch**: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</p>
+     * <ul>
+     * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests than those with lower weights.</li>
+     * <li><strong>wlc</strong>: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections to a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.</li>
+     * <li><strong>rr</strong>: Requests are distributed to backend servers in sequence.</li>
+     * <li><strong>sch</strong>: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+     * <li><strong>qch</strong>: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.</li>
+     * <li><strong>iqch</strong>: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>wrr</p>
      */
     @NameInMap("Scheduler")
     public String scheduler;
 
     /**
      * <p>The status of the listener. Valid values:</p>
-     * <br>
-     * <p>*   **Running**</p>
-     * <p>*   **Stopped**</p>
-     * <p>*   **Starting**</p>
-     * <p>*   **Configuring**</p>
-     * <p>*   **Stopping**</p>
+     * <ul>
+     * <li><strong>Running</strong></li>
+     * <li><strong>Stopped</strong></li>
+     * <li><strong>Starting</strong></li>
+     * <li><strong>Configuring</strong></li>
+     * <li><strong>Stopping</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Stopped</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: **2** to **10**.</p>
-     * <br>
-     * <p>>  This parameter takes effect only if you set HealthCheck to on.</p>
+     * <p>The number of consecutive failed health checks that must occur before a healthy and accessible backend server is declared unhealthy and inaccessible. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <blockquote>
+     * <p> This parameter takes effect only if you set HealthCheck to on.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("UnhealthyThreshold")
     public Integer unhealthyThreshold;

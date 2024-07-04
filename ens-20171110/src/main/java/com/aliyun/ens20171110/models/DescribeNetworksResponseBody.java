@@ -12,24 +12,36 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries in the list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -101,57 +113,85 @@ public class DescribeNetworksResponseBody extends TeaModel {
     public static class DescribeNetworksResponseBodyNetworksNetwork extends TeaModel {
         /**
          * <p>The IPv4 CIDR block of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.xx.xx/24</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
          * <p>The timestamp when the instance was created. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-16T06:33:15Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The description of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exampleDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the edge node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The ID of the network access control list (ACL).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nacl-a2do9e413e0spxscd****</p>
          */
         @NameInMap("NetworkAclId")
         public String networkAclId;
 
         /**
          * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5***</p>
          */
         @NameInMap("NetworkId")
         public String networkId;
 
         /**
          * <p>The name of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("NetworkName")
         public String networkName;
 
         /**
          * <p>The route table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtb-5**</p>
          */
         @NameInMap("RouterTableId")
         public String routerTableId;
 
         /**
          * <p>The status of the network. Valid values:</p>
-         * <br>
-         * <p>*   Pending</p>
-         * <p>*   Available</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Available</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;

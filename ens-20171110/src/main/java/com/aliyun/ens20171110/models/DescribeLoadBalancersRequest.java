@@ -6,63 +6,94 @@ import com.aliyun.tea.*;
 public class DescribeLoadBalancersRequest extends TeaModel {
     /**
      * <p>The IP address that the ELB instance uses to provide services.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.8</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-guangzhou-10</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the ELB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5q73cv04zeyh43lh74lp4****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
      * <p>The name of the ELB instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
     /**
      * <p>The status of the ELB instance. Valid values:</p>
-     * <br>
-     * <p>*   **Active** (default): The listener for the instance can forward the received traffic based on the rule.</p>
-     * <p>*   **InActive**: The listener for the instance does not forward the received traffic.</p>
+     * <ul>
+     * <li><strong>Active</strong> (default): The listener for the instance can forward the received traffic based on the rule.</li>
+     * <li><strong>InActive</strong>: The listener for the instance does not forward the received traffic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InActive</p>
      */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
     /**
      * <p>The ID of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-5s9ayrxsd9hszrlt5fgv2****</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The page number. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: **10** to **100**.</p>
+     * <p>The number of entries per page. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the backend server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5f67ffjc004wwz0t****</p>
      */
     @NameInMap("ServerId")
     public String serverId;
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-5sy773iy25rulsmgskmba****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

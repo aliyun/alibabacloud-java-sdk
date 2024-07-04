@@ -6,120 +6,182 @@ import com.aliyun.tea.*;
 public class DescribeInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-cmcc</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The IDs of the regions. The value is a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;cn-suzhou-telecom&quot;,&quot;cn-chengdu-telecom&quot;]</p>
      */
     @NameInMap("EnsRegionIds")
     public String ensRegionIds;
 
     /**
      * <p>The ID of the edge service. You can use the ID to query information about the instances that are created in the edge service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ens-20190730202316s****</p>
      */
     @NameInMap("EnsServiceId")
     public String ensServiceId;
 
     /**
      * <p>The ID of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>centos_6_08_64_20G_alibase_****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5iqczfxps7csjrxeca****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs. Separate IDs with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;i-5iqczfxps7csjrxeca07****&quot;, &quot;i-5iqczfxps7csjrxeca07****&quot;]]</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
      * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestName</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
      * <p>The condition that you want to use to filter instances by category. Valid values:</p>
-     * <br>
-     * <p>*   EnsInstance: ENS instances that you purchase.</p>
-     * <p>*   EnsService: ENS instances that belong to edge services.</p>
-     * <p>*   BuildMachine: ENS instances that are configured with image builders.</p>
-     * <p>*   EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.</p>
+     * <ul>
+     * <li>EnsInstance: ENS instances that you purchase.</li>
+     * <li>EnsService: ENS instances that belong to edge services.</li>
+     * <li>BuildMachine: ENS instances that are configured with image builders.</li>
+     * <li>EnsPostPaidInstance: Pay-as-you-go ENS instances that you purchase.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EnsService</p>
      */
     @NameInMap("InstanceResourceType")
     public String instanceResourceType;
 
     /**
+     * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ens.se1.tiny</p>
+     */
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    /**
      * <p>The internal IP address of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>47.100.XX.XX</p>
      */
     @NameInMap("IntranetIp")
     public String intranetIp;
 
     /**
      * <p>The ID of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-2zeuphj08tt7q3brd****</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The method that you want to use to sort instances. The value of this parameter is in the JSON format.</p>
-     * <br>
      * <p>You can sort instances by name, expiration time, node ID, or creation time. You can specify one or more methods.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;InstanceNameSort&quot;:&quot;asc&quot;,&quot;ExpireTimeSort&quot;:&quot;asc&quot;,&quot;CreationTimeSort&quot;:&quot;desc&quot;}}</p>
      */
     @NameInMap("OrderByParams")
     public String orderByParams;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is **100**.</p>
-     * <br>
-     * <p>Default value: **10**.</p>
+     * <p>The number of entries to return on each page. The maximum value is <strong>100</strong>.</p>
+     * <p>Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The keyword that you use to query the logs of the service. You can specify the values of parameters such as **ip**, **InstanceName**, and **InstanceId** as the keyword.</p>
+     * <p>The keyword that you use to query the logs of the service. You can specify the values of parameters such as <strong>ip</strong>, <strong>InstanceName</strong>, and <strong>InstanceId</strong> as the keyword.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Joshua</p>
      */
     @NameInMap("SearchKey")
     public String searchKey;
 
     /**
      * <p>The ID of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-5kyicq2kfcapxrdds6tar7jqb</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The status of the instance. Valid values:</p>
-     * <br>
-     * <p>*   Running</p>
-     * <p>*   Stopped</p>
-     * <p>*   Expired</p>
+     * <ul>
+     * <li>Running</li>
+     * <li>Stopped</li>
+     * <li>Expired</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags that are added to the resource.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
      * <p>The ID of the vSwitch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-2zeh0r1pabwtg6wcs****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -191,6 +253,14 @@ public class DescribeInstancesShrinkRequest extends TeaModel {
     }
     public String getInstanceResourceType() {
         return this.instanceResourceType;
+    }
+
+    public DescribeInstancesShrinkRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DescribeInstancesShrinkRequest setIntranetIp(String intranetIp) {

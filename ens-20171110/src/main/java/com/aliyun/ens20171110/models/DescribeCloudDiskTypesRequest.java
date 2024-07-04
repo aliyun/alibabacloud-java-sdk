@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCloudDiskTypesRequest extends TeaModel {
     /**
      * <p>The ID of the edge node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chongqing-cmcc</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;

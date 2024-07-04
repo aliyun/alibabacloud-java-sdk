@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteNetworkAclRequest extends TeaModel {
     /**
      * <p>The ID of the network ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacl-bp1lhl0taikrbgnh****</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;

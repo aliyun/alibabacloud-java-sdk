@@ -6,52 +6,66 @@ import com.aliyun.tea.*;
 public class ListObjectsRequest extends TeaModel {
     /**
      * <p>The name of the bucket.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
      * <p>The token used in this list operation. If the number of objects exceeds the value of MaxKeys, the NextContinuationToken is included in the response as the token for the next list operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test1.txt</p>
      */
     @NameInMap("ContinuationToken")
     public String continuationToken;
 
     /**
      * <p>The encoding type of the object names in the response. Only URL encoding is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>url</p>
      */
     @NameInMap("EncodingType")
     public String encodingType;
 
     /**
-     * <p>The position from which the list operation starts. The name of the object after which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than the value of Marker are returned. The Marker parameter is used to list the returned objects by page, and its value must be less than 1,024 bytes in length.</p>
-     * <br>
+     * <p>The position from which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than value of Marker are returned. The Marker parameter is used to list the returned objects by page, and its value must be smaller than 1,024 bytes in length.</p>
      * <p>Even if the value specified for Marker does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of Marker.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a</p>
      */
     @NameInMap("Marker")
     public String marker;
 
     /**
-     * <p>The maximum number of objects to return.</p>
-     * <br>
-     * <p>Valid values: 0 to 1000. Default value: 100.</p>
+     * <p>The maximum number of objects to return. Valid values: 0 to 1000. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxKeys")
     public Long maxKeys;
 
     /**
      * <p>The prefix that must be included in the names of objects you want to list. If you specify a prefix to query objects, the returned object names contain the prefix.</p>
-     * <br>
      * <p>The value of the parameter must be less than 1,000 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b</p>
      */
     @NameInMap("Prefix")
     public String prefix;
 
     /**
-     * <p>The position from which the list operation starts. The name of the object after which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than the value of StartAfter are returned. The StartAfter parameter is used to list the returned objects by page, and its value must be less than 1,000 bytes in length.</p>
-     * <br>
-     * <p>Even if the value specified for StartAfter does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of StartAfter.</p>
+     * <p>The position from which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than the value of StartAfter are returned. The StartAfter parameter is used to list the returned objects by page, and its value must be less than 1,000 bytes in length. Even if the value specified for StartAfter does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of StartAfter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b</p>
      */
     @NameInMap("StartAfter")
     public String startAfter;

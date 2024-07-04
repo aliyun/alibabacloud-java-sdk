@@ -12,42 +12,63 @@ public class RunServiceScheduleResponseBody extends TeaModel {
 
     /**
      * <p>The index number of the scheduled virtual device (pod).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Index")
     public Integer index;
 
     /**
      * <p>The ID of the scheduled instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5qvji3mom4ec013dyygmtxlkj</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The IP address of the scheduled instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.246.11</p>
      */
     @NameInMap("InstanceIp")
     public String instanceIp;
 
     /**
      * <p>The start port of the scheduled instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("InstancePort")
     public Integer instancePort;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is repeated. This parameter is not returned if ServcieAction is set to Console.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("RequestRepeated")
     public String requestRepeated;
 
     /**
      * <p>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;80-88&quot;</p>
      */
     @NameInMap("TcpPorts")
     public Boolean tcpPorts;
@@ -124,18 +145,27 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     public static class RunServiceScheduleResponseBodyCommandResultsCommandResult extends TeaModel {
         /**
          * <p>The command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls -l /data</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
          * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
 
         /**
          * <p>The execution result of the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("ResultMsg")
         public String resultMsg;

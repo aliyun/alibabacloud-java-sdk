@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ExportImageRequest extends TeaModel {
     /**
      * <p>The ID of the image.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-5ragaz3s74b7go8ks7jp9****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The OSS bucket to which you want to export the image.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>whxyl****</p>
      */
     @NameInMap("OSSBucket")
     public String OSSBucket;
@@ -28,18 +32,23 @@ public class ExportImageRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   cn-beijing</p>
-     * <br>
+     * <ul>
+     * <li>cn-beijing</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("OSSRegionId")
     public String OSSRegionId;
 
     /**
      * <p>The name of the Resource Access Management (RAM) role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunMNSLoggingRole</p>
      */
     @NameInMap("RoleName")
     public String roleName;

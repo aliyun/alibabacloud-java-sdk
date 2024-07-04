@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetBucketAclResponseBody extends TeaModel {
     /**
      * <p>The ACL of the bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>private</p>
      */
     @NameInMap("BucketAcl")
     public String bucketAcl;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C881388-2D4B-46F4-A96B-D4E6BD0886A2</p>
      */
     @NameInMap("RequestId")
     public String requestId;

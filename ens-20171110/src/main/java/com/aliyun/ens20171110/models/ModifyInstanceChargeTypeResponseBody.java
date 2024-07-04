@@ -12,12 +12,18 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21522202681****</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E2CE5821-7A18-5F7B-A18A-1C751B933D2A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

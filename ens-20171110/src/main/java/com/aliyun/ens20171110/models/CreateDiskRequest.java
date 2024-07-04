@@ -6,67 +6,91 @@ import com.aliyun.tea.*;
 public class CreateDiskRequest extends TeaModel {
     /**
      * <p>The category of the disk. Valid values:</p>
-     * <br>
-     * <p>*   cloud_efficiency: ultra disk.</p>
-     * <p>*   cloud_ssd: all-flash disk.</p>
-     * <br>
+     * <ul>
+     * <li>cloud_efficiency: ultra disk.</li>
+     * <li>cloud_ssd: all-flash disk.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_efficiency</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>The name of the disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourDiskName</p>
      */
     @NameInMap("DiskName")
     public String diskName;
 
     /**
      * <p>Specifies whether to encrypt the new system disk. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default): no</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default): no</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
     /**
      * <p>The ID of the edge node.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-chengdu-telecom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
-     * <p>The billing method of the instance. Set the value to **PostPaid**.</p>
-     * <br>
+     * <p>The billing method of the instance. Set the value to <strong>PostPaid</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The ID of the Key Management Service (KMS) key that is used by the cloud disk.</p>
-     * <br>
-     * <p>>  If you set the **Encrypted** parameter to **true**, the default service key is used when the **KMSKeyId** parameter is empty.</p>
+     * <blockquote>
+     * <p> If you set the <strong>Encrypted</strong> parameter to <strong>true</strong>, the default service key is used when the <strong>KMSKeyId</strong> parameter is empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>0e478b7a-4262-4802-b8cb-00d3fxxxxx</p>
      */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
     /**
      * <p>The size of the disk. Unit: GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Size")
     public String size;
 
     /**
      * <p>The ID of the snapshot that you want to use to create the disk.</p>
-     * <br>
-     * <p>The following limits apply to the **SnapshotId** and **Size** parameters:</p>
-     * <br>
-     * <p>*   If the size of the snapshot specified by **SnapshotId** is greater than the specified **Size** value, the size of the created disk is equal to the specified snapshot size.</p>
-     * <p>*   If the size of the snapshot specified by **SnapshotId** is smaller than the specified **Size** value, the size of the created disk is equal to the specified **Size** value.</p>
+     * <p>The following limits apply to the <strong>SnapshotId</strong> and <strong>Size</strong> parameters:</p>
+     * <ul>
+     * <li>If the size of the snapshot specified by <strong>SnapshotId</strong> is greater than the specified <strong>Size</strong> value, the size of the created disk is equal to the specified snapshot size.</li>
+     * <li>If the size of the snapshot specified by <strong>SnapshotId</strong> is smaller than the specified <strong>Size</strong> value, the size of the created disk is equal to the specified <strong>Size</strong> value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>s-897654321****</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

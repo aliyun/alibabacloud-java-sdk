@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeInstanceSpecResponseBody extends TeaModel {
     /**
      * <p>The bandwidth limit for a single instance. Unit: Mbit/s.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("BandwidthLimit")
     public Integer bandwidthLimit;
 
     /**
      * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
      * <p>The maximum capacity of a data disk. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20015</p>
      */
     @NameInMap("DataDiskMaxSize")
     public Integer dataDiskMaxSize;
 
     /**
      * <p>The minimum capacity of a data disk. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DataDiskMinSize")
     public Integer dataDiskMinSize;
@@ -36,12 +48,18 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ECC937A-AE0E-4626-BE51-DED1D6D1C888</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The maximum capacity of the system disk. Unit: GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("SystemDiskMaxSize")
     public Integer systemDiskMaxSize;
@@ -110,6 +128,9 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
     public static class DescribeInstanceSpecResponseBodyInstanceSpecsInstanceSpec extends TeaModel {
         /**
          * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Core")
         public String core;
@@ -122,12 +143,18 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
 
         /**
          * <p>The type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.stiny</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The memory size. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         @NameInMap("Memory")
         public String memory;

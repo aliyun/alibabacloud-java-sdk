@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RebootAICInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the AIC instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aic-instance****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -18,6 +21,9 @@ public class RebootAICInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cas-instance****</p>
      */
     @NameInMap("ServerId")
     public String serverId;

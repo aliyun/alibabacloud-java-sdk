@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetBucketAclRequest extends TeaModel {
     /**
      * <p>The name of the bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("BucketName")
     public String bucketName;

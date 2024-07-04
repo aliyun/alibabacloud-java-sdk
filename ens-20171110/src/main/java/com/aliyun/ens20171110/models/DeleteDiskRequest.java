@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteDiskRequest extends TeaModel {
     /**
      * <p>The ID of the disk.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-5va95bg6i5f44kgkeuazyfcxm</p>
      */
     @NameInMap("DiskId")
     public String diskId;

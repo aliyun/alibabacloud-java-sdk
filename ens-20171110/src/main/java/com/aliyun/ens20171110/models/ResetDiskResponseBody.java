@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ResetDiskResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C0003E8B-B930-4F59-ADC0-0E209A9012A8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

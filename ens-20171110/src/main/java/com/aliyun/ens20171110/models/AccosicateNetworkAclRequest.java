@@ -6,15 +6,16 @@ import com.aliyun.tea.*;
 public class AccosicateNetworkAclRequest extends TeaModel {
     /**
      * <p>The ID of the network ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacl-a2do9e413e0sp****</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
     /**
      * <p>The information about the resources with which you want to associate the network ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Resource")
@@ -44,18 +45,21 @@ public class AccosicateNetworkAclRequest extends TeaModel {
     public static class AccosicateNetworkAclRequestResource extends TeaModel {
         /**
          * <p>The ID of the resource with which you want to associate the network ACL.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of resource with which you want to associate the network ACL. Set the value to **Network**.</p>
-         * <br>
-         * <p>****</p>
-         * <br>
+         * <p>The type of resource with which you want to associate the network ACL. Set the value to <strong>Network</strong>.</p>
+         * <hr>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Network</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

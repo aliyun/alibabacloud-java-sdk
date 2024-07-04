@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class StopSnatIpForSnatEntryRequest extends TeaModel {
     /**
      * <p>The ID of the SNAT entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snat-5tfi6f8gds82mjmlofeym****</p>
      */
     @NameInMap("SnatEntryId")
     public String snatEntryId;
 
     /**
      * <p>The EIP specified in the SNAT entry.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>221.178.103.143</p>
      */
     @NameInMap("SnatIp")
     public String snatIp;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The number of SNAT entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,57 +94,83 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     public static class DescribeSnatTableEntriesResponseBodySnatTableEntries extends TeaModel {
         /**
          * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
          */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
         /**
          * <p>The ID of the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snat-5tfjp3537mi6iokl59g5c****</p>
          */
         @NameInMap("SnatEntryId")
         public String snatEntryId;
 
         /**
          * <p>The name of the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         @NameInMap("SnatEntryName")
         public String snatEntryName;
 
         /**
          * <p>The EIP specified in the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.XXX.XXX.71</p>
          */
         @NameInMap("SnatIp")
         public String snatIp;
 
         /**
          * <p>The source CIDR block specified in the SNAT entry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.13/32</p>
          */
         @NameInMap("SourceCIDR")
         public String sourceCIDR;
 
         /**
          * <p>The secondary EIP. Multiple EIPs are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101.XXX.XXX.7</p>
          */
         @NameInMap("StandbySnatIp")
         public String standbySnatIp;
 
         /**
          * <p>The status of the secondary EIP. Valid values:</p>
-         * <br>
-         * <p>*   Running</p>
-         * <p>*   Stopping</p>
-         * <p>*   Stopped</p>
-         * <p>*   Starting</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * <li>Stopped</li>
+         * <li>Starting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopped</p>
          */
         @NameInMap("StandbyStatus")
         public String standbyStatus;
 
         /**
          * <p>The status of the SNAT entry. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The SNAT entry is being created or modified.</p>
-         * <p>*   Available: The SNAT entry is available.</p>
-         * <p>*   Deleting: The SNAT entry is being deleted.</p>
+         * <ul>
+         * <li>Pending: The SNAT entry is being created or modified.</li>
+         * <li>Available: The SNAT entry is available.</li>
+         * <li>Deleting: The SNAT entry is being deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;

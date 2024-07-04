@@ -6,86 +6,108 @@ import com.aliyun.tea.*;
 public class CreateNetworkAclEntryRequest extends TeaModel {
     /**
      * <p>The source CIDR block.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.0/24</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>The description of the network ACL.</p>
-     * <br>
      * <p>The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is my NetworkAcl.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>Specifies whether the ACL rule controls inbound or outbound access requests. Valid values:</p>
-     * <br>
-     * <p>*   **ingress**</p>
-     * <p>*   **egress**</p>
-     * <br>
+     * <ul>
+     * <li><strong>ingress</strong></li>
+     * <li><strong>egress</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ingress</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The name of the rule.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acl-1</p>
      */
     @NameInMap("NetworkAclEntryName")
     public String networkAclEntryName;
 
     /**
      * <p>The ID of the network ACL.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nacl-bp1lhl0taikrbgnh****</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
     /**
      * <p>The action that is performed on network traffic that matches the rule. Valid values:</p>
-     * <br>
-     * <p>*   **accept**: allows network traffic.</p>
-     * <p>*   **drop**: blocks network traffic.</p>
-     * <br>
+     * <ul>
+     * <li><strong>accept</strong>: allows network traffic.</li>
+     * <li><strong>drop</strong>: blocks network traffic.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>accept</p>
      */
     @NameInMap("Policy")
     public String policy;
 
     /**
      * <p>The port range.</p>
-     * <br>
-     * <p>*   If you set **Protocol** to **all** or **icmp**, set this parameter to -1/-1, which specifies all ports.</p>
-     * <p>*   If you set **Protocol** to **tcp** or **udp**, the port can be **1 to 65535**. You can set this parameter to **1/200** or **80/80**, which specifies ports 1 to 200 or port 80.</p>
-     * <br>
+     * <ul>
+     * <li>If you set <strong>Protocol</strong> to <strong>all</strong> or <strong>icmp</strong>, set this parameter to -1/-1, which specifies all ports.</li>
+     * <li>If you set <strong>Protocol</strong> to <strong>tcp</strong> or <strong>udp</strong>, the port can be <strong>1 to 65535</strong>. You can set this parameter to <strong>1/200</strong> or <strong>80/80</strong>, which specifies ports 1 to 200 or port 80.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1/-1</p>
      */
     @NameInMap("PortRange")
     public String portRange;
 
     /**
-     * <p>The priority of the rule. Valid values: **1 to 100**. Default value: **1**.</p>
-     * <br>
+     * <p>The priority of the rule. Valid values: <strong>1 to 100</strong>. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
      * <p>The protocol. Valid values:</p>
-     * <br>
-     * <p>*   **icmp**: ICMP</p>
-     * <p>*   **tcp**: TCP</p>
-     * <p>*   **udp**: UDP</p>
-     * <p>*   **all**: all protocols</p>
-     * <br>
+     * <ul>
+     * <li><strong>icmp</strong>: ICMP</li>
+     * <li><strong>tcp</strong>: TCP</li>
+     * <li><strong>udp</strong>: UDP</li>
+     * <li><strong>all</strong>: all protocols</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>all</p>
      */
     @NameInMap("Protocol")
     public String protocol;

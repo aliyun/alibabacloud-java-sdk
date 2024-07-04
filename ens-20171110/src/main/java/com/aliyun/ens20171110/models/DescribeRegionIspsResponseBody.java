@@ -12,6 +12,9 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC90CC7E-23B6-5A90-9097-A17CE4A161C4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
     public static class DescribeRegionIspsResponseBodyIsps extends TeaModel {
         /**
          * <p>The code of the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmcc</p>
          */
         @NameInMap("Code")
         public String code;

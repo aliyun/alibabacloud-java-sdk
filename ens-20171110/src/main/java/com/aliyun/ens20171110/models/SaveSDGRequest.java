@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SaveSDGRequest extends TeaModel {
     /**
      * <p>The ID of the SDG to be saved.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sdg-xxxx</p>
      */
     @NameInMap("SDGId")
     public String SDGId;

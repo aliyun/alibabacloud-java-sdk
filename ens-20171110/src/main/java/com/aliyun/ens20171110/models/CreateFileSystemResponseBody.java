@@ -12,15 +12,22 @@ public class CreateFileSystemResponseBody extends TeaModel {
 
     /**
      * <p>The status code for successful operations. Valid values:</p>
-     * <br>
-     * <p>*   PartSuccess: The operation is partially successful.</p>
-     * <p>*   AllSuccess: The operation is successful.</p>
+     * <ul>
+     * <li>PartSuccess: The operation is partially successful.</li>
+     * <li>AllSuccess: The operation is successful.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PartSuccess</p>
      */
     @NameInMap("BizStatusCode")
     public String bizStatusCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;

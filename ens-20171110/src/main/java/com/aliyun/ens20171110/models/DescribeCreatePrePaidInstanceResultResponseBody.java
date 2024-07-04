@@ -12,6 +12,9 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAE90880-4970-4D81-A534-A6C0F3631F74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,17 +43,24 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
     public static class DescribeCreatePrePaidInstanceResultResponseBodyInstanceCreateResult extends TeaModel {
         /**
          * <p>The status of the instance creation.</p>
-         * <br>
-         * <p>*   Accepted</p>
-         * <p>*   Creating</p>
-         * <p>*   Failed</p>
-         * <p>*   Successed</p>
+         * <ul>
+         * <li>Accepted</li>
+         * <li>Creating</li>
+         * <li>Failed</li>
+         * <li>Successed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Successed</p>
          */
         @NameInMap("InstanceCreateStatus")
         public String instanceCreateStatus;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-6ecpqvkicnchxccozrpxxxx</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

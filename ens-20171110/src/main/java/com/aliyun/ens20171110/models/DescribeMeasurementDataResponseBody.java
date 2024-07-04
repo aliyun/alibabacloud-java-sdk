@@ -12,6 +12,9 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>125B04C7-3D0D-4245-AF96-14E3758E3F06</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
     public static class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataBandWidthFeeDatasBandWidthFeeData extends TeaModel {
         /**
          * <p>The code of the bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-cmcc-1</p>
          */
         @NameInMap("CostCode")
         public String costCode;
@@ -52,6 +58,9 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
         /**
          * <p>The bandwidth consumption. Unit: bit/second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16486</p>
          */
         @NameInMap("CostVal")
         public Integer costVal;
@@ -109,18 +118,27 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
     public static class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeData extends TeaModel {
         /**
          * <p>The memory size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         @NameInMap("Memory")
         public Integer memory;
 
         /**
          * <p>The storage capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Storage")
         public Integer storage;
 
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Vcpu")
         public Integer vcpu;
@@ -159,28 +177,41 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
     public static class DescribeMeasurementDataResponseBodyMeasurementDatasMeasurementDataResourceFeeDataDetailsResourceFeeDataDetail extends TeaModel {
         /**
          * <p>The code of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vCPU</p>
          */
         @NameInMap("CostCode")
         public String costCode;
 
         /**
          * <p>The name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vCPU</p>
          */
         @NameInMap("CostName")
         public String costName;
 
         /**
          * <p>The consumption of the resource.</p>
-         * <br>
-         * <p>*   Memory unit: GB.</p>
-         * <p>*   CPU unit: vCPU.</p>
-         * <p>*   Storage unit: GB.</p>
+         * <ul>
+         * <li>Memory unit: GB.</li>
+         * <li>CPU unit: vCPU.</li>
+         * <li>Storage unit: GB.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("CostVal")
         public Integer costVal;
 
         /**
          * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vCPU</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -252,27 +283,40 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
         /**
          * <p>The metering method. Valid values:</p>
-         * <br>
-         * <p>*   ChargeByUnified: unified metering.</p>
-         * <p>*   ChargeByGrade: differential metering.</p>
+         * <ul>
+         * <li>ChargeByUnified: unified metering.</li>
+         * <li>ChargeByGrade: differential metering.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ChargeByGrade</p>
          */
         @NameInMap("ChargeModel")
         public String chargeModel;
 
         /**
          * <p>The metering cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-30</p>
          */
         @NameInMap("CostCycle")
         public String costCycle;
 
         /**
          * <p>The end time of the metering cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-30T16:00:00Z</p>
          */
         @NameInMap("CostEndTime")
         public String costEndTime;
 
         /**
          * <p>The start time of the metering cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-07-29T16:00:00Z</p>
          */
         @NameInMap("CostStartTime")
         public String costStartTime;

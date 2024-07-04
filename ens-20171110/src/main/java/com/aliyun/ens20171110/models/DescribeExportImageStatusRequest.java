@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeExportImageStatusRequest extends TeaModel {
     /**
      * <p>The ID of the image.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>centos_6_08_64_20G_alibase_****</p>
      */
     @NameInMap("ImageId")
     public String imageId;

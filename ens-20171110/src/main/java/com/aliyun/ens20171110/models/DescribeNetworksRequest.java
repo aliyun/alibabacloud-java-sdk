@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeNetworksRequest extends TeaModel {
     /**
      * <p>The ID of the edge node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-telecom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>n-5***</p>
      */
     @NameInMap("NetworkId")
     public String networkId;
 
     /**
      * <p>The name of the network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example</p>
      */
     @NameInMap("NetworkName")
     public String networkName;
 
     /**
-     * <p>The page number of the returned page. Default value: **1**.</p>
+     * <p>The page number of the returned page. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

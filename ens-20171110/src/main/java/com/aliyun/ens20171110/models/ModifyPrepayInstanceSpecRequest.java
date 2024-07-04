@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     /**
      * <p>The ID of the instance that you want to upgrade or downgrade.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp67acfmxazb4p****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The updated configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ens.sn1.tiny</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

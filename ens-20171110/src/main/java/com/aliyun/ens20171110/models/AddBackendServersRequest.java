@@ -6,18 +6,20 @@ import com.aliyun.tea.*;
 public class AddBackendServersRequest extends TeaModel {
     /**
      * <p>The list of backend servers that you want to add. You can add at most 20 backend servers.</p>
-     * <br>
-     * <p>>  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
-     * <br>
+     * <blockquote>
+     * <p> Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
     public java.util.List<AddBackendServersRequestBackendServers> backendServers;
 
     /**
-     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.</p>
-     * <br>
+     * <p>The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5qzdmxefgrpxd7oz2mefonvtx</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -46,37 +48,53 @@ public class AddBackendServersRequest extends TeaModel {
     public static class AddBackendServersRequestBackendServers extends TeaModel {
         /**
          * <p>The IP address of the backend server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
          * <p>The backend port that is used by the ELB instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3309</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The ID of the ENS instance.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-5uf6dwyzch3wly790****</p>
          */
         @NameInMap("ServerId")
         public String serverId;
 
         /**
          * <p>The type of the backend server. Valid values:</p>
-         * <br>
-         * <p>*   **ens**: ENS instance.</p>
-         * <p>*   **eni**: ENI.</p>
+         * <ul>
+         * <li><strong>ens</strong>: ENS instance.</li>
+         * <li><strong>eni</strong>: ENI.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ens</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The weight of the backend server. Default value: 100. Valid values: **0** to **100**.</p>
-         * <br>
-         * <p>>  The value 0 indicates that requests are not forwarded to the backend server.</p>
+         * <p>The weight of the backend server. Default value: 100. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
+         * <blockquote>
+         * <p> The value 0 indicates that requests are not forwarded to the backend server.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;

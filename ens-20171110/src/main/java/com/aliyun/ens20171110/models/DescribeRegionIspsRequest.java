@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRegionIspsRequest extends TeaModel {
     /**
      * <p>The ID of the node. You can specify only one node ID in a call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-dalian-unicom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;

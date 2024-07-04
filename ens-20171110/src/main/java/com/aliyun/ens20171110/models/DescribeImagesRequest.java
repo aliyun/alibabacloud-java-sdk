@@ -6,44 +6,58 @@ import com.aliyun.tea.*;
 public class DescribeImagesRequest extends TeaModel {
     /**
      * <p>The ID of the Edge Node Service (ENS) node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-dalian-unicom</p>
      */
     @NameInMap("EnsRegionId")
     public String ensRegionId;
 
     /**
      * <p>The ID of the image. You can specify only one image ID.</p>
-     * <br>
      * <p>Custom images and public images are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-5qm2r6xo7njrpdkx04q1o****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The name of the custom image. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with `acs:` or `aliyun`. The name cannot contain `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
-     * <br>
+     * <p>The name of the custom image. The name must be 2 to 128 characters in length The name must start with a letter and cannot start with <code>acs:</code> or <code>aliyun</code>. The name cannot contain <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
      * <p>By default, this parameter is left empty, which indicates that the original name is retained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>centos_6_08_64_20G_a****</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
-     * <p>The page number. Pages start from page **1**.</p>
-     * <br>
-     * <p>Default value: **1**.</p>
+     * <p>The page number. Pages start from page <strong>1</strong>.</p>
+     * <p>Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: **50**.</p>
-     * <br>
-     * <p>Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: <strong>50</strong>.</p>
+     * <p>Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
      * <p>The ID of the snapshot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mock-clone_snapshot_id</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

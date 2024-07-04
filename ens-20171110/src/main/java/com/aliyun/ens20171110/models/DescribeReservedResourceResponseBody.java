@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeReservedResourceResponseBody extends TeaModel {
     /**
      * <p>The returned service code. 0 indicates that the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6666C5A5-75ED-422E-A022-7121FA18C968</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,12 +74,18 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
     public static class DescribeReservedResourceResponseBodyImagesImage extends TeaModel {
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_alibase_****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>centos_6_08_64_20G_alibase_****</p>
          */
         @NameInMap("ImageName")
         public String imageName;
@@ -167,18 +179,27 @@ public class DescribeReservedResourceResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-cmcc</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The specifications of instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.sn1.stiny</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
         /**
          * <p>The number of resources that you can purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         @NameInMap("SupportResourcesCount")
         public String supportResourcesCount;

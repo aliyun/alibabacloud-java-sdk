@@ -6,64 +6,88 @@ import com.aliyun.tea.*;
 public class PutBucketLifecycleRequest extends TeaModel {
     /**
      * <p>Specifies whether to allow overlapped prefixes. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false** (default)</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AllowSameActionOverlap")
     public String allowSameActionOverlap;
 
     /**
      * <p>The name of the bucket.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("BucketName")
     public String bucketName;
 
     /**
-     * <p>The expiration data. EOS executes a lifecycle rule for objects that were last updated before the expiration date.</p>
-     * <br>
-     * <p>Specify the time that follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> ExpirationDays and CreateBeforeDate are mutually exclusive.</p>
+     * <p>The expiration time. EOS executes a lifecycle rule for objects that were last updated before the expiration time.</p>
+     * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <blockquote>
+     * <p> ExpirationDays and CreateBeforeDate are mutually exclusive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-10-12T05:45:00Z</p>
      */
     @NameInMap("CreatedBeforeDate")
     public String createdBeforeDate;
 
     /**
      * <p>The number of days from when the objects were last modified to when the lifecycle rule takes effect. The value must be a positive integer that is greater than 0.</p>
-     * <br>
-     * <p>> ExpirationDays and CreateBeforeDate are mutually exclusive.</p>
+     * <blockquote>
+     * <p> ExpirationDays and CreateBeforeDate are mutually exclusive.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("ExpirationDays")
     public Long expirationDays;
 
     /**
-     * <p>The prefix of a rule. The prefix must be unique.</p>
-     * <br>
-     * <p>*   If you specify a prefix, the rule applies only to objects in the bucket that match the prefix.</p>
-     * <p>*   If you do not specify a prefix, the rule applies to all objects in the bucket.</p>
+     * <p>The prefix of a object name. The prefix must be unique.</p>
+     * <ul>
+     * <li>If you specify a prefix, the rule applies only to objects in the bucket that match the prefix.</li>
+     * <li>If you do not specify a prefix, the rule applies to all objects in the bucket.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>image</p>
      */
     @NameInMap("Prefix")
     public String prefix;
 
     /**
      * <p>The unique ID of the rule. The ID of a lifecycle rule can be up to 255 bytes in length.</p>
-     * <br>
-     * <p>*   You do not need to configure this parameter when you create a rule. The system automatically generates a unique ID.</p>
-     * <p>*   When you update a rule, you need to specify the rule ID, and the rule must exist. Otherwise, an error occurs.</p>
+     * <ul>
+     * <li>You do not need to configure this parameter when you create a rule. The system automatically generates a unique ID.</li>
+     * <li>When you update a rule, you need to specify this parameter. Make sure that the rule specified by RuleId exists. Otherwise, an error occurs.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
      * <p>The status of the rule. Valid values:</p>
-     * <br>
-     * <p>*   **Enabled**: The rule is periodically executed.</p>
-     * <p>*   **Disabled**: The rule is ignored.</p>
-     * <br>
+     * <ul>
+     * <li><strong>Enabled</strong></li>
+     * <li><strong>Disabled</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("Status")
     public String status;

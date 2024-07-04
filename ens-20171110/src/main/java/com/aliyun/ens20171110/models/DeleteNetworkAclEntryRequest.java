@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteNetworkAclEntryRequest extends TeaModel {
     /**
      * <p>The ID of the network ACL for which you want to delete a rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nae-5****</p>
      */
     @NameInMap("NetworkAclEntryId")
     public String networkAclEntryId;

@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeImageInfosRequest extends TeaModel {
     /**
      * <p>The operating system (OS). You can specify only one OS in a request. If you do not specify a value for this parameter, images for all supported OSs are queried. Valid values:</p>
-     * <br>
-     * <p>*   linux</p>
-     * <p>*   windows</p>
+     * <ul>
+     * <li>linux</li>
+     * <li>windows</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>linux</p>
      */
     @NameInMap("OsType")
     public String osType;

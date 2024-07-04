@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSDGsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3703C4AC-9396-458C-8F25-1D701334D309</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,43 @@ public class DescribeSDGsResponseBody extends TeaModel {
     public static class DescribeSDGsResponseBodySDGsAvaliableRegionIds extends TeaModel {
         /**
          * <p>The time when the SDG was created on the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-27 15:13:26</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-26</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The ID of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mock-clone_snapshot_id</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The status of the SDG on the node. Valid values:</p>
-         * <br>
-         * <p>*   **sdg_making**</p>
-         * <p>*   **sdg_saving**</p>
-         * <p>*   **sdg_copying**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **success**</p>
+         * <ul>
+         * <li><strong>sdg_making</strong></li>
+         * <li><strong>sdg_saving</strong></li>
+         * <li><strong>sdg_copying</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>success</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
@@ -110,31 +126,45 @@ public class DescribeSDGsResponseBody extends TeaModel {
     public static class DescribeSDGsResponseBodySDGsDeployedInstanceIds extends TeaModel {
         /**
          * <p>The time when the SDG was deployed on the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-27 16:48:43</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The deployment type of the SDG. Valid values:</p>
-         * <br>
-         * <p>*   common: common deployment.</p>
-         * <p>*   overlay: read/write splitting deployment.</p>
+         * <ul>
+         * <li>common: common deployment.</li>
+         * <li>overlay: read/write splitting deployment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>overlay</p>
          */
         @NameInMap("DeploymentType")
         public String deploymentType;
 
         /**
          * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic-5x20dyeos****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The deployment status. Valid values:</p>
-         * <br>
-         * <p>*   **sdg_deploying**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **success**</p>
+         * <ul>
+         * <li><strong>sdg_deploying</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>success</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg_deploying</p>
          */
         @NameInMap("Status")
         public String status;
@@ -187,18 +217,27 @@ public class DescribeSDGsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the instance on which the SDG is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aic-5x20dyeos****</p>
          */
         @NameInMap("CreationInstanceId")
         public String creationInstanceId;
 
         /**
          * <p>The ID of the node on which the SDG is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-26</p>
          */
         @NameInMap("CreationRegionId")
         public String creationRegionId;
 
         /**
          * <p>The time when the SDG was first created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-27 15:07:21</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -216,36 +255,52 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the **FromSDGId** parameter that you need to specify when you call the [CreateSDG](https://help.aliyun.com/document_detail/608128.html) operation.</p>
+         * <p>The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the <strong>FromSDGId</strong> parameter that you need to specify when you call the <a href="https://help.aliyun.com/document_detail/608128.html">CreateSDG</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-xxxxx</p>
          */
         @NameInMap("ParentSDGId")
         public String parentSDGId;
 
         /**
          * <p>The ID of the SDG.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sdg-30e1fdba7196bc****</p>
          */
         @NameInMap("SDGId")
         public String SDGId;
 
         /**
          * <p>The size of the SDG. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
          * <p>The status of the SDG creation. Valid values:</p>
-         * <br>
-         * <p>*   **sdg_making**</p>
-         * <p>*   **sdg_saving**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **success**</p>
+         * <ul>
+         * <li><strong>sdg_making</strong></li>
+         * <li><strong>sdg_saving</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>success</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the SDG was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-27 16:04:39</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

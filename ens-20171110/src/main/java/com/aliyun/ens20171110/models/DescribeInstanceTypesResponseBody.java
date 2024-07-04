@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeInstanceTypesResponseBody extends TeaModel {
     /**
      * <p>The status code. If the request is successful, 0 is returned. If the request fails, a non-zero error code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -18,6 +21,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D452D190-BADF-5D09-910D-599B96D42AAA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +60,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CpuCoreCount")
         public Integer cpuCoreCount;
@@ -66,12 +75,18 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
         /**
          * <p>The name of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ens.xxx.small</p>
          */
         @NameInMap("InstanceTypeName")
         public String instanceTypeName;
 
         /**
          * <p>The memory size. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8192</p>
          */
         @NameInMap("MemorySize")
         public Integer memorySize;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class StartInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the instance. You can start only one instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-instance****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

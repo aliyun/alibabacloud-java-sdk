@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The ID of an instance. Separate multiple IDs with semicolons (;).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-5ci7l7k1m9m2zmhp4iw3o****</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

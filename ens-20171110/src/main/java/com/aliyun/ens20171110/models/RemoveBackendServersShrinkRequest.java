@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class RemoveBackendServersShrinkRequest extends TeaModel {
     /**
      * <p>The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackendServers")
@@ -14,8 +13,10 @@ public class RemoveBackendServersShrinkRequest extends TeaModel {
 
     /**
      * <p>The ID of the Edge Load Balancer (ELB) instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-5ovkn1piwqmoqrfjdyhq4****</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;

@@ -12,24 +12,36 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2818A8F4-5E2B-5611-8732-5ACF7B677059</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of NAT gateways that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>49</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,42 +94,63 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     public static class DescribeNatGatewaysResponseBodyNatGateways extends TeaModel {
         /**
          * <p>The time when the NAT gateway was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-22T07:03:32Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the ENS node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-xiangyang-5</p>
          */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         /**
          * <p>The name of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test0</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nat-5t7nh1cfm6kxiszlttr38****</p>
          */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
         /**
          * <p>The ID of the network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>n-5s2ml1olj0kzaws9n1yrj****</p>
          */
         @NameInMap("NetworkId")
         public String networkId;
 
         /**
          * <p>The type of the NAT gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enat.default</p>
          */
         @NameInMap("Spec")
         public String spec;
 
         /**
          * <p>The ID of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-5szpp1os9m55myirbflfw****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ReinitInstanceResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C46C79B7-0C31-5947-9D86-82207661EADA</p>
      */
     @NameInMap("RequestId")
     public String requestId;

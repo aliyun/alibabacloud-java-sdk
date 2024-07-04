@@ -12,14 +12,21 @@ public class CreateDiskResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the order. Multiple IDs are separated by commas (,).</p>
-     * <br>
-     * <p>>  This parameter is not returned for the pay-as-you-go billing method.</p>
+     * <blockquote>
+     * <p> This parameter is not returned for the pay-as-you-go billing method.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>21127020370****</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7030AB96-57CF-1C68-9FEE-D60E547FD79C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

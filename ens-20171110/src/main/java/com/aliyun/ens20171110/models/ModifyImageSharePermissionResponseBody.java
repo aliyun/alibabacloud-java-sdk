@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyImageSharePermissionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>701B3BB9-9190-544D-90D1-328B0527380C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
