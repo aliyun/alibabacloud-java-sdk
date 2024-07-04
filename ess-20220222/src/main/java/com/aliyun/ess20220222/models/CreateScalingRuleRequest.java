@@ -6,90 +6,112 @@ import com.aliyun.tea.*;
 public class CreateScalingRuleRequest extends TeaModel {
     /**
      * <p>The scaling method of the scaling rule. This parameter is required only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule. Valid values:</p>
-     * <br>
-     * <p>*   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</p>
-     * <p>*   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</p>
-     * <p>*   TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</p>
+     * <ul>
+     * <li>QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</li>
+     * <li>PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</li>
+     * <li>TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>QuantityChangeInCapacity</p>
      */
     @NameInMap("AdjustmentType")
     public String adjustmentType;
 
     /**
      * <p>The number of instances that must be scaled based on the scaling rule. This parameter is required only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule. The number of ECS instances that are scaled in a single scaling activity cannot exceed 1,000.</p>
-     * <br>
-     * <p>*   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</p>
-     * <p>*   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</p>
-     * <p>*   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</p>
+     * <ul>
+     * <li>Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</li>
+     * <li>Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</li>
+     * <li>Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
     /**
-     * <p>监控项维度信息值，适用于目标追踪规则，当监控项需额外维度信息时设置，例如LoadBalancerRealServerAverageQps监控项需指定rulePool维度键值信息。</p>
+     * <p>The metric dimensions. This parameter is applicable to target tracking scaling rules. If your predefined metric requires extra dimensions, you must specify this parameter. For example, if you use LoadBalancerRealServerAverageQps as your predefined metric, you must use this parameter to specify the rulePool dimension.</p>
      */
     @NameInMap("AlarmDimensions")
     public java.util.List<CreateScalingRuleRequestAlarmDimensions> alarmDimensions;
 
     /**
      * <p>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule. Valid values: 0 to 86400. Unit: seconds.</p>
-     * <br>
      * <p>By default, this parameter is left empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Cooldown")
     public Integer cooldown;
 
     /**
      * <p>Specifies whether to disable scale-in. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule.</p>
-     * <br>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DisableScaleIn")
     public Boolean disableScaleIn;
 
     /**
      * <p>The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.</p>
-     * <br>
-     * <p>> Auto Scaling calculates the number of ECS instances that must be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.</p>
-     * <br>
+     * <blockquote>
+     * <p>Auto Scaling calculates the number of ECS instances that must be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.</p>
+     * </blockquote>
      * <p>Valid values: 0 to 86400. Unit: seconds.</p>
-     * <br>
      * <p>Default value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("EstimatedInstanceWarmup")
     public Integer estimatedInstanceWarmup;
 
     /**
-     * <p>The maximum number of ECS instances in the scaling group. If you specify this parameter, you must also specify the PredictiveValueBehavior parameter.</p>
-     * <br>
-     * <p>The default value of this parameter is the value of the MaxSize parameter.</p>
+     * <p>The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify <code>PredictiveValueBehavior</code>.</p>
+     * <p>The default value of this parameter is the value of MaxSize.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("InitialMaxSize")
     public Integer initialMaxSize;
 
     /**
-     * <p>The predefined metric that you want to monitor. This parameter is required only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule.</p>
-     * <br>
-     * <p>Valid values if you set the ScalingRuleType parameter to TargetTrackingScalingRule:</p>
-     * <br>
-     * <p>*   CpuUtilization: the average CPU utilization</p>
-     * <p>*   ClassicInternetRx: the average inbound Internet traffic over the classic network</p>
-     * <p>*   ClassicInternetTx: the average outbound Internet traffic over the classic network</p>
-     * <p>*   VpcInternetRx: the average inbound Internet traffic over the virtual private cloud (VPC)</p>
-     * <p>*   VpcInternetTx: the average outbound Internet traffic over the VPC</p>
-     * <p>*   IntranetRx: the average inbound traffic over the internal network</p>
-     * <p>*   IntranetTx: the average outbound traffic over the internal network</p>
-     * <br>
-     * <p>Valid values if you set the ScalingRuleType parameter to PredictiveScalingRule:</p>
-     * <br>
-     * <p>*   CpuUtilization: the average CPU utilization</p>
-     * <p>*   IntranetRx: the average inbound traffic over the internal network</p>
-     * <p>*   IntranetTx: the average outbound traffic over the internal network</p>
+     * <p>The predefined metric of the scaling rule. If you set ScalingRuleType to TargetTrackingScalingRule or PredictiveScalingRule, you must specify this parameter.</p>
+     * <p>Valid values if you set ScalingRuleType to TargetTrackingScalingRule:</p>
+     * <ul>
+     * <li>CpuUtilization: the average CPU utilization.</li>
+     * <li>IntranetTx: the outbound traffic over an internal network.</li>
+     * <li>IntranetRx: the inbound traffic over an internal network.</li>
+     * <li>VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.</li>
+     * <li>VpcInternetRx: the inbound traffic from the Internet to a VPC.</li>
+     * <li>MemoryUtilization: the memory usage.</li>
+     * <li>LoadBalancerRealServerAverageQps:the queries per second (QPS) per Application Load Balancer (ALB) server group.</li>
+     * </ul>
+     * <p>Valid values if you set ScalingRuleType to PredictiveScalingRule:</p>
+     * <ul>
+     * <li>CpuUtilization: the average CPU utilization.</li>
+     * <li>IntranetRx: the inbound traffic over an internal network.</li>
+     * <li>IntranetTx: the outbound traffic over an internal network.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CpuUtilization</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinAdjustmentMagnitude")
     public Integer minAdjustmentMagnitude;
@@ -102,45 +124,58 @@ public class CreateScalingRuleRequest extends TeaModel {
 
     /**
      * <p>The mode of the predictive scaling rule. Valid values:</p>
-     * <br>
-     * <p>*   PredictAndScale: produces predictions and creates prediction tasks.</p>
-     * <p>*   PredictOnly: produces predictions but does not create prediction tasks.</p>
-     * <br>
+     * <ul>
+     * <li>PredictAndScale: produces predictions and creates prediction tasks.</li>
+     * <li>PredictOnly: produces predictions but does not create prediction tasks.</li>
+     * </ul>
      * <p>Default value: PredictAndScale.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PredictAndScale</p>
      */
     @NameInMap("PredictiveScalingMode")
     public String predictiveScalingMode;
 
     /**
      * <p>The amount of buffer time before the prediction task is executed. By default, all prediction tasks that are automatically created for a predictive scaling rule are executed on the hour. You can specify an amount of buffer time for resource preparation before the prediction tasks are executed. Valid values: 0 to 60. Unit: minutes.</p>
-     * <br>
      * <p>Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PredictiveTaskBufferTime")
     public Integer predictiveTaskBufferTime;
 
     /**
      * <p>The maximum value for predication tasks. Valid values:</p>
-     * <br>
-     * <p>*   MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</p>
-     * <p>*   PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</p>
-     * <p>*   PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.</p>
-     * <br>
+     * <ul>
+     * <li>MaxOverridePredictiveValue: uses the initial maximum capacity as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</li>
+     * <li>PredictiveValueOverrideMax: uses the predicted value as the maximum value for prediction tasks if the predicted value is greater than the initial maximum capacity.</li>
+     * <li>PredictiveValueOverrideMaxWithBuffer: increases the predicted value by a percentage that is specified by the PredictiveValueBuffer parameter. If the predicted value that is increased by the percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks.</li>
+     * </ul>
      * <p>Default value: MaxOverridePredictiveValue.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MaxOverridePredictiveValue</p>
      */
     @NameInMap("PredictiveValueBehavior")
     public String predictiveValueBehavior;
 
     /**
-     * <p>The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.</p>
-     * <br>
+     * <p>The ratio based on which the predicted value is increased when you set <code>PredictiveValueBehavior</code> to <code>PredictiveValueOverrideMaxWithBuffer</code>. If the predicted value increased by this ratio is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.</p>
      * <p>Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PredictiveValueBuffer")
     public Integer predictiveValueBuffer;
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -150,45 +185,57 @@ public class CreateScalingRuleRequest extends TeaModel {
 
     /**
      * <p>The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
-     * <br>
      * <p>Default value: 15.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("ScaleInEvaluationCount")
     public Integer scaleInEvaluationCount;
 
     /**
      * <p>The number of consecutive times that the event-triggered task created for scale-out activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
-     * <br>
      * <p>Default value: 3.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("ScaleOutEvaluationCount")
     public Integer scaleOutEvaluationCount;
 
     /**
      * <p>The ID of the scaling group to which the scaling rule belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1ffogfdauy0jw0****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
-     * <p>The name of the scaling rule. It must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). It must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.</p>
-     * <br>
-     * <p>If you do not specify this parameter, the value of the ScalingRuleId parameter is used.</p>
+     * <p>The name of the scaling rule. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</p>
+     * <p>The name of each scaling rule must be unique under the same account within a region.</p>
+     * <p>If you leave this parameter empty, the scaling rule ID is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scalingrule****</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
 
     /**
      * <p>The type of the scaling rule. Valid values:</p>
-     * <br>
-     * <p>*   SimpleScalingRule: scales the number of ECS instances based on the values that are specified for the AdjustmentType and AdjustmentValue parameters.</p>
-     * <p>*   TargetTrackingScalingRule: calculates the number of ECS instances that must be scaled and maintains the value of a predefined metric close to the value that is specified for the TargetValue parameter.</p>
-     * <p>*   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.</p>
-     * <p>*   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to specify the boundary values for the scaling group.</p>
-     * <br>
+     * <ul>
+     * <li>SimpleScalingRule: a simple scaling rule. Once a simple scaling rule is executed, Auto Scaling adjusts the number of ECS instances or elastic container instances in the scaling group based on the values of AdjustmentType and AdjustmentValue.</li>
+     * <li>TargetTrackingScalingRule: a target tracking scaling rule. Once a target tracking scaling rule is executed, Auto Scaling dynamically calculates the number of ECS instances or elastic container instances to scale based on the predefined metric (MetricName) and attempts to maintain the metric value close to the specified target value (TargetValue).</li>
+     * <li>StepScalingRule: a step scaling rule. Once a step scaling rule is executed, Auto Scaling scales instances step by step based on the predefined thresholds and metric values.</li>
+     * <li>PredictiveScalingRule: a predictive scaling rule. Once a predictive scaling rule is executed, Auto Scaling analyzes the historical monitoring data based on the machine learning technology and predicts the trends of metric data. Auto Scaling also creates scheduled tasks to enable dynamic adjustment of the boundary values for the scaling group.</li>
+     * </ul>
      * <p>Default value: SimpleScalingRule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SimpleScalingRule</p>
      */
     @NameInMap("ScalingRuleType")
     public String scalingRuleType;
@@ -201,6 +248,9 @@ public class CreateScalingRuleRequest extends TeaModel {
 
     /**
      * <p>The target value. This parameter is required only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. The value must be greater than 0 and can have up to three decimal places.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.125</p>
      */
     @NameInMap("TargetValue")
     public Float targetValue;
@@ -404,13 +454,19 @@ public class CreateScalingRuleRequest extends TeaModel {
 
     public static class CreateScalingRuleRequestAlarmDimensions extends TeaModel {
         /**
-         * <p>监控项关联的维度信息键。</p>
+         * <p>The dimension key of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rulePool</p>
          */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
         /**
-         * <p>监控项关联的维度信息值。</p>
+         * <p>The dimension value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-l1cbirz451yxuxxx</p>
          */
         @NameInMap("DimensionValue")
         public String dimensionValue;
@@ -441,18 +497,27 @@ public class CreateScalingRuleRequest extends TeaModel {
     public static class CreateScalingRuleRequestStepAdjustments extends TeaModel {
         /**
          * <p>The lower limit specified in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule. Valid values: -9.999999E18 to 9.999999E18.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("MetricIntervalLowerBound")
         public Float metricIntervalLowerBound;
 
         /**
          * <p>The upper limit that is specified in a step adjustment. Valid values: -9.999999E18 to 9.999999E18.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.0</p>
          */
         @NameInMap("MetricIntervalUpperBound")
         public Float metricIntervalUpperBound;
 
         /**
          * <p>The number of ECS instances that you want to scale in a step adjustment. This parameter is available only if you set the ScalingRuleType parameter to StepScalingRule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ScalingAdjustment")
         public Integer scalingAdjustment;

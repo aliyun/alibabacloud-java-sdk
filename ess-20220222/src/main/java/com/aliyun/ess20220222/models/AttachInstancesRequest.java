@@ -4,18 +4,29 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to use the scaling group to manage the lifecycles of manually added instances. Valid values:</p>
-     * <br>
-     * <p>*   true: The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</p>
-     * <p>*   false: The scaling group does not manage the lifecycles of manually added instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</p>
-     * <br>
-     * <p>>  You cannot specify this parameter for subscription instances, non-Alibaba Cloud instances, and instances in Economical Mode.</p>
-     * <br>
+     * <ul>
+     * <li>true: The scaling group manages the lifecycles of manually added instances and automatically created instances in the same manner. In this case, Auto Scaling releases the instances when they are removed from the scaling group. This rule does not apply to instances that are removed by calling the DetachInstances operation.</li>
+     * <li>false: The scaling group does not manage the lifecycles of manually added instances. In this case, Auto Scaling does not release the instances when they are removed from the scaling group.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You cannot specify this parameter for subscription instances, non-Alibaba Cloud instances, and instances in Economical Mode.</p>
+     * </blockquote>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Entrusted")
     public Boolean entrusted;
@@ -28,13 +39,17 @@ public class AttachInstancesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to trigger the lifecycle hook for scale-outs when you call this operation. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
-     * <p>>  You cannot specify this parameter for subscription instances and instances in Economical Mode.</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <blockquote>
+     * <p> You cannot specify this parameter for subscription instances and instances in Economical Mode.</p>
+     * </blockquote>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("LifecycleHook")
     public Boolean lifecycleHook;
@@ -53,6 +68,9 @@ public class AttachInstancesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -65,8 +83,10 @@ public class AttachInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

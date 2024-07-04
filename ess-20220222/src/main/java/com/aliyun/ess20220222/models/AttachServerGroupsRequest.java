@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class AttachServerGroupsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the server group. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceAttach")
     public Boolean forceAttach;
@@ -28,8 +33,10 @@ public class AttachServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -39,15 +46,16 @@ public class AttachServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1fo0dbtsbmqa9h****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
      * <p>The information about the server groups.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ServerGroups")
@@ -117,39 +125,46 @@ public class AttachServerGroupsRequest extends TeaModel {
     public static class AttachServerGroupsRequestServerGroups extends TeaModel {
         /**
          * <p>The port used by ECS instances or elastic container instances after being added as backend servers to the server group.</p>
-         * <br>
          * <p>Valid values: 1 to 65535.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The ID of the server group.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-5yc3bd9lfyh*****</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
         /**
          * <p>The type of the server group. Valid values:</p>
-         * <br>
-         * <p>*   ALB</p>
-         * <p>*   NLB</p>
-         * <br>
+         * <ul>
+         * <li>ALB</li>
+         * <li>NLB</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALB</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of an ECS instance or elastic container instance as a backend server of the server group. Valid values: 0 to 100.</p>
-         * <br>
          * <p>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;

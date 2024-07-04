@@ -6,79 +6,104 @@ import com.aliyun.tea.*;
 public class ModifyLifecycleHookRequest extends TeaModel {
     /**
      * <p>The action that you want Auto Scaling to perform after the lifecycle hook ends. Valid values:</p>
-     * <br>
-     * <p>*   CONTINUE: Auto Scaling continues to respond to scaling requests.</p>
-     * <p>*   ABANDON: Auto Scaling releases Elastic Compute Service (ECS) instances that are created during scale-out activities, or removes ECS instances from the scaling group during scale-in activities.</p>
-     * <br>
+     * <ul>
+     * <li>CONTINUE: Auto Scaling continues to respond to scaling requests.</li>
+     * <li>ABANDON: Auto Scaling releases Elastic Compute Service (ECS) instances that are created during scale-out activities, or removes ECS instances from the scaling group during scale-in activities.</li>
+     * </ul>
      * <p>If multiple lifecycle hooks in a scaling group are triggered during scale-in activities and you set the DefaultResult parameter to ABANDON for the lifecycle hook that you want to modify, Auto Scaling immediately performs the action after the lifecycle hook that you want to modify ends. As a result, other lifecycle hooks end ahead of schedule. In other cases, Auto Scaling performs the action only after all lifecycle hooks end.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CONTINUE</p>
      */
     @NameInMap("DefaultResult")
     public String defaultResult;
 
     /**
      * <p>The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends. Valid values: 30 to 21600. Unit: seconds.</p>
-     * <br>
      * <p>You can call the RecordLifecycleActionHeartbeat operation to prolong the length of a lifecycle hook. You can also call the CompleteLifecycleAction operation to end a lifecycle hook ahead of schedule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
      */
     @NameInMap("HeartbeatTimeout")
     public Integer heartbeatTimeout;
 
     /**
      * <p>The ID of the lifecycle hook that you want to modify.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ash-bp1fxuqyi98w0aib****</p>
      */
     @NameInMap("LifecycleHookId")
     public String lifecycleHookId;
 
     /**
      * <p>The name of the lifecycle hook that you want to modify.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_SCALE_IN</p>
      */
     @NameInMap("LifecycleHookName")
     public String lifecycleHookName;
 
     /**
      * <p>The status into which you want to put the lifecycle hook. Valid values:</p>
-     * <br>
-     * <p>*   Active</p>
-     * <p>*   InActive</p>
-     * <br>
+     * <ul>
+     * <li>Active</li>
+     * <li>InActive</li>
+     * </ul>
      * <p>If you do not specify this parameter, the status of the lifecycle hook remains unchanged after you call this operation.</p>
-     * <br>
-     * <p>> By default, a lifecycle hook is in the Active state after you create it.</p>
+     * <blockquote>
+     * <p>By default, a lifecycle hook is in the Active state after you create it.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Active</p>
      */
     @NameInMap("LifecycleHookStatus")
     public String lifecycleHookStatus;
 
     /**
      * <p>The type of scaling activity to which the lifecycle hook applies. Valid values:</p>
-     * <br>
-     * <p>*   SCALE_OUT</p>
-     * <p>*   SCALE_IN</p>
+     * <ul>
+     * <li>SCALE_OUT</li>
+     * <li>SCALE_IN</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SCALE_IN</p>
      */
     @NameInMap("LifecycleTransition")
     public String lifecycleTransition;
 
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. Specify the value in one of the following formats:</p>
-     * <br>
-     * <p>*   If the notification method is a Message Service (MNS) queue, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</p>
-     * <p>*   If the notification method is an MNS topic, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</p>
-     * <p>*   If the notification method is an Operation Orchestration Service (OOS) template, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</p>
-     * <br>
+     * <ul>
+     * <li>If the notification method is a Message Service (MNS) queue, specify the value in the acs:mns:{region-id}:{account-id}:queue/{queuename} format.</li>
+     * <li>If the notification method is an MNS topic, specify the value in the acs:mns:{region-id}:{account-id}:topic/{topicname} format.</li>
+     * <li>If the notification method is an Operation Orchestration Service (OOS) template, specify the value in the acs:oos:{region-id}:{account-id}:template/{templatename} format.</li>
+     * </ul>
      * <p>The variables in the preceding parameter formats have the following meanings:</p>
-     * <br>
-     * <p>*   region-id: the region ID of the scaling group.</p>
-     * <p>*   account-id: the ID of the Alibaba Cloud account.</p>
-     * <p>*   queuename: the name of the MNS queue.</p>
-     * <p>*   topicname: the name of the MNS topic.</p>
-     * <p>*   templatename: the name of the OOS template.</p>
+     * <ul>
+     * <li>region-id: the region ID of the scaling group.</li>
+     * <li>account-id: the ID of the Alibaba Cloud account.</li>
+     * <li>queuename: the name of the MNS queue.</li>
+     * <li>topicname: the name of the MNS topic.</li>
+     * <li>templatename: the name of the OOS template.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:mns:cn-beijing:161456884340****:queue/modifyLifecycleHo****</p>
      */
     @NameInMap("NotificationArn")
     public String notificationArn;
 
     /**
      * <p>The fixed string that is included in a notification. Auto Scaling sends the notification when the lifecycle hook takes effect. The value of this parameter cannot exceed 4,096 characters in length.</p>
-     * <br>
      * <p>Auto Scaling sends the value specified for the NotificationMetadata parameter together with the notification. This helps you categorize your notifications. The NotificationMetadata parameter takes effect only after you specify the NotificationArn parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test</p>
      */
     @NameInMap("NotificationMetadata")
     public String notificationMetadata;
@@ -91,6 +116,9 @@ public class ModifyLifecycleHookRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -100,6 +128,9 @@ public class ModifyLifecycleHookRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group to which the lifecycle hook belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

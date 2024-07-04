@@ -6,27 +6,33 @@ import com.aliyun.tea.*;
 public class EnableScalingGroupRequest extends TeaModel {
     /**
      * <p>The ID of the scaling configuration that you want to enable in the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asc-bp1ffogfdauy0nu5****</p>
      */
     @NameInMap("ActiveScalingConfigurationId")
     public String activeScalingConfigurationId;
 
     /**
      * <p>The IDs of the ECS instances that you want to add to the scaling group after the scaling group is enabled.</p>
-     * <br>
      * <p>Before you add ECS instances to the scaling group, make sure that the instances meet the following requirements:</p>
-     * <br>
-     * <p>*   The instances must reside in the same region as the scaling group.</p>
-     * <p>*   The instances must be in the Running state.</p>
-     * <p>*   The instances do not belong to another scaling group.</p>
-     * <p>*   The instances are billed on a subscription or pay-as-you-go basis, or the instances are preemptible instances.</p>
-     * <p>*   If you specify VswitchID for the scaling group, the instances must share the same VPC as the scaling group.</p>
-     * <p>*   If you do not specify VswitchID for the scaling group, the instances must use the classic network.</p>
+     * <ul>
+     * <li>The instances must reside in the same region as the scaling group.</li>
+     * <li>The instances must be in the Running state.</li>
+     * <li>The instances do not belong to another scaling group.</li>
+     * <li>The instances are billed on a subscription or pay-as-you-go basis, or the instances are preemptible instances.</li>
+     * <li>If you specify VswitchID for the scaling group, the instances must share the same VPC as the scaling group.</li>
+     * <li>If you do not specify VswitchID for the scaling group, the instances must use the classic network.</li>
+     * </ul>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
      * <p>The ID of the launch template that is used by Auto Scaling to create ECS instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lt-m5e3ofjr1zn1aw7****</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
@@ -39,17 +45,20 @@ public class EnableScalingGroupRequest extends TeaModel {
 
     /**
      * <p>The version number of the launch template. Valid values:</p>
-     * <br>
-     * <p>*   A fixed template version number.</p>
-     * <p>*   Default: The default template version is always used.</p>
-     * <p>*   Latest: The latest template version is always used.</p>
+     * <ul>
+     * <li>A fixed template version number.</li>
+     * <li>Default: The default template version is always used.</li>
+     * <li>Latest: The latest template version is always used.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("LaunchTemplateVersion")
     public String launchTemplateVersion;
 
     /**
      * <p>The weights of ECS instances or elastic container instances as backend servers.</p>
-     * <br>
      * <p>Default value: 50.</p>
      */
     @NameInMap("LoadBalancerWeights")
@@ -63,6 +72,9 @@ public class EnableScalingGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -75,8 +87,10 @@ public class EnableScalingGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp14wlu85wrpchm0****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
@@ -184,35 +198,37 @@ public class EnableScalingGroupRequest extends TeaModel {
 
     public static class EnableScalingGroupRequestLaunchTemplateOverrides extends TeaModel {
         /**
-         * <p>The instance type. If you want to scale instances based on instance type weights in the scaling group, you must specify `LaunchTemplateOverrides.WeightedCapacity` after you specify this parameter.</p>
-         * <br>
+         * <p>The instance type. If you want to scale instances based on instance type weights in the scaling group, you must specify <code>LaunchTemplateOverrides.WeightedCapacity</code> after you specify this parameter.</p>
          * <p>The instance type specified by using this parameter overwrites the instance type of the launch template.</p>
-         * <br>
-         * <p>>  This parameter takes effect only if you specify LaunchTemplateId.</p>
-         * <br>
+         * <blockquote>
+         * <p> This parameter takes effect only if you specify LaunchTemplateId.</p>
+         * </blockquote>
          * <p>You can use this parameter to specify any instance types that are available for purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5.xlarge</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The weight of the instance type. If you want to scale instances based on instance type weights in the scaling group, you must specify this parameter after you specify `LaunchTemplateOverrides.InstanceType`.</p>
-         * <br>
+         * <p>The weight of the instance type. If you want to scale instances based on instance type weights in the scaling group, you must specify this parameter after you specify <code>LaunchTemplateOverrides.InstanceType</code>.</p>
          * <p>The weight specifies the capacity of an instance of the specified instance type in the scaling group. A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</p>
-         * <br>
          * <p>Performance metrics such as the number of vCPUs and the memory size of each instance type may vary. You can specify different weights for different instance types based on your business requirements.</p>
-         * <br>
          * <p>Example:</p>
-         * <br>
-         * <p>*   Current capacity: 0</p>
-         * <p>*   Expected capacity: 6</p>
-         * <p>*   Capacity of ecs.c5.xlarge: 4</p>
-         * <br>
+         * <ul>
+         * <li>Current capacity: 0</li>
+         * <li>Expected capacity: 6</li>
+         * <li>Capacity of ecs.c5.xlarge: 4</li>
+         * </ul>
          * <p>To reach the expected capacity, Auto Scaling must scale out two instances of ecs.c5.xlarge.</p>
-         * <br>
-         * <p>>  The total capacity of the scaling group is constrained and cannot surpass the combined total of the maximum group size defined by MaxSize and the highest weight assigned to any instance type.</p>
-         * <br>
+         * <blockquote>
+         * <p> The total capacity of the scaling group is constrained and cannot surpass the combined total of the maximum group size defined by MaxSize and the highest weight assigned to any instance type.</p>
+         * </blockquote>
          * <p>Valid values of WeightedCapacity: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("WeightedCapacity")
         public Integer weightedCapacity;

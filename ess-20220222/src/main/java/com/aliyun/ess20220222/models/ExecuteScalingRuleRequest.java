@@ -6,18 +6,28 @@ import com.aliyun.tea.*;
 public class ExecuteScalingRuleRequest extends TeaModel {
     /**
      * <p>The threshold specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("BreachThreshold")
     public Float breachThreshold;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The metric value specified when the step scaling rule is executed. Valid values: -9.999999E18 to 9.999999E18.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("MetricValue")
     public Float metricValue;
@@ -30,6 +40,9 @@ public class ExecuteScalingRuleRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,10 +55,13 @@ public class ExecuteScalingRuleRequest extends TeaModel {
 
     /**
      * <p>The unique identifier of the scaling rule.</p>
-     * <br>
-     * <p>> You can call the ExecuteScalingRule operation to execute only simple scaling rules and step scaling rules. To execute a step scaling rule, you must specify the BreachThreshold and MetricValue parameters.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can call this operation to execute simple scaling rules and step scaling rules. If you want to call this operation to execute a step scaling rule, you must specify <code>BreachThreshold</code> and <code>MetricValue</code>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ari:acs:ess:cn-hangzhou:140692647406****:scalingrule/asr-bp1dvirgwkoowxk7****</p>
      */
     @NameInMap("ScalingRuleAri")
     public String scalingRuleAri;

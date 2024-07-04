@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeScalingActivitiesResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC107349-57B7-4405-B1BF-9BF5AF7F2A46</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of scaling activities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,9 +92,22 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext extends TeaModel {
+        /**
+         * <p>Indicates whether all lifecycle hooks are disabled. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DisableLifecycleHook")
         public Boolean disableLifecycleHook;
 
+        /**
+         * <p>The IDs of the lifecycle hooks that are disabled.</p>
+         */
         @NameInMap("IgnoredLifecycleHookIds")
         public java.util.List<String> ignoredLifecycleHookIds;
 
@@ -110,167 +135,258 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingActivitiesResponseBodyScalingActivities extends TeaModel {
+        /**
+         * <p>The metadata of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;goatscaler.io/managed\&quot;:\&quot;true\&quot;}</p>
+         */
         @NameInMap("ActivityMetadata")
         public String activityMetadata;
 
         /**
-         * <p>The total number of instances that are manually added to the scaling group after the scaling activity is complete.</p>
+         * <p>The total number of instances that are manually added to the scaling group after the scaling activity was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AttachedCapacity")
         public String attachedCapacity;
 
         /**
-         * <p>The total number of instances that are created by Auto Scaling after the scaling activity is complete.</p>
+         * <p>The total number of instances that are created by Auto Scaling after the scaling activity was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("AutoCreatedCapacity")
         public String autoCreatedCapacity;
 
         /**
-         * <p>The reason why the scaling activity is triggered.</p>
+         * <p>The reason why the scaling activity was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A user requests to execute scaling rule \&quot;asr-bp12tcnol686y1ik****\&quot;, changing the Total Capacity from \&quot;1\&quot; to \&quot;2\&quot;.</p>
          */
         @NameInMap("Cause")
         public String cause;
 
         /**
-         * <p>The number of instances that are created during the scale-out.</p>
+         * <p>The number of instances that are created during the scale-out event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CreatedCapacity")
         public Integer createdCapacity;
 
         /**
-         * <p>The instances that are created during the scale-out.</p>
+         * <p>The instances that are created during the scale-out event.</p>
          */
         @NameInMap("CreatedInstances")
         public java.util.List<String> createdInstances;
 
         /**
          * <p>The description of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Add \&quot;1\&quot; ECS instance</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The number of instances that are released during the scale-in.</p>
+         * <p>The number of instances that are released during the scale-in event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("DestroyedCapacity")
         public Integer destroyedCapacity;
 
         /**
-         * <p>The instances that are released during the scale-in.</p>
+         * <p>The instances that are released during the scale-in event.</p>
          */
         @NameInMap("DestroyedInstances")
         public java.util.List<String> destroyedInstances;
 
         /**
          * <p>Details of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;new ECS instances &quot;i-j6c8ilerw, i-j6c8iler4mx&quot; are created.&quot;</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
-         * <p>The time when the scaling activity is complete.</p>
+         * <p>The time when the scaling activity was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-10T09:54Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The error code that is returned when the scaling activity failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OperationDenied.NoStock</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message that is returned when the scaling activity failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified ECS resource is out of stock in this region. Please try again later.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The context of the lifecycle hook.</p>
+         */
         @NameInMap("LifecycleHookContext")
         public DescribeScalingActivitiesResponseBodyScalingActivitiesLifecycleHookContext lifecycleHookContext;
 
         /**
          * <p>The execution progress of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Progress")
         public Integer progress;
 
         /**
          * <p>The ID of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asa-bp161xudmuxdzofe****</p>
          */
         @NameInMap("ScalingActivityId")
         public String scalingActivityId;
 
         /**
          * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp18p2yfxow2dloq****</p>
          */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
         /**
-         * <p>If you query a scale-out, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out.</p>
-         * <br>
-         * <p>If you query a scale-in, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in.</p>
+         * <p>If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out event.</p>
+         * <p>If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ScalingInstanceNumber")
         public Integer scalingInstanceNumber;
 
         /**
-         * <p>The time when the scaling activity is started.</p>
+         * <p>The time when the scaling activity was started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-10T09:54Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The number of instances that are started from the Economical Mode during the scale-out.</p>
+         * <p>The number of instances that are started from the Economical Mode during the scale-out event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("StartedCapacity")
         public Integer startedCapacity;
 
         /**
-         * <p>The instances that are started from the Economical Mode during the scale-out.</p>
+         * <p>The instances that are started from the Economical Mode during the scale-out event.</p>
          */
         @NameInMap("StartedInstances")
         public java.util.List<String> startedInstances;
 
         /**
          * <p>The status of the scaling activity. Valid values:</p>
-         * <br>
-         * <p>*   Successful: The scaling activity is successful.</p>
-         * <p>*   Warning: The scaling activity is partially successful.</p>
-         * <p>*   Failed: The scaling activity failed.</p>
-         * <p>*   InProgress: The scaling activity is in progress.</p>
-         * <p>*   Rejected: The request to trigger the scaling activity is rejected.</p>
+         * <ul>
+         * <li>Successful: The scaling activity is successful.</li>
+         * <li>Warning: The scaling activity is partially successful.</li>
+         * <li>Failed: The scaling activity failed.</li>
+         * <li>InProgress: The scaling activity is in progress.</li>
+         * <li>Rejected: The request to trigger the scaling activity is rejected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         @NameInMap("StatusCode")
         public String statusCode;
 
         /**
          * <p>The status message of the scaling activity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>\&quot;1\&quot; ECS instances are added</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
-         * <p>The number of instances that are stopped in the Economical Mode during the scale-in.</p>
+         * <p>The number of instances that are stopped in the Economical Mode during the scale-in event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("StoppedCapacity")
         public Integer stoppedCapacity;
 
         /**
-         * <p>The instances that are stopped in the Economical Mode during the scale-in.</p>
+         * <p>The instances that are stopped in the Economical Mode during the scale-in event.</p>
          */
         @NameInMap("StoppedInstances")
         public java.util.List<String> stoppedInstances;
 
         /**
-         * <p>The total number of instances in the scaling group after the scaling activity is complete.</p>
+         * <p>The total number of instances in the scaling group after the scaling activity was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("TotalCapacity")
         public String totalCapacity;
 
+        /**
+         * <p>The ID of the trigger source of the scaling activity.</p>
+         * <ul>
+         * <li>If TriggerSourceType is set to Cms, the ID of the trigger source is the ID of an event-triggered task.</li>
+         * <li>If TriggerSourceType is set to Api, the ID of the trigger source is the ID of an Alibaba Cloud account or a RAM user.</li>
+         * <li>If TriggerSourceType is set to Api, the ID of the trigger source is null.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2346366580*****</p>
+         */
         @NameInMap("TriggerSourceId")
         public String triggerSourceId;
 
+        /**
+         * <p>The type of the trigger source of the scaling activity.</p>
+         * <ul>
+         * <li>Cms: triggered by an event-triggered task</li>
+         * <li>APIs: triggered by API calling</li>
+         * <li>Ess: triggered by a system task</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Api</p>
+         */
         @NameInMap("TriggerSourceType")
         public String triggerSourceType;
 

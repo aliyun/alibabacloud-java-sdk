@@ -12,6 +12,9 @@ public class RebalanceInstancesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -24,8 +27,10 @@ public class RebalanceInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

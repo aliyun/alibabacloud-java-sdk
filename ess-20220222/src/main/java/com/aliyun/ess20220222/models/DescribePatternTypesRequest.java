@@ -6,13 +6,13 @@ import com.aliyun.tea.*;
 public class DescribePatternTypesRequest extends TeaModel {
     /**
      * <p>The architectures of instance types. Valid values:</p>
-     * <br>
-     * <p>*   X86: x86</p>
-     * <p>*   Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</p>
-     * <p>*   BareMetal: ECS Bare Metal Instance</p>
-     * <p>*   Arm: Arm</p>
-     * <p>*   SuperComputeCluster: Super Computing Cluster</p>
-     * <br>
+     * <ul>
+     * <li>X86: x86</li>
+     * <li>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated</li>
+     * <li>BareMetal: ECS Bare Metal Instance</li>
+     * <li>Arm: Arm</li>
+     * <li>SuperComputeCluster: Super Computing Cluster</li>
+     * </ul>
      * <p>By default, all values are selected.</p>
      */
     @NameInMap("Architecture")
@@ -20,24 +20,33 @@ public class DescribePatternTypesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to include burstable instance types. Valid values:</p>
-     * <br>
-     * <p>*   Exclude: does not include burstable instance types.</p>
-     * <p>*   Include: includes burstable instance types.</p>
-     * <p>*   Required: includes only burstable instance types.</p>
-     * <br>
+     * <ul>
+     * <li>Exclude: does not include burstable instance types.</li>
+     * <li>Include: includes burstable instance types.</li>
+     * <li>Required: includes only burstable instance types.</li>
+     * </ul>
      * <p>Default value: Include.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Include</p>
      */
     @NameInMap("BurstablePerformance")
     public String burstablePerformance;
 
     /**
      * <p>The channel ID. This parameter is not for public use.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79425074</p>
      */
     @NameInMap("ChannelId")
     public Long channelId;
 
     /**
      * <p>The number of vCPUs that you want to assign to the instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Cores")
     public Integer cores;
@@ -62,10 +71,14 @@ public class DescribePatternTypesRequest extends TeaModel {
 
     /**
      * <p>The level of the instance family. Valid values:</p>
-     * <br>
-     * <p>*   EntryLevel: entry level</p>
-     * <p>*   EnterpriseLevel: enterprise level</p>
-     * <p>*   CreditEntryLevel: credit-based entry level For more information, see [Burstable instance families](https://help.aliyun.com/document_detail/59977.html).</p>
+     * <ul>
+     * <li>EntryLevel: entry level</li>
+     * <li>EnterpriseLevel: enterprise level</li>
+     * <li>CreditEntryLevel: credit-based entry level For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>EnterpriseLevel</p>
      */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
@@ -75,21 +88,39 @@ public class DescribePatternTypesRequest extends TeaModel {
 
     /**
      * <p>The maximum hourly price for pay-as-you-go or preemptible instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("MaxPrice")
     public Float maxPrice;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("MaximumCpuCoreCount")
     public Integer maximumCpuCoreCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MaximumGpuAmount")
     public Integer maximumGpuAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("MaximumMemorySize")
     public Float maximumMemorySize;
 
     /**
      * <p>The memory size that you want to assign to the instance type. Unit: GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("Memory")
     public Float memory;
@@ -100,27 +131,59 @@ public class DescribePatternTypesRequest extends TeaModel {
     @NameInMap("MemoryList")
     public java.util.List<Float> memoryList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("MinimumBaselineCredit")
     public Integer minimumBaselineCredit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MinimumCpuCoreCount")
     public Integer minimumCpuCoreCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinimumEniIpv6AddressQuantity")
     public Integer minimumEniIpv6AddressQuantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MinimumEniPrivateIpAddressQuantity")
     public Integer minimumEniPrivateIpAddressQuantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MinimumEniQuantity")
     public Integer minimumEniQuantity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("MinimumGpuAmount")
     public Integer minimumGpuAmount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("MinimumInitialCredit")
     public Integer minimumInitialCredit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("MinimumMemorySize")
     public Float minimumMemorySize;
 
@@ -129,20 +192,25 @@ public class DescribePatternTypesRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The preemption policy that you want to apply to pay-as-you-go instances. Valid values:</p>
-     * <br>
-     * <p>*   NoSpot: The instances are created as regular pay-as-you-go instances.</p>
-     * <p>*   SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</p>
-     * <br>
+     * <ul>
+     * <li>NoSpot: The instances are created as regular pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The instances are created as preemptible instances that have a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</li>
+     * </ul>
      * <p>Default value: NoSpot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;

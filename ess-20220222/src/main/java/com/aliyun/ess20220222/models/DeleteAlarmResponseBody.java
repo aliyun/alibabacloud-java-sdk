@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteAlarmResponseBody extends TeaModel {
     /**
      * <p>The ID of the event-triggered task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1hvbnmkl10vll5****_f95ce797-dc2e-4bad-9618-14fee7d1****</p>
      */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EF9BFEE-FE07-4627-B8FB-14326FB9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,28 +5,37 @@ import com.aliyun.tea.*;
 
 public class RemoveInstancesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to adjust the expected number of ECS instances in the scaling group. Valid values:</p>
-     * <br>
-     * <p>*   true: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group decreases.</p>
-     * <p>*   false: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group remains unchanged.</p>
-     * <br>
+     * <ul>
+     * <li>true: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group decreases.</li>
+     * <li>false: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group remains unchanged.</li>
+     * </ul>
      * <p>Default value: true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DecreaseDesiredCapacity")
     public Boolean decreaseDesiredCapacity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IgnoreInvalidInstance")
     public Boolean ignoreInvalidInstance;
 
     /**
      * <p>The IDs of the ECS instances that you want to remove from the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
@@ -40,29 +49,34 @@ public class RemoveInstancesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The action subsequent to the removal of the Elastic Compute Service (ECS) instances. Valid values:</p>
-     * <br>
-     * <p>*   recycle: The ECS instances enter the Economical Mode.</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note** This setting is applicable only if you set `ScalingPolicy` to `recycle`.</p>
-     * <br>
-     * <p>*   release: The ECS instances are released.</p>
-     * <br>
+     * <ul>
+     * <li><p>recycle: The ECS instances enter the Economical Mode.</p>
+     * <p>**</p>
+     * <p><strong>Note</strong> This setting is applicable only if you set <code>ScalingPolicy</code> to <code>recycle</code>.</p>
+     * </li>
+     * <li><p>release: The ECS instances are released.</p>
+     * </li>
+     * </ul>
      * <p>ScalingPolicy of the CreateScalingGroup operation specifies the reclaim mode of the scaling group while RemovePolicy of the RemoveInstances operation specifies the subsequent action when an ECS instance is removed from the scaling group. Examples:</p>
-     * <br>
-     * <p>*   If you set ScalingPolicy and RemovePolicy to recycle, the ECS instances enter the Economical Mode when they are removed.</p>
-     * <p>*   If you set ScalingPolicy to recycle and RemovePolicy to release, the ECS instances are released when they are removed.</p>
-     * <p>*   If you set ScalingPolicy to release and RemovePolicy to recycle, the ECS instances are released when they are removed.</p>
-     * <p>*   If you set ScalingPolicy and RemovePolicy to release, the ECS instances are released when they are removed.</p>
-     * <br>
+     * <ul>
+     * <li>If you set ScalingPolicy and RemovePolicy to recycle, the ECS instances enter the Economical Mode when they are removed.</li>
+     * <li>If you set ScalingPolicy to recycle and RemovePolicy to release, the ECS instances are released when they are removed.</li>
+     * <li>If you set ScalingPolicy to release and RemovePolicy to recycle, the ECS instances are released when they are removed.</li>
+     * <li>If you set ScalingPolicy and RemovePolicy to release, the ECS instances are released when they are removed.</li>
+     * </ul>
      * <p>Default value: release.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>release</p>
      */
     @NameInMap("RemovePolicy")
     public String removePolicy;
@@ -75,8 +89,10 @@ public class RemoveInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

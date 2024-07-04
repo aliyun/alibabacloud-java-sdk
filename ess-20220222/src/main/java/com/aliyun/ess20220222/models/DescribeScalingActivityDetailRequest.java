@@ -15,8 +15,10 @@ public class DescribeScalingActivityDetailRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling activity that you want to query. You can call the DescribeScalingActivities operation to query the IDs of scaling activities.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asa-bp1c9djwrgxjyk31****</p>
      */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;

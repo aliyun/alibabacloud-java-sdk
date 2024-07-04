@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class SetGroupDeletionProtectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable deletion protection for the scaling group. Valid values:</p>
-     * <br>
-     * <p>*   true: enables deletion protection. In this case, you cannot delete the scaling group by using the Auto Scaling console or calling an API operation. You must disable deletion protection before you can delete the scaling group.</p>
-     * <p>*   false: disables deletion protection.</p>
-     * <br>
+     * <ul>
+     * <li>true: enables deletion protection. In this case, you cannot delete the scaling group by using the Auto Scaling console or calling an API operation. You must disable deletion protection before you can delete the scaling group.</li>
+     * <li>false: disables deletion protection.</li>
+     * </ul>
      * <p>Default value: false.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("GroupDeletionProtection")
     public Boolean groupDeletionProtection;
@@ -22,6 +24,9 @@ public class SetGroupDeletionProtectionRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -31,8 +36,10 @@ public class SetGroupDeletionProtectionRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1igpak5ft1flyp****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteLifecycleHookRequest extends TeaModel {
     /**
      * <p>The ID of the lifecycle hook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ash-bp14g3ee6bt3sc98****</p>
      */
     @NameInMap("LifecycleHookId")
     public String lifecycleHookId;
 
     /**
      * <p>The name of the lifecycle hook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lifecyclehook****</p>
      */
     @NameInMap("LifecycleHookName")
     public String lifecycleHookName;
@@ -24,6 +30,9 @@ public class DeleteLifecycleHookRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -33,6 +42,9 @@ public class DeleteLifecycleHookRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

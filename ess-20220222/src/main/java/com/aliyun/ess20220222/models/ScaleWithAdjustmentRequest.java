@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class ScaleWithAdjustmentRequest extends TeaModel {
     /**
      * <p>The metadata of the scaling activity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("ActivityMetadata")
     public String activityMetadata;
 
     /**
      * <p>The type of the scaling policy. Valid values:</p>
-     * <br>
-     * <p>*   QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</p>
-     * <p>*   PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</p>
-     * <p>*   TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</p>
-     * <br>
+     * <ul>
+     * <li>QuantityChangeInCapacity: adds the specified number of ECS instances to or removes the specified number of ECS instances from the scaling group.</li>
+     * <li>PercentChangeInCapacity: adds the specified percentage of ECS instances to or removes the specified percentage of ECS instances from the scaling group.</li>
+     * <li>TotalCapacity: adjusts the number of ECS instances in the scaling group to a specified number.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QuantityChangeInCapacity</p>
      */
     @NameInMap("AdjustmentType")
     public String adjustmentType;
 
     /**
      * <p>The number of instances in each adjustment. The number of ECS instances in each adjustment cannot exceed 1,000.</p>
-     * <br>
-     * <p>*   Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</p>
-     * <p>*   Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</p>
-     * <p>*   Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</p>
-     * <br>
+     * <ul>
+     * <li>Valid values if you set the AdjustmentType parameter to QuantityChangeInCapacity: -1000 to 1000.</li>
+     * <li>Valid values if you set the AdjustmentType parameter to PercentChangeInCapacity: -100 to 10000.</li>
+     * <li>Valid values if you set the AdjustmentType parameter to TotalCapacity: 0 to 2000.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -47,13 +59,16 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     public ScaleWithAdjustmentRequestLifecycleHookContext lifecycleHookContext;
 
     /**
-     * <p>The minimum number of instances allowed in each adjustment. This parameter takes effect only if you set the `AdjustmentType` parameter to `PercentChangeInCapacity`.</p>
+     * <p>The minimum number of instances allowed in each adjustment. This parameter takes effect only if you set the <code>AdjustmentType</code> parameter to <code>PercentChangeInCapacity</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinAdjustmentMagnitude")
     public Integer minAdjustmentMagnitude;
 
     /**
-     * <p>The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out.</p>
+     * <p>The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out event.</p>
      */
     @NameInMap("Overrides")
     public ScaleWithAdjustmentRequestOverrides overrides;
@@ -66,21 +81,27 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-j6c1o397427hyjdc****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
      * <p>Specifies whether to trigger the scaling activity in a synchronous manner. This parameter takes effect only on scaling groups for which you specified an expected number of instances. Valid values:</p>
-     * <br>
-     * <p>*   true: triggers the scaling activity in a synchronous manner. The scaling activity is triggered at the time when the scaling rule is executed.</p>
-     * <p>*   false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number of instances and determines whether to trigger the scaling activity based on the check result.</p>
-     * <br>
-     * <p>> For more information about the Expected Number of Instances feature, see [Expected number of instances](https://help.aliyun.com/document_detail/146231.html).</p>
-     * <br>
+     * <ul>
+     * <li>true: triggers the scaling activity in a synchronous manner. The scaling activity is triggered at the time when the scaling rule is executed.</li>
+     * <li>false: does not trigger the scaling activity in a synchronous manner. After you change the expected number of instances for the scaling group, Auto Scaling checks whether the total number of instances in the scaling group matches the new expected number of instances and determines whether to trigger the scaling activity based on the check result.</li>
+     * </ul>
+     * <blockquote>
+     * <p>For more information about the Expected Number of Instances feature, see <a href="https://help.aliyun.com/document_detail/146231.html">Expected number of instances</a>.</p>
+     * </blockquote>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SyncActivity")
     public Boolean syncActivity;
@@ -181,9 +202,13 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     public static class ScaleWithAdjustmentRequestLifecycleHookContext extends TeaModel {
         /**
          * <p>Specifies whether to disable the Lifecycle Hook feature. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DisableLifecycleHook")
         public Boolean disableLifecycleHook;
@@ -219,13 +244,19 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
 
     public static class ScaleWithAdjustmentRequestOverridesContainerOverridesEnvironmentVars extends TeaModel {
         /**
-         * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.</p>
+         * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the <code>[0-9a-zA-Z]</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PATH</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/tomcat</p>
          */
         @NameInMap("Value")
         public String value;
@@ -261,13 +292,16 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
         public java.util.List<String> args;
 
         /**
-         * <p>The startup commands of the container. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
+         * <p>The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.</p>
          */
         @NameInMap("Commands")
         public java.util.List<String> commands;
 
         /**
          * <p>The number of vCPUs that you want to allocate to the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
@@ -280,12 +314,18 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
 
         /**
          * <p>The memory size that you want to allocate to the container. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Memory")
         public Float memory;
 
         /**
          * <p>The container name. If you specify ContainerOverrides, you must also specify Name. ContainerOverrides takes effect only when the container name specified by Name matches that specified in the scaling configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>container-1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -354,12 +394,18 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
 
         /**
          * <p>The number of vCPUs that you want to allocate to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cpu")
         public Float cpu;
 
         /**
          * <p>The memory size that you want to allocate to the instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Memory")
         public Float memory;

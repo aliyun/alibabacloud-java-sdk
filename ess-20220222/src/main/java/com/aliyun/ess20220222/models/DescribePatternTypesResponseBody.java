@@ -12,6 +12,9 @@ public class DescribePatternTypesResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,34 +43,50 @@ public class DescribePatternTypesResponseBody extends TeaModel {
     public static class DescribePatternTypesResponseBodyPatternTypes extends TeaModel {
         /**
          * <p>The number of vCPUs that are assigned to the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Cores")
         public Integer cores;
 
         /**
          * <p>The level of the instance family.</p>
-         * <br>
-         * <p>*   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](https://help.aliyun.com/document_detail/108489.html).</p>
-         * <p>*   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see [Overview of instance families](https://help.aliyun.com/document_detail/25378.html).</p>
-         * <p>*   CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](https://help.aliyun.com/document_detail/59977.html).</p>
+         * <ul>
+         * <li>EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</li>
+         * <li>EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
+         * <li>CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EnterpriseLevel</p>
          */
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
         /**
          * <p>The name of the instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c7.xlarge</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>The instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c7</p>
          */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
         /**
          * <p>The memory size that are assigned to the instance type. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Memory")
         public Float memory;

@@ -4,18 +4,30 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingInstancesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AutoCreated</p>
+     */
     @NameInMap("CreationType")
     public String creationType;
 
     @NameInMap("CreationTypes")
     public java.util.List<String> creationTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Healthy</p>
+     */
     @NameInMap("HealthStatus")
     public String healthStatus;
 
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>InService</p>
+     */
     @NameInMap("LifecycleState")
     public String lifecycleState;
 
@@ -31,14 +43,25 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,12 +72,24 @@ public class DescribeScalingInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asa-bp1c9djwrgxjyk31****</p>
+     */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc-bp1i65jd06v04vdh****</p>
+     */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asg-bp1igpak5ft1flyp****</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

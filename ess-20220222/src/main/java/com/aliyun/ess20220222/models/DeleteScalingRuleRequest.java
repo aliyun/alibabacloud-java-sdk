@@ -12,6 +12,9 @@ public class DeleteScalingRuleRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,8 +24,10 @@ public class DeleteScalingRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling rule that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asr-bp163l21e07uhnyt****</p>
      */
     @NameInMap("ScalingRuleId")
     public String scalingRuleId;

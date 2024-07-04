@@ -4,6 +4,10 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("GroupType")
     public String groupType;
 
@@ -15,26 +19,37 @@ public class DescribeScalingGroupsRequest extends TeaModel {
 
     /**
      * <p>The page number. Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page. Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-123******</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -47,6 +62,10 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     @NameInMap("ScalingGroupIds")
     public java.util.List<String> scalingGroupIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>scalinggroup****</p>
+     */
     @NameInMap("ScalingGroupName")
     public String scalingGroupName;
 
@@ -166,9 +185,17 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     }
 
     public static class DescribeScalingGroupsRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Department</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Finance</p>
+         */
         @NameInMap("Value")
         public String value;
 

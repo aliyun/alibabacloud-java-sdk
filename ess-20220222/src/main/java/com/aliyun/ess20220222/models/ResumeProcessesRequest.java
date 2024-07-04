@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ResumeProcessesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
-     * <br>
-     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -17,7 +19,6 @@ public class ResumeProcessesRequest extends TeaModel {
 
     /**
      * <p>Details of the processes that you want to resume.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Processes")
@@ -25,6 +26,9 @@ public class ResumeProcessesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -34,8 +38,10 @@ public class ResumeProcessesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp15oubotmrq11xe****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

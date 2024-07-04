@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DetachAlbServerGroupsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the scaling activity in which the ALB server group is disassociated from the scaling group and the ECS instances in the ALB server group are removed from the ALB server group. This parameter is returned only after you set the `ForceDetach` parameter to `true`.</p>
+     * <p>The ID of the scaling activity in which the ALB server group is disassociated from the scaling group and the ECS instances in the ALB server group are removed from the ALB server group. This parameter is returned only after you set the <code>ForceDetach</code> parameter to <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asa-2ze6wxj8vsohn6j9****</p>
      */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;

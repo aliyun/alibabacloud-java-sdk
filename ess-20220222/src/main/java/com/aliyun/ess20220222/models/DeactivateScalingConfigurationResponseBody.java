@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeactivateScalingConfigurationResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D09C9E64-7D19-4E1C-8CD6-123D34A4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

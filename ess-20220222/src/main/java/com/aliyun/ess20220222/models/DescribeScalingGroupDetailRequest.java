@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeScalingGroupDetailRequest extends TeaModel {
     /**
      * <p>The output format. Set the value to yaml.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yaml</p>
      */
     @NameInMap("OutputFormat")
     public String outputFormat;
@@ -14,17 +17,21 @@ public class DescribeScalingGroupDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the scaling group. For more information, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
-     * <br>
+     * <p>The region ID of the scaling group. For more information, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
