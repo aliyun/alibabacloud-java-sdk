@@ -638,6 +638,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>上传国密证书</p>
+     * 
+     * @param request CreateSM2CertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSM2CertResponse
+     */
+    public CreateSM2CertResponse createSM2CertWithOptions(CreateSM2CertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certName)) {
+            query.put("CertName", request.certName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptCertificate)) {
+            query.put("EncryptCertificate", request.encryptCertificate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptPrivateKey)) {
+            query.put("EncryptPrivateKey", request.encryptPrivateKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signCertificate)) {
+            query.put("SignCertificate", request.signCertificate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signPrivateKey)) {
+            query.put("SignPrivateKey", request.signPrivateKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSM2Cert"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSM2CertResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传国密证书</p>
+     * 
+     * @param request CreateSM2CertRequest
+     * @return CreateSM2CertResponse
+     */
+    public CreateSM2CertResponse createSM2Cert(CreateSM2CertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSM2CertWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除API安全风险</p>
      * 
      * @param request DeleteApisecAbnormalRequest
@@ -1402,7 +1474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取API安全日志订阅列表</p>
+     * <p>Queries the configurations of API security log subscription.</p>
      * 
      * @param request DescribeApisecLogDeliveriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1442,7 +1514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取API安全日志订阅列表</p>
+     * <p>Queries the configurations of API security log subscription.</p>
      * 
      * @param request DescribeApisecLogDeliveriesRequest
      * @return DescribeApisecLogDeliveriesResponse
@@ -1538,7 +1610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询日志服务SLS的LogStore列表</p>
+     * <p>Queries the Logstores whose names start with apisec- in Simple Log Service.</p>
      * 
      * @param request DescribeApisecSlsLogStoresRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1586,7 +1658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询日志服务SLS的LogStore列表</p>
+     * <p>Queries the Logstores whose names start with apisec- in Simple Log Service.</p>
      * 
      * @param request DescribeApisecSlsLogStoresRequest
      * @return DescribeApisecSlsLogStoresResponse
@@ -1598,7 +1670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询日志服务SLS的Project列表</p>
+     * <p>Queries the projects whose names start with apisec- in Simple Log Service.</p>
      * 
      * @param request DescribeApisecSlsProjectsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1642,7 +1714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询日志服务SLS的Project列表</p>
+     * <p>Queries the projects whose names start with apisec- in Simple Log Service.</p>
      * 
      * @param request DescribeApisecSlsProjectsRequest
      * @return DescribeApisecSlsProjectsResponse
@@ -1866,6 +1938,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCloudResourcesResponse describeCloudResources(DescribeCloudResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCloudResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</p>
+     * 
+     * @param request DescribeDDoSStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDDoSStatusResponse
+     */
+    public DescribeDDoSStatusResponse describeDDoSStatusWithOptions(DescribeDDoSStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDDoSStatus"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDDoSStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</p>
+     * 
+     * @param request DescribeDDoSStatusRequest
+     * @return DescribeDDoSStatusResponse
+     */
+    public DescribeDDoSStatusResponse describeDDoSStatus(DescribeDDoSStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDDoSStatusWithOptions(request, runtime);
     }
 
     /**
@@ -5210,7 +5334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改API安全日志订阅</p>
+     * <p>Modifies the configurations of API security log subscription.</p>
      * 
      * @param request ModifyApisecLogDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5266,7 +5390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改API安全日志订阅</p>
+     * <p>Modifies the configurations of API security log subscription.</p>
      * 
      * @param request ModifyApisecLogDeliveryRequest
      * @return ModifyApisecLogDeliveryResponse
@@ -5278,7 +5402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改API安全日志订阅状态</p>
+     * <p>Modifies the status of API security log subscription.</p>
      * 
      * @param request ModifyApisecLogDeliveryStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5326,7 +5450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改API安全日志订阅状态</p>
+     * <p>Modifies the status of API security log subscription.</p>
      * 
      * @param request ModifyApisecLogDeliveryStatusRequest
      * @return ModifyApisecLogDeliveryStatusResponse

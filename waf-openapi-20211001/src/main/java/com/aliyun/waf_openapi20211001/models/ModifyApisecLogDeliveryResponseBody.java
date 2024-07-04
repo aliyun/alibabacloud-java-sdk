@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyApisecLogDeliveryResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>F35F45B0-5D6B-4238-BE02-A62D****E840</p>
      */
