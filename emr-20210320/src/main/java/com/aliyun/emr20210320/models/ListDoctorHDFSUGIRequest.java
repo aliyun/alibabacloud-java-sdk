@@ -6,66 +6,89 @@ import com.aliyun.tea.*;
 public class ListDoctorHDFSUGIRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-01</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The basis on which you want to sort the query results. Valid values:</p>
-     * <br>
-     * <p>*   totalFileCount: the total number of files</p>
-     * <p>*   totalDataSize: the total data size</p>
-     * <p>*   totalDirCount: the total number of directories</p>
+     * <ul>
+     * <li>totalFileCount: the total number of files</li>
+     * <li>totalDataSize: the total data size</li>
+     * <li>totalDirCount: the total number of directories</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>totalFileCount</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The order in which you want to sort the query results. Valid values:</p>
-     * <br>
-     * <p>*   ASC: in ascending order</p>
-     * <p>*   DESC: in descending order</p>
+     * <ul>
+     * <li>ASC: in ascending order</li>
+     * <li>DESC: in descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The filter condition. Valid values:</p>
-     * <br>
-     * <p>*   user</p>
-     * <p>*   group</p>
-     * <br>
+     * <ul>
+     * <li>user</li>
+     * <li>group</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>group</p>
      */
     @NameInMap("Type")
     public String type;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ScalingRuleSpec extends TeaModel {
     /**
      * <p>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
@@ -26,32 +28,40 @@ public class ScalingRuleSpec extends TeaModel {
 
     /**
      * <p>冷却时间。单位为秒，取值范围在30~10800秒之间。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("CoolDownInterval")
     public Integer coolDownInterval;
 
     /**
      * <p>伸缩活动类型。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SCALE_IN</p>
      */
     @NameInMap("ScalingActivityType")
     public String scalingActivityType;
 
     /**
      * <p>规则名称。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scale-out-memory</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
 
     /**
      * <p>伸缩规则类型。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BY_TIME</p>
      */
     @NameInMap("ScalingRuleType")
     public String scalingRuleType;
@@ -120,48 +130,60 @@ public class ScalingRuleSpec extends TeaModel {
     public static class ByLoadScalingRuleSpec extends TeaModel {
         /**
          * <p>比较符。</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LT</p>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>统计次数。</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
         /**
          * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yarn_resourcemanager_root_availablememoryusage</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>统计量名称。</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVG</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>阈值。</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.5</p>
          */
         @NameInMap("Threshold")
         public Double threshold;
 
         /**
          * <p>统计窗口。单位为秒。</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("TimeWindow")
         public Integer timeWindow;
@@ -224,26 +246,37 @@ public class ScalingRuleSpec extends TeaModel {
     public static class ByTimeScalingRuleSpec extends TeaModel {
         /**
          * <p>重复执行定时任务的结束时间戳。单位为毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639714800000</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>启动时间戳。单位为毫秒。</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639714634819</p>
          */
         @NameInMap("LaunchTime")
         public Long launchTime;
 
         /**
          * <p>指定时间规则的执行类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEEKLY</p>
          */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
         /**
          * <p>重复执行定时任务的数值。具体取值取决于 recurrenceType 设置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MON,FRI,SUN</p>
          */
         @NameInMap("RecurrenceValue")
         public String recurrenceValue;

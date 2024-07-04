@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class GetApplicationRequest extends TeaModel {
     /**
      * <p>应用名称。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HDFS</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>集群ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>地域ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

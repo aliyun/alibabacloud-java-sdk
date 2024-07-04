@@ -12,6 +12,9 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class Analysis extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("ReadRequestHotspotRegionList")
         public java.util.List<String> readRequestHotspotRegionList;
 
@@ -47,6 +54,10 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         @NameInMap("ReadRequestUnbalanceSuggestion")
         public String readRequestUnbalanceSuggestion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("RequestHotspotRegionList")
         public java.util.List<String> requestHotspotRegionList;
 
@@ -56,9 +67,17 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
         @NameInMap("RequestUnbalanceSuggestion")
         public String requestUnbalanceSuggestion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85</p>
+         */
         @NameInMap("TableScore")
         public Integer tableScore;
 
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("WriteRequestHotspotRegionList")
         public java.util.List<String> writeRequestHotspotRegionList;
 
@@ -132,15 +151,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class ColdAccessDay extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Cold access day</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>coldAccessDay</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -184,15 +219,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class ColdConfigDay extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Cold config day</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>coldConfigDay</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -236,15 +287,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class ColdDataSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the cold data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>coldDataSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -288,15 +355,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class DailyReadRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>test-update</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dailyReadRequest</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -340,15 +423,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class DailyReadRequestDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of table size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dailyReadRequestDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.5</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -392,15 +491,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class DailyWriteRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of write requests per day</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dailyWriteRequest</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -444,15 +559,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class DailyWriteRequestDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>The balance of distributing requests</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dailyWriteRequestDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -496,15 +627,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class FreezeConfigDay extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Freeze config day</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>freezeConfigDay</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>day</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -548,15 +695,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class FreezeDataSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the freeze data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>freezeDataSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -600,15 +763,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class HotDataSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the hot data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hotDataSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -652,15 +831,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class Locality extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>The locality of data</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>locality</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -704,15 +899,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class ReadRequestBalance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>The balance of distributing read requests</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>readRequestBalance</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -756,15 +967,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class RegionBalance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>The ability to evenly distribute Regions on different RegionServer nodes</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>regionBalance</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -808,15 +1035,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class RegionCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of regions count</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>regionCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -860,15 +1103,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class RegionCountDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of region count</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>regionCountDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.8</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -912,15 +1171,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class RegionServerCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of region servers count</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>regionServerCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -964,15 +1239,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class RequestBalance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>The balance of distributing requests</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>requestBalance</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1016,15 +1307,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class StoreFileCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of store files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>storeFileCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1068,15 +1375,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class StoreFileCountDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of store file count</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>storeFileCountDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.5</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1120,15 +1443,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class TableSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the table</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tableSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tb_item</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1172,15 +1511,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class TableSizeDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of table size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tableSizeDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.5</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1224,15 +1579,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class WarmConfigDay extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the warm data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>warmConfigDay</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1276,15 +1647,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class WarmDataSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the warm data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>warmDataSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1328,15 +1715,31 @@ public class GetDoctorHBaseTableResponseBody extends TeaModel {
     }
 
     public static class WriteRequestBalance extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>The balance of distributing write requests</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>writeRequestBalance</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("Value")
         public Float value;
 

@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class GetDoctorHiveDatabaseRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The database name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>db1</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>The query date.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-01</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

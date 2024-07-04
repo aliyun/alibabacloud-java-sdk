@@ -4,33 +4,69 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ApplicationConfigParam extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DELETE</p>
+     */
     @NameInMap("ConfigAction")
     public String configAction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hdfs-site.xml</p>
+     */
     @NameInMap("ConfigFileName")
     public String configFileName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>namenode checkpoint period</p>
+     */
     @NameInMap("ConfigItemDescription")
     public String configItemDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dfs.namenode.checkpoint.period</p>
+     */
     @NameInMap("ConfigItemKey")
     public String configItemKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600s</p>
+     */
     @NameInMap("ConfigItemValue")
     public String configItemValue;
 
     @NameInMap("ConfigScope")
     public String configScope;
 
+    /**
+     * <strong>example:</strong>
+     * <p>RESTART</p>
+     */
     @NameInMap("EffectiveActions")
     public String effectiveActions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MANUAL</p>
+     */
     @NameInMap("EffectiveType")
     public String effectiveType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>G-DE1CF4661E09****</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>i-bp10h9rezawz1i4o****</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

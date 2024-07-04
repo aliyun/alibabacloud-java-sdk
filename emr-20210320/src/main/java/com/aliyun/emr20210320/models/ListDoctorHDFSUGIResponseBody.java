@@ -12,24 +12,36 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
     public static class TotalDataSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total data size in megabytes (MB)</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalDataSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40440503</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -146,24 +170,36 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
     public static class TotalDirCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of total dirs</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalDirCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -210,24 +246,36 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
     public static class TotalFileCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of total files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalFileCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -330,6 +378,9 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
 
         /**
          * <p>The actual name of the owner or group returned based on the value of Type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DW</p>
          */
         @NameInMap("Name")
         public String name;

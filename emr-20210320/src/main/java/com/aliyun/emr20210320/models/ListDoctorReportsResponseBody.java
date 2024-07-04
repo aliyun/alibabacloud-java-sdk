@@ -12,24 +12,36 @@ public class ListDoctorReportsResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     public static class SummaryReport extends TeaModel {
         /**
          * <p>The score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88</p>
          */
         @NameInMap("Score")
         public Integer score;
 
         /**
          * <p>The optimization suggestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>block</p>
          */
         @NameInMap("Suggestion")
         public String suggestion;
 
         /**
          * <p>The summary of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eastbuy-mse-plugin-auth</p>
          */
         @NameInMap("Summary")
         public String summary;
@@ -132,62 +153,62 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     public static class Data extends TeaModel {
         /**
          * <p>The component types.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   compute</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   hive</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   hdfs</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   yarn</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   oss</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   hbase</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>compute</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>hive</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>hdfs</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>yarn</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>oss</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>hbase</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("ComponentTypes")
         public java.util.List<String> componentTypes;
 
         /**
          * <p>The date on which the report was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-06-29</p>
          */
         @NameInMap("DateTime")
         public String dateTime;

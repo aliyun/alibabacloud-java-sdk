@@ -6,43 +6,68 @@ import com.aliyun.tea.*;
 public class ListDoctorHDFSDirectoriesRequest extends TeaModel {
     /**
      * <p>集群ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-01</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/tmp/test</p>
+     */
     @NameInMap("DirPath")
     public String dirPath;
 
     /**
      * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>smallFileCount</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
      * <p>区域ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

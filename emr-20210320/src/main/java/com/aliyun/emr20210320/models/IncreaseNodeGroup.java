@@ -6,40 +6,56 @@ import com.aliyun.tea.*;
 public class IncreaseNodeGroup extends TeaModel {
     /**
      * <p>描述。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>描述</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>节点数量。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("NodeCount")
     public Integer nodeCount;
 
     /**
      * <p>节点组ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ng-869471354ecd****</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
      * <p>付费时长。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("PaymentDuration")
     public Integer paymentDuration;
 
     /**
      * <p>付费时长单位。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
     /**
      * <p>虚拟机交换机ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-hp35g7ya5ymw68mmg****</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

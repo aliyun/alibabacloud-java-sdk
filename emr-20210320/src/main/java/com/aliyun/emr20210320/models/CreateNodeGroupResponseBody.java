@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateNodeGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>G-21E39B11837E****</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

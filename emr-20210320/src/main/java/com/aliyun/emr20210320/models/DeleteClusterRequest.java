@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteClusterRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The ID of the region in which you want to create the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ApplicationConfigFile extends TeaModel {
     /**
      * <p>应用名称。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HDFS</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>配置文件名称。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>core-site.xml</p>
      */
     @NameInMap("ConfigFileName")
     public String configFileName;

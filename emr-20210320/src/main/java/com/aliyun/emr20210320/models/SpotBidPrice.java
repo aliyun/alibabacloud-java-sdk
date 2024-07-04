@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SpotBidPrice extends TeaModel {
     /**
      * <p>实例的每小时最高出价。支持最大3位小数，参数SpotStrategy=SpotWithPriceLimit时，该参数生效。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000.0</p>
      */
     @NameInMap("BidPrice")
     public Double bidPrice;
 
     /**
      * <p>实例类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g7.2xlarge</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

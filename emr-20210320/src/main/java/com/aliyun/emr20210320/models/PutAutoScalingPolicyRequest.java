@@ -6,37 +6,42 @@ import com.aliyun.tea.*;
 public class PutAutoScalingPolicyRequest extends TeaModel {
     /**
      * <p>集群ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>最大最小值约束。</p>
+     * <p>The maximum and minimum numbers of nodes in a node group.</p>
      */
     @NameInMap("Constraints")
     public ScalingConstraints constraints;
 
     /**
      * <p>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ng-869471354ecd****</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
      * <p>区域ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>弹性伸缩规则描述列表。</p>
-     * <p><p></p>
+     * <p>The auto scaling rules. Number of elements in the array: 0 to 100.</p>
      */
     @NameInMap("ScalingRules")
     public java.util.List<ScalingRule> scalingRules;

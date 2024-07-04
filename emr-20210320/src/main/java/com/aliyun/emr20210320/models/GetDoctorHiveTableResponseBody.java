@@ -12,6 +12,9 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class Analysis extends TeaModel {
         /**
          * <p>The score for the distribution of files of different sizes stored in the Hive table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("HiveDistributionScore")
         public Integer hiveDistributionScore;
 
         /**
          * <p>The score for the distribution of files stored in different formats in the Hive table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("HiveFormatScore")
         public Integer hiveFormatScore;
 
         /**
          * <p>The score for the access frequency of the Hive table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         @NameInMap("HiveFrequencyScore")
         public Integer hiveFrequencyScore;
 
         /**
          * <p>The overall score of the Hive table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("HiveScore")
         public Integer hiveScore;
@@ -104,36 +119,54 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class Formats extends TeaModel {
         /**
          * <p>The daily amount increment of the data in a specific storage format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1232124</p>
          */
         @NameInMap("FormatDayGrowthSize")
         public Long formatDayGrowthSize;
 
         /**
          * <p>The name of the storage format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TextInputFormat</p>
          */
         @NameInMap("FormatName")
         public String formatName;
 
         /**
          * <p>The ratio of the data in a specific storage format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.23</p>
          */
         @NameInMap("FormatRatio")
         public Float formatRatio;
 
         /**
          * <p>The size of storage format-specific data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>506930200</p>
          */
         @NameInMap("FormatSize")
         public Long formatSize;
 
         /**
          * <p>The day-to-day growth rate of the amount of the data in a specific storage format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.04</p>
          */
         @NameInMap("FormatSizeDayGrowthRatio")
         public Float formatSizeDayGrowthRatio;
 
         /**
          * <p>The unit of the data size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("FormatSizeUnit")
         public String formatSizeUnit;
@@ -196,24 +229,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class ColdDataDayGrowthSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth size of cold data</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coldDataDayGrowthSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>217715</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -260,24 +305,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class ColdDataRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cold data ratio</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coldDataRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -324,24 +381,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class ColdDataSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Size of the cold data size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coldDataSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>217715</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -388,24 +457,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class ColdDataSizeDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of cold data size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coldDataSizeDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -452,24 +533,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class EmptyFileCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of empty files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emptyFileCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3123</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -516,24 +609,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class EmptyFileCountDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of empty files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emptyFileCountDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -580,24 +685,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class EmptyFileDayGrowthCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth count of empty files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emptyFileDayGrowthCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-20</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -644,24 +761,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class EmptyFileRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ratio of empty files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emptyFileRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -708,24 +837,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class FreezeDataDayGrowthSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth size of freeze data</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>freezeDataDayGrowthSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33229309</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -772,24 +913,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class FreezeDataRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ratio of freeze data</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>freezeDataRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.98</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -836,24 +989,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class FreezeDataSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Size of the freeze data size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>freezeDataSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33229309</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -900,24 +1065,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class FreezeDataSizeDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of freeze data size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>freezeDataSizeDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -964,24 +1141,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class HotDataDayGrowthSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth size of hot data</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hotDataDayGrowthSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203431</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -1028,24 +1217,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class HotDataRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hot data ratio</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hotDataRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -1092,24 +1293,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class HotDataSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Size of the hot data size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hotDataSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203431</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -1156,24 +1369,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class HotDataSizeDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of hot data size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hotDataSizeDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -1220,24 +1445,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class LargeFileCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of large files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>largeFileCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -1284,24 +1521,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class LargeFileCountDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of large files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>largeFileCountDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -1348,24 +1597,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class LargeFileDayGrowthCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth count of large files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>largeFileDayGrowthCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -1412,24 +1673,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class LargeFileRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ratio of large files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>largeFileRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.02</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -1476,24 +1749,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class MediumFileCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of medium files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mediumFileCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -1540,24 +1825,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class MediumFileCountDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of medium files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mediumFileCountDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -1604,24 +1901,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class MediumFileDayGrowthCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth count of medium files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mediumFileDayGrowthCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -1668,24 +1977,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class MediumFileRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ratio of medium files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mediumFileRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.80</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -1732,24 +2053,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class PartitionNum extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>number of partitions</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>partitionNum</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>441</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -1796,24 +2129,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class SmallFileCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of small files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smallFileCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -1860,24 +2205,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class SmallFileCountDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of small files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smallFileCountDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -1924,24 +2281,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class SmallFileDayGrowthCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth count of small files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smallFileDayGrowthCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -1988,24 +2357,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class SmallFileRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ratio of small files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smallFileRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.04</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -2052,24 +2433,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TinyFileCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of tiny files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tinyFileCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>451</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -2116,24 +2509,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TinyFileCountDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of tiny files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tinyFileCountDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.04</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -2180,24 +2585,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TinyFileDayGrowthCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth count of tiny files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tinyFileDayGrowthCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>482</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -2244,24 +2661,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TinyFileRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ratio of tiny files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tinyFileRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.96</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -2308,24 +2737,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TotalDataDayGrowthSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth size of total data</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalDataDayGrowthSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33800296</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -2372,24 +2813,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TotalDataSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total data size in megabytes (MB)</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalDataSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33800296</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -2436,24 +2889,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TotalDataSizeDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of total data size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalDataSizeDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -2500,24 +2965,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TotalFileCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of total files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalFileCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -2564,24 +3041,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TotalFileCountDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of total files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalFileCountDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -2628,24 +3117,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class TotalFileDayGrowthCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth count of total files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalFileDayGrowthCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -2692,24 +3193,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class WarmDataDayGrowthSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth size of warm data</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warmDataDayGrowthSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>149841</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -2756,24 +3269,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class WarmDataRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ratio of warm data</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warmDataRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -2820,24 +3345,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class WarmDataSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Size of the warm data size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warmDataSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14981</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -2884,24 +3421,36 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
     public static class WarmDataSizeDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Day growth ratio of warm data size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warmDataSizeDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -3576,6 +4125,9 @@ public class GetDoctorHiveTableResponseBody extends TeaModel {
 
         /**
          * <p>The owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DW</p>
          */
         @NameInMap("Owner")
         public String owner;

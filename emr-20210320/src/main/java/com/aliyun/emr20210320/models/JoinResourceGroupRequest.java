@@ -5,35 +5,44 @@ import com.aliyun.tea.*;
 
 public class JoinResourceGroupRequest extends TeaModel {
     /**
-     * <p>The region ID.</p>
-     * <br>
+     * <p>The ID of the region in which you want to create the instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the resource group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzabjyop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the resource.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-c95f0a39d8ff****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>The type of the resource. Valid values:</p>
-     * <br>
-     * <p>*   cluster: cluster</p>
-     * <br>
+     * <ul>
+     * <li>cluster: cluster</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

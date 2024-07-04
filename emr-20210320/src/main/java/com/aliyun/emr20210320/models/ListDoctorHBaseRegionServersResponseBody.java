@@ -12,24 +12,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class AvgGc extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The efficiency of garbage collection in the system</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>avgGc</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37.9</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -146,24 +170,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class CacheRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ratio of the BlockCache memory size</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cacheRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96.7</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -210,24 +246,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class DailyReadRequest extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of read requests per day</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dailyReadRequest</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42571</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -274,24 +322,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class DailyReadRequestDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The growth rate of daily read request quantity.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dailyReadRequestDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -338,24 +398,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class DailyWriteRequest extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of write requests per day</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dailyWriteRequest</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23124</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -402,24 +474,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class DailyWriteRequestDayGrowthRatio extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The growth rate of daily write request quantity.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dailyWriteRequestDayGrowthRatio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("Value")
         public Float value;
@@ -466,24 +550,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class RegionCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of regions count</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>regionCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -530,24 +626,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class TotalReadRequest extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total number of read requests</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalReadRequest</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170500567</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -594,24 +702,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class TotalRequest extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total number of requests</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalRequest</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89499511</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -658,24 +778,36 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     public static class TotalWriteRequest extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total number of write requests</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalWriteRequest</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30109837</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -876,6 +1008,9 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
         /**
          * <p>The RegionServer host.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr-worker-4.cluster-20****</p>
          */
         @NameInMap("RegionServerHost")
         public String regionServerHost;

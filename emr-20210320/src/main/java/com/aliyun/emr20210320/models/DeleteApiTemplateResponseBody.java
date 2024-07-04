@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class DeleteApiTemplateResponseBody extends TeaModel {
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     @Deprecated
     public Boolean success;

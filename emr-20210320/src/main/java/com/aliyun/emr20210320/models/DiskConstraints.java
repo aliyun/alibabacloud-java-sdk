@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DiskConstraints extends TeaModel {
     /**
      * <p>支持的磁盘类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;cloud_efficiency&quot;,&quot;cloud_ssd&quot;,&quot;cloud_essd&quot;,&quot;local_disk&quot;]</p>
      */
     @NameInMap("Categories")
     public java.util.List<String> categories;

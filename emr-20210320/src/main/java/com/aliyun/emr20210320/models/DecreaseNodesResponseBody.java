@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DecreaseNodesResponseBody extends TeaModel {
     /**
      * <p>Operation ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>op-13c37a77c505****</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>44430037-E59A-3E66-A2B0-97D155346F22</p>
      */
     @NameInMap("RequestId")
     public String requestId;

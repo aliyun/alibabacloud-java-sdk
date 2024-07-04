@@ -10,6 +10,9 @@ public class ComponentInstanceSelector extends TeaModel {
 
     /**
      * <p>应用名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HDFS</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
@@ -21,19 +24,23 @@ public class ComponentInstanceSelector extends TeaModel {
     public java.util.List<ComponentInstances> componentInstances;
 
     /**
-     * <p>组件列表。</p>
-     * <p>actionScope为COPONENT时使用。</p>
+     * <p>组件列表。
+     * actionScope为COPONENT时使用。</p>
      */
     @NameInMap("Components")
     public java.util.List<Components> components;
 
     /**
      * <p>动作执行范围。取值范围：</p>
-     * <p>- APPLICATION：应用级别。</p>
-     * <p>- COMPONENT：组件级别。</p>
-     * <p>- COMPONENT_INSTANCE：组件实例级别。</p>
-     * <br>
+     * <ul>
+     * <li>APPLICATION：应用级别。</li>
+     * <li>COMPONENT：组件级别。</li>
+     * <li>COMPONENT_INSTANCE：组件实例级别。</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>APPLICATION</p>
      */
     @NameInMap("RunActionScope")
     public String runActionScope;
@@ -86,18 +93,27 @@ public class ComponentInstanceSelector extends TeaModel {
     public static class ComponentInstances extends TeaModel {
         /**
          * <p>应用名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>组件名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataNode</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
 
         /**
          * <p>节点ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -136,12 +152,18 @@ public class ComponentInstanceSelector extends TeaModel {
     public static class Components extends TeaModel {
         /**
          * <p>应用名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>组件名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataNode</p>
          */
         @NameInMap("ComponentName")
         public String componentName;

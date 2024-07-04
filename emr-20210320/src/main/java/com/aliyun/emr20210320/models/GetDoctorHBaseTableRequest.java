@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class GetDoctorHBaseTableRequest extends TeaModel {
     /**
      * <p>集群ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-01</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>区域ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>namespace1:tb_item</p>
      */
     @NameInMap("TableName")
     public String tableName;

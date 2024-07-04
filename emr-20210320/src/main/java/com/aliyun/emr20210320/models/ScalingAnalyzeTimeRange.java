@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ScalingAnalyzeTimeRange extends TeaModel {
     /**
      * <p>结束时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1676441972000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>起始时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1676441971000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
      * <p>峰谷类型。 peak/valley</p>
+     * 
+     * <strong>example:</strong>
+     * <p>peak</p>
      */
     @NameInMap("Type")
     public String type;

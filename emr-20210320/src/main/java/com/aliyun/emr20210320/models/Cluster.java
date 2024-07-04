@@ -6,54 +6,81 @@ import com.aliyun.tea.*;
 public class Cluster extends TeaModel {
     /**
      * <p>集群ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>集群名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>emrtest</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>集群状态。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RUNNING</p>
      */
     @NameInMap("ClusterState")
     public String clusterState;
 
     /**
      * <p>集群类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DATALAKE</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>创建时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1592837465784</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>部署模式。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HA</p>
      */
     @NameInMap("DeployMode")
     public String deployMode;
 
     /**
      * <p>EMR默认角色。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunEMRDefaultRole</p>
      */
     @NameInMap("EmrDefaultRole")
     public String emrDefaultRole;
 
     /**
      * <p>删除时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1592837465784</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>过期时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1592837465784</p>
      */
     @NameInMap("ExpireTime")
     public Long expireTime;
@@ -66,36 +93,54 @@ public class Cluster extends TeaModel {
 
     /**
      * <p>付费类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
      */
     @NameInMap("PaymentType")
     public String paymentType;
 
     /**
      * <p>可用时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1592837465784</p>
      */
     @NameInMap("ReadyTime")
     public Long readyTime;
 
     /**
      * <p>地域ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>EMR发行版。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EMR-5.3.0</p>
      */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
 
     /**
      * <p>资源组ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzabjyop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>Kerberos安全模式。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("SecurityMode")
     public String securityMode;

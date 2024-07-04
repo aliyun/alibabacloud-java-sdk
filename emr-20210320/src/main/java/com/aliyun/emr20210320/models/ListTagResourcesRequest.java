@@ -6,42 +6,57 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The number of maximum number of records to obtain at a time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>Marks the current position to start reading. If this field is empty, the data is read from the beginning.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the region in which you want to create the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The list of resource IDs. Number of array elements N Valid values: 1 to 1</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
      * <p>The type of the resource. Set the value to cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The array of tags. The number of array elements N. Valid values: 1 to 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;

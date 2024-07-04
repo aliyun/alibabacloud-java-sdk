@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class Promotion extends TeaModel {
     /**
      * <p>产品码。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>优惠券描述。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5元优惠券（有效期至23年8月11日）</p>
      */
     @NameInMap("PromotionDesc")
     public String promotionDesc;
 
     /**
      * <p>优惠券名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5元优惠券</p>
      */
     @NameInMap("PromotionName")
     public String promotionName;
 
     /**
      * <p>优惠券码。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhui_quan</p>
      */
     @NameInMap("PromotionOptionCode")
     public String promotionOptionCode;
 
     /**
      * <p>优惠券号。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ABC123</p>
      */
     @NameInMap("PromotionOptionNo")
     public String promotionOptionNo;

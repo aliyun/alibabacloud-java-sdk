@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ScalingConstraints extends TeaModel {
     /**
      * <p>最大值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("MaxCapacity")
     public Integer maxCapacity;
 
     /**
      * <p>最小值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("MinCapacity")
     public Integer minCapacity;

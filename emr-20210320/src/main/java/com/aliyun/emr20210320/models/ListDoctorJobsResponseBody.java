@@ -12,24 +12,36 @@ public class ListDoctorJobsResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class ListDoctorJobsResponseBody extends TeaModel {
     public static class MemSeconds extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total memory usage over time in seconds</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memSeconds</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB * Sec</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312312</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -146,24 +170,36 @@ public class ListDoctorJobsResponseBody extends TeaModel {
     public static class VcoreSeconds extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total vcore usage over time in seconds</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcoreSeconds</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VCores * Sec</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11123</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -246,42 +282,61 @@ public class ListDoctorJobsResponseBody extends TeaModel {
     public static class Data extends TeaModel {
         /**
          * <p>The ID of the job that was submitted to YARN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application_1607584549220_*****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpcds</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The total running time of the job. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>242</p>
          */
         @NameInMap("ElapsedTime")
         public Long elapsedTime;
 
         /**
          * <p>The final state of the job. Valid values:</p>
-         * <br>
-         * <p>*   SUCCEEDED</p>
-         * <p>*   FAILED</p>
-         * <p>*   KILLED</p>
-         * <p>*   ENDED</p>
-         * <p>*   UNDEFINED</p>
+         * <ul>
+         * <li>SUCCEEDED</li>
+         * <li>FAILED</li>
+         * <li>KILLED</li>
+         * <li>ENDED</li>
+         * <li>UNDEFINED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>KILLED</p>
          */
         @NameInMap("FinalStatus")
         public String finalStatus;
 
         /**
          * <p>The end time of the job. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683690929000</p>
          */
         @NameInMap("FinishTime")
         public Long finishTime;
 
         /**
          * <p>The time when the job was started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1672148400000</p>
          */
         @NameInMap("LaunchTime")
         public Long launchTime;
@@ -294,34 +349,50 @@ public class ListDoctorJobsResponseBody extends TeaModel {
 
         /**
          * <p>The YARN queue to which the job was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DW</p>
          */
         @NameInMap("Queue")
         public String queue;
 
         /**
          * <p>The time when the job was submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1675180800000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The running state of the job. Valid values:</p>
-         * <br>
-         * <p>*   FINISHED</p>
-         * <p>*   FAILED</p>
-         * <p>*   KILLED</p>
+         * <ul>
+         * <li>FINISHED</li>
+         * <li>FAILED</li>
+         * <li>KILLED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FINISHED</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The type of the compute engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPARK</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The username that was used to submit the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DW</p>
          */
         @NameInMap("User")
         public String user;

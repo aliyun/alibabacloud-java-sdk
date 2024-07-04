@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class OSUser extends TeaModel {
     /**
      * <p>用户组。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hadoop</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
      * <p>用户密码。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345****</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>用户名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>王五</p>
      */
     @NameInMap("User")
     public String user;

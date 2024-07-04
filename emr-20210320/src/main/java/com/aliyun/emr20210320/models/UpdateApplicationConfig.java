@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class UpdateApplicationConfig extends TeaModel {
     /**
      * <p>修改描述。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dfs.namenode.checkpoint.period</p>
      */
     @NameInMap("ConfigDescription")
     public String configDescription;
 
     /**
      * <p>应用配置文件名。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hdfs-site.xml</p>
      */
     @NameInMap("ConfigFileName")
     public String configFileName;
 
     /**
      * <p>配置项键。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dfs.namenode.checkpoint.period</p>
      */
     @NameInMap("ConfigItemKey")
     public String configItemKey;
 
     /**
      * <p>配置项值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600s</p>
      */
     @NameInMap("ConfigItemValue")
     public String configItemValue;

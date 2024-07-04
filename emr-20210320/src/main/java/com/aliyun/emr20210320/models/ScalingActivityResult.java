@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ScalingActivityResult extends TeaModel {
     /**
      * <p>实例ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1cudc25w2bfwl5****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

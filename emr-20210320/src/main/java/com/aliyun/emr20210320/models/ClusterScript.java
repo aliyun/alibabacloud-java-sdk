@@ -4,9 +4,17 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ClusterScript extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>取值:FAILED_CONTINUE, FAILED_BLOCKED</p>
+     */
     @NameInMap("ExecutionFailStrategy")
     public String executionFailStrategy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>取值:BEFORE_INSTALL, AFTER_STARTED</p>
+     */
     @NameInMap("ExecutionMoment")
     public String executionMoment;
 

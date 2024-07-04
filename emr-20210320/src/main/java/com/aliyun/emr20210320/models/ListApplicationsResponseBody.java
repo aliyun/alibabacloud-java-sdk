@@ -12,24 +12,36 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The page number of the next page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,18 +94,27 @@ public class ListApplicationsResponseBody extends TeaModel {
     public static class Applications extends TeaModel {
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>The status of the application operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         @NameInMap("ApplicationState")
         public String applicationState;
 
         /**
          * <p>The version of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.8.1</p>
          */
         @NameInMap("ApplicationVersion")
         @Deprecated
@@ -101,6 +122,9 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>The community edition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.8.5</p>
          */
         @NameInMap("CommunityVersion")
         public String communityVersion;

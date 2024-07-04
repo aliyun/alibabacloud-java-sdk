@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class DiskSize extends TeaModel {
     /**
      * <p>磁盘类型。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>单位GB。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("Size")
     public Integer size;

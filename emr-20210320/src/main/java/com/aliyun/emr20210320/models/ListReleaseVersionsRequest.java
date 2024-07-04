@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class ListReleaseVersionsRequest extends TeaModel {
     /**
      * <p>The type of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DATALAKE</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>The type of the IaaS resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
      */
     @NameInMap("IaasType")
     public String iaasType;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

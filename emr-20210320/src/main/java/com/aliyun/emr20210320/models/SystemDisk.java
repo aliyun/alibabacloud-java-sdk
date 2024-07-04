@@ -6,34 +6,45 @@ import com.aliyun.tea.*;
 public class SystemDisk extends TeaModel {
     /**
      * <p>磁盘类型。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>每个节点系统盘数量，默认值为1。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>创建ESSD云盘作为系统盘使用时，设置云盘的性能等级。取值范围：</p>
-     * <p>- PL0：单盘最高随机读写IOPS 1万。</p>
-     * <p>- PL1（默认）：单盘最高随机读写IOPS 5万。</p>
-     * <p>- PL2：单盘最高随机读写IOPS 10万。</p>
-     * <p>- PL3：单盘最高随机读写IOPS 100万。</p>
-     * <br>
+     * <ul>
+     * <li>PL0：单盘最高随机读写IOPS 1万。</li>
+     * <li>PL1（默认）：单盘最高随机读写IOPS 5万。</li>
+     * <li>PL2：单盘最高随机读写IOPS 10万。</li>
+     * <li>PL3：单盘最高随机读写IOPS 100万。</li>
+     * </ul>
      * <p>默认值：PL1。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL1</p>
      */
     @NameInMap("PerformanceLevel")
     public String performanceLevel;
 
     /**
      * <p>单位GB。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("Size")
     public Integer size;

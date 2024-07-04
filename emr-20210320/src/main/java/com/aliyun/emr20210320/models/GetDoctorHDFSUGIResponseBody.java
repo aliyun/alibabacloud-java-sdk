@@ -12,6 +12,9 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
     public static class TotalDataSize extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total data size in megabytes (MB)</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalDataSize</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40440503</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -104,24 +119,36 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
     public static class TotalDirCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of total dirs</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalDirCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -168,24 +195,36 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
     public static class TotalFileCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number of total files</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>totalFileCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>”“</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         @NameInMap("Value")
         public Long value;

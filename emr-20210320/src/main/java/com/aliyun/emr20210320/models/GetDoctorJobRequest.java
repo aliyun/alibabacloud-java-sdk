@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class GetDoctorJobRequest extends TeaModel {
     /**
      * <p>The ID of the job that is submitted to YARN.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>application_1542620905989_****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

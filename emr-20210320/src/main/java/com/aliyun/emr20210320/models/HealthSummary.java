@@ -4,24 +4,52 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class HealthSummary extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("BadCount")
     public Long badCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("GoodCount")
     public Long goodCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("NoneCount")
     public Long noneCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("StoppedCount")
     public Long stoppedCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("UnknownCount")
     public Long unknownCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("WarningCount")
     public Long warningCount;
 

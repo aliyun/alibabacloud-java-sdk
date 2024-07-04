@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class Attribute extends TeaModel {
     /**
      * <p>键。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>currentYarnRangerPluginState</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Value")
     public String value;

@@ -4,14 +4,25 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class NodeCountConstraint extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Max")
     public Integer max;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Min")
     public Integer min;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>range</p>
      */
     @NameInMap("Type")
     public String type;

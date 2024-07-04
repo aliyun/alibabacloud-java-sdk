@@ -4,11 +4,18 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class RunApiTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;clusterId\&quot;:\&quot;c-b7be171f1928****\&quot;,\&quot;operationId\&quot;:\&quot;op-61126efe629d****\&quot;}</p>
+     */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

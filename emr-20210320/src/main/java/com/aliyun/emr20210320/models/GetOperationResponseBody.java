@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetOperationResponseBody extends TeaModel {
     /**
-     * <p>The operation that is performed.</p>
+     * <p>The operation that was performed.</p>
      */
     @NameInMap("Operation")
     public Operation operation;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3896A</p>
      */
     @NameInMap("RequestId")
     public String requestId;

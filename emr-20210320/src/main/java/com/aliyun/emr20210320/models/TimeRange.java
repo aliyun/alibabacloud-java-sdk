@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class TimeRange extends TeaModel {
     /**
      * <p>结束时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1676441972000</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>起始时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1676441971000</p>
      */
     @NameInMap("StartTime")
     public String startTime;

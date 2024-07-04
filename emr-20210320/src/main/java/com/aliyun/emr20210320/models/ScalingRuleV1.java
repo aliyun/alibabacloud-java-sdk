@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ScalingRuleV1 extends TeaModel {
     /**
      * <p>调整类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QUANTITY_CHANGE_IN_CAPACITY</p>
      */
     @NameInMap("AdjustmentType")
     public String adjustmentType;
 
     /**
      * <p>调整值,正数为扩容,负数为缩容。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
     /**
      * <p>冷却时间,单位秒。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("CoolDownTime")
     public Integer coolDownTime;
 
     /**
      * <p>规则名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tule1</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -36,12 +48,18 @@ public class ScalingRuleV1 extends TeaModel {
 
     /**
      * <p>规则类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BY_LOAD</p>
      */
     @NameInMap("RuleType")
     public String ruleType;
 
     /**
      * <p>弹性规则配置ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SCB-DCD96BCCFED1****</p>
      */
     @NameInMap("ScalingConfigBizId")
     public String scalingConfigBizId;
@@ -110,66 +128,100 @@ public class ScalingRuleV1 extends TeaModel {
     public static class RuleParam extends TeaModel {
         /**
          * <p>[负载触发参数] 比较符。</p>
+         * 
+         * <strong>example:</strong>
+         * <blockquote>
+         * </blockquote>
          */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
         /**
          * <p>[负载触发参数] 统计次数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
         /**
          * <p>[时间调度参数] 周期类型周期过期时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("LaunchExpirationTime")
         public Integer launchExpirationTime;
 
         /**
          * <p>[时间调度参数] 周期类型周期开始时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-15T04:02Z</p>
          */
         @NameInMap("LaunchTime")
         public String launchTime;
 
         /**
          * <p>[负载触发参数] 度量名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YarnRootAvailableVCores</p>
          */
         @NameInMap("MetricName")
         public String metricName;
 
         /**
          * <p>[负载触发参数] 统计时长,单位分钟。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Period")
         public Integer period;
 
         /**
          * <p>[时间调度参数] 周期类型周期结束时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-16T05:02Z</p>
          */
         @NameInMap("RecurrenceEndTime")
         public String recurrenceEndTime;
 
         /**
          * <p>[时间调度参数] 周期类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
         /**
          * <p>[时间调度参数] 周期类型周期值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RecurrenceValue")
         public String recurrenceValue;
 
         /**
          * <p>[负载触发参数] 统计方式。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         @NameInMap("Statistics")
         public String statistics;
 
         /**
          * <p>[负载触发参数] 阈值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Threshold")
         public Integer threshold;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateApplicationConfigsResponseBody extends TeaModel {
     /**
      * <p>The operation ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>op-13c37a77c505****</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

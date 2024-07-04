@@ -12,24 +12,36 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The page number of the next page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,78 +94,117 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
     public static class ApplicationConfigs extends TeaModel {
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>The status of the configuration value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EFFECT</p>
          */
         @NameInMap("ConfigEffectState")
         public String configEffectState;
 
         /**
          * <p>The name of the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hdfs-site.xml</p>
          */
         @NameInMap("ConfigFileName")
         public String configFileName;
 
         /**
          * <p>The key of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfs.replication</p>
          */
         @NameInMap("ConfigItemKey")
         public String configItemKey;
 
         /**
          * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("ConfigItemValue")
         public String configItemValue;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1628589439114</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>Indicates whether the configurations are custom.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Custom")
         public Boolean custom;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfs.replication description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The initial value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InitValue")
         public String initValue;
 
         /**
          * <p>The person who modified the configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170906468757****</p>
          */
         @NameInMap("Modifier")
         public String modifier;
 
         /**
          * <p>The node group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-d555335ced5****</p>
          */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
         /**
          * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp18y0ng3qqxog4mw****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1628589439114</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;

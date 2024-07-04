@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
     /**
-     * <p>The list of clusters.</p>
+     * <p>The clusters.</p>
      */
     @NameInMap("Clusters")
     public java.util.List<ClusterSummary> clusters;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The page number of the next page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJlY21OZXh0VG9rZW4iOiIxIiwidGFpaGFvTmV4dFRva2VuIjoiNTYiLCJ0YWloYW9OZXh0VG9rZW5JbnQiOjU2LCJlY21OZXh0VG9rZW5JbnQiOjF9</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3896A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

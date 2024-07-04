@@ -6,43 +6,54 @@ import com.aliyun.tea.*;
 public class GetDoctorHDFSUGIRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-01</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>Set this parameter based on the value of Type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DW</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The filter condition. Valid values:</p>
-     * <br>
-     * <p>*   user</p>
-     * <p>*   group</p>
-     * <br>
+     * <ul>
+     * <li>user</li>
+     * <li>group</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("Type")
     public String type;

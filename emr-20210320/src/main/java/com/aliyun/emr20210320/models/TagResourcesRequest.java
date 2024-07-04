@@ -6,34 +6,43 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The ID of the region in which you want to create the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The list of resource IDs. Valid values of N: 1 to 1.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
      * <p>The type of the resource to which the tag belongs. Valid values:</p>
-     * <br>
-     * <p>*   cluster: cluster</p>
-     * <br>
+     * <ul>
+     * <li>cluster: cluster</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The list of tags to be bound.</p>
-     * <br>
+     * <p>The tags.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[null]</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;

@@ -9,24 +9,36 @@ public class ListComponentInstancesResponseBody extends TeaModel {
 
     /**
      * <p>本次请求所返回的最大记录条数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>本次请求条件下的数据总量。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -79,84 +91,115 @@ public class ListComponentInstancesResponseBody extends TeaModel {
     public static class ComponentInstances extends TeaModel {
         /**
          * <p>应用名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>组件服务状态，取值如下：</p>
-         * <p>- active：主服务</p>
-         * <p>- standby：备用服务。</p>
+         * <ul>
+         * <li>active：主服务</li>
+         * <li>standby：备用服务。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         @NameInMap("BizState")
         public String bizState;
 
         /**
          * <p>Commission状态，取值如下：</p>
-         * <p>- COMMISSIONED：已上线</p>
-         * <p>- COMMISSIONING：上线中</p>
-         * <p>- DECOMMISSIONED：已下线</p>
-         * <p>- DECOMMISSIONINPROGRESS：下线进程中</p>
-         * <p>- DECOMMISSIONFAILED：下线失败</p>
-         * <p>- INSERVICE：服务中</p>
-         * <p>- UNKNOWN：未知状态。</p>
-         * <p><p></p>
+         * <ul>
+         * <li>COMMISSIONED：已上线</li>
+         * <li>COMMISSIONING：上线中</li>
+         * <li>DECOMMISSIONED：已下线</li>
+         * <li>DECOMMISSIONINPROGRESS：下线进程中</li>
+         * <li>DECOMMISSIONFAILED：下线失败</li>
+         * <li>INSERVICE：服务中</li>
+         * <li>UNKNOWN：未知状态。<p></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INSERVICE</p>
          */
         @NameInMap("CommissionState")
         public String commissionState;
 
         /**
          * <p>组件实例操作状态，取值如下：</p>
-         * <p>- WAITING：等待中</p>
-         * <p>- INSTALLING：安装中</p>
-         * <p>- INSTALLED：已安装</p>
-         * <p>- INSTALL_FAILED：安装失败</p>
-         * <p>- STARTING：启动中</p>
-         * <p>- STARTED：已启动</p>
-         * <p>- START_FAILED：启动失败</p>
-         * <p>- STOPPING：停止中</p>
-         * <p>- STOPPED：已停止</p>
-         * <p>- STOP_FAILED：停止失败</p>
+         * <ul>
+         * <li>WAITING：等待中</li>
+         * <li>INSTALLING：安装中</li>
+         * <li>INSTALLED：已安装</li>
+         * <li>INSTALL_FAILED：安装失败</li>
+         * <li>STARTING：启动中</li>
+         * <li>STARTED：已启动</li>
+         * <li>START_FAILED：启动失败</li>
+         * <li>STOPPING：停止中</li>
+         * <li>STOPPED：已停止</li>
+         * <li>STOP_FAILED：停止失败</li>
+         * </ul>
          */
         @NameInMap("ComponentInstanceState")
         public String componentInstanceState;
 
         /**
          * <p>组件名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataNode</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
 
         /**
          * <p>安装时间戳。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1628248947000</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
 
         /**
          * <p>期望状态，取值如下：</p>
-         * <p>- WAITING：等待中</p>
-         * <p>- INSTALLING：安装中</p>
-         * <p>- INSTALLED：已安装</p>
-         * <p>- INSTALL_FAILED：安装失败</p>
-         * <p>- STARTING：启动中</p>
-         * <p>- STARTED：已启动</p>
-         * <p>- START_FAILED：启动失败</p>
-         * <p>- STOPPING：停止中</p>
-         * <p>- STOPPED：已停止</p>
-         * <p>- STOP_FAILED：停止失败。</p>
+         * <ul>
+         * <li>WAITING：等待中</li>
+         * <li>INSTALLING：安装中</li>
+         * <li>INSTALLED：已安装</li>
+         * <li>INSTALL_FAILED：安装失败</li>
+         * <li>STARTING：启动中</li>
+         * <li>STARTED：已启动</li>
+         * <li>START_FAILED：启动失败</li>
+         * <li>STOPPING：停止中</li>
+         * <li>STOPPED：已停止</li>
+         * <li>STOP_FAILED：停止失败。</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STARTED</p>
          */
         @NameInMap("DesiredState")
         public String desiredState;
 
         /**
          * <p>节点ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
          * <p>节点名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>core1-1</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
