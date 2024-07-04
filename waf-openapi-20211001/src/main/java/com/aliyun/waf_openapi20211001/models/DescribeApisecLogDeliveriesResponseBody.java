@@ -4,10 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
+    /**
+     * <p>The configurations of API security log subscription.</p>
+     */
     @NameInMap("DeliveryConfigs")
     public java.util.List<DescribeApisecLogDeliveriesResponseBodyDeliveryConfigs> deliveryConfigs;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>2EFCFE18-78F8-5079-B312-07***48B</p>
      */
@@ -37,6 +42,13 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
 
     public static class DescribeApisecLogDeliveriesResponseBodyDeliveryConfigs extends TeaModel {
         /**
+         * <p>The type of the log subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>risk</strong>: risk information.</li>
+         * <li><strong>event</strong>: attack event information.</li>
+         * <li><strong>asset</strong>: asset information.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>risk</p>
          */
@@ -44,6 +56,8 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         public String assertKey;
 
         /**
+         * <p>The ID of the region where logs are stored.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -51,6 +65,8 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         public String logRegionId;
 
         /**
+         * <p>The name of the Logstore in Simple Log Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>apisec-logstore***</p>
          */
@@ -58,6 +74,8 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
+         * <p>The name of the project in Simple Log Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>apisec-project-14316572********</p>
          */
@@ -65,6 +83,12 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The status of API security log subscription. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

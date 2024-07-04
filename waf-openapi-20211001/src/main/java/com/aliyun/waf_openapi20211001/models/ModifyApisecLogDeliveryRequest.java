@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyApisecLogDeliveryRequest extends TeaModel {
     /**
+     * <p>The type of the log subscription. Valid values:</p>
+     * <ul>
+     * <li><strong>risk</strong>: risk information.</li>
+     * <li><strong>event</strong>: attack event information.</li>
+     * <li><strong>asset</strong>: asset information.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +20,10 @@ public class ModifyApisecLogDeliveryRequest extends TeaModel {
     public String assertKey;
 
     /**
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +33,10 @@ public class ModifyApisecLogDeliveryRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the region where logs are stored.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2712598.html">DescribeUserSlsLogRegions</a> operation to query available log storage regions.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +46,10 @@ public class ModifyApisecLogDeliveryRequest extends TeaModel {
     public String logRegionId;
 
     /**
+     * <p>The name of the Logstore in Simple Log Service.</p>
+     * <blockquote>
+     * <p> API security logs can be delivered only to Logstores whose names start with apisec-.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +59,10 @@ public class ModifyApisecLogDeliveryRequest extends TeaModel {
     public String logStoreName;
 
     /**
+     * <p>The name of the project in Simple Log Service.</p>
+     * <blockquote>
+     * <p> API security logs can be delivered only to projects whose names start with apisec-.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +72,12 @@ public class ModifyApisecLogDeliveryRequest extends TeaModel {
     public String projectName;
 
     /**
+     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -57,6 +85,8 @@ public class ModifyApisecLogDeliveryRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */

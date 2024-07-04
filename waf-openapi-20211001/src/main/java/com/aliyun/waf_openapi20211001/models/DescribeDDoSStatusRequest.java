@@ -3,22 +3,22 @@ package com.aliyun.waf_openapi20211001.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeApisecLogDeliveriesRequest extends TeaModel {
+public class DescribeDDoSStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <p>The ID of the WAF instance that you want to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>waf_v3_public_cn-uqm2z****0a</p>
+     * <p>waf_v3prepaid_public_cn-***</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The region where the WAF instance is deployed. Valid values:</p>
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
      * <ul>
      * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
      * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
@@ -39,12 +39,12 @@ public class DescribeApisecLogDeliveriesRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
-    public static DescribeApisecLogDeliveriesRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeApisecLogDeliveriesRequest self = new DescribeApisecLogDeliveriesRequest();
+    public static DescribeDDoSStatusRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDDoSStatusRequest self = new DescribeDDoSStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApisecLogDeliveriesRequest setInstanceId(String instanceId) {
+    public DescribeDDoSStatusRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -52,7 +52,7 @@ public class DescribeApisecLogDeliveriesRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeApisecLogDeliveriesRequest setRegionId(String regionId) {
+    public DescribeDDoSStatusRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -60,7 +60,7 @@ public class DescribeApisecLogDeliveriesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeApisecLogDeliveriesRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
+    public DescribeDDoSStatusRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
         this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
         return this;
     }
