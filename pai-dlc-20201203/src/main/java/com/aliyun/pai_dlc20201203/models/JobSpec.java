@@ -4,18 +4,30 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobSpec extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.c6.large</p>
+     */
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
     @NameInMap("ExtraPodSpec")
     public ExtraPodSpec extraPodSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-hangzhou.aliyuncs.com/pai-dlc/tensorflow-training:1.12.2PAI-cpu-py27-ubuntu16.04</p>
+     */
     @NameInMap("Image")
     public String image;
 
     @NameInMap("ImageConfig")
     public ImageConfig imageConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PodCount")
     public Long podCount;
 
@@ -25,9 +37,17 @@ public class JobSpec extends TeaModel {
     @NameInMap("SpotSpec")
     public SpotSpec spotSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Worker</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseSpotInstance")
     public Boolean useSpotInstance;
 

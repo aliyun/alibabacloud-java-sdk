@@ -4,18 +4,38 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetPodLogsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DownloadToFile")
     public Boolean downloadToFile;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T17:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxLines")
     public Integer maxLines;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fe846462-af2c-4521-bd6f-96787a57****</p>
+     */
     @NameInMap("PodUid")
     public String podUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

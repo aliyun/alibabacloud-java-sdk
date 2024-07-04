@@ -4,9 +4,17 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class FreeResourceDetail extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Amount")
     public Integer amount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CPU</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

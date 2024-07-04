@@ -10,9 +10,17 @@ public class JobElasticSpec extends TeaModel {
     @NameInMap("AIMasterType")
     public String AIMasterType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("EDPMaxParallelism")
     public Integer EDPMaxParallelism;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("EDPMinParallelism")
     public Integer EDPMinParallelism;
 
@@ -22,30 +30,62 @@ public class JobElasticSpec extends TeaModel {
     @NameInMap("EnableAIMaster")
     public Boolean enableAIMaster;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableEDP")
     public Boolean enableEDP;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableElasticTraining")
     public Boolean enableElasticTraining;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnablePsJobElasticPS")
     public Boolean enablePsJobElasticPS;
 
     @NameInMap("EnablePsJobElasticWorker")
     public Boolean enablePsJobElasticWorker;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnablePsResourceEstimate")
     public Boolean enablePsResourceEstimate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("MaxParallelism")
     public Integer maxParallelism;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinParallelism")
     public Integer minParallelism;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PSMaxParallelism")
     public Integer PSMaxParallelism;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("PSMinParallelism")
     public Integer PSMinParallelism;
 

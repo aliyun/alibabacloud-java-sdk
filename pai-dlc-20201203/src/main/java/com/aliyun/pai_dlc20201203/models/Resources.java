@@ -4,12 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Resources extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("CPU")
     public String CPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("GPU")
     public String GPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024（单位GB）</p>
+     */
     @NameInMap("Memory")
     public String memory;
 

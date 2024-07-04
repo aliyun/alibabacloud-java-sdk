@@ -7,45 +7,101 @@ public class JobSettings extends TeaModel {
     @NameInMap("AdvancedSettings")
     public java.util.Map<String, ?> advancedSettings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>166924</p>
+     */
     @NameInMap("BusinessUserId")
     public String businessUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SilkFlow</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <strong>example:</strong>
+     * <p>535.54.03</p>
+     */
     @NameInMap("Driver")
     public String driver;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableErrorMonitoringInAIMaster")
     public Boolean enableErrorMonitoringInAIMaster;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableOssAppend")
     public Boolean enableOssAppend;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableRDMA")
     public Boolean enableRDMA;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableSanityCheck")
     public Boolean enableSanityCheck;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableTideResource")
     public Boolean enableTideResource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>--enable-log-hang-detection true</p>
+     */
     @NameInMap("ErrorMonitoringArgs")
     public String errorMonitoringArgs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("JobReservedMinutes")
     public Integer jobReservedMinutes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Always</p>
+     */
     @NameInMap("JobReservedPolicy")
     public String jobReservedPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AcceptQuotaOverSold</p>
+     */
     @NameInMap("OversoldType")
     public String oversoldType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pid-123456</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFai</p>
+     */
     @NameInMap("SanityCheckArgs")
     public String sanityCheckArgs;
 

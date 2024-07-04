@@ -4,12 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Workspace extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ken</p>
+     */
     @NameInMap("Creator")
     public String creator;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:01Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:01Z</p>
+     */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
@@ -25,9 +37,17 @@ public class Workspace extends TeaModel {
     @NameInMap("WorkspaceAdmins")
     public java.util.List<Member> workspaceAdmins;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ws-20210126170216-mtl37ge7gkvdz</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-workspace</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 

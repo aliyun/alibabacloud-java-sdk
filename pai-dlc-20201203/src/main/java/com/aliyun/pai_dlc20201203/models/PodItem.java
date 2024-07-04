@@ -4,30 +4,62 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class PodItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:01Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T15:36:05Z</p>
+     */
     @NameInMap("GmtFinishTime")
     public String gmtFinishTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:05Z</p>
+     */
     @NameInMap("GmtStartTime")
     public String gmtStartTime;
 
     @NameInMap("HistoryPods")
     public java.util.List<PodItem> historyPods;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.0.1.2</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210126170216-mtl37ge7gkvdz-worker-0</p>
+     */
     @NameInMap("PodId")
     public String podId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fe846462-af2c-4521-bd6f-96787a57591d</p>
+     */
     @NameInMap("PodUid")
     public String podUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Stopped</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Worker</p>
+     */
     @NameInMap("Type")
     public String type;
 

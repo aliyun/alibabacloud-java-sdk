@@ -4,21 +4,45 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DebuggerConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;description&quot;:&quot;这是一个新的pytorchjob模板&quot;}</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dc-vf9lowjt3pso</p>
+     */
     @NameInMap("DebuggerConfigId")
     public String debuggerConfigId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>这是一个Pytorch的基础配置模板</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Pytorch Experiment Config</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:00Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:00Z</p>
+     */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 

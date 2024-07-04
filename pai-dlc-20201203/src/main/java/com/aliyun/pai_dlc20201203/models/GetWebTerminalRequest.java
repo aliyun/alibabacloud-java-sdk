@@ -9,6 +9,9 @@ public class GetWebTerminalRequest extends TeaModel {
 
     /**
      * <p>Pod UID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94a7cc7c-0033-48b5-85bd-71c63592c268</p>
      */
     @NameInMap("PodUid")
     public String podUid;

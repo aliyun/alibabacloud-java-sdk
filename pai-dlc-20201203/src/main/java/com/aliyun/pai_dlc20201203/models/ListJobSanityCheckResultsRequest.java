@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListJobSanityCheckResultsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("Order")
     public String order;
 

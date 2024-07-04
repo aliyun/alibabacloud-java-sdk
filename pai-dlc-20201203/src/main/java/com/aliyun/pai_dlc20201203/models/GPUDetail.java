@@ -7,9 +7,17 @@ public class GPUDetail extends TeaModel {
     @NameInMap("GPU")
     public String GPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Tesla-V100-32G</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nvidia.com/gpu-tesla-v100-sxm2-16gb</p>
+     */
     @NameInMap("GPUTypeFullName")
     public String GPUTypeFullName;
 

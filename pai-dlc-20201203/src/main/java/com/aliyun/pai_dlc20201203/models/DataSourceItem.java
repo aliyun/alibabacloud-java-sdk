@@ -4,39 +4,87 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DataSourceItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>data-20210114104214-vf9lowjt3pso</p>
+     */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nas</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>data source of dlc examples</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>nas-data</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-cn-beijing-internal.aliyuncs.com</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:00Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:00Z</p>
+     */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/root/data/</p>
+     */
     @NameInMap("MountPath")
     public String mountPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+     */
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://mybucket/path/to/dir</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

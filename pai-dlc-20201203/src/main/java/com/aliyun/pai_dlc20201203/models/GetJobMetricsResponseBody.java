@@ -4,12 +4,20 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobMetricsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210126170216-*******</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
     @NameInMap("PodMetrics")
     public java.util.List<PodMetric> podMetrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

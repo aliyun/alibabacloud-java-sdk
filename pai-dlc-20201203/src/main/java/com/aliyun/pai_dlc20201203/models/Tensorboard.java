@@ -4,57 +4,121 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Tensorboard extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>datasource-test</p>
+     */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:00Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:00Z</p>
+     */
     @NameInMap("GmtFinishTime")
     public String gmtFinishTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:00Z</p>
+     */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210114104214-vf9lowjt3pso</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Delete by user</p>
+     */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Tensorboard is deleted</p>
+     */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/root/data</p>
+     */
     @NameInMap("SummaryPath")
     public String summaryPath;
 
     @NameInMap("TensorboardDataSources")
     public java.util.List<TensorboardDataSourceSpec> tensorboardDataSources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tensorboard-xxx</p>
+     */
     @NameInMap("TensorboardId")
     public String tensorboardId;
 
     @NameInMap("TensorboardSpec")
     public TensorboardSpec tensorboardSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://xxxxxx">http://xxxxxx</a></p>
+     */
     @NameInMap("TensorboardUrl")
     public String tensorboardUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>lycxxxxx</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tensorboard.pai</p>
+     */
     @NameInMap("Username")
     public String username;
 

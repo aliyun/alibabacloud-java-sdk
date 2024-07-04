@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DeleteTensorboardRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>46099</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

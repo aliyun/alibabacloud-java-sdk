@@ -4,9 +4,17 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class StopJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210126170216-xxxxxxx</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-xxxxxx</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

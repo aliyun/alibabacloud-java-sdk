@@ -4,12 +4,20 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListJobSanityCheckResultsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1AC9xxx-3xxx-5xxx2-xxxx-FA5</p>
+     */
     @NameInMap("RequestID")
     public String requestID;
 
     @NameInMap("SanityCheckResults")
     public java.util.List<java.util.List<SanityCheckResultItem>> sanityCheckResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

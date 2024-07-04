@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class StartTensorboardRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>380</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

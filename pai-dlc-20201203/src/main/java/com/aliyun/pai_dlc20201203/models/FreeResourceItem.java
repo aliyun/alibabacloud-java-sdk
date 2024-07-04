@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class FreeResourceItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("AvailableNumber")
     public Long availableNumber;
 
@@ -13,18 +17,38 @@ public class FreeResourceItem extends TeaModel {
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>freeres-whateversth</p>
+     */
     @NameInMap("FreeResourceId")
     public String freeResourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-18T12:52:15Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-18T12:52:15Z</p>
+     */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>inner</p>
+     */
     @NameInMap("RegionID")
     public String regionID;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cpu</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

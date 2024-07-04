@@ -13,15 +13,27 @@ public class ContainerSpec extends TeaModel {
     @NameInMap("Env")
     public java.util.List<EnvVar> env;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-hangzhou.aliyuncs.com/pai-dlc/curl:v1.0.0</p>
+     */
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <strong>example:</strong>
+     * <p>data-init</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Resources")
     public ResourceRequirements resources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/root</p>
+     */
     @NameInMap("WorkingDir")
     public String workingDir;
 

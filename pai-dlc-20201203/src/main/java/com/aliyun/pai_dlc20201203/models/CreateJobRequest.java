@@ -10,11 +10,18 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("DataSources")
     public java.util.List<CreateJobRequestDataSources> dataSources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>“”</p>
+     */
     @NameInMap("DebuggerConfigContent")
     public String debuggerConfigContent;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tf-mnist-test</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
@@ -25,6 +32,10 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024</p>
+     */
     @NameInMap("JobMaxRunningTimeMinutes")
     public Long jobMaxRunningTimeMinutes;
 
@@ -36,25 +47,48 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TFJob</p>
      */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key1=value1,key2=value2</p>
+     */
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rs-xxx</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
     @NameInMap("Settings")
     public JobSettings settings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AllWorkers</p>
+     */
     @NameInMap("SuccessPolicy")
     public String successPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/root/code/</p>
+     */
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
 
@@ -63,6 +97,9 @@ public class CreateJobRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>python /root/code/mnist.py</p>
      */
     @NameInMap("UserCommand")
     public String userCommand;
@@ -70,6 +107,10 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("UserVpc")
     public CreateJobRequestUserVpc userVpc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ws-20210126170216-xxxxxxx</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -231,15 +272,31 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestCodeSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("Branch")
         public String branch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>code-20210111103721-xxxxxxx</p>
+         */
         @NameInMap("CodeSourceId")
         public String codeSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44da109b5******</p>
+         */
         @NameInMap("Commit")
         public String commit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/root/data</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
@@ -283,12 +340,24 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestDataSources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-cn9dl*******</p>
+         */
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/root/data</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -330,12 +399,24 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-abcdef****</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vs-abcdef****</p>
+         */
         @NameInMap("SwitchId")
         public String switchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-abcdef****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
