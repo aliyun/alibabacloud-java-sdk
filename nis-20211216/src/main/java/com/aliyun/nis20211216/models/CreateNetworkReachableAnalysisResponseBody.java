@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateNetworkReachableAnalysisResponseBody extends TeaModel {
     /**
      * <p>The ID of the task for analyzing network reachability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nra-2fede05617494417****</p>
      */
     @NameInMap("NetworkReachableAnalysisId")
     public String networkReachableAnalysisId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */
     @NameInMap("RequestId")
     public String requestId;

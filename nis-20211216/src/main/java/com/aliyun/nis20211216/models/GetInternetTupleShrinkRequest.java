@@ -12,12 +12,19 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1684373600099</p>
      */
     @NameInMap("BeginTime")
     public Long beginTime;
 
     /**
      * <p>The local IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>112.74.XX.XX</p>
      */
     @NameInMap("CloudIp")
     public String cloudIp;
@@ -30,37 +37,57 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
 
     /**
      * <p>The local Internet service provider (ISP).</p>
-     * <br>
-     * <p>>  In most cases, the value is Alibaba or Alibaba Cloud.</p>
+     * <blockquote>
+     * <p> In most cases, the value is Alibaba or Alibaba Cloud.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Alibaba</p>
      */
     @NameInMap("CloudIsp")
     public String cloudIsp;
 
     /**
      * <p>The local port.</p>
-     * <br>
-     * <p>>  This parameter is required only if you set GroupBy to CloudPort.</p>
+     * <blockquote>
+     * <p> This parameter is required only if you set GroupBy to CloudPort.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>443</p>
      */
     @NameInMap("CloudPort")
     public String cloudPort;
 
     /**
      * <p>The direction of the Internet traffic that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **in**: inbound</p>
-     * <p>*   **out**: outbound</p>
+     * <ul>
+     * <li><strong>in</strong>: inbound</li>
+     * <li><strong>out</strong>: outbound</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>in</p>
      */
     @NameInMap("Direction")
     public String direction;
 
     /**
      * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1684373700099</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The ID of the Alibaba Cloud instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eip-sample*</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -72,114 +99,148 @@ public class GetInternetTupleShrinkRequest extends TeaModel {
     public String instanceListShrink;
 
     /**
-     * <p>The metric for data ranking. Default value: **ByteCount**. This value indicates that Internet traffic data is ranked by traffic volume.</p>
-     * <br>
+     * <p>The metric for data ranking. Default value: <strong>ByteCount</strong>. This value indicates that Internet traffic data is ranked by traffic volume.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Rtt</p>
-     * <p>*   ByteCount</p>
-     * <p>*   PacketCount</p>
-     * <p>*   InByteCount</p>
-     * <p>*   OutByteCount</p>
-     * <p>*   InPacketCount</p>
-     * <p>*   OutPacketCount</p>
-     * <p>*   InRetranCount</p>
-     * <p>*   OutRetranCount</p>
-     * <p>*   InDupAckCount</p>
-     * <p>*   OutDupAckCount</p>
-     * <p>*   InOutOrderCount</p>
-     * <p>*   OutOutOrderCount</p>
-     * <p>*   RetranCount</p>
-     * <p>*   OutOrderCount</p>
-     * <p>*   DupAckCount</p>
-     * <p>*   RetransmitRate</p>
+     * <ul>
+     * <li>Rtt</li>
+     * <li>ByteCount</li>
+     * <li>PacketCount</li>
+     * <li>RetransmitRate</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ByteCount</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The remote city.</p>
-     * <br>
-     * <p>>  This parameter is required only if you set **TupleType** to **2** or **5**.</p>
+     * <blockquote>
+     * <p> This parameter is required only if you set <strong>TupleType</strong> to <strong>2</strong> or <strong>5</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Hangzhou</p>
      */
     @NameInMap("OtherCity")
     public String otherCity;
 
     /**
      * <p>The remote country.</p>
-     * <br>
-     * <p>>  This parameter is required only if you set **TupleType** to **2** or **5**.</p>
+     * <blockquote>
+     * <p> This parameter is required only if you set <strong>TupleType</strong> to <strong>2</strong> or <strong>5</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>China</p>
      */
     @NameInMap("OtherCountry")
     public String otherCountry;
 
     /**
      * <p>The remote IP address.</p>
-     * <br>
-     * <p>> This parameter is required only when you set **TupleType** to **2** or **5**.</p>
+     * <blockquote>
+     * <p>This parameter is required only when you set <strong>TupleType</strong> to <strong>2</strong> or <strong>5</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>122.112.XX.XX</p>
      */
     @NameInMap("OtherIp")
     public String otherIp;
 
     /**
      * <p>The remote ISP.</p>
-     * <br>
-     * <p>> This parameter is required if you want to view the information about the remote ISP.</p>
+     * <blockquote>
+     * <p>This parameter is required if you want to view the information about the remote ISP.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>China Mobile</p>
      */
     @NameInMap("OtherIsp")
     public String otherIsp;
 
     /**
      * <p>The remote port.</p>
-     * <br>
-     * <p>> This parameter is required only when you set **TupleType** to **5**.</p>
+     * <blockquote>
+     * <p>This parameter is required only when you set <strong>TupleType</strong> to <strong>5</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>40002</p>
      */
     @NameInMap("OtherPort")
     public String otherPort;
 
     /**
      * <p>The protocol number.</p>
-     * <br>
-     * <p>> All protocols are supported. This parameter is required only when you set **TupleType** to **5**.</p>
+     * <blockquote>
+     * <p>All protocols are supported. This parameter is required only when you set <strong>TupleType</strong> to <strong>5</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>The ID of the region for which you want to query the Internet traffic.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The order in which instances are ranked by Internet traffic. Valid values:</p>
-     * <br>
-     * <p>*   **desc**: the descending order</p>
-     * <p>*   **asc**: the ascending order</p>
+     * <ul>
+     * <li><strong>desc</strong>: the descending order</li>
+     * <li><strong>asc</strong>: the ascending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>desc</p>
      */
     @NameInMap("Sort")
     public String sort;
 
     /**
-     * <p>Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default. Max value: **100**.</p>
+     * <p>Specifies top-N traffic data to display. Default value: <strong>10</strong>. This value specifies to display top-10 traffic data by default. Max value: <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TopN")
     public Integer topN;
 
     /**
      * <p>The type of the tuple. Valid values:</p>
-     * <br>
-     * <p>*   **1**: 1-tuple</p>
-     * <p>*   **2**: 2-tuple</p>
-     * <p>*   **5**: 5-tuple</p>
+     * <ul>
+     * <li><strong>1</strong>: 1-tuple</li>
+     * <li><strong>2</strong>: 2-tuple</li>
+     * <li><strong>5</strong>: 5-tuple</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TupleType")
     public Integer tupleType;
 
     /**
-     * <p>Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.</p>
-     * <br>
-     * <p>>  By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.</p>
+     * <p>Specifies whether to enable the multi-account management feature. Default value: <strong>false</strong>. This value specifies that the multi-account management feature is disabled.</p>
+     * <blockquote>
+     * <p> By default, the multi-account management feature is not available. If you want to use this feature, contact your account manager to apply for permissions.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("UseMultiAccount")
     public Boolean useMultiAccount;

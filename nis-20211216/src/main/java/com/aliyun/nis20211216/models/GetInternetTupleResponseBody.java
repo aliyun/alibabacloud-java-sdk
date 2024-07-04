@@ -12,6 +12,9 @@ public class GetInternetTupleResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D5E98683-355B-5867-8D3D-A24755F6895B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,197 +43,295 @@ public class GetInternetTupleResponseBody extends TeaModel {
     public static class GetInternetTupleResponseBodyData extends TeaModel {
         /**
          * <p>The access point of Alibaba Cloud.</p>
-         * <br>
-         * <p>>  This parameter is valid only if you set **InstanceId** to the instance ID of an Anycast elastic IP address (EIP).</p>
+         * <blockquote>
+         * <p> This parameter is valid only if you set <strong>InstanceId</strong> to the instance ID of an Anycast elastic IP address (EIP).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong-pop</p>
          */
         @NameInMap("AccessRegion")
         public String accessRegion;
 
         /**
          * <p>The beginning of the time range that you queried. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684373600099</p>
          */
         @NameInMap("BeginTime")
         public String beginTime;
 
         /**
          * <p>The traffic volume. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88</p>
          */
         @NameInMap("ByteCount")
         public Double byteCount;
 
         /**
          * <p>The local city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nanjing</p>
          */
         @NameInMap("CloudCity")
         public String cloudCity;
 
         /**
          * <p>The local country or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         @NameInMap("CloudCountry")
         public String cloudCountry;
 
         /**
          * <p>The local IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112.74.XX.XX</p>
          */
         @NameInMap("CloudIp")
         public String cloudIp;
 
         /**
          * <p>The local ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China Mobile</p>
          */
         @NameInMap("CloudIsp")
         public String cloudIsp;
 
         /**
          * <p>The local port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>443</p>
          */
         @NameInMap("CloudPort")
         public String cloudPort;
 
         /**
          * <p>The service code of the instance to which the local IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EIP</p>
          */
         @NameInMap("CloudProduct")
         public String cloudProduct;
 
         /**
          * <p>The local province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jiangsu</p>
          */
         @NameInMap("CloudProvince")
         public String cloudProvince;
 
         /**
          * <p>The direction of Internet traffic. Valid values:</p>
-         * <br>
-         * <p>*   **in**: inbound</p>
-         * <p>*   **out**: outbound</p>
+         * <ul>
+         * <li><strong>in</strong>: inbound</li>
+         * <li><strong>out</strong>: outbound</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>in</p>
          */
         @NameInMap("Direction")
         public String direction;
 
         /**
          * <p>The inbound traffic volume. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88</p>
          */
         @NameInMap("InByteCount")
         public Double inByteCount;
 
         /**
          * <p>The number of inbound disordered packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("InOutOrderCount")
         public Double inOutOrderCount;
 
         /**
          * <p>The number of inbound packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33</p>
          */
         @NameInMap("InPacketCount")
         public Double inPacketCount;
 
         /**
          * <p>The number of inbound repeated packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("InRetranCount")
         public Double inRetranCount;
 
         /**
          * <p>The ID of the instance to which the local IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-sample*</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The remote city. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.</p>
+         * <p>The remote city. In most cases, this parameter is empty if you set <strong>OtherCountry</strong> to a country except China.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Austin</p>
          */
         @NameInMap("OtherCity")
         public String otherCity;
 
         /**
          * <p>The remote country or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>United States</p>
          */
         @NameInMap("OtherCountry")
         public String otherCountry;
 
         /**
          * <p>The remote IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122.112.XX.XX</p>
          */
         @NameInMap("OtherIp")
         public String otherIp;
 
         /**
          * <p>The remote ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>amazon.com</p>
          */
         @NameInMap("OtherIsp")
         public String otherIsp;
 
         /**
          * <p>The remote port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40002</p>
          */
         @NameInMap("OtherPort")
         public String otherPort;
 
         /**
          * <p>The service code of the instance to which the remote IP address belongs. If the IP address is not on the cloud, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         @NameInMap("OtherProduct")
         public String otherProduct;
 
         /**
-         * <p>The remote province. In most cases, this parameter is empty if you set **OtherCountry** to a country except China.</p>
+         * <p>The remote province. In most cases, this parameter is empty if you set <strong>OtherCountry</strong> to a country except China.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Texas</p>
          */
         @NameInMap("OtherProvince")
         public String otherProvince;
 
         /**
          * <p>The outbound traffic volume. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("OutByteCount")
         public Double outByteCount;
 
         /**
          * <p>The number of disordered packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OutOrderCount")
         public Double outOrderCount;
 
         /**
          * <p>The number of outbound disordered packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OutOutOrderCount")
         public Double outOutOrderCount;
 
         /**
          * <p>The number of outbound packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("OutPacketCount")
         public Double outPacketCount;
 
         /**
          * <p>The number of outbound repeated packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OutRetranCount")
         public Double outRetranCount;
 
         /**
          * <p>The number of packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("PacketCount")
         public Double packetCount;
 
         /**
          * <p>The protocol number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The retransmission rate of TCP packets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
          */
         @NameInMap("RetransmitRate")
         public Double retransmitRate;
 
         /**
          * <p>The round-trip time (RTT). Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("Rtt")
         public Double rtt;

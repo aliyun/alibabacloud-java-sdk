@@ -4,11 +4,24 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class DeleteNetworkReachableAnalysisResponseBody extends TeaModel {
+    /**
+     * <p>Result of operation.</p>
+     * <ul>
+     * <li><strong>true</strong>: Delete Success.</li>
+     * <li><strong>false</strong>: Delete Fail.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4838F3F2-30E1-5D82-B25A-B9FE33BC3E25</p>
      */
     @NameInMap("RequestId")
     public String requestId;

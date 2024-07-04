@@ -5,50 +5,74 @@ import com.aliyun.tea.*;
 
 public class GetNatTopNRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query in milliseconds. If you do not specify **EndTime**, the point in time specified by **BeginTime** is queried.</p>
+     * <p>The beginning of the time range to query in milliseconds. If you do not specify <strong>EndTime</strong>, the point in time specified by <strong>BeginTime</strong> is queried.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1638239092000</p>
      */
     @NameInMap("BeginTime")
     public Long beginTime;
 
     /**
-     * <p>The end of the time range to query in milliseconds. The time range specified by **BeginTime** and **EndTime** cannot exceed **86400000** milliseconds (24 hours).</p>
+     * <p>The end of the time range to query in milliseconds. The time range specified by <strong>BeginTime</strong> and <strong>EndTime</strong> cannot exceed <strong>86400000</strong> milliseconds (24 hours).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1638239093000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>Query ranking statistics for a specific IP address. If you specify this parameter, you do not need to specify **TopN** or **OrderBy**.</p>
+     * <p>Query ranking statistics for a specific IP address. If you specify this parameter, you do not need to specify <strong>TopN</strong> or <strong>OrderBy</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.156.101</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
      * <p>The ID of the NAT gateway.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ngw-sample***</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
     /**
      * <p>The metric that is used for real-time SNAT performance ranking. Valid values:</p>
-     * <br>
-     * <p>*   **InBps**: inbound data transfer. Unit: bit/s.</p>
-     * <p>*   **OutBps**: outbound data transfer. Unit: bit/s.</p>
-     * <p>*   **InPps**: inbound packet forwarding rate. Unit: packets per second.</p>
-     * <p>*   **OutPps**: outbound packet forwarding rate. Unit: packets per second.</p>
-     * <p>*   **NewSessionPerSecond**: new connection creation rate. Unit: connections per second.</p>
-     * <p>*   **ActiveSessionCount**: number of concurrent connections. Unit: connections.</p>
+     * <ul>
+     * <li><strong>InBps</strong>: inbound data transfer. Unit: bit/s.</li>
+     * <li><strong>OutBps</strong>: outbound data transfer. Unit: bit/s.</li>
+     * <li><strong>InPps</strong>: inbound packet forwarding rate. Unit: packets per second.</li>
+     * <li><strong>OutPps</strong>: outbound packet forwarding rate. Unit: packets per second.</li>
+     * <li><strong>NewSessionPerSecond</strong>: new connection creation rate. Unit: connections per second.</li>
+     * <li><strong>ActiveSessionCount</strong>: number of concurrent connections. Unit: connections.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InBps</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The ID of the region in which the NAT gateway is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The number of entries to return for real-time SNAT performance ranking. Valid values: **1 to 100**. Default value: **10**.</p>
+     * <p>The number of entries to return for real-time SNAT performance ranking. Valid values: <strong>1 to 100</strong>. Default value: <strong>10</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TopN")
     public Integer topN;

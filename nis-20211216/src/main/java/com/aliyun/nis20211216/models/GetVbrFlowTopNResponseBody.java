@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetVbrFlowTopNResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7F0D6EC-E19E-58AC-AC9F-08036763960F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,66 +43,99 @@ public class GetVbrFlowTopNResponseBody extends TeaModel {
     public static class GetVbrFlowTopNResponseBodyVirtualBorderRouterFlowlogTopN extends TeaModel {
         /**
          * <p>The account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156237031628****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
          * <p>The CEN connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tr-attach-u6v1j3jre0fe9h****</p>
          */
         @NameInMap("AttachmentId")
         public String attachmentId;
 
         /**
          * <p>The total volume of traffic in the specified time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>108</p>
          */
         @NameInMap("Bytes")
         public Double bytes;
 
         /**
          * <p>The local IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.24.X.X</p>
          */
         @NameInMap("CloudIp")
         public String cloudIp;
 
         /**
          * <p>The local port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("CloudPort")
         public String cloudPort;
 
         /**
          * <p>The local region where the local IP address resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("CloudRegion")
         public String cloudRegion;
 
         /**
          * <p>The remote IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222.85.X.X</p>
          */
         @NameInMap("OtherIp")
         public String otherIp;
 
         /**
          * <p>The remote port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10965</p>
          */
         @NameInMap("OtherPort")
         public String otherPort;
 
         /**
          * <p>The total number of packets in the specified time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66</p>
          */
         @NameInMap("Packets")
         public Double packets;
 
         /**
          * <p>The protocol number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Protocol")
         public String protocol;
 
         /**
          * <p>The ID of the VBR that is associated with the Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vbr-k1atj46citwuek42j****</p>
          */
         @NameInMap("VirtualBorderRouterId")
         public String virtualBorderRouterId;

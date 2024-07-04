@@ -27,11 +27,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
-      *
-      * @param request CreateAndAnalyzeNetworkPathRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateAndAnalyzeNetworkPathResponse
+     * <b>description</b> :
+     * <p>You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the <strong>createNetworkReachableAnalysis</strong> operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a task for analyzing network reachability.</p>
+     * 
+     * @param request CreateAndAnalyzeNetworkPathRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAndAnalyzeNetworkPathResponse
      */
     public CreateAndAnalyzeNetworkPathResponse createAndAnalyzeNetworkPathWithOptions(CreateAndAnalyzeNetworkPathRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -54,10 +58,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the **createNetworkReachableAnalysis** operation.
-      *
-      * @param request CreateAndAnalyzeNetworkPathRequest
-      * @return CreateAndAnalyzeNetworkPathResponse
+     * <b>description</b> :
+     * <p>You can call this operation to initiate a task for analyzing network reachability by specifying only the information about the source and destination. You do not need to create a network path for reachability analysis. The analysis result is not recorded in the system. If you want to record the path parameters and analysis result in the Network Intelligence Service (NIS) console, we recommend that you call the <strong>createNetworkReachableAnalysis</strong> operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Initiates a task for analyzing network reachability.</p>
+     * 
+     * @param request CreateAndAnalyzeNetworkPathRequest
+     * @return CreateAndAnalyzeNetworkPathResponse
      */
     public CreateAndAnalyzeNetworkPathResponse createAndAnalyzeNetworkPath(CreateAndAnalyzeNetworkPathRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -65,12 +73,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
-      * *   You can create up to 100 network paths within one Alibaba Cloud account.
-      *
-      * @param request CreateNetworkPathRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateNetworkPathResponse
+     * <b>description</b> :
+     * <p>  You can call the <strong>CreateNetworkPath</strong> operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.</p>
+     * <ul>
+     * <li>You can create up to 100 network paths within one Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a network path in the cloud for reachability analysis.</p>
+     * 
+     * @param request CreateNetworkPathRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNetworkPathResponse
      */
     public CreateNetworkPathResponse createNetworkPathWithOptions(CreateNetworkPathRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -149,11 +163,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can call the **CreateNetworkPath** operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.
-      * *   You can create up to 100 network paths within one Alibaba Cloud account.
-      *
-      * @param request CreateNetworkPathRequest
-      * @return CreateNetworkPathResponse
+     * <b>description</b> :
+     * <p>  You can call the <strong>CreateNetworkPath</strong> operation to create network paths in multiple networking scenarios and between multiple resources. After a path is created, the path parameters are saved for repeated analysis.</p>
+     * <ul>
+     * <li>You can create up to 100 network paths within one Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a network path in the cloud for reachability analysis.</p>
+     * 
+     * @param request CreateNetworkPathRequest
+     * @return CreateNetworkPathResponse
      */
     public CreateNetworkPathResponse createNetworkPath(CreateNetworkPathRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -161,13 +181,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
-      * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
-      * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
-      *
-      * @param request CreateNetworkReachableAnalysisRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateNetworkReachableAnalysisResponse
+     * <b>description</b> :
+     * <p>  The <strong>CreateNetworkReachableAnalysis</strong> operation is used to create a task for analyzing the reachability of the network path that is created by calling the <strong>CreateNetworkPath</strong> operation and record the analysis results.</p>
+     * <ul>
+     * <li>The <strong>CreateNetworkReachableAnalysis</strong> operation can be called to repeatedly analyze the reachability of a network path.</li>
+     * <li>You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a task for analyzing network reachability.</p>
+     * 
+     * @param request CreateNetworkReachableAnalysisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNetworkReachableAnalysisResponse
      */
     public CreateNetworkReachableAnalysisResponse createNetworkReachableAnalysisWithOptions(CreateNetworkReachableAnalysisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -202,18 +228,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **CreateNetworkReachableAnalysis** operation is used to create a task for analyzing the reachability of the network path that is created by calling the **CreateNetworkPath** operation and record the analysis results.
-      * *   The **CreateNetworkReachableAnalysis** operation can be called to repeatedly analyze the reachability of a network path.
-      * *   You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.
-      *
-      * @param request CreateNetworkReachableAnalysisRequest
-      * @return CreateNetworkReachableAnalysisResponse
+     * <b>description</b> :
+     * <p>  The <strong>CreateNetworkReachableAnalysis</strong> operation is used to create a task for analyzing the reachability of the network path that is created by calling the <strong>CreateNetworkPath</strong> operation and record the analysis results.</p>
+     * <ul>
+     * <li>The <strong>CreateNetworkReachableAnalysis</strong> operation can be called to repeatedly analyze the reachability of a network path.</li>
+     * <li>You can create up to 1,000 reachability analysis records within one Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a task for analyzing network reachability.</p>
+     * 
+     * @param request CreateNetworkReachableAnalysisRequest
+     * @return CreateNetworkReachableAnalysisResponse
      */
     public CreateNetworkReachableAnalysisResponse createNetworkReachableAnalysis(CreateNetworkReachableAnalysisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNetworkReachableAnalysisWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a network path.</p>
+     * 
+     * @param tmpReq DeleteNetworkPathRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNetworkPathResponse
+     */
     public DeleteNetworkPathResponse deleteNetworkPathWithOptions(DeleteNetworkPathRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteNetworkPathShrinkRequest request = new DeleteNetworkPathShrinkRequest();
@@ -248,11 +288,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNetworkPathResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a network path.</p>
+     * 
+     * @param request DeleteNetworkPathRequest
+     * @return DeleteNetworkPathResponse
+     */
     public DeleteNetworkPathResponse deleteNetworkPath(DeleteNetworkPathRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNetworkPathWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a task for analyzing network reachability.</p>
+     * 
+     * @param tmpReq DeleteNetworkReachableAnalysisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNetworkReachableAnalysisResponse
+     */
     public DeleteNetworkReachableAnalysisResponse deleteNetworkReachableAnalysisWithOptions(DeleteNetworkReachableAnalysisRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         DeleteNetworkReachableAnalysisShrinkRequest request = new DeleteNetworkReachableAnalysisShrinkRequest();
@@ -287,11 +342,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNetworkReachableAnalysisResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a task for analyzing network reachability.</p>
+     * 
+     * @param request DeleteNetworkReachableAnalysisRequest
+     * @return DeleteNetworkReachableAnalysisResponse
+     */
     public DeleteNetworkReachableAnalysisResponse deleteNetworkReachableAnalysis(DeleteNetworkReachableAnalysisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNetworkReachableAnalysisWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
+     * 
+     * @param tmpReq GetInternetTupleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInternetTupleResponse
+     */
     public GetInternetTupleResponse getInternetTupleWithOptions(GetInternetTupleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetInternetTupleShrinkRequest request = new GetInternetTupleShrinkRequest();
@@ -410,11 +480,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInternetTupleResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the rankings of Internet traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Internet traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
+     * 
+     * @param request GetInternetTupleRequest
+     * @return GetInternetTupleResponse
+     */
     public GetInternetTupleResponse getInternetTuple(GetInternetTupleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInternetTupleWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the real-time SNAT performance ranking of a NAT gateway.</p>
+     * 
+     * @param request GetNatTopNRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNatTopNResponse
+     */
     public GetNatTopNResponse getNatTopNWithOptions(GetNatTopNRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -463,19 +548,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetNatTopNResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the real-time SNAT performance ranking of a NAT gateway.</p>
+     * 
+     * @param request GetNatTopNRequest
+     * @return GetNatTopNResponse
+     */
     public GetNatTopNResponse getNatTopN(GetNatTopNRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNatTopNWithOptions(request, runtime);
     }
 
     /**
-      * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
-      * *   The **init** state indicates that the task is in progress.
-      * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
-      *
-      * @param request GetNetworkReachableAnalysisRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetNetworkReachableAnalysisResponse
+     * <b>description</b> :
+     * <p><em>GetNetworkReachableAnalysis</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.</p>
+     * <ul>
+     * <li>The <strong>init</strong> state indicates that the task is in progress.</li>
+     * <li>The <strong>finish</strong> state indicates that the task is complete. In this state, you can obtain the analysis result.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the results of network reachability analysis.</p>
+     * 
+     * @param request GetNetworkReachableAnalysisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNetworkReachableAnalysisResponse
      */
     public GetNetworkReachableAnalysisResponse getNetworkReachableAnalysisWithOptions(GetNetworkReachableAnalysisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -506,18 +604,208 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **GetNetworkReachableAnalysis** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.
-      * *   The **init** state indicates that the task is in progress.
-      * *   The **finish** state indicates that the task is complete. In this state, you can obtain the analysis result.
-      *
-      * @param request GetNetworkReachableAnalysisRequest
-      * @return GetNetworkReachableAnalysisResponse
+     * <b>description</b> :
+     * <p><em>GetNetworkReachableAnalysis</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can query the state of the task for analyzing network reachability.</p>
+     * <ul>
+     * <li>The <strong>init</strong> state indicates that the task is in progress.</li>
+     * <li>The <strong>finish</strong> state indicates that the task is complete. In this state, you can obtain the analysis result.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the results of network reachability analysis.</p>
+     * 
+     * @param request GetNetworkReachableAnalysisRequest
+     * @return GetNetworkReachableAnalysisResponse
      */
     public GetNetworkReachableAnalysisResponse getNetworkReachableAnalysis(GetNetworkReachableAnalysisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNetworkReachableAnalysisWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取云网络指标趋势</p>
+     * 
+     * @param tmpReq GetNisNetworkMetricsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNisNetworkMetricsResponse
+     */
+    public GetNisNetworkMetricsResponse getNisNetworkMetricsWithOptions(GetNisNetworkMetricsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetNisNetworkMetricsShrinkRequest request = new GetNisNetworkMetricsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dimensions)) {
+            request.dimensionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dimensions, "Dimensions", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountIds)) {
+            query.put("AccountIds", request.accountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            query.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dimensionsShrink)) {
+            query.put("Dimensions", request.dimensionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
+            query.put("MetricName", request.metricName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionNo)) {
+            query.put("RegionNo", request.regionNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scanBy)) {
+            query.put("ScanBy", request.scanBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useCrossAccount)) {
+            query.put("UseCrossAccount", request.useCrossAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNisNetworkMetrics"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNisNetworkMetricsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取云网络指标趋势</p>
+     * 
+     * @param request GetNisNetworkMetricsRequest
+     * @return GetNisNetworkMetricsResponse
+     */
+    public GetNisNetworkMetricsResponse getNisNetworkMetrics(GetNisNetworkMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNisNetworkMetricsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取云网络指标排名</p>
+     * 
+     * @param tmpReq GetNisNetworkRankingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNisNetworkRankingResponse
+     */
+    public GetNisNetworkRankingResponse getNisNetworkRankingWithOptions(GetNisNetworkRankingRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetNisNetworkRankingShrinkRequest request = new GetNisNetworkRankingShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountIds)) {
+            query.put("AccountIds", request.accountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            query.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            query.put("Filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            query.put("GroupBy", request.groupBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionNo)) {
+            query.put("RegionNo", request.regionNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
+            query.put("Sort", request.sort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topN)) {
+            query.put("TopN", request.topN);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useCrossAccount)) {
+            query.put("UseCrossAccount", request.useCrossAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNisNetworkRanking"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNisNetworkRankingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取云网络指标排名</p>
+     * 
+     * @param request GetNisNetworkRankingRequest
+     * @return GetNisNetworkRankingResponse
+     */
+    public GetNisNetworkRankingResponse getNisNetworkRanking(GetNisNetworkRankingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNisNetworkRankingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
+     * 
+     * @param tmpReq GetTransitRouterFlowTopNRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTransitRouterFlowTopNResponse
+     */
     public GetTransitRouterFlowTopNResponse getTransitRouterFlowTopNWithOptions(GetTransitRouterFlowTopNRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetTransitRouterFlowTopNShrinkRequest request = new GetTransitRouterFlowTopNShrinkRequest();
@@ -616,11 +904,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetTransitRouterFlowTopNResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the rankings of inter-region traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Inter-region traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
+     * 
+     * @param request GetTransitRouterFlowTopNRequest
+     * @return GetTransitRouterFlowTopNResponse
+     */
     public GetTransitRouterFlowTopNResponse getTransitRouterFlowTopN(GetTransitRouterFlowTopNRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTransitRouterFlowTopNWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
+     * 
+     * @param tmpReq GetVbrFlowTopNRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVbrFlowTopNResponse
+     */
     public GetVbrFlowTopNResponse getVbrFlowTopNWithOptions(GetVbrFlowTopNRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GetVbrFlowTopNShrinkRequest request = new GetVbrFlowTopNShrinkRequest();
@@ -719,6 +1022,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetVbrFlowTopNResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the rankings of hybrid cloud traffic data in the form of 1-tuple, 2-tuple, or 5-tuple. Hybrid cloud traffic data can be ranked by metrics such as traffic volumes and the number of packets.</p>
+     * 
+     * @param request GetVbrFlowTopNRequest
+     * @return GetVbrFlowTopNResponse
+     */
     public GetVbrFlowTopNResponse getVbrFlowTopN(GetVbrFlowTopNRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getVbrFlowTopNWithOptions(request, runtime);

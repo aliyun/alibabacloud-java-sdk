@@ -6,64 +6,96 @@ import com.aliyun.tea.*;
 public class CreateNetworkPathRequest extends TeaModel {
     /**
      * <p>The description of the network path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Analyze the path from ECS to ECS</p>
      */
     @NameInMap("NetworkPathDescription")
     public String networkPathDescription;
 
     /**
      * <p>The name of the network path.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs2PublicIp</p>
      */
     @NameInMap("NetworkPathName")
     public String networkPathName;
 
     /**
      * <p>The protocol type. Valid values:</p>
-     * <br>
-     * <p>*   **tcp**: Transmission Control Protocol (TCP)</p>
-     * <p>*   **udp**: User Datagram Protocol (UDP)</p>
-     * <p>*   **icmp**: Internet Control Message Protocol (ICMP)</p>
+     * <ul>
+     * <li><strong>tcp</strong>: Transmission Control Protocol (TCP)</li>
+     * <li><strong>udp</strong>: User Datagram Protocol (UDP)</li>
+     * <li><strong>icmp</strong>: Internet Control Message Protocol (ICMP)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>The region ID of the network path that you want to create.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm27qsxjj****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The ID of the source resource.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-2zef4ngqfarepyun****</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
 
     /**
      * <p>The source IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.17.XX.XX</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
 
     /**
      * <p>The source port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>443</p>
      */
     @NameInMap("SourcePort")
     public Integer sourcePort;
 
     /**
      * <p>The type of the source resource. Valid values:</p>
-     * <br>
-     * <p>*   **ecs**: the Elastic Compute Service (ECS) instance</p>
-     * <p>*   **internetIp**: the public IP address</p>
-     * <p>*   **vsw**: the vSwitch</p>
-     * <p>*   **vpn**: the VPN gateway</p>
-     * <p>*   **vbr**: the virtual border router (VBR)</p>
+     * <ul>
+     * <li><strong>ecs</strong>: the Elastic Compute Service (ECS) instance</li>
+     * <li><strong>internetIp</strong>: the public IP address</li>
+     * <li><strong>vsw</strong>: the vSwitch</li>
+     * <li><strong>vpn</strong>: the VPN gateway</li>
+     * <li><strong>vbr</strong>: the virtual border router (VBR)</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
@@ -76,31 +108,44 @@ public class CreateNetworkPathRequest extends TeaModel {
 
     /**
      * <p>The ID of the destination resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp13d0e064gubm****</p>
      */
     @NameInMap("TargetId")
     public String targetId;
 
     /**
      * <p>The destination IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.210</p>
      */
     @NameInMap("TargetIpAddress")
     public String targetIpAddress;
 
     /**
      * <p>The destination port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("TargetPort")
     public Integer targetPort;
 
     /**
      * <p>The type of the destination resource. Valid values:</p>
-     * <br>
-     * <p>*   **ecs**: the ECS instance</p>
-     * <p>*   **internetIp**: the public IP address</p>
-     * <p>*   **vsw**: the vSwitch</p>
-     * <p>*   **vpn**: the VPN gateway</p>
-     * <p>*   **vbr**: the VBR</p>
-     * <p>*   **clb**: the Classic Load Balancer (CLB) instance</p>
+     * <ul>
+     * <li><strong>ecs</strong>: the ECS instance</li>
+     * <li><strong>internetIp</strong>: the public IP address</li>
+     * <li><strong>vsw</strong>: the vSwitch</li>
+     * <li><strong>vpn</strong>: the VPN gateway</li>
+     * <li><strong>vbr</strong>: the VBR</li>
+     * <li><strong>clb</strong>: the Classic Load Balancer (CLB) instance</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("TargetType")
     public String targetType;
@@ -224,17 +269,21 @@ public class CreateNetworkPathRequest extends TeaModel {
 
     public static class CreateNetworkPathRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
-         * <br>
+         * <p>The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * <p>You can add up to 20 tags in each call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ops</p>
          */
         @NameInMap("Value")
         public String value;

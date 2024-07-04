@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeleteNetworkReachableAnalysisRequest extends TeaModel {
     /**
      * <p>The IDs of the tasks for analyzing network reachability.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkReachableAnalysisIds")
     public java.util.List<String> networkReachableAnalysisIds;
 
     /**
      * <p>The ID of the region for which you want to delete a task for analyzing network reachability.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
