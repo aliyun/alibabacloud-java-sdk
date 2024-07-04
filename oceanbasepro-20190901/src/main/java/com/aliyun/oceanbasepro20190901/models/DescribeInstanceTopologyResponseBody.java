@@ -744,8 +744,6 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceCpu extends TeaModel {
         /**
-         * <p>The size of used storage space of the node, in GB.</p>
-         * 
          * <strong>example:</strong>
          * <p>14</p>
          */
@@ -753,8 +751,6 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public Integer totalCpu;
 
         /**
-         * <p>Indicates whether migration can be performed.</p>
-         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -785,32 +781,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize extends TeaModel {
-        /**
-         * <p>The deployment type of the primary zone.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>400</p>
-         */
         @NameInMap("TotalDiskSize")
         public Double totalDiskSize;
 
-        /**
-         * <p>The status of the tenant.   </p>
-         * <ul>
-         * <li>PENDING_CREATE: The tenant is being created.   </li>
-         * <li>RESTORE: The tenant is being recovered.   </li>
-         * <li>ONLINE: The tenant is running.   </li>
-         * <li>SPEC_MODIFYING: The specification of the tenant is being modified.   </li>
-         * <li>ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.   </li>
-         * <li>PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.   </li>
-         * <li>PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.   </li>
-         * <li>PARAMETER_MODIFYING: Parameters are being modified.   </li>
-         * <li>WHITE_LIST_MODIFYING: The whitelist is being modified.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
         @NameInMap("UsedDiskSize")
         public Double usedDiskSize;
 
@@ -839,8 +812,6 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceMemory extends TeaModel {
         /**
-         * <p>The ID of the replica node.</p>
-         * 
          * <strong>example:</strong>
          * <p>70</p>
          */
@@ -848,8 +819,6 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public Long totalMemory;
 
         /**
-         * <p>The information of node resources.</p>
-         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -880,25 +849,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource extends TeaModel {
-        /**
-         * <p>The memory size of the tenant, in GB.</p>
-         */
         @NameInMap("Cpu")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceCpu cpu;
 
-        /**
-         * <p>The information about the CPU resources of the node.</p>
-         */
         @NameInMap("DiskSize")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceDiskSize diskSize;
 
-        /**
-         * <p>The role to access the zone. Valid values:   </p>
-         * <ul>
-         * <li>ReadWrite: a role that has the read and write privileges.</li>
-         * <li>ReadOnly: a role that has only the read-only privilege.</li>
-         * </ul>
-         */
         @NameInMap("Memory")
         public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResourceMemory memory;
 
@@ -962,7 +918,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
          * <p>The ID of the node.</p>
          */
         @NameInMap("NodeResource")
-        public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource> nodeResource;
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource nodeResource;
 
         /**
          * <p>The ID of the OBServer where the resource unit resides.</p>
@@ -1016,11 +972,11 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return this.nodeId;
         }
 
-        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes setNodeResource(java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource> nodeResource) {
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodes setNodeResource(DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource nodeResource) {
             this.nodeResource = nodeResource;
             return this;
         }
-        public java.util.List<DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource> getNodeResource() {
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyZonesNodesNodeResource getNodeResource() {
             return this.nodeResource;
         }
 
