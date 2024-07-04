@@ -4,9 +4,17 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class EnvVar extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ENABLE_DEBUG</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Value")
     public String value;
 

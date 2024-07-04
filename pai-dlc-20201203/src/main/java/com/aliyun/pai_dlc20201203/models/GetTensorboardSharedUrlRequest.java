@@ -4,6 +4,10 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetTensorboardSharedUrlRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>86400</p>
+     */
     @NameInMap("ExpireTimeSeconds")
     public String expireTimeSeconds;
 

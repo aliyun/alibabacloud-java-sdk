@@ -4,21 +4,41 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class SanityCheckResultItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CheckNumber")
     public Integer checkNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”2023-11-30T16:47:30.378817+08:00&quot;</p>
+     */
     @NameInMap("FinishedAt")
     public String finishedAt;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CheckInit</p>
+     */
     @NameInMap("Phase")
     public String phase;
 
+    /**
+     * <strong>example:</strong>
+     * <p>”2023-11-30T16:47:30.343005+08:00“</p>
+     */
     @NameInMap("StartedAt")
     public String startedAt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("Status")
     public String status;
 

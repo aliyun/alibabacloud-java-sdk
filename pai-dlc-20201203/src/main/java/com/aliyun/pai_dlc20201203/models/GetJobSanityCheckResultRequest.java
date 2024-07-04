@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class GetJobSanityCheckResultRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SanityCheckNumber")
     public Integer sanityCheckNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DeviceCheck</p>
+     */
     @NameInMap("SanityCheckPhase")
     public String sanityCheckPhase;
 

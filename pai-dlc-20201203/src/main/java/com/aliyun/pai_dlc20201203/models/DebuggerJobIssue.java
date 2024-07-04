@@ -4,24 +4,52 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DebuggerJobIssue extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Name&quot;: &quot;CPUBottleneck&quot;,  &quot;Triggered&quot;: 10, &quot;Violations&quot;: 2,  &quot;Details&quot;: &quot;{}&quot;}</p>
+     */
     @NameInMap("DebuggerJobIssue")
     public String debuggerJobIssue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:00Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>de-826ca1bcfba30</p>
+     */
     @NameInMap("JobDebuggerIssueId")
     public String jobDebuggerIssueId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210126170216-mtl37ge7gkvdz</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1002300</p>
+     */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GPU利用率低</p>
+     */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ProfileReport</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 

@@ -16,6 +16,10 @@ public class FreeResourceClusterControlItem extends TeaModel {
     @NameInMap("EnableFreeResource")
     public Boolean enableFreeResource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>frcc-whateversth</p>
+     */
     @NameInMap("FreeResourceClusterControlId")
     public String freeResourceClusterControlId;
 

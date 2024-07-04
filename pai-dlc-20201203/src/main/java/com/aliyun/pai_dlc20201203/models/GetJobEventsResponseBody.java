@@ -7,9 +7,17 @@ public class GetJobEventsResponseBody extends TeaModel {
     @NameInMap("Events")
     public java.util.List<String> events;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210126170216-******</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>78F6FCE2-278F-4C4A-A6B7-DD8ECEA9C456</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

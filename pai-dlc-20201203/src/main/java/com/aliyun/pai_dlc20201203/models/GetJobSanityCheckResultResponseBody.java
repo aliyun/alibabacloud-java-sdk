@@ -4,9 +4,17 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetJobSanityCheckResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210126170216-xxxxxx</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B3789344-F1xxxBE-5xx2-A04D-xxxxx</p>
+     */
     @NameInMap("RequestID")
     public String requestID;
 

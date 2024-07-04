@@ -7,102 +7,217 @@ public class JobItem extends TeaModel {
     @NameInMap("CodeSource")
     public JobItemCodeSource codeSource;
 
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
     @NameInMap("DataSources")
     public java.util.List<JobItemDataSources> dataSources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tf-mnist-test</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3602</p>
+     */
     @NameInMap("Duration")
     public Long duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnabledDebugger")
     public Boolean enabledDebugger;
 
     @NameInMap("Envs")
     public java.util.Map<String, String> envs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:01Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:01Z</p>
+     */
     @NameInMap("GmtFailedTime")
     public String gmtFailedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T15:36:08Z</p>
+     */
     @NameInMap("GmtFinishTime")
     public String gmtFinishTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:01Z</p>
+     */
     @NameInMap("GmtRunningTime")
     public String gmtRunningTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:01Z</p>
+     */
     @NameInMap("GmtStoppedTime")
     public String gmtStoppedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:01Z</p>
+     */
     @NameInMap("GmtSubmittedTime")
     public String gmtSubmittedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:01Z</p>
+     */
     @NameInMap("GmtSuccessedTime")
     public String gmtSuccessedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210126170216-mtl37ge7gkvdz</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TFJob</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>JobStoppedByUser</p>
+     */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Job is stopped by user.</p>
+     */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-quota</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>L0</p>
+     */
     @NameInMap("ResourceLevel")
     public String resourceLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my_resource_group</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     @NameInMap("Settings")
     public JobSettings settings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Stopped</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Restarting</p>
+     */
     @NameInMap("SubStatus")
     public String subStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/root/code/</p>
+     */
     @NameInMap("ThirdpartyLibDir")
     public String thirdpartyLibDir;
 
     @NameInMap("ThirdpartyLibs")
     public java.util.List<String> thirdpartyLibs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("UseOversoldResource")
     public Boolean useOversoldResource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>python /root/code/mnist.py</p>
+     */
     @NameInMap("UserCommand")
     public String userCommand;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pai-dlc-role</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <strong>example:</strong>
+     * <p>268</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-workspace</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 
@@ -117,6 +232,14 @@ public class JobItem extends TeaModel {
     }
     public JobItemCodeSource getCodeSource() {
         return this.codeSource;
+    }
+
+    public JobItem setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public JobItem setDataSources(java.util.List<JobItemDataSources> dataSources) {
@@ -384,15 +507,31 @@ public class JobItem extends TeaModel {
     }
 
     public static class JobItemCodeSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>master</p>
+         */
         @NameInMap("Branch")
         public String branch;
 
+        /**
+         * <strong>example:</strong>
+         * <p>code-20210111103721-85qz78ia96lu</p>
+         */
         @NameInMap("CodeSourceId")
         public String codeSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>44da109b59f8596152987eaa8f3b2487bb72ea63</p>
+         */
         @NameInMap("Commit")
         public String commit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/data</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
@@ -436,9 +575,17 @@ public class JobItem extends TeaModel {
     }
 
     public static class JobItemDataSources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>data-20210114104214-vf9lowjt3pso</p>
+         */
         @NameInMap("DataSourceId")
         public String dataSourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/data</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 

@@ -4,24 +4,52 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ImageItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>gpu</p>
+     */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ken</p>
+     */
     @NameInMap("AuthorId")
     public String authorId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PyTorchJob</p>
+     */
     @NameInMap("Framework")
     public String framework;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Community</p>
+     */
     @NameInMap("ImageProviderType")
     public String imageProviderType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tensorflow-training:2.3-cpu-py36-ubuntu18.04</p>
+     */
     @NameInMap("ImageTag")
     public String imageTag;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-beijing.aliyuncs.com/pai-dlc/tensorflow-training:2.3-cpu-py36-ubuntu18.04</p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry-vpc.cn-beijing.aliyuncs.com/pai-dlc/tensorflow-training:2.3-cpu-py36-ubuntu18.04</p>
+     */
     @NameInMap("ImageUrlVpc")
     public String imageUrlVpc;
 

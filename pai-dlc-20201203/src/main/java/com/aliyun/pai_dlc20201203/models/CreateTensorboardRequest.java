@@ -4,9 +4,17 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CreateTensorboardRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Cpu")
     public Long cpu;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d-xxxxxxxx</p>
+     */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
@@ -16,30 +24,66 @@ public class CreateTensorboardRequest extends TeaModel {
     @NameInMap("DataSources")
     public java.util.List<DataSourceItem> dataSources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tensorboard</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210126170216-mtl37ge7gkvdz</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>240</p>
+     */
     @NameInMap("MaxRunningTimeMinutes")
     public Long maxRunningTimeMinutes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("Memory")
     public Long memory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</p>
+     */
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-xxxxxx</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/root/data/</p>
+     */
     @NameInMap("SummaryPath")
     public String summaryPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/summary/</p>
+     */
     @NameInMap("SummaryRelativePath")
     public String summaryRelativePath;
 
@@ -49,9 +93,17 @@ public class CreateTensorboardRequest extends TeaModel {
     @NameInMap("TensorboardSpec")
     public TensorboardSpec tensorboardSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://.oss-cn-shanghai-finance-1.aliyuncs.com/</p>
+     */
     @NameInMap("Uri")
     public String uri;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123***</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

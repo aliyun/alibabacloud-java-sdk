@@ -4,12 +4,20 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetTensorboardRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-xxxxxxxx</p>
+     */
     @NameInMap("JodId")
     public String jodId;
 
     @NameInMap("Token")
     public String token;
 
+    /**
+     * <strong>example:</strong>
+     * <p>46099</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

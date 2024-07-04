@@ -16,6 +16,10 @@ public class LogInfo extends TeaModel {
     @NameInMap("PodUid")
     public String podUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>stderr, stdout</p>
+     */
     @NameInMap("Source")
     public String source;
 

@@ -4,18 +4,38 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ResourceConfig extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("CPU")
     public String CPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("GPU")
     public String GPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Tesla-V100-16G</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10Gi</p>
+     */
     @NameInMap("Memory")
     public String memory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5Gi</p>
+     */
     @NameInMap("SharedMemory")
     public String sharedMemory;
 

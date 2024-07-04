@@ -7,6 +7,10 @@ public class NodeMetric extends TeaModel {
     @NameInMap("Metrics")
     public java.util.List<Metric> metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asi_xxx</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 

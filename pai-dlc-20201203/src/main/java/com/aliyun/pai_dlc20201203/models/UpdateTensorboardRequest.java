@@ -4,9 +4,17 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class UpdateTensorboardRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>MaxRunningTimeMinutes</p>
+     */
     @NameInMap("MaxRunningTimeMinutes")
     public Long maxRunningTimeMinutes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>380</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

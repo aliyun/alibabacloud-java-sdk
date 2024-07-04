@@ -79,8 +79,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建一个DLC作业
-     *
+     * <b>summary</b> : 
+     * <p>创建一个DLC作业</p>
+     * 
      * @param request CreateJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -184,8 +185,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建一个DLC作业
-     *
+     * <b>summary</b> : 
+     * <p>创建一个DLC作业</p>
+     * 
      * @param request CreateJobRequest
      * @return CreateJobResponse
      */
@@ -196,8 +198,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建一个Tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>创建一个Tensorboard</p>
+     * 
      * @param request CreateTensorboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -293,8 +296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建一个Tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>创建一个Tensorboard</p>
+     * 
      * @param request CreateTensorboardRequest
      * @return CreateTensorboardResponse
      */
@@ -305,8 +309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除一个DLC作业
-     *
+     * <b>summary</b> : 
+     * <p>删除一个DLC作业</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteJobResponse
@@ -330,8 +335,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除一个DLC作业
-     *
+     * <b>summary</b> : 
+     * <p>删除一个DLC作业</p>
      * @return DeleteJobResponse
      */
     public DeleteJobResponse deleteJob(String JobId) throws Exception {
@@ -341,8 +346,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除一个数据源配置
-     *
+     * <b>summary</b> : 
+     * <p>删除一个数据源配置</p>
+     * 
      * @param request DeleteTensorboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -374,8 +380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除一个数据源配置
-     *
+     * <b>summary</b> : 
+     * <p>删除一个数据源配置</p>
+     * 
      * @param request DeleteTensorboardRequest
      * @return DeleteTensorboardResponse
      */
@@ -386,8 +393,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取一个DLC作业详情
-     *
+     * <b>summary</b> : 
+     * <p>获取一个DLC作业详情</p>
+     * 
      * @param request GetJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -419,8 +427,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取一个DLC作业详情
-     *
+     * <b>summary</b> : 
+     * <p>获取一个DLC作业详情</p>
+     * 
      * @param request GetJobRequest
      * @return GetJobResponse
      */
@@ -431,8 +440,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取作业的事件
-     *
+     * <b>summary</b> : 
+     * <p>获取作业的事件</p>
+     * 
      * @param request GetJobEventsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -472,8 +482,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取作业的事件
-     *
+     * <b>summary</b> : 
+     * <p>获取作业的事件</p>
+     * 
      * @param request GetJobEventsRequest
      * @return GetJobEventsResponse
      */
@@ -484,8 +495,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取一个作业的资源监控指标
-     *
+     * <b>summary</b> : 
+     * <p>获取一个作业的资源监控指标</p>
+     * 
      * @param request GetJobMetricsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -533,8 +545,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取一个作业的资源监控指标
-     *
+     * <b>summary</b> : 
+     * <p>获取一个作业的资源监控指标</p>
+     * 
      * @param request GetJobMetricsRequest
      * @return GetJobMetricsResponse
      */
@@ -545,8 +558,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取DLC作业某次算力健康检测结果
-     *
+     * <b>summary</b> : 
+     * <p>获取DLC作业某次算力健康检测结果</p>
+     * 
      * @param request GetJobSanityCheckResultRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -586,8 +600,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取DLC作业某次算力健康检测结果
-     *
+     * <b>summary</b> : 
+     * <p>获取DLC作业某次算力健康检测结果</p>
+     * 
      * @param request GetJobSanityCheckResultRequest
      * @return GetJobSanityCheckResultResponse
      */
@@ -598,8 +613,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取作业中一个运行实例的系统事件
-     *
+     * <b>summary</b> : 
+     * <p>获取作业中一个运行实例的系统事件</p>
+     * 
      * @param request GetPodEventsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -643,8 +659,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取作业中一个运行实例的系统事件
-     *
+     * <b>summary</b> : 
+     * <p>获取作业中一个运行实例的系统事件</p>
+     * 
      * @param request GetPodEventsRequest
      * @return GetPodEventsResponse
      */
@@ -655,8 +672,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取作业中一个运行实例的日志
-     *
+     * <b>summary</b> : 
+     * <p>获取作业中一个运行实例的日志</p>
+     * 
      * @param request GetPodLogsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -704,8 +722,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取作业中一个运行实例的日志
-     *
+     * <b>summary</b> : 
+     * <p>获取作业中一个运行实例的日志</p>
+     * 
      * @param request GetPodLogsRequest
      * @return GetPodLogsResponse
      */
@@ -716,8 +735,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取一个Tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>获取一个Tensorboard</p>
+     * 
      * @param request GetTensorboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -757,8 +777,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取一个Tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>获取一个Tensorboard</p>
+     * 
      * @param request GetTensorboardRequest
      * @return GetTensorboardResponse
      */
@@ -769,8 +790,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Get the shared url for tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>Get the shared url for tensorboard</p>
+     * 
      * @param request GetTensorboardSharedUrlRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -802,8 +824,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Get the shared url for tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>Get the shared url for tensorboard</p>
+     * 
      * @param request GetTensorboardSharedUrlRequest
      * @return GetTensorboardSharedUrlResponse
      */
@@ -814,8 +837,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户Token
-     *
+     * <b>summary</b> : 
+     * <p>获取用户Token</p>
+     * 
      * @param request GetTokenRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -855,8 +879,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户Token
-     *
+     * <b>summary</b> : 
+     * <p>获取用户Token</p>
+     * 
      * @param request GetTokenRequest
      * @return GetTokenResponse
      */
@@ -867,8 +892,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Get the url for accessing pod's terminal in k8s
-     *
+     * <b>summary</b> : 
+     * <p>Get the url for accessing pod&#39;s terminal in k8s</p>
+     * 
      * @param request GetWebTerminalRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -904,8 +930,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Get the url for accessing pod's terminal in k8s
-     *
+     * <b>summary</b> : 
+     * <p>Get the url for accessing pod&#39;s terminal in k8s</p>
+     * 
      * @param request GetWebTerminalRequest
      * @return GetWebTerminalResponse
      */
@@ -916,8 +943,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListEcsSpecs
-     *
+     * <b>summary</b> : 
+     * <p>ListEcsSpecs</p>
+     * 
      * @param request ListEcsSpecsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -973,8 +1001,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary ListEcsSpecs
-     *
+     * <b>summary</b> : 
+     * <p>ListEcsSpecs</p>
+     * 
      * @param request ListEcsSpecsRequest
      * @return ListEcsSpecsResponse
      */
@@ -985,8 +1014,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取某个DLC作业的多次算力健康检测结果
-     *
+     * <b>summary</b> : 
+     * <p>获取某个DLC作业的多次算力健康检测结果</p>
+     * 
      * @param request ListJobSanityCheckResultsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1018,8 +1048,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取某个DLC作业的多次算力健康检测结果
-     *
+     * <b>summary</b> : 
+     * <p>获取某个DLC作业的多次算力健康检测结果</p>
+     * 
      * @param request ListJobSanityCheckResultsRequest
      * @return ListJobSanityCheckResultsResponse
      */
@@ -1030,8 +1061,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据过滤条件获取DLC作业列表
-     *
+     * <b>summary</b> : 
+     * <p>根据过滤条件获取DLC作业列表</p>
+     * 
      * @param tmpReq ListJobsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1149,8 +1181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 根据过滤条件获取DLC作业列表
-     *
+     * <b>summary</b> : 
+     * <p>根据过滤条件获取DLC作业列表</p>
+     * 
      * @param request ListJobsRequest
      * @return ListJobsResponse
      */
@@ -1161,8 +1194,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取Tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>获取Tensorboard</p>
+     * 
      * @param request ListTensorboardsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1262,8 +1296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取Tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>获取Tensorboard</p>
+     * 
      * @param request ListTensorboardsRequest
      * @return ListTensorboardsResponse
      */
@@ -1274,8 +1309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 开始运行tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>开始运行tensorboard</p>
+     * 
      * @param request StartTensorboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1307,8 +1343,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 开始运行tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>开始运行tensorboard</p>
+     * 
      * @param request StartTensorboardRequest
      * @return StartTensorboardResponse
      */
@@ -1319,8 +1356,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止一个DLC作业
-     *
+     * <b>summary</b> : 
+     * <p>停止一个DLC作业</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopJobResponse
@@ -1344,8 +1382,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止一个DLC作业
-     *
+     * <b>summary</b> : 
+     * <p>停止一个DLC作业</p>
      * @return StopJobResponse
      */
     public StopJobResponse stopJob(String JobId) throws Exception {
@@ -1355,8 +1393,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止运行tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>停止运行tensorboard</p>
+     * 
      * @param request StopTensorboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1388,8 +1427,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止运行tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>停止运行tensorboard</p>
+     * 
      * @param request StopTensorboardRequest
      * @return StopTensorboardResponse
      */
@@ -1400,8 +1440,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新一个Job
-     *
+     * <b>summary</b> : 
+     * <p>更新一个Job</p>
+     * 
      * @param request UpdateJobRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1433,8 +1474,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新一个Job
-     *
+     * <b>summary</b> : 
+     * <p>更新一个Job</p>
+     * 
      * @param request UpdateJobRequest
      * @return UpdateJobResponse
      */
@@ -1445,8 +1487,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>更新tensorboard</p>
+     * 
      * @param request UpdateTensorboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1482,8 +1525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新tensorboard
-     *
+     * <b>summary</b> : 
+     * <p>更新tensorboard</p>
+     * 
      * @param request UpdateTensorboardRequest
      * @return UpdateTensorboardResponse
      */

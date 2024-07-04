@@ -4,27 +4,59 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class TensorboardDataSourceSpec extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlcJobName</p>
+     */
     @NameInMap("DirectoryName")
     public String directoryName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://xxxxx/tensorboard/run1</p>
+     */
     @NameInMap("FullSummaryPath")
     public String fullSummaryPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d-vf2fdhxxxxxx</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlcJobName</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>datasource</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/tensorboard/run1</p>
+     */
     @NameInMap("SummaryPath")
     public String summaryPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://.oss-cn-shanghai-finance-1.aliyuncs.com/</p>
+     */
     @NameInMap("Uri")
     public String uri;
 

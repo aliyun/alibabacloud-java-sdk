@@ -13,12 +13,24 @@ public class Quota extends TeaModel {
     @NameInMap("QuotaConfig")
     public QuotaConfig quotaConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>quotamtl37ge7gkvdz</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-quota</p>
+     */
     @NameInMap("QuotaName")
     public String quotaName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asiquota</p>
+     */
     @NameInMap("QuotaType")
     public String quotaType;
 

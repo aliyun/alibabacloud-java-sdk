@@ -4,21 +4,45 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListTensorboardsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>TestTensorboard</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-09T14:45:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-xxx</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -28,21 +52,45 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("ShowOwn")
     public Boolean showOwn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtCreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-xxxxxx</p>
+     */
     @NameInMap("SourceId")
     public String sourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tensorboard-xxx</p>
+     */
     @NameInMap("TensorboardId")
     public String tensorboardId;
 
@@ -52,9 +100,17 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Verbose")
     public Boolean verbose;
 
+    /**
+     * <strong>example:</strong>
+     * <p>380</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -4,36 +4,76 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CodeSourceItem extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>master</p>
+     */
     @NameInMap("CodeBranch")
     public String codeBranch;
 
+    /**
+     * <strong>example:</strong>
+     * <p>44da1*******</p>
+     */
     @NameInMap("CodeCommit")
     public String codeCommit;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></p>
+     */
     @NameInMap("CodeRepo")
     public String codeRepo;
 
     @NameInMap("CodeRepoAccessToken")
     public String codeRepoAccessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user</p>
+     */
     @NameInMap("CodeRepoUserName")
     public String codeRepoUserName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>code-20210111103721-85qz*****</p>
+     */
     @NameInMap("CodeSourceId")
     public String codeSourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>code source of dlc examples</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MyCodeSourceName1</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-18T12:52:15Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-18T12:52:15Z</p>
+     */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>115**********</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

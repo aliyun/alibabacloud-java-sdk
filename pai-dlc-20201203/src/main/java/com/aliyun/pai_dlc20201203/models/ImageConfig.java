@@ -7,6 +7,10 @@ public class ImageConfig extends TeaModel {
     @NameInMap("Auth")
     public String auth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-hangzhou.aliyuncs.com</p>
+     */
     @NameInMap("DockerRegistry")
     public String dockerRegistry;
 

@@ -4,15 +4,31 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetPodEventsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-09T16:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxEventsNum")
     public Integer maxEventsNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210126170216-*****-chief-0</p>
+     */
     @NameInMap("PodUid")
     public String podUid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

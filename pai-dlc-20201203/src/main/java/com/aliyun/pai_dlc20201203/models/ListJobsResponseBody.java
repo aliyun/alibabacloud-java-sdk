@@ -7,9 +7,17 @@ public class ListJobsResponseBody extends TeaModel {
     @NameInMap("Jobs")
     public java.util.List<JobItem> jobs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 

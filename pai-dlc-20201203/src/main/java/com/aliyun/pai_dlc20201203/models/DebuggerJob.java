@@ -4,15 +4,31 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class DebuggerJob extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dlc20210126170216-mtl37ge7gkvdz</p>
+     */
     @NameInMap("DebuggerJobId")
     public String debuggerJobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc debugger test</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2932</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:35:00Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -34,15 +50,31 @@ public class DebuggerJob extends TeaModel {
     @NameInMap("GmtSucceedTime")
     public String gmtSucceedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12344556</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>workspace01</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>public</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 

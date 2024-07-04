@@ -4,12 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GetTokenRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc*******</p>
+     */
     @NameInMap("TargetId")
     public String targetId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>job</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 

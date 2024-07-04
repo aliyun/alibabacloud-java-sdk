@@ -4,51 +4,115 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class SmartCache extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("CacheWorkerNum")
     public Long cacheWorkerNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("CacheWorkerSize")
     public Long cacheWorkerSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-cn-beijing-internal.aliyuncs.com</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1ca404****</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:01Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T23:36:01Z</p>
+     */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>/root/data/</p>
+     */
     @NameInMap("MountPath")
     public String mountPath;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;num_threads&quot;: 32}</p>
+     */
     @NameInMap("Options")
     public String options;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://buc/path/to/dir</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <strong>example:</strong>
+     * <p>smartcache-20210114104214-vf9lowjt3pso</p>
+     */
     @NameInMap("SmartCacheId")
     public String smartCacheId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>189xxx</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

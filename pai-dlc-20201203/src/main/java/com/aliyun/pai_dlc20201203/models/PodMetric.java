@@ -7,6 +7,10 @@ public class PodMetric extends TeaModel {
     @NameInMap("Metrics")
     public java.util.List<Metric> metrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc-20210329110128-746bf7cl47pr8-worker-0</p>
+     */
     @NameInMap("PodId")
     public String podId;
 

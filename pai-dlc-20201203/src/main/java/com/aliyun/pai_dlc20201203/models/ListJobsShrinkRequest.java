@@ -4,54 +4,118 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ListJobsShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>16****</p>
+     */
     @NameInMap("BusinessUserId")
     public String businessUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>local</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tf-mnist-test</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-09T14:45:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("FromAllWorkspaces")
     public Boolean fromAllWorkspaces;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dlc********</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TFJob</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>flow-*******</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>r*****</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
     @NameInMap("ResourceQuotaName")
     public String resourceQuotaName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ShowOwn")
     public Boolean showOwn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>GmtCreateTime</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -64,6 +128,10 @@ public class ListJobsShrinkRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1****</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
