@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetClusterResponseBody extends TeaModel {
     /**
-     * <p>The details of the master instance.</p>
+     * <p>The details of the cluster.</p>
      */
     @NameInMap("Cluster")
     public Cluster cluster;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

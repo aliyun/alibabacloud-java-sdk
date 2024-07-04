@@ -6,64 +6,92 @@ import com.aliyun.tea.*;
 public class ListApplicationConfigsRequest extends TeaModel {
     /**
      * <p>The name of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HDFS</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-e6a9d46e9267****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The name of the configuration file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hdfs-site.xml</p>
      */
     @NameInMap("ConfigFileName")
     public String configFileName;
 
     /**
      * <p>The name of the configuration item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dfs.replication</p>
      */
     @NameInMap("ConfigItemKey")
     public String configItemKey;
 
     /**
      * <p>The value of the configuration item.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ConfigItemValue")
     public String configItemValue;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The page number of the next page returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the node group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ng-d555335ced5c****</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
      * <p>The node ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp10h9rezawz1i4o****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

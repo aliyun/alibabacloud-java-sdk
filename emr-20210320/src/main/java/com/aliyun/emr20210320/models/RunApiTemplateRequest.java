@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class RunApiTemplateRequest extends TeaModel {
     /**
      * <p>接口名。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateCluster</p>
      */
     @NameInMap("ApiName")
     public String apiName;
 
     /**
      * <p>幂等客户端TOKEN。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>地域ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>集群模板id。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AT-****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

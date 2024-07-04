@@ -6,36 +6,48 @@ import com.aliyun.tea.*;
 public class User extends TeaModel {
     /**
      * <p>用户组。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hadoop</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
      * <p>用户密码。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345****</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>用户ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1238539****</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
      * <p>用户名称。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>王五</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
      * <p>用户类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LDAP</p>
      */
     @NameInMap("UserType")
     public String userType;

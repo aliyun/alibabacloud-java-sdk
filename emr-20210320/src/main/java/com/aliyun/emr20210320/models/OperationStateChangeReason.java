@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class OperationStateChangeReason extends TeaModel {
     /**
      * <p>状态码。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OutOfStock</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>状态变化信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The requested resource is sold out in the specified zone, try other types of resources or other regions and zones.</p>
      */
     @NameInMap("Message")
     public String message;

@@ -6,13 +6,24 @@ import com.aliyun.tea.*;
 public class InstanceCategory extends TeaModel {
     /**
      * <p>默认值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("DefaultValue")
     public String defaultValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Values")
     public java.util.List<String> values;
 

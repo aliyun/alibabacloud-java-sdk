@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class FailedReason extends TeaModel {
     /**
      * <p>错误码。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingParameter.InstanceType</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
      * <p>错误信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The instance type is required.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944abcd</p>
      */
     @NameInMap("RequestId")
     public String requestId;

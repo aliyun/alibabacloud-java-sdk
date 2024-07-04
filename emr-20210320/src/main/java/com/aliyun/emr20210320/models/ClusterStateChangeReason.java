@@ -6,23 +6,31 @@ import com.aliyun.tea.*;
 public class ClusterStateChangeReason extends TeaModel {
     /**
      * <p>状态码。取值范围：</p>
-     * <p>- UserRequest：用户请求。</p>
-     * <p>- OutOfStock：请求的ECS实例类型无库存。</p>
-     * <p>- NotAuthorized：无权限。</p>
-     * <p>- QuotaExceeded：Quota超出。</p>
-     * <p>- OperationDenied：操作被拒绝。</p>
-     * <p>- AccountException：账号异常。</p>
-     * <p>- NodeFailure：ECS节点异常。</p>
-     * <p>- BootstrapFailure：引导失败。</p>
-     * <p>- ValidationFail：业务逻辑校验失败。</p>
-     * <p>- ServiceFailure：依赖的其他服务失败。</p>
-     * <p>- InternalError：内部错误。</p>
+     * <ul>
+     * <li>UserRequest：用户请求。</li>
+     * <li>OutOfStock：请求的ECS实例类型无库存。</li>
+     * <li>NotAuthorized：无权限。</li>
+     * <li>QuotaExceeded：Quota超出。</li>
+     * <li>OperationDenied：操作被拒绝。</li>
+     * <li>AccountException：账号异常。</li>
+     * <li>NodeFailure：ECS节点异常。</li>
+     * <li>BootstrapFailure：引导失败。</li>
+     * <li>ValidationFail：业务逻辑校验失败。</li>
+     * <li>ServiceFailure：依赖的其他服务失败。</li>
+     * <li>InternalError：内部错误。</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OutOfStock</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>状态变化信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The requested resource is sold out in the specified zone, try other types of resources or other regions and zones.</p>
      */
     @NameInMap("Message")
     public String message;

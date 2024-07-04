@@ -9,24 +9,36 @@ public class ListComponentsResponseBody extends TeaModel {
 
     /**
      * <p>本次请求所返回的最大记录条数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>本次请求条件下的数据总量。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -79,6 +91,9 @@ public class ListComponentsResponseBody extends TeaModel {
     public static class Components extends TeaModel {
         /**
          * <p>应用名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HDFS</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
@@ -91,6 +106,9 @@ public class ListComponentsResponseBody extends TeaModel {
 
         /**
          * <p>组件名称。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataNode</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
@@ -103,6 +121,9 @@ public class ListComponentsResponseBody extends TeaModel {
 
         /**
          * <p>安装该组件的机器总数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Replica")
         public Integer replica;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ByLoadScalingRule extends TeaModel {
     /**
      * <p>比较符。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LT</p>
      */
     @NameInMap("ComparisonOperator")
     public String comparisonOperator;
@@ -17,40 +19,50 @@ public class ByLoadScalingRule extends TeaModel {
 
     /**
      * <p>统计次数。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
     /**
      * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yarn_resourcemanager_root_availablememoryusage</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>统计量名称。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AVG</p>
      */
     @NameInMap("Statistics")
     public String statistics;
 
     /**
      * <p>阈值。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12.5</p>
      */
     @NameInMap("Threshold")
     public Double threshold;
 
     /**
      * <p>统计窗口。单位为秒。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("TimeWindow")
     public Integer timeWindow;

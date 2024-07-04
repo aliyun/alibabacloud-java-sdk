@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ScalingGroupConfig extends TeaModel {
     /**
      * <p>数据盘类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("DataDiskCategory")
     public String dataDiskCategory;
 
     /**
      * <p>数据盘个数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("DataDiskCount")
     public Integer dataDiskCount;
 
     /**
      * <p>数据盘大小,单位GB。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40</p>
      */
     @NameInMap("DataDiskSize")
     public Long dataDiskSize;
 
     /**
      * <p>默认冷却时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("DefaultCoolDownTime")
     public Long defaultCoolDownTime;
@@ -54,36 +66,54 @@ public class ScalingGroupConfig extends TeaModel {
 
     /**
      * <p>伸缩组节点最大个数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("ScalingMaxSize")
     public Integer scalingMaxSize;
 
     /**
      * <p>伸缩组节点最小个数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ScalingMinSize")
     public Integer scalingMinSize;
 
     /**
      * <p>抢占式Spot实例策略。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
     /**
      * <p>系统盘类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("SysDiskCategory")
     public String sysDiskCategory;
 
     /**
      * <p>系统盘大小,单位GB。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("SysDiskSize")
     public Long sysDiskSize;
 
     /**
      * <p>伸缩活动触发模式。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ByLoad</p>
      */
     @NameInMap("TriggerMode")
     public String triggerMode;
@@ -208,12 +238,18 @@ public class ScalingGroupConfig extends TeaModel {
     public static class InstanceTypeList extends TeaModel {
         /**
          * <p>Ecs类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5.xlarge</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
          * <p>抢占价格上限,可空。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.79</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
@@ -244,24 +280,36 @@ public class ScalingGroupConfig extends TeaModel {
     public static class PolicyParam extends TeaModel {
         /**
          * <p>按需实例最小个数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("OnDemandBaseCapacity")
         public Integer onDemandBaseCapacity;
 
         /**
          * <p>按需实例百分比。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("OnDemandPercentageAboveBaseCapacity")
         public Integer onDemandPercentageAboveBaseCapacity;
 
         /**
          * <p>抢占实例类型池规模。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SpotInstancePools")
         public Integer spotInstancePools;
 
         /**
          * <p>是否使用按量补偿。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SpotInstanceRemedy")
         public Boolean spotInstanceRemedy;
@@ -314,6 +362,9 @@ public class ScalingGroupConfig extends TeaModel {
 
         /**
          * <p>策略类型。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIORITY</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
@@ -344,12 +395,18 @@ public class ScalingGroupConfig extends TeaModel {
     public static class NodeOfflinePolicy extends TeaModel {
         /**
          * <p>下线模式,是否为优雅下线。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
          * <p>下线超时时间,单位毫秒。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("TimeoutMs")
         public Long timeoutMs;
@@ -380,12 +437,18 @@ public class ScalingGroupConfig extends TeaModel {
     public static class PrivatePoolOptions extends TeaModel {
         /**
          * <p>私有池id。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-bp67acfmxazb4****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>实例启动的私有池容量选项。。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Open</p>
          */
         @NameInMap("MatchCriteria")
         public String matchCriteria;

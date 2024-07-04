@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class DeleteApiTemplateRequest extends TeaModel {
     /**
      * <p>接口名。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateCluster</p>
      */
     @NameInMap("ApiName")
     public String apiName;
 
     /**
      * <p>区域ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>资源组ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzabjyop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>集群模板id。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>at-****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

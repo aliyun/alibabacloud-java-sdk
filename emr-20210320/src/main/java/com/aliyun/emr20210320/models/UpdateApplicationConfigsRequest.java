@@ -6,69 +6,103 @@ import com.aliyun.tea.*;
 public class UpdateApplicationConfigsRequest extends TeaModel {
     /**
      * <p>The application configurations.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<UpdateApplicationConfig> applicationConfigs;
 
     /**
      * <p>The application name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HDFS</p>
      */
     @NameInMap("ApplicationName")
     public String applicationName;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-e6a9d46e9267****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The operation performed on configuration items. Valid values:</p>
-     * <br>
-     * <p>*   ADD</p>
-     * <p>*   UPDATE</p>
-     * <p>*   DELETE</p>
+     * <ul>
+     * <li>ADD</li>
+     * <li>UPDATE</li>
+     * <li>DELETE</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ADD</p>
      */
     @NameInMap("ConfigAction")
     public String configAction;
 
     /**
      * <p>The operation scope. Valid values:</p>
-     * <br>
-     * <p>*   CLUSTER</p>
-     * <p>*   NODE_GROUP</p>
+     * <ul>
+     * <li>CLUSTER</li>
+     * <li>NODE_GROUP</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("ConfigScope")
     public String configScope;
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>更新YARN内存配置。</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The node group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ng-869471354ecd****</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
      * <p>The node ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1cudc25w2bfwl5****</p>
      */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
+     * <p>Specifies whether to refresh the configurations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("RefreshConfig")
+    public Boolean refreshConfig;
+
+    /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -140,6 +174,14 @@ public class UpdateApplicationConfigsRequest extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
+    }
+
+    public UpdateApplicationConfigsRequest setRefreshConfig(Boolean refreshConfig) {
+        this.refreshConfig = refreshConfig;
+        return this;
+    }
+    public Boolean getRefreshConfig() {
+        return this.refreshConfig;
     }
 
     public UpdateApplicationConfigsRequest setRegionId(String regionId) {

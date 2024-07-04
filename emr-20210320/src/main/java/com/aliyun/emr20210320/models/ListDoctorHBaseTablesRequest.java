@@ -6,61 +6,83 @@ import com.aliyun.tea.*;
 public class ListDoctorHBaseTablesRequest extends TeaModel {
     /**
      * <p>The ID of the cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The query date.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-01</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>The maximum number of entries that are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>Marks the current position to start reading. If this field is empty, the data is read from the beginning.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The field that you use to sort the query results.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   tableSize</p>
+     * <ul>
+     * <li>tableSize</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tableSize</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The order in which you want to sort the query results. Valid value:</p>
-     * <br>
-     * <p>*   ASC: in ascending order</p>
-     * <p>*   DESC: in descending order</p>
+     * <ul>
+     * <li>ASC: in ascending order</li>
+     * <li>DESC: in descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The table names, which are used to filter the query results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("TableNames")
     public java.util.List<String> tableNames;

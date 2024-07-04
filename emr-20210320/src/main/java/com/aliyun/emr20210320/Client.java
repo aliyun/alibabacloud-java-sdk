@@ -125,8 +125,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a pay-as-you-go or subscription cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a pay-as-you-go or subscription cluster.</p>
+     * 
      * @param request CreateClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateClusterResponse
@@ -216,8 +217,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a pay-as-you-go or subscription cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a pay-as-you-go or subscription cluster.</p>
+     * 
      * @param request CreateClusterRequest
      * @return CreateClusterResponse
      */
@@ -227,10 +229,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a node group.
-     *
-     * @description 创建节点组。
-     *
+     * <b>description</b> :
+     * <p>创建节点组。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a node group.</p>
+     * 
      * @param request CreateNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNodeGroupResponse
@@ -268,10 +272,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a node group.
-     *
-     * @description 创建节点组。
-     *
+     * <b>description</b> :
+     * <p>创建节点组。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a node group.</p>
+     * 
      * @param request CreateNodeGroupRequest
      * @return CreateNodeGroupResponse
      */
@@ -281,10 +287,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Perform a scale-out operation on the target node group.
-     *
-     * @description 缩容节点。
-     *
+     * @param request CreateScriptRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateScriptResponse
+     */
+    public CreateScriptResponse createScriptWithOptions(CreateScriptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptType)) {
+            query.put("ScriptType", request.scriptType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scripts)) {
+            query.put("Scripts", request.scripts);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateScript"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateScriptResponse());
+    }
+
+    /**
+     * @param request CreateScriptRequest
+     * @return CreateScriptResponse
+     */
+    public CreateScriptResponse createScript(CreateScriptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createScriptWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Perform a scale-out operation on the target node group.</p>
+     * 
      * @param request DecreaseNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DecreaseNodesResponse
@@ -330,10 +385,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Perform a scale-out operation on the target node group.
-     *
-     * @description 缩容节点。
-     *
+     * <b>summary</b> : 
+     * <p>Perform a scale-out operation on the target node group.</p>
+     * 
      * @param request DecreaseNodesRequest
      * @return DecreaseNodesResponse
      */
@@ -343,8 +397,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 创建集群模板
-     *
+     * <b>description</b> :
+     * <p>创建集群模板</p>
+     * 
      * @param request DeleteApiTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteApiTemplateResponse
@@ -386,8 +441,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 创建集群模板
-     *
+     * <b>description</b> :
+     * <p>创建集群模板</p>
+     * 
      * @param request DeleteApiTemplateRequest
      * @return DeleteApiTemplateResponse
      */
@@ -439,8 +495,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取API模板详情
-     *
+     * @param request DeleteScriptRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteScriptResponse
+     */
+    public DeleteScriptResponse deleteScriptWithOptions(DeleteScriptRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            query.put("ScriptId", request.scriptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptType)) {
+            query.put("ScriptType", request.scriptType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteScript"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScriptResponse());
+    }
+
+    /**
+     * @param request DeleteScriptRequest
+     * @return DeleteScriptResponse
+     */
+    public DeleteScriptResponse deleteScript(DeleteScriptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteScriptWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取API模板详情</p>
+     * 
      * @param request GetApiTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetApiTemplateResponse
@@ -474,8 +581,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取API模板详情
-     *
+     * <b>summary</b> : 
+     * <p>获取API模板详情</p>
+     * 
      * @param request GetApiTemplateRequest
      * @return GetApiTemplateResponse
      */
@@ -485,8 +593,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询应用详情。
-     *
+     * <b>description</b> :
+     * <p>查询应用详情。</p>
+     * 
      * @param request GetApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetApplicationResponse
@@ -524,8 +633,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询应用详情。
-     *
+     * <b>description</b> :
+     * <p>查询应用详情。</p>
+     * 
      * @param request GetApplicationRequest
      * @return GetApplicationResponse
      */
@@ -535,8 +645,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 获取弹性伸缩活动详情。
-     *
+     * <b>description</b> :
+     * <p>获取弹性伸缩活动详情。</p>
+     * 
      * @param request GetAutoScalingActivityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAutoScalingActivityResponse
@@ -574,8 +685,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 获取弹性伸缩活动详情。
-     *
+     * <b>description</b> :
+     * <p>获取弹性伸缩活动详情。</p>
+     * 
      * @param request GetAutoScalingActivityRequest
      * @return GetAutoScalingActivityResponse
      */
@@ -631,8 +743,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the details of a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the details of a cluster.</p>
+     * 
      * @param request GetClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetClusterResponse
@@ -666,8 +779,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the details of a cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Obtains the details of a cluster.</p>
+     * 
      * @param request GetClusterRequest
      * @return GetClusterResponse
      */
@@ -677,10 +791,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains job analysis information on E-MapReduce (EMR) Doctor.
-     *
-     * @description get one doctor analysis app
-     *
+     * <b>description</b> :
+     * <p>get one doctor analysis app</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains job analysis information on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorApplicationResponse
@@ -722,10 +838,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains job analysis information on E-MapReduce (EMR) Doctor.
-     *
-     * @description get one doctor analysis app
-     *
+     * <b>description</b> :
+     * <p>get one doctor analysis app</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains job analysis information on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorApplicationRequest
      * @return GetDoctorApplicationResponse
      */
@@ -735,10 +853,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about resource usage in a cluster on E-MapReduce (EMR) Doctor.
-     *
-     * @description get one specific luster engine queue by <type, name>
-     *
+     * <b>description</b> :
+     * <p>get one specific luster engine queue by &lt;type, name&gt;</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about resource usage in a cluster on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorComputeSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorComputeSummaryResponse
@@ -780,10 +900,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about resource usage in a cluster on E-MapReduce (EMR) Doctor.
-     *
-     * @description get one specific luster engine queue by <type, name>
-     *
+     * <b>description</b> :
+     * <p>get one specific luster engine queue by &lt;type, name&gt;</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about resource usage in a cluster on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorComputeSummaryRequest
      * @return GetDoctorComputeSummaryResponse
      */
@@ -793,10 +915,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the metrics of an HBase cluster.
-     *
-     * @description get Doctor HBaseCluster
-     *
+     * <b>description</b> :
+     * <p>get Doctor HBaseCluster</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the metrics of an HBase cluster.</p>
+     * 
      * @param request GetDoctorHBaseClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHBaseClusterResponse
@@ -834,10 +958,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the metrics of an HBase cluster.
-     *
-     * @description get Doctor HBaseCluster
-     *
+     * <b>description</b> :
+     * <p>get Doctor HBaseCluster</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the metrics of an HBase cluster.</p>
+     * 
      * @param request GetDoctorHBaseClusterRequest
      * @return GetDoctorHBaseClusterResponse
      */
@@ -847,8 +973,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description list Doctor HBaseRegions
-     *
+     * <b>description</b> :
+     * <p>list Doctor HBaseRegions</p>
+     * 
      * @param request GetDoctorHBaseRegionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHBaseRegionResponse
@@ -890,8 +1017,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description list Doctor HBaseRegions
-     *
+     * <b>description</b> :
+     * <p>list Doctor HBaseRegions</p>
+     * 
      * @param request GetDoctorHBaseRegionRequest
      * @return GetDoctorHBaseRegionResponse
      */
@@ -901,10 +1029,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about an HBase region server.
-     *
-     * @description get Doctor HBaseRegionServer
-     *
+     * <b>description</b> :
+     * <p>get Doctor HBaseRegionServer</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about an HBase region server.</p>
+     * 
      * @param request GetDoctorHBaseRegionServerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHBaseRegionServerResponse
@@ -946,10 +1076,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about an HBase region server.
-     *
-     * @description get Doctor HBaseRegionServer
-     *
+     * <b>description</b> :
+     * <p>get Doctor HBaseRegionServer</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about an HBase region server.</p>
+     * 
      * @param request GetDoctorHBaseRegionServerRequest
      * @return GetDoctorHBaseRegionServerResponse
      */
@@ -959,8 +1091,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description get Doctor HBaseTable
-     *
+     * <b>description</b> :
+     * <p>get Doctor HBaseTable</p>
+     * 
      * @param request GetDoctorHBaseTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHBaseTableResponse
@@ -1002,8 +1135,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description get Doctor HBaseTable
-     *
+     * <b>description</b> :
+     * <p>get Doctor HBaseTable</p>
+     * 
      * @param request GetDoctorHBaseTableRequest
      * @return GetDoctorHBaseTableResponse
      */
@@ -1013,10 +1147,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of the Hadoop Distributed File System (HDFS) storage resources of a cluster on E-MapReduce (EMR) Doctor.
-     *
-     * @description list Doctor HBaseTableRegions
-     *
+     * <b>description</b> :
+     * <p>list Doctor HBaseTableRegions</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of the Hadoop Distributed File System (HDFS) storage resources of a cluster on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorHDFSClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHDFSClusterResponse
@@ -1054,10 +1190,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of the Hadoop Distributed File System (HDFS) storage resources of a cluster on E-MapReduce (EMR) Doctor.
-     *
-     * @description list Doctor HBaseTableRegions
-     *
+     * <b>description</b> :
+     * <p>list Doctor HBaseTableRegions</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of the Hadoop Distributed File System (HDFS) storage resources of a cluster on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorHDFSClusterRequest
      * @return GetDoctorHDFSClusterResponse
      */
@@ -1067,10 +1205,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of a specific Hadoop Distributed File System (HDFS) directory of a cluster. The depth of the directory is not greater than five.
-     *
-     * @description get Doctor HDFSNode
-     *
+     * <b>description</b> :
+     * <p>get Doctor HDFSNode</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of a specific Hadoop Distributed File System (HDFS) directory of a cluster. The depth of the directory is not greater than five.</p>
+     * 
      * @param request GetDoctorHDFSDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHDFSDirectoryResponse
@@ -1112,10 +1252,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of a specific Hadoop Distributed File System (HDFS) directory of a cluster. The depth of the directory is not greater than five.
-     *
-     * @description get Doctor HDFSNode
-     *
+     * <b>description</b> :
+     * <p>get Doctor HDFSNode</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of a specific Hadoop Distributed File System (HDFS) directory of a cluster. The depth of the directory is not greater than five.</p>
+     * 
      * @param request GetDoctorHDFSDirectoryRequest
      * @return GetDoctorHDFSDirectoryResponse
      */
@@ -1125,10 +1267,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of Hadoop Distributed File System (HDFS) storage resources for a specific owner or group on E-MapReduce (EMR) Doctor.
-     *
-     * @description get Doctor HDFS UGI
-     *
+     * <b>description</b> :
+     * <p>get Doctor HDFS UGI</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of Hadoop Distributed File System (HDFS) storage resources for a specific owner or group on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorHDFSUGIRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHDFSUGIResponse
@@ -1174,10 +1318,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of Hadoop Distributed File System (HDFS) storage resources for a specific owner or group on E-MapReduce (EMR) Doctor.
-     *
-     * @description get Doctor HDFS UGI
-     *
+     * <b>description</b> :
+     * <p>get Doctor HDFS UGI</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of Hadoop Distributed File System (HDFS) storage resources for a specific owner or group on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorHDFSUGIRequest
      * @return GetDoctorHDFSUGIResponse
      */
@@ -1187,10 +1333,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of a Hive cluster.
-     *
-     * @description list Doctor Hive Cluster
-     *
+     * <b>description</b> :
+     * <p>list Doctor Hive Cluster</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of a Hive cluster.</p>
+     * 
      * @param request GetDoctorHiveClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHiveClusterResponse
@@ -1228,10 +1376,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of a Hive cluster.
-     *
-     * @description list Doctor Hive Cluster
-     *
+     * <b>description</b> :
+     * <p>list Doctor Hive Cluster</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of a Hive cluster.</p>
+     * 
      * @param request GetDoctorHiveClusterRequest
      * @return GetDoctorHiveClusterResponse
      */
@@ -1241,10 +1391,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of a Hive database.
-     *
-     * @description get Doctor Hive Database
-     *
+     * <b>description</b> :
+     * <p>get Doctor Hive Database</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of a Hive database.</p>
+     * 
      * @param request GetDoctorHiveDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHiveDatabaseResponse
@@ -1286,10 +1438,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of a Hive database.
-     *
-     * @description get Doctor Hive Database
-     *
+     * <b>description</b> :
+     * <p>get Doctor Hive Database</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of a Hive database.</p>
+     * 
      * @param request GetDoctorHiveDatabaseRequest
      * @return GetDoctorHiveDatabaseResponse
      */
@@ -1299,10 +1453,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of a specific Hive table in a cluster on E-MapReduce (EMR) Doctor.
-     *
-     * @description get Doctor Hive Table
-     *
+     * <b>description</b> :
+     * <p>get Doctor Hive Table</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of a specific Hive table in a cluster on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorHiveTableRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorHiveTableResponse
@@ -1344,10 +1500,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of a specific Hive table in a cluster on E-MapReduce (EMR) Doctor.
-     *
-     * @description get Doctor Hive Table
-     *
+     * <b>description</b> :
+     * <p>get Doctor Hive Table</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of a specific Hive table in a cluster on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorHiveTableRequest
      * @return GetDoctorHiveTableResponse
      */
@@ -1357,10 +1515,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the basic running information about a job on E-MapReduce (EMR) Doctor.
-     *
-     * @description Get realtime job by yarn
-     *
+     * <b>description</b> :
+     * <p>Get realtime job by yarn</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the basic running information about a job on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorJobResponse
@@ -1398,10 +1558,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the basic running information about a job on E-MapReduce (EMR) Doctor.
-     *
-     * @description Get realtime job by yarn
-     *
+     * <b>description</b> :
+     * <p>Get realtime job by yarn</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the basic running information about a job on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request GetDoctorJobRequest
      * @return GetDoctorJobResponse
      */
@@ -1411,8 +1573,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description get specify component's report analysis by emr doctor
-     *
+     * <b>description</b> :
+     * <p>get specify component&#39;s report analysis by emr doctor</p>
+     * 
      * @param request GetDoctorReportComponentSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDoctorReportComponentSummaryResponse
@@ -1454,8 +1617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description get specify component's report analysis by emr doctor
-     *
+     * <b>description</b> :
+     * <p>get specify component&#39;s report analysis by emr doctor</p>
+     * 
      * @param request GetDoctorReportComponentSummaryRequest
      * @return GetDoctorReportComponentSummaryResponse
      */
@@ -1465,10 +1629,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to obtain the details of a node group.
-     *
-     * @description 获取节点组详情。
-     *
+     * <b>description</b> :
+     * <p>获取节点组详情。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to obtain the details of a node group.</p>
+     * 
      * @param request GetNodeGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetNodeGroupResponse
@@ -1506,10 +1672,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to obtain the details of a node group.
-     *
-     * @description 获取节点组详情。
-     *
+     * <b>description</b> :
+     * <p>获取节点组详情。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to obtain the details of a node group.</p>
+     * 
      * @param request GetNodeGroupRequest
      * @return GetNodeGroupResponse
      */
@@ -1519,10 +1687,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Gets the details of an asynchronous operation.
-     *
-     * @description 获取操作详情。
-     *
+     * <b>summary</b> : 
+     * <p>Gets the details of an asynchronous operation.</p>
+     * 
      * @param request GetOperationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetOperationResponse
@@ -1560,10 +1727,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Gets the details of an asynchronous operation.
-     *
-     * @description 获取操作详情。
-     *
+     * <b>summary</b> : 
+     * <p>Gets the details of an asynchronous operation.</p>
+     * 
      * @param request GetOperationRequest
      * @return GetOperationResponse
      */
@@ -1573,8 +1739,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scale out the node group.
-     *
+     * <b>summary</b> : 
+     * <p>Scale out the node group.</p>
+     * 
      * @param request IncreaseNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return IncreaseNodesResponse
@@ -1588,6 +1755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoPayOrder)) {
             query.put("AutoPayOrder", request.autoPayOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
@@ -1636,8 +1807,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Scale out the node group.
-     *
+     * <b>summary</b> : 
+     * <p>Scale out the node group.</p>
+     * 
      * @param request IncreaseNodesRequest
      * @return IncreaseNodesResponse
      */
@@ -1647,8 +1819,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Add an EMR resource to the target resource group. A resource can belong to only one resource group.
-     *
+     * <b>summary</b> : 
+     * <p>Add an EMR resource to the target resource group. A resource can belong to only one resource group.</p>
+     * 
      * @param request JoinResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return JoinResourceGroupResponse
@@ -1690,8 +1863,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Add an EMR resource to the target resource group. A resource can belong to only one resource group.
-     *
+     * <b>summary</b> : 
+     * <p>Add an EMR resource to the target resource group. A resource can belong to only one resource group.</p>
+     * 
      * @param request JoinResourceGroupRequest
      * @return JoinResourceGroupResponse
      */
@@ -1701,8 +1875,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API模板
-     *
+     * <b>summary</b> : 
+     * <p>查询API模板</p>
+     * 
      * @param request ListApiTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListApiTemplatesResponse
@@ -1760,8 +1935,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询API模板
-     *
+     * <b>summary</b> : 
+     * <p>查询API模板</p>
+     * 
      * @param request ListApiTemplatesRequest
      * @return ListApiTemplatesResponse
      */
@@ -1771,8 +1947,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询应用配置。
-     *
+     * <b>description</b> :
+     * <p>查询应用配置。</p>
+     * 
      * @param request ListApplicationConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListApplicationConfigsResponse
@@ -1838,8 +2015,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询应用配置。
-     *
+     * <b>description</b> :
+     * <p>查询应用配置。</p>
+     * 
      * @param request ListApplicationConfigsRequest
      * @return ListApplicationConfigsResponse
      */
@@ -1849,8 +2027,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询应用列表。
-     *
+     * <b>description</b> :
+     * <p>查询应用列表。</p>
+     * 
      * @param request ListApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListApplicationsResponse
@@ -1896,8 +2075,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询应用列表。
-     *
+     * <b>description</b> :
+     * <p>查询应用列表。</p>
+     * 
      * @param request ListApplicationsRequest
      * @return ListApplicationsResponse
      */
@@ -1907,8 +2087,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询弹性伸缩活动列表。
-     *
+     * <b>description</b> :
+     * <p>查询弹性伸缩活动列表。</p>
+     * 
      * @param request ListAutoScalingActivitiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAutoScalingActivitiesResponse
@@ -1974,8 +2155,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询弹性伸缩活动列表。
-     *
+     * <b>description</b> :
+     * <p>查询弹性伸缩活动列表。</p>
+     * 
      * @param request ListAutoScalingActivitiesRequest
      * @return ListAutoScalingActivitiesResponse
      */
@@ -1985,8 +2167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries E-MapReduce (EMR) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries E-MapReduce (EMR) clusters.</p>
+     * 
      * @param request ListClustersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListClustersResponse
@@ -2052,8 +2235,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries E-MapReduce (EMR) clusters.
-     *
+     * <b>summary</b> : 
+     * <p>Queries E-MapReduce (EMR) clusters.</p>
+     * 
      * @param request ListClustersRequest
      * @return ListClustersResponse
      */
@@ -2063,8 +2247,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询组件实例列表。
-     *
+     * <b>description</b> :
+     * <p>查询组件实例列表。</p>
+     * 
      * @param request ListComponentInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListComponentInstancesResponse
@@ -2126,8 +2311,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询组件实例列表。
-     *
+     * <b>description</b> :
+     * <p>查询组件实例列表。</p>
+     * 
      * @param request ListComponentInstancesRequest
      * @return ListComponentInstancesResponse
      */
@@ -2137,8 +2323,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询组件列表。
-     *
+     * <b>description</b> :
+     * <p>查询组件列表。</p>
+     * 
      * @param request ListComponentsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListComponentsResponse
@@ -2196,8 +2383,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询组件列表。
-     *
+     * <b>description</b> :
+     * <p>查询组件列表。</p>
+     * 
      * @param request ListComponentsRequest
      * @return ListComponentsResponse
      */
@@ -2207,10 +2395,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of multiple jobs on E-MapReduce (EMR) Doctor.
-     *
-     * @description list all doctor analysis apps
-     *
+     * <b>description</b> :
+     * <p>list all doctor analysis apps</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of multiple jobs on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorApplicationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorApplicationsResponse
@@ -2280,10 +2470,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of multiple jobs on E-MapReduce (EMR) Doctor.
-     *
-     * @description list all doctor analysis apps
-     *
+     * <b>description</b> :
+     * <p>list all doctor analysis apps</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of multiple jobs on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorApplicationsRequest
      * @return ListDoctorApplicationsResponse
      */
@@ -2293,10 +2485,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about resource usage by resource type in a cluster on E-MapReduce (EMR) Doctor.
-     *
-     * @description list Doctor analysis result of cluster engine queue view
-     *
+     * <b>description</b> :
+     * <p>list Doctor analysis result of cluster engine queue view</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about resource usage by resource type in a cluster on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorComputeSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorComputeSummaryResponse
@@ -2354,10 +2548,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about resource usage by resource type in a cluster on E-MapReduce (EMR) Doctor.
-     *
-     * @description list Doctor analysis result of cluster engine queue view
-     *
+     * <b>description</b> :
+     * <p>list Doctor analysis result of cluster engine queue view</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about resource usage by resource type in a cluster on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorComputeSummaryRequest
      * @return ListDoctorComputeSummaryResponse
      */
@@ -2367,10 +2563,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about multiple HBase RegionServers at a time.
-     *
-     * @description list Doctor HBaseRegionServers
-     *
+     * <b>description</b> :
+     * <p>list Doctor HBaseRegionServers</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about multiple HBase RegionServers at a time.</p>
+     * 
      * @param request ListDoctorHBaseRegionServersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorHBaseRegionServersResponse
@@ -2428,10 +2626,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about multiple HBase RegionServers at a time.
-     *
-     * @description list Doctor HBaseRegionServers
-     *
+     * <b>description</b> :
+     * <p>list Doctor HBaseRegionServers</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about multiple HBase RegionServers at a time.</p>
+     * 
      * @param request ListDoctorHBaseRegionServersRequest
      * @return ListDoctorHBaseRegionServersResponse
      */
@@ -2441,10 +2641,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about multiple HBase tables at a time.
-     *
-     * @description list Doctor HBaseTables
-     *
+     * <b>description</b> :
+     * <p>list Doctor HBaseTables</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about multiple HBase tables at a time.</p>
+     * 
      * @param request ListDoctorHBaseTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorHBaseTablesResponse
@@ -2502,10 +2704,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the information about multiple HBase tables at a time.
-     *
-     * @description list Doctor HBaseTables
-     *
+     * <b>description</b> :
+     * <p>list Doctor HBaseTables</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the information about multiple HBase tables at a time.</p>
+     * 
      * @param request ListDoctorHBaseTablesRequest
      * @return ListDoctorHBaseTablesResponse
      */
@@ -2515,8 +2719,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description list Doctor HDFSNodes
-     *
+     * <b>description</b> :
+     * <p>list Doctor HDFSNodes</p>
+     * 
      * @param request ListDoctorHDFSDirectoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorHDFSDirectoriesResponse
@@ -2574,8 +2779,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description list Doctor HDFSNodes
-     *
+     * <b>description</b> :
+     * <p>list Doctor HDFSNodes</p>
+     * 
      * @param request ListDoctorHDFSDirectoriesRequest
      * @return ListDoctorHDFSDirectoriesResponse
      */
@@ -2585,10 +2791,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of Hadoop Distributed File System (HDFS) storage resources for multiple owners or groups at a time on E-MapReduce (EMR) Doctor.
-     *
-     * @description list Doctor HDFS UGIs
-     *
+     * <b>description</b> :
+     * <p>list Doctor HDFS UGIs</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of Hadoop Distributed File System (HDFS) storage resources for multiple owners or groups at a time on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorHDFSUGIRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorHDFSUGIResponse
@@ -2646,10 +2854,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of Hadoop Distributed File System (HDFS) storage resources for multiple owners or groups at a time on E-MapReduce (EMR) Doctor.
-     *
-     * @description list Doctor HDFS UGIs
-     *
+     * <b>description</b> :
+     * <p>list Doctor HDFS UGIs</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of Hadoop Distributed File System (HDFS) storage resources for multiple owners or groups at a time on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorHDFSUGIRequest
      * @return ListDoctorHDFSUGIResponse
      */
@@ -2659,10 +2869,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of multiple Hive databases at a time.
-     *
-     * @description list Doctor Hive Databases
-     *
+     * <b>description</b> :
+     * <p>list Doctor Hive Databases</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of multiple Hive databases at a time.</p>
+     * 
      * @param request ListDoctorHiveDatabasesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorHiveDatabasesResponse
@@ -2720,10 +2932,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of multiple Hive databases at a time.
-     *
-     * @description list Doctor Hive Databases
-     *
+     * <b>description</b> :
+     * <p>list Doctor Hive Databases</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of multiple Hive databases at a time.</p>
+     * 
      * @param request ListDoctorHiveDatabasesRequest
      * @return ListDoctorHiveDatabasesResponse
      */
@@ -2733,10 +2947,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of multiple Hive tables at a time on E-MapReduce (EMR) Doctor.
-     *
-     * @description list Doctor Hive Tables
-     *
+     * <b>description</b> :
+     * <p>list Doctor Hive Tables</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of multiple Hive tables at a time on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorHiveTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorHiveTablesResponse
@@ -2794,10 +3010,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the analysis results of multiple Hive tables at a time on E-MapReduce (EMR) Doctor.
-     *
-     * @description list Doctor Hive Tables
-     *
+     * <b>description</b> :
+     * <p>list Doctor Hive Tables</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the analysis results of multiple Hive tables at a time on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorHiveTablesRequest
      * @return ListDoctorHiveTablesResponse
      */
@@ -2807,10 +3025,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the basic running information about multiple jobs at a time on E-MapReduce (EMR) Doctor.
-     *
-     * @description list realtime jobs by yarn
-     *
+     * <b>description</b> :
+     * <p>list realtime jobs by yarn</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the basic running information about multiple jobs at a time on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorJobsResponse
@@ -2884,10 +3104,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the basic running information about multiple jobs at a time on E-MapReduce (EMR) Doctor.
-     *
-     * @description list realtime jobs by yarn
-     *
+     * <b>description</b> :
+     * <p>list realtime jobs by yarn</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the basic running information about multiple jobs at a time on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorJobsRequest
      * @return ListDoctorJobsResponse
      */
@@ -2897,10 +3119,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the summary of basic running information about multiple jobs at a time on E-MapReduce (EMR) Doctor.
-     *
-     * @description list stats groupBy jobs by yarn
-     *
+     * <b>description</b> :
+     * <p>list stats groupBy jobs by yarn</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the summary of basic running information about multiple jobs at a time on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorJobsStatsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorJobsStatsResponse
@@ -2962,10 +3186,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the summary of basic running information about multiple jobs at a time on E-MapReduce (EMR) Doctor.
-     *
-     * @description list stats groupBy jobs by yarn
-     *
+     * <b>description</b> :
+     * <p>list stats groupBy jobs by yarn</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the summary of basic running information about multiple jobs at a time on E-MapReduce (EMR) Doctor.</p>
+     * 
      * @param request ListDoctorJobsStatsRequest
      * @return ListDoctorJobsStatsResponse
      */
@@ -2975,10 +3201,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the overall analysis result reports of E-MapReduce (EMR) Doctor at a time.
-     *
-     * @description list all reports analysis by emr doctor
-     *
+     * <b>description</b> :
+     * <p>list all reports analysis by emr doctor</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the overall analysis result reports of E-MapReduce (EMR) Doctor at a time.</p>
+     * 
      * @param request ListDoctorReportsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDoctorReportsResponse
@@ -3020,16 +3248,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Obtains the overall analysis result reports of E-MapReduce (EMR) Doctor at a time.
-     *
-     * @description list all reports analysis by emr doctor
-     *
+     * <b>description</b> :
+     * <p>list all reports analysis by emr doctor</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Obtains the overall analysis result reports of E-MapReduce (EMR) Doctor at a time.</p>
+     * 
      * @param request ListDoctorReportsRequest
      * @return ListDoctorReportsResponse
      */
     public ListDoctorReportsResponse listDoctorReports(ListDoctorReportsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDoctorReportsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ListInspectionHistoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListInspectionHistoryResponse
+     */
+    public ListInspectionHistoryResponse listInspectionHistoryWithOptions(ListInspectionHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.component)) {
+            query.put("Component", request.component);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            query.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListInspectionHistory"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListInspectionHistoryResponse());
+    }
+
+    /**
+     * @param request ListInspectionHistoryRequest
+     * @return ListInspectionHistoryResponse
+     */
+    public ListInspectionHistoryResponse listInspectionHistory(ListInspectionHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listInspectionHistoryWithOptions(request, runtime);
     }
 
     /**
@@ -3111,8 +3411,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of node groups in an EMR cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of node groups in an EMR cluster.</p>
+     * 
      * @param request ListNodeGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListNodeGroupsResponse
@@ -3170,8 +3471,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of node groups in an EMR cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the list of node groups in an EMR cluster.</p>
+     * 
      * @param request ListNodeGroupsRequest
      * @return ListNodeGroupsResponse
      */
@@ -3181,8 +3483,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the node list of an EMR cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the node list of an EMR cluster.</p>
+     * 
      * @param request ListNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListNodesResponse
@@ -3252,8 +3555,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the node list of an EMR cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the node list of an EMR cluster.</p>
+     * 
      * @param request ListNodesRequest
      * @return ListNodesResponse
      */
@@ -3263,10 +3567,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the major E-MapReduce (EMR) versions.
-     *
-     * @description 查询主版本。
-     *
+     * <b>description</b> :
+     * <p>查询主版本。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the major E-MapReduce (EMR) versions.</p>
+     * 
      * @param request ListReleaseVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListReleaseVersionsResponse
@@ -3304,10 +3610,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the major E-MapReduce (EMR) versions.
-     *
-     * @description 查询主版本。
-     *
+     * <b>description</b> :
+     * <p>查询主版本。</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the major E-MapReduce (EMR) versions.</p>
+     * 
      * @param request ListReleaseVersionsRequest
      * @return ListReleaseVersionsResponse
      */
@@ -3317,8 +3625,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询集群脚本。
-     *
+     * <b>description</b> :
+     * <p>查询资源巡检项。</p>
+     * 
+     * @param request ListResourceHealthInspectionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListResourceHealthInspectionsResponse
+     */
+    public ListResourceHealthInspectionsResponse listResourceHealthInspectionsWithOptions(ListResourceHealthInspectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationName)) {
+            query.put("ApplicationName", request.applicationName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.componentName)) {
+            query.put("ComponentName", request.componentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.healthStatuses)) {
+            query.put("HealthStatuses", request.healthStatuses);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeIds)) {
+            query.put("NodeIds", request.nodeIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeNames)) {
+            query.put("NodeNames", request.nodeNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListResourceHealthInspections"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceHealthInspectionsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>查询资源巡检项。</p>
+     * 
+     * @param request ListResourceHealthInspectionsRequest
+     * @return ListResourceHealthInspectionsResponse
+     */
+    public ListResourceHealthInspectionsResponse listResourceHealthInspections(ListResourceHealthInspectionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listResourceHealthInspectionsWithOptions(request, runtime);
+    }
+
+    /**
      * @param request ListScriptsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListScriptsResponse
@@ -3364,8 +3754,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 查询集群脚本。
-     *
      * @param request ListScriptsRequest
      * @return ListScriptsResponse
      */
@@ -3375,8 +3763,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are bound to an EMR cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are bound to an EMR cluster.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -3426,8 +3815,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are bound to an EMR cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are bound to an EMR cluster.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -3437,10 +3827,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures auto scaling rules.
-     *
-     * @description You can call this operation to configure auto scaling policies.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to configure auto scaling policies.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures auto scaling rules.</p>
+     * 
      * @param request PutAutoScalingPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PutAutoScalingPolicyResponse
@@ -3486,10 +3878,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures auto scaling rules.
-     *
-     * @description You can call this operation to configure auto scaling policies.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to configure auto scaling policies.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures auto scaling rules.</p>
+     * 
      * @param request PutAutoScalingPolicyRequest
      * @return PutAutoScalingPolicyResponse
      */
@@ -3545,8 +3939,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 执行集群模板
-     *
      * @param request RunApiTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RunApiTemplateResponse
@@ -3588,8 +3980,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 执行集群模板
-     *
      * @param request RunApiTemplateRequest
      * @return RunApiTemplateResponse
      */
@@ -3669,8 +4059,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Bind tags to a specified EMR cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Bind tags to a specified EMR cluster.</p>
+     * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -3712,8 +4103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Bind tags to a specified EMR cluster.
-     *
+     * <b>summary</b> : 
+     * <p>Bind tags to a specified EMR cluster.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -3723,10 +4115,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds tags from a specified column in an EMR cluster. If the tag is not bound to other resources, the tag is automatically deleted.
-     *
-     * @description 删除指定资源标签。
-     *
+     * <b>summary</b> : 
+     * <p>Unbinds tags from a specified column in an EMR cluster. If the tag is not bound to other resources, the tag is automatically deleted.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -3772,10 +4163,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Unbinds tags from a specified column in an EMR cluster. If the tag is not bound to other resources, the tag is automatically deleted.
-     *
-     * @description 删除指定资源标签。
-     *
+     * <b>summary</b> : 
+     * <p>Unbinds tags from a specified column in an EMR cluster. If the tag is not bound to other resources, the tag is automatically deleted.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -3785,8 +4175,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 修改集群模板
-     *
+     * <b>description</b> :
+     * <p>修改集群模板</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an API operation template.</p>
+     * 
      * @param request UpdateApiTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateApiTemplateResponse
@@ -3836,8 +4230,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description 修改集群模板
-     *
+     * <b>description</b> :
+     * <p>修改集群模板</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates an API operation template.</p>
+     * 
      * @param request UpdateApiTemplateRequest
      * @return UpdateApiTemplateResponse
      */
@@ -3886,6 +4284,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NodeId", request.nodeId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.refreshConfig)) {
+            query.put("RefreshConfig", request.refreshConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -3914,5 +4316,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateApplicationConfigsResponse updateApplicationConfigs(UpdateApplicationConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateApplicationConfigsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param tmpReq UpdateScriptRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateScriptResponse
+     */
+    public UpdateScriptResponse updateScriptWithOptions(UpdateScriptRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateScriptShrinkRequest request = new UpdateScriptShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.script)) {
+            request.scriptShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.script, "Script", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptShrink)) {
+            query.put("Script", request.scriptShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
+            query.put("ScriptId", request.scriptId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptType)) {
+            query.put("ScriptType", request.scriptType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateScript"),
+            new TeaPair("version", "2021-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateScriptResponse());
+    }
+
+    /**
+     * @param request UpdateScriptRequest
+     * @return UpdateScriptResponse
+     */
+    public UpdateScriptResponse updateScript(UpdateScriptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateScriptWithOptions(request, runtime);
     }
 }

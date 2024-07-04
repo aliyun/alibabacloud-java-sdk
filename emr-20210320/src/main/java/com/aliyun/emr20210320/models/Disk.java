@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class Disk extends TeaModel {
     /**
      * <p>磁盘类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_essd</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
      * <p>每个节点磁盘数量。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Count")
     public Integer count;
 
     /**
      * <p>性能级别。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S0</p>
      */
     @NameInMap("PerformanceLevel")
     public String performanceLevel;
 
     /**
      * <p>单位GB。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("Size")
     public Integer size;

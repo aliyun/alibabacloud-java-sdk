@@ -6,8 +6,13 @@ import com.aliyun.tea.*;
 public class MetricsTrigger extends TeaModel {
     /**
      * <p>多指标逻辑关系。默认：Or。取值范围：</p>
-     * <p>- And:与</p>
-     * <p>- Or：或</p>
+     * <ul>
+     * <li>And:与</li>
+     * <li>Or：或</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Or</p>
      */
     @NameInMap("ConditionLogicOperator")
     public String conditionLogicOperator;
@@ -20,14 +25,19 @@ public class MetricsTrigger extends TeaModel {
 
     /**
      * <p>冷却时间。 单位为秒</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("CoolDownInterval")
     public Integer coolDownInterval;
 
     /**
      * <p>统计次数。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
@@ -40,8 +50,10 @@ public class MetricsTrigger extends TeaModel {
 
     /**
      * <p>统计窗口。单位为秒。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("TimeWindow")
     public Integer timeWindow;

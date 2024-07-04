@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAutoScalingPolicyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
     public static class Constraints extends TeaModel {
         /**
          * <p>The maximum number of nodes in the node group. Default value: 2000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("MaxCapacity")
         public Integer maxCapacity;
 
         /**
          * <p>The minimum number of nodes in the node group. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MinCapacity")
         public Integer minCapacity;
@@ -75,52 +84,66 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
     public static class ScalingRules extends TeaModel {
         /**
-         * <p>The type of the scaling activity. Valid values:</p>
-         * <br>
-         * <p>*   SCALE_OUT: scale-out rules</p>
-         * <p>*   SCALE_IN: scale-in rules</p>
+         * <p>The scaling type. Valid values:</p>
+         * <ul>
+         * <li>SCALE_OUT</li>
+         * <li>SCALE_IN</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SCALE_OUT</p>
          */
         @NameInMap("ActivityType")
         public String activityType;
 
         /**
          * <p>The adjustment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CHANGE_IN_CAPACITY</p>
          */
         @NameInMap("AdjustmentType")
         public String adjustmentType;
 
         /**
-         * <p>The adjustment value. The value must be a positive number, which indicates the number of instances to be scaled out or in.</p>
+         * <p>The adjustment value. The parameter value must be a positive integer, which indicates the number of instances that you want to add or remove.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AdjustmentValue")
         public Integer adjustmentValue;
 
         /**
-         * <p>The description of scaling by load.</p>
+         * <p>The description of load-based scaling.</p>
          */
         @NameInMap("MetricsTrigger")
         public MetricsTrigger metricsTrigger;
 
-        @NameInMap("MinAdjustmentValue")
-        public Integer minAdjustmentValue;
-
         /**
          * <p>The name of the auto scaling rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scaling-out-memory</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The description of scaling by time.</p>
+         * <p>The description of time-based scaling.</p>
          */
         @NameInMap("TimeTrigger")
         public TimeTrigger timeTrigger;
 
         /**
-         * <p>The type of the scaling rule. Valid values:</p>
-         * <br>
-         * <p>*   TIME_TRIGGER: scaling by time.</p>
-         * <p>*   METRICS_TRIGGER: scaling by load.</p>
+         * <p>The type of the auto scaling rule. Valid values:</p>
+         * <ul>
+         * <li>TIME_TRIGGER: time-based scaling</li>
+         * <li>METRICS_TRIGGER: load-based scaling</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TIME_TRIGGER</p>
          */
         @NameInMap("TriggerType")
         public String triggerType;
@@ -162,14 +185,6 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             return this.metricsTrigger;
         }
 
-        public ScalingRules setMinAdjustmentValue(Integer minAdjustmentValue) {
-            this.minAdjustmentValue = minAdjustmentValue;
-            return this;
-        }
-        public Integer getMinAdjustmentValue() {
-            return this.minAdjustmentValue;
-        }
-
         public ScalingRules setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
@@ -199,6 +214,9 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
     public static class ScalingPolicy extends TeaModel {
         /**
          * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c-b933c5aac8fe****</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -211,18 +229,24 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the node group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ng-869471354ecd****</p>
          */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
         /**
          * <p>The ID of the scaling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asp-asduwe23znl***</p>
          */
         @NameInMap("ScalingPolicyId")
         public String scalingPolicyId;
 
         /**
-         * <p>The scaling rules.</p>
+         * <p>The auto scaling rules.</p>
          */
         @NameInMap("ScalingRules")
         public java.util.List<ScalingRules> scalingRules;

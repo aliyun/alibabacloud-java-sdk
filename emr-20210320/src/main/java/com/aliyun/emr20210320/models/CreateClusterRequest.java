@@ -12,7 +12,6 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The applications. You can specify a maximum of 100 items.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Applications")
@@ -26,47 +25,57 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>emrtest</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
      * <p>The type of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   DATALAKE: data lake</p>
-     * <p>*   OLAP: online analytical processing (OLAP)</p>
-     * <p>*   DATAFLOW: Dataflow</p>
-     * <p>*   DATASERVING: DataServing</p>
-     * <p>*   CUSTOM: a custom hybrid cluster.</p>
-     * <p>*   HADOOP: the old data lake. We recommend that you use the new data lake.</p>
-     * <br>
+     * <ul>
+     * <li>DATALAKE: data lake</li>
+     * <li>OLAP: online analytical processing (OLAP)</li>
+     * <li>DATAFLOW: Dataflow</li>
+     * <li>DATASERVING: DataServing</li>
+     * <li>CUSTOM: a custom hybrid cluster.</li>
+     * <li>HADOOP: the old data lake. We recommend that you use the new data lake.</li>
+     * </ul>
      * <p>If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DATALAKE</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
      * <p>The deployment mode of master nodes in the cluster. Valid values:</p>
-     * <br>
-     * <p>*   NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</p>
-     * <p>*   HA: high availability (HA) mode. A cluster that contains three master nodes is created.</p>
+     * <ul>
+     * <li>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</li>
+     * <li>HA: high availability (HA) mode. A cluster that contains three master nodes is created.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HA</p>
      */
     @NameInMap("DeployMode")
     public String deployMode;
 
     /**
      * <p>The attributes of all ECS instances.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeAttributes")
@@ -74,50 +83,66 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The node groups. You can specify a maximum of 100 items.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<NodeGroupConfig> nodeGroups;
 
     /**
      * <p>The billing cycle of the instance. Valid values:</p>
-     * <br>
-     * <p>*   PayAsYouGo: pay-as-you-go</p>
-     * <p>*   Subscription: subscription</p>
-     * <br>
+     * <ul>
+     * <li>PayAsYouGo: pay-as-you-go</li>
+     * <li>Subscription: subscription</li>
+     * </ul>
      * <p>Default value: PayAsYouGo.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
      */
     @NameInMap("PaymentType")
     public String paymentType;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The version of EMR. You can view the EMR release version on the EMR cluster purchase page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EMR-5.8.0</p>
      */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
 
     /**
      * <p>The ID of the resource group to which to assign the ENI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzabjyop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The security mode of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   NORMAL: disables Kerberos authentication for the cluster. This is the default value.</p>
-     * <p>*   KERBEROS: enables Kerberos authentication for the cluster.</p>
+     * <ul>
+     * <li>NORMAL: disables Kerberos authentication for the cluster. This is the default value.</li>
+     * <li>KERBEROS: enables Kerberos authentication for the cluster.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("SecurityMode")
     public String securityMode;
@@ -130,6 +155,9 @@ public class CreateClusterRequest extends TeaModel {
 
     /**
      * <p>The tags. You can specify a maximum of 20 items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class NodeSelector extends TeaModel {
     /**
      * <p>节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ng-869471354ecd****</p>
      */
     @NameInMap("NodeGroupId")
     @Deprecated
@@ -16,6 +19,9 @@ public class NodeSelector extends TeaModel {
 
     /**
      * <p>节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>master-1</p>
      */
     @NameInMap("NodeGroupName")
     @Deprecated
@@ -26,23 +32,33 @@ public class NodeSelector extends TeaModel {
 
     /**
      * <p>节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;CORE&quot;,&quot;TASK&quot;]</p>
      */
     @NameInMap("NodeGroupTypes")
     public java.util.List<String> nodeGroupTypes;
 
     /**
      * <p>节点名称列表。当NodeSelectType取值Node时，该参数生效。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;core1-1&quot;]</p>
      */
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
 
     /**
      * <p>节点选择类型。取值范围：</p>
-     * <p>- CLUSTER：集群。</p>
-     * <p>- NODE_GROUP：节点组。</p>
-     * <p>- NODE：节点。</p>
-     * <br>
+     * <ul>
+     * <li>CLUSTER：集群。</li>
+     * <li>NODE_GROUP：节点组。</li>
+     * <li>NODE：节点。</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("NodeSelectType")
     public String nodeSelectType;

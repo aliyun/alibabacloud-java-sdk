@@ -6,32 +6,46 @@ import com.aliyun.tea.*;
 public class RenewInstance extends TeaModel {
     /**
      * <p>emr实例续费时长。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("EmrRenewDuration")
     public Integer emrRenewDuration;
 
     /**
      * <p>emr实例续费时长单位。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("EmrRenewDurationUnit")
     public String emrRenewDurationUnit;
 
     /**
      * <p>节点ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1cudc25w2bfwl5****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>续费时长。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("RenewDuration")
     public Integer renewDuration;
 
     /**
      * <p>付费时长单位。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("RenewDurationUnit")
     public String renewDurationUnit;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ApiTemplate extends TeaModel {
     /**
      * <p>接口名。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateCluster</p>
      */
     @NameInMap("ApiName")
     public String apiName;
@@ -18,30 +21,45 @@ public class ApiTemplate extends TeaModel {
 
     /**
      * <p>区域ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>资源组ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzabjyop****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>模板状态。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>READY</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>模板ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AT-Af***</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
      * <p>模板ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AT-Af***</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

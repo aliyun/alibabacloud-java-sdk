@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class GetApiTemplateRequest extends TeaModel {
     /**
      * <p>区域ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>集群模板id。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>at-41b4c6a0fc63****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

@@ -40,12 +40,18 @@ public class AckNodeSelector extends TeaModel {
     public static class Labels extends TeaModel {
         /**
          * <p>标签键。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>标签值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Value")
         public String value;
@@ -82,12 +88,18 @@ public class AckNodeSelector extends TeaModel {
 
         /**
          * <p>污点键。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>emr</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>污点值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Value")
         public String value;

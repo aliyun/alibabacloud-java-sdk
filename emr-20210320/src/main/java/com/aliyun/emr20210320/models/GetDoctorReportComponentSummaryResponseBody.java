@@ -12,6 +12,9 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,6 +41,10 @@ public class GetDoctorReportComponentSummaryResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>88</p>
+         */
         @NameInMap("Score")
         public Integer score;
 

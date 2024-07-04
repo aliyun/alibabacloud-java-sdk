@@ -6,67 +6,96 @@ import com.aliyun.tea.*;
 public class ListAutoScalingActivitiesRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The end of the time range to query. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1639718634819</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>The number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the node group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ng-869471354ecd****</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of the scaling activity. Number of elements in the array: 1-20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;REJECTED&quot;,&quot;SUCCESSFUL&quot;]</p>
      */
     @NameInMap("ScalingActivityStates")
     public java.util.List<String> scalingActivityStates;
 
     /**
      * <p>The type of the scaling activity. Valid values:</p>
-     * <br>
-     * <p>*   SCALE_OUT</p>
-     * <p>*   SCALE_IN</p>
+     * <ul>
+     * <li>SCALE_OUT</li>
+     * <li>SCALE_IN</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SCALE_IN</p>
      */
     @NameInMap("ScalingActivityType")
     public String scalingActivityType;
 
     /**
      * <p>The name of the scaling rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scale-out-by-memroy</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
 
     /**
      * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1639714634819</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

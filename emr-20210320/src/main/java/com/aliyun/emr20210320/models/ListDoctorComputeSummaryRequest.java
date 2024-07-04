@@ -6,78 +6,101 @@ import com.aliyun.tea.*;
 public class ListDoctorComputeSummaryRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The resource types, which are used to filter query results. Valid values:</p>
-     * <br>
-     * <p>*   engine: filters results by engine.</p>
-     * <p>*   queue: filters results by queue.</p>
-     * <p>*   cluster: displays the results at the cluster level.</p>
-     * <br>
+     * <ul>
+     * <li>engine: filters results by engine.</li>
+     * <li>queue: filters results by queue.</li>
+     * <li>cluster: displays the results at the cluster level.</li>
+     * </ul>
      * <p>If you do not specify this parameter, the information at the cluster level is displayed by default. Currently, only one resource type is supported. If you specify multiple resource types, the first resource type is used by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("ComponentTypes")
     public java.util.List<String> componentTypes;
 
     /**
      * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-01</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The basis on which you want to sort the query results. Valid values:</p>
-     * <br>
-     * <p>1.  vcoreSeconds: the total CPU consumption over time in seconds.</p>
-     * <p>2.  memSeconds: the total memory consumption over time in seconds.</p>
-     * <p>3.  vcoreUtilization: the average CPU utilization. The meaning is the same as the %CPU parameter in the output of the top command in Linux.</p>
-     * <p>4.  memUtilization: the average memory usage.</p>
-     * <p>5.  vcoreSecondsDayGrowthRatio: the day-to-day growth rate of the total CPU consumption over time in seconds.</p>
-     * <p>6.  memSecondsDayGrowthRatio: the day-to-day growth rate of the total memory consumption over time in seconds.</p>
-     * <p>7.  readSize: the total amount of data read from the file system.</p>
-     * <p>8.  writeSize: the total amount of data written to the file system.</p>
-     * <p>9.  healthyJobCount: the total number of healthy jobs.</p>
-     * <p>10. subHealthyJobCount: the total number of sub-healthy jobs.</p>
-     * <p>11. unhealthyJobCount: the total number of unhealthy jobs.</p>
-     * <p>12. needAttentionJobCount: the total number of jobs that require attention.</p>
-     * <p>13. score: the score for jobs.</p>
-     * <p>14. scoreDayGrowthRatio: the day-to-day growth rate of the score for jobs.</p>
+     * <ol>
+     * <li>vcoreSeconds: the total CPU consumption over time in seconds.</li>
+     * <li>memSeconds: the total memory consumption over time in seconds.</li>
+     * <li>vcoreUtilization: the average CPU utilization. The meaning is the same as the %CPU parameter in the output of the top command in Linux.</li>
+     * <li>memUtilization: the average memory usage.</li>
+     * <li>vcoreSecondsDayGrowthRatio: the day-to-day growth rate of the total CPU consumption over time in seconds.</li>
+     * <li>memSecondsDayGrowthRatio: the day-to-day growth rate of the total memory consumption over time in seconds.</li>
+     * <li>readSize: the total amount of data read from the file system.</li>
+     * <li>writeSize: the total amount of data written to the file system.</li>
+     * <li>healthyJobCount: the total number of healthy jobs.</li>
+     * <li>subHealthyJobCount: the total number of sub-healthy jobs.</li>
+     * <li>unhealthyJobCount: the total number of unhealthy jobs.</li>
+     * <li>needAttentionJobCount: the total number of jobs that require attention.</li>
+     * <li>score: the score for jobs.</li>
+     * <li>scoreDayGrowthRatio: the day-to-day growth rate of the score for jobs.</li>
+     * </ol>
+     * 
+     * <strong>example:</strong>
+     * <p>score</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The order in which you want to sort the query results. Valid values:</p>
-     * <br>
-     * <p>*   ASC: in ascending order.</p>
-     * <p>*   DESC: in descending order.</p>
+     * <ul>
+     * <li>ASC: in ascending order.</li>
+     * <li>DESC: in descending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

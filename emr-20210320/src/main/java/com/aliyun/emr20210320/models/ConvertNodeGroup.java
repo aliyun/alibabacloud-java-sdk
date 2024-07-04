@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ConvertNodeGroup extends TeaModel {
     /**
      * <p>节点组ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ng-869471354ecd****</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
     /**
      * <p>付费时长。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
      */
     @NameInMap("PaymentDuration")
     public Integer paymentDuration;
 
     /**
      * <p>付费时长单位。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
     /**
      * <p>付费类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
      */
     @NameInMap("PaymentType")
     public String paymentType;

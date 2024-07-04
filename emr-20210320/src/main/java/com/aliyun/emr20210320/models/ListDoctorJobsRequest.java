@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class ListDoctorJobsRequest extends TeaModel {
     /**
      * <p>The IDs of the jobs that are submitted to YARN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("AppIds")
     public java.util.List<String> appIds;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -26,44 +31,63 @@ public class ListDoctorJobsRequest extends TeaModel {
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The field that you use to sort the query results. Valid values:</p>
-     * <br>
-     * <p>*   vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</p>
-     * <p>*   memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</p>
+     * <ul>
+     * <li>vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</li>
+     * <li>memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>vcoreSeconds</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
      * <p>The order in which you want to sort the query results. Valid values:</p>
-     * <br>
-     * <p>*   ASC: the ascending order</p>
-     * <p>*   DESC: the descending order</p>
+     * <ul>
+     * <li>ASC: the ascending order</li>
+     * <li>DESC: the descending order</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ASC</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
      * <p>The YARN queues to which the jobs are submitted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Queues")
     public java.util.List<String> queues;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -76,12 +100,18 @@ public class ListDoctorJobsRequest extends TeaModel {
 
     /**
      * <p>The YARN engines to which the jobs are submitted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Types")
     public java.util.List<String> types;
 
     /**
      * <p>The users who submit the jobs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Users")
     public java.util.List<String> users;
@@ -190,12 +220,18 @@ public class ListDoctorJobsRequest extends TeaModel {
     public static class EndRange extends TeaModel {
         /**
          * <p>The end of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1666865137099</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The beginning of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679135111960</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
@@ -226,12 +262,18 @@ public class ListDoctorJobsRequest extends TeaModel {
     public static class StartRange extends TeaModel {
         /**
          * <p>The end of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683340662020</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The beginning of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1683340662016</p>
          */
         @NameInMap("StartTime")
         public Long startTime;

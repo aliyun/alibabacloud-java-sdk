@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ScalingAnalyzeResult extends TeaModel {
     /**
      * <p>实际资源利用率。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.12</p>
      */
     @NameInMap("ActualUsage")
     public Float actualUsage;
 
     /**
      * <p>理想资源用量。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.12</p>
      */
     @NameInMap("IdealUsage")
     public Float idealUsage;
 
     /**
      * <p>固定资源释放核数（非master）core。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ReleaseCores")
     public Integer releaseCores;
 
     /**
      * <p>固定资源保留核数（非master）core。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ReservedCores")
     public Integer reservedCores;

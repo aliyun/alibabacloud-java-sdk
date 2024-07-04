@@ -12,6 +12,9 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,15 +41,31 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
     }
 
     public static class DailyReadRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of read requests per day</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dailyReadRequest</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -90,15 +109,31 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
     }
 
     public static class DailyWriteRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of write requests per day</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dailyWriteRequest</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -142,20 +177,34 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
     }
 
     public static class StoreFileCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of store file</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>storeFileCount</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -200,15 +249,31 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
     }
 
     public static class TotalReadRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Total read request</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totalReadRequest</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -252,15 +317,31 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
     }
 
     public static class TotalWriteRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Total Write Request</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totalWriteRequest</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -376,9 +457,17 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         @NameInMap("Metrics")
         public Metrics metrics;
 
+        /**
+         * <strong>example:</strong>
+         * <p>emr-worker-2.cluster-20****</p>
+         */
         @NameInMap("RegionServerHost")
         public String regionServerHost;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tb_item</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

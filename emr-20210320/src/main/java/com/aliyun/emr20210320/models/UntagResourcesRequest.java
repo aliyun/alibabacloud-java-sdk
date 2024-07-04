@@ -5,42 +5,54 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags. This parameter is valid only when the **Tagkeys** is empty. Valid values:</p>
-     * <br>
-     * <p>*   true: All the data is deleted.</p>
-     * <p>*   false: Not all of them are deleted.</p>
-     * <br>
+     * <p>Specifies whether to remove all tags. This parameter is valid only when the <strong>Tagkeys</strong> is empty. Valid values:</p>
+     * <ul>
+     * <li>true: All the data is deleted.</li>
+     * <li>false: Not all of them are deleted.</li>
+     * </ul>
      * <p>Default value: false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The ID of the region in which you want to create the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The list of resource IDs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     /**
      * <p>The type of the resource. Set the value to cluster.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The key of the label. Valid values of N: 1 to 20.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;c-b933c5aac8fe****&quot;]</p>
      */
     @NameInMap("TagKeys")
     public java.util.List<String> tagKeys;

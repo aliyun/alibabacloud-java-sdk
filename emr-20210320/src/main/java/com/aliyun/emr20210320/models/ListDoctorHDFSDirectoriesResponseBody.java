@@ -9,24 +9,36 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
 
     /**
      * <p>本次请求所返回的最大记录条数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>本次请求条件下的数据总量。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -77,15 +89,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class ColdDataDayGrowthSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth size of cold data</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>coldDataDayGrowthSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-182636577752</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -129,15 +157,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class ColdDataSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the cold data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>coldDataSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5570958082267</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -181,15 +225,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class ColdDataSizeDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of cold data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>coldDataSizeDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-0.03</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -233,15 +293,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class EmptyFileCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of empty files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>emptyFileCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>15595897</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -285,15 +361,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class EmptyFileCountDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of empty files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>emptyFileCountDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.005</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -337,15 +429,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class EmptyFileDayGrowthCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth count of empty files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>emptyFileDayGrowthCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>114</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -389,15 +497,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class FreezeDataDayGrowthSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth size of freeze data</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>freezeDataDayGrowthSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-167683929450</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -441,15 +565,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class FreezeDataSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the freeze data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>freezeDataSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1231312431</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -493,15 +633,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class FreezeDataSizeDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of freeze data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>freezeDataSizeDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-0.09</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -545,15 +701,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class HotDataDayGrowthSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth size of hot data</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hotDataDayGrowthSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123154</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -597,15 +769,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class HotDataSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the hot data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hotDataSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6701531944206</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -649,15 +837,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class HotDataSizeDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of hot data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hotDataSizeDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.1114</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -701,15 +905,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class LargeFileCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of large files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>largeFileCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -753,15 +973,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class LargeFileCountDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of large files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>largeFileCountDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.39</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -805,15 +1041,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class LargeFileDayGrowthCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth count of large files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>largeFileDayGrowthCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -857,15 +1109,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class MediumFileCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of medium files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mediumFileCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -909,15 +1177,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class MediumFileCountDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of medium files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mediumFileCountDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.19</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -961,15 +1245,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class MediumFileDayGrowthCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth count of medium files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mediumFileDayGrowthCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>176</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1013,15 +1313,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class SmallFileCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of small files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>smallFileCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1065,15 +1381,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class SmallFileCountDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of small files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>smallFileCountDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1117,15 +1449,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class SmallFileDayGrowthCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth count of small files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>smallFileDayGrowthCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1169,15 +1517,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class TinyFileCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of tiny files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tinyFileCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>232131</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1221,15 +1585,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class TinyFileCountDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of tiny files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tinyFileCountDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.003</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1273,15 +1653,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class TinyFileDayGrowthCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth count of tiny files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tinyFileDayGrowthCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-123</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1325,15 +1721,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class TotalDataDayGrowthSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth size of total data</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totalDataDayGrowthSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>256482228248</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1377,15 +1789,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class TotalDataSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Total data size in megabytes (MB)</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totalDataSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62086342083623</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1429,15 +1857,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class TotalDataSizeDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of total data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totalDataSizeDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.14</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1481,15 +1925,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class TotalFileCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Number of total files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totalFileCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>51683279</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1533,15 +1993,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class TotalFileCountDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of total files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totalFileCountDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.02</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -1585,15 +2061,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class TotalFileDayGrowthCount extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth count of total files</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>totalFileDayGrowthCount</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>27809</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1637,15 +2129,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class WarmDataDayGrowthSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth size of warm data</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>warmDataDayGrowthSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-64806998319</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1689,15 +2197,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class WarmDataSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size of the warm data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>warmDataSize</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MB</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4062349775577</p>
+         */
         @NameInMap("Value")
         public Long value;
 
@@ -1741,15 +2265,31 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class WarmDataSizeDayGrowthRatio extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Day growth ratio of warm data size</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>warmDataSizeDayGrowthRatio</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>”“</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-0.015</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -2164,18 +2704,34 @@ public class ListDoctorHDFSDirectoriesResponseBody extends TeaModel {
     }
 
     public static class Data extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Depth")
         public Integer depth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/tmp/test</p>
+         */
         @NameInMap("DirPath")
         public String dirPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DW</p>
+         */
         @NameInMap("Group")
         public String group;
 
         @NameInMap("Metrics")
         public Metrics metrics;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DW</p>
+         */
         @NameInMap("User")
         public String user;
 

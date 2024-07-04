@@ -12,12 +12,18 @@ public class RunApplicationActionResponseBody extends TeaModel {
 
     /**
      * <p>The operation ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>op-13c37a77c505****</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,9 +58,21 @@ public class RunApplicationActionResponseBody extends TeaModel {
     }
 
     public static class AbnInstances extends TeaModel {
+        /**
+         * <p>The ID of the abnormal node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1cudc25w2bfwl5****</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The name of the abnormal node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>core1-1</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 

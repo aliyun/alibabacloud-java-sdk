@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class DeploymentSetConstraints extends TeaModel {
     /**
      * <p>默认值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("DefaultValue")
     public String defaultValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>是否启用部署集限制策略</p>
+     */
     @NameInMap("EnableState")
     public String enableState;
 
@@ -21,6 +28,9 @@ public class DeploymentSetConstraints extends TeaModel {
 
     /**
      * <p>枚举值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;CLUSTER&quot;,&quot;NODE_GROUP&quot;,&quot;NONE&quot;]</p>
      */
     @NameInMap("Values")
     public java.util.List<String> values;

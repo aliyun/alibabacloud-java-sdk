@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class KeyValue extends TeaModel {
     /**
      * <p>键。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>key</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
      * <p>值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>value</p>
      */
     @NameInMap("Value")
     public String value;

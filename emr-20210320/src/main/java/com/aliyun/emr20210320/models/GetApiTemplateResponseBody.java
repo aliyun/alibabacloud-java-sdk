@@ -4,12 +4,18 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetApiTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The content of the API operation template.</p>
+     */
     @NameInMap("Data")
     @Deprecated
     public ApiTemplate data;
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

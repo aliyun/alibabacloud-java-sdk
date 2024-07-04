@@ -36,6 +36,9 @@ public class ValueConstraints extends TeaModel {
 
     /**
      * <p>枚举值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("Values")
     public java.util.List<Integer> values;

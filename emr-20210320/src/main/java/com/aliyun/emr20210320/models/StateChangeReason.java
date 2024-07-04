@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class StateChangeReason extends TeaModel {
     /**
      * <p>状态码。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MissingParameter</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>描述信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The instance type is required.</p>
      */
     @NameInMap("Message")
     public String message;

@@ -6,36 +6,43 @@ import com.aliyun.tea.*;
 public class RunApplicationActionRequest extends TeaModel {
     /**
      * <p>The name of the action. Valid values:</p>
-     * <br>
-     * <p>*   start</p>
-     * <p>*   stop</p>
-     * <p>*   config</p>
-     * <p>*   restart</p>
-     * <p>*   refresh_queues</p>
-     * <p>*   refresh_labels</p>
-     * <br>
+     * <ul>
+     * <li>start</li>
+     * <li>stop</li>
+     * <li>config</li>
+     * <li>restart</li>
+     * <li>refresh_queues</li>
+     * <li>refresh_labels</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>start</p>
      */
     @NameInMap("ActionName")
     public String actionName;
 
     /**
      * <p>The number of applications in each batch.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("BatchSize")
     public Integer batchSize;
 
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C-C95F0A39D8FF****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>The operation object.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ComponentInstanceSelector")
@@ -43,35 +50,50 @@ public class RunApplicationActionRequest extends TeaModel {
 
     /**
      * <p>The description of the execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>运行描述</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The execution policy. Valid values:</p>
-     * <br>
-     * <p>*   FAILED_BLOCK: The system stops the execution if the execution fails.</p>
-     * <p>*   FAILED_CONTINUE: The system continues the execution if the execution fails.</p>
+     * <ul>
+     * <li>FAILED_BLOCK: The system stops the execution if the execution fails.</li>
+     * <li>FAILED_CONTINUE: The system continues the execution if the execution fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FAILED_CONTINUE</p>
      */
     @NameInMap("ExecuteStrategy")
     public String executeStrategy;
 
     /**
      * <p>The interval for rolling execution. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Interval")
     public Long interval;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>Specifies whether to enable rolling execution.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RollingExecute")
     public Boolean rollingExecute;

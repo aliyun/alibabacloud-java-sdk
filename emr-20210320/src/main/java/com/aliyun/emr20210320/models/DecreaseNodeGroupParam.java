@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DecreaseNodeGroupParam extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>G-21E39B11837E****</p>
      */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;

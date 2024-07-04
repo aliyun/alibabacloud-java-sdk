@@ -18,18 +18,27 @@ public class AutoScalingConstraints extends TeaModel {
 
     /**
      * <p>单次伸缩活动最大扩缩容节点数量。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("MaxAdjustmentValue")
     public Integer maxAdjustmentValue;
 
     /**
      * <p>按负载规则数量最大值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxByLoadRuleCount")
     public Integer maxByLoadRuleCount;
 
     /**
      * <p>按时间规则数量最大值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxByTimeRuleCount")
     public Integer maxByTimeRuleCount;
@@ -42,12 +51,18 @@ public class AutoScalingConstraints extends TeaModel {
 
     /**
      * <p>支持的按负载弹性伸缩指标列表。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;YarnRootAvailableMemoryUsage&quot;,&quot;YarnRootAvailableVcores&quot;]</p>
      */
     @NameInMap("SupportMetrics")
     public java.util.List<String> supportMetrics;
 
     /**
      * <p>支持的弹性伸缩规则类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;TIME_TRIGGER&quot;,&quot;METRICS_TRIGGER&quot;]</p>
      */
     @NameInMap("SupportRuleTypes")
     public java.util.List<String> supportRuleTypes;

@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class Script extends TeaModel {
     /**
      * <p>执行失败策略。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FAILED_CONTINUE</p>
      */
     @NameInMap("ExecutionFailStrategy")
     public String executionFailStrategy;
 
     /**
      * <p>脚本的执行时机。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BEFORE_INSTALL</p>
      */
     @NameInMap("ExecutionMoment")
     public String executionMoment;
 
     /**
      * <p>节点选择器。</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeSelector")
@@ -26,6 +31,9 @@ public class Script extends TeaModel {
 
     /**
      * <p>脚本执行优先级。取值范围：1~100。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Priority")
     @Deprecated
@@ -33,22 +41,29 @@ public class Script extends TeaModel {
 
     /**
      * <p>脚本执行参数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-host 10.0.10.5 -m 30</p>
      */
     @NameInMap("ScriptArgs")
     public String scriptArgs;
 
     /**
      * <p>脚本名称。长度为1~64个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、下划线（_）、或者短划线（-）</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>脚本名-1</p>
      */
     @NameInMap("ScriptName")
     public String scriptName;
 
     /**
      * <p>脚本所在OSS路径。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://bucket1/update_hosts.sh</p>
      */
     @NameInMap("ScriptPath")
     public String scriptPath;

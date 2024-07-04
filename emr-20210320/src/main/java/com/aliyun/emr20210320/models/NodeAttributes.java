@@ -6,42 +6,57 @@ import com.aliyun.tea.*;
 public class NodeAttributes extends TeaModel {
     /**
      * <p>ECS ssh登录秘钥。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>emr_login</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     /**
      * <p>MASTER节点root密码。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Adxefswfd****</p>
      */
     @NameInMap("MasterRootPassword")
     public String masterRootPassword;
 
     /**
      * <p>ECS访问资源绑定的角色。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunECSInstanceForEMRRole</p>
      */
     @NameInMap("RamRole")
     public String ramRole;
 
     /**
      * <p>安全组ID。EMR只支持普通安全组，不支持企业安全组。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-hp3abbae8lb6lmb1****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>专有网络ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1tgey2p0ytxmdo5****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
      * <p>可用区ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing-h</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

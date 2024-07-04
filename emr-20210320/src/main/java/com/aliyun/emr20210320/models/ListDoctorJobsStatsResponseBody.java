@@ -12,24 +12,36 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
 
     /**
      * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>A pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,24 +94,36 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
     public static class AppsCount extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total apps count</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appsCount</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -146,24 +170,36 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
     public static class MemSeconds extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total memory usage over time in seconds</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>memSeconds</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MB * Sec</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312312</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -210,24 +246,36 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
     public static class VcoreSeconds extends TeaModel {
         /**
          * <p>The description of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Total vcore usage over time in seconds</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vcoreSeconds</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The unit of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VCores * Sec</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
          * <p>The value of the metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11123</p>
          */
         @NameInMap("Value")
         public Long value;
@@ -286,18 +334,27 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
 
         /**
          * <p>The YARN queue to which the job was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DW</p>
          */
         @NameInMap("Queue")
         public String queue;
 
         /**
          * <p>The type of the compute engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPARK</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The username that is used to submit the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DW</p>
          */
         @NameInMap("User")
         public String user;

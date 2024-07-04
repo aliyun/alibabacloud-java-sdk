@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetDoctorComputeSummaryRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -20,16 +22,20 @@ public class GetDoctorComputeSummaryRequest extends TeaModel {
 
     /**
      * <p>Specify the date in the ISO 8601 standard. For example, 2023-01-01 represents January 1, 2023.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-01-01</p>
      */
     @NameInMap("DateTime")
     public String dateTime;
 
     /**
      * <p>The region ID.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -74,18 +80,24 @@ public class GetDoctorComputeSummaryRequest extends TeaModel {
     public static class ComponentInfo extends TeaModel {
         /**
          * <p>Set the filter condition name based on the value of ComponentType. For example, if you set ComponentType to queue, you can specify a specific queue name to obtain the resource usage of a specific queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MAPREDUCE</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
 
         /**
          * <p>The resource type for filtering. Valid values:</p>
-         * <br>
-         * <p>*   engine: filters results by engine.</p>
-         * <p>*   queue: filters results by queue.</p>
-         * <p>*   cluster: displays the results at the cluster level.</p>
-         * <br>
+         * <ul>
+         * <li>engine: filters results by engine.</li>
+         * <li>queue: filters results by queue.</li>
+         * <li>cluster: displays the results at the cluster level.</li>
+         * </ul>
          * <p>If you do not specify this parameter, the information at the cluster level is displayed by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>engine</p>
          */
         @NameInMap("ComponentType")
         public String componentType;

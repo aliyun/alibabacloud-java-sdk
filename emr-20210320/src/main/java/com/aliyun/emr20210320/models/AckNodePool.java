@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AckNodePool extends TeaModel {
     /**
      * <p>节点池ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>npe76629caa1b14a73bf3e47c6d481****</p>
      */
     @NameInMap("NodePoolId")
     public String nodePoolId;

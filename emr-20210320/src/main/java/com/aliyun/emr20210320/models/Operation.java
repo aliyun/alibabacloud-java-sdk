@@ -6,48 +6,72 @@ import com.aliyun.tea.*;
 public class Operation extends TeaModel {
     /**
      * <p>集群ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>创建时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1628589439114</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
     /**
      * <p>描述。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>start</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>结束时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1628589439114</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>操作ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>op-13c37a77c505****</p>
      */
     @NameInMap("OperationId")
     public String operationId;
 
     /**
      * <p>操作状态。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>COMPLETED</p>
      */
     @NameInMap("OperationState")
     public String operationState;
 
     /**
      * <p>操作类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CLUSTER</p>
      */
     @NameInMap("OperationType")
     public String operationType;
 
     /**
      * <p>开始时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1628589439114</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

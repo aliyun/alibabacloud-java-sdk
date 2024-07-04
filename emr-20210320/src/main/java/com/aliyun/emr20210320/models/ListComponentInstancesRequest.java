@@ -6,55 +6,81 @@ import com.aliyun.tea.*;
 public class ListComponentInstancesRequest extends TeaModel {
     /**
      * <p>应用名称列表。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;HDFS&quot;]</p>
      */
     @NameInMap("ApplicationNames")
     public java.util.List<String> applicationNames;
 
     /**
      * <p>集群ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
      * <p>组件名称列表。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;DataNode&quot;]</p>
      */
     @NameInMap("ComponentNames")
     public java.util.List<String> componentNames;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ComponentStates")
     public java.util.List<String> componentStates;
 
     /**
      * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>节点ID列表。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;i-bp1cudc25w2bfwl5****&quot;]</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
      * <p>节点名称列表。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;core1-1&quot;]</p>
      */
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
 
     /**
      * <p>地域ID。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

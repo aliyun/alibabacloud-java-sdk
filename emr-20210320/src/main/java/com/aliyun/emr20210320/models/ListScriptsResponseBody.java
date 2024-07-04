@@ -6,27 +6,42 @@ import com.aliyun.tea.*;
 public class ListScriptsResponseBody extends TeaModel {
     /**
      * <p>本次请求所返回的最大记录条数。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dd6b1b2a-5837-5237-abe4-ff0c89568982</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>请求ID。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The scripts.</p>
+     */
     @NameInMap("Scripts")
     public java.util.List<Scripts> scripts;
 
     /**
      * <p>本次请求条件下的数据总量。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -78,76 +93,128 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class Scripts extends TeaModel {
         /**
-         * <p>API名称。</p>
+         * <p>The name of the API operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ListScripts</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>结束执行时间。</p>
+         * <p>The time when the system finishes the running of the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639715635819</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
-         * <p>执行失败策略。</p>
+         * <p>The policy that is used to handle execution failures of the script. Valid values:</p>
+         * <ul>
+         * <li>FAILED_CONTINUE</li>
+         * <li>FAILED_BLOCK</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FAILED_CONTINUE</p>
          */
         @NameInMap("ExecutionFailStrategy")
         public String executionFailStrategy;
 
         /**
-         * <p>执行时机。</p>
+         * <p>The time based on which the system runs the script. Valid values:</p>
+         * <ul>
+         * <li>BEFORE_INSTALL</li>
+         * <li>AFTER_STARTED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BEFORE_INSTALL</p>
          */
         @NameInMap("ExecutionMoment")
         public String executionMoment;
 
+        /**
+         * <p>The status of the script. This parameter is returned only if the <code>ScriptType</code> parameter is set to <code>NORMAL</code>. Valid values:</p>
+         * <ul>
+         * <li>SCRIPT_COMPLETED</li>
+         * <li>SCRIPT_SUBMISSION_FAILED</li>
+         * <li>SCRIPT_RUNNING</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SCRIPT_COMPLETED</p>
+         */
         @NameInMap("ExecutionState")
         public String executionState;
 
         /**
-         * <p>最近一次编辑时间。</p>
+         * <p>The time when the script was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639714634819</p>
          */
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 
         /**
-         * <p>节点选择器。</p>
+         * <p>The node selector.</p>
          */
         @NameInMap("NodeSelector")
         public NodeSelector nodeSelector;
 
         /**
-         * <p>区域ID。</p>
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>集群脚本执行参数。</p>
+         * <p>The runtime parameters of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>--mode=client -h -p</p>
          */
         @NameInMap("ScriptArgs")
         public String scriptArgs;
 
         /**
-         * <p>脚本ID。</p>
+         * <p>The script ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cs-bf25219d103043a0820613e32781****</p>
          */
         @NameInMap("ScriptId")
         public String scriptId;
 
         /**
-         * <p>集群脚本名称。</p>
+         * <p>The name of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>check_env</p>
          */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
-         * <p>集群脚本路径。</p>
+         * <p>The path in which the script is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket1/check_evn.sh</p>
          */
         @NameInMap("ScriptPath")
         public String scriptPath;
 
         /**
-         * <p>开始执行时间。</p>
+         * <p>The time when the system starts to run the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639714634000</p>
          */
         @NameInMap("StartTime")
         public Long startTime;

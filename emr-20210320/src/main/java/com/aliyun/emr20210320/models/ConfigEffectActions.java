@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ConfigEffectActions extends TeaModel {
     /**
      * <p>配置生效动作。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>restart</p>
      */
     @NameInMap("ConfigEffectAction")
     public String configEffectAction;
 
     /**
      * <p>配置生效配置文件。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>null</p>
      */
     @NameInMap("ConfigFiles")
     public java.util.List<String> configFiles;

@@ -6,33 +6,43 @@ import com.aliyun.tea.*;
 public class TriggerCondition extends TeaModel {
     /**
      * <p>比较符。取值范围：</p>
-     * <p>- EQ:等于。</p>
-     * <p>- NE:不等于。</p>
-     * <p>- GT:大于。</p>
-     * <p>- LT:小于。</p>
-     * <p>- GE:大于等于。</p>
-     * <p>- LE:小于等于。</p>
-     * <br>
+     * <ul>
+     * <li>EQ:等于。</li>
+     * <li>NE:不等于。</li>
+     * <li>GT:大于。</li>
+     * <li>LT:小于。</li>
+     * <li>GE:大于等于。</li>
+     * <li>LE:小于等于。</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LT</p>
      */
     @NameInMap("ComparisonOperator")
     public String comparisonOperator;
 
     /**
      * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yarn_resourcemanager_root_availablememoryusage</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>统计量名称。取值范围：</p>
-     * <p>- MAX：最大值。</p>
-     * <p>- MIN：最小值。</p>
-     * <p>- AVG：平均值。</p>
-     * <br>
+     * <ul>
+     * <li>MAX：最大值。</li>
+     * <li>MIN：最小值。</li>
+     * <li>AVG：平均值。</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AVG</p>
      */
     @NameInMap("Statistics")
     public String statistics;
@@ -45,8 +55,10 @@ public class TriggerCondition extends TeaModel {
 
     /**
      * <p>阈值。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12.5</p>
      */
     @NameInMap("Threshold")
     public Double threshold;

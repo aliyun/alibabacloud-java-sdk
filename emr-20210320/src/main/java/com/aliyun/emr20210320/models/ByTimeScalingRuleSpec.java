@@ -6,26 +6,37 @@ import com.aliyun.tea.*;
 public class ByTimeScalingRuleSpec extends TeaModel {
     /**
      * <p>重复执行定时任务的结束时间戳。单位为毫秒。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1639714800000</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
      * <p>启动时间戳。单位为毫秒。</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1639714634819</p>
      */
     @NameInMap("LaunchTime")
     public Long launchTime;
 
     /**
      * <p>指定时间规则的执行类型。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WEEKLY</p>
      */
     @NameInMap("RecurrenceType")
     public String recurrenceType;
 
     /**
      * <p>重复执行定时任务的数值。具体取值取决于 recurrenceType 设置。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MON,FRI,SUN</p>
      */
     @NameInMap("RecurrenceValue")
     public String recurrenceValue;

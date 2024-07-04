@@ -4,12 +4,24 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class CreateNodeGroupParam extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Monthly</p>
+     */
     @NameInMap("AutoRenewDurationUnit")
     public String autoRenewDurationUnit;
 
@@ -19,36 +31,80 @@ public class CreateNodeGroupParam extends TeaModel {
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("NodeCount")
     public Integer nodeCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>core-1</p>
+     */
     @NameInMap("NodeGroupName")
     public String nodeGroupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CORE</p>
+     */
     @NameInMap("NodeGroupType")
     public String nodeGroupType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sshkey</p>
+     */
     @NameInMap("NodeKeyPairName")
     public String nodeKeyPairName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AliyunEmrEcsDefaultRole</p>
+     */
     @NameInMap("NodeRamRole")
     public String nodeRamRole;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("NodeRootPassword")
     public String nodeRootPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PaymentDuration")
     public Integer paymentDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Monthly</p>
+     */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Subscription</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sg-hp3abbae8lb6lmb1****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NoSpot</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
@@ -58,9 +114,17 @@ public class CreateNodeGroupParam extends TeaModel {
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithPublicIp")
     public Boolean withPublicIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-e</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
