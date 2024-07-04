@@ -6,66 +6,99 @@ import com.aliyun.tea.*;
 public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
     /**
      * <p>The ID of the task for analyzing network reachability that you initiated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>nra-dfe9e53d2b524568****</p>
      */
     @NameInMap("NetworkReachableAnalysisId")
     public String networkReachableAnalysisId;
 
     /**
      * <p>The protocol type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tcp</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D5E98683-355B-5867-8D3D-A24755F6895B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the source resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-uf62y8khhbkbdrp6****</p>
      */
     @NameInMap("SourceId")
     public String sourceId;
 
     /**
      * <p>The source IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("SourceIpAddress")
     public String sourceIpAddress;
 
     /**
      * <p>The source port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SourcePort")
     public String sourcePort;
 
     /**
      * <p>The type of the source resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>The ID of the destination resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-m5eactvw7wtpktv5****</p>
      */
     @NameInMap("TargetId")
     public String targetId;
 
     /**
      * <p>The destination IP address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>172.50.XX.XX</p>
      */
     @NameInMap("TargetIpAddress")
     public String targetIpAddress;
 
     /**
      * <p>The destination port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("TargetPort")
     public String targetPort;
 
     /**
      * <p>The type of the destination resource.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs</p>
      */
     @NameInMap("TargetType")
     public String targetType;

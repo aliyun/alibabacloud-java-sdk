@@ -6,12 +6,16 @@ import com.aliyun.tea.*;
 public class DeleteNetworkPathRequest extends TeaModel {
     /**
      * <p>The IDs of network paths.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NetworkPathIds")
     public java.util.List<String> networkPathIds;
 
     /**
      * <p>The region ID of the network path that you want to delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("RegionId")
     public String regionId;
