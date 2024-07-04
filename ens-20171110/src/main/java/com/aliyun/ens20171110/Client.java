@@ -2942,6 +2942,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a storage gateway.</p>
+     * 
+     * @param tmpReq CreateStorageGatewayRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateStorageGatewayResponse
+     */
+    public CreateStorageGatewayResponse createStorageGatewayWithOptions(CreateStorageGatewayRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateStorageGatewayShrinkRequest request = new CreateStorageGatewayShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.orderDetails)) {
+            request.orderDetailsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.orderDetails, "OrderDetails", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderDetailsShrink)) {
+            query.put("OrderDetails", request.orderDetailsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateStorageGateway"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateStorageGatewayResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a storage gateway.</p>
+     * 
+     * @param request CreateStorageGatewayRequest
+     * @return CreateStorageGatewayResponse
+     */
+    public CreateStorageGatewayResponse createStorageGateway(CreateStorageGatewayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createStorageGatewayWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a vSwitch.</p>
      * 
      * @param request CreateVSwitchRequest
@@ -4236,6 +4286,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSnatIpForSnatEntryResponse deleteSnatIpForSnatEntry(DeleteSnatIpForSnatEntryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSnatIpForSnatEntryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a storage gateway.</p>
+     * 
+     * @param request DeleteStorageGatewayRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteStorageGatewayResponse
+     */
+    public DeleteStorageGatewayResponse deleteStorageGatewayWithOptions(DeleteStorageGatewayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("GatewayId", request.gatewayId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteStorageGateway"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteStorageGatewayResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a storage gateway.</p>
+     * 
+     * @param request DeleteStorageGatewayRequest
+     * @return DeleteStorageGatewayResponse
+     */
+    public DeleteStorageGatewayResponse deleteStorageGateway(DeleteStorageGatewayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteStorageGatewayWithOptions(request, runtime);
     }
 
     /**
