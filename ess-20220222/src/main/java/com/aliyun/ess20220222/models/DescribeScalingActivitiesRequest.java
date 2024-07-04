@@ -12,24 +12,30 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the scaling group to which the scaling activity that you want to query belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,28 +48,37 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
 
     /**
      * <p>The IDs of the scaling activities that you want to query.</p>
-     * <br>
-     * <p>> When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.</p>
+     * <blockquote>
+     * <p>When you call this operation, you must specify one of the <code>ScalingGroupId</code> and <code>ScalingActivityId.N</code> parameters. Otherwise, an error is reported.</p>
+     * </blockquote>
      */
     @NameInMap("ScalingActivityIds")
     public java.util.List<String> scalingActivityIds;
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
-     * <p>> When you call this operation, you must specify one of the `ScalingGroupId` and `ScalingActivityId.N` parameters. Otherwise, an error is reported.</p>
+     * <blockquote>
+     * <p>When you call this operation, you must specify one of the <code>ScalingGroupId</code> and <code>ScalingActivityId.N</code> parameters. Otherwise, an error is reported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
      * <p>The status of the scaling activity. Valid values:</p>
-     * <br>
-     * <p>*   Successful: The scaling activity is successful.</p>
-     * <p>*   Warning: The scaling activity is partially successful.</p>
-     * <p>*   Failed: The scaling activity failed.</p>
-     * <p>*   InProgress: The scaling activity is in progress.</p>
-     * <p>*   Rejected: The request to trigger the scaling activity is rejected.</p>
+     * <ul>
+     * <li>Successful: The scaling activity is successful.</li>
+     * <li>Warning: The scaling activity is partially successful.</li>
+     * <li>Failed: The scaling activity failed.</li>
+     * <li>InProgress: The scaling activity is in progress.</li>
+     * <li>Rejected: The request to trigger the scaling activity is rejected.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Successful</p>
      */
     @NameInMap("StatusCode")
     public String statusCode;

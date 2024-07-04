@@ -6,34 +6,71 @@ import com.aliyun.tea.*;
 public class ApplyEciScalingConfigurationRequest extends TeaModel {
     /**
      * <p>The content of the configuration file.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>apiVersion: apps/v1
+     * kind: Deployment
+     * metadata:
+     *   name: nginx-deployment
+     *   labels:
+     *     app: nginx
+     *   spec:
+     *     replicas: 3
+     *     selector:
+     *        matchLabels:
+     *         app: nginx
+     *     template:
+     *       metadata:
+     *         labels:
+     *           app: nginx
+     *         annotations:
+     *           k8s.aliyun.com/eip-bandwidth: 10
+     *           k8s.aliyun.com/eci-with-eip: true
+     *         spec:
+     *           containers:
+     *           - name: nginx
+     *             image: nginx:1.14.2
+     *             ports:
+     *             - containerPort: 80</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.</p>
+     * <p>Optional. Set the value to YAML.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>YAML</p>
      */
     @NameInMap("Format")
     public String format;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the scaling configuration that you want to update. If you want to update a scaling configuration based on the value of Content, you must specify ScalingConfigurationId. If you want to create a scaling configuration based on the value of Content, you can leave ScalingConfigurationId empty.</p>
+     * <p>The ID of the scaling configuration.</p>
+     * <p>If you want the system to update a scaling configuration of the Elastic Container Instance type based on a YAML configuration file, you must specify <code>ScalingConfigurationId</code>. If you do not specify <code>ScalingConfigurationId</code>, the system creates a new scaling configuration based on the YAML configuration file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asc-bp1i65jd06v04vdh****</p>
      */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1igpak5ft1flyp****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

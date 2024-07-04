@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class DetachAlbServerGroupsRequest extends TeaModel {
     /**
      * <p>Details of the ALB server groups.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AlbServerGroups")
@@ -14,19 +13,24 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
-     * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure the idempotence of a request</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to remove existing Elastic Compute Service (ECS) instances from the ALB server group that you want to disassociate from the scaling group. Valid values:</p>
-     * <br>
-     * <p>*   true: removes existing ECS instances and returns the value of the `ScalingActivityId` parameter. You can use the scaling activity ID to check whether the ECS instances are removed.</p>
-     * <p>*   false: does not remove existing ECS instances.</p>
-     * <br>
+     * <ul>
+     * <li>true: removes existing ECS instances and returns the value of the <code>ScalingActivityId</code> parameter. You can use the scaling activity ID to check whether the ECS instances are removed.</li>
+     * <li>false: does not remove existing ECS instances.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceDetach")
     public Boolean forceDetach;
@@ -36,8 +40,10 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -47,8 +53,10 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
@@ -117,16 +125,20 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
     public static class DetachAlbServerGroupsRequestAlbServerGroups extends TeaModel {
         /**
          * <p>The ID of the ALB server group.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-ddwb0y0g6y9bjm****</p>
          */
         @NameInMap("AlbServerGroupId")
         public String albServerGroupId;
 
         /**
          * <p>The port number used by the ECS instances in the ALB server group.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("Port")
         public Integer port;

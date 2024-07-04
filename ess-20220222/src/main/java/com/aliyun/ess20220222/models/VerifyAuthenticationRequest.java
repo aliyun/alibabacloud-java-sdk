@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class VerifyAuthenticationRequest extends TeaModel {
     /**
      * <p>Specifies whether to check only the authorization status. Valid values:</p>
-     * <br>
-     * <p>*   true: checks only the authorization status. The service-linked role is not created.</p>
-     * <p>*   false (default): checks the authorization status and resource usage.</p>
+     * <ul>
+     * <li>true: checks only the authorization status. The service-linked role is not created.</li>
+     * <li>false (default): checks the authorization status and resource usage.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("OnlyCheck")
     public Boolean onlyCheck;
@@ -24,6 +28,9 @@ public class VerifyAuthenticationRequest extends TeaModel {
 
     /**
      * <p>The ID of your Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678123*****</p>
      */
     @NameInMap("Uid")
     public Long uid;

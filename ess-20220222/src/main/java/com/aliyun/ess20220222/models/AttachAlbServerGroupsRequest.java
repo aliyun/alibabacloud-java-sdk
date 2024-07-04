@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class AttachAlbServerGroupsRequest extends TeaModel {
     /**
      * <p>The information about the ALB server groups.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AlbServerGroups")
@@ -14,19 +13,24 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the ALB server group. Valid values:</p>
-     * <br>
-     * <p>*   true: adds the existing ECS instances or elastic container instances in the scaling group to the ALB server group. In this case, the system returns the value of `ScalingActivityId`.</p>
-     * <p>*   false: does not add the existing ECS instances or elastic container instances in the scaling group to the ALB server group.</p>
-     * <br>
+     * <ul>
+     * <li>true: adds the existing ECS instances or elastic container instances in the scaling group to the ALB server group. In this case, the system returns the value of <code>ScalingActivityId</code>.</li>
+     * <li>false: does not add the existing ECS instances or elastic container instances in the scaling group to the ALB server group.</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceAttach")
     public Boolean forceAttach;
@@ -36,10 +40,11 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
-     * <br>
-     * <p>Examples: `cn-hangzhou` and `cn-shanghai`. For more information about regions and zones, see [Regions and zones](https://help.aliyun.com/document_detail/40654.html).</p>
-     * <br>
+     * <p>Examples: <code>cn-hangzhou</code> and <code>cn-shanghai</code>. For more information about regions and zones, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,8 +54,10 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
@@ -119,30 +126,33 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
     public static class AttachAlbServerGroupsRequestAlbServerGroups extends TeaModel {
         /**
          * <p>The ID of the ALB server group.</p>
-         * <br>
-         * <p>You can attach only a limited number of ALB server groups to a scaling group. To view the predefined quota limit or manually request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).</p>
-         * <br>
+         * <p>You can attach only a limited number of ALB server groups to a scaling group. To view the predefined quota limit or manually request a quota increase, go to <a href="https://quotas.console.aliyun.com/products/ess/quotas">Quota Center</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sgp-ddwb0y0g6y9bjm****</p>
          */
         @NameInMap("AlbServerGroupId")
         public String albServerGroupId;
 
         /**
          * <p>The port used by ECS instances or elastic container instances after being added as backend servers to the ALB server group.</p>
-         * <br>
          * <p>Valid values: 1 to 65535.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The weight of an ECS instance or elastic container instance after being added as a backend server to the ALB server group. Valid values: 0 to 100.</p>
-         * <br>
          * <p>If you assign a higher weight to an instance, the instance is allocated a larger proportion of access requests. If you assign zero weight to an instance, the instance is allocated no access requests.</p>
-         * <br>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Weight")
         public Integer weight;

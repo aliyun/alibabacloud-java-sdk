@@ -12,6 +12,9 @@ public class DeleteEciScalingConfigurationRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -21,8 +24,10 @@ public class DeleteEciScalingConfigurationRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling configuration that you want to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asc-bp1bx8mzur534edp****</p>
      */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;

@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteAlarmRequest extends TeaModel {
     /**
      * <p>The ID of the event-triggered task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1hvbnmkl10vll5****_f95ce797-dc2e-4bad-9618-14fee7d1****</p>
      */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
@@ -17,8 +19,10 @@ public class DeleteAlarmRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;

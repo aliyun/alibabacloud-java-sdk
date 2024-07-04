@@ -9,6 +9,9 @@ public class DescribeNotificationConfigurationsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -18,8 +21,10 @@ public class DescribeNotificationConfigurationsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1igpak5ft1flyp****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

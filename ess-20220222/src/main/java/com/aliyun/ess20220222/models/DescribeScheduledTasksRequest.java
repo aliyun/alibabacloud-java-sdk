@@ -11,25 +11,37 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
+     * <p>The page number. Pages start from page 1.</p>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
-     * <br>
+     * <p>The number of entries per page. Maximum value: 50.</p>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RecurrenceType")
+    public String recurrenceType;
+
+    @NameInMap("RecurrenceValue")
+    public String recurrenceValue;
+
     /**
      * <p>The region ID of the scaling group to which the scheduled task belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,18 +54,21 @@ public class DescribeScheduledTasksRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group to which the scheduled task belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1bo5tca4m56nap****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
-     * <p>The actions that you want Auto Scaling to perform when the scheduled task is triggered.</p>
+     * <p>The scaling rules of the scheduled tasks. Once the scheduled tasks are triggered, the scaling rules are executed.</p>
      */
     @NameInMap("ScheduledActions")
     public java.util.List<String> scheduledActions;
 
     /**
-     * <p>The ID of the scheduled task that you want to query.</p>
+     * <p>The IDs of the scheduled tasks that you want to query.</p>
      */
     @NameInMap("ScheduledTaskIds")
     public java.util.List<String> scheduledTaskIds;
@@ -63,6 +78,12 @@ public class DescribeScheduledTasksRequest extends TeaModel {
      */
     @NameInMap("ScheduledTaskNames")
     public java.util.List<String> scheduledTaskNames;
+
+    @NameInMap("TaskEnabled")
+    public Boolean taskEnabled;
+
+    @NameInMap("TaskName")
+    public String taskName;
 
     public static DescribeScheduledTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScheduledTasksRequest self = new DescribeScheduledTasksRequest();
@@ -99,6 +120,22 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeScheduledTasksRequest setRecurrenceType(String recurrenceType) {
+        this.recurrenceType = recurrenceType;
+        return this;
+    }
+    public String getRecurrenceType() {
+        return this.recurrenceType;
+    }
+
+    public DescribeScheduledTasksRequest setRecurrenceValue(String recurrenceValue) {
+        this.recurrenceValue = recurrenceValue;
+        return this;
+    }
+    public String getRecurrenceValue() {
+        return this.recurrenceValue;
     }
 
     public DescribeScheduledTasksRequest setRegionId(String regionId) {
@@ -155,6 +192,22 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     }
     public java.util.List<String> getScheduledTaskNames() {
         return this.scheduledTaskNames;
+    }
+
+    public DescribeScheduledTasksRequest setTaskEnabled(Boolean taskEnabled) {
+        this.taskEnabled = taskEnabled;
+        return this;
+    }
+    public Boolean getTaskEnabled() {
+        return this.taskEnabled;
+    }
+
+    public DescribeScheduledTasksRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
     }
 
 }

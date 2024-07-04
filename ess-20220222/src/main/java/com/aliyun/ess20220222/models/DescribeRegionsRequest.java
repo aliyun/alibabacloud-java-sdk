@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The language for the response. For more information, see [RFC7231](https://tools.ietf.org/html/rfc7231). Valid values:</p>
-     * <br>
-     * <p>*   zh-CN: Chinese</p>
-     * <p>*   en-US: English</p>
-     * <p>*   ja: Japanese</p>
-     * <br>
+     * <p>The language for the response. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC7231</a>. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Chinese</li>
+     * <li>en-US: English</li>
+     * <li>ja: Japanese</li>
+     * </ul>
      * <p>Default value: zh-CN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;

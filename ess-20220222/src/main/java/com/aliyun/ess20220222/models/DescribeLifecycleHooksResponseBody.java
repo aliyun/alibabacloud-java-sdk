@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeLifecycleHooksResponseBody extends TeaModel {
     /**
-     * <p>Details of the lifecycle hooks.</p>
+     * <p>The details of the lifecycle hooks.</p>
      */
     @NameInMap("LifecycleHooks")
     public java.util.List<DescribeLifecycleHooksResponseBodyLifecycleHooks> lifecycleHooks;
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of lifecycle hooks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,71 +93,101 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
 
     public static class DescribeLifecycleHooksResponseBodyLifecycleHooks extends TeaModel {
         /**
-         * <p>The action that Auto Scaling performs after the lifecycle hook ends.</p>
+         * <p>The next action that is performed after the lifecycle hook times out.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTINUE</p>
          */
         @NameInMap("DefaultResult")
         public String defaultResult;
 
         /**
-         * <p>The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends.</p>
+         * <p>The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("HeartbeatTimeout")
         public Integer heartbeatTimeout;
 
         /**
          * <p>The ID of the lifecycle hook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ash-bp19d1032y9kij96****</p>
          */
         @NameInMap("LifecycleHookId")
         public String lifecycleHookId;
 
         /**
          * <p>The name of the lifecycle hook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lifecyclehook****</p>
          */
         @NameInMap("LifecycleHookName")
         public String lifecycleHookName;
 
         /**
          * <p>The status of the lifecycle hook. Valid values:</p>
-         * <br>
-         * <p>*   Active</p>
-         * <p>*   InActive</p>
+         * <ul>
+         * <li>Active: The lifecycle hook is enabled.</li>
+         * <li>InActive: The lifecycle hook is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("LifecycleHookStatus")
         public String lifecycleHookStatus;
 
         /**
          * <p>The type of the scaling activity to which the lifecycle hook applies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCALE_OUT</p>
          */
         @NameInMap("LifecycleTransition")
         public String lifecycleTransition;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the method that is used by Auto Scaling to send notifications when the lifecycle hook takes effect. Specify the value in one of the following formats:</p>
-         * <br>
-         * <p>*   If you do not create a notification rule, specify the value in the `acs:ess:{region-id}:{account-id}:null/null` format.</p>
-         * <p>*   If you specify a Message Service (MNS) queue as the notification method, specify the value in the `acs:mns:{region-id}:{account-id}:queue/{queuename}` format.</p>
-         * <p>*   If you specify an MNS topic as the notification method, specify the value in the `acs:mns:{region-id}:{account-id}:topic/{topicname}` format.</p>
-         * <p>*   If you specify an Operation Orchestration Service (OOS) template as the notification method, specify the value in the `acs:oos:{region-id}:{account-id}:template/{templatename}` format.</p>
-         * <br>
-         * <p>The variables in the preceding parameter formats have the following meanings:</p>
-         * <br>
-         * <p>*   region-id: the region ID of the scaling group.</p>
-         * <p>*   account-id: the ID of the Alibaba Cloud account.</p>
-         * <p>*   queuename: the name of the MNS queue.</p>
-         * <p>*   topicname: the name of the MNS topic.</p>
-         * <p>*   templatename: the name of the OOS template.</p>
+         * <p>The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter is in one of the following formats:</p>
+         * <ul>
+         * <li>If you did not specify this parameter, the return value is in the <code>acs:ess:{region-id}:{account-id}:null/null</code> format.</li>
+         * <li>If you specified a Message Service (MNS) queue as the notification recipient, the return value is in the <code>acs:mns:{region-id}:{account-id}:queue/{queuename}</code> format.</li>
+         * <li>If you specified an MNS topic as the notification recipient, the return value is in the <code>acs:mns:{region-id}:{account-id}:topic/{topicname}</code> format.</li>
+         * <li>If you specified a CloudOps Orchestration Service (OOS) template as the notification recipient, the return value is in the <code>acs:oos:{region-id}:{account-id}:template/{templatename}</code> format.</li>
+         * <li>If you specified an event bus as the notification recipient, the return value is in the <code>acs:eventbridge:{region-id}:{account-id}:eventbus/default</code> format.</li>
+         * </ul>
+         * <p>The variables in the preceding formats have the following meanings:</p>
+         * <ul>
+         * <li>region-id: the region ID of your scaling group.</li>
+         * <li>account-id: the ID of your Alibaba Cloud.</li>
+         * <li>queuename: the name of the MNS queue.</li>
+         * <li>topicname: the name of the MNS topic.</li>
+         * <li>templatename: the name of the OOS template.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ess:cn-beijing:161456884340****:null/null</p>
          */
         @NameInMap("NotificationArn")
         public String notificationArn;
 
         /**
-         * <p>The fixed string that is included in a notification. Auto Scaling sends the notification when the lifecycle hook takes effect.</p>
+         * <p>The fixed string that is included in a notification that Auto Scaling sends when the lifecycle hook takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Lifecycle Hook.</p>
          */
         @NameInMap("NotificationMetadata")
         public String notificationMetadata;
 
         /**
          * <p>The ID of the scaling group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1igpak5ft1flyp****</p>
          */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;

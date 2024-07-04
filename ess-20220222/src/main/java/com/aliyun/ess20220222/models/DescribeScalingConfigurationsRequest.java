@@ -12,24 +12,30 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the scaling group to which the scaling configuration that you want to query belongs.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,15 +48,13 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
 
     /**
      * <p>The IDs of the scaling configurations that you want to query.</p>
-     * <br>
-     * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the `LifecycleState` parameter.</p>
+     * <p>The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the <code>LifecycleState</code> parameter.</p>
      */
     @NameInMap("ScalingConfigurationIds")
     public java.util.List<String> scalingConfigurationIds;
 
     /**
      * <p>The names of the scaling configurations that you want to query.</p>
-     * <br>
      * <p>The names of inactive scaling configurations are not displayed in the query results, and no error is reported.</p>
      */
     @NameInMap("ScalingConfigurationNames")
@@ -58,6 +62,9 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group. You can use the ID to query all scaling configurations in the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp17pelvl720x3v7****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

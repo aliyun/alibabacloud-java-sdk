@@ -6,30 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeAlarmsRequest extends TeaModel {
     /**
      * <p>The ID of the event-triggered task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1hvbnmkl10vll5****_f95ce797-dc2e-4bad-9618-14fee7d1****</p>
      */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
 
     /**
      * <p>Specifies whether to enable the event-triggered task. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the event-triggered task.</p>
-     * <p>*   false: disables the event-triggered task.</p>
+     * <ul>
+     * <li>true: enables the event-triggered task.</li>
+     * <li>false: disables the event-triggered task.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsEnable")
     public Boolean isEnable;
 
     /**
      * <p>The metric name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CpuUtilization</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
      * <p>The metric type. Valid values:</p>
-     * <br>
-     * <p>*   system: system metrics of CloudMonitor</p>
-     * <p>*   custom: custom metrics that are reported to CloudMonitor.</p>
+     * <ul>
+     * <li>system: system metrics of CloudMonitor</li>
+     * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("MetricType")
     public String metricType;
@@ -39,24 +53,30 @@ public class DescribeAlarmsRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the event-triggered task.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -66,16 +86,23 @@ public class DescribeAlarmsRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group with which the event-triggered task is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
      * <p>The status of the event-triggered task. Valid values:</p>
-     * <br>
-     * <p>*   ALARM: The alert condition is met and an alert is triggered.</p>
-     * <p>*   OK: The alert condition is not met.</p>
-     * <p>*   INSUFFICIENT_DATA: Auto Scaling cannot determine whether the alert condition is met due to insufficient data.</p>
+     * <ul>
+     * <li>ALARM: The alert condition is met and an alert is triggered.</li>
+     * <li>OK: The alert condition is not met.</li>
+     * <li>INSUFFICIENT_DATA: Auto Scaling cannot determine whether the alert condition is met due to insufficient data.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("State")
     public String state;

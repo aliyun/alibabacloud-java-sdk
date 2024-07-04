@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteEciScalingConfigurationResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
-     * <br>
      * <p>The request ID is consistently returned in the response, irrespective of whether the request is executed successfully or encounters an error.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>45D5B0AD-3B00-4A9B-9911-6D5303B06712</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeLifecycleHooksRequest extends TeaModel {
     /**
-     * <p>The ID of the lifecycle hook.</p>
+     * <p>The IDs of the lifecycle hooks that you want to query.</p>
      */
     @NameInMap("LifecycleHookIds")
     public java.util.List<String> lifecycleHookIds;
 
     /**
      * <p>The name of the lifecycle hook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lifecyclehook****</p>
      */
     @NameInMap("LifecycleHookName")
     public String lifecycleHookName;
@@ -24,22 +27,29 @@ public class DescribeLifecycleHooksRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 50.</p>
-     * <br>
      * <p>Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,6 +59,9 @@ public class DescribeLifecycleHooksRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1igpak5ft1flyp****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

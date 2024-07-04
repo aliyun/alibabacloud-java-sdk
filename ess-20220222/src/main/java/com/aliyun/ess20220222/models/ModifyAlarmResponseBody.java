@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ModifyAlarmResponseBody extends TeaModel {
     /**
      * <p>The ID of the event-triggered task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1hvbnmkl10vll5****_83948190-acdd-483f-98f7-b77f4778****</p>
      */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BACACF83-7070-4953-A8FD-D81F89F1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

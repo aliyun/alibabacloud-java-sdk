@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class SetInstancesProtectionRequest extends TeaModel {
     /**
      * <p>The IDs of the ECS instances.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceIds")
@@ -17,11 +16,14 @@ public class SetInstancesProtectionRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to protect ECS instances from being stopped or removed from the scaling group during scale-ins. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ProtectedFromScaleIn")
     public Boolean protectedFromScaleIn;
@@ -31,8 +33,10 @@ public class SetInstancesProtectionRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp18p2yfxow2dloq****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

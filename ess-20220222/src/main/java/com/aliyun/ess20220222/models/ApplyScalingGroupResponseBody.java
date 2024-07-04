@@ -4,9 +4,17 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ApplyScalingGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CC107349-57B7-4405-B1BF-9BF5AF7F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asg-bp1igpak5ft1flyp****</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

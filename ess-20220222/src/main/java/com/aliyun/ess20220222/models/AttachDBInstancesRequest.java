@@ -6,24 +6,29 @@ import com.aliyun.tea.*;
 public class AttachDBInstancesRequest extends TeaModel {
     /**
      * <p>The mode in which you want to attach the ApsaraDB RDS instance to the scaling group. Valid values:</p>
-     * <br>
-     * <p>*   SecurityIp: the SecurityIp mode. Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the ApsaraDB RDS instance. You can select this mode only when you attach an ApsaraDB RDS instance to a scaling group.</p>
-     * <p>*   SecurityGroup: the security group mode. Auto Scaling adds the security group of the scaling configuration to the security group whitelist for registration and association.</p>
+     * <ul>
+     * <li>SecurityIp: the SecurityIp mode. Auto Scaling automatically adds the private IP addresses of the scaled out instances to the IP address whitelist of the ApsaraDB RDS instance. You can select this mode only when you attach an ApsaraDB RDS instance to a scaling group.</li>
+     * <li>SecurityGroup: the security group mode. Auto Scaling adds the security group of the scaling configuration to the security group whitelist for registration and association.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SecurityIp</p>
      */
     @NameInMap("AttachMode")
     public String attachMode;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
-     * <br>
-     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">How to ensure the idempotence of a request</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The ID of the ApsaraDB RDS instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DBInstances")
@@ -31,11 +36,14 @@ public class AttachDBInstancesRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to add the private IP addresses of all instances in the scaling group to the IP address whitelist of the ApsaraDB RDS instance. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * <p>Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("ForceAttach")
     public Boolean forceAttach;
@@ -45,6 +53,9 @@ public class AttachDBInstancesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -54,20 +65,25 @@ public class AttachDBInstancesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp1avr6ensitts3w****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
     /**
      * <p>The type of the database that you want to attach to the scaling group. Valid values:</p>
-     * <br>
-     * <p>*   ApsaraDB RDS</p>
-     * <p>*   ApsaraDB for Redis</p>
-     * <p>*   ApsaraDB for MongoDB</p>
-     * <br>
+     * <ul>
+     * <li>ApsaraDB RDS</li>
+     * <li>ApsaraDB for Redis</li>
+     * <li>ApsaraDB for MongoDB</li>
+     * </ul>
      * <p>Default value: RDS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RDS</p>
      */
     @NameInMap("Type")
     public String type;

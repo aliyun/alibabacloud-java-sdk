@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListTagValuesResponseBody extends TeaModel {
     /**
      * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AB444F46-1CFF-4B06-B8F0-B45D3158****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

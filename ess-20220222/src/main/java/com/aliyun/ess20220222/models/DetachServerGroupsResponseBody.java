@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class DetachServerGroupsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EF9BFEE-FE07-4627-B8FB-14326FB9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the scaling activity. During the scaling activity, the server group is detached from the scaling group and the existing servers, which are the ECS instances or elastic container instances in the scaling group, are removed from the server group.</p>
-     * <br>
-     * <p>>  This parameter is returned only if you set `ForceDetach` to `true`.</p>
+     * <blockquote>
+     * <p> This parameter is returned only if you set <code>ForceDetach</code> to <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>asa-bp1gbswjhjrw8tko****</p>
      */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;

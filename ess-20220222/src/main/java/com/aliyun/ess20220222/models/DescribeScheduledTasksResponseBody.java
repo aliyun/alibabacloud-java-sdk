@@ -6,30 +6,42 @@ import com.aliyun.tea.*;
 public class DescribeScheduledTasksResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details of the scheduled tasks.</p>
+     * <p>The information collection of the scheduled tasks.</p>
      */
     @NameInMap("ScheduledTasks")
     public java.util.List<DescribeScheduledTasksResponseBodyScheduledTasks> scheduledTasks;
 
     /**
      * <p>The total number of scheduled tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,89 +94,131 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
     public static class DescribeScheduledTasksResponseBodyScheduledTasks extends TeaModel {
         /**
          * <p>The description of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test scheduled task.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The expected number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         * <p>The expected number of instances in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("DesiredCapacity")
         public Integer desiredCapacity;
 
         /**
-         * <p>The time period during which the failed scheduled task is retried. Unit: seconds. Valid values: 0 to 21600.</p>
+         * <p>The time window during which the scheduled task can be retried. Unit: seconds. Valid values: 0 to 21600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         @NameInMap("LaunchExpirationTime")
         public Integer launchExpirationTime;
 
         /**
          * <p>The point in time at which the scheduled task is triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-08-18T10:52Z</p>
          */
         @NameInMap("LaunchTime")
         public String launchTime;
 
         /**
-         * <p>The maximum number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         * <p>The maximum number of instances that must be contained in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("MaxValue")
         public Integer maxValue;
 
         /**
-         * <p>The minimum number of instances in the scaling group if you specify the ScalingGroupId parameter.</p>
+         * <p>The minimum number of instances that must be contained in the scaling group. If you set <code>Scaling Method</code> to <code>Configure Number of Instances in Scaling Group</code>, you can specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MinValue")
         public Integer minValue;
 
         /**
          * <p>The end time of the recurrence of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-08-20T16:55Z</p>
          */
         @NameInMap("RecurrenceEndTime")
         public String recurrenceEndTime;
 
         /**
-         * <p>The interval at which the scheduled task is repeated.</p>
+         * <p>The recurring interval of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
         /**
-         * <p>The number of recurrences of the scheduled task.</p>
+         * <p>The frequency of recurrence of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RecurrenceValue")
         public String recurrenceValue;
 
         /**
          * <p>The ID of the scaling group to which the scheduled task belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp1bo5tca4m56nap****</p>
          */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
         /**
-         * <p>The scaling rule that is executed when the scheduled task is triggered. This parameter is returned only after a scaling rule is specified for the scheduled task.</p>
+         * <p>The scaling rule of the scheduled task. A value is returned for this parameter only after you specify ScheduledActions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ari:acs:ess:cn-hangzhou:1406926474****:scalingrule/asr-bp1id5rhu8edp7kd****</p>
          */
         @NameInMap("ScheduledAction")
         public String scheduledAction;
 
         /**
          * <p>The ID of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edRtShc57WGXdt8TlPbr****</p>
          */
         @NameInMap("ScheduledTaskId")
         public String scheduledTaskId;
 
         /**
          * <p>The name of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scheduled****</p>
          */
         @NameInMap("ScheduledTaskName")
         public String scheduledTaskName;
 
         /**
          * <p>Indicates whether the scheduled task is enabled.</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
-         * <br>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * <p>Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("TaskEnabled")
         public Boolean taskEnabled;

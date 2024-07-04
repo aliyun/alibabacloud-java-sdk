@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetGroupDeletionProtectionResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CCC29E24-3AEC-4F2C-8A14-78B14FA738B7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The token that determines the start point of the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -14,9 +17,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource. You can call the [DescribeRegions](https://help.aliyun.com/document_detail/2679950.html) operation to query the most recent region list.</p>
-     * <br>
+     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -32,8 +37,10 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The resource type. Set the value to scalinggroup.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scalinggroup</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -108,18 +115,24 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTags extends TeaModel {
         /**
          * <p>The key of the tag. The key is used to perform an exact match of Auto Scaling resources. The key must be 1 to 128 characters in length.</p>
-         * <br>
-         * <p>`Tags` is used to perform an exact match of Auto Scaling resources to which the specified tags are added. Specify a tag in the key-value pair format.</p>
-         * <br>
-         * <p>*   If you specify only `Tags.Key`, all resources whose tags contain the specified tag key are returned.</p>
-         * <p>*   If you specify only `Tags.Value`, the `MissingParameter.TagKey` error is reported.</p>
-         * <p>*   If you specify multiple key-value pairs at the same time, only Auto Scaling resources that match all the tag keys and tag values are returned.</p>
+         * <p><code>Tags</code> is used to perform an exact match of Auto Scaling resources to which the specified tags are added. Specify a tag in the key-value pair format.</p>
+         * <ul>
+         * <li>If you specify only <code>Tags.Key</code>, all resources whose tags contain the specified tag key are returned.</li>
+         * <li>If you specify only <code>Tags.Value</code>, the <code>MissingParameter.TagKey</code> error is reported.</li>
+         * <li>If you specify multiple key-value pairs at the same time, only Auto Scaling resources that match all the tag keys and tag values are returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag. The value is used to perform an exact match of Auto Scaling resources. The value can be up to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

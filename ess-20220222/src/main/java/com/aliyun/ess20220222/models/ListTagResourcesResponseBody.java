@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The token that determines the start point of the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE65F6B7-7566-4802-9007-96F2494A****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,33 +60,49 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>Indicates whether the tags of the scaling group can be propagated to instances. Valid values:</p>
-         * <br>
-         * <p>*   true: The tags of the scaling group can be propagated to only instances that are newly created.</p>
-         * <p>*   false: The tags of the scaling group cannot be propagated to instances.</p>
+         * <ul>
+         * <li>true: The tags of the scaling group can be propagated to only instances that are newly created.</li>
+         * <li>false: The tags of the scaling group cannot be propagated to instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Propagate")
         public Boolean propagate;
 
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asg-bp17xb4x1vr29lgt****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::ESS::SCALINGGROUP</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag key of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag value of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

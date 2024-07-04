@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateLifecycleHookResponseBody extends TeaModel {
     /**
      * <p>The ID of the lifecycle hook.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ash-bp1at9ufhmcf9cmy****</p>
      */
     @NameInMap("LifecycleHookId")
     public String lifecycleHookId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

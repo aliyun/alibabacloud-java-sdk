@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class SetInstanceHealthRequest extends TeaModel {
     /**
      * <p>The health status of the instance. Valid values:</p>
-     * <br>
-     * <p>*   Healthy: sets the instance as healthy.</p>
-     * <p>*   Unhealthy: sets the instance as unhealthy.</p>
-     * <br>
+     * <ul>
+     * <li>Healthy: sets the instance as healthy.</li>
+     * <li>Unhealthy: sets the instance as unhealthy.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Healthy</p>
      */
     @NameInMap("HealthStatus")
     public String healthStatus;
 
     /**
      * <p>The ID of the instance.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i-bp1ap6bro51a7fsa****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

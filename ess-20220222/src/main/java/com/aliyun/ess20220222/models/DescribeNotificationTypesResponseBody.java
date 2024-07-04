@@ -6,21 +6,25 @@ import com.aliyun.tea.*;
 public class DescribeNotificationTypesResponseBody extends TeaModel {
     /**
      * <p>The types of the notifications.</p>
-     * <br>
-     * <p>*   AUTOSCALING:SCALE_OUT_SUCCESS: The scale-out activity succeeds.</p>
-     * <p>*   AUTOSCALING:SCALE_IN_SUCCESS: The scale-in activity succeeds.</p>
-     * <p>*   AUTOSCALING:SCALE_OUT_ERROR: The scale-out activity fails.</p>
-     * <p>*   AUTOSCALING:SCALE_IN_ERROR: The scale-in activity fails.</p>
-     * <p>*   AUTOSCALING:SCALE_REJECT: The request for scaling activities is rejected.</p>
-     * <p>*   AUTOSCALING:SCALE_OUT_START: The scale-out activity starts.</p>
-     * <p>*   AUTOSCALING:SCALE_IN_START: The scale-in activity starts.</p>
-     * <p>*   AUTOSCALING:SCHEDULE_TASK_EXPIRING: Auto Scaling sends a notification when a scheduled task is about to expire.</p>
+     * <ul>
+     * <li>AUTOSCALING:SCALE_OUT_SUCCESS: The scale-out activity succeeds.</li>
+     * <li>AUTOSCALING:SCALE_IN_SUCCESS: The scale-in activity succeeds.</li>
+     * <li>AUTOSCALING:SCALE_OUT_ERROR: The scale-out activity fails.</li>
+     * <li>AUTOSCALING:SCALE_IN_ERROR: The scale-in activity fails.</li>
+     * <li>AUTOSCALING:SCALE_REJECT: The request for scaling activities is rejected.</li>
+     * <li>AUTOSCALING:SCALE_OUT_START: The scale-out activity starts.</li>
+     * <li>AUTOSCALING:SCALE_IN_START: The scale-in activity starts.</li>
+     * <li>AUTOSCALING:SCHEDULE_TASK_EXPIRING: Auto Scaling sends a notification when a scheduled task is about to expire.</li>
+     * </ul>
      */
     @NameInMap("NotificationTypes")
     public java.util.List<String> notificationTypes;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

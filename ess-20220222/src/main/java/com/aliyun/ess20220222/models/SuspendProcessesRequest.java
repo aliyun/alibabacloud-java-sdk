@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class SuspendProcessesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](https://help.aliyun.com/document_detail/25965.html).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25965.html">Ensure idempotence</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-42665544****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -15,15 +18,14 @@ public class SuspendProcessesRequest extends TeaModel {
 
     /**
      * <p>The types of the processes that you want to suspend. Valid values:</p>
-     * <br>
-     * <p>*   scalein: the scale-in process.</p>
-     * <p>*   scaleout: the scale-out process.</p>
-     * <p>*   healthcheck: the health check process.</p>
-     * <p>*   alarmnotification: the process of executing an event-triggered task.</p>
-     * <p>*   scheduledaction: the process of executing a scheduled task.</p>
-     * <br>
+     * <ul>
+     * <li>scalein: the scale-in process.</li>
+     * <li>scaleout: the scale-out process.</li>
+     * <li>healthcheck: the health check process.</li>
+     * <li>alarmnotification: the process of executing an event-triggered task.</li>
+     * <li>scheduledaction: the process of executing a scheduled task.</li>
+     * </ul>
      * <p>Presently, Auto Scaling supports suspending the five mentioned process types. In cases where more than five types are specified, Auto Scaling will automatically disregard duplicates and proceed with suspending the unique process types.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Processes")
@@ -31,6 +33,9 @@ public class SuspendProcessesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the scaling group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -40,8 +45,10 @@ public class SuspendProcessesRequest extends TeaModel {
 
     /**
      * <p>The ID of the scaling group.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asg-bp15oubotmrq11xe****</p>
      */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;

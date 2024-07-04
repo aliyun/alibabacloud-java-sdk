@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SuspendProcessesResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3E2033F0-03B4-419D-BCE2-C2339DB51****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
