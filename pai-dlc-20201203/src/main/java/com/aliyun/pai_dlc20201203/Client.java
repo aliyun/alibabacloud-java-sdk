@@ -94,6 +94,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CodeSource", request.codeSource);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialConfig)) {
+            body.put("CredentialConfig", request.credentialConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataSources)) {
             body.put("DataSources", request.dataSources);
         }
