@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSM2CertRequest extends TeaModel {
     /**
+     * <p>The name of the SM certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-sm2</p>
      */
@@ -12,6 +14,8 @@ public class CreateSM2CertRequest extends TeaModel {
     public String certName;
 
     /**
+     * <p>The content of the SM certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
      * <hr>
@@ -21,6 +25,8 @@ public class CreateSM2CertRequest extends TeaModel {
     public String encryptCertificate;
 
     /**
+     * <p>The private key of the SM certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>
      * <hr>
@@ -30,6 +36,11 @@ public class CreateSM2CertRequest extends TeaModel {
     public String encryptPrivateKey;
 
     /**
+     * <p>The ID of the WAF instance.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>waf_v2_public_cn-***</p>
      */
@@ -37,6 +48,12 @@ public class CreateSM2CertRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The region in which the WAF instance is deployed. Valid values:</p>
+     * <ul>
+     * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
+     * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -44,6 +61,8 @@ public class CreateSM2CertRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the Alibaba Cloud resource group.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfm***q</p>
      */
@@ -51,6 +70,8 @@ public class CreateSM2CertRequest extends TeaModel {
     public String resourceManagerResourceGroupId;
 
     /**
+     * <p>The content of the signing certificate for the SM certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----</p>
      * <hr>
@@ -60,6 +81,8 @@ public class CreateSM2CertRequest extends TeaModel {
     public String signCertificate;
 
     /**
+     * <p>The private key of the signing certificate for the SM certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>-----BEGIN PRIVATE KEY-----</p>
      * <hr>

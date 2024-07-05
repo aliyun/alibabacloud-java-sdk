@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateSM2CertResponseBody extends TeaModel {
     /**
+     * <p>The ID of the certificate.</p>
+     * 
      * <strong>example:</strong>
      * <p>***-cn-hangzhou</p>
      */
@@ -12,6 +14,8 @@ public class CreateSM2CertResponseBody extends TeaModel {
     public String certIdentifier;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D7861F61-5B61-46CE-A47C-***</p>
      */
