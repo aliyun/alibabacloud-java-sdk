@@ -7,6 +7,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("CodeSource")
     public CreateJobRequestCodeSource codeSource;
 
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
     @NameInMap("DataSources")
     public java.util.List<CreateJobRequestDataSources> dataSources;
 
@@ -125,6 +128,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public CreateJobRequestCodeSource getCodeSource() {
         return this.codeSource;
+    }
+
+    public CreateJobRequest setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public CreateJobRequest setDataSources(java.util.List<CreateJobRequestDataSources> dataSources) {
