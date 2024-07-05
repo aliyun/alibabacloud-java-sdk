@@ -7,6 +7,10 @@ public class SemanticQueryResponseBody extends TeaModel {
     @NameInMap("Files")
     public java.util.List<File> files;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

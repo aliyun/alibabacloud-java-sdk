@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteLocationDateClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>B121940C-9794-4EE3-8D6E-F8EC525F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

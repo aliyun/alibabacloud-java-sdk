@@ -12,6 +12,9 @@ public class QueryFigureClustersShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -19,24 +22,43 @@ public class QueryFigureClustersShrinkRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ImageCount</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
     @NameInMap("UpdateTimeRange")
     public String updateTimeRangeShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("WithTotalCount")
     public Boolean withTotalCount;
 

@@ -7,6 +7,10 @@ public class GetFigureClusterResponseBody extends TeaModel {
     @NameInMap("FigureCluster")
     public FigureCluster figureCluster;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5F74C5C9-5AC0-49F9-914D-E01589D3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

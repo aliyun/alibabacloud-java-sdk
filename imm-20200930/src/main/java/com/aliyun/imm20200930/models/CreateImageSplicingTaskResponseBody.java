@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateImageSplicingTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10C-1R6p7Km0H5Ieg38LKXTIvw*****</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94D6F994-E298-037E-8E8B-0090F27*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ImageSplicing-537cc157-7645-444a-a631-c8db4d02*****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

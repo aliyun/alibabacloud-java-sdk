@@ -21,16 +21,26 @@ public class CreateTriggerShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunIMMDefaultRole</p>
      */
     @NameInMap("ServiceRole")
     public String serviceRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;val&quot;}</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 

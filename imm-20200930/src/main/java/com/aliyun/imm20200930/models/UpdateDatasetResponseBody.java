@@ -7,6 +7,10 @@ public class UpdateDatasetResponseBody extends TeaModel {
     @NameInMap("Dataset")
     public Dataset dataset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>45234D4A-A3E3-4B23-AACA-8D897514****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

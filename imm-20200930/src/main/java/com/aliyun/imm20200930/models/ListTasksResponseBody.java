@@ -4,15 +4,31 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>immtest</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9847E7D0-A9A3-0053-84C6-BA16FFFA726E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

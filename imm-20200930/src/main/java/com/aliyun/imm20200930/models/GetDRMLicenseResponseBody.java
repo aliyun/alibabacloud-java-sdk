@@ -4,15 +4,31 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetDRMLicenseResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>IEEE1284DeviceID</p>
+     */
     @NameInMap("DeviceInfo")
     public String deviceInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AESzB8SQgpACioSEJ3yqiFwruAOUgIvlCx*****</p>
+     */
     @NameInMap("License")
     public String license;
 
+    /**
+     * <strong>example:</strong>
+     * <p>896ABAD1-C452-4BED-B5E0-302955F*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("States")
     public Long states;
 

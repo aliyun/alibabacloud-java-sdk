@@ -7,6 +7,10 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://bucket/object/master.m3u8</p>
+     */
     @NameInMap("MasterURI")
     public String masterURI;
 
@@ -18,13 +22,24 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SourceDuration")
     public Float sourceDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SourceStartTime")
     public Float sourceStartTime;
 
@@ -33,10 +48,17 @@ public class GenerateVideoPlaylistShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://imm-test/testcases/video.mp4</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 

@@ -7,30 +7,51 @@ public class UpdateStoryShrinkRequest extends TeaModel {
     @NameInMap("Cover")
     public String coverShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("CustomId")
     public String customId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+     */
     @NameInMap("CustomLabels")
     public String customLabelsShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdata</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testid</p>
      */
     @NameInMap("ObjectId")
     public String objectId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>newstory</p>
+     */
     @NameInMap("StoryName")
     public String storyName;
 

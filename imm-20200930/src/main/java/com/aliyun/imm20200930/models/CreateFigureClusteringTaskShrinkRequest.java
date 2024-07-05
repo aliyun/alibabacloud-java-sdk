@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateFigureClusteringTaskShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataset001</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -15,13 +18,24 @@ public class CreateFigureClusteringTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>octree</p>
      */
     @NameInMap("CompressMethod")
     public String compressMethod;
@@ -28,30 +31,51 @@ public class CreateCompressPointCloudTaskShrinkRequest extends TeaModel {
     @NameInMap("PointCloudFields")
     public String pointCloudFieldsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pcd</p>
+     */
     @NameInMap("PointCloudFileFormat")
     public String pointCloudFileFormat;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test/src/test.pcd</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;LabelKey&quot;: &quot;Value&quot;}</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test/tgt</p>
      */
     @NameInMap("TargetURI")
     public String targetURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 

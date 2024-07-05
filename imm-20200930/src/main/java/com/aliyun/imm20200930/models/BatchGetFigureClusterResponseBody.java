@@ -7,6 +7,10 @@ public class BatchGetFigureClusterResponseBody extends TeaModel {
     @NameInMap("FigureClusters")
     public java.util.List<FigureCluster> figureClusters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA995EFD-083D-4F40-BE8A-BDF75FFF****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

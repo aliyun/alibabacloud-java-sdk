@@ -79,6 +79,9 @@ public class TargetAudio extends TeaModel {
         @NameInMap("BitrateOption")
         public String bitrateOption;
 
+        @NameInMap("BitsPerSample")
+        public Integer bitsPerSample;
+
         @NameInMap("Channel")
         public Integer channel;
 
@@ -113,6 +116,14 @@ public class TargetAudio extends TeaModel {
         }
         public String getBitrateOption() {
             return this.bitrateOption;
+        }
+
+        public TargetAudioTranscodeAudio setBitsPerSample(Integer bitsPerSample) {
+            this.bitsPerSample = bitsPerSample;
+            return this;
+        }
+        public Integer getBitsPerSample() {
+            return this.bitsPerSample;
         }
 
         public TargetAudioTranscodeAudio setChannel(Integer channel) {

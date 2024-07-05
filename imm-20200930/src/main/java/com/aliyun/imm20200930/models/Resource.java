@@ -4,21 +4,45 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Resource extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CPU")
     public Long CPU;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.gn5i-c2g1.large</p>
+     */
     @NameInMap("ECSInstance")
     public String ECSInstance;
 
+    /**
+     * <strong>example:</strong>
+     * <p>string	NVIDIA_P4</p>
+     */
     @NameInMap("GPUModel")
     public String GPUModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GPUNum")
     public Long GPUNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>string	ecs.gn5i-c2g1.large-2vCPU-8GB-1*NVIDIA_P4</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("RAM")
     public Long RAM;
 

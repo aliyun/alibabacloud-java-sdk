@@ -7,6 +7,10 @@ public class ExtractDocumentTextResponseBody extends TeaModel {
     @NameInMap("DocumentText")
     public String documentText;
 
+    /**
+     * <strong>example:</strong>
+     * <p>94D6F994-E298-037E-8E8B-0090F27*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

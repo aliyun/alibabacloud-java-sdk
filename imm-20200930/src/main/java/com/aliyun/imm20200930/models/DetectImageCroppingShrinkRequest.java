@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectImageCroppingShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>[&quot;1:1&quot;]</p>
+     */
     @NameInMap("AspectRatios")
     public String aspectRatios;
 
@@ -12,10 +16,17 @@ public class DetectImageCroppingShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://imm-test/testcases/facetest.jpg</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 

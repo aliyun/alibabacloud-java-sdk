@@ -15,19 +15,33 @@ public class CreateVideoLabelClassificationTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://bucket1/object</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 

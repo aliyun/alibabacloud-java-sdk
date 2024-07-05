@@ -7,6 +7,10 @@ public class AddImageMosaicRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jpg</p>
+     */
     @NameInMap("ImageFormat")
     public String imageFormat;
 
@@ -16,6 +20,10 @@ public class AddImageMosaicRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("Quality")
     public Integer quality;
 
@@ -101,27 +109,43 @@ public class AddImageMosaicRequest extends TeaModel {
     public static class AddImageMosaicRequestTargetsBoundary extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>topleft</p>
+         */
         @NameInMap("ReferPos")
         public String referPos;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Width")
         public Float width;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("X")
         public Float x;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Y")
         public Float y;
@@ -174,6 +198,10 @@ public class AddImageMosaicRequest extends TeaModel {
     }
 
     public static class AddImageMosaicRequestTargets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("BlurRadius")
         public Integer blurRadius;
 
@@ -183,17 +211,32 @@ public class AddImageMosaicRequest extends TeaModel {
         @NameInMap("Boundary")
         public AddImageMosaicRequestTargetsBoundary boundary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>#FFFFFF</p>
+         */
         @NameInMap("Color")
         public String color;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("MosaicRadius")
         public Integer mosaicRadius;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Sigma")
         public Integer sigma;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>square</p>
          */
         @NameInMap("Type")
         public String type;

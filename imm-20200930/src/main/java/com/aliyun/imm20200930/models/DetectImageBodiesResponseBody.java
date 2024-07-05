@@ -7,6 +7,10 @@ public class DetectImageBodiesResponseBody extends TeaModel {
     @NameInMap("Bodies")
     public java.util.List<Body> bodies;
 
+    /**
+     * <strong>example:</strong>
+     * <p>501339F9-4B70-0CE2-AB8C-866C********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

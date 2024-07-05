@@ -10,6 +10,10 @@ public class LicensePlate extends TeaModel {
     @NameInMap("Confidence")
     public Double confidence;
 
+    /**
+     * <strong>example:</strong>
+     * <p>川A0123</p>
+     */
     @NameInMap("Content")
     public String content;
 

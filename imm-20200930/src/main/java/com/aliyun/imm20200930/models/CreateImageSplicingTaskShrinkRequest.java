@@ -4,39 +4,74 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateImageSplicingTaskShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>192</p>
+     */
     @NameInMap("Align")
     public Long align;
 
+    /**
+     * <strong>example:</strong>
+     * <p>red</p>
+     */
     @NameInMap("BackgroundColor")
     public String backgroundColor;
 
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vertical</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jpg</p>
+     */
     @NameInMap("ImageFormat")
     public String imageFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Margin")
     public Long margin;
 
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Padding")
     public Long padding;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("Quality")
     public Long quality;
 
+    /**
+     * <strong>example:</strong>
+     * <p>stretch</p>
+     */
     @NameInMap("ScaleType")
     public String scaleType;
 

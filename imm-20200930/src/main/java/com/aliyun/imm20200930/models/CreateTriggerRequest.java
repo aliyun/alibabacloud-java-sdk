@@ -21,16 +21,26 @@ public class CreateTriggerRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunIMMDefaultRole</p>
      */
     @NameInMap("ServiceRole")
     public String serviceRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;val&quot;}</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
@@ -93,6 +103,9 @@ public class CreateTriggerRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc/convert</p>
          */
         @NameInMap("Name")
         public String name;

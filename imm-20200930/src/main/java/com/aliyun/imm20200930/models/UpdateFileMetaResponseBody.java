@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateFileMetaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6D53E6C9-5AC0-48F9-825F-D02678E3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

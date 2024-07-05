@@ -7,6 +7,10 @@ public class SimpleQuery extends TeaModel {
     @NameInMap("Field")
     public String field;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eq / gt / gte / lt / lte / match / prefix / and / or / not</p>
+     */
     @NameInMap("Operation")
     public String operation;
 

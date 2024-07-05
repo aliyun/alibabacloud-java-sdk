@@ -7,6 +7,10 @@ public class DetectImageLabelsResponseBody extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>91AC8C98-0F36-49D2-8290-742E24DF1F69</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

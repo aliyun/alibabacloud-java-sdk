@@ -7,12 +7,24 @@ public class ListTasksRequest extends TeaModel {
     @NameInMap("EndTimeRange")
     public TimeRange endTimeRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ASC</p>
+     */
     @NameInMap("Order")
     public String order;
 
@@ -22,18 +34,34 @@ public class ListTasksRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("RequestDefinition")
     public Boolean requestDefinition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TaskId</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
     @NameInMap("StartTimeRange")
     public TimeRange startTimeRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test=val1</p>
+     */
     @NameInMap("TagSelector")
     public String tagSelector;
 

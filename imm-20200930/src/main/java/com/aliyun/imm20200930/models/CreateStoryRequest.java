@@ -7,21 +7,40 @@ public class CreateStoryRequest extends TeaModel {
     @NameInMap("Address")
     public AddressForStory address;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("CustomId")
     public String customId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
+     */
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("MaxFileCount")
     public Long maxFileCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinFileCount")
     public Long minFileCount;
 
@@ -31,39 +50,77 @@ public class CreateStoryRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-topic</p>
+     */
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id1</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-30T16:00:00Z</p>
+     */
     @NameInMap("StoryEndTime")
     public String storyEndTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name1</p>
+     */
     @NameInMap("StoryName")
     public String storyName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2016-12-30T16:00:00Z</p>
+     */
     @NameInMap("StoryStartTime")
     public String storyStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Solo</p>
+     */
     @NameInMap("StorySubType")
     public String storySubType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PeopleMemory</p>
      */
     @NameInMap("StoryType")
     public String storyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;val&quot;}</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 

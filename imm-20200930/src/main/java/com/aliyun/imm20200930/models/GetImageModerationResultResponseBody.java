@@ -4,39 +4,85 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetImageModerationResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ResourceNotFound</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-03T09:44:32Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B6-1XBMX3BixLMILvXVGtlkr******</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified resource TaskId is not found.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("ModerationResult")
     public GetImageModerationResultResponseBodyModerationResult moderationResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-project</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E6A120B1-BEB3-0F63-A7C2-0783B6******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-03T09:44:31.029Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ImageModeration-ff207203-3f93-4645-a041-7b8f0f******</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ImageModeration</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{
+     *       &quot;fileId&quot;: &quot;123&quot;
+     * }</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -142,12 +188,26 @@ public class GetImageModerationResultResponseBody extends TeaModel {
     }
 
     public static class GetImageModerationResultResponseBodyModerationResultFramesBlockFrames extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;test&quot;: &quot;val&quot;
+         * }</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Offset")
         public Integer offset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Rate")
         public Double rate;
 
@@ -186,6 +246,10 @@ public class GetImageModerationResultResponseBody extends TeaModel {
         @NameInMap("BlockFrames")
         public java.util.List<GetImageModerationResultResponseBodyModerationResultFramesBlockFrames> blockFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -219,9 +283,17 @@ public class GetImageModerationResultResponseBody extends TeaModel {
         @NameInMap("Frames")
         public GetImageModerationResultResponseBodyModerationResultFrames frames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object</p>
+         */
         @NameInMap("URI")
         public String URI;
 

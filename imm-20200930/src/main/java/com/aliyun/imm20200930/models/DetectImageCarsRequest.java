@@ -9,12 +9,18 @@ public class DetectImageCarsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;

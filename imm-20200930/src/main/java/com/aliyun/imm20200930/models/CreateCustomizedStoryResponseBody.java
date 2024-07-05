@@ -4,9 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomizedStoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>563062c0b085733f34ab****</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BC91D091-D49F-0ACD-95D5-F0621045****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

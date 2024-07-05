@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxResult")
     public Long maxResult;
 
@@ -18,6 +25,9 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -25,6 +35,10 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     @NameInMap("Sources")
     public String sourcesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 

@@ -4,9 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CompareImageFacesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>F73AC982-2B9E-4ECD-AED5-F8331C5******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.8848152756690983</p>
+     */
     @NameInMap("Similarity")
     public Float similarity;
 

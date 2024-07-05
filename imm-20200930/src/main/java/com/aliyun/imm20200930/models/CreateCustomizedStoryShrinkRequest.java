@@ -10,11 +10,18 @@ public class CreateCustomizedStoryShrinkRequest extends TeaModel {
     @NameInMap("Cover")
     public String coverShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
+     */
     @NameInMap("CustomLabels")
     public String customLabelsShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataset001</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -27,24 +34,36 @@ public class CreateCustomizedStoryShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name1</p>
      */
     @NameInMap("StoryName")
     public String storyName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Solo</p>
      */
     @NameInMap("StorySubType")
     public String storySubType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PeopleMemory</p>
      */
     @NameInMap("StoryType")
     public String storyType;

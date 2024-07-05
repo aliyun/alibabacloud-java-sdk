@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateOfficeConversionTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2C2-1I0EG57VR37J4rQ8oKG6C9*****</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FF3B7D81-66AE-47E0-BF69-157DCF18*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>formatconvert-00bec802-073a-4b61-ba3b-39bc2fdd*****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

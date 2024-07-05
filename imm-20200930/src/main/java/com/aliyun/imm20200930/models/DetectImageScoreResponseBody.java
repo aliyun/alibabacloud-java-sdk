@@ -7,6 +7,10 @@ public class DetectImageScoreResponseBody extends TeaModel {
     @NameInMap("ImageScore")
     public DetectImageScoreResponseBodyImageScore imageScore;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class DetectImageScoreResponseBody extends TeaModel {
     }
 
     public static class DetectImageScoreResponseBodyImageScore extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
         @NameInMap("OverallQualityScore")
         public Float overallQualityScore;
 

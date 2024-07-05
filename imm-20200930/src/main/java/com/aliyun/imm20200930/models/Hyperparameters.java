@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Hyperparameters extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BackupInterval")
     public Long backupInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("BatchSize")
     public Long batchSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("DataLoaderWorkers")
     public Long dataLoaderWorkers;
 
@@ -25,6 +37,10 @@ public class Hyperparameters extends TeaModel {
     @NameInMap("InputSize")
     public java.util.List<Long> inputSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxEpoch")
     public Long maxEpoch;
 

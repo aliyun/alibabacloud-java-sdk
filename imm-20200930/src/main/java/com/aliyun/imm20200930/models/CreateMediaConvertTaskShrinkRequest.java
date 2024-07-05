@@ -18,6 +18,9 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -28,6 +31,10 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     @NameInMap("Sources")
     public String sourcesShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
@@ -37,6 +44,10 @@ public class CreateMediaConvertTaskShrinkRequest extends TeaModel {
     @NameInMap("Targets")
     public String targetsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 

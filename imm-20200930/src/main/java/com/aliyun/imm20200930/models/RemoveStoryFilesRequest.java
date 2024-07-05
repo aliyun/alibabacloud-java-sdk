@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveStoryFilesRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -18,12 +21,18 @@ public class RemoveStoryFilesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testid</p>
      */
     @NameInMap("ObjectId")
     public String objectId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -66,6 +75,10 @@ public class RemoveStoryFilesRequest extends TeaModel {
     }
 
     public static class RemoveStoryFilesRequestFiles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket1/object</p>
+         */
         @NameInMap("URI")
         public String URI;
 

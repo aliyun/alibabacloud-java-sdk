@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class AddStoryFilesShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -18,12 +21,18 @@ public class AddStoryFilesShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testid</p>
      */
     @NameInMap("ObjectId")
     public String objectId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;

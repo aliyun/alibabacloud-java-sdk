@@ -4,36 +4,76 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetVideoModerationResultResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ResourceNotFound</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-03T10:20:56.87Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>05C-1XBQvsG2Tn5kBx2dUWo43******</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified resource TaskId is not found.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("ModerationResult")
     public GetVideoModerationResultResponseBodyModerationResult moderationResult;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test-project</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VideoModeration-d0f0df1d-531d-4ab4-b353-e7f475******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2023-04-03T10:20:41.432Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VideoModeration-d0f0df1d-531d-4ab4-b353-e7f4750******</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VideoModeration</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
@@ -142,12 +182,24 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class GetVideoModerationResultResponseBodyModerationResultFramesBlockFrames extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;teat&quot;:&quot;val&quot;}</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Offset")
         public Integer offset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Rate")
         public Double rate;
 
@@ -186,6 +238,10 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         @NameInMap("BlockFrames")
         public java.util.List<GetVideoModerationResultResponseBodyModerationResultFramesBlockFrames> blockFrames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
@@ -219,9 +275,17 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         @NameInMap("Frames")
         public GetVideoModerationResultResponseBodyModerationResultFrames frames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object</p>
+         */
         @NameInMap("URI")
         public String URI;
 

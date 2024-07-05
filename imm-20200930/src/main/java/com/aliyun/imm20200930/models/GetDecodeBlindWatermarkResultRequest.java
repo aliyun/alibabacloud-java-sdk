@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetDecodeBlindWatermarkResultRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DecodeBlindWatermark-c09b0943-ed79-4983-8dbe-7a882574****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DecodeBlindWatermark</p>
      */
     @NameInMap("TaskType")
     public String taskType;

@@ -7,6 +7,10 @@ public class AddImageMosaicShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jpg</p>
+     */
     @NameInMap("ImageFormat")
     public String imageFormat;
 
@@ -16,6 +20,10 @@ public class AddImageMosaicShrinkRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("Quality")
     public Integer quality;
 

@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class QuerySimilarImageClustersRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;: &quot;val&quot;}</p>
+     */
     @NameInMap("CustomLabels")
     public String customLabels;
 
@@ -13,12 +17,24 @@ public class QuerySimilarImageClustersRequest extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CAESEgoQCg4KClVwZGF0ZVRpbWUQARgBIs8ECgkAAJLUwUCAQ****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
@@ -28,6 +44,10 @@ public class QuerySimilarImageClustersRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UpdateTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 

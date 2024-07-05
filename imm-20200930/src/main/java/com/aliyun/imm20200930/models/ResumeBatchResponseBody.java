@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ResumeBatchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>D2C628B8-35DF-473C-8A41-757F30******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

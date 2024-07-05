@@ -7,6 +7,10 @@ public class KdtreeOption extends TeaModel {
     @NameInMap("CompressionLevel")
     public Integer compressionLevel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>draco</p>
+     */
     @NameInMap("LibraryName")
     public String libraryName;
 

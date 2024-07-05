@@ -7,6 +7,10 @@ public class GetProjectResponseBody extends TeaModel {
     @NameInMap("Project")
     public Project project;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5A022F78-B9A8-4ACC-BB6B-B3597553</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Schedule extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0.97</p>
+     */
     @NameInMap("Gamma")
     public Float gamma;
 
+    /**
+     * <strong>example:</strong>
+     * <p>StepLR</p>
+     */
     @NameInMap("LRScheduler")
     public String LRScheduler;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("StepSize")
     public Long stepSize;
 

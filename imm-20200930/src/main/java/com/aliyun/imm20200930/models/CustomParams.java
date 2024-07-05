@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CustomParams extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Normalize</p>
+     */
     @NameInMap("Name")
     public String name;
 

@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class CreateFigureClustersMergingTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataset001</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Cluster-2ab85905-23ba-4632-b2d8-1c21cfe****</p>
+     */
     @NameInMap("From")
     public String from;
 
@@ -21,19 +28,33 @@ public class CreateFigureClustersMergingTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;val&quot;}</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cluster-4a3a71c1-c092-4788-8826-2f65d17****</p>
      */
     @NameInMap("To")
     public String to;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 

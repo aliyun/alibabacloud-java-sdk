@@ -7,102 +7,211 @@ public class CreateOfficeConversionTaskShrinkRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>-1</p>
+     */
     @NameInMap("EndPage")
     public Long endPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("FirstPage")
     public Boolean firstPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("FitToHeight")
     public Boolean fitToHeight;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("FitToWidth")
     public Boolean fitToWidth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("HoldLineFeed")
     public Boolean holdLineFeed;
 
+    /**
+     * <strong>example:</strong>
+     * <p>96</p>
+     */
     @NameInMap("ImageDPI")
     public Long imageDPI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("LongPicture")
     public Boolean longPicture;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("LongText")
     public Boolean longText;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxSheetColumn")
     public Long maxSheetColumn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxSheetRow")
     public Long maxSheetRow;
 
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1,2-4,7</p>
+     */
     @NameInMap("Pages")
     public String pages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("PaperHorizontal")
     public Boolean paperHorizontal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A4</p>
+     */
     @NameInMap("PaperSize")
     public String paperSize;
 
+    /**
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Quality")
     public Long quality;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("ScalePercentage")
     public Long scalePercentage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SheetCount")
     public Long sheetCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SheetIndex")
     public Long sheetIndex;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ShowComments")
     public Boolean showComments;
 
+    /**
+     * <strong>example:</strong>
+     * <p>doc</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("StartPage")
     public Long startPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>png</p>
      */
     @NameInMap("TargetType")
     public String targetType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://{bucket}/{tags.custom}/{dirname}/{barename}.{autoext}</p>
+     */
     @NameInMap("TargetURI")
     public String targetURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://bucket1/</p>
+     */
     @NameInMap("TargetURIPrefix")
     public String targetURIPrefix;
 
     @NameInMap("TrimPolicy")
     public String trimPolicyShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;file_id&quot;: &quot;abc&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

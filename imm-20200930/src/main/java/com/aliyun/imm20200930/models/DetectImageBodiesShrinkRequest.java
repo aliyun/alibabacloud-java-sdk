@@ -9,13 +9,27 @@ public class DetectImageBodiesShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.6</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Sensitivity")
     public Float sensitivity;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 

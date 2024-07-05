@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTaskRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -15,12 +18,18 @@ public class GetTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c2b277b9-0d30-4882-ad6d-ad661382****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VideoLabelClassification</p>
      */
     @NameInMap("TaskType")
     public String taskType;

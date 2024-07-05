@@ -7,6 +7,10 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
     @NameInMap("Files")
     public java.util.List<BatchUpdateFileMetaResponseBodyFiles> files;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F5BF215E-3237-0852-B9C6-F233D44A****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class BatchUpdateFileMetaResponseBody extends TeaModel {
     }
 
     public static class BatchUpdateFileMetaResponseBodyFiles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>*error.OpError : InvalidArgument | Index KV count exceeded, should be no more than 100.</p>
+         */
         @NameInMap("Message")
         public String message;
 

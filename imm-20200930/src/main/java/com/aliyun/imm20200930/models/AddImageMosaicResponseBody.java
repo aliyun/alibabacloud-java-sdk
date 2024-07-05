@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class AddImageMosaicResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CA995EFD-083D-4F40-BE8A-BDF75FF*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

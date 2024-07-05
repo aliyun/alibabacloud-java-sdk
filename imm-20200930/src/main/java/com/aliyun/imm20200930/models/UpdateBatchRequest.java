@@ -9,6 +9,9 @@ public class UpdateBatchRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>batch-4eb9223f-3e88-42d3-a578-3f2852******</p>
      */
     @NameInMap("Id")
     public String id;
@@ -18,10 +21,17 @@ public class UpdateBatchRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;val&quot;}</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
@@ -71,6 +81,10 @@ public class UpdateBatchRequest extends TeaModel {
     }
 
     public static class UpdateBatchRequestActions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>doc/convert</p>
+         */
         @NameInMap("Name")
         public String name;
 

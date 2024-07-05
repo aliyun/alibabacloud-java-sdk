@@ -16,6 +16,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     @NameInMap("MasterURI")
     public String masterURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA995EFD-083D-4F40-BE8A-BDF75FFF*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -25,6 +29,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     @NameInMap("SubtitlePlaylist")
     public java.util.List<GenerateVideoPlaylistResponseBodySubtitlePlaylist> subtitlePlaylist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>92376fbb-171f-4259-913f-705f7ee0****</p>
+     */
     @NameInMap("Token")
     public String token;
 
@@ -101,12 +109,18 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
 
         /**
          * <p>转码生成的Token。用于LiveTranscoding访问的参数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>affe0c6042f09722fec95a21b8b******</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
-         * <p>输出m3u8的OSS地址。地址规则为 Target.URI + ".m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。</p>
+         * <p>输出m3u8的OSS地址。地址规则为 Target.URI + &quot;.m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://imm-test/testcases/video.m3u8</p>
          */
         @NameInMap("URI")
         public String URI;
@@ -145,24 +159,36 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
     public static class GenerateVideoPlaylistResponseBodySubtitlePlaylist extends TeaModel {
         /**
          * <p>字幕流编号，从0开始。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Index")
         public Integer index;
 
         /**
          * <p>视频源中字幕流的语言。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
          * <p>转码生成的Token。用于LiveTranscoding访问的参数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>affe0c6042f09722fec95a21b8b******</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
-         * <p>输出m3u8的OSS地址。地址规则为 Target.URI + “_” + Index + ".m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。</p>
+         * <p>输出m3u8的OSS地址。地址规则为 Target.URI + “_” + Index + &quot;.m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://imm-test/testcases/vide_0.m3u8</p>
          */
         @NameInMap("URI")
         public String URI;
@@ -215,12 +241,18 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
 
         /**
          * <p>转码生成的Token。用于LiveTranscoding访问的参数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>affe0c6042f09722fec95a21b8b******</p>
          */
         @NameInMap("Token")
         public String token;
 
         /**
-         * <p>输出m3u8的OSS地址。地址规则为 Target.URI + ".m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。</p>
+         * <p>输出m3u8的OSS地址。地址规则为 Target.URI + &quot;.m3u8“， 其中Target.URI为输入参数中视频转码输出地址前缀。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://imm-test/testcases/video.m3u8</p>
          */
         @NameInMap("URI")
         public String URI;

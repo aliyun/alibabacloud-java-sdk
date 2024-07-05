@@ -4,17 +4,32 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class ListDatasetsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345678:immtest:dataset002</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dataset</p>
+     */
     @NameInMap("Prefix")
     public String prefix;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;

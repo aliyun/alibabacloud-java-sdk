@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ResumeBatchRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>batch-4eb9223f-3e88-42d3-a578-3f2852******</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;

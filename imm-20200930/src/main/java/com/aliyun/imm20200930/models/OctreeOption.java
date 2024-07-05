@@ -4,15 +4,31 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class OctreeOption extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("DoVoxelGridDownDownSampling")
     public Boolean doVoxelGridDownDownSampling;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pcl</p>
+     */
     @NameInMap("LibraryName")
     public String libraryName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.01</p>
+     */
     @NameInMap("OctreeResolution")
     public Double octreeResolution;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.01</p>
+     */
     @NameInMap("PointResolution")
     public Double pointResolution;
 
