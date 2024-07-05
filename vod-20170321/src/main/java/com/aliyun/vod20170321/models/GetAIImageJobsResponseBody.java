@@ -12,6 +12,9 @@ public class GetAIImageJobsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7721B494-1F78-4E*****E8-A7CEE7315BFA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,71 +43,103 @@ public class GetAIImageJobsResponseBody extends TeaModel {
     public static class GetAIImageJobsResponseBodyAIImageJobList extends TeaModel {
         /**
          * <p>The Object Storage Service (OSS) URL of the image file.</p>
-         * <br>
-         * <p>> This parameter does not include the complete authentication information. To obtain the authentication information, you must generate a signed URL. Alternatively, you can call the [ListAIImageInfo](~~ListAIImageInfo~~) operation to obtain the image information.</p>
+         * <blockquote>
+         * <p>This parameter does not include the complete authentication information. To obtain the authentication information, you must generate a signed URL. Alternatively, you can call the <a href="~~ListAIImageInfo~~">ListAIImageInfo</a> operation to obtain the image information.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Score&quot;:5.035636554444242,&quot;Url&quot;:&quot;<a href="http://outin-*****.oss-cn-shanghai.aliyuncs.com/357a8748c577*****789d2726e6436aa/image/ai/b0a7612554d*****5cbe3-00001.gif%22%7D%5D">http://outin-*****.oss-cn-shanghai.aliyuncs.com/357a8748c577*****789d2726e6436aa/image/ai/b0a7612554d*****5cbe3-00001.gif&quot;}]</a></p>
          */
         @NameInMap("AIImageResult")
         public String AIImageResult;
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The time when the image AI processing job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the image AI processing job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-15T03:30:03Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the image AI processing job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf08a2c6e11e*****de1711b738b9067</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **fail**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The configurations of the AI template that was used to submit the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Format&quot;:&quot;gif&quot;,&quot;SetDefaultCover&quot;:&quot;true&quot;}</p>
          */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
         /**
          * <p>The ID of the AI template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5a86a00f15194*****d7fe7de1b4a173</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The user data.</p>
-         * <br>
-         * <p>*   The value must be a JSON string.</p>
-         * <p>*   The MessageCallback or Extend parameter is returned.</p>
-         * <p>*   The value contains a maximum of 512 bytes.</p>
-         * <br>
-         * <p>For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.</p>
+         * <ul>
+         * <li>The value must be a JSON string.</li>
+         * <li>The MessageCallback or Extend parameter is returned.</li>
+         * <li>The value contains a maximum of 512 bytes.</li>
+         * </ul>
+         * <p>For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Extend&quot;:{&quot;localId&quot;:&quot;****&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
          */
         @NameInMap("UserData")
         public String userData;
 
         /**
          * <p>The ID of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>357a8748c577*****789d2726e6436aa</p>
          */
         @NameInMap("VideoId")
         public String videoId;

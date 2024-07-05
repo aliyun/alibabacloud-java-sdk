@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePlayVideoStatisResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A92D3600-A3E7-43D6-****-B6E3B4A1FE6B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,37 +42,55 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
 
     public static class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail extends TeaModel {
         /**
-         * <p>The date. The date is displayed in the *yyyy-MM-dd* format.</p>
+         * <p>The date. The date is displayed in the <em>yyyy-MM-dd</em> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20170120</p>
          */
         @NameInMap("Date")
         public String date;
 
         /**
          * <p>The playback duration. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>967277</p>
          */
         @NameInMap("PlayDuration")
         public String playDuration;
 
         /**
          * <p>The distribution of the playback duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&lt;=1m:79.2%;&gt;1&lt;=5m:16.7%;&gt;5&lt;=10m:4.2%</p>
          */
         @NameInMap("PlayRange")
         public String playRange;
 
         /**
          * <p>The video title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Four streams (one stream encrypted): LD-HLS + SD-MP4 + HD-HLS-encrypted + UHD-MP4</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The number of unique visitors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UV")
         public String UV;
 
         /**
          * <p>The number of video views.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         @NameInMap("VV")
         public String VV;

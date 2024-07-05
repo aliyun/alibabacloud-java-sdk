@@ -4,21 +4,55 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval at which data is returned. Unit: seconds.</p>
+     * <p>The returned value varies based on the time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600 (1 hour). For more information, see the <strong>Time granularity</strong> section in the <strong>API documentation</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:40:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The proportion of each HTTP status code in each time interval.</p>
+     */
     @NameInMap("RealTimeHttpCodeData")
     public DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeData realTimeHttpCodeData;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:39:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +110,30 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
     }
 
     public static class DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData extends TeaModel {
+        /**
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The number of the HTTP status codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The proportion of the HTTP status code in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28.4496124031008</p>
+         */
         @NameInMap("Proportion")
         public String proportion;
 
@@ -136,9 +188,18 @@ public class DescribeVodDomainRealTimeHttpCodeDataResponseBody extends TeaModel 
     }
 
     public static class DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData extends TeaModel {
+        /**
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:39:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The proportion of each HTTP status code is displayed in a data list.</p>
+         */
         @NameInMap("Value")
         public DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue value;
 

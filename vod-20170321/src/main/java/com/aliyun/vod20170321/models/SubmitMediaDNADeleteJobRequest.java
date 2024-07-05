@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class SubmitMediaDNADeleteJobRequest extends TeaModel {
     /**
      * <p>The ID of the video.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>656eaaa8c43a4597******1f09a36</p>
      */
     @NameInMap("MediaId")
     public String mediaId;

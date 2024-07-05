@@ -12,6 +12,10 @@ public class DeleteEditingProjectRequest extends TeaModel {
 
     /**
      * <p>The ID of the online editing project. Separate multiple IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fb2101bf24bf41*****cb318787dc</p>
      */
     @NameInMap("ProjectIds")
     public String projectIds;

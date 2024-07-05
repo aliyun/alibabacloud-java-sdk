@@ -4,9 +4,18 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DescribeVodDomainRealTimeByteHitRateDataResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70A26B11-3673-479C-AEA8-E03FC5D3496D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
     }
 
     public static class DescribeVodDomainRealTimeByteHitRateDataResponseBodyDataByteHitRateDataModel extends TeaModel {
+        /**
+         * <p>The byte hit ratio in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8956940476262277</p>
+         */
         @NameInMap("ByteHitRate")
         public Float byteHitRate;
 
+        /**
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-15T09:13:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

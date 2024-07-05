@@ -4,9 +4,17 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultAITemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8E70E3F8-E2EE-47BC-4677-379D6F28****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1706a0063dd733f6a823ef32e0a5****</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

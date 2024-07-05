@@ -18,6 +18,9 @@ public class CancelUrlUploadJobsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4D5C-3C3D-D7393642****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

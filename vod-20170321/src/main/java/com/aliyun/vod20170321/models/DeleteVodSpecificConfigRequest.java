@@ -6,24 +6,32 @@ import com.aliyun.tea.*;
 public class DeleteVodSpecificConfigRequest extends TeaModel {
     /**
      * <p>The ID of the configuration.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2317****</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
      * <p>The domain name for CDN.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The environment of configuration. </p>
-     * <br>
      * <p>Value:</p>
-     * <br>
      * <p>online: production environment</p>
-     * <br>
      * <p>gray: simulation environment</p>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("Env")
     public String env;

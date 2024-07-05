@@ -12,6 +12,9 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CB7D7232-1AB2-40FE-B8D3-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,31 +43,45 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     public static class GetMediaAuditAudioResultDetailResponseBodyMediaAuditAudioResultDetailList extends TeaModel {
         /**
          * <p>The end time of the audio that failed the review. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
         /**
          * <p>The review results. Valid values:</p>
-         * <p>*   **spam**</p>
-         * <p>*   **ad**</p>
-         * <p>*   **abuse**</p>
-         * <p>*   **flood**</p>
-         * <p>*   **contraband**</p>
-         * <p>*   **meaningless**</p>
-         * <p>*   **normal**</p>
+         * <ul>
+         * <li><strong>spam</strong></li>
+         * <li><strong>ad</strong></li>
+         * <li><strong>abuse</strong></li>
+         * <li><strong>flood</strong></li>
+         * <li><strong>contraband</strong></li>
+         * <li><strong>meaningless</strong></li>
+         * <li><strong>normal</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>abuse</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The start time of the audio that failed the review. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
          * <p>The text that corresponds to the audio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beauty</p>
          */
         @NameInMap("Text")
         public String text;
@@ -117,12 +134,18 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageTotal")
         public Integer pageTotal;
 
         /**
          * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Total")
         public Integer total;

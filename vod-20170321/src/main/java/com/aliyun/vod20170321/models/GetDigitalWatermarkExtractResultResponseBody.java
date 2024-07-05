@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
     /**
-     * <p>The information about the job.</p>
+     * <p>The details of the watermark extraction job.</p>
      */
     @NameInMap("AiExtractResultList")
     public java.util.List<GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList> aiExtractResultList;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42E0554B-80F4-4921-****-ACFB22CAAAD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,41 +42,60 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
 
     public static class GetDigitalWatermarkExtractResultResponseBodyAiExtractResultList extends TeaModel {
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The time when the watermark extraction job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-16T02:49:04Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The ID of the watermark extraction job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3af004763bcf459698860f4ede20****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
-         * <p>The time when the job was modified.</p>
+         * <p>The time when the watermark extraction job was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-09-17T06:20:45Z</p>
          */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
-         * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   **Success**</p>
-         * <p>*   **Failed**</p>
-         * <p>*   **Processing**</p>
+         * <p>The status of the watermark extraction job. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * <li><strong>Processing</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The extracted watermark text.</p>
+         * <p>The extracted watermark content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test mark</p>
          */
         @NameInMap("WaterMarkText")
         public String waterMarkText;

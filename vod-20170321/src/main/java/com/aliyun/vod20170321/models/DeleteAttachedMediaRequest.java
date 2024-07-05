@@ -5,10 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteAttachedMediaRequest extends TeaModel {
     /**
-     * <p>The list of auxiliary media asset IDs.</p>
-     * <br>
-     * <p>*   Separate multiple IDs with commas (,).</p>
-     * <p>*   A maximum of 20 IDs can be specified.</p>
+     * <p>The ID of the auxiliary media asset that you want to delete. You can obtain the ID of the auxiliary media asset from the MediaId parameter in the response to the <a href="https://help.aliyun.com/document_detail/98467.html">CreateUploadAttachedMedia</a> operation.</p>
+     * <ul>
+     * <li>Separate multiple IDs with commas (,).</li>
+     * <li>You can specify a maximum of 20 IDs.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8bc8e94fe4e55abde85718****,eb186180e989dd56****</p>
      */
     @NameInMap("MediaIds")
     public String mediaIds;

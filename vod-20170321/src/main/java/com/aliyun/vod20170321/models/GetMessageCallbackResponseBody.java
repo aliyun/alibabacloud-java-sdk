@@ -12,6 +12,9 @@ public class GetMessageCallbackResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>272A222A-F7F7-4A3E-****-F531574F1234</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,80 @@ public class GetMessageCallbackResponseBody extends TeaModel {
     public static class GetMessageCallbackResponseBodyMessageCallback extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The cryptographic key. This parameter is returned only for HTTP callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678abc</p>
          */
         @NameInMap("AuthKey")
         public String authKey;
 
         /**
          * <p>Indicates whether callback authentication is enabled. This parameter is returned only for HTTP callbacks. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("AuthSwitch")
         public String authSwitch;
 
         /**
          * <p>The callback method. Valid values:</p>
-         * <br>
-         * <p>*   **HTTP**</p>
-         * <p>*   **MNS**</p>
+         * <ul>
+         * <li><strong>HTTP</strong></li>
+         * <li><strong>MNS</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         @NameInMap("CallbackType")
         public String callbackType;
 
         /**
          * <p>The callback URL. This parameter is returned only for HTTP callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test.com/test">http://test.com/test</a></p>
          */
         @NameInMap("CallbackURL")
         public String callbackURL;
 
         /**
          * <p>The type of the callback event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FileUploadComplete,StreamTranscodeComplete,TranscodeComplete,SnapshotComplete,AIComplete,AddLiveRecordVideoComplete,CreateAuditComplete,UploadByURLComplete,ProduceMediaComplete,LiveRecordVideoComposeStart,ImageUploadComplete,VideoAnalysisComplete</p>
          */
         @NameInMap("EventTypeList")
         public String eventTypeList;
 
         /**
          * <p>The public endpoint of MNS. This parameter is returned only for MNS callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://1234567.mns.cn-shanghai-internal.aliyuncs.com/">http://1234567.mns.cn-shanghai-internal.aliyuncs.com/</a></p>
          */
         @NameInMap("MnsEndpoint")
         public String mnsEndpoint;
 
         /**
          * <p>The name of the Message Service (MNS) queue. This parameter is returned only for MNS callbacks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vodcallback</p>
          */
         @NameInMap("MnsQueueName")
         public String mnsQueueName;

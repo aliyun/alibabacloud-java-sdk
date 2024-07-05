@@ -5,43 +5,61 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the entries returned. Unit: seconds.</p>
+     * <p>The time interval at which data is returned, which is the time granularity. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-20T14:59:58Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D94E471F-1A27-442E-552D-D4D2000C****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-01-20T13:59:58Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The total amount of network traffic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5906662826</p>
      */
     @NameInMap("TotalTraffic")
     public String totalTraffic;
 
     /**
-     * <p>The network traffic that was collected at each interval.</p>
+     * <p>The amount of network traffic at each time interval.</p>
      */
     @NameInMap("TrafficDataPerInterval")
     public DescribeVodDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
@@ -110,42 +128,63 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     public static class DescribeVodDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The amount of network traffic in the Chinese mainland. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
         /**
          * <p>The amount of HTTPS network traffic on points of presence (POPs) in the Chinese mainland. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
         /**
          * <p>The amount of HTTPS network traffic on POPs outside the Chinese mainland. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
         /**
          * <p>The total amount of HTTPS network traffic on POPs. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
          * <p>The amount of network traffic outside the Chinese mainland. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
         /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-15T19:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The total amount of network traffic. Unit: bytes.</p>
+         * <p>The total traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Value")
         public String value;

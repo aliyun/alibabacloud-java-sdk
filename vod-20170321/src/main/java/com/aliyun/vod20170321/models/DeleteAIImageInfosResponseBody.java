@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteAIImageInfosResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FCDC80EA-363C-41*****B8-0DF14033D643</p>
      */
     @NameInMap("RequestId")
     public String requestId;

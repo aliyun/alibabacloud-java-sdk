@@ -5,37 +5,52 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     /**
-     * <p>The time interval between the entries returned. Unit: seconds.</p>
+     * <p>The time interval at which data is returned, which is the time granularity. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The accelerated domain name whose ICP filing status you want to update.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The end of the time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-23T02:02:57Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-BEF6-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details about the origin bandwidth data returned at each time interval. Unit: bit/s.</p>
+     * <p>The origin bandwidth data at each time interval.</p>
      */
     @NameInMap("SrcBpsDataPerInterval")
     public DescribeVodDomainSrcBpsDataResponseBodySrcBpsDataPerInterval srcBpsDataPerInterval;
 
     /**
-     * <p>The start of the time range during which data was queried.</p>
+     * <p>The beginning of the time range.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-07-12T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,19 +110,28 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
 
     public static class DescribeVodDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The bandwidth values of origin HTTPS requests.</p>
+         * <p>The bandwidth consumed for fetching resources from the origin over HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-23T02:02:57Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The bandwidth value at each time interval.</p>
+         * <p>The total origin bandwidth data. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Value")
         public String value;

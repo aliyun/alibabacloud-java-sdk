@@ -5,15 +5,21 @@ import com.aliyun.tea.*;
 
 public class GetMediaRefreshJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the media file. It is the value of the `MediaIds` parameter that you specify when you call the [RefreshMediaPlayUrls](~~RefreshMediaPlayUrls~~) operation. You can specify only one media ID.</p>
-     * <br>
-     * <p>If you leave this parameter empty, information about all media files in the refresh or prefetch job specified by `MediaRefreshJobId` is returned. If you set this parameter, only the information about the specified media file is returned.``</p>
+     * <p>The ID of the media file. It is the value of the <code>MediaIds</code> parameter that you specify when you call the <a href="~~RefreshMediaPlayUrls~~">RefreshMediaPlayUrls</a> operation. You can specify only one media ID.</p>
+     * <p>If you leave this parameter empty, information about all media files in the refresh or prefetch job specified by <code>MediaRefreshJobId</code> is returned. If you set this parameter, only the information about the specified media file is returned.``</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca3a8f6e4957b658067095869****</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
 
     /**
-     * <p>The ID of the refresh or prefetch job. It is the value of the MediaRefreshJobId parameter that is returned from the call to the [RefreshMediaPlayUrls](~~RefreshMediaPlayUrls~~) operation.</p>
+     * <p>The ID of the refresh or prefetch job. It is the value of the MediaRefreshJobId parameter that is returned from the call to the <a href="~~RefreshMediaPlayUrls~~">RefreshMediaPlayUrls</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>41d465e31957****</p>
      */
     @NameInMap("MediaRefreshJobId")
     public String mediaRefreshJobId;

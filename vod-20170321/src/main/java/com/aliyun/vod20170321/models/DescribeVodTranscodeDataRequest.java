@@ -5,22 +5,33 @@ import com.aliyun.tea.*;
 
 public class DescribeVodTranscodeDataRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can specify this parameter to query the transcoding statistics of a specific application. By default, the transcoding statistics of all applications is returned. You can obtain the application ID from the `AppId` parameter in the response to the [CreateAppInfo](~~CreateAppInfo~~) operation.</p>
+     * <p>The ID of the application. You can specify this parameter to query the transcoding statistics of a specific application. By default, the transcoding statistics of all applications is returned. You can obtain the application ID from the <code>AppId</code> parameter in the response to the <a href="~~CreateAppInfo~~">CreateAppInfo</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-1000001</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-02-01T15:59:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The interval at which you want to query data. Valid values:</p>
-     * <br>
-     * <p>*   **day**: days</p>
-     * <p>*   **hour**: hours</p>
+     * <ul>
+     * <li><strong>day</strong>: days</li>
+     * <li><strong>hour</strong>: hours</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>day</p>
      */
     @NameInMap("Interval")
     public String interval;
@@ -30,33 +41,48 @@ public class DescribeVodTranscodeDataRequest extends TeaModel {
 
     /**
      * <p>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **cn-shanghai**: China (Shanghai)</p>
-     * <p>*   **cn-beijing**: China (Beijing)</p>
-     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
+     * <ul>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The transcoding specification. If you leave this parameter empty, data of all transcoding specifications is returned. Separate multiple transcoding specifications with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **Audio**: audio transcoding</p>
-     * <p>*   **Segmentation**: container format conversion</p>
-     * <p>*   **H264.LD**, **H264.SD**, **H264.HD**, **H264.2K**, **H264.4K**, and more</p>
+     * <ul>
+     * <li><strong>Audio</strong>: audio transcoding</li>
+     * <li><strong>Segmentation</strong>: container format conversion</li>
+     * <li><strong>H264.LD</strong>, <strong>H264.SD</strong>, <strong>H264.HD</strong>, <strong>H264.2K</strong>, <strong>H264.4K</strong>, and more</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Audio</p>
      */
     @NameInMap("Specification")
     public String specification;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-02-01T15:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bucket01</p>
      */
     @NameInMap("Storage")
     public String storage;

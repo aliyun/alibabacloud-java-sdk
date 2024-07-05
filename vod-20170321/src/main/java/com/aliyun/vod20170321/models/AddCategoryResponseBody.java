@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class AddCategoryResponseBody extends TeaModel {
     /**
-     * <p>The information about the video category.</p>
+     * <p>The information about the category.</p>
      */
     @NameInMap("Category")
     public AddCategoryResponseBodyCategory category;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,37 +42,55 @@ public class AddCategoryResponseBody extends TeaModel {
 
     public static class AddCategoryResponseBodyCategory extends TeaModel {
         /**
-         * <p>The ID of the video category.</p>
+         * <p>The ID of the category. You can use the value of this parameter when you call the <a href="~~UpdateCategory~~">UpdateCategory</a>, <a href="~~DeleteCategory~~">DeleteCategory</a>, and <a href="~~GetCategories~~">GetCategories</a> operations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10020</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
          * <p>The name of the category.</p>
-         * <br>
-         * <p>- The value can be up to 64 bytes in length.</p>
-         * <p>- The string must be encoded in the UTF-8 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
-         * <p>The level of the category. A value of **0** indicates a level 1 category.</p>
+         * <p>The level of the category. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: level 1 category</li>
+         * <li><strong>1</strong>: level 2 category</li>
+         * <li><strong>1</strong>: level 3 category</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Level")
         public Long level;
 
         /**
-         * <p>The ID of the parent category. The parent category ID of a level 1 category is **-1**.</p>
+         * <p>The ID of the parent category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100012</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
 
         /**
          * <p>The type of the category. Valid values:</p>
-         * <br>
-         * <p>- **default** (default): default category</p>
-         * <p>- **material**: material category</p>
+         * <ul>
+         * <li><strong>default</strong>: audio, video, and image files</li>
+         * <li><strong>material</strong>: short video materials</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("Type")
         public String type;

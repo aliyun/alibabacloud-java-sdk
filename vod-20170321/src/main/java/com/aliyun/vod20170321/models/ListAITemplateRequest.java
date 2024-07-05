@@ -6,9 +6,14 @@ import com.aliyun.tea.*;
 public class ListAITemplateRequest extends TeaModel {
     /**
      * <p>The type of the AI template. Valid values:</p>
-     * <br>
-     * <p>*   **AIMediaAudit**: automated review</p>
-     * <p>*   **AIImage**: smart thumbnail</p>
+     * <ul>
+     * <li><strong>AIMediaAudit</strong>: automated review</li>
+     * <li><strong>AIImage</strong>: smart thumbnail</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AIMediaAudit</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

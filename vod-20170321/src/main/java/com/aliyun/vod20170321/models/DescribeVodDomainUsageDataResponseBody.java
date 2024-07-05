@@ -6,45 +6,67 @@ import com.aliyun.tea.*;
 public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     /**
      * <p>The billable region where the data was collected.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CN</p>
      */
     @NameInMap("Area")
     public String area;
 
     /**
      * <p>The time interval between the entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T12:20:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B955107D-E658-4E77-****-E0AC3D31693E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The start of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The start of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T10:20:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The type of the data. Valid values:</p>
-     * <br>
-     * <p>*   **bps**: bandwidth</p>
-     * <p>*   **traf**: traffic</p>
+     * <ul>
+     * <li><strong>bps</strong>: bandwidth</li>
+     * <li><strong>traf</strong>: traffic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>static</p>
      */
     @NameInMap("Type")
     public String type;
@@ -126,13 +148,19 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
 
     public static class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The timestamp of the returned data. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the returned data. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T10:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The traffic or bandwidth data. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2592.3920000000003</p>
          */
         @NameInMap("Value")
         public String value;

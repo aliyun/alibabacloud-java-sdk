@@ -18,6 +18,9 @@ public class RegisterMediaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>14F43C5C-8033-448B-AD04F64E5098****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,21 +57,31 @@ public class RegisterMediaResponseBody extends TeaModel {
     public static class RegisterMediaResponseBodyRegisteredMediaList extends TeaModel {
         /**
          * <p>The URL of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://****.oss-cn-shanghai.aliyuncs.com/vod_sample_01.mp4</p>
          */
         @NameInMap("FileURL")
         public String fileURL;
 
         /**
          * <p>The ID of the media file that is registered with ApsaraVideo VOD. If the registered media file is an audio or video file, the value of this parameter is the same as that of the VideoId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d97af32828084d1896683b1aa38****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
          * <p>Indicates whether the media file is newly registered or repeatedly registered. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The media file is newly registered.</p>
-         * <p>*   **false**: The media file is repeatedly registered.</p>
+         * <ul>
+         * <li><strong>true</strong>: The media file is newly registered.</li>
+         * <li><strong>false</strong>: The media file is repeatedly registered.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("NewRegister")
         public Boolean newRegister;

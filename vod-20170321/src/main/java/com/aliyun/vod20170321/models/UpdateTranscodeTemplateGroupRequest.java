@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class UpdateTranscodeTemplateGroupRequest extends TeaModel {
     /**
      * <p>The lock status of the transcoding template group. Valid values:</p>
-     * <br>
-     * <p>*   **Enabled**: The transcoding template group is locked and cannot be modified.</p>
-     * <p>*   **Disabled** (default): The transcoding template group is not locked.</p>
+     * <ul>
+     * <li><strong>Enabled</strong>: The transcoding template group is locked and cannot be modified.</li>
+     * <li><strong>Disabled</strong> (default): The transcoding template group is not locked.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
      */
     @NameInMap("Locked")
     public String locked;
 
     /**
      * <p>The name of the transcoding template group.</p>
-     * <br>
-     * <p>*   The name cannot exceed 128 bytes.</p>
-     * <p>*   The value must be encoded in UTF-8.</p>
+     * <ul>
+     * <li>The name cannot exceed 128 bytes.</li>
+     * <li>The value must be encoded in UTF-8.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>transcodetemplate</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the transcoding template group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4c71a339fe*****52b4fa6f4527</p>
      */
     @NameInMap("TranscodeTemplateGroupId")
     public String transcodeTemplateGroupId;
 
     /**
-     * <p>The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see [TranscodeTemplate](~~52839#title-9mb-8o2-uu6~~).</p>
+     * <p>The configurations of the transcoding template. The value must be a JSON string. For more information about the data structure, see <a href="~~52839#title-9mb-8o2-uu6~~">TranscodeTemplate</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Video&quot;:{&quot;Bitrate&quot;:&quot;400&quot;,&quot;Codec&quot;:&quot;H.264&quot;,&quot;Fps&quot;:&quot;30&quot;},&quot;Audio&quot;:{&quot;Codec&quot;:&quot;AAC&quot;,&quot;Bitrate&quot;:&quot;64&quot;,&quot;Definition&quot;:&quot;SD&quot;,&quot;EncryptType&quot;:&quot;Private&quot;,&quot;Container&quot;:{&quot;Format&quot;:&quot;m3u8&quot;},&quot;PackageType&quot;:&quot;HLSPackage&quot;}}]</p>
      */
     @NameInMap("TranscodeTemplateList")
     public String transcodeTemplateList;

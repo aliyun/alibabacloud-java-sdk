@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class SetVodDomainCertificateRequest extends TeaModel {
     /**
      * <p>The name of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cert_name</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
      * <p>The domain name that is secured by the certificate. The domain name must use HTTPS acceleration.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -21,21 +28,32 @@ public class SetVodDomainCertificateRequest extends TeaModel {
 
     /**
      * <p>The private key. This parameter is required only if you enable the SSL certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("SSLPri")
     public String SSLPri;
 
     /**
      * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
     /**
      * <p>The content of the certificate. This parameter is required only if you enable the SSL certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("SSLPub")
     public String SSLPub;

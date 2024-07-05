@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class BatchStartVodDomainRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;

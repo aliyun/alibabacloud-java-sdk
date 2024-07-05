@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetMediaAuditAudioResultDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the [SearchMedia](~~86044~~) operation.</p>
+     * <p>The ID of the video. You can query the video ID by using the ApsaraVideo VOD console or calling the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93ab850b4f6f*****54b6e91d24d81d4</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
@@ -18,6 +22,9 @@ public class GetMediaAuditAudioResultDetailRequest extends TeaModel {
 
     /**
      * <p>The number of the page to return. This parameter is optional. If you do not specify this parameter, all results are returned without pagination.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;

@@ -12,12 +12,18 @@ public class SearchEditingProjectResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9262E3DA-07FA-48*****62-FCBB6BC61D08</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of online editing projects returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -54,66 +60,102 @@ public class SearchEditingProjectResponseBody extends TeaModel {
     public static class SearchEditingProjectResponseBodyProjectListProject extends TeaModel {
         /**
          * <p>The thumbnail URL of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cover_url</p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test project 001</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The duration of the online editing project, which must be consistent with the duration of the timeline.</p>
-         * <p>> The Timeline parameter is not included in response parameters.</p>
+         * <blockquote>
+         * <p>The Timeline parameter is not included in response parameters.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>22.65</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T13:00:00Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The ID of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25cfc178d2de4*****e77aebed6afcd</p>
          */
         @NameInMap("ProjectId")
         public String projectId;
 
         /**
          * <p>The region where the online editing project was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The status of the online editing project. Separate multiple states with commas (,). By default, all online editing projects were queried. Valid values:</p>
-         * <p>*   **Normal**: indicates that the online editing project is in draft.</p>
-         * <p>*   **Producing**: indicates that the video is being produced.</p>
-         * <p>*   **Produced**: indicates that the video was produced.</p>
-         * <p>*   **ProduceFailed**: indicates that the video failed to be produced.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: indicates that the online editing project is in draft.</li>
+         * <li><strong>Producing</strong>: indicates that the video is being produced.</li>
+         * <li><strong>Produced</strong>: indicates that the video was produced.</li>
+         * <li><strong>ProduceFailed</strong>: indicates that the video failed to be produced.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The path of the Object Storage Service (OSS) bucket where the produced video is stored.</p>
-         * <p>> To view the path of the OSS bucket, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored), and choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the path of the OSS bucket.</p>
+         * <blockquote>
+         * <p>To view the path of the OSS bucket, log on to the <a href="https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored">ApsaraVideo VOD console</a>, and choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Storage</strong>. On the Storage page, you can view the path of the OSS bucket.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>location_s</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
          * <p>The title of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video_150873681****</p>
          */
         @NameInMap("Title")
         public String title;

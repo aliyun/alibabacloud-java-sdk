@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribePlayTopVideosResponseBody extends TeaModel {
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B0BCF9F-2FD5-4817-****-7BEBBE3AF90B&quot;</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -30,6 +39,9 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries that were collected in playback statistics on top videos.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalNum")
     public Long totalNum;
@@ -82,30 +94,45 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     public static class DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis extends TeaModel {
         /**
          * <p>The playback duration. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4640369</p>
          */
         @NameInMap("PlayDuration")
         public String playDuration;
 
         /**
          * <p>The title of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Four streams (two streams encrypted): LD-HLS-encrypted + SD-MP4 + HD-H</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The number of unique visitors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("UV")
         public String UV;
 
         /**
          * <p>The number of video views.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>107</p>
          */
         @NameInMap("VV")
         public String VV;
 
         /**
          * <p>The ID of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2a8d4cb9ecbb487681473a15****8fda</p>
          */
         @NameInMap("VideoId")
         public String videoId;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class AddVodDomainRequest extends TeaModel {
     /**
      * <p>The URL that is used for health checks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com/test.html">www.example.com/test.html</a></p>
      */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
     /**
      * <p>The domain name that you want to accelerate. Wildcard domain names that start with periods (.) are supported. Example: .example.com.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -24,10 +31,14 @@ public class AddVodDomainRequest extends TeaModel {
 
     /**
      * <p>This parameter is applicable to users of level 3 or higher in the Chinese mainland and users outside the Chinese mainland. Default value: domestic. Valid values:</p>
-     * <br>
-     * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: outside the Chinese mainland</p>
-     * <p>*   **global**: regions in and outside the Chinese mainland</p>
+     * <ul>
+     * <li><strong>domestic</strong>: Chinese mainland</li>
+     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+     * <li><strong>global</strong>: regions in and outside the Chinese mainland</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>domestic</p>
      */
     @NameInMap("Scope")
     public String scope;
@@ -36,13 +47,20 @@ public class AddVodDomainRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The information about the addresses of origin servers. For more information, see the **Sources** table in this topic.</p>
+     * <p>The information about the addresses of origin servers. For more information, see the <strong>Sources</strong> table in this topic.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;content&quot;:&quot;1.1.1.1&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80}]</p>
      */
     @NameInMap("Sources")
     public String sources;
 
     /**
      * <p>The top-level domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

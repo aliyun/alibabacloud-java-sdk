@@ -6,51 +6,74 @@ import com.aliyun.tea.*;
 public class UpdateMediaStorageClassRequest extends TeaModel {
     /**
      * <p>Specifies whether to change the storage class of a media asset that is stored for less than the minimum storage duration. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>>  If you forcibly change the storage class of a media asset that is stored for less than the minimum storage duration, additional data retrieval fees are incurred.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> If you forcibly change the storage class of a media asset that is stored for less than the minimum storage duration, additional data retrieval fees are incurred.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AllowUpdateWithoutTimeLimit")
     public Boolean allowUpdateWithoutTimeLimit;
 
     /**
      * <p>The media asset ID. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID:</p>
-     * <br>
-     * <p>*   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, you can view the ID of the media asset. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</p>
-     * <p>*   Obtain the value of the VideoId parameter from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media assets.</p>
-     * <p>*   Obtain the value of the VideoId parameter from the response to the [SearchMedia](~~86044~~) operation that you call to query the media ID after the media asset is uploaded.</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, you can view the ID of the media asset. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
+     * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media assets.</li>
+     * <li>Obtain the value of the VideoId parameter from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the media ID after the media asset is uploaded.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d56c2ac0cee271ed80004710b5ba****</p>
      */
     @NameInMap("MediaIds")
     public String mediaIds;
 
     /**
      * <p>The restoration priority. This parameter is required only when you restore a Cold Archive media asset. Valid values:</p>
-     * <br>
-     * <p>*   **Expedited**</p>
-     * <p>*   **Standard**</p>
-     * <p>*   **Bulk**</p>
+     * <ul>
+     * <li><strong>Expedited</strong></li>
+     * <li><strong>Standard</strong></li>
+     * <li><strong>Bulk</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Standard</p>
      */
     @NameInMap("RestoreTier")
     public String restoreTier;
 
     /**
      * <p>The modification range. Valid values:</p>
-     * <br>
-     * <p>*   **All**: modifies the storage classes of all resources including the source files and transcoded streams.</p>
-     * <p>*   **SourceFile**: modifies the storage classes of only the source files. The storage class of other resources is Standard.</p>
+     * <ul>
+     * <li><strong>All</strong>: modifies the storage classes of all resources including the source files and transcoded streams.</li>
+     * <li><strong>SourceFile</strong>: modifies the storage classes of only the source files. The storage class of other resources is Standard.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
      */
     @NameInMap("Scope")
     public String scope;
 
     /**
      * <p>The storage class. Valid values:</p>
-     * <br>
-     * <p>*   **Standard**</p>
-     * <p>*   **IA**</p>
-     * <p>*   **Archive**</p>
-     * <p>*   **ColdArchive**</p>
+     * <ul>
+     * <li><strong>Standard</strong></li>
+     * <li><strong>IA</strong></li>
+     * <li><strong>Archive</strong></li>
+     * <li><strong>ColdArchive</strong></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Archive</p>
      */
     @NameInMap("StorageClass")
     public String storageClass;

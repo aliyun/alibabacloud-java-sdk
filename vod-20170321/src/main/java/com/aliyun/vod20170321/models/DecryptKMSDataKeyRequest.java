@@ -4,6 +4,12 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DecryptKMSDataKeyRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmaaSl+TztSIMe43nbTH/Z1Wr4XfLftKhAciUmDQXuMRl4WTvKhxjMThjK****</p>
+     */
     @NameInMap("CipherText")
     public String cipherText;
 

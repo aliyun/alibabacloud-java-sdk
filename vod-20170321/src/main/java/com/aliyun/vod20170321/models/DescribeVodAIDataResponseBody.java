@@ -12,15 +12,22 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
 
     /**
      * <p>The time granularity at which the data was queried. Valid values:</p>
-     * <br>
-     * <p>*   **hour**</p>
-     * <p>*   **day**</p>
+     * <ul>
+     * <li><strong>hour</strong></li>
+     * <li><strong>day</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>day</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C370DAF1-C838-4288-****-9A87633D248E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,16 +64,23 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
     public static class DescribeVodAIDataResponseBodyAIDataAIDataItemDataDataItem extends TeaModel {
         /**
          * <p>The type of video AI. Valid values:</p>
-         * <br>
-         * <p>*   **AIVideoCensor**: automated review</p>
-         * <p>*   **AIVideoFPShot**: media fingerprinting</p>
-         * <p>*   **AIVideoTag**: smart tagging</p>
+         * <ul>
+         * <li><strong>AIVideoCensor</strong>: automated review</li>
+         * <li><strong>AIVideoFPShot</strong>: media fingerprinting</li>
+         * <li><strong>AIVideoTag</strong>: smart tagging</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AIVideoCensor</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The processing duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         @NameInMap("Value")
         public String value;
@@ -121,7 +135,10 @@ public class DescribeVodAIDataResponseBody extends TeaModel {
         public DescribeVodAIDataResponseBodyAIDataAIDataItemData data;
 
         /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-01T13:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

@@ -6,36 +6,53 @@ import com.aliyun.tea.*;
 public class UpdateAppInfoRequest extends TeaModel {
     /**
      * <p>The ID of the application.</p>
-     * <br>
-     * <p>*   Default value: **app-1000000**.</p>
-     * <p>*   For more information, see [Overview](~~113600~~).</p>
+     * <ul>
+     * <li>Default value: <strong>app-1000000</strong>.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the application.</p>
-     * <br>
-     * <p>*   The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).</p>
-     * <p>*   The name can contain only UTF-8 characters.</p>
+     * <ul>
+     * <li>The name can contain up to 128 characters in length, including Chinese letters, digits, and periods (.), dash (-), and at character (@).</li>
+     * <li>The name can contain only UTF-8 characters.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The description of the application.</p>
-     * <br>
-     * <p>*   The description can contain up to 512 characters in length.</p>
-     * <p>*   The description can contain only UTF-8 characters.</p>
+     * <ul>
+     * <li>The description can contain up to 512 characters in length.</li>
+     * <li>The description can contain only UTF-8 characters.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>my first app.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The status of the application. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**</p>
-     * <p>*   **Disable**</p>
+     * <ul>
+     * <li><strong>Normal</strong></li>
+     * <li><strong>Disable</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disable</p>
      */
     @NameInMap("Status")
     public String status;

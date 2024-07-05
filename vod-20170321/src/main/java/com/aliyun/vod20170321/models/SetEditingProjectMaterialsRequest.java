@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class SetEditingProjectMaterialsRequest extends TeaModel {
     /**
-     * <p>The ID of the material. A material is a media asset, such as a video, an image, or an auxiliary media asset. Separate multiple material IDs with commas (,).</p>
+     * <p>The ID of the media asset. You can specify IDs of media assets such as videos, images, or auxiliary media assets. Separate multiple IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9e3101bf24bf41c*****123318788ca</p>
      */
     @NameInMap("MaterialIds")
     public String materialIds;
@@ -18,6 +22,10 @@ public class SetEditingProjectMaterialsRequest extends TeaModel {
 
     /**
      * <p>The ID of the online editing project.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fb2101bf24bf4*****754cb318787dc</p>
      */
     @NameInMap("ProjectId")
     public String projectId;

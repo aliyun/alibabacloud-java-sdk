@@ -4,6 +4,12 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SetDefaultAITemplateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1706a0063dd733f6a823ef32e0a5****</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 

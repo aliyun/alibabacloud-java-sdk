@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateAppInfoRequest extends TeaModel {
     /**
      * <p>The name of the application. The application name must be unique.</p>
-     * <br>
-     * <p>*   The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.</p>
-     * <p>*   The value must be encoded in UTF-8.</p>
+     * <ul>
+     * <li>The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.</li>
+     * <li>The value must be encoded in UTF-8.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
      * <p>The description of the application.</p>
-     * <br>
-     * <p>*   The description can contain up to 512 characters in length.</p>
-     * <p>*   The value must be encoded in UTF-8.</p>
+     * <ul>
+     * <li>The description can contain up to 512 characters in length.</li>
+     * <li>The value must be encoded in UTF-8.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>myfirstapp</p>
      */
     @NameInMap("Description")
     public String description;

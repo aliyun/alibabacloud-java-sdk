@@ -5,27 +5,42 @@ import com.aliyun.tea.*;
 
 public class GetAuditHistoryRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The sorting rule of the results. Valid values:</p>
-     * <p>*   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.</p>
-     * <p>*   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.</p>
+     * <ul>
+     * <li><strong>CreationTime:Desc</strong>: sorts the results based on the creation time in descending order. This is the default value.</li>
+     * <li><strong>CreationTime:Asc</strong>: sorts the results based on the creation time in ascending order.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CreationTime:Desc</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
      * <p>The ID of the video.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93ab850b4f6f44*****6e91d24d81d4</p>
      */
     @NameInMap("VideoId")
     public String videoId;

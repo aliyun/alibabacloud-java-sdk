@@ -12,6 +12,9 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63FC4896-E956-4B*****7D-134FF1BC597A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication extends TeaModel {
         /**
          * <p>The duration of the video. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.0</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The start time of the video. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         @NameInMap("Start")
         public String start;
@@ -76,12 +85,18 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput extends TeaModel {
         /**
          * <p>The duration of the video. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.0</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The start time of the video. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         @NameInMap("Start")
         public String start;
@@ -154,12 +169,18 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the video that has a similar fingerprint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6ad8987da46f4b*****490ce2873745</p>
          */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
         /**
          * <p>The similarity between the fingerprints of the input video and the matched video. 1 indicates that the fingerprints of the two videos are the same.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.98</p>
          */
         @NameInMap("Similarity")
         public String similarity;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetAIVideoTagResultResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8829B4DB-AFD9-4FF6-12965DBFFA14****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     public static class GetAIVideoTagResultResponseBodyVideoTagResultCategory extends TeaModel {
         /**
          * <p>The tag string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Retouching</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -62,6 +68,9 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     public static class GetAIVideoTagResultResponseBodyVideoTagResultKeyword extends TeaModel {
         /**
          * <p>The tag string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cushion</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -98,6 +107,9 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     public static class GetAIVideoTagResultResponseBodyVideoTagResultLocation extends TeaModel {
         /**
          * <p>The tag string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -134,14 +146,21 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     public static class GetAIVideoTagResultResponseBodyVideoTagResultPerson extends TeaModel {
         /**
          * <p>The URL of the profile photo.</p>
-         * <br>
-         * <p>> This parameter is returned only when a figure tag was used.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when a figure tag was used.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/aivideotag/8829B4DB-AFD9-4F*****F6-12965DBFFA14/Index_****.jpg">http://example.com/aivideotag/8829B4DB-AFD9-4F*****F6-12965DBFFA14/Index_****.jpg</a></p>
          */
         @NameInMap("FaceUrl")
         public String faceUrl;
 
         /**
          * <p>The tag string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>John</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -186,6 +205,9 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     public static class GetAIVideoTagResultResponseBodyVideoTagResultTime extends TeaModel {
         /**
          * <p>The tag string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Milliseconds</p>
          */
         @NameInMap("Tag")
         public String tag;

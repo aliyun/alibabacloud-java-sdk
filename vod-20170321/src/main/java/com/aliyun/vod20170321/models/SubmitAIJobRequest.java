@@ -6,23 +6,33 @@ import com.aliyun.tea.*;
 public class SubmitAIJobRequest extends TeaModel {
     /**
      * <p>The configurations of the AI job. The value is a JSON string.</p>
-     * <br>
-     * <p>*   If you set `Types` to `AIVideoTag`, you can specify `AnalyseTypes` for `Config` to set the analysis algorithm of a smart tagging job. Valid values:</p>
-     * <br>
-     * <p>    *   ASR: automatic speech recognition (ASR)</p>
-     * <p>    *   OCR: image optical character recognition (OCR)</p>
-     * <br>
-     * <p>*   If you set `Types` to `AIMediaDNA`, you can specify `DNADBId` for `Config` to set the ID of the media fingerprint library for video fingerprinting jobs.</p>
+     * <ul>
+     * <li><p>If you set <code>Types</code> to <code>AIVideoTag</code>, you can specify <code>AnalyseTypes</code> for <code>Config</code> to set the analysis algorithm of a smart tagging job. Valid values:</p>
+     * <ul>
+     * <li>ASR: automatic speech recognition (ASR)</li>
+     * <li>OCR: image optical character recognition (OCR)</li>
+     * </ul>
+     * </li>
+     * <li><p>If you set <code>Types</code> to <code>AIMediaDNA</code>, you can specify <code>DNADBId</code> for <code>Config</code> to set the ID of the media fingerprint library for video fingerprinting jobs.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AIVideoTag&quot;: {&quot;AnalyseTypes&quot;: &quot;Face,ASR&quot;} }</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
-     * <br>
-     * <p>*   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</p>
-     * <p>*   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.</p>
-     * <p>*   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation after you upload media files.</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD</a> console. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong>. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</li>
+     * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you call to upload media files.</li>
+     * <li>Obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation after you upload media files.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>3D3D12340d9401fab46a0b847****</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
@@ -41,15 +51,22 @@ public class SubmitAIJobRequest extends TeaModel {
 
     /**
      * <p>The type of the AI job. Separate multiple types with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **AIMediaDNA**: The media fingerprinting job.</p>
-     * <p>*   **AIVideoTag**: The smart tagging job.</p>
+     * <ul>
+     * <li><strong>AIMediaDNA</strong>: The media fingerprinting job.</li>
+     * <li><strong>AIVideoTag</strong>: The smart tagging job.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AIVideoTag</p>
      */
     @NameInMap("Types")
     public String types;
 
     /**
-     * <p>The custom settings. The value is a JSON string. For more information, see [Request parameters](~~86952#h2--userdata-div-id-userdata-div-3~~).</p>
+     * <p>The custom settings. The value is a JSON string. For more information, see <a href="~~86952#h2--userdata-div-id-userdata-div-3~~">Request parameters</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Extend&quot;:{&quot;localId&quot;:&quot;***&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
      */
     @NameInMap("UserData")
     public String userData;

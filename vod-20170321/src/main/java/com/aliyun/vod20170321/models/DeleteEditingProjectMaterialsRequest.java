@@ -4,9 +4,21 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteEditingProjectMaterialsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9e3101bf24bf41c*****123318788ca</p>
+     */
     @NameInMap("MaterialIds")
     public String materialIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>video</p>
+     */
     @NameInMap("MaterialType")
     public String materialType;
 
@@ -16,6 +28,12 @@ public class DeleteEditingProjectMaterialsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>198236101*****1093374</p>
+     */
     @NameInMap("ProjectId")
     public String projectId;
 

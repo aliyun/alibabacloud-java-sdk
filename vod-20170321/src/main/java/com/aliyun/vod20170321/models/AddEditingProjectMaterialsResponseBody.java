@@ -7,6 +7,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     @NameInMap("MaterialList")
     public java.util.List<AddEditingProjectMaterialsResponseBodyMaterialList> materialList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>85237CDA-0B54-5CED-BA10-A8A71AA13C1A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     }
 
     public static class AddEditingProjectMaterialsResponseBodyMaterialList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000487543</p>
+         */
         @NameInMap("CateId")
         public Integer cateId;
 
@@ -41,45 +49,89 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         @NameInMap("CoverURL")
         public String coverURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2019-10-02T08:26Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234751840694470</p>
+         */
         @NameInMap("CustomerId")
         public Long customerId;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3690.2332</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>85befc4118b84c6723e53b80b1****</p>
+         */
         @NameInMap("MaterialId")
         public String materialId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>video</p>
+         */
         @NameInMap("MaterialType")
         public String materialType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-11-25T07:28:34Z</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1682694</p>
+         */
         @NameInMap("Size")
         public Long size;
 
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxx</p>
+         */
         @NameInMap("SpriteConfig")
         public String spriteConfig;
 
         @NameInMap("Sprites")
         public java.util.List<String> sprites;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>tag1,tag2</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Title")
         public String title;
 

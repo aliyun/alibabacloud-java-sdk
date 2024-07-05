@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetMediaDNAResultRequest extends TeaModel {
     /**
      * <p>The ID of the video.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>88c6ca184c0e*****a5b665e2a126797</p>
      */
     @NameInMap("MediaId")
     public String mediaId;

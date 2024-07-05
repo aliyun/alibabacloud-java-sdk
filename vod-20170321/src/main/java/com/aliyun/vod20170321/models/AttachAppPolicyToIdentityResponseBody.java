@@ -18,6 +18,9 @@ public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-****-D7393642CA58</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,16 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeVodAIDataRequest extends TeaModel {
     /**
      * <p>The type of video AI. If you leave this parameter empty, statistics on video AI of all types are returned. Separate multiple types with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **AIVideoCensor**: automated review</p>
-     * <p>*   **AIVideoFPShot**: media fingerprinting</p>
-     * <p>*   **AIVideoTag**: smart tagging</p>
+     * <ul>
+     * <li><strong>AIVideoCensor</strong>: automated review</li>
+     * <li><strong>AIVideoFPShot</strong>: media fingerprinting</li>
+     * <li><strong>AIVideoTag</strong>: smart tagging</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AIVideoCensor</p>
      */
     @NameInMap("AIType")
     public String AIType;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-02-01T15:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -25,17 +33,25 @@ public class DescribeVodAIDataRequest extends TeaModel {
 
     /**
      * <p>The region in which you want to query data. If you leave this parameter empty, data in all regions is returned. Separate multiple regions with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **cn-shanghai**: China (Shanghai)</p>
-     * <p>*   **cn-beijing**: China (Beijing)</p>
-     * <p>*   **eu-central-1**: Germany (Frankfurt)</p>
-     * <p>*   **ap-southeast-1**: Singapore</p>
+     * <ul>
+     * <li><strong>cn-shanghai</strong>: China (Shanghai)</li>
+     * <li><strong>cn-beijing</strong>: China (Beijing)</li>
+     * <li><strong>eu-central-1</strong>: Germany (Frankfurt)</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-02-01T13:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -6,21 +6,33 @@ import com.aliyun.tea.*;
 public class ProduceEditingProjectVideoResponseBody extends TeaModel {
     /**
      * <p>The ID of the produced video.</p>
-     * <br>
-     * <p>> *   This parameter is returned for each request.</p>
-     * <p>> *   If a value is returned for this parameter, the video production task is being asynchronously processed.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter is returned for each request.</li>
+     * <li>If a value is returned for this parameter, the video production task is being asynchronously processed.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>006204a11bb386bb25491f95f****</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
 
     /**
      * <p>The ID of the online editing project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fb2101bf24b4cb318787dc****</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

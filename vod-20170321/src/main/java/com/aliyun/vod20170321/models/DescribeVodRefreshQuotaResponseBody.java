@@ -6,54 +6,81 @@ import com.aliyun.tea.*;
 public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
     /**
      * <p>The maximum number of Object Storage Service (OSS) buckets that can be refreshed each day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("BlockQuota")
     public String blockQuota;
 
     /**
      * <p>The maximum number of directories of files that can be refreshed each day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("DirQuota")
     public String dirQuota;
 
     /**
      * <p>The remaining number of directories of files that can be refreshed on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99</p>
      */
     @NameInMap("DirRemain")
     public String dirRemain;
 
     /**
      * <p>The maximum number of URLs of files that can be prefetched each day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("PreloadQuota")
     public String preloadQuota;
 
     /**
      * <p>The remaining number of URLs of files that can be prefetched on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("PreloadRemain")
     public String preloadRemain;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>42E0554B-80F4-4921-****-ACFB22CAAAD0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The maximum number of URLs of files that can be refreshed each day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("UrlQuota")
     public String urlQuota;
 
     /**
      * <p>The remaining number of URLs of files that can be refreshed on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1996</p>
      */
     @NameInMap("UrlRemain")
     public String urlRemain;
 
     /**
      * <p>The remaining number of OSS buckets that can be refreshed on the current day.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("blockRemain")
     public String blockRemain;

@@ -12,6 +12,9 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FC0E34AC-0239-44A7-****-800DE522C8DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
     public static class DescribeVodCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>235437</p>
          */
         @NameInMap("CertId")
         public Long certId;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>certificate</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The common name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Common")
         public String common;
 
         /**
          * <p>The fingerprint of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
         /**
          * <p>The certificate authority (CA) that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
          * <p>The time when the certificate was issued. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1512388610</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
@@ -157,6 +178,9 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
 
         /**
          * <p>The number of certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;

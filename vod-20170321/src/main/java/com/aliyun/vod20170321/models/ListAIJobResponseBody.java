@@ -18,6 +18,9 @@ public class ListAIJobResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8233A0E4-E112-44*****58-2BCED1B88173</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,62 +57,91 @@ public class ListAIJobResponseBody extends TeaModel {
     public static class ListAIJobResponseBodyAIJobListAIJob extends TeaModel {
         /**
          * <p>The error code. This parameter is returned if the value of Status is fail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The time when the job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-28T02:04:47Z</p>
          */
         @NameInMap("CompleteTime")
         public String completeTime;
 
         /**
-         * <p>The time when the job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-28T02:04:32Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The returned data. The value is a JSON string. For more information, see [AITemplateConfig](~~89863~~).</p>
+         * <p>The returned data. The value is a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/89863.html">AITemplateConfig</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;OrigASRData&quot;:{&quot;AsrTextList&quot;:[{&quot;EndTime&quot;:700,&quot;StartTime&quot;:0,&quot;Text&quot;:&quot;Yes.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:85},{&quot;EndTime&quot;:3750,&quot;StartTime&quot;:1630,&quot;Text&quot;:&quot;No.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:28},{&quot;EndTime&quot;:5910,&quot;StartTime&quot;:4020,&quot;Text&quot;:&quot;Of course.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:95},{&quot;EndTime&quot;:12750,&quot;StartTime&quot;:10090,&quot;Text&quot;:&quot;Message.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:45},{&quot;EndTime&quot;:25230,&quot;StartTime&quot;:13590,&quot;Text&quot;:&quot;Hello, good afternoon.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:20},{&quot;EndTime&quot;:30000,&quot;StartTime&quot;:28220,&quot;Text&quot;:&quot;Yes.&quot;,&quot;ChannelId&quot;:0,&quot;SpeechRate&quot;:33}],&quot;Duration&quot;:&quot;30016&quot;}}</p>
          */
         @NameInMap("Data")
         public String data;
 
         /**
          * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a718a3a1e8bb42ee3bc88921e94****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The ID of the video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D3D12340d9401fab46a0b847****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
          * <p>The error message. This parameter is returned if the value of Status is fail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   **success**: The job is successful.</p>
-         * <p>*   **fail**: The job failed.</p>
-         * <p>*   **init**: The job is being initialized.</p>
-         * <p>*   **Processing**: The job is in progress.</p>
+         * <ul>
+         * <li><strong>success</strong>: The job is successful.</li>
+         * <li><strong>fail</strong>: The job failed.</li>
+         * <li><strong>init</strong>: The job is being initialized.</li>
+         * <li><strong>Processing</strong>: The job is in progress.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the job. Valid values:</p>
-         * <br>
-         * <p>*   **AIMediaDNA**: video fingerprinting</p>
-         * <p>*   **AIVideoTag**: smart tagging</p>
+         * <ul>
+         * <li><strong>AIMediaDNA</strong>: video fingerprinting</li>
+         * <li><strong>AIVideoTag</strong>: smart tagging</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AIVideoTag</p>
          */
         @NameInMap("Type")
         public String type;

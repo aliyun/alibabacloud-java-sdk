@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetMediaAuditResultRequest extends TeaModel {
     /**
      * <p>The ID of the video or image.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93ab850b4f6f*****54b6e91d24d81d4</p>
      */
     @NameInMap("MediaId")
     public String mediaId;

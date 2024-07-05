@@ -18,15 +18,22 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30FA0B7C-3A81-5449-93CD-ACA149E6****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The state of the task. Valid values:</p>
-     * <br>
-     * <p>*   **Processing**</p>
-     * <p>*   **Failed**</p>
+     * <ul>
+     * <li><strong>Processing</strong></li>
+     * <li><strong>Failed</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Processing</p>
      */
     @NameInMap("Status")
     public String status;
@@ -71,12 +78,18 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
     public static class UpdateMediaStorageClassResponseBodyForbiddenListMediaForbiddenReasonDTO extends TeaModel {
         /**
          * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>19e231ee6e3e417fbf2e92ec2680****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
          * <p>The reason for the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TargetStorageClassInconsistent</p>
          */
         @NameInMap("Reason")
         public String reason;

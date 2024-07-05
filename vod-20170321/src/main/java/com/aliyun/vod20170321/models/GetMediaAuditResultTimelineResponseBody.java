@@ -12,6 +12,9 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6438BD76-D523-46FC-956F-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineAd extends TeaModel {
         /**
          * <p>The category of the review result. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: normal content</p>
-         * <p>*   **ad**: ad or text violation</p>
+         * <ul>
+         * <li><strong>normal</strong>: normal content</li>
+         * <li><strong>ad</strong>: ad or text violation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ad</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * <p>The score of the review result category. Valid values: <code>[0, 100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Score")
         public String score;
 
         /**
          * <p>The position in the video. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
@@ -93,21 +106,31 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLive extends TeaModel {
         /**
          * <p>The category of the review result. Valid values:</p>
-         * <br>
-         * <p>*   **normal**</p>
-         * <p>*   **terrorism**</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>terrorism</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pip</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * <p>The score of the review result category. Valid values: <code>[0, 100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Score")
         public String score;
 
         /**
          * <p>The position in the video. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
@@ -146,21 +169,31 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineLogo extends TeaModel {
         /**
          * <p>The category of the review result. Valid values:</p>
-         * <br>
-         * <p>*   **normal**</p>
-         * <p>*   **logo**</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>logo</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>logo</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * <p>The score of the review result category. Valid values: <code>[0, 100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Score")
         public String score;
 
         /**
          * <p>The position in the video. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
@@ -199,22 +232,32 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelinePorn extends TeaModel {
         /**
          * <p>The category of the review result. Valid values:</p>
-         * <br>
-         * <p>*   **porn**</p>
-         * <p>*   **sexy**</p>
-         * <p>*   **normal**</p>
+         * <ul>
+         * <li><strong>porn</strong></li>
+         * <li><strong>sexy</strong></li>
+         * <li><strong>normal</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>porn</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
-         * <p>The score of the review result category. Valid values: `[0, 100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * <p>The score of the review result category. Valid values: <code>[0, 100]</code>. The value is rounded down to 10 decimal places. The score is representative of the confidence.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         @NameInMap("Score")
         public String score;
 
         /**
          * <p>The position in the video. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3005</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
@@ -253,26 +296,36 @@ public class GetMediaAuditResultTimelineResponseBody extends TeaModel {
     public static class GetMediaAuditResultTimelineResponseBodyMediaAuditResultTimelineTerrorism extends TeaModel {
         /**
          * <p>The category of the review result. Valid values:</p>
-         * <br>
-         * <p>*   **terrorism**: terrorist content</p>
-         * <p>*   **outfit**: special costume</p>
-         * <p>*   **logo**: special logo</p>
-         * <p>*   **weapon**: weapon</p>
-         * <p>*   **politics**: politically sensitive content</p>
-         * <p>*   **others**: other terrorist and politically sensitive content</p>
-         * <p>*   **normal**: normal content</p>
+         * <ul>
+         * <li><strong>terrorism</strong>: terrorist content</li>
+         * <li><strong>outfit</strong>: special costume</li>
+         * <li><strong>logo</strong>: special logo</li>
+         * <li><strong>weapon</strong>: weapon</li>
+         * <li><strong>politics</strong>: politically sensitive content</li>
+         * <li><strong>others</strong>: other terrorist and politically sensitive content</li>
+         * <li><strong>normal</strong>: normal content</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The score of the review result category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         @NameInMap("Score")
         public String score;
 
         /**
          * <p>The position in the video. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3005</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;

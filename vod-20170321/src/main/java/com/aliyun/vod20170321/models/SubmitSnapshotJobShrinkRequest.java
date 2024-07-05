@@ -5,41 +5,59 @@ import com.aliyun.tea.*;
 
 public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     /**
-     * <p>The maximum number of snapshots. Default value: **1**.</p>
+     * <p>The maximum number of snapshots. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public Long count;
 
     /**
-     * <p>The height of each snapshot. Valid values: `[8,4096]`. By default, the height of the video source is used. Unit: pixels.</p>
+     * <p>The height of each snapshot. Valid values: <code>[8,4096]</code>. By default, the height of the video source is used. Unit: pixels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>720</p>
      */
     @NameInMap("Height")
     public String height;
 
     /**
-     * <p>The snapshot interval. The value must be **greater than or equal to 0**.</p>
-     * <br>
-     * <p>*   Unit: seconds.</p>
-     * <p>*   Default value: **1**.</p>
-     * <p>*   If you set this parameter to **0**, snapshots are captured at even intervals based on the video duration divided by the value of the Count parameter.</p>
+     * <p>The snapshot interval. The value must be <strong>greater than or equal to 0</strong>.</p>
+     * <ul>
+     * <li>Unit: seconds.</li>
+     * <li>Default value: <strong>1</strong>.</li>
+     * <li>If you set this parameter to <strong>0</strong>, snapshots are captured at even intervals based on the video duration divided by the value of the Count parameter.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Interval")
     public Long interval;
 
     /**
      * <p>The ID of the snapshot template.</p>
-     * <br>
-     * <p>*   We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see [AddVodTemplate](~~99406~~).</p>
-     * <p>*   If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.</p>
+     * <ul>
+     * <li>We recommend that you create a snapshot template before you specify the template ID. For more information about how to create a snapshot template, see <a href="https://help.aliyun.com/document_detail/99406.html">AddVodTemplate</a>.</li>
+     * <li>If you set the SnapshotTemplateId parameter, all the other request parameters except the Action and VideoId parameters are ignored.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>f5b228fe693bf55bd87b789****</p>
      */
     @NameInMap("SnapshotTemplateId")
     public String snapshotTemplateId;
 
     /**
      * <p>The point in time when the first snapshot is captured.</p>
-     * <br>
-     * <p>*   Unit: milliseconds.</p>
-     * <p>*   Default value: **0**.</p>
+     * <ul>
+     * <li>Unit: milliseconds.</li>
+     * <li>Default value: <strong>0</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("SpecifiedOffsetTime")
     public Long specifiedOffsetTime;
@@ -51,31 +69,45 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public String specifiedOffsetTimesShrink;
 
     /**
-     * <p>The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see [SpriteSnapshotConfig](~~86952~~).</p>
+     * <p>The sprite snapshot configuration. If you set this parameter, sprite snapshots are generated. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">SpriteSnapshotConfig</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;CellWidth\&quot;: 120, \&quot;CellHeight\&quot;: 68, \&quot;Columns\&quot;: 3,\&quot;Lines\&quot;: 10, \&quot;Padding\&quot;: 20, \&quot;Margin\&quot;: 50}</p>
      */
     @NameInMap("SpriteSnapshotConfig")
     public String spriteSnapshotConfig;
 
     /**
-     * <p>The custom configurations including the configuration of transparent data transmission and callback configurations. The value must be a JSON string. For more information, see [UserData](~~86952~~).</p>
-     * <br>
-     * <p>>  To use the message callback feature, you must specify an HTTP callback URL and the callback events in the ApsaraVideo VOD console. Otherwise, the callback settings do not take effect.</p>
+     * <p>The custom configurations including the configuration of transparent data transmission and callback configurations. The value must be a JSON string. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</p>
+     * <blockquote>
+     * <p> To use the message callback feature, you must specify an HTTP callback URL and the callback events in the ApsaraVideo VOD console. Otherwise, the callback settings do not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;http://.example.aliyundoc.com&quot;},&quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;example&quot;:&quot;www&quot;}}</p>
      */
     @NameInMap("UserData")
     public String userData;
 
     /**
      * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
-     * <br>
-     * <p>*   After you upload a video in the ApsaraVideo VOD console, you can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Media Files** > **Audio/Video** to view the ID of the video.</p>
-     * <p>*   Obtain the video ID from the response to the [CreateUploadVideo](~~55407~~) operation that you called to obtain the upload URL and credential.</p>
-     * <p>*   Obtain the video ID from the response to the [SearchMedia](~~86044~~) operation that you called to query media information after the audio or video file is uploaded.</p>
+     * <ul>
+     * <li>After you upload a video in the ApsaraVideo VOD console, you can log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the ID of the video.</li>
+     * <li>Obtain the video ID from the response to the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to obtain the upload URL and credential.</li>
+     * <li>Obtain the video ID from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you called to query media information after the audio or video file is uploaded.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>d3e680e618708efbf2cae7cc9312****</p>
      */
     @NameInMap("VideoId")
     public String videoId;
 
     /**
-     * <p>The width of each snapshot. Valid values: `[8,4096]`. By default, the width of the video source is used. Unit: pixels.</p>
+     * <p>The width of each snapshot. Valid values: <code>[8,4096]</code>. By default, the width of the video source is used. Unit: pixels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1280</p>
      */
     @NameInMap("Width")
     public String width;

@@ -12,6 +12,9 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>077D0284-F041-4A41-4D3C-B48377FD****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,31 +42,46 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
 
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfosLogInfoDetail extends TeaModel {
         /**
-         * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-31T05:00:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The name of the log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com_2018_03_25_180000_19****.gz</p>
          */
         @NameInMap("LogName")
         public String logName;
 
         /**
          * <p>The path of the log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com/2018_03_25/example.com_2018_03_25_180000_19****.gz?Expires=1522659931&amp;OSSAccessKeyId=<strong><strong>&amp;Signature=</strong></strong></p>
          */
         @NameInMap("LogPath")
         public String logPath;
 
         /**
          * <p>The size of the log file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2645401</p>
          */
         @NameInMap("LogSize")
         public Long logSize;
 
         /**
-         * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-05-31T04:00:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -137,18 +155,27 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Total")
         public Long total;
@@ -187,12 +214,18 @@ public class DescribeVodDomainLogResponseBody extends TeaModel {
     public static class DescribeVodDomainLogResponseBodyDomainLogDetailsDomainLogDetail extends TeaModel {
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The total number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("LogCount")
         public Long logCount;

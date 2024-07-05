@@ -12,6 +12,9 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
     public static class SubmitPreprocessJobsResponseBodyPreprocessJobsPreprocessJob extends TeaModel {
         /**
          * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bb396607fd11fee9effbb99c4****</p>
          */
         @NameInMap("JobId")
         public String jobId;

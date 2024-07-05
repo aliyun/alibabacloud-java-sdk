@@ -18,6 +18,9 @@ public class GetUploadDetailsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9E290613-04F4-47F4-795D30732077****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,79 +70,118 @@ public class GetUploadDetailsResponseBody extends TeaModel {
 
     public static class GetUploadDetailsResponseBodyUploadDetails extends TeaModel {
         /**
-         * <p>The time when the upload job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the upload job was complete. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-04-28T09:45:07Z</p>
          */
         @NameInMap("CompletionTime")
         public String completionTime;
 
         /**
-         * <p>The time when the upload job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the upload job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-04-28T09:42:07Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The device model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Chrome</p>
          */
         @NameInMap("DeviceModel")
         public String deviceModel;
 
         /**
          * <p>The size of the uploaded file. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46</p>
          */
         @NameInMap("FileSize")
         public Long fileSize;
 
         /**
          * <p>The ID of the uploaded audio or video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61ccbdb06fa83012be4d8083f6****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
          * <p>The time when the information about the media file was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-04-28T09:43:12Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>The status of the video. For more information about the valid values and value description of the parameter, see the "Status: the status of a video" section of the [Basic structures](~~52839~~) topic.</p>
+         * <p>The status of the video. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a video&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Uploading</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The title of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test details</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The IP address of the server that uploads the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
          */
         @NameInMap("UploadIP")
         public String uploadIP;
 
         /**
          * <p>The upload ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.038</p>
          */
         @NameInMap("UploadRatio")
         public Float uploadRatio;
 
         /**
          * <p>The upload size. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>346</p>
          */
         @NameInMap("UploadSize")
         public Long uploadSize;
 
         /**
          * <p>The method that is used to upload the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WebSDK</p>
          */
         @NameInMap("UploadSource")
         public String uploadSource;
 
         /**
-         * <p>The status of the upload job. For more information about the valid values and value description of the parameter, see the "Status: the status of a URL-based upload job" section of the [Basic structures](~~52839~~) topic.</p>
+         * <p>The status of the upload job. For more information about the valid values and value description of the parameter, see the &quot;Status: the status of a URL-based upload job&quot; section of the <a href="https://help.aliyun.com/document_detail/52839.html">Basic structures</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Uploading</p>
          */
         @NameInMap("UploadStatus")
         public String uploadStatus;

@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeVodStorageDataResponseBody extends TeaModel {
     /**
      * <p>The time granularity at which the data was queried. Valid values:</p>
-     * <br>
-     * <p>*   **hour**</p>
-     * <p>*   **day**</p>
+     * <ul>
+     * <li><strong>hour</strong></li>
+     * <li><strong>day</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>day</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C370DAF1-C838-4288-****-9A87633D248E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,18 +64,27 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     public static class DescribeVodStorageDataResponseBodyStorageDataStorageDataItem extends TeaModel {
         /**
          * <p>The outbound traffic. Unit: bytes. The outbound traffic is generated when videos are directly downloaded or played from OSS buckets without Alibaba Cloud CDN acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111</p>
          */
         @NameInMap("NetworkOut")
         public String networkOut;
 
         /**
          * <p>The detailed usage data of storage-related resources. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111</p>
          */
         @NameInMap("StorageUtilization")
         public String storageUtilization;
 
         /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-01T15:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

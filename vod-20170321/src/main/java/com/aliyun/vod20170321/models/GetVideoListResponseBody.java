@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetVideoListResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of media files returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -72,71 +78,105 @@ public class GetVideoListResponseBody extends TeaModel {
 
     public static class GetVideoListResponseBodyVideoListVideo extends TeaModel {
         /**
-         * <p>The ID of the application. Default value: **app-1000000**.</p>
+         * <p>The ID of the application. Default value: <strong>app-1000000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-1000000</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The category ID of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>781111</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
          * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Category name</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
          * <p>The thumbnail URL of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-14T09:15:50Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Video description in ApsaraVideo VOD</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The duration of the audio or video file. Unit: seconds. 86,400 seconds is equivalent to 24 hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>135.6</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the video was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-14T09:16:50Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
          * <p>The period of time in which the audio or video file remains in the restored state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T10:14:14Z</p>
          */
         @NameInMap("RestoreExpiration")
         public String restoreExpiration;
 
         /**
          * <p>The restoration status of the audio or video file. Valid values:</p>
-         * <br>
-         * <p>*   **Processing**</p>
-         * <p>*   **Success**</p>
-         * <p>*   **Failed**</p>
+         * <ul>
+         * <li><strong>Processing</strong></li>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("RestoreStatus")
         public String restoreStatus;
 
         /**
          * <p>The size of the source file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10897890</p>
          */
         @NameInMap("Size")
         public Long size;
@@ -149,58 +189,77 @@ public class GetVideoListResponseBody extends TeaModel {
 
         /**
          * <p>The status of the audio or video file. Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**: The video is being uploaded.</p>
-         * <p>*   **UploadFail**: The video failed to be uploaded.</p>
-         * <p>*   **UploadSucc**: The video is uploaded.</p>
-         * <p>*   **Transcoding**: The video is being transcoded.</p>
-         * <p>*   **TranscodeFail**: The video failed to be transcoded.</p>
-         * <p>*   **checking**: The video is being reviewed.</p>
-         * <p>*   **Blocked**: The video is blocked.</p>
-         * <p>*   **Normal**: The video is normal.</p>
-         * <p>*   **ProduceFail**: The video failed to be produced.</p>
-         * <br>
-         * <p>For more information about each video status, see the "Status: the status of a video" section of the [Basic data types](~~52839#section-p7c-jgy-070~~) topic.</p>
+         * <ul>
+         * <li><strong>Uploading</strong>: The video is being uploaded.</li>
+         * <li><strong>UploadFail</strong>: The video failed to be uploaded.</li>
+         * <li><strong>UploadSucc</strong>: The video is uploaded.</li>
+         * <li><strong>Transcoding</strong>: The video is being transcoded.</li>
+         * <li><strong>TranscodeFail</strong>: The video failed to be transcoded.</li>
+         * <li><strong>checking</strong>: The video is being reviewed.</li>
+         * <li><strong>Blocked</strong>: The video is blocked.</li>
+         * <li><strong>Normal</strong>: The video is normal.</li>
+         * <li><strong>ProduceFail</strong>: The video failed to be produced.</li>
+         * </ul>
+         * <p>For more information about each video status, see the &quot;Status: the status of a video&quot; section of the <a href="~~52839#section-p7c-jgy-070~~">Basic data types</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The storage class of the audio or video file. Valid values:</p>
-         * <br>
-         * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
-         * <p>*   **IA**: All media resources are stored as IA objects.</p>
-         * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
-         * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
-         * <p>*   **SourceIA**: Only the source files are IA objects.</p>
-         * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
-         * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
-         * <p>*   **Changing**: The storage class of the audio or video file is being changed.</p>
-         * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
+         * <ul>
+         * <li><strong>Standard</strong>: All media resources are stored as Standard objects.</li>
+         * <li><strong>IA</strong>: All media resources are stored as IA objects.</li>
+         * <li><strong>Archive</strong>: All media resources are stored as Archive objects.</li>
+         * <li><strong>ColdArchive</strong>: All media resources are stored as Cold Archive objects.</li>
+         * <li><strong>SourceIA</strong>: Only the source files are IA objects.</li>
+         * <li><strong>SourceArchive</strong>: Only the source files are Archive objects.</li>
+         * <li><strong>SourceColdArchive</strong>: Only the source files are Cold Archive objects.</li>
+         * <li><strong>Changing</strong>: The storage class of the audio or video file is being changed.</li>
+         * <li><strong>SourceChanging</strong>: The storage class of the source file is being changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
          * <p>The storage address of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
          * <p>The tags of the audio or video file. Multiple tags are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tag 1,Tag 2</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Video title in ApsaraVideo VOD</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The ID of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ae2af636ca6c10412f44891fc****</p>
          */
         @NameInMap("VideoId")
         public String videoId;

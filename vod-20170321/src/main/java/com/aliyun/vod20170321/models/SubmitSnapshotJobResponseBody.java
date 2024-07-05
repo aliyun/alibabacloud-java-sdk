@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SubmitSnapshotJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-5EB0-4AF6-D7393642****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
     public static class SubmitSnapshotJobResponseBodySnapshotJob extends TeaModel {
         /**
          * <p>The ID of the snapshot job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad90a501b1b94b72374ad0050464****</p>
          */
         @NameInMap("JobId")
         public String jobId;

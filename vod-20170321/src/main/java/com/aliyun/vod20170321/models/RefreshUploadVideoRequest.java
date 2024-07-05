@@ -15,10 +15,15 @@ public class RefreshUploadVideoRequest extends TeaModel {
 
     /**
      * <p>The ID of the audio or video file. You can use one of the following methods to obtain the ID:</p>
-     * <br>
-     * <p>*   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Media Files** > **Audio/Video** in the left-side navigation pane to view the ID.</p>
-     * <p>*   View the value of the VideoId parameter returned by the [CreateUploadVideo](~~55407~~) operation that you called to upload the audio or video file.</p>
-     * <p>*   After an audio or video file is uploaded, obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation that you call to query the audio or video ID.</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a> and choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> in the left-side navigation pane to view the ID.</li>
+     * <li>View the value of the VideoId parameter returned by the <a href="https://help.aliyun.com/document_detail/55407.html">CreateUploadVideo</a> operation that you called to upload the audio or video file.</li>
+     * <li>After an audio or video file is uploaded, obtain the value of VideoId from the response to the <a href="https://help.aliyun.com/document_detail/86044.html">SearchMedia</a> operation that you call to query the audio or video ID.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c6a23a870c8c4ffcd40cbd381333****</p>
      */
     @NameInMap("VideoId")
     public String videoId;

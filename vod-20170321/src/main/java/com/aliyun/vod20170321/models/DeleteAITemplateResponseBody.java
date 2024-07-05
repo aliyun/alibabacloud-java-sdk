@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteAITemplateResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-BEF6-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the AI template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1706a0063dd733f6a823ef32e0a5****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

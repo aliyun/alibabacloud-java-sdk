@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateVideoInfosResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required [permissions](~~113600~~).</p>
+     * <p>The IDs of the videos that cannot be modified. Generally, videos cannot be modified if you do not have required <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
      */
     @NameInMap("ForbiddenVideoIds")
     public java.util.List<String> forbiddenVideoIds;
@@ -18,6 +18,9 @@ public class UpdateVideoInfosResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
