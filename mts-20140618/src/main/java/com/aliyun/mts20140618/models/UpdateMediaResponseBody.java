@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateMediaResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about the media file.</p>
+     * <p>The information about the media file.</p>
      */
     @NameInMap("Media")
     public UpdateMediaResponseBodyMedia media;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6A88246F-C91F-42BD-BABE-DB0DF993F960</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,16 +42,23 @@ public class UpdateMediaResponseBody extends TeaModel {
 
     public static class UpdateMediaResponseBodyMediaFile extends TeaModel {
         /**
-         * <p>The status of the input file. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The input file is normal.</p>
-         * <p>*   **Deleted**: The input file is deleted.</p>
+         * <p>The state of the input file. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The input file is normal.</li>
+         * <li><strong>Deleted</strong>: The input file is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The URL of the input file.</p>
+         * <p>The name of the OSS bucket in which the input media file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com//example-****.mp4">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com//example-****.mp4</a></p>
          */
         @NameInMap("URL")
         public String URL;
@@ -117,45 +127,67 @@ public class UpdateMediaResponseBody extends TeaModel {
     public static class UpdateMediaResponseBodyMedia extends TeaModel {
         /**
          * <p>The bitrate of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2659.326</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
          * <p>The ID of the category to which the media file belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
-         * <p>The review status of the video. Valid values:</p>
-         * <br>
-         * <p>*   **Initiated**: The media file is uploaded but not reviewed.</p>
-         * <p>*   **Pass**: The media file is uploaded and passes the review.</p>
+         * <p>The review state of the media file. Valid values:</p>
+         * <ul>
+         * <li><strong>Initiated</strong>: The media file is uploaded but not reviewed.</li>
+         * <li><strong>Pass</strong>: The media file is uploaded and passes the review.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Initiated</p>
          */
         @NameInMap("CensorState")
         public String censorState;
 
         /**
-         * <p>The storage location of the media thumbnail.</p>
+         * <p>The URL of the thumbnail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket-****.oss-cn-shanghai.aliyuncs.com/example-****.jpg">http://example-bucket-****.oss-cn-shanghai.aliyuncs.com/example-****.jpg</a></p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
          * <p>The time when the media file was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-09-14T08:30:33Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The duration of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7.965000</p>
          */
         @NameInMap("Duration")
         public String duration;
@@ -168,35 +200,51 @@ public class UpdateMediaResponseBody extends TeaModel {
 
         /**
          * <p>The format of the media file. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mov</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>The frame rate of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25.0</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
          * <p>The height of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
          * <p>The ID of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3e1cd21131a94525be55acf65888****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
-         * <p>The publishing status of the media file. Valid values:</p>
-         * <br>
-         * <p>*   **Initiated**: The media file is in the initial state.</p>
-         * <p>*   **UnPublish**: The media file has not been published, and the playback permission on the OSS object is Private.</p>
-         * <p>*   **Published**: The media file has been published, and the playback permission on the OSS object is Default.</p>
-         * <p>*   **Deleted**: The media file is deleted.</p>
+         * <p>The publishing state of the media file. Valid values:</p>
+         * <ul>
+         * <li><strong>Initiated</strong>: The media file is in the initial state.</li>
+         * <li><strong>UnPublish</strong>: The media file has not been published, and the playback permission on the OSS object is Private.</li>
+         * <li><strong>Published</strong>: The media file has been published, and the playback permission on the OSS object is Default.</li>
+         * <li><strong>Deleted</strong>: The media file is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Published</p>
          */
         @NameInMap("PublishState")
         public String publishState;
@@ -209,24 +257,33 @@ public class UpdateMediaResponseBody extends TeaModel {
 
         /**
          * <p>The size of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2647692</p>
          */
         @NameInMap("Size")
         public String size;
 
         /**
-         * <p>The tags of the media file.</p>
+         * <p>The information about the tags.</p>
          */
         @NameInMap("Tags")
         public UpdateMediaResponseBodyMediaTags tags;
 
         /**
          * <p>The title of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The width of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1920</p>
          */
         @NameInMap("Width")
         public String width;

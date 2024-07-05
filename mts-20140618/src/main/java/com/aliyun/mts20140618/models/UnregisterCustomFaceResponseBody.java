@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UnregisterCustomFaceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A3347BF-7BCE-40A6-B33E-43C2B8A9A278</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

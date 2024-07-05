@@ -17,7 +17,11 @@ public class QueryTemplateListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of the custom transcoding templates that you want to query. You can query up to 10 custom transcoding templates at a time. Separate multiple IDs of custom transcoding templates with commas (,).</p>
+     * <p>The response parameters.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16f01ad6175e4230ac42bb5182cd****,88c6ca184c0e424d5w5b665e2a12****</p>
      */
     @NameInMap("TemplateIds")
     public String templateIds;

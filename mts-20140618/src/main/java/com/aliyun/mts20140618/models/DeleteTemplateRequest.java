@@ -17,7 +17,11 @@ public class DeleteTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the custom transcoding template that you want to delete. To obtain the ID of the custom transcoding template, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Global Settings** > **Encoding Templates** in the left-side navigation pane.</p>
+     * <p>The ID of the custom transcoding template that you want to delete. To obtain the ID of the custom transcoding template, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Encoding Templates</strong> in the left-side navigation pane.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16f01ad6175e4230ac42bb5182cd****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

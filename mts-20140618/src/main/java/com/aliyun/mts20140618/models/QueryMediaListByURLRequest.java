@@ -5,49 +5,72 @@ import com.aliyun.tea.*;
 
 public class QueryMediaListByURLRequest extends TeaModel {
     /**
-     * <p>The OSS URLs of the media files. To obtain the OSS URL of a media file, you can perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the media file whose OSS URL you want to view and click **Manage** in the **Actions** column. The OSS URL of the media file is displayed on the **Obtain Encoding URL** tab. Separate multiple URLs with commas (,). You can query up to 10 media files at a time.</p>
-     * <br>
-     * <p>*   The URL complies with RFC 3986 and is encoded in UTF-8, with reserved characters being percent-encoded. The value can be up to 3,200 bytes in size. For more information, see [URL encoding](~~423796~~).</p>
-     * <p>*   Only OSS HTTP URLs are supported. Alibaba Cloud CDN URLs and HTTPS URLs are not supported.</p>
+     * <p>The OSS URLs of the media files. To obtain the OSS URL of a media file, you can perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose <strong>Media Management</strong> &gt; <strong>Media List</strong>. Find the media file whose OSS URL you want to view and click <strong>Manage</strong> in the <strong>Actions</strong> column. The OSS URL of the media file is displayed on the <strong>Obtain Encoding URL</strong> tab. Separate multiple URLs with commas (,). You can query up to 10 media files at a time.</p>
+     * <ul>
+     * <li>The URL complies with RFC 3986 and is encoded in UTF-8, with reserved characters being percent-encoded. The value can be up to 3,200 bytes in size. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</li>
+     * <li>Only OSS HTTP URLs are supported. Alibaba Cloud CDN URLs and HTTPS URLs are not supported.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://example-bucket-****.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket-****.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
      */
     @NameInMap("FileURLs")
     public String fileURLs;
 
     /**
      * <p>Specifies whether to include media information in the returned result.</p>
-     * <br>
-     * <p>*   Valid values: true and false.</p>
-     * <br>
-     * <p>*   Default value: **false**.</p>
-     * <br>
-     * <p>> To obtain detailed information about the media files, set this parameter to true.</p>
+     * <ul>
+     * <li><p>Valid values: true and false.</p>
+     * </li>
+     * <li><p>Default value: <strong>false</strong>.</p>
+     * </li>
+     * </ul>
+     * <blockquote>
+     * <p>To obtain detailed information about the media files, set this parameter to true.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeMediaInfo")
     public Boolean includeMediaInfo;
 
     /**
      * <p>Specifies whether to include playback information in the returned result.</p>
-     * <br>
-     * <p>*   Valid values: true and false.</p>
-     * <p>*   Default value: **false**.</p>
+     * <ul>
+     * <li>Valid values: true and false.</li>
+     * <li>Default value: <strong>false</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludePlayList")
     public Boolean includePlayList;
 
     /**
      * <p>Specifies whether to include snapshot information in the returned result.</p>
-     * <br>
-     * <p>*   Valid values: true and false.</p>
-     * <p>*   Default value: **false**.</p>
+     * <ul>
+     * <li>Valid values: true and false.</li>
+     * <li>Default value: <strong>false</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeSnapshotList")
     public Boolean includeSnapshotList;
 
     /**
      * <p>Specifies whether to include summaries in the returned result.</p>
-     * <br>
-     * <p>*   Valid values: true and false.</p>
-     * <p>*   Default value: **false**.</p>
+     * <ul>
+     * <li>Valid values: true and false.</li>
+     * <li>Default value: <strong>false</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeSummaryList")
     public Boolean includeSummaryList;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateMediaPublishStateResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91B6CAB9-034C-4E4E-A40B-E7F5C81E688C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

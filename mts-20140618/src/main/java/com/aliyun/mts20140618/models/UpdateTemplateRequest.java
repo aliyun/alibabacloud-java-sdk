@@ -5,31 +5,44 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
     /**
-     * <p>The configuration of the audio stream. The value is a JSON object. For more information, see [Audio](~~29253~~).</p>
+     * <p>The transmuxing configurations. The value is a JSON object. For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">MuxConfig</a> parameter of the &quot;Parameter details&quot; topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Codec&quot;:&quot;aac&quot;,&quot;Samplerate&quot;:&quot;44100&quot;,&quot;Bitrate&quot;:&quot;500&quot;,&quot;Channels&quot;:&quot;2&quot;}</p>
      */
     @NameInMap("Audio")
     public String audio;
 
     /**
-     * <p>The container format. The value is a JSON object. Default format: **MP4**.</p>
-     * <br>
-     * <p>*   Video formats: FLV, MP4, HLS (m3u8 + TS), and MPEG-DASH (MPD + fMP4)</p>
-     * <p>*   Audio formats: MP3, MP4, Ogg, FLAC, and M4A</p>
-     * <p>*   Images formats: GIF and WebP</p>
-     * <br>
-     * <p>For more information, see [Container](~~29253~~).</p>
+     * <p>The configurations of the video stream. The value is a JSON object. For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">Video</a> parameter of the &quot;Parameter details&quot; topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Format&quot;:&quot;mp4&quot;}</p>
      */
     @NameInMap("Container")
     public String container;
 
     /**
-     * <p>The transmuxing configuration. The value is a JSON object. For more information, see [MuxConfig](~~29253~~).</p>
+     * <p>The general transcoding configurations. The value is a JSON object. For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">TransConfig</a> parameter of the &quot;Parameter details&quot; topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Segment&quot;:{&quot;Duration&quot;:&quot;10&quot;}}</p>
      */
     @NameInMap("MuxConfig")
     public String muxConfig;
 
     /**
-     * <p>The name of the template. The value can be up to 128 bytes in size.</p>
+     * <p>The container format. The value is a JSON object. Default format: <strong>MP4</strong>.</p>
+     * <ul>
+     * <li>Video formats: FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4)</li>
+     * <li>Audio formats: MP3, MP4, OGG, FLAC, and M4A</li>
+     * <li>Images formats: GIF and WebP</li>
+     * </ul>
+     * <p>For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">Container</a> parameter of the &quot;Parameter details&quot; topic.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MPS-example</p>
      */
     @NameInMap("Name")
     public String name;
@@ -47,19 +60,29 @@ public class UpdateTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the template. You can obtain the template ID from the response of the [AddTemplate](~~213306~~) operation.</p>
+     * <p>The name of the template. The name can be up to 128 bytes in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16f01ad6175e4230ac42bb5182cd****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
-     * <p>The general transcoding configuration. The value is a JSON object. For more information, see [TransConfig](~~29253~~).</p>
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;TransMode&quot;:&quot;onepass&quot;}</p>
      */
     @NameInMap("TransConfig")
     public String transConfig;
 
     /**
-     * <p>The configuration of the video stream. The value is a JSON object. For more information, see [Video](~~29253~~).</p>
+     * <p>The configurations of the audio stream. The value is a JSON object. For more information, see the <a href="https://help.aliyun.com/document_detail/29253.html">Audio</a> parameter of the &quot;Parameter details&quot; topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Codec&quot;:&quot;H.264&quot;,&quot;Profile&quot;:&quot;high&quot;,&quot;Bitrate&quot;:&quot;500&quot;,&quot;Crf&quot;:&quot;15&quot;,&quot;Width&quot;:&quot;256&quot;,&quot;Height&quot;:&quot;800&quot;,&quot;Fps&quot;:&quot;25&quot;,&quot;Gop&quot;:&quot;10&quot;}</p>
      */
     @NameInMap("Video")
     public String video;

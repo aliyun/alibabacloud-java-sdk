@@ -1,3 +1,30 @@
+2024-07-05 Version: 4.0.0
+- Delete API QueryVideoQualityJob.
+- Delete API ReportFpShotJobResult.
+- Delete API SubmitVideoQualityJob.
+- Update API AddTemplate: update response param.
+- Update API BindInputBucket: delete param RoleArn.
+- Update API BindInputBucket: update response param.
+- Update API BindOutputBucket: delete param RoleArn.
+- Update API BindOutputBucket: update response param.
+- Update API CreateFpShotDB: update param ModelId.
+- Update API QueryJobList: update response param.
+- Update API QueryMediaCensorJobDetail: update response param.
+- Update API QueryMediaCensorJobList: update response param.
+- Update API QueryPipelineList: update response param.
+- Update API QuerySnapshotJobList: update response param.
+- Update API QueryTemplateList: update response param.
+- Update API SearchPipeline: update response param.
+- Update API SearchTemplate: add param NamePrefix.
+- Update API SearchTemplate: update response param.
+- Update API SubmitSmarttagJob: add param Priority.
+- Update API SubmitSnapshotJob: update response param.
+- Update API UpdateMediaWorkflow: add param Name.
+- Update API UpdateMediaWorkflow: add param TriggerMode.
+- Update API UpdatePipeline: add param ExtendConfig.
+- Update API UpdateTemplate: update response param.
+
+
 2023-02-15 Version: 3.3.56
 - Update QueryFpShotJobList add duration.
 

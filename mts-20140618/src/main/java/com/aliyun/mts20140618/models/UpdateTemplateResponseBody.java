@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of the transcoding template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E4FB22E-B9EA-4E24-8FFC-B407EA71QW21</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,70 +40,237 @@ public class UpdateTemplateResponseBody extends TeaModel {
         return this.template;
     }
 
+    public static class UpdateTemplateResponseBodyTemplateAudioVolume extends TeaModel {
+        /**
+         * <p>The expected volume.</p>
+         * <ul>
+         * <li>This parameter takes effect only if the value of Method is dynamic.</li>
+         * <li>Unit: decibel.</li>
+         * <li>Valid values: [-70,-5].</li>
+         * <li>Default value: -6.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-6</p>
+         */
+        @NameInMap("IntegratedLoudnessTarget")
+        public String integratedLoudnessTarget;
+
+        /**
+         * <p>The increased volume relative to the volume of the input audio.</p>
+         * <ul>
+         * <li>This parameter takes effect only if the value of Method is linear.</li>
+         * <li>Unit: decibel.</li>
+         * <li>Valid values: less than or equal to 20.</li>
+         * <li>Default value: -20.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-20</p>
+         */
+        @NameInMap("Level")
+        public String level;
+
+        /**
+         * <p>The range of the volume relative to the expected volume.</p>
+         * <ul>
+         * <li>This parameter takes effect only if the value of Method is dynamic.</li>
+         * <li>Unit: decibel.</li>
+         * <li>Valid values: [1,20].</li>
+         * <li>Default value: 8.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
+        @NameInMap("LoudnessRangeTarget")
+        public String loudnessRangeTarget;
+
+        /**
+         * <p>The volume adjustment method. Valid values:</p>
+         * <ul>
+         * <li><strong>auto</strong></li>
+         * <li><strong>dynamic</strong></li>
+         * <li><strong>linear</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
+        @NameInMap("Method")
+        public String method;
+
+        /**
+         * <p>The volume adjustment coefficient.</p>
+         * <p>This parameter takes effect only if the value of Method is adaptive.</p>
+         * <p>Valid values: [0,1].</p>
+         * <p>Default value: 0.9.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
+         */
+        @NameInMap("PeakLevel")
+        public String peakLevel;
+
+        /**
+         * <p>The peak volume.</p>
+         * <ul>
+         * <li>This parameter takes effect only if the value of Method is dynamic.</li>
+         * <li>Unit: decibel.</li>
+         * <li>Valid values: [-9,0].</li>
+         * <li>Default value: -1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
+        @NameInMap("TruePeak")
+        public String truePeak;
+
+        public static UpdateTemplateResponseBodyTemplateAudioVolume build(java.util.Map<String, ?> map) throws Exception {
+            UpdateTemplateResponseBodyTemplateAudioVolume self = new UpdateTemplateResponseBodyTemplateAudioVolume();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateTemplateResponseBodyTemplateAudioVolume setIntegratedLoudnessTarget(String integratedLoudnessTarget) {
+            this.integratedLoudnessTarget = integratedLoudnessTarget;
+            return this;
+        }
+        public String getIntegratedLoudnessTarget() {
+            return this.integratedLoudnessTarget;
+        }
+
+        public UpdateTemplateResponseBodyTemplateAudioVolume setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public UpdateTemplateResponseBodyTemplateAudioVolume setLoudnessRangeTarget(String loudnessRangeTarget) {
+            this.loudnessRangeTarget = loudnessRangeTarget;
+            return this;
+        }
+        public String getLoudnessRangeTarget() {
+            return this.loudnessRangeTarget;
+        }
+
+        public UpdateTemplateResponseBodyTemplateAudioVolume setMethod(String method) {
+            this.method = method;
+            return this;
+        }
+        public String getMethod() {
+            return this.method;
+        }
+
+        public UpdateTemplateResponseBodyTemplateAudioVolume setPeakLevel(String peakLevel) {
+            this.peakLevel = peakLevel;
+            return this;
+        }
+        public String getPeakLevel() {
+            return this.peakLevel;
+        }
+
+        public UpdateTemplateResponseBodyTemplateAudioVolume setTruePeak(String truePeak) {
+            this.truePeak = truePeak;
+            return this;
+        }
+        public String getTruePeak() {
+            return this.truePeak;
+        }
+
+    }
+
     public static class UpdateTemplateResponseBodyTemplateAudio extends TeaModel {
         /**
-         * <p>The audio bitrate of the output file.</p>
-         * <br>
-         * <p>*   Valid values: **\[8, 1000]**.</p>
-         * <p>*   Unit: Kbit/s.</p>
-         * <p>*   Default value: **128**.</p>
+         * <p>The ID of the transcoding template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The number of sound channels. Default value: **2**.</p>
+         * <p>The audio bitrate of the output file.</p>
+         * <ul>
+         * <li>Valid values: 8 to 1000.****</li>
+         * <li>Unit: Kbit/s.</li>
+         * <li>Default value: <strong>128</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Channels")
         public String channels;
 
         /**
-         * <p>The audio codec. Default value: **aac**. Valid values:</p>
-         * <br>
-         * <p>*   **aac**</p>
-         * <p>*   **mp3**</p>
-         * <p>*   **vorbis**</p>
-         * <p>*   **flac**</p>
+         * <p>The sampling rate.</p>
+         * <ul>
+         * <li>Unit: Hz.</li>
+         * <li>Default value: <strong>44100</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>aac</p>
          */
         @NameInMap("Codec")
         public String codec;
 
         /**
-         * <p>The codec profile of the audio. Valid values when the **Codec** parameter is set to **aac**:</p>
-         * <br>
-         * <p>*   **aac_low**</p>
-         * <p>*   **aac_he**</p>
-         * <p>*   **aac_he_v2**</p>
-         * <p>*   **aac_ld**</p>
-         * <p>*   **aac_eld**</p>
+         * <p>Indicates whether the audio stream is deleted.</p>
+         * <ul>
+         * <li><strong>true</strong>: The audio stream is deleted.</li>
+         * <li><strong>false</strong>: The audio stream is retained.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>aac_low</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
-         * <p>The strength of the independent noise reduction algorithm.</p>
+         * <p>The number of sound channels. Default value: <strong>2</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Qscale")
         public String qscale;
 
         /**
-         * <p>Indicates whether to delete the audio stream.</p>
-         * <br>
-         * <p>*   **true**: The audio stream is deleted.</p>
-         * <p>*   **false**: The audio stream is retained.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>The audio codec format. Default value: <strong>aac</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>aac</strong></li>
+         * <li><strong>mp3</strong></li>
+         * <li><strong>vorbis</strong></li>
+         * <li><strong>flac</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Remove")
         public String remove;
 
         /**
-         * <p>The sampling rate.</p>
-         * <br>
-         * <p>*   Unit: Hz.</p>
-         * <p>*   Default value: **44100**.</p>
+         * <p>The level of the independent denoising algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44100</p>
          */
         @NameInMap("Samplerate")
         public String samplerate;
+
+        /**
+         * <p>The volume control configurations.</p>
+         */
+        @NameInMap("Volume")
+        public UpdateTemplateResponseBodyTemplateAudioVolume volume;
 
         public static UpdateTemplateResponseBodyTemplateAudio build(java.util.Map<String, ?> map) throws Exception {
             UpdateTemplateResponseBodyTemplateAudio self = new UpdateTemplateResponseBodyTemplateAudio();
@@ -163,11 +333,22 @@ public class UpdateTemplateResponseBody extends TeaModel {
             return this.samplerate;
         }
 
+        public UpdateTemplateResponseBodyTemplateAudio setVolume(UpdateTemplateResponseBodyTemplateAudioVolume volume) {
+            this.volume = volume;
+            return this;
+        }
+        public UpdateTemplateResponseBodyTemplateAudioVolume getVolume() {
+            return this.volume;
+        }
+
     }
 
     public static class UpdateTemplateResponseBodyTemplateContainer extends TeaModel {
         /**
          * <p>The container format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp4</p>
          */
         @NameInMap("Format")
         public String format;
@@ -189,25 +370,37 @@ public class UpdateTemplateResponseBody extends TeaModel {
 
     public static class UpdateTemplateResponseBodyTemplateMuxConfigGif extends TeaModel {
         /**
-         * <p>The color dithering algorithm of the palette. Valid values: sierra and bayer.</p>
+         * <p>The loop count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bayer</p>
          */
         @NameInMap("DitherMode")
         public String ditherMode;
 
         /**
-         * <p>The duration for which the final frame is paused. Unit: milliseconds.</p>
+         * <p>The color dithering algorithm of the palette. Valid values: sierra and bayer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("FinalDelay")
         public String finalDelay;
 
         /**
-         * <p>Indicates whether the custom palette is used.</p>
+         * <p>The segment configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("IsCustomPalette")
         public String isCustomPalette;
 
         /**
-         * <p>The loop count.</p>
+         * <p>Indicates whether the custom palette is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Loop")
         public String loop;
@@ -253,7 +446,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
 
     public static class UpdateTemplateResponseBodyTemplateMuxConfigSegment extends TeaModel {
         /**
-         * <p>The length of the segment. Unit: seconds.</p>
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Duration")
         public String duration;
@@ -275,7 +471,10 @@ public class UpdateTemplateResponseBody extends TeaModel {
 
     public static class UpdateTemplateResponseBodyTemplateMuxConfigWebp extends TeaModel {
         /**
-         * <p>The loop count.</p>
+         * <p>The transmuxing configurations for GIF.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Loop")
         public String loop;
@@ -297,19 +496,19 @@ public class UpdateTemplateResponseBody extends TeaModel {
 
     public static class UpdateTemplateResponseBodyTemplateMuxConfig extends TeaModel {
         /**
-         * <p>The transmuxing configuration for GIF.</p>
+         * <p>The duration for which the final frame is paused. Unit: milliseconds.</p>
          */
         @NameInMap("Gif")
         public UpdateTemplateResponseBodyTemplateMuxConfigGif gif;
 
         /**
-         * <p>The segment configuration.</p>
+         * <p>The length of the segment. Unit: seconds.</p>
          */
         @NameInMap("Segment")
         public UpdateTemplateResponseBodyTemplateMuxConfigSegment segment;
 
         /**
-         * <p>The transmuxing configuration for WebP.</p>
+         * <p>The loop count.</p>
          */
         @NameInMap("Webp")
         public UpdateTemplateResponseBodyTemplateMuxConfigWebp webp;
@@ -347,87 +546,112 @@ public class UpdateTemplateResponseBody extends TeaModel {
 
     public static class UpdateTemplateResponseBodyTemplateTransConfig extends TeaModel {
         /**
-         * <p>The method of resolution adjustment. Default value: **none**. Valid values:</p>
-         * <br>
-         * <p>*   rescale: The input video is rescaled.</p>
-         * <p>*   crop: The input video is cropped.</p>
-         * <p>*   none: No change is made.</p>
+         * <p>Indicates whether the video bitrate is checked. If this parameter is set to true and the system detects that the video bitrate of the output file is greater than that of the input file, the video bitrate of the input file is retained after transcoding. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The video bitrate is checked.</li>
+         * <li><strong>false</strong>: The video bitrate is not checked.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("AdjDarMethod")
         public String adjDarMethod;
 
         /**
-         * <p>Indicates whether to check the audio bitrate.</p>
-         * <br>
-         * <p>*   If this feature is enabled and the system detects that the audio bitrate of the output file is greater than that of the input file, the audio bitrate of the input file is retained after transcoding.</p>
-         * <p>*   **true**: The audio bitrate is checked.</p>
-         * <p>*   **false**: The audio bitrate is not checked.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>The transcoding mode. Default value: <strong>onepass</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>onepass</strong></li>
+         * <li><strong>twopass</strong></li>
+         * <li><strong>CBR</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckAudioBitrate")
         public String isCheckAudioBitrate;
 
         /**
-         * <p>Indicates whether to allow audio bitrate check errors.</p>
-         * <br>
-         * <p>*   **true**. If the audio bitrate check fails, the input file is not transcoded.</p>
-         * <p>*   **false**: The audio bitrate is not checked.</p>
-         * <p>*   Default value: **false**.</p>
-         * <p>*   This parameter takes precedence over the IsCheckAudioBitrate parameter.</p>
+         * <p>The status of the template. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The template is normal.</li>
+         * <li><strong>Deleted</strong>: The template is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckAudioBitrateFail")
         public String isCheckAudioBitrateFail;
 
         /**
-         * <p>Indicates whether to check the resolution.</p>
-         * <br>
-         * <p>*   If this feature is enabled and the system detects that the resolution of the output file is higher than that of the input file based on the width or height, the resolution of the input file is retained after transcoding.</p>
-         * <p>*   **true**: The resolution is checked.</p>
-         * <p>*   **false**: The resolution is not checked.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>Indicates whether the video bitrate is checked. This parameter has a higher priority than the IsCheckVideoBitrate parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The video bitrate is checked</li>
+         * <li><strong>false</strong>: The video bitrate is not checked.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckReso")
         public String isCheckReso;
 
         /**
-         * <p>Indicates whether to check the resolution.</p>
-         * <br>
-         * <p>*   If this feature is enabled and the system detects that the resolution of the output file is higher than that of the input file based on the width or height, an error that indicates a transcoding failure is returned.</p>
-         * <p>*   **true**: The resolution is checked.</p>
-         * <p>*   **false**: The resolution is not checked.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>Indicates whether the audio bitrate is checked. This parameter has a higher priority than the IsCheckAudioBitrate parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The audio bitrate is checked.</li>
+         * <li><strong>false</strong>: The audio bitrate is not checked.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckResoFail")
         public String isCheckResoFail;
 
         /**
-         * <p>Indicates whether to check the video bitrate.</p>
-         * <br>
-         * <p>*   If this feature is enabled and the system detects that the video bitrate of the output file is greater than that of the input file, the video bitrate of the input file is retained after transcoding.</p>
-         * <p>*   **true**: The video bitrate is checked.</p>
-         * <p>*   **false**: The video bitrate is not checked.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>Indicates whether the resolution is checked. If this parameter is set to true and the system detects that the resolution of the output file is higher than that of the input file based on the width or height, an error that indicates a transcoding failure is returned. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The resolution is checked.</li>
+         * <li><strong>false</strong>: The resolution is not checked.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckVideoBitrate")
         public String isCheckVideoBitrate;
 
         /**
-         * <p>Indicates whether to allow video bitrate check errors.</p>
-         * <br>
-         * <p>*   **true**. If the video bitrate check fails, the input file is not transcoded.</p>
-         * <p>*   **false**: The video bitrate is not checked.</p>
-         * <p>*   Default value: **false**.</p>
-         * <p>*   This parameter takes precedence over the IsCheckVideoBitrate parameter.</p>
+         * <p>The method of resolution adjustment. Default value: <strong>none</strong>. Valid values:</p>
+         * <ul>
+         * <li>rescale: The input video is rescaled.</li>
+         * <li>crop: The input video is cropped.</li>
+         * <li>none: No change is made.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckVideoBitrateFail")
         public String isCheckVideoBitrateFail;
 
         /**
-         * <p>The transcoding mode. Default value: **onepass**. Valid values:</p>
-         * <br>
-         * <p>*   **onepass**</p>
-         * <p>*   **twopass**</p>
-         * <p>*   **CBR**</p>
+         * <p>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained after transcoding. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The resolution is checked.</li>
+         * <li><strong>false</strong>: The resolution is not checked.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>onepass</p>
          */
         @NameInMap("TransMode")
         public String transMode;
@@ -505,13 +729,19 @@ public class UpdateTemplateResponseBody extends TeaModel {
 
     public static class UpdateTemplateResponseBodyTemplateVideoBitrateBnd extends TeaModel {
         /**
-         * <p>The upper limit of the total bitrate. Unit: Kbit/s.</p>
+         * <p>The lower limit of the total bitrate. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Max")
         public String max;
 
         /**
-         * <p>The lower limit of the total bitrate. Unit: Kbit/s.</p>
+         * <p>The pixel format. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Min")
         public String min;
@@ -539,179 +769,322 @@ public class UpdateTemplateResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateTemplateResponseBodyTemplateVideoNarrowBand extends TeaModel {
+        /**
+         * <p>The upper limit of the dynamic bitrate. If this parameter is set, the average bitrate is in the range of (0, 1000000].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
+        @NameInMap("Abrmax")
+        public Float abrmax;
+
+        /**
+         * <p>The maximum ratio of the upper limit of dynamic bitrate. If this parameter is set, the value of Abrmax does not exceed x times of the source video bitrate. Valid values: (0,1.0].</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
+        @NameInMap("MaxAbrRatio")
+        public Float maxAbrRatio;
+
+        /**
+         * <p>The Narrowband HD version. Only 1.0 may be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
+        @NameInMap("Version")
+        public String version;
+
+        public static UpdateTemplateResponseBodyTemplateVideoNarrowBand build(java.util.Map<String, ?> map) throws Exception {
+            UpdateTemplateResponseBodyTemplateVideoNarrowBand self = new UpdateTemplateResponseBodyTemplateVideoNarrowBand();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateTemplateResponseBodyTemplateVideoNarrowBand setAbrmax(Float abrmax) {
+            this.abrmax = abrmax;
+            return this;
+        }
+        public Float getAbrmax() {
+            return this.abrmax;
+        }
+
+        public UpdateTemplateResponseBodyTemplateVideoNarrowBand setMaxAbrRatio(Float maxAbrRatio) {
+            this.maxAbrRatio = maxAbrRatio;
+            return this;
+        }
+        public Float getMaxAbrRatio() {
+            return this.maxAbrRatio;
+        }
+
+        public UpdateTemplateResponseBodyTemplateVideoNarrowBand setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class UpdateTemplateResponseBodyTemplateVideo extends TeaModel {
         /**
-         * <p>The average bitrate of the video. Unit: Kbit/s.</p>
+         * <p>The maximum bitrate of the video. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The average bitrate range of the video.</p>
+         * <p>The upper limit of the total bitrate. Unit: Kbit/s.</p>
          */
         @NameInMap("BitrateBnd")
         public UpdateTemplateResponseBodyTemplateVideoBitrateBnd bitrateBnd;
 
         /**
-         * <p>The size of the buffer.</p>
-         * <br>
-         * <p>*   Unit: KB.</p>
-         * <p>*   Default value: **6000**.</p>
+         * <p>The level of quality control on the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6000</p>
          */
         @NameInMap("Bufsize")
         public String bufsize;
 
         /**
-         * <p>The video codec. Default value: **H.264**.</p>
+         * <p>The height of the output video.</p>
+         * <ul>
+         * <li>Unit: pixel.</li>
+         * <li>Default value: the height of the input video.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>H.264</p>
          */
         @NameInMap("Codec")
         public String codec;
 
         /**
-         * <p>The constant rate factor.</p>
-         * <br>
-         * <p>*   Default value when the Codec parameter is set to H.264: **23**. Default value when the Codec parameter is set to H.265: **26**.</p>
-         * <p>*   If this parameter is specified, the setting of the Bitrate parameter is invalid.</p>
+         * <p>Indicates whether the video stream is deleted. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The video stream is deleted.</li>
+         * <li><strong>false</strong>: The video stream is retained.</li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("Crf")
         public String crf;
 
         /**
-         * <p>The method of video cropping. Valid values:</p>
-         * <br>
-         * <p>*   **border**: automatically detects and removes borders.</p>
-         * <p>*   **Other values**: the custom cropping modes. Format: width:height:left:top. Example: 1280:800:0:140.</p>
+         * <p>The average bitrate of the video. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>border</p>
          */
         @NameInMap("Crop")
         public String crop;
 
         /**
-         * <p>The level of video quality control.</p>
+         * <p>The average bitrate range of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Degrain")
         public String degrain;
 
         /**
-         * <p>The frame rate of the video.</p>
-         * <br>
-         * <p>*   The value is 60 if the frame rate of the input video exceeds 60.</p>
-         * <p>*   Default value: the frame rate of the input video.</p>
+         * <p>The preset video algorithm. Default value: <strong>medium</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>veryfast</strong></li>
+         * <li><strong>fast</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>slow</strong></li>
+         * <li><strong>slower</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
-         * <p>The maximum number of frames between two keyframes. Default value: **250**.</p>
+         * <p>The width of the video.</p>
+         * <ul>
+         * <li>Unit: pixel.</li>
+         * <li>Default value: <strong>the width of the input video</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Gop")
         public String gop;
 
         /**
-         * <p>The height of the video.</p>
-         * <br>
-         * <p>*   Unit: pixel.</p>
-         * <p>*   Default value: the height of the input video.</p>
+         * <p>Indicates whether the HDR2SDR conversion feature is enabled. If this feature is enabled, high dynamic range (HDR) videos are transcoded to standard dynamic range (SDR) videos.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Hdr2sdr")
+        public String hdr2sdr;
+
+        /**
+         * <p>The level of the independent denoising algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
-         * <p>Indicates whether to enable the auto-rotate screen feature.</p>
-         * <br>
-         * <p>*   If this feature is enabled, the width of the output video corresponds to the long side of the input video, which is the height of the input video in portrait mode. The height of the output video corresponds to the short side of the input video, which is the width of the input video in portrait mode.</p>
-         * <p>*   **true**: The auto-rotate screen feature is enabled.</p>
-         * <p>*   **false**: The auto-rotate screen feature is disabled.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>The size of the buffer.</p>
+         * <ul>
+         * <li>Unit: KB.</li>
+         * <li>Default value: <strong>6000</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("LongShortMode")
         public String longShortMode;
 
         /**
-         * <p>The maximum frame rate.</p>
+         * <p>The encoding profile. Valid values:</p>
+         * <ul>
+         * <li><strong>baseline</strong>: applicable to mobile devices.</li>
+         * <li><strong>main</strong>: applicable to standard-definition devices.</li>
+         * <li><strong>high</strong>: applicable to high-definition devices.</li>
+         * <li>Default value: <strong>high</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("MaxFps")
         public String maxFps;
 
         /**
-         * <p>The maximum video bitrate. Unit: Kbit/s.</p>
+         * <p>The maximum frame rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Maxrate")
         public String maxrate;
 
         /**
-         * <p>The black borders to be added to the video.</p>
-         * <br>
-         * <p>*   Format: width:height:left:top.</p>
-         * <p>*   Example: 1280:800:0:140.</p>
+         * <p>The Narrowband HD settings.</p>
+         */
+        @NameInMap("NarrowBand")
+        public UpdateTemplateResponseBodyTemplateVideoNarrowBand narrowBand;
+
+        /**
+         * <p>The video codec. Default value: <strong>H.264</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280:800:0:140</p>
          */
         @NameInMap("Pad")
         public String pad;
 
         /**
-         * <p>The pixel format for video color encoding. Valid values: standard pixel formats such as yuv420p and yuvj420p.</p>
+         * <p>The black borders added to the video.</p>
+         * <ul>
+         * <li>Format: width:height:left:top.</li>
+         * <li>Example: 1280:800:0:140.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yuv420p</p>
          */
         @NameInMap("PixFmt")
         public String pixFmt;
 
         /**
-         * <p>The preset video algorithm. Default value: **medium**. Valid values:</p>
-         * <br>
-         * <p>*   **veryfast**</p>
-         * <p>*   **fast**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **slow**</p>
-         * <p>*   **slower**</p>
+         * <p>The scan mode. Valid values:</p>
+         * <ul>
+         * <li><strong>interlaced</strong>: An interlaced scan is performed.</li>
+         * <li><strong>progressive</strong>: A progressive scan is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         @NameInMap("Preset")
         public String preset;
 
         /**
-         * <p>The codec profile.</p>
-         * <br>
-         * <p>*   **baseline**: applicable to mobile devices.</p>
-         * <p>*   **main**: applicable to standard-definition devices.</p>
-         * <p>*   **high**: applicable to high-definition devices.</p>
-         * <p>*   Default value: **high**.</p>
+         * <p>The bitrate quality control factor.</p>
+         * <ul>
+         * <li>Default value if the Codec parameter is set to H.264: <strong>23</strong>. Default value if the Codec parameter is set to H.265: <strong>26</strong>.</li>
+         * <li>If this parameter is returned, the setting of the Bitrate parameter is invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
-         * <p>The strength of the independent noise reduction algorithm.</p>
+         * <p>The method used to crop the video.</p>
+         * <ul>
+         * <li><strong>border</strong>: automatically detects and removes borders.</li>
+         * <li>Value in the width:height:left:top format: crops the video based on custom settings.**** Example: 1280:800:0:140.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Qscale")
         public String qscale;
 
         /**
-         * <p>Indicates whether to delete the video stream.</p>
-         * <br>
-         * <p>*   **true**: The video stream is deleted.</p>
-         * <p>*   **false**: The video stream is retained.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>The maximum number of frames between two keyframes. Default value: <strong>250</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Remove")
         public String remove;
 
         /**
-         * <p>The policy of resolution adjustment.</p>
+         * <p>The general transcoding configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResoPriority")
         public String resoPriority;
 
         /**
-         * <p>The scan mode. Valid values:</p>
-         * <br>
-         * <p>*   **interlaced**</p>
-         * <p>*   **progressive**</p>
+         * <p>The policy of resolution adjustment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>interlaced</p>
          */
         @NameInMap("ScanMode")
         public String scanMode;
 
         /**
-         * <p>The width of the video.</p>
-         * <br>
-         * <p>*   Unit: pixel.</p>
-         * <p>*   Default value: the width of the input video.</p>
+         * <p>The frame rate.</p>
+         * <ul>
+         * <li>A value of 60 is returned if the frame rate of the input video exceeds 60.</li>
+         * <li>Default value: the frame rate of the input video.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>256</p>
          */
         @NameInMap("Width")
         public String width;
@@ -793,6 +1166,14 @@ public class UpdateTemplateResponseBody extends TeaModel {
             return this.gop;
         }
 
+        public UpdateTemplateResponseBodyTemplateVideo setHdr2sdr(String hdr2sdr) {
+            this.hdr2sdr = hdr2sdr;
+            return this;
+        }
+        public String getHdr2sdr() {
+            return this.hdr2sdr;
+        }
+
         public UpdateTemplateResponseBodyTemplateVideo setHeight(String height) {
             this.height = height;
             return this;
@@ -823,6 +1204,14 @@ public class UpdateTemplateResponseBody extends TeaModel {
         }
         public String getMaxrate() {
             return this.maxrate;
+        }
+
+        public UpdateTemplateResponseBodyTemplateVideo setNarrowBand(UpdateTemplateResponseBodyTemplateVideoNarrowBand narrowBand) {
+            this.narrowBand = narrowBand;
+            return this;
+        }
+        public UpdateTemplateResponseBodyTemplateVideoNarrowBand getNarrowBand() {
+            return this.narrowBand;
         }
 
         public UpdateTemplateResponseBodyTemplateVideo setPad(String pad) {
@@ -901,52 +1290,70 @@ public class UpdateTemplateResponseBody extends TeaModel {
 
     public static class UpdateTemplateResponseBodyTemplate extends TeaModel {
         /**
-         * <p>The audio codec configuration.</p>
+         * <p>The audio codec settings.</p>
          */
         @NameInMap("Audio")
         public UpdateTemplateResponseBodyTemplateAudio audio;
 
         /**
-         * <p>The container configuration.</p>
+         * <p>The container format.</p>
          */
         @NameInMap("Container")
         public UpdateTemplateResponseBodyTemplateContainer container;
 
         /**
-         * <p>The ID of the transcoding template.</p>
+         * <p>The container configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16f01ad6175e4230ac42bb5182cd****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The transmuxing configuration.</p>
+         * <p>The transmuxing configurations for WebP.</p>
          */
         @NameInMap("MuxConfig")
         public UpdateTemplateResponseBodyTemplateMuxConfig muxConfig;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The audio codec configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MPS-example</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The status of the template.</p>
-         * <br>
-         * <p>*   **Normal**: The template is normal.</p>
-         * <p>*   **Deleted**: The template is deleted.</p>
+         * <p>The transmuxing configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The general transcoding configuration.</p>
+         * <p>Indicates whether the audio bitrate is checked. If the bitrate of the output audio is greater than the bitrate of the input audio, the bitrate of the input audio is retained after transcoding. In this case, the specified audio bitrate does not take effect. This parameter has a lower priority than the IsCheckAudioBitrateFail parameter. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The audio bitrate is checked.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The audio bitrate is not checked.</p>
+         * </li>
+         * <li><p>Default value:</p>
+         * <ul>
+         * <li>If the parameter is left empty and the codec of the output audio is different from that of the input audio, the default value is false.</li>
+         * <li>If the parameter is left empty and the codec of the output audio is the same as that of the input audio, the default value is true.</li>
+         * </ul>
+         * </li>
+         * </ul>
          */
         @NameInMap("TransConfig")
         public UpdateTemplateResponseBodyTemplateTransConfig transConfig;
 
         /**
-         * <p>The video codec configuration.</p>
+         * <p>The video codec configurations.</p>
          */
         @NameInMap("Video")
         public UpdateTemplateResponseBodyTemplateVideo video;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SubmitFpDBDeleteJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the job. We recommend that you keep this ID for subsequent operation calls.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d98459323c024947a104f6a50cbf****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4247B23C-26DE-529F-8D9F-FD6811AE979B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

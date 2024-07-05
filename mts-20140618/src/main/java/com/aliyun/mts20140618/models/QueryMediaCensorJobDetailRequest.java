@@ -5,22 +5,33 @@ import com.aliyun.tea.*;
 
 public class QueryMediaCensorJobDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the content moderation job. You can obtain the job ID from the response parameters of the [SubmitMediaCensorJob](~~91774~~) operation.</p>
+     * <p>The ID of the content moderation job. You can obtain the job ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/91774.html">SubmitMediaCensorJob</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2288c6ca184c0e47098a5b665e2a12****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Default value: **30**.</p>
-     * <p>*   Valid values: **1 to 300**.</p>
+     * <ul>
+     * <li>Default value: <strong>30</strong>.</li>
+     * <li>Valid values: <strong>1 to 300</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("MaximumPageSize")
     public Long maximumPageSize;
 
     /**
-     * <p>The token that is used to retrieve the next page of the query results. You can leave this parameter empty when you call this operation to query the results of a content moderation job for the first time. The token of the next page is returned after you call this operation to query the results of a content moderation job for the first time.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation to query the results of a content moderation job for the first time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ae0fd49c0840e14daf0d66a75b83****</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteTemplateResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2247541A-9F27-47EE-B6EC-484B5475****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the custom transcoding template that is deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16f01ad6175e4230ac42bb5182cd****</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

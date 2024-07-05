@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UnbindOutputBucketResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The operation that you want to perform. Set the value to <strong>UnbindOutputBucket</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4AEA0480-32F4-1656-92B3-F4D4CDE6BBB3</p>
      */
     @NameInMap("RequestId")
     public String requestId;

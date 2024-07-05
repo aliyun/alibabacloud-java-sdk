@@ -4,9 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ImportFpShotJobResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the import job. We recommend that you save this ID for subsequent operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c074b118ace44395a02063a5ab94****</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

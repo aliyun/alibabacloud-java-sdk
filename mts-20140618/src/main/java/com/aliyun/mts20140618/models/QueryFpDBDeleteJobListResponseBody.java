@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
     /**
-     * <p>The jobs of deleting a media fingerprint library. For more information, see the "FpDBDeleteJob" section of the [Data types](https://icms.alibaba-inc.com/content/mps/cc2a58?l=1\&m=16051\&n=23657) topic.</p>
+     * <p>The jobs of deleting a media fingerprint library. For more information, see the &quot;FpDBDeleteJob&quot; section of the <a href="https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/datatypes">Data types</a> topic.</p>
      */
     @NameInMap("FpDBDeleteJobList")
     public QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobList fpDBDeleteJobList;
 
     /**
-     * <p>The IDs of the jobs that do not exist. This parameter is not returned if all specified jobs are found.</p>
+     * <p>The IDs of the jobs that do not exist.</p>
      */
     @NameInMap("NonExistIds")
     public QueryFpDBDeleteJobListResponseBodyNonExistIds nonExistIds;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4247B23C-26DE-529F-8D9F-FD6811AE979B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,66 +56,97 @@ public class QueryFpDBDeleteJobListResponseBody extends TeaModel {
 
     public static class QueryFpDBDeleteJobListResponseBodyFpDBDeleteJobListFpDBDeleteJob extends TeaModel {
         /**
-         * <p>The error code returned when the job fails. This parameter is not returned if the job is successful.</p>
+         * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceUnavailable</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The point in time when the job was created.</p>
+         * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-30T00:33:18Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The operation type.</p>
+         * <p>The type of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Purge</p>
          */
         @NameInMap("DelType")
         public String delType;
 
         /**
-         * <p>The point in time when the job was complete.</p>
+         * <p>The time when the job was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-30T00:34:02Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
          * <p>The ID of the media fingerprint library.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e47098a5b665e2a12****</p>
          */
         @NameInMap("FpDBId")
         public String fpDBId;
 
         /**
          * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25bacf2824614bcf9273dc0744db****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The error message returned when the job fails. This parameter is not returned if the job is successful.</p>
+         * <p>The error message returned if the job fails. This parameter is not returned if the job is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The request has failed due to a temporary failure of the server.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue.</p>
+         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the job was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb712a6890464059b1b2ea7c8647****</p>
          */
         @NameInMap("PipelineId")
         public String pipelineId;
 
         /**
          * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   **Queuing**: The job is waiting in the queue.</p>
-         * <p>*   **Analysing**: The job is in progress.</p>
-         * <p>*   **Success**: The job is successful.</p>
-         * <p>*   **Fail**: The job fails.</p>
+         * <ul>
+         * <li><strong>Queuing</strong>: The job is waiting in the queue.</li>
+         * <li><strong>Analysing</strong>: The job is in progress.</li>
+         * <li><strong>Success</strong>: The job is successful.</li>
+         * <li><strong>Fail</strong>: The job fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The custom data.</p>
+         * <p>The user-defined data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example data</p>
          */
         @NameInMap("UserData")
         public String userData;

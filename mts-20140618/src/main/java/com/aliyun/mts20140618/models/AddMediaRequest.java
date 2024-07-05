@@ -6,66 +6,97 @@ import com.aliyun.tea.*;
 public class AddMediaRequest extends TeaModel {
     /**
      * <p>The ID of the category to which the media file belongs. The value cannot be negative.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("CateId")
     public Long cateId;
 
     /**
-     * <p>The storage location of the thumbnail that you want to specify for the media file. To obtain the URL, you can log on to the **MPS console** and choose **Workflows** > **Media Buckets**. Alternatively, you can log on to the **OSS console** and click **My OSS Paths**.</p>
-     * <br>
-     * <p>*   The value can be up to 3,200 bytes in length.</p>
-     * <p>*   The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded.</p>
+     * <p>The URL of the thumbnail. To obtain the URL, you can log on to the <strong>MPS console</strong> and choose <strong>Workflows</strong> &gt; <strong>Media Buckets</strong>. Alternatively, you can log on to the <strong>OSS console</strong> and click <strong>My OSS Paths</strong>.</p>
+     * <ul>
+     * <li>The value can be up to 3,200 bytes in length.</li>
+     * <li>The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://bucket.oss-cn-hangzhou.aliyuncs.com/example/1.png">http://bucket.oss-cn-hangzhou.aliyuncs.com/example/1.png</a></p>
      */
     @NameInMap("CoverURL")
     public String coverURL;
 
     /**
      * <p>The description of the media file.</p>
-     * <br>
-     * <p>*   The description can be up to 1,024 bytes in length.</p>
-     * <p>*   The value is encoded in UTF-8.</p>
+     * <ul>
+     * <li>The description can be up to 1,024 bytes in length.</li>
+     * <li>The value must be encoded in UTF-8.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>A test video</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The path of the input file. You can query the path of the input file in the MPS or OSS console. For more information, see the **Triggering and matching rule for a workflow** section of this topic.</p>
-     * <br>
-     * <p>*   The value can be up to 3,200 bytes in length.</p>
-     * <p>*   The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded.</p>
+     * <p>The path of the input file. You can query the path of the input file in the MPS or OSS console. For more information, see the <strong>Triggering and matching rules for a workflow</strong> section of this topic.</p>
+     * <ul>
+     * <li>The value can be up to 3,200 bytes in length.</li>
+     * <li>The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://bucket.oss-cn-hangzhou.aliyuncs.com/A/B/C/test.mp4">http://bucket.oss-cn-hangzhou.aliyuncs.com/A/B/C/test.mp4</a></p>
      */
     @NameInMap("FileURL")
     public String fileURL;
 
     /**
-     * <p>Specifies whether to check if the media workflow supports the specified input path. We recommend that you set this parameter to true to avoid errors that may result from invalid paths. Valid values:</p>
-     * <br>
-     * <p>*   **true**: checks whether the workflow supports the specified input path.</p>
-     * <p>*   **false**: does not check whether the workflow supports the specified input path.</p>
+     * <p>Specifies whether to check if the media workflow supports the specified input path. We recommend that you set this parameter to true to prevent errors that may result from invalid paths. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: checks whether the workflow supports the specified input path.</li>
+     * <li><strong>false</strong>: does not check whether the workflow supports the specified input path.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("InputUnbind")
     public Boolean inputUnbind;
 
     /**
-     * <p>The ID of the media workflow that you want to run for the media file. To query the ID of a media workflow, you can log on to the MPS console or call the [AddMediaWorkflow](~~44437~~) operation.</p>
+     * <p>The ID of the media workflow that you want to run for the media file. To query the ID of a media workflow, you can log on to the MPS console or call the <a href="https://help.aliyun.com/document_detail/44437.html">AddMediaWorkflow</a> operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>07da6c65da7f458997336e0de192****</p>
      */
     @NameInMap("MediaWorkflowId")
     public String mediaWorkflowId;
 
     /**
      * <p>The custom data of the media workflow.</p>
-     * <br>
-     * <p>*   The value can be up to 1,024 bytes in length.</p>
-     * <p>*   The value is encoded in UTF-8.</p>
+     * <ul>
+     * <li>The value can be up to 1,024 bytes in length.</li>
+     * <li>The value must be encoded in UTF-8.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("MediaWorkflowUserData")
     public String mediaWorkflowUserData;
 
     /**
      * <p>The subtitle settings that are used to overwrite the original settings.</p>
-     * <br>
-     * <p>*   Example 1: Use `{"WebVTTSubtitleOverrides",[{"RefActivityName":"subtitleNode","WebVTTSubtitleURL":"http://test.oss-cn-hangzhou.aliyuncs.com/example1.vtt"}]}` to overwrite the original subtitle settings during HTTP Live Streaming (HLS) packaging.</p>
-     * <p>*   Example 2: Use `{"subtitleTransNodeName":{"InputConfig":{"Format":"stl","InputFile":{"URL":"http://subtitleBucket.oss-cn-hangzhou.aliyuncs.com/package/example/CENG.stl"}}}}` to overwrite the original subtitle settings during Dynamic Adaptive Streaming over HTTP (DASH) packaging.</p>
+     * <ul>
+     * <li>Example 1: Use <code>{&quot;WebVTTSubtitleOverrides&quot;,[{&quot;RefActivityName&quot;:&quot;subtitleNode&quot;,&quot;WebVTTSubtitleURL&quot;:&quot;http://test.oss-cn-hangzhou.aliyuncs.com/example1.vtt&quot;}]}</code> to overwrite the original subtitle settings during HTTP Live Streaming (HLS) packaging.</li>
+     * <li>Example 2: Use <code>{&quot;subtitleTransNodeName&quot;:{&quot;InputConfig&quot;:{&quot;Format&quot;:&quot;stl&quot;,&quot;InputFile&quot;:{&quot;URL&quot;:&quot;http://subtitleBucket.oss-cn-hangzhou.aliyuncs.com/package/example/CENG.stl&quot;}}}}</code> to overwrite the original subtitle settings during Dynamic Adaptive Streaming over HTTP (DASH) packaging.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{“subtitleTransNodeName”:{“InputConfig”:{“Format”:”stl”,”InputFile”:{“URL”:”<a href="http://exampleBucket.oss-cn-hangzhou.aliyuncs.com/package/example/CENG.stl%22%7D%7D%7D%7D">http://exampleBucket.oss-cn-hangzhou.aliyuncs.com/package/example/CENG.stl&quot;}}}}</a></p>
      */
     @NameInMap("OverrideParams")
     public String overrideParams;
@@ -83,22 +114,31 @@ public class AddMediaRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags that you want to add for the media file.</p>
-     * <br>
-     * <p>>  In MPS, each tag that is specified for a media file is independent. You can search for all the media files that have the same tags in the Media Library.</p>
-     * <br>
-     * <p>*   Separate multiple tags with commas (,). You can specify up to 16 tags for a media file.</p>
-     * <p>*   Each tag can be up to 32 bytes in length.</p>
-     * <p>*   The value is encoded in UTF-8.</p>
+     * <p>The tags that you want to add to the media file.</p>
+     * <blockquote>
+     * <p>In MPS, each tag that is specified for a media file is independent. You can search for all the media files that have the same tags in the Media Library.</p>
+     * </blockquote>
+     * <ul>
+     * <li>You can specify up to 16 tags for a media file. Separate multiple tags with commas (,).</li>
+     * <li>Each tag can be up to 32 bytes in size</li>
+     * <li>The value must be encoded in UTF-8.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tag1,tag2</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
      * <p>The title of the media file.</p>
-     * <br>
-     * <p>*   The title can be up to 128 bytes in length.</p>
-     * <p>*   The value is encoded in UTF-8.</p>
+     * <ul>
+     * <li>The title can be up to 128 bytes in length.</li>
+     * <li>The value must be encoded in UTF-8.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>mytest</p>
      */
     @NameInMap("Title")
     public String title;

@@ -11,7 +11,10 @@ public class SubmitJobsResponseBody extends TeaModel {
     public SubmitJobsResponseBodyJobResultList jobResultList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A45S71F6-D73936451234</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobInput extends TeaModel {
         /**
          * <p>The name of the OSS bucket in which the job input is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The ID of the OSS region in which the job input resides.</p>
+         * <p>The ID of the OSS region in which the job input is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The name of the OSS object that is used as the job input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.flv</p>
          */
         @NameInMap("Object")
         public String object;
@@ -89,19 +101,28 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobMNSMessageResult extends TeaModel {
         /**
-         * <p>The error code returned if the job failed. This parameter is not returned if the job is successful.</p>
+         * <p>The error code returned if the job failed. This parameter is not returned if the job was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.ResourceNotFound</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The error message returned if the job failed. This parameter is not returned if the job is successful.</p>
+         * <p>The error message returned if the job failed. This parameter is not returned if the job was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource operated &quot;%s&quot; cannot be found.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The ID of the error message returned if the job failed. This parameter is not returned if the job is successful.</p>
+         * <p>The ID of the error message returned if the job failed. This parameter is not returned if the job was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("MessageId")
         public String messageId;
@@ -139,38 +160,55 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputAmixListAmix extends TeaModel {
         /**
-         * <p>The URL of the audio track to be mixed as the background music. </p>
-         * <br>
-         * <p>- The URL can be an OSS URL or the value of the `Input` parameter in the form of a string.</p>
-         * <p>- If you want to mix two audio tracks in a video, set this parameter to the value of the Input parameter in the form of a string.</p>
+         * <p>The URL of the audio track that is mixed as the background music.</p>
+         * <ul>
+         * <li>The URL can be an OSS URL or the string <code>input</code>.</li>
+         * <li>A value of input indicates that two audio tracks are mixed in a video.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://outpu***.oss-cn-shanghai.aliyuncs.com/mp4-to-mp3%5E1571025263578816%40.mp3">https://outpu***.oss-cn-shanghai.aliyuncs.com/mp4-to-mp3%5E1571025263578816%40.mp3</a></p>
          */
         @NameInMap("AmixURL")
         public String amixURL;
 
         /**
-         * <p>The duration of the audio track. The value is in the number or time format.</p>
+         * <p>The duration of the mixed audio track. The value is in the number or time format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The audio track to be mixed. Format: 0:a:{audio_index}. Example: 0:a:0.</p>
+         * <p>The audio track that is mixed. Format: 0:a:{audio_index}. Example: 0:a:0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0:a:0</p>
          */
         @NameInMap("Map")
         public String map;
 
         /**
-         * <p>The mode to specify the mixing duration. Valid values: **first** and **long**.  </p>
-         * <br>
-         * <p>- **first**: The length of the output media equals the length of the input media.</p>
-         * <p>- **long**: The length of the output media equals the length of the output media or the length of the input media, whichever is longer.</p>
-         * <p>- Default value: **long**.</p>
+         * <p>The mode to specify the mixing duration. Valid values: <strong>first</strong> and <strong>long</strong>.</p>
+         * <ul>
+         * <li><strong>first</strong>: The length of the output media equals the length of the input media.</li>
+         * <li><strong>long</strong>: The length of the output media equals the length of the output media or the length of the input media, whichever is longer.</li>
+         * <li>Default value: <strong>long</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>long</p>
          */
         @NameInMap("MixDurMode")
         public String mixDurMode;
 
         /**
-         * <p>The start point in time of the audio track. The value is in the number or time format. Examples: 1:25:36.240 and 32000.23.</p>
+         * <p>The start time. The value is in the number or time format. Examples: 1:25:36.240 and 32000.23.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Start")
         public String start;
@@ -244,19 +282,27 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputAudioVolume extends TeaModel {
         /**
          * <p>The volume adjustment range.</p>
-         * <br>
-         * <p>*   Unit: dB.</p>
-         * <p>*   Default value: **-20db**.</p>
+         * <ul>
+         * <li>Unit: decibel.</li>
+         * <li>Default value: <strong>-20</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-20</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The volume adjustment method. Valid values:</p>
-         * <br>
-         * <p>*   **auto**: The volume is automatically adjusted.</p>
-         * <p>*   **dynamic**: The volume is dynamically adjusted.</p>
-         * <p>*   **linear**: The volume is linearly adjusted.</p>
+         * <p>The method that is used to adjust the volume. Valid values:</p>
+         * <ul>
+         * <li><strong>auto</strong></li>
+         * <li><strong>dynamic</strong></li>
+         * <li><strong>linear</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>auto</p>
          */
         @NameInMap("Method")
         public String method;
@@ -287,54 +333,78 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputAudio extends TeaModel {
         /**
          * <p>The audio bitrate of the output file.</p>
-         * <br>
-         * <p>*   Unit: Kbit/s.</p>
-         * <p>*   Default value: **128**.</p>
+         * <ul>
+         * <li>Unit: Kbit/s.</li>
+         * <li>Default value: <strong>128</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>128</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
          * <p>The number of sound channels.</p>
-         * <br>
-         * <p>*   If the value of the Codec parameter is mp3, the value of this parameter can only be **1** or **2**.</p>
-         * <p>*   If the value of the Codec parameter is aac, the value of this parameter can only be **1**, **2**, **4**, **5**, **6**, or **8**.</p>
-         * <p>*   Default value: **2**.</p>
+         * <ul>
+         * <li>If the value of Codec is mp3, the value of this parameter can only be <strong>1</strong> or <strong>2</strong>.</li>
+         * <li>If the value of Codec is aac, the value of this parameter can only be <strong>1</strong>, <strong>2</strong>, <strong>4</strong>, <strong>5</strong>, <strong>6</strong>, or <strong>8</strong>.</li>
+         * <li>Default value: <strong>2</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("Channels")
         public String channels;
 
         /**
          * <p>The audio codec.</p>
-         * <br>
-         * <p>*   Valid values: **aac**, **mp3**, **vorbis**, and **flac**.</p>
-         * <p>*   Default value: **aac**.</p>
+         * <ul>
+         * <li>Valid values: <strong>aac</strong>, <strong>mp3</strong>, <strong>vorbis</strong>, and <strong>flac</strong>.</li>
+         * <li>Default value: <strong>aac</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>aac</p>
          */
         @NameInMap("Codec")
         public String codec;
 
         /**
          * <p>The codec profile of the audio.</p>
-         * <br>
-         * <p>>  Valid values when the value of the **Codec** parameter is **aac**: **aac_low**, **aac_he**, **aac_he_v2**, **aac_ld**, and **aac_eld**.</p>
+         * <blockquote>
+         * <p> Valid values if the value of <strong>Codec</strong> is <strong>aac</strong>: <strong>aac_low</strong>, <strong>aac_he</strong>, <strong>aac_he_v2</strong>, <strong>aac_ld</strong>, and <strong>aac_eld</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>aac_low</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
          * <p>The level of quality control on the audio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("Qscale")
         public String qscale;
 
         /**
          * <p>The sampling rate.</p>
-         * <br>
-         * <p>*   Valid values: **22050**, **32000**, **44100**, **48000**, and **96000**.</p>
-         * <p>*   Unit: Hz.</p>
-         * <p>*   Default value: **44100**.</p>
-         * <br>
-         * <p>>  If the video container format is FLV and the audio codec is MP3, the sampling rate cannot be 32000, 48000, or 96000. If the audio codec is MP3, the sampling rate cannot be 96000.</p>
+         * <ul>
+         * <li>Valid values: <strong>22050</strong>, <strong>32000</strong>, <strong>44100</strong>, <strong>48000</strong>, and <strong>96000</strong>.</li>
+         * <li>Unit: Hz.</li>
+         * <li>Default value: <strong>44100</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the video container format is FLV and the audio codec is MP3, the value of this parameter cannot be 32000, 48000, or 96000. If the audio codec is MP3, the value of this parameter cannot be 96000.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>32000</p>
          */
         @NameInMap("Samplerate")
         public String samplerate;
@@ -410,19 +480,27 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputClipTimeSpan extends TeaModel {
         /**
-         * <p>The duration of the clip. </p>
-         * <br>
-         * <p>- Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.</p>
-         * <p>- Valid values: `[00:00:00.000,23:59:59.999]` or `[0.000,86399.999]`.</p>
+         * <p>The duration of the clip.</p>
+         * <ul>
+         * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+         * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>01:00:59.999</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The time when the clip starts. </p>
-         * <br>
-         * <p>- Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.</p>
-         * <p>- Valid values: `[00:00:00.000,23:59:59.999]` or `[0.000,86399.999]`.</p>
+         * <p>The start time.</p>
+         * <ul>
+         * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+         * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>01:59:59.999</p>
          */
         @NameInMap("Seek")
         public String seek;
@@ -474,15 +552,19 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputContainer extends TeaModel {
         /**
-         * <p>The container format. </p>
-         * <br>
-         * <p>- Default value: **mp4**.</p>
-         * <p>- Video formats include FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4).</p>
-         * <p>- Audio formats include MP3, MP4, Ogg, FLAC, and M4A.</p>
-         * <p>- Image formats include GIF and WebP.</p>
-         * <p>- If the container format is GIF, the video codec must be GIF.</p>
-         * <p>- If the container format is WebP, the video codec must be WebP.</p>
-         * <p>- If the container format is FLV, the video codec cannot be H.265.</p>
+         * <p>The container format.</p>
+         * <ul>
+         * <li>Default value: <strong>mp4</strong>.</li>
+         * <li>Video formats include FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4).</li>
+         * <li>Audio formats include MP3, MP4, Ogg, FLAC, and M4A.</li>
+         * <li>Image formats include GIF and WebP.</li>
+         * <li>If the container format is GIF, the video codec must be GIF.</li>
+         * <li>If the container format is WebP, the video codec must be WebP.</li>
+         * <li>If the container format is FLV, the video codec cannot be H.265.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>flv</p>
          */
         @NameInMap("Format")
         public String format;
@@ -504,19 +586,28 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputDigiWaterMarkInputFile extends TeaModel {
         /**
-         * <p>The name of the OSS bucket in which the output file is stored.</p>
+         * <p>The name of the OSS bucket in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The ID of the OSS region in which the input file resides.</p>
+         * <p>The ID of the OSS region in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The name of the OSS object that is used as the input file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-intput.flv</p>
          */
         @NameInMap("Object")
         public String object;
@@ -554,25 +645,33 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputDigiWaterMark extends TeaModel {
         /**
-         * <p>The transparency of the text or image. </p>
-         * <br>
-         * <p>- Value values: **(0,1]**.</p>
-         * <p>- Default value: **1.0**.</p>
+         * <p>The transparency of the text or image.</p>
+         * <ul>
+         * <li>Value values: <strong>(0,1]</strong>.</li>
+         * <li>Default value: <strong>1.0</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("Alpha")
         public String alpha;
 
         /**
-         * <p>The input file.</p>
+         * <p>The details of the input file.</p>
          */
         @NameInMap("InputFile")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputDigiWaterMarkInputFile inputFile;
 
         /**
-         * <p>The type of the watermark. If this parameter is specified in the request, this value overwrites the corresponding parameter in the watermark template. Valid values: </p>
-         * <br>
-         * <p>- **Image**: an image watermark. This is the default value.</p>
-         * <p>- **Text**: a text watermark.</p>
+         * <p>The type of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Valid values:</p>
+         * <ul>
+         * <li><strong>Image</strong> (default)</li>
+         * <li><strong>Text</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Image</p>
          */
         @NameInMap("Type")
         public String type;
@@ -611,36 +710,54 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputEncryption extends TeaModel {
         /**
          * <p>The encryption ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31fa3c9ca8134f9cec2b4b0b0f78****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The key that is used to encrypt the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>encryptionkey128</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The key encryption method. Keys cannot be transmitted to MPS in plaintext. Keys must be encrypted by using Base64 or Key Management Service (KMS). For example, if the key is encryptionkey128, you can encrypt the key by using the following method: Base64("encryptionkey128") or KMS(Base64("encryptionkey128").</p>
+         * <p>The key encryption method. Keys cannot be transmitted to MPS in plaintext. Keys must be encrypted by using Base64 or Key Management Service (KMS). For example, if the key is encryptionkey128, you can encrypt the key by using the following method: Base64(&quot;encryptionkey128&quot;) or KMS(Base64(&quot;encryptionkey128&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Base64</p>
          */
         @NameInMap("KeyType")
         public String keyType;
 
         /**
          * <p>The URL that is used to request the key. The URL is Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://1161758785*****.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/HLS-decyptServer/decyptServer/">https://1161758785*****.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/HLS-decyptServer/decyptServer/</a></p>
          */
         @NameInMap("KeyUri")
         public String keyUri;
 
         /**
          * <p>The number of unencrypted frames at the beginning of the video. Leaving these frames unencrypted enables video playback to quickly start.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("SkipCnt")
         public String skipCnt;
 
         /**
-         * <p>The encryption type. The value is **hls-aes-128**.</p>
+         * <p>The encryption type. Only <strong>hls-aes-128</strong> may be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hls-aes-128</p>
          */
         @NameInMap("Type")
         public String type;
@@ -702,19 +819,27 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputM3U8NonStandardSupportTS extends TeaModel {
         /**
-         * <p>Indicates whether to support the output of the MD5 value of the TS file in the M3U8 video. Valid values:</p>
-         * <br>
-         * <p>*   **true**: supported.</p>
-         * <p>*   **false**: not supported.</p>
+         * <p>Indicates whether the output of the MD5 value of the TS file is supported in the M3U8 video. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Md5Support")
         public Boolean md5Support;
 
         /**
-         * <p>Indicates whether to support the output of the size of the TS file in the M3U8 video. Valid values:</p>
-         * <br>
-         * <p>*   **true**: supported.</p>
-         * <p>*   **false**: not supported.</p>
+         * <p>Indicates whether the size of the TS file is generated in the output M3U8 video. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SizeSupport")
         public Boolean sizeSupport;
@@ -744,7 +869,7 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputM3U8NonStandardSupport extends TeaModel {
         /**
-         * <p>The non-standard support configuration for TS files. The value is a JSON object. For more information, see **TS** in [Parameter details](~~29253~~).</p>
+         * <p>The non-standard support configurations for TS files. The value is a JSON object. For more information, see the <strong>TS</strong> section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
          */
         @NameInMap("TS")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputM3U8NonStandardSupportTS TS;
@@ -767,33 +892,48 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputMergeListMerge extends TeaModel {
         /**
          * <p>The duration of the clip.</p>
-         * <br>
-         * <p>*   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.</p>
-         * <p>*   Examples: 01:59:59.999 and 32000.23.</p>
+         * <ul>
+         * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+         * <li>Examples: 01:59:59.999 and 32000.23.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>00000.20</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The OSS URL of the clip.</p>
-         * <br>
-         * <p>*   Example: `http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object-****.flv`.</p>
-         * <p>*   The object must be URL-encoded by using the UTF-8 standard.</p>
+         * <ul>
+         * <li>Example: <code>http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object-****.flv</code>.</li>
+         * <li>The OSS URL of the object must be URL-encoded by using the UTF-8 standard.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object-****.flv">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/example-object-****.flv</a></p>
          */
         @NameInMap("MergeURL")
         public String mergeURL;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the role used for delegated authorization.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role used for delegated authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::<your uid>:role/<your role name></p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
 
         /**
          * <p>The start point in time of the clip.</p>
-         * <br>
-         * <p>*   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.</p>
-         * <p>*   Examples: 01:59:59.999 and 32000.23.</p>
+         * <ul>
+         * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+         * <li>Examples: 01:59:59.999 and 32000.23.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>00000.50</p>
          */
         @NameInMap("Start")
         public String start;
@@ -858,28 +998,41 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigGif extends TeaModel {
         /**
-         * <p>The color dithering algorithm of the palette. Valid values: **sierra** and **bayer**.</p>
+         * <p>The color dithering algorithm of the palette. Valid values: <strong>sierra</strong> and <strong>bayer</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bayer</p>
          */
         @NameInMap("DitherMode")
         public String ditherMode;
 
         /**
-         * <p>The duration for which the final frame is paused. Unit: centiseconds.</p>
+         * <p>The duration for which the final frame is paused. Unit: centisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FinalDelay")
         public String finalDelay;
 
         /**
-         * <p>Indicates whether the custom palette is used. Valid values:</p>
-         * <br>
-         * <p>- **true**: The custom palette is used.</p>
-         * <p>- **false**: The custom palette is not used.</p>
+         * <p>Indicates whether a custom palette is used. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCustomPalette")
         public String isCustomPalette;
 
         /**
          * <p>The loop count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Loop")
         public String loop;
@@ -925,10 +1078,14 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigSegment extends TeaModel {
         /**
-         * <p>The length of the segment. The value is an integer. Unit: seconds. </p>
-         * <br>
-         * <p>- Valid values: **[1,10]**.</p>
-         * <p>- Default value: **10**.</p>
+         * <p>The length of the segment. The value is an integer. Unit: seconds.</p>
+         * <ul>
+         * <li>Valid values: <strong>[1,10]</strong>.</li>
+         * <li>Default value: <strong>10</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Duration")
         public String duration;
@@ -951,6 +1108,9 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigWebp extends TeaModel {
         /**
          * <p>The loop count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Loop")
         public String loop;
@@ -972,19 +1132,19 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfig extends TeaModel {
         /**
-         * <p>The transmuxing configuration for GIF.</p>
+         * <p>The transmuxing configurations for GIF.</p>
          */
         @NameInMap("Gif")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigGif gif;
 
         /**
-         * <p>The segment configurations. The value is a JSON object.</p>
+         * <p>The segment configuration. The value is a JSON object.</p>
          */
         @NameInMap("Segment")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigSegment segment;
 
         /**
-         * <p>The transmuxing configuration for WebP.</p>
+         * <p>The transmuxing configurations for WebP.</p>
          */
         @NameInMap("Webp")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfigWebp webp;
@@ -1022,38 +1182,53 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputOpeningListOpening extends TeaModel {
         /**
-         * <p>The height of the opening part. </p>
-         * <br>
-         * <p>- Valid values: **0 to 4096**, **-1**, and **full**.</p>
-         * <p>- Default value: **-1**.</p>
-         * <p>- A value of **-1** indicates that the height of the source of the opening part is retained.</p>
-         * <p>- A value of **full** indicates that the height of the main part is used for the opening part.</p>
+         * <p>The height of the opening part.</p>
+         * <ul>
+         * <li>Valid values: values in the range of <strong>(0,4096)</strong>, <strong>-1</strong>, and <strong>full</strong>.</li>
+         * <li>Default value: <strong>-1</strong>.</li>
+         * <li>A value of <strong>-1</strong> indicates that the height of the source of the opening part is retained.</li>
+         * <li>A value of <strong>full</strong> indicates that the height of the main part is used for the opening part.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
-         * <p>The amount of time after which the opening part is played. The value starts from 0. </p>
-         * <br>
-         * <p>- Unit: seconds.</p>
-         * <p>- Default value: **0**.</p>
+         * <p>The amount of time after which the opening part is played. The value starts from 0.</p>
+         * <ul>
+         * <li>Unit: seconds.</li>
+         * <li>Default value: <strong>0</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Start")
         public String start;
 
         /**
-         * <p>The width of the opening part. </p>
-         * <br>
-         * <p>- Valid values: **0 to 4096**, **-1**, and **full**.</p>
-         * <p>- Default value: **-1**.</p>
-         * <p>- A value of **-1** indicates that the height of the source of the opening part is retained.</p>
-         * <p>- A value of **full** indicates that the height of the main part is used for the opening part.</p>
+         * <p>The width of the opening part.</p>
+         * <ul>
+         * <li>Valid values: values in the range of <strong>(0,4096)</strong>, <strong>-1</strong>, and <strong>full</strong>.</li>
+         * <li>Default value: <strong>-1</strong>.</li>
+         * <li>A value of <strong>-1</strong> indicates that the width of the source of the opening part is retained.</li>
+         * <li>A value of <strong>full</strong> indicates that the width of the main part is used for the opening part.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1920</p>
          */
         @NameInMap("Width")
         public String width;
 
         /**
-         * <p>The OSS URL of the opening part of the video.</p>
+         * <p>The OSS URL of the opening part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv</a></p>
          */
         @NameInMap("openUrl")
         public String openUrl;
@@ -1118,25 +1293,37 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleListOutSubtitleOutSubtitleFile extends TeaModel {
         /**
-         * <p>The name of the OSS bucket in which the output file is stored.</p>
+         * <p>The name of the OSS bucket in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The ID of the OSS region in which the output file resides.</p>
+         * <p>The ID of the OSS region in which the output file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The name of the OSS object that is used as the output file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-output.flv</p>
          */
         @NameInMap("Object")
         public String object;
 
         /**
-         * <p>The ARN of the role used for delegated authorization.</p>
+         * <p>The ARN of the RAM role used for delegated authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::<your uid>:role/<your role name></p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
@@ -1182,13 +1369,19 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleListOutSubtitle extends TeaModel {
         /**
-         * <p>The video stream. Format: `0:{Stream}:{Stream sequence number}`, which is `0:v:{video_index}`. The value of Stream is v, which indicates a video stream. The sequence number is the index of the video stream in the list and starts from 0.</p>
+         * <p>The video track. Format: <code>0:{Stream}:{Stream sequence number}</code>, which is <code>0:v:{video_index}</code>. The value of Stream is v, which indicates a video stream. The sequence number is the index of the video stream in the list and starts from 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0:v:0</p>
          */
         @NameInMap("Map")
         public String map;
 
         /**
-         * <p>The error message returned if the job fails to be created. This parameter is not returned if the job is created.</p>
+         * <p>The error message returned if the job failed to be created. This parameter is not returned if the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter “%s” cannot be null.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -1200,10 +1393,14 @@ public class SubmitJobsResponseBody extends TeaModel {
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleListOutSubtitleOutSubtitleFile outSubtitleFile;
 
         /**
-         * <p>Indicates whether the job is created. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The job is created.</p>
-         * <p>*   **false**: The job fails to be created.</p>
+         * <p>Indicates whether the job was created. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;
@@ -1268,25 +1465,37 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputOutputFile extends TeaModel {
         /**
-         * <p>The name of the OSS bucket in which the output file is stored.</p>
+         * <p>The name of the OSS bucket in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The ID of the OSS region in which the output file resides.</p>
+         * <p>The ID of the OSS region in which the output file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The name of the OSS object that is used as the output file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-output.flv</p>
          */
         @NameInMap("Object")
         public String object;
 
         /**
-         * <p>The ARN of the role used for delegated authorization.</p>
+         * <p>The ARN of the RAM role used for delegated authorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::<your uid>:role/<your role name></p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
@@ -1333,48 +1542,72 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesFormat extends TeaModel {
         /**
          * <p>The total bitrate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
          * <p>The total duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The full name of the container format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuickTime / MOV</p>
          */
         @NameInMap("FormatLongName")
         public String formatLongName;
 
         /**
          * <p>The short name of the container format. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mov</p>
          */
         @NameInMap("FormatName")
         public String formatName;
 
         /**
          * <p>The total number of program streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NumPrograms")
         public String numPrograms;
 
         /**
          * <p>The total number of media streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("NumStreams")
         public String numStreams;
 
         /**
          * <p>The size of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3509895</p>
          */
         @NameInMap("Size")
         public String size;
 
         /**
          * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000000</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -1453,96 +1686,144 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsAudioStreamListAudioStream extends TeaModel {
         /**
          * <p>The bitrate of the audio stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>128.806</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
          * <p>The output layout of the sound channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stereo</p>
          */
         @NameInMap("ChannelLayout")
         public String channelLayout;
 
         /**
          * <p>The number of sound channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Channels")
         public String channels;
 
         /**
-         * <p>The full name of the encoding format.</p>
+         * <p>The full name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAC (Advanced Audio Coding)</p>
          */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
         /**
-         * <p>The short name of the encoding format.</p>
+         * <p>The short name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aac</p>
          */
         @NameInMap("CodecName")
         public String codecName;
 
         /**
-         * <p>The tag of the encoding format.</p>
+         * <p>The tag of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x6134706d</p>
          */
         @NameInMap("CodecTag")
         public String codecTag;
 
         /**
-         * <p>The tag string of the encoding format.</p>
+         * <p>The tag string of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp4a</p>
          */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
         /**
          * <p>The codec time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/44100</p>
          */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
         /**
          * <p>The duration of the audio stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17.159546</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Index")
         public String index;
 
         /**
-         * <p>The language of the audio stream. For more information, see [FFmpeg language definition](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).</p>
+         * <p>The language of the audio stream. For more information, see <a href="https://www.ffmpeg.org/ffmpeg-all.html#Metadata">FFmpeg documentation</a> and <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eng</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
          * <p>The total number of frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("NumFrames")
         public String numFrames;
 
         /**
-         * <p>The sampling format of the audio stream.</p>
+         * <p>The sampling format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fltp</p>
          */
         @NameInMap("SampleFmt")
         public String sampleFmt;
 
         /**
          * <p>The sampling rate of the audio stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44100</p>
          */
         @NameInMap("Samplerate")
         public String samplerate;
 
         /**
-         * <p>The start point in time of the audio stream.</p>
+         * <p>The start time of the audio stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000000</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The time base of the audio stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/44100</p>
          */
         @NameInMap("Timebase")
         public String timebase;
@@ -1704,12 +1985,18 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsSubtitleStreamListSubtitleStream extends TeaModel {
         /**
          * <p>The sequence number of the subtitle stream. The value indicates the position of the subtitle stream in all subtitle streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Index")
         public String index;
 
         /**
-         * <p>The language of the subtitle stream. For more information, see [FFmpeg language definition](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).</p>
+         * <p>The language of the subtitle stream. For more information, see <a href="https://www.ffmpeg.org/ffmpeg-all.html#Metadata">FFmpeg documentation</a> and <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eng</p>
          */
         @NameInMap("Lang")
         public String lang;
@@ -1759,18 +2046,27 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamListVideoStreamNetworkCost extends TeaModel {
         /**
          * <p>The average bitrate of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AvgBitrate")
         public String avgBitrate;
 
         /**
-         * <p>The maximum bandwidth that is consumed.</p>
+         * <p>The maximum bandwidth that was consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("CostBandwidth")
         public String costBandwidth;
 
         /**
-         * <p>The amount of preload time.</p>
+         * <p>The amount of time consumed to preload the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("PreloadTime")
         public String preloadTime;
@@ -1809,138 +2105,204 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamListVideoStream extends TeaModel {
         /**
          * <p>The average frame rate of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23.976025</p>
          */
         @NameInMap("AvgFPS")
         public String avgFPS;
 
         /**
          * <p>The bitrate of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1496.46</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The full name of the encoding format.</p>
+         * <p>The full name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
          */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
         /**
-         * <p>The short name of the encoding format.</p>
+         * <p>The short name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>h264</p>
          */
         @NameInMap("CodecName")
         public String codecName;
 
         /**
-         * <p>The tag of the encoding format.</p>
+         * <p>The tag of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x31637661</p>
          */
         @NameInMap("CodecTag")
         public String codecTag;
 
         /**
-         * <p>The tag string of the encoding format.</p>
+         * <p>The tag string of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>avc1</p>
          */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
         /**
          * <p>The codec time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001/48000</p>
          */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
         /**
          * <p>The display aspect ratio (DAR) of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16:9</p>
          */
         @NameInMap("Dar")
         public String dar;
 
         /**
          * <p>The duration of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17.225542</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The frame rate of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23.976025</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
-         * <p>Indicates whether the video stream contains bidirectional frames (B-frames).</p>
+         * <p>Indicates whether the video stream contains B-frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("HasBFrames")
         public String hasBFrames;
 
         /**
          * <p>The height of the video stream in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
          * <p>The sequence number of the video stream. The value indicates the position of the video stream in all video streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Index")
         public String index;
 
         /**
-         * <p>The language of the video stream. For more information, see [FFmpeg language definition](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).</p>
+         * <p>The language of the video stream. For more information, see <a href="https://www.ffmpeg.org/ffmpeg-all.html#Metadata">FFmpeg documentation</a> and <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eng</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
          * <p>The codec level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The network bandwidth consumption.</p>
+         * <p>The network bandwidth that was consumed.</p>
          */
         @NameInMap("NetworkCost")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamListVideoStreamNetworkCost networkCost;
 
         /**
          * <p>The total number of frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("NumFrames")
         public String numFrames;
 
         /**
          * <p>The pixel format of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuv420p</p>
          */
         @NameInMap("PixFmt")
         public String pixFmt;
 
         /**
          * <p>The codec profile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
          * <p>The sample aspect ratio (SAR) of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1:1</p>
          */
         @NameInMap("Sar")
         public String sar;
 
         /**
-         * <p>The start point in time of the video stream.</p>
+         * <p>The start time of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000000</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The time base of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/24000</p>
          */
         @NameInMap("Timebase")
         public String timebase;
 
         /**
          * <p>The width of the video stream in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         @NameInMap("Width")
         public String width;
@@ -2157,19 +2519,19 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreams extends TeaModel {
         /**
-         * <p>The list of audio streams.</p>
+         * <p>The audio streams.</p>
          */
         @NameInMap("AudioStreamList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsAudioStreamList audioStreamList;
 
         /**
-         * <p>The list of subtitle streams.</p>
+         * <p>The subtitle streams.</p>
          */
         @NameInMap("SubtitleStreamList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsSubtitleStreamList subtitleStreamList;
 
         /**
-         * <p>The list of video streams.</p>
+         * <p>The video streams.</p>
          */
         @NameInMap("VideoStreamList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputPropertiesStreamsVideoStreamList videoStreamList;
@@ -2208,24 +2570,36 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputProperties extends TeaModel {
         /**
          * <p>The bitrate of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
          * <p>The duration of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The format of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuickTime / MOV</p>
          */
         @NameInMap("FileFormat")
         public String fileFormat;
 
         /**
          * <p>The size of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3509895</p>
          */
         @NameInMap("FileSize")
         public String fileSize;
@@ -2238,12 +2612,18 @@ public class SubmitJobsResponseBody extends TeaModel {
 
         /**
          * <p>The frame rate of the video. The value is a number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
-         * <p>The length of the video.</p>
+         * <p>The height of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         @NameInMap("Height")
         public String height;
@@ -2256,6 +2636,9 @@ public class SubmitJobsResponseBody extends TeaModel {
 
         /**
          * <p>The width of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         @NameInMap("Width")
         public String width;
@@ -2342,18 +2725,27 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleListExtSubtitleInput extends TeaModel {
         /**
          * <p>The name of the OSS bucket in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The ID of the OSS region in which the input file resides.</p>
+         * <p>The ID of the OSS region in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The name of the OSS object that is used as the input file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-output.flv</p>
          */
         @NameInMap("Object")
         public String object;
@@ -2391,24 +2783,32 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleListExtSubtitle extends TeaModel {
         /**
-         * <p>The character set used by the external subtitle. </p>
-         * <br>
-         * <p>- Valid values: **UTF-8**, **GBK**, **BIG5**, and **auto**.</p>
-         * <p>- Default value: **auto**.</p>
-         * <br>
-         * <p>>  If you set this parameter to **auto**, the detected character set may not be the actual character set. We recommend that you set this parameter to another value.</p>
+         * <p>The character set used by the external subtitle.</p>
+         * <ul>
+         * <li>Valid values: <strong>UTF-8</strong>, <strong>GBK</strong>, <strong>BIG5</strong>, and <strong>auto</strong>.</li>
+         * <li>Default value: <strong>auto</strong>.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If this parameter is set to <strong>auto</strong>, the detected character set may not be the actual character set. We recommend that you set this parameter to another value.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>UTF-8</p>
          */
         @NameInMap("CharEnc")
         public String charEnc;
 
         /**
-         * <p>The font of the hard subtitles converted from external subtitles. Default value: **SimSun**. For more information, see [Fonts](https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/font-name).</p>
+         * <p>The font of the hardcoded subtitles converted from external subtitles. Default value: <strong>SimSun</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/59950.html">Fonts</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;WenQuanYi Zen Hei&quot;, &quot;Yuanti SC Regular&quot;, &quot;SimSun&quot;</p>
          */
         @NameInMap("FontName")
         public String fontName;
 
         /**
-         * <p>The OSS object that is used as the external subtitle. The value is a JSON object. Files in the **SRT** or **ASS** format are supported.</p>
+         * <p>The OSS object that is used as the external subtitle. The value is a JSON object. Files in the <strong>SRT</strong> or <strong>ASS</strong> format are supported.</p>
          */
         @NameInMap("Input")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleListExtSubtitleInput input;
@@ -2465,7 +2865,10 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigSubtitleListSubtitle extends TeaModel {
         /**
-         * <p>The audio track. Format: `0:{Stream}:{Stream sequence number}`, which is `0:a:{audio_index}`. The value of Stream is a, which indicates an audio stream. The sequence number is the index of the audio stream in the list and starts from 0.</p>
+         * <p>The audio track. Format: <code>0:{Stream}:{Stream sequence number}</code>, which is <code>0:a:{audio_index}</code>. The value of Stream is a, which indicates an audio stream. The sequence number is the index of the audio stream in the list and starts from 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0:a:0</p>
          */
         @NameInMap("Map")
         public String map;
@@ -2506,13 +2909,13 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfig extends TeaModel {
         /**
-         * <p>The list of external subtitles. The value is a JSON array that contains up to **four** objects.</p>
+         * <p>The external subtitles. The value is a JSON array that contains up to <strong>four</strong> objects.</p>
          */
         @NameInMap("ExtSubtitleList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigExtSubtitleList extSubtitleList;
 
         /**
-         * <p>The list of subtitles.</p>
+         * <p>The subtitles.</p>
          */
         @NameInMap("SubtitleList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputSubtitleConfigSubtitleList subtitleList;
@@ -2542,10 +2945,14 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputSuperReso extends TeaModel {
         /**
-         * <p>Indicates whether to obtain parameters related to the sampling rate. Valid values:</p>
-         * <br>
-         * <p>- **true**: The parameters are obtained.</p>
-         * <p>- **false**: The parameters are not obtained.</p>
+         * <p>Indicates whether parameters related to the sampling rate are obtained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsHalfSample")
         public String isHalfSample;
@@ -2567,54 +2974,78 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputTailSlateListTailSlate extends TeaModel {
         /**
-         * <p>The color of the bars that are added to the ending part if the size of the ending part is smaller than that of the main part. Default value: **White**. For more information, see [Background colors](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/29253/cn_zh/1502784952344/color.txt?spm=a2c4g.11186623.2.63.241240f77qp3Yy&file=color.txt).</p>
+         * <p>The color of the bars that are added to the ending part if the size of the ending part is smaller than that of the main part. Default value: <strong>White</strong>. For more information, see <a href="https://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/attach/29253/cn_zh/1502784952344/color.txt?spm=a2c4g.11186623.2.63.241240f77qp3Yy%5C&file=color.txt">Background colors</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>White</p>
          */
         @NameInMap("BgColor")
         public String bgColor;
 
         /**
-         * <p>The amount of time between the end of the main part and the beginning of the ending part. During the transition, the last frame of the main part fades out, and the first frame of the ending part fades in. Unit: seconds. Default value: **0**.</p>
+         * <p>The duration of the transition between the main part and the ending part. A fade transition is used: The last frame of the main part fades out, and the first frame of the ending part fades in. Unit: seconds. Default value: <strong>0</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("BlendDuration")
         public String blendDuration;
 
         /**
-         * <p>The height of the ending part. </p>
-         * <br>
-         * <p>- Valid values: **0 to 4096**, **-1**, and **full**.</p>
-         * <p>- A value of **-1** indicates that the height of the source of the ending part is retained. A value of **full** indicates that the height of the main part is used for the ending part.</p>
-         * <p>- Default value: **-1**.</p>
+         * <p>The height of the ending part.</p>
+         * <ul>
+         * <li>Valid values: values in the range of <strong>(0,4096)</strong>, <strong>-1</strong>, and <strong>full</strong>.</li>
+         * <li>A value of <strong>-1</strong> indicates that the height of the source of the ending part is retained. A value of <strong>full</strong> indicates that the height of the main part is used for the ending part.</li>
+         * <li>Default value: -1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
-         * <p>Indicates whether to merge the audio content of the ending part. Valid values:</p>
-         * <br>
-         * <p>- **true**: The audio content of the ending part is merged.</p>
-         * <p>- **false**: The audio content of the ending part is not merged.</p>
+         * <p>Indicates whether the audio content of the ending part is merged. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsMergeAudio")
         public Boolean isMergeAudio;
 
         /**
          * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Start")
         public String start;
 
         /**
          * <p>The OSS URL of the ending part.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/opening_01.flv</a></p>
          */
         @NameInMap("TailUrl")
         public String tailUrl;
 
         /**
-         * <p>The width of the ending part. </p>
-         * <br>
-         * <p>- Valid values: **0 to 4096**, **-1**, and **full**.</p>
-         * <p>- A value of **-1** indicates that the height of the source of the ending part is retained. A value of **full** indicates that the height of the main part is used for the ending part.</p>
-         * <p>- Default value: **-1**.</p>
+         * <p>The width of the ending part.</p>
+         * <ul>
+         * <li>Valid values: values in the range of <strong>(0,4096)</strong>, <strong>-1</strong>, and <strong>full</strong>.</li>
+         * <li>A value of <strong>-1</strong> indicates that the width of the source of the ending part is retained. A value of <strong>full</strong> indicates that the width of the main part is used for the ending part.</li>
+         * <li>Default value: -1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1920</p>
          */
         @NameInMap("Width")
         public String width;
@@ -2703,83 +3134,120 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputTransConfig extends TeaModel {
         /**
-         * <p>The method of resolution adjustment. Default value: **none**. Valid values:</p>
-         * <br>
-         * <p>*   rescale: resizes the video image.</p>
-         * <p>*   crop:crops the video image.</p>
-         * <p>*   pad: scales out the video image to fill the view.</p>
-         * <p>*   none: no adjustment.</p>
+         * <p>The method of resolution adjustment. Default value: <strong>none</strong>. Valid values:</p>
+         * <ul>
+         * <li>rescale: The video image is resized.</li>
+         * <li>crop: The video image is cropped.</li>
+         * <li>pad: The video image is scaled out to fill the view.</li>
+         * <li>none: The resolution is not adjusted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>crop</p>
          */
         @NameInMap("AdjDarMethod")
         public String adjDarMethod;
 
         /**
-         * <p>Indicates whether the audio bitrate is checked. If the output audio bitrate is higher than the input audio bitrate, the system considers that the output bitrate equals the input bitrate.</p>
-         * <br>
-         * <p>>  If the same audio encoder is used before and after transcoding and the audio bitrate after transcoding is greater than the audio bitrate before transcoding, the audio bitrate is reset, and the specified audio bitrate does not take effect.</p>
-         * <br>
-         * <p>*   **true**: The audio bitrate is checked.</p>
-         * <p>*   **false**: The video bitrate is not checked.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, the input bitrate is retained and the specified audio bitrate does not take effect. This parameter has a lower priority than IsCheckAudioBitrateFail. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
+         * <li><p>Default value:</p>
+         * <ul>
+         * <li>If this parameter is empty and the codec of the output audio is different from the codec of the input audio, the default value is false.</li>
+         * <li>If this parameter is empty and the codec of the output audio is the same as the codec of the input audio, the default value is true.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckAudioBitrate")
         public String isCheckAudioBitrate;
 
         /**
-         * <p>Indicates whether the audio bitrate is checked. If the output audio bitrate is higher than the input audio bitrate, a transcoding failure is returned without video transcoding. This parameter takes precedence over the **IsCheckAudioBitrate** parameter.</p>
-         * <br>
-         * <p>*   **false**: The audio bitrate is checked.</p>
-         * <p>*   **true**: The audio bitrate is not checked.</p>
+         * <p>Indicates whether the audio bitrate is checked. This parameter has a higher priority than <strong>IsCheckAudioBitrate</strong>. If the bitrate of the output audio is higher than that of the input audio, a transcoding failure is returned without transcoding the audio. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsCheckAudioBitrateFail")
         public String isCheckAudioBitrateFail;
 
         /**
-         * <p>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the system considers that the output resolution equals the input resolution.</p>
-         * <br>
-         * <p>*   **true**: The resolution is checked.</p>
-         * <p>*   **false**: The resolution is not checked.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckReso")
         public String isCheckReso;
 
         /**
-         * <p>Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, a transcoding failure is returned without video transcoding. This parameter takes precedence over the IsCheckReso parameter.</p>
-         * <br>
-         * <p>*   **true**: The resolution is checked.</p>
-         * <p>*   **false**: The resolution is not checked.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>Indicates whether the resolution is checked. This parameter has a higher priority than IsCheckReso. If the output resolution is higher than the input resolution based on the width or height, a transcoding failure is returned without transcoding the video. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckResoFail")
         public String isCheckResoFail;
 
         /**
-         * <p>Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the system considers that the output bitrate equals the input bitrate.</p>
-         * <br>
-         * <p>*   **true**: The video bitrate is checked.</p>
-         * <p>*   **false**: The video bitrate is not checked.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the input bitrate is retained. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsCheckVideoBitrate")
         public String isCheckVideoBitrate;
 
         /**
-         * <p>Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, a transcoding failure is returned without video transcoding. This parameter takes precedence over the **IsCheckVideoBitrate** parameter.</p>
-         * <br>
-         * <p>*   **true**: The video bitrate is checked.</p>
-         * <p>*   **false**: The video bitrate is not checked.</p>
-         * <p>*   Default value: **false**.</p>
+         * <p>Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, a transcoding failure is returned without transcoding the video. This parameter has a higher priority than<strong>IsCheckVideoBitrate</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * <li>Default value: <strong>false</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsCheckVideoBitrateFail")
         public String isCheckVideoBitrateFail;
 
         /**
          * <p>The transcoding mode. Valid values:</p>
-         * <br>
-         * <p>*   **onepass**: transcoding based on one-pass algorithms, which has higher accuracy.</p>
-         * <p>*   **twopass**: transcoding based on two-pass algorithms, which has lower accuracy.</p>
-         * <p>*   **CBR**: transcoding based on a fixed bitrate.</p>
+         * <ul>
+         * <li><strong>onepass</strong>: transcoding based on one-pass algorithms, which has higher accuracy.</li>
+         * <li><strong>twopass</strong>: transcoding based on two-pass algorithms, which has lower accuracy.</li>
+         * <li><strong>CBR</strong>: transcoding based on a fixed bitrate.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>onepass</p>
          */
         @NameInMap("TransMode")
         public String transMode;
@@ -2858,12 +3326,18 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputVideoBitrateBnd extends TeaModel {
         /**
          * <p>The upper limit of the total bitrate. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Max")
         public String max;
 
         /**
          * <p>The lower limit of the total bitrate. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Min")
         public String min;
@@ -2894,6 +3368,9 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputVideo extends TeaModel {
         /**
          * <p>The bitrate of the output video. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
@@ -2906,158 +3383,234 @@ public class SubmitJobsResponseBody extends TeaModel {
 
         /**
          * <p>The size of the buffer.</p>
-         * <br>
-         * <p>*   Unit: KB.</p>
-         * <p>*   Default value: **6000**.</p>
+         * <ul>
+         * <li>Unit: KB.</li>
+         * <li>Default value: <strong>6000</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("Bufsize")
         public String bufsize;
 
         /**
          * <p>The video codec.</p>
-         * <br>
-         * <p>*   Valid values: **H.264**, **H.265**, **GIF**, and **WEBP**.</p>
-         * <p>*   Default value: **H.264**.</p>
+         * <ul>
+         * <li>Valid values: <strong>H.264</strong>, <strong>H.265</strong>, <strong>GIF</strong>, and <strong>WEBP</strong>.</li>
+         * <li>Default value: <strong>H.264</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>H.264</p>
          */
         @NameInMap("Codec")
         public String codec;
 
         /**
          * <p>The constant rate factor.</p>
-         * <br>
-         * <p>*   If the **Crf** parameter is specified, the setting of the **Bitrate** parameter becomes invalid.</p>
-         * <p>*   Default value when the value of the Codec parameter is H.264: **23**. Default value when the value of the Codec parameter is H.265: **26**.</p>
+         * <ul>
+         * <li>If <strong>Crf</strong> is returned, the value of <strong>Bitrate</strong> is invalid.</li>
+         * <li>Default value if the value of Codec is H.264: <strong>23</strong>. Default value if the value of Codec is H.265: <strong>26</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         @NameInMap("Crf")
         public String crf;
 
         /**
          * <p>The method of video cropping. Valid values:</p>
-         * <br>
-         * <p>*   **border**: automatically detects and removes borders.</p>
-         * <p>*   A value in the format of width:height:left:top: crops the video based on the custom settings.</p>
+         * <ul>
+         * <li><strong>border</strong>: Black borders are automatically detected and removed.</li>
+         * <li>A value in the format of width:height:left:top: The video is cropped based on the custom settings.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1280:800:0:140</p>
          */
         @NameInMap("Crop")
         public String crop;
 
         /**
-         * <p>The level of the independent denoising algorithm.</p>
+         * <p>The strength of the independent noise reduction algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Degrain")
         public String degrain;
 
         /**
-         * <p>The frame rate of the video.</p>
-         * <br>
-         * <p>*   Unit: frames per second.</p>
-         * <p>*   Valid values: 0 to 60. The value is 60 if the frame rate of the input file exceeds 60.</p>
-         * <p>*   Default value: the frame rate of the input file.</p>
+         * <p>The frame rate.</p>
+         * <ul>
+         * <li>Unit: frames per second.</li>
+         * <li>Valid values: 0 to 60. The value is 60 if the frame rate of the input file exceeds 60.</li>
+         * <li>Default value: the frame rate of the input file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
-         * <p>The Group of Pictures (GOP) size. The GOP size can be the maximum interval of keyframes or the maximum number of frames in a frame group. Unit: seconds.</p>
-         * <br>
-         * <p>*   Default value: 10s.</p>
-         * <p>*   If the value specifies the maximum number of frames, the value does not contain a unit.</p>
+         * <p>The maximum interval between keyframes or the maximum number of frames in a frame group. Unit: seconds.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * <li>If the maximum number of frames is returned, the value does not have a unit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Gop")
         public String gop;
 
         /**
          * <p>The height of the video.</p>
-         * <br>
-         * <p>*   Unit: pixel.</p>
-         * <p>*   Default value: the original video height.</p>
+         * <ul>
+         * <li>Unit: pixel.</li>
+         * <li>Default value: the height of the input video.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
          * <p>The maximum frame rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("MaxFps")
         public String maxFps;
 
         /**
          * <p>The maximum bitrate of the video. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Maxrate")
         public String maxrate;
 
         /**
-         * <p>The black borders to be added to the video.</p>
-         * <br>
-         * <p>*   Format: width:height:left:top.</p>
-         * <p>*   Unit: pixel.</p>
+         * <p>The black borders that are added to the video.</p>
+         * <ul>
+         * <li>The value is in the width:height:left:top format.</li>
+         * <li>Unit: pixel.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1280:800:0:140</p>
          */
         @NameInMap("Pad")
         public String pad;
 
         /**
-         * <p>The pixel format for video color encoding.</p>
-         * <br>
-         * <p>*   Valid values: standard pixel formats such as **yuv420p** and **yuvj420p**.</p>
-         * <br>
-         * <p>    **</p>
-         * <br>
-         * <p>    **Note** If a non-standard pixel format such as yuvj420p(pc, bt470bg/bt470bg/smpte170m) is used, compatibility with the pixel format must be configured. Otherwise, the transcoding fails. Default value: yuv420p or the original pixel format. )</p>
+         * <p>The pixel format of the video.</p>
+         * <ul>
+         * <li><p>The default pixel format can be <strong>yuv420p</strong> or the pixel format of the input file.</p>
+         * </li>
+         * <li><p>Valid values: standard pixel formats such as <strong>yuv420p</strong> and <strong>yuvj420p</strong>.</p>
+         * <p>**</p>
+         * <p><strong>Note</strong> If a non-standard pixel format such as yuvj420p(pc, bt470bg/bt470bg/smpte170m) is used, compatibility with the pixel format must be configured. Otherwise, the transcoding job fails.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yuvj420p</p>
          */
         @NameInMap("PixFmt")
         public String pixFmt;
 
         /**
-         * <p>The preset video algorithm. Default value: **medium**. Valid values:</p>
-         * <br>
-         * <p>*   **veryfast**</p>
-         * <p>*   **fast**</p>
-         * <p>*   **medium**</p>
-         * <p>*   **slow**</p>
-         * <p>*   **slower**</p>
+         * <p>The preset video algorithm. Default value: <strong>medium</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>veryfast</strong></li>
+         * <li><strong>fast</strong></li>
+         * <li><strong>medium</strong></li>
+         * <li><strong>slow</strong></li>
+         * <li><strong>slower</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>veryfast</p>
          */
         @NameInMap("Preset")
         public String preset;
 
         /**
-         * <p>The encoding profile. This parameter is returned only for the H.264 codec. Default value: **high**. Valid values:</p>
-         * <br>
-         * <p>>  If multiple definitions exist, we recommend that you set this parameter to baseline for the lowest definition to ensure normal playback on low-end devices. Set this parameter to main or high for other definitions.</p>
-         * <br>
-         * <p>*   **baseline**: applicable to mobile devices.</p>
-         * <p>*   **main**: applicable to standard-definition devices.</p>
-         * <p>*   **high**: applicable to high-definition devices.</p>
+         * <p>The encoding profile. This parameter is returned only for the H.264 codec. Default value: <strong>high</strong>. Valid values:</p>
+         * <blockquote>
+         * <p> If multiple definitions are involved, we recommend that you use baseline for the lowest definition to ensure normal playback on low-definition devices, and use main or high for other definitions.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>baseline</strong>: applicable to mobile devices.</li>
+         * <li><strong>main</strong>: applicable to standard-definition devices.</li>
+         * <li><strong>high</strong>: applicable to high-definition devices.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>baseline</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
          * <p>The level of quality control on the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("Qscale")
         public String qscale;
 
         /**
          * <p>The priority of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ResoPriority")
         public String resoPriority;
 
         /**
          * <p>The scan mode. Valid values:</p>
-         * <br>
-         * <p>*   **interlaced**: An interlaced scan is performed.</p>
-         * <p>*   **progressive**: A progressive scan is performed.</p>
-         * <p>*   **auto**: A scan is performed based on the video source.</p>
+         * <ul>
+         * <li>If this parameter is <strong>empty</strong>, the scan mode of the input file is used.</li>
+         * <li><strong>auto</strong>: automatic deinterlacing.</li>
+         * <li><strong>progressive</strong>: progressive scan.</li>
+         * <li><strong>interlaced</strong>: interlaced scan.</li>
+         * <li><strong>By default</strong>, this parameter is empty.</li>
+         * </ul>
+         * <p><strong>Best practice</strong>: Interlaced scan consumes less bandwidth than progressive scan, but the image quality is poor. Therefore, mainstream video production uses progressive scan.</p>
+         * <ul>
+         * <li>If <strong>progressive scan</strong> or <strong>interlaced scan</strong> is used when the scan mode of the input file is neither of them, the transcoding job fails.</li>
+         * <li>We recommend that you use <strong>the scan mode of the input file</strong> or <strong>automatic deinterlacing</strong> to improve compatibility.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>interlaced</p>
          */
         @NameInMap("ScanMode")
         public String scanMode;
 
         /**
          * <p>The width of the video.</p>
-         * <br>
-         * <p>*   Unit: pixel.</p>
-         * <p>*   Default value: **the original video width**.</p>
+         * <ul>
+         * <li>Unit: pixel.</li>
+         * <li>Default value: <strong>the width of the input video</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         @NameInMap("Width")
         public String width;
@@ -3232,18 +3785,27 @@ public class SubmitJobsResponseBody extends TeaModel {
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkListWaterMarkInputFile extends TeaModel {
         /**
          * <p>The name of the OSS bucket in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The ID of the OSS region in which the input file resides.</p>
+         * <p>The ID of the OSS region in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The name of the OSS object that is used as the input file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-logo-****.png</p>
          */
         @NameInMap("Object")
         public String object;
@@ -3281,97 +3843,136 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkListWaterMark extends TeaModel {
         /**
-         * <p>The horizontal offset of the watermark relative to the output video. If this parameter is specified in the request, the value overwrites the corresponding parameter in the watermark template. Default value: 0. The value can be an integer or a decimal.</p>
-         * <br>
-         * <p>*   An integer indicates the pixel value of the horizontal offset.</p>
-         * <br>
-         * <p>    *   Valid values: **\[8,4096]**.</p>
-         * <p>    *   Unit: pixel.</p>
-         * <br>
-         * <p>*   A decimal indicates the ratio of the horizontal offset to the width in the output video resolution.</p>
-         * <br>
-         * <p>    *   Valid values: (0,1).</p>
-         * <p>    *   The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically deleted.</p>
+         * <p>The horizontal offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Default value: 0. The value can be an integer or a decimal number.</p>
+         * <ul>
+         * <li><p>An integer indicates the pixel value of the horizontal offset.</p>
+         * <ul>
+         * <li>Valid values: <strong>[8,4096]</strong>.</li>
+         * <li>Unit: pixel.</li>
+         * </ul>
+         * </li>
+         * <li><p>A decimal number indicates the ratio of the horizontal offset to the width in the output video resolution.</p>
+         * <ul>
+         * <li>Valid values: (0,1).</li>
+         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Dx")
         public String dx;
 
         /**
-         * <p>The vertical offset of the watermark image relative to the output video. If this parameter is specified in the request, the value overwrites the corresponding parameter in the watermark template. The value can be an integer or a decimal.</p>
-         * <br>
-         * <p>*   An integer indicates the pixel value of the vertical offset.</p>
-         * <br>
-         * <p>    *   Valid values: **\[8,4096]**.</p>
-         * <p>    *   Unit: pixel.</p>
-         * <br>
-         * <p>*   A decimal indicates the ratio of the vertical offset to the height in the output video resolution.</p>
-         * <br>
-         * <p>    *   Valid values: **(0,1)**.</p>
-         * <p>    *   The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically deleted.</p>
+         * <p>The vertical offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.</p>
+         * <ul>
+         * <li><p>An integer indicates the pixel value of the vertical offset.</p>
+         * <ul>
+         * <li>Valid values: <strong>[8,4096]</strong>.</li>
+         * <li>Unit: pixel.</li>
+         * </ul>
+         * </li>
+         * <li><p>A decimal number indicates the ratio of the vertical offset to the height in the output video resolution.</p>
+         * <ul>
+         * <li>Valid values: <strong>(0,1)</strong>.</li>
+         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Dy")
         public String dy;
 
         /**
-         * <p>The height of the watermark image. If this parameter is specified in the request, the value overwrites the corresponding parameter in the watermark template. The value can be an integer or a decimal.</p>
-         * <br>
-         * <p>*   An integer indicates the pixel value of the watermark height.</p>
-         * <br>
-         * <p>    *   Valid values: **\[8,4096]**.</p>
-         * <p>    *   Unit: pixel.</p>
-         * <br>
-         * <p>*   A decimal indicates the ratio of the watermark height to the height in the output video resolution.</p>
-         * <br>
-         * <p>    *   Valid values: **(0,1)**.</p>
-         * <p>    *   The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically deleted.</p>
+         * <p>The height of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.</p>
+         * <ul>
+         * <li><p>An integer indicates the pixel value of the watermark height.</p>
+         * <ul>
+         * <li>Valid values: <strong>[8,4096]</strong>.</li>
+         * <li>Unit: pixel.</li>
+         * </ul>
+         * </li>
+         * <li><p>A decimal number indicates the ratio of the watermark height to the height in the output video resolution.</p>
+         * <ul>
+         * <li>Valid values: <strong>(0,1)</strong>.</li>
+         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
-         * <p>The watermark input file. You can use an image in the PNG format or a file in the MOV format as the watermark input.</p>
+         * <p>The watermark input file. PNG images and MOV files are supported.</p>
          */
         @NameInMap("InputFile")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkListWaterMarkInputFile inputFile;
 
         /**
-         * <p>The position of the watermark. If this parameter is specified in the request, the value overwrites the corresponding parameter in the watermark template. Valid values:</p>
-         * <br>
-         * <p>*   **TopRight**: the upper-right corner.</p>
-         * <p>*   **TopLeft**: the upper-left corner.</p>
-         * <p>*   **BottomRight**: the lower-right corner.</p>
-         * <p>*   **BottomLeft**: the lower-left corner.</p>
+         * <p>The position of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Valid values:</p>
+         * <ul>
+         * <li><strong>TopRight</strong></li>
+         * <li><strong>TopLeft</strong></li>
+         * <li><strong>BottomRight</strong></li>
+         * <li><strong>BottomLeft</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TopRight</p>
          */
         @NameInMap("ReferPos")
         public String referPos;
 
         /**
-         * <p>The type of the watermark. If this parameter is specified in the request, the value overwrites the corresponding parameter in the watermark template. For more information, see [Parameter details](~~29253~~). Valid values:</p>
-         * <br>
-         * <p>*   **Image**: an image watermark.</p>
-         * <p>*   **Text**: a text watermark.</p>
+         * <p>The type of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>. Valid values:</p>
+         * <ul>
+         * <li><strong>Image</strong></li>
+         * <li><strong>Text</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Image</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The ID of the watermark template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e47098a5b665e2a12****</p>
          */
         @NameInMap("WaterMarkTemplateId")
         public String waterMarkTemplateId;
 
         /**
-         * <p>The width of the watermark image. If this parameter is specified in the request, the value overwrites the corresponding parameter in the watermark template. The value can be an integer or a decimal.</p>
-         * <br>
-         * <p>*   An integer indicates the pixel value of the watermark width.</p>
-         * <br>
-         * <p>    *   Valid values: **\[8,4096]**.</p>
-         * <p>    *   Unit: pixel.</p>
-         * <br>
-         * <p>*   A decimal indicates the ratio of the watermark width to the width in the output video resolution.</p>
-         * <br>
-         * <p>    *   Valid values: **(0,1)**.</p>
-         * <p>    *   The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically deleted.</p>
+         * <p>The width of the watermark image. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.</p>
+         * <ul>
+         * <li><p>An integer indicates the pixel value of the watermark width.</p>
+         * <ul>
+         * <li>Valid values: <strong>[8,4096]</strong>.</li>
+         * <li>Unit: pixel.</li>
+         * </ul>
+         * </li>
+         * <li><p>A decimal number indicates the ratio of the watermark width to the width in the output video resolution.</p>
+         * <ul>
+         * <li>Valid values: <strong>(0,1)</strong>.</li>
+         * <li>The decimal number can be accurate to four decimal places, such as 0.9999. Excess digits are automatically deleted.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         @NameInMap("Width")
         public String width;
@@ -3468,25 +4069,30 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJobOutput extends TeaModel {
         /**
-         * <p>The list of audio tracks to be mixed.</p>
+         * <p>The audio tracks that are mixed.</p>
          */
         @NameInMap("AmixList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputAmixList amixList;
 
         /**
          * <p>The audio configurations.</p>
-         * <br>
-         * <p>>  If this parameter is specified in the request, the value overwrites the corresponding parameter in the specified transcoding template.</p>
+         * <blockquote>
+         * <p> If this parameter is specified in the request, the corresponding configurations in the specified transcoding template are overwritten.</p>
+         * </blockquote>
          */
         @NameInMap("Audio")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputAudio audio;
 
         /**
          * <p>The sequence number of the audio stream.</p>
-         * <br>
-         * <p>*   Format: 0:a:{Sequence number}. Example: 0:a:0.</p>
-         * <p>*   The sequence number is the index of the audio stream in the list and starts from 0.</p>
-         * <p>*   If you do not specify a sequence number, the default audio stream is used.</p>
+         * <ul>
+         * <li>Format: 0:a:{Sequence number}. Example: 0:a:0.</li>
+         * <li>The sequence number is the index of the audio stream in the list and starts from 0.</li>
+         * <li>If no sequence number is specified, the default audio stream is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0:a:0</p>
          */
         @NameInMap("AudioStreamMap")
         public String audioStreamMap;
@@ -3498,13 +4104,16 @@ public class SubmitJobsResponseBody extends TeaModel {
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputClip clip;
 
         /**
-         * <p>The container configurations.</p>
+         * <p>The container format configurations.</p>
          */
         @NameInMap("Container")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputContainer container;
 
         /**
-         * <p>The configurations of watermark blurring. The value is a JSON object. For more information, see **DeWatermark** in [Parameter details](~~29253~~).</p>
+         * <p>The configurations of watermark blurring. The value is a JSON object. For more information, see the <strong>DeWatermark</strong> section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;0&quot;: [{&quot;l&quot;: 10,&quot;t&quot;: 10,&quot;w&quot;: 10,&quot;h&quot;: 10},{&quot;l&quot;: 100,&quot;t&quot;: 0.1,&quot;w&quot;: 10,&quot;h&quot;: 10}],&quot;128000&quot;: [],&quot;250000&quot;: [{&quot;l&quot;: 0.2,&quot;t&quot;: 0.1,&quot;w&quot;: 0.01,&quot;h&quot;: 0.05}]}</p>
          */
         @NameInMap("DeWatermark")
         public String deWatermark;
@@ -3516,24 +4125,28 @@ public class SubmitJobsResponseBody extends TeaModel {
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputDigiWaterMark digiWaterMark;
 
         /**
-         * <p>The encryption configuration. Only outputs in the M3U8 format are supported.</p>
+         * <p>The encryption configurations. Only outputs in the M3U8 format are supported.</p>
          */
         @NameInMap("Encryption")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputEncryption encryption;
 
         /**
-         * <p>The non-standard support configuration for M3U8. The value is a JSON object. For more information, see **M3U8NonStandardSupport** in [Parameter details](~~29253~~).</p>
+         * <p>The non-standard support configuration for M3U8. The value is a JSON object. For more information, see the <strong>M3U8NonStandardSupport</strong> section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
          */
         @NameInMap("M3U8NonStandardSupport")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputM3U8NonStandardSupport m3U8NonStandardSupport;
 
         /**
-         * <p>You can specify either the **MergeList** or **MergeConfigUrl** parameter.  </p>
-         * <br>
-         * <p>- The configuration file that you specify by using the MergeConfigUrl parameter can contain up to 50 merged clips.</p>
-         * <p>- The MergeConfigUrl parameter specifies the URL of the configuration file for merging clips.</p>
-         * <p>- Make sure that the configuration file is stored as an object in OSS and that MPS can access the OSS object. For information about the file content, see the details about merging parameters.</p>
-         * <p>- Example of the content of mergeConfigfile: `{"MergeList":[{"MergeURL":"http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4"}]}`.</p>
+         * <p>The URL of the merging configuration file. Only one of <strong>MergeList</strong> and <strong>MergeConfigUrl</strong> takes effect.</p>
+         * <ul>
+         * <li>The configuration file specified by MergeConfigUrl can contain up to 50 clips.</li>
+         * <li>MergeConfigUrl indicates the URL of the configuration file for merging clips.</li>
+         * <li>Make sure that the configuration file is stored as an object in OSS and that MPS can access the OSS object. For information about the file content, see the details about merging parameters.</li>
+         * <li>Example of the content of the merging configuration file: <code>{&quot;MergeList&quot;:[{&quot;MergeURL&quot;:&quot;http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4&quot;}]}</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>`{&quot;MergeList&quot;:[{&quot;MergeURL&quot;:&quot;<a href="http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4%22%7D%5D%7D">http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4&quot;}]}</a></p>
          */
         @NameInMap("MergeConfigUrl")
         public String mergeConfigUrl;
@@ -3545,19 +4158,19 @@ public class SubmitJobsResponseBody extends TeaModel {
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputMergeList mergeList;
 
         /**
-         * <p>The transmuxing configurations. If this parameter is specified in the request, the value overwrites the corresponding parameter in the specified transcoding template.</p>
+         * <p>The transmuxing configurations. If this parameter is specified in the request, the corresponding configurations in the specified transcoding template are overwritten.</p>
          */
         @NameInMap("MuxConfig")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputMuxConfig muxConfig;
 
         /**
-         * <p>The list of opening parts. The value is a JSON object.</p>
+         * <p>The opening parts. The value is a JSON object.</p>
          */
         @NameInMap("OpeningList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputOpeningList openingList;
 
         /**
-         * <p>The output subtitle list.</p>
+         * <p>The output subtitles.</p>
          */
         @NameInMap("OutSubtitleList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputOutSubtitleList outSubtitleList;
@@ -3569,10 +4182,14 @@ public class SubmitJobsResponseBody extends TeaModel {
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputOutputFile outputFile;
 
         /**
-         * <p>The priority of the job in the MPS queue to which the job is added. </p>
-         * <br>
-         * <p>- A value of **10** indicates the highest priority.</p>
-         * <p>- Default value: **6**.</p>
+         * <p>The priority of the job in the MPS queue to which the job is added.</p>
+         * <ul>
+         * <li>A value of <strong>10</strong> indicates the highest priority.</li>
+         * <li>Default value: <strong>6</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Priority")
         public String priority;
@@ -3585,6 +4202,9 @@ public class SubmitJobsResponseBody extends TeaModel {
 
         /**
          * <p>The rotation angle of the video, in the clockwise direction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         @NameInMap("Rotate")
         public String rotate;
@@ -3602,59 +4222,75 @@ public class SubmitJobsResponseBody extends TeaModel {
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputSuperReso superReso;
 
         /**
-         * <p>The list of ending parts. The value is a JSON object.</p>
+         * <p>The ending parts. The value is a JSON object.</p>
          */
         @NameInMap("TailSlateList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputTailSlateList tailSlateList;
 
         /**
          * <p>The ID of the transcoding template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S00000000-000010</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
          * <p>The general transcoding configurations.</p>
-         * <br>
-         * <p>>  If this parameter is specified in the request, the value overwrites the corresponding parameter in the specified transcoding template.</p>
+         * <blockquote>
+         * <p> If this parameter is specified in the request, the corresponding parameter in the specified transcoding template are overwritten.</p>
+         * </blockquote>
          */
         @NameInMap("TransConfig")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputTransConfig transConfig;
 
         /**
          * <p>The custom data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example data</p>
          */
         @NameInMap("UserData")
         public String userData;
 
         /**
          * <p>The video configurations.</p>
-         * <br>
-         * <p>>  If this parameter is specified in the request, the setting of the **AliyunVideoCodec** parameter in the template specified by the **TemplateId** parameter is overwritten by the setting of this parameter.</p>
+         * <blockquote>
+         * <p> If this parameter is specified, <strong>AliyunVideoCodec</strong> in the template specified by <strong>TemplateId</strong> is overwritten.</p>
+         * </blockquote>
          */
         @NameInMap("Video")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputVideo video;
 
         /**
-         * <p>The sequence number of the video stream. </p>
-         * <br>
-         * <p>- Format: 0:a:{Sequence number}. Example: 0:a:0.</p>
-         * <p>- The sequence number is the index of the video stream in the list and starts from 0.</p>
-         * <p>- If you do not specify a sequence number, the default video stream is used.</p>
+         * <p>The sequence number of the video stream.</p>
+         * <ul>
+         * <li>Format: 0:a:{Sequence number}. Example: 0:a:0.</li>
+         * <li>The sequence number is the index of the video stream in the list and starts from 0.</li>
+         * <li>If no sequence number is specified, the default video stream is used.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0:a:0</p>
          */
         @NameInMap("VideoStreamMap")
         public String videoStreamMap;
 
         /**
          * <p>The URL of the watermark configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/configure">http://example.com/configure</a></p>
          */
         @NameInMap("WaterMarkConfigUrl")
         public String waterMarkConfigUrl;
 
         /**
-         * <p>The list of watermarks.</p>
-         * <br>
-         * <p>>  If watermarks are truncated or fail to be added to the video, check whether the text watermarks that you add contain special characters. If the text watermarks contain special characters, you must escape the special characters. Alternatively, \<prop="china">[submit a ticket](https://smartservice.console.aliyun.com/service/create-ticket?product=mts)\</prop>\<prop="intl">[submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.12246746.top-nav.dticket.68797bbcm8H408#/ticket/add/?productId=1232)\</prop> to contact Alibaba Cloud customer service for compatibility processing.</p>
+         * <p>The watermarks.</p>
+         * <blockquote>
+         * <p> If watermarks are truncated or fail to be generated, check whether the text watermarks that you add contain special characters. If the text watermarks contain special characters, you must escape the special characters before you add the watermarks. Alternatively, you can <a href="https://workorder-intl.console.aliyun.com/?spm=5176.12246746.top-nav.dticket.68797bbcm8H408#/ticket/add/?productId=1232">submit a ticket</a> to contact Alibaba Cloud customer service for compatibility processing.</p>
+         * </blockquote>
          */
         @NameInMap("WaterMarkList")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutputWaterMarkList waterMarkList;
@@ -3892,19 +4528,28 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResultJob extends TeaModel {
         /**
-         * <p>The error code returned if the job failed. This parameter is not returned if the job is successful.</p>
+         * <p>The error code returned if the job failed. This parameter is not returned if the job was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InternalError</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-01-10T12:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The time when the job was complete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-01-10T12:20:00Z</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
@@ -3916,7 +4561,10 @@ public class SubmitJobsResponseBody extends TeaModel {
         public SubmitJobsResponseBodyJobResultListJobResultJobInput input;
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31fa3c9ca8134f9cec2b4b0b0f78****</p>
          */
         @NameInMap("JobId")
         public String jobId;
@@ -3928,34 +4576,47 @@ public class SubmitJobsResponseBody extends TeaModel {
         public SubmitJobsResponseBodyJobResultListJobResultJobMNSMessageResult MNSMessageResult;
 
         /**
-         * <p>The error message returned if the job failed. This parameter is not returned if the job is successful.</p>
+         * <p>The error message returned if the job failed. This parameter is not returned if the job was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The operation has failed due to some unknown error, exception or failure.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The outputs of the jobs.</p>
+         * <p>The output of the job.</p>
          */
         @NameInMap("Output")
         public SubmitJobsResponseBodyJobResultListJobResultJobOutput output;
 
         /**
          * <p>The transcoding progress.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Percent")
         public Long percent;
 
         /**
          * <p>The ID of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e47098a5b665e2a126797</p>
          */
         @NameInMap("PipelineId")
         public String pipelineId;
 
         /**
          * <p>The state of the job. Valid values:</p>
-         * <br>
-         * <p>*   **Submitted**: The job is submitted.</p>
-         * <p>*   **TranscodeFail**: The job is failed.</p>
+         * <ul>
+         * <li><strong>Submitted</strong></li>
+         * <li><strong>TranscodeFail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Submitted</p>
          */
         @NameInMap("State")
         public String state;
@@ -4057,7 +4718,10 @@ public class SubmitJobsResponseBody extends TeaModel {
 
     public static class SubmitJobsResponseBodyJobResultListJobResult extends TeaModel {
         /**
-         * <p>The error code returned if the job fails to be created. This parameter is not returned if the job is created.</p>
+         * <p>The error code returned if the job failed to be created. This parameter is not returned if the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.NullValue</p>
          */
         @NameInMap("Code")
         public String code;
@@ -4069,16 +4733,23 @@ public class SubmitJobsResponseBody extends TeaModel {
         public SubmitJobsResponseBodyJobResultListJobResultJob job;
 
         /**
-         * <p>The error message returned if the job fails to be created. This parameter is not returned if the job is created.</p>
+         * <p>The error message returned if the job failed to be created. This parameter is not returned if the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameter &quot;%s&quot; cannot be null.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the job is created. Valid values:</p>
-         * <br>
-         * <p>- **true**: The job is created.</p>
-         * <p>- **false**: The job fails to be created.</p>
+         * <p>Indicates whether the job was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;

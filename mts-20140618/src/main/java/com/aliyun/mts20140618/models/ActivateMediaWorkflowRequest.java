@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ActivateMediaWorkflowRequest extends TeaModel {
     /**
-     * <p>The ID of the media workflow. You can obtain the ID from the response of the [AddMediaWorkflow](~~44437~~) operation.</p>
+     * <p>The ID of the media workflow. You can obtain the ID from the response of the <a href="https://help.aliyun.com/document_detail/44437.html">AddMediaWorkflow</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93ab850b4f6f44eab54b6e9181d4****</p>
      */
     @NameInMap("MediaWorkflowId")
     public String mediaWorkflowId;

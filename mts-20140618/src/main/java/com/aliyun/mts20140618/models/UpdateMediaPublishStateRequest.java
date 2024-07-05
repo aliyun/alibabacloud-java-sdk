@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateMediaPublishStateRequest extends TeaModel {
     /**
-     * <p>The ID of the media file whose publishing status you want update. To obtain the ID of a media file, you can call the [AddMedia](~~44458~~) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click **Manage**. The ID of the video is displayed on the Basics tab.</p>
+     * <p>The ID of the media file whose publishing status you want to update. You can obtain the ID of a media file from the response of the <a href="https://help.aliyun.com/document_detail/44458.html">AddMedia</a> operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose <strong>Media Management</strong> &gt; <strong>Media List</strong>. Find the required video and click <strong>Manage</strong>. The ID of the video is displayed on the Basics tab.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3e6149d5a8c944c09b1a8d2dc3e4****</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
@@ -17,10 +21,14 @@ public class UpdateMediaPublishStateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The publishing status. Default value: **Initialed**. Valid values:</p>
-     * <br>
-     * <p>*   **true**: published</p>
-     * <p>*   **false**: unpublished</p>
+     * <p>The publishing status. Default value: <strong>Initialed</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: published.</li>
+     * <li><strong>false</strong>: unpublished.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Publish")
     public Boolean publish;

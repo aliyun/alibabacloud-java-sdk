@@ -4,6 +4,13 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class ListFpShotImportJobRequest extends TeaModel {
+    /**
+     * <p>The job IDs. You can obtain the job IDs from the response to the <a href="https://help.aliyun.com/document_detail/312262.html">ImportFpShotJob</a> operation. You can specify a maximum of 10 job IDs in a request. Separate multiple job IDs with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>88c6ca184c0e47098a5b665e2a12****,c074b118ace44395a02063a5ab94****</p>
+     */
     @NameInMap("JobIds")
     public String jobIds;
 

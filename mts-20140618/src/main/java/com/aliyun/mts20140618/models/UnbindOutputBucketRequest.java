@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class UnbindOutputBucketRequest extends TeaModel {
     /**
-     * <p>The name of the output media bucket to be unbound. To obtain the media bucket name, you can log on to the **ApsaraVideo Media Processing (MPS)** console and choose **Workflows** > **Media Buckets** in the left-side navigation pane. Alternatively, you can log on to the **Object Storage Service (OSS) console** and click **My OSS Paths**.</p>
+     * <p>The ID of the request.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-bucket-****</p>
      */
     @NameInMap("Bucket")
     public String bucket;

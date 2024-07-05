@@ -4,9 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmarttagJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>39f8e0bc005e4f309379701645f4****</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

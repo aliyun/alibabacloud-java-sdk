@@ -6,33 +6,49 @@ import com.aliyun.tea.*;
 public class UpdateMediaRequest extends TeaModel {
     /**
      * <p>The ID of the category to which the media file belongs. The value must be an integer.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, the value is NULL.</p>
-     * <p>*   The value cannot be negative.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, the value is NULL.</li>
+     * <li>The value cannot be negative.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CateId")
     public Long cateId;
 
     /**
-     * <p>The storage location of the thumbnail that you want to specify for the media file. To obtain the URL, you can log on to the **MPS console** and choose **Workflows** > **Media Buckets**. Alternatively, you can log on to the **Object Storage Service (OSS) console** and click **My OSS Paths**.</p>
-     * <br>
-     * <p>*   The value can be up to 3,200 bytes in length.</p>
-     * <p>*   The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded.</p>
+     * <p>The URL of the thumbnail. This parameter is used to specify the storage location of the thumbnail. To obtain the URL, you can log on to the <strong>MPS console</strong> and choose <strong>Workflows</strong> &gt; <strong>Media Buckets</strong> in the left-side navigation pane. Alternatively, you can log on to the <strong>OSS console</strong> and click <strong>Buckets</strong> in the left-side navigation pane.</p>
+     * <ul>
+     * <li>The value can be up to 3,200 bytes in length.</li>
+     * <li>The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see <a href="https://help.aliyun.com/document_detail/423796.html">URL encoding</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/test****.jpg">http://example-bucket-****.oss-cn-hangzhou.aliyuncs.com/test****.jpg</a></p>
      */
     @NameInMap("CoverURL")
     public String coverURL;
 
     /**
      * <p>The description of the media file. Multiple character types, such as letters and digits, are supported.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, the value is NULL.</p>
-     * <p>*   The value is encoded in UTF-8 and can be up to 1,024 bytes in length.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, the value is NULL.</li>
+     * <li>The value is encoded in UTF-8 and can be up to 1,024 bytes in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>example description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the media file whose basic information you want to update. To obtain the ID of the media file, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Media Management** > **Media List** in the left-side navigation pane.</p>
+     * <p>The ID of the media file whose basic information you want to update. To obtain the ID of the media file, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Media Management</strong> &gt; <strong>Media List</strong> in the left-side navigation pane.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3e1cd21131a94525be55acf65888****</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
@@ -50,20 +66,28 @@ public class UpdateMediaRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags that you want to add for the media file.</p>
-     * <br>
-     * <p>*   Separate multiple tags with commas (,). You can specify up to 16 tags for a media file.</p>
-     * <p>*   Each tag can be up to 32 bytes in length.</p>
-     * <p>*   The value is encoded in UTF-8.</p>
+     * <p>The tags that you want to add to the media file.</p>
+     * <ul>
+     * <li>You can specify up to 16 tags for a media file. Separate multiple tags with commas (,).</li>
+     * <li>Each tag can be up to 32 bytes in length.</li>
+     * <li>The value is encoded in UTF-8.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tag1,tag2</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
      * <p>The title of the media file. Multiple character types, such as letters and digits, are supported.</p>
-     * <br>
-     * <p>*   If you do not specify this parameter, the value is NULL.</p>
-     * <p>*   The value is encoded in UTF-8 and can be up to 128 bytes in length.</p>
+     * <ul>
+     * <li>If you do not specify this parameter, the value is NULL.</li>
+     * <li>The value is encoded in UTF-8 and can be up to 128 bytes in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>hello</p>
      */
     @NameInMap("Title")
     public String title;

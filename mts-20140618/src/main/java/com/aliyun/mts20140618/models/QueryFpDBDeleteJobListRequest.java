@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryFpDBDeleteJobListRequest extends TeaModel {
     /**
-     * <p>The IDs of the jobs of clearing or deleting a media fingerprint library. You can obtain the job IDs from the response parameters of the [SubmitFpDBDeleteJob](~~209341~~) operation. Separate multiple job IDs with commas (,). If you leave this parameter empty, the system returns the latest 20 jobs that are submitted.</p>
+     * <p>The IDs of the jobs of clearing or deleting a media fingerprint library. You can obtain the job IDs from the response parameters of the <a href="https://help.aliyun.com/document_detail/209341.html">SubmitFpDBDeleteJob</a> operation. Separate multiple job IDs with commas (,). If you leave this parameter empty, the system returns the latest 20 jobs that are submitted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2288c6ca184c0e47098a5b665e2a12****,78dc866518b843259669df58ed30****</p>
      */
     @NameInMap("JobIds")
     public String jobIds;

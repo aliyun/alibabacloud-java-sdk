@@ -4,15 +4,36 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class RegisterCustomViewRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>landmark</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CustomEntityId")
     public String customEntityId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CustomGroupId")
     public String customGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 

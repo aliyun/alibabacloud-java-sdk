@@ -4,9 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>129****</p>
+     */
     @NameInMap("CustomGroupId")
     public String customGroupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>580e8ce3-3b80-44c5-9f3f-36ac3cc5bdd5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

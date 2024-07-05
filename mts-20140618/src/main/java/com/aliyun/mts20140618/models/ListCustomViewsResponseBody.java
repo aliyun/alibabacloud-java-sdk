@@ -7,15 +7,31 @@ public class ListCustomViewsResponseBody extends TeaModel {
     @NameInMap("CustomViews")
     public ListCustomViewsResponseBodyCustomViews customViews;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>580e8ce3-3b80-44c5-9f3f-36ac3cc5bdd5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,6 +81,10 @@ public class ListCustomViewsResponseBody extends TeaModel {
     }
 
     public static class ListCustomViewsResponseBodyCustomViewsCustomView extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("CustomViewId")
         public String customViewId;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class BindOutputBucketResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D0F80646-90D4-402F-9D56-CEFEAA6BCC9B</p>
      */
     @NameInMap("RequestId")
     public String requestId;

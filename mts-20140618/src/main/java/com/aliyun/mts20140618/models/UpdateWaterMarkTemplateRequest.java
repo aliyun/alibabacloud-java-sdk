@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class UpdateWaterMarkTemplateRequest extends TeaModel {
     /**
-     * <p>The updated configuration of the watermark template. The value is a JSON object. For more information, see [Watermark template configuration](~~29253~~).</p>
+     * <p>The updated configuration of the watermark template. The value is a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Width&quot;:&quot;10&quot;,&quot;Height&quot;:&quot;30&quot;,&quot;Dx&quot;:&quot;10&quot;,&quot;Dy&quot;:&quot;5&quot;,&quot;Type&quot;:&quot;Image&quot;,&quot;Timeline&quot;:{&quot;Start&quot;:&quot;0&quot;,&quot;Duration&quot;:&quot;10&quot;}}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>The new name of the watermark template. The value can contain letters and digits and can be up to 128 bytes in size.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-watermark-****</p>
      */
     @NameInMap("Name")
     public String name;
@@ -29,7 +37,11 @@ public class UpdateWaterMarkTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the watermark template that you want to update. To obtain the ID of the watermark template, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Global Settings** > **Watermark Templates** in the left-side navigation pane.</p>
+     * <p>The ID of the watermark template that you want to update. To obtain the ID of the watermark template, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Watermark Templates</strong> in the left-side navigation pane.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3780bd69b2b74540bc7b1096f564****</p>
      */
     @NameInMap("WaterMarkTemplateId")
     public String waterMarkTemplateId;

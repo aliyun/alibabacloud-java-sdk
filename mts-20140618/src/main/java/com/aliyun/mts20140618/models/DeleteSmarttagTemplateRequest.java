@@ -16,6 +16,13 @@ public class DeleteSmarttagTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the template that you want to delete. You can obtain the template ID from the response of the <a href="https://help.aliyun.com/document_detail/187759.html">AddSmarttagTemplate</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05de22f255284c7a8d2aab535dde****</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
