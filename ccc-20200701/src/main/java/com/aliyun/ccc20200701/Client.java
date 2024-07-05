@@ -5949,6 +5949,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request ListCategoriesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCategoriesResponse
+     */
+    public ListCategoriesResponse listCategoriesWithOptions(ListCategoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            query.put("CategoryId", request.categoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCategories"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCategoriesResponse());
+    }
+
+    /**
+     * @param request ListCategoriesRequest
+     * @return ListCategoriesResponse
+     */
+    public ListCategoriesResponse listCategories(ListCategoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCategoriesWithOptions(request, runtime);
+    }
+
+    /**
      * @param request ListCommonTicketFieldsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListCommonTicketFieldsResponse
