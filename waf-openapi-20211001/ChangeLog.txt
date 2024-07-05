@@ -1,3 +1,7 @@
+2024-07-05 Version: 3.9.0
+- Support API ReleaseInstance.
+
+
 2024-07-04 Version: 3.8.0
 - Support API CreateSM2Cert.
 - Support API DescribeDDoSStatus.
