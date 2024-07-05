@@ -6,15 +6,24 @@ import com.aliyun.tea.*;
 public class DeleteStreamRequest extends TeaModel {
     /**
      * <p>The job IDs for deleting media streams.</p>
-     * <br>
-     * <p>*   Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified for one video.</p>
-     * <p>*   You can obtain job IDs from the PlayInfo parameter that is returned after you call the [GetPlayInfo](~~56124~~) operation. Each media stream has a unique job ID.</p>
+     * <ul>
+     * <li>Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified for one video.</li>
+     * <li>You can obtain job IDs from the PlayInfo parameter that is returned after you call the <a href="https://help.aliyun.com/document_detail/56124.html">GetPlayInfo</a> operation. Each media stream has a unique job ID.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>35eb4dbda18c49cc0025df374b46****</p>
      */
     @NameInMap("JobIds")
     public String jobIds;
 
     /**
      * <p>The ID of the video.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95948ddba24446b6aed5db985e78****</p>
      */
     @NameInMap("VideoId")
     public String videoId;

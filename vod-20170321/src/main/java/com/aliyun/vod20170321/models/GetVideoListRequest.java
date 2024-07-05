@@ -6,67 +6,93 @@ import com.aliyun.tea.*;
 public class GetVideoListRequest extends TeaModel {
     /**
      * <p>The ID of the category. You can use one of the following methods to obtain the category ID:</p>
-     * <br>
-     * <p>*   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID.</p>
-     * <p>*   Obtain the value of CateId from the response to the [AddCategory](~~56401~~) operation.</p>
-     * <p>*   Obtain the value of CateId from the response to the [GetCategories](~~56406~~) operation.</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Configuration Management</strong> &gt; <strong>Media Management</strong> &gt; <strong>Categories</strong> to view the category ID.</li>
+     * <li>Obtain the value of CateId from the response to the <a href="https://help.aliyun.com/document_detail/56401.html">AddCategory</a> operation.</li>
+     * <li>Obtain the value of CateId from the response to the <a href="https://help.aliyun.com/document_detail/56406.html">GetCategories</a> operation.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>781111</p>
      */
     @NameInMap("CateId")
     public Long cateId;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-01-11T12:59:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNo")
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. Maximum value: <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The sorting method of the results. Valid values:</p>
-     * <br>
-     * <p>*   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.</p>
-     * <p>*   **CreationTime:Asc**: The results are sorted in chronological order based on the creation time.</p>
+     * <ul>
+     * <li><strong>CreationTime:Desc</strong> (default): The results are sorted in reverse chronological order based on the creation time.</li>
+     * <li><strong>CreationTime:Asc</strong>: The results are sorted in chronological order based on the creation time.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CreationTime:Asc</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-01-11T12:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The status of the video. You can specify multiple video statuses and separate them with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **Uploading**: The video is being uploaded.</p>
-     * <p>*   **UploadFail**: The video failed to be uploaded.</p>
-     * <p>*   **UploadSucc**: The video has been uploaded.</p>
-     * <p>*   **Transcoding**: The video is being transcoded.</p>
-     * <p>*   **TranscodeFail**: The video failed to be transcoded.</p>
-     * <p>*   **checking**: The video is being reviewed.</p>
-     * <p>*   **Blocked**: The video is blocked.</p>
-     * <p>*   **Normal**: The video is normal.</p>
-     * <p>*   **ProduceFail**: The video failed to be produced.</p>
-     * <br>
-     * <p>For more information about each video status, see the "Status: the status of a video" section of the [Basic data types](~~52839#section-p7c-jgy-070~~) topic.</p>
+     * <ul>
+     * <li><strong>Uploading</strong>: The video is being uploaded.</li>
+     * <li><strong>UploadFail</strong>: The video failed to be uploaded.</li>
+     * <li><strong>UploadSucc</strong>: The video has been uploaded.</li>
+     * <li><strong>Transcoding</strong>: The video is being transcoded.</li>
+     * <li><strong>TranscodeFail</strong>: The video failed to be transcoded.</li>
+     * <li><strong>checking</strong>: The video is being reviewed.</li>
+     * <li><strong>Blocked</strong>: The video is blocked.</li>
+     * <li><strong>Normal</strong>: The video is normal.</li>
+     * <li><strong>ProduceFail</strong>: The video failed to be produced.</li>
+     * </ul>
+     * <p>For more information about each video status, see the &quot;Status: the status of a video&quot; section of the <a href="~~52839#section-p7c-jgy-070~~">Basic data types</a> topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Uploading,Normal</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The storage address of the media file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
      */
     @NameInMap("StorageLocation")
     public String storageLocation;

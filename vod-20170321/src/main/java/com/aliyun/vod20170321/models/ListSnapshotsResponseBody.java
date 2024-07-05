@@ -12,6 +12,9 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListSnapshotsResponseBody extends TeaModel {
     public static class ListSnapshotsResponseBodyMediaSnapshotSnapshotsSnapshot extends TeaModel {
         /**
          * <p>The index of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Index")
         public Long index;
 
         /**
          * <p>The URL of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com/snapshot/sample00001****.jpg">http://example.aliyundoc.com/snapshot/sample00001****.jpg</a></p>
          */
         @NameInMap("Url")
         public String url;
@@ -94,19 +103,28 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     public static class ListSnapshotsResponseBodyMediaSnapshot extends TeaModel {
         /**
-         * <p>The time when the snapshot job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot job was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-20T12:23:45Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the snapshot job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad90a501b1b9472374ad005046****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The rule for generating snapshot URLs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com/snapshot/sample%7BSnapshotCount%7D.jpg">http://example.aliyundoc.com/snapshot/sample{SnapshotCount}.jpg</a></p>
          */
         @NameInMap("Regular")
         public String regular;
@@ -119,6 +137,9 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
         /**
          * <p>The total number of snapshots.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Total")
         public Long total;

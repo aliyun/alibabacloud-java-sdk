@@ -12,6 +12,9 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,78 +43,116 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
     public static class GetMediaRefreshJobsResponseBodyMediaRefreshJobs extends TeaModel {
         /**
          * <p>The error code. This parameter is returned if the refresh or prefetch task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PreloadQueueFull</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
          * <p>The error message. This parameter is returned if the refresh or prefetch task fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Preload queue is full, please try again later!</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The filtering conditions for stream playback. The value is a JSON string. This parameter is used as a request parameter of the [RefreshMediaPlayUrls](~~RefreshMediaPlayUrls~~) operation.</p>
+         * <p>The filtering conditions for stream playback. The value is a JSON string. This parameter is used as a request parameter of the <a href="~~RefreshMediaPlayUrls~~">RefreshMediaPlayUrls</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Formats&quot;:&quot;mp4,m3u8&quot;, &quot;Definitions&quot;:&quot;HD,SD&quot;,  &quot; StreamType&quot;:&quot;video&quot;,  &quot;ResultType&quot;:&quot;Single&quot;,  &quot; SliceFlag&quot;:false, &quot;SliceCount&quot;: 3}</p>
          */
         @NameInMap("FilterPolicy")
         public String filterPolicy;
 
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-20T08:23:22Z</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
          * <p>The time when the task was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-21T08:23:22Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca3a8f6e4957b658067095869****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
          * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41d465e31957****</p>
          */
         @NameInMap("MediaRefreshJobId")
         public String mediaRefreshJobId;
 
         /**
          * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **fail**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>fail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The playback URLs that were refreshed or prefetched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://shenzhen.****.aliyuncdn.com/74401a4f546007bf845cd8840****.m3u8,https://shenzhen.****.aliyuncdn.com/24041e7d13582d86604d8****.m3u8">https://shenzhen.****.aliyuncdn.com/74401a4f546007bf845cd8840****.m3u8,https://shenzhen.****.aliyuncdn.com/24041e7d13582d86604d8****.m3u8</a></p>
          */
         @NameInMap("SuccessPlayUrls")
         public String successPlayUrls;
 
         /**
-         * <p>The IDs of the refresh or prefetch tasks for the playback URLs of media files. Only one URL can be refreshed or prefetched in a task. This value is used in the [DescribeVodRefreshTasks](~~DescribeVodRefreshTasks~~) operation, which queries the status of refresh or prefetch tasks for playback URLs of media files.</p>
+         * <p>The IDs of the refresh or prefetch tasks for the playback URLs of media files. Only one URL can be refreshed or prefetched in a task. This value is used in the <a href="~~DescribeVodRefreshTasks~~">DescribeVodRefreshTasks</a> operation, which queries the status of refresh or prefetch tasks for playback URLs of media files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70422****,9524****</p>
          */
         @NameInMap("TaskIds")
         public String taskIds;
 
         /**
          * <p>The type of the job. Valid values:</p>
-         * <br>
-         * <p>*   **Refresh**</p>
-         * <p>*   **Preload**</p>
+         * <ul>
+         * <li><strong>Refresh</strong></li>
+         * <li><strong>Preload</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Preload</p>
          */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
          * <p>The user data that you passed when you submit a refresh or prefetch task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://example.aliyundoc.com%22%7D">http://example.aliyundoc.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
          */
         @NameInMap("UserData")
         public String userData;

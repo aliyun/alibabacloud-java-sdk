@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeVodDomainCertificateInfoRequest extends TeaModel {
     /**
      * <p>The accelerated domain name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

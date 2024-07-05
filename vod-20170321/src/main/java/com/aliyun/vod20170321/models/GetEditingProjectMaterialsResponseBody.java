@@ -12,6 +12,9 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>746FFA07-8BBB-46B1-3E94E3B2915E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -78,12 +81,18 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     public static class GetEditingProjectMaterialsResponseBodyMaterialListMaterial extends TeaModel {
         /**
          * <p>The category ID of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100005****</p>
          */
         @NameInMap("CateId")
         public Integer cateId;
 
         /**
          * <p>The category name of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("CateName")
         public String cateName;
@@ -95,47 +104,69 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the material was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the material was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-10-19 10:48:17</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The duration of the material. The value is rounded to four decimal places. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15.16</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
          * <p>The ID of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85befc4118b84c6723e53b80b1****</p>
          */
         @NameInMap("MaterialId")
         public String materialId;
 
         /**
          * <p>The type of the material. Valid values:</p>
-         * <br>
-         * <p>*   **video**</p>
-         * <p>*   **audio**</p>
-         * <p>*   **image**</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * <li><strong>image</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         @NameInMap("MaterialType")
         public String materialType;
 
         /**
-         * <p>The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the material was last updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-10-19 10:48:17</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The size of the mezzanine file. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1682694</p>
          */
         @NameInMap("Size")
         public Long size;
@@ -148,12 +179,18 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
         /**
          * <p>The source of the sprite.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The configuration of the sprite.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         @NameInMap("SpriteConfig")
         public String spriteConfig;
@@ -166,23 +203,33 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the material. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The material is in draft.</p>
-         * <p>*   **Producing**: The material is being produced.</p>
-         * <p>*   **Produced**: The material was produced.</p>
-         * <p>*   **ProduceFailed**: The material failed to be produced.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The material is in draft.</li>
+         * <li><strong>Producing</strong>: The material is being produced.</li>
+         * <li><strong>Produced</strong>: The material was produced.</li>
+         * <li><strong>ProduceFailed</strong>: The material failed to be produced.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The tag of the material. Multiple tags are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>editing test</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Title")
         public String title;

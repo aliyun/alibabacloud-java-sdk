@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteVodDomainRequest extends TeaModel {
     /**
      * <p>The domain name for CDN that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

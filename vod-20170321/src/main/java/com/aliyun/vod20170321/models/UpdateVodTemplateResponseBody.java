@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateVodTemplateResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the snapshot template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8c75a02e339b*****0b0d2c48171a22</p>
      */
     @NameInMap("VodTemplateId")
     public String vodTemplateId;

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class VerifyVodDomainOwnerRequest extends TeaModel {
     /**
      * <p>The domain name of which you want to verify the ownership. You can specify only one domain name in each call.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -15,9 +19,14 @@ public class VerifyVodDomainOwnerRequest extends TeaModel {
 
     /**
      * <p>The verification method. Valid values:</p>
-     * <br>
-     * <p>*   **dnsCheck**: uses a Domain Name System (DNS) record</p>
-     * <p>*   **fileCheck**: uses a verification file</p>
+     * <ul>
+     * <li><strong>dnsCheck</strong>: uses a Domain Name System (DNS) record</li>
+     * <li><strong>fileCheck</strong>: uses a verification file</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dnsCheck</p>
      */
     @NameInMap("VerifyType")
     public String verifyType;

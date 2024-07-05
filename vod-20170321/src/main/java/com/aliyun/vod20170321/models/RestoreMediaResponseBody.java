@@ -18,12 +18,18 @@ public class RestoreMediaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8E70E3F8-E2EE-47BC-4677-379D6F28****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -68,12 +74,18 @@ public class RestoreMediaResponseBody extends TeaModel {
     public static class RestoreMediaResponseBodyForbiddenListMediaForbiddenReasonDTO extends TeaModel {
         /**
          * <p>The ID of the media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fa10ee70898671edb99f6eb3690d****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
          * <p>The reason for the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Forbidden.RestoreMedia</p>
          */
         @NameInMap("Reason")
         public String reason;

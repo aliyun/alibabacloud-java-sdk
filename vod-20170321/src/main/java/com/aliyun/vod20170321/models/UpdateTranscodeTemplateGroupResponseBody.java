@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateTranscodeTemplateGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A*****F6-D7393642CA58</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the transcoding template group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34e908aa4024a*****f7821c31f93a2a</p>
      */
     @NameInMap("TranscodeTemplateGroupId")
     public String transcodeTemplateGroupId;

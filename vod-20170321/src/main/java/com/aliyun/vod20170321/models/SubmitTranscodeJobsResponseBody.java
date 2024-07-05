@@ -6,20 +6,27 @@ import com.aliyun.tea.*;
 public class SubmitTranscodeJobsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The information about the transcoding job.</p>
-     * <br>
-     * <p>>  This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+     * <blockquote>
+     * <p> This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+     * </blockquote>
      */
     @NameInMap("TranscodeJobs")
     public SubmitTranscodeJobsResponseBodyTranscodeJobs transcodeJobs;
 
     /**
      * <p>The ID of the transcoding task that was submitted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9f4a0df7da2c8a81c8c0408c84****</p>
      */
     @NameInMap("TranscodeTaskId")
     public String transcodeTaskId;
@@ -56,8 +63,12 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
     public static class SubmitTranscodeJobsResponseBodyTranscodeJobsTranscodeJob extends TeaModel {
         /**
          * <p>The ID of the transcoding job.</p>
-         * <br>
-         * <p>>  This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+         * <blockquote>
+         * <p> This parameter is not returned for HLS packaging tasks. You must asynchronously receive the transcoding result.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>d8921ce8505716cfe86fb112c4****</p>
          */
         @NameInMap("JobId")
         public String jobId;

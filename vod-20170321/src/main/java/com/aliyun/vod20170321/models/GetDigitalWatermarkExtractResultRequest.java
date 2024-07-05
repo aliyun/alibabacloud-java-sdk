@@ -5,22 +5,42 @@ import com.aliyun.tea.*;
 
 public class GetDigitalWatermarkExtractResultRequest extends TeaModel {
     /**
-     * <p>The type of the digital watermark. Valid values:</p>
-     * <br>
-     * <p>*   TraceMark: tracing watermark</p>
-     * <p>*   CopyrightMark: copyright watermark</p>
+     * <p>The type of the watermark. Valid values:</p>
+     * <ul>
+     * <li><strong>TraceMark</strong>: user-tracing watermark</li>
+     * <li><strong>CopyrightMark</strong>: copyright watermark</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TraceMark</p>
      */
     @NameInMap("ExtractType")
     public String extractType;
 
     /**
-     * <p>The ID of the job.</p>
+     * <p>The ID of the watermark extraction job.</p>
+     * <ul>
+     * <li>You can obtain the ID from the response to the <a href="~~SubmitDigitalWatermarkExtractJob~~">SubmitDigitalWatermarkExtractJob</a> operation.</li>
+     * <li>If you specify this parameter, the result of the specified watermark extraction job is returned. If you leave this parameter empty, the results of all watermark extraction jobs submitted for the video are returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2bf4390af9e5491c09cc720ad****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p>The ID of the video file. You can query the video ID by using the ApsaraVideo VOD console or calling the SearchMedia operation.</p>
+     * <p>The ID of the video from which you want to query the watermark content. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>Obtain the VideoId from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>93ab850b4f6f54b6e91d24d81d4****</p>
      */
     @NameInMap("MediaId")
     public String mediaId;

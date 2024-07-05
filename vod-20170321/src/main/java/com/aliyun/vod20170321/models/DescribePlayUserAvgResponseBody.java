@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribePlayUserAvgResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C7F90B2-BDA4-4FAC-****-A38A121DFE19</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
     public static class DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg extends TeaModel {
         /**
          * <p>The average number of video views.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>170</p>
          */
         @NameInMap("AvgPlayCount")
         public String avgPlayCount;
 
         /**
          * <p>The average playback duration. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1035902.8</p>
          */
         @NameInMap("AvgPlayDuration")
         public String avgPlayDuration;
 
         /**
-         * <p>The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.</p>
+         * <p>The date when the statistics were generated. The date follows the <em>yyyy-MM-dd</em> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20170120</p>
          */
         @NameInMap("Date")
         public String date;

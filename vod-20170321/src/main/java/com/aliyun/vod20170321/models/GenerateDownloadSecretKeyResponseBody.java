@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
     /**
      * <p>The key file for secure download.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
      */
     @NameInMap("AppEncryptKey")
     public String appEncryptKey;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E99B9BAD-7F9D-552B-A689-B72E92EA040E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

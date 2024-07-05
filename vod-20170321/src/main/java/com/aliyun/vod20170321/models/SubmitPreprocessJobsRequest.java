@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class SubmitPreprocessJobsRequest extends TeaModel {
     /**
-     * <p>The preprocessing type. Set the value to **LivePreprocess**, which indicates that the video is preprocessed in the production studio.</p>
+     * <p>The preprocessing type. Set the value to <strong>LivePreprocess</strong>, which indicates that the video is preprocessed in the production studio.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LivePreprocess</p>
      */
     @NameInMap("PreprocessType")
     public String preprocessType;
 
     /**
      * <p>The ID of the video.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d3e680e618708efbf2cae7cc9312****</p>
      */
     @NameInMap("VideoId")
     public String videoId;

@@ -6,18 +6,26 @@ import com.aliyun.tea.*;
 public class GenerateDownloadSecretKeyRequest extends TeaModel {
     /**
      * <p>A custom string of 16 to 32 characters in length. The string must contain uppercase letters, lowercase letters, and digits.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AppDecryptKeyAndroid20230101</p>
      */
     @NameInMap("AppDecryptKey")
     public String appDecryptKey;
 
     /**
      * <p>The unique identifier of the app.</p>
-     * <br>
-     * <p>*   Android: the SHA-1 fingerprint of the keystore. The value is a string that contains a colon (:).</p>
-     * <p>*   iOS: the bundle ID of the app.</p>
-     * <p>*   Windows: the serial number in the digital signature certificate.</p>
-     * <br>
-     * <p>For more information about how to obtain the unique identifier of an app, see [Obtain the unique app identifier](~~86107#section-wtj-9d7-lg2~~).</p>
+     * <ul>
+     * <li>Android: the SHA-1 fingerprint of the keystore. The value is a string that contains a colon (:).</li>
+     * <li>iOS: the bundle ID of the app.</li>
+     * <li>Windows: the serial number in the digital signature certificate.</li>
+     * </ul>
+     * <p>For more information about how to obtain the unique identifier of an app, see <a href="~~86107#section-wtj-9d7-lg2~~">Obtain the unique app identifier</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BB:0D:AC:74:D3:21:09:EF:9C:71:1A:5E:77:2C:8E:BF:03:FD:FA:5A</p>
      */
     @NameInMap("AppIdentification")
     public String appIdentification;

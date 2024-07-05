@@ -5,32 +5,39 @@ import com.aliyun.tea.*;
 
 public class RefreshVodObjectCachesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to refresh resources in a directory if the resources are different from the resources in the same directory in the origin server. Default value: false.</p>
-     * <br>
-     * <p>   - true:refresh all resources in the directory.</p>
-     * <br>
-     * <p>   - false:refresh the changed resources in the directory.</p>
+     * <p>Specifies whether to purge resources in a directory if the resources requested are different from the resources on the origin server.</p>
+     * <ul>
+     * <li><strong>true</strong>: refreshes all resources in the directory. If you set this parameter to true, when the requested content matches the resource in the directory, the POP retrieves the resource from the origin server, returns the resource to the client, and caches the resource.</li>
+     * <li><strong>false</strong> (default): refreshes the changed resources in the directory. If you set this parameter to false, when the requested content matches the resource in the directory, the POP obtains the Last-Modified parameter of the resource from the origin server. If the value of the obtained Last-Modified parameter is the same as that of the cached resource, the cached resource is returned. Otherwise, the POP retrieves the resource from the origin server, returns the resource to the client, and caches the resource.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
      * <p>The URL of the file to be prefetched. Separate multiple URLs with line breaks (\n or \r\n).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc.com/image/1.png</p>
      */
     @NameInMap("ObjectPath")
     public String objectPath;
 
     /**
      * <p>The type of the object that you want to refresh. Valid values:</p>
-     * <br>
-     * <p>*   **File** (default): refreshes files.</p>
-     * <p>*   **Directory**: refreshes the files in specified directories.</p>
-     * <p>*   **Regex**: refreshes content based on regular expressions.</p>
-     * <p>*   **ExQuery**: omits parameters after the question mark in the URL and refreshes content.</p>
-     * <br>
-     * <p>If you set the ObjectType parameter to File or Directory, you can view Refresh and prefetch resources to obtain more information. If you set the ObjectType parameter to Regex, you can view Configure URL refresh rules that contain regular expressions to obtain more information.</p>
-     * <br>
-     * <p>If you set the ObjectType parameter to Directory, the resources in the directory that you want to refresh are marked as expired. You cannot delete the directory. If clients request resources on POPs that are marked as expired, Alibaba Cloud CDN checks whether the resources on your origin server are updated. If resources are updated, Alibaba Cloud CDN retrieves the latest version of the resources and returns the resources to the clients. Otherwise, the origin server returns the 304 status code.</p>
+     * <ul>
+     * <li><strong>File</strong> (default): refreshes one or more files.</li>
+     * <li><strong>Directory</strong>: refreshes the files in specified directories.</li>
+     * <li><strong>Regex</strong>: refreshes content based on regular expressions.</li>
+     * <li><strong>IgnoreParams</strong>: removes the question mark (?) and parameters after the question mark (?) in a request URL and refreshes content. After you call this operation with the request URL submitted, the system compares the submitted URL with the URL of the cached resource without specific parameters. If the URLs match, the POPs refresh the cached resource.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>File</p>
      */
     @NameInMap("ObjectType")
     public String objectType;

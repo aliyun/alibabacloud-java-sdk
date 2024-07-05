@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SubmitAIImageJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the image AI processing job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cf08a2c6e11e*****de1711b738b9067</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>218A6807-A21E-43*****54-C0512880B0B0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

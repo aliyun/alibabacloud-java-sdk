@@ -6,61 +6,83 @@ import com.aliyun.tea.*;
 public class UploadStreamByURLRequest extends TeaModel {
     /**
      * <p>The quality of the video stream.</p>
-     * <br>
-     * <p>For more information about valid values of this parameter, see [Parameters for media assets](~~124671~~).</p>
+     * <p>For more information about valid values of this parameter, see <a href="https://help.aliyun.com/document_detail/124671.html">Parameters for media assets</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HD</p>
      */
     @NameInMap("Definition")
     public String definition;
 
     /**
      * <p>The file name extension of the transcoded stream.</p>
-     * <br>
-     * <p>For more information, see the Supported media file formats section in [Overview](~~55396~~).</p>
-     * <br>
+     * <p>For more information, see the Supported media file formats section in <a href="https://help.aliyun.com/document_detail/55396.html">Overview</a>.</p>
      * <p>If you set a value for this parameter, the file name extension specified in StreamURL is overwritten.</p>
-     * <br>
-     * <p>>  This parameter is required if you do not specify a file name extension in StreamURL.</p>
+     * <blockquote>
+     * <p> This parameter is required if you do not specify a file name extension in StreamURL.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>mp4</p>
      */
     @NameInMap("FileExtension")
     public String fileExtension;
 
     /**
      * <p>The HDR type of the transcoded stream. Valid values:</p>
-     * <br>
-     * <p>*   HDR</p>
-     * <p>*   HDR10</p>
-     * <p>*   HLG</p>
-     * <p>*   DolbyVision</p>
-     * <p>*   HDRVivid</p>
-     * <p>*   SDR+</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   The HDR type of the transcoded stream is not case-sensitive.</p>
-     * <br>
-     * <p>*   You can leave this parameter empty for non-HDR streams.</p>
+     * <ul>
+     * <li>HDR</li>
+     * <li>HDR10</li>
+     * <li>HLG</li>
+     * <li>DolbyVision</li>
+     * <li>HDRVivid</li>
+     * <li>SDR+</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The HDR type of the transcoded stream is not case-sensitive.</p>
+     * </li>
+     * <li><p>You can leave this parameter empty for non-HDR streams.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>HDR10</p>
      */
     @NameInMap("HDRType")
     public String HDRType;
 
     /**
      * <p>The media ID in ApsaraVideo VOD.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ca3a8f6e49*****57b65806709586</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
 
     /**
      * <p>The URL of the transcoded stream.</p>
-     * <br>
      * <p>If URL authentication is required, you must pass authentication information in this parameter and make sure that the URL can be accessed over the Internet.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/lesson-01.mp4">https://example.com/lesson-01.mp4</a></p>
      */
     @NameInMap("StreamURL")
     public String streamURL;
 
     /**
-     * <p>The user-defined parameter. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.</p>
-     * <br>
-     * <p>>  The callback configurations you specify for this parameter take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).</p>
+     * <p>The user-defined parameter. For more information, see the &quot;UserData: specifies the custom configurations for media upload&quot; section of the <a href="https://help.aliyun.com/document_detail/86952.html">Request parameters</a> topic.</p>
+     * <blockquote>
+     * <p> The callback configurations you specify for this parameter take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see <a href="https://help.aliyun.com/document_detail/86071.html">Configure callback settings</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;MessageCallback&quot;:{&quot;CallbackURL&quot;:&quot;<a href="http://aliyundoc.com%22%7D">http://aliyundoc.com&quot;}</a>, &quot;Extend&quot;:{&quot;localId&quot;:&quot;xxx&quot;,&quot;test&quot;:&quot;www&quot;}}</p>
      */
     @NameInMap("UserData")
     public String userData;

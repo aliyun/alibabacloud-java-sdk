@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateAppInfoResponseBody extends TeaModel {
     /**
      * <p>The ID of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-34D5-D7393642****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

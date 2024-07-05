@@ -12,6 +12,9 @@ public class GetVideoInfosResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,136 +57,206 @@ public class GetVideoInfosResponseBody extends TeaModel {
     public static class GetVideoInfosResponseBodyVideoList extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The ID of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>781111****</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
          * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a category name.</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
          * <p>The thumbnail URL of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the media file was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-06-26T05:38:48Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a category description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The duration of the audio or video file. Unit: seconds. 86,400 seconds is equivalent to 24 hours.</p>
+         * <p>Indicates whether the offline download feature is enabled. If you enable the offline download feature, users can download and play videos by using the ApsaraVideo Player on a local PC. For more information, see <a href="https://help.aliyun.com/document_detail/86107.html">Configure download settings</a>. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: the offline download feature is enabled.</li>
+         * <li><strong>off</strong>: the offline download feature is not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
+        @NameInMap("DownloadSwitch")
+        public String downloadSwitch;
+
+        /**
+         * <p>The duration of the audio or video file. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The time when the audio or video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video file was last updated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-06-26T06:38:48Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>The period of time in which the audio or video file remains in the restored state.</p>
+         * <p>The period of time in which the audio file remains in the restored state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T10:14:14Z</p>
          */
         @NameInMap("RestoreExpiration")
         public String restoreExpiration;
 
         /**
-         * <p>The restoration status of the audio or video file. Valid values:</p>
-         * <br>
-         * <p>*   **Processing**</p>
-         * <p>*   **Success**</p>
-         * <p>*   **Failed**</p>
+         * <p>The restoration status of the audio file. Valid values:</p>
+         * <ul>
+         * <li><strong>Processing</strong></li>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("RestoreStatus")
         public String restoreStatus;
 
         /**
          * <p>The size of the source file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>453</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The URL array of video snapshots.</p>
+         * <p>The video snapshot URLs.</p>
          */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
          * <p>The status of the video. Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**: The video is being uploaded.</p>
-         * <p>*   **UploadFail**: The video failed to be uploaded.</p>
-         * <p>*   **UploadSucc**: The video is uploaded.</p>
-         * <p>*   **Transcoding**: The video is being transcoded.</p>
-         * <p>*   **TranscodeFail**: The video failed to be transcoded.</p>
-         * <p>*   **Blocked**: The video is blocked.</p>
-         * <p>*   **Normal**: The video is normal.</p>
+         * <ul>
+         * <li><strong>Uploading</strong></li>
+         * <li><strong>UploadFail</strong></li>
+         * <li><strong>UploadSucc</strong></li>
+         * <li><strong>Transcoding</strong></li>
+         * <li><strong>TranscodeFail</strong></li>
+         * <li><strong>Blocked</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The storage class of the audio or video file. Valid values:</p>
-         * <br>
-         * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
-         * <p>*   **IA**: All media resources are stored as IA objects.</p>
-         * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
-         * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
-         * <p>*   **SourceIA**: Only the source files are IA objects.</p>
-         * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
-         * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
-         * <p>*   **Changing**: The storage class of the audio or video file is being changed.</p>
-         * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
+         * <p>The storage class of the audio file. Valid values:</p>
+         * <ul>
+         * <li><strong>Standard</strong>: All media resources are stored as Standard objects.</li>
+         * <li><strong>IA</strong>: All media resources are stored as IA objects.</li>
+         * <li><strong>Archive</strong>: All media resources are stored as Archive objects.</li>
+         * <li><strong>ColdArchive</strong>: All media resources are stored as Cold Archive objects.</li>
+         * <li><strong>SourceIA</strong>: Only the source files are IA objects.</li>
+         * <li><strong>SourceArchive</strong>: Only the source files are Archive objects.</li>
+         * <li><strong>SourceColdArchive</strong>: Only the source file is stored as a Cold Archive object.</li>
+         * <li><strong>Changing</strong>: The storage class of the video file is being changed.</li>
+         * <li><strong>SourceChanging</strong>: The storage class of the source file is being changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
          * <p>The storage address of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out-****.oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
          * <p>The tags of the audio or video file. Multiple tags are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1, tag2</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The ID of the transcoding template group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b4039216985f4312a5382a4ed****</p>
          */
         @NameInMap("TemplateGroupId")
         public String templateGroupId;
 
         /**
          * <p>The title of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Video tiltle</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The ID of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7753d144efd74d6c45fe0570****</p>
          */
         @NameInMap("VideoId")
         public String videoId;
@@ -239,6 +312,14 @@ public class GetVideoInfosResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetVideoInfosResponseBodyVideoList setDownloadSwitch(String downloadSwitch) {
+            this.downloadSwitch = downloadSwitch;
+            return this;
+        }
+        public String getDownloadSwitch() {
+            return this.downloadSwitch;
         }
 
         public GetVideoInfosResponseBodyVideoList setDuration(Float duration) {

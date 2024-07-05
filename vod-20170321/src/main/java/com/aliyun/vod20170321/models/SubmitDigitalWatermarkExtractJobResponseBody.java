@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class SubmitDigitalWatermarkExtractJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the job.</p>
+     * <p>The ID of the watermark extraction job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ad90a501b1b9472374ad005046****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-****-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;

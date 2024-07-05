@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetAIMediaAuditJobRequest extends TeaModel {
     /**
      * <p>The ID of the intelligent review job.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bdbc266af6894*****943a70176d92e9</p>
      */
     @NameInMap("JobId")
     public String jobId;

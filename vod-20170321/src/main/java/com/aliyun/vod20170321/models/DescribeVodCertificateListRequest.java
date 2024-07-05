@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeVodCertificateListRequest extends TeaModel {
     /**
      * <p>The domain name for CDN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

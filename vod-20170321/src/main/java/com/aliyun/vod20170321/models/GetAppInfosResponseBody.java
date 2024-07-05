@@ -12,6 +12,9 @@ public class GetAppInfosResponseBody extends TeaModel {
 
     /**
      * <p>The HTTP status code that is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,6 +27,9 @@ public class GetAppInfosResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-4DC4-D7393642****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,48 +74,71 @@ public class GetAppInfosResponseBody extends TeaModel {
     public static class GetAppInfosResponseBodyAppInfoList extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The time when the application was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the application was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-01T08:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my first app.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The last time when the application was modified. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The last time when the application was modified. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-01T09:00:00Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
          * <p>The status of the application. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **Disable**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>Disable</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the application. Valid values:</p>
-         * <br>
-         * <p>*   **System**</p>
-         * <p>*   **Custom**</p>
+         * <ul>
+         * <li><strong>System</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("Type")
         public String type;

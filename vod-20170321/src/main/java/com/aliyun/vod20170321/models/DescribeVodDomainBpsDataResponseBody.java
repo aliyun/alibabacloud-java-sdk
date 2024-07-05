@@ -12,42 +12,63 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The time interval between the returned entries. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The domain name for CDN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T14:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The name of the ISP. By default, the data of all ISPs is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alibaba</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
      * <p>The name of the region. By default, the data in all regions is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-****-D47B3D92CF8F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T13:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -124,42 +145,63 @@ public class DescribeVodDomainBpsDataResponseBody extends TeaModel {
     public static class DescribeVodDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The bandwidth in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11286111</p>
          */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
         /**
          * <p>The HTTPS bandwidth on L1 nodes in mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11286111</p>
          */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
         /**
          * <p>The HTTPS bandwidth on L1 nodes outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
         /**
          * <p>The total HTTPS bandwidth on L1 nodes. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11288111</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
          * <p>The bandwidth outside mainland China. Unit: bit/s. When the bandwidth data is queried by ISP, no value is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
         /**
          * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T13:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11288111</p>
          */
         @NameInMap("Value")
         public String value;

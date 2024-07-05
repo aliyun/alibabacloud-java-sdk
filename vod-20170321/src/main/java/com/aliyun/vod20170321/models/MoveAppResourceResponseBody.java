@@ -18,6 +18,9 @@ public class MoveAppResourceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-BEF6-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

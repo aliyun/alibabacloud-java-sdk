@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class AddEditingProjectResponseBody extends TeaModel {
     /**
-     * <p>The information about the online editing project. For more information about the structure, see [EditingProject](~~52839~~).</p>
+     * <p>The information about the online editing project. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">EditingProject</a>.</p>
      */
     @NameInMap("Project")
     public AddEditingProjectResponseBodyProject project;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,42 +42,61 @@ public class AddEditingProjectResponseBody extends TeaModel {
 
     public static class AddEditingProjectResponseBodyProject extends TeaModel {
         /**
-         * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the online editing project was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testtimeline001desciption</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The last time when the online editing project was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T13:00:00Z</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
          * <p>The ID of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb2101bf24bf4df34c4cb3187****</p>
          */
         @NameInMap("ProjectId")
         public String projectId;
 
         /**
          * <p>The status of the online editing project. Valid values:</p>
-         * <br>
-         * <p>- **Normal**: indicates that the online editing project is in draft.</p>
-         * <p>- **Producing**: indicates that the video is being produced.</p>
-         * <p>- **Produced**: indicates that the video was produced.</p>
-         * <p>- **ProduceFailed**: indicates that the video failed to be produced.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: indicates that the online editing project is in draft.</li>
+         * <li><strong>Producing</strong>: indicates that the video is being produced.</li>
+         * <li><strong>Produced</strong>: indicates that the video was produced.</li>
+         * <li><strong>ProduceFailed</strong>: indicates that the video failed to be produced.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The title of the online editing project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testtimeline</p>
          */
         @NameInMap("Title")
         public String title;

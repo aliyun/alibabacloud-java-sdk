@@ -12,6 +12,9 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6438BD76-D523-46FC-956F-****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,93 +43,134 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
     public static class GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList extends TeaModel {
         /**
          * <p>The category of the ad review result. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: normal content</p>
-         * <p>*   **ad**: ad or text violation</p>
+         * <ul>
+         * <li><strong>normal</strong>: normal content</li>
+         * <li><strong>ad</strong>: ad or text violation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("AdLabel")
         public String adLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("AdScore")
         public String adScore;
 
         /**
          * <p>The category of the undesirable scene review result. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: The video does not contain undesirable scenes.</p>
-         * <p>*   **live**: The video contains undesirable scenes.</p>
+         * <ul>
+         * <li><strong>normal</strong>: The video does not contain undesirable scenes.</li>
+         * <li><strong>live</strong>: The video contains undesirable scenes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("LiveLabel")
         public String liveLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("LiveScore")
         public String liveScore;
 
         /**
          * <p>The category of the logo review result. Valid values:</p>
-         * <br>
-         * <p>*   **normal**</p>
-         * <p>*   **tlogo**</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>tlogo</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("LogoLabel")
         public String logoLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("LogoScore")
         public String logoScore;
 
         /**
          * <p>The category of the pornographic content review result. Valid values:</p>
-         * <br>
-         * <p>*   **normal**</p>
-         * <p>*   **porn**</p>
-         * <p>*   **sexy**</p>
+         * <ul>
+         * <li><strong>normal</strong></li>
+         * <li><strong>porn</strong></li>
+         * <li><strong>sexy</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("PornLabel")
         public String pornLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         @NameInMap("PornScore")
         public String pornScore;
 
         /**
          * <p>The category of the terrorist content review result.</p>
-         * <br>
-         * <p>*   **normal**: normal</p>
-         * <p>*   **terrorism**: terrorist content</p>
-         * <p>*   **outfit**: special costume</p>
-         * <p>*   **logo**: special logo</p>
-         * <p>*   **weapon**: weapon</p>
-         * <p>*   **politics**: politically sensitive content</p>
-         * <p>*   **others**: other terrorist content and politically sensitive content</p>
+         * <ul>
+         * <li><strong>normal</strong>: normal</li>
+         * <li><strong>terrorism</strong>: terrorist content</li>
+         * <li><strong>outfit</strong>: special costume</li>
+         * <li><strong>logo</strong>: special logo</li>
+         * <li><strong>weapon</strong>: weapon</li>
+         * <li><strong>politics</strong>: politically sensitive content</li>
+         * <li><strong>others</strong>: other terrorist content and politically sensitive content</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         @NameInMap("TerrorismLabel")
         public String terrorismLabel;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: <code>[0.00-100.00].</code> The value is rounded down to 10 decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.00</p>
          */
         @NameInMap("TerrorismScore")
         public String terrorismScore;
 
         /**
          * <p>The position in the video. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3005</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
 
         /**
          * <p>The URL of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg">http://temp-testbucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</a></p>
          */
         @NameInMap("Url")
         public String url;
@@ -243,6 +287,9 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
 
         /**
          * <p>The total number of snapshots returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Total")
         public Integer total;

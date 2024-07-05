@@ -18,6 +18,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>221BCB57-B217-42BF-619BD13378F9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,26 +57,40 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     public static class GetAttachedMediaInfoResponseBodyAttachedMediaListCategories extends TeaModel {
         /**
          * <p>The ID of the video category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000224338</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
          * <p>The name of the category.</p>
-         * <p>- The value can be up to 64 bytes in length.</p>
-         * <p>- The string must be encoded in the UTF-8 format.</p>
+         * <ul>
+         * <li>The value can be up to 64 bytes in length.</li>
+         * <li>The string must be encoded in the UTF-8 format.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>category test</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
          * <p>The level of the category. A value of 0 indicates a level 1 category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Level")
         public Long level;
 
         /**
          * <p>The ID of the parent category. The parent category ID of a level 1 category is -1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000224336</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
@@ -120,6 +137,9 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     public static class GetAttachedMediaInfoResponseBodyAttachedMediaList extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-*****</p>
          */
         @NameInMap("AppId")
         public String appId;
@@ -131,68 +151,104 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
         public java.util.List<GetAttachedMediaInfoResponseBodyAttachedMediaListCategories> categories;
 
         /**
-         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T10:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0222e203cf80f9c22870a4d2c****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
-         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-31T11:42:20Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
          * <p>The status of the auxiliary media asset. Valid values:</p>
-         * <p>- **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.</p>
-         * <p>- **Normal**: The auxiliary media asset is uploaded.</p>
-         * <p>- **UploadFail**: The auxiliary media asset fails to be uploaded.</p>
+         * <ul>
+         * <li><strong>Uploading</strong>: The auxiliary media asset is being uploaded. This is the initial status.</li>
+         * <li><strong>Normal</strong>: The auxiliary media asset is uploaded.</li>
+         * <li><strong>UploadFail</strong>: The auxiliary media asset fails to be uploaded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The OSS bucket where the auxiliary media asset is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outin-bfefbb9*****c7426.oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
          * <p>The tags of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1,tag2</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subtitle test</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The type of the auxiliary media asset. Valid values:</p>
-         * <p>- **watermark**</p>
-         * <p>- **subtitle**</p>
-         * <p>- **material**</p>
+         * <ul>
+         * <li><strong>watermark</strong></li>
+         * <li><strong>subtitle</strong></li>
+         * <li><strong>material</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>subtitle</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The URL of the auxiliary media asset.</p>
-         * <p>> If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+         * <blockquote>
+         * <p>If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://al*****.cn/subtitle/9843C2*****4E186F19B6.vtt?auth_key=159099f60e0b7fd59">https://al*****.cn/subtitle/9843C2*****4E186F19B6.vtt?auth_key=159099f60e0b7fd59</a>****</p>
          */
         @NameInMap("URL")
         public String URL;

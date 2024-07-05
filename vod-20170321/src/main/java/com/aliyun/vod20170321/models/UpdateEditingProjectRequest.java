@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class UpdateEditingProjectRequest extends TeaModel {
     /**
      * <p>The thumbnail URL of the online editing project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>https://<strong><strong>.com/6AB4D0E1E1C7446888</strong></strong>.png</p>
      */
     @NameInMap("CoverURL")
     public String coverURL;
 
     /**
      * <p>The description of the online editing project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testtimeline001desciption</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,6 +30,10 @@ public class UpdateEditingProjectRequest extends TeaModel {
 
     /**
      * <p>The ID of the online editing project.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4ee4b97e27*****b525142a6b2</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -35,13 +45,19 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String resourceOwnerId;
 
     /**
-     * <p>The timeline of the online editing project. For more information about the structure, see [Timeline](~~52839~~).</p>
+     * <p>The timeline of the online editing project. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/52839.html">Timeline</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;cc3308ac500c<em><strong><strong>a54328bc3443&quot;},{&quot;MediaId&quot;:&quot;da87a9cff64</strong></strong></em>d88bc6d8326e4&quot;}]}]}</p>
      */
     @NameInMap("Timeline")
     public String timeline;
 
     /**
      * <p>The title of the online editing project.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testtimeline</p>
      */
     @NameInMap("Title")
     public String title;

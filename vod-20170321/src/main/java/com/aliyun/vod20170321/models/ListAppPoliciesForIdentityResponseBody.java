@@ -6,14 +6,18 @@ import com.aliyun.tea.*;
 public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     /**
      * <p>The details of each policy.</p>
-     * <br>
-     * <p>> A maximum of 100 entries can be returned.</p>
+     * <blockquote>
+     * <p>A maximum of 100 entries can be returned.</p>
+     * </blockquote>
      */
     @NameInMap("AppPolicyList")
     public java.util.List<ListAppPoliciesForIdentityResponseBodyAppPolicyList> appPolicyList;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C9F3E715-B3B8-4D*****27-3A70346F0E04</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -42,45 +46,67 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     public static class ListAppPoliciesForIdentityResponseBodyAppPolicyList extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The time when the application policy was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the application policy was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:01:01Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>App full access permission</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The last time when the application policy was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The last time when the application policy was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-01T01:08:01Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VODAppFullAccess</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The type of the policy. Valid values:</p>
-         * <br>
-         * <p>*   **System**</p>
-         * <p>*   **Custom**</p>
+         * <ul>
+         * <li><strong>System</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
          * <p>The content of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         @NameInMap("PolicyValue")
         public String policyValue;

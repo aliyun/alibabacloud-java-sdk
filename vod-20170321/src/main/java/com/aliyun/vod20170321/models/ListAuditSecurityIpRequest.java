@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListAuditSecurityIpRequest extends TeaModel {
     /**
      * <p>The name of the review security group in which you want to query IP addresses. If you do not specify this parameter, IP addresses in all review security groups are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;

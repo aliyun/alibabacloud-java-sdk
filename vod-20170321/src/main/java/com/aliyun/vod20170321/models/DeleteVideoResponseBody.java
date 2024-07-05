@@ -6,20 +6,27 @@ import com.aliyun.tea.*;
 public class DeleteVideoResponseBody extends TeaModel {
     /**
      * <p>The IDs of the videos that cannot be deleted.</p>
-     * <p>> Generally, videos cannot be deleted if you do not have the required [permissions](~~113600~~).</p>
+     * <blockquote>
+     * <p>Generally, videos cannot be deleted if you do not have the required <a href="https://help.aliyun.com/document_detail/113600.html">permissions</a>.</p>
+     * </blockquote>
      */
     @NameInMap("ForbiddenVideoIds")
     public java.util.List<String> forbiddenVideoIds;
 
     /**
      * <p>The IDs of the videos that do not exist.</p>
-     * <p>> If the list of videos to be deleted contains one or more videos that do not exist, the IDs of these non-existing videos are returned. If none of the videos in the list exists, a 404 error is returned.</p>
+     * <blockquote>
+     * <p>If the list of videos to be deleted contains one or more videos that do not exist, the IDs of these non-existing videos are returned. If none of the videos in the list exists, a 404 error is returned.</p>
+     * </blockquote>
      */
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

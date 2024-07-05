@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeVodDomainDetailRequest extends TeaModel {
     /**
      * <p>The domain name for CDN.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

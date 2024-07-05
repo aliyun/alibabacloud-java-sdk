@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ListDynamicImageRequest extends TeaModel {
     /**
      * <p>The ID of the video.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2e114f1100590c3193918fd449a****</p>
      */
     @NameInMap("VideoId")
     public String videoId;

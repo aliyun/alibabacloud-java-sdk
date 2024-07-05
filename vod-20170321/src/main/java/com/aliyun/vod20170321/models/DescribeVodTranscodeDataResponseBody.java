@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     /**
      * <p>The interval at which the data was queried. Valid values:</p>
-     * <br>
-     * <p>*   **hour**</p>
-     * <p>*   **day**</p>
+     * <ul>
+     * <li><strong>hour</strong></li>
+     * <li><strong>day</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>day</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C370DAF1-C838-4288-****-9A87633D248E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,16 +64,23 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     public static class DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemDataDataItem extends TeaModel {
         /**
          * <p>The transcoding specification. Valid values:</p>
-         * <br>
-         * <p>*   **Audio**: audio transcoding</p>
-         * <p>*   **Segmentation**: container format conversion</p>
-         * <p>*   **H264.LD, H264.SD, H264.HD, H264.2K, H264.4K, and more**</p>
+         * <ul>
+         * <li><strong>Audio</strong>: audio transcoding</li>
+         * <li><strong>Segmentation</strong>: container format conversion</li>
+         * <li><strong>H264.LD, H264.SD, H264.HD, H264.2K, H264.4K, and more</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>H264.SD</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The transcoding duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
          */
         @NameInMap("Value")
         public String value;
@@ -121,7 +135,10 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
         public DescribeVodTranscodeDataResponseBodyTranscodeDataTranscodeDataItemData data;
 
         /**
-         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-02-01T16:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

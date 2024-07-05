@@ -6,25 +6,37 @@ import com.aliyun.tea.*;
 public class DeleteTranscodeTemplateGroupRequest extends TeaModel {
     /**
      * <p>Specifies whether to forcibly delete the transcoding template group. Valid values:</p>
-     * <br>
-     * <p>*   **true**: deletes the transcoding template group and all the transcoding templates in the group.</p>
-     * <p>*   **false** (default): deletes only the specified transcoding templates from the transcoding template group.</p>
+     * <ul>
+     * <li><strong>true</strong>: deletes the transcoding template group and all the transcoding templates in the group.</li>
+     * <li><strong>false</strong> (default): deletes only the specified transcoding templates from the transcoding template group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("ForceDelGroup")
     public String forceDelGroup;
 
     /**
      * <p>The ID of the transcoding template group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4c71a339fec*****152b4fa6f4527</p>
      */
     @NameInMap("TranscodeTemplateGroupId")
     public String transcodeTemplateGroupId;
 
     /**
      * <p>The IDs of the transcoding templates that you want to delete.</p>
-     * <br>
-     * <p>*   Separate multiple IDs with commas (,).</p>
-     * <p>*   You can specify a maximum of 10 IDs.</p>
-     * <p>*   This parameter is required if you set ForceDelGroup to false or leave ForceDelGroup empty.</p>
+     * <ul>
+     * <li>Separate multiple IDs with commas (,).</li>
+     * <li>You can specify a maximum of 10 IDs.</li>
+     * <li>This parameter is required if you set ForceDelGroup to false or leave ForceDelGroup empty.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;613702defdc4<em><strong><strong>6a3b94cace1129e&quot;,&quot;bfd6c90253a2</strong></strong></em>7fc054d7c5825&quot;]</p>
      */
     @NameInMap("TranscodeTemplateIds")
     public String transcodeTemplateIds;

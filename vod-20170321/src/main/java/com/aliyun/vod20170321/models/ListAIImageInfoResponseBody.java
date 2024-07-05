@@ -12,6 +12,9 @@ public class ListAIImageInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D73420CD-D221-9122-5B8FA995A511****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class ListAIImageInfoResponseBody extends TeaModel {
     public static class ListAIImageInfoResponseBodyAIImageInfoList extends TeaModel {
         /**
          * <p>The ID of the image information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b89a6aabf1b6197ebd6fe6cf29****</p>
          */
         @NameInMap("AIImageInfoId")
         public String AIImageInfoId;
 
         /**
-         * <p>The time when the file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-15T03:30:03Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -57,31 +66,46 @@ public class ListAIImageInfoResponseBody extends TeaModel {
         public String fileURL;
 
         /**
-         * <p>The format of the image. Valid values: **gif** and **png**.</p>
+         * <p>The format of the image. Valid values: <strong>gif</strong> and <strong>png</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gif</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>The ID of the image AI processing job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cf08a2c6e11ee1711b738b9067****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The score of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.035636554444242</p>
          */
         @NameInMap("Score")
         public String score;
 
         /**
          * <p>The data version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b547f3f0e199c3b457369f3cf****</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
          * <p>The ID of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>357a8748c5789d2726e6436aa****</p>
          */
         @NameInMap("VideoId")
         public String videoId;

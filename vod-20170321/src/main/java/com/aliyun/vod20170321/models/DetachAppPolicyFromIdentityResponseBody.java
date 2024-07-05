@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
     /**
-     * <p>The name of the policy that failed to be detached from the identity.</p>
+     * <p>The names of the policies that failed to be granted to the RAM user or RAM role.</p>
      */
     @NameInMap("FailedPolicyNames")
     public java.util.List<String> failedPolicyNames;
@@ -18,6 +18,9 @@ public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-****-D7393642C</p>
      */
     @NameInMap("RequestId")
     public String requestId;

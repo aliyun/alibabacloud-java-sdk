@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeVodDomainConfigsRequest extends TeaModel {
     /**
      * <p>The domain name for CDN.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The feature name. Separate multiple names with commas (,). For more information, see **Feature description**.</p>
+     * <p>The feature name. Separate multiple names with commas (,). For more information, see <strong>Feature description</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>filetype_based_ttl_set,set_req_host_header</p>
      */
     @NameInMap("FunctionNames")
     public String functionNames;

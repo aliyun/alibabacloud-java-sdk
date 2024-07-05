@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class SubmitAIMediaAuditJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bdbc266af6893943a70176d92e99****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The ID of the media file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fe028d09441afffb138cd7ee****</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F4631053-8D9F-42B2-4A67281DB88E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

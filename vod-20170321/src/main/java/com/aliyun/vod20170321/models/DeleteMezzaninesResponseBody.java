@@ -12,14 +12,18 @@ public class DeleteMezzaninesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The IDs of the audio or video files whose source files cannot be deleted.</p>
-     * <br>
-     * <p>>  In most cases, source files cannot be deleted if they are used for original-quality playback or you do not have required permissions to delete them. For more information, see [Overview](~~113600~~).</p>
+     * <blockquote>
+     * <p> In most cases, source files cannot be deleted if they are used for original-quality playback or you do not have required permissions to delete them. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * </blockquote>
      */
     @NameInMap("UnRemoveableVideoIds")
     public java.util.List<String> unRemoveableVideoIds;

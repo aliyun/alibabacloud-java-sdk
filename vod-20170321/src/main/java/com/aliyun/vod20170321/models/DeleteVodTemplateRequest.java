@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteVodTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the snapshot template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f5b228fe6930e*****d6bf55bd87789</p>
      */
     @NameInMap("VodTemplateId")
     public String vodTemplateId;

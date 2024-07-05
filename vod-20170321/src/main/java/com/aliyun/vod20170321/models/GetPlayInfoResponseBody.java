@@ -12,6 +12,9 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F552E596-967D-5500-842F-17E6364****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,179 +57,252 @@ public class GetPlayInfoResponseBody extends TeaModel {
     public static class GetPlayInfoResponseBodyPlayInfoListPlayInfo extends TeaModel {
         /**
          * <p>The color depth. This value is an integer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("BitDepth")
         public Integer bitDepth;
 
         /**
          * <p>The bitrate of the media stream. Unit: Kbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>450.878</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The time when the audio or video stream was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video stream was created. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-18T07:37:15Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The quality of the video stream. Valid values:</p>
-         * <br>
-         * <p>*   **FD**: low definition</p>
-         * <p>*   **LD**: standard definition</p>
-         * <p>*   **SD**: high definition</p>
-         * <p>*   **HD**: ultra-high definition</p>
-         * <p>*   **OD**: original definition</p>
-         * <p>*   **2K**: 2K</p>
-         * <p>*   **4K**: 4K</p>
-         * <p>*   **SQ**: standard sound quality</p>
-         * <p>*   **HQ**: high sound quality</p>
-         * <p>*   **AUTO**: adaptive bitrate</p>
+         * <ul>
+         * <li><strong>FD</strong>: low definition</li>
+         * <li><strong>LD</strong>: standard definition</li>
+         * <li><strong>SD</strong>: high definition</li>
+         * <li><strong>HD</strong>: ultra-high definition</li>
+         * <li><strong>OD</strong>: original definition</li>
+         * <li><strong>2K</strong></li>
+         * <li><strong>4K</strong></li>
+         * <li><strong>SQ</strong>: standard sound quality</li>
+         * <li><strong>HQ</strong>: high sound quality</li>
+         * <li><strong>AUTO</strong>: adaptive bitrate</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LD</p>
          */
         @NameInMap("Definition")
         public String definition;
 
         /**
          * <p>The duration of the media stream. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9.0464</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>Indicates whether the media stream is encrypted. Valid values:</p>
-         * <br>
-         * <p>*   **0**: The media stream is not encrypted.</p>
-         * <p>*   **1**: The media stream is encrypted.</p>
+         * <ul>
+         * <li><strong>0</strong>: The media stream is not encrypted.</li>
+         * <li><strong>1</strong>: The media stream is encrypted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Encrypt")
         public Long encrypt;
 
         /**
          * <p>The encryption type of the media stream. Valid values:</p>
-         * <br>
-         * <p>*   **AliyunVoDEncryption**: Alibaba Cloud proprietary cryptography</p>
-         * <p>*   **HLSEncryption**: HTTP-Live-Streaming (HLS) encryption</p>
-         * <br>
-         * <p>>  If the encryption type is AliyunVoDEncryption, only ApsaraVideo Player SDK can be used to play videos.</p>
+         * <ul>
+         * <li><strong>AliyunVoDEncryption</strong>: Alibaba Cloud proprietary cryptography</li>
+         * <li><strong>HLSEncryption</strong>: HTTP-Live-Streaming (HLS) encryption</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the encryption type is AliyunVoDEncryption, only ApsaraVideo Player SDK can be used to play videos.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunVoDEncryption</p>
          */
         @NameInMap("EncryptType")
         public String encryptType;
 
         /**
          * <p>The format of the media stream.</p>
-         * <br>
-         * <p>*   If the media file is a video file, the valid values are **mp4** and **m3u8**.</p>
-         * <p>*   If the media file is an audio-only file, the value is **mp3**.</p>
+         * <ul>
+         * <li>If the media file is a video file, the valid values are <strong>mp4</strong> and <strong>m3u8</strong>.</li>
+         * <li>If the media asset is an audio-only file, the value is <strong>mp3</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>m3u8</p>
          */
         @NameInMap("Format")
         public String format;
 
         /**
          * <p>The frame rate of the media stream. Unit: frames per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
          * <p>The HDR type of the media stream. Valid values:</p>
-         * <br>
-         * <p>*   HDR</p>
-         * <p>*   HDR10</p>
-         * <p>*   HLG</p>
-         * <p>*   DolbyVision</p>
-         * <p>*   HDRVivid</p>
-         * <p>*   SDR+</p>
+         * <ul>
+         * <li>HDR</li>
+         * <li>HDR10</li>
+         * <li>HLG</li>
+         * <li>DolbyVision</li>
+         * <li>HDRVivid</li>
+         * <li>SDR+</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HLG</p>
          */
         @NameInMap("HDRType")
         public String HDRType;
 
         /**
          * <p>The height of the media stream. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>640</p>
          */
         @NameInMap("Height")
         public Long height;
 
         /**
-         * <p>The custom watermark information of the copyright watermark. This parameter is returned if you set `JobType` to `2`.</p>
+         * <p>The custom watermark information of the copyright watermark. This parameter is returned if you set <code>JobType</code> to <code>2</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CopyrightMarkTest</p>
          */
         @NameInMap("JobExt")
         public String jobExt;
 
         /**
          * <p>The job ID for transcoding the media stream. This ID uniquely identifies a media stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80e9c6580e754a798c3c19c59b16****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The type of the digital watermark. Valid values:</p>
-         * <br>
-         * <p>*   **1**: tracing watermark</p>
-         * <p>*   **2**: copyright watermark</p>
+         * <ul>
+         * <li><strong>1</strong>: user-tracing watermark</li>
+         * <li><strong>2</strong>: copyright watermark</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("JobType")
         public Integer jobType;
 
         /**
-         * <p>The time when the audio or video file was last updated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video file was last updated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-20T06:32:19Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>The type of Narrowband HD transcoding. Valid values:</p>
-         * <br>
-         * <p>*   **0**: regular transcoding</p>
-         * <p>*   **1.0**: Narrowband HD™ 1.0 transcoding</p>
-         * <p>*   **2.0**: Narrowband HD™ 2.0 transcoding</p>
-         * <br>
-         * <p>This parameter is returned only when a definition that is available in the built-in Narrowband HD™ 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.</p>
+         * <p>The transcoding type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: regular transcoding</li>
+         * <li><strong>1.0</strong>: Narrowband HD™ 1.0 transcoding</li>
+         * <li><strong>2.0</strong>: Narrowband HD™ 2.0 transcoding</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("NarrowBandType")
         public String narrowBandType;
 
         /**
-         * <p>The playback URL of the media stream.</p>
+         * <p>The playback URL of the video stream.</p>
          */
         @NameInMap("PlayURL")
         public String playURL;
 
         /**
          * <p>The size of the media stream. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>418112</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671~~).</p>
+         * <p>The specifications of transcoded audio and video streams. For more information about the valid values, see <a href="~~124671#section-6bv-l0g-opq~~">Output specifications</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H264.LD</p>
          */
         @NameInMap("Specification")
         public String specification;
 
         /**
          * <p>The status of the audio or video stream. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The latest transcoded stream in each quality and format is in the Normal status.</p>
-         * <p>*   **Invisible**: If multiple streams are transcoded in the same quality and format, the latest transcoded stream is in the Normal status and other streams are in the Invisible status.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The latest transcoded stream in each quality and format is in the Normal status.</li>
+         * <li><strong>Invisible</strong>: If multiple streams are transcoded in the same quality and format, the latest transcoded stream is in the Normal status and other streams are in the Invisible status.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The type of the media stream. If the media stream is a video stream, the value is **video**. If the media stream is an audio-only stream, the value is **audio**.</p>
+         * <p>The type of the media stream. If the media stream is a video stream, the value is <strong>video</strong>. If the media stream is an audio-only stream, the value is <strong>audio</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         @NameInMap("StreamType")
         public String streamType;
 
         /**
          * <p>The ID of the watermark that is associated with the media stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dgfn26457856****</p>
          */
         @NameInMap("WatermarkId")
         public String watermarkId;
 
         /**
          * <p>The width of the media stream. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
          */
         @NameInMap("Width")
         public Long width;
@@ -444,67 +520,96 @@ public class GetPlayInfoResponseBody extends TeaModel {
     public static class GetPlayInfoResponseBodyVideoBase extends TeaModel {
         /**
          * <p>The thumbnail URL of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com/sample.jpg?auth_key=2333232-atb">http://example.aliyundoc.com/sample.jpg?auth_key=2333232-atb</a>****</p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio or video file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-06-26T06:38:48Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The URL of the masked live comment data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com/****?auth_key=abdf2123-6783232">http://example.aliyundoc.com/****?auth_key=abdf2123-6783232</a>****</p>
          */
         @NameInMap("DanMuURL")
         public String danMuURL;
 
         /**
          * <p>The duration of the audio or video file. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.1667</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The type of the media file. Valid values:</p>
-         * <br>
-         * <p>*   **video**</p>
-         * <p>*   **audio**</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
-         * <p>The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.</p>
+         * <p>The status of the media file. For more information about the value range and description, see the <a href="~~52839#title-vqg-8cz-7p8~~">Status</a> table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The storage class of the audio file. Valid values:</p>
-         * <br>
-         * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
-         * <p>*   **IA**: All media resources are stored as IA objects.</p>
-         * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
-         * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
-         * <p>*   **SourceIA**: Only the source files are IA objects.</p>
-         * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
-         * <p>*   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.</p>
-         * <p>*   **Changing**: The storage class of the video file is being changed.</p>
-         * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
+         * <ul>
+         * <li><strong>Standard</strong>: All media resources are stored as Standard objects.</li>
+         * <li><strong>IA</strong>: All media resources are stored as IA objects.</li>
+         * <li><strong>Archive</strong>: All media resources are stored as Archive objects.</li>
+         * <li><strong>ColdArchive</strong>: All media resources are stored as Cold Archive objects.</li>
+         * <li><strong>SourceIA</strong>: Only the source files are IA objects.</li>
+         * <li><strong>SourceArchive</strong>: Only the source files are Archive objects.</li>
+         * <li><strong>SourceColdArchive</strong>: Only the source file is stored as a Cold Archive object.</li>
+         * <li><strong>Changing</strong>: The storage class of the video file is being changed.</li>
+         * <li><strong>SourceChanging</strong>: The storage class of the source file is being changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
          * <p>The title of the audio or video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ApsaraVideo VOD</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The ID of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93ab850b4f654b6e91d24d81d44****</p>
          */
         @NameInMap("VideoId")
         public String videoId;

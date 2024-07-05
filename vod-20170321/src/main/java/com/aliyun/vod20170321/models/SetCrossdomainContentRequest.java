@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class SetCrossdomainContentRequest extends TeaModel {
     /**
      * <p>The content of the cross-domain policy file. The file must be in the XML format and can contain up to 2,048 characters.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&lt;cross-domain-policy&gt;&lt;allow-access-from domain=&quot;<em>&quot;/&gt;&lt;allow-http-request-headers-from domain=&quot;</em>&quot; headers=&quot;*&quot; secure=&quot;false&quot;/&gt;&lt;/cross-domain-policy&gt;</p>
      */
     @NameInMap("Content")
     public String content;
@@ -24,12 +28,19 @@ public class SetCrossdomainContentRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3461111</p>
      */
     @NameInMap("ResourceRealOwnerId")
     public String resourceRealOwnerId;
 
     /**
      * <p>The URL of the Object Storage Service (OSS) bucket.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>outin-67870fd5b****1e98a3900163e1c35d5.oss-cn-shanghai.aliyuncs.com</p>
      */
     @NameInMap("StorageLocation")
     public String storageLocation;

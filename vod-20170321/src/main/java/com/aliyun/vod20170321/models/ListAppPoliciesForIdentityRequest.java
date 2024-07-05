@@ -5,25 +5,36 @@ import com.aliyun.tea.*;
 
 public class ListAppPoliciesForIdentityRequest extends TeaModel {
     /**
-     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
+     * <p>The ID of the application. Default value: <strong>app-1000000</strong>. For more information, see <a href="https://help.aliyun.com/document_detail/113600.html">Overview</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>The name of the identity.</p>
-     * <br>
-     * <p>*   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.</p>
-     * <p>*   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.</p>
+     * <ul>
+     * <li>Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.</li>
+     * <li>Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test****name</p>
      */
     @NameInMap("IdentityName")
     public String identityName;
 
     /**
      * <p>The type of the identity. Valid values:</p>
-     * <br>
-     * <p>*   **RamUser**: a RAM user.</p>
-     * <p>*   **RamRole**: a RAM role.</p>
+     * <ul>
+     * <li><strong>RamUser</strong>: a RAM user.</li>
+     * <li><strong>RamRole</strong>: a RAM role.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>RamUser</p>
      */
     @NameInMap("IdentityType")
     public String identityType;

@@ -5,16 +5,29 @@ import com.aliyun.tea.*;
 
 public class SubmitDigitalWatermarkExtractJobRequest extends TeaModel {
     /**
-     * <p>The type of the digital watermark that you want to extract. Valid values:</p>
-     * <br>
-     * <p>*   TraceMark: tracing watermark</p>
-     * <p>*   CopyrightMark: copyright watermark</p>
+     * <p>The type of the watermark that you want to extract. Valid values:</p>
+     * <ul>
+     * <li><strong>TraceMark</strong>: user-tracing watermark</li>
+     * <li><strong>CopyrightMark</strong>: copyright watermark</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TraceMark</p>
      */
     @NameInMap("ExtractType")
     public String extractType;
 
     /**
-     * <p>The ID of the video file. You can query the video ID by using the ApsaraVideo VOD console or calling the SearchMedia operation.</p>
+     * <p>The ID of the video from which you want to extract the watermark. You can specify only one ID. You can use one of the following methods to obtain the ID:</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Media Files</strong> &gt; <strong>Audio/Video</strong> to view the video ID.</li>
+     * <li>Obtain the VideoId from the response to the <a href="~~SearchMedia~~">SearchMedia</a> operation.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0222e203cf80f9c22870a4d2c****</p>
      */
     @NameInMap("MediaId")
     public String mediaId;

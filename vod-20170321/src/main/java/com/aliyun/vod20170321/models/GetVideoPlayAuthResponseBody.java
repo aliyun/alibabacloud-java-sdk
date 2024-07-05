@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class GetVideoPlayAuthResponseBody extends TeaModel {
     /**
      * <p>The credential for media playback.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sstyYuew6789000000xtt7TYUh****</p>
      */
     @NameInMap("PlayAuth")
     public String playAuth;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E4EBD2BF-5EB0-4476-8829-9D94E1B1****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The metadata of the media file.</p>
+     * <p>The metadata of the audio or video file.</p>
      */
     @NameInMap("VideoMeta")
     public GetVideoPlayAuthResponseBodyVideoMeta videoMeta;
@@ -54,30 +60,45 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
     public static class GetVideoPlayAuthResponseBodyVideoMeta extends TeaModel {
         /**
          * <p>The thumbnail URL of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
          * <p>The duration of the media file. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.0</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The status of the media file. For more information about the value range and description, see [Status: the status of a video](~~52839~~).</p>
+         * <p>The status of the media file. For more information about the value range and description, see <a href="~~52839#title-vqg-8cz-7p8~~">Status: the status of a video</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The title of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VOD</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The ID of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dfde02284a5c46622a097adaf44a****</p>
          */
         @NameInMap("VideoId")
         public String videoId;

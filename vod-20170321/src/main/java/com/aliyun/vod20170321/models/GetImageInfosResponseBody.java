@@ -18,6 +18,9 @@ public class GetImageInfosResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58*****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,30 +57,45 @@ public class GetImageInfosResponseBody extends TeaModel {
     public static class GetImageInfosResponseBodyImageInfoMezzanine extends TeaModel {
         /**
          * <p>The size of the image file. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8932</p>
          */
         @NameInMap("FileSize")
         public String fileSize;
 
         /**
          * <p>The OSS URL of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://outin-bfefbb*****163e1c7426.oss-cn-XXXXXXXX.aliyuncs.com/image/default/5E84CD536*****D4DAD.png?Expires=1590982353&OSSAccessKeyId=*****&Signature=ALPET74o*****c%3D">https://outin-bfefbb*****163e1c7426.oss-cn-XXXXXXXX.aliyuncs.com/image/default/5E84CD536*****D4DAD.png?Expires=1590982353&amp;OSSAccessKeyId=*****&amp;Signature=ALPET74o*****c%3D</a></p>
          */
         @NameInMap("FileURL")
         public String fileURL;
 
         /**
          * <p>The height of the image. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Height")
         public Integer height;
 
         /**
          * <p>The name of the source file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****.gif</p>
          */
         @NameInMap("OriginalFileName")
         public String originalFileName;
 
         /**
          * <p>The width of the image. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Width")
         public Integer width;
@@ -132,48 +150,70 @@ public class GetImageInfosResponseBody extends TeaModel {
     public static class GetImageInfosResponseBodyImageInfo extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The ID of the category to which the image belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>254766071</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
          * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
-         * <p>The time when the image was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the image was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-11-21T02:37:23Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bbc65bba53f9*****ed90de118a7849</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The type of the image. Valid values:</p>
-         * <br>
-         * <p>*   **CoverSnapshot**: thumbnail snapshot</p>
-         * <p>*   **NormalSnapshot**: normal snapshot</p>
-         * <p>*   **SpriteSnapshot**: sprite snapshot</p>
-         * <p>*   **SpriteOriginSnapshot**: sprite source snapshot</p>
-         * <p>*   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).</p>
+         * <ul>
+         * <li><strong>CoverSnapshot</strong>: thumbnail snapshot</li>
+         * <li><strong>NormalSnapshot</strong>: normal snapshot</li>
+         * <li><strong>SpriteSnapshot</strong>: sprite snapshot</li>
+         * <li><strong>SpriteOriginSnapshot</strong>: sprite source snapshot</li>
+         * <li><strong>All</strong>: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NormalSnapshot</p>
          */
         @NameInMap("ImageType")
         public String imageType;
@@ -186,34 +226,50 @@ public class GetImageInfosResponseBody extends TeaModel {
 
         /**
          * <p>The status of the image file. Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**: The image is being uploaded. This is the initial status.</p>
-         * <p>*   **Normal**: The image is uploaded.</p>
-         * <p>*   **UploadFail**: The image fails to be uploaded.</p>
+         * <ul>
+         * <li><strong>Uploading</strong>: The image is being uploaded. This is the initial status.</li>
+         * <li><strong>Normal</strong>: The image is uploaded.</li>
+         * <li><strong>UploadFail</strong>: The image fails to be uploaded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Uploading</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The bucket in which the image is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outin-****..oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
          * <p>The tags of the image. Separate multiple tags with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1,tag2,tag3</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a sample</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The image URL. If a domain name for CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.aliyundoc.com/image/default/****.gif?auth_key=">http://example.aliyundoc.com/image/default/****.gif?auth_key=</a>****</p>
          */
         @NameInMap("URL")
         public String URL;

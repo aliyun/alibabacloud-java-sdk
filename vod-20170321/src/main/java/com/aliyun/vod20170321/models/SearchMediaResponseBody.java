@@ -12,18 +12,27 @@ public class SearchMediaResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3E0CEF83-FB09-4E34-BA1451814B03****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The pagination identifier.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24e0fba7188fae707e146esa54****</p>
      */
     @NameInMap("ScrollToken")
     public String scrollToken;
 
     /**
      * <p>The total number of data records that meet the specified filter criteria.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -68,18 +77,27 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaListAiDataAiLabelInfoOccurrences extends TeaModel {
         /**
          * <p>The start time of the clip.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.4</p>
          */
         @NameInMap("From")
         public Double from;
 
         /**
          * <p>The score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.75287705</p>
          */
         @NameInMap("Score")
         public Double score;
 
         /**
          * <p>The end time of the clip.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.5</p>
          */
         @NameInMap("To")
         public Double to;
@@ -118,18 +136,27 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaListAiDataAiLabelInfo extends TeaModel {
         /**
          * <p>The category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Transportation</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
          * <p>The ID of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10310250338</p>
          */
         @NameInMap("LabelId")
         public String labelId;
 
         /**
          * <p>The name of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Vehicles</p>
          */
         @NameInMap("LabelName")
         public String labelName;
@@ -182,18 +209,27 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaListAiDataOcrInfo extends TeaModel {
         /**
          * <p>The text content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I\&quot;m Jane.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The start time of the subtitle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.4</p>
          */
         @NameInMap("From")
         public Double from;
 
         /**
          * <p>The end time of the subtitle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.5</p>
          */
         @NameInMap("To")
         public Double to;
@@ -268,24 +304,36 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaListAiRoughData extends TeaModel {
         /**
          * <p>The AI category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TV series</p>
          */
         @NameInMap("AiCategory")
         public String aiCategory;
 
         /**
          * <p>The ID of the AI task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cd35b0b0025f71edbfcb472190a9xxxx</p>
          */
         @NameInMap("AiJobId")
         public String aiJobId;
 
         /**
          * <p>The save type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT</p>
          */
         @NameInMap("SaveType")
         public String saveType;
 
         /**
          * <p>The data status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SaveSuccess</p>
          */
         @NameInMap("Status")
         public String status;
@@ -332,24 +380,36 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaListAttachedMediaCategories extends TeaModel {
         /**
          * <p>The category ID of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10027394</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
          * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
          * <p>The level of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Level")
         public Long level;
 
         /**
          * <p>The ID of the parent node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
@@ -396,16 +456,23 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaListAttachedMedia extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The type of the auxiliary media asset. Valid values:</p>
-         * <br>
-         * <p>*   **watermark**</p>
-         * <p>*   **subtitle**</p>
-         * <p>*   **material**</p>
+         * <ul>
+         * <li><strong>watermark</strong></li>
+         * <li><strong>subtitle</strong></li>
+         * <li><strong>material</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>watermark</p>
          */
         @NameInMap("BusinessType")
         public String businessType;
@@ -417,59 +484,87 @@ public class SearchMediaResponseBody extends TeaModel {
         public java.util.List<SearchMediaResponseBodyMediaListAttachedMediaCategories> categories;
 
         /**
-         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-19T03:45:25Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test3</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a82a2cd7d4e147ba0ed6c1ee372****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
-         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-19T03:48:25Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
          * <p>The status of the auxiliary media asset. Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**</p>
-         * <p>*   **Normal**</p>
-         * <p>*   **UploadFail**</p>
+         * <ul>
+         * <li><strong>Uploading</strong></li>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>UploadFail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The region in which the auxiliary media asset is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outin-bfefbb90a47c11*****7426.oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
          * <p>The tags of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The URL of the auxiliary media asset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/****.png">https://example.com/****.png</a></p>
          */
         @NameInMap("URL")
         public String URL;
@@ -580,107 +675,156 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaListAudio extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The ID of the audio file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a82a2cd7d4e147bbed6c1ee372****</p>
          */
         @NameInMap("AudioId")
         public String audioId;
 
         /**
          * <p>The ID of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000123</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
          * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceshi</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
          * <p>The URL of the thumbnail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/image04.jpg">http://example.com/image04.jpg</a></p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the audio stream was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio stream was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-19T03:45:25Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the audio file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audio description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The download switch. The audio file can be downloaded offline only when the download switch is turned on. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("DownloadSwitch")
         public String downloadSwitch;
 
         /**
          * <p>The duration of the audio file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
          * <p>The source of the audio file. Valid values:</p>
-         * <br>
-         * <p>*   **general**: The audio file is uploaded by using ApsaraVideo VOD.</p>
-         * <p>*   **short_video**: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see [Introduction](~~53407~~).</p>
-         * <p>*   **editing**: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see [ProduceEditingProjectVideo](~~68536~~).</p>
-         * <p>*   **live**: The audio file is recorded and uploaded as a file to ApsaraVideo VOD.</p>
+         * <ul>
+         * <li><strong>general</strong>: The audio file is uploaded by using ApsaraVideo VOD.</li>
+         * <li><strong>short_video</strong>: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see <a href="https://help.aliyun.com/document_detail/53407.html">Introduction</a>.</li>
+         * <li><strong>editing</strong>: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see <a href="https://help.aliyun.com/document_detail/68536.html">ProduceEditingProjectVideo</a>.</li>
+         * <li><strong>live</strong>: The audio file is recorded and uploaded as a file to ApsaraVideo VOD.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         @NameInMap("MediaSource")
         public String mediaSource;
 
         /**
-         * <p>The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the audio file was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-19T03:48:25Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
          * <p>The preprocessing status. Only preprocessed videos can be used for live streaming in the production studio. Valid values:</p>
-         * <br>
-         * <p>*   **UnPreprocess**</p>
-         * <p>*   **Preprocessing**</p>
-         * <p>*   **PreprocessSucceed**</p>
-         * <p>*   **PreprocessFailed**</p>
+         * <ul>
+         * <li><strong>UnPreprocess</strong></li>
+         * <li><strong>Preprocessing</strong></li>
+         * <li><strong>PreprocessSucceed</strong></li>
+         * <li><strong>PreprocessFailed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UnPreprocess</p>
          */
         @NameInMap("PreprocessStatus")
         public String preprocessStatus;
 
         /**
          * <p>The period of time in which the audio file remains in the restored state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T10:14:14Z</p>
          */
         @NameInMap("RestoreExpiration")
         public String restoreExpiration;
 
         /**
          * <p>The restoration status of the audio file. Valid values:</p>
-         * <br>
-         * <p>*   **Processing**</p>
-         * <p>*   **Success**</p>
-         * <p>*   **Failed**</p>
+         * <ul>
+         * <li><strong>Processing</strong></li>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("RestoreStatus")
         public String restoreStatus;
 
         /**
          * <p>The size of the audio file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Size")
         public Long size;
@@ -699,54 +843,75 @@ public class SearchMediaResponseBody extends TeaModel {
 
         /**
          * <p>The status of the audio file. Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**</p>
-         * <p>*   **Normal**</p>
-         * <p>*   **UploadFail**</p>
-         * <p>*   **Deleted**</p>
+         * <ul>
+         * <li><strong>Uploading</strong></li>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>UploadFail</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The storage class of the audio file. Valid values:</p>
-         * <br>
-         * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
-         * <p>*   **IA**: All media resources are stored as IA objects.</p>
-         * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
-         * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
-         * <p>*   **SourceIA**: Only the source file is stored as an IA object.</p>
-         * <p>*   **SourceArchive**: Only the source file is stored as an Archive object.</p>
-         * <p>*   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.</p>
-         * <p>*   **Changing**: The storage class is being modified.</p>
+         * <ul>
+         * <li><strong>Standard</strong>: All media resources are stored as Standard objects.</li>
+         * <li><strong>IA</strong>: All media resources are stored as IA objects.</li>
+         * <li><strong>Archive</strong>: All media resources are stored as Archive objects.</li>
+         * <li><strong>ColdArchive</strong>: All media resources are stored as Cold Archive objects.</li>
+         * <li><strong>SourceIA</strong>: Only the source file is stored as an IA object.</li>
+         * <li><strong>SourceArchive</strong>: Only the source file is stored as an Archive object.</li>
+         * <li><strong>SourceColdArchive</strong>: Only the source file is stored as a Cold Archive object.</li>
+         * <li><strong>Changing</strong>: The storage class is being modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
          * <p>The region in which the audio is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outin-aaa*****aa.oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
          * <p>The tags of the audio file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1,tag2</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the audio file</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audio</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The transcoding mode. Valid values:</p>
-         * <br>
-         * <p>*   **FastTranscode**: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</p>
-         * <p>*   **NoTranscode**: The audio file can be played without being transcoded. You can immediately play the file after it is uploaded.</p>
-         * <p>*   **AsyncTranscode**: The audio file can be immediately played and asynchronously transcoded after it is uploaded.</p>
+         * <ul>
+         * <li><strong>FastTranscode</strong>: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</li>
+         * <li><strong>NoTranscode</strong>: The audio file can be played without being transcoded. You can immediately play the file after it is uploaded.</li>
+         * <li><strong>AsyncTranscode</strong>: The audio file can be immediately played and asynchronously transcoded after it is uploaded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FastTranscode</p>
          */
         @NameInMap("TranscodeMode")
         public String transcodeMode;
@@ -945,76 +1110,113 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaListImage extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The ID of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000123</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
          * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beauty</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
-         * <p>The time when the image was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the image was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-19T03:45:25Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11130843741se99wqmoes****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the image file was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-19T03:48:25Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
          * <p>The status of the image file.</p>
-         * <br>
-         * <p>*   **Uploading**</p>
-         * <p>*   **Normal**</p>
-         * <p>*   **UploadFail**</p>
+         * <ul>
+         * <li><strong>Uploading</strong></li>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>UploadFail</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Uploading</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The region in which the image is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outin-bfefbb90a47c******163e1c7426.oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
          * <p>The tags of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image1</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The URL of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/****.png">https://example.com/****.png</a></p>
          */
         @NameInMap("URL")
         public String URL;
@@ -1125,101 +1327,147 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaListVideo extends TeaModel {
         /**
          * <p>The ID of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app-****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The ID of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000123</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
          * <p>The name of the category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video1</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
          * <p>The URL of the thumbnail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com/image01.png">https://example.aliyundoc.com/image01.png</a></p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the video file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-19T03:45:25Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Video test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The download switch. The video file can be downloaded offline only when the download switch is turned on. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("DownloadSwitch")
         public String downloadSwitch;
 
         /**
          * <p>The duration of the video file. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
          * <p>The source of the video file. Valid values:</p>
-         * <br>
-         * <p>*   **general**: The video file is uploaded by using ApsaraVideo VOD.</p>
-         * <p>*   **short_video**: The video file is uploaded by using the short video SDK.</p>
-         * <p>*   **editing**: The video file is produced after online editing.</p>
-         * <p>*   **live**: The video stream is recorded and uploaded as a file.</p>
+         * <ul>
+         * <li><strong>general</strong>: The video file is uploaded by using ApsaraVideo VOD.</li>
+         * <li><strong>short_video</strong>: The video file is uploaded by using the short video SDK.</li>
+         * <li><strong>editing</strong>: The video file is produced after online editing.</li>
+         * <li><strong>live</strong>: The video stream is recorded and uploaded as a file.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>general</p>
          */
         @NameInMap("MediaSource")
         public String mediaSource;
 
         /**
-         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-19T03:48:25Z</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
          * <p>The preprocessing status. Valid values:</p>
-         * <br>
-         * <p>*   **UnPreprocess**</p>
-         * <p>*   **Preprocessing**</p>
-         * <p>*   **PreprocessSucceed**</p>
-         * <p>*   **PreprocessFailed**</p>
+         * <ul>
+         * <li><strong>UnPreprocess</strong></li>
+         * <li><strong>Preprocessing</strong></li>
+         * <li><strong>PreprocessSucceed</strong></li>
+         * <li><strong>PreprocessFailed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Preprocessing</p>
          */
         @NameInMap("PreprocessStatus")
         public String preprocessStatus;
 
         /**
          * <p>The period of time in which the video file remains in the restored state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-03-30T10:14:14Z</p>
          */
         @NameInMap("RestoreExpiration")
         public String restoreExpiration;
 
         /**
          * <p>The restoration status of the video file. Valid values:</p>
-         * <br>
-         * <p>*   **Processing**</p>
-         * <p>*   **Success**</p>
-         * <p>*   **Failed**</p>
+         * <ul>
+         * <li><strong>Processing</strong></li>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("RestoreStatus")
         public String restoreStatus;
 
         /**
          * <p>The size of the video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Size")
         public Long size;
@@ -1238,64 +1486,88 @@ public class SearchMediaResponseBody extends TeaModel {
 
         /**
          * <p>The status of the file. Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**</p>
-         * <p>*   **UploadFail**</p>
-         * <p>*   **UploadSucc**</p>
-         * <p>*   **Transcoding**</p>
-         * <p>*   **TranscodeFail**</p>
-         * <p>*   **Blocked**</p>
-         * <p>*   **Normal**</p>
+         * <ul>
+         * <li><strong>Uploading</strong></li>
+         * <li><strong>UploadFail</strong></li>
+         * <li><strong>UploadSucc</strong></li>
+         * <li><strong>Transcoding</strong></li>
+         * <li><strong>TranscodeFail</strong></li>
+         * <li><strong>Blocked</strong></li>
+         * <li><strong>Normal</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UploadSucc</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The storage class of the video file. Valid values:</p>
-         * <br>
-         * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
-         * <p>*   **IA**: All media resources are stored as IA objects.</p>
-         * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
-         * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
-         * <p>*   **SourceIA**: Only the source file is stored as an IA object.</p>
-         * <p>*   **SourceArchive**: Only the source file is stored as an Archive object.</p>
-         * <p>*   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.</p>
-         * <p>*   **Changing**: The storage class of the video file is being changed.</p>
-         * <p>*   **SourceChanging**: The storage class of the source file is being changed.</p>
+         * <ul>
+         * <li><strong>Standard</strong>: All media resources are stored as Standard objects.</li>
+         * <li><strong>IA</strong>: All media resources are stored as IA objects.</li>
+         * <li><strong>Archive</strong>: All media resources are stored as Archive objects.</li>
+         * <li><strong>ColdArchive</strong>: All media resources are stored as Cold Archive objects.</li>
+         * <li><strong>SourceIA</strong>: Only the source file is stored as an IA object.</li>
+         * <li><strong>SourceArchive</strong>: Only the source file is stored as an Archive object.</li>
+         * <li><strong>SourceColdArchive</strong>: Only the source file is stored as a Cold Archive object.</li>
+         * <li><strong>Changing</strong>: The storage class of the video file is being changed.</li>
+         * <li><strong>SourceChanging</strong>: The storage class of the source file is being changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
          * <p>The region in which the video is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>outin-bfefbb90a47c******163e1c7426.oss-cn-shanghai.aliyuncs.com</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
          * <p>The tags of the video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag1</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
          * <p>The title of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ceshi</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
          * <p>The transcoding mode. Valid values:</p>
-         * <br>
-         * <p>*   **FastTranscode**: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</p>
-         * <p>*   **NoTranscode**: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.</p>
-         * <p>*   **AsyncTranscode**: The video file can be immediately played and asynchronously transcoded after it is uploaded.</p>
+         * <ul>
+         * <li><strong>FastTranscode</strong>: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</li>
+         * <li><strong>NoTranscode</strong>: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.</li>
+         * <li><strong>AsyncTranscode</strong>: The video file can be immediately played and asynchronously transcoded after it is uploaded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FastTranscode</p>
          */
         @NameInMap("TranscodeMode")
         public String transcodeMode;
 
         /**
          * <p>The ID of the video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a82a2asdasqadaf3faa0ed6c1ee372****</p>
          */
         @NameInMap("VideoId")
         public String videoId;
@@ -1505,48 +1777,58 @@ public class SearchMediaResponseBody extends TeaModel {
         public SearchMediaResponseBodyMediaListAiRoughData aiRoughData;
 
         /**
-         * <p>[The information about the auxiliary media asset](~~86991~~).</p>
+         * <p><a href="https://help.aliyun.com/document_detail/86991.html">The information about the auxiliary media asset</a>.</p>
          */
         @NameInMap("AttachedMedia")
         public SearchMediaResponseBodyMediaListAttachedMedia attachedMedia;
 
         /**
-         * <p>[The information about the audio](~~86991~~).</p>
+         * <p><a href="https://help.aliyun.com/document_detail/86991.html">The information about the audio</a>.</p>
          */
         @NameInMap("Audio")
         public SearchMediaResponseBodyMediaListAudio audio;
 
         /**
-         * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>hh:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-19T03:45:25Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>[The information about the image](~~86991~~).</p>
+         * <p><a href="https://help.aliyun.com/document_detail/86991.html">The information about the image</a>.</p>
          */
         @NameInMap("Image")
         public SearchMediaResponseBodyMediaListImage image;
 
         /**
          * <p>The ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a82a2cd7d4e147bbed6c1ee372****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
          * <p>The type of the media asset. Valid values:</p>
-         * <br>
-         * <p>*   **video**</p>
-         * <p>*   **audio**</p>
-         * <p>*   **image**</p>
-         * <p>*   **attached**</p>
+         * <ul>
+         * <li><strong>video</strong></li>
+         * <li><strong>audio</strong></li>
+         * <li><strong>image</strong></li>
+         * <li><strong>attached</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
-         * <p>[The information about the video](~~86991~~).</p>
+         * <p><a href="https://help.aliyun.com/document_detail/86991.html">The information about the video</a>.</p>
          */
         @NameInMap("Video")
         public SearchMediaResponseBodyMediaListVideo video;

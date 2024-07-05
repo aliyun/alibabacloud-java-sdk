@@ -12,6 +12,9 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-74A6-BEF6-D7393642****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
     public static class SubmitDynamicImageJobResponseBodyDynamicImageJob extends TeaModel {
         /**
          * <p>The ID of the animated image job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad90a501b1bfb72374ad0050746****</p>
          */
         @NameInMap("JobId")
         public String jobId;

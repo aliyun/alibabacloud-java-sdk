@@ -12,6 +12,9 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>09ABE829-6CD3-4FE0-556113E2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,38 +43,66 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
     public static class DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
         /**
          * <p>The address of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****.oss-cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The status of the origin server. Valid values:</p>
-         * <p>*   **online**: indicates that the origin server is enabled.</p>
-         * <p>*   **offline**: indicates that the origin server is disabled.</p>
+         * <ul>
+         * <li><strong>online</strong>: indicates that the origin server is enabled.</li>
+         * <li><strong>offline</strong>: indicates that the origin server is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Enabled")
         public String enabled;
 
         /**
          * <p>The port number. Valid values: 443 and 80.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The priority of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         @NameInMap("Priority")
         public String priority;
 
         /**
          * <p>The type of the origin server. Valid values:</p>
-         * <p>*   **ipaddr**: a server that you can access by using an IP address.</p>
-         * <p>*   **domain**: a server that you can access by using a domain name.</p>
-         * <p>*   **oss**: the URL of an Object Storage Service (OSS) bucket.</p>
+         * <ul>
+         * <li><strong>ipaddr</strong>: a server that you can access by using an IP address.</li>
+         * <li><strong>domain</strong>: a server that you can access by using a domain name.</li>
+         * <li><strong>oss</strong>: the URL of an Object Storage Service (OSS) bucket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("Type")
         public String type;
+
+        /**
+         * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
+        @NameInMap("Weight")
+        public String weight;
 
         public static DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource self = new DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource();
@@ -118,6 +149,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             return this.type;
         }
 
+        public DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource setWeight(String weight) {
+            this.weight = weight;
+            return this;
+        }
+        public String getWeight() {
+            return this.weight;
+        }
+
     }
 
     public static class DescribeVodDomainDetailResponseBodyDomainDetailSources extends TeaModel {
@@ -142,71 +181,107 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
     public static class DescribeVodDomainDetailResponseBodyDomainDetail extends TeaModel {
         /**
          * <p>The name of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testCertName</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The CNAME that is assigned to the domain name for CDN. You must add a CNAME record in the system of your Domain Name System (DNS) service provider to map the domain name for CDN to the CNAME.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com.w.alikunlun.net</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The description of the domain name for CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The domain name for CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The status of the domain name for CDN. Value values:</p>
-         * <p>*   **online**: indicates that the domain name is enabled.</p>
-         * <p>*   **offline**: indicates that the domain name is disabled.</p>
-         * <p>*   **configuring**: indicates that the domain name is being configured.</p>
-         * <p>*   **configure_failed**: indicates that the domain name failed to be configured.</p>
-         * <p>*   **checking**: indicates that the domain name is under review.</p>
-         * <p>*   **check_failed**: indicates that the domain name failed the review.</p>
+         * <ul>
+         * <li><strong>online</strong>: indicates that the domain name is enabled.</li>
+         * <li><strong>offline</strong>: indicates that the domain name is disabled.</li>
+         * <li><strong>configuring</strong>: indicates that the domain name is being configured.</li>
+         * <li><strong>configure_failed</strong>: indicates that the domain name failed to be configured.</li>
+         * <li><strong>checking</strong>: indicates that the domain name is under review.</li>
+         * <li><strong>check_failed</strong>: indicates that the domain name failed the review.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
-         * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-27T06:51:26Z</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
-         * <p>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-11-27T06:55:26Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>Indicates whether the Secure Sockets Layer (SSL) certificate is enabled. Valid values:</p>
-         * <p>*   **on**: indicates that the SSL certificate is enabled.</p>
-         * <p>*   **off**: indicates that the SSL certificate is disabled.</p>
+         * <ul>
+         * <li><strong>on</strong>: indicates that the SSL certificate is enabled.</li>
+         * <li><strong>off</strong>: indicates that the SSL certificate is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
         /**
          * <p>The public key of the certificate. The value of this parameter is returned if HTTPS is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourSSLPub</p>
          */
         @NameInMap("SSLPub")
         public String SSLPub;
 
         /**
          * <p>This parameter is applicable to users of level 3 or higher in mainland China and users outside mainland China. Valid values:</p>
-         * <p>*   **domestic**: mainland China. This is the default value.</p>
-         * <p>*   **overseas**: outside mainland China.</p>
-         * <p>*   **global**: regions in and outside mainland China.</p>
+         * <ul>
+         * <li><strong>domestic</strong>: mainland China. This is the default value.</li>
+         * <li><strong>overseas</strong>: outside mainland China.</li>
+         * <li><strong>global</strong>: regions in and outside mainland China.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         @NameInMap("Scope")
         public String scope;
@@ -219,6 +294,9 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
 
         /**
          * <p>The weight of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Weight")
         public String weight;

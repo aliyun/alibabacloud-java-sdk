@@ -6,21 +6,32 @@ import com.aliyun.tea.*;
 public class UpdateVodTemplateRequest extends TeaModel {
     /**
      * <p>The name of the template.</p>
-     * <br>
-     * <p>*   The name can be up to 128 bytes in length.</p>
-     * <p>*   The value must be encoded in UTF-8.</p>
+     * <ul>
+     * <li>The name can be up to 128 bytes in length.</li>
+     * <li>The value must be encoded in UTF-8.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.</p>
+     * <p>The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the &quot;SnapshotTemplateConfig&quot; section of the <a href="https://help.aliyun.com/document_detail/98618.html">Media processing parameters</a> topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;SnapshotConfig&quot;:{&quot;Count&quot;:10,&quot;SpecifiedOffsetTime&quot;:0,&quot;Interval&quot;:1}</p>
      */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
     /**
      * <p>The ID of the snapshot template.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8c75a02e339b*****0b0d2c48171a22</p>
      */
     @NameInMap("VodTemplateId")
     public String vodTemplateId;

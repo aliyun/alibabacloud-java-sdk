@@ -4,18 +4,45 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("QoeInfoList")
     public java.util.List<DescribeVodMediaPlayDataResponseBodyQoeInfoList> qoeInfoList;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4AF6-D7393642CA58****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,29 +92,74 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodMediaPlayDataResponseBodyQoeInfoList extends TeaModel {
+        /**
+         * <p>The number of visits to the audio or video per day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("DAU")
         public Float DAU;
 
+        /**
+         * <p>The ID of the media file (VideoId).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9ae2af636ca6c10412f44891fc****</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>The total playback duration of the audio or video. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2400</p>
+         */
         @NameInMap("PlayDuration")
         public Float playDuration;
 
+        /**
+         * <p>The average playback duration of the audio or video per viewer. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
+         */
         @NameInMap("PlayDurationPerUv")
         public Float playDurationPerUv;
 
+        /**
+         * <p>The average number of times that the audio or video was played per viewer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("PlayPerVv")
         public Float playPerVv;
 
+        /**
+         * <p>The total number of times the audio or video has been played.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("PlaySuccessVv")
         public Float playSuccessVv;
 
+        /**
+         * <p>The duration of the audio or video file. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>246</p>
+         */
         @NameInMap("VideoDuration")
         public Float videoDuration;
 
+        /**
+         * <p>The name of the audio or video file.</p>
+         */
         @NameInMap("VideoTitle")
-        public Float videoTitle;
+        public String videoTitle;
 
         public static DescribeVodMediaPlayDataResponseBodyQoeInfoList build(java.util.Map<String, ?> map) throws Exception {
             DescribeVodMediaPlayDataResponseBodyQoeInfoList self = new DescribeVodMediaPlayDataResponseBodyQoeInfoList();
@@ -150,11 +222,11 @@ public class DescribeVodMediaPlayDataResponseBody extends TeaModel {
             return this.videoDuration;
         }
 
-        public DescribeVodMediaPlayDataResponseBodyQoeInfoList setVideoTitle(Float videoTitle) {
+        public DescribeVodMediaPlayDataResponseBodyQoeInfoList setVideoTitle(String videoTitle) {
             this.videoTitle = videoTitle;
             return this;
         }
-        public Float getVideoTitle() {
+        public String getVideoTitle() {
             return this.videoTitle;
         }
 

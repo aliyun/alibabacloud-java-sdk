@@ -6,30 +6,41 @@ import com.aliyun.tea.*;
 public class DescribeVodUserDomainsRequest extends TeaModel {
     /**
      * <p>The domain name. The value of this parameter is used as a filter condition for a fuzzy match.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The search method. Valid values:</p>
-     * <br>
-     * <p>*   **fuzzy_match** (default): fuzzy match.</p>
-     * <p>*   **pre_match**: prefix match</p>
-     * <p>*   **suf_match**: suffix match</p>
-     * <p>*   **full_match**: exact match</p>
+     * <ul>
+     * <li><strong>fuzzy_match</strong> (default): fuzzy match.</li>
+     * <li><strong>pre_match</strong>: prefix match</li>
+     * <li><strong>suf_match</strong>: suffix match</li>
+     * <li><strong>full_match</strong>: exact match</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>fuzzy_match</p>
      */
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
     /**
      * <p>The status of the domain name. Value values:</p>
-     * <br>
-     * <p>*   **online**: indicates that the domain name is enabled.</p>
-     * <p>*   **offline**: indicates that the domain name is disabled.</p>
-     * <p>*   **configuring**: indicates that the domain name is being configured.</p>
-     * <p>*   **configure_failed**: indicates that the domain name failed to be configured.</p>
-     * <p>*   **checking**: indicates that the domain name is under review.</p>
-     * <p>*   **check_failed**: indicates that the domain name failed the review.</p>
+     * <ul>
+     * <li><strong>online</strong>: indicates that the domain name is enabled.</li>
+     * <li><strong>offline</strong>: indicates that the domain name is disabled.</li>
+     * <li><strong>configuring</strong>: indicates that the domain name is being configured.</li>
+     * <li><strong>configure_failed</strong>: indicates that the domain name failed to be configured.</li>
+     * <li><strong>checking</strong>: indicates that the domain name is under review.</li>
+     * <li><strong>check_failed</strong>: indicates that the domain name failed the review.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
      */
     @NameInMap("DomainStatus")
     public String domainStatus;
@@ -39,12 +50,18 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: **20**. Maximum value: **50**. Valid values: **1** to **50**.</p>
+     * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -129,17 +146,21 @@ public class DescribeVodUserDomainsRequest extends TeaModel {
 
     public static class DescribeVodUserDomainsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: **1** to **20**.</p>
-         * <br>
+         * <p>The key of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <p>By default, all tag keys are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: **1** to **20**.</p>
-         * <br>
+         * <p>The value of tag N. Valid values of N: <strong>1</strong> to <strong>20</strong>.</p>
          * <p>By default, all tag values are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

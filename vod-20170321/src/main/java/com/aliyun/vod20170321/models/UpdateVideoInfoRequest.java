@@ -6,46 +6,68 @@ import com.aliyun.tea.*;
 public class UpdateVideoInfoRequest extends TeaModel {
     /**
      * <p>The ID of the video category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>384761111</p>
      */
     @NameInMap("CateId")
     public Long cateId;
 
     /**
      * <p>The URL of the video thumbnail.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.aliyundoc.com/****.jpg">https://example.aliyundoc.com/****.jpg</a></p>
      */
     @NameInMap("CoverURL")
     public String coverURL;
 
     /**
      * <p>The description of the video.</p>
-     * <br>
-     * <p>*   The value can be up to 1,024 bytes in length.</p>
-     * <p>*   The string must be encoded in the UTF-8 format.</p>
+     * <ul>
+     * <li>The value can be up to 1,024 bytes in length.</li>
+     * <li>The string must be encoded in the UTF-8 format.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>video description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The tags of the video.</p>
-     * <br>
-     * <p>*   Each tag can be up to 32 bytes in length. A maximum of 16 tags can be specified.</p>
-     * <p>*   Separate multiple tags with commas (,).</p>
-     * <p>*   The string must be encoded in the UTF-8 format.</p>
+     * <ul>
+     * <li>Each tag can be up to 32 bytes in length. A maximum of 16 tags can be specified.</li>
+     * <li>Separate multiple tags with commas (,).</li>
+     * <li>The string must be encoded in the UTF-8 format.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>tag1,tag2</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
      * <p>The title of the video.</p>
-     * <br>
-     * <p>*   The value can be up to 128 bytes in length.</p>
-     * <p>*   The string must be encoded in the UTF-8 format.</p>
+     * <ul>
+     * <li>The value can be up to 128 bytes in length.</li>
+     * <li>The string must be encoded in the UTF-8 format.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>video title</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
      * <p>The ID of the video.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2deda93265312baf9b0ed810d****</p>
      */
     @NameInMap("VideoId")
     public String videoId;

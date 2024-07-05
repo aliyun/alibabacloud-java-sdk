@@ -5,22 +5,35 @@ import com.aliyun.tea.*;
 
 public class AddAITemplateRequest extends TeaModel {
     /**
-     * <p>The detailed configurations of the AI template. The value must be a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).</p>
+     * <p>The detailed configurations of the AI template. The value must be a JSON string. For more information, see <a href="~~89863#title-vd3-499-o36~~">AITemplateConfig</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;AuditItem&quot;:[&quot;terrorism&quot;,&quot;porn&quot;],&quot;AuditRange&quot;:[&quot;image-cover&quot;,&quot;text-title&quot;,&quot;video&quot;],&quot;AuditContent&quot;:[&quot;screen&quot;],&quot;AuditAutoBlock&quot;:&quot;yes&quot;}</p>
      */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
     /**
      * <p>The name of the AI template. The name can be up to 128 bytes in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AI-media-test</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
      * <p>The type of the AI template. Valid values:</p>
-     * <br>
-     * <p>*   **AIMediaAudit**: automated review</p>
-     * <p>*   **AIImage**: smart thumbnail</p>
+     * <ul>
+     * <li><strong>AIMediaAudit</strong>: automated review</li>
+     * <li><strong>AIImage</strong>: smart thumbnail</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AIMediaAudit</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

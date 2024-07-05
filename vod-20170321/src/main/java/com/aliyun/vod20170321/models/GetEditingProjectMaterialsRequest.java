@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class GetEditingProjectMaterialsRequest extends TeaModel {
     /**
      * <p>The type of the material. Valid values:</p>
-     * <br>
-     * <p>*   **video**</p>
-     * <p>*   **audio**</p>
-     * <p>*   **image**</p>
+     * <ul>
+     * <li><strong>video</strong></li>
+     * <li><strong>audio</strong></li>
+     * <li><strong>image</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>video</p>
      */
     @NameInMap("MaterialType")
     public String materialType;
@@ -22,9 +26,14 @@ public class GetEditingProjectMaterialsRequest extends TeaModel {
 
     /**
      * <p>The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:</p>
-     * <br>
-     * <p>*   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to obtain the ID of the specified online editing project.</p>
-     * <p>*   Call the **AddEditingProject** operation. The value of the response parameter ProjectId is the ID of the specified online editing project.</p>
+     * <ul>
+     * <li>Log on to the <a href="https://vod.console.aliyun.com">ApsaraVideo VOD console</a>. In the left-side navigation pane, choose <strong>Production Center</strong> &gt; <strong>Video Editing</strong> to obtain the ID of the specified online editing project.</li>
+     * <li>Call the <strong>AddEditingProject</strong> operation. The value of the response parameter ProjectId is the ID of the specified online editing project.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1982361011093374****</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -37,9 +46,13 @@ public class GetEditingProjectMaterialsRequest extends TeaModel {
 
     /**
      * <p>The type of the material. Valid values:</p>
-     * <br>
-     * <p>*   **video**</p>
-     * <p>*   **audio**</p>
+     * <ul>
+     * <li><strong>video</strong></li>
+     * <li><strong>audio</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>video</p>
      */
     @NameInMap("Type")
     public String type;

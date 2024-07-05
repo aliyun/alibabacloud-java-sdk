@@ -12,6 +12,9 @@ public class SubmitAIJobResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-BEF6-D73936****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class SubmitAIJobResponseBody extends TeaModel {
     public static class SubmitAIJobResponseBodyAIJobListAIJob extends TeaModel {
         /**
          * <p>The ID of the AI job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9e82640c85114bf5af23edfaf****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
          * <p>The ID of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D3D12340d92c641401fab46a0b847****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
          * <p>The type of the AI job. Valid values:</p>
-         * <br>
-         * <p>*   **AIMediaDNA**: The media fingerprinting job.</p>
-         * <p>*   **AIVideoTag**: The smart tagging job.</p>
+         * <ul>
+         * <li><strong>AIMediaDNA</strong>: The media fingerprinting job.</li>
+         * <li><strong>AIVideoTag</strong>: The smart tagging job.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AIVideoTag</p>
          */
         @NameInMap("Type")
         public String type;
