@@ -9,12 +9,18 @@ public class ConfigDomainSecurityProfileRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;global_rule_mode\&quot;:\&quot;hard\&quot;}</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>live.abcde.com</p>
      */
     @NameInMap("Domain")
     public String domain;

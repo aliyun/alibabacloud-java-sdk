@@ -1341,10 +1341,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+     * 
      * @param request CreateWebCCRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateWebCCRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateWebCCRuleResponse createWebCCRuleWithOptions(CreateWebCCRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1402,9 +1406,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI CreateWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+     * 
      * @param request CreateWebCCRuleRequest
      * @return CreateWebCCRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateWebCCRuleResponse createWebCCRule(CreateWebCCRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createWebCCRuleWithOptions(request, runtime);
@@ -1958,10 +1966,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a custom frequency control rule of a website.</p>
      * 
+     * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
+     * 
      * @param request DeleteWebCCRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteWebCCRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteWebCCRuleResponse deleteWebCCRuleWithOptions(DeleteWebCCRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1998,9 +2010,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a custom frequency control rule of a website.</p>
      * 
+     * @deprecated OpenAPI DeleteWebCCRule is deprecated, please use ddoscoo::2020-01-01::DeleteWebCCRuleV2 instead.
+     * 
      * @param request DeleteWebCCRuleRequest
      * @return DeleteWebCCRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteWebCCRuleResponse deleteWebCCRule(DeleteWebCCRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteWebCCRuleWithOptions(request, runtime);
@@ -2898,6 +2914,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Ip", request.ip);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.range)) {
+            query.put("Range", request.range);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -3020,6 +3040,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
             query.put("Ip", request.ip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.range)) {
+            query.put("Range", request.range);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -3306,6 +3330,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDefenseRecordsResponse describeDefenseRecords(DescribeDefenseRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDefenseRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询目的端口事件</p>
+     * 
+     * @param request DescribeDestinationPortEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDestinationPortEventResponse
+     */
+    public DescribeDestinationPortEventResponse describeDestinationPortEventWithOptions(DescribeDestinationPortEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
+            query.put("EventType", request.eventType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ip)) {
+            query.put("Ip", request.ip);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.range)) {
+            query.put("Range", request.range);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDestinationPortEvent"),
+            new TeaPair("version", "2020-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDestinationPortEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询目的端口事件</p>
+     * 
+     * @param request DescribeDestinationPortEventRequest
+     * @return DescribeDestinationPortEventResponse
+     */
+    public DescribeDestinationPortEventResponse describeDestinationPortEvent(DescribeDestinationPortEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDestinationPortEventWithOptions(request, runtime);
     }
 
     /**
@@ -6922,10 +7006,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the custom frequency control rules that are created for a website.</p>
      * 
+     * @deprecated OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+     * 
      * @param request DescribeWebCCRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWebCCRulesResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeWebCCRulesResponse describeWebCCRulesWithOptions(DescribeWebCCRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6966,9 +7054,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the custom frequency control rules that are created for a website.</p>
      * 
+     * @deprecated OpenAPI DescribeWebCCRules is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+     * 
      * @param request DescribeWebCCRulesRequest
      * @return DescribeWebCCRulesResponse
      */
+    @Deprecated
+    // Deprecated
     public DescribeWebCCRulesResponse describeWebCCRules(DescribeWebCCRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeWebCCRulesWithOptions(request, runtime);
@@ -9465,10 +9557,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+     * 
      * @param request ModifyWebCCRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyWebCCRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public ModifyWebCCRuleResponse modifyWebCCRuleWithOptions(ModifyWebCCRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -9526,9 +9622,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI ModifyWebCCRule is deprecated, please use ddoscoo::2020-01-01::ConfigWebCCRuleV2 instead.
+     * 
      * @param request ModifyWebCCRuleRequest
      * @return ModifyWebCCRuleResponse
      */
+    @Deprecated
+    // Deprecated
     public ModifyWebCCRuleResponse modifyWebCCRule(ModifyWebCCRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyWebCCRuleWithOptions(request, runtime);
