@@ -28,6 +28,9 @@ public class DescribeDDosEventAreaRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    @NameInMap("Range")
+    public Long range;
+
     /**
      * <p>The UNIX timestamp when the query starts. Unit: seconds.</p>
      * <blockquote>
@@ -60,6 +63,14 @@ public class DescribeDDosEventAreaRequest extends TeaModel {
     }
     public String getIp() {
         return this.ip;
+    }
+
+    public DescribeDDosEventAreaRequest setRange(Long range) {
+        this.range = range;
+        return this;
+    }
+    public Long getRange() {
+        return this.range;
     }
 
     public DescribeDDosEventAreaRequest setStartTime(Long startTime) {
