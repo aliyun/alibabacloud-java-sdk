@@ -7,6 +7,10 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
     @NameInMap("LiveStreamsNotifyConfig")
     public DescribeVsStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig liveStreamsNotifyConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,6 +42,10 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         @NameInMap("AuthType")
         public String authType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 

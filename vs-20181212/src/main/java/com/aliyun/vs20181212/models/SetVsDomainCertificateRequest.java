@@ -4,30 +4,66 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class SetVsDomainCertificateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Cert-77****7</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>free</p>
+     */
     @NameInMap("CertType")
     public String certType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ForceSet")
     public String forceSet;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xxxxxxx</p>
+     */
     @NameInMap("SSLPri")
     public String SSLPri;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>328uiuii28****82dsada81</p>
+     */
     @NameInMap("SSLPub")
     public String SSLPub;
 

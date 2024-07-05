@@ -4,36 +4,73 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>live</p>
+     */
     @NameInMap("App")
     public String app;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
+     */
     @NameInMap("Callback")
     public String callback;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtmp</p>
+     */
     @NameInMap("InProtocol")
     public String inProtocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("LazyPull")
     public Boolean lazyPull;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>flv,rtmp</p>
+     */
     @NameInMap("OutProtocol")
     public String outProtocol;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com</p>
+     */
     @NameInMap("PlayDomain")
     public String playDomain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("PushDomain")
     public String pushDomain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("Region")
     public String region;
 

@@ -4,24 +4,50 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchForbidVsStreamRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>live/stream1,live/stream2</p>
+     */
     @NameInMap("Channel")
     public String channel;
 
     @NameInMap("ControlStreamAction")
     public String controlStreamAction;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>publisher</p>
+     */
     @NameInMap("LiveStreamType")
     public String liveStreamType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>yes</p>
+     */
     @NameInMap("Oneshot")
     public String oneshot;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2015-12-01T17:37:00Z</p>
+     */
     @NameInMap("ResumeTime")
     public String resumeTime;
 

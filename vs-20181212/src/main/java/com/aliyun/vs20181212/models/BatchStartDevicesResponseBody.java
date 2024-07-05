@@ -4,6 +4,10 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchStartDevicesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class BatchStartDevicesResponseBody extends TeaModel {
     }
 
     public static class BatchStartDevicesResponseBodyResultsStreams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Stream not found</p>
+         */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3238848****092997-cn-qingdao</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>310101*****187542126</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -73,6 +89,10 @@ public class BatchStartDevicesResponseBody extends TeaModel {
     }
 
     public static class BatchStartDevicesResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>32388487****92996-cn-qingdao</p>
+         */
         @NameInMap("Id")
         public String id;
 

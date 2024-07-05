@@ -7,6 +7,10 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
     @NameInMap("Records")
     public java.util.List<DescribeStreamVodListResponseBodyRecords> records;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
     }
 
     public static class DescribeStreamVodListResponseBodyRecords extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1634873413</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1639077653</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 

@@ -4,6 +4,10 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchBindParentPlatformDevicesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class BatchBindParentPlatformDevicesResponseBody extends TeaModel {
     }
 
     public static class BatchBindParentPlatformDevicesResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>some error</p>
+         */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <strong>example:</strong>
+         * <p>361*****212-cn-qingdao</p>
+         */
         @NameInMap("ParentPlatformId")
         public String parentPlatformId;
 

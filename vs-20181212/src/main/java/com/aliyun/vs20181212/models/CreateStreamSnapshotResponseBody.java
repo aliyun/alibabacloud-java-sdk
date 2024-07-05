@@ -4,33 +4,73 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateStreamSnapshotResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>jpg</p>
+     */
     @NameInMap("Format")
     public String format;
 
+    /**
+     * <strong>example:</strong>
+     * <p>720</p>
+     */
     @NameInMap("Height")
     public Long height;
 
+    /**
+     * <strong>example:</strong>
+     * <p>323*****997-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>examplebucket</p>
+     */
     @NameInMap("OssBucket")
     public String ossBucket;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-cn-qingdao.aliyuncs.com</p>
+     */
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>photos/live/340200*****100049/ondemand-1639126601767.jpg</p>
+     */
     @NameInMap("OssObject")
     public String ossObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1639126601767</p>
+     */
     @NameInMap("Timestamp")
     public Long timestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://examplebucket.oss-*****.aliyuncs.com/photos/live/340200*****100049/ondemand-1639126601767.jpg">http://examplebucket.oss-*****.aliyuncs.com/photos/live/340200*****100049/ondemand-1639126601767.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1280</p>
+     */
     @NameInMap("Width")
     public Long width;
 

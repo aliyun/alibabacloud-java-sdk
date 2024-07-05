@@ -7,6 +7,10 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
     @NameInMap("RecordDataPerInterval")
     public DescribeVsDomainRecordDataResponseBodyRecordDataPerInterval recordDataPerInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainRecordDataResponseBodyRecordDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("RecordValue")
         public String recordValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StreamCountValue")
         public String streamCountValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-19T15:59:59Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

@@ -7,6 +7,10 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
     @NameInMap("DomainConfig")
     public DescribeVsDomainDetailResponseBodyDomainConfig domainConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9BEC5E85-C76B-56EF-A922-860EFDB8B64B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +36,69 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainDetailResponseBodyDomainConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com.*****.com</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vs</p>
+         */
         @NameInMap("DomainType")
         public String domainType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-19T10:27:23Z</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-07-19T10:27:23Z</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("SSLProtocol")
         public String SSLProtocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>domestic</p>
+         */
         @NameInMap("Scope")
         public String scope;
 

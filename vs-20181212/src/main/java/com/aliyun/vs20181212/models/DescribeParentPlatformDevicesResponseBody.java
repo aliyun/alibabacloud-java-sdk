@@ -7,18 +7,38 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     @NameInMap("Devices")
     public java.util.List<DescribeParentPlatformDevicesResponseBodyDevices> devices;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageCount")
     public Long pageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,18 +96,34 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     }
 
     public static class DescribeParentPlatformDevicesResponseBodyDevices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>310101*****7542007</p>
+         */
         @NameInMap("GbId")
         public String gbId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3484*****8732174-cn-qingdao</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3487*****323380-cn-qingdao</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3614*****766212-cn-qingdao</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 

@@ -4,9 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DeletePresetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>348*****380-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F18FD685-B194-4489-9609-F80A9490A258</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

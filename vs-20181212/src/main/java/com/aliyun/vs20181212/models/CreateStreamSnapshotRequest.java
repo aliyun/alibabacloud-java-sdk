@@ -4,9 +4,19 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateStreamSnapshotRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>323*****997-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>device</p>
+     */
     @NameInMap("Location")
     public String location;
 

@@ -7,18 +7,38 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
     @NameInMap("BpsDataPerInterval")
     public DescribeVsDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2100</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-01T07:10:48Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-09-18T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +96,17 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("BpsValue")
         public String bpsValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

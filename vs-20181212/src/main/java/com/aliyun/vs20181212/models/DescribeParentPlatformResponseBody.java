@@ -4,54 +4,114 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeParentPlatformResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoStart")
     public Boolean autoStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ClientAuth")
     public Boolean clientAuth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31010*****317542006</p>
+     */
     @NameInMap("ClientGbId")
     public String clientGbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.0.1</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin123</p>
+     */
     @NameInMap("ClientPassword")
     public String clientPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5160</p>
+     */
     @NameInMap("ClientPort")
     public Long clientPort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user01</p>
+     */
     @NameInMap("ClientUsername")
     public String clientUsername;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-12-10T21:00:00Z</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31000*****2170123451</p>
+     */
     @NameInMap("GbId")
     public String gbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>359*****374-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.10.10.10</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5060</p>
+     */
     @NameInMap("Port")
     public Long port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gb28181</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("Status")
     public String status;
 

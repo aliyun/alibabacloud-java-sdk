@@ -4,24 +4,44 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDirectoryResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-09-10T10:00:00Z</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>348*****174-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>399*****488-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>399*****774-cn-qingdao</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,6 +7,10 @@ public class BatchBindTemplateResponseBody extends TeaModel {
     @NameInMap("Bindings")
     public java.util.List<BatchBindTemplateResponseBodyBindings> bindings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class BatchBindTemplateResponseBody extends TeaModel {
     }
 
     public static class BatchBindTemplateResponseBodyBindings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>some error</p>
+         */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323*****994-cn-qingdao</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>group</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323*****998-cn-qingdao</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

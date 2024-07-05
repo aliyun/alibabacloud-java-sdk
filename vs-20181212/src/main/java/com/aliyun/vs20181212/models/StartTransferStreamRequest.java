@@ -4,15 +4,31 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class StartTransferStreamRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>323*****998-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sd</p>
+     */
     @NameInMap("Transcode")
     public String transcode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("Url")
     public String url;
 

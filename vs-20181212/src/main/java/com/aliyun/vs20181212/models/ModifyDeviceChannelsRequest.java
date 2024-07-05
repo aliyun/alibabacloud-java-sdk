@@ -4,15 +4,32 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeviceChannelsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Channels")
     public String channels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("DeviceStatus")
     public String deviceStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>210235C3GN32090008286cf17e130d</p>
+     */
     @NameInMap("Dsn")
     public String dsn;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>348*****380-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 

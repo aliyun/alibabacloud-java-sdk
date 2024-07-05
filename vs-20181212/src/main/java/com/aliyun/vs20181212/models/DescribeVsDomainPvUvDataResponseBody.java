@@ -4,21 +4,41 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-24T00:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("PvUvDataInfos")
     public DescribeVsDomainPvUvDataResponseBodyPvUvDataInfos pvUvDataInfos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-12T10:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +96,24 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("PV")
         public String PV;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-10-14T23:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("UV")
         public String UV;
 

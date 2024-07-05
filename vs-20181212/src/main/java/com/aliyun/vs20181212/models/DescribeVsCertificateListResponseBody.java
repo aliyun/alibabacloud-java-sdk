@@ -7,6 +7,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
     @NameInMap("CertificateListModel")
     public DescribeVsCertificateListResponseBodyCertificateListModel certificateListModel;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6E310519-E035-51AB-80D4-C1CBECD39EB5</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +36,45 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeVsCertificateListResponseBodyCertificateListModelCertList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6338888</p>
+         */
         @NameInMap("CertId")
         public Long certId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cert-5391062</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("Common")
         public String common;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3EB2585309AE5C8F369****7CDA6A8F5CEC8B2D4</p>
+         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxxCert Inc</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1632462708</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
@@ -109,6 +137,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         @NameInMap("CertList")
         public java.util.List<DescribeVsCertificateListResponseBodyCertificateListModelCertList> certList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Count")
         public Integer count;
 

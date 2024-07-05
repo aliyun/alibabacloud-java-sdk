@@ -4,6 +4,10 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchSetVsDomainConfigsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>9BEC5E85-C76B-56EF-A922-860EFDB8B64B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

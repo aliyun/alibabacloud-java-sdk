@@ -4,21 +4,41 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-09-24T03:30:46Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("ReqBpsDataPerInterval")
     public DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerInterval reqBpsDataPerInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-24T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +96,17 @@ public class DescribeVsDomainReqBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("ReqBpsValue")
         public String reqBpsValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-12-24T16:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

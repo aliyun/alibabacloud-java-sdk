@@ -7,9 +7,12 @@ public class DescribeVodStreamURLRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("TxId")
-    public String txId;
-
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://xxx/xxx.mp4">http://xxx/xxx.mp4</a></p>
+     */
     @NameInMap("Url")
     public String url;
 
@@ -24,14 +27,6 @@ public class DescribeVodStreamURLRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeVodStreamURLRequest setTxId(String txId) {
-        this.txId = txId;
-        return this;
-    }
-    public String getTxId() {
-        return this.txId;
     }
 
     public DescribeVodStreamURLRequest setUrl(String url) {

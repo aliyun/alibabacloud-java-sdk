@@ -4,24 +4,48 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainBpsDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-02T02:30:48Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>unicom</p>
+     */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>guangdong</p>
+     */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-26T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

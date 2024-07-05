@@ -7,6 +7,10 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
     @NameInMap("DomainConfigs")
     public java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigs> domainConfigs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D94D0E1E-E71B-562D-8C18-969BB3653FBD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>auth_type</p>
+         */
         @NameInMap("ArgName")
         public String argName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>req_auth</p>
+         */
         @NameInMap("ArgValue")
         public String argValue;
 
@@ -62,15 +74,27 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainConfigsResponseBodyDomainConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>6295</p>
+         */
         @NameInMap("ConfigId")
         public String configId;
 
         @NameInMap("FunctionArgs")
         public java.util.List<DescribeVsDomainConfigsResponseBodyDomainConfigsFunctionArgs> functionArgs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>aliauth</p>
+         */
         @NameInMap("FunctionName")
         public String functionName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Status")
         public String status;
 

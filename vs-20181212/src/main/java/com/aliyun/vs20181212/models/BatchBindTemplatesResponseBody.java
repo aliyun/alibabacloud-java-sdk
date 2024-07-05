@@ -4,6 +4,10 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchBindTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20D0DFCE-5DB7-5D83-BD82-8482F2327636</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class BatchBindTemplatesResponseBody extends TeaModel {
     }
 
     public static class BatchBindTemplatesResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>some error</p>
+         */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323*****994-cn-qingdao</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>group</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323*****998-cn-qingdao</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

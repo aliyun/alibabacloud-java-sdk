@@ -4,15 +4,27 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDevicesDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2022-01-30T16:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>348*****174-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-01-04T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

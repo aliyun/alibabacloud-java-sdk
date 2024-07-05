@@ -4,72 +4,152 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
+     */
     @NameInMap("Callback")
     public String callback;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-12-10T10:00:00Z</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hls</p>
+     */
     @NameInMap("FileFormat")
     public String fileFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
+     */
     @NameInMap("Flv")
     public String flv;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
+     */
     @NameInMap("HlsM3u8")
     public String hlsM3u8;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/record/{StreamName}/{UnixTimestamp}_{Sequence}</p>
+     */
     @NameInMap("HlsTs")
     public String hlsTs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>323*****998-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("Interval")
     public Long interval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}_ondemand.jpg</p>
+     */
     @NameInMap("JpgOnDemand")
     public String jpgOnDemand;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/snapshot/{AppName}/{StreamName}.jpg</p>
+     */
     @NameInMap("JpgOverwrite")
     public String jpgOverwrite;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}.jpg</p>
+     */
     @NameInMap("JpgSequence")
     public String jpgSequence;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
+     */
     @NameInMap("Mp4")
     public String mp4;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>my_oss_bucket</p>
+     */
     @NameInMap("OssBucket")
     public String ossBucket;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-cn-qingdao.aliyuncs.com</p>
+     */
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-prefix</p>
+     */
     @NameInMap("OssFilePrefix")
     public String ossFilePrefix;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Retention")
     public Long retention;
 
     @NameInMap("TransConfigs")
     public java.util.List<DescribeTemplateResponseBodyTransConfigs> transConfigs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>auto</p>
+     */
     @NameInMap("Trigger")
     public String trigger;
 
+    /**
+     * <strong>example:</strong>
+     * <p>record</p>
+     */
     @NameInMap("Type")
     public String type;
 
@@ -263,27 +343,59 @@ public class DescribeTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplateResponseBodyTransConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("Fps")
         public Long fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Gop")
         public Long gop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>399*****430-cn-qingdao</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sd</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>800</p>
+         */
         @NameInMap("VideoBitrate")
         public Long videoBitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>h264</p>
+         */
         @NameInMap("VideoCodec")
         public String videoCodec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("Width")
         public Long width;
 

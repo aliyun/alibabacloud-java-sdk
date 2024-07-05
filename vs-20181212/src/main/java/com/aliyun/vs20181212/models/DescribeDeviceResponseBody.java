@@ -4,18 +4,41 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("AlarmMethod")
     public String alarmMethod;
 
+    @NameInMap("AutoDirectory")
+    public Boolean autoDirectory;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoPos")
     public Boolean autoPos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoStart")
     public Boolean autoStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-02-28T17:01:17Z</p>
+     */
     @NameInMap("ChannelSyncTime")
     public String channelSyncTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-02-28T17:00:17Z</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
@@ -25,72 +48,156 @@ public class DescribeDeviceResponseBody extends TeaModel {
     @NameInMap("Directory")
     public DescribeDeviceResponseBodyDirectory directory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3238848****092994-cn-qingdao</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7D0*****4C0</p>
+     */
     @NameInMap("Dsn")
     public String dsn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31000000****00000002</p>
+     */
     @NameInMap("GbId")
     public String gbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3238848****092994-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3238848****092996-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.10.10.10</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <strong>example:</strong>
+     * <p>119.20</p>
+     */
     @NameInMap("Latitude")
     public String latitude;
 
+    /**
+     * <strong>example:</strong>
+     * <p>45.00</p>
+     */
     @NameInMap("Longitude")
     public String longitude;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3238848****092995-cn-qingdao</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
     @NameInMap("Port")
     public Long port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("PosInterval")
     public Long posInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gb28181</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-02-28T17:00:17Z</p>
+     */
     @NameInMap("RegisteredTime")
     public String registeredTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Stats")
     public DescribeDeviceResponseBodyStats stats;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ipc</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rtmp://xxx/xxx</p>
+     */
     @NameInMap("Url")
     public String url;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("Username")
     public String username;
 
@@ -108,6 +215,14 @@ public class DescribeDeviceResponseBody extends TeaModel {
     }
     public String getAlarmMethod() {
         return this.alarmMethod;
+    }
+
+    public DescribeDeviceResponseBody setAutoDirectory(Boolean autoDirectory) {
+        this.autoDirectory = autoDirectory;
+        return this;
+    }
+    public Boolean getAutoDirectory() {
+        return this.autoDirectory;
     }
 
     public DescribeDeviceResponseBody setAutoPos(Boolean autoPos) {
@@ -351,21 +466,37 @@ public class DescribeDeviceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceResponseBodyDirectory extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2019-02-28T17:00:17Z</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3238848****092994-cn-qingdao</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3238848****092994-cn-qingdao</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3238848****092995-cn-qingdao</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 
@@ -425,18 +556,38 @@ public class DescribeDeviceResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceResponseBodyStats extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ChannelNum")
         public Long channelNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FailedNum")
         public Long failedNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OfflineNum")
         public Long offlineNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OnlineNum")
         public Long onlineNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StreamNum")
         public Long streamNum;
 

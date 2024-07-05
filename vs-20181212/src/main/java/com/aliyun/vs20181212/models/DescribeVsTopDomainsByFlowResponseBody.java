@@ -4,18 +4,38 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("DomainCount")
     public Long domainCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("DomainOnlineCount")
     public Long domainOnlineCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-12-10T18:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-10T10:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,24 +96,52 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
     }
 
     public static class DescribeVsTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("MaxBps")
         public Long maxBps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1457111400</p>
+         */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Rank")
         public Long rank;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30.64191989360235</p>
+         */
         @NameInMap("TrafficPercent")
         public String trafficPercent;
 

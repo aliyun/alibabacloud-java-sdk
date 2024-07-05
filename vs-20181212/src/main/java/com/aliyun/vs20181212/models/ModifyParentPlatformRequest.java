@@ -4,27 +4,57 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ModifyParentPlatformRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoStart")
     public Boolean autoStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ClientAuth")
     public Boolean clientAuth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin123</p>
+     */
     @NameInMap("ClientPassword")
     public String clientPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user01</p>
+     */
     @NameInMap("ClientUsername")
     public String clientUsername;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31000*****2170123451</p>
+     */
     @NameInMap("GbId")
     public String gbId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>359*****374-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.10.10.10</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
@@ -34,6 +64,10 @@ public class ModifyParentPlatformRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5060</p>
+     */
     @NameInMap("Port")
     public Long port;
 

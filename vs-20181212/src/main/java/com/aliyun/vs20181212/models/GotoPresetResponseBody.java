@@ -4,9 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class GotoPresetResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>348*****380-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>30295DF1-1DC7-48BA-BE5A-D58E61EB2375</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

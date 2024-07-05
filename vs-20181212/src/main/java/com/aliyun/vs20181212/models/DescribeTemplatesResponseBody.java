@@ -4,21 +4,41 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplatesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageCount")
     public Long pageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F3F88C96-CA6E-573E-B8F7-5BE83A1A0BCF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Templates")
     public java.util.List<DescribeTemplatesResponseBodyTemplates> templates;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,27 +96,59 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatesResponseBodyTemplatesTransConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>25</p>
+         */
         @NameInMap("Fps")
         public Long fps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("Gop")
         public Long gop;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sd</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>800</p>
+         */
         @NameInMap("VideoBitrate")
         public Long videoBitrate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>h264</p>
+         */
         @NameInMap("VideoCodec")
         public String videoCodec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("Width")
         public Long width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>399788187729597430-cn-qingdao</p>
+         */
         @NameInMap("id")
         public String id;
 
@@ -172,69 +224,145 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatesResponseBodyTemplates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
+         */
         @NameInMap("Callback")
         public String callback;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-12-10T10:00:00Z</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hls</p>
+         */
         @NameInMap("FileFormat")
         public String fileFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
+         */
         @NameInMap("Flv")
         public String flv;
 
+        /**
+         * <strong>example:</strong>
+         * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
+         */
         @NameInMap("HlsM3u8")
         public String hlsM3u8;
 
+        /**
+         * <strong>example:</strong>
+         * <p>osspath/record/{StreamName}/{UnixTimestamp}_{Sequence}</p>
+         */
         @NameInMap("HlsTs")
         public String hlsTs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323*****998-cn-qingdao</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("Interval")
         public Long interval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}_ondemand.jpg</p>
+         */
         @NameInMap("JpgOnDemand")
         public String jpgOnDemand;
 
+        /**
+         * <strong>example:</strong>
+         * <p>osspath/snapshot/{AppName}/{StreamName}.jpg</p>
+         */
         @NameInMap("JpgOverwrite")
         public String jpgOverwrite;
 
+        /**
+         * <strong>example:</strong>
+         * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}.jpg</p>
+         */
         @NameInMap("JpgSequence")
         public String jpgSequence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
+         */
         @NameInMap("Mp4")
         public String mp4;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my_oss_bucket</p>
+         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-qingdao.aliyuncs.com</p>
+         */
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my_prefix</p>
+         */
         @NameInMap("OssFilePrefix")
         public String ossFilePrefix;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-qingdao</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Retention")
         public Long retention;
 
         @NameInMap("TransConfigs")
         public java.util.List<DescribeTemplatesResponseBodyTemplatesTransConfigs> transConfigs;
 
+        /**
+         * <strong>example:</strong>
+         * <p>auto</p>
+         */
         @NameInMap("Trigger")
         public String trigger;
 
+        /**
+         * <strong>example:</strong>
+         * <p>record</p>
+         */
         @NameInMap("Type")
         public String type;
 

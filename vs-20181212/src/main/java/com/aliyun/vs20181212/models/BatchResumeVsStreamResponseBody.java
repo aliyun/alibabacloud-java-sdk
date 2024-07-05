@@ -4,6 +4,10 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchResumeVsStreamResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +58,24 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         @NameInMap("Channels")
         public BatchResumeVsStreamResponseBodyResumeResultResumeResultInfoChannels channels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("Detail")
         public String detail;
 
+        /**
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("Result")
         public String result;
 

@@ -4,6 +4,10 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchUnbindDirectoriesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>64DB7F34-11A8-45DC-A421-40ACF446282C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class BatchUnbindDirectoriesResponseBody extends TeaModel {
     }
 
     public static class BatchUnbindDirectoriesResponseBodyResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>399*****488-cn-qingdao</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>An error occurred while processing your request.</p>
+         */
         @NameInMap("Error")
         public String error;
 

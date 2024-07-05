@@ -4,24 +4,52 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDevicesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>399*****488-cn-qingdao</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7D0*****4C0</p>
+     */
     @NameInMap("Dsn")
     public String dsn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>310000000****0000002</p>
+     */
     @NameInMap("GbId")
     public String gbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>348*****174-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>348*****380-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IncludeDirectory")
     public Boolean includeDirectory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IncludeStats")
     public Boolean includeStats;
 
@@ -31,27 +59,55 @@ public class DescribeDevicesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>399*****774-cn-qingdao</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("SortDirection")
     public String sortDirection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ipc</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8yd*****qem</p>
+     */
     @NameInMap("Vendor")
     public String vendor;
 

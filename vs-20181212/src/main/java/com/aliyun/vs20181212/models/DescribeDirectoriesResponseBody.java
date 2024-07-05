@@ -7,18 +7,38 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     @NameInMap("Directories")
     public java.util.List<DescribeDirectoriesResponseBodyDirectories> directories;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageCount")
     public Long pageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,21 +96,37 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
     }
 
     public static class DescribeDirectoriesResponseBodyDirectories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-10T10:00:00Z</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>348*****174-cn-qingdao</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>399*****488-cn-qingdao</p>
+         */
         @NameInMap("Id")
         public String id;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>399*****774-cn-qingdao</p>
+         */
         @NameInMap("ParentId")
         public String parentId;
 

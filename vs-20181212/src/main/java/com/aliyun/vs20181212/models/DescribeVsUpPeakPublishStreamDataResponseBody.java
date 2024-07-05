@@ -7,6 +7,10 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
     @NameInMap("DescribeVsUpPeakPublishStreamDatas")
     public DescribeVsUpPeakPublishStreamDataResponseBodyDescribeVsUpPeakPublishStreamDatas describeVsUpPeakPublishStreamDatas;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27A3C548-A699-48F9-97CD-F35D81075AF3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,15 +39,31 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         @NameInMap("BandWidth")
         public String bandWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1522252320000</p>
+         */
         @NameInMap("PeakTime")
         public String peakTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31</p>
+         */
         @NameInMap("PublishStreamNum")
         public Integer publishStreamNum;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1522166400000</p>
+         */
         @NameInMap("QueryTime")
         public String queryTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("StatName")
         public String statName;
 

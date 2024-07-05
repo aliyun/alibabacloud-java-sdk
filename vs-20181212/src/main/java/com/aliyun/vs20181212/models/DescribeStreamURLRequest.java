@@ -4,33 +4,73 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeStreamURLRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Auth")
     public Boolean auth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ocs*****ace</p>
+     */
     @NameInMap("AuthKey")
     public String authKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1571649499</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("Expire")
     public Long expire;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>323*****997-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtmp</p>
+     */
     @NameInMap("OutProtocol")
     public String outProtocol;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1571639499</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sd</p>
+     */
     @NameInMap("Transcode")
     public String transcode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>live</p>
+     */
     @NameInMap("Type")
     public String type;
 
