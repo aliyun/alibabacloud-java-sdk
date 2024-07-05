@@ -5,7 +5,18 @@ import com.aliyun.tea.*;
 
 public class QueryMediaInfoJobListRequest extends TeaModel {
     /**
-     * <p>The IDs of the media information analysis jobs. Separate multiple jobs with commas (,). You can query up to 10 jobs at a time.</p>
+     * <p>The IDs of the media information analysis jobs.</p>
+     * <ul>
+     * <li>You can query up to 10 jobs at a time. Separate multiple IDs with commas (,).</li>
+     * <li>You can obtain the details from the response parameters of the <a href="https://help.aliyun.com/document_detail/602827.html">SubmitMediaInfoJob</a> operation.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify the JobIds parameter, the <strong>InvalidParameter</strong> error code is returned.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23ca1d184c0e4341e5b665e2a12****</p>
      */
     @NameInMap("MediaInfoJobIds")
     public String mediaInfoJobIds;

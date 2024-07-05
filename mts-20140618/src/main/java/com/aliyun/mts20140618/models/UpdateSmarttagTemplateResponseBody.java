@@ -4,6 +4,10 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class UpdateSmarttagTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5210DBB0-E327-4D45-ADBC-0B83C8796E26</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

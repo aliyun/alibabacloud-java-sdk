@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListAllMediaBucketRequest extends TeaModel {
     /**
      * <p>The maximum number of media buckets to return. Valid values: 1 to 100. Default value: 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaximumPageSize")
     public Integer maximumPageSize;
 
     /**
-     * <p>The token that is used to retrieve the next page of the query results. You do not need to specify this parameter in the first request. The response to the first request contains this parameter, which is added to the next request.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The response to the first request contains this parameter, which is added to the next request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P2Zqo1PLGhZdygo-ajSsjUX5zrBHCgXy6j4hEvv****</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;

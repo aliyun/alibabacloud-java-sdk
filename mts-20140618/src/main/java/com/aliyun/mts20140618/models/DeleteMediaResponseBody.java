@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeleteMediaResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05F8B913-E9F3-4A6F-9922-48CADA0FFAAD</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

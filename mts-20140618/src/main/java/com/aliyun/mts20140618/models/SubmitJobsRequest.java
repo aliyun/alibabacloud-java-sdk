@@ -5,33 +5,58 @@ import com.aliyun.tea.*;
 
 public class SubmitJobsRequest extends TeaModel {
     /**
-     * <p>The input of the jobs. Specify the value in a JSON object. Referer is an optional parameter. If you need to set a referer whitelist in a transcoding job, you must set the Referer parameter in the input. For more information about the fields in the Input parameter, see [Input](~~29253~~).</p>
-     * <br>
-     * <p>>  You can specify the `{ObjectPrefix}`, `{FileName}`, and `{ExtName}` variables in an OSS URL. MPS can dynamically replace the variables with the actual values. For example, if you specify `a/b/c/test.flv` as the object to be used as the input file and `{ObjectPrefix}{FileName}-cn.srt` as the object to be used as the external subtitle file, MPS replaces the variables to obtain the OSS URL a/b/c/test-cn.srt of the external subtitle file. The OSS URL that you specify must be URL-encoded. Therefore, you must specify the OSS URL of the external subtitle file as `%7bObjectPrefix%7d%7bFileName%7d-cn.srt`. Therefore, you must specify the OSS URL of the external subtitle file as `a/b/c/test-cn.srt`.</p>
+     * <p>The information about the input file. For more information, see the &quot;Input&quot; section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The path of an Object Storage Service (OSS) object must be URL-encoded in UTF-8 before you use the path in MPS.</p>
+     * </li>
+     * <li><p>The OSS bucket must reside in the same region as your MPS service.</p>
+     * </li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a/b/c/test-cn.srt</p>
      */
     @NameInMap("Input")
     public String input;
 
     /**
-     * <p>The name of the output bucket. To obtain the name of an output bucket, you can log on to the [MPS console](https://mps.console.aliyun.com/overview) and choose **Workflows** > **Media Buckets** in the left-side navigation pane.</p>
+     * <p>The name of the OSS bucket that stores the output file.</p>
+     * <ul>
+     * <li>For more information about the term bucket, see <a href="https://help.aliyun.com/document_detail/31827.html">Terms</a>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>exampleBucket</p>
      */
     @NameInMap("OutputBucket")
     public String outputBucket;
 
     /**
-     * <p>The region in which the output bucket resides.</p>
+     * <p>The region in which the OSS bucket that stores the output file resides.</p>
+     * <ul>
+     * <li>The OSS bucket must reside in the same region as MPS.</li>
+     * <li>For more information about the term bucket, see <a href="https://help.aliyun.com/document_detail/31827.html">Terms</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-cn-hangzhou</p>
      */
     @NameInMap("OutputLocation")
     public String outputLocation;
 
     /**
-     * <p>The outputs of the jobs.</p>
-     * <br>
-     * <p>*   Specify the value in a JSON array of Output objects. You can specify up to 30 Output objects.</p>
-     * <p>*   For more information about job outputs, see [Terms](~~29212~~).</p>
-     * <p>*   For more information about the fields in each Output object, see [Output](~~29253~~).</p>
-     * <br>
-     * <p>>  If you need to merge images in a transcoding job, set the width and height of each image to be processed to even numbers. Otherwise, the job may fail.</p>
+     * <p>The job output configurations. For more information, see the &quot;Output&quot; section of the <a href="https://help.aliyun.com/document_detail/29253.html">Parameter details</a> topic.</p>
+     * <ul>
+     * <li>Specify the value in a JSON array of Output objects. You can specify up to 30 Output objects.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;OutputObject&quot;:&quot;exampleOutput.mp4&quot;,&quot;TemplateId&quot;:&quot;6181666213ab41b9bc21da8ff5ff****&quot;,&quot;WaterMarks&quot;:[{&quot;InputFile&quot;:{&quot;Bucket&quot;:&quot;exampleBucket&quot;,&quot;Location&quot;:&quot;oss-cn-hangzhou&quot;,&quot;Object&quot;:&quot;image_01.png&quot;},&quot;WaterMarkTemplateId&quot;:&quot;9b772ce2740d4d55876d8b542d47****&quot;}],&quot;UserData&quot;:&quot;testid-001&quot;}]</p>
      */
     @NameInMap("Outputs")
     public String outputs;
@@ -43,10 +68,15 @@ public class SubmitJobsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the MPS queue. To obtain the ID of an MPS queue, you can log on to the [MPS console](https://mps.console.aliyun.com/overview) and choose **Global Settings** > **Pipelines** in the left-side navigation pane.</p>
-     * <br>
-     * <p>*   For more information about MPS queues, see [Terms](~~29212~~).</p>
-     * <p>*   If you want to use asynchronous notifications, make sure that an MNS topic is bound to the MPS queue to be used. For more information about how to bind an MNS topic to an MPS queue, see [Enable the feature for sending notifications on transcoding jobs](~~51469~~).</p>
+     * <p>The ID of the MPS queue. For more information, see <a href="https://help.aliyun.com/document_detail/31827.html">Terms</a>.</p>
+     * <ul>
+     * <li>To obtain the ID of an MPS queue, you can log on to the <a href="https://mps.console.aliyun.com/overview">MPS console</a> and choose <strong>Global Settings</strong> &gt; <strong>MPS Queue and Callback</strong> in the left-side navigation pane.</li>
+     * <li>If you want to receive asynchronous message notifications, associate an MNS queue or topic with the MPS queue. For more information, see <a href="https://www.alibabacloud.com/help/zh/apsaravideo-for-media-processing/latest/receive-message-notifications">Receive notifications</a>.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dd3dae411e704030b921e52698e5****</p>
      */
     @NameInMap("PipelineId")
     public String pipelineId;

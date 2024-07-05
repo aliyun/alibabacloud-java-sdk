@@ -11,16 +11,23 @@ public class SearchMediaWorkflowRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   A maximum of **100** entries can be returned on each page.</p>
-     * <p>*   Default value: **10**.</p>
+     * <ul>
+     * <li>A maximum of <strong>100</strong> entries can be returned on each page.</li>
+     * <li>Default value: <strong>10</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -32,11 +39,15 @@ public class SearchMediaWorkflowRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the media workflows that you want to query. You can specify multiple states. Separate multiple states with commas (,). Default value: **Inactive,Active,Deleted**. Valid values:</p>
-     * <br>
-     * <p>*   **Inactive**: Deactivated media workflows are queried.</p>
-     * <p>*   **Active**: Activated media workflows are queried.</p>
-     * <p>*   **Deleted**: Deleted media workflows are queried.</p>
+     * <p>The status of the media workflows that you want to query. You can specify multiple states. Separate multiple states with commas (,). Default value: <strong>Inactive,Active,Deleted</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>Inactive</strong>: Deactivated media workflows are queried.</li>
+     * <li><strong>Active</strong>: Activated media workflows are queried.</li>
+     * <li><strong>Deleted</strong>: Deleted media workflows are queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Inactive,Active,Deleted</p>
      */
     @NameInMap("StateList")
     public String stateList;

@@ -4,9 +4,18 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddPipelineResponseBody extends TeaModel {
+    /**
+     * <p>The MPS queue.</p>
+     */
     @NameInMap("Pipeline")
     public AddPipelineResponseBodyPipeline pipeline;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CFEA608A-5A1C-4C83-A54B-6197BC250D23</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +41,39 @@ public class AddPipelineResponseBody extends TeaModel {
     }
 
     public static class AddPipelineResponseBodyPipelineNotifyConfig extends TeaModel {
+        /**
+         * <p>The tag string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mts-test</p>
+         */
         @NameInMap("MqTag")
         public String mqTag;
 
+        /**
+         * <p>The queue of messages that are received.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example1</p>
+         */
         @NameInMap("MqTopic")
         public String mqTopic;
 
+        /**
+         * <p>The name of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mts-queue-1</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <p>The name of the topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mts-topic-1</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -84,27 +117,76 @@ public class AddPipelineResponseBody extends TeaModel {
     }
 
     public static class AddPipelineResponseBodyPipeline extends TeaModel {
+        /**
+         * <p>The ID of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed450ea0bfbd41e29f80a401fb4d****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Media Fingerprint</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The MNS configuration.</p>
+         */
         @NameInMap("NotifyConfig")
         public AddPipelineResponseBodyPipelineNotifyConfig notifyConfig;
 
+        /**
+         * <p>The quota that is allocated to the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("QuotaAllocate")
         public Long quotaAllocate;
 
+        /**
+         * <p>The role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunMTSDefaultRole</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The type of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
+         */
         @NameInMap("Speed")
         public String speed;
 
+        /**
+         * <p>The level of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SpeedLevel")
         public Long speedLevel;
 
+        /**
+         * <p>The state of the MPS queue.</p>
+         * <ul>
+         * <li>Active: The MPS queue is active. The jobs in the MPS queue are scheduled and transcoded by MPS.</li>
+         * <li>Paused: The MPS queue is paused. Jobs in the MPS queue are no longer scheduled for transcoding by MPS. All of the jobs in the MPS queue remain in the Submitted state. Jobs that are being transcoded are not affected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("State")
         public String state;
 

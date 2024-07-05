@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UnbindInputBucketResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4AEA0480-32F4-1656-92B3-F4D4CDE6BBB3</p>
      */
     @NameInMap("RequestId")
     public String requestId;

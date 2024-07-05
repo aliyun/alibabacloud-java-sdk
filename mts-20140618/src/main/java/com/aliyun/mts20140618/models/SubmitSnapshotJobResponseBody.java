@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SubmitSnapshotJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>19B6D8C5-A5DD-467A-B435-29D393C71E2D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
     public static class SubmitSnapshotJobResponseBodySnapshotJobInput extends TeaModel {
         /**
          * <p>The OSS bucket that stores the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The ID of the region in which the OSS bucket that stores the object is located.</p>
+         * <p>The region in which the OSS bucket resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-location\&quot;</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The OSS object that is used as the input file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.flv</p>
          */
         @NameInMap("Object")
         public String object;
 
         /**
          * <p>The ARN of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1:role/testrole</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
@@ -103,19 +118,28 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     public static class SubmitSnapshotJobResponseBodySnapshotJobMNSMessageResult extends TeaModel {
         /**
-         * <p>The error code returned when the job fails. This parameter is not returned if the job is successful.</p>
+         * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The error message returned when the job fails. This parameter is not returned if the job is successful.</p>
+         * <p>The error message returned if the job fails. This parameter is not returned if the job is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource operated InputFile is bad</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The ID of the message. This parameter is not returned if the job fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>799454621135656C7F815F198A76****</p>
          */
         @NameInMap("MessageId")
         public String messageId;
@@ -153,25 +177,37 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     public static class SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigOutputFile extends TeaModel {
         /**
-         * <p>The OSS bucket that stores the object.</p>
+         * <p>The OSS bucket that stores the output snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The ID of the region in which the OSS bucket that stores the object is located.</p>
+         * <p>The OSS region in which the OSS bucket for storing the output snapshot resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-location</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The OSS object that is generated as the output file of the snapshot job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.png</p>
          */
         @NameInMap("Object")
         public String object;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1:role/testrole</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
@@ -217,70 +253,102 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     public static class SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTileOut extends TeaModel {
         /**
-         * <p>The height of a single image. The default value is the height of a captured snapshot.</p>
+         * <p>The height of a single image. The default value is the height of the output snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("CellHeight")
         public String cellHeight;
 
         /**
-         * <p>The stride of a single image.</p>
+         * <p>The step for selecting a single image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("CellSelStep")
         public String cellSelStep;
 
         /**
-         * <p>The width of a single image. The default value is the width of a captured snapshot.</p>
+         * <p>The width of a single image. The default value is the width of the output snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("CellWidth")
         public String cellWidth;
 
         /**
          * <p>The background color.</p>
-         * <br>
-         * <p>*   Default value: **black**.</p>
-         * <p>*   You can set the Color parameter to a **color keyword** or **random** in the request.</p>
-         * <br>
-         * <p>>  If you want to set the background color to black, you can specify the color keyword in one of the following three formats: Black, black, and #000000.</p>
+         * <ul>
+         * <li>Default value: <strong>black</strong>.</li>
+         * <li>You can set the Color parameter to a <strong>color keyword</strong> or <strong>random</strong> in the request.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If you want to set the background color to black, you can specify the color keyword in one of the following three formats: Black, black, and #000000.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>black</p>
          */
         @NameInMap("Color")
         public String color;
 
         /**
-         * <p>The number of columns that the tiled image contains. Default value: **10**.</p>
+         * <p>The number of columns that the tiled image contains. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Columns")
         public String columns;
 
         /**
          * <p>Indicates whether the single images are retained. Valid values:</p>
-         * <br>
-         * <p>*   **true**: The single images are retained.</p>
-         * <p>*   **false**: The single images are not retained.</p>
-         * <p>*   Default value: **true**.</p>
+         * <ul>
+         * <li><strong>true</strong>: The single images are retained.</li>
+         * <li><strong>false</strong>: The single images are not retained.</li>
+         * <li>Default value: <strong>true</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsKeepCellPic")
         public String isKeepCellPic;
 
         /**
-         * <p>The number of rows that the tiled image contains. Default value: **10**.</p>
+         * <p>The number of rows that the tiled image contains. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Lines")
         public String lines;
 
         /**
          * <p>The margin width of the tiled image.</p>
-         * <br>
-         * <p>*   Default value: **0**.</p>
-         * <p>*   Unit: pixel.</p>
+         * <ul>
+         * <li>Default value: <strong>0</strong>.</li>
+         * <li>Unit: pixel.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Margin")
         public String margin;
 
         /**
          * <p>The distance between two consecutive single images in the tiled image.</p>
-         * <br>
-         * <p>*   Default value: **0**.</p>
-         * <p>*   Unit: pixel.</p>
+         * <ul>
+         * <li>Default value: <strong>0</strong>.</li>
+         * <li>Unit: pixel.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Padding")
         public String padding;
@@ -367,24 +435,36 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
     public static class SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTileOutputFile extends TeaModel {
         /**
          * <p>The OSS bucket that stores the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>The ID of the region in which the OSS bucket that stores the object is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-location</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
          * <p>The OSS object that is generated as the output file of the tiling job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.png</p>
          */
         @NameInMap("Object")
         public String object;
 
         /**
          * <p>The ARN of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1:role/testrole</p>
          */
         @NameInMap("RoleArn")
         public String roleArn;
@@ -428,36 +508,70 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     }
 
+    public static class SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTimeArray extends TeaModel {
+        @NameInMap("TimePointList")
+        public java.util.List<Long> timePointList;
+
+        public static SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTimeArray build(java.util.Map<String, ?> map) throws Exception {
+            SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTimeArray self = new SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTimeArray();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTimeArray setTimePointList(java.util.List<Long> timePointList) {
+            this.timePointList = timePointList;
+            return this;
+        }
+        public java.util.List<Long> getTimePointList() {
+            return this.timePointList;
+        }
+
+    }
+
     public static class SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfig extends TeaModel {
         /**
-         * <p>The snapshot type. Default value: **normal**. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: normal frames.</p>
-         * <p>*   **intra**: I-frames (keyframes).</p>
-         * <br>
-         * <p>>  If the FrameType parameter is set to intra in the request, only keyframes are captured. If no keyframe is found at a specified time point, the keyframe closest to the specified time point is captured. Keyframes are captured faster than normal frames if the same snapshot rules are applied.</p>
+         * <p>The type of the snapshot. Default value: <strong>Normal</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>normal</strong>: normal frames.</li>
+         * <li><strong>intra</strong>: I-frames (keyframes).</li>
+         * </ul>
+         * <blockquote>
+         * <p>If the FrameType parameter is set to intra in the request, only keyframes are captured. If no keyframe is found at the specified point in time, the keyframe closest to the specified point in time is captured. Keyframes are captured faster than normal frames if the same snapshot rules are applied.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>intra</p>
          */
         @NameInMap("FrameType")
         public String frameType;
 
         /**
-         * <p>The height of a captured snapshot.</p>
+         * <p>The height of the output snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
          * <p>The interval for capturing snapshots.</p>
-         * <br>
-         * <p>*   If this parameter is specified in the request, snapshots are captured at intervals. The value must be greater than 0 in the request.</p>
-         * <p>*   Unit: seconds.</p>
-         * <p>*   Default value: **10**.</p>
+         * <ul>
+         * <li>If this parameter is specified in the request, snapshots are captured at intervals. The value must be greater than 0 in the request.</li>
+         * <li>Unit: seconds.</li>
+         * <li>Default value: <strong>10</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Interval")
         public String interval;
 
         /**
          * <p>The number of snapshots. If the Num parameter is set in the request, snapshots are captured at intervals.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Num")
         public String num;
@@ -469,7 +583,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         public SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigOutputFile outputFile;
 
         /**
-         * <p>The tiling configuration.</p>
+         * <p>The tiling configurations.</p>
          */
         @NameInMap("TileOut")
         public SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTileOut tileOut;
@@ -482,12 +596,21 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
         /**
          * <p>The start time for capturing snapshots. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("Time")
         public String time;
 
+        @NameInMap("TimeArray")
+        public SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTimeArray timeArray;
+
         /**
-         * <p>The width of a captured snapshot.</p>
+         * <p>The width of the output snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Width")
         public String width;
@@ -561,6 +684,14 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             return this.time;
         }
 
+        public SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfig setTimeArray(SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTimeArray timeArray) {
+            this.timeArray = timeArray;
+            return this;
+        }
+        public SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfigTimeArray getTimeArray() {
+            return this.timeArray;
+        }
+
         public SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfig setWidth(String width) {
             this.width = width;
             return this;
@@ -573,25 +704,37 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     public static class SubmitSnapshotJobResponseBodySnapshotJob extends TeaModel {
         /**
-         * <p>The error code returned when the job fails. This parameter is not returned if the job is successful.</p>
+         * <p>The error code returned if the job fails. This parameter is not returned if the job is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceContentBad</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The number of snapshots that are captured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-19T03:11:48Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The ID of the snapshot job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f4e3b9ba9f3840c39d6e288056f0****</p>
          */
         @NameInMap("Id")
         public String id;
@@ -609,42 +752,58 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         public SubmitSnapshotJobResponseBodySnapshotJobMNSMessageResult MNSMessageResult;
 
         /**
-         * <p>The error message returned when the job fails. This parameter is not returned if the job is successful.</p>
+         * <p>The error message returned if the job fails. This parameter is not returned if the job is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource operated InputFile is bad</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
          * <p>The ID of the MPS queue to which the snapshot job is submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dd3dae411e704030b921e52698e5****</p>
          */
         @NameInMap("PipelineId")
         public String pipelineId;
 
         /**
-         * <p>The snapshot capturing configuration.</p>
+         * <p>The snapshot configurations.</p>
          */
         @NameInMap("SnapshotConfig")
         public SubmitSnapshotJobResponseBodySnapshotJobSnapshotConfig snapshotConfig;
 
         /**
          * <p>The status of the snapshot job. Valid values:</p>
-         * <br>
-         * <p>- **Submitted**: The job is submitted.</p>
-         * <p>- **Snapshoting**: The job is being processed.</p>
-         * <p>- **Success**: The job is successful.</p>
-         * <p>- **Fail**: The job fails.</p>
+         * <ul>
+         * <li><strong>Submitted</strong>: The job is submitted.</li>
+         * <li><strong>Snapshoting</strong>: The job is being processed.</li>
+         * <li><strong>Success</strong>: The job is successful.</li>
+         * <li><strong>Fail</strong>: The job fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Snapshoting</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The number of single images that are contained in the tiled image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("TileCount")
         public String tileCount;
 
         /**
          * <p>The custom data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testid-001</p>
          */
         @NameInMap("UserData")
         public String userData;

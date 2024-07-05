@@ -5,10 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryAnalysisJobListRequest extends TeaModel {
     /**
-     * <p>The IDs of the template analysis jobs.</p>
-     * <br>
-     * <p>*   You can query up to 10 jobs at a time.</p>
-     * <p>*   Separate multiple IDs with commas (,).</p>
+     * <p>The template analysis job ID list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bb558c1cc25b45309aab5be44d19****</p>
      */
     @NameInMap("AnalysisJobIds")
     public String analysisJobIds;

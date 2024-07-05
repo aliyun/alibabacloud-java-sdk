@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateMediaCoverResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0DC39B9E-13D4-40BA-AE76-CFF9BD64239D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

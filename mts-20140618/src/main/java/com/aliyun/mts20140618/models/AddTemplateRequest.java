@@ -5,39 +5,60 @@ import com.aliyun.tea.*;
 
 public class AddTemplateRequest extends TeaModel {
     /**
-     * <p>The audio stream configuration. The value must be a JSON object. For more information, see the [Parameters nested under the Audio parameter](~~29253~~) section of this topic.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, output files do not contain audio streams. If you need to retain the audio streams, this parameter is required.</p>
+     * <p>The audio stream settings. The value must be a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Audio</a>.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, output files do not contain audio streams. This parameter is required if you want to retain the audio streams.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Codec&quot;:&quot;H.264&quot;,&quot;Samplerate&quot;:&quot;44100&quot;,&quot;Bitrate&quot;:&quot;500&quot;,&quot;Channels&quot;:&quot;2&quot;}</p>
      */
     @NameInMap("Audio")
     public String audio;
 
     /**
-     * <p>The container configuration. The value must be a JSON object and contains the Format parameter. If you do not configure the container, the transcoded media file is in MP4 format by default. If you want to use the transcoding template to generate media files in other formats, this parameter is required. For more information, see the [Parameter nested under the Container parameter](~~29253~~) section of this topic.</p>
-     * <br>
-     * <p>*   Default value of the Format parameter: mp4.</p>
-     * <p>*   Video formats include FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4)</p>
-     * <br>
-     * <p>>  If the container format is FLV, the video codec cannot be set to H.265.</p>
-     * <br>
-     * <p>*   Audio formats include MP3, MP4, Ogg, FLAC, and M4A</p>
-     * <br>
-     * <p>*   Image formats include GIF and WebP.</p>
-     * <br>
-     * <p>>*   If the container format is GIF, the video codec must be set to GIF.</p>
-     * <p>  *   If the container format is WebP, the video codec must be set to WebP.</p>
+     * <p>The container format. The value must be a JSON object that contains the Format parameter. If you do not specify this parameter, the transcoded media file is in MP4 format by default. This parameter is required if you want to use the transcoding template to generate media files in other formats. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Container</a>.</p>
+     * <ul>
+     * <li>Default value: MP4.</li>
+     * <li>Video transcoding supports the following formats: FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4).</li>
+     * </ul>
+     * <blockquote>
+     * <p>If the container format is FLV, the video codec cannot be set to H.265.</p>
+     * </blockquote>
+     * <ul>
+     * <li>Audio transcoding supports the following formats: MP3, MP4, OGG, FLAC, and M4A.</li>
+     * <li>Image transcoding supports the GIF and WebP formats.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If the container format is GIF, the video codec must be set to GIF.</p>
+     * </li>
+     * <li><p>If the container format is WebP, the video codec must be set to WebP.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Format&quot;:&quot;mp4&quot;}</p>
      */
     @NameInMap("Container")
     public String container;
 
     /**
-     * <p>The segment configuration. The value must be a JSON object. For more information, see the [Parameters nested under the MuxConfig parameter](~~29253~~) section of this topic. If you do not set this parameter, media segment files are not generated. If you want to generate media segment files, this parameter is required.</p>
+     * <p>The segment settings. The value must be a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">MuxConfig</a>. If you do not specify this parameter, media segment files are not generated. This parameter is required if you want to generate media segment files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Segment&quot;:{&quot;Duration&quot;:&quot;10&quot;}}</p>
      */
     @NameInMap("MuxConfig")
     public String muxConfig;
 
     /**
-     * <p>The name of the template. The name can be up to 128 bytes in length.</p>
+     * <p>The name of the transcoding template. The name can be up to 128 bytes in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mps-example</p>
      */
     @NameInMap("Name")
     public String name;
@@ -55,15 +76,22 @@ public class AddTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The general transcoding configuration. The value must be a JSON object. For more information, see the [Parameters nested under the TransConfig parameter](~~29253~~) section of this topic. If you do not set this parameter, the default settings of this parameter are used. If the default settings cannot meet your transcoding needs, set the parameters nested under the TransConfig parameter as required.</p>
+     * <p>The general transcoding settings. The value must be a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">TransConfig</a>. If you do not specify this parameter, the default settings are used. This parameter is required if the default settings cannot meet your business requirements.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;TransMode&quot;:&quot;onepass&quot;}</p>
      */
     @NameInMap("TransConfig")
     public String transConfig;
 
     /**
-     * <p>The video stream configuration. The value must be a JSON object. For more information, see the [Parameters nested under the Video parameter](~~29253~~) section of this topic.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, output files do not contain video streams. If you need to retain the video streams, this parameter is required.</p>
+     * <p>The video stream settings. The value must be a JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/29253.html">Video</a>.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, output files do not contain video streams. This parameter is required if you want to retain the video streams.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Codec&quot;:&quot;H.264&quot;,&quot;Profile&quot;:&quot;high&quot;,&quot;Bitrate&quot;:&quot;500&quot;,&quot;Crf&quot;:&quot;15&quot;,&quot;Width&quot;:&quot;256&quot;,&quot;Height&quot;:&quot;800&quot;,&quot;Fps&quot;:&quot;25&quot;,&quot;Gop&quot;:&quot;10s&quot;}</p>
      */
     @NameInMap("Video")
     public String video;

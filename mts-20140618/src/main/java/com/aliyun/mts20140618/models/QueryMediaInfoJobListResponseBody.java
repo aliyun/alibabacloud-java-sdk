@@ -11,13 +11,16 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
     public QueryMediaInfoJobListResponseBodyMediaInfoJobList mediaInfoJobList;
 
     /**
-     * <p>The IDs of the media information analysis jobs that do not exist. If all specified jobs exist, the response does not contain this parameter.</p>
+     * <p>Nonexistent media information analysis jobs.</p>
      */
     @NameInMap("NonExistMediaInfoJobIds")
     public QueryMediaInfoJobListResponseBodyNonExistMediaInfoJobIds nonExistMediaInfoJobIds;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46A04AA5-B119-41BB-B750-7C5327AC3E7A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,19 +56,28 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobInput extends TeaModel {
         /**
-         * <p>The name of the OSS bucket that stores the object.</p>
+         * <p>The OSS bucket in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>The ID of the OSS region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
-         * <p>The name of the Object Storage Service (OSS) object used as the input file.</p>
+         * <p>The name of the Object Storage Service (OSS) object that is used as the input file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.mp4</p>
          */
         @NameInMap("Object")
         public String object;
@@ -103,19 +115,28 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult extends TeaModel {
         /**
-         * <p>The error code returned when the job fails. This parameter is not returned if the job is successful.</p>
+         * <p>The error code returned if the job failed. This parameter is not returned if the job is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.JsonObjectFormatInvalid</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The error message returned when the job fails. This parameter is not returned if the job is successful.</p>
+         * <p>The error message returned if the job failed. This parameter is not returned if the job is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The parameter \&quot;Input\&quot; does not conform to the JSON Object specification</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The ID of the success message returned when the job is successful. This parameter is not returned if the job fails.</p>
+         * <p>The ID of the message returned if the job was successful. This parameter is not returned if the job fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("MessageId")
         public String messageId;
@@ -154,48 +175,72 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat extends TeaModel {
         /**
          * <p>The total bitrate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1630.045</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
          * <p>The total duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17.226000</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The full name of the container format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuickTime/MOV</p>
          */
         @NameInMap("FormatLongName")
         public String formatLongName;
 
         /**
          * <p>The short name of the container format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mov</p>
          */
         @NameInMap("FormatName")
         public String formatName;
 
         /**
          * <p>The total number of program streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("NumPrograms")
         public String numPrograms;
 
         /**
          * <p>The total number of media streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("NumStreams")
         public String numStreams;
 
         /**
-         * <p>The size of the file.</p>
+         * <p>The size of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3509895</p>
          */
         @NameInMap("Size")
         public String size;
 
         /**
          * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.042000</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -273,103 +318,152 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsAudioStreamListAudioStream extends TeaModel {
         /**
-         * <p>The bitrate.</p>
+         * <p>The bitrate of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1536000</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
          * <p>The number of sound channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.1(side)</p>
          */
         @NameInMap("ChannelLayout")
         public String channelLayout;
 
         /**
          * <p>The output layout of the sound channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Channels")
         public String channels;
 
         /**
          * <p>The full name of the encoding format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DCA (DTS Coherent Acoustics)</p>
          */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
         /**
          * <p>The short name of the encoding format. Valid values:</p>
-         * <br>
-         * <p>- **acc**</p>
-         * <p>- **mp3**</p>
-         * <p>- **mp4**</p>
-         * <p>- **ogg**</p>
-         * <p>- **flac**</p>
+         * <ul>
+         * <li><strong>acc</strong></li>
+         * <li><strong>mp3</strong></li>
+         * <li><strong>mp4</strong></li>
+         * <li><strong>ogg</strong></li>
+         * <li><strong>flac</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acc</p>
          */
         @NameInMap("CodecName")
         public String codecName;
 
         /**
          * <p>The tag of the encoding format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x0000</p>
          */
         @NameInMap("CodecTag")
         public String codecTag;
 
         /**
          * <p>The tag string of the encoding format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0][0][0][0]</p>
          */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
         /**
          * <p>The codec time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/48000</p>
          */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
         /**
-         * <p>The duration.</p>
+         * <p>The duration of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Index")
         public String index;
 
         /**
-         * <p>The language. For more information, see [21.20.1 Metadata](https://www.ffmpeg.org/ffmpeg-all.html?spm=a2c4g.11186623.2.66.243851cd2SntfN#Metadata) in FFmpeg documentation.</p>
+         * <p>The language. For more information, see <a href="https://www.ffmpeg.org/ffmpeg-all.html?spm=a2c4g.11186623.2.66.243851cd2SntfN#Metadata">FFmpeg documentation</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eng</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
          * <p>The total number of frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("NumFrames")
         public String numFrames;
 
         /**
          * <p>The sampling format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fltp</p>
          */
         @NameInMap("SampleFmt")
         public String sampleFmt;
 
         /**
          * <p>The sampling rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48000</p>
          */
         @NameInMap("Samplerate")
         public String samplerate;
 
         /**
          * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.042000</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/1000</p>
          */
         @NameInMap("Timebase")
         public String timebase;
@@ -531,63 +625,94 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsSubtitleStreamListSubtitleStream extends TeaModel {
         /**
          * <p>The full name of the encoding format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASS (Advanced SSA) subtitle</p>
          */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
         /**
          * <p>The short name of the encoding format. Valid values:</p>
-         * <br>
-         * <p>- **srt**</p>
-         * <p>- **ass**</p>
+         * <ul>
+         * <li><strong>srt</strong></li>
+         * <li><strong>ass</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ass</p>
          */
         @NameInMap("CodecName")
         public String codecName;
 
         /**
          * <p>The tag of the encoding format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x0000</p>
          */
         @NameInMap("CodecTag")
         public String codecTag;
 
         /**
          * <p>The tag string of the encoding format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0][0][0][0]</p>
          */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
         /**
          * <p>The codec time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0/1</p>
          */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
         /**
          * <p>The duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1370.116000</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The sequence number of the subtitle stream. The value indicates the position of the subtitle stream in all subtitle streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Index")
         public String index;
 
         /**
          * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eng</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
          * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000000</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/1000</p>
          */
         @NameInMap("Timebase")
         public String timebase;
@@ -700,19 +825,28 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost extends TeaModel {
         /**
-         * <p>The average bitrate.</p>
+         * <p>The average bitrate of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300.34</p>
          */
         @NameInMap("AvgBitrate")
         public String avgBitrate;
 
         /**
-         * <p>The maximum bandwidth consumption.</p>
+         * <p>The maximum bandwidth that is consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("CostBandwidth")
         public String costBandwidth;
 
         /**
-         * <p>The amount of preload time.</p>
+         * <p>The time consumed to preload the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("PreloadTime")
         public String preloadTime;
@@ -751,167 +885,246 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream extends TeaModel {
         /**
          * <p>The average frame rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24000/1001</p>
          */
         @NameInMap("AvgFPS")
         public String avgFPS;
 
         /**
-         * <p>The bitrate.</p>
+         * <p>The bitrate of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30541090</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
          * <p>The full name of the encoding format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H.264/AVC/MPEG-4 AVC/MPEG-4 part 10</p>
          */
         @NameInMap("CodecLongName")
         public String codecLongName;
 
         /**
          * <p>The short name of the encoding format. Valid values:</p>
-         * <br>
-         * <p>*   **h264**</p>
-         * <p>*   **h265**</p>
-         * <p>*   **gif**</p>
-         * <p>*   **webp**</p>
+         * <ul>
+         * <li><strong>h264</strong></li>
+         * <li><strong>h265</strong></li>
+         * <li><strong>gif</strong></li>
+         * <li><strong>webp</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>h264</p>
          */
         @NameInMap("CodecName")
         public String codecName;
 
         /**
          * <p>The tag of the encoding format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x0000</p>
          */
         @NameInMap("CodecTag")
         public String codecTag;
 
         /**
          * <p>The tag string of the encoding format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[0][0][0][0]</p>
          */
         @NameInMap("CodecTagString")
         public String codecTagString;
 
         /**
          * <p>The codec time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001/48000</p>
          */
         @NameInMap("CodecTimeBase")
         public String codecTimeBase;
 
         /**
          * <p>The level of color reconstruction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700</p>
          */
         @NameInMap("ColorPrimaries")
         public String colorPrimaries;
 
         /**
          * <p>The color range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>700</p>
          */
         @NameInMap("ColorRange")
         public String colorRange;
 
         /**
          * <p>The color channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>R255 G83 B170</p>
          */
         @NameInMap("ColorTransfer")
         public String colorTransfer;
 
         /**
          * <p>The display aspect ratio (DAR).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16:9</p>
          */
         @NameInMap("Dar")
         public String dar;
 
         /**
-         * <p>The duration.</p>
+         * <p>The duration of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The frame rate.</p>
+         * <p>The frame rate of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
          * <p>Indicates whether the video stream contains bidirectional frames (B-frames). A value of 1 indicates that the video stream contains B-frames. A value of 0 indicates that the video stream does not contain B-frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HasBFrames")
         public String hasBFrames;
 
         /**
-         * <p>The latter number in the video resolution. The number indicates the video height.</p>
+         * <p>The height of the video stream in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
          * <p>The sequence number of the video stream. The value indicates the position of the video stream in all video streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Index")
         public String index;
 
         /**
          * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eng</p>
          */
         @NameInMap("Lang")
         public String lang;
 
         /**
          * <p>The codec level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41</p>
          */
         @NameInMap("Level")
         public String level;
 
         /**
-         * <p>The network bandwidth consumption.</p>
+         * <p>The network bandwidth that is consumed.</p>
          */
         @NameInMap("NetworkCost")
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost networkCost;
 
         /**
          * <p>The total number of frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("NumFrames")
         public String numFrames;
 
         /**
          * <p>The pixel format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuv420p</p>
          */
         @NameInMap("PixFmt")
         public String pixFmt;
 
         /**
          * <p>The codec profile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>High</p>
          */
         @NameInMap("Profile")
         public String profile;
 
         /**
-         * <p>The video rotation angle.</p>
+         * <p>The rotation angle of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180</p>
          */
         @NameInMap("Rotate")
         public String rotate;
 
         /**
          * <p>The sample aspect ratio (SAR).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1:1</p>
          */
         @NameInMap("Sar")
         public String sar;
 
         /**
          * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.042000</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/1000</p>
          */
         @NameInMap("Timebase")
         public String timebase;
 
         /**
-         * <p>The former number in the video resolution. The number indicates the video width.</p>
+         * <p>The width of the video in pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1920</p>
          */
         @NameInMap("Width")
         public String width;
@@ -1210,25 +1423,37 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties extends TeaModel {
         /**
-         * <p>The bitrate.</p>
+         * <p>The bitrate of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1630.045</p>
          */
         @NameInMap("Bitrate")
         public String bitrate;
 
         /**
-         * <p>The duration.</p>
+         * <p>The duration of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17.226000</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The file format.</p>
+         * <p>The format of the input media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuickTime/MOV</p>
          */
         @NameInMap("FileFormat")
         public String fileFormat;
 
         /**
-         * <p>The size of the file.</p>
+         * <p>The size of the image file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3509895</p>
          */
         @NameInMap("FileSize")
         public String fileSize;
@@ -1240,25 +1465,34 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesFormat format;
 
         /**
-         * <p>The frame rate.</p>
+         * <p>The frame rate of the media file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
          * <p>The height of the video. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
-         * <p>The stream information.</p>
+         * <p>The media streams that are contained in the input media file.</p>
          */
         @NameInMap("Streams")
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreams streams;
 
         /**
          * <p>The width of the video. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         @NameInMap("Width")
         public String width;
@@ -1345,18 +1579,27 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
     public static class QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJob extends TeaModel {
         /**
          * <p>Indicates whether the job is in asynchronous mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Async")
         public Boolean async;
 
         /**
-         * <p>The error code returned when the job fails.</p>
+         * <p>The error code returned if the job fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.JsonObjectFormatInvalid</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The time when the job was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2014-01-10T12:00:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -1369,46 +1612,62 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23ca1d184c0e4341e5b665e2a12****</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
-         * <p>The message sent by Message Service (MNS) to notify users of the job result.</p>
+         * <p>The message sent by MNS to notify you of the job result.</p>
          */
         @NameInMap("MNSMessageResult")
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobMNSMessageResult MNSMessageResult;
 
         /**
-         * <p>The error message returned when the job fails.</p>
+         * <p>The error message returned if the job fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The parameter ”*” does not conform to the JSON Object specification</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The ID of the MPS queue to which the job is added.</p>
+         * <p>The ID of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>88c6ca184c0e432bbf5b665e2a15****</p>
          */
         @NameInMap("PipelineId")
         public String pipelineId;
 
         /**
-         * <p>The information about the input file. For more information, see [AliyunProperties](~~29251~~).</p>
+         * <p>The information about the input file. For more information, see <a href="https://help.aliyun.com/document_detail/29251.html">AliyunProperties</a>.</p>
          */
         @NameInMap("Properties")
         public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobProperties properties;
 
         /**
-         * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   **Analyzing**: The job is being run.</p>
-         * <p>*   **Success**: The job is successful.</p>
-         * <p>*   **Fail**: The job fails.</p>
+         * <p>The status of the job.</p>
+         * <ul>
+         * <li><strong>Analyzing</strong>: The job is being run.</li>
+         * <li><strong>Success</strong>: The job is successful.</li>
+         * <li><strong>Fail</strong>: The job fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
          * <p>The custom data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testid-001</p>
          */
         @NameInMap("UserData")
         public String userData;

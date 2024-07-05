@@ -11,13 +11,16 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
     public QueryMediaWorkflowExecutionListResponseBodyMediaWorkflowExecutionList mediaWorkflowExecutionList;
 
     /**
-     * <p>The IDs of the execution instances that do not exist. null is returned if all specified execution instances exist.</p>
+     * <p>The IDs of the execution instances that do not exist.</p>
      */
     @NameInMap("NonExistRunIds")
     public QueryMediaWorkflowExecutionListResponseBodyNonExistRunIds nonExistRunIds;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D1D5C080-8E2F-5030-8AB4-13092F17631B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,19 +56,28 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
     public static class QueryMediaWorkflowExecutionListResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult extends TeaModel {
         /**
-         * <p>The error code returned when the MNS message fails to be sent. This parameter is not returned if the MNS message is sent.</p>
+         * <p>The error code returned if the MNS message fails to be sent. This parameter is not returned if the MNS message is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Topic/Queue config is empty, not send message</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The error message returned when the MNS message fails to be sent. This parameter is not returned if the MNS message is sent.</p>
+         * <p>The error message returned if the MNS message fails to be sent. This parameter is not returned if the MNS message is sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MessageConfigEmpty</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
          * <p>The ID of the message that indicates the MNS message is sent. This parameter is not returned if the MNS message fails to be sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4f3bc83233de4e2f81c7dade443e****</p>
          */
         @NameInMap("MessageId")
         public String messageId;
@@ -103,22 +115,32 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
     public static class QueryMediaWorkflowExecutionListResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivity extends TeaModel {
         /**
-         * <p>The error code returned when the method fails to be called.</p>
-         * <br>
-         * <p>*   This parameter is returned only when **Fail** is returned for the State parameter.</p>
-         * <p>*   ****</p>
+         * <p>The error code.</p>
+         * <ul>
+         * <li>This parameter is returned only if <strong>Fail</strong> is returned for the State parameter.</li>
+         * <li>This parameter is not returned if the method status is <strong>Success</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InvalidParameter.ResourceContentBad</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The time when the method ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-04-01T06:53:44Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The IDs of the jobs that are generated when the methods are called. For example, job IDs for the analysis, transcode, and snapshot methods.</p>
+         * <p>The IDs of the jobs that are generated when the methods are called, such as the job IDs for the analysis, transcode, and snapshot methods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2376030d9d0849399cd20e20f4f3****</p>
          */
         @NameInMap("JobId")
         public String jobId;
@@ -130,43 +152,62 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
         public QueryMediaWorkflowExecutionListResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionActivityListActivityMNSMessageResult MNSMessageResult;
 
         /**
-         * <p>The error message returned when the method fails to be called.</p>
-         * <br>
-         * <p>*   This parameter is returned only when **Fail** is returned for the State parameter.</p>
-         * <p>*   ****</p>
+         * <p>The error message.</p>
+         * <ul>
+         * <li>This parameter is returned only if <strong>Fail</strong> is returned for the State parameter.</li>
+         * <li>This parameter is not returned if the method status is <strong>Success</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>The resource operated InputFile is bad</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The name of the method. </p>
-         * <br>
-         * <p>>  The name of each method in a media workflow is unique.</p>
+         * <p>The name of the method.</p>
+         * <blockquote>
+         * <p>The name of each method in a media workflow is unique.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Start</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The time when the method is called.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-04-01T06:53:44Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The status of the method. Valid values:</p>
-         * <br>
-         * <p>*   Running: The method is being called.</p>
-         * <p>*   Success: The method is called.</p>
-         * <p>*   Fail: The method failed to be called.</p>
-         * <p>*   Skipped: The method is skipped.</p>
-         * <br>
-         * <p>>  For example, after the analysis is complete, the transcode method is called and high-definition and standard-definition transcoding jobs are created. The system determines whether to run the jobs based on the analysis result. If the resolution of the input video is low, the high-definition transcoding job may be skipped.</p>
+         * <p>The status of the workflow method. Valid values:</p>
+         * <ul>
+         * <li>Running: The method is being called.</li>
+         * <li>Success: The method is called.</li>
+         * <li>Fail: The method failed to be called.</li>
+         * <li>Skipped: The method is skipped.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For example, after the analysis is complete, the transcode method is called and high-definition and standard-definition transcoding jobs are created. The system determines whether to run the jobs based on the analysis result. If the resolution of the input video is low, the high-definition transcoding job may be skipped.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The methods that are supported in the media workflow. Valid values: Start, Snapshot, Transcode, Analysis, and Report. For more information, see [Methods supported for media workflows](~~68494~~).</p>
+         * <p>The methods that are supported in the media workflow. Valid values: Start, Snapshot, Transcode, Analysis, and Report. For more information, see <a href="https://help.aliyun.com/document_detail/68494.html">Methods supported for media workflows</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Start</p>
          */
         @NameInMap("Type")
         public String type;
@@ -272,18 +313,24 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
     public static class QueryMediaWorkflowExecutionListResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile extends TeaModel {
         /**
          * <p>The name of the OSS bucket in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The ID of the region in which the input file resides.</p>
+         * <p>The ID of the OSS region in which the input file resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mps-cn-shanghai</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
-         * <p>The name of the Object Storage Service (OSS) object that is used as the input file.</p>
+         * <p>The name of the OSS object that is used as the input file.</p>
          */
         @NameInMap("Object")
         public String object;
@@ -327,7 +374,10 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
         public QueryMediaWorkflowExecutionListResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInputInputFile inputFile;
 
         /**
-         * <p>The custom data.</p>
+         * <p>The user-defined data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example data ****</p>
          */
         @NameInMap("UserData")
         public String userData;
@@ -364,6 +414,9 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
         /**
          * <p>The time when the media workflow was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>016-04-01T06:53:43Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -375,38 +428,56 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
         public QueryMediaWorkflowExecutionListResponseBodyMediaWorkflowExecutionListMediaWorkflowExecutionInput input;
 
         /**
-         * <p>The ID of the media file. A media file contains all the information about a media workflow.</p>
+         * <p>The ID of the media asset. A media file contains all the information about a media workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512046582a924698a41e0f8b0d2b****</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
          * <p>The ID of the media workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93ab850b4f6f44eab54b6e91****81d4</p>
          */
         @NameInMap("MediaWorkflowId")
         public String mediaWorkflowId;
 
         /**
          * <p>The name of the media workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-mediaworkflow-****</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the execution instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48e33690ac19445488c706924321****</p>
          */
         @NameInMap("RunId")
         public String runId;
 
         /**
          * <p>The status of the media workflow. Valid values:</p>
-         * <br>
-         * <p>*   Running: The media workflow is running.</p>
-         * <p>*   Completed: The media workflow is complete.</p>
-         * <br>
-         * <p>>  Completed only indicates that the media workflow is complete. View the status of each method in the workflow, such as the transcode and snapshot methods, to check whether the method is called.</p>
-         * <br>
-         * <p>*   Fail: The media workflow fails.</p>
+         * <ul>
+         * <li>Running: The media workflow is running.</li>
+         * <li>Completed: The media workflow is complete.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Completed only indicates that the media workflow is complete. View the status of each method in the workflow, such as the transcode and snapshot methods, to check whether the method is called.</p>
+         * </blockquote>
+         * <ul>
+         * <li>Fail: The media workflow fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Completed</p>
          */
         @NameInMap("State")
         public String state;

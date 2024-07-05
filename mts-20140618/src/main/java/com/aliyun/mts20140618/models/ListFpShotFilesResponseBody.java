@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListFpShotFilesResponseBody extends TeaModel {
     /**
-     * <p>The media fingerprint files. For more information, see the "FpShotFile" section of the [Data types](~~29251~~) topic.</p>
+     * <p>The media fingerprint files. For more information, see the &quot;FpShotFile&quot; section of the <a href="https://help.aliyun.com/document_detail/29251.html">Data types</a> topic.</p>
      */
     @NameInMap("FpShotFileList")
     public ListFpShotFilesResponseBodyFpShotFileList fpShotFileList;
 
     /**
-     * <p>The token of the next page.</p>
+     * <p>The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ae0fd49c0840e14daf0d66a75b83****</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +60,27 @@ public class ListFpShotFilesResponseBody extends TeaModel {
     public static class ListFpShotFilesResponseBodyFpShotFileListFpShotFileInputFile extends TeaModel {
         /**
          * <p>The name of the OSS bucket in which the input file is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>The ID of the OSS region in which the input file resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-beijing</p>
          */
         @NameInMap("Location")
         public String location;
 
         /**
-         * <p>The name of the Object Storage Service (OSS) object that is used as the input file.</p>
+         * <p>The name of the OSS object that is used as the input file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-****.mp4</p>
          */
         @NameInMap("Object")
         public String object;
@@ -104,22 +119,37 @@ public class ListFpShotFilesResponseBody extends TeaModel {
     public static class ListFpShotFilesResponseBodyFpShotFileListFpShotFile extends TeaModel {
         /**
          * <p>The ID of the video file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41e6536e4f2250e2e9bf26cdea19****</p>
          */
         @NameInMap("FileId")
         public String fileId;
 
         /**
-         * <p>The information about the job input.</p>
+         * <p>The information about the input file.</p>
          */
         @NameInMap("InputFile")
         public ListFpShotFilesResponseBodyFpShotFileListFpShotFileInputFile inputFile;
 
         /**
-         * <p>The unique primary key of the video.</p>
+         * <p>The unique primary key of the input video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fb712a6890464059b1b2ea7c8647****</p>
          */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
+        /**
+         * <p>The time when the media fingerprint file was stored. The time follows the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * <blockquote>
+         * <p>This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-09-08T23:32:56Z</p>
+         */
         @NameInMap("StoreTime")
         public String storeTime;
 

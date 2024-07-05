@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteMediaTagResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>283DC68C-146F-4489-A2A1-2F88F1472A56</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -4,12 +4,24 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitIProductionJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>39f8e0bc005e4f309379701645f4****</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5210DBB0-E327-4D45-ADBC-0B83C8796E26</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ &quot;Code&quot;:&quot;Success&quot;, &quot;Details&quot;:[], &quot;FunctionName&quot;:&quot;ImageCartoonize&quot;, &quot;JobId&quot;:&quot;39f8e0bc005e4f309379701645f4****&quot;, &quot;Message&quot;:&quot;success&quot;, &quot;State&quot;:&quot;Success&quot;, &quot;Type&quot;:&quot;IProduction&quot; }</p>
+     */
     @NameInMap("Result")
     public String result;
 

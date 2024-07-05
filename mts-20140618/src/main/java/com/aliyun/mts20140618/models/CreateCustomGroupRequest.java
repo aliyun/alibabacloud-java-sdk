@@ -4,12 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>landmark</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
     @NameInMap("CustomGroupDescription")
     public String customGroupDescription;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CustomGroupName")
     public String customGroupName;
 

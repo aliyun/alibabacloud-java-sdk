@@ -4,21 +4,47 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SubmitIProductionJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ImageCartoonize</p>
+     */
     @NameInMap("FunctionName")
     public String functionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://example-****.oss-cn-shanghai.aliyuncs.com/example.mp4</p>
+     */
     @NameInMap("Input")
     public String input;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Model&quot;:&quot;gif&quot;}</p>
+     */
     @NameInMap("JobParams")
     public String jobParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ModelId")
     public String modelId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mns://125340688170****.mns.cn-beijing.aliyuncs.com/queues/example-pipeline</p>
+     */
     @NameInMap("NotifyUrl")
     public String notifyUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://example-****.oss-cn-shanghai.aliyuncs.com/iproduction/{source}-{timestamp}-{sequenceId}.srt</p>
+     */
     @NameInMap("Output")
     public String output;
 
@@ -28,6 +54,10 @@ public class SubmitIProductionJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>39f8e0bc005e4f309379701645f4****</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
@@ -37,9 +67,17 @@ public class SubmitIProductionJobRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("ScheduleParams")
     public String scheduleParams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

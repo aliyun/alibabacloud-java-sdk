@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListAllMediaBucketResponseBody extends TeaModel {
     /**
-     * <p>The list of returned media buckets.</p>
+     * <p>The media buckets returned.</p>
      */
     @NameInMap("MediaBucketList")
     public ListAllMediaBucketResponseBodyMediaBucketList mediaBucketList;
 
     /**
-     * <p>The identifier of the next page.</p>
+     * <p>The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P2Zqo1PLGhZdygo-ajSsjUX5zrBHCgXy6j4hEvv****</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>79760D91-D3CF-4165-****-B7E2836EF62A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,21 +60,31 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
     public static class ListAllMediaBucketResponseBodyMediaBucketListMediaBucket extends TeaModel {
         /**
          * <p>The name of the media bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-bucket-****</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
-         * <p>The settings of Object Storage Service (OSS) hotlink protection. For more information, see [Hotlink protection](~~31869~~).</p>
+         * <p>The settings of Object Storage Service (OSS) hotlink protection. For more information, see <a href="https://help.aliyun.com/document_detail/31869.html">Hotlink protection</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">http://www.example.com</a></p>
          */
         @NameInMap("Referer")
         public String referer;
 
         /**
          * <p>The type of the media bucket. Valid values:</p>
-         * <br>
-         * <p>*   Input: input media bucket</p>
-         * <p>*   Output: output media bucket</p>
+         * <ul>
+         * <li>Input: input media bucket</li>
+         * <li>Output: output media bucket</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Input</p>
          */
         @NameInMap("Type")
         public String type;

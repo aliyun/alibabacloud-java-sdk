@@ -6,16 +6,24 @@ import com.aliyun.tea.*;
 public class SubmitFpDBDeleteJobRequest extends TeaModel {
     /**
      * <p>The operation type. Valid values:</p>
-     * <br>
-     * <p>*   **Purge**: clears the media fingerprint library. If you set the DelType parameter to Purge, the content in the library is deleted, but the library is not deleted.</p>
-     * <p>*   **Delete**: deletes the media fingerprint library. If you set the DelType parameter to Delete, both the library and the content in the library are deleted.</p>
-     * <p>*   Default value: **Purge**.</p>
+     * <ul>
+     * <li><strong>Purge</strong>: clears the media fingerprint library. The content in the library is deleted, but the library is not deleted.</li>
+     * <li><strong>Delete</strong>: deletes the media fingerprint library. Both the library and its content are deleted.</li>
+     * <li>Default value: <strong>Purge</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Purge</p>
      */
     @NameInMap("DelType")
     public String delType;
 
     /**
-     * <p>The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.</p>
+     * <p>The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/170149.html">CreateFpShotDB</a> operation.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>88c6ca184c0e47098a5b665e2a12****</p>
      */
     @NameInMap("FpDBId")
     public String fpDBId;
@@ -27,7 +35,10 @@ public class SubmitFpDBDeleteJobRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the ApsaraVideo Media Processing (MPS) queue. This ID can be used to associate the job with a notification method. To view the MPS queue ID, log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.</p>
+     * <p>The ID of the ApsaraVideo Media Processing (MPS) queue. This ID can be used to associate the job with a notification method. To view the MPS queue ID, log on to the <strong>MPS console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Pipelines</strong> in the left-side navigation pane.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>fb712a6890464059b1b2ea7c8647****</p>
      */
     @NameInMap("PipelineId")
     public String pipelineId;
@@ -40,6 +51,9 @@ public class SubmitFpDBDeleteJobRequest extends TeaModel {
 
     /**
      * <p>The custom data. The value can contain letters and digits and can be up to 128 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example data</p>
      */
     @NameInMap("UserData")
     public String userData;

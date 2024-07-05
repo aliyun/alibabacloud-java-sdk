@@ -4,15 +4,27 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QuerySmarttagJobResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("JobStatus")
     public String jobStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7B117AF5-2A16-412C-B127-FA6175ED1AD0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Results")
     public QuerySmarttagJobResponseBodyResults results;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example UserData ****</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -54,9 +66,17 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     }
 
     public static class QuerySmarttagJobResponseBodyResultsResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;title&quot;:&quot;example-title-****&quot;}</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Meta</p>
+         */
         @NameInMap("Type")
         public String type;
 

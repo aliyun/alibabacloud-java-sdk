@@ -4,12 +4,24 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class TagCustomPersonRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CategoryDescription001-****</p>
+     */
     @NameInMap("CategoryDescription")
     public String categoryDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CategoryId001-****</p>
+     */
     @NameInMap("CategoryId")
     public String categoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CategoryNametest-****</p>
+     */
     @NameInMap("CategoryName")
     public String categoryName;
 
@@ -19,12 +31,24 @@ public class TagCustomPersonRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PersonDescriptiontest-****</p>
+     */
     @NameInMap("PersonDescription")
     public String personDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PersonId001-****</p>
+     */
     @NameInMap("PersonId")
     public String personId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PersonNametest-****</p>
+     */
     @NameInMap("PersonName")
     public String personName;
 

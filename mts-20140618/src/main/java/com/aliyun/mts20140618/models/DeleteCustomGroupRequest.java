@@ -4,9 +4,27 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomGroupRequest extends TeaModel {
+    /**
+     * <p>The custom type of the image library. Valid values:</p>
+     * <ul>
+     * <li>landmark: custom landmarks.</li>
+     * <li>object: custom objects.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>landmark</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <p>The ID of the custom image library.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CustomGroupId")
     public String customGroupId;
 

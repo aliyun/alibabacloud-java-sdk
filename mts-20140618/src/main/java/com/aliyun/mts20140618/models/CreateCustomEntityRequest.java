@@ -4,15 +4,34 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomEntityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>landmark</p>
+     */
     @NameInMap("Algorithm")
     public String algorithm;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{ &quot;finegrainName&quot;:&quot;examplName&quot; }</p>
+     */
     @NameInMap("CustomEntityInfo")
     public String customEntityInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CustomEntityName")
     public String customEntityName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CustomGroupId")
     public String customGroupId;
 

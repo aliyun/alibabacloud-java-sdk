@@ -16,6 +16,13 @@ public class DeleteWaterMarkTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the watermark template that you want to delete. To obtain the template ID, you can log on to the <strong>ApsaraVideo Media Processing (MPS) console</strong> and choose <strong>Global Settings</strong> &gt; <strong>Watermark Templates</strong> in the left-side navigation pane.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3780bd69b2b74540bc7b1096f564****</p>
+     */
     @NameInMap("WaterMarkTemplateId")
     public String waterMarkTemplateId;
 

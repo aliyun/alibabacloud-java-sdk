@@ -4,6 +4,12 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QuerySmarttagJobRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39f8e0bc005e4f309379701645f4****</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
@@ -13,6 +19,10 @@ public class QuerySmarttagJobRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;labelResultType&quot;:&quot;auto&quot;}</p>
+     */
     @NameInMap("Params")
     public String params;
 

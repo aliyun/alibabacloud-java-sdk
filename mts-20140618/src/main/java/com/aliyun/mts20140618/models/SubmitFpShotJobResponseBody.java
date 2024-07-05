@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SubmitFpShotJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the media fingerprint analysis job. We recommend that you keep this ID for subsequent operation calls.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2a0697e35a7342859f733a9190c4****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>
      */
     @NameInMap("RequestId")
     public String requestId;

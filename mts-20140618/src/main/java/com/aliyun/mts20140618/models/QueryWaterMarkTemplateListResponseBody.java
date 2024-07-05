@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
     /**
-     * <p>The watermark template IDs that do not exist. This parameter is not returned if all specified watermark templates are found.</p>
+     * <p>The IDs of the templates that do not exist.</p>
      */
     @NameInMap("NonExistWids")
     public QueryWaterMarkTemplateListResponseBodyNonExistWids nonExistWids;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17079AF5-6276-51A9-B755-D26594C93F3C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -72,37 +75,53 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
 
     public static class QueryWaterMarkTemplateListResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer extends TeaModel {
         /**
-         * <p>The horizontal offset of the watermark relative to the output video image. Default value: **0**. The default value indicates no offset. The value can be an integer or a decimal.</p>
-         * <br>
-         * <p>*   **Integer**: the vertical offset. This indicates the absolute position. Unit: pixel.</p>
-         * <p>*   **Decimal**: the ratio of the horizontal offset to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</p>
+         * <p>The horizontal offset of the watermark relative to the output video image. Default value: <strong>0</strong>. The default value indicates no offset. The value can be an integer or a decimal.</p>
+         * <ul>
+         * <li><strong>Integer</strong>: the vertical offset. This indicates the absolute position. Unit: pixel.</li>
+         * <li><strong>Decimal</strong>: the ratio of the horizontal offset to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0.51</p>
          */
         @NameInMap("Dx")
         public String dx;
 
         /**
-         * <p>The vertical offset of the watermark relative to the output video image. Default value: **0**. The default value indicates no offset. The value can be an integer or a decimal.</p>
-         * <br>
-         * <p>*   **Integer**: the vertical offset. This indicates the absolute position. Unit: pixel.</p>
-         * <p>*   **Decimal**: the ratio of the vertical offset to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</p>
+         * <p>The vertical offset of the watermark relative to the output video image. Default value: <strong>0</strong>. The default value indicates no offset. The value can be an integer or a decimal.</p>
+         * <ul>
+         * <li><strong>Integer</strong>: the vertical offset. This indicates the absolute position. Unit: pixel.</li>
+         * <li><strong>Decimal</strong>: the ratio of the vertical offset to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4</p>
          */
         @NameInMap("Dy")
         public String dy;
 
         /**
          * <p>The height of the watermark image in the output video. The value can be an integer or a decimal.</p>
-         * <br>
-         * <p>*   **Integer**: the height of the watermark image. This indicates the absolute position. Unit: pixel.</p>
-         * <p>*   **Decimal**: the ratio of the height of the watermark image to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</p>
+         * <ul>
+         * <li><strong>Integer</strong>: the height of the watermark image. This indicates the absolute position. Unit: pixel.</li>
+         * <li><strong>Decimal</strong>: the ratio of the height of the watermark image to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0.33</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
          * <p>The width of the watermark image in the output video. The value can be an integer or a decimal.</p>
-         * <br>
-         * <p>*   **Integer**: the width of the watermark image. This indicates the absolute position. Unit: pixel.</p>
-         * <p>*   **Decimal**: the ratio of the width of the watermark image to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</p>
+         * <ul>
+         * <li><strong>Integer</strong>: the width of the watermark image. This indicates the absolute position. Unit: pixel.</li>
+         * <li><strong>Decimal</strong>: the ratio of the width of the watermark image to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0.36</p>
          */
         @NameInMap("Width")
         public String width;
@@ -148,16 +167,23 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
 
     public static class QueryWaterMarkTemplateListResponseBodyWaterMarkTemplateListWaterMarkTemplateTimeline extends TeaModel {
         /**
-         * <p>The display duration of the watermark. Default value: **ToEND**. The default value indicates that the watermark is displayed until the video ends.</p>
+         * <p>The display duration of the watermark. Default value: <strong>ToEND</strong>. The default value indicates that the watermark is displayed until the video ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
          * <p>The beginning of the time range during which the watermark is displayed.</p>
-         * <br>
-         * <p>*   Unit: seconds.</p>
-         * <p>*   Default value: **0**.</p>
+         * <ul>
+         * <li>Unit: seconds.</li>
+         * <li>Default value: <strong>0</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Start")
         public String start;
@@ -188,61 +214,85 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
     public static class QueryWaterMarkTemplateListResponseBodyWaterMarkTemplateListWaterMarkTemplate extends TeaModel {
         /**
          * <p>The horizontal offset. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Dx")
         public String dx;
 
         /**
          * <p>The vertical offset. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Dy")
         public String dy;
 
         /**
          * <p>The height of the watermark image. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
          * <p>The ID of the watermark template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3780bd69b2b74540bc7b1096f564****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The name of the watermark template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-watermark</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The values of the Height, Width, Dx, and Dy parameters relative to the reference edges. If the values of the Height, Width, Dx, and Dy parameters are decimals between 0 and 1, the values are calculated by referring to the following edges in sequence:</p>
-         * <br>
-         * <p>*   **Width**: the width edge.</p>
-         * <p>*   **Height**: the height edge.</p>
-         * <p>*   **Long**: the long edge.</p>
-         * <p>*   **Short**: the short edge.</p>
+         * <ul>
+         * <li><strong>Width</strong>: the width edge.</li>
+         * <li><strong>Height</strong>: the height edge.</li>
+         * <li><strong>Long</strong>: the long edge.</li>
+         * <li><strong>Short</strong>: the short edge.</li>
+         * </ul>
          */
         @NameInMap("RatioRefer")
         public QueryWaterMarkTemplateListResponseBodyWaterMarkTemplateListWaterMarkTemplateRatioRefer ratioRefer;
 
         /**
          * <p>The position of the watermark. Valid values:</p>
-         * <br>
-         * <p>*   **TopRight**: the upper-right corner.</p>
-         * <p>*   **TopLeft**: the upper-left corner.</p>
-         * <p>*   **BottomRight**: the lower-right corner.</p>
-         * <p>*   **BottomLeft**: the lower-left corner.</p>
+         * <ul>
+         * <li><strong>TopRight</strong>: the upper-right corner.</li>
+         * <li><strong>TopLeft</strong>: the upper-left corner.</li>
+         * <li><strong>BottomRight</strong>: the lower-right corner.</li>
+         * <li><strong>BottomLeft</strong>: the lower-left corner.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>TopRight</p>
          */
         @NameInMap("ReferPos")
         public String referPos;
 
         /**
          * <p>The status of the watermark template. Valid values: Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: The watermark template is normal.</p>
-         * <p>*   **Deleted**: The watermark template is deleted.</p>
+         * <ul>
+         * <li><strong>Normal</strong>: The watermark template is normal.</li>
+         * <li><strong>Deleted</strong>: The watermark template is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("State")
         public String state;
@@ -255,17 +305,25 @@ public class QueryWaterMarkTemplateListResponseBody extends TeaModel {
 
         /**
          * <p>The type of the watermark. Valid values:</p>
-         * <br>
-         * <p>*   Image, and</p>
-         * <p>*   Text.</p>
-         * <br>
-         * <p>>  Only watermarks of the **Image** type are supported.</p>
+         * <ul>
+         * <li>Image: an image watermark.</li>
+         * <li>Text: a text watermark.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only watermarks of the <strong>Image</strong> type are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Image</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The width of the watermark image. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         @NameInMap("Width")
         public String width;

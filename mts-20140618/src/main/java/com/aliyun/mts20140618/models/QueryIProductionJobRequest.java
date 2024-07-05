@@ -4,6 +4,10 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class QueryIProductionJobRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>88c6ca184c0e432bbf5b665e2a15****</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

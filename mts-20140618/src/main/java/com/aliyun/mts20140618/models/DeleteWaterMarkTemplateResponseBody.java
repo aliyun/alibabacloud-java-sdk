@@ -4,9 +4,21 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DeleteWaterMarkTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>030E2671-806A-52AF-A93C-DA8E308603A6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the deleted watermark template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3780bd69b2b74540bc7b1096f564****</p>
+     */
     @NameInMap("WaterMarkTemplateId")
     public String waterMarkTemplateId;
 

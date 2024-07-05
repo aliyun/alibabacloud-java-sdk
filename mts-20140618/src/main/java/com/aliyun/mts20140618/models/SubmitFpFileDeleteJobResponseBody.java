@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class SubmitFpFileDeleteJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the deleted media file.</p>
+     * <p>The job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39f8e0bc005e4f309379701645f4****</p>
      */
     @NameInMap("JobId")
     public String jobId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D127C68E-F1A1-4CE5-A874-8FF724881A12</p>
      */
     @NameInMap("RequestId")
     public String requestId;

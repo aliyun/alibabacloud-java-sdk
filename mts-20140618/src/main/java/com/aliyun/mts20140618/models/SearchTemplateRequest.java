@@ -4,6 +4,15 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class SearchTemplateRequest extends TeaModel {
+    /**
+     * <p>The name prefix based on which you want to search for templates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S00000001</p>
+     */
+    @NameInMap("NamePrefix")
+    public String namePrefix;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -11,16 +20,23 @@ public class SearchTemplateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   A maximum of **100** entries can be returned on each page.</p>
-     * <p>*   Default value: **10**.</p>
+     * <p>The size of each page set during the result paging query.</p>
+     * <ul>
+     * <li>Upper limit: 100.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -33,11 +49,15 @@ public class SearchTemplateRequest extends TeaModel {
 
     /**
      * <p>The status of the custom transcoding templates that you want to query.</p>
-     * <br>
-     * <p>*   **All**: All custom transcoding templates are queried.</p>
-     * <p>*   **normal**: Normal custom transcoding templates are queried.</p>
-     * <p>*   **Deleted**: Deleted custom transcoding templates are queried.</p>
-     * <p>*   Default value: **All**.</p>
+     * <ul>
+     * <li><strong>All</strong>: All custom transcoding templates are queried.</li>
+     * <li><strong>Normal</strong>: Normal custom transcoding templates are queried.</li>
+     * <li><strong>Deleted</strong>: Deleted custom transcoding templates are queried.</li>
+     * <li>Default value: <strong>All</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Normal</p>
      */
     @NameInMap("State")
     public String state;
@@ -45,6 +65,14 @@ public class SearchTemplateRequest extends TeaModel {
     public static SearchTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTemplateRequest self = new SearchTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchTemplateRequest setNamePrefix(String namePrefix) {
+        this.namePrefix = namePrefix;
+        return this;
+    }
+    public String getNamePrefix() {
+        return this.namePrefix;
     }
 
     public SearchTemplateRequest setOwnerAccount(String ownerAccount) {

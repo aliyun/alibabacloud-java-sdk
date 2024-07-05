@@ -5,22 +5,32 @@ import com.aliyun.tea.*;
 
 public class ListJobRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2014-01-11T12:00:00Z</p>
      */
     @NameInMap("EndOfJobCreatedTimeRange")
     public String endOfJobCreatedTimeRange;
 
     /**
-     * <p>The maximum number of media workflow execution instances to return on each page.</p>
-     * <br>
-     * <p>*   Default value: **10**.</p>
-     * <p>*   Valid values: **1 to 100**.</p>
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li>Default value: <strong>10</strong>.</li>
+     * <li>Valid values: <strong>1 to 100</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaximumPageSize")
     public Long maximumPageSize;
 
     /**
-     * <p>The token that is used to retrieve the next page of the query results. You do not need to specify this parameter in the first request. The response to the first request contains this parameter, which you add to the next request.</p>
+     * <p>The token that is used to retrieve the next page of the query results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextPageToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16f01ad6175e4230ac42bb5182cd****</p>
      */
     @NameInMap("NextPageToken")
     public String nextPageToken;
@@ -32,7 +42,10 @@ public class ListJobRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the MPS queue. To view the ID of the MPS queue, log on to the [MPS console](https://mps.console.aliyun.com/overview) and choose **Global Settings** > **Pipelines** in the left-side navigation pane.</p>
+     * <p>The ID of the MPS queue to which the job is submitted. To obtain the ID of an MPS queue, you can log on to the <a href="https://mps.console.aliyun.com/overview">MPS console</a> and choose <strong>Global Settings</strong> &gt; <strong>MPS Queue and Callback</strong> in the left-side navigation pane.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>88c6ca184c0e424d5w5b665e2a12****</p>
      */
     @NameInMap("PipelineId")
     public String pipelineId;
@@ -44,20 +57,27 @@ public class ListJobRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2014-01-10T12:00:00Z</p>
      */
     @NameInMap("StartOfJobCreatedTimeRange")
     public String startOfJobCreatedTimeRange;
 
     /**
-     * <p>The status of the transcoding job. Default value: **All**. Valid values:</p>
-     * <br>
-     * <p>*   **All**: All statuses.</p>
-     * <p>*   **Submitted**: The job is submitted.</p>
-     * <p>*   **Transcoding**: The job is being transcoded.</p>
-     * <p>*   **TranscodeSuccess**: Transcoding is successful.</p>
-     * <p>*   **TranscodeFail**: Transcoding failed.</p>
-     * <p>*   **TranscodeCancelled**: Transcoding is canceled.</p>
+     * <p>The state of the transcoding job. Default value: <strong>All</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>All</strong></li>
+     * <li><strong>Submitted</strong></li>
+     * <li><strong>Transcoding</strong></li>
+     * <li><strong>TranscodeSuccess</strong></li>
+     * <li><strong>TranscodeFail</strong></li>
+     * <li><strong>TranscodeCancelled</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
      */
     @NameInMap("State")
     public String state;

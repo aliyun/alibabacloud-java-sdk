@@ -12,6 +12,9 @@ public class UpdatePipelineResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1FE0F96B-544D-4244-9D83-DFCFB0E5A231</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class UpdatePipelineResponseBody extends TeaModel {
     public static class UpdatePipelineResponseBodyPipelineNotifyConfig extends TeaModel {
         /**
          * <p>The tags of the messages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mts-test</p>
          */
         @NameInMap("MqTag")
         public String mqTag;
 
         /**
          * <p>The queue of messages that are received.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example1,example2</p>
          */
         @NameInMap("MqTopic")
         public String mqTopic;
 
         /**
          * <p>The queue that is created in MNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-queue-****</p>
          */
         @NameInMap("QueueName")
         public String queueName;
 
         /**
          * <p>The topic that is created in MNS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-topic-****</p>
          */
         @NameInMap("Topic")
         public String topic;
@@ -104,12 +119,18 @@ public class UpdatePipelineResponseBody extends TeaModel {
     public static class UpdatePipelineResponseBodyPipeline extends TeaModel {
         /**
          * <p>The ID of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d1ce4d3efcb549419193f50f1fcd****</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The new name of the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-pipeline-****</p>
          */
         @NameInMap("Name")
         public String name;
@@ -122,39 +143,53 @@ public class UpdatePipelineResponseBody extends TeaModel {
 
         /**
          * <p>The quota that is allocated to the MPS queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("QuotaAllocate")
         public Long quotaAllocate;
 
         /**
          * <p>The role that is assigned to the current RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunMTSExampleRole</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
-         * <p>The type of the MPS queue. Default value: **Standard**. Valid values:</p>
-         * <br>
-         * <p>*   **Boost**: MPS queue with transcoding speed boosted.</p>
-         * <p>*   **Standard**: standard MPS queue.</p>
-         * <p>*   **NarrowBandHDV2**: MPS queue that supports Narrowband HD™ 2.0.</p>
-         * <p>*   **AIVideoCover**: MPS queue for intelligent snapshot capture.</p>
-         * <p>*   **AIVideoFPShot**: MPS queue for media fingerprinting.</p>
-         * <p>*   **AIVideoCensor**: MPS queue for automated review.</p>
-         * <p>*   **AIVideoMCU**: MPS queue for smart tagging.</p>
-         * <p>*   **AIVideoSummary**: MPS queue for video synopsis.</p>
-         * <p>*   **AIVideoPorn**: MPS queue for pornography detection in videos.</p>
-         * <p>*   **AIAudioKWS**: MPS queue for keyword recognition in audio.</p>
-         * <p>*   **AIAudioASR**: MPS queue for speech-to-text conversion.</p>
+         * <p>The type of the MPS queue. Default value: <strong>Standard</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>Boost</strong>: MPS queue with transcoding speed boosted</li>
+         * <li><strong>Standard</strong>: standard MPS queue</li>
+         * <li><strong>NarrowBandHDV2</strong>: MPS queue that supports Narrowband HD 2.0</li>
+         * <li><strong>AIVideoCover</strong>: MPS queue for intelligent snapshot capture</li>
+         * <li><strong>AIVideoFPShot</strong>: MPS queue for media fingerprinting</li>
+         * <li><strong>AIVideoCensor</strong>: MPS queue for automated review</li>
+         * <li><strong>AIVideoMCU</strong>: MPS queue for smart tagging</li>
+         * <li><strong>AIVideoSummary</strong>: MPS queue for video synopsis</li>
+         * <li><strong>AIVideoPorn</strong>: MPS queue for pornography detection in videos</li>
+         * <li><strong>AIAudioKWS</strong>: MPS queue for keyword recognition in audio</li>
+         * <li><strong>AIAudioASR</strong>: MPS queue for speech-to-text conversion</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         @NameInMap("Speed")
         public String speed;
 
         /**
-         * <p>The status of the pipeline. Valid values:</p>
-         * <br>
-         * <p>*   **Active**: The MPS queue is active.</p>
-         * <p>*   **Paused**: The MPS queue is paused.</p>
+         * <p>The state of the MPS queue. Valid values:</p>
+         * <ul>
+         * <li><strong>Active</strong>: The MPS queue is active.</li>
+         * <li><strong>Paused</strong>: The MPS queue is paused.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Paused</p>
          */
         @NameInMap("State")
         public String state;

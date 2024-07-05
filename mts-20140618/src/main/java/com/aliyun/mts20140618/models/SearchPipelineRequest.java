@@ -11,16 +11,23 @@ public class SearchPipelineRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   A maximum of **100** entries can be returned on each page.</p>
-     * <p>*   Default value: **10**.</p>
+     * <ul>
+     * <li>A maximum of <strong>100</strong> entries can be returned on each page.</li>
+     * <li>Default value: <strong>10</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -33,11 +40,15 @@ public class SearchPipelineRequest extends TeaModel {
 
     /**
      * <p>The status of the MPS queues that you want to query. If you leave this parameter empty, all MPS queues are queried.</p>
-     * <br>
-     * <p>*   **All**: All MPS queues are queried.</p>
-     * <p>*   **Active**: Active MPS queues are queried.</p>
-     * <p>*   **Paused**: Paused MPS queues are queried.</p>
-     * <p>*   Default value: **All**.</p>
+     * <ul>
+     * <li><strong>All</strong>: queries all MPS queues.</li>
+     * <li><strong>Active</strong>: queries the MPS queues that are active.</li>
+     * <li><strong>Paused</strong>: queues the MPS queues that are paused.</li>
+     * <li>Default value: <strong>All</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Paused</p>
      */
     @NameInMap("State")
     public String state;

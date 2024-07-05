@@ -4,6 +4,10 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class TagCustomPersonResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FD8B5B8C-0C3D-5776-B3B1-EE6AD11F905A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

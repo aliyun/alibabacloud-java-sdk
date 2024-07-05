@@ -6,42 +6,62 @@ import com.aliyun.tea.*;
 public class QueryMediaListRequest extends TeaModel {
     /**
      * <p>Specifies whether to include media information in the returned result.</p>
-     * <br>
-     * <p>*   Valid values: true and false.</p>
-     * <p>*   Default value: **false**.</p>
+     * <ul>
+     * <li>Valid values: true and false.</li>
+     * <li>Default value: <strong>false</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeMediaInfo")
     public Boolean includeMediaInfo;
 
     /**
      * <p>Specifies whether to include playback information in the returned result.</p>
-     * <br>
-     * <p>*   Valid values: true and false.</p>
-     * <p>*   Default value: **false**.</p>
+     * <ul>
+     * <li>Valid values: true and false.</li>
+     * <li>Default value: <strong>false</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludePlayList")
     public Boolean includePlayList;
 
     /**
      * <p>Specifies whether to include snapshot information in the returned result.</p>
-     * <br>
-     * <p>*   Valid values: true and false.</p>
-     * <p>*   Default value: **false**.</p>
+     * <ul>
+     * <li>Valid values: true and false.</li>
+     * <li>Default value: <strong>false</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeSnapshotList")
     public Boolean includeSnapshotList;
 
     /**
      * <p>Specifies whether to include summaries in the returned result.</p>
-     * <br>
-     * <p>*   Valid values: true and false.</p>
-     * <p>*   Default value: **false**.</p>
+     * <ul>
+     * <li>Valid values: true and false.</li>
+     * <li>Default value: <strong>false</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IncludeSummaryList")
     public Boolean includeSummaryList;
 
     /**
-     * <p>The IDs of the media files. To obtain the ID of a media file, you can perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click Manage. The ID of the video is displayed on the Basics tab. Separate multiple IDs with commas (,). You can query up to 10 media files at a time.</p>
+     * <p>The IDs of the media files. To obtain the ID of a media file, you can perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose <strong>Media Management</strong> &gt; <strong>Media List</strong>. Find the required video and click Manage. The ID of the video is displayed on the Basics tab. Separate multiple IDs with commas (,). You can query up to 10 media files at a time.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3e1cd21131a94525be55acf65888****,e26cfa29e784402388463f61dbec****</p>
      */
     @NameInMap("MediaIds")
     public String mediaIds;

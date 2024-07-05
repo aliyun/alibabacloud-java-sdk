@@ -6,11 +6,16 @@ import com.aliyun.tea.*;
 public class AddMediaWorkflowRequest extends TeaModel {
     /**
      * <p>The name of the media workflow.</p>
-     * <br>
-     * <p>*   The value cannot be empty.</p>
-     * <p>*   The name cannot be the same as that of an existing media workflow within the current Alibaba Cloud account.</p>
-     * <p>*   The name can be up to 64 characters in length.</p>
-     * <p>*   The name can contain only UTF-8 characters.</p>
+     * <ul>
+     * <li>The value cannot be empty.</li>
+     * <li>The name cannot be the same as that of an existing media workflow within the current Alibaba Cloud account.</li>
+     * <li>The name can be up to 64 characters in length.</li>
+     * <li>The value must be encoded in the UTF-8 format.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mediaworkflow-example</p>
      */
     @NameInMap("Name")
     public String name;
@@ -28,16 +33,24 @@ public class AddMediaWorkflowRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The topology of the media workflow. The value must be a JSON object that contains the activity list and activity dependencies. For more information, see the **Sample topology** section of this topic.</p>
+     * <p>The topology of the media workflow. The value must be a JSON object that contains the activities and activity dependencies. For more information, see the <strong>Sample topology</strong> section of this topic.</p>
+     * <blockquote>
+     * <p> The Object Storage Service (OSS) bucket must reside in the same region as your MPS service.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Topology")
     public String topology;
 
     /**
-     * <p>The trigger mode of the media workflow. Valid values:</p>
-     * <br>
-     * <p>*   **OssAutoTrigger**: The media workflow is automatically triggered.</p>
-     * <p>*   **NotInAuto**: The media workflow is not automatically triggered.</p>
+     * <p>The triggering mode of the media workflow. Valid values:</p>
+     * <ul>
+     * <li><strong>OssAutoTrigger</strong>: The media workflow is automatically triggered.</li>
+     * <li><strong>NotInAuto</strong>: The media workflow is not automatically triggered.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OssAutoTrigger</p>
      */
     @NameInMap("TriggerMode")
     public String triggerMode;

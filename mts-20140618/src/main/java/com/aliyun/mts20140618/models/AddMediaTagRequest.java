@@ -4,6 +4,16 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class AddMediaTagRequest extends TeaModel {
+    /**
+     * <p>The ID of the media file to which you want to add tags.</p>
+     * <blockquote>
+     * <p>To obtain the ID of a media file, you can call the <a href="https://help.aliyun.com/document_detail/44458.html">AddMedia</a> operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose <strong>Media Management</strong> &gt; <strong>Media List</strong>. Find the file that you want to manage and click <strong>Manage</strong> in the Actions column. The ID of the file is displayed on the Basics tab.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3e6149d5a8c944c09b1a8d2dc3e4****</p>
+     */
     @NameInMap("MediaId")
     public String mediaId;
 
@@ -19,6 +29,12 @@ public class AddMediaTagRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag that you want to add to the medial file. The value is encoded in UTF-8 and can be up to 32 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tag1</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
