@@ -4,15 +4,29 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class StopStreamRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32388487****92997-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>31000000*****0000002</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-12T10:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

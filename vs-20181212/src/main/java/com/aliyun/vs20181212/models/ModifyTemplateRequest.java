@@ -4,66 +4,140 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ModifyTemplateRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
+     */
     @NameInMap("Callback")
     public String callback;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hls</p>
+     */
     @NameInMap("FileFormat")
     public String fileFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
+     */
     @NameInMap("Flv")
     public String flv;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
+     */
     @NameInMap("HlsM3u8")
     public String hlsM3u8;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/record/{StreamName}/{UnixTimestamp}_{Sequence}</p>
+     */
     @NameInMap("HlsTs")
     public String hlsTs;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>323*****998-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("Interval")
     public Long interval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}_ondemand.jpg</p>
+     */
     @NameInMap("JpgOnDemand")
     public String jpgOnDemand;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/snapshot/{AppName}/{StreamName}.jpg</p>
+     */
     @NameInMap("JpgOverwrite")
     public String jpgOverwrite;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/snapshot/{AppName}/{StreamName}/{UnixTimestamp}.jpg</p>
+     */
     @NameInMap("JpgSequence")
     public String jpgSequence;
 
+    /**
+     * <strong>example:</strong>
+     * <p>osspath/record/{StreamName}/{EscapedStartTime}_{EscapedEndTime}</p>
+     */
     @NameInMap("Mp4")
     public String mp4;
 
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bucketname</p>
+     */
     @NameInMap("OssBucket")
     public String ossBucket;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-cn-qingdao.aliyuncs.com</p>
+     */
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss-prefix</p>
+     */
     @NameInMap("OssFilePrefix")
     public String ossFilePrefix;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Retention")
     public Long retention;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;Fps&quot;:25,&quot;Gop&quot;:50,&quot;Height&quot;:720,&quot;VideoCodec&quot;:&quot;h264&quot;,&quot;Width&quot;:1280,&quot;Name&quot;:&quot;sd&quot;,&quot;VideoBitrate&quot;:800}]</p>
+     */
     @NameInMap("TransConfigsJSON")
     public String transConfigsJSON;
 
+    /**
+     * <strong>example:</strong>
+     * <p>auto</p>
+     */
     @NameInMap("Trigger")
     public String trigger;
 

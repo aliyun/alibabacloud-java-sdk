@@ -13,6 +13,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("MaintainTime")
     public String maintainTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 

@@ -4,12 +4,22 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchStopDevicesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32388487****92996</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-14T23:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

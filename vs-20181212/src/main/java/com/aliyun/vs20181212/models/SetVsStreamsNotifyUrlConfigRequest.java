@@ -4,15 +4,35 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class SetVsStreamsNotifyUrlConfigRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ocs*****ace</p>
+     */
     @NameInMap("AuthKey")
     public String authKey;
 
+    /**
+     * <strong>example:</strong>
+     * <p>type_a</p>
+     */
     @NameInMap("AuthType")
     public String authType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://xxx.com/xx">http://xxx.com/xx</a></p>
+     */
     @NameInMap("NotifyUrl")
     public String notifyUrl;
 

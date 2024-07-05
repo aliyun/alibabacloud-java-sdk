@@ -4,21 +4,45 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ResumeVsStreamRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("ControlStreamAction")
     public String controlStreamAction;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>publisher</p>
+     */
     @NameInMap("LiveStreamType")
     public String liveStreamType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxxStream</p>
+     */
     @NameInMap("StreamName")
     public String streamName;
 

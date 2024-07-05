@@ -4,18 +4,38 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>31000000****00000001</p>
+     */
     @NameInMap("GbId")
     public String gbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.10.10.10</p>
+     */
     @NameInMap("GbIp")
     public String gbIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5060</p>
+     */
     @NameInMap("GbPort")
     public Long gbPort;
 
+    /**
+     * <strong>example:</strong>
+     * <p>33763****77224964-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,27 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsTopDomainsByFlowRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2018-12-10T18:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("Limit")
     public Long limit;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-12T10:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

@@ -7,18 +7,38 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     @NameInMap("OnlineInfo")
     public DescribeVsStreamsOnlineListResponseBodyOnlineInfo onlineInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B31FC4AD-3592-573E-8063-878F722B322A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -76,30 +96,66 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
     }
 
     public static class DescribeVsStreamsOnlineListResponseBodyOnlineInfoLiveStreamOnlineInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxApp</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>push.example.com</p>
+         */
         @NameInMap("PublishDomain")
         public String publishDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2015-12-02T06:58:04Z</p>
+         */
         @NameInMap("PublishTime")
         public String publishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>edge</p>
+         */
         @NameInMap("PublishType")
         public String publishType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rtmp://example.com/xchen</p>
+         */
         @NameInMap("PublishUrl")
         public String publishUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>testxchen_small</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("TranscodeId")
         public String transcodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>no</p>
+         */
         @NameInMap("Transcoded")
         public String transcoded;
 

@@ -7,18 +7,38 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     @NameInMap("Channels")
     public java.util.List<DescribeDeviceChannelsResponseBodyChannels> channels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageCount")
     public Long pageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4641C72D-462E-4AEA-8485-FC267AF90B0A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,27 +96,55 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceChannelsResponseBodyChannels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ChannelId")
         public Long channelId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("DeviceStatus")
         public String deviceStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3100000****000000002</p>
+         */
         @NameInMap("GbId")
         public String gbId;
 
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("Params")
         public String params;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
+         */
         @NameInMap("StreamId")
         public String streamId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
         @NameInMap("StreamStatus")
         public String streamStatus;
 

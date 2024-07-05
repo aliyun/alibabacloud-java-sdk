@@ -4,12 +4,26 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceGatewayRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.0.1</p>
+     */
     @NameInMap("ClientIp")
     public String clientIp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("Expire")
     public Long expire;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>24611****70597051-cn-beijing</p>
+     */
     @NameInMap("Id")
     public String id;
 

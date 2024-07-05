@@ -4,21 +4,41 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainPvDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-12T15:59:59Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("PvDataInterval")
     public DescribeVsDomainPvDataResponseBodyPvDataInterval pvDataInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-11-22T00:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +96,17 @@ public class DescribeVsDomainPvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainPvDataResponseBodyPvDataIntervalUsageData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-22T00:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Value")
         public String value;
 

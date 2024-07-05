@@ -4,21 +4,47 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountStatResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("GroupLimit")
     public Long groupLimit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("GroupNum")
     public Long groupNum;
 
+    /**
+     * <p>ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3238848****092996</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("TemplateLimit")
     public Long templateLimit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("TemplateNum")
     public Long templateNum;
 

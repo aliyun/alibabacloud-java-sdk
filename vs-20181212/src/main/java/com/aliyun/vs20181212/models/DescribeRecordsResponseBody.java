@@ -4,24 +4,48 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2018-12-10T11:00:00Z</p>
+     */
     @NameInMap("NextStartTime")
     public String nextStartTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageCount")
     public Long pageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     @NameInMap("Records")
     public java.util.List<DescribeRecordsResponseBodyRecords> records;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -87,42 +111,94 @@ public class DescribeRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordsResponseBodyRecords extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-23T18:33:48</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hls</p>
+         */
         @NameInMap("FileFormat")
         public String fileFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2be2a673-6033-4874-b6f2-f2bc0a1*****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my_oss_bucket</p>
+         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss-cn-qingdao.aliyuncs.com</p>
+         */
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</p>
+         */
         @NameInMap("OssObject")
         public String ossObject;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-11-23T18:19:32</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
+         */
         @NameInMap("StreamId")
         public String streamId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>388*****204-cn-qingdao</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>record</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8">http://my_oss_bucket.oss-cn-qingdao.aliyuncs.com/record/live/310*****007/2021-11-23-18-19-38_2021-11-23-18-33-48.m3u8</a></p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("Width")
         public Long width;
 

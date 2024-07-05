@@ -4,15 +4,33 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BindPurchasedDeviceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3939*****6580539-cn-qingdao</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3484*****8732174-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
+     */
     @NameInMap("Region")
     public String region;
 

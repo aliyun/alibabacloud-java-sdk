@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeParentPlatformRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>359*****374-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 

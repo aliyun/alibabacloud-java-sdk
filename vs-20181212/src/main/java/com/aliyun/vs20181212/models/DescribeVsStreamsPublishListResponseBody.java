@@ -4,21 +4,41 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3000</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("PublishInfo")
     public DescribeVsStreamsPublishListResponseBodyPublishInfo publishInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>119F7639-4646-51A4-B6C1-300D391C0104</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -76,42 +96,94 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
     }
 
     public static class DescribeVsStreamsPublishListResponseBodyPublishInfoLiveStreamPublishInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>xxxApp</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
+         */
         @NameInMap("ClientAddr")
         public String clientAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
+         */
         @NameInMap("EdgeNodeAddr")
         public String edgeNodeAddr;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("PublishDomain")
         public String publishDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-06-29T19:00:00Z</p>
+         */
         @NameInMap("PublishTime")
         public String publishTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>center</p>
+         */
         @NameInMap("PublishType")
         public String publishType;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com/xxxApp/3402000****320000001.m3u8">https://example.aliyundoc.com/xxxApp/3402000****320000001.m3u8</a></p>
+         */
         @NameInMap("PublishUrl")
         public String publishUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2016-06-29T19:00:00Z</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xxxStream</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://example.aliyundoc.com/xxxApp/3402000****320000001.m3u8">https://example.aliyundoc.com/xxxApp/3402000****320000001.m3u8</a></p>
+         */
         @NameInMap("StreamUrl")
         public String streamUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3888920****8138204-cn-qingdao</p>
+         */
         @NameInMap("TranscodeId")
         public String transcodeId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>yes</p>
+         */
         @NameInMap("Transcoded")
         public String transcoded;
 

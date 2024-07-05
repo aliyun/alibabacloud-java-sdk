@@ -4,6 +4,10 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("SnapshotValue")
         public String snapshotValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

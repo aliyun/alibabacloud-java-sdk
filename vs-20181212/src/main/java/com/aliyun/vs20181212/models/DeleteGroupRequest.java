@@ -4,9 +4,19 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DeleteGroupRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33763950751395843</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 

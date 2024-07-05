@@ -4,39 +4,81 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ModifyGroupRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://example.com/callback">http://example.com/callback</a></p>
+     */
     @NameInMap("Callback")
     public String callback;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32388487739092994-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gb28181</p>
+     */
     @NameInMap("InProtocol")
     public String inProtocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("LazyPull")
     public Boolean lazyPull;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myGroup</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>flv,rtmp,hls</p>
+     */
     @NameInMap("OutProtocol")
     public String outProtocol;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>myplay.com</p>
+     */
     @NameInMap("PlayDomain")
     public String playDomain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mypush.com</p>
+     */
     @NameInMap("PushDomain")
     public String pushDomain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
+     */
     @NameInMap("Region")
     public String region;
 

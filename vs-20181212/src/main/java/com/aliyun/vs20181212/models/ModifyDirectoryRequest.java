@@ -7,6 +7,12 @@ public class ModifyDirectoryRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>399*****488-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 

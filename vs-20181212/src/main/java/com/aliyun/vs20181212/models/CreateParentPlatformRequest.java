@@ -4,36 +4,77 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateParentPlatformRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoStart")
     public Boolean autoStart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ClientAuth")
     public Boolean clientAuth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin123</p>
+     */
     @NameInMap("ClientPassword")
     public String clientPassword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>user01</p>
+     */
     @NameInMap("ClientUsername")
     public String clientUsername;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31000*****2170123451</p>
+     */
     @NameInMap("GbId")
     public String gbId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.10.10.10</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5060</p>
+     */
     @NameInMap("Port")
     public Long port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gb28181</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 

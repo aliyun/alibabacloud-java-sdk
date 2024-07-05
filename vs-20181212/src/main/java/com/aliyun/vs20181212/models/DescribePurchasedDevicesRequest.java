@@ -4,9 +4,17 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedDevicesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>348*****174-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4070*****1132-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
@@ -16,21 +24,45 @@ public class DescribePurchasedDevicesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("SortDirection")
     public String sortDirection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dome</p>
+     */
     @NameInMap("SubType")
     public String subType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ipc</p>
+     */
     @NameInMap("Type")
     public String type;
 

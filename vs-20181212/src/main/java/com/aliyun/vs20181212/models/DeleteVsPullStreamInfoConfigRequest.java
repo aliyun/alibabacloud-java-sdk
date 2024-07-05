@@ -4,15 +4,33 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DeleteVsPullStreamInfoConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxStream</p>
+     */
     @NameInMap("StreamName")
     public String streamName;
 

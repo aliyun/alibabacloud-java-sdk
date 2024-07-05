@@ -4,18 +4,31 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodStreamURLResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rtsp</p>
+     */
     @NameInMap("OutProtocol")
     public String outProtocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
     @NameInMap("Port")
     public Long port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TxId")
-    public String txId;
-
+    /**
+     * <strong>example:</strong>
+     * <p>rtsp://domain/live/stream?sign=xxxxxx</p>
+     */
     @NameInMap("Url")
     public String url;
 
@@ -46,14 +59,6 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeVodStreamURLResponseBody setTxId(String txId) {
-        this.txId = txId;
-        return this;
-    }
-    public String getTxId() {
-        return this.txId;
     }
 
     public DescribeVodStreamURLResponseBody setUrl(String url) {

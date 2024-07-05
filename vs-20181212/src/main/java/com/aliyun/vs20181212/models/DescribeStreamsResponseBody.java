@@ -4,21 +4,41 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeStreamsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageCount")
     public Long pageCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Streams")
     public java.util.List<DescribeStreamsResponseBodyStreams> streams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -76,42 +96,94 @@ public class DescribeStreamsResponseBody extends TeaModel {
     }
 
     public static class DescribeStreamsResponseBodyStreams extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>live</p>
+         */
         @NameInMap("App")
         public String app;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-12-10T17:00:00Z</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>348*****380-cn-qingdao</p>
+         */
         @NameInMap("DeviceId")
         public String deviceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>348*****174-cn-qingdao</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>323*****997-cn-qingdao</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>31000000*****0000002</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
+         */
         @NameInMap("PlayDomain")
         public String playDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>gb28181</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("PushDomain")
         public String pushDomain;
 
+        /**
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1280</p>
+         */
         @NameInMap("Width")
         public Integer width;
 

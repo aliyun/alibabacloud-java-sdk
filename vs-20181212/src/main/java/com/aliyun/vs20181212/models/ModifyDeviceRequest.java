@@ -4,36 +4,81 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeviceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AlarmMethod")
     public String alarmMethod;
 
+    @NameInMap("AutoDirectory")
+    public Boolean autoDirectory;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoPos")
     public Boolean autoPos;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoStart")
     public Boolean autoStart;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>399*****488-cn-qingdao</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3100000****000000002</p>
+     */
     @NameInMap("GbId")
     public String gbId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>348*****174-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>348*****380-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10.10.10.10</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <strong>example:</strong>
+     * <p>119.20</p>
+     */
     @NameInMap("Latitude")
     public String latitude;
 
+    /**
+     * <strong>example:</strong>
+     * <p>45.00</p>
+     */
     @NameInMap("Longitude")
     public String longitude;
 
@@ -43,27 +88,59 @@ public class ModifyDeviceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <strong>example:</strong>
+     * <p>399*****774-cn-qingdao</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
     @NameInMap("Port")
     public Long port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("PosInterval")
     public Long posInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ipc</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rtmp://xxx/xxx</p>
+     */
     @NameInMap("Url")
     public String url;
 
+    /**
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("Username")
     public String username;
 
@@ -81,6 +158,14 @@ public class ModifyDeviceRequest extends TeaModel {
     }
     public String getAlarmMethod() {
         return this.alarmMethod;
+    }
+
+    public ModifyDeviceRequest setAutoDirectory(Boolean autoDirectory) {
+        this.autoDirectory = autoDirectory;
+        return this;
+    }
+    public Boolean getAutoDirectory() {
+        return this.autoDirectory;
     }
 
     public ModifyDeviceRequest setAutoPos(Boolean autoPos) {

@@ -4,12 +4,24 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>33763950877224964-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rtmp</p>
+     */
     @NameInMap("InProtocol")
     public String inProtocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("IncludeStats")
     public Boolean includeStats;
 
@@ -19,21 +31,41 @@ public class DescribeGroupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
+     */
     @NameInMap("Region")
     public String region;
 
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("SortDirection")
     public String sortDirection;
 
+    /**
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("Status")
     public String status;
 

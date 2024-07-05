@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class UnbindPurchasedDeviceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3939*****6580539-cn-qingdao</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 

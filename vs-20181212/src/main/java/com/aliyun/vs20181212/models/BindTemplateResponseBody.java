@@ -4,15 +4,31 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BindTemplateResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>323*****994-cn-qingdao</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>group</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>323*****998-cn-qingdao</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
@@ -51,58 +67,6 @@ public class BindTemplateResponseBody extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public static class BatchBindTemplateResponseBodyBindings extends TeaModel {
-        @NameInMap("Error")
-        public String error;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("InstanceType")
-        public String instanceType;
-
-        @NameInMap("TemplateId")
-        public String templateId;
-
-        public static BatchBindTemplateResponseBodyBindings build(java.util.Map<String, ?> map) throws Exception {
-            BatchBindTemplateResponseBodyBindings self = new BatchBindTemplateResponseBodyBindings();
-            return TeaModel.build(map, self);
-        }
-
-        public BatchBindTemplateResponseBodyBindings setError(String error) {
-            this.error = error;
-            return this;
-        }
-        public String getError() {
-            return this.error;
-        }
-
-        public BatchBindTemplateResponseBodyBindings setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
-        public BatchBindTemplateResponseBodyBindings setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public BatchBindTemplateResponseBodyBindings setTemplateId(String templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public String getTemplateId() {
-            return this.templateId;
-        }
-
     }
 
 }

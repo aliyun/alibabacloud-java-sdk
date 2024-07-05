@@ -4,18 +4,36 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ContinuousMoveRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>348*****380-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.5</p>
+     */
     @NameInMap("Pan")
     public String pan;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.5</p>
+     */
     @NameInMap("Tilt")
     public String tilt;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.5</p>
+     */
     @NameInMap("Zoom")
     public String zoom;
 

@@ -4,9 +4,21 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class BatchUnbindDirectoriesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>348*****380-cn-qingdao</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>399*****488-cn-qingdao</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 

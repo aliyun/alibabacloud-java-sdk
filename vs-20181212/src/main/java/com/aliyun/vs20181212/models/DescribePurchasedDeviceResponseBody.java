@@ -4,42 +4,86 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribePurchasedDeviceResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2018-12-10T21:00:00Z</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>348*****174-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>33763****77224964-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2117*****0447</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-qingdao</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345*****67890</p>
+     */
     @NameInMap("RegisterCode")
     public String registerCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dome</p>
+     */
     @NameInMap("SubType")
     public String subType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ipc</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8yd*****qem</p>
+     */
     @NameInMap("Vendor")
     public String vendor;
 

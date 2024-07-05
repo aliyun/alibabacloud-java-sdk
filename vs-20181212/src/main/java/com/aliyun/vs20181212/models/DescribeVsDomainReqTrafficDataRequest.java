@@ -4,24 +4,48 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsDomainReqTrafficDataRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-10-13T10:00:41Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("Interval")
     public String interval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>unicom</p>
+     */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>shanghai</p>
+     */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-09-30T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

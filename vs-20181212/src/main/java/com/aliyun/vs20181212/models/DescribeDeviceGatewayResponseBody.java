@@ -4,18 +4,38 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceGatewayResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>192.168.0.1</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
     @NameInMap("Port")
     public Long port;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gb28181</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>f5578fbc-694c-461d-a2a2-eb090775cef0</p>
+     */
     @NameInMap("Token")
     public String token;
 

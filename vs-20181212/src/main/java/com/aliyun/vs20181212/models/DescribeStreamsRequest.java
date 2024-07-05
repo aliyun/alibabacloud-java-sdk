@@ -4,39 +4,83 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeStreamsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>live</p>
+     */
     @NameInMap("App")
     public String app;
 
+    /**
+     * <strong>example:</strong>
+     * <p>348*****380-cn-qingdao</p>
+     */
     @NameInMap("DeviceId")
     public String deviceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>348*****174-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>323*****997-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3100000*****00000002</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>399*****774-cn-qingdao</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Id</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("SortDirection")
     public String sortDirection;
 

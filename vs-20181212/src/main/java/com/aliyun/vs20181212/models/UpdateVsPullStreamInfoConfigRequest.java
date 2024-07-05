@@ -7,24 +7,56 @@ public class UpdateVsPullStreamInfoConfigRequest extends TeaModel {
     @NameInMap("Always")
     public String always;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2018-12-10T18:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>up.xxx.com.cn</p>
+     */
     @NameInMap("SourceUrl")
     public String sourceUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-10T10:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxxStream</p>
+     */
     @NameInMap("StreamName")
     public String streamName;
 

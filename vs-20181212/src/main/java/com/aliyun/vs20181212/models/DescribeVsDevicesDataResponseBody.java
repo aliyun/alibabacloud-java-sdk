@@ -7,6 +7,10 @@ public class DescribeVsDevicesDataResponseBody extends TeaModel {
     @NameInMap("DevicesDataPerInterval")
     public DescribeVsDevicesDataResponseBodyDevicesDataPerInterval devicesDataPerInterval;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeVsDevicesDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVsDevicesDataResponseBodyDevicesDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>128</p>
+         */
         @NameInMap("DevicesDataValue")
         public String devicesDataValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-04T16:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

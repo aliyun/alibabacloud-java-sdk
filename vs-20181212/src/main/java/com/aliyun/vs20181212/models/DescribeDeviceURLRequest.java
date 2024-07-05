@@ -7,21 +7,47 @@ public class DescribeDeviceURLRequest extends TeaModel {
     @NameInMap("Auth")
     public Boolean auth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("Expire")
     public Long expire;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>348*****380-cn-qingdao</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <strong>example:</strong>
+     * <p>push</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtmp</p>
+     */
     @NameInMap("OutProtocol")
     public String outProtocol;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>live001</p>
+     */
     @NameInMap("Stream")
     public String stream;
 

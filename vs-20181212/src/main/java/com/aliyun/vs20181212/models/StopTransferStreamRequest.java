@@ -4,12 +4,22 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class StopTransferStreamRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>323434****83423432</p>
+     */
     @NameInMap("Id")
     public String id;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>sd</p>
+     */
     @NameInMap("Transcode")
     public String transcode;
 

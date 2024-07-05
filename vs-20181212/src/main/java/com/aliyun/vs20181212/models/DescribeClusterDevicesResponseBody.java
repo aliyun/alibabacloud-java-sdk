@@ -208,6 +208,9 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
         @NameInMap("PodId")
         public String podId;
 
+        @NameInMap("PodIp")
+        public String podIp;
+
         @NameInMap("Status")
         public String status;
 
@@ -232,6 +235,14 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
             return this.podId;
         }
 
+        public DescribeClusterDevicesResponseBodyDevicesPodInfos setPodIp(String podIp) {
+            this.podIp = podIp;
+            return this;
+        }
+        public String getPodIp() {
+            return this.podIp;
+        }
+
         public DescribeClusterDevicesResponseBodyDevicesPodInfos setStatus(String status) {
             this.status = status;
             return this;
@@ -254,6 +265,9 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
 
         @NameInMap("EdgeNodeName")
         public String edgeNodeName;
+
+        @NameInMap("HostRom")
+        public String hostRom;
 
         @NameInMap("ImageId")
         public String imageId;
@@ -326,6 +340,14 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
         }
         public String getEdgeNodeName() {
             return this.edgeNodeName;
+        }
+
+        public DescribeClusterDevicesResponseBodyDevices setHostRom(String hostRom) {
+            this.hostRom = hostRom;
+            return this;
+        }
+        public String getHostRom() {
+            return this.hostRom;
         }
 
         public DescribeClusterDevicesResponseBodyDevices setImageId(String imageId) {

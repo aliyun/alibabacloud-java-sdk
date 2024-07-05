@@ -7,15 +7,30 @@ public class CreateDirectoryRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>348*****174-cn-qingdao</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>399*****774-cn-qingdao</p>
+     */
     @NameInMap("ParentId")
     public String parentId;
 
