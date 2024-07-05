@@ -7,9 +7,17 @@ public class QueryLocationDateClustersResponseBody extends TeaModel {
     @NameInMap("LocationDateClusters")
     public java.util.List<LocationDateCluster> locationDateClusters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MzQNjmY2MzYxNhNjk2ZNjEu****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7055FCF7-4D7B-098E-BD4D-DD2932B0****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

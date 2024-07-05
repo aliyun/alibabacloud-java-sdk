@@ -4,45 +4,93 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ResourceNotFound</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-24T03:01:49.480109219Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2F6-1Bz99Xi93EnRpNEyLudILJm****</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>The specified resource project is not found.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Progress")
     public Integer progress;
 
+    /**
+     * <strong>example:</strong>
+     * <p>immtest</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-12-24T03:01:41.662060377Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <strong>example:</strong>
+     * <p>c2b277b9-0d30-4882-ad6d-ad661382****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
     @NameInMap("TaskRequestDefinition")
     public String taskRequestDefinition;
 
+    /**
+     * <strong>example:</strong>
+     * <p>VideoLabelClassification</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 

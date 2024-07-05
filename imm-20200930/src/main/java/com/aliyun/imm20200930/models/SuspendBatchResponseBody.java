@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class SuspendBatchResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>EC564A9A-BA5C-4499-A087-D9B9E76E*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

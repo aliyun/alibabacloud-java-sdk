@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteFileMetaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3A82F6C9-5AC0-38F9-914F-F02623B3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

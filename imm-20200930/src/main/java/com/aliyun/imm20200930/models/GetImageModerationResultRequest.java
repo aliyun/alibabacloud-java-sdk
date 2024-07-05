@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetImageModerationResultRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ImageModeration-ff207203-3f93-4645-a041-7b8f0f******</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ImageModeration</p>
      */
     @NameInMap("TaskType")
     public String taskType;

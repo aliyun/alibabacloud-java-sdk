@@ -9,12 +9,18 @@ public class DetectImageTextsShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object.jpg</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;

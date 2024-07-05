@@ -12,10 +12,17 @@ public class SimpleQueryResponseBody extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -68,9 +75,17 @@ public class SimpleQueryResponseBody extends TeaModel {
     }
 
     public static class SimpleQueryResponseBodyAggregationsGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -98,15 +113,27 @@ public class SimpleQueryResponseBody extends TeaModel {
     }
 
     public static class SimpleQueryResponseBodyAggregations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Size</p>
+         */
         @NameInMap("Field")
         public String field;
 
         @NameInMap("Groups")
         public java.util.List<SimpleQueryResponseBodyAggregationsGroups> groups;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sum</p>
+         */
         @NameInMap("Operation")
         public String operation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Value")
         public Double value;
 

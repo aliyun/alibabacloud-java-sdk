@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateLocationDateClusterResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>52B017A8-FEF5-0A61-BAEE-234A8AD8****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

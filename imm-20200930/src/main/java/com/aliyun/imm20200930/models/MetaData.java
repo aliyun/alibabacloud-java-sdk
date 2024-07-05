@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class MetaData extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>detection</p>
+     */
     @NameInMap("Identifier")
     public String identifier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>imm</p>
+     */
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("Version")
     public String version;
 

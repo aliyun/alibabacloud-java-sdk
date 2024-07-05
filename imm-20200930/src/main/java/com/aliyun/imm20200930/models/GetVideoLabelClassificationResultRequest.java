@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetVideoLabelClassificationResultRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VideoLabelClassification-2f157087-91df-4fda-8c3e-232407ec****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VideoLabelClassification</p>
      */
     @NameInMap("TaskType")
     public String taskType;

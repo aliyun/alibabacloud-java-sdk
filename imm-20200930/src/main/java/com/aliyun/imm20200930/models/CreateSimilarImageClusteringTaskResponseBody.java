@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateSimilarImageClusteringTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3BF-1UhtFyrua71eOkFlqYq23Co****</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SimilarImageClustering-48d0a0f3-8459-47f4-b8af-ff49c64****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

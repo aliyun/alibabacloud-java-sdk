@@ -7,9 +7,17 @@ public class ListBatchesResponseBody extends TeaModel {
     @NameInMap("Batches")
     public java.util.List<DataIngestion> batches;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpw****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FEDC9B1F-30F2-4C1F-8ED2-B7860187****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

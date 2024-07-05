@@ -7,6 +7,10 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
     @NameInMap("Clusters")
     public java.util.List<SearchImageFigureClusterResponseBodyClusters> clusters;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C2734912-E6D5-052C-AC67-6A9FD02*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +39,17 @@ public class SearchImageFigureClusterResponseBody extends TeaModel {
         @NameInMap("Boundary")
         public Boundary boundary;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Cluster-ca730577-06b1-42c7-a25b-8f2c7******</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.87413794</p>
+         */
         @NameInMap("Similarity")
         public Float similarity;
 

@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateMediaConvertTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0ED-1Bz8z71k5TtsUejT4UJ16Es****</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA995EFD-083D-4F40-BE8A-BDF75FFFE0B6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MediaConvert-adb1ee28-c4c9-42a7-9f54-3b8eadcb****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

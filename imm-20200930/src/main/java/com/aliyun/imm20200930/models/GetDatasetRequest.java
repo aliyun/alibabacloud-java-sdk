@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class GetDatasetRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataset001</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithStatistics")
     public Boolean withStatistics;
 

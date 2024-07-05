@@ -7,72 +7,152 @@ public class DetectMediaMetaResponseBody extends TeaModel {
     @NameInMap("Addresses")
     public java.util.List<Address> addresses;
 
+    /**
+     * <strong>example:</strong>
+     * <p>unable</p>
+     */
     @NameInMap("Album")
     public String album;
 
+    /**
+     * <strong>example:</strong>
+     * <p>unable</p>
+     */
     @NameInMap("AlbumArtist")
     public String albumArtist;
 
+    /**
+     * <strong>example:</strong>
+     * <p>unable</p>
+     */
     @NameInMap("Artist")
     public String artist;
 
     @NameInMap("AudioStreams")
     public java.util.List<AudioStream> audioStreams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13164131</p>
+     */
     @NameInMap("Bitrate")
     public Long bitrate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>unable</p>
+     */
     @NameInMap("Composer")
     public String composer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15.263000</p>
+     */
     @NameInMap("Duration")
     public Double duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>QuickTime / MOV</p>
+     */
     @NameInMap("FormatLongName")
     public String formatLongName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
+     */
     @NameInMap("FormatName")
     public String formatName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eng</p>
+     */
     @NameInMap("Language")
     public String language;
 
+    /**
+     * <strong>example:</strong>
+     * <p>+120.029003,+30.283095</p>
+     */
     @NameInMap("LatLong")
     public String latLong;
 
+    /**
+     * <strong>example:</strong>
+     * <p>unable</p>
+     */
     @NameInMap("Performer")
     public String performer;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2022-04-24T02:39:57Z</p>
+     */
     @NameInMap("ProduceTime")
     public String produceTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("ProgramCount")
     public Long programCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2213B1A9-EB3D-4666-84E0-24980BC*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>25115517</p>
+     */
     @NameInMap("Size")
     public Long size;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.000000</p>
+     */
     @NameInMap("StartTime")
     public Double startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("StreamCount")
     public Long streamCount;
 
     @NameInMap("Subtitles")
     public java.util.List<SubtitleStream> subtitles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1920</p>
+     */
     @NameInMap("VideoHeight")
     public Long videoHeight;
 
     @NameInMap("VideoStreams")
     public java.util.List<VideoStream> videoStreams;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1080</p>
+     */
     @NameInMap("VideoWidth")
     public Long videoWidth;
 

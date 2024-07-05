@@ -4,18 +4,38 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class RefreshWebofficeTokenResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>4996466c690a4902846ce00f96********</p>
+     */
     @NameInMap("AccessToken")
     public String accessToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-08-31T13:07:28.950065359Z</p>
+     */
     @NameInMap("AccessTokenExpiredTime")
     public String accessTokenExpiredTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>72a52ab3702a4123ab5594671a********</p>
+     */
     @NameInMap("RefreshToken")
     public String refreshToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-09-01T12:37:28.950065359Z</p>
+     */
     @NameInMap("RefreshTokenExpiredTime")
     public String refreshTokenExpiredTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>501339F9-4B70-0CE2-AB8C-866C********</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

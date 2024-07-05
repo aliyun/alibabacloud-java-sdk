@@ -4,9 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class IndexFileMetaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>30F-1D8FxFzDXKJH9YQdve4CjR****</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

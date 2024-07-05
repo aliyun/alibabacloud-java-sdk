@@ -9,6 +9,9 @@ public class SimpleQueryShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -16,14 +19,25 @@ public class SimpleQueryShrinkRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc,desc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -31,12 +45,20 @@ public class SimpleQueryShrinkRequest extends TeaModel {
     @NameInMap("Query")
     public String queryShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Size,Filename</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
     @NameInMap("WithFields")
     public String withFieldsShrink;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithoutTotalHits")
     public Boolean withoutTotalHits;
 

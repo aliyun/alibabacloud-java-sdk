@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class GetBindingRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataset001</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://examplebucket</p>
      */
     @NameInMap("URI")
     public String URI;

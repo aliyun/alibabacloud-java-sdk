@@ -12,6 +12,9 @@ public class CreateImageToPDFTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -96,6 +99,10 @@ public class CreateImageToPDFTaskRequest extends TeaModel {
     }
 
     public static class CreateImageToPDFTaskRequestSources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("Rotate")
         public Long rotate;
 

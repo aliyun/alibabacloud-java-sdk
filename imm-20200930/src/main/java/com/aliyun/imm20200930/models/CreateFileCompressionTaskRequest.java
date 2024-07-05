@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateFileCompressionTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>zip</p>
+     */
     @NameInMap("CompressedFormat")
     public String compressedFormat;
 
@@ -15,10 +19,17 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object.json</p>
+     */
     @NameInMap("SourceManifestURI")
     public String sourceManifestURI;
 
@@ -27,10 +38,17 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-target-object.zip</p>
      */
     @NameInMap("TargetURI")
     public String targetURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -104,12 +122,20 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
     }
 
     public static class CreateFileCompressionTaskRequestSources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/new-dir/</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object</p>
+         */
         @NameInMap("URI")
         public String URI;
 

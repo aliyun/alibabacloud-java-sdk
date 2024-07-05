@@ -9,6 +9,9 @@ public class UpdateTriggerShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trigger-9f72636a-0f0c-4baf-ae78-38b27b******</p>
      */
     @NameInMap("Id")
     public String id;
@@ -18,10 +21,17 @@ public class UpdateTriggerShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 

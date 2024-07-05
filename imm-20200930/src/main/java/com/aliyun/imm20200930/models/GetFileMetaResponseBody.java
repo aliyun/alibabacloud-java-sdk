@@ -7,6 +7,10 @@ public class GetFileMetaResponseBody extends TeaModel {
     @NameInMap("Files")
     public java.util.List<File> files;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7F84C6D9-5AC0-49F9-914D-F02678E3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

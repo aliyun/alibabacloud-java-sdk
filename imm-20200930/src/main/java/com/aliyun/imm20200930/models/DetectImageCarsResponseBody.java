@@ -10,6 +10,10 @@ public class DetectImageCarsResponseBody extends TeaModel {
     @NameInMap("Cars")
     public java.util.List<Car> cars;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A8745209-DD0E-027E-8ABA-085E0C******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

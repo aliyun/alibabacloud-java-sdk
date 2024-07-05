@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class AssumeRoleChainNode extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1023210024677934</p>
      */
     @NameInMap("OwnerId")
     public String ownerId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-role</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user</p>
      */
     @NameInMap("Type")
     public String type;

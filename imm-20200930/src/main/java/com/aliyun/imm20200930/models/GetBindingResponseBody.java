@@ -7,6 +7,10 @@ public class GetBindingResponseBody extends TeaModel {
     @NameInMap("Binding")
     public Binding binding;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AEFCD467-C928-4A36-951A-6EB5A592****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

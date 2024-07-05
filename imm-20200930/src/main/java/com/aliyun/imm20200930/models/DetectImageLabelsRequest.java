@@ -9,16 +9,26 @@ public class DetectImageLabelsRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immimagetest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://imm-test/testcases/facetest.jpg</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Threshold")
     public Float threshold;
 

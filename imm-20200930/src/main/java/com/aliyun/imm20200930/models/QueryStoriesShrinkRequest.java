@@ -12,6 +12,9 @@ public class QueryStoriesShrinkRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-dataset</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -19,42 +22,81 @@ public class QueryStoriesShrinkRequest extends TeaModel {
     @NameInMap("FigureClusterIds")
     public String figureClusterIdsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpw****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>id1</p>
+     */
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CreateTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
     @NameInMap("StoryEndTimeRange")
     public String storyEndTimeRangeShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>name1</p>
+     */
     @NameInMap("StoryName")
     public String storyName;
 
     @NameInMap("StoryStartTimeRange")
     public String storyStartTimeRangeShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SeasonHighlights</p>
+     */
     @NameInMap("StorySubType")
     public String storySubType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TimeMemory</p>
+     */
     @NameInMap("StoryType")
     public String storyType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("WithEmptyStories")
     public Boolean withEmptyStories;
 

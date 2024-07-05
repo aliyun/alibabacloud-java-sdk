@@ -9,6 +9,9 @@ public class CompareImageFacesRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -46,9 +49,17 @@ public class CompareImageFacesRequest extends TeaModel {
     }
 
     public static class CompareImageFacesRequestSource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object1</p>
+         */
         @NameInMap("URI1")
         public String URI1;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object2</p>
+         */
         @NameInMap("URI2")
         public String URI2;
 

@@ -4,18 +4,38 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GetDRMLicenseRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AESzB8SQgpACioSEJ3yqiFwruAOUgIvlCx*****</p>
+     */
     @NameInMap("KeyId")
     public String keyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://1111111111.mns.cn-hangzhou.aliyuncs.com">http://1111111111.mns.cn-hangzhou.aliyuncs.com</a></p>
+     */
     @NameInMap("NotifyEndpoint")
     public String notifyEndpoint;
 
+    /**
+     * <strong>example:</strong>
+     * <p>topic1</p>
+     */
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>immtest</p>
+     */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>widevine</p>
+     */
     @NameInMap("ProtectionSystem")
     public String protectionSystem;
 

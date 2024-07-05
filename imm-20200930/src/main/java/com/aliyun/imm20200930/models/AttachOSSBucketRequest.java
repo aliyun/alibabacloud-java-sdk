@@ -9,12 +9,18 @@ public class AttachOSSBucketRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>examplebucket</p>
      */
     @NameInMap("OSSBucket")
     public String OSSBucket;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;

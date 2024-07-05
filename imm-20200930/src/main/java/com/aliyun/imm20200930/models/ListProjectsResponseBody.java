@@ -10,6 +10,10 @@ public class ListProjectsResponseBody extends TeaModel {
     @NameInMap("Projects")
     public java.util.List<Project> projects;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4A7A2D0E-D8B8-4DA0-8127-EB32C660</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

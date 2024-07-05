@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RefreshWebofficeTokenRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99d1b8b478b641c1b3372f5bd6********</p>
      */
     @NameInMap("AccessToken")
     public String accessToken;
@@ -15,12 +18,18 @@ public class RefreshWebofficeTokenRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a730ae0d7c6a487d87c661d199********</p>
      */
     @NameInMap("RefreshToken")
     public String refreshToken;

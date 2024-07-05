@@ -7,6 +7,10 @@ public class AddStoryFilesResponseBody extends TeaModel {
     @NameInMap("Files")
     public java.util.List<AddStoryFilesResponseBodyFiles> files;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6E93D6C9-5AC0-49F9-914D-E02678D3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class AddStoryFilesResponseBody extends TeaModel {
     }
 
     public static class AddStoryFilesResponseBodyFiles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ResourceNotFound</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The specified resource %s is not found.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object</p>
+         */
         @NameInMap("URI")
         public String URI;
 

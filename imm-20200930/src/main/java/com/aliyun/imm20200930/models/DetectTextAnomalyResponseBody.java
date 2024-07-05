@@ -4,9 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DetectTextAnomalyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>91AC8C98-0F36-49D2-8290-742E24DF*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pass</p>
+     */
     @NameInMap("Suggestion")
     public String suggestion;
 

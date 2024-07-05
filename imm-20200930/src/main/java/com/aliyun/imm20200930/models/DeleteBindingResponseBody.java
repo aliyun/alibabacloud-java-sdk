@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteBindingResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ACDFE467-C817-4B36-951A-6EB5A592****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

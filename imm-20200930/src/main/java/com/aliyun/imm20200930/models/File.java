@@ -97,6 +97,9 @@ public class File extends TeaModel {
     @NameInMap("FileModifiedTime")
     public String fileModifiedTime;
 
+    @NameInMap("FileStatus")
+    public String fileStatus;
+
     @NameInMap("Filename")
     public String filename;
 
@@ -192,6 +195,12 @@ public class File extends TeaModel {
 
     @NameInMap("ProjectName")
     public String projectName;
+
+    @NameInMap("Reason")
+    public String reason;
+
+    @NameInMap("SceneElements")
+    public java.util.List<SceneElement> sceneElements;
 
     @NameInMap("SemanticTypes")
     public java.util.List<String> semanticTypes;
@@ -497,6 +506,14 @@ public class File extends TeaModel {
         return this.fileModifiedTime;
     }
 
+    public File setFileStatus(String fileStatus) {
+        this.fileStatus = fileStatus;
+        return this;
+    }
+    public String getFileStatus() {
+        return this.fileStatus;
+    }
+
     public File setFilename(String filename) {
         this.filename = filename;
         return this;
@@ -751,6 +768,22 @@ public class File extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public File setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
+    }
+
+    public File setSceneElements(java.util.List<SceneElement> sceneElements) {
+        this.sceneElements = sceneElements;
+        return this;
+    }
+    public java.util.List<SceneElement> getSceneElements() {
+        return this.sceneElements;
     }
 
     public File setSemanticTypes(java.util.List<String> semanticTypes) {

@@ -7,6 +7,10 @@ public class CreateDatasetResponseBody extends TeaModel {
     @NameInMap("Dataset")
     public Dataset dataset;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6D74B3A9-5AC0-49F9-914D-E01589D3****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -7,6 +7,10 @@ public class DetectImageCroppingResponseBody extends TeaModel {
     @NameInMap("Croppings")
     public java.util.List<CroppingSuggestion> croppings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>91AC8C98-0F36-49D2-8290-742E24D*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

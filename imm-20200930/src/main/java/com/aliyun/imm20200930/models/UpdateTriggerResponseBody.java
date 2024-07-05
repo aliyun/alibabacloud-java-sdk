@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class UpdateTriggerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5A022F78-B9A8-4ACC-BB6B-B35975******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -27,12 +27,18 @@ public class TrainingSpecification extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://imm-alg-dataset-bj/cifar10/test_index.json</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://imm-alg-dataset-bj/model_training_test/</p>
      */
     @NameInMap("TargetURI")
     public String targetURI;
@@ -40,9 +46,17 @@ public class TrainingSpecification extends TeaModel {
     @NameInMap("Transforms")
     public java.util.List<CustomParams> transforms;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://imm-alg-dataset-bj/cifar10/test_index.json</p>
+     */
     @NameInMap("ValidationSourceURI")
     public String validationSourceURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.95</p>
+     */
     @NameInMap("ValidationSplit")
     public Float validationSplit;
 

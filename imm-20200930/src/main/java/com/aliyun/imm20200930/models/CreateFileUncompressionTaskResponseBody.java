@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateFileUncompressionTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0ED-1Bz8z71k5TtsUejT4UJ16Es*****</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EC564A9A-BA5C-4499-A087-D9B9E76E*****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FileUncompression-16ab5dd6-af02-480e-9ed7-a8d51b1*****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

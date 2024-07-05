@@ -101,6 +101,9 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
     public static class CreateLocationDateClusteringTaskRequestDateOptions extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GapDays")
         public Long gapDays;
@@ -113,6 +116,9 @@ public class CreateLocationDateClusteringTaskRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("MinDays")
         public Long minDays;

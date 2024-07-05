@@ -10,6 +10,10 @@ public class ListProjectsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>immtest</p>
+     */
     @NameInMap("Prefix")
     public String prefix;
 

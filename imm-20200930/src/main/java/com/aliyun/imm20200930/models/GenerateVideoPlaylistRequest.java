@@ -7,6 +7,10 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     @NameInMap("CredentialConfig")
     public CredentialConfig credentialConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://bucket/object/master.m3u8</p>
+     */
     @NameInMap("MasterURI")
     public String masterURI;
 
@@ -18,13 +22,24 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SourceDuration")
     public Float sourceDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SourceStartTime")
     public Float sourceStartTime;
 
@@ -33,10 +48,17 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://imm-test/testcases/video.mp4</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 
@@ -151,6 +173,10 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
     }
 
     public static class GenerateVideoPlaylistRequestSourceSubtitles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>eng</p>
+         */
         @NameInMap("Language")
         public String language;
 
@@ -187,12 +213,20 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
         @NameInMap("Audio")
         public TargetAudio audio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
         @NameInMap("InitialSegments")
         public java.util.List<Float> initialSegments;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30.0</p>
+         */
         @NameInMap("InitialTranscode")
         public Float initialTranscode;
 
@@ -202,9 +236,17 @@ public class GenerateVideoPlaylistRequest extends TeaModel {
         @NameInMap("Tags")
         public java.util.Map<String, String> tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("TranscodeAhead")
         public Integer transcodeAhead;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://imm-test/testcases/video</p>
+         */
         @NameInMap("URI")
         public String URI;
 

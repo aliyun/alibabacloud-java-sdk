@@ -9,6 +9,9 @@ public class ExtractDocumentTextRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -18,6 +21,9 @@ public class ExtractDocumentTextRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket/test-object</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;

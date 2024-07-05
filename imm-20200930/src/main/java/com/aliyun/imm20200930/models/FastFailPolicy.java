@@ -4,6 +4,10 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class FastFailPolicy extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>abort</p>
+     */
     @NameInMap("Action")
     public String action;
 

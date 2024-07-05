@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateImageModerationTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2E6-1I0FGn0zFnl5AflRfhzClma*****</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ImageModeration-179ef4f8-d583-4f0c-a293-7c0889c*****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

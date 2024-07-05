@@ -7,6 +7,9 @@ public class ElementContent extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("TimeRange")
+    public java.util.List<Long> timeRange;
+
     @NameInMap("Type")
     public String type;
 
@@ -24,6 +27,14 @@ public class ElementContent extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public ElementContent setTimeRange(java.util.List<Long> timeRange) {
+        this.timeRange = timeRange;
+        return this;
+    }
+    public java.util.List<Long> getTimeRange() {
+        return this.timeRange;
     }
 
     public ElementContent setType(String type) {

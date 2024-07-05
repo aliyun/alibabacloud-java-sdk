@@ -7,6 +7,10 @@ public class CreateLocationDateClusteringTaskResponseBody extends TeaModel {
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B121940C-9794-4EE3-8D6E-F8EC525F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

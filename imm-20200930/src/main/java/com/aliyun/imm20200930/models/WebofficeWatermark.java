@@ -4,9 +4,17 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class WebofficeWatermark extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>rgba(192, 192, 192, 0.6)</p>
+     */
     @NameInMap("FillStyle")
     public String fillStyle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>bold 20px Serif</p>
+     */
     @NameInMap("Font")
     public String font;
 

@@ -10,6 +10,10 @@ public class QueryLocationDateClustersRequest extends TeaModel {
     @NameInMap("CreateTimeRange")
     public TimeRange createTimeRange;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key=value</p>
+     */
     @NameInMap("CustomLabels")
     public String customLabels;
 
@@ -31,12 +35,20 @@ public class QueryLocationDateClustersRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MzQNjmY2MzYxNhNjk2ZNjEu****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("ObjectId")
     public String objectId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("Order")
     public String order;
 
@@ -46,6 +58,10 @@ public class QueryLocationDateClustersRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>LocationDateClusterStartTime</p>
+     */
     @NameInMap("Sort")
     public String sort;
 

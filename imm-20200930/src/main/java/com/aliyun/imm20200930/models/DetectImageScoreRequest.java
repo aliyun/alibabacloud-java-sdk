@@ -9,10 +9,17 @@ public class DetectImageScoreRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://bucketname/objectname</p>
+     */
     @NameInMap("SourceURI")
     public String sourceURI;
 

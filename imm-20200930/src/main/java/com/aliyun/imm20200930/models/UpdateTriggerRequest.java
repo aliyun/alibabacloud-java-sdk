@@ -9,6 +9,9 @@ public class UpdateTriggerRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trigger-9f72636a-0f0c-4baf-ae78-38b27b******</p>
      */
     @NameInMap("Id")
     public String id;
@@ -18,10 +21,17 @@ public class UpdateTriggerRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-project</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
@@ -71,6 +81,10 @@ public class UpdateTriggerRequest extends TeaModel {
     }
 
     public static class UpdateTriggerRequestActions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>doc/convert</p>
+         */
         @NameInMap("Name")
         public String name;
 

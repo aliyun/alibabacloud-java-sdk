@@ -10,11 +10,18 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     @NameInMap("Cover")
     public CreateCustomizedStoryRequestCover cover;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
+     */
     @NameInMap("CustomLabels")
     public java.util.Map<String, ?> customLabels;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dataset001</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
@@ -27,24 +34,36 @@ public class CreateCustomizedStoryRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>name1</p>
      */
     @NameInMap("StoryName")
     public String storyName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Solo</p>
      */
     @NameInMap("StorySubType")
     public String storySubType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PeopleMemory</p>
      */
     @NameInMap("StoryType")
     public String storyType;
@@ -121,6 +140,9 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     public static class CreateCustomizedStoryRequestCover extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket1/cover</p>
          */
         @NameInMap("URI")
         public String URI;
@@ -143,6 +165,9 @@ public class CreateCustomizedStoryRequest extends TeaModel {
     public static class CreateCustomizedStoryRequestFiles extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;URI&quot;:&quot;oss://bucket1/file1&quot;}]</p>
          */
         @NameInMap("URI")
         public String URI;

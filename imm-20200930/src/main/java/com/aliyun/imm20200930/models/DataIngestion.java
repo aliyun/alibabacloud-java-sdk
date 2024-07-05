@@ -25,9 +25,17 @@ public class DataIngestion extends TeaModel {
     @NameInMap("Notification")
     public DataIngestionNotification notification;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IncrementalScanning</p>
+     */
     @NameInMap("Phase")
     public String phase;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AliyunIMMBatchTriggerRole</p>
+     */
     @NameInMap("ServiceRole")
     public String serviceRole;
 

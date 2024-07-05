@@ -18,6 +18,9 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
@@ -28,6 +31,10 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     @NameInMap("Sources")
     public java.util.List<CreateMediaConvertTaskRequestSources> sources;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
@@ -37,6 +44,10 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     @NameInMap("Targets")
     public java.util.List<CreateMediaConvertTaskRequestTargets> targets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+     */
     @NameInMap("UserData")
     public String userData;
 
@@ -110,12 +121,24 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
 
     public static class CreateMediaConvertTaskRequestSourcesSubtitles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>eng</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.5</p>
+         */
         @NameInMap("TimeOffset")
         public Double timeOffset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/subtitles</p>
+         */
         @NameInMap("URI")
         public String URI;
 
@@ -151,15 +174,27 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
 
     public static class CreateMediaConvertTaskRequestSources extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Duration")
         public Double duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StartTime")
         public Double startTime;
 
         @NameInMap("Subtitles")
         public java.util.List<CreateMediaConvertTaskRequestSourcesSubtitles> subtitles;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object</p>
+         */
         @NameInMap("URI")
         public String URI;
 
@@ -203,12 +238,24 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
     }
 
     public static class CreateMediaConvertTaskRequestTargetsSegment extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("Duration")
         public Double duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>hls</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("StartNumber")
         public Integer startNumber;
 
@@ -247,6 +294,10 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         @NameInMap("Audio")
         public TargetAudio audio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mp4</p>
+         */
         @NameInMap("Container")
         public String container;
 
@@ -256,6 +307,10 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         @NameInMap("Segment")
         public CreateMediaConvertTaskRequestTargetsSegment segment;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Speed")
         public Float speed;
 
@@ -265,6 +320,10 @@ public class CreateMediaConvertTaskRequest extends TeaModel {
         @NameInMap("Subtitle")
         public TargetSubtitle subtitle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/targets</p>
+         */
         @NameInMap("URI")
         public String URI;
 

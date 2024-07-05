@@ -7,9 +7,17 @@ public class ListBindingsResponseBody extends TeaModel {
     @NameInMap("Bindings")
     public java.util.List<Binding> bindings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>immtest:dataset001:examplebucket01</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EFDFD356-C928-4A36-951A-6EB5A592****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

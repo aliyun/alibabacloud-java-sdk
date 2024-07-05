@@ -7,12 +7,20 @@ public class Spec extends TeaModel {
     @NameInMap("Backbone")
     public CustomParams backbone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("ClassNum")
     public Long classNum;
 
     @NameInMap("Head")
     public CustomParams head;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("InputChannel")
     public Long inputChannel;
 
@@ -21,6 +29,9 @@ public class Spec extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ClsResNet</p>
      */
     @NameInMap("Name")
     public String name;
@@ -28,9 +39,17 @@ public class Spec extends TeaModel {
     @NameInMap("Neck")
     public CustomParams neck;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("NumLandmarks")
     public Long numLandmarks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>oss://bucket/abc/xxx.json</p>
+     */
     @NameInMap("PretrainedPath")
     public String pretrainedPath;
 

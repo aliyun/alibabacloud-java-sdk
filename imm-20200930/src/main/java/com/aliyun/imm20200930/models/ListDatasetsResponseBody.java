@@ -7,9 +7,17 @@ public class ListDatasetsResponseBody extends TeaModel {
     @NameInMap("Datasets")
     public java.util.List<Dataset> datasets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12345678:immtest:dataset002</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FEEDE356-C928-4A36-951A-6EB5A592****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

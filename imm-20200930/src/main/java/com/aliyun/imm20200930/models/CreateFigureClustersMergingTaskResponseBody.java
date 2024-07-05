@@ -4,12 +4,24 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateFigureClustersMergingTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0ED-1Bz8z71k5TtsUejT4UJ16E****</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA995EFD-083D-4F40-BE8A-BDF75FF****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>92376fbb-171f-4259-913f-705f7ee0****</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

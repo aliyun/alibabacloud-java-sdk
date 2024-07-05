@@ -4,18 +4,34 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class GenerateWebofficeTokenShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("CachePreview")
     public Boolean cachePreview;
 
     @NameInMap("CredentialConfig")
     public String credentialConfigShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("ExternalUploaded")
     public Boolean externalUploaded;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.pptx</p>
+     */
     @NameInMap("Filename")
     public String filename;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Hidecmb")
     public Boolean hidecmb;
 
@@ -25,29 +41,53 @@ public class GenerateWebofficeTokenShrinkRequest extends TeaModel {
     @NameInMap("Notification")
     public String notificationShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>topic1</p>
+     */
     @NameInMap("NotifyTopicName")
     public String notifyTopicName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>123456</p>
+     */
     @NameInMap("Password")
     public String password;
 
     @NameInMap("Permission")
     public String permissionShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PreviewPages")
     public Long previewPages;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>immtest</p>
      */
     @NameInMap("ProjectName")
     public String projectName;
 
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("Referer")
     public String referer;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://imm-test/test.pptx</p>
      */
     @NameInMap("SourceURI")
     public String sourceURI;
@@ -55,6 +95,10 @@ public class GenerateWebofficeTokenShrinkRequest extends TeaModel {
     @NameInMap("User")
     public String userShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;file_id&quot;: &quot;abc&quot;}</p>
+     */
     @NameInMap("UserData")
     public String userData;
 
