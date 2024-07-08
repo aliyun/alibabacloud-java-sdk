@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   **OK**: The request is successful.</p>
-     * <p>*   **PortabilityNumberNotSupported**: The phone number that is involved in mobile number portability is not supported.</p>
-     * <p>*   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</p>
-     * <br>
-     * <p>>  You are charged if the value of Code is OK and the value of VerifyResult is not -1. For more information, see [Pricing](https://help.aliyun.com/document_detail/154751.html).</p>
+     * <ul>
+     * <li><strong>OK</strong>: The request is successful.</li>
+     * <li><strong>PortabilityNumberNotSupported</strong>: The phone number that is involved in mobile number portability is not supported.</li>
+     * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You are charged if the value of Code is OK and the value of VerifyResult is not -1. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html">Pricing</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,12 +29,18 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -74,25 +85,33 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
     public static class DescribePhoneNumberOnlineTimeResponseBodyData extends TeaModel {
         /**
          * <p>The carrier code. Valid values:</p>
-         * <br>
-         * <p>*   **CMCC**: China Mobile</p>
-         * <p>*   **CUCC**: China Unicom</p>
-         * <p>*   **CTCC**: China Telecom</p>
-         * <p>*   **CBN**: China Broadnet</p>
+         * <ul>
+         * <li><strong>CMCC</strong>: China Mobile</li>
+         * <li><strong>CUCC</strong>: China Unicom</li>
+         * <li><strong>CTCC</strong>: China Telecom</li>
+         * <li><strong>CBN</strong>: China Broadnet</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CMCC</p>
          */
         @NameInMap("CarrierCode")
         public String carrierCode;
 
         /**
          * <p>The enumerated value of the usage period of a phone number. Valid values:</p>
-         * <br>
-         * <p>*   **-1**: No usage period information is available for the phone number.</p>
-         * <p>*   **0**: The phone number status is abnormal. For example, the phone number is a nonexistent number.</p>
-         * <p>*   **1** :[0-3) months.</p>
-         * <p>*   **2** :[3-6] months.</p>
-         * <p>*   **3** :(6-12] months.</p>
-         * <p>*   **4** :(12-24] months.</p>
-         * <p>*   **5** :(24,+) months.</p>
+         * <ul>
+         * <li><strong>-1</strong>: No usage period information is available for the phone number.</li>
+         * <li><strong>0</strong>: The phone number status is abnormal. For example, the phone number is a nonexistent number.</li>
+         * <li><strong>1</strong> :[0-3) months.</li>
+         * <li><strong>2</strong> :[3-6] months.</li>
+         * <li><strong>3</strong> :(6-12] months.</li>
+         * <li><strong>4</strong> :(12-24] months.</li>
+         * <li><strong>5</strong> :(24,+) months.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("VerifyResult")
         public String verifyResult;

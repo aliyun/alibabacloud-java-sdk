@@ -6,10 +6,14 @@ import com.aliyun.tea.*;
 public class PhoneNumberStatusForVirtualResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   **OK**: The request is successful.</p>
-     * <p>*   **OperatorLimit**: The carrier prohibits the query of the phone number.</p>
-     * <p>*   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</p>
+     * <ul>
+     * <li><strong>OK</strong>: The request is successful.</li>
+     * <li><strong>OperatorLimit</strong>: The carrier prohibits the query of the phone number.</li>
+     * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -22,12 +26,18 @@ public class PhoneNumberStatusForVirtualResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -72,9 +82,13 @@ public class PhoneNumberStatusForVirtualResponseBody extends TeaModel {
     public static class PhoneNumberStatusForVirtualResponseBodyData extends TeaModel {
         /**
          * <p>Indicate whether the phone number is a virtual number assigned by the carrier. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("IsPrivacyNumber")
         public Boolean isPrivacyNumber;

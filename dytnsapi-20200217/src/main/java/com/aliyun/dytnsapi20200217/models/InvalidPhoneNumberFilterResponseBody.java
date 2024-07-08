@@ -6,18 +6,22 @@ import com.aliyun.tea.*;
 public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   **OK**: The request is successful.</p>
-     * <p>*   **MobileNumberIllegal**: The phone number is invalid.</p>
-     * <p>*   **EncyrptTypeIllegal**: The encryption type is invalid.</p>
-     * <p>*   **MobileNumberTypeNotMatch**: The phone number does not match the encryption type.</p>
-     * <p>*   **CarrierIllegal**: The carrier type is invalid.</p>
-     * <p>*   **AuthCodeNotExist**: The authorization code does not exist.</p>
-     * <p>*   **PortabilityNumberNotSupported**: Mobile number portability is not supported.</p>
-     * <p>*   **Unknown**: An unknown exception occurred.</p>
-     * <p>*   **AuthCodeAndApiNotMatch**: A system exception occurred.</p>
-     * <p>*   **AuthCodeAndApiNotMatch**: The authorization code does not match the API operation.</p>
-     * <p>*   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</p>
+     * <ul>
+     * <li><strong>OK</strong>: The request is successful.</li>
+     * <li><strong>MobileNumberIllegal</strong>: The phone number is invalid.</li>
+     * <li><strong>EncyrptTypeIllegal</strong>: The encryption type is invalid.</li>
+     * <li><strong>MobileNumberTypeNotMatch</strong>: The phone number does not match the encryption type.</li>
+     * <li><strong>CarrierIllegal</strong>: The carrier type is invalid.</li>
+     * <li><strong>AuthCodeNotExist</strong>: The authorization code does not exist.</li>
+     * <li><strong>PortabilityNumberNotSupported</strong>: Mobile number portability is not supported.</li>
+     * <li><strong>Unknown</strong>: An unknown exception occurred.</li>
+     * <li><strong>AuthCodeAndApiNotMatch</strong>: A system exception occurred.</li>
+     * <li><strong>AuthCodeAndApiNotMatch</strong>: The authorization code does not match the API operation.</li>
+     * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -30,12 +34,18 @@ public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -80,27 +90,40 @@ public class InvalidPhoneNumberFilterResponseBody extends TeaModel {
     public static class InvalidPhoneNumberFilterResponseBodyData extends TeaModel {
         /**
          * <p>The returned filter results.</p>
-         * <br>
-         * <p>*   **YES**: the valid phone number. The mappings are returned.</p>
-         * <p>*   **NO**: the invalid phone number. No mappings are returned.</p>
+         * <ul>
+         * <li><strong>YES</strong>: the valid phone number. The mappings are returned.</li>
+         * <li><strong>NO</strong>: the invalid phone number. No mappings are returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The encrypted phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1400513****</p>
          */
         @NameInMap("EncryptedNumber")
         public String encryptedNumber;
 
         /**
          * <p>The time when the phone number expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-27 16:05:23</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The original phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         @NameInMap("OriginalNumber")
         public String originalNumber;

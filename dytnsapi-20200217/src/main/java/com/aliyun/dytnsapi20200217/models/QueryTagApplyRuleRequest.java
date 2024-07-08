@@ -15,6 +15,9 @@ public class QueryTagApplyRuleRequest extends TeaModel {
 
     /**
      * <p>The tag ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61</p>
      */
     @NameInMap("TagId")
     public Long tagId;

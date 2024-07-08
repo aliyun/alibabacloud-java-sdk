@@ -8,13 +8,19 @@ public class QueryTagListPageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

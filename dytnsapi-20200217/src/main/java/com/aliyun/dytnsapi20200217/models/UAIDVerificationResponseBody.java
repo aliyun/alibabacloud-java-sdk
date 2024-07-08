@@ -4,18 +4,36 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class UAIDVerificationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public UAIDVerificationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>68A40250-50CD-034C-B728-0BD******177</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,6 +83,10 @@ public class UAIDVerificationResponseBody extends TeaModel {
     }
 
     public static class UAIDVerificationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>B1E0C1********9F757AF52A035</p>
+         */
         @NameInMap("Uaid")
         public String uaid;
 

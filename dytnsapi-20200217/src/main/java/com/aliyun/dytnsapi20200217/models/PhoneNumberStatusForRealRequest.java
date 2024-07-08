@@ -6,36 +6,46 @@ import com.aliyun.tea.*;
 public class PhoneNumberStatusForRealRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
-     * <br>
-     * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization ID.</p>
-     * <br>
+     * <blockquote>
+     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dd1r***4id</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>The phone number to be queried.</p>
-     * <br>
-     * <p>*   If the value of Mask is NORMAL, the value of this field is an 11-digit phone number.</p>
-     * <p>*   If the value of Mask is MD5, the value of this field is a 32-bit encrypted string.</p>
-     * <p>*   If the value of Mask is SHA256, the value of this field is a 64-bit encrypted string.</p>
-     * <br>
-     * <p>>  Letters in the encrypted strings are not case-sensitive.</p>
-     * <br>
+     * <ul>
+     * <li>If the value of Mask is NORMAL, the value of this field is an 11-digit phone number.</li>
+     * <li>If the value of Mask is MD5, the value of this field is a 32-bit encrypted string.</li>
+     * <li>If the value of Mask is SHA256, the value of this field is a 64-bit encrypted string.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>189****8999</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
 
     /**
      * <p>The encryption method of the phone number. Valid values:</p>
-     * <br>
-     * <p>*   **NORMAL**: The phone number is not encrypted.</p>
-     * <p>*   **MD5**</p>
-     * <p>*   **SHA256**</p>
-     * <br>
+     * <ul>
+     * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
+     * <li><strong>MD5</strong></li>
+     * <li><strong>SHA256</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("Mask")
     public String mask;

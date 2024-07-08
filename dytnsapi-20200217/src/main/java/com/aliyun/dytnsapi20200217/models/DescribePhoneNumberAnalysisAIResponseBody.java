@@ -9,8 +9,12 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
 
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   OK: The request is successful.</p>
+     * <ul>
+     * <li>OK: The request is successful.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -23,12 +27,18 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68A40250-50CD-034C-B728-0BD******177</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,16 +91,23 @@ public class DescribePhoneNumberAnalysisAIResponseBody extends TeaModel {
     public static class DescribePhoneNumberAnalysisAIResponseBodyData extends TeaModel {
         /**
          * <p>The returned code.</p>
-         * <br>
-         * <p>*   YES: The specified phone number is valid.</p>
-         * <p>*   NO: The specified phone number is invalid.</p>
-         * <p>*   UNKNOWN: The specified phone number is unknown</p>
+         * <ul>
+         * <li>YES: The specified phone number is valid.</li>
+         * <li>NO: The specified phone number is invalid.</li>
+         * <li>UNKNOWN: The specified phone number is unknown</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>YES</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The specified phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>187****5620</p>
          */
         @NameInMap("Number")
         public String number;

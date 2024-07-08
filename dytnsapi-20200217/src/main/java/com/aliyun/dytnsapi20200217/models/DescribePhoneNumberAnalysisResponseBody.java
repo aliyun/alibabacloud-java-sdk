@@ -4,15 +4,27 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribePhoneNumberAnalysisResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,17 @@ public class DescribePhoneNumberAnalysisResponseBody extends TeaModel {
     }
 
     public static class DescribePhoneNumberAnalysisResponseBodyDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>NO</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18752785620</p>
+         */
         @NameInMap("Number")
         public String number;
 

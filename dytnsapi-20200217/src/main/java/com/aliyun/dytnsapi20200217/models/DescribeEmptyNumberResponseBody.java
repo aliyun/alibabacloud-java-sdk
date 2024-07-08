@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class DescribeEmptyNumberResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
-     * <br>
-     * <p>*   **OK**: The request is successful.</p>
-     * <p>*   **InvalidPhoneNumber.Check**: The phone number is invalid.</p>
+     * <ul>
+     * <li><strong>OK</strong>: The request is successful.</li>
+     * <li><strong>InvalidPhoneNumber.Check</strong>: The phone number is invalid.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,17 +81,24 @@ public class DescribeEmptyNumberResponseBody extends TeaModel {
     public static class DescribeEmptyNumberResponseBodyData extends TeaModel {
         /**
          * <p>The specified phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>189****1234</p>
          */
         @NameInMap("Number")
         public String number;
 
         /**
          * <p>The returned status for the queried phone number. Valid values:</p>
-         * <br>
-         * <p>*   **EMPTY**: The queried phone number is a nonexistent number.</p>
-         * <p>*   **NORMAL**: The queried phone number is valid.</p>
-         * <p>*   **SUSPECT_EMPTY**: The queried phone number is suspected to be a nonexistent number.</p>
-         * <p>*   **UNKNOWN**: The queried phone number is unknown.</p>
+         * <ul>
+         * <li><strong>EMPTY</strong>: The queried phone number is a nonexistent number.</li>
+         * <li><strong>NORMAL</strong>: The queried phone number is valid.</li>
+         * <li><strong>SUSPECT_EMPTY</strong>: The queried phone number is suspected to be a nonexistent number.</li>
+         * <li><strong>UNKNOWN</strong>: The queried phone number is unknown.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EMPTY</p>
          */
         @NameInMap("Status")
         public String status;

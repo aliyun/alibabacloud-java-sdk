@@ -65,12 +65,24 @@ public class GetUAIDConversionSignResponseBody extends TeaModel {
     }
 
     public static class GetUAIDConversionSignResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
         @NameInMap("Carrier")
         public String carrier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
         @NameInMap("OutId")
         public String outId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
         @NameInMap("Sign")
         public String sign;
 

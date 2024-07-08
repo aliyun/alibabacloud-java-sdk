@@ -65,9 +65,17 @@ public class QueryPhoneTwiceTelVerifyResponseBody extends TeaModel {
     }
 
     public static class QueryPhoneTwiceTelVerifyResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
         @NameInMap("CarrierCode")
         public String carrierCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>73</p>
+         */
         @NameInMap("VerifyResult")
         public Long verifyResult;
 

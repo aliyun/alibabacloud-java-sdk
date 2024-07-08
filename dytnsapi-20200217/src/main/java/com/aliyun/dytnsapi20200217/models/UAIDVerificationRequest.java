@@ -6,25 +6,43 @@ import com.aliyun.tea.*;
 public class UAIDVerificationRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HwD97InG</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CM</p>
      */
     @NameInMap("Carrier")
     public String carrier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <strong>example:</strong>
+     * <p>b8b5b3a*******0b9893484fdf412c99</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Province")
     public String province;
 
@@ -36,10 +54,17 @@ public class UAIDVerificationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MIGfMA0********3DQEBAQUAA4GNADCB</p>
      */
     @NameInMap("Token")
     public String token;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Md****a3Em</p>
+     */
     @NameInMap("UserGrantId")
     public String userGrantId;
 

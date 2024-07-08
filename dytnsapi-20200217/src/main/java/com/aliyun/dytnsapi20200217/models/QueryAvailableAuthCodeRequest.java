@@ -15,6 +15,9 @@ public class QueryAvailableAuthCodeRequest extends TeaModel {
 
     /**
      * <p>The tag ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
      */
     @NameInMap("TagId")
     public Long tagId;

@@ -7,15 +7,27 @@ public class UAIDConversionResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("Model")
     public UAIDConversionResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,6 +77,10 @@ public class UAIDConversionResponseBody extends TeaModel {
     }
 
     public static class UAIDConversionResponseBodyModel extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
         @NameInMap("PhoneList")
         public String phoneList;
 

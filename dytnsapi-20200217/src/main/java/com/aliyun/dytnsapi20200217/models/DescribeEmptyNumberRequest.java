@@ -6,32 +6,41 @@ import com.aliyun.tea.*;
 public class DescribeEmptyNumberRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
-     * <br>
-     * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
-     * <br>
+     * <blockquote>
+     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dd1r***4id</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>The phone number to be queried.</p>
-     * <br>
-     * <p>>  You can query only one phone number a time.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can query only one phone number a time.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>189****1234</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
 
     /**
      * <p>The encryption method of the phone number. Valid values:</p>
-     * <br>
-     * <p>*   **NORMAL**: The phone number is not encrypted.</p>
-     * <p>*   **MD5**</p>
-     * <p>*   **SHA256**</p>
-     * <br>
+     * <ul>
+     * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
+     * <li><strong>MD5</strong></li>
+     * <li><strong>SHA256</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("Mask")
     public String mask;

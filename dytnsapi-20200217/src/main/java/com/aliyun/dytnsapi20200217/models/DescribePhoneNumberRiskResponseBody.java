@@ -65,6 +65,10 @@ public class DescribePhoneNumberRiskResponseBody extends TeaModel {
     }
 
     public static class DescribePhoneNumberRiskResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
         @NameInMap("VerifyResult")
         public String verifyResult;
 

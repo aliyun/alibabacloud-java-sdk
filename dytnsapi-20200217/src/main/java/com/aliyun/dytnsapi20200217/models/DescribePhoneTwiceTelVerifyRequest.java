@@ -6,36 +6,46 @@ import com.aliyun.tea.*;
 public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
-     * <br>
-     * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
-     * <br>
+     * <blockquote>
+     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dd1r***4id</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>The phone number to be queried.</p>
-     * <br>
-     * <p>*   If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</p>
-     * <p>*   If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</p>
-     * <p>*   If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</p>
-     * <br>
-     * <p>>  Letters in the encrypted strings are not case-sensitive.</p>
-     * <br>
+     * <ul>
+     * <li>If the value of Mask is NORMAL, specify an 11-digit phone number in plaintext.</li>
+     * <li>If the value of Mask is MD5, specify a 32-bit string that is encrypted by using MD5.</li>
+     * <li>If the value of Mask is SHA256, specify a 64-bit string that is encrypted by using SHA256.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>139*******</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
 
     /**
      * <p>The encryption method of the phone number. Valid values:</p>
-     * <br>
-     * <p>*   **NORMAL**: The phone number is not encrypted.</p>
-     * <p>*   **MD5**</p>
-     * <p>*   **SHA256**</p>
-     * <br>
+     * <ul>
+     * <li><strong>NORMAL</strong>: The phone number is not encrypted.</li>
+     * <li><strong>MD5</strong></li>
+     * <li><strong>SHA256</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("Mask")
     public String mask;
@@ -51,14 +61,18 @@ public class DescribePhoneTwiceTelVerifyRequest extends TeaModel {
 
     /**
      * <p>The registration time. Specify the time in the yyyy-MM-dd HH:mm:ss format. This time is the service registration time of the mobile phone user. If the service registration time is later than the time when the phone number is assigned by a carrier, it indicates that the phone number is not a reassigned number. Otherwise, the phone number is a reassigned number.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If a carrier allocates a single number multiple times, the system will determine whether the phone number is a reassigned number based on the time when the carrier last allocated the phone number.</p>
-     * <br>
-     * <p>*   The service registration time must be later than 00:00:00 on January 1, 1970.</p>
-     * <br>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>If a carrier allocates a single number multiple times, the system will determine whether the phone number is a reassigned number based on the time when the carrier last allocated the phone number.</p>
+     * </li>
+     * <li><p>The service registration time must be later than 00:00:00 on January 1, 1970.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-01-01 00:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;
