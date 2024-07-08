@@ -98,6 +98,9 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
     }
 
     public static class MealOrderDetailQueryResponseBodyModule extends TeaModel {
+        @NameInMap("apply_id")
+        public Long applyId;
+
         /**
          * <strong>example:</strong>
          * <p>2024032522001423601409393178</p>
@@ -215,6 +218,14 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         public static MealOrderDetailQueryResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             MealOrderDetailQueryResponseBodyModule self = new MealOrderDetailQueryResponseBodyModule();
             return TeaModel.build(map, self);
+        }
+
+        public MealOrderDetailQueryResponseBodyModule setApplyId(Long applyId) {
+            this.applyId = applyId;
+            return this;
+        }
+        public Long getApplyId() {
+            return this.applyId;
         }
 
         public MealOrderDetailQueryResponseBodyModule setCorpCodeOrderId(String corpCodeOrderId) {

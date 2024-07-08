@@ -187,6 +187,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cascade_department")
         public String cascadeDepartment;
 
+        @NameInMap("change_affiliate_no")
+        public String changeAffiliateNo;
+
+        @NameInMap("change_apply_id")
+        public String changeApplyId;
+
         /**
          * <strong>example:</strong>
          * <p>23.0</p>
@@ -316,6 +322,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("project_name")
         public String projectName;
 
+        @NameInMap("refund_affiliate_no")
+        public String refundAffiliateNo;
+
+        @NameInMap("refund_apply_id")
+        public String refundApplyId;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -382,6 +394,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("short_ticket_no")
         public String shortTicketNo;
+
+        @NameInMap("speed_package_fee")
+        public Double speedPackageFee;
 
         /**
          * <strong>example:</strong>
@@ -616,6 +631,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.cascadeDepartment;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setChangeAffiliateNo(String changeAffiliateNo) {
+            this.changeAffiliateNo = changeAffiliateNo;
+            return this;
+        }
+        public String getChangeAffiliateNo() {
+            return this.changeAffiliateNo;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setChangeApplyId(String changeApplyId) {
+            this.changeApplyId = changeApplyId;
+            return this;
+        }
+        public String getChangeApplyId() {
+            return this.changeApplyId;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setChangeFee(Double changeFee) {
             this.changeFee = changeFee;
             return this;
@@ -832,6 +863,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.projectName;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setRefundAffiliateNo(String refundAffiliateNo) {
+            this.refundAffiliateNo = refundAffiliateNo;
+            return this;
+        }
+        public String getRefundAffiliateNo() {
+            return this.refundAffiliateNo;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setRefundApplyId(String refundApplyId) {
+            this.refundApplyId = refundApplyId;
+            return this;
+        }
+        public String getRefundApplyId() {
+            return this.refundApplyId;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setRefundFee(Double refundFee) {
             this.refundFee = refundFee;
             return this;
@@ -934,6 +981,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getShortTicketNo() {
             return this.shortTicketNo;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setSpeedPackageFee(Double speedPackageFee) {
+            this.speedPackageFee = speedPackageFee;
+            return this;
+        }
+        public Double getSpeedPackageFee() {
+            return this.speedPackageFee;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setStatus(Integer status) {
