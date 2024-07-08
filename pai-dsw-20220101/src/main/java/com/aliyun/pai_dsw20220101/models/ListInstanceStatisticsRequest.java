@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListInstanceStatisticsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27218,34956</p>
      */
     @NameInMap("WorkspaceIds")
     public String workspaceIds;

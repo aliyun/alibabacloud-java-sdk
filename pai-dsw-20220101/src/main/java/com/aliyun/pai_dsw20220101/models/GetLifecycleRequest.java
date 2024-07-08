@@ -4,18 +4,38 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetLifecycleRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SessionNumber")
     public Integer sessionNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

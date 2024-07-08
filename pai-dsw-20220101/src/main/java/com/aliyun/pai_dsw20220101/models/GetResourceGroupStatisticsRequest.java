@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class GetResourceGroupStatisticsRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-123456789</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>27218,34956</p>
      */
     @NameInMap("WorkspaceIds")
     public String workspaceIds;

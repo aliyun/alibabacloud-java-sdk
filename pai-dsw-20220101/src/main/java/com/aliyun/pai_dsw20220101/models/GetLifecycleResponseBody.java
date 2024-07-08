@@ -4,21 +4,45 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetLifecycleResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[[{&quot;Status&quot;:&quot;Creating&quot;,&quot;GmtCreateTime&quot;:&quot;2022-09-19T22:38:00Z&quot;,&quot;Reason&quot;:&quot;&quot;,&quot;ReasonCode&quot;:&quot;&quot;}]]</p>
+     */
     @NameInMap("Lifecycle")
     public java.util.List<java.util.List<GetLifecycleResponseBodyLifecycle>> lifecycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;XXX&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -76,15 +100,31 @@ public class GetLifecycleResponseBody extends TeaModel {
     }
 
     public static class GetLifecycleResponseBodyLifecycle extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Starting</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>“”</p>
+         */
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-10-21T07:27:44Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 

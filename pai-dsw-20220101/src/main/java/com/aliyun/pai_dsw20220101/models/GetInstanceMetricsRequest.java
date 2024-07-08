@@ -4,18 +4,33 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceMetricsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GpuCoreUsage</p>
      */
     @NameInMap("MetricType")
     public String metricType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15m</p>
+     */
     @NameInMap("TimeStep")
     public String timeStep;
 

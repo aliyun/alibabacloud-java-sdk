@@ -76,8 +76,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建实例
-     *
+     * <b>summary</b> : 
+     * <p>创建实例</p>
+     * 
      * @param request CreateInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -88,6 +89,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
             body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.affinity)) {
+            body.put("Affinity", request.affinity);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.cloudDisks)) {
@@ -173,8 +178,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建实例
-     *
+     * <b>summary</b> : 
+     * <p>创建实例</p>
+     * 
      * @param request CreateInstanceRequest
      * @return CreateInstanceResponse
      */
@@ -185,8 +191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建定时关机任务
-     *
+     * <b>summary</b> : 
+     * <p>创建定时关机任务</p>
+     * 
      * @param request CreateInstanceShutdownTimerRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -222,8 +229,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建定时关机任务
-     *
+     * <b>summary</b> : 
+     * <p>创建定时关机任务</p>
+     * 
      * @param request CreateInstanceShutdownTimerRequest
      * @return CreateInstanceShutdownTimerResponse
      */
@@ -234,8 +242,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建实例快照
-     *
+     * <b>summary</b> : 
+     * <p>创建实例快照</p>
+     * 
      * @param request CreateInstanceSnapshotRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -287,8 +296,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建实例快照
-     *
+     * <b>summary</b> : 
+     * <p>创建实例快照</p>
+     * 
      * @param request CreateInstanceSnapshotRequest
      * @return CreateInstanceSnapshotResponse
      */
@@ -331,8 +341,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除实例
-     *
+     * <b>summary</b> : 
+     * <p>删除实例</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceResponse
@@ -356,8 +367,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除实例
-     *
+     * <b>summary</b> : 
+     * <p>删除实例</p>
      * @return DeleteInstanceResponse
      */
     public DeleteInstanceResponse deleteInstance(String InstanceId) throws Exception {
@@ -367,8 +378,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除定时关机任务
-     *
+     * <b>summary</b> : 
+     * <p>删除定时关机任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceShutdownTimerResponse
@@ -392,8 +404,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 删除定时关机任务
-     *
+     * <b>summary</b> : 
+     * <p>删除定时关机任务</p>
      * @return DeleteInstanceShutdownTimerResponse
      */
     public DeleteInstanceShutdownTimerResponse deleteInstanceShutdownTimer(String InstanceId) throws Exception {
@@ -403,8 +415,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例快照详情
-     *
+     * <b>summary</b> : 
+     * <p>获取实例快照详情</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteInstanceSnapshotResponse
@@ -428,8 +441,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例快照详情
-     *
+     * <b>summary</b> : 
+     * <p>获取实例快照详情</p>
      * @return DeleteInstanceSnapshotResponse
      */
     public DeleteInstanceSnapshotResponse deleteInstanceSnapshot(String InstanceId, String SnapshotId) throws Exception {
@@ -471,8 +484,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例详情
-     *
+     * <b>summary</b> : 
+     * <p>获取实例详情</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceResponse
@@ -496,8 +510,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例详情
-     *
+     * <b>summary</b> : 
+     * <p>获取实例详情</p>
      * @return GetInstanceResponse
      */
     public GetInstanceResponse getInstance(String InstanceId) throws Exception {
@@ -609,8 +623,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取定时关机任务
-     *
+     * <b>summary</b> : 
+     * <p>获取定时关机任务</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceShutdownTimerResponse
@@ -634,8 +649,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取定时关机任务
-     *
+     * <b>summary</b> : 
+     * <p>获取定时关机任务</p>
      * @return GetInstanceShutdownTimerResponse
      */
     public GetInstanceShutdownTimerResponse getInstanceShutdownTimer(String InstanceId) throws Exception {
@@ -645,8 +660,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例快照详情
-     *
+     * <b>summary</b> : 
+     * <p>获取实例快照详情</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetInstanceSnapshotResponse
@@ -670,8 +686,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例快照详情
-     *
+     * <b>summary</b> : 
+     * <p>获取实例快照详情</p>
      * @return GetInstanceSnapshotResponse
      */
     public GetInstanceSnapshotResponse getInstanceSnapshot(String InstanceId, String SnapshotId) throws Exception {
@@ -738,8 +754,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取metrics数据
-     *
+     * <b>summary</b> : 
+     * <p>获取metrics数据</p>
+     * 
      * @param request GetMetricsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -799,8 +816,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取metrics数据
-     *
+     * <b>summary</b> : 
+     * <p>获取metrics数据</p>
+     * 
      * @param request GetMetricsRequest
      * @return GetMetricsResponse
      */
@@ -909,8 +927,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户配置
-     *
+     * <b>summary</b> : 
+     * <p>获取用户配置</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserConfigResponse
@@ -934,8 +953,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取用户配置
-     *
+     * <b>summary</b> : 
+     * <p>获取用户配置</p>
      * @return GetUserConfigResponse
      */
     public GetUserConfigResponse getUserConfig() throws Exception {
@@ -945,8 +964,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取ECS规格列表
-     *
+     * <b>summary</b> : 
+     * <p>获取ECS规格列表</p>
+     * 
      * @param request ListEcsSpecsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -994,8 +1014,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取ECS规格列表
-     *
+     * <b>summary</b> : 
+     * <p>获取ECS规格列表</p>
+     * 
      * @param request ListEcsSpecsRequest
      * @return ListEcsSpecsResponse
      */
@@ -1006,8 +1027,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询实例快照列表
-     *
+     * <b>summary</b> : 
+     * <p>查询实例快照列表</p>
+     * 
      * @param request ListInstanceSnapshotRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1051,8 +1073,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询实例快照列表
-     *
+     * <b>summary</b> : 
+     * <p>查询实例快照列表</p>
+     * 
      * @param request ListInstanceSnapshotRequest
      * @return ListInstanceSnapshotResponse
      */
@@ -1063,8 +1086,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例统计信息
-     *
+     * <b>summary</b> : 
+     * <p>获取实例统计信息</p>
+     * 
      * @param request ListInstanceStatisticsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1096,8 +1120,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取实例统计信息
-     *
+     * <b>summary</b> : 
+     * <p>获取实例统计信息</p>
+     * 
      * @param request ListInstanceStatisticsRequest
      * @return ListInstanceStatisticsResponse
      */
@@ -1203,8 +1228,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动实例
-     *
+     * <b>summary</b> : 
+     * <p>启动实例</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartInstanceResponse
@@ -1228,8 +1254,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动实例
-     *
+     * <b>summary</b> : 
+     * <p>启动实例</p>
      * @return StartInstanceResponse
      */
     public StartInstanceResponse startInstance(String InstanceId) throws Exception {
@@ -1239,8 +1265,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止实例
-     *
+     * <b>summary</b> : 
+     * <p>停止实例</p>
+     * 
      * @param request StopInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1272,8 +1299,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 停止实例
-     *
+     * <b>summary</b> : 
+     * <p>停止实例</p>
+     * 
      * @param request StopInstanceRequest
      * @return StopInstanceResponse
      */
@@ -1284,8 +1312,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新实例
-     *
+     * <b>summary</b> : 
+     * <p>更新实例</p>
+     * 
      * @param request UpdateInstanceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1296,6 +1325,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
             body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.affinity)) {
+            body.put("Affinity", request.affinity);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.cloudDisks)) {
@@ -1381,8 +1414,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 更新实例
-     *
+     * <b>summary</b> : 
+     * <p>更新实例</p>
+     * 
      * @param request UpdateInstanceRequest
      * @return UpdateInstanceResponse
      */

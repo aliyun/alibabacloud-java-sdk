@@ -4,42 +4,90 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesShrinkRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AcceleratorType</p>
+     */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dsw-730xxxxxxxxxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>training_data</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     @NameInMap("Labels")
     public String labelsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PayAsYouGo</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-123456789</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gmtCreate</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>40823</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

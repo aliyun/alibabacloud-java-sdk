@@ -7,18 +7,34 @@ public class CreateInstanceSnapshotRequest extends TeaModel {
     @NameInMap("ExcludePaths")
     public java.util.List<String> excludePaths;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;foo\&quot;: \&quot;bar\&quot;}</p>
+     */
     @NameInMap("Labels")
     public java.util.List<CreateInstanceSnapshotRequestLabels> labels;
 
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    /**
+     * <strong>example:</strong>
+     * <p>training_data_env</p>
+     */
     @NameInMap("SnapshotDescription")
     public String snapshotDescription;
 
+    /**
+     * <strong>example:</strong>
+     * <p>training_data_env</p>
+     */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
@@ -76,9 +92,17 @@ public class CreateInstanceSnapshotRequest extends TeaModel {
     }
 
     public static class CreateInstanceSnapshotRequestLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>stsTokenOwner</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123xxxxxxxx</p>
+         */
         @NameInMap("Value")
         public String value;
 

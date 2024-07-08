@@ -4,12 +4,24 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceEventsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2000</p>
+     */
     @NameInMap("MaxEventsNum")
     public Integer maxEventsNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

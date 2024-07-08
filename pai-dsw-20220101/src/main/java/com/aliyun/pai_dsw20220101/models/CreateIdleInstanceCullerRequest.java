@@ -4,12 +4,24 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateIdleInstanceCullerRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("CpuPercentThreshold")
     public Integer cpuPercentThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("GpuPercentThreshold")
     public Integer gpuPercentThreshold;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("MaxIdleTimeInMinutes")
     public Integer maxIdleTimeInMinutes;
 
