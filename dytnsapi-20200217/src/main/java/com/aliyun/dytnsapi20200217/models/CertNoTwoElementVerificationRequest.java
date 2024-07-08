@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CertNoTwoElementVerificationRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QASDW@#**</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>331021200001010000</p>
      */
     @NameInMap("CertNo")
     public String certNo;

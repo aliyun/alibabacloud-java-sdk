@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class CompanyFourElementsVerificationResponseBody extends TeaModel {
     /**
      * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -24,12 +32,18 @@ public class CompanyFourElementsVerificationResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The unique request ID. It is a common parameter and can be used to troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,12 +96,18 @@ public class CompanyFourElementsVerificationResponseBody extends TeaModel {
     public static class CompanyFourElementsVerificationResponseBodyDataDetailInfo extends TeaModel {
         /**
          * <p>The business status of the enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("EnterpriseStatus")
         public String enterpriseStatus;
 
         /**
          * <p>The business term of the enterprise.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-25/2053-05-24</p>
          */
         @NameInMap("OpenTime")
         public String openTime;
@@ -130,22 +150,30 @@ public class CompanyFourElementsVerificationResponseBody extends TeaModel {
 
         /**
          * <p>The code of the verification result. Valid values:</p>
-         * <br>
-         * <p>*   0: The four elements belong to the same enterprise.</p>
-         * <p>*   1: The four elements belong to the same enterprise, but the business status of the enterprise is abnormal.</p>
-         * <p>*   2: The legal representative information cannot match the enterprise information.</p>
-         * <p>*   3: The four elements do not belong to the same enterprise.</p>
-         * <p>*   4: No information about the enterprise is found.</p>
-         * <p>*   5: No information about the legal representative is found.</p>
+         * <ul>
+         * <li>0: The four elements belong to the same enterprise.</li>
+         * <li>1: The four elements belong to the same enterprise, but the business status of the enterprise is abnormal.</li>
+         * <li>2: The legal representative information cannot match the enterprise information.</li>
+         * <li>3: The four elements do not belong to the same enterprise.</li>
+         * <li>4: No information about the enterprise is found.</li>
+         * <li>5: No information about the legal representative is found.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ReasonCode")
         public Long reasonCode;
 
         /**
          * <p>The verification result. Valid values:</p>
-         * <br>
-         * <p>*   true: The four elements belong to the same enterprise and the business status of the enterprise is Active.</p>
-         * <p>*   false: The four elements do not belong to the same enterprise.</p>
+         * <ul>
+         * <li>true: The four elements belong to the same enterprise and the business status of the enterprise is Active.</li>
+         * <li>false: The four elements do not belong to the same enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("VerifyResult")
         public String verifyResult;

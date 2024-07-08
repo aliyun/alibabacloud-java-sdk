@@ -6,30 +6,39 @@ import com.aliyun.tea.*;
 public class PhoneNumberEncryptRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
-     * <br>
-     * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
-     * <br>
+     * <blockquote>
+     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QASDW@#**</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>The phone number to be queried.</p>
-     * <br>
-     * <p>>  You can query only one phone number at a time.</p>
-     * <br>
+     * <blockquote>
+     * <p> You can query only one phone number at a time.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
 
     /**
-     * <p>The encryption method of the phone number. Set the value to **NORMAL**.</p>
-     * <br>
-     * <p>>  Only the NORMAL encryption method is supported.</p>
-     * <br>
+     * <p>The encryption method of the phone number. Set the value to <strong>NORMAL</strong>.</p>
+     * <blockquote>
+     * <p> Only the NORMAL encryption method is supported.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
      */
     @NameInMap("Mask")
     public String mask;

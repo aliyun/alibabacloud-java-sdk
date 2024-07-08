@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryAvailableAuthCodeResponseBody extends TeaModel {
     /**
-     * <p>The response code. **OK** indicates that the request is successful.</p>
+     * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class QueryAvailableAuthCodeResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6ADDCD31-6BC7-5913-A47F-E29A07E37FEE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -6,25 +6,43 @@ import com.aliyun.tea.*;
 public class DescribePhoneNumberAnalysisRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QASDW@#**</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1310000****</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MD5</p>
+     */
     @NameInMap("Mask")
     public String mask;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("NumberType")
     public Long numberType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Rate")
     public Long rate;
 

@@ -6,50 +6,64 @@ import com.aliyun.tea.*;
 public class TwoElementsVerificationRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
-     * <br>
-     * <p>>  On the **My Applications** page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/analysis/apply), you can obtain the authorization code (also known as authorization ID).</p>
-     * <br>
+     * <blockquote>
+     * <p> On the <strong>My Applications</strong> page in the <a href="https://dytns.console.aliyun.com/analysis/apply">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QASDW@#**</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>The phone number to be verified.</p>
-     * <br>
-     * <p>*   If the value of Mask is NORMAL, specify a value in plaintext for this field.</p>
-     * <p>*   If the value of Mask is MD5, specify a MD5-encrypted value for this field.</p>
-     * <p>*   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</p>
-     * <br>
-     * <p>>  Letters in the encrypted strings are not case-sensitive.</p>
-     * <br>
+     * <ul>
+     * <li>If the value of Mask is NORMAL, specify a value in plaintext for this field.</li>
+     * <li>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</li>
+     * <li>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1390000****</p>
      */
     @NameInMap("InputNumber")
     public String inputNumber;
 
     /**
      * <p>The encryption method. Valid values:</p>
-     * <br>
-     * <p>*   **NORMAL**: plaintext</p>
-     * <p>*   **MD5**</p>
-     * <p>*   **SHA256**</p>
-     * <br>
+     * <ul>
+     * <li><strong>NORMAL</strong>: plaintext</li>
+     * <li><strong>MD5</strong></li>
+     * <li><strong>SHA256</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MD5</p>
      */
     @NameInMap("Mask")
     public String mask;
 
     /**
      * <p>The name to be verified.</p>
-     * <br>
-     * <p>*   If the value of Mask is NORMAL, specify a value in plaintext for this field.</p>
-     * <p>*   If the value of Mask is MD5, specify a MD5-encrypted value for this field.</p>
-     * <p>*   If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</p>
-     * <br>
-     * <p>>  Letters in the encrypted strings are not case-sensitive.</p>
-     * <br>
+     * <ul>
+     * <li>If the value of Mask is NORMAL, specify a value in plaintext for this field.</li>
+     * <li>If the value of Mask is MD5, specify a MD5-encrypted value for this field.</li>
+     * <li>If the value of Mask is SHA256, specify a SHA256-encrypted value for this field.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Letters in the encrypted strings are not case-sensitive.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun</p>
      */
     @NameInMap("Name")
     public String name;

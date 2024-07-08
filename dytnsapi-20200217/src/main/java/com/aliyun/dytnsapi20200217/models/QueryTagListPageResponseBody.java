@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryTagListPageResponseBody extends TeaModel {
     /**
-     * <p>The response code. **OK** indicates that the request is successful.</p>
+     * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class QueryTagListPageResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A4475657-BB7E-585D-9E09-37934F096103</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,73 +98,111 @@ public class QueryTagListPageResponseBody extends TeaModel {
     public static class QueryTagListPageResponseBodyDataRecords extends TeaModel {
         /**
          * <p>The API operation that is called by the frontend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TwoElementsVerification</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
          * <p>Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The URL for the API documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.388997.0.0.cf804cc7DX4vlP">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.388997.0.0.cf804cc7DX4vlP</a></p>
          */
         @NameInMap("DocAddress")
         public String docAddress;
 
         /**
          * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <p>The industry ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("IndustryId")
         public Long industryId;
 
         /**
          * <p>The industry name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("IndustryName")
         public String industryName;
 
         /**
          * <p>The tag description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>for autotest new</p>
          */
         @NameInMap("Introduction")
         public String introduction;
 
         /**
          * <p>Indicates whether the number is activated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
          */
         @NameInMap("IsOpen")
         public Long isOpen;
 
         /**
          * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>*   0: The number is hidden.</p>
-         * <p>*   1: The number is public.</p>
+         * <ul>
+         * <li>0: The number is hidden.</li>
+         * <li>1: The number is public.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SaleStatusStr")
         public String saleStatusStr;
 
         /**
          * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
          */
         @NameInMap("SceneId")
         public Long sceneId;
 
         /**
          * <p>The scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>check</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
@@ -262,12 +313,18 @@ public class QueryTagListPageResponseBody extends TeaModel {
     public static class QueryTagListPageResponseBodyData extends TeaModel {
         /**
          * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("PageNo")
         public Long pageNo;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
@@ -280,12 +337,18 @@ public class QueryTagListPageResponseBody extends TeaModel {
 
         /**
          * <p>The total number of returned entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;
 
         /**
          * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91</p>
          */
         @NameInMap("TotalPage")
         public Long totalPage;

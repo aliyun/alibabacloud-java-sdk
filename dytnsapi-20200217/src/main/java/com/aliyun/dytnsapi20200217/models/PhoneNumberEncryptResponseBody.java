@@ -6,9 +6,13 @@ import com.aliyun.tea.*;
 public class PhoneNumberEncryptResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
-     * <br>
-     * <p>*   The value OK indicates that the request was successful.</p>
-     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](https://help.aliyun.com/document_detail/109196.html).</p>
+     * <ul>
+     * <li>The value OK indicates that the request was successful.</li>
+     * <li>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/109196.html">Error codes</a>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,12 +25,18 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -71,18 +81,27 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
     public static class PhoneNumberEncryptResponseBodyData extends TeaModel {
         /**
          * <p>The encrypted phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1400513****</p>
          */
         @NameInMap("EncryptedNumber")
         public String encryptedNumber;
 
         /**
          * <p>The time when the phone number expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-27 16:05:23</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The original phone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         @NameInMap("OriginalNumber")
         public String originalNumber;

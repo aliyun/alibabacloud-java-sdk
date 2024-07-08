@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class UAIDConversionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Carrier")
     public String carrier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("OutId")
     public String outId;
 
@@ -28,6 +38,10 @@ public class UAIDConversionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("UaidList")
     public String uaidList;
 

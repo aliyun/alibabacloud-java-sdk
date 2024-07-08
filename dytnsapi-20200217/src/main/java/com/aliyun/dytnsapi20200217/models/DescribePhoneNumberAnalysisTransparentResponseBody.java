@@ -4,18 +4,36 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class DescribePhoneNumberAnalysisTransparentResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public DescribePhoneNumberAnalysisTransparentResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,18 +83,38 @@ public class DescribePhoneNumberAnalysisTransparentResponseBody extends TeaModel
     }
 
     public static class DescribePhoneNumberAnalysisTransparentResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值示例值</p>
+         */
         @NameInMap("Device_risk")
         public String deviceRisk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>示例值示例值</p>
+         */
         @NameInMap("Ip_risk")
         public String ipRisk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6</p>
+         */
         @NameInMap("Score1")
         public String score1;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
         @NameInMap("Score2")
         public String score2;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.8</p>
+         */
         @NameInMap("Score3")
         public String score3;
 

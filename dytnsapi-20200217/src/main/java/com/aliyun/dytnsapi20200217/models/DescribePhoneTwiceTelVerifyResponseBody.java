@@ -6,13 +6,18 @@ import com.aliyun.tea.*;
 public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   **OK**: The request is successful.</p>
-     * <p>*   **PortabilityNumberNotSupported**: The phone number that is involved in mobile number portability is not supported.</p>
-     * <p>*   **RequestNumberNotSupported**: You are not allowed to query phone numbers assigned by China Broadnet (that is, phone numbers start with 192) and phone numbers assigned by virtual network operators (VNOs).</p>
-     * <p>*   **RequestFrequencyLimit**: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</p>
-     * <br>
-     * <p>>  You are charged for phone number verifications if the value of Code is OK and the value of VerifyResult is not 0. For more information, see [Pricing](https://help.aliyun.com/document_detail/154751.html).</p>
+     * <ul>
+     * <li><strong>OK</strong>: The request is successful.</li>
+     * <li><strong>PortabilityNumberNotSupported</strong>: The phone number that is involved in mobile number portability is not supported.</li>
+     * <li><strong>RequestNumberNotSupported</strong>: You are not allowed to query phone numbers assigned by China Broadnet (that is, phone numbers start with 192) and phone numbers assigned by virtual network operators (VNOs).</li>
+     * <li><strong>RequestFrequencyLimit</strong>: Repeated queries for the same phone number at a high frequency within a short period of time are prohibited due to restrictions that are set by carriers. If this error code is returned, please try again later.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You are charged for phone number verifications if the value of Code is OK and the value of VerifyResult is not 0. For more information, see <a href="https://help.aliyun.com/document_detail/154751.html">Pricing</a>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -25,12 +30,18 @@ public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The unique request ID. It is a common parameter and can be used to troubleshoot and locate issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68A40250-50CD-034C-B728-0BD135850177</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -75,23 +86,32 @@ public class DescribePhoneTwiceTelVerifyResponseBody extends TeaModel {
     public static class DescribePhoneTwiceTelVerifyResponseBodyData extends TeaModel {
         /**
          * <p>The carrier. Valid values:</p>
-         * <br>
-         * <p>*   **CMCC**: China Mobile</p>
-         * <p>*   **CUCC**: China Unicom</p>
-         * <p>*   **CTCC**: China Telecom</p>
-         * <br>
-         * <p>>  The returned result indicates the carrier who assigns the phone number. If the phone number involves mobile number portability, the carrier after mobile number portability is returned.</p>
+         * <ul>
+         * <li><strong>CMCC</strong>: China Mobile</li>
+         * <li><strong>CUCC</strong>: China Unicom</li>
+         * <li><strong>CTCC</strong>: China Telecom</li>
+         * </ul>
+         * <blockquote>
+         * <p> The returned result indicates the carrier who assigns the phone number. If the phone number involves mobile number portability, the carrier after mobile number portability is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CMCC</p>
          */
         @NameInMap("Carrier")
         public String carrier;
 
         /**
          * <p>The result of the request. Valid values:</p>
-         * <br>
-         * <p>*   **0**: It is unable to judge whether the phone number is a reassigned number.</p>
-         * <p>*   **1**: The phone number is a reassigned number.</p>
-         * <p>*   **2**: The phone number is not a reassigned number.</p>
-         * <p>*   **3**: The phone number has been canceled.</p>
+         * <ul>
+         * <li><strong>0</strong>: It is unable to judge whether the phone number is a reassigned number.</li>
+         * <li><strong>1</strong>: The phone number is a reassigned number.</li>
+         * <li><strong>2</strong>: The phone number is not a reassigned number.</li>
+         * <li><strong>3</strong>: The phone number has been canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("VerifyResult")
         public String verifyResult;

@@ -4,18 +4,36 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class GetUAIDApplyTokenSignResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
     public GetUAIDApplyTokenSignResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>68A40250-50CD-034C-B728-0BD******177</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,12 +83,24 @@ public class GetUAIDApplyTokenSignResponseBody extends TeaModel {
     }
 
     public static class GetUAIDApplyTokenSignResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CM</p>
+         */
         @NameInMap("Carrier")
         public String carrier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b8b5b3a*******0b9893484fdf412c99</p>
+         */
         @NameInMap("OutId")
         public String outId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>D2E204D74EEB373E468632********23F592C4C9</p>
+         */
         @NameInMap("Sign")
         public String sign;
 

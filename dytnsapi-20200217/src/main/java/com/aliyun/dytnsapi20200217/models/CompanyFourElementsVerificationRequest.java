@@ -6,44 +6,58 @@ import com.aliyun.tea.*;
 public class CompanyFourElementsVerificationRequest extends TeaModel {
     /**
      * <p>The authorization code.</p>
-     * <br>
-     * <p>>  On the [My Applications](https://dytns.console.aliyun.com/analysis/apply) page in the [Cell Phone Number Service console](https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC), you can obtain the authorization code (also known as authorization ID).</p>
-     * <br>
+     * <blockquote>
+     * <p> On the <a href="https://dytns.console.aliyun.com/analysis/apply">My Applications</a> page in the <a href="https://dytns.console.aliyun.com/overview?spm=a2c4g.608385.0.0.79847f8b3awqUC">Cell Phone Number Service console</a>, you can obtain the authorization code (also known as authorization ID).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Dd1r***4id</p>
      */
     @NameInMap("AuthCode")
     public String authCode;
 
     /**
      * <p>The enterprise name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
      */
     @NameInMap("EpCertName")
     public String epCertName;
 
     /**
      * <p>The business license number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9242032*******J627</p>
      */
     @NameInMap("EpCertNo")
     public String epCertNo;
 
     /**
      * <p>The name of the legal representative.</p>
-     * <br>
-     * <p>>  If an enterprise has multiple legal representatives, separate them with commas (,).</p>
-     * <br>
+     * <blockquote>
+     * <p> If an enterprise has multiple legal representatives, separate them with commas (,).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>示例值</p>
      */
     @NameInMap("LegalPersonCertName")
     public String legalPersonCertName;
 
     /**
      * <p>The ID card number of the legal representative.</p>
-     * <br>
-     * <p>>  If an enterprise has multiple legal representatives, separate the ID card numbers with commas (,).</p>
-     * <br>
+     * <blockquote>
+     * <p> If an enterprise has multiple legal representatives, separate the ID card numbers with commas (,).</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>331021********0011</p>
      */
     @NameInMap("LegalPersonCertNo")
     public String legalPersonCertNo;

@@ -4,12 +4,24 @@ package com.aliyun.dytnsapi20200217.models;
 import com.aliyun.tea.*;
 
 public class QueryPhoneNumberOnlineTimeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值示例值</p>
+     */
     @NameInMap("AuthCode")
     public String authCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值</p>
+     */
     @NameInMap("InputNumber")
     public String inputNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
+     */
     @NameInMap("Mask")
     public String mask;
 

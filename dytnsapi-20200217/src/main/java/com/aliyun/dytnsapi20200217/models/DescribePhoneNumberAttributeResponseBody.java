@@ -6,17 +6,24 @@ import com.aliyun.tea.*;
 public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
     /**
      * <p>The response code. Valid values:</p>
-     * <br>
-     * <p>*   **OK**: The request is successful.</p>
-     * <p>*   **InvalidParameter**: The specified phone number is invalid or the parameter format is invalid.</p>
-     * <p>*   **PhoneNumberNotfound**: No attribute information can be found for the specified phone number.</p>
-     * <p>*   **isp.UNKNOWN**: An unknown exception occurred.</p>
+     * <ul>
+     * <li><strong>OK</strong>: The request is successful.</li>
+     * <li><strong>InvalidParameter</strong>: The specified phone number is invalid or the parameter format is invalid.</li>
+     * <li><strong>PhoneNumberNotfound</strong>: No attribute information can be found for the specified phone number.</li>
+     * <li><strong>isp.UNKNOWN</strong>: An unknown exception occurred.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
@@ -29,6 +36,9 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CC3BB6D2-2FDF-4321-9DCE-B38165CE4C47</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -73,10 +83,11 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
     public static class DescribePhoneNumberAttributeResponseBodyPhoneNumberAttribute extends TeaModel {
         /**
          * <p>The basic carrier. Valid values:</p>
-         * <br>
-         * <p>*   **China Mobile**</p>
-         * <p>*   **China Unicom**</p>
-         * <p>*   **China Telecom**</p>
+         * <ul>
+         * <li><strong>China Mobile</strong></li>
+         * <li><strong>China Unicom</strong></li>
+         * <li><strong>China Telecom</strong></li>
+         * </ul>
          */
         @NameInMap("BasicCarrier")
         public String basicCarrier;
@@ -95,15 +106,22 @@ public class DescribePhoneNumberAttributeResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the phone number involves mobile number portability. Valid values:</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsNumberPortability")
         public Boolean isNumberPortability;
 
         /**
          * <p>The number segment to which the phone number belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139</p>
          */
         @NameInMap("NumberSegment")
         public Long numberSegment;

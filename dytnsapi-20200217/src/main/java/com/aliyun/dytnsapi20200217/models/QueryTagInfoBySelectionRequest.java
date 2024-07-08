@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class QueryTagInfoBySelectionRequest extends TeaModel {
     /**
      * <p>The industry ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>58</p>
      */
     @NameInMap("IndustryId")
     public Long industryId;
@@ -21,12 +24,18 @@ public class QueryTagInfoBySelectionRequest extends TeaModel {
 
     /**
      * <p>The scene ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83</p>
      */
     @NameInMap("SceneId")
     public Long sceneId;
 
     /**
      * <p>The tag ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>71</p>
      */
     @NameInMap("TagId")
     public Long tagId;

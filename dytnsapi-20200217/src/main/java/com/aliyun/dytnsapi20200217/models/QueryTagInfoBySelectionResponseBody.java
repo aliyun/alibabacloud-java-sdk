@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryTagInfoBySelectionResponseBody extends TeaModel {
     /**
-     * <p>The response code. **OK** indicates that the request is successful.</p>
+     * <p>The response code. <strong>OK</strong> indicates that the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,21 +21,31 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1C3B8084-3A7D-570B-BC84-BF945A9CF65E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -85,12 +98,18 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
     public static class QueryTagInfoBySelectionResponseBodyDataParamListValueDict extends TeaModel {
         /**
          * <p>The English name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The Chinese name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云</p>
          */
         @NameInMap("Desc")
         public String desc;
@@ -121,30 +140,45 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
     public static class QueryTagInfoBySelectionResponseBodyDataParamList extends TeaModel {
         /**
          * <p>The English name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>preame</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The input hint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("Hint")
         public String hint;
 
         /**
          * <p>Indicates whether the parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Must")
         public Boolean must;
 
         /**
          * <p>The Chinese name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type. The code that corresponds to EnumUIWidgetTypes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aqzx</p>
          */
         @NameInMap("Type")
         public String type;
@@ -222,36 +256,54 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
         /**
          * <p>The URL for the API demo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz</a></p>
          */
         @NameInMap("DemoAddress")
         public String demoAddress;
 
         /**
          * <p>The URL for the API documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz">https://help.aliyun.com/document_detail/388997.html?spm=a2c4g.2573870.0.0.3aa921cbOrtqJz</a></p>
          */
         @NameInMap("DocAddress")
         public String docAddress;
 
         /**
          * <p>The URL for the definitions of the enumerated values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         @NameInMap("EnumDefinitionAddress")
         public String enumDefinitionAddress;
 
         /**
          * <p>The flow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>process name</p>
          */
         @NameInMap("FlowName")
         public String flowName;
 
         /**
          * <p>The industry ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>83</p>
          */
         @NameInMap("IndustryId")
         public Long industryId;
 
         /**
          * <p>The industry name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logistics</p>
          */
         @NameInMap("IndustryName")
         public String industryName;
@@ -267,24 +319,36 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
         /**
          * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41</p>
          */
         @NameInMap("SceneId")
         public Long sceneId;
 
         /**
          * <p>The scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General scenario</p>
          */
         @NameInMap("SceneName")
         public String sceneName;
 
         /**
          * <p>The tag ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         @NameInMap("TagId")
         public Long tagId;
 
         /**
          * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Number ownership</p>
          */
         @NameInMap("TagName")
         public String tagName;
