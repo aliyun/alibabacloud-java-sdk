@@ -272,6 +272,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("bill_date")
         public String billDate;
 
+        @NameInMap("category")
+        public Integer category;
+
         /**
          * <p>校验码</p>
          * 
@@ -354,6 +357,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
+        @NameInMap("invoice_type")
+        public Integer invoiceType;
+
         /**
          * <p>机器码</p>
          * 
@@ -362,6 +368,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
          */
         @NameInMap("machine_code")
         public String machineCode;
+
+        @NameInMap("ofd_oss_url")
+        public String ofdOssUrl;
 
         /**
          * <strong>example:</strong>
@@ -483,6 +492,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @NameInMap("total_amount_in_words")
         public String totalAmountInWords;
 
+        @NameInMap("xml_oss_url")
+        public String xmlOssUrl;
+
         public static InsInvoiceScanQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             InsInvoiceScanQueryResponseBodyModuleItems self = new InsInvoiceScanQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
@@ -510,6 +522,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getBillDate() {
             return this.billDate;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setCategory(Integer category) {
+            this.category = category;
+            return this;
+        }
+        public Integer getCategory() {
+            return this.category;
         }
 
         public InsInvoiceScanQueryResponseBodyModuleItems setCheckCode(String checkCode) {
@@ -624,12 +644,28 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             return this.invoiceTitle;
         }
 
+        public InsInvoiceScanQueryResponseBodyModuleItems setInvoiceType(Integer invoiceType) {
+            this.invoiceType = invoiceType;
+            return this;
+        }
+        public Integer getInvoiceType() {
+            return this.invoiceType;
+        }
+
         public InsInvoiceScanQueryResponseBodyModuleItems setMachineCode(String machineCode) {
             this.machineCode = machineCode;
             return this;
         }
         public String getMachineCode() {
             return this.machineCode;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setOfdOssUrl(String ofdOssUrl) {
+            this.ofdOssUrl = ofdOssUrl;
+            return this;
+        }
+        public String getOfdOssUrl() {
+            return this.ofdOssUrl;
         }
 
         public InsInvoiceScanQueryResponseBodyModuleItems setOrderId(Long orderId) {
@@ -790,6 +826,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
         public String getTotalAmountInWords() {
             return this.totalAmountInWords;
+        }
+
+        public InsInvoiceScanQueryResponseBodyModuleItems setXmlOssUrl(String xmlOssUrl) {
+            this.xmlOssUrl = xmlOssUrl;
+            return this;
+        }
+        public String getXmlOssUrl() {
+            return this.xmlOssUrl;
         }
 
     }

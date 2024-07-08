@@ -272,6 +272,18 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("index")
         public String index;
 
+        @NameInMap("ins_order_id")
+        public String insOrderId;
+
+        @NameInMap("insurance_number")
+        public String insuranceNumber;
+
+        @NameInMap("insurance_price")
+        public Double insurancePrice;
+
+        @NameInMap("insurance_product_name")
+        public String insuranceProductName;
+
         @NameInMap("invoice_title")
         public String invoiceTitle;
 
@@ -787,6 +799,38 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getIndex() {
             return this.index;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setInsOrderId(String insOrderId) {
+            this.insOrderId = insOrderId;
+            return this;
+        }
+        public String getInsOrderId() {
+            return this.insOrderId;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setInsuranceNumber(String insuranceNumber) {
+            this.insuranceNumber = insuranceNumber;
+            return this;
+        }
+        public String getInsuranceNumber() {
+            return this.insuranceNumber;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setInsurancePrice(Double insurancePrice) {
+            this.insurancePrice = insurancePrice;
+            return this;
+        }
+        public Double getInsurancePrice() {
+            return this.insurancePrice;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setInsuranceProductName(String insuranceProductName) {
+            this.insuranceProductName = insuranceProductName;
+            return this;
+        }
+        public String getInsuranceProductName() {
+            return this.insuranceProductName;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setInvoiceTitle(String invoiceTitle) {

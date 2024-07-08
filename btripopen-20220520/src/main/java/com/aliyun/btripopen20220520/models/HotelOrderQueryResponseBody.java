@@ -99,6 +99,15 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     }
 
     public static class HotelOrderQueryResponseBodyModuleHotelInfo extends TeaModel {
+        @NameInMap("brand_code")
+        public String brandCode;
+
+        @NameInMap("brand_group")
+        public String brandGroup;
+
+        @NameInMap("brand_name")
+        public String brandName;
+
         /**
          * <strong>example:</strong>
          * <p>1669344020</p>
@@ -155,6 +164,30 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         public static HotelOrderQueryResponseBodyModuleHotelInfo build(java.util.Map<String, ?> map) throws Exception {
             HotelOrderQueryResponseBodyModuleHotelInfo self = new HotelOrderQueryResponseBodyModuleHotelInfo();
             return TeaModel.build(map, self);
+        }
+
+        public HotelOrderQueryResponseBodyModuleHotelInfo setBrandCode(String brandCode) {
+            this.brandCode = brandCode;
+            return this;
+        }
+        public String getBrandCode() {
+            return this.brandCode;
+        }
+
+        public HotelOrderQueryResponseBodyModuleHotelInfo setBrandGroup(String brandGroup) {
+            this.brandGroup = brandGroup;
+            return this;
+        }
+        public String getBrandGroup() {
+            return this.brandGroup;
+        }
+
+        public HotelOrderQueryResponseBodyModuleHotelInfo setBrandName(String brandName) {
+            this.brandName = brandName;
+            return this;
+        }
+        public String getBrandName() {
+            return this.brandName;
         }
 
         public HotelOrderQueryResponseBodyModuleHotelInfo setCheckIn(Long checkIn) {
