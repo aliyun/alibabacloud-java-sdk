@@ -4,24 +4,48 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListEcsSpecsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("EcsSpecs")
     public java.util.List<ListEcsSpecsResponseBodyEcsSpecs> ecsSpecs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;XXX&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -87,6 +111,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     }
 
     public static class ListEcsSpecsResponseBodyEcsSpecsLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>stsTokenOwner</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -117,39 +145,87 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     }
 
     public static class ListEcsSpecsResponseBodyEcsSpecs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CPU</p>
+         */
         @NameInMap("AcceleratorType")
         public String acceleratorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("CPU")
         public Long CPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("GPU")
         public Long GPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v100</p>
+         */
         @NameInMap("GPUType")
         public String GPUType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5120000</p>
+         */
         @NameInMap("InstanceBandwidthRx")
         public Long instanceBandwidthRx;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.gn5-c28g1.7xlarge</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("IsAvailable")
         public Boolean isAvailable;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;foo\&quot;: \&quot;bar\&quot;}</p>
+         */
         @NameInMap("Labels")
         public java.util.List<ListEcsSpecsResponseBodyEcsSpecsLabels> labels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Memory")
         public Float memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22.8</p>
+         */
         @NameInMap("Price")
         public Double price;
 
+        /**
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
         @NameInMap("SystemDiskCapacity")
         public Long systemDiskCapacity;
 

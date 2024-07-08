@@ -4,6 +4,10 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("SaveImage")
     public Boolean saveImage;
 

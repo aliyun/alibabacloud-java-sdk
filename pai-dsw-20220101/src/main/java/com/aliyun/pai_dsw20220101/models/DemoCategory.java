@@ -4,12 +4,24 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class DemoCategory extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>sdk</p>
+     */
     @NameInMap("CategoryCode")
     public String categoryCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SDK Usage</p>
+     */
     @NameInMap("CategoryName")
     public String categoryName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Order")
     public Long order;
 

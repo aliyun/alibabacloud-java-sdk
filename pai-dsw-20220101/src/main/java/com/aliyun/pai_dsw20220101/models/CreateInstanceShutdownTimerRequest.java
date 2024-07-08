@@ -4,9 +4,17 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceShutdownTimerRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:01Z</p>
+     */
     @NameInMap("DueTime")
     public String dueTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3600000</p>
+     */
     @NameInMap("RemainingTimeInMs")
     public Long remainingTimeInMs;
 

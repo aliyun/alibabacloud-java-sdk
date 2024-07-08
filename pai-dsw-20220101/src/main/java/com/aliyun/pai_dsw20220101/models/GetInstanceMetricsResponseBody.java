@@ -4,24 +4,48 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceMetricsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dsw-730xxxxxxxxxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;XXX&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
     @NameInMap("PodMetrics")
     public java.util.List<GetInstanceMetricsResponseBodyPodMetrics> podMetrics;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,9 +111,17 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
     }
 
     public static class GetInstanceMetricsResponseBodyPodMetricsMetrics extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1670890560</p>
+         */
         @NameInMap("Time")
         public Long time;
 
+        /**
+         * <strong>example:</strong>
+         * <p>25.901031</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -120,6 +152,10 @@ public class GetInstanceMetricsResponseBody extends TeaModel {
         @NameInMap("Metrics")
         public java.util.List<GetInstanceMetricsResponseBodyPodMetricsMetrics> metrics;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dsw-15870-695f44c5bc-hd6xm</p>
+         */
         @NameInMap("PodId")
         public String podId;
 

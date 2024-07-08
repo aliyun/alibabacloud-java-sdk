@@ -4,30 +4,62 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetUserConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AccountSufficient")
     public Boolean accountSufficient;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("EnableEciDisk")
     public Boolean enableEciDisk;
 
     @NameInMap("FreeTier")
     public GetUserConfigResponseBodyFreeTier freeTier;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("FreeTierSpecAvailable")
     public Boolean freeTierSpecAvailable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;Access denied&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -109,39 +141,87 @@ public class GetUserConfigResponseBody extends TeaModel {
     }
 
     public static class GetUserConfigResponseBodyFreeTier extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>个</p>
+         */
         @NameInMap("InitBaseUnit")
         public String initBaseUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("InitBaseValue")
         public Double initBaseValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>个</p>
+         */
         @NameInMap("InitShowUnit")
         public String initShowUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5000</p>
+         */
         @NameInMap("InitShowValue")
         public String initShowValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsFreeTierUser")
         public Boolean isFreeTierUser;
 
+        /**
+         * <strong>example:</strong>
+         * <p>个</p>
+         */
         @NameInMap("PeriodBaseUnit")
         public String periodBaseUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("PeriodBaseValue")
         public Double periodBaseValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>个</p>
+         */
         @NameInMap("PeriodShowUnit")
         public String periodShowUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3000</p>
+         */
         @NameInMap("PeriodShowValue")
         public String periodShowValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2020-11-08T15:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>valid</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,54 +4,117 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>PRIVATE</p>
+     */
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("Affinity")
+    public CreateInstanceRequestAffinity affinity;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("CloudDisks")
     public java.util.List<CreateInstanceRequestCloudDisks> cloudDisks;
 
     @NameInMap("Datasets")
     public java.util.List<CreateInstanceRequestDatasets> datasets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>535.54.03</p>
+     */
     @NameInMap("Driver")
     public String driver;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ecs.c6.large</p>
+     */
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{userName: &quot;Chris&quot;}</p>
+     */
     @NameInMap("EnvironmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image-05cefd0be2exxxx</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>training_data</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{\&quot;foo\&quot;: \&quot;bar\&quot;}</p>
+     */
     @NameInMap("Labels")
     public java.util.List<CreateInstanceRequestLabels> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Priority")
     public Long priority;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;CPU&quot;:&quot;4&quot;,&quot;Memory&quot;:&quot;8Gi&quot;,&quot;SharedMemory&quot;:&quot;4Gi&quot;,&quot;GPU&quot;:&quot;1&quot;,&quot;GPUType&quot;:&quot;Tesla-V100-16G&quot;}</p>
+     */
     @NameInMap("RequestedResource")
     public CreateInstanceRequestRequestedResource requestedResource;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dsw-123456789</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1612285282502324</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
     @NameInMap("UserVpc")
     public CreateInstanceRequestUserVpc userVpc;
 
+    /**
+     * <strong>example:</strong>
+     * <p>40823</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d-123456789</p>
+     */
     @NameInMap("WorkspaceSource")
     public String workspaceSource;
 
@@ -66,6 +129,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public CreateInstanceRequest setAffinity(CreateInstanceRequestAffinity affinity) {
+        this.affinity = affinity;
+        return this;
+    }
+    public CreateInstanceRequestAffinity getAffinity() {
+        return this.affinity;
     }
 
     public CreateInstanceRequest setCloudDisks(java.util.List<CreateInstanceRequestCloudDisks> cloudDisks) {
@@ -196,6 +267,44 @@ public class CreateInstanceRequest extends TeaModel {
         return this.workspaceSource;
     }
 
+    public static class CreateInstanceRequestAffinityCPU extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        public static CreateInstanceRequestAffinityCPU build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestAffinityCPU self = new CreateInstanceRequestAffinityCPU();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestAffinityCPU setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+    }
+
+    public static class CreateInstanceRequestAffinity extends TeaModel {
+        @NameInMap("CPU")
+        public CreateInstanceRequestAffinityCPU CPU;
+
+        public static CreateInstanceRequestAffinity build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestAffinity self = new CreateInstanceRequestAffinity();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestAffinity setCPU(CreateInstanceRequestAffinityCPU CPU) {
+            this.CPU = CPU;
+            return this;
+        }
+        public CreateInstanceRequestAffinityCPU getCPU() {
+            return this.CPU;
+        }
+
+    }
+
     public static class CreateInstanceRequestCloudDisksStatus extends TeaModel {
         @NameInMap("Available")
         public Long available;
@@ -238,18 +347,34 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestCloudDisks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30Gi</p>
+         */
         @NameInMap("Capacity")
         public String capacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mmt/workspace</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>workspace</p>
+         */
         @NameInMap("Path")
         public String path;
 
         @NameInMap("Status")
         public CreateInstanceRequestCloudDisksStatus status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rootfs</p>
+         */
         @NameInMap("SubType")
         public String subType;
 
@@ -301,11 +426,32 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestDatasets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-vsqjvsjp4orp5l206u</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/data</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
+
+        @NameInMap("OptionType")
+        public String optionType;
+
+        @NameInMap("Options")
+        public String options;
+
+        /**
+         * <strong>example:</strong>
+         * <p>oss://bucket.oss-cn-shanghai.aliyuncs.com/data/path/</p>
+         */
+        @NameInMap("Uri")
+        public String uri;
 
         public static CreateInstanceRequestDatasets build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceRequestDatasets self = new CreateInstanceRequestDatasets();
@@ -328,12 +474,44 @@ public class CreateInstanceRequest extends TeaModel {
             return this.mountPath;
         }
 
+        public CreateInstanceRequestDatasets setOptionType(String optionType) {
+            this.optionType = optionType;
+            return this;
+        }
+        public String getOptionType() {
+            return this.optionType;
+        }
+
+        public CreateInstanceRequestDatasets setOptions(String options) {
+            this.options = options;
+            return this;
+        }
+        public String getOptions() {
+            return this.options;
+        }
+
+        public CreateInstanceRequestDatasets setUri(String uri) {
+            this.uri = uri;
+            return this;
+        }
+        public String getUri() {
+            return this.uri;
+        }
+
     }
 
     public static class CreateInstanceRequestLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>stsTokenOwner</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123xxxxxxxx</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -361,18 +539,38 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestRequestedResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("CPU")
         public String CPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("GPU")
         public String GPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v100</p>
+         */
         @NameInMap("GPUType")
         public String GPUType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Memory")
         public String memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("SharedMemory")
         public String sharedMemory;
 
@@ -424,21 +622,41 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestUserVpc extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>eth0 | eth1</p>
+         */
         @NameInMap("DefaultRoute")
         public String defaultRoute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;192.168.0.1/24&quot;, &quot;192.168.1.1/24&quot;]</p>
+         */
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
         @NameInMap("ForwardInfos")
         public java.util.List<ForwardInfo> forwardInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-xxxxxx</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-xxxxx</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-xxxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

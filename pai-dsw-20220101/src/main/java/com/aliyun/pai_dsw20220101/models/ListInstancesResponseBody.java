@@ -4,24 +4,48 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;XXX&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>35</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -86,16 +110,70 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListInstancesResponseBodyInstancesAffinityCPU extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        public static ListInstancesResponseBodyInstancesAffinityCPU build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesAffinityCPU self = new ListInstancesResponseBodyInstancesAffinityCPU();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesAffinityCPU setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+    }
+
+    public static class ListInstancesResponseBodyInstancesAffinity extends TeaModel {
+        @NameInMap("CPU")
+        public ListInstancesResponseBodyInstancesAffinityCPU CPU;
+
+        public static ListInstancesResponseBodyInstancesAffinity build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesAffinity self = new ListInstancesResponseBodyInstancesAffinity();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesAffinity setCPU(ListInstancesResponseBodyInstancesAffinityCPU CPU) {
+            this.CPU = CPU;
+            return this;
+        }
+        public ListInstancesResponseBodyInstancesAffinityCPU getCPU() {
+            return this.CPU;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstancesCloudDisks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30Gi</p>
+         */
         @NameInMap("Capacity")
         public String capacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mmt/workspace</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/workspace</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rootfs</p>
+         */
         @NameInMap("SubType")
         public String subType;
 
@@ -139,9 +217,17 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesDatasets extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>d-vsqjvsjp4orp5l206u</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/data</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
@@ -202,18 +288,38 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesIdleInstanceCuller extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("CpuPercentThreshold")
         public Integer cpuPercentThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("GpuPercentThreshold")
         public Integer gpuPercentThreshold;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("IdleTimeInMinutes")
         public Integer idleTimeInMinutes;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("MaxIdleTimeInMinutes")
         public Integer maxIdleTimeInMinutes;
 
@@ -265,18 +371,38 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesInstanceShutdownTimer extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
+         */
         @NameInMap("DueTime")
         public String dueTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3600000</p>
+         */
         @NameInMap("RemainingTimeInMs")
         public Long remainingTimeInMs;
 
@@ -328,30 +454,66 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesInstanceSnapshotList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>image-05cefd0be2exxxx</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>py36_cpu_tf1.12_ubuntu</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Internal Error</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ImagePullBackOff</p>
+         */
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
+         */
         @NameInMap("RepositoryUrl")
         public String repositoryUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pushing</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -435,9 +597,17 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>stsTokenOwner</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123xxxxxxxx</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -465,30 +635,66 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesLatestSnapshot extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>image-05cefd0be2exxxx</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>py36_cpu_tf1.12_ubuntu</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Internal Error</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ImagePullBackOff</p>
+         */
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images">https://cr.console.aliyun.com/repository/cn-hangzhou/zouxu/kf/images</a></p>
+         */
         @NameInMap("RepositoryUrl")
         public String repositoryUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Pushing</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -572,18 +778,38 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesRequestedResource extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("CPU")
         public String CPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("GPU")
         public String GPU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v100</p>
+         */
         @NameInMap("GPUType")
         public String GPUType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("Memory")
         public String memory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("SharedMemory")
         public String sharedMemory;
 
@@ -635,21 +861,41 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesUserVpc extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>eth0 | eth1</p>
+         */
         @NameInMap("DefaultRoute")
         public String defaultRoute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;192.168.0.1/24&quot;, &quot;192.168.1.1/24&quot;]</p>
+         */
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
         @NameInMap("ForwardInfos")
         public java.util.List<ForwardInfoResponse> forwardInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-xxxxxx</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-xxxxx</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-xxxxx</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -709,105 +955,227 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CPU</p>
+         */
         @NameInMap("AcceleratorType")
         public String acceleratorType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
+         */
         @NameInMap("Accessibility")
         public String accessibility;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3600000</p>
+         */
         @NameInMap("AccumulatedRunningTimeInMs")
         public Long accumulatedRunningTimeInMs;
 
+        @NameInMap("Affinity")
+        public ListInstancesResponseBodyInstancesAffinity affinity;
+
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("CloudDisks")
         public java.util.List<ListInstancesResponseBodyInstancesCloudDisks> cloudDisks;
 
         @NameInMap("Datasets")
         public java.util.List<ListInstancesResponseBodyInstancesDatasets> datasets;
 
+        /**
+         * <strong>example:</strong>
+         * <p>535.54.03</p>
+         */
         @NameInMap("Driver")
         public String driver;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ecs.c6.large</p>
+         */
         @NameInMap("EcsSpec")
         public String ecsSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{userName: &quot;Chris&quot;}</p>
+         */
         @NameInMap("EnvironmentVariables")
         public java.util.Map<String, String> environmentVariables;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-12T14:36:01Z</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;InstanceId&quot;:&quot;dsw-05cefd0be2e5a278&quot;,&quot;CpuPercentThreshold&quot;:20,&quot;GpuPercentThreshold&quot;:10,&quot;MaxIdleTimeInMinutes&quot;:120,&quot;IdleTimeInMinutes&quot;:30}</p>
+         */
         @NameInMap("IdleInstanceCuller")
         public ListInstancesResponseBodyInstancesIdleInstanceCuller idleInstanceCuller;
 
+        /**
+         * <strong>example:</strong>
+         * <p>image-05cefd0be2exxxx</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>py36_cpu_tf1.12_ubuntu</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dsw-730xxxxxxxxxx</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>training_data</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
         @NameInMap("InstanceShutdownTimer")
         public ListInstancesResponseBodyInstancesInstanceShutdownTimer instanceShutdownTimer;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[]</p>
+         */
         @NameInMap("InstanceSnapshotList")
         public java.util.List<ListInstancesResponseBodyInstancesInstanceSnapshotList> instanceSnapshotList;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/">https://dsw-cn-shanghai.data.aliyun.com/notebook.htm?instance=39772#/</a></p>
+         */
         @NameInMap("InstanceUrl")
         public String instanceUrl;
 
         /**
          * <p>Jupyterlab Url。</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/lab/</a></p>
          */
         @NameInMap("JupyterlabUrl")
         public String jupyterlabUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;foo\&quot;: \&quot;bar\&quot;}</p>
+         */
         @NameInMap("Labels")
         public java.util.List<ListInstancesResponseBodyInstancesLabels> labels;
 
         @NameInMap("LatestSnapshot")
         public ListInstancesResponseBodyInstancesLatestSnapshot latestSnapshot;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PayAsYouGo</p>
+         */
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Priority")
         public Long priority;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Internal Error</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ImagePullBackOff</p>
+         */
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;CPU&quot;:&quot;4&quot;,&quot;Memory&quot;:&quot;8Gi&quot;,&quot;SharedMemory&quot;:&quot;4Gi&quot;,&quot;GPU&quot;:&quot;1&quot;,&quot;GPUType&quot;:&quot;Tesla-V100-16G&quot;}</p>
+         */
         @NameInMap("RequestedResource")
         public ListInstancesResponseBodyInstancesRequestedResource requestedResource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>dsw-123456789</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>resource_group</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/tty/</a></p>
+         */
         @NameInMap("TerminalUrl")
         public String terminalUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1612285282502324</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>测试用户</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -816,16 +1184,31 @@ public class ListInstancesResponseBody extends TeaModel {
 
         /**
          * <p>Web IDE url。</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/">https://dsw-gateway-cn-shanghai.aliyun.com/dsw-39772/ide/</a></p>
          */
         @NameInMap("WebIDEUrl")
         public String webIDEUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40823</p>
+         */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>training_data</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d-123456789</p>
+         */
         @NameInMap("WorkspaceSource")
         public String workspaceSource;
 
@@ -856,6 +1239,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public Long getAccumulatedRunningTimeInMs() {
             return this.accumulatedRunningTimeInMs;
+        }
+
+        public ListInstancesResponseBodyInstances setAffinity(ListInstancesResponseBodyInstancesAffinity affinity) {
+            this.affinity = affinity;
+            return this;
+        }
+        public ListInstancesResponseBodyInstancesAffinity getAffinity() {
+            return this.affinity;
         }
 
         public ListInstancesResponseBodyInstances setCloudDisks(java.util.List<ListInstancesResponseBodyInstancesCloudDisks> cloudDisks) {

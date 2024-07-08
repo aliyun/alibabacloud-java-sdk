@@ -4,27 +4,59 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetMetricsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;userId&quot;:&quot;16122852825*****&quot;,&quot;jobId&quot;:&quot;dsw-328d2bbf605*****&quot;,&quot;regionId&quot;:&quot;cn-wulanchabu&quot;,&quot;pod&quot;:&quot;dsw-45680-76766f8778-95gxh&quot;}</p>
+     */
     @NameInMap("Dimensions")
     public String dimensions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T16:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Length")
     public String length;
 
+    /**
+     * <strong>example:</strong>
+     * <p>INSTANCE_SPEC_MEMORY_SWAP</p>
+     */
     @NameInMap("MetricName")
     public String metricName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs_pai_dsw</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15761485350009dd70bb64cff1f0fff750b08ffff073be5fb1e785e2b020f1a949d5ea14aea7fed82f01dd8****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2020-11-08T15:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

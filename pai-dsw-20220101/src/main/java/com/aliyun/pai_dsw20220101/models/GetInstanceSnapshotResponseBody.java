@@ -4,54 +4,118 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceSnapshotResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("ExcludePaths")
     public java.util.List<String> excludePaths;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:01Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2021-01-12T14:36:01Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image-05cefd0be2exxxx</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>registry.cn-shanghai.aliyuncs.com/pai_product/tensorflow:py36_cpu_tf1.12_ubuntu</p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dsw-730xxxxxxxxxx</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;foo&quot;: &quot;bar&quot;}</p>
+     */
     @NameInMap("Labels")
     public java.util.List<GetInstanceSnapshotResponseBodyLabels> labels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>&quot;XXX&quot;</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Internal Error</p>
+     */
     @NameInMap("ReasonCode")
     public String reasonCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ImagePullBackOff</p>
+     */
     @NameInMap("ReasonMessage")
     public String reasonMessage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>E7D55162-4489-1619-AAF5-3F97D5FCA948</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>snp-05cexxxxxxxxx</p>
+     */
     @NameInMap("SnapshotId")
     public String snapshotId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>training_data_env</p>
+     */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Pushing</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -197,9 +261,17 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
     }
 
     public static class GetInstanceSnapshotResponseBodyLabels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>stsTokenOwner</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123xxxxxxxx</p>
+         */
         @NameInMap("Value")
         public String value;
 

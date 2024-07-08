@@ -4,11 +4,18 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetTokenRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("ExpireTime")
     public Integer expireTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dsw-730xxxxxxxxxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

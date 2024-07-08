@@ -7,18 +7,38 @@ public class ForwardInfoResponse extends TeaModel {
     @NameInMap("ConnectInfo")
     public ForwardInfoResponseConnectInfo connectInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>dsw-notebook</p>
+     */
     @NameInMap("ContainerName")
     public String containerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eip-25877c70gddh****</p>
+     */
     @NameInMap("EipAllocationId")
     public String eipAllocationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ngw-bp1uewa15k4iy5770****</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("Port")
     public String port;
 
@@ -87,9 +107,17 @@ public class ForwardInfoResponse extends TeaModel {
     }
 
     public static class ForwardInfoResponseConnectInfoInternet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>47.111.119.114</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("Port")
         public String port;
 
@@ -117,9 +145,17 @@ public class ForwardInfoResponse extends TeaModel {
     }
 
     public static class ForwardInfoResponseConnectInfoIntranet extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>dsw-notebook-22-urz3u6cnu0uts7ej9r.dsw-5cc6083084818f60.dsw.pai.alibaba.com</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>22</p>
+         */
         @NameInMap("Port")
         public String port;
 
@@ -153,9 +189,17 @@ public class ForwardInfoResponse extends TeaModel {
         @NameInMap("Intranet")
         public ForwardInfoResponseConnectInfoIntranet intranet;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DNAT and privateZone are both ready.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Ready</p>
+         */
         @NameInMap("Phase")
         public String phase;
 

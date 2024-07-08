@@ -4,15 +4,31 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceSnapshotRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>DESC</p>
+     */
     @NameInMap("Order")
     public String order;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gmtCreate</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 

@@ -4,18 +4,38 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ForwardInfo extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>dsw-notebook</p>
+     */
     @NameInMap("ContainerName")
     public String containerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eip-25877c70gddh****</p>
+     */
     @NameInMap("EipAllocationId")
     public String eipAllocationId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ngw-bp1uewa15k4iy5770****</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("Port")
     public String port;
 
