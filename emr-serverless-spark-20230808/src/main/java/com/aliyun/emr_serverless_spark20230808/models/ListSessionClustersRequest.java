@@ -4,26 +4,50 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListSessionClustersRequest extends TeaModel {
+    @NameInMap("kind")
+    public String kind;
+
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of entries to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The name of the queue.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("queueName")
     public String queueName;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
     /**
-     * <p>作业名称。</p>
+     * <p>The name of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>emr-spark-demo-job</p>
      */
     @NameInMap("sessionClusterId")
     public String sessionClusterId;
@@ -31,6 +55,14 @@ public class ListSessionClustersRequest extends TeaModel {
     public static ListSessionClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSessionClustersRequest self = new ListSessionClustersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSessionClustersRequest setKind(String kind) {
+        this.kind = kind;
+        return this;
+    }
+    public String getKind() {
+        return this.kind;
     }
 
     public ListSessionClustersRequest setMaxResults(Integer maxResults) {

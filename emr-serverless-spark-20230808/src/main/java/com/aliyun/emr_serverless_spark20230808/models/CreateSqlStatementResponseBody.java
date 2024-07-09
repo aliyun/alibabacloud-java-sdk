@@ -4,9 +4,18 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class CreateSqlStatementResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("data")
     public CreateSqlStatementResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,6 +41,12 @@ public class CreateSqlStatementResponseBody extends TeaModel {
     }
 
     public static class CreateSqlStatementResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the SQL query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>st-1231dfafadfa***</p>
+         */
         @NameInMap("statementId")
         public String statementId;
 

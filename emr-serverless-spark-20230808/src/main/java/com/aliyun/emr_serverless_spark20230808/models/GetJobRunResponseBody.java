@@ -4,11 +4,17 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class GetJobRunResponseBody extends TeaModel {
+    /**
+     * <p>The details of the job.</p>
+     */
     @NameInMap("jobRun")
     public GetJobRunResponseBodyJobRun jobRun;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("requestId")
     public String requestId;
@@ -35,6 +41,9 @@ public class GetJobRunResponseBody extends TeaModel {
     }
 
     public static class GetJobRunResponseBodyJobRunConfigurationOverrides extends TeaModel {
+        /**
+         * <p>The configurations.</p>
+         */
         @NameInMap("configurations")
         public java.util.List<Configuration> configurations;
 
@@ -54,9 +63,21 @@ public class GetJobRunResponseBody extends TeaModel {
     }
 
     public static class GetJobRunResponseBodyJobRunStateChangeReason extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ERR-100000</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection refused</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -85,85 +106,144 @@ public class GetJobRunResponseBody extends TeaModel {
 
     public static class GetJobRunResponseBodyJobRun extends TeaModel {
         /**
-         * <p>作业代码类型。</p>
+         * <p>The code type of the job. Valid values:</p>
+         * <ul>
+         * <li>SQL</li>
+         * <li>JAR</li>
+         * <li>PYTHON</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         @NameInMap("codeType")
         public String codeType;
 
+        /**
+         * <p>The task configurations of Spark.</p>
+         */
         @NameInMap("configurationOverrides")
         public GetJobRunResponseBodyJobRunConfigurationOverrides configurationOverrides;
 
         /**
-         * <p>作业结束时间。</p>
+         * <p>The end time of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684119314000</p>
          */
         @NameInMap("endTime")
         public Long endTime;
 
         /**
-         * <p>运行超时时间。</p>
+         * <p>The timeout period of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("executionTimeoutSeconds")
         public Integer executionTimeoutSeconds;
 
+        /**
+         * <p>The information about Spark Driver.</p>
+         */
         @NameInMap("jobDriver")
         public JobDriver jobDriver;
 
         /**
-         * <p>任务实例ID。</p>
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jr-231231</p>
          */
         @NameInMap("jobRunId")
         public String jobRunId;
 
+        /**
+         * <p>The path where the operational logs are stored.</p>
+         */
         @NameInMap("log")
         public RunLog log;
 
         /**
-         * <p>作业实例名称。</p>
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobName</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The version of the Spark engine on which the job runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-3.3.1</p>
+         */
         @NameInMap("releaseVersion")
         public String releaseVersion;
 
         /**
-         * <p>创建用户Uid。</p>
+         * <p>The ID of the user who created the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1509789347011222</p>
          */
         @NameInMap("resourceOwnerId")
         public String resourceOwnerId;
 
+        /**
+         * <p>The name of the queue on which the job runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root_queue</p>
+         */
         @NameInMap("resourceQueueId")
         public String resourceQueueId;
 
         /**
-         * <p>作业状态。</p>
+         * <p>The job state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The reason of the job status change.</p>
+         */
         @NameInMap("stateChangeReason")
         public GetJobRunResponseBodyJobRunStateChangeReason stateChangeReason;
 
         /**
-         * <p>作业提交时间。</p>
+         * <p>The time when the job was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684119314000</p>
          */
         @NameInMap("submitTime")
         public Long submitTime;
 
         /**
-         * <p>标签。</p>
+         * <p>The tags of the job.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
         /**
-         * <p>作业web ui。</p>
+         * <p>The web UI of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://spark-ui">http://spark-ui</a></p>
          */
         @NameInMap("webUI")
         public String webUI;
 
         /**
-         * <p>工作空间id。</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-1234abcd</p>
          */
         @NameInMap("workspaceId")
         public String workspaceId;

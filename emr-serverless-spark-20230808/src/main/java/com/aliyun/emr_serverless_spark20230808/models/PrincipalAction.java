@@ -4,9 +4,17 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class PrincipalAction extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>acs:emr::workspaceId:action/create_queue</p>
+     */
     @NameInMap("actionArn")
     public String actionArn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>acs:emr::workspaceId:user/237593691541622267</p>
+     */
     @NameInMap("principalArn")
     public String principalArn;
 

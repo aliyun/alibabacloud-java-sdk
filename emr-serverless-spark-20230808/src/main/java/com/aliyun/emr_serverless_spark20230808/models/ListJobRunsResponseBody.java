@@ -4,29 +4,44 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListJobRunsResponseBody extends TeaModel {
+    /**
+     * <p>The list of Spark jobs.</p>
+     */
     @NameInMap("jobRuns")
     public java.util.List<ListJobRunsResponseBodyJobRuns> jobRuns;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -77,6 +92,9 @@ public class ListJobRunsResponseBody extends TeaModel {
     }
 
     public static class ListJobRunsResponseBodyJobRunsConfigurationOverrides extends TeaModel {
+        /**
+         * <p>The SparkConf objects.</p>
+         */
         @NameInMap("configurations")
         public java.util.List<Configuration> configurations;
 
@@ -96,9 +114,21 @@ public class ListJobRunsResponseBody extends TeaModel {
     }
 
     public static class ListJobRunsResponseBodyJobRunsStateChangeReason extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -127,82 +157,133 @@ public class ListJobRunsResponseBody extends TeaModel {
 
     public static class ListJobRunsResponseBodyJobRuns extends TeaModel {
         /**
-         * <p>作业代码类型。</p>
+         * <p>The code type of the job. Valid values:</p>
+         * <p>SQL</p>
+         * <p>JAR</p>
+         * <p>PYTHON</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         @NameInMap("codeType")
         public String codeType;
 
+        /**
+         * <p>The advanced configurations of Spark.</p>
+         */
         @NameInMap("configurationOverrides")
         public ListJobRunsResponseBodyJobRunsConfigurationOverrides configurationOverrides;
 
         /**
-         * <p>创建用户Uid。</p>
+         * <p>The ID of the user who created the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1509789347011222</p>
          */
         @NameInMap("creator")
         public String creator;
 
         /**
-         * <p>作业结束时间。</p>
+         * <p>The end time of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684119314000</p>
          */
         @NameInMap("endTime")
         public Long endTime;
 
         /**
-         * <p>运行超时时间。</p>
+         * <p>The timeout period of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("executionTimeoutSeconds")
         public Integer executionTimeoutSeconds;
 
+        /**
+         * <p>The information about Spark Driver.</p>
+         */
         @NameInMap("jobDriver")
         public JobDriver jobDriver;
 
         /**
-         * <p>任务实例ID。</p>
+         * <p>The job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jr-231231</p>
          */
         @NameInMap("jobRunId")
         public String jobRunId;
 
+        /**
+         * <p>The path where the operational logs are stored.</p>
+         */
         @NameInMap("log")
         public RunLog log;
 
         /**
-         * <p>作业实例名称。</p>
+         * <p>The job name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jobName</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The version of Spark on which the jobs run.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-native-3.4.0</p>
+         */
         @NameInMap("releaseVersion")
         public String releaseVersion;
 
         /**
-         * <p>作业状态。</p>
+         * <p>The job state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The reason of the job status change.</p>
+         */
         @NameInMap("stateChangeReason")
         public ListJobRunsResponseBodyJobRunsStateChangeReason stateChangeReason;
 
         /**
-         * <p>作业提交时间。</p>
+         * <p>The time when the job was submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684119314000</p>
          */
         @NameInMap("submitTime")
         public Long submitTime;
 
         /**
-         * <p>标签。</p>
+         * <p>The tags of the job.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
 
         /**
-         * <p>作业web ui。</p>
+         * <p>The web UI of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://spark-ui">http://spark-ui</a></p>
          */
         @NameInMap("webUI")
         public String webUI;
 
         /**
-         * <p>工作空间id。</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-1234abcd</p>
          */
         @NameInMap("workspaceId")
         public String workspaceId;

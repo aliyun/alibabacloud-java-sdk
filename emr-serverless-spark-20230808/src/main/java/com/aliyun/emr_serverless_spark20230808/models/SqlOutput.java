@@ -32,6 +32,10 @@ public class SqlOutput extends TeaModel {
     }
 
     public static class SqlOutputRows extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("values")
         public java.util.List<String> values;
 

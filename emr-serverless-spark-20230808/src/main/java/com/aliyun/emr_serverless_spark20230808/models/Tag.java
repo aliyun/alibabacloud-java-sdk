@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class Tag extends TeaModel {
     /**
      * <p>标签key值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>workflowId</p>
      */
     @NameInMap("key")
     public String key;
 
     /**
      * <p>标签key值。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wf-123test</p>
      */
     @NameInMap("value")
     public String value;

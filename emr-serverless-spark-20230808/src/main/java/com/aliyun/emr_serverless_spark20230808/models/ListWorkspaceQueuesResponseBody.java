@@ -5,28 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListWorkspaceQueuesResponseBody extends TeaModel {
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>下一页TOKEN。</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of queues.</p>
+     */
     @NameInMap("queues")
     public java.util.List<ListWorkspaceQueuesResponseBodyQueues> queues;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>记录总数。</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -78,31 +93,46 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
     public static class ListWorkspaceQueuesResponseBodyQueuesAllowActions extends TeaModel {
         /**
-         * <p>行为 arn。</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of a behavior.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:emr::workspaceId:action/create_queue</p>
          */
         @NameInMap("actionArn")
         public String actionArn;
 
         /**
-         * <p>权限名称。</p>
+         * <p>The name of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>view</p>
          */
         @NameInMap("actionName")
         public String actionName;
 
         /**
-         * <p>action 依赖列表。</p>
+         * <p>The dependencies of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;view&quot;]</p>
          */
         @NameInMap("dependencies")
         public java.util.List<String> dependencies;
 
         /**
-         * <p>action 描述。</p>
+         * <p>The description of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文件目录遍历、文件浏览</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>权限展示名称。</p>
+         * <p>The display name of the permission.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文件目录遍历、文件浏览</p>
          */
         @NameInMap("displayName")
         public String displayName;
@@ -156,70 +186,112 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
 
     public static class ListWorkspaceQueuesResponseBodyQueues extends TeaModel {
         /**
-         * <p>队列允许的操作</p>
+         * <p>The operations allowed for the queue.</p>
          */
         @NameInMap("allowActions")
         public java.util.List<ListWorkspaceQueuesResponseBodyQueuesAllowActions> allowActions;
 
+        /**
+         * <p>The ID of the user who created the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>237109</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <p>The environment types of the queue.</p>
+         */
         @NameInMap("environments")
         public java.util.List<String> environments;
 
         /**
-         * <p>队列资源最大容量</p>
+         * <p>The maximum capacity of resources that can be used in the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
          */
         @NameInMap("maxResource")
         public String maxResource;
 
         /**
-         * <p>队列资源最小容量</p>
+         * <p>The minimum capacity of resources that can be used in the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
          */
         @NameInMap("minResource")
         public String minResource;
 
         /**
-         * <p>队列Label</p>
+         * <p>The queue label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_queue</p>
          */
         @NameInMap("properties")
         public String properties;
 
         /**
-         * <p>队列名称。</p>
+         * <p>The name of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_queue</p>
          */
         @NameInMap("queueName")
         public String queueName;
 
         /**
-         * <p>队列架构</p>
+         * <p>The queue architecture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;arch&quot;: &quot;x86&quot;}</p>
          */
         @NameInMap("queueScope")
         public String queueScope;
 
+        /**
+         * <p>The status of the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("queueStatus")
         public String queueStatus;
 
         /**
-         * <p>队列类型</p>
+         * <p>The queue type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance, instanceChildren</p>
          */
         @NameInMap("queueType")
         public String queueType;
 
         /**
-         * <p>regionId。</p>
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("regionId")
         public String regionId;
 
         /**
-         * <p>队列资源使用容量</p>
+         * <p>The capacity of resources that are used in the queue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</p>
          */
         @NameInMap("usedResource")
         public String usedResource;
 
         /**
-         * <p>工作空间id。</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-1234abcd</p>
          */
         @NameInMap("workspaceId")
         public String workspaceId;

@@ -5,29 +5,44 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesResponseBody extends TeaModel {
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>下一页TOKEN。</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>记录总数。</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The workspaces.</p>
+     */
     @NameInMap("workspaces")
     public java.util.List<ListWorkspacesResponseBodyWorkspaces> workspaces;
 
@@ -77,9 +92,21 @@ public class ListWorkspacesResponseBody extends TeaModel {
     }
 
     public static class ListWorkspacesResponseBodyWorkspacesStateChangeReason extends TeaModel {
+        /**
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -108,100 +135,169 @@ public class ListWorkspacesResponseBody extends TeaModel {
 
     public static class ListWorkspacesResponseBodyWorkspaces extends TeaModel {
         /**
-         * <p>是否自动续费(pre付费类型必须)。</p>
+         * <p>Indicates whether auto-renewal is enabled. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("autoRenew")
         public Boolean autoRenew;
 
         /**
-         * <p>自动续费时长(pre付费类型必须)。</p>
+         * <p>The auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("autoRenewPeriod")
         public Integer autoRenewPeriod;
 
         /**
-         * <p>自动续费周期(pre付费类型必须)。</p>
+         * <p>The unit of the auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
          */
         @NameInMap("autoRenewPeriodUnit")
         public String autoRenewPeriodUnit;
 
+        /**
+         * <p>The time when the workspace was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684115879955</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
         /**
-         * <p>dlf catalog 信息。</p>
+         * <p>The information of the Data Lake Formation (DLF) catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("dlfCatalogId")
         public String dlfCatalogId;
 
         /**
-         * <p>订购周期数量(pre付费类型必须)。</p>
+         * <p>The subscription period. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("duration")
         public Integer duration;
 
+        /**
+         * <p>The time when the workspace was released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1687103999999</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
         /**
-         * <p>失败原因。</p>
+         * <p>The reason for the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>out of stock</p>
          */
         @NameInMap("failReason")
         public String failReason;
 
         /**
-         * <p>订购周期(pre付费类型必须)。</p>
+         * <p>The unit of the subscription duration. This parameter is required only if the paymentType parameter is set to Subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</p>
          */
         @NameInMap("paymentDurationUnit")
         public String paymentDurationUnit;
 
         /**
-         * <p>支付状态。</p>
+         * <p>The status of the payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PAID/UNPAID</p>
          */
         @NameInMap("paymentStatus")
         public String paymentStatus;
 
         /**
-         * <p>付费类型。</p>
+         * <p>The payment type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayAsYouGo or Subscription</p>
          */
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The reason why the workspace is released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SERVICE_RELEASE</p>
+         */
         @NameInMap("releaseType")
         public String releaseType;
 
         /**
-         * <p>资源规格。</p>
+         * <p>The resource specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100cu</p>
          */
         @NameInMap("resourceSpec")
         public String resourceSpec;
 
+        /**
+         * <p>The information about the workspace status change.</p>
+         */
         @NameInMap("stateChangeReason")
         public ListWorkspacesResponseBodyWorkspacesStateChangeReason stateChangeReason;
 
         /**
-         * <p>oss 路径。</p>
+         * <p>The Object Storage Service (OSS) path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark-result</p>
          */
         @NameInMap("storage")
         public String storage;
 
         /**
-         * <p>Workspace Id。</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-******</p>
          */
         @NameInMap("workspaceId")
         public String workspaceId;
 
         /**
-         * <p>工作空间名称。</p>
+         * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark批作业空间-1</p>
          */
         @NameInMap("workspaceName")
         public String workspaceName;
 
         /**
-         * <p>工作空间状态。</p>
+         * <p>The workspace status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STARTING,RUNNING,TERMINATED</p>
          */
         @NameInMap("workspaceStatus")
         public String workspaceStatus;

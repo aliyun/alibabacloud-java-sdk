@@ -5,28 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListReleaseVersionsResponseBody extends TeaModel {
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>下一页TOKEN。</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The versions.</p>
+     */
     @NameInMap("releaseVersions")
     public java.util.List<ListReleaseVersionsResponseBodyReleaseVersions> releaseVersions;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>记录总数。</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -77,27 +92,72 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     }
 
     public static class ListReleaseVersionsResponseBodyReleaseVersions extends TeaModel {
+        /**
+         * <p>The version number of open source Spark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Spark 3.3.1</p>
+         */
         @NameInMap("communityVersion")
         public String communityVersion;
 
+        /**
+         * <p>The CPU architectures.</p>
+         */
         @NameInMap("cpuArchitectures")
         public java.util.List<String> cpuArchitectures;
 
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1716215854101</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The type of the Infrastructure as a Service (IaaS) layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASI</p>
+         */
         @NameInMap("iaasType")
         public String iaasType;
 
+        /**
+         * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esr-2.1 (Spark 3.3.1, Scala 2.12, Java Runtime)</p>
+         */
         @NameInMap("releaseVersion")
         public String releaseVersion;
 
+        /**
+         * <p>The version of Scala.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.12</p>
+         */
         @NameInMap("scalaVersion")
         public String scalaVersion;
 
+        /**
+         * <p>The status of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The type of the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stable</p>
+         */
         @NameInMap("type")
         public String type;
 
