@@ -1487,6 +1487,13 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions privatePoolOptions;
 
         /**
+         * <strong>example:</strong>
+         * <p>example-role</p>
+         */
+        @NameInMap("ram_role_name")
+        public String ramRoleName;
+
+        /**
          * <p>The ApsaraDB RDS instances.</p>
          */
         @NameInMap("rds_instances")
@@ -1897,6 +1904,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions getPrivatePoolOptions() {
             return this.privatePoolOptions;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setRdsInstances(java.util.List<String> rdsInstances) {

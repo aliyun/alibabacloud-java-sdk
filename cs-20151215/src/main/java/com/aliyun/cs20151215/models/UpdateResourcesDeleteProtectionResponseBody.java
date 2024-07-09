@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
     /**
+     * <p>The namespace to which the resource belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>Indicates the status of deletion protection. A value of true indicates that deletion protection is enabled and a value of false indicates that deletion protection is disabled.</p>
+     */
     @NameInMap("protection")
     public String protection;
 
@@ -23,9 +28,15 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The type of resource for which deletion protection is enabled or disabled.</p>
+     */
     @NameInMap("resource_type")
     public String resourceType;
 
+    /**
+     * <p>The list of resources whose deletion protection status is updated.</p>
+     */
     @NameInMap("resources")
     public java.util.List<String> resources;
 

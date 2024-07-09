@@ -44,6 +44,7 @@ public class DescribeResourcesDeleteProtectionResponse extends TeaModel {
 
     public static class DescribeResourcesDeleteProtectionResponseBody extends TeaModel {
         /**
+         * <p>The name of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -53,15 +54,34 @@ public class DescribeResourcesDeleteProtectionResponse extends TeaModel {
         public String name;
 
         /**
+         * <p>The namespace to which the resource belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>default</p>
          */
         @NameInMap("namespace")
         public String namespace;
 
+        /**
+         * <p>The type of resource for which deletion protection is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>namespaces</p>
+         */
         @NameInMap("resource")
         public String resource;
 
+        /**
+         * <p>Indicates whether deletion protection is enabled.</p>
+         * <ul>
+         * <li>true: deletion protection is enabled.</li>
+         * <li>false: deletion protection is disabled.</li>
+         * </ul>
+         * <p>Default value: false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("protection")
         public Boolean protection;
 
