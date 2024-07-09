@@ -115,6 +115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EnvironmentVariables", request.environmentVariables);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imageAuth)) {
+            body.put("ImageAuth", request.imageAuth);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             body.put("ImageId", request.imageId);
         }
@@ -1361,6 +1365,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
             body.put("EcsSpec", request.ecsSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageAuth)) {
+            body.put("ImageAuth", request.imageAuth);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>pai_dsw20220101</artifactId>
-  <version>1.4.1</version>
+  <version>1.4.2</version>
   <packaging>jar</packaging>
   <name>pai_dsw20220101</name>
   <description>Alibaba Cloud pai-dsw (20220101) SDK for Java

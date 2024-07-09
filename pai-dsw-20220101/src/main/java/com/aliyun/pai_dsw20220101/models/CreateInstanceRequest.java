@@ -45,6 +45,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("EnvironmentVariables")
     public java.util.Map<String, String> environmentVariables;
 
+    @NameInMap("ImageAuth")
+    public String imageAuth;
+
     /**
      * <strong>example:</strong>
      * <p>image-05cefd0be2exxxx</p>
@@ -177,6 +180,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public java.util.Map<String, String> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    public CreateInstanceRequest setImageAuth(String imageAuth) {
+        this.imageAuth = imageAuth;
+        return this;
+    }
+    public String getImageAuth() {
+        return this.imageAuth;
     }
 
     public CreateInstanceRequest setImageId(String imageId) {
