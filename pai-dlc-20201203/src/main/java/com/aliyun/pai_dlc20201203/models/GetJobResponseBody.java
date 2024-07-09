@@ -14,6 +14,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("CodeSource")
     public GetJobResponseBodyCodeSource codeSource;
 
+    @NameInMap("CredentialConfig")
+    public CredentialConfig credentialConfig;
+
     @NameInMap("DataSources")
     public java.util.List<GetJobResponseBodyDataSources> dataSources;
 
@@ -249,6 +252,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public GetJobResponseBodyCodeSource getCodeSource() {
         return this.codeSource;
+    }
+
+    public GetJobResponseBody setCredentialConfig(CredentialConfig credentialConfig) {
+        this.credentialConfig = credentialConfig;
+        return this;
+    }
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     public GetJobResponseBody setDataSources(java.util.List<GetJobResponseBodyDataSources> dataSources) {
