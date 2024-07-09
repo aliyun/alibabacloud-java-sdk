@@ -16,7 +16,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建异步提取任务</p>
+     * <p>创建文档解析异步提取任务</p>
      * 
      * @param request CreateDocumentAnalyzeTaskRequest
      * @param headers map
@@ -54,7 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建异步提取任务</p>
+     * <p>创建文档解析异步提取任务</p>
      * 
      * @param request CreateDocumentAnalyzeTaskRequest
      * @return CreateDocumentAnalyzeTaskResponse
@@ -67,7 +67,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取异步提取任务状态</p>
+     * <p>创建图片解析异步提取任务</p>
+     * 
+     * @param request CreateImageAnalyzeTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateImageAnalyzeTaskResponse
+     */
+    public CreateImageAnalyzeTaskResponse createImageAnalyzeTaskWithOptions(String workspaceName, String serviceId, CreateImageAnalyzeTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.document)) {
+            body.put("document", request.document);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateImageAnalyzeTask"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/image-analyze/" + serviceId + "/async"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateImageAnalyzeTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建图片解析异步提取任务</p>
+     * 
+     * @param request CreateImageAnalyzeTaskRequest
+     * @return CreateImageAnalyzeTaskResponse
+     */
+    public CreateImageAnalyzeTaskResponse createImageAnalyzeTask(String workspaceName, String serviceId, CreateImageAnalyzeTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createImageAnalyzeTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文档解析异步提取任务状态</p>
      * 
      * @param request GetDocumentAnalyzeTaskStatusRequest
      * @param headers map
@@ -101,7 +148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取异步提取任务状态</p>
+     * <p>获取文档解析异步提取任务状态</p>
      * 
      * @param request GetDocumentAnalyzeTaskStatusRequest
      * @return GetDocumentAnalyzeTaskStatusResponse
@@ -212,6 +259,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getDocumentSplitWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取图片解析异步提取任务状态</p>
+     * 
+     * @param request GetImageAnalyzeTaskStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetImageAnalyzeTaskStatusResponse
+     */
+    public GetImageAnalyzeTaskStatusResponse getImageAnalyzeTaskStatusWithOptions(String workspaceName, String serviceId, GetImageAnalyzeTaskStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("task_id", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetImageAnalyzeTaskStatus"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/image-analyze/" + serviceId + "/async/task-status"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetImageAnalyzeTaskStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取图片解析异步提取任务状态</p>
+     * 
+     * @param request GetImageAnalyzeTaskStatusRequest
+     * @return GetImageAnalyzeTaskStatusResponse
+     */
+    public GetImageAnalyzeTaskStatusResponse getImageAnalyzeTaskStatus(String workspaceName, String serviceId, GetImageAnalyzeTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getImageAnalyzeTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取query分析结果</p>
+     * 
+     * @param request GetQueryAnalysisRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetQueryAnalysisResponse
+     */
+    public GetQueryAnalysisResponse getQueryAnalysisWithOptions(String workspaceName, String serviceId, GetQueryAnalysisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.history)) {
+            body.put("history", request.history);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            body.put("query", request.query);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetQueryAnalysis"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/query-analyze/" + serviceId + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetQueryAnalysisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取query分析结果</p>
+     * 
+     * @param request GetQueryAnalysisRequest
+     * @return GetQueryAnalysisResponse
+     */
+    public GetQueryAnalysisResponse getQueryAnalysis(String workspaceName, String serviceId, GetQueryAnalysisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getQueryAnalysisWithOptions(workspaceName, serviceId, request, headers, runtime);
     }
 
     /**
