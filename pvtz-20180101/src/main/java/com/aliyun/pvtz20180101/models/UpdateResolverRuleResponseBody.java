@@ -4,6 +4,12 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class UpdateResolverRuleResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0C9959BE-3A6A-4803-8DCE-973B42ACD599</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

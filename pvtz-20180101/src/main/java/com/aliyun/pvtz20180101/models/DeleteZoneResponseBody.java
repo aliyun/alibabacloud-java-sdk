@@ -4,11 +4,20 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DeleteZoneResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E246E023-F2EB-4034-83F7-B13FCF31459C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>zone ID</p>
+     * <p>The global ID of the zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AgIDE1MA_150</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

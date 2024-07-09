@@ -4,6 +4,12 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserVpcAuthorizationResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

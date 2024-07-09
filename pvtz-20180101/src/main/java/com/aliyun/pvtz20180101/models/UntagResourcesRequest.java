@@ -4,18 +4,54 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the specified one or more resources. This parameter is valid only if the TagKey parameter is left empty. Default value: false. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97fe9321a476d0861f624d3f738dcc38</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The resource type. Valid value: ZONE.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZONE</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The keys of tags that you want to remove. You can specify up to 20 tag keys.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

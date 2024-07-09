@@ -4,17 +4,40 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DeleteZoneRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21079fa016944979537637959d09bc</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.XX.XX</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>zone ID</p>
+     * <p>The global ID of the zone.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AgIDE1MA_150</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

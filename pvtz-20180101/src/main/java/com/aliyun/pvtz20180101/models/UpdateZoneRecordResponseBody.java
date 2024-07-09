@@ -4,9 +4,21 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class UpdateZoneRecordResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the DNS record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5809</p>
+     */
     @NameInMap("RecordId")
     public Long recordId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>250E2C38-D0AD-4518-851D-1C1055805F82</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

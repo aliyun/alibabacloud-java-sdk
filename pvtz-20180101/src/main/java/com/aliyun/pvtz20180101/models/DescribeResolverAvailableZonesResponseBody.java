@@ -4,9 +4,18 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the queried zones.</p>
+     */
     @NameInMap("AvailableZones")
     public java.util.List<DescribeResolverAvailableZonesResponseBodyAvailableZones> availableZones;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23268E49-0C3E-4A2C-AB70-B4C7D092470B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,25 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeResolverAvailableZonesResponseBodyAvailableZones extends TeaModel {
+        /**
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou-a</p>
+         */
         @NameInMap("AzId")
         public String azId;
 
+        /**
+         * <p>The state of resources in the zone. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: The resources are in the normal state.</li>
+         * <li>SOLD_OUT: The resources are sold out.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("Status")
         public String status;
 

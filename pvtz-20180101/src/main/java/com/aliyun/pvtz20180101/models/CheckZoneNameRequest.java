@@ -4,12 +4,30 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class CheckZoneNameRequest extends TeaModel {
+    /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.0.2.0</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>The name of the zone. This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("ZoneName")
     public String zoneName;
 

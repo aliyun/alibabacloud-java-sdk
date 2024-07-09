@@ -4,42 +4,117 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeResolverRuleResponseBody extends TeaModel {
+    /**
+     * <p>The virtual private clouds (VPCs) that are associated with the forwarding rule.</p>
+     */
     @NameInMap("BindVpcs")
     public java.util.List<DescribeResolverRuleResponseBodyBindVpcs> bindVpcs;
 
+    /**
+     * <p>The time when the forwarding rule was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-07-13 10:51:44</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The time when the forwarding rule was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1594608704000</p>
+     */
     @NameInMap("CreateTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <p>The endpoint ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0**</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The endpoint name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>endpoint-test</p>
+     */
     @NameInMap("EndpointName")
     public String endpointName;
 
+    /**
+     * <p>The destination IP addresses.</p>
+     */
     @NameInMap("ForwardIps")
     public java.util.List<DescribeResolverRuleResponseBodyForwardIps> forwardIps;
 
+    /**
+     * <p>The forwarding rule ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra1**</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The name of the forwarding rule.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>forward rule-test</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13D5113B-7E34-407F-A9C1-D96CD2B04277</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The type of the forwarding rule. Valid value:</p>
+     * <ul>
+     * <li>OUTBOUND: forwards Domain Name System (DNS) requests to one or more external IP addresses.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OUTBOUND</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The time when the forwarding rule was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-07-13 10:51:44</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
+    /**
+     * <p>The time when the forwarding rule was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1594608704000</p>
+     */
     @NameInMap("UpdateTimestamp")
     public Long updateTimestamp;
 
+    /**
+     * <p>The name of the forward zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("ZoneName")
     public String zoneName;
 
@@ -153,24 +228,61 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeResolverRuleResponseBodyBindVpcs extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The region name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hangzhou</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
-         * <p>Vpc ID</p>
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbl8m-vpc-id</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The VPC name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-name-test</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 
+        /**
+         * <p>The type of the VPC. Valid values:</p>
+         * <ul>
+         * <li>STANDARD: standard VPC</li>
+         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("VpcType")
         public String vpcType;
 
+        /**
+         * <p>The Alibaba Cloud account to which the VPC belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324542413</p>
+         */
         @NameInMap("VpcUserId")
         public String vpcUserId;
 
@@ -230,9 +342,21 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeResolverRuleResponseBodyForwardIps extends TeaModel {
+        /**
+         * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.xx.xx</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
         @NameInMap("Port")
         public Integer port;
 

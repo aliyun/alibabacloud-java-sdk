@@ -4,9 +4,22 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DeleteResolverEndpointRequest extends TeaModel {
+    /**
+     * <p>The endpoint ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0**</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

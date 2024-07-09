@@ -4,21 +4,54 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeResolverEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The information about endpoints.</p>
+     */
     @NameInMap("Endpoints")
     public java.util.List<DescribeResolverEndpointsResponseBodyEndpoints> endpoints;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>83D1682B-B69A-4060-9FA8-2907C2A35600</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -76,15 +109,39 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeResolverEndpointsResponseBodyEndpointsIpConfigs extends TeaModel {
+        /**
+         * <p>The ID of the zone where the vSwitch resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou-a</p>
+         */
         @NameInMap("AzId")
         public String azId;
 
+        /**
+         * <p>The IPv4 CIDR block of the vSwitch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0/24</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>The IPv4 address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.xx.xx</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-8vbmks7h-test-vswitchId</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -128,42 +185,125 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeResolverEndpointsResponseBodyEndpoints extends TeaModel {
+        /**
+         * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-13 10:36:26</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the endpoint was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594607786000</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The endpoint ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hra0**</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The source IP addresses of outbound traffic.</p>
+         */
         @NameInMap("IpConfigs")
         public java.util.List<DescribeResolverEndpointsResponseBodyEndpointsIpConfigs> ipConfigs;
 
+        /**
+         * <p>The endpoint name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>endpoint-test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-8vb3sigz86xc-test-group</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The state of the endpoint. Valid values:</p>
+         * <ul>
+         * <li>SUCCESS: The endpoint works as expected.</li>
+         * <li>INIT: The endpoint is being created.</li>
+         * <li>FAILED: The endpoint fails to be created.</li>
+         * <li>CHANGE_INIT: The endpoint is being modified.</li>
+         * <li>CHANGE_FAILED: The endpoint fails to be modified.</li>
+         * <li>EXCEPTION: The endpoint encounters an exception.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the endpoint was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-07-13 10:38:24</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The time when the endpoint was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1594607904000</p>
+         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
+        /**
+         * <p>The ID of the outbound virtual private cloud (VPC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-8vbl8mpum-test-vpc-id</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The VPC name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-test-name</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 
+        /**
+         * <p>The region ID of the outbound VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-zhangjiakou</p>
+         */
         @NameInMap("VpcRegionId")
         public String vpcRegionId;
 
+        /**
+         * <p>The name of the region where the outbound VPC resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China East 1 (Hangzhou)</p>
+         */
         @NameInMap("VpcRegionName")
         public String vpcRegionName;
 
