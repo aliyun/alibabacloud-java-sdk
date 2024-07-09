@@ -7,6 +7,10 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
     @NameInMap("CertificateStatus")
     public java.util.List<DescribeClientCertificateStatusResponseBodyCertificateStatus> certificateStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,24 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeClientCertificateStatusResponseBodyCertificateStatus extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-01-01T00:00Z</p>
+         */
         @NameInMap("RevokeTime")
         public Long revokeTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b67e53ebcea9b77d65b0c3236646d715****</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>good</p>
+         */
         @NameInMap("Status")
         public String status;
 

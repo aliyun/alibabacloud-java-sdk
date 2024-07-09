@@ -1,3 +1,7 @@
+2024-07-09 Version: 1.0.18
+- Update API DescribeCACertificate: update response param.
+
+
 2024-01-25 Version: 1.0.17
 - Update Tea.
 

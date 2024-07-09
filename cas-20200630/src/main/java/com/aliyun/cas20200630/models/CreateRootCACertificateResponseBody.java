@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateRootCACertificateResponseBody extends TeaModel {
     /**
-     * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+     * <p>The root CA certificate in the PEM format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</p>
      */
     @NameInMap("Certificate")
     public String certificate;
 
     /**
-     * <p>RSA_2048</p>
+     * <p>The certificate chain of the root CA certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</p>
      */
     @NameInMap("CertificateChain")
     public String certificateChain;
 
     /**
      * <p>The unique identifier of the root CA certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1a83bcbb89e562885e40aa0108f5****</p>
      */
     @NameInMap("Identifier")
     public String identifier;
 
     /**
-     * <p>Zhejiang</p>
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6D9B4C5F-7140-5B41-924C-329181DC00C1</p>
      */
     @NameInMap("RequestId")
     public String requestId;

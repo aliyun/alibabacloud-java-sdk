@@ -6,8 +6,12 @@ import com.aliyun.tea.*;
 public class DescribeCACertificateRequest extends TeaModel {
     /**
      * <p>The unique identifier of the CA certificate that you want to query.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifiers of all CA certificates.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifiers of all CA certificates.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>160ae6bb538d538c70c01f81dcf2****</p>
      */
     @NameInMap("Identifier")
     public String identifier;

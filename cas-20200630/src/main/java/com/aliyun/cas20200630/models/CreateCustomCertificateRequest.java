@@ -11,49 +11,81 @@ public class CreateCustomCertificateRequest extends TeaModel {
     public CreateCustomCertificateRequestApiPassthrough apiPassthrough;
 
     /**
-     * <p>The content of the CSR. You can generate a CSR by using the OpenSSL tool or the Keytool tool. For more information, see [How do I create a CSR file?](~~42218~~)</p>
+     * <p>The content of the CSR. You can generate a CSR by using the OpenSSL tool or the Keytool tool. For more information, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a></p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE REQUEST-----
+     * MIIBczCCARgCAQAwgYoxFDASBgNVBAMMC2FsaXl1bi50ZXN0MQ0wCwYDVQQ
+     * ...
+     * ...
+     * ...
+     * vbIgMQIhAKHDWD6/WAMbtezAt4bysJ/BZIDz1jPWuUR5GV4TJ/mS
+     * -----END CERTIFICATE REQUEST-----</p>
      */
     @NameInMap("Csr")
     public String csr;
 
     /**
      * <p>include the CRL address.</p>
-     * <br>
-     * <p>- 0- No</p>
-     * <p>- 1- Yes</p>
+     * <ul>
+     * <li>0- No</li>
+     * <li>1- Yes</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("EnableCrl")
     public Long enableCrl;
 
     /**
      * <p>Specifies whether to immediately issue the certificate. Valid values:</p>
-     * <br>
-     * <p>*   0: asynchronously issues the certificate.</p>
-     * <p>*   1: immediately issues the certificate.</p>
-     * <p>*   2: immediately issues the certificate and returns the certificate chain.</p>
+     * <ul>
+     * <li>0: asynchronously issues the certificate.</li>
+     * <li>1: immediately issues the certificate.</li>
+     * <li>2: immediately issues the certificate and returns the certificate chain.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Immediately")
     public Integer immediately;
 
     /**
      * <p>The identifier of the certificate.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1ed4068c-6f1b-6deb-8e32-3f8439a851cb</p>
      */
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 
     /**
      * <p>The validity period of the certificate. The value cannot exceed the validity period of the certificate instance. Relative time and absolute time are supported.</p>
-     * <br>
      * <p>Units of relative time: year, month, and day.</p>
-     * <br>
-     * <p>*   Use y to specify years.</p>
-     * <p>*   Use m to specify months.</p>
-     * <p>*   Use d to specify days.</p>
-     * <br>
-     * <p>Absolute time: Use Greenwich Mean Time (GMT). Format: `yyyy-MM-dd\"T\"HH:mm:ss\"Z\"`</p>
-     * <br>
-     * <p>*   Format of the end time: $NotAfter</p>
-     * <p>*   Format of the start time and end time: $NotBefore/$NotAfter</p>
+     * <ul>
+     * <li>Use y to specify years.</li>
+     * <li>Use m to specify months.</li>
+     * <li>Use d to specify days.</li>
+     * </ul>
+     * <p>Absolute time: Use Greenwich Mean Time (GMT). Format: <code>yyyy-MM-dd\\&quot;T\\&quot;HH:mm:ss\\&quot;Z\\&quot;</code></p>
+     * <ul>
+     * <li>Format of the end time: $NotAfter</li>
+     * <li>Format of the start time and end time: $NotBefore/$NotAfter</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Relative time:
+     *  ● 1y
+     *  ● 3m
+     *  ● 7d
+     * Absolute time: 
+     * ● 2006-01-02T15:04:05Z 
+     * ● 2006-01-02T15:04:05Z/2023-03-09T17:48:13Z</p>
      */
     @NameInMap("Validity")
     public String validity;
@@ -114,48 +146,72 @@ public class CreateCustomCertificateRequest extends TeaModel {
     public static class CreateCustomCertificateRequestApiPassthroughExtensionsKeyUsage extends TeaModel {
         /**
          * <p>The original name of the parameter is NonRepudiation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ContentCommitment")
         public Boolean contentCommitment;
 
         /**
          * <p>Specifies whether the key can be used for data encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DataEncipherment")
         public Boolean dataEncipherment;
 
         /**
          * <p>Specifies whether the key can be used only for data decryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DecipherOnly")
         public Boolean decipherOnly;
 
         /**
          * <p>Specifies whether the key can be used for digital signing. If you set this parameter to true, the private key of the certificate can be used to generate digital signatures, and the public key of the certificate can be used to verify digital signatures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("DigitalSignature")
         public Boolean digitalSignature;
 
         /**
          * <p>Specifies whether the key can be used only for data encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EncipherOnly")
         public Boolean encipherOnly;
 
         /**
          * <p>Specifies whether the key can be used for key agreement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("KeyAgreement")
         public Boolean keyAgreement;
 
         /**
          * <p>Specifies whether the key can be used for data encipherment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("KeyEncipherment")
         public Boolean keyEncipherment;
 
         /**
          * <p>Specifies whether the key can be used for non-repudiation. This parameter is renamed ContentCommitment in the X.509 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("NonRepudiation")
         public Boolean nonRepudiation;
@@ -234,17 +290,32 @@ public class CreateCustomCertificateRequest extends TeaModel {
     public static class CreateCustomCertificateRequestApiPassthroughExtensionsSubjectAlternativeNames extends TeaModel {
         /**
          * <p>The type of the alias. Valid values:</p>
-         * <br>
-         * <p>*   rfc822Name: email address</p>
-         * <p>*   dNSName: domain name</p>
-         * <p>*   uniformResourceIdentifier: URI</p>
-         * <p>*   iPAddress: IP address</p>
+         * <ul>
+         * <li>rfc822Name: email address</li>
+         * <li>dNSName: domain name</li>
+         * <li>uniformResourceIdentifier: URI</li>
+         * <li>iPAddress: IP address</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dNSName</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The alias that meets the requirement of a specified type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rfc822Name:
+         * <a href="mailto:exmaple@certqa.cn">exmaple@certqa.cn</a></p>
+         * <p>dNSName:
+         * <a href="http://www.certqa.cn">www.certqa.cn</a></p>
+         * <p>uniformResourceIdentifier:
+         * acs:ecs:regionid:15619224785*****:instance/i-bp1bzvz55uz27hf*****</p>
+         * <p>iPAddress:
+         * 127.0.0.1</p>
          */
         @NameInMap("Value")
         public String value;
@@ -339,26 +410,33 @@ public class CreateCustomCertificateRequest extends TeaModel {
     public static class CreateCustomCertificateRequestApiPassthroughSubjectCustomAttributes extends TeaModel {
         /**
          * <p>Custom attribute type as:</p>
-         * <br>
-         * <p>- 2.5.4.6 : country</p>
-         * <p>- 2.5.4.10 : organization</p>
-         * <p>- 2.5.4.11 : organizational unit</p>
-         * <p>- 2.5.4.12 : title</p>
-         * <p>- 2.5.4.3 : common name</p>
-         * <p>- 2.5.4.9 : street</p>
-         * <p>- 2.5.4.5 : serial number</p>
-         * <p>- 2.5.4.7 : locality</p>
-         * <p>- 2.5.4.8 : state</p>
-         * <p>- 1.3.6.1.4.1.37244.1.1 : Matter Operational Certificate - Node ID</p>
-         * <p>- 1.3.6.1.4.1.37244.1.5 : Matter Operational Certificate - Fabric ID</p>
-         * <p>- 1.3.6.1.4.1.37244.2.1 : Matter Device Attestation Certificate Vender ID (VID)</p>
-         * <p>- 1.3.6.1.4.1.37244.2.2 : Matter Device Attestation Certificate Product ID (PID).</p>
+         * <ul>
+         * <li>2.5.4.6 : country</li>
+         * <li>2.5.4.10 : organization</li>
+         * <li>2.5.4.11 : organizational unit</li>
+         * <li>2.5.4.12 : title</li>
+         * <li>2.5.4.3 : common name</li>
+         * <li>2.5.4.9 : street</li>
+         * <li>2.5.4.5 : serial number</li>
+         * <li>2.5.4.7 : locality</li>
+         * <li>2.5.4.8 : state</li>
+         * <li>1.3.6.1.4.1.37244.1.1 : Matter Operational Certificate - Node ID</li>
+         * <li>1.3.6.1.4.1.37244.1.5 : Matter Operational Certificate - Fabric ID</li>
+         * <li>1.3.6.1.4.1.37244.2.1 : Matter Device Attestation Certificate Vender ID (VID)</li>
+         * <li>1.3.6.1.4.1.37244.2.2 : Matter Device Attestation Certificate Product ID (PID).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2.5.4.3</p>
          */
         @NameInMap("ObjectIdentifier")
         public String objectIdentifier;
 
         /**
          * <p>Custom attribute value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Aliyun</p>
          */
         @NameInMap("Value")
         public String value;
@@ -389,12 +467,18 @@ public class CreateCustomCertificateRequest extends TeaModel {
     public static class CreateCustomCertificateRequestApiPassthroughSubject extends TeaModel {
         /**
          * <p>The common name of the certificate user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bob</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
-         * <p>The code of the country. The value is an alpha-2 country code that complies with the ISO 3166-1 standard. For more information about country codes, visit <https://www.iso.org/obp/ui/#search/code/>.</p>
+         * <p>The code of the country. The value is an alpha-2 country code that complies with the ISO 3166-1 standard. For more information about country codes, visit <a href="https://www.iso.org/obp/ui/#search/code/">https://www.iso.org/obp/ui/#search/code/</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         @NameInMap("Country")
         public String country;
@@ -407,24 +491,36 @@ public class CreateCustomCertificateRequest extends TeaModel {
 
         /**
          * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         @NameInMap("Locality")
         public String locality;
 
         /**
          * <p>The name of the organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX company</p>
          */
         @NameInMap("Organization")
         public String organization;
 
         /**
          * <p>The name of the department or branch in the organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXX department</p>
          */
         @NameInMap("OrganizationUnit")
         public String organizationUnit;
 
         /**
          * <p>The name of the province or state in which the organization associated with the certificate is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhejiang</p>
          */
         @NameInMap("State")
         public String state;
@@ -501,6 +597,9 @@ public class CreateCustomCertificateRequest extends TeaModel {
 
         /**
          * <p>The serial number MUST be a positive integer assigned by the CA to each certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16889526086333</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;

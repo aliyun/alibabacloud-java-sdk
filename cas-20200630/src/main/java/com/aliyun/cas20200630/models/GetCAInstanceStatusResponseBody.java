@@ -12,6 +12,9 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25589516-2A56-5159-AB88-4A1D9824E183</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,74 +43,105 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
     public static class GetCAInstanceStatusResponseBodyInstanceStatusList extends TeaModel {
         /**
          * <p>The expiration date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of the **Status** parameter is **USED** or **REVOKE**. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>USED</strong> or <strong>REVOKE</strong>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1792944000000</p>
          */
         @NameInMap("AfterTime")
         public Long afterTime;
 
         /**
          * <p>The issuance date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of the **Status** parameter is **USED** or **REVOKE**. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>USED</strong> or <strong>REVOKE</strong>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1635177600000</p>
          */
         @NameInMap("BeforeTime")
         public Long beforeTime;
 
         /**
          * <p>The number of certificates that are issued by using the private CA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CertIssuedCount")
         public Integer certIssuedCount;
 
         /**
          * <p>The number of certificates that can be issued by using the private CA instance.</p>
-         * <br>
-         * <p>For a private root CA instance whose **Type** is **ROOT**, this parameter indicates the number of intermediate CA certificates that can be issued.</p>
-         * <br>
-         * <p>For a private intermediate CA instance whose **Type** is **SUB_ROOT**, this parameter indicates the total number of client certificates and server certificates that can be issued</p>
+         * <p>For a private root CA instance whose <strong>Type</strong> is <strong>ROOT</strong>, this parameter indicates the number of intermediate CA certificates that can be issued.</p>
+         * <p>For a private intermediate CA instance whose <strong>Type</strong> is <strong>SUB_ROOT</strong>, this parameter indicates the total number of client certificates and server certificates that can be issued</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("CertTotalCount")
         public Integer certTotalCount;
 
         /**
          * <p>The unique identifier of the private CA certificate.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of the **Status** parameter is **USED** or **REVOKE**. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of the <strong>Status</strong> parameter is <strong>USED</strong> or <strong>REVOKE</strong>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a7bb2dd212a2112128cd5cc9b753****</p>
          */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
          * <p>The ID of the private CA instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cas-member-0hmi****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The status of the private CA instance. Valid values:</p>
-         * <br>
-         * <p>*   **BUY**: The private CA instance is purchased but is not enabled.</p>
-         * <p>*   **USED**: The private CA instance is enabled.</p>
-         * <p>*   **REFUND**: The private CA instance is refunded.</p>
-         * <p>*   **REVOKE**: The private CA instance is revoked.</p>
+         * <ul>
+         * <li><strong>BUY</strong>: The private CA instance is purchased but is not enabled.</li>
+         * <li><strong>USED</strong>: The private CA instance is enabled.</li>
+         * <li><strong>REFUND</strong>: The private CA instance is refunded.</li>
+         * <li><strong>REVOKE</strong>: The private CA instance is revoked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The type of the private CA instance. Valid values:</p>
-         * <br>
-         * <p>*   **ROOT**: root CA instance</p>
-         * <p>*   **SUB_ROOT**: intermediate CA instance</p>
+         * <ul>
+         * <li><strong>ROOT</strong>: root CA instance</li>
+         * <li><strong>SUB_ROOT</strong>: intermediate CA instance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ROOT</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The expiration date of the private CA instance. This value is a UNIX timestamp. Unit: milliseconds.</p>
-         * <br>
-         * <p>>  This parameter corresponds to the duration that you select when you purchase the private CA instance. The duration indicates the subscription period of the Private Certificate Authority (PCA) service.</p>
+         * <blockquote>
+         * <p> This parameter corresponds to the duration that you select when you purchase the private CA instance. The duration indicates the subscription period of the Private Certificate Authority (PCA) service.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1637251200000</p>
          */
         @NameInMap("UseExpireTime")
         public Long useExpireTime;
