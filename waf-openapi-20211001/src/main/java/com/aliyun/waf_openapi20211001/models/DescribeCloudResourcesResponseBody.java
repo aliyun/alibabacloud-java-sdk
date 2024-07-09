@@ -58,6 +58,12 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudResourcesResponseBodyCloudResources extends TeaModel {
+        @NameInMap("HttpPortCount")
+        public Integer httpPortCount;
+
+        @NameInMap("HttpsPortCount")
+        public Integer httpsPortCount;
+
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          * 
@@ -92,7 +98,17 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
          * <p>alb-ffff****</p>
          */
         @NameInMap("ResourceInstance")
+        @Deprecated
         public String resourceInstance;
+
+        @NameInMap("ResourceInstanceId")
+        public String resourceInstanceId;
+
+        @NameInMap("ResourceInstanceIp")
+        public String resourceInstanceIp;
+
+        @NameInMap("ResourceInstanceName")
+        public String resourceInstanceName;
 
         /**
          * <p>The name of the resource.</p>
@@ -101,6 +117,7 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
          * <p>test-resource-name</p>
          */
         @NameInMap("ResourceName")
+        @Deprecated
         public String resourceName;
 
         /**
@@ -150,6 +167,22 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeCloudResourcesResponseBodyCloudResources setHttpPortCount(Integer httpPortCount) {
+            this.httpPortCount = httpPortCount;
+            return this;
+        }
+        public Integer getHttpPortCount() {
+            return this.httpPortCount;
+        }
+
+        public DescribeCloudResourcesResponseBodyCloudResources setHttpsPortCount(Integer httpsPortCount) {
+            this.httpsPortCount = httpsPortCount;
+            return this;
+        }
+        public Integer getHttpsPortCount() {
+            return this.httpsPortCount;
+        }
+
         public DescribeCloudResourcesResponseBodyCloudResources setOwnerUserId(String ownerUserId) {
             this.ownerUserId = ownerUserId;
             return this;
@@ -180,6 +213,30 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         }
         public String getResourceInstance() {
             return this.resourceInstance;
+        }
+
+        public DescribeCloudResourcesResponseBodyCloudResources setResourceInstanceId(String resourceInstanceId) {
+            this.resourceInstanceId = resourceInstanceId;
+            return this;
+        }
+        public String getResourceInstanceId() {
+            return this.resourceInstanceId;
+        }
+
+        public DescribeCloudResourcesResponseBodyCloudResources setResourceInstanceIp(String resourceInstanceIp) {
+            this.resourceInstanceIp = resourceInstanceIp;
+            return this;
+        }
+        public String getResourceInstanceIp() {
+            return this.resourceInstanceIp;
+        }
+
+        public DescribeCloudResourcesResponseBodyCloudResources setResourceInstanceName(String resourceInstanceName) {
+            this.resourceInstanceName = resourceInstanceName;
+            return this;
+        }
+        public String getResourceInstanceName() {
+            return this.resourceInstanceName;
         }
 
         public DescribeCloudResourcesResponseBodyCloudResources setResourceName(String resourceName) {
