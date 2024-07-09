@@ -1266,6 +1266,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         public String ramPolicy;
 
         /**
+         * <strong>example:</strong>
+         * <p>KubernetesWorkerRole-4a4fa089-80c1-48a5-b3c6-9349311f****</p>
+         */
+        @NameInMap("ram_role_name")
+        public String ramRoleName;
+
+        /**
          * <p>The ApsaraDB RDS instances. If you specify the list of ApsaraDB RDS instances, ECS instances in the cluster are automatically added to the whitelist of the ApsaraDB RDS instances.</p>
          */
         @NameInMap("rds_instances")
@@ -1677,6 +1684,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public String getRamPolicy() {
             return this.ramPolicy;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setRdsInstances(java.util.List<String> rdsInstances) {

@@ -67,9 +67,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
          * <p>The severity level of the vulnerability.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>nntf: You can ignore the vulnerability</li>
-         * <li>later: You can fix the vulnerability later</li>
-         * <li>asap: You need to fix the vulnerability at the earliest opportunity</li>
+         * <li>nntf: You can ignore the vulnerability.</li>
+         * <li>later: You can fix the vulnerability later.</li>
+         * <li>asap: You need to fix the vulnerability at the earliest opportunity.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -78,6 +78,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         @NameInMap("necessity")
         public String necessity;
 
+        /**
+         * <p>Indicates whether a restart is required.</p>
+         */
         @NameInMap("need_reboot")
         public Boolean needReboot;
 
@@ -130,7 +133,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
 
     public static class DescribeNodePoolVulsResponseBodyVulRecords extends TeaModel {
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>i-t4n2qolb0wtzt0pz****</p>

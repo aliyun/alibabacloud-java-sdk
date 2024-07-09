@@ -3740,7 +3740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改资源删除保护配置</p>
+     * <p>Queries whether the deletion protection feature is enabled for the specified resources. The resources that you can query include namespaces and Services.</p>
      * 
      * @param request DescribeResourcesDeleteProtectionRequest
      * @param headers map
@@ -3778,7 +3778,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改资源删除保护配置</p>
+     * <p>Queries whether the deletion protection feature is enabled for the specified resources. The resources that you can query include namespaces and Services.</p>
      * 
      * @param request DescribeResourcesDeleteProtectionRequest
      * @return DescribeResourcesDeleteProtectionResponse
@@ -7044,7 +7044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改资源删除保护配置</p>
+     * <p>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services.</p>
      * 
      * @param request UpdateResourcesDeleteProtectionRequest
      * @param headers map
@@ -7090,7 +7090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改资源删除保护配置</p>
+     * <p>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services.</p>
      * 
      * @param request UpdateResourcesDeleteProtectionRequest
      * @return UpdateResourcesDeleteProtectionResponse

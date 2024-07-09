@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     /**
+     * <p>Specify whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The namespace to which the resource belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      * 
@@ -22,12 +26,17 @@ public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.</p>
+     * 
      * <strong>example:</strong>
      * <p>services</p>
      */
     @NameInMap("resource_type")
     public String resourceType;
 
+    /**
+     * <p>The resources list.</p>
+     */
     @NameInMap("resources")
     public java.util.List<String> resources;
 

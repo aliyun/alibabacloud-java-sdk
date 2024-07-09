@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeResourcesDeleteProtectionRequest extends TeaModel {
     /**
+     * <p>The namespace to which the resource belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -12,6 +14,8 @@ public class DescribeResourcesDeleteProtectionRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The name of the resource that you want to query. Separate multiple resource names with commas (,).</p>
+     * 
      * <strong>example:</strong>
      * <p>test1,test2</p>
      */
