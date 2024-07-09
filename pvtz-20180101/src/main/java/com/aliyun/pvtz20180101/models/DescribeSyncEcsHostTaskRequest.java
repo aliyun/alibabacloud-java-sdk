@@ -4,9 +4,22 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSyncEcsHostTaskRequest extends TeaModel {
+    /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The zone ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pvtz-test-id-2989149d628c56f00e</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

@@ -4,9 +4,18 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRequestGraphResponseBody extends TeaModel {
+    /**
+     * <p>The information about the DNS requests.</p>
+     */
     @NameInMap("RequestDetails")
     public DescribeRequestGraphResponseBodyRequestDetails requestDetails;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EB71815-A421-4E51-8E8D-667F44ABE633</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,30 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
     }
 
     public static class DescribeRequestGraphResponseBodyRequestDetailsZoneRequestTop extends TeaModel {
+        /**
+         * <p>The number of DNS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103</p>
+         */
         @NameInMap("RequestCount")
         public Long requestCount;
 
+        /**
+         * <p>The statistical time. The value is a string. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-21T10:00Z</p>
+         */
         @NameInMap("Time")
         public String time;
 
+        /**
+         * <p>The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571652000000</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

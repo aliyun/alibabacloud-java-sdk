@@ -4,21 +4,54 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeZonesResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6856BCF6-11D6-4D7E-AC53-FD579933522B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
+    /**
+     * <p>The total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
+    /**
+     * <p>The zones.</p>
+     */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
 
@@ -76,9 +109,21 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZoneResourceTagsResourceTag extends TeaModel {
+        /**
+         * <p>The key of tag N added to the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N added to the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daily</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -125,60 +170,192 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
+        /**
+         * <p>The time when the zone was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-28T13:08Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the zone was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1514466483000</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The creator of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5463564356</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The type of the user account.</p>
+         * <ul>
+         * <li><strong>CUSTOMER</strong>: Alibaba Cloud account</li>
+         * <li><strong>SUB</strong>: RAM user</li>
+         * <li><strong>STS</strong>: assumed role that obtains the Security Token Service (STS) token of a RAM role</li>
+         * <li><strong>OTHER</strong>: other types</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUB</p>
+         */
         @NameInMap("CreatorSubType")
         public String creatorSubType;
 
+        /**
+         * <p>The logical location type of the built-in authoritative module in which the zone is added. Valid values:</p>
+         * <ul>
+         * <li><strong>NORMAL_ZONE</strong>: regular module</li>
+         * <li><strong>FAST_ZONE</strong>: acceleration module</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL_ZONE</p>
+         */
         @NameInMap("DnsGroup")
         public String dnsGroup;
 
+        /**
+         * <p>Indicates whether the zone is being removed to another logical location. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("DnsGroupChanging")
         public Boolean dnsGroupChanging;
 
+        /**
+         * <p>Indicates whether the zone is a reverse lookup zone. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsPtr")
         public Boolean isPtr;
 
+        /**
+         * <p>Indicates whether the recursive resolution proxy feature is enabled for the zone. Valid values:</p>
+         * <ul>
+         * <li><strong>ZONE</strong>: The recursive resolution proxy feature is disabled for the zone.</li>
+         * <li><strong>RECORD</strong>: The recursive resolution proxy feature is enabled for the zone.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ZONE</p>
+         */
         @NameInMap("ProxyPattern")
         public String proxyPattern;
 
+        /**
+         * <p>The number of Domain Name System (DNS) records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("RecordCount")
         public Integer recordCount;
 
+        /**
+         * <p>The description of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxx</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The tags added to the resources.</p>
+         */
         @NameInMap("ResourceTags")
         public DescribeZonesResponseBodyZonesZoneResourceTags resourceTags;
 
+        /**
+         * <p>The time when the zone was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-03T08:57Z</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1514969843000</p>
+         */
         @NameInMap("UpdateTimestamp")
         public Long updateTimestamp;
 
         /**
-         * <p>zone ID。</p>
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6d83e3b31aa60ca4aaa7161f1b6b**95</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>The name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 
+        /**
+         * <p>The type of the cloud service. Valid values:</p>
+         * <ul>
+         * <li>If ZoneType is set to AUTH_ZONE, no value is returned for this parameter.</li>
+         * <li>If ZoneType is set to CLOUD_PRODUCT_ZONE, the type of the cloud service is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>BLINK</p>
+         */
         @NameInMap("ZoneTag")
         public String zoneTag;
 
+        /**
+         * <p>The type of zones. Valid values:</p>
+         * <ul>
+         * <li><strong>AUTH_ZONE</strong>: authoritative zone</li>
+         * <li><strong>CLOUD_PRODUCT_ZONE</strong>: authoritative zone for cloud services</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOUD_PRODUCT_ZONE</p>
+         */
         @NameInMap("ZoneType")
         public String zoneType;
 

@@ -4,12 +4,28 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class BindResolverRuleVpcRequest extends TeaModel {
+    /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The forwarding rule ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0**</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <p>The VPCs.</p>
+     */
     @NameInMap("Vpc")
     public java.util.List<BindResolverRuleVpcRequestVpc> vpc;
 
@@ -43,15 +59,34 @@ public class BindResolverRuleVpcRequest extends TeaModel {
     }
 
     public static class BindResolverRuleVpcRequestVpc extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>vpcID</p>
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-kqk1i2o2ajsksl-vpc-test</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The VPC type. Valid values:</p>
+         * <ul>
+         * <li>STANDARD: standard VPC</li>
+         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("VpcType")
         public String vpcType;
 

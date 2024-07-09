@@ -1,3 +1,9 @@
+2024-07-09 Version: 1.3.3
+- Update API AddZone: add param DnsGroup.
+- Update API DescribeResolverEndpoints: add param VpcRegionId.
+- Update API UpdateResolverRule: add param EndpointId.
+
+
 2024-02-19 Version: 1.3.2
 - Update API AddZone: add param DnsGroup.
 

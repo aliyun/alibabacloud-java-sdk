@@ -4,9 +4,21 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class AddResolverEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The outbound endpoint ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hra0**</p>
+     */
     @NameInMap("EndpointId")
     public String endpointId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32436208-E1AF-4DAB-B3B8-24F5F25B0950</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

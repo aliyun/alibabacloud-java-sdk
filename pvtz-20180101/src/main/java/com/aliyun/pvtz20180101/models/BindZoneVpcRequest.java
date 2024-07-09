@@ -4,18 +4,46 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class BindZoneVpcRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6447728c8578e66aacf062d2df4446dc</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The IP address of the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.1.1.1</p>
+     */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
+    /**
+     * <p>The information about VPCs.</p>
+     */
     @NameInMap("Vpcs")
     public java.util.List<BindZoneVpcRequestVpcs> vpcs;
 
+    /**
+     * <p>The global ID of the zone.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AgIDE0OQ_149</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -65,12 +93,34 @@ public class BindZoneVpcRequest extends TeaModel {
     }
 
     public static class BindZoneVpcRequestVpcs extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The VPC ID. If you do not specify this parameter, the VPCs that are bound to the zone are unbound from the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daily-vpc-id</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The type of the VPC. Valid values:</p>
+         * <ul>
+         * <li><strong>STANDARD</strong>: standard VPC</li>
+         * <li><strong>EDS</strong>: Elastic Desktop Service (EDS) workspace VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("VpcType")
         public String vpcType;
 

@@ -4,15 +4,33 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeStatisticSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A73F3BD0-B1A8-42A9-A9B6-689BBABC4891</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2254</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
+    /**
+     * <p>The top 3 virtual private clouds (VPCs) that initiate the largest number of DNS requests.</p>
+     */
     @NameInMap("VpcRequestTops")
     public DescribeStatisticSummaryResponseBodyVpcRequestTops vpcRequestTops;
 
+    /**
+     * <p>The top 3 zones with the largest number of DNS requests.</p>
+     */
     @NameInMap("ZoneRequestTops")
     public DescribeStatisticSummaryResponseBodyZoneRequestTops zoneRequestTops;
 
@@ -54,24 +72,61 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeStatisticSummaryResponseBodyVpcRequestTopsVpcRequestTop extends TeaModel {
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China (Beijing)</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The number of DNS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2254</p>
+         */
         @NameInMap("RequestCount")
         public Long requestCount;
 
+        /**
+         * <p>The tunnel ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46574</p>
+         */
         @NameInMap("TunnelId")
         public String tunnelId;
 
         /**
-         * <p>VPC ID</p>
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2zeisd8c0j6wk1451jr6o</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The type of the VPC. Valid values:</p>
+         * <ul>
+         * <li>STANDARD: standard VPC</li>
+         * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STANDARD</p>
+         */
         @NameInMap("VpcType")
         public String vpcType;
 
@@ -150,12 +205,34 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeStatisticSummaryResponseBodyZoneRequestTopsZoneRequestTop extends TeaModel {
+        /**
+         * <p>The business type. Valid values:</p>
+         * <ul>
+         * <li>AUTH_ZONE: authoritative zone</li>
+         * <li>RESOLVER_RULE: forwarding rule</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTH_ZONE</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <p>The number of DNS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2251</p>
+         */
         @NameInMap("RequestCount")
         public Long requestCount;
 
+        /**
+         * <p>The name of the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>host.local</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 

@@ -4,11 +4,21 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeZoneInfoRequest extends TeaModel {
+    /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>Zone ID。</p>
+     * <p>The global ID of the zone.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AgIDE1MA_149</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
