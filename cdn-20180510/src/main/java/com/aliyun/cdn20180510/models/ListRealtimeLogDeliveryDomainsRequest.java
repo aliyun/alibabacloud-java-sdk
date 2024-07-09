@@ -6,26 +6,31 @@ import com.aliyun.tea.*;
 public class ListRealtimeLogDeliveryDomainsRequest extends TeaModel {
     /**
      * <p>The name of the Logstore that collects log data from Alibaba Cloud CDN in real time. You can specify multiple Logstore names and separate them with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LogstoreName</p>
      */
     @NameInMap("Logstore")
     public String logstore;
 
     /**
      * <p>The name of the Log Service project that is used for real-time log delivery. You can specify multiple project names and separate them with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ProjectName</p>
      */
     @NameInMap("Project")
     public String project;
 
     /**
      * <p>The ID of the region where the Log Service project is deployed. You can specify multiple region IDs and separate them with commas (,).</p>
-     * <br>
-     * <p>For more information about regions, see [Regions that support real-time log delivery](https://help.aliyun.com/document_detail/144883.html).</p>
-     * <br>
+     * <p>For more information about regions, see <a href="https://help.aliyun.com/document_detail/144883.html">Regions that support real-time log delivery</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ch-shanghai</p>
      */
     @NameInMap("Region")
     public String region;

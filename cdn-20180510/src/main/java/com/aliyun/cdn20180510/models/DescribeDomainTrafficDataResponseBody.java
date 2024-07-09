@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeDomainTrafficDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T21:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T20:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,42 +111,63 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
     public static class DescribeDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The amount of network traffic in the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
         /**
          * <p>The amount of HTTPS traffic on points of presence (POPs) in the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
         /**
          * <p>The amount of HTTPS traffic on POPs outside the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
         /**
          * <p>The total amount of HTTPS traffic on POPs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>423304182</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
          * <p>The amount of network traffic outside the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The total volume of traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>423304182</p>
          */
         @NameInMap("Value")
         public String value;

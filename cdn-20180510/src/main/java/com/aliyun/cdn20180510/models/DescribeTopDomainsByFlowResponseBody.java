@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
     /**
      * <p>The total number of accelerated domain names that belong to the current Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68</p>
      */
     @NameInMap("DomainCount")
     public Long domainCount;
 
     /**
-     * <p>The total number of accelerated domain names that are in the **Enabled** state within the current Alibaba Cloud account.</p>
+     * <p>The total number of accelerated domain names that are in the <strong>Enabled</strong> state within the current Alibaba Cloud account.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>68</p>
      */
     @NameInMap("DomainOnlineCount")
     public Long domainOnlineCount;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-23T08:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4E09C5D7-E1CF-4CAA-A45E-8727F4C8FD70</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-22T08:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,42 +111,63 @@ public class DescribeTopDomainsByFlowResponseBody extends TeaModel {
     public static class DescribeTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The peak bandwidth value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22139626</p>
          */
         @NameInMap("MaxBps")
         public Float maxBps;
 
         /**
          * <p>The time when the bandwidth reached the peak value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1457111400</p>
          */
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
         /**
          * <p>The ranking of the accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Rank")
         public Long rank;
 
         /**
          * <p>The number of visits to the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>107784230</p>
          */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
         /**
          * <p>The total volume of traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2043859876683.9001</p>
          */
         @NameInMap("TotalTraffic")
         public String totalTraffic;
 
         /**
          * <p>The proportion of network traffic consumed to access the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.64191989360235</p>
          */
         @NameInMap("TrafficPercent")
         public String trafficPercent;

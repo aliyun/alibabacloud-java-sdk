@@ -12,6 +12,9 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95D5B69F-8AEC-419B-8F3A-612B35032B0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     public static class ListRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {
         /**
          * <p>The name of the Logstore that collects log data from Alibaba Cloud CDN in real time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogstoreName</p>
          */
         @NameInMap("Logstore")
         public String logstore;
 
         /**
          * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ProjectName</p>
          */
         @NameInMap("Project")
         public String project;
 
         /**
-         * <p>The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](https://help.aliyun.com/document_detail/144883.html).</p>
+         * <p>The ID of the region where the Log Service project is deployed. For more information, see <a href="https://help.aliyun.com/document_detail/144883.html">Regions that support real-time log delivery</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ch-shanghai</p>
          */
         @NameInMap("Region")
         public String region;

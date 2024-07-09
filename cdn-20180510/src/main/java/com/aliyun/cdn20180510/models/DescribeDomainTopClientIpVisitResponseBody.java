@@ -12,6 +12,9 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64D28B53-5902-409B-94F6-FD46680144FE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
     public static class DescribeDomainTopClientIpVisitResponseBodyClientIpList extends TeaModel {
         /**
          * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>256</p>
          */
         @NameInMap("Acc")
         public Long acc;
 
         /**
          * <p>The client IP address returned. Only IPv4 addressed are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.xxx</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The ranking of the client IP address returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Rank")
         public Integer rank;
 
         /**
          * <p>The total amount of network traffic consumed. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
          */
         @NameInMap("Traffic")
         public Long traffic;

@@ -12,6 +12,9 @@ public class DescribeIpStatusResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,16 +43,23 @@ public class DescribeIpStatusResponseBody extends TeaModel {
     public static class DescribeIpStatusResponseBodyIpStatus extends TeaModel {
         /**
          * <p>The IP address of the POP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.10.10</p>
          */
         @NameInMap("ip")
         public String ip;
 
         /**
          * <p>The status.</p>
-         * <br>
-         * <p>*   **nonali**: not an Alibaba Cloud CDN POP</p>
-         * <p>*   **normal**: an available Alibaba Cloud CDN POP</p>
-         * <p>*   **abnormal**: an unavailable Alibaba Cloud CDN POP</p>
+         * <ul>
+         * <li><strong>nonali</strong>: not an Alibaba Cloud CDN POP</li>
+         * <li><strong>normal</strong>: an available Alibaba Cloud CDN POP</li>
+         * <li><strong>abnormal</strong>: an unavailable Alibaba Cloud CDN POP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>abnormal</p>
          */
         @NameInMap("status")
         public String status;

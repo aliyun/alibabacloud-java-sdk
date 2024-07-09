@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class BatchStopCdnDomainResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>324AEFFF-308C-4DA7-8CD3-01B277B98F28</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeL2VipsByDomainResponseBody extends TeaModel {
     /**
      * <p>The domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
      */
     @NameInMap("RequestId")
     public String requestId;

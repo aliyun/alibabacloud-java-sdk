@@ -12,24 +12,36 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BDA62CE4-3477-439A-B52E-D2D7C829D7C1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,30 +94,45 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
     public static class DescribeUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
         /**
          * <p>The address of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***.oss-cn-hangzhou.aliyuncs.com</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The port of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("Port")
         public Integer port;
 
         /**
          * <p>The priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("Priority")
         public String priority;
 
         /**
          * <p>The type of the origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
          * <p>The weight of the origin server if multiple origin servers have been specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("Weight")
         public String weight;
@@ -179,83 +206,119 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
     public static class DescribeUserDomainsResponseBodyDomainsPageData extends TeaModel {
         /**
          * <p>The type of the workload accelerated by Alibaba Cloud CDN. Valid values:</p>
-         * <br>
-         * <p>*   **web**: images and small files</p>
-         * <p>*   **download**: large files</p>
-         * <p>*   **video**: on-demand video and audio streaming</p>
+         * <ul>
+         * <li><strong>web</strong>: images and small files</li>
+         * <li><strong>download</strong>: large files</li>
+         * <li><strong>video</strong>: on-demand video and audio streaming</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>download</p>
          */
         @NameInMap("CdnType")
         public String cdnType;
 
         /**
          * <p>The CNAME assigned to the accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com.w.alikunlun.net</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The acceleration region. Valid values:</p>
-         * <br>
-         * <p>*   **domestic**: Chinese mainland</p>
-         * <p>*   **global**: global</p>
-         * <p>*   **overseas**: outside the Chinese mainland</p>
+         * <ul>
+         * <li><strong>domestic</strong>: Chinese mainland</li>
+         * <li><strong>global</strong>: global</li>
+         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>domestic</p>
          */
         @NameInMap("Coverage")
         public String coverage;
 
         /**
          * <p>The information about Internet Content Provider (ICP) filing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filing description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11223344</p>
          */
         @NameInMap("DomainId")
         public Long domainId;
 
         /**
          * <p>The accelerated domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The status of the accelerated domain name. Valid values:</p>
-         * <br>
-         * <p>*   **online**</p>
-         * <p>*   **offline**</p>
-         * <p>*   **configuring**</p>
-         * <p>*   **configure_failed**</p>
-         * <p>*   **checking**</p>
-         * <p>*   **check_failed**</p>
-         * <p>*   **stopping**</p>
-         * <p>*   **deleting**</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * <li><strong>configuring</strong></li>
+         * <li><strong>configure_failed</strong></li>
+         * <li><strong>checking</strong></li>
+         * <li><strong>check_failed</strong></li>
+         * <li><strong>stopping</strong></li>
+         * <li><strong>deleting</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>configure_failed</p>
          */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
          * <p>The time when the accelerated domain name was added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-10-28T09:32:51Z</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
         /**
          * <p>The time when the accelerated domain name was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-10-28T11:05:52Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
          * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abcd1234abcd1234</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>Indicates whether the accelerated domain name is in a sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("Sandbox")
         public String sandbox;
@@ -268,9 +331,13 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether HTTPS is enabled. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("SslProtocol")
         public String sslProtocol;

@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDomainQpsDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:40:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,12 +39,18 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B8333EDB-4595-46E0-AFE9-29BAA290D0E0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:33:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,78 +111,117 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
     public static class DescribeDomainQpsDataResponseBodyQpsDataIntervalDataModule extends TeaModel {
         /**
          * <p>The number of requests in the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AccDomesticValue")
         public String accDomesticValue;
 
         /**
          * <p>The number of requests outside the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AccOverseasValue")
         public String accOverseasValue;
 
         /**
          * <p>The total number of requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AccValue")
         public String accValue;
 
         /**
          * <p>The number of queries per second in the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
         /**
          * <p>The number of HTTPS requests sent to POPs in the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HttpsAccDomesticValue")
         public String httpsAccDomesticValue;
 
         /**
          * <p>The number of HTTPS requests sent to POPs outside the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HttpsAccOverseasValue")
         public String httpsAccOverseasValue;
 
         /**
          * <p>The number of HTTPS requests sent to POPs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HttpsAccValue")
         public String httpsAccValue;
 
         /**
          * <p>The number of queries per second that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
         /**
          * <p>The number of queries per second that is calculated based on the HTTPS requests sent to POPs outside the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
         /**
          * <p>The number of queries per second that is calculated based on the HTTPS requests sent to points of presence (POPs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
          * <p>The number of queries per second outside the Chinese mainland.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The total QPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Value")
         public String value;

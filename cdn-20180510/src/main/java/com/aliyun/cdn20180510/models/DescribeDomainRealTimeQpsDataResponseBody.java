@@ -12,6 +12,9 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32DC9806-E9F9-4490-BBDC-B3A9E32FCC1D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
     public static class DescribeDomainRealTimeQpsDataResponseBodyDataQpsModel extends TeaModel {
         /**
          * <p>The number of queries per second.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1851.25</p>
          */
         @NameInMap("Qps")
         public Float qps;
 
         /**
          * <p>The timestamp of the data returned. The time follows the yyyy-MM-ddTHH:mm:ssZ format in the ISO 8601 standard and is in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-02T11:25:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

@@ -6,12 +6,21 @@ import com.aliyun.tea.*;
 public class DescribeDomainVerifyDataResponseBody extends TeaModel {
     /**
      * <p>The verification content.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;verifiCode&quot;: &quot;uy0-DbxL4HBmUtSUXpkXctaSnCAUKhhNH6WKl-JnJY4&quot;,
+     *     &quot;verifyKey&quot;: &quot;_acme-challenge&quot;
+     *   }</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
      */
     @NameInMap("RequestId")
     public String requestId;

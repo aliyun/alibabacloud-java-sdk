@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com,example.org</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-11-30T05:40:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,12 +39,18 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-11-30T05:33:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,18 +111,27 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
     public static class DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageDataValueCodeProportionData extends TeaModel {
         /**
          * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2300</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The proportion of the HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67.1458998935037</p>
          */
         @NameInMap("Proportion")
         public String proportion;
@@ -165,6 +189,9 @@ public class DescribeDomainSrcHttpCodeDataResponseBody extends TeaModel {
     public static class DescribeDomainSrcHttpCodeDataResponseBodyHttpCodeDataUsageData extends TeaModel {
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-11-30T05:30:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

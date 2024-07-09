@@ -6,28 +6,35 @@ import com.aliyun.tea.*;
 public class AddCdnDomainRequest extends TeaModel {
     /**
      * <p>The workload type of the accelerated domain name. Valid values:</p>
-     * <br>
-     * <p>*   **web**: images and small files</p>
-     * <p>*   **download**: large files</p>
-     * <p>*   **video**: on-demand video and audio streaming</p>
-     * <br>
+     * <ul>
+     * <li><strong>web</strong>: images and small files</li>
+     * <li><strong>download</strong>: large files</li>
+     * <li><strong>video</strong>: on-demand video and audio streaming</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>web</p>
      */
     @NameInMap("CdnType")
     public String cdnType;
 
     /**
      * <p>The URL that is used to check the accessibility of the origin server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com/test.html">www.example.com/test.html</a></p>
      */
     @NameInMap("CheckUrl")
     public String checkUrl;
 
     /**
      * <p>The domain name that you want to add to Alibaba Cloud CDN.</p>
-     * <br>
      * <p>A wildcard domain that starts with a period (.) is supported, such as .example.com.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>.example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -40,18 +47,24 @@ public class AddCdnDomainRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
-     * <br>
      * <p>If you do not set this parameter, the system uses the ID of the default resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyuji4b6r4**</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The acceleration region. Default value: domestic. Valid values:</p>
-     * <br>
-     * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: global (excluding the Chinese mainland)</p>
-     * <p>*   **global**: global</p>
+     * <ul>
+     * <li><strong>domestic</strong>: Chinese mainland</li>
+     * <li><strong>overseas</strong>: global (excluding the Chinese mainland)</li>
+     * <li><strong>global</strong>: global</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>domestic</p>
      */
     @NameInMap("Scope")
     public String scope;
@@ -61,8 +74,18 @@ public class AddCdnDomainRequest extends TeaModel {
 
     /**
      * <p>The information about the addresses of origin servers.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *       {
+     *             &quot;content&quot;: &quot;192.0.2.0&quot;,
+     *             &quot;type&quot;: &quot;ipaddr&quot;,
+     *             &quot;priority&quot;: &quot;20&quot;,
+     *             &quot;port&quot;: 80,
+     *             &quot;weight&quot;: &quot;15&quot;
+     *       }
+     * ]</p>
      */
     @NameInMap("Sources")
     public String sources;
@@ -75,6 +98,9 @@ public class AddCdnDomainRequest extends TeaModel {
 
     /**
      * <p>The top-level domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
@@ -174,13 +200,19 @@ public class AddCdnDomainRequest extends TeaModel {
 
     public static class AddCdnDomainRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag. Valid values of N: **1 to 20**.</p>
+         * <p>The key of the tag. Valid values of N: <strong>1 to 20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag. Valid values of N: **1 to 20**.</p>
+         * <p>The value of the tag. Valid values of N: <strong>1 to 20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

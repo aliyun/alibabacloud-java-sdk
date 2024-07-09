@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeBlockedRegionsRequest extends TeaModel {
     /**
      * <p>The language. Valid values:</p>
-     * <br>
-     * <p>*   **zh**: simplified Chinese</p>
-     * <p>*   **en**: English</p>
-     * <p>*   **jp**: Japanese</p>
-     * <br>
+     * <ul>
+     * <li><strong>zh</strong>: simplified Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * <li><strong>jp</strong>: Japanese</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Language")
     public String language;

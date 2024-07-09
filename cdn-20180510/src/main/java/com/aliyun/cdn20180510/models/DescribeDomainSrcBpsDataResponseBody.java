@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-10T20:30:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,6 +48,9 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-10T20:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,18 +111,27 @@ public class DescribeDomainSrcBpsDataResponseBody extends TeaModel {
     public static class DescribeDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The bandwidth values of origin HTTPS requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-10T20:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The traffic value at each time interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Value")
         public String value;

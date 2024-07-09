@@ -12,6 +12,9 @@ public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
     public static class SetCdnDomainStagingConfigResponseBodyDomainConfigList extends TeaModel {
         /**
          * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         @NameInMap("ConfigId")
         public Long configId;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">www.example.com</a></p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set_resp_header</p>
          */
         @NameInMap("FunctionName")
         public String functionName;

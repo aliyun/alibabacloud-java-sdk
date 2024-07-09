@@ -12,6 +12,9 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>70A26B11-3673-479C-AEA8-E03FC5D3496D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
     public static class DescribeDomainRealTimeByteHitRateDataResponseBodyDataByteHitRateDataModel extends TeaModel {
         /**
          * <p>The byte hit ratio. The byte hit ratio is measured in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8956940476262277</p>
          */
         @NameInMap("ByteHitRate")
         public Float byteHitRate;
 
         /**
          * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:40:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

@@ -12,6 +12,9 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55ADD936-763F-5E1A-BF54-2EA3F6E94A52</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
     public static class BatchDescribeCdnIpInfoResponseBodyIpInfoList extends TeaModel {
         /**
          * <p>Indicates whether the IP address belongs to an Alibaba Cloud CDN point of presence (POP).</p>
-         * <br>
-         * <p>*   **true**</p>
-         * <p>*   **false**</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("CdnIp")
         public String cdnIp;
 
         /**
          * <p>The city to which the IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         @NameInMap("City")
         public String city;
 
         /**
          * <p>The country to which the IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China</p>
          */
         @NameInMap("Country")
         public String country;
 
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111.XXX.XXX.230</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The ISP to which the IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Move</p>
          */
         @NameInMap("IspName")
         public String ispName;
 
         /**
          * <p>The province to which the IP address belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Beijing</p>
          */
         @NameInMap("Province")
         public String province;

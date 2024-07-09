@@ -4,9 +4,17 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class RefreshObjectCacheByCacheTagResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>17772470184</p>
+     */
     @NameInMap("RefreshTaskId")
     public String refreshTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2E5AD83F-BD7B-462E-8319-2E30E305519A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -12,6 +12,9 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95D5B69F-8AEC-419B-8F3A-612B35032B0D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
     public static class ListRealtimeLogDeliveryDomainsResponseBodyContentDomains extends TeaModel {
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The status. Valid values:</p>
-         * <br>
-         * <p>*   **online**: enabled</p>
-         * <p>*   **offline**: disabled</p>
+         * <ul>
+         * <li><strong>online</strong>: enabled</li>
+         * <li><strong>offline</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Status")
         public String status;

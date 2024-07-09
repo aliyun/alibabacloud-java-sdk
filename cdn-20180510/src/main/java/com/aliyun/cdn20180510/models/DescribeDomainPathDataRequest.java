@@ -6,42 +6,61 @@ import com.aliyun.tea.*;
 public class DescribeDomainPathDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name.</p>
-     * <br>
-     * <p>> You can specify only one domain name in each call.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can specify only one domain name in each call.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The interval between the start time and end time must be less than 30 days. Example: 2016-10-21T04:00:00Z.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-10-21T04:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**.</p>
+     * <p>The number of the page to return. Pages start from page <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: integers from **1** to **1000**.</p>
+     * <p>The number of entries to return on each page. Valid values: integers from <strong>1</strong> to <strong>1000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The paths that you want to query. Separate paths with forward slashes (/). If you do not set this parameter, all paths are queried. If you set the value to a directory, it must end with a forward slash (/).</p>
-     * <br>
-     * <p>> Fuzzy match is not supported. If you want data to be collected based on a directory, you can specify a specific directory, for example, directory/path/. In this case, bandwidth data is collected based on directory/path/.</p>
+     * <blockquote>
+     * <p>Fuzzy match is not supported. If you want data to be collected based on a directory, you can specify a specific directory, for example, directory/path/. In this case, bandwidth data is collected based on directory/path/.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>/path/</p>
      */
     @NameInMap("Path")
     public String path;
 
     /**
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-10-20T04:00:00Z.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-10-20T04:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

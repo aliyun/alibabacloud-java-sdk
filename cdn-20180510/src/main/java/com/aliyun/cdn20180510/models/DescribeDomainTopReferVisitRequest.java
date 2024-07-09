@@ -6,35 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeDomainTopReferVisitRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
      * <p>The end time must be later than the start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-22T12:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The order in which you want to sort the queried information. Valid values:</p>
-     * <br>
-     * <p>*   **traf**: by network traffic.</p>
-     * <p>*   **pv**: by the number of page views. This is the default value.</p>
+     * <ul>
+     * <li><strong>traf</strong>: by network traffic.</li>
+     * <li><strong>pv</strong>: by the number of page views. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pv</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-21T12:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

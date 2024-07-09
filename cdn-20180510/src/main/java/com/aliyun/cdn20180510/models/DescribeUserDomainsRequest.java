@@ -6,81 +6,110 @@ import com.aliyun.tea.*;
 public class DescribeUserDomainsRequest extends TeaModel {
     /**
      * <p>The type of workload accelerated by Alibaba Cloud CDN. Separate types with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **web**: images and small files</p>
-     * <p>*   **download**: large files</p>
-     * <p>*   **video**: on-demand video and audio streaming</p>
-     * <br>
+     * <ul>
+     * <li><strong>web</strong>: images and small files</li>
+     * <li><strong>download</strong>: large files</li>
+     * <li><strong>video</strong>: on-demand video and audio streaming</li>
+     * </ul>
      * <p>If you do not set this parameter, all service types are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>download,web,video</p>
      */
     @NameInMap("CdnType")
     public String cdnType;
 
     /**
      * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-10-10T12:14:58Z</p>
      */
     @NameInMap("ChangeEndTime")
     public String changeEndTime;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-10-10T12:14:55Z</p>
      */
     @NameInMap("ChangeStartTime")
     public String changeStartTime;
 
     /**
      * <p>Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:</p>
-     * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CheckDomainShow")
     public Boolean checkDomainShow;
 
     /**
      * <p>The acceleration region. By default, all acceleration regions are queried. Valid values:</p>
-     * <br>
-     * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **global**: global</p>
-     * <p>*   **overseas**: outside the Chinese mainland</p>
+     * <ul>
+     * <li><strong>domestic</strong>: Chinese mainland</li>
+     * <li><strong>global</strong>: global</li>
+     * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>domestic</p>
      */
     @NameInMap("Coverage")
     public String coverage;
 
     /**
      * <p>The accelerated domain. If you do not set this parameter, all domain names that match the conditions are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The search mode. Valid values:</p>
-     * <br>
-     * <p>*   **fuzzy_match**: fuzzy match</p>
-     * <p>*   **pre_match**: prefix match</p>
-     * <p>*   **suf_match**: suffix match</p>
-     * <p>*   **full_match** (default): exact match</p>
-     * <br>
-     * <p>> If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.</p>
+     * <ul>
+     * <li><strong>fuzzy_match</strong>: fuzzy match</li>
+     * <li><strong>pre_match</strong>: prefix match</li>
+     * <li><strong>suf_match</strong>: suffix match</li>
+     * <li><strong>full_match</strong> (default): exact match</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>fuzzy_match</p>
      */
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
     /**
      * <p>The status of the domain name. Valid values:</p>
-     * <br>
-     * <p>*   **online**</p>
-     * <p>*   **offline**</p>
-     * <p>*   **configuring**</p>
-     * <p>*   **configure_failed**</p>
-     * <p>*   **checking**</p>
-     * <p>*   **check_failed**</p>
-     * <p>*   **stopping**</p>
-     * <p>*   **deleting**</p>
-     * <br>
+     * <ul>
+     * <li><strong>online</strong></li>
+     * <li><strong>offline</strong></li>
+     * <li><strong>configuring</strong></li>
+     * <li><strong>configure_failed</strong></li>
+     * <li><strong>checking</strong></li>
+     * <li><strong>check_failed</strong></li>
+     * <li><strong>stopping</strong></li>
+     * <li><strong>deleting</strong></li>
+     * </ul>
      * <p>If you do not set this parameter, domain names in all states are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>configure_failed</p>
      */
     @NameInMap("DomainStatus")
     public String domainStatus;
@@ -89,19 +118,28 @@ public class DescribeUserDomainsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: **1** to **100000**.</p>
+     * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1 to 500**. Default value: **20**. Maximum value: **500**.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>. Maximum value: <strong>500</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group. By default, all IDs are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abcd1234abcd1234</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -111,6 +149,9 @@ public class DescribeUserDomainsRequest extends TeaModel {
 
     /**
      * <p>The information about the origin server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.source.com</p>
      */
     @NameInMap("Source")
     public String source;
@@ -249,16 +290,20 @@ public class DescribeUserDomainsRequest extends TeaModel {
     public static class DescribeUserDomainsRequestTag extends TeaModel {
         /**
          * <p>The key of a tag.</p>
-         * <br>
          * <p>By default, all tag keys are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
-         * <br>
          * <p>By default, all tag values are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeCdnOrderCommodityCodeResponseBody extends TeaModel {
     /**
      * <p>The commodity code that includes the organization unit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("OrderCommodityCode")
     public String orderCommodityCode;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,6 +12,9 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B49E6DDA-F413-422B-B58E-2FA23F286726</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
     public static class DescribeDomainRealTimeBpsDataResponseBodyDataBpsModel extends TeaModel {
         /**
          * <p>The bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16710625.733333332</p>
          */
         @NameInMap("Bps")
         public Float bps;
 
         /**
          * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-30T05:41:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

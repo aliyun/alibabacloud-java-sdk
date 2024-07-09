@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class CheckCdnDomainExistRequest extends TeaModel {
     /**
      * <p>The accelerated domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

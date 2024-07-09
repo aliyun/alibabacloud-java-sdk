@@ -6,36 +6,53 @@ import com.aliyun.tea.*;
 public class DescribeCdnServiceResponseBody extends TeaModel {
     /**
      * <p>The time when the metering method for the next cycle takes effect. The time is displayed in GMT.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-27T16:00:00Z</p>
      */
     @NameInMap("ChangingAffectTime")
     public String changingAffectTime;
 
     /**
      * <p>The metering method for the next cycle. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+     * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
     /**
      * <p>The ID of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliuidxx</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <p>The current metering method. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+     * <ul>
+     * <li><strong>PayByTraffic</strong>: pay-by-data-transfer</li>
+     * <li><strong>PayByBandwidth</strong>: pay-by-bandwidth</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The time when the service was activated. The time follows the ISO 8601 standard.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-02-28T13:11:49Z</p>
      */
     @NameInMap("OpeningTime")
     public String openingTime;
@@ -48,6 +65,9 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -116,6 +136,9 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     public static class DescribeCdnServiceResponseBodyOperationLocksLockReason extends TeaModel {
         /**
          * <p>The reason why the service is locked. A value of financial indicates that the service is locked due to overdue payments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>financial</p>
          */
         @NameInMap("LockReason")
         public String lockReason;

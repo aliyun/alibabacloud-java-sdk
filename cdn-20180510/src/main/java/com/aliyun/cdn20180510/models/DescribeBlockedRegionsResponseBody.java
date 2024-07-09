@@ -12,6 +12,9 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BFFCDFAD-DACC-484E-9BE6-0AF3B3A0DD23</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
     public static class DescribeBlockedRegionsResponseBodyInfoListInfoItem extends TeaModel {
         /**
          * <p>The district to which the country or region belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia</p>
          */
         @NameInMap("Continent")
         public String continent;
 
         /**
          * <p>The abbreviation of the name of the country or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF</p>
          */
         @NameInMap("CountriesAndRegions")
         public String countriesAndRegions;
 
         /**
          * <p>The name of the country or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Afghanistan</p>
          */
         @NameInMap("CountriesAndRegionsName")
         public String countriesAndRegionsName;

@@ -6,50 +6,73 @@ import com.aliyun.tea.*;
 public class CreateCdnCertificateSigningRequestRequest extends TeaModel {
     /**
      * <p>The city. Default value: Hangzhou.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hangzhou</p>
      */
     @NameInMap("City")
     public String city;
 
     /**
      * <p>The Common Name of the certificate.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CommonName</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
      * <p>The country or region in which the organization is located. Default value: CN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CN</p>
      */
     @NameInMap("Country")
     public String country;
 
     /**
      * <p>The email address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:username@example.com">username@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The name of the organization. Default value: Alibaba Inc.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alibaba Inc</p>
      */
     @NameInMap("Organization")
     public String organization;
 
     /**
      * <p>The name of the department. Default value: Aliyun CDN.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Aliyun CDN</p>
      */
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
     /**
      * <p>The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("SANs")
     public String SANs;
 
     /**
      * <p>The provincial district. Default value: Zhejiang.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Zhejiang</p>
      */
     @NameInMap("State")
     public String state;

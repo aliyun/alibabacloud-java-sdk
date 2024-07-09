@@ -6,22 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeCdnSecFuncInfoRequest extends TeaModel {
     /**
      * <p>The language.</p>
-     * <br>
-     * <p>*   en: English</p>
-     * <p>*   zh: Chinese</p>
-     * <br>
+     * <ul>
+     * <li>en: English</li>
+     * <li>zh: Chinese</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The type of the security feature. Valid values:</p>
-     * <br>
-     * <p>*   CipherSuiteGroupCustomize: custom cipher suite.</p>
-     * <p>*   CipherSuiteGroupStrict: dustom cipher suite.</p>
-     * <br>
+     * <ul>
+     * <li>CipherSuiteGroupCustomize: custom cipher suite.</li>
+     * <li>CipherSuiteGroupStrict: dustom cipher suite.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CipherSuiteGroupCustomize</p>
      */
     @NameInMap("SecFuncType")
     public String secFuncType;

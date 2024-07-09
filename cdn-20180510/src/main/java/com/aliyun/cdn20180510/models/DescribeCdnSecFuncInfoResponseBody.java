@@ -12,27 +12,40 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
 
     /**
      * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The HTTP status code returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("HttpStatus")
     public String httpStatus;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BCD7D917-76F1-442F-BB75-C810DE34C761</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The HTTP request response code.</p>
-     * <br>
-     * <p>*   0: OK.</p>
-     * <p>*   Values other than 0: an error.</p>
+     * <ul>
+     * <li>0: OK.</li>
+     * <li>Values other than 0: an error.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("RetCode")
     public String retCode;
@@ -85,12 +98,18 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
     public static class DescribeCdnSecFuncInfoResponseBodyContent extends TeaModel {
         /**
          * <p>The tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
          */
         @NameInMap("Label")
         public String label;
 
         /**
          * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetCdnDomainSSLCertificateResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7C69682-7F88-40DD-A198-10D0309E439D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

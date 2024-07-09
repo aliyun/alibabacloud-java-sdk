@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteCdnDeliverTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the tracking task that you want to delete. You can call the [DescribeCdnDeliverList](https://help.aliyun.com/document_detail/270877.html) operation to query task IDs.</p>
-     * <br>
+     * <p>The ID of the tracking task that you want to delete. You can call the <a href="https://help.aliyun.com/document_detail/270877.html">DescribeCdnDeliverList</a> operation to query task IDs.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("DeliverId")
     public Long deliverId;

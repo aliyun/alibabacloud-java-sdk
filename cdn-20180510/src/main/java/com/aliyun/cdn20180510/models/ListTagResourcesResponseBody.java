@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QpgBAAAAAABsb2dzL2RzLw==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64D28B53-5902-409B-94F6-FD46680144FE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +60,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
          * <p>The ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource. Set the value to **DOMAIN**.</p>
+         * <p>The type of the resource. Set the value to <strong>DOMAIN</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

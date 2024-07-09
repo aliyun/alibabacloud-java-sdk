@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCdnReportListRequest extends TeaModel {
     /**
      * <p>The ID of the operations report that you want to query. If you do not specify an ID, all operations reports are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("ReportId")
     public Long reportId;

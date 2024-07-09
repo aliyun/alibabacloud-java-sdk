@@ -12,12 +12,18 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B0F074E5-A1AC-4B32-8EA2-6F450410D1E0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The origin servers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com,aliyundoc.com</p>
      */
     @NameInMap("Sources")
     public String sources;
@@ -54,47 +60,67 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
     public static class DescribeDomainsBySourceResponseBodyDomainsListDomainsDataDomainInfosDomainInfo extends TeaModel {
         /**
          * <p>The workload type of the accelerated domain name. Valid values:</p>
-         * <br>
-         * <p>*   **web**: images and small files</p>
-         * <p>*   **download**: large files</p>
-         * <p>*   **video**: on-demand video and audio streaming</p>
+         * <ul>
+         * <li><strong>web</strong>: images and small files</li>
+         * <li><strong>download</strong>: large files</li>
+         * <li><strong>video</strong>: on-demand video and audio streaming</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         @NameInMap("CdnType")
         public String cdnType;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-07-12T11:53:19+08:00</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The CNAME record assigned to the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>***.alikunlun.com</p>
          */
         @NameInMap("DomainCname")
         public String domainCname;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.org</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The status of the domain name. Valid values:</p>
-         * <br>
-         * <p>*   **applying**: The domain name is under review.</p>
-         * <p>*   **configuring**: The domain name is being configured.</p>
-         * <p>*   **online**: The domain name is working as expected.</p>
-         * <p>*   **stopping**: The domain name is being stopped.</p>
-         * <p>*   **offline**: The domain name is disabled.</p>
-         * <p>*   **disabling**: The domain name is being removed.</p>
+         * <ul>
+         * <li><strong>applying</strong>: The domain name is under review.</li>
+         * <li><strong>configuring</strong>: The domain name is being configured.</li>
+         * <li><strong>online</strong>: The domain name is working as expected.</li>
+         * <li><strong>stopping</strong>: The domain name is being stopped.</li>
+         * <li><strong>offline</strong>: The domain name is disabled.</li>
+         * <li><strong>disabling</strong>: The domain name is being removed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-03-31T04:49:00+08:00</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -207,6 +233,9 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
         /**
          * <p>The origin server.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Source")
         public String source;

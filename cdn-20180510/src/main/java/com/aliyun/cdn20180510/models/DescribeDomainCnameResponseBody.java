@@ -12,6 +12,9 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06D29681-B7CD-4034-A8CC-28AFFA213539</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,21 +43,31 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
     public static class DescribeDomainCnameResponseBodyCnameDatasData extends TeaModel {
         /**
          * <p>The CNAME assigned to the domain name by Alibaba Cloud CDN.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a.com.w.alikunlun.net</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The CNAME detection result. Valid values:</p>
-         * <br>
-         * <p>*   0: The DNS can detect the CNAME assigned to the domain name.</p>
-         * <p>*   Value other than 0: The DNS cannot detect the CNAME assigned to the domain name.</p>
+         * <ul>
+         * <li>0: The DNS can detect the CNAME assigned to the domain name.</li>
+         * <li>Value other than 0: The DNS cannot detect the CNAME assigned to the domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;

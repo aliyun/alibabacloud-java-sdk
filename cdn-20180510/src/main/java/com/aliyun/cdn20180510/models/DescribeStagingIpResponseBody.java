@@ -12,6 +12,9 @@ public class DescribeStagingIpResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1B9E0E83-24AC-49F4-9EE0-BF5EB03E8381</p>
      */
     @NameInMap("RequestId")
     public String requestId;

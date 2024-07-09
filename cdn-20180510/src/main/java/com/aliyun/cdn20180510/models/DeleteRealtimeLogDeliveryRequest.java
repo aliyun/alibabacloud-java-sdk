@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class DeleteRealtimeLogDeliveryRequest extends TeaModel {
     /**
      * <p>The acceleration domain name for which you want to disable real-time log delivery. You can specify multiple domain names and separate them with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
      * <p>The name of the Logstore where log entries are stored.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LogstoreName</p>
      */
     @NameInMap("Logstore")
     public String logstore;
 
     /**
      * <p>The name of the Log Service project that is used for real-time log delivery.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ProjectName</p>
      */
     @NameInMap("Project")
     public String project;
 
     /**
-     * <p>The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](https://help.aliyun.com/document_detail/144883.html).</p>
-     * <br>
+     * <p>The ID of the region where the Log Service project is deployed. For more information, see <a href="https://help.aliyun.com/document_detail/144883.html">Regions that support real-time log delivery</a>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("Region")
     public String region;

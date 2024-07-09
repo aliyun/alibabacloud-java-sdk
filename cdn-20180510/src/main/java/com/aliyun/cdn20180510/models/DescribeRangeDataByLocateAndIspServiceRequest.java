@@ -6,46 +6,55 @@ import com.aliyun.tea.*;
 public class DescribeRangeDataByLocateAndIspServiceRequest extends TeaModel {
     /**
      * <p>The accelerated domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
 
     /**
      * <p>The end of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time. The maximum time range that can be specified is 1 hour.</p>
-     * <br>
+     * <blockquote>
+     * <p>The end time must be later than the start time. The maximum time range that can be specified is 1 hour.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:40:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The name of the ISP. You can specify only one ISP name in each call.</p>
-     * <br>
-     * <p>You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISPs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query ISPs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>unicom</p>
      */
     @NameInMap("IspNames")
     public String ispNames;
 
     /**
      * <p>The names of the regions. Separate multiple region names with commas (,).</p>
-     * <br>
-     * <p>You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>liaoning,guangxi</p>
      */
     @NameInMap("LocationNames")
     public String locationNames;
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:33:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -12,6 +12,9 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99D61AB3-6164-4CF2-A0DE-129C9B07618B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,6 +49,9 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
 
         /**
          * <p>The name of the table that shows the status of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Exception</p>
          */
         @NameInMap("Name")
         public String name;

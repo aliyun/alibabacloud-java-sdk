@@ -12,6 +12,9 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>684306D2-2511-4977-991D-CE97E91FD7C0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
     public static class DescribeRealtimeDeliveryAccResponseBodyReatTimeDeliveryAccDataAccData extends TeaModel {
         /**
          * <p>The number of failed attempts to deliver log data to Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("FailedNum")
         public Integer failedNum;
 
         /**
          * <p>The number of successful deliveries of log data to Log Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("SuccessNum")
         public Integer successNum;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-03T06:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

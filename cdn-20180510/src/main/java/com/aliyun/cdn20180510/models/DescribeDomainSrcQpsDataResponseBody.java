@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:40:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7CBCD6AD-B016-42E5-AE0B-B3731DE8F755</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -36,6 +48,9 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:33:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,12 +111,18 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
     public static class DescribeDomainSrcQpsDataResponseBodySrcQpsDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T21:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The QPS value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Value")
         public String value;

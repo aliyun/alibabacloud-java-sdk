@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:40:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -30,12 +39,18 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:33:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,18 +111,27 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
     public static class DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValueRealTimeSrcCodeProportionData extends TeaModel {
         /**
          * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The count of each HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The proportion of the HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.62015503875969</p>
          */
         @NameInMap("Proportion")
         public String proportion;
@@ -165,6 +189,9 @@ public class DescribeDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel 
     public static class DescribeDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData extends TeaModel {
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-11-30T05:40:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

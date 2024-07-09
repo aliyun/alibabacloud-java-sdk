@@ -6,17 +6,23 @@ import com.aliyun.tea.*;
 public class DescribeUserVipsByDomainRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:</p>
-     * <br>
-     * <p>*   **on**: healthy CDN edge nodes.</p>
-     * <p>*   **off**: all CDN edge nodes.</p>
+     * <ul>
+     * <li><strong>on</strong>: healthy CDN edge nodes.</li>
+     * <li><strong>off</strong>: all CDN edge nodes.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
      */
     @NameInMap("Available")
     public String available;
 
     /**
      * <p>The accelerated domain name. You can specify only one domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

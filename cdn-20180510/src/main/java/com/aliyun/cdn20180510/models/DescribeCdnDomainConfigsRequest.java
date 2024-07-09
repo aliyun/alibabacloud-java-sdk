@@ -5,21 +5,29 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnDomainConfigsRequest extends TeaModel {
     /**
-     * <p>The ID of the configuration. For more information about ConfigId, see [Usage notes on ConfigId](https://help.aliyun.com/document_detail/388994.html).</p>
+     * <p>The ID of the configuration. For more information about ConfigId, see <a href="https://help.aliyun.com/document_detail/388994.html">Usage notes on ConfigId</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6295</p>
      */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
      * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The names of the features. Separate multiple feature names with commas (,). For more information, see [Parameters for configuring features for domain names](https://help.aliyun.com/document_detail/388460.html).</p>
+     * <p>The names of the features. Separate multiple feature names with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/388460.html">Parameters for configuring features for domain names</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aliauth</p>
      */
     @NameInMap("FunctionNames")
     public String functionNames;

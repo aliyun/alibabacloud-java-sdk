@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -18,6 +21,9 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +60,27 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
     public static class DescribeDomainHttpCodeDataByLayerResponseBodyHttpCodeDataIntervalDataModule extends TeaModel {
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:35:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The total number of times that HTTP status codes were returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         @NameInMap("TotalValue")
         public String totalValue;
 
         /**
          * <p>The number of times that the HTTP status code was returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;200&quot;: 10, &quot;206&quot;: 100}</p>
          */
         @NameInMap("Value")
         public String value;

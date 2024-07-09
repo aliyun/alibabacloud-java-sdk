@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
-     * <br>
-     * <p>Depending on the maximum time range per query, the value is 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the "Time granularity" section in Usage notes.</p>
+     * <p>Depending on the maximum time range per query, the value is 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the &quot;Time granularity&quot; section in Usage notes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com,example.org</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-29T05:42:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -32,12 +40,18 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-29T05:39:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -98,18 +112,27 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     public static class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData extends TeaModel {
         /**
          * <p>The HTTP status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         @NameInMap("Count")
         public String count;
 
         /**
          * <p>The proportion of the HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28.4496124031008</p>
          */
         @NameInMap("Proportion")
         public String proportion;
@@ -167,6 +190,9 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
     public static class DescribeDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData extends TeaModel {
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-11-29T05:39:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

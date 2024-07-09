@@ -12,6 +12,9 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C80705BF-0F76-41FA-BAD1-5B59296A4E59</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +42,19 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
 
     public static class DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
         /**
-         * <p>The parameter name, which is the configuration item of **functionName**. You can configure multiple configuration items.</p>
+         * <p>The parameter name, which is the configuration item of <strong>functionName</strong>. You can configure multiple configuration items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>auth_type</p>
          */
         @NameInMap("ArgName")
         public String argName;
 
         /**
-         * <p>The parameter value, which is the value of the configuration item of **functionName**.</p>
+         * <p>The parameter value, which is the value of the configuration item of <strong>functionName</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>req_auth</p>
          */
         @NameInMap("ArgValue")
         public String argValue;
@@ -95,6 +104,9 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
     public static class DescribeCdnDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
         /**
          * <p>The ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6295</p>
          */
         @NameInMap("ConfigId")
         public String configId;
@@ -107,27 +119,35 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliauth</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
          * <p>The ID of the rule condition. This parameter is optional.</p>
-         * <br>
-         * <p>To create a rule condition, you can configure the **condition** feature that is described in the [Parameters for configuring features for domain names](https://help.aliyun.com/document_detail/388460.html) topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a [ConfigId](https://help.aliyun.com/document_detail/388994.html). You can use ConfigId as ParentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.</p>
-         * <br>
-         * <p>For more information, see [BatchSetCdnDomainConfig](https://help.aliyun.com/document_detail/90915.html) or ParentId configuration example in this topic.</p>
+         * <p>To create a rule condition, you can configure the <strong>condition</strong> feature that is described in the <a href="https://help.aliyun.com/document_detail/388460.html">Parameters for configuring features for domain names</a> topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a <a href="https://help.aliyun.com/document_detail/388994.html">ConfigId</a>. You can use ConfigId as ParentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/90915.html">BatchSetCdnDomainConfig</a> or ParentId configuration example in this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222728944812032</p>
          */
         @NameInMap("ParentId")
         public String parentId;
 
         /**
          * <p>The status of the configuration. Valid values:</p>
-         * <br>
-         * <p>*   **success**</p>
-         * <p>*   **testing**</p>
-         * <p>*   **failed**</p>
-         * <p>*   **configuring**</p>
+         * <ul>
+         * <li><strong>success</strong></li>
+         * <li><strong>testing</strong></li>
+         * <li><strong>failed</strong></li>
+         * <li><strong>configuring</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

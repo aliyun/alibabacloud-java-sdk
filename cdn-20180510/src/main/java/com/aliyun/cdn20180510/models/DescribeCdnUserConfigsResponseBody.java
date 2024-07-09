@@ -12,6 +12,9 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>06D29681-B7CD-4034-A8CC-28AFFA213539</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,37 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
     public static class DescribeCdnUserConfigsResponseBodyConfigs extends TeaModel {
         /**
          * <p>The name of the configuration.</p>
-         * <br>
          * <p>The configuration is specified by enterprise users and public service sectors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>allow_function</p>
          */
         @NameInMap("ArgName")
         public String argName;
 
         /**
          * <p>The value of the configuration. Valid values:</p>
-         * <br>
-         * <p>*   **cc_rule**: HTTP flood protection rules</p>
-         * <p>*   **ddos_dispatch**: integration with Anti-DDoS</p>
-         * <p>*   **edge_safe**: application security settings on POPs</p>
-         * <p>*   **blocked_regions**: blocked regions</p>
-         * <p>*   **http_acl_policy**: access control list (ACL) rules</p>
-         * <p>*   **bot_manager**: bot traffic management</p>
-         * <p>*   **ip_reputation**: IP reputation library</p>
+         * <ul>
+         * <li><strong>cc_rule</strong>: HTTP flood protection rules</li>
+         * <li><strong>ddos_dispatch</strong>: integration with Anti-DDoS</li>
+         * <li><strong>edge_safe</strong>: application security settings on POPs</li>
+         * <li><strong>blocked_regions</strong>: blocked regions</li>
+         * <li><strong>http_acl_policy</strong>: access control list (ACL) rules</li>
+         * <li><strong>bot_manager</strong>: bot traffic management</li>
+         * <li><strong>ip_reputation</strong>: IP reputation library</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;dcdn_allow\&quot;:[\&quot;cc_rule\&quot;,\&quot;ddos_dispatch\&quot;]}</p>
          */
         @NameInMap("ArgValue")
         public String argValue;
 
         /**
          * <p>The name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>domain_business_control</p>
          */
         @NameInMap("FunctionName")
         public String functionName;

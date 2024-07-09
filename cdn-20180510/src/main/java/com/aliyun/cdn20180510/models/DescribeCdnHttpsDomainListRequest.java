@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeCdnHttpsDomainListRequest extends TeaModel {
     /**
      * <p>The keyword that is used to search for certificates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>com</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
+     * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

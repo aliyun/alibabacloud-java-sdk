@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteUserUsageDataExportTaskRequest extends TeaModel {
     /**
      * <p>The ID of the task to delete.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("TaskId")
     public String taskId;

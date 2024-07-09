@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteFCTriggerResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC046C5D-8CB4-4B6B-B7F8-B335E51EF90E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

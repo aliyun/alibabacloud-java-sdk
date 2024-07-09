@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E0C2EF95-B1EC-4C93-855E-2059A7DA2B7B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
 
     /**
      * <p>The total number of tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,56 +60,80 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
     public static class DescribeRefreshTaskByIdResponseBodyTasks extends TeaModel {
         /**
          * <p>The time when the task was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-08-03T08:54:23Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The error returned when the refresh or prefetch task failed. Valid values:</p>
-         * <br>
-         * <p>*   **Internal Error**</p>
-         * <p>*   **Origin Timeout**</p>
-         * <p>*   **Origin Return StatusCode 5XX**</p>
+         * <ul>
+         * <li><strong>Internal Error</strong></li>
+         * <li><strong>Origin Timeout</strong></li>
+         * <li><strong>Origin Return StatusCode 5XX</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Internal Error</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The path of the object refreshed by the refresh task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/abc.jpg">http://example.com/abc.jpg</a></p>
          */
         @NameInMap("ObjectPath")
         public String objectPath;
 
         /**
          * <p>The type of the task. Valid values:</p>
-         * <br>
-         * <p>*   **file**: refreshes an individual file.</p>
-         * <p>*   **directory**: refreshes files in the specified directory.</p>
-         * <p>*   **preload**: prefetches an individual file.</p>
-         * <p>*   **regex**: refreshes content based on a regular expression.</p>
+         * <ul>
+         * <li><strong>file</strong>: refreshes an individual file.</li>
+         * <li><strong>directory</strong>: refreshes files in the specified directory.</li>
+         * <li><strong>preload</strong>: prefetches an individual file.</li>
+         * <li><strong>regex</strong>: refreshes content based on a regular expression.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         @NameInMap("ObjectType")
         public String objectType;
 
         /**
          * <p>The progress of the task, in percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Process")
         public String process;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **Complete**</p>
-         * <p>*   **Pending**</p>
-         * <p>*   **Refreshing**</p>
-         * <p>*   **Failed**</p>
+         * <ul>
+         * <li><strong>Complete</strong></li>
+         * <li><strong>Pending</strong></li>
+         * <li><strong>Refreshing</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24840</p>
          */
         @NameInMap("TaskId")
         public String taskId;

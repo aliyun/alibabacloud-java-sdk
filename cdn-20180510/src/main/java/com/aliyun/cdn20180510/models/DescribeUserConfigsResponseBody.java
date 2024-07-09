@@ -12,6 +12,9 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9BCC7BAA-ACBE-45E5-83F0-98BF7E693E84</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     public static class DescribeUserConfigsResponseBodyConfigsOssLogConfig extends TeaModel {
         /**
          * <p>The name of the bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Buckettest</p>
          */
         @NameInMap("Bucket")
         public String bucket;
 
         /**
          * <p>Indicates whether the OSS bucket is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         @NameInMap("Enable")
         public String enable;
 
         /**
          * <p>The prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Prefix")
         public String prefix;
@@ -90,6 +102,9 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     public static class DescribeUserConfigsResponseBodyConfigsWafConfig extends TeaModel {
         /**
          * <p>Indicates whether WAF is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("Enable")
         public String enable;

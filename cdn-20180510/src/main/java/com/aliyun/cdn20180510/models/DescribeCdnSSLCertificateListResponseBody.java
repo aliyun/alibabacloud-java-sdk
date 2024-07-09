@@ -12,6 +12,9 @@ public class DescribeCdnSSLCertificateListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9D3257A-1B7C-414C-90C1-8D07AC47BCAC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,42 +43,63 @@ public class DescribeCdnSSLCertificateListResponseBody extends TeaModel {
     public static class DescribeCdnSSLCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9128192</p>
          */
         @NameInMap("CertId")
         public Long certId;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertName</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
-         * <p>The region ID of the certificate. Valid values: **cn-hangzhou** and **ap-southeast-1**. Default value: **cn-hangzhou**.</p>
+         * <p>The region ID of the certificate. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("CertRegion")
         public String certRegion;
 
         /**
          * <p>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Common")
         public String common;
 
         /**
          * <p>The fingerprint of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>933c6ddee95c9c41a40f9f50493d82be03ad87bf</p>
          */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
         /**
          * <p>The certificate authority (CA) that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertIssuer</p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
          * <p>The time when the certificate was last modified. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679896965</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
@@ -171,18 +195,27 @@ public class DescribeCdnSSLCertificateListResponseBody extends TeaModel {
 
         /**
          * <p>The number of certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
          * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
         /**
          * <p>The number of entries per page. Valid values: an integer from 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
