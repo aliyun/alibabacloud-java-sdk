@@ -98,6 +98,9 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         @NameInMap("data")
         public GetDocumentAnalyzeTaskStatusResponseBodyResultData data;
 
+        @NameInMap("error")
+        public String error;
+
         @NameInMap("status")
         public String status;
 
@@ -115,6 +118,14 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         }
         public GetDocumentAnalyzeTaskStatusResponseBodyResultData getData() {
             return this.data;
+        }
+
+        public GetDocumentAnalyzeTaskStatusResponseBodyResult setError(String error) {
+            this.error = error;
+            return this;
+        }
+        public String getError() {
+            return this.error;
         }
 
         public GetDocumentAnalyzeTaskStatusResponseBodyResult setStatus(String status) {
