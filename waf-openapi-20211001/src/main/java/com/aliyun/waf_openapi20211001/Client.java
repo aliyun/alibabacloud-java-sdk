@@ -1891,6 +1891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceInstanceId", request.resourceInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceName)) {
+            query.put("ResourceInstanceName", request.resourceInstanceName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
             query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
         }
@@ -1938,6 +1942,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCloudResourcesResponse describeCloudResources(DescribeCloudResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCloudResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Cname接入的数量</p>
+     * 
+     * @param request DescribeCnameCountRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCnameCountResponse
+     */
+    public DescribeCnameCountResponse describeCnameCountWithOptions(DescribeCnameCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCnameCount"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCnameCountResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Cname接入的数量</p>
+     * 
+     * @param request DescribeCnameCountRequest
+     * @return DescribeCnameCountResponse
+     */
+    public DescribeCnameCountResponse describeCnameCount(DescribeCnameCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCnameCountWithOptions(request, runtime);
     }
 
     /**
@@ -3685,6 +3741,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceId)) {
             query.put("ResourceInstanceId", request.resourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceIp)) {
+            query.put("ResourceInstanceIp", request.resourceInstanceIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceName)) {
+            query.put("ResourceInstanceName", request.resourceInstanceName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceIp)) {
@@ -6424,7 +6488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放实例</p>
+     * <p>Releases a Web Application Firewall (WAF) 3.0 instance.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6464,7 +6528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>释放实例</p>
+     * <p>Releases a Web Application Firewall (WAF) 3.0 instance.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @return ReleaseInstanceResponse

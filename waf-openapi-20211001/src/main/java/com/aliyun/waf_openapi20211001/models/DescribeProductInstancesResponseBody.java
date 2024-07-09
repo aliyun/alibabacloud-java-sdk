@@ -178,6 +178,12 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceInstanceId")
         public String resourceInstanceId;
 
+        @NameInMap("ResourceInstanceIp")
+        public String resourceInstanceIp;
+
+        @NameInMap("ResourceInstanceName")
+        public String resourceInstanceName;
+
         /**
          * <p>The public IP address of the instance.</p>
          * 
@@ -185,6 +191,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
          * <p>1.X.X.1</p>
          */
         @NameInMap("ResourceIp")
+        @Deprecated
         public String resourceIp;
 
         /**
@@ -194,6 +201,7 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
          * <p>ecs-test</p>
          */
         @NameInMap("ResourceName")
+        @Deprecated
         public String resourceName;
 
         /**
@@ -256,6 +264,22 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         }
         public String getResourceInstanceId() {
             return this.resourceInstanceId;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstances setResourceInstanceIp(String resourceInstanceIp) {
+            this.resourceInstanceIp = resourceInstanceIp;
+            return this;
+        }
+        public String getResourceInstanceIp() {
+            return this.resourceInstanceIp;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstances setResourceInstanceName(String resourceInstanceName) {
+            this.resourceInstanceName = resourceInstanceName;
+            return this;
+        }
+        public String getResourceInstanceName() {
+            return this.resourceInstanceName;
         }
 
         public DescribeProductInstancesResponseBodyProductInstances setResourceIp(String resourceIp) {

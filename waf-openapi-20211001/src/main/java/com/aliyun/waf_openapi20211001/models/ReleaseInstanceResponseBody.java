@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ReleaseInstanceResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>65626467-8002-5022-9F5F-***</p>
      */

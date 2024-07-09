@@ -84,6 +84,9 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     @NameInMap("ResourceInstanceId")
     public String resourceInstanceId;
 
+    @NameInMap("ResourceInstanceName")
+    public String resourceInstanceName;
+
     /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
@@ -100,6 +103,7 @@ public class DescribeCloudResourcesRequest extends TeaModel {
      * <p>alb-name</p>
      */
     @NameInMap("ResourceName")
+    @Deprecated
     public String resourceName;
 
     /**
@@ -208,6 +212,14 @@ public class DescribeCloudResourcesRequest extends TeaModel {
     }
     public String getResourceInstanceId() {
         return this.resourceInstanceId;
+    }
+
+    public DescribeCloudResourcesRequest setResourceInstanceName(String resourceInstanceName) {
+        this.resourceInstanceName = resourceInstanceName;
+        return this;
+    }
+    public String getResourceInstanceName() {
+        return this.resourceInstanceName;
     }
 
     public DescribeCloudResourcesRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
