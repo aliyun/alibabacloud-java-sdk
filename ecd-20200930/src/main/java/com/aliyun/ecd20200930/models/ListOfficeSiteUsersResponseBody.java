@@ -6,19 +6,25 @@ import com.aliyun.tea.*;
 public class ListOfficeSiteUsersResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The usernames of AD users.\</p>
-     * <p>If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.</p>
+     * <p>The usernames of AD users.\
+     * If the only Administrator and Guest users exist in the enterprise AD, an empty User array is returned.</p>
      */
     @NameInMap("Users")
     public java.util.List<ListOfficeSiteUsersResponseBodyUsers> users;
@@ -55,12 +61,18 @@ public class ListOfficeSiteUsersResponseBody extends TeaModel {
     public static class ListOfficeSiteUsersResponseBodyUsers extends TeaModel {
         /**
          * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The name of the AD user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("EndUser")
         public String endUser;

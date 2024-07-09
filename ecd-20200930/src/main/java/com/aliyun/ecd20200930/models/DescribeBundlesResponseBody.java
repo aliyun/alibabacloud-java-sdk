@@ -12,12 +12,18 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
     /**
      * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lu3PTF6h3zE8egwlYuv8M8</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BCC854D8-5D1E-46D3-96EF-797A5DD36789</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +60,36 @@ public class DescribeBundlesResponseBody extends TeaModel {
     public static class DescribeBundlesResponseBodyBundlesDesktopTypeAttribute extends TeaModel {
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("CpuCount")
         public Integer cpuCount;
 
         /**
          * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
         /**
          * <p>The GPU type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NVIDIA T4</p>
          */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
         /**
          * <p>The memory size. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47104</p>
          */
         @NameInMap("MemorySize")
         public Integer memorySize;
@@ -118,70 +136,73 @@ public class DescribeBundlesResponseBody extends TeaModel {
     public static class DescribeBundlesResponseBodyBundlesDisks extends TeaModel {
         /**
          * <p>The PL of the disk.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   PL1</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   PL0</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   PL3</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   PL2</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>PL1</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>PL0</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>PL3</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>PL2</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         @NameInMap("DiskPerformanceLevel")
         public String diskPerformanceLevel;
 
         /**
          * <p>The size of the disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
         /**
          * <p>The type of the disk.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM: system disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DATA: data disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SYSTEM: system disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DATA: data disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -220,54 +241,70 @@ public class DescribeBundlesResponseBody extends TeaModel {
     public static class DescribeBundlesResponseBodyBundles extends TeaModel {
         /**
          * <p>The ID of the cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bundle_ecd_graphics.2xlarge_s15d15_win2019</p>
          */
         @NameInMap("BundleId")
         public String bundleId;
 
         /**
          * <p>The name of the cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Advanced graphics with Windows 2019</p>
          */
         @NameInMap("BundleName")
         public String bundleName;
 
         /**
          * <p>The type of the cloud computer template.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM: system template</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   CUSTOM: custom template</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SYSTEM: system template</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CUSTOM: custom template</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("BundleType")
         public String bundleType;
 
         /**
          * <p>The time when the cloud computer template was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-09-30T06:09Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The instance type of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd.graphics.2xlarge</p>
          */
         @NameInMap("DesktopType")
         public String desktopType;
@@ -280,12 +317,15 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
         /**
          * <p>The instance family of the cloud computer.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   eds.graphics: graphical instance family</p>
-         * <p>*   eds.hf: instance family with a high clock speed</p>
-         * <p>*   eds.general: general-purpose instance family</p>
+         * <ul>
+         * <li>eds.graphics: graphical instance family</li>
+         * <li>eds.hf: instance family with a high clock speed</li>
+         * <li>eds.general: general-purpose instance family</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.general</p>
          */
         @NameInMap("DesktopTypeFamily")
         public String desktopTypeFamily;
@@ -298,144 +338,169 @@ public class DescribeBundlesResponseBody extends TeaModel {
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desktopimage-windows-server-2019-64-ch-vgpu</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows server 2019 Chinese</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The status of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("ImageStatus")
         public String imageStatus;
 
         /**
          * <p>The OS language of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en-US</p>
          */
         @NameInMap("Language")
         public String language;
 
         /**
          * <p>The type of the OS.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Linux</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Windows</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Linux</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
          * <p>The OS.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Ubuntu</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Windows Server 2022</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   UOS</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   CentOS</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Windows Server 2019</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Windows Server 2016</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Ubuntu</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows Server 2022</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>UOS</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CentOS</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows Server 2019</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows Server 2016</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows Server 2019</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The protocol type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   HDX: HDX protocol</p>
-         * <p>*   ASP: in-house ASP</p>
+         * <ul>
+         * <li>HDX: HDX protocol</li>
+         * <li>ASP: in-house ASP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The session type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   0: single-session</p>
-         * <p>*   1: multi-session</p>
+         * <ul>
+         * <li>0: single-session</li>
+         * <li>1: multi-session</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SessionType")
         public String sessionType;
 
         /**
-         * <p>The inventory status of the cloud computer instance type. This parameter is returned only if you set the `CheckStock` parameter to `true`.</p>
+         * <p>The inventory status of the cloud computer instance type. This parameter is returned only if you set the <code>CheckStock</code> parameter to <code>true</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sufficient</p>
          */
         @NameInMap("StockState")
         public String stockState;
 
         /**
          * <p>Indicates whether disk encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
         /**
          * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;

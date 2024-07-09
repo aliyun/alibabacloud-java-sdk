@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class CancelCdsFileShareLinkRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-352282****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The ID of the file sharing task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7JQX1Fsw****</p>
      */
     @NameInMap("ShareId")
     public String shareId;

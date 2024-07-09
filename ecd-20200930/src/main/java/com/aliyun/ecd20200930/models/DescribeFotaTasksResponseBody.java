@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeFotaTasksResponseBody extends TeaModel {
     /**
-     * <p>The returned message. If the request was successful, a `success` is returned. If the request failed, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, a <code>success</code> is returned. If the request failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -17,19 +20,28 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
     public java.util.List<DescribeFotaTasksResponseBodyFotaTasks> fotaTasks;
 
     /**
-     * <p>The returned error message. This parameter is not returned if the Code value is a `success` message.</p>
+     * <p>The returned error message. This parameter is not returned if the Code value is a <code>success</code> message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,60 +93,89 @@ public class DescribeFotaTasksResponseBody extends TeaModel {
 
     public static class DescribeFotaTasksResponseBodyFotaTasks extends TeaModel {
         /**
-         * <p>The image version. You can call the [DescribeImages](~~188895~~) operation to obtain the value of this parameter.</p>
+         * <p>The image version. You can call the <a href="https://help.aliyun.com/document_detail/188895.html">DescribeImages</a> operation to obtain the value of this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1-D-20220513.143129</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
         /**
-         * <p>>  This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>To be hidden.</p>
          */
         @NameInMap("FotaProject")
         public String fotaProject;
 
         /**
          * <p>The number of custom images that can be updated to this version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PendingCustomImageCount")
         public Integer pendingCustomImageCount;
 
         /**
          * <p>The number of cloud computers whose images can be updated to this version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PendingDesktopCount")
         public Integer pendingDesktopCount;
 
         /**
          * <p>The time when the image version available for update was published.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-31T04:28:48Z</p>
          */
         @NameInMap("PublishTime")
         public String publishTime;
 
         /**
          * <p>The description of the image version available for update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
          * <p>The size of the update package. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>568533470</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
          * <p>Indicates whether the image update task is automatically pushed.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Running: automatically pushes the image update task.</p>
-         * <p>*   Pending: does not automatically push the image update task.</p>
+         * <ul>
+         * <li>Running: automatically pushes the image update task.</li>
+         * <li>Pending: does not automatically push the image update task.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the image upgrade task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aot-c4khwrp9ocml4****</p>
          */
         @NameInMap("TaskUid")
         public String taskUid;

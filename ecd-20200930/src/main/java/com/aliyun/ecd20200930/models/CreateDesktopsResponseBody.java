@@ -12,14 +12,21 @@ public class CreateDesktopsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the order.</p>
-     * <br>
-     * <p>> This parameter is returned only when you set the ChargeType parameter to PrePaid.</p>
+     * <blockquote>
+     * <p>This parameter is returned only when you set the ChargeType parameter to PrePaid.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

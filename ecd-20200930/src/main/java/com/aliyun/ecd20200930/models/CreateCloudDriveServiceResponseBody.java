@@ -6,22 +6,36 @@ import com.aliyun.tea.*;
 public class CreateCloudDriveServiceResponseBody extends TeaModel {
     /**
      * <p>The ID of the attached cloud disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-7782057786</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The name of the cloud disk that is created in Cloud Drive Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CDS_Windows_1126</p>
      */
     @NameInMap("CdsName")
     public String cdsName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cen-638u3wxds9snyc****</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
     @NameInMap("ConflictCdsAndOrder")
     public CreateCloudDriveServiceResponseBodyConflictCdsAndOrder conflictCdsAndOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test1.local</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
@@ -30,10 +44,17 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     /**
      * <p>The maximum capacity of each instance in Cloud Drive Service. Unit: GiB</p>
+     * 
+     * <strong>example:</strong>
+     * <p>213674622976</p>
      */
     @NameInMap("MaxSize")
     public String maxSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AD_CONNECTOR</p>
+     */
     @NameInMap("OfficeSiteType")
     public String officeSiteType;
 
@@ -42,6 +63,9 @@ public class CreateCloudDriveServiceResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>062B1439-709A-580E-85DF-CE97A1560565</p>
      */
     @NameInMap("RequestId")
     public String requestId;

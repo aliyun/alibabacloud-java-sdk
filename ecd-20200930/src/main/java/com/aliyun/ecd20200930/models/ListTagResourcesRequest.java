@@ -6,34 +6,51 @@ import com.aliyun.tea.*;
 public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-ia2zw38bi6cm7****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>* ALIYUN::GWS::INSTANCE: cloud computer.</p>
+     * <ul>
+     * <li>ALIYUN::GWS::INSTANCE: cloud computer.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::GWS::INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -100,12 +117,18 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The tag keys. You can specify 1 to 20 tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag values. You can specify 1 to 20 tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

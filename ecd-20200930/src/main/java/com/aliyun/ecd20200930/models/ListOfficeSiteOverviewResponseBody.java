@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListOfficeSiteOverviewResponseBody extends TeaModel {
     /**
      * <p>The token that is used to start the next query. If this parameter is empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -18,6 +21,9 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,158 +60,188 @@ public class ListOfficeSiteOverviewResponseBody extends TeaModel {
     public static class ListOfficeSiteOverviewResponseBodyOfficeSiteOverviewResults extends TeaModel {
         /**
          * <p>The number of expired cloud computers in the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HasExpiredEdsCount")
         public Integer hasExpiredEdsCount;
 
         /**
          * <p>The number of expired cloud computers in the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("HasExpiredEdsCountForGroup")
         public Integer hasExpiredEdsCountForGroup;
 
         /**
          * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
          * <p>The office network name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
          * <p>The office network status.</p>
-         * <br>
          * <p>Default values:</p>
-         * <br>
-         * <p>*   CONFIGUSERFAILED</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   REGISTERING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   REGISTERED</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   NEEDCONFIGTRUST</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   CONFIGUSERING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   CONFIGTRUSTFAILED</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   ERROR</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   CONFIGTRUSTING</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   NEEDCONFIGUSER</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>CONFIGUSERFAILED</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>REGISTERING</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>REGISTERED</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NEEDCONFIGTRUST</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CONFIGUSERING</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CONFIGTRUSTFAILED</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>ERROR</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CONFIGTRUSTING</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NEEDCONFIGUSER</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REGISTERED</p>
          */
         @NameInMap("OfficeSiteStatus")
         public String officeSiteStatus;
 
         /**
          * <p>The ID of the region where the office network resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The number of cloud computers that are running in the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RunningEdsCount")
         public Integer runningEdsCount;
 
         /**
          * <p>The number of running cloud computers in the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("RunningEdsCountForGroup")
         public Integer runningEdsCountForGroup;
 
         /**
          * <p>The total number of cloud computers in the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalEdsCount")
         public Integer totalEdsCount;
 
         /**
          * <p>The total number of cloud computers in the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalEdsCountForGroup")
         public Integer totalEdsCountForGroup;
 
         /**
          * <p>The office network type and its suitable VPC type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   standard (default): standard, exclusive VPC</p>
-         * <p>*   customized: custom, user VPC</p>
-         * <p>*   basic: basic, shared VPC</p>
+         * <ul>
+         * <li>standard (default): standard, exclusive VPC</li>
+         * <li>customized: custom, user VPC</li>
+         * <li>basic: basic, shared VPC</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("VpcType")
         public String vpcType;
 
         /**
          * <p>The number of cloud computers that are about to expire in the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("WillExpiredEdsCount")
         public Integer willExpiredEdsCount;
 
         /**
          * <p>The number of cloud computers that are about to expire in the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("WillExpiredEdsCountForGroup")
         public Integer willExpiredEdsCountForGroup;

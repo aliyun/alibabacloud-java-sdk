@@ -12,12 +12,18 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2CC66B0A-BA3B-5D87-BFBE-11AAAD7A8E03</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,36 +60,54 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     public static class DescribeUserConnectionRecordsResponseBodyConnectionRecords extends TeaModel {
         /**
          * <p>The duration for which the end user is connected to the cloud computer. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3405035000</p>
          */
         @NameInMap("ConnectDuration")
         public String connectDuration;
 
         /**
          * <p>The time when the end user disconnected from the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-02-27T20:03:13Z</p>
          */
         @NameInMap("ConnectEndTime")
         public String connectEndTime;
 
         /**
          * <p>The time when the end user connected to the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-19T10:12:38Z</p>
          */
         @NameInMap("ConnectStartTime")
         public String connectStartTime;
 
         /**
          * <p>The ID of the connection record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>528</p>
          */
         @NameInMap("ConnectionRecordId")
         public String connectionRecordId;
 
         /**
          * <p>The ID of the cloud computer to which the end user connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ud-2hawufy3uedi1****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The name of the cloud computer to which the end user connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;

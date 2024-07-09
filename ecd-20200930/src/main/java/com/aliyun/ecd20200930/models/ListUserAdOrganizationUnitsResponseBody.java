@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     /**
      * <p>A pagination token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAAAAA==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -18,6 +21,9 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +60,27 @@ public class ListUserAdOrganizationUnitsResponseBody extends TeaModel {
     public static class ListUserAdOrganizationUnitsResponseBodyOUNames extends TeaModel {
         /**
          * <p>The name of the OU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wuying_computers</p>
          */
         @NameInMap("DisplayOUName")
         public String displayOUName;
 
         /**
          * <p>The canonical name (CNAME) of the OU in the AD domain controller.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com/wuying_computers</p>
          */
         @NameInMap("OUName")
         public String OUName;
 
         /**
          * <p>The enterprise AD office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-485361****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;

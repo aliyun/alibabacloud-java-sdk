@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DescribeUsersPasswordRequest extends TeaModel {
     /**
      * <p>The ID of the cloud computer.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-gq8u6whi9f6k8****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

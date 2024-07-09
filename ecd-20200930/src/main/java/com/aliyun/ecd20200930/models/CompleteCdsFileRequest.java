@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class CompleteCdsFileRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai+cds-465878****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The name of the end user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test0</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
      * <p>The file ID. An ID is the unique identifier of a file.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>635a316c94f40f35f5354da29b2aee88c9d1****</p>
      */
     @NameInMap("FileId")
     public String fileId;
@@ -27,12 +38,20 @@ public class CompleteCdsFileRequest extends TeaModel {
 
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the file uploading task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6C48B55A1FAC4E1A9E0579059514****</p>
      */
     @NameInMap("UploadId")
     public String uploadId;

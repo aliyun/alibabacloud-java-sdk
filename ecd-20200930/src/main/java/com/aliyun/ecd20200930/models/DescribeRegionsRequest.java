@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class DescribeRegionsRequest extends TeaModel {
     /**
      * <p>The display name of the region, which varies based on the current language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -4,9 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudDrivePermissionsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-82414*****</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

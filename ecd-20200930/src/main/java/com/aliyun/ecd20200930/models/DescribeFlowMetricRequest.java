@@ -4,24 +4,63 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowMetricRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1664714703743</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>desktop</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>intranetOutRate</p>
+     */
     @NameInMap("MetricType")
     public String metricType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1651817220643</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

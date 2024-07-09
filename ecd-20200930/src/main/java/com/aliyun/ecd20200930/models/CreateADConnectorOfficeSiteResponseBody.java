@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateADConnectorOfficeSiteResponseBody extends TeaModel {
     /**
      * <p>The office network ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-363353****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,61 +5,93 @@ import com.aliyun.tea.*;
 
 public class DescribeDevicesRequest extends TeaModel {
     /**
-     * <p>The address of the Active Directory (AD) workspace.</p>
+     * <p>The address of the Active Directory (AD) office network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xn--0zw****</p>
      */
     @NameInMap("AdDomain")
     public String adDomain;
 
     /**
-     * <p>The type of the Alibaba Cloud Workspace client.</p>
-     * <br>
-     * <p>*   1: hardware client.</p>
-     * <p>*   2: software client.</p>
+     * <p>The type of the client.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>1: hardware client.</li>
+     * <li>2: software client.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ClientType")
     public String clientType;
 
     /**
-     * <p>The ID of the device.</p>
+     * <p>The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5F52817BE267A43C608D245070D2****</p>
      */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The ID of the convenient office network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
-     * <p>The ID of the convenience user to whom you want to bind the device.</p>
+     * <p>The ID of the bound user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>moli</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The type of the user account.</p>
-     * <br>
-     * <p>*   SIMPLE: convenience account.</p>
-     * <p>*   AD: AD account.</p>
+     * <p>The account type of the user.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>AD: enterprise AD account.</li>
+     * <li>SIMPLE: convenience account</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SIMPLE</p>
      */
     @NameInMap("UserType")
     public String userType;

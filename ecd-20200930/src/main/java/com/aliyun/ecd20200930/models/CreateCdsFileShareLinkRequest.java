@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class CreateCdsFileShareLinkRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai+cds-135515****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
@@ -18,126 +22,129 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to prohibit the download of the files that are being shared.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    prohibits file download</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    allows file download</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>prohibits file download</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>allows file download</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DisableDownload")
     public Boolean disableDownload;
 
     /**
      * <p>Specifies whether to prohibit the preview of the files that are being shared.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    prohibits file preview</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    allows file preview</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>prohibits file preview</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>allows file preview</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DisablePreview")
     public Boolean disablePreview;
 
     /**
      * <p>Specifies whether to prohibit the dump of the files that are being shared.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    prohibits file dump</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    allows file dump</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    .</p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>prohibits file dump</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>allows file dump</p>
+     * <!-- -->
+     * 
+     * <p>.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DisableSave")
     public Boolean disableSave;
 
     /**
      * <p>The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("DownloadLimit")
     public Long downloadLimit;
 
     /**
      * <p>The ID of the end user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user01</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
-     * <p>The time when the file sharing link expires. The value of this parameter follows the RFC 3339 standard. Example: "2020-06-28T11:33:00.000+08:00". If this parameter is set to "", the file sharing link never expires.</p>
+     * <p>The time when the file sharing link expires. The value of this parameter follows the RFC 3339 standard. Example: &quot;2020-06-28T11:33:00.000+08:00&quot;. If this parameter is set to &quot;&quot;, the file sharing link never expires.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-06-28T11:33:00.000+08:00</p>
      */
     @NameInMap("Expiration")
     public String expiration;
@@ -153,24 +160,36 @@ public class CreateCdsFileShareLinkRequest extends TeaModel {
 
     /**
      * <p>The limit on the number of times that the shared files can be previewed. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be previewed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PreviewLimit")
     public Long previewLimit;
 
     /**
      * <p>The limit on the number of times that the shared files can be dumped. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be dumped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("SaveLimit")
     public Long saveLimit;
 
     /**
      * <p>The name of the file sharing task. If you leave this parameter empty, the file name that corresponds to the first ID in the file ID list is used. The name must be 0 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>view.txt</p>
      */
     @NameInMap("ShareName")
     public String shareName;
 
     /**
      * <p>The length of the access code. Valid values: 6 to 8. Unit: bytes. If you leave this parameter empty or set it to null, no access code is required. If you use a token to share files, you do not need to configure this parameter. The access code can contain only visible ASCII characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345678</p>
      */
     @NameInMap("SharePwd")
     public String sharePwd;

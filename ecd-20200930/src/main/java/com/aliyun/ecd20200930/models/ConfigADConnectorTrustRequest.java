@@ -6,30 +6,46 @@ import com.aliyun.tea.*;
 public class ConfigADConnectorTrustRequest extends TeaModel {
     /**
      * <p>The ID of the enterprise AD office network.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-778418****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
      * <p>Specifies whether to configure a trust password for the Remote Desktop Services (RDS) License Domain of the enterprise AD office network.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true: configures a trust password for the RDS License Domain of the AD office network.</p>
-     * <br>
-     * <p>*   false: configures a trust password for a regular enterprise AD office network.</p>
+     * <ul>
+     * <li><p>true: configures a trust password for the RDS License Domain of the AD office network.</p>
+     * </li>
+     * <li><p>false: configures a trust password for a regular enterprise AD office network.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("RdsLicenseDomain")
     public Boolean rdsLicenseDomain;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The trust password. You can specify the password when you configure a trust relationship between the AD domain and the ecd.acs domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>password123***</p>
      */
     @NameInMap("TrustKey")
     public String trustKey;

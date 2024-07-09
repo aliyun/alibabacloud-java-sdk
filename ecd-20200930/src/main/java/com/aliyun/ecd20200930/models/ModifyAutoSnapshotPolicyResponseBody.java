@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyAutoSnapshotPolicyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

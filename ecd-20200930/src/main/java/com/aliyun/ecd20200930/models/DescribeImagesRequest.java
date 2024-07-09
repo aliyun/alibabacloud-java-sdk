@@ -5,135 +5,178 @@ import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
     /**
-     * <p>The instance type of the cloud computer. You can call the [DescribeDesktopTypes](~~436816~~) operation to obtain the parameter value.</p>
+     * <p>The instance type of the cloud computer. You can call the <a href="https://help.aliyun.com/document_detail/436816.html">DescribeDesktopTypes</a> operation to obtain the parameter value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd.graphics.xlarge</p>
      */
     @NameInMap("DesktopInstanceType")
     public String desktopInstanceType;
 
     /**
      * <p>The image version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.3-R-20220616.133609</p>
      */
     @NameInMap("FotaVersion")
     public String fotaVersion;
 
     /**
      * <p>Specifies whether the images are GPU-accelerated images.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("GpuCategory")
     public Boolean gpuCategory;
 
     /**
      * <p>The version of the GPU driver.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>417.22</p>
      */
     @NameInMap("GpuDriverVersion")
     public String gpuDriverVersion;
 
     /**
      * <p>The IDs of the images. You can specify one or more image IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-gx2x1dhsmusr2****</p>
      */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
     /**
      * <p>The image name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Win_01</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
      * <p>The state of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Available</p>
      */
     @NameInMap("ImageStatus")
     public String imageStatus;
 
     /**
      * <p>The type of the image.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYSTEM</p>
      */
     @NameInMap("ImageType")
     public String imageType;
 
     /**
      * <p>The language of the OS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en-US</p>
      */
     @NameInMap("LanguageType")
     public String languageType;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Maximum value: 100.</p>
-     * <p>*   Default value: 10.</p>
+     * <ul>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the next query. If you do not specify this parameter, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The type of the operating system of the images. Default value: `null`.</p>
-     * <br>
+     * <p>The type of the operating system of the images. Default value: <code>null</code>.</p>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Linux</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Windows</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>Linux</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Windows</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Windows</p>
      */
     @NameInMap("OsType")
     public String osType;
 
     /**
      * <p>The protocol type.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   HDX: High-definition Experience (HDX) protocol</p>
-     * <p>*   ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</p>
+     * <ul>
+     * <li>HDX: High-definition Experience (HDX) protocol</li>
+     * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ASP</p>
      */
     @NameInMap("ProtocolType")
     public String protocolType;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The session type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SINGLE_SESSION</p>
      */
     @NameInMap("SessionType")
     public String sessionType;

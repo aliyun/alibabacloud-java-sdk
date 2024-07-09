@@ -6,96 +6,136 @@ import com.aliyun.tea.*;
 public class DescribeUserConnectionRecordsRequest extends TeaModel {
     /**
      * <p>The duration when the cloud desktop is connected, which is the minimum value for condition filtering.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ConnectDurationFrom")
     public Long connectDurationFrom;
 
     /**
      * <p>The duration when the cloud desktop is connected, which is the maximum value for condition filtering.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("ConnectDurationTo")
     public Long connectDurationTo;
 
     /**
      * <p>The time when the cloud desktop stops to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1631266200000</p>
      */
     @NameInMap("ConnectEndTimeFrom")
     public Long connectEndTimeFrom;
 
     /**
      * <p>The time when the cloud desktop stops to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1631268000000</p>
      */
     @NameInMap("ConnectEndTimeTo")
     public Long connectEndTimeTo;
 
     /**
      * <p>The time when the cloud desktop starts to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1631239200000</p>
      */
     @NameInMap("ConnectStartTimeFrom")
     public Long connectStartTimeFrom;
 
     /**
      * <p>The time when the cloud desktop starts to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1631241000000</p>
      */
     @NameInMap("ConnectStartTimeTo")
     public Long connectStartTimeTo;
 
     /**
      * <p>The ID of the cloud computer pool.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dg-2i8qxpv6t1a03****</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
      * <p>The ID of the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-138dsptkrt00u****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
      * <p>The ID of the authorized user.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
      * <p>The type of the user account.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   SIMPLE: convenience account</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   AD_CONNECTOR: enterprise AD account</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>SIMPLE: convenience account</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>AD_CONNECTOR: enterprise AD account</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SIMPLE</p>
      */
     @NameInMap("EndUserType")
     public String endUserType;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -12,6 +12,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B1175630-3C44-4389-A3C1-15639FFC8EBC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyPriceInfoPricePromotions extends TeaModel {
         /**
          * <p>The description of the promotion rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("OptionCode")
         public String optionCode;
 
         /**
          * <p>The description of the promotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Get started with new services with a discount.</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
          * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("PromotionId")
         public String promotionId;
 
         /**
          * <p>The promotion name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Special Offer</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
          * <p>Indicates whether an item is selected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Selected")
         public Boolean selected;
@@ -118,12 +136,18 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
          * <p>The unit of the currency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
          * <p>The discounted price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
@@ -133,6 +157,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
         /**
          * <p>The original price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.796</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
@@ -148,6 +175,9 @@ public class DescribePriceResponseBody extends TeaModel {
 
         /**
          * <p>The actual price that is paid. The original price minus the discounted part equals the actual price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.796</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;
@@ -218,12 +248,18 @@ public class DescribePriceResponseBody extends TeaModel {
     public static class DescribePriceResponseBodyPriceInfoRules extends TeaModel {
         /**
          * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Receive a 15% discount on a one-year subscription.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>587</p>
          */
         @NameInMap("RuleId")
         public Long ruleId;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyCloudDrivePermissionResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9197824D-AD4B-571F-94BB-C2E6D5855AB6</p>
      */
     @NameInMap("RequestId")
     public String requestId;

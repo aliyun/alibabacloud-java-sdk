@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyCloudDriveGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai+cds-135515****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
@@ -18,23 +22,33 @@ public class ModifyCloudDriveGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of the team space. Valid values:</p>
-     * <br>
-     * <p>*   enabled</p>
-     * <p>*   disabled</p>
-     * <br>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
      * <p>Default value: enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>disabled</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The total capacity of the team space.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32212254720</p>
      */
     @NameInMap("TotalSize")
     public Long totalSize;

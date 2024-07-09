@@ -5,29 +5,42 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource IDs, which are cloud computer IDs. You can specify 1 to 50 IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-ia2zw38bi6cm7****</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>* ALIYUN::GWS::INSTANCE: cloud computer.</p>
+     * <ul>
+     * <li>ALIYUN::GWS::INSTANCE: cloud computer.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIYUN::GWS::INSTANCE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tags that you want to add to the cloud computers. You can specify 1 to 20 tags.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -71,13 +84,19 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag keys. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with `acs:` or `aliyun` and cannot contain `http://` or `https://`.</p>
+         * <p>The tag keys. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.</p>
+         * <p>The tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;

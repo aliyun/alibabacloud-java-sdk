@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DisableDesktopsInGroupRequest extends TeaModel {
     /**
      * <p>The ID of the desktop group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dg-2i8qxpv6t1a03****</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
      * <p>The IDs of cloud desktops.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopIds")
     public java.util.List<String> desktopIds;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

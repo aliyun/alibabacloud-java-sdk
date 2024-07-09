@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeKmsKeysRequest extends TeaModel {
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

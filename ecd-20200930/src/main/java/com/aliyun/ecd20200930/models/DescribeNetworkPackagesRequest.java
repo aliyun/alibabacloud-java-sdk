@@ -6,39 +6,57 @@ import com.aliyun.tea.*;
 public class DescribeNetworkPackagesRequest extends TeaModel {
     /**
      * <p>The charge type of the pay-as-you-go premium bandwidth plan.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   PayByTraffic: charges by data transfer.</p>
-     * <br>
-     * <p>*   PayByBandwidth: charges by fixed bandwidth.</p>
+     * <ul>
+     * <li><p>PayByTraffic: charges by data transfer.</p>
+     * </li>
+     * <li><p>PayByBandwidth: charges by fixed bandwidth.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByBandwidth</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Maximum value: 100</p>
-     * <p>*   Default value: 10</p>
+     * <ul>
+     * <li>Maximum value: 100</li>
+     * <li>Default value: 10</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The ID of the premium bandwidth plan. You can specify 1 to 100 IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np-amtp8e8q1o9e4****</p>
      */
     @NameInMap("NetworkPackageId")
     public java.util.List<String> networkPackageId;
 
     /**
      * <p>The token that determines the start point of the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

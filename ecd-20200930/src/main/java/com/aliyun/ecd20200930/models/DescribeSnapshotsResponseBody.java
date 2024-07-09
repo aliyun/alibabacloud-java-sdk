@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
      * <p>If the NextToken parameter is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,202 +59,248 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
         /**
-         * <p>The point in time at which the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.</p>
+         * <p>The point in time at which the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-20T14:52:28Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The user who creates the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Administrator</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
-         * <p>The time when the snapshot was deleted. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot was deleted. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-20T14:52:28Z</p>
          */
         @NameInMap("DeletionTime")
         public String deletionTime;
 
         /**
          * <p>The description of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the cloud computer to which the snapshot belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-g03l3tlm8djoj****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
          * <p>The status of the cloud computer.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Stopped</p>
-         * <p>*   Starting</p>
-         * <p>*   Rebuilding</p>
-         * <p>*   Running</p>
-         * <p>*   Stopping</p>
-         * <p>*   Expired</p>
-         * <p>*   Deleted</p>
-         * <p>*   Pending</p>
+         * <ul>
+         * <li>Stopped</li>
+         * <li>Starting</li>
+         * <li>Rebuilding</li>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * <li>Expired</li>
+         * <li>Deleted</li>
+         * <li>Pending</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
         /**
          * <p>The progress of creating the snapshot. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The protocol type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   HDX: High-definition Experience (HDX) protocol</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   ASP: in-house Adaptive Streaming Protocol (ASP)</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>HDX: High-definition Experience (HDX) protocol</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>ASP: in-house Adaptive Streaming Protocol (ASP)</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The remaining time that is required to complete the snapshot creation. Unit: seconds.</p>
-         * <br>
-         * <p>>  When the `Status` value is `PROGRESSING`, the `RemainTime` value is `-1`. A value of -1 indicates that the system is calculating the remaining time.</p>
+         * <blockquote>
+         * <p> When the <code>Status</code> value is <code>PROGRESSING</code>, the <code>RemainTime</code> value is <code>-1</code>. A value of -1 indicates that the system is calculating the remaining time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
         /**
          * <p>The snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>s-2zeipxmnhej803x7****</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
 
         /**
          * <p>The name of the snapshot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
         /**
          * <p>The type of the snapshot.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   AUTO: automatic snapshot</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   USER: manual snapshot</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>AUTO: automatic snapshot</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>USER: manual snapshot</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>USER</p>
          */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
         /**
          * <p>The capacity of the source disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("SourceDiskSize")
         public String sourceDiskSize;
 
         /**
          * <p>The type of the source disk.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM: system disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DATA: data disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SYSTEM: system disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DATA: data disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;
 
         /**
          * <p>The status of the snapshot.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   PROGRESSING: The snapshot is being created.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   FAILED: The snapshot fails to be created.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   ACCOMPLISHED: The snapshot is created.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>PROGRESSING: The snapshot is being created.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>FAILED: The snapshot fails to be created.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>ACCOMPLISHED: The snapshot is created.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACCOMPLISHED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>Indicates whether disk encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;

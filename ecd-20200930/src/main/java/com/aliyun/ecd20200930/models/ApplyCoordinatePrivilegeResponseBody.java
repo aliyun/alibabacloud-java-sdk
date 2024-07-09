@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ApplyCoordinatePrivilegeResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C43EEAC3-84F8-5C1E-A067-4751C3D1422E</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,36 +6,55 @@ import com.aliyun.tea.*;
 public class AddFilePermissionRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk whose folder you want to share.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-352282****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The ID of the end user who uses the cloud disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user01</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
      * <p>The ID of the file.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6333e553a133ce21e6f747cf948bb9ef95d7****</p>
      */
     @NameInMap("FileId")
     public String fileId;
 
     /**
      * <p>The ID of the team that uses cloud disks in Cloud Drive Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-i1ruuudp92qpj****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The members who are granted the folder permissions.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MemberList")
     public java.util.List<AddFilePermissionRequestMemberList> memberList;
 
     /**
-     * <p>The region ID of the folder. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the folder. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -96,30 +115,36 @@ public class AddFilePermissionRequest extends TeaModel {
     public static class AddFilePermissionRequestMemberListCdsIdentity extends TeaModel {
         /**
          * <p>The ID of the user.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user01</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The type of the user.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    IT_Group</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    IT_User</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><!-- -->
+         * 
+         * <p>IT_Group</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
+         * 
+         * <p>IT_User</p>
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT_User</p>
          */
         @NameInMap("Type")
         public String type;
@@ -150,40 +175,51 @@ public class AddFilePermissionRequest extends TeaModel {
     public static class AddFilePermissionRequestMemberList extends TeaModel {
         /**
          * <p>The user of the cloud disk.</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("CdsIdentity")
         public AddFilePermissionRequestMemberListCdsIdentity cdsIdentity;
 
         /**
          * <p>Specifies whether the users of the child group can inherit the folder permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("DisinheritSubGroup")
         public Boolean disinheritSubGroup;
 
         /**
          * <p>The time when the authorization expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. The value never expires. You can specify a value that is predefined by the system for this parameter. Example: 4775500800000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4775500800000</p>
          */
         @NameInMap("ExpireTime")
         public Long expireTime;
 
         /**
          * <p>The ID of the role to which you want to attach the folder permissions. To configure the folder permissions: you can specify a role or create custom operation permissions. You can use RoleId to specify a role. RoleId is mutually exclusive with ActionList. If you specify both of them, the value of RoleId takes precedence.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>* SystemFileEditorWithoutShareLink</p>
-         * <p>* SystemFileUploaderAndDownloaderWithShareLink</p>
-         * <p>* SystemFileDownloader</p>
-         * <p>* SystemFileEditorWithoutDelete</p>
-         * <p>* SystemFileOwner</p>
-         * <p>* SystemFileDownloaderWithShareLink</p>
-         * <p>* SystemFileUploaderAndViewer</p>
-         * <p>* SystemFileViewer</p>
-         * <p>* SystemFileEditor</p>
-         * <p>* SystemFileUploaderWithShareLink</p>
-         * <p>* SystemFileUploader</p>
-         * <p>* SystemFileUploaderAndDownloader</p>
-         * <p>* SystemFileMetaViewer</p>
+         * <ul>
+         * <li>SystemFileEditorWithoutShareLink</li>
+         * <li>SystemFileUploaderAndDownloaderWithShareLink</li>
+         * <li>SystemFileDownloader</li>
+         * <li>SystemFileEditorWithoutDelete</li>
+         * <li>SystemFileOwner</li>
+         * <li>SystemFileDownloaderWithShareLink</li>
+         * <li>SystemFileUploaderAndViewer</li>
+         * <li>SystemFileViewer</li>
+         * <li>SystemFileEditor</li>
+         * <li>SystemFileUploaderWithShareLink</li>
+         * <li>SystemFileUploader</li>
+         * <li>SystemFileUploaderAndDownloader</li>
+         * <li>SystemFileMetaViewer</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SystemFileUploaderAndDownloader</p>
          */
         @NameInMap("RoleId")
         public String roleId;

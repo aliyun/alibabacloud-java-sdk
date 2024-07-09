@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateRAMDirectoryResponseBody extends TeaModel {
     /**
      * <p>The RAM directory ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dri-uf62w3qzt4aigvlcb****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

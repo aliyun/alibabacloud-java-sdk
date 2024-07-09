@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ListCdsFilesRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-320357****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The ID of the user to whom the cloud disk is allocated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testUser</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
@@ -27,160 +34,148 @@ public class ListCdsFilesRequest extends TeaModel {
 
     /**
      * <p>The number of entries to return on each page. Default value: 100.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token used for the next query. If this parameter is empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WyI2Mzg4MjAwMzFhNGQwZWVmN2I3MjRkZjZhZjAyMWU4YzY1MmRjZmUyIiwibiIsIm4iLDEsLTEsMTY2OTg2NTQ3NTMxMiwiNjM4ODIwMDNlNTU0YmZiZjFkYTk0MmEyYTZhMjEyZDkxODdjMjAy****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The sorting method of the files.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   CreateTimeDesc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts files in descending order based on the time when they are created.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   ModifiedTimeAsc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts files in ascending order based on the time when they are modified.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   NameDesc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts files in descending order based on their names.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   SizeAsc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts files in ascending order based on their sizes.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   ModifiedTimeDesc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts files in descending order based on the time when they are modified.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   CreateTimeAsc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts files in ascending order based on the time when they are created.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   SizeDesc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts files in descending order based on their sizes.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   NameAsc</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    sorts files in ascending order based on their names.</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>CreateTimeDesc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts files in descending order based on the time when they are created.</p>
+     * <!-- -->
+     * </li>
+     * <li><p>ModifiedTimeAsc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts files in ascending order based on the time when they are modified.</p>
+     * <!-- -->
+     * </li>
+     * <li><p>NameDesc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts files in descending order based on their names.</p>
+     * <!-- -->
+     * </li>
+     * <li><p>SizeAsc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts files in ascending order based on their sizes.</p>
+     * <!-- -->
+     * </li>
+     * <li><p>ModifiedTimeDesc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts files in descending order based on the time when they are modified.</p>
+     * <!-- -->
+     * </li>
+     * <li><p>CreateTimeAsc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts files in ascending order based on the time when they are created.</p>
+     * <!-- -->
+     * </li>
+     * <li><p>SizeDesc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts files in descending order based on their sizes.</p>
+     * <!-- -->
+     * </li>
+     * <li><p>NameAsc</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>sorts files in ascending order based on their names.</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CreateTimeDesc</p>
      */
     @NameInMap("OrderType")
     public String orderType;
 
     /**
      * <p>The ID of the parent file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63636837e47e5a24a8a940218bef395c210e****</p>
      */
     @NameInMap("ParentFileId")
     public String parentFileId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The file status.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   available</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    returns only normal files.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   uploading</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    returns only the files that are being uploaded.</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>available</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>returns only normal files.</p>
+     * <!-- -->
+     * </li>
+     * <li><p>uploading</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>returns only the files that are being uploaded.</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>available</p>
      */
     @NameInMap("Status")
     public String status;

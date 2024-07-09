@@ -6,39 +6,60 @@ import com.aliyun.tea.*;
 public class ListOfficeSiteUsersRequest extends TeaModel {
     /**
      * <p>The query string for fuzzy query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><em>jin</em></p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 100.</p>
-     * <p>*   Default value: 10.</p>
+     * <ul>
+     * <li>Valid values: 1 to 100.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next query exists. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The organizational unit (OU) of the specified AD domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com/Domain Controllers</p>
      */
     @NameInMap("OUPath")
     public String OUPath;
 
     /**
      * <p>The office network ID. The office network must be of the enterprise AD account type.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-363353****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

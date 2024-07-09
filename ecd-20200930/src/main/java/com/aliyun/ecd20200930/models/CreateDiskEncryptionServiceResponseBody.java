@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class CreateDiskEncryptionServiceResponseBody extends TeaModel {
     /**
      * <p>The order ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>214552063030752</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

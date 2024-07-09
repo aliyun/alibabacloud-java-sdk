@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopInfoResponseBody extends TeaModel {
     /**
-     * <p>Details of the cloud computers.</p>
+     * <p>The basic information about cloud computers.</p>
      */
     @NameInMap("Desktops")
     public java.util.List<DescribeDesktopInfoResponseBodyDesktops> desktops;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>062B1439-709A-580E-85DF-CE97A1560565</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,37 +42,62 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
 
     public static class DescribeDesktopInfoResponseBodyDesktops extends TeaModel {
         /**
-         * <p>The connection status of the user. Valid values:</p>
-         * <br>
-         * <p>*   Connected</p>
-         * <p>*   Disconnected</p>
+         * <p>The connection status of the user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Connected</li>
+         * <li>Disconnected</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disconnected</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
         /**
-         * <p>The version of the image that is used by the cloud computer.</p>
+         * <p>The version of the cloud computer image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.4.0-R-***</p>
          */
         @NameInMap("CurrentAppVersion")
         public String currentAppVersion;
 
         /**
-         * <p>The cloud computer ID.</p>
+         * <p>The ID of the cloud computer pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-3uiojcc0j4kh7****</p>
+         */
+        @NameInMap("DesktopGroupId")
+        public String desktopGroupId;
+
+        /**
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The status of the cloud computer. Valid values:</p>
-         * <br>
-         * <p>*   Pending: The cloud computer is being created.</p>
-         * <p>*   Starting: The cloud computer is being started.</p>
-         * <p>*   Running: The cloud computer is running.</p>
-         * <p>*   Stopping: The cloud computer is being stopped.</p>
-         * <p>*   Stopped: The cloud computer is stopped.</p>
-         * <p>*   Expired: The cloud computer is expired.</p>
-         * <p>*   Deleted: The cloud computer is deleted.</p>
-         * <p>*   Failed: Failed to create the cloud computer.</p>
+         * <p>The status of the cloud computer.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Stopped</li>
+         * <li>Failed</li>
+         * <li>Starting</li>
+         * <li>Running</li>
+         * <li>Stopping</li>
+         * <li>Expired</li>
+         * <li>Deleted</li>
+         * <li>Pending</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
@@ -82,24 +110,36 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
 
         /**
          * <p>The size of the update package. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>568533470</p>
          */
         @NameInMap("NewAppSize")
         public Long newAppSize;
 
         /**
-         * <p>The destination version to which the image of the cloud computer can be updated.</p>
+         * <p>The version number of the image that can be updated on the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.6.0-R-***</p>
          */
         @NameInMap("NewAppVersion")
         public String newAppVersion;
 
         /**
-         * <p>The description of the destination version to which the image of the cloud computer can be updated.</p>
+         * <p>The description of the image version that can be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test package 03-07</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
-         * <p>The first time when the cloud computer was started.</p>
+         * <p>The time when the cloud computer was first started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-06T08:31Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -123,6 +163,14 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         }
         public String getCurrentAppVersion() {
             return this.currentAppVersion;
+        }
+
+        public DescribeDesktopInfoResponseBodyDesktops setDesktopGroupId(String desktopGroupId) {
+            this.desktopGroupId = desktopGroupId;
+            return this;
+        }
+        public String getDesktopGroupId() {
+            return this.desktopGroupId;
         }
 
         public DescribeDesktopInfoResponseBodyDesktops setDesktopId(String desktopId) {

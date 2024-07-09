@@ -6,81 +6,98 @@ import com.aliyun.tea.*;
 public class RenewDesktopsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the auto-payment feature.</p>
-     * <br>
      * <p>Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the auto-payment feature.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    You can log on to the WUYING Workspace console and complete the payment based on the order ID on the Orders page.</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>true: enables the auto-payment feature.</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <p>Make sure that you have sufficient balance in your Alibaba Cloud account. Otherwise, your order becomes invalid.</p>
+     * <!-- -->
+     * </li>
+     * <li><p>false: disables the auto-payment feature. In this case, an order is generated, and no payment is automatically made.</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <p>You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     /**
      * <p>The IDs of the cloud computers. Only IDs of subscription cloud computers are supported.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-ia2zw38bi6cm7****</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The renewal duration. Valid values of this parameter are determined by the value of the `PeriodUnit` parameter.</p>
-     * <br>
-     * <p>*   Valid values if you set the `PeriodUnit` parameter to `Month`: 1, 2, 3, and 6</p>
-     * <p>*   Valid values if you set the `PeriodUnit` parameter to `Year`: 1, 2, 3, 4, 5, and 6</p>
-     * <br>
+     * <p>The renewal duration. Valid values of this parameter are determined by the value of the <code>PeriodUnit</code> parameter.</p>
+     * <ul>
+     * <li>Valid values if you set the <code>PeriodUnit</code> parameter to <code>Month</code>: 1, 2, 3, and 6</li>
+     * <li>Valid values if you set the <code>PeriodUnit</code> parameter to <code>Year</code>: 1, 2, 3, 4, 5, and 6</li>
+     * </ul>
      * <p>Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The unit of the renewal duration specified by the `Period` parameter.</p>
-     * <br>
+     * <p>The unit of the renewal duration specified by the <code>Period</code> parameter.</p>
      * <p>Default value: Month. Valid values:</p>
-     * <br>
-     * <p>*   Month</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Year</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>Month</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Year</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>The ID of the promotional activity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500030980150146</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -99,6 +116,14 @@ public class RenewDesktopsRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public RenewDesktopsRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public RenewDesktopsRequest setDesktopId(java.util.List<String> desktopId) {

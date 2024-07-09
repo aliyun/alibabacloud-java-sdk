@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeDevicesResponseBody extends TeaModel {
     /**
-     * <p>Details of the devices that are returned.</p>
+     * <p>The information about devices that you queried.</p>
      */
     @NameInMap("Devices")
     public java.util.List<DescribeDevicesResponseBodyDevices> devices;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BEFE642-A383-4A18-8939-FB7DE452****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,25 +42,42 @@ public class DescribeDevicesResponseBody extends TeaModel {
 
     public static class DescribeDevicesResponseBodyDevicesEndUserList extends TeaModel {
         /**
-         * <p>The address of the AD workspace.</p>
+         * <p>The address of the AD office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xn--0zw****</p>
          */
         @NameInMap("AdDomain")
         public String adDomain;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The ID of the convenient office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>moli</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The type of the account.</p>
+         * <p>The account type of the user.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AD: enterprise AD account.</li>
+         * <li>SIMPLE: convenience account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         @NameInMap("UserType")
         public String userType;
@@ -103,7 +123,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
 
     public static class DescribeDevicesResponseBodyDevices extends TeaModel {
         /**
-         * <p>The ID of the device.</p>
+         * <p>The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F52817BE267A43C608D245070D2****</p>
          */
         @NameInMap("DeviceId")
         public String deviceId;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CopyImageResponseBody extends TeaModel {
     /**
      * <p>The ID of the image that is being copied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-2g65ljy3ynrdq****</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28A40F12-F340-442B-A35F-46EF6A03****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

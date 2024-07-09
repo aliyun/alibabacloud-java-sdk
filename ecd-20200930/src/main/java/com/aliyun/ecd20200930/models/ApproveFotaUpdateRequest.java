@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class ApproveFotaUpdateRequest extends TeaModel {
     /**
      * <p>Mirror version.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0.1-D-20220513.143129</p>
      */
     @NameInMap("AppVersion")
     public String appVersion;
 
     /**
      * <p>The ID of the cloud computer.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-138dsptkrt00u****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class ModifyCloudDriveGroupsResponseBody extends TeaModel {
     /**
      * <p>The returned results. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The data information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
      * <p>The message returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -6,12 +6,21 @@ import com.aliyun.tea.*;
 public class ModifyDesktopSpecResponseBody extends TeaModel {
     /**
      * <p>The ID of the order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
+    @NameInMap("OrderIds")
+    public java.util.List<Long> orderIds;
+
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -27,6 +36,14 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public ModifyDesktopSpecResponseBody setOrderIds(java.util.List<Long> orderIds) {
+        this.orderIds = orderIds;
+        return this;
+    }
+    public java.util.List<Long> getOrderIds() {
+        return this.orderIds;
     }
 
     public ModifyDesktopSpecResponseBody setRequestId(String requestId) {

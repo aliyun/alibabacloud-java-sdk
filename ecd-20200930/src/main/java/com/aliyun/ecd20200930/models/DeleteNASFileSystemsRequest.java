@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeleteNASFileSystemsRequest extends TeaModel {
     /**
      * <p>The IDs of the NAS file systems that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04f314****</p>
      */
     @NameInMap("FileSystemId")
     public java.util.List<String> fileSystemId;
 
     /**
      * <p>The region ID of the NAS file system that you want to delete.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

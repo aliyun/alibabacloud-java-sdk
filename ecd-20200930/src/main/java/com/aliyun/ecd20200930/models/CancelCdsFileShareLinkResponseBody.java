@@ -6,48 +6,61 @@ import com.aliyun.tea.*;
 public class CancelCdsFileShareLinkResponseBody extends TeaModel {
     /**
      * <p>The operation result. The value success indicates that the operation is successful. If the operation failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The data information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
     /**
-     * <p>The error message that is returned if the request failed. This parameter is not returned if the value of Code is `success`.</p>
+     * <p>The error message that is returned if the request failed. This parameter is not returned if the value of Code is <code>success</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the call was successful.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

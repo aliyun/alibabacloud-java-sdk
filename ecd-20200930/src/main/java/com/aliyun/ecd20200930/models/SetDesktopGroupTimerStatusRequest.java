@@ -6,38 +6,53 @@ import com.aliyun.tea.*;
 public class SetDesktopGroupTimerStatusRequest extends TeaModel {
     /**
      * <p>The ID of the cloud computer pool.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dg-fgxsniu6at****</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of the scheduled task.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   1: enabled</p>
-     * <p>*   2: disabled</p>
-     * <p>*   3: deleted</p>
-     * <p>*   100: unknown</p>
+     * <ul>
+     * <li>1: enabled</li>
+     * <li>2: disabled</li>
+     * <li>3: deleted</li>
+     * <li>100: unknown</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Status")
     public Integer status;
 
     /**
      * <p>The type of the scheduled task.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   1: scheduled reset</p>
-     * <p>*   2: scheduled startup</p>
-     * <p>*   3: scheduled stop</p>
-     * <p>*   4: scheduled restart</p>
+     * <ul>
+     * <li>1: scheduled reset</li>
+     * <li>2: scheduled startup</li>
+     * <li>3: scheduled stop</li>
+     * <li>4: scheduled restart</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TimerType")
     public Integer timerType;

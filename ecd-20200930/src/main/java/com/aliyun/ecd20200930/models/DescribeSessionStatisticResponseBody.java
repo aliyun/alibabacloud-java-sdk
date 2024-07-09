@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeSessionStatisticResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C5528624-C6ED-5CA4-A4A2-7C30DBF2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
 
     /**
      * <p>The total number of sessions returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -54,12 +60,18 @@ public class DescribeSessionStatisticResponseBody extends TeaModel {
     public static class DescribeSessionStatisticResponseBodyStatistic extends TeaModel {
         /**
          * <p>The total number of sessions in the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
          * <p>The point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1690164443508</p>
          */
         @NameInMap("TimePoint")
         public Long timePoint;

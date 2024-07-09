@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class HibernateDesktopsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101AE027-8299-5E6E-A782-6C91C962****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

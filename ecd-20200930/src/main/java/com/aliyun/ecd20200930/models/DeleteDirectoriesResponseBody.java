@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDirectoriesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5CC5E450-FC43-4F5B-B540-9964BD313427</p>
      */
     @NameInMap("RequestId")
     public String requestId;

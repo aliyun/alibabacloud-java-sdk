@@ -4,18 +4,42 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudDriveUsersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-066224****</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>abc</p>
+     */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,30 +4,68 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordingsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ecd-hlh41mk78dugw****</p>
+     */
     @NameInMap("DesktopId")
     public String desktopId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20230424004441</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("NeedSignedUrl")
     public Boolean needSignedUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pg-gx2x1dhsmthe9****</p>
+     */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("SignedUrlExpireMinutes")
     public Integer signedUrlExpireMinutes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20230424000000</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

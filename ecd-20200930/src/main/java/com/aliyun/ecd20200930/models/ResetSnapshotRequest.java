@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class ResetSnapshotRequest extends TeaModel {
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hzngahou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the snapshot.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-2zeipxmnhej803x7****</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

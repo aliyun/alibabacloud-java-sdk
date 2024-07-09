@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class AssociateNetworkPackageRequest extends TeaModel {
     /**
      * <p>The ID of the premium bandwidth plan.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>np-e0iodl3yzb62q****</p>
      */
     @NameInMap("NetworkPackageId")
     public String networkPackageId;
 
     /**
-     * <p>The ID of the office network. You can call the [DescribeNetworkPackages](~~216079~~) to obtain the ID of the office network to which a premium bandwidth plan is bound.</p>
+     * <p>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216079.html">DescribeNetworkPackages</a> to obtain the ID of the office network to which a premium bandwidth plan is bound.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-*********</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

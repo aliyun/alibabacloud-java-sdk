@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>A pagination token. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>484256DA-D816-44D2-9D86-B6EE4D5BA78C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,28 +60,40 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>The resource ID, which is the cloud computer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-ia2zw38bi6cm7****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
          * <p>The type of the resource.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>* ALIYUN::GWS::INSTANCE: cloud computer.</p>
+         * <ul>
+         * <li>ALIYUN::GWS::INSTANCE: cloud computer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ALIYUN::GWS::INSTANCE</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The tag keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The tag values.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

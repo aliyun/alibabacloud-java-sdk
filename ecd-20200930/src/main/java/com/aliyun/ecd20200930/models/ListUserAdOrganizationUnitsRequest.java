@@ -6,30 +6,47 @@ import com.aliyun.tea.*;
 public class ListUserAdOrganizationUnitsRequest extends TeaModel {
     /**
      * <p>The string that you enter for fuzzy search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>develop</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
      * <p>The maximum number of entries to return on each page. Valid values: 1 to 500. Default value: 500.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next request exists. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CAAAAA==</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The enterprise AD office network ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-485361****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

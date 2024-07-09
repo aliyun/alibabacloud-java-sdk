@@ -6,18 +6,26 @@ import com.aliyun.tea.*;
 public class DisconnectDesktopSessionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform precheck. If you perform precheck, the system does not disconnect from desktop sessions. Only the sessions that do not meet specific conditions are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("PreCheck")
     public Boolean preCheck;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The session details.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Sessions")
     public java.util.List<DisconnectDesktopSessionsRequestSessions> sessions;
@@ -54,12 +62,18 @@ public class DisconnectDesktopSessionsRequest extends TeaModel {
     public static class DisconnectDesktopSessionsRequestSessions extends TeaModel {
         /**
          * <p>The cloud desktop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-90g15fkhsxxxn0unj</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The end user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wy01</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;

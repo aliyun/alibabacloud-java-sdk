@@ -12,6 +12,9 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2507CFA8-FEAB-5208-98F5-5E028C50XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DisconnectDesktopSessionsResponseBody extends TeaModel {
     public static class DisconnectDesktopSessionsResponseBodyInvalidSessions extends TeaModel {
         /**
          * <p>The cloud desktop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-2jv6wugbkp65pxxxx</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The end user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wy01</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;

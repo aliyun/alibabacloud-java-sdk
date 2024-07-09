@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
     /**
      * <p>The ID of the automatic snapshot policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-3hpa78d0qyt99****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

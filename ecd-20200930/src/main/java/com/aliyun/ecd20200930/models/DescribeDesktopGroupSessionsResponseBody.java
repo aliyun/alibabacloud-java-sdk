@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D0920845-7359-59FC-9899-B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -24,6 +30,9 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of sessions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,140 +77,196 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
     public static class DescribeDesktopGroupSessionsResponseBodySessions extends TeaModel {
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.21.XX.XX</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The OS that the client runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>windows_\&quot;Windows10Enterprise\&quot;10.0(Build22000)</p>
          */
         @NameInMap("ClientOS")
         public String clientOS;
 
         /**
          * <p>The version of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0-R-20221030.08****</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
         /**
          * <p>The ID of the desktop group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-iaqu3bi2xtie****</p>
          */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
         /**
          * <p>The name of the desktop group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
         /**
          * <p>If the session is being established, the value of this parameter indicates the ID of the current cloud desktop. If the session is disconnected, the value of this parameter indicates the ID of the cloud desktop that was most recently connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-g6t1ukbaea****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The point in time when the end user applies for administrator assistance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1678794261000</p>
          */
         @NameInMap("EndUserApplyCoordinateTime")
         public Long endUserApplyCoordinateTime;
 
         /**
          * <p>The ID of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xianqiu</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
          * <p>The end time of the most recent connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-31 06:56:45</p>
          */
         @NameInMap("LastSessionEndTime")
         public String lastSessionEndTime;
 
         /**
          * <p>The start time of the most recent connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-31 06:56:45</p>
          */
         @NameInMap("LastSessionStartTime")
         public String lastSessionStartTime;
 
         /**
          * <p>The duration of the most recent session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("LatestConnectionTime")
         public Long latestConnectionTime;
 
         /**
          * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-8904****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
          * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
          * <p>The OS. Valid values:</p>
-         * <br>
-         * <p>*   Windows</p>
-         * <p>*   Linux</p>
+         * <ul>
+         * <li>Windows</li>
+         * <li>Linux</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
          * <p>The type of the session.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   0: single-session</p>
-         * <p>*   1: multi-session</p>
+         * <ul>
+         * <li>0: single-session</li>
+         * <li>1: multi-session</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("OwnType")
         public Integer ownType;
 
         /**
          * <p>The type of the protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The duration during which the cloud desktop stays in the Idle state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("SessionIdleTime")
         public Long sessionIdleTime;
 
         /**
          * <p>The state of the session.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Connected</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Disconnected</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Connected</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Disconnected</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Connected</p>
          */
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
         /**
          * <p>The total duration of the sessions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("TotalConnectionDuration")
         public Long totalConnectionDuration;

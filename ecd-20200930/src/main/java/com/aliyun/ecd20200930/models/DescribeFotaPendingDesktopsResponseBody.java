@@ -6,30 +6,42 @@ import com.aliyun.tea.*;
 public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     /**
      * <p>The response code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The cloud computers whose images can be and are pending to be updated to the version specified in `TaskUid`.</p>
+     * <p>The cloud computers whose images can be and are pending to be updated to the version specified in <code>TaskUid</code>.</p>
      */
     @NameInMap("FotaPendingDesktops")
     public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> fotaPendingDesktops;
 
     /**
      * <p>The returned message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -82,6 +94,9 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     public static class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions extends TeaModel {
         /**
          * <p>The ID of the end user that connects to the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>end user id</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -104,30 +119,47 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     public static class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops extends TeaModel {
         /**
          * <p>The current version of the image used by the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.1-D-20220513.143129</p>
          */
         @NameInMap("CurrentAppVersion")
         public String currentAppVersion;
 
         /**
          * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-bvdtu3jn97o1r****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDesktop</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
-         * <p>> This parameter is not publicly available.</p>
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>To be hidden</p>
          */
         @NameInMap("FotaProject")
         public String fotaProject;
 
         /**
          * <p>The ID of the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-815419****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
@@ -140,17 +172,20 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>The status of the cloud computer.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   0: The cloud computer is being created.</p>
-         * <p>*   1: The cloud computer is being started.</p>
-         * <p>*   2: The cloud computer is running.</p>
-         * <p>*   3: The cloud computer is being stopped.</p>
-         * <p>*   5: The cloud computer is stopped.</p>
-         * <p>*   6: The cloud computer expires.</p>
-         * <p>*   7: The cloud computer is deleted.</p>
-         * <p>*   9: Failed to create the cloud computer.</p>
+         * <ul>
+         * <li>0: The cloud computer is being created.</li>
+         * <li>1: The cloud computer is being started.</li>
+         * <li>2: The cloud computer is running.</li>
+         * <li>3: The cloud computer is being stopped.</li>
+         * <li>5: The cloud computer is stopped.</li>
+         * <li>6: The cloud computer expires.</li>
+         * <li>7: The cloud computer is deleted.</li>
+         * <li>9: Failed to create the cloud computer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Long status;

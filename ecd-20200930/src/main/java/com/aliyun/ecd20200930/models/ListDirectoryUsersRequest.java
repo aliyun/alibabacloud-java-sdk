@@ -6,40 +6,58 @@ import com.aliyun.tea.*;
 public class ListDirectoryUsersRequest extends TeaModel {
     /**
      * <p>The ID of the AD directory.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
      */
     @NameInMap("Filter")
     public String filter;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The organizational unit (OU) in the specified AD domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com/Domain Controllers</p>
      */
     @NameInMap("OUPath")
     public String OUPath;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

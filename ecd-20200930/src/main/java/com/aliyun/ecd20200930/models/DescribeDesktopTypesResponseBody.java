@@ -12,6 +12,9 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,54 +43,81 @@ public class DescribeDesktopTypesResponseBody extends TeaModel {
     public static class DescribeDesktopTypesResponseBodyDesktopTypes extends TeaModel {
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("CpuCount")
         public String cpuCount;
 
         /**
          * <p>The size of the data disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
         /**
          * <p>The ID of the cloud desktop type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd.graphics.xlarge</p>
          */
         @NameInMap("DesktopTypeId")
         public String desktopTypeId;
 
         /**
          * <p>The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUFFICIENT</p>
          */
         @NameInMap("DesktopTypeStatus")
         public String desktopTypeStatus;
 
         /**
          * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
         /**
          * <p>The GPU memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16 GiB</p>
          */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
         /**
          * <p>The family of the cloud desktop type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd.graphics</p>
          */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
         /**
          * <p>The memory size. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23552</p>
          */
         @NameInMap("MemorySize")
         public String memorySize;
 
         /**
          * <p>The size of the system disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("SystemDiskSize")
         public String systemDiskSize;

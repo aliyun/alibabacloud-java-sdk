@@ -9,6 +9,9 @@ public class CreateCdsFileResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2BAFE05D-FFB9-5938-96D0-08017DB9****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

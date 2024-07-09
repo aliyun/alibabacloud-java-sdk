@@ -12,12 +12,18 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
 
     /**
      * <p>The token that is used to start the next query. If this parameter is empty, all results haven been returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7F6612E-59CC-59F9-9DD1-91867FCC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,75 +59,99 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
 
     public static class DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies extends TeaModel {
         /**
-         * <p>The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-mm-ddthh:mm:ssz` format. The time is displayed in UTC.</p>
+         * <p>The time when the automatic snapshot policy was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-11T09:14:00Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The cron expression that specifies when WUYING Workspace creates snapshots on the cloud computers.</p>
+         * <p>The cron expression that specifies when Elastic Desktop Service creates snapshots on the cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 0 5,7 ? * 2/2</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;
 
         /**
          * <p>The number of cloud computers to which the automatic snapshot policy is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         @NameInMap("DesktopNum")
         public Integer desktopNum;
 
         /**
          * <p>The ID of the automatic snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-3e3bmfcdkjfl1****</p>
          */
         @NameInMap("PolicyId")
         public String policyId;
 
         /**
          * <p>The name of the automatic snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot01</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The ID of the region to which the automatic snapshot policy belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("RetentionDays")
         public String retentionDays;
 
         /**
          * <p>The status of the automatic snapshot policy.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Expire: The automatic snapshot policy cannot be used because you have overdue payments in your account.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Normal: The automatic snapshot policy is normal.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Expire: The automatic snapshot policy cannot be used because you have overdue payments in your account.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Normal: The automatic snapshot policy is normal.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The points in time at which the auto snapshots were created.</p>
-         * <br>
-         * <p>The parameter values are a JSON array. Example: `["0", "1", ... "23"]`. A maximum of 24 points in time are returned. The points in time are separated with commas (,).</p>
+         * <p>The parameter values are a JSON array. Example: <code>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</code>. A maximum of 24 points in time are returned. The points in time are separated with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;17&quot;,&quot;18&quot;]</p>
          */
         @NameInMap("TimePoints")
         public String timePoints;

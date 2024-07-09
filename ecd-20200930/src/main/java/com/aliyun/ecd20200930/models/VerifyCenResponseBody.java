@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class VerifyCenResponseBody extends TeaModel {
     /**
-     * <p>The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when the `Status` value is `Conflict`.</p>
+     * <p>The recommended IPv4 CIDR blocks. Three CIDR blocks are randomly recommended. This parameter is returned when the <code>Status</code> value is <code>Conflict</code>.</p>
      */
     @NameInMap("CidrBlocks")
     public java.util.List<String> cidrBlocks;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0AF9D857-AE96-53D6-B317-5DD665EC4EC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -24,15 +27,18 @@ public class VerifyCenResponseBody extends TeaModel {
 
     /**
      * <p>The check result of CIDR block conflict.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   InvalidCen.CenUidInvalid: The Alibaba Cloud account is invalid or the Alibaba Cloud account does not have the permission to access WUYING Workspace.</p>
-     * <p>*   VerifyCode.InvalidTokenCode: The verification code is invalid.</p>
-     * <p>*   VerifyCode.ReachTokenRetryTime: The maximum number of times for entering a verification code reaches the limit.</p>
-     * <p>*   Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.</p>
-     * <p>*   Access: The verification is passed. If the verification result for all routes is Access, Access is returned for this parameter.</p>
-     * <p>*   InvalidCen.ParameterCenInstanceId: The Alibaba Cloud account does not own the CEN instance.</p>
+     * <ul>
+     * <li>InvalidCen.CenUidInvalid: The Alibaba Cloud account is invalid or the Alibaba Cloud account does not have the permission to access Elastic Desktop Service.</li>
+     * <li>VerifyCode.InvalidTokenCode: The verification code is invalid.</li>
+     * <li>VerifyCode.ReachTokenRetryTime: The maximum number of times for entering a verification code reaches the limit.</li>
+     * <li>Conflict: A CIDR block conflict exists. If the verification result of at least one route is Conflict, Conflict is returned for this parameter.</li>
+     * <li>Access: The verification is passed. If the verification result for all routes is Access, Access is returned for this parameter.</li>
+     * <li>InvalidCen.ParameterCenInstanceId: The Alibaba Cloud account does not own the CEN instance.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Access</p>
      */
     @NameInMap("Status")
     public String status;
@@ -77,29 +83,41 @@ public class VerifyCenResponseBody extends TeaModel {
     public static class VerifyCenResponseBodyRouteEntries extends TeaModel {
         /**
          * <p>The CIDR block of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.111.3****</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
          * <p>The ID of the instance corresponding to the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-uf62bu0xs5j8md54p****</p>
          */
         @NameInMap("NextHopInstanceId")
         public String nextHopInstanceId;
 
         /**
          * <p>The region ID of the route.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The verification result of the route.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Conflict: A CIDR block conflict exists.</p>
-         * <p>*   Access: The verification is passed.</p>
+         * <ul>
+         * <li>Conflict: A CIDR block conflict exists.</li>
+         * <li>Access: The verification is passed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Access</p>
          */
         @NameInMap("Status")
         public String status;

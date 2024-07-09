@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class DeleteCdsFileRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-066224****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The ID of the end user who uses the cloud disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user01</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
      * <p>The ID of the file. The ID is a unique identifier for the file.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6333e553a133ce21e6f747cf948bb9ef95d7****</p>
      */
     @NameInMap("FileId")
     public String fileId;
@@ -29,7 +40,11 @@ public class DeleteCdsFileRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

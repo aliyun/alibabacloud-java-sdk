@@ -4,9 +4,18 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class WakeupDesktopsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

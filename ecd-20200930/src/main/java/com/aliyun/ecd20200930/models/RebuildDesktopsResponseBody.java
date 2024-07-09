@@ -12,6 +12,9 @@ public class RebuildDesktopsResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +42,28 @@ public class RebuildDesktopsResponseBody extends TeaModel {
 
     public static class RebuildDesktopsResponseBodyRebuildResults extends TeaModel {
         /**
-         * <p>The recreation result code. If the request was successful, `success` is returned. If the request failed, an error message is returned.</p>
+         * <p>The recreation result code. If the request was successful, <code>success</code> is returned. If the request failed, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IncorrectDesktopStatus</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The IDs of the cloud computers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The error message. This parameter is invalid if the value of `Code` is `success`.</p>
+         * <p>The error message. This parameter is invalid if the value of <code>Code</code> is <code>success</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The current status of the desktop does not support this operation.</p>
          */
         @NameInMap("Message")
         public String message;

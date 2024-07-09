@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class MoveCdsFileResponseBody extends TeaModel {
     /**
      * <p>The result of the modification. A value of success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
      * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -24,30 +30,34 @@ public class MoveCdsFileResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the request is successful.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><!-- -->
+     * 
+     * <p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><!-- -->
+     * 
+     * <p>false</p>
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -100,36 +110,43 @@ public class MoveCdsFileResponseBody extends TeaModel {
     public static class MoveCdsFileResponseBodyMoveCdsFileModel extends TeaModel {
         /**
          * <p>The ID of the asynchronous task. This parameter is not returned if you copy files. This parameter is returned if you copy folders in the backend in an asynchronous manner. You can call the GetAsyncTask operation to obtain the ID and details of an asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fe307518-825a-4c8b-a69c-958f0e8a****</p>
          */
         @NameInMap("AsyncTaskId")
         public String asyncTaskId;
 
         /**
          * <p>Indicates whether the file exists.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    true</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   <!-- --></p>
-         * <br>
-         * <p>    false</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><!-- -->
+         * 
+         * <p>true</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><!-- -->
+         * 
+         * <p>false</p>
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Exist")
         public Boolean exist;
 
         /**
          * <p>The ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63636837e47e5a24a8a940218bef395c210e****</p>
          */
         @NameInMap("FileId")
         public String fileId;

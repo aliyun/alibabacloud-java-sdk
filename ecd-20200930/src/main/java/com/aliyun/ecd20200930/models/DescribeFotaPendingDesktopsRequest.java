@@ -6,45 +6,68 @@ import com.aliyun.tea.*;
 public class DescribeFotaPendingDesktopsRequest extends TeaModel {
     /**
      * <p>The ID of the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-gx2x1dhsmucyy****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
      * <p>The name of the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testName</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 100.</p>
-     * <p>*   Default value: 20.</p>
+     * <ul>
+     * <li>Valid values: 1 to 100.</li>
+     * <li>Default value: 20.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the office network. You can call the [DescribeOfficeSites](~~216071~~) operation to obtain the value of this parameter.</p>
+     * <p>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain the value of this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-363353****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the image update task. You can call the [DescribeFotaTasks](~~437001~~) operation to obtain the value of this parameter.</p>
+     * <p>The ID of the image update task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain the value of this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aot-c4khwrp9ocml4****</p>
      */
     @NameInMap("TaskUid")
     public String taskUid;

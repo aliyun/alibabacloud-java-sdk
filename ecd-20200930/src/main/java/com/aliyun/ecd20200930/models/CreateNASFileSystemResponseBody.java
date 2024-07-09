@@ -4,18 +4,38 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateNASFileSystemResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>04f314****</p>
+     */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testNAS</p>
+     */
     @NameInMap("FileSystemName")
     public String fileSystemName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>04f314****-at***.cn-hangzhou.nas.aliyuncs.com</p>
+     */
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-363353****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

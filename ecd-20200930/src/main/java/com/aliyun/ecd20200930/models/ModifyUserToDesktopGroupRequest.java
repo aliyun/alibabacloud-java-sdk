@@ -6,24 +6,34 @@ import com.aliyun.tea.*;
 public class ModifyUserToDesktopGroupRequest extends TeaModel {
     /**
      * <p>The ID of the cloud computer pool whose end users you want to change.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dg-2i8qxpv6t1a03****</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
      * <p>The IDs of the end users that you want to add. You can configure 1 to 500 IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("NewEndUserIds")
     public java.util.List<String> newEndUserIds;
 
     /**
      * <p>The IDs of the end users that you want to remove. You can configure 1 to 500 IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("OldEndUserIds")
     public java.util.List<String> oldEndUserIds;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

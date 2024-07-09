@@ -12,12 +12,18 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
 
     /**
      * <p>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,36 +60,43 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
     public static class DescribeNetworkPackagesResponseBodyNetworkPackages extends TeaModel {
         /**
          * <p>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The business status.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Expired</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Normal</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Expired</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Normal</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
          * <p>The time when the premium bandwidth plan was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-10T02:35:26Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -96,129 +109,164 @@ public class DescribeNetworkPackagesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the premium bandwidth plan expires.</p>
-         * <br>
-         * <p>*   If the plan is a subscription one, the time when the plan expires is returned.</p>
-         * <p>*   If the plan is a pay-as-you-go one, `2099-12-31T15:59:59Z` is returned.</p>
+         * <ul>
+         * <li>If the plan is a subscription one, the time when the plan expires is returned.</li>
+         * <li>If the plan is a pay-as-you-go one, <code>2099-12-31T15:59:59Z</code> is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2099-12-31T15:59:59Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
          * <p>The charge type of the premium bandwidth plan.</p>
-         * <br>
-         * <p>*   Valid value when the `PayType` parameter is set to `PrePaid`:</p>
-         * <br>
-         * <p>    *   PayByBandwidth: charges by fixed bandwidth.</p>
-         * <br>
-         * <p>*   Valid values when the `PayType` parameter is set to `PostPaid`:</p>
-         * <br>
-         * <p>    *   PayByTraffic: charges by data transfer.</p>
-         * <p>    *   PayByBandwidth: charges by fixed bandwidth.</p>
+         * <ul>
+         * <li><p>Valid value when the <code>PayType</code> parameter is set to <code>PrePaid</code>:</p>
+         * <ul>
+         * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+         * </ul>
+         * </li>
+         * <li><p>Valid values when the <code>PayType</code> parameter is set to <code>PostPaid</code>:</p>
+         * <ul>
+         * <li>PayByTraffic: charges by data transfer.</li>
+         * <li>PayByBandwidth: charges by fixed bandwidth.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
          * <p>The ID of the premium bandwidth plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>np-amtp8e8q1o9e4****</p>
          */
         @NameInMap("NetworkPackageId")
         public String networkPackageId;
 
         /**
          * <p>The status of the premium bandwidth plan.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Creating</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Released</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   InUse</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Releasing</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Creating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Released</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>InUse</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Releasing</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InUse</p>
          */
         @NameInMap("NetworkPackageStatus")
         public String networkPackageStatus;
 
         /**
          * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
          * <p>The office network name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
          * <p>The type of the office network.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   standard: advanced office network</p>
-         * <p>*   customized: custom office network</p>
-         * <p>*   basic: basic office network</p>
+         * <ul>
+         * <li>standard: advanced office network</li>
+         * <li>customized: custom office network</li>
+         * <li>basic: basic office network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         @NameInMap("OfficeSiteVpcType")
         public String officeSiteVpcType;
 
         /**
          * <p>The billing method of the premium bandwidth plan.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   PostPaid: pay-as-you-go</p>
-         * <p>*   PrePaid: subscription</p>
+         * <ul>
+         * <li>PostPaid: pay-as-you-go</li>
+         * <li>PrePaid: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("PayType")
         public String payType;
 
         /**
          * <p>The time when the reserved network bandwidth took effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-10T00:00:00Z</p>
          */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
 
         /**
          * <p>The peak bandwidth that is reserved for the premium bandwidth plan. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("ReservationBandwidth")
         public Integer reservationBandwidth;
 
         /**
          * <p>The billing method of the reserved network bandwidth.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   PayByTraffic: charges by data transfer.</p>
-         * <br>
-         * <p>*   PayByBandwidth: charges by fixed bandwidth.</p>
+         * <ul>
+         * <li><p>PayByTraffic: charges by data transfer.</p>
+         * </li>
+         * <li><p>PayByBandwidth: charges by fixed bandwidth.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByBandwidth</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;

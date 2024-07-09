@@ -6,40 +6,59 @@ import com.aliyun.tea.*;
 public class DescribeCloudDriveGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai+cds-135515****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The workspace name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testDirectoryName</p>
      */
     @NameInMap("DirectoryName")
     public String directoryName;
 
     /**
      * <p>The team space status. Valid values:</p>
-     * <br>
-     * <p>*   enabled</p>
-     * <p>*   disabled</p>
-     * <br>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
      * <p>Default value: enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("DriveStatus")
     public String driveStatus;
 
     /**
      * <p>Specifies whether the space is increased.</p>
-     * <br>
-     * <p>*   binding: increased</p>
-     * <p>*   unbound: not increased</p>
-     * <br>
+     * <ul>
+     * <li>binding: increased</li>
+     * <li>unbound: not increased</li>
+     * </ul>
      * <p>Default value: null. The default value indicates that all spaces are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>binding</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("DriveType")
     public String driveType;
@@ -52,46 +71,65 @@ public class DescribeCloudDriveGroupsRequest extends TeaModel {
 
     /**
      * <p>The team name for fuzzy search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test Team 1</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
      * <p>The team type.</p>
-     * <br>
-     * <p>*   org: organizational structure</p>
-     * <p>*   directory: workspace</p>
-     * <br>
+     * <ul>
+     * <li>org: organizational structure</li>
+     * <li>directory: workspace</li>
+     * </ul>
      * <p>Default value: null. The default value indicates that all types of teams are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>org</p>
      */
     @NameInMap("GroupType")
     public String groupType;
 
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 100</p>
-     * <p>*   Default value: 20</p>
+     * <ul>
+     * <li>Valid values: 1 to 100</li>
+     * <li>Default value: 20</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6lY3I2VNHLwy+nIoSXh****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.</p>
-     * <br>
      * <p>Default value: null. The default value indicates that all nodes are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cg-e70ga4ixp30ur****</p>
      */
     @NameInMap("ParentGroupId")
     public String parentGroupId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

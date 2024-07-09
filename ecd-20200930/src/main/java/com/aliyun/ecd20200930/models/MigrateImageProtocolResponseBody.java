@@ -12,6 +12,9 @@ public class MigrateImageProtocolResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4D4E5AF5-DF28-5FE7-85C7-9F98315B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
