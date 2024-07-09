@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加用户
-     *
+     * <b>summary</b> : 
+     * <p>Adds a RAM user or RAM role to a workspace as a member.</p>
+     * 
      * @param request AddMembersRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -70,8 +71,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 添加用户
-     *
+     * <b>summary</b> : 
+     * <p>Adds a RAM user or RAM role to a workspace as a member.</p>
+     * 
      * @param request AddMembersRequest
      * @return AddMembersResponse
      */
@@ -82,8 +84,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消jobRun作业
-     *
+     * <b>summary</b> : 
+     * <p>Terminates a Spark job.</p>
+     * 
      * @param request CancelJobRunRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -115,8 +118,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 取消jobRun作业
-     *
+     * <b>summary</b> : 
+     * <p>Terminates a Spark job.</p>
+     * 
      * @param request CancelJobRunRequest
      * @return CancelJobRunResponse
      */
@@ -127,8 +131,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 使用session运行SQL
-     *
+     * <b>summary</b> : 
+     * <p>使用session运行SQL</p>
+     * 
      * @param request CreateSqlStatementRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -182,8 +187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 使用session运行SQL
-     *
+     * <b>summary</b> : 
+     * <p>使用session运行SQL</p>
+     * 
      * @param request CreateSqlStatementRequest
      * @return CreateSqlStatementResponse
      */
@@ -194,8 +200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务
-     *
+     * <b>summary</b> : 
+     * <p>Obtain the job details.</p>
+     * 
      * @param request GetJobRunRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -227,8 +234,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取任务
-     *
+     * <b>summary</b> : 
+     * <p>Obtain the job details.</p>
+     * 
      * @param request GetJobRunRequest
      * @return GetJobRunResponse
      */
@@ -239,8 +247,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取Sql Statement状态
-     *
+     * <b>summary</b> : 
+     * <p>获取Sql Statement状态</p>
+     * 
      * @param request GetSqlStatementRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -272,8 +281,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取Sql Statement状态
-     *
+     * <b>summary</b> : 
+     * <p>获取Sql Statement状态</p>
+     * 
      * @param request GetSqlStatementRequest
      * @return GetSqlStatementResponse
      */
@@ -284,8 +294,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 给用户授权Role列表
-     *
+     * <b>summary</b> : 
+     * <p>Assigns a specified role to users.</p>
+     * 
      * @param request GrantRoleToUsersRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -327,8 +338,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 给用户授权Role列表
-     *
+     * <b>summary</b> : 
+     * <p>Assigns a specified role to users.</p>
+     * 
      * @param request GrantRoleToUsersRequest
      * @return GrantRoleToUsersResponse
      */
@@ -339,8 +351,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询run列表
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of Spark jobs.</p>
+     * 
      * @param tmpReq ListJobRunsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -434,8 +447,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询run列表
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of Spark jobs.</p>
+     * 
      * @param request ListJobRunsRequest
      * @return ListJobRunsResponse
      */
@@ -446,8 +460,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取发布版本列表
-     *
+     * <b>summary</b> : 
+     * <p>获取发布版本列表</p>
+     * 
      * @param request ListReleaseVersionsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -491,8 +506,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 获取发布版本列表
-     *
+     * <b>summary</b> : 
+     * <p>获取发布版本列表</p>
+     * 
      * @param request ListReleaseVersionsRequest
      * @return ListReleaseVersionsResponse
      */
@@ -503,8 +519,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询run列表
-     *
+     * <b>summary</b> : 
+     * <p>查询run列表</p>
+     * 
      * @param request ListSessionClustersRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -513,6 +530,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSessionClustersResponse listSessionClustersWithOptions(String workspaceId, ListSessionClustersRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.kind)) {
+            query.put("kind", request.kind);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
         }
@@ -552,8 +573,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询run列表
-     *
+     * <b>summary</b> : 
+     * <p>查询run列表</p>
+     * 
      * @param request ListSessionClustersRequest
      * @return ListSessionClustersResponse
      */
@@ -564,8 +586,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看工作空间队列列表
-     *
+     * <b>summary</b> : 
+     * <p>查看工作空间队列列表</p>
+     * 
      * @param request ListWorkspaceQueuesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -601,8 +624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看工作空间队列列表
-     *
+     * <b>summary</b> : 
+     * <p>查看工作空间队列列表</p>
+     * 
      * @param request ListWorkspaceQueuesRequest
      * @return ListWorkspaceQueuesResponse
      */
@@ -613,8 +637,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看工作空间列表
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of workspaces.</p>
+     * 
      * @param request ListWorkspacesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -662,8 +687,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看工作空间列表
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of workspaces.</p>
+     * 
      * @param request ListWorkspacesRequest
      * @return ListWorkspacesResponse
      */
@@ -674,8 +700,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动作业
-     *
+     * <b>summary</b> : 
+     * <p>Starts a Spark job.</p>
+     * 
      * @param request StartJobRunRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -749,8 +776,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 启动作业
-     *
+     * <b>summary</b> : 
+     * <p>Starts a Spark job.</p>
+     * 
      * @param request StartJobRunRequest
      * @return StartJobRunResponse
      */
@@ -761,8 +789,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 终止 session statement
-     *
+     * <b>summary</b> : 
+     * <p>终止 session statement</p>
+     * 
      * @param request TerminateSqlStatementRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -794,8 +823,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 终止 session statement
-     *
+     * <b>summary</b> : 
+     * <p>终止 session statement</p>
+     * 
      * @param request TerminateSqlStatementRequest
      * @return TerminateSqlStatementResponse
      */

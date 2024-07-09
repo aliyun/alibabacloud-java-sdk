@@ -11,11 +11,21 @@ public class AddMembersRequest extends TeaModel {
     public java.util.List<String> memberArns;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>w-975bcfda9625****</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 

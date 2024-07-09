@@ -4,36 +4,98 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class StartJobRunRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8e6aae2810c8f67229ca70bb31cd6028</p>
+     */
     @NameInMap("clientToken")
     public String clientToken;
 
+    /**
+     * <p>The code type of the job. Valid values:</p>
+     * <ul>
+     * <li>SQL</li>
+     * <li>JAR</li>
+     * <li>PYTHON</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>SQL</p>
+     */
     @NameInMap("codeType")
     public String codeType;
 
+    /**
+     * <p>The advanced configurations of Spark.</p>
+     */
     @NameInMap("configurationOverrides")
     public StartJobRunRequestConfigurationOverrides configurationOverrides;
 
+    /**
+     * <p>The timeout period of the job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("executionTimeoutSeconds")
     public Integer executionTimeoutSeconds;
 
+    /**
+     * <p>The information about Spark Driver.</p>
+     */
     @NameInMap("jobDriver")
     public JobDriver jobDriver;
 
+    /**
+     * <p>The job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jr-12345</p>
+     */
     @NameInMap("jobId")
     public String jobId;
 
+    /**
+     * <p>The job name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>spark_job_name</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The version number of Spark.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esr-3.3.1</p>
+     */
     @NameInMap("releaseVersion")
     public String releaseVersion;
 
+    /**
+     * <p>The name of the resource queue on which the Spark job runs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev_queue</p>
+     */
     @NameInMap("resourceQueueId")
     public String resourceQueueId;
 
+    /**
+     * <p>The tags of the job.</p>
+     */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
@@ -131,12 +193,30 @@ public class StartJobRunRequest extends TeaModel {
     }
 
     public static class StartJobRunRequestConfigurationOverridesConfigurations extends TeaModel {
+        /**
+         * <p>The configuration file of SparkConf.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark-default.conf</p>
+         */
         @NameInMap("configFileName")
         public String configFileName;
 
+        /**
+         * <p>The key of SparkConf.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark.app.name</p>
+         */
         @NameInMap("configItemKey")
         public String configItemKey;
 
+        /**
+         * <p>The value of SparkConf.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_app</p>
+         */
         @NameInMap("configItemValue")
         public String configItemValue;
 
@@ -172,6 +252,9 @@ public class StartJobRunRequest extends TeaModel {
     }
 
     public static class StartJobRunRequestConfigurationOverrides extends TeaModel {
+        /**
+         * <p>The SparkConf objects.</p>
+         */
         @NameInMap("configurations")
         public java.util.List<StartJobRunRequestConfigurationOverridesConfigurations> configurations;
 

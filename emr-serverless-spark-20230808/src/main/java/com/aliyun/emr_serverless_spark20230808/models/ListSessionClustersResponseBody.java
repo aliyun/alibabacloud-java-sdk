@@ -5,28 +5,43 @@ import com.aliyun.tea.*;
 
 public class ListSessionClustersResponseBody extends TeaModel {
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The SQL Computes.</p>
+     */
     @NameInMap("sessionClusters")
     public java.util.List<ListSessionClustersResponseBodySessionClusters> sessionClusters;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("totalCount")
     public Integer totalCount;
@@ -77,12 +92,30 @@ public class ListSessionClustersResponseBody extends TeaModel {
     }
 
     public static class ListSessionClustersResponseBodySessionClustersApplicationConfigs extends TeaModel {
+        /**
+         * <p>The name of the configuration file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark-default.conf</p>
+         */
         @NameInMap("configFileName")
         public String configFileName;
 
+        /**
+         * <p>The key of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spark.app.name</p>
+         */
         @NameInMap("configItemKey")
         public String configItemKey;
 
+        /**
+         * <p>The value of the configuration item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_application</p>
+         */
         @NameInMap("configItemValue")
         public String configItemValue;
 
@@ -118,6 +151,12 @@ public class ListSessionClustersResponseBody extends TeaModel {
     }
 
     public static class ListSessionClustersResponseBodySessionClustersAutoStartConfiguration extends TeaModel {
+        /**
+         * <p>Indicates whether automatic startup is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
@@ -137,9 +176,21 @@ public class ListSessionClustersResponseBody extends TeaModel {
     }
 
     public static class ListSessionClustersResponseBodySessionClustersAutoStopConfiguration extends TeaModel {
+        /**
+         * <p>Indicates whether automatic termination is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The idle timeout period. The SQL Compute is automatically terminated if the idle timeout period is exceeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45</p>
+         */
         @NameInMap("idleTimeoutMinutes")
         public Integer idleTimeoutMinutes;
 
@@ -167,9 +218,21 @@ public class ListSessionClustersResponseBody extends TeaModel {
     }
 
     public static class ListSessionClustersResponseBodySessionClustersStateChangeReason extends TeaModel {
+        /**
+         * <p>The status change code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The status change message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -197,50 +260,104 @@ public class ListSessionClustersResponseBody extends TeaModel {
     }
 
     public static class ListSessionClustersResponseBodySessionClusters extends TeaModel {
+        /**
+         * <p>The SQL Compute configurations, which are equivalent to the configurations of the Spark job.</p>
+         */
         @NameInMap("applicationConfigs")
         public java.util.List<ListSessionClustersResponseBodySessionClustersApplicationConfigs> applicationConfigs;
 
+        /**
+         * <p>The automatic startup configurations.</p>
+         */
         @NameInMap("autoStartConfiguration")
         public ListSessionClustersResponseBodySessionClustersAutoStartConfiguration autoStartConfiguration;
 
+        /**
+         * <p>The automatic termination configurations.</p>
+         */
         @NameInMap("autoStopConfiguration")
         public ListSessionClustersResponseBodySessionClustersAutoStopConfiguration autoStopConfiguration;
 
+        @NameInMap("domain")
+        public String domain;
+
+        @NameInMap("draftId")
+        public String draftId;
+
+        @NameInMap("kind")
+        public String kind;
+
+        /**
+         * <p>The name of the SQL Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adhoc_query</p>
+         */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>作业实例名称。</p>
+         * <p>The name of the queue on which the SQL Compute runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev_queue</p>
          */
         @NameInMap("queueName")
         public String queueName;
 
+        @NameInMap("releaseVersion")
+        public String releaseVersion;
+
         /**
-         * <p>SQL Compute id</p>
+         * <p>The SQL Compute ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sc-123131</p>
          */
         @NameInMap("sessionClusterId")
         public String sessionClusterId;
 
         /**
-         * <p>作业状态。</p>
+         * <p>The status of the SQL Compute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The details of the last status change of the SQL Compute.</p>
+         */
         @NameInMap("stateChangeReason")
         public ListSessionClustersResponseBodySessionClustersStateChangeReason stateChangeReason;
 
         /**
-         * <p>任务实例ID。</p>
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123131</p>
          */
         @NameInMap("userId")
         public String userId;
 
+        /**
+         * <p>The name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_user</p>
+         */
         @NameInMap("userName")
         public String userName;
 
+        @NameInMap("webUI")
+        public String webUI;
+
         /**
-         * <p>工作空间id。</p>
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>w-1234abcd</p>
          */
         @NameInMap("workspaceId")
         public String workspaceId;
@@ -274,6 +391,30 @@ public class ListSessionClustersResponseBody extends TeaModel {
             return this.autoStopConfiguration;
         }
 
+        public ListSessionClustersResponseBodySessionClusters setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setDraftId(String draftId) {
+            this.draftId = draftId;
+            return this;
+        }
+        public String getDraftId() {
+            return this.draftId;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setKind(String kind) {
+            this.kind = kind;
+            return this;
+        }
+        public String getKind() {
+            return this.kind;
+        }
+
         public ListSessionClustersResponseBodySessionClusters setName(String name) {
             this.name = name;
             return this;
@@ -288,6 +429,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
         public String getQueueName() {
             return this.queueName;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setReleaseVersion(String releaseVersion) {
+            this.releaseVersion = releaseVersion;
+            return this;
+        }
+        public String getReleaseVersion() {
+            return this.releaseVersion;
         }
 
         public ListSessionClustersResponseBodySessionClusters setSessionClusterId(String sessionClusterId) {
@@ -328,6 +477,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
         public String getUserName() {
             return this.userName;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setWebUI(String webUI) {
+            this.webUI = webUI;
+            return this;
+        }
+        public String getWebUI() {
+            return this.webUI;
         }
 
         public ListSessionClustersResponseBodySessionClusters setWorkspaceId(String workspaceId) {

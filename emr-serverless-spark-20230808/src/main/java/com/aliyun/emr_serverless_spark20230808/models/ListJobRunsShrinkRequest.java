@@ -5,11 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListJobRunsShrinkRequest extends TeaModel {
     /**
-     * <p>创建用户Uid。</p>
+     * <p>The ID of the user who creates a Spark job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1509789347011222</p>
      */
     @NameInMap("creator")
     public String creator;
 
+    /**
+     * <p>The range of end time.</p>
+     */
     @NameInMap("endTime")
     public String endTimeShrink;
 
@@ -17,46 +23,76 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public String jobRunDeploymentId;
 
     /**
-     * <p>作业id。</p>
+     * <p>The job ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>j-xxx</p>
      */
     @NameInMap("jobRunId")
     public String jobRunId;
 
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of entries to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>作业名称。</p>
+     * <p>The job name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>emr-spark-demo-job</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>The name of the resource queue on which the Spark jobs run.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev_queue</p>
+     */
     @NameInMap("resourceQueueId")
     public String resourceQueueId;
 
+    /**
+     * <p>The range of start time.</p>
+     */
     @NameInMap("startTime")
     public String startTimeShrink;
 
     /**
-     * <p>作业状态。</p>
+     * <p>The job states.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;Running&quot;,&quot;Submitted&quot;]</p>
      */
     @NameInMap("states")
     public String statesShrink;
 
     /**
-     * <p>标签。</p>
+     * <p>The tags of the job.</p>
      */
     @NameInMap("tags")
     public String tagsShrink;

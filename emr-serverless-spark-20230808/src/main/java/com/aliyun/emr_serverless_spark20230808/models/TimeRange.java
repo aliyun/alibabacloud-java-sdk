@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class TimeRange extends TeaModel {
     /**
      * <p>时间范围结束时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1688370894339</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
     /**
      * <p>时间范围开始时间。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1688370894339</p>
      */
     @NameInMap("startTime")
     public Long startTime;

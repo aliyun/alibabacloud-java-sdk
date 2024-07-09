@@ -97,6 +97,10 @@ public class Task extends TeaModel {
     @NameInMap("pyFiles")
     public java.util.List<String> pyFiles;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("sparkArgs")
     public String sparkArgs;
 

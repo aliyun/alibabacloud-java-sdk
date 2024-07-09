@@ -5,23 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
-     * <p>一次获取的最大记录数。</p>
+     * <p>The maximum number of entries to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Fuzzy match is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_workspace</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>The workspace status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>running</p>
+     */
     @NameInMap("state")
     public String state;
 

@@ -4,9 +4,26 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListWorkspaceQueuesRequest extends TeaModel {
+    /**
+     * <p>The environment type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>dev</li>
+     * <li>production</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>production</p>
+     */
     @NameInMap("environment")
     public String environment;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
