@@ -6,71 +6,93 @@ import com.aliyun.tea.*;
 public class DescribeDesktopGroupSessionsRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;2022-08-31T06:56:45Z&quot;</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the end user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xianqiu</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;asdfdfsdfsdfds&quot;</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The type of the session.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   0: single-session</p>
-     * <p>*   1: multi-session</p>
+     * <ul>
+     * <li>0: single-session</li>
+     * <li>1: multi-session</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("OwnType")
     public Integer ownType;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of the session.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Connected</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Disconnected</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>Connected</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Disconnected</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Connected</p>
      */
     @NameInMap("SessionStatus")
     public String sessionStatus;
 
     /**
      * <p>The beginning of the time range to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;2022-08-31T06:56:45Z&quot;</p>
      */
     @NameInMap("StartTime")
     public String startTime;

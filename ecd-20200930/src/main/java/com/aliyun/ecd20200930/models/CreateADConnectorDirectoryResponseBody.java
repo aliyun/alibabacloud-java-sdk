@@ -12,18 +12,27 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the AD directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-gx2x1dhsmu52rd****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3FE99D5E-93A1-493F-B1CB-0ABD4D05BEFF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The AD trust password.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>82Tg****</p>
      */
     @NameInMap("TrustPassword")
     public String trustPassword;
@@ -68,6 +77,9 @@ public class CreateADConnectorDirectoryResponseBody extends TeaModel {
     public static class CreateADConnectorDirectoryResponseBodyAdConnectors extends TeaModel {
         /**
          * <p>The connection address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.**.**</p>
          */
         @NameInMap("Address")
         public String address;

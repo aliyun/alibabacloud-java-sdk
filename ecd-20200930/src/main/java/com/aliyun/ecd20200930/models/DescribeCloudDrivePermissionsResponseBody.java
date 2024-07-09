@@ -7,6 +7,10 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
     @NameInMap("CloudDrivePermissionModels")
     public java.util.List<DescribeCloudDrivePermissionsResponseBodyCloudDrivePermissionModels> cloudDrivePermissionModels;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A87DBB05-653A-5E4B-B72B-5F4A1E07E5B3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,6 +39,10 @@ public class DescribeCloudDrivePermissionsResponseBody extends TeaModel {
         @NameInMap("EndUsers")
         public java.util.List<String> endUsers;
 
+        /**
+         * <strong>example:</strong>
+         * <p>CDS_DOWNLOAD</p>
+         */
         @NameInMap("Permission")
         public String permission;
 

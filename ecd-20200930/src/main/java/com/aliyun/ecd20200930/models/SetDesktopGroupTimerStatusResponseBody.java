@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class SetDesktopGroupTimerStatusResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AC7912E7-8BDF-547F-BCAC****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

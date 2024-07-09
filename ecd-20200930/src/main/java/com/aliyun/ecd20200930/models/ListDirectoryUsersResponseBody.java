@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class ListDirectoryUsersResponseBody extends TeaModel {
     /**
      * <p>The token used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +60,18 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     public static class ListDirectoryUsersResponseBodyUsers extends TeaModel {
         /**
          * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("EndUser")
         public String endUser;

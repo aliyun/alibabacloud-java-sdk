@@ -6,33 +6,50 @@ import com.aliyun.tea.*;
 public class DescribeAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Maximum value: 100</p>
-     * <p>*   Default value: 20</p>
+     * <ul>
+     * <li>Maximum value: 100</li>
+     * <li>Default value: 20</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6mqIGdPhID94rjhZFGsvpJo</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the automatic snapshot policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-c5tv9d64ebjnj****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
      * <p>The name of the automatic snapshot policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test 1201</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

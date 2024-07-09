@@ -7,9 +7,17 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
     @NameInMap("CloudDriveUsers")
     public java.util.List<DescribeCloudDriveUsersResponseBodyCloudDriveUsers> cloudDriveUsers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F083AAE5-7AA9-53BB-9060-AFFB2C18****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +51,48 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudDriveUsersResponseBodyCloudDriveUsers extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("DriveId")
         public String driveId;
 
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10240000</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20490</p>
+         */
         @NameInMap("UsedSize")
         public Long usedSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeKmsKeysResponseBody extends TeaModel {
     /**
      * <p>The authorization status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>authorized</p>
      */
     @NameInMap("AuthorizeStatus")
     public String authorizeStatus;
@@ -18,12 +21,18 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether KMS is activated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("KmsServiceStatus")
     public String kmsServiceStatus;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,24 +77,36 @@ public class DescribeKmsKeysResponseBody extends TeaModel {
     public static class DescribeKmsKeysResponseBodyKeys extends TeaModel {
         /**
          * <p>The alias of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestAlias</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the key in KMS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-hangzhou:154035569884****:key/05754286-3ba2-4fa6-8d41-4323aca6****</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
          * <p>The ID of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05754286-3ba2-4fa6-8d41-4323aca6****</p>
          */
         @NameInMap("KeyId")
         public String keyId;
 
         /**
          * <p>The type of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceKey</p>
          */
         @NameInMap("Type")
         public String type;

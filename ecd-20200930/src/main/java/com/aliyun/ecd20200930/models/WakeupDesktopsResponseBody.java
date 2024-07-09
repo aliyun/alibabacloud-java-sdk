@@ -4,6 +4,10 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class WakeupDesktopsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>6557DBA9-CF3E-5C1B-B1F1-68FDA599****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

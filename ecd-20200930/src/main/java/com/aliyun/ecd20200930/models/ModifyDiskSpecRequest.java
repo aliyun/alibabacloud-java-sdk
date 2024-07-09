@@ -6,51 +6,73 @@ import com.aliyun.tea.*;
 public class ModifyDiskSpecRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically complete the payment. Valid values:</p>
-     * <br>
-     * <p>*   `true`: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.</p>
-     * <p>*   `false`: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the **Orders** page.</p>
-     * <br>
-     * <p>Default value: `true`.</p>
+     * <ul>
+     * <li><code>true</code>: automatically completes the payment. Make sure that your Alibaba Cloud account has sufficient balance. If your Alibaba Cloud account does not have sufficient balance, abnormal orders are generated.</li>
+     * <li><code>false</code>: does not complete the payment. In this case, an order is generated, but no payment is made. You can log on to the Elastic Desktop Service (EDS) console and complete the payment based on the order ID on the <strong>Orders</strong> page.</li>
+     * </ul>
+     * <p>Default value: <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>The ID of the cloud desktop.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-2yjhqxo1monxxxxxx</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
      * <p>The ID of the sales promotion activity. You can call the DescribePrice operation to obtain the IDs of matching sales promotion activities.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>youhuiquan_promotion_option_id_for_blank</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The performance level (PL) of the system disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the system disk. Valid values:</p>
-     * <br>
-     * <p>*   PL0</p>
-     * <p>*   PL1</p>
-     * <p>*   PL2</p>
-     * <p>*   PL3</p>
+     * <ul>
+     * <li>PL0</li>
+     * <li>PL1</li>
+     * <li>PL2</li>
+     * <li>PL3</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PL1</p>
      */
     @NameInMap("RootDiskPerformanceLevel")
     public String rootDiskPerformanceLevel;
 
     /**
      * <p>The PL of the data disk. If the cloud desktop type is Graphics or High Frequency, you can set the PL of the data disk. Valid values:</p>
-     * <br>
-     * <p>*   PL0</p>
-     * <p>*   PL1</p>
-     * <p>*   PL2</p>
-     * <p>*   PL3</p>
+     * <ul>
+     * <li>PL0</li>
+     * <li>PL1</li>
+     * <li>PL2</li>
+     * <li>PL3</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PL1</p>
      */
     @NameInMap("UserDiskPerformanceLevel")
     public String userDiskPerformanceLevel;

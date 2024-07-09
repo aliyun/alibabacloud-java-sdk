@@ -5,119 +5,153 @@ import com.aliyun.tea.*;
 
 public class CreateSimpleOfficeSiteRequest extends TeaModel {
     /**
-     * <p>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set `EnableInternetAccess` to `true`.</p>
+     * <p>The maximum public bandwidth. Value range: 10 to 200. Unit: Mbit/s. This parameter is available if you set <code>EnableInternetAccess</code> to <code>true</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
      * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
-     * <br>
-     * <p>>  If you want end users to connect to cloud computers from WUYING clients over VPCs, you can attach the office network to a CEN instance. The CEN instance is the one that connects to your on-premises network over VPN Gateway or Express Connect.</p>
+     * <blockquote>
+     * <p> If you want end users to connect to cloud computers from Alibaba Cloud Workspace clients over VPCs, you can attach the office network to a CEN instance. The CEN instance is the one that connects to your on-premises network over VPN Gateway or Express Connect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cen-3gwy16dojz1m65****</p>
      */
     @NameInMap("CenId")
     public String cenId;
 
     /**
      * <p>The ID of the Alibaba Cloud account to which the Cloud Enterprise Network (CEN) instance belongs.</p>
-     * <br>
-     * <p>- If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</p>
-     * <p>- If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</p>
+     * <ul>
+     * <li>If you do not specify the CenId parameter, or the CEN instance that is specified by the CenId parameter belongs to the current Alibaba Cloud account, skip this parameter.</li>
+     * <li>If you specify the CenId parameter and the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, enter the ID of the Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>118272523431****</p>
      */
     @NameInMap("CenOwnerId")
     public Long cenOwnerId;
 
     /**
      * <p>The IPv4 CIDR block that you want the office network to use in the virtual private cloud (VPC) of the office network. The system automatically creates a VPC for the office network based on the IPv4 CIDR block. We recommend that you set this parameter to one of the following CIDR blocks and their subnets:</p>
-     * <br>
-     * <p>*   `10.0.0.0/12` (subnet mask range: 12 to 14 bits)</p>
-     * <p>*   `172.16.0.0/12` (subnet mask range: 12 to 24 bits)</p>
-     * <p>*   `192.168.0.0/16` (subnet mask range: 16 to 24 bits)</p>
+     * <ul>
+     * <li><code>10.0.0.0/12</code> (subnet mask range: 12 to 14 bits)</li>
+     * <li><code>172.16.0.0/12</code> (subnet mask range: 12 to 24 bits)</li>
+     * <li><code>192.168.0.0/16</code> (subnet mask range: 16 to 24 bits)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>172.16.0.0/12</p>
      */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
     /**
      * <p>Specifies whether to create a CloudBox-based office network.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("CloudBoxOfficeSite")
     public Boolean cloudBoxOfficeSite;
 
     /**
-     * <p>The method to connect to cloud computers from WUYING clients.</p>
-     * <br>
-     * <p>>  The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.````</p>
+     * <p>The method to connect to cloud computers from Alibaba Cloud Workspace clients.</p>
+     * <blockquote>
+     * <p> The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.````</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Internet</p>
      */
     @NameInMap("DesktopAccessType")
     public String desktopAccessType;
 
     /**
      * <p>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>* true (default)</p>
-     * <p>* false</p>
+     * <ul>
+     * <li>true (default)</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("EnableAdminAccess")
     public Boolean enableAdminAccess;
 
     /**
      * <p>Specifies whether to enable Internet access.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false (default)</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false (default)</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("EnableInternetAccess")
     public Boolean enableInternetAccess;
 
     /**
      * <p>Specifies whether to enable trusted device verification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("NeedVerifyZeroDevice")
     public Boolean needVerifyZeroDevice;
 
     /**
-     * <p>The office network name. The name must be 2 to 255 characters in length. It can contain digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The office network name. The name must be 2 to 255 characters in length. It can contain digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestOfficeSite_Simple</p>
      */
     @NameInMap("OfficeSiteName")
     public String officeSiteName;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -129,18 +163,24 @@ public class CreateSimpleOfficeSiteRequest extends TeaModel {
     public java.util.List<String> vSwitchId;
 
     /**
-     * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the [SendVerifyCode](~~335132~~) operation to obtain the verification code.</p>
+     * <p>The verification code. If the CEN instance that you specify for the CenId parameter belongs to another Alibaba Cloud account, you must call the <a href="https://help.aliyun.com/document_detail/335132.html">SendVerifyCode</a> operation to obtain the verification code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("VerifyCode")
     public String verifyCode;
 
     /**
      * <p>The network type of the office network.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   standard: advanced</p>
-     * <p>*   basic: basic</p>
+     * <ul>
+     * <li>standard: advanced</li>
+     * <li>basic: basic</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>standard</p>
      */
     @NameInMap("VpcType")
     public String vpcType;

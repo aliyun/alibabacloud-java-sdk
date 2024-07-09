@@ -12,12 +12,18 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
 
     /**
      * <p>The token that is used to start the next query. If the value of this parameter is empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,28 +60,37 @@ public class DescribeAclEntriesResponseBody extends TeaModel {
     public static class DescribeAclEntriesResponseBodyAclEntries extends TeaModel {
         /**
          * <p>The ACL type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   allow: whitelist</p>
-         * <p>*   disable: blacklist</p>
+         * <ul>
+         * <li>allow: whitelist</li>
+         * <li>disable: blacklist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>allow</p>
          */
         @NameInMap("Policy")
         public String policy;
 
         /**
          * <p>The ID of the instance to which the ACL applies, such as an office network ID or a cloud computer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-fsafeweh***</p>
          */
         @NameInMap("SourceId")
         public String sourceId;
 
         /**
          * <p>The granularity of the ACL.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   desktop: cloud computer</p>
-         * <p>*   vpc: office network</p>
+         * <ul>
+         * <li>desktop: cloud computer</li>
+         * <li>vpc: office network</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desktop</p>
          */
         @NameInMap("SourceType")
         public String sourceType;

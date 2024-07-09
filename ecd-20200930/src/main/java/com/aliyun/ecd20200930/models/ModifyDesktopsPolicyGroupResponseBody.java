@@ -12,6 +12,9 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,18 +43,27 @@ public class ModifyDesktopsPolicyGroupResponseBody extends TeaModel {
     public static class ModifyDesktopsPolicyGroupResponseBodyModifyResults extends TeaModel {
         /**
          * <p>The result of the modification. A value of success indicates that the policy is modified. If the policy failed to be modified, an error message is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
          * <p>The ID of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-7w78ozhjcwa3u****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The error message returned if the request failed. This parameter is not returned if the value of Code is success.``</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified param DesktopId ecd-ia2zw38bi6cm7**** is not found.</p>
          */
         @NameInMap("Message")
         public String message;

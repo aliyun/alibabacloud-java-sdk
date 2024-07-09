@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopInfoRequest extends TeaModel {
     /**
-     * <p>The cloud desktop ID. You can specify 1 to 100 cloud desktop IDs.</p>
+     * <p>The IDs of the cloud computers. You can specify 1 to 100 IDs.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

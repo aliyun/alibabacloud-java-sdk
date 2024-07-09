@@ -6,18 +6,26 @@ import com.aliyun.tea.*;
 public class DeleteImagesRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete the associated template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("DeleteCascadedBundle")
     public Boolean deleteCascadedBundle;
 
     /**
      * <p>The image IDs. You can specify 1 to 100 image IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

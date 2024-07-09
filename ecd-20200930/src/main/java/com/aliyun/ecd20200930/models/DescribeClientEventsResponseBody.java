@@ -12,12 +12,18 @@ public class DescribeClientEventsResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28A40F12-F340-442B-A35F-46EF6A03227B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,153 +60,218 @@ public class DescribeClientEventsResponseBody extends TeaModel {
     public static class DescribeClientEventsResponseBodyEvents extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account with which the event is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>112259558861****</p>
          */
         @NameInMap("AliUid")
         public String aliUid;
 
         /**
          * <p>The number of bytes that are received.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8665</p>
          */
         @NameInMap("BytesReceived")
         public String bytesReceived;
 
         /**
          * <p>The number of bytes that are sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2345</p>
          */
         @NameInMap("BytesSend")
         public String bytesSend;
 
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.68.<em>.</em></p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
          * <p>The OS that the client runs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Darwin 17.7.0 x64</p>
          */
         @NameInMap("ClientOS")
         public String clientOS;
 
         /**
          * <p>The client version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.4 202012021700</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
         /**
          * <p>The desktop group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-kadkdfaf****</p>
          */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
         /**
          * <p>The desktop group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
 
         /**
          * <p>The cloud desktop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-8fupvkhg0aayu****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The IP address of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.10.<em>.</em></p>
          */
         @NameInMap("DesktopIp")
         public String desktopIp;
 
         /**
          * <p>The cloud desktop name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
          * <p>The ID of the directory to which the cloud desktop belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-bh77qa8nmjot4****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The directory type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RAM</p>
          */
         @NameInMap("DirectoryType")
         public String directoryType;
 
         /**
          * <p>The information about the end user that connects to the cloud desktop from the EDS client. The information can be a RAM user ID or an AD username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28961708130834****</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
          * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5651188b-3070-d1cc-5311-75753d59****</p>
          */
         @NameInMap("EventId")
         public String eventId;
 
         /**
          * <p>The time when the event occurred.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-30T06:32:31Z</p>
          */
         @NameInMap("EventTime")
         public String eventTime;
 
         /**
          * <p>The event type. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESKTOP_DISCONNECT</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
          * <p>The ID of the workspace to which the cloud desktop belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-bh77qa8nmjot4****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
          * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
          * <p>The account type of the workspace.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SIMPLE: convenience account</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   AD_CONNECTOR: enterprise AD account</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SIMPLE: convenience account</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>AD_CONNECTOR: enterprise AD account</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
         /**
          * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The status of the event. If you set the EventType parameter to `DESKTOP_DISCONNECT` or `GET_CONNECTION_TICKET`, this parameter is returned. Valid values:</p>
-         * <br>
-         * <p>*   200\. The value indicates that the request is successful.</p>
-         * <p>*   An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.</p>
+         * <p>The status of the event. If you set the EventType parameter to <code>DESKTOP_DISCONNECT</code> or <code>GET_CONNECTION_TICKET</code>, this parameter is returned. Valid values:</p>
+         * <ul>
+         * <li>200\. The value indicates that the request is successful.</li>
+         * <li>An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Status")
         public String status;

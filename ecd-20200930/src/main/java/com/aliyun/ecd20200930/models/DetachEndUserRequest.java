@@ -5,37 +5,62 @@ import com.aliyun.tea.*;
 
 public class DetachEndUserRequest extends TeaModel {
     /**
-     * <p>The address of the Active Directory (AD) workspace.</p>
+     * <p>The address of the Active Directory (AD) office network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xn--0zw****</p>
      */
     @NameInMap("AdDomain")
     public String adDomain;
 
     /**
-     * <p>The type of the Alibaba Cloud Workspace client. 1: the hardware client 2: the software client</p>
+     * <p>The type of the client.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>1: hardware client.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("ClientType")
     public String clientType;
 
     /**
-     * <p>The ID of the device.</p>
+     * <p>The serial number (SN) of the hardware client.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F9E52EDCCB2B****</p>
      */
     @NameInMap("DeviceId")
     public String deviceId;
 
     /**
-     * <p>The ID of the workspace.</p>
+     * <p>The ID of the convenient office network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-jedbpr4sl9l37****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
-     * <p>The ID of the user that is bound to the client.</p>
+     * <p>The ID of the user that you want to unbind from the hardware client.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>moli</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("Region")
     public String region;

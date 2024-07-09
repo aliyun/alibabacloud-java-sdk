@@ -12,6 +12,9 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>272CF39E-B5DE-5BE3-A09B-B43F1026****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,48 +43,72 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
     public static class DescribeGuestApplicationsResponseBodyApplicationsProcessData extends TeaModel {
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Google Chrome</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115.0.5790.110</p>
          */
         @NameInMap("ApplicationVersion")
         public String applicationVersion;
 
         /**
          * <p>The CPU utilization (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
          */
         @NameInMap("CpuPercent")
         public Double cpuPercent;
 
         /**
          * <p>The GPU utilization (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("GpuPercent")
         public Double gpuPercent;
 
         /**
          * <p>The I/O read and write performance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124906.0</p>
          */
         @NameInMap("Iospeed")
         public Double iospeed;
 
         /**
          * <p>The memory utilization (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         @NameInMap("MemPercent")
         public Double memPercent;
 
         /**
          * <p>The PID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1357</p>
          */
         @NameInMap("Pid")
         public Integer pid;
 
         /**
          * <p>The path to the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C:\\Program Files\\Google\\Chrome\\Application\\ch****.exe</p>
          */
         @NameInMap("ProcessPath")
         public String processPath;
@@ -160,48 +187,72 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
     public static class DescribeGuestApplicationsResponseBodyApplications extends TeaModel {
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Google Chrome</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
 
         /**
          * <p>The application version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>115.0.5790.110</p>
          */
         @NameInMap("ApplicationVersion")
         public String applicationVersion;
 
         /**
          * <p>The CPU utilization (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
          */
         @NameInMap("CpuPercent")
         public Double cpuPercent;
 
         /**
          * <p>The GPU utilization (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         @NameInMap("GpuPercent")
         public Double gpuPercent;
 
         /**
          * <p>The icon URL of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/market/preload/default****.png">https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/market/preload/default****.png</a></p>
          */
         @NameInMap("IconUrl")
         public String iconUrl;
 
         /**
          * <p>The I/O read and write performance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124906.0</p>
          */
         @NameInMap("IoSpeed")
         public Double ioSpeed;
 
         /**
          * <p>The memory utilization (%).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34</p>
          */
         @NameInMap("MemPercent")
         public Double memPercent;
 
         /**
          * <p>The process ID (PID).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1357</p>
          */
         @NameInMap("Pid")
         public Integer pid;
@@ -214,12 +265,18 @@ public class DescribeGuestApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>The path to the process.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C:\\Program Files\\Google\\Chrome\\Application\\ch****.exe</p>
          */
         @NameInMap("ProcessPath")
         public String processPath;
 
         /**
          * <p>The application status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("Status")
         public String status;

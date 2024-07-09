@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class ClonePolicyGroupRequest extends TeaModel {
     /**
      * <p>The name of the policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testPolicyGroupName</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the policy that you want to clone.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pg-gx2x1dhsmthe9****</p>
      */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

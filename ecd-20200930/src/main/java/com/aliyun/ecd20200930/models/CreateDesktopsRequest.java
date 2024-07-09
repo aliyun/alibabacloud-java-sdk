@@ -6,189 +6,259 @@ import com.aliyun.tea.*;
 public class CreateDesktopsRequest extends TeaModel {
     /**
      * <p>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
      * <p>Specifies whether to enable automatic payment.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
      * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the ChargeType parameter is set to PrePaid.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
     /**
      * <p>The ID of the cloud computer template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>b-je9hani001wfn****</p>
      */
     @NameInMap("BundleId")
     public String bundleId;
 
     /**
      * <p>The cloud computer templates.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("BundleModels")
     public java.util.List<CreateDesktopsRequestBundleModels> bundleModels;
 
     /**
      * <p>The billing method of the cloud computers.</p>
-     * <br>
      * <p>Default value: PostPaid. Valid values:</p>
-     * <br>
-     * <p>*   Postpaid: pay-as-you-go</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   PrePaid: subscription</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>Postpaid: pay-as-you-go</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>PrePaid: subscription</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePaid</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
      * <p>The private IP address of the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10.0.0.1</p>
      */
     @NameInMap("DesktopMemberIp")
     public String desktopMemberIp;
 
     /**
      * <p>The name of the cloud computer. The name must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name must be 1 to 64 characters in length.</p>
-     * <p>*   The name must start with a letter but cannot start with `http://` or `https://`.</p>
-     * <p>*   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <ul>
+     * <li>The name must be 1 to 64 characters in length.</li>
+     * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>testDesktopName</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
 
     /**
      * <p>Specifies whether to automatically add suffixes to the names of cloud computers when you create multiple cloud computers at the same time.</p>
-     * <br>
      * <p>Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   False</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>true</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>False</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DesktopNameSuffix")
     public Boolean desktopNameSuffix;
 
     /**
      * <p>The details of the scheduled task on cloud computers.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("DesktopTimers")
     public java.util.List<CreateDesktopsRequestDesktopTimers> desktopTimers;
 
     /**
-     * <p>>  This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>To be hidden.</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The IDs of the end users to which you want to assign the cloud computers. You can specify 1 to 100 IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
      * <p>The ID of the cloud computer pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dg-boyczi8enfyc5****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.</p>
-     * <br>
      * <p>The hostnames must meet the following requirements:</p>
-     * <br>
-     * <p>*   The hostnames must be 2 to 15 characters in length.</p>
-     * <p>*   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
-     * <br>
-     * <p>When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
-     * <br>
-     * <p>*   `name_prefix`: the prefix of the hostname.</p>
-     * <p>*   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.</p>
-     * <p>*   `name_suffix`: the suffix of the hostname.</p>
+     * <ul>
+     * <li>The hostnames must be 2 to 15 characters in length.</li>
+     * <li>The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+     * </ul>
+     * <p>When you create multiple cloud computers, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
+     * <ul>
+     * <li><code>name_prefix</code>: the prefix of the hostname.</li>
+     * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. The <code>begin_number</code> value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The <code>bits</code> value is the number of digits. Valid values: 1 to 6. Default value: 6.</li>
+     * <li><code>name_suffix</code>: the suffix of the hostname.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>testhost</p>
      */
     @NameInMap("Hostname")
     public String hostname;
 
+    /**
+     * <blockquote>
+     * <p>This parameter is not publicly available.</p>
+     * </blockquote>
+     */
     @NameInMap("MonthDesktopSetting")
     public CreateDesktopsRequestMonthDesktopSetting monthDesktopSetting;
 
     /**
      * <p>The office network ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+os-c5cy7q578s8jc****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The subscription duration of the cloud desktop that you want to create. The unit is specified by the `PeriodUnit` parameter. This parameter takes effect and is required only when the `ChargeType` parameter is set to `PrePaid`.</p>
-     * <br>
-     * <p>*   Valid values if the `PeriodUnit` parameter is set to `Month`:</p>
-     * <br>
-     * <p>    *   1</p>
-     * <p>    *   2</p>
-     * <p>    *   3</p>
-     * <p>    *   6</p>
-     * <br>
-     * <p>*   Valid values if the `PeriodUnit` parameter is set to `Year`:</p>
-     * <br>
-     * <p>    *   1</p>
-     * <p>    *   2</p>
-     * <p>    *   3</p>
-     * <p>    *   4</p>
-     * <p>    *   5</p>
+     * <p>The subscription duration of the cloud desktop that you want to create. The unit is specified by the <code>PeriodUnit</code> parameter. This parameter takes effect and is required only when the <code>ChargeType</code> parameter is set to <code>PrePaid</code>.</p>
+     * <ul>
+     * <li><p>Valid values if the <code>PeriodUnit</code> parameter is set to <code>Month</code>:</p>
+     * <ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>6</li>
+     * </ul>
+     * </li>
+     * <li><p>Valid values if the <code>PeriodUnit</code> parameter is set to <code>Year</code>:</p>
+     * <ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>4</li>
+     * <li>5</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The unit of the subscription duration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Month</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>The ID of the policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>system-all-enabled-policy</p>
      */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
     /**
      * <p>The ID of the sales promotion.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23141</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -201,28 +271,29 @@ public class CreateDesktopsRequest extends TeaModel {
 
     /**
      * <p>How the cloud computers are assigned.</p>
-     * <br>
-     * <p>>  If you do not specify the `EndUserId` parameter, the cloud computers are not assigned to end users after the cloud computers are created.</p>
-     * <br>
+     * <blockquote>
+     * <p> If you do not specify the <code>EndUserId</code> parameter, the cloud computers are not assigned to end users after the cloud computers are created.</p>
+     * </blockquote>
      * <p>Default value: ALL. Valid values:</p>
-     * <br>
-     * <p>*   ALL: If you specify the EndUserId parameter, the cloud computers are assigned to all specified end users after the cloud computers are created.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   PER_USER: If you specify the EndUserId parameter, the cloud computers are evenly assigned to the specified end users after the cloud computers are created.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    In this case, you must make sure that the value of the Amount parameter can be divided by the N value of the EndUserId.N parameter that you specify.</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>ALL: If you specify the EndUserId parameter, the cloud computers are assigned to all specified end users after the cloud computers are created.</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>PER_USER: If you specify the EndUserId parameter, the cloud computers are evenly assigned to the specified end users after the cloud computers are created.</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <p>In this case, you must make sure that the value of the Amount parameter can be divided by the N value of the EndUserId.N parameter that you specify.</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("UserAssignMode")
     public String userAssignMode;
@@ -234,25 +305,41 @@ public class CreateDesktopsRequest extends TeaModel {
     public java.util.List<CreateDesktopsRequestUserCommands> userCommands;
 
     /**
-     * <p>>  This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>To be hidden.</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
      * <p>Specifies whether to enable disk encryption.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("VolumeEncryptionEnabled")
     public Boolean volumeEncryptionEnabled;
 
     /**
-     * <p>The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to obtain a list of KMS keys.</p>
+     * <p>The ID of the Key Management Service (KMS) key that you want to use when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to obtain a list of KMS keys.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
      */
     @NameInMap("VolumeEncryptionKey")
     public String volumeEncryptionKey;
 
     /**
-     * <p>>  This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>To be hidden.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -489,22 +576,32 @@ public class CreateDesktopsRequest extends TeaModel {
     public static class CreateDesktopsRequestBundleModels extends TeaModel {
         /**
          * <p>The number of cloud computers that you want to create. Valid values: 1 to 300. Default value: null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Amount")
         public Integer amount;
 
         /**
          * <p>The ID of a cloud computer template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-je9hani001wfn****</p>
          */
         @NameInMap("BundleId")
         public String bundleId;
 
         /**
          * <p>The name of the cloud computer. The name must meet the following requirements:</p>
-         * <br>
-         * <p>*   The name must be 1 to 64 characters in length.</p>
-         * <p>*   The name must start with a letter but cannot start with `http://` or `https://`.</p>
-         * <p>*   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+         * <ul>
+         * <li>The name must be 1 to 64 characters in length.</li>
+         * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testDesktopName</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
@@ -517,29 +614,38 @@ public class CreateDesktopsRequest extends TeaModel {
 
         /**
          * <p>The custom hostnames of the cloud computers. This parameter is valid only if the office network is an AD office network and the operating system type of the cloud computers is Windows.</p>
-         * <br>
          * <p>The hostnames must meet the following requirements:</p>
-         * <br>
-         * <p>*   The hostnames must be 2 to 15 characters in length.</p>
-         * <p>*   The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
-         * <br>
-         * <p>When you create multiple cloud computers, you can use the `name_prefix[begin_number,bits]name_suffix` naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-\[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
-         * <br>
-         * <p>*   `name_prefix`: the prefix of the hostname.</p>
-         * <p>*   `[begin_number,bits]`: the sequential number in the hostname. The `begin_number` value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The `bits` value is the number of digits. Valid values: 1 to 6. Default value: 6.</p>
-         * <p>*   `name_suffix`: the suffix of the hostname.</p>
+         * <ul>
+         * <li>The hostnames must be 2 to 15 characters in length.</li>
+         * <li>The hostnames can contain only letters, digits, and hyphens (-). The hostnames cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+         * </ul>
+         * <p>When you create multiple cloud computers, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> naming format to name the cloud computers. For example, if you set the value of the Hostname parameter to ecd-[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
+         * <ul>
+         * <li><code>name_prefix</code>: the prefix of the hostname.</li>
+         * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. The <code>begin_number</code> value is the starting digit. Valid values of begin_number: 0 to 999999. Default value: 0. The <code>bits</code> value is the number of digits. Valid values: 1 to 6. Default value: 6.</li>
+         * <li><code>name_suffix</code>: the suffix of the hostname.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testhost</p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
         /**
          * <p>Specifies whether to enable disk encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
@@ -610,98 +716,114 @@ public class CreateDesktopsRequest extends TeaModel {
     public static class CreateDesktopsRequestDesktopTimers extends TeaModel {
         /**
          * <p>Specifies whether to allow the end user to configure the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowClientSetting")
         public Boolean allowClientSetting;
 
         /**
          * <p>The cron expression for the scheduled task.</p>
-         * <br>
-         * <p>>  The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7</p>
+         * <blockquote>
+         * <p> The time must be in UTC. For example, for 24:00 (UTC+8), you must set the value to 0 0 16 ? \* 1,2,3,4,5,6,7</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0 40 7 ? * 1,2,3,4,5,6,7</p>
          */
         @NameInMap("CronExpression")
         public String cronExpression;
 
         /**
          * <p>Specifies whether to forcibly execute the scheduled task.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   false: does not forcibly execute the scheduled task.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>true: forcibly executes the scheduled task regardless of the status and connection of the cloud computers.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>false: does not forcibly execute the scheduled task.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("Enforce")
         public Boolean enforce;
 
         /**
          * <p>The interval at which cloud computers are created. Unit: minutes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Interval")
         public Integer interval;
 
         /**
          * <p>The operations that scheduled tasks support. This parameter is valid only when TimerType is set to NoConnect.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Hibernate: hibernates the cloud computers.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Shutdown: stops the cloud computers.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Hibernate: hibernates the cloud computers.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Shutdown: stops the cloud computers.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Shutdown</p>
          */
         @NameInMap("OperationType")
         public String operationType;
 
         /**
          * <p>The reset type of the cloud computers.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   RESET_TYPE_SYSTEM: resets the system disks.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   RESET_TYPE_BOTH: resets the system disks and data disks.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>RESET_TYPE_SYSTEM: resets the system disks.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>RESET_TYPE_BOTH: resets the system disks and data disks.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RESET_TYPE_SYSTEM</p>
          */
         @NameInMap("ResetType")
         public String resetType;
 
         /**
          * <p>The type of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NoOperationReboot</p>
          */
         @NameInMap("TimerType")
         public String timerType;
@@ -770,12 +892,36 @@ public class CreateDesktopsRequest extends TeaModel {
     }
 
     public static class CreateDesktopsRequestMonthDesktopSetting extends TeaModel {
+        /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("BuyerId")
         public Long buyerId;
 
+        /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
+        /**
+         * <blockquote>
+         * <p>This parameter is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
+         */
         @NameInMap("UseDuration")
         public Integer useDuration;
 
@@ -813,12 +959,18 @@ public class CreateDesktopsRequest extends TeaModel {
     public static class CreateDesktopsRequestTag extends TeaModel {
         /**
          * <p>The key of the tag. You can specify 1 to 20 keys for a tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag. You can specify 1 to 20 values for a tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -849,62 +1001,66 @@ public class CreateDesktopsRequest extends TeaModel {
     public static class CreateDesktopsRequestUserCommands extends TeaModel {
         /**
          * <p>The command content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bmV3LWl0ZW0gZDpcdGVzdF91c2VyX2NvbW1hbmRzLnR4dCAtdHlwZSBm****</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
          * <p>The encoding mode of the command content.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Base64: encodes the command content in Base64.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   PlainText: does not encode the command content.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Base64: encodes the command content in Base64.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>PlainText: does not encode the command content.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Base64</p>
          */
         @NameInMap("ContentEncoding")
         public String contentEncoding;
 
         /**
          * <p>The language type of the command.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   RunPowerShellScript: PowerShell commands (applicable to Windows cloud computers).</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   RunShellScript: shell commands (applicable to Linux cloud computers).</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   RunBatScript: batch commands (applicable to Windows cloud computers).</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>RunPowerShellScript: PowerShell commands (applicable to Windows cloud computers).</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>RunShellScript: shell commands (applicable to Linux cloud computers).</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>RunBatScript: batch commands (applicable to Windows cloud computers).</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RunPowerShellScript</p>
          */
         @NameInMap("ContentType")
         public String contentType;

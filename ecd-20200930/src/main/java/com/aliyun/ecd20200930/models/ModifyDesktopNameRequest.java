@@ -6,22 +6,35 @@ import com.aliyun.tea.*;
 public class ModifyDesktopNameRequest extends TeaModel {
     /**
      * <p>The ID of the cloud computer.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-gx2x1dhsmucyy****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
      * <p>The new name of the cloud computer. The name of the cloud computer must meet the following requirements:</p>
-     * <br>
-     * <p>*   The name must be 1 to 64 characters in length.</p>
-     * <p>*   The name must start with a letter but cannot start with `http://` or `https://`.</p>
-     * <p>*   The name can only contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <ul>
+     * <li>The name must be 1 to 64 characters in length.</li>
+     * <li>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("NewDesktopName")
     public String newDesktopName;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

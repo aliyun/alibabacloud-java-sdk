@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The IDs of the automatic snapshot policies that you want to delete.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyId")
     public java.util.List<String> policyId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

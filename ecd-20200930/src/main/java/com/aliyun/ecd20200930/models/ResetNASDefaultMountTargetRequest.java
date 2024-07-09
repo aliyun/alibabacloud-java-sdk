@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class ResetNASDefaultMountTargetRequest extends TeaModel {
     /**
      * <p>The ID of the NAS file system.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3a6ef4****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

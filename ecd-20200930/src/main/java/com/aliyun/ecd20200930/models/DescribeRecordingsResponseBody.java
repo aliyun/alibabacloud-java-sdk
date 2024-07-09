@@ -4,12 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordingsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nbCQ7ar+fECeh1IuWQXi39R5eoJ68zWp99mTAKRRNRhw==</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("Recordings")
     public java.util.List<DescribeRecordingsResponseBodyRecordings> recordings;
 
+    /**
+     * <strong>example:</strong>
+     * <p>327CFE78-1C0D-51AC-A9C6-BCEDF0DD44D6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +51,65 @@ public class DescribeRecordingsResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordingsResponseBodyRecordings extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ecd-10v0vuvm616sk****</p>
+         */
         @NameInMap("DesktopId")
         public String desktopId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DemoComputer</p>
+         */
         @NameInMap("DesktopName")
         public String desktopName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-10T07:26:06Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pg-4w5nk44zo5yl129dd/1mk78dugw344.mp4</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pg-6dn811rzrwh9ws4z6</p>
+         */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1742845</p>
+         */
         @NameInMap("RecordingSize")
         public Integer recordingSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alltime</p>
+         */
         @NameInMap("RecordingType")
         public String recordingType;
 
         @NameInMap("SignedUrl")
         public String signedUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-04-10T07:26:06Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

@@ -12,12 +12,18 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
     /**
      * <p>The token that determines the start point of the next query. This parameter is empty if no additional results exist.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +60,18 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     public static class DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups extends TeaModel {
         /**
          * <p>The ID of the desktop group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dg-9eeyf15b25nyl****</p>
          */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
         /**
          * <p>The name of the desktop group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_dg</p>
          */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
@@ -90,21 +102,31 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
     public static class DescribeNASFileSystemsResponseBodyFileSystems extends TeaModel {
         /**
          * <p>The total capacity of the NAS file system. Unit: GiB.</p>
-         * <br>
-         * <p>*   The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.</p>
-         * <p>*   The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.</p>
+         * <ul>
+         * <li>The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.</li>
+         * <li>The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10485760</p>
          */
         @NameInMap("Capacity")
         public Long capacity;
 
         /**
          * <p>The time when the NAS file system was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-10T11:39Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDescription</p>
          */
         @NameInMap("Description")
         public String description;
@@ -117,106 +139,154 @@ public class DescribeNASFileSystemsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether disk encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EncryptionEnabled")
         public Boolean encryptionEnabled;
 
         /**
          * <p>The ID of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****</p>
          */
         @NameInMap("FileSystemId")
         public String fileSystemId;
 
         /**
          * <p>The name of the NAS file system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNAS</p>
          */
         @NameInMap("FileSystemName")
         public String fileSystemName;
 
         /**
          * <p>The status of the NAS file system. The possible values include:</p>
-         * <br>
-         * <p>*   Pending: The NAS file system is being created.</p>
-         * <p>*   Running: The NAS file system is running.</p>
-         * <p>*   Stopped: The NAS file system is stopped.</p>
-         * <p>*   Deleting: The NAS file system is being deleted.</p>
-         * <p>*   Deleted: The NAS file system is deleted.</p>
-         * <p>*   Invalid: The NAS file system is invalid.</p>
+         * <ul>
+         * <li>Pending: The NAS file system is being created.</li>
+         * <li>Running: The NAS file system is running.</li>
+         * <li>Stopped: The NAS file system is stopped.</li>
+         * <li>Deleting: The NAS file system is being deleted.</li>
+         * <li>Deleted: The NAS file system is deleted.</li>
+         * <li>Invalid: The NAS file system is invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("FileSystemStatus")
         public String fileSystemStatus;
 
         /**
          * <p>The type of the NAS file system. Valid value: Universal NAS. This value indicates that the NAS file system is a General-purpose one.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
          */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
         /**
          * <p>The used storage of the NAS file system. Unit: byte.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("MeteredSize")
         public Long meteredSize;
 
         /**
          * <p>The domain name of the mount target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04f314****-at***.cn-hangzhou.nas.aliyuncs.com</p>
          */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
         /**
          * <p>The status of the mount target. The possible values include:</p>
-         * <br>
-         * <p>*   Pending: The mount target is being created.</p>
-         * <p>*   Active: The mount target is enabled.</p>
-         * <p>*   Inactive: The mount target is disabled.</p>
-         * <p>*   Deleting: The mount target is being deleted.</p>
-         * <p>*   Invalid: The mount target is invalid.</p>
+         * <ul>
+         * <li>Pending: The mount target is being created.</li>
+         * <li>Active: The mount target is enabled.</li>
+         * <li>Inactive: The mount target is disabled.</li>
+         * <li>Deleting: The mount target is being deleted.</li>
+         * <li>Invalid: The mount target is invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("MountTargetStatus")
         public String mountTargetStatus;
 
         /**
          * <p>The ID of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
          * <p>The name of the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
          * <p>Indicates whether the User Profile Management (UPM) feature is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("ProfileCompatible")
         public Boolean profileCompatible;
 
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The storage type of the NAS file system. Valid values:</p>
-         * <br>
-         * <p>*   Capacity</p>
-         * <p>*   Performance</p>
+         * <ul>
+         * <li>Capacity</li>
+         * <li>Performance</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Capacity</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
         /**
          * <p>Indicates whether the Server Message Block (SMB) access control list (ACL) feature was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("SupportAcl")
         public Boolean supportAcl;
 
         /**
          * <p>The ID of the zone where the NAS file system resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

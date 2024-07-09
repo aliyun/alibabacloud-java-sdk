@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CancelCopyImageResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5BEFE642-A383-4A18-8939-FB7DE452****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

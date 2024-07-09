@@ -4,49 +4,64 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyCloudDriveUsersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-596198****</p>
+     */
     @NameInMap("CdsId")
     public String cdsId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The status of Cloud Drive Service users.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   disabled</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    unavailable</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   enabled</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    available</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>disabled</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>unavailable</p>
+     * <!-- -->
+     * </li>
+     * <li><p>enabled</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>available</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>enabled</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The maximum storage space of a user. Unit: bytes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("UserMaxSize")
     public Long userMaxSize;

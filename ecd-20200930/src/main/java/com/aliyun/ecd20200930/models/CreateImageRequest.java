@@ -5,54 +5,79 @@ import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
     /**
-     * <p>Specifies whether to clear private data of users. If you set AutoCleanUserdata to `true`, the custom image clears the data directories, excluding the `Administrator` and `Public` directories, in the `C:\Users` directory.</p>
+     * <p>Specifies whether to clear private data of users. If you set AutoCleanUserdata to <code>true</code>, the custom image clears the data directories, excluding the <code>Administrator</code> and <code>Public</code> directories, in the <code>C:\\Users</code> directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("AutoCleanUserdata")
     public Boolean autoCleanUserdata;
 
     /**
-     * <p>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with `http://` or `https://`.</p>
+     * <p>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the cloud computer.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-7w78ozhjcwa3u****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
      * <p>The disk data that is contained in the custom image.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>- SYSTEM: only contain data from system disks.</p>
-     * <p>- ALL: contain data from system disks and user disks. [default]</p>
+     * <ul>
+     * <li>SYSTEM: only contain data from system disks.</li>
+     * <li>ALL: contain data from system disks and user disks. [default]</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("DiskType")
     public String diskType;
 
     /**
-     * <p>The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testImageName</p>
      */
     @NameInMap("ImageName")
     public String imageName;
 
     /**
      * <p>This parameter is not publicly available.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>To be hidden.</p>
      */
     @NameInMap("ImageResourceType")
     public String imageResourceType;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the snapshot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-2zefuwk8l6ytcgd3bf4o</p>
      */
     @NameInMap("SnapshotId")
     public String snapshotId;

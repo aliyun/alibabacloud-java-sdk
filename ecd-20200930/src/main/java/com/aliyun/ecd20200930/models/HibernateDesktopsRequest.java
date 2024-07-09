@@ -6,12 +6,17 @@ import com.aliyun.tea.*;
 public class HibernateDesktopsRequest extends TeaModel {
     /**
      * <p>The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,36 +6,44 @@ import com.aliyun.tea.*;
 public class DescribeUserProfilePathRulesRequest extends TeaModel {
     /**
      * <p>The desktop group ID. This parameter is required when you set RuleType parameter to DesktopGroup.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dg-2i8qxpv6t1a03****</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The rule type that you want to configure for the directory.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   DesktopGroup</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Default</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>DesktopGroup</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Default</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DesktopGroup</p>
      */
     @NameInMap("RuleType")
     public String ruleType;

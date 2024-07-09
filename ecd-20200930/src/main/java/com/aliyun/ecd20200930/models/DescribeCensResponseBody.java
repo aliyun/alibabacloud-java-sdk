@@ -12,24 +12,36 @@ public class DescribeCensResponseBody extends TeaModel {
 
     /**
      * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of CEN instances returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,6 +94,9 @@ public class DescribeCensResponseBody extends TeaModel {
     public static class DescribeCensResponseBodyCensPackageIds extends TeaModel {
         /**
          * <p>The ID of the bandwidth plan that is bound to the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cenbwp-4c2zaavbvh5f42****</p>
          */
         @NameInMap("PackageId")
         public String packageId;
@@ -104,12 +119,18 @@ public class DescribeCensResponseBody extends TeaModel {
     public static class DescribeCensResponseBodyCensTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -140,42 +161,57 @@ public class DescribeCensResponseBody extends TeaModel {
     public static class DescribeCensResponseBodyCens extends TeaModel {
         /**
          * <p>The ID of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cen-3gwy16dojz1m65****</p>
          */
         @NameInMap("CenId")
         public String cenId;
 
         /**
          * <p>The time when the CEN instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-16T08:46Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The description of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The IPv6 level.</p>
-         * <br>
-         * <p>>  IPv6 is not supported.</p>
-         * <br>
+         * <blockquote>
+         * <p> IPv6 is not supported.</p>
+         * </blockquote>
          * <p>Valid value:</p>
-         * <br>
-         * <p>*   DISABLED</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>DISABLED</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DISABLED</p>
          */
         @NameInMap("Ipv6Level")
         public String ipv6Level;
 
         /**
          * <p>The name of the CEN instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testCen</p>
          */
         @NameInMap("Name")
         public String name;
@@ -188,42 +224,45 @@ public class DescribeCensResponseBody extends TeaModel {
 
         /**
          * <p>The tolerated level of CIDR block conflict.</p>
-         * <br>
          * <p>Valid value:</p>
-         * <br>
-         * <p>*   REDUCED: CIDR block conflicts are allowed, but the conflicting CIDR blocks cannot be identical.</p>
+         * <ul>
+         * <li>REDUCED: CIDR block conflicts are allowed, but the conflicting CIDR blocks cannot be identical.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REDUCED</p>
          */
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
         /**
          * <p>The status of the CEN instance.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Creating</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Active</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Deleting</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Creating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Active</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Deleting</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;

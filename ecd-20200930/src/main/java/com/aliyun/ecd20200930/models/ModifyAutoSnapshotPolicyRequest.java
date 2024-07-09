@@ -6,30 +6,47 @@ import com.aliyun.tea.*;
 public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The CRON expression.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0 20 16 ? * 1,2,3,4,5,6,7</p>
      */
     @NameInMap("CronExpression")
     public String cronExpression;
 
     /**
      * <p>The ID of the automatic snapshot policy.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sp-itcmrhqt01tdo****</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-). This parameter is empty by default.</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). This parameter is empty by default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Automatic system snapshot</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class MigrateDesktopsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E46DECEC-AC72-570E-958B-B52A4B****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -12,24 +12,36 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
     /**
      * <p>The token that is used to start the next query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The total number of authorized users that is connected to cloud computers in the cloud computer pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("OnlineUsersCount")
     public Integer onlineUsersCount;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of authorized users of the cloud computer pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("UsersCount")
     public Integer usersCount;
@@ -82,12 +94,18 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     public static class DescribeUsersInGroupResponseBodyEndUsersExternalInfo extends TeaModel {
         /**
          * <p>The external name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nameDemo</p>
          */
         @NameInMap("ExternalName")
         public String externalName;
 
         /**
          * <p>The employee ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("JobNumber")
         public String jobNumber;
@@ -118,12 +136,18 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     public static class DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModelsPropertyValues extends TeaModel {
         /**
          * <p>The property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("PropertyValue")
         public String propertyValue;
 
         /**
          * <p>The ID of the property value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
@@ -154,23 +178,32 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     public static class DescribeUsersInGroupResponseBodyEndUsersUserSetPropertiesModels extends TeaModel {
         /**
          * <p>The property ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("PropertyId")
         public Long propertyId;
 
         /**
          * <p>The property name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
         /**
          * <p>The property type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   1: system property</p>
-         * <p>*   2: custom property</p>
+         * <ul>
+         * <li>1: system property</li>
+         * <li>2: custom property</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PropertyType")
         public Integer propertyType;
@@ -183,12 +216,18 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
          * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nameDemo</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -251,70 +290,100 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     public static class DescribeUsersInGroupResponseBodyEndUsers extends TeaModel {
         /**
          * <p>The connection status.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   0: disconnected</p>
-         * <p>*   1: connecting</p>
+         * <ul>
+         * <li>0: disconnected</li>
+         * <li>1: connecting</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
         /**
          * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
          * <p>The display name of the enterprise AD account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The email address of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
          */
         @NameInMap("EndUserEmail")
         public String endUserEmail;
 
         /**
          * <p>The ID of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
          * <p>The username of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("EndUserName")
         public String endUserName;
 
         /**
          * <p>The mobile number of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1381111****</p>
          */
         @NameInMap("EndUserPhone")
         public String endUserPhone;
 
         /**
          * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Note</p>
          */
         @NameInMap("EndUserRemark")
         public String endUserRemark;
 
         /**
          * <p>The user account type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SIMPLE: convenience account</p>
-         * <p>*   AD_CONNECTOR: enterprise Active Directory (AD) account</p>
+         * <ul>
+         * <li>SIMPLE: convenience account</li>
+         * <li>AD_CONNECTOR: enterprise Active Directory (AD) account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         @NameInMap("EndUserType")
         public String endUserType;
@@ -327,6 +396,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the cloud computer that is used by the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ud-i896ze8hazpvl****</p>
          */
         @NameInMap("UserDesktopId")
         public String userDesktopId;

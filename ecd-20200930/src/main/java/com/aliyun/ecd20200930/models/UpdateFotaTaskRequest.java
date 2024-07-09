@@ -5,24 +5,35 @@ import com.aliyun.tea.*;
 
 public class UpdateFotaTaskRequest extends TeaModel {
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the image update task. You can call the [DescribeFotaTasks](~~437001~~) operation to obtain the value of this parameter.</p>
+     * <p>The ID of the image update task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain the value of this parameter.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aot-c4khwrp9ocml4****</p>
      */
     @NameInMap("TaskUid")
     public String taskUid;
 
     /**
      * <p>Specifies whether to automatically push the image update task.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Running: automatically pushes the image update task.</p>
-     * <p>*   Pending: does not automatically push the image update task.</p>
+     * <ul>
+     * <li>Running: automatically pushes the image update task.</li>
+     * <li>Pending: does not automatically push the image update task.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Pending</p>
      */
     @NameInMap("UserStatus")
     public String userStatus;

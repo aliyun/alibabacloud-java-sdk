@@ -12,18 +12,27 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
 
     /**
      * <p>If the NextToken parameter is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6koN7RqHg3d2z8LKmSoe821</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC40EE61-7E83-59ED-AEA6-7EE9C437F352</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of image modification records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,44 +77,63 @@ public class DescribeImageModifiedRecordsResponseBody extends TeaModel {
     public static class DescribeImageModifiedRecordsResponseBodyImageModifiedRecords extends TeaModel {
         /**
          * <p>The ID of the original image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-8rnz2imrpcfuh****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The name of the original image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>win10-0307</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The ID of the new image after the image was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxNewImageID</p>
          */
         @NameInMap("NewImageId")
         public String newImageId;
 
         /**
          * <p>The name of the new image after the image was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxImageID</p>
          */
         @NameInMap("NewImageName")
         public String newImageName;
 
         /**
          * <p>The status of the image modification.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   0: The image is being modified.</p>
-         * <br>
-         * <p>*   1: The image is successfully modified.</p>
-         * <br>
-         * <p>*   2: The image fails to be modified.</p>
+         * <ul>
+         * <li><p>0: The image is being modified.</p>
+         * </li>
+         * <li><p>1: The image is successfully modified.</p>
+         * </li>
+         * <li><p>2: The image fails to be modified.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
          * <p>The time when the image was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-03-03T02:43:44.851Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

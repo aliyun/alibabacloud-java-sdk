@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class RemoveFilePermissionShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-066224****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user01</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
      * <p>The file ID. The ID is a unique identifier for the file.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6333e553a133ce21e6f747cf948bb9ef95d7****</p>
      */
     @NameInMap("FileId")
     public String fileId;
@@ -30,12 +41,17 @@ public class RemoveFilePermissionShrinkRequest extends TeaModel {
 
     /**
      * <p>The users that you want to authorize.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MemberList")
     public String memberListShrink;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

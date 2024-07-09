@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The number of subscription cloud computers that are in the Connected state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("OnlinePrePaidDesktopsCount")
     public Integer onlinePrePaidDesktopsCount;
@@ -24,6 +30,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     /**
      * <p>The total number of queried subscription cloud computers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PaidDesktopsCount")
     public Integer paidDesktopsCount;
@@ -36,36 +45,54 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
     /**
      * <p>The total number of queried pay-as-you-go cloud computers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PostPaidDesktopsCount")
     public Integer postPaidDesktopsCount;
 
     /**
      * <p>The total amount of bills for pay-as-you-go cloud computers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
      */
     @NameInMap("PostPaidDesktopsTotalAmount")
     public Integer postPaidDesktopsTotalAmount;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of subscription cloud computers that are in the Running state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("RunningPrePaidDesktopsCount")
     public Integer runningPrePaidDesktopsCount;
 
     /**
      * <p>The number of subscription cloud computers that are in the Stopped state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("StopedPrePaidDesktopsCount")
     public Integer stopedPrePaidDesktopsCount;
 
     /**
      * <p>The number of subscription cloud computers that are in the Stopped state.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("StoppedPrePaidDesktopsCount")
     public Integer stoppedPrePaidDesktopsCount;
@@ -166,146 +193,151 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public static class DescribeDesktopsInGroupResponseBodyPaidDesktops extends TeaModel {
         /**
          * <p>The connection status of the cloud computer.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Unknown</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Connected</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Disconnected</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Unknown</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Connected</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Disconnected</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Connected</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
         /**
          * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ud-7ftf5b6yu77b0****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
          * <p>The status of the cloud computer.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Stopped</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Starting</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Rebuilding</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Running</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Stopping</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Expired</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Deleted</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Pending</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Stopped</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Starting</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Rebuilding</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Running</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Stopping</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Expired</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Deleted</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Pending</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
         /**
          * <p>The type of the disk.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM: system disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DATA: data disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SYSTEM: system disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DATA: data disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
          * <p>The ID of the authorized user of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -318,6 +350,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The username of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("EndUserName")
         public String endUserName;
@@ -330,48 +365,61 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The image version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0-R-20220914.17****</p>
          */
         @NameInMap("FotaVersion")
         public String fotaVersion;
 
         /**
          * <p>The version of the GPU driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-hn5v2mmk0****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Win10_ZC</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The flag that is used to manage the cloud computer.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Updating: The configurations of the cloud computer are being updated.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   NoFlag: No flags are attached to the cloud computer.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Updating: The configurations of the cloud computer are being updated.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NoFlag: No flags are attached to the cloud computer.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoFlag</p>
          */
         @NameInMap("ManagementFlag")
         public String managementFlag;
@@ -384,72 +432,86 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The IP address of the member network interface controller (NIC) of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("MemberEniIp")
         public String memberEniIp;
 
         /**
          * <p>The OS.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Linux</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Windows</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Linux</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
          * <p>The IP address of the primary NIC of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("PrimaryEniIp")
         public String primaryEniIp;
 
         /**
          * <p>The protocol.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   HDX: High-definition Experience (HDX) protocol</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   ASP: Adaptive Streaming Protocol (ASP) protocol provided by Alibaba Cloud</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>HDX: High-definition Experience (HDX) protocol</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>ASP: Adaptive Streaming Protocol (ASP) protocol provided by Alibaba Cloud</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The time when the cloud computer was reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-03 08:48:08</p>
          */
         @NameInMap("ResetTime")
         public String resetTime;
 
         /**
          * <p>The system disk size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
@@ -632,158 +694,169 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
     public static class DescribeDesktopsInGroupResponseBodyPostPaidDesktops extends TeaModel {
         /**
          * <p>The connection status of the cloud computer.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Unknown</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Connected</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Disconnected</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Unknown</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Connected</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Disconnected</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Connected</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
         /**
          * <p>The retention period of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4153958447</p>
          */
         @NameInMap("CreateDuration")
         public String createDuration;
 
         /**
          * <p>The time when the cloud computer was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-21T06:34:57Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ud-2i8qxpv6t1a07****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
          * <p>The status of the cloud computer.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Stopped</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Starting</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Rebuilding</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Running</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Stopping</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Expired</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Deleted</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Pending</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Stopped</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Starting</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Rebuilding</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Running</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Stopping</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Expired</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Deleted</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Pending</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Stopped</p>
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
         /**
          * <p>The type of the disk.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM: system disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DATA: data disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SYSTEM: system disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DATA: data disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
          * <p>The ID of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -796,6 +869,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The username of the authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("EndUserName")
         public String endUserName;
@@ -808,48 +884,61 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The image version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1.0-R-20220914.17****</p>
          */
         @NameInMap("FotaVersion")
         public String fotaVersion;
 
         /**
          * <p>The version of the GPU driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-hn5v2mmk0****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Win10_ZC</p>
          */
         @NameInMap("ImageName")
         public String imageName;
 
         /**
          * <p>The flag that is used to manage the cloud computer.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Updating: The configurations of the cloud computer are being updated.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   NoFlag: No flags are attached to the cloud computer.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Updating: The configurations of the cloud computer are being updated.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NoFlag: No flags are attached to the cloud computer.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoFlag</p>
          */
         @NameInMap("ManagementFlag")
         public String managementFlag;
@@ -862,78 +951,95 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
 
         /**
          * <p>The IP address of the member NIC of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("MemberEniIp")
         public String memberEniIp;
 
         /**
          * <p>The OS.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Linux</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Windows</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Linux</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
          * <p>The IP address of the primary NIC of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         @NameInMap("PrimaryEniIp")
         public String primaryEniIp;
 
         /**
          * <p>The protocol.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   HDX: HDX protocol</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   ASP: ASP protocol provided by Alibaba Cloud</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>HDX: HDX protocol</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>ASP: ASP protocol provided by Alibaba Cloud</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HDX</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The time when the cloud computer was released.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-21T16:34:57Z</p>
          */
         @NameInMap("ReleaseTime")
         public String releaseTime;
 
         /**
          * <p>The time when the cloud computer was reset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-03 08:48:08</p>
          */
         @NameInMap("ResetTime")
         public String resetTime;
 
         /**
          * <p>The system disk size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;

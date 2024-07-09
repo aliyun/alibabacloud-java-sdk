@@ -12,18 +12,27 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     /**
      * <p>The token that is used for the next query. If this parameter is left empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>484256DA-D816-44D2-9D86-B6EE4D5BA78C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of cloud desktops.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -68,49 +77,59 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     public static class DescribeDesktopsResponseBodyDesktopsDisks extends TeaModel {
         /**
          * <p>The disk ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-jedbpr4sl9l37****</p>
          */
         @NameInMap("DiskId")
         public String diskId;
 
         /**
          * <p>The disk size. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
         /**
          * <p>The type of the disk.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM: system disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DATA: data disk</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SYSTEM: system disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>DATA: data disk</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("DiskType")
         public String diskType;
 
         /**
          * <p>The performance level (PL) of the disk when an enhanced SSD (ESSD) is used. Valid values:</p>
-         * <br>
-         * <p>*   PL0</p>
-         * <p>*   PL1</p>
-         * <p>*   PL2</p>
-         * <p>*   PL3</p>
-         * <br>
-         * <p>For more information about the differences among ESSDs at different PLs, see [Enhanced SSDs](~~122389~~).</p>
+         * <ul>
+         * <li>PL0</li>
+         * <li>PL1</li>
+         * <li>PL2</li>
+         * <li>PL3</li>
+         * </ul>
+         * <p>For more information about the differences among ESSDs at different PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">Enhanced SSDs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
@@ -157,36 +176,54 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     public static class DescribeDesktopsResponseBodyDesktopsFotaUpdate extends TeaModel {
         /**
          * <p>The current image version of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0-D-20220102.000000</p>
          */
         @NameInMap("CurrentAppVersion")
         public String currentAppVersion;
 
         /**
          * <p>The image version to which the cloud desktop can be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0-R-20220307.190736</p>
          */
         @NameInMap("NewAppVersion")
         public String newAppVersion;
 
         /**
          * <p>The description of the image version to which the cloud desktop can be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Upgrade package for testing 03-07</p>
          */
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
         /**
          * <p>The English description of the image version to which the cloud desktop can be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Release note</p>
          */
         @NameInMap("ReleaseNoteEn")
         public String releaseNoteEn;
 
         /**
          * <p>The Japanese description of the image version to which the cloud desktop can be updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>リリースノート</p>
          */
         @NameInMap("ReleaseNoteJp")
         public String releaseNoteJp;
 
         /**
          * <p>The size of the installation package for the image to which the cloud desktop can be updated. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>108815097</p>
          */
         @NameInMap("Size")
         public Long size;
@@ -246,21 +283,60 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDesktopsResponseBodyDesktopsResourceGroups extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeDesktopsResponseBodyDesktopsResourceGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopsResponseBodyDesktopsResourceGroups self = new DescribeDesktopsResponseBodyDesktopsResourceGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsResourceGroups setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsResourceGroups setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class DescribeDesktopsResponseBodyDesktopsSessions extends TeaModel {
         /**
          * <p>The ID of the end user who logged on to the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29615820929547****</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
          * <p>The time when the desktop session was established.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-07T08:23Z</p>
          */
         @NameInMap("EstablishmentTime")
         public String establishmentTime;
 
         /**
          * <p>The name of the external user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Testname</p>
          */
         @NameInMap("ExternalUserName")
         public String externalUserName;
@@ -299,12 +375,18 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     public static class DescribeDesktopsResponseBodyDesktopsTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
          */
         @NameInMap("Value")
         public String value;
@@ -335,140 +417,189 @@ public class DescribeDesktopsResponseBody extends TeaModel {
     public static class DescribeDesktopsResponseBodyDesktops extends TeaModel {
         /**
          * <p>The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("BindAmount")
         public Integer bindAmount;
 
         /**
          * <p>The ID of the desktop template that is used to create the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b-2g65ljy4291vl****</p>
          */
         @NameInMap("BundleId")
         public String bundleId;
 
         /**
          * <p>The name of the desktop template that is used to create the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name</p>
          */
         @NameInMap("BundleName")
         public String bundleName;
 
         /**
          * <p>The billing method of the cloud desktop.</p>
-         * <br>
          * <p>Default value: PostPaid. Valid values:</p>
-         * <br>
-         * <p>*   Postpaid: pay-as-you-go</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   PrePaid: subscription</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Postpaid: pay-as-you-go</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>PrePaid: subscription</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("ChargeType")
         public String chargeType;
 
         /**
          * <p>The connection status of the end user.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Unknown</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Connected</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Disconnected</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Unknown</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Connected</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Disconnected</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disconnected</p>
          */
         @NameInMap("ConnectionStatus")
         public String connectionStatus;
 
         /**
          * <p>The number of vCPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Cpu")
         public Integer cpu;
 
         /**
          * <p>The time when the cloud desktop was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-06T08:28Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
 
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
         /**
          * <p>The ID of the desktop group to which the cloud desktop belongs. Default value: null.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("DesktopGroupId")
         public String desktopGroupId;
 
         /**
          * <p>The cloud desktop ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-gx2x1dhsmucyy****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The cloud desktop name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDesktopName</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
          * <p>The status of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         @NameInMap("DesktopStatus")
         public String desktopStatus;
 
         /**
          * <p>The type of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd.basic.large</p>
          */
         @NameInMap("DesktopType")
         public String desktopType;
 
         /**
          * <p>The directory ID. The value of this parameter is the same as the workspace ID that is indicated by the OfficeSiteId parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         @NameInMap("DirectoryType")
         public String directoryType;
@@ -481,12 +612,18 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>The number of times for which the cloud desktop can be downgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("DowngradeQuota")
         public Long downgradeQuota;
 
         /**
          * <p>The number of times for which the cloud desktop has been downgraded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DowngradedTimes")
         public Long downgradedTimes;
@@ -499,6 +636,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>The time when the subscription cloud desktop expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-31T15:59Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -511,72 +651,101 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the cloud desktop is a GPU-accelerated desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("GpuCategory")
         public Long gpuCategory;
 
         /**
          * <p>The number of GPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
         /**
          * <p>The version number of the GPU driver of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
         /**
          * <p>The GPU Specifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NVIDIA T4</p>
          */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HibernationBeta")
         public Boolean hibernationBeta;
 
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("HibernationOptionsConfigured")
         public Boolean hibernationOptionsConfigured;
 
         /**
          * <p>The hostname of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testName</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
          * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-4zfb6zj728hhr****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The flag that is used to manage the cloud desktop.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Updating: The configurations of the cloud desktop are being updated.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   NoFlag: No flags are available.</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Updating: The configurations of the cloud desktop are being updated.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>NoFlag: No flags are available.</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoFlag</p>
          */
         @NameInMap("ManagementFlag")
         public String managementFlag;
@@ -589,110 +758,136 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>The memory size. Unit: MiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4096</p>
          */
         @NameInMap("Memory")
         public Long memory;
 
         /**
          * <p>The ID of the secondary network interface controller (NIC) created by the RAM or Active Directory (AD) user in Elastic Desktop Service (EDS). You do not have permissions to modify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
         /**
          * <p>The IP address of the secondary NIC that is created by the RAM or AD user in EDS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.74.165</p>
          */
         @NameInMap("NetworkInterfaceIp")
         public String networkInterfaceIp;
 
         /**
          * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-363353****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
          * <p>The workspace name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
         /**
          * <p>The account type of the workspace.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SIMPLE: convenience account</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   AD_CONNECTOR: enterprise AD account</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SIMPLE: convenience account</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>AD_CONNECTOR: enterprise AD account</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SIMPLE</p>
          */
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
         /**
          * <p>The virtual private cloud (VPC) type of the workspace.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   standard</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   customized</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   basic</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>standard</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>customized</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>basic</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         @NameInMap("OfficeSiteVpcType")
         public String officeSiteVpcType;
 
         /**
          * <p>The OS that is defined in the desktop template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
          * <p>The information about the OS platform. Valid values:</p>
-         * <br>
-         * <p>*   CentOS</p>
-         * <p>*   Ubuntu</p>
-         * <p>*   Windows Server 2016</p>
-         * <p>*   Windows Server 2019</p>
-         * <p>*   UOS</p>
+         * <ul>
+         * <li>CentOS</li>
+         * <li>Ubuntu</li>
+         * <li>Windows Server 2016</li>
+         * <li>Windows Server 2019</li>
+         * <li>UOS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Ubuntu</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system-all-enabled-policy</p>
          */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
@@ -705,6 +900,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
@@ -717,54 +915,62 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>The progress when the cloud desktop was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The protocol.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   HDX: High-definition Experience (HDX) protocol</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   ASP: Adaptive Streaming Protocol (ASP) developed by Alibaba Cloud</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>HDX: High-definition Experience (HDX) protocol</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>ASP: Adaptive Streaming Protocol (ASP) developed by Alibaba Cloud</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        @NameInMap("ResourceGroups")
+        public java.util.List<DescribeDesktopsResponseBodyDesktopsResourceGroups> resourceGroups;
+
         /**
          * <p>The type of the session.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SINGLE_SESSION</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   MULTIPLE_SESSION</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SINGLE_SESSION</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>MULTIPLE_SESSION</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SINGLE_SESSION</p>
          */
         @NameInMap("SessionType")
         public String sessionType;
@@ -777,36 +983,58 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-gi007jgyc3kcey2bb</p>
          */
         @NameInMap("SnapshotPolicyId")
         public String snapshotPolicyId;
 
         /**
          * <p>The name of the snapshot policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testSnapshotName</p>
          */
         @NameInMap("SnapshotPolicyName")
         public String snapshotPolicyName;
 
         /**
          * <p>The time when the cloud desktop was first started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-06T08:31Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>Indicates whether the cloud desktop supports hibernation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("SupportHibernation")
         public Boolean supportHibernation;
 
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         @NameInMap("SystemDiskCategory")
         public String systemDiskCategory;
 
         /**
-         * <p>>  This parameter is in invitational preview and is not publicly available.</p>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
@@ -819,18 +1047,27 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether disk encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 
         /**
-         * <p>The zone type. Default value: **AvailabilityZone**. This value indicates Alibaba Cloud zones.</p>
+         * <p>The zone type. Default value: <strong>AvailabilityZone</strong>. This value indicates Alibaba Cloud zones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AvailabilityZone</p>
          */
         @NameInMap("ZoneType")
         public String zoneType;
@@ -1214,6 +1451,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setResourceGroups(java.util.List<DescribeDesktopsResponseBodyDesktopsResourceGroups> resourceGroups) {
+            this.resourceGroups = resourceGroups;
+            return this;
+        }
+        public java.util.List<DescribeDesktopsResponseBodyDesktopsResourceGroups> getResourceGroups() {
+            return this.resourceGroups;
         }
 
         public DescribeDesktopsResponseBodyDesktops setSessionType(String sessionType) {

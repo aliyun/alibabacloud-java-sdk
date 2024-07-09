@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class DeleteCloudDriveGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-532033****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
@@ -18,6 +22,10 @@ public class DeleteCloudDriveGroupsRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

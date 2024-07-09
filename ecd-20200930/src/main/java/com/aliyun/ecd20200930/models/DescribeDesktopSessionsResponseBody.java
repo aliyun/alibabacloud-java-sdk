@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeDesktopSessionsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3EC4A6DB-EC8D-55B0-9038-543DE671****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -54,111 +60,174 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
     public static class DescribeDesktopSessionsResponseBodySessions extends TeaModel {
         /**
          * <p>The IP address of the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.21.XX.XX</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
-         * <p>The OS that the client runs.</p>
+         * <p>The client OS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>windows_\&quot;Windows10Enterprise\&quot;10.0(Build22000)</p>
          */
         @NameInMap("ClientOS")
         public String clientOS;
 
         /**
          * <p>The client version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0.0-R-20221030.08****</p>
          */
         @NameInMap("ClientVersion")
         public String clientVersion;
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-g6t1ukbaea****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testDesktop</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
          * <p>The duration of the remote assistance. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("EndUserApplyCoordinateTime")
         public Long endUserApplyCoordinateTime;
 
         /**
          * <p>The ID of the end user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testUser</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
 
         /**
-         * <p>The duration of the latest session. Unit: seconds.</p>
+         * <p>The duration of the last connection to the cloud computer. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("LatestConnectionTime")
         public Long latestConnectionTime;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-8904****</p>
          */
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
 
         /**
-         * <p>The workspace name.</p>
+         * <p>The name of the office network.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DemoOfficeSite</p>
          */
         @NameInMap("OfficeSiteName")
         public String officeSiteName;
 
+        @NameInMap("OsSessionStatus")
+        public String osSessionStatus;
+
         /**
-         * <p>The OS. Valid values:</p>
-         * <br>
-         * <p>*   Windows</p>
-         * <p>*   Linux</p>
+         * <p>The OS.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Linux</li>
+         * <li>Windows</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
-         * <p>The protocol type that is supported by the cloud desktop. Valid values:</p>
-         * <br>
-         * <p>*   HDX</p>
-         * <p>*   ASP</p>
+         * <p>The protocol type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>HDX</li>
+         * <li>ASP</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The end time of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-28T02:31:43Z</p>
          */
         @NameInMap("SessionEndTime")
         public String sessionEndTime;
 
         /**
          * <p>The idle duration of the session. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("SessionIdleTime")
         public Long sessionIdleTime;
 
         /**
          * <p>The start time of the session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-01-28T02:31:43Z</p>
          */
         @NameInMap("SessionStartTime")
         public String sessionStartTime;
 
         /**
-         * <p>The session status. Valid values:</p>
-         * <br>
-         * <p>*   Connected</p>
-         * <p>*   Disconnected</p>
+         * <p>The state of the session.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Connected</li>
+         * <li>Disconnected</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Connected</p>
          */
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
+        @NameInMap("SubPayType")
+        public String subPayType;
+
         /**
-         * <p>The total session duration. Unit: seconds.</p>
+         * <p>The total connection duration. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240</p>
          */
         @NameInMap("TotalConnectionTime")
         public Long totalConnectionTime;
@@ -248,6 +317,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             return this.officeSiteName;
         }
 
+        public DescribeDesktopSessionsResponseBodySessions setOsSessionStatus(String osSessionStatus) {
+            this.osSessionStatus = osSessionStatus;
+            return this;
+        }
+        public String getOsSessionStatus() {
+            return this.osSessionStatus;
+        }
+
         public DescribeDesktopSessionsResponseBodySessions setOsType(String osType) {
             this.osType = osType;
             return this;
@@ -294,6 +371,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
         public String getSessionStatus() {
             return this.sessionStatus;
+        }
+
+        public DescribeDesktopSessionsResponseBodySessions setSubPayType(String subPayType) {
+            this.subPayType = subPayType;
+            return this;
+        }
+        public String getSubPayType() {
+            return this.subPayType;
         }
 
         public DescribeDesktopSessionsResponseBodySessions setTotalConnectionTime(Long totalConnectionTime) {

@@ -6,66 +6,70 @@ import com.aliyun.tea.*;
 public class MoveCdsFileRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-346063****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The processing mode of files that have the same name.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    refuse</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : If you want to create a file that uses the same name as an existing file in the cloud, the system denies your request and returns the details of the existing file.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    auto_rename</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : If you want to create a file that uses the same name as an existing file in the cloud, the system renames the file that you want to create by appending the current time point.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    ignore</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : The system allows you to create a file that uses the same name as an existing file in the cloud.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   <!-- --></p>
-     * <br>
-     * <p>    over_write</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    : After you create a file that uses the same name as an existing file in the cloud, the new file overwrites the existing file.</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><!-- -->
+     * 
+     * <p>refuse</p>
+     * <!-- -->
+     * 
+     * <p>: If you want to create a file that uses the same name as an existing file in the cloud, the system denies your request and returns the details of the existing file.</p>
+     * <!-- -->
+     * </li>
+     * <li><!-- -->
+     * 
+     * <p>auto_rename</p>
+     * <!-- -->
+     * 
+     * <p>: If you want to create a file that uses the same name as an existing file in the cloud, the system renames the file that you want to create by appending the current time point.</p>
+     * <!-- -->
+     * </li>
+     * <li><!-- -->
+     * 
+     * <p>ignore</p>
+     * <!-- -->
+     * 
+     * <p>: The system allows you to create a file that uses the same name as an existing file in the cloud.</p>
+     * <!-- -->
+     * </li>
+     * <li><!-- -->
+     * 
+     * <p>over_write</p>
+     * <!-- -->
+     * 
+     * <p>: After you create a file that uses the same name as an existing file in the cloud, the new file overwrites the existing file.</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>ignore</p>
      */
     @NameInMap("ConflictPolicy")
     public String conflictPolicy;
 
     /**
      * <p>The user ID that you want to use to access the cloud disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>user01</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
      * <p>The ID of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63f3257b68b018170b194d87b875512d108f****</p>
      */
     @NameInMap("FileId")
     public String fileId;
@@ -78,12 +82,19 @@ public class MoveCdsFileRequest extends TeaModel {
 
     /**
      * <p>The ID of the parent folder that you want to move. If you want to remove the root folder, set the value to root.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6409848a6da91d6240604e7ba7337d85ba8a1****</p>
      */
     @NameInMap("ParentFolderId")
     public String parentFolderId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class GetOfficeSiteSsoStatusRequest extends TeaModel {
     /**
      * <p>The workspace ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-363353****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

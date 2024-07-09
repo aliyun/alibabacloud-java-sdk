@@ -6,27 +6,42 @@ import com.aliyun.tea.*;
 public class DescribeImageModifiedRecordsRequest extends TeaModel {
     /**
      * <p>The ID of the cloud computer.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-bd53sfmysz8ir****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
      * <p>The maximum number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Maximum value: 100.</p>
-     * <p>*   Default value: 10.</p>
+     * <ul>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 10.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l3d+SWeOobbIlDLjwhjkTk</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -6,19 +6,30 @@ import com.aliyun.tea.*;
 public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The number of the resources. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
      * <p>The maximum public bandwidth. Unit: Mbit/s.</p>
-     * <br>
-     * <p>*   Valid values if the PayByTraffic parameter is set to PayByBandwidth: 10 to 1000</p>
-     * <p>*   Valid values if the PayByTraffic parameter is set to PayByTraffic: 10 to 200</p>
+     * <ul>
+     * <li>Valid values if the PayByTraffic parameter is set to PayByBandwidth: 10 to 1000</li>
+     * <li>Valid values if the PayByTraffic parameter is set to PayByTraffic: 10 to 200</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
     @NameInMap("BundleModels")
     public java.util.List<DescribePriceRequestBundleModels> bundleModels;
 
@@ -57,46 +68,59 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The model of the WUYING hardware client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hide</p>
      */
     @NameInMap("HardwareVersion")
     public String hardwareVersion;
 
     /**
      * <p>The resource specifications.</p>
-     * <br>
-     * <p>*   If you set ResourceType to Desktop, set this parameter to one of the following values:</p>
-     * <br>
-     * <p>    *   ecd.basic.small</p>
-     * <p>    *   ecd.basic.large</p>
-     * <p>    *   ecd.advanced.large</p>
-     * <p>    *   ecd.advanced.xlarge</p>
-     * <p>    *   ecd.performance.2xlarge</p>
-     * <p>    *   ecd.graphics.xlarge</p>
-     * <p>    *   ecd.graphics.2xlarge</p>
-     * <p>    *   ecd.advanced.xlarge_s8d2</p>
-     * <p>    *   ecd.advanced.xlarge_s8d7</p>
-     * <p>    *   ecd.graphics.1g72c</p>
-     * <p>    *   eds.general.2c2g</p>
-     * <p>    *   eds.general.2c4g</p>
-     * <p>    *   eds.general.2c8g</p>
-     * <p>    *   eds.general.4c8g</p>
-     * <p>    *   eds.general.4c16g</p>
-     * <p>    *   eds.general.8c16g</p>
-     * <p>    *   eds.general.8c32g</p>
-     * <p>    *   eds.general.16c32g</p>
-     * <br>
-     * <p>*   If you set ResourceType to OfficeSite, set this parameter to large.</p>
-     * <br>
-     * <p>*   If you set ResourceType to Bandwidth, leave this parameter empty.</p>
+     * <ul>
+     * <li><p>If you set ResourceType to Desktop, set this parameter to one of the following values:</p>
+     * <ul>
+     * <li>ecd.basic.small</li>
+     * <li>ecd.basic.large</li>
+     * <li>ecd.advanced.large</li>
+     * <li>ecd.advanced.xlarge</li>
+     * <li>ecd.performance.2xlarge</li>
+     * <li>ecd.graphics.xlarge</li>
+     * <li>ecd.graphics.2xlarge</li>
+     * <li>ecd.advanced.xlarge_s8d2</li>
+     * <li>ecd.advanced.xlarge_s8d7</li>
+     * <li>ecd.graphics.1g72c</li>
+     * <li>eds.general.2c2g</li>
+     * <li>eds.general.2c4g</li>
+     * <li>eds.general.2c8g</li>
+     * <li>eds.general.4c8g</li>
+     * <li>eds.general.4c16g</li>
+     * <li>eds.general.8c16g</li>
+     * <li>eds.general.8c32g</li>
+     * <li>eds.general.16c32g</li>
+     * </ul>
+     * </li>
+     * <li><p>If you set ResourceType to OfficeSite, set this parameter to large.</p>
+     * </li>
+     * <li><p>If you set ResourceType to Bandwidth, leave this parameter empty.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>eds.general.2c2g</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
      * <p>The metering method of the Internet access package. Valid values:</p>
-     * <br>
-     * <p>*   PayByBandwidth: pay-by-bandwidth</p>
-     * <p>*   PayByTraffic: pay-by-data-transfer</p>
+     * <ul>
+     * <li>PayByBandwidth: pay-by-bandwidth</li>
+     * <li>PayByTraffic: pay-by-data-transfer</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -106,11 +130,14 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The OS. Valid values:</p>
-     * <br>
-     * <p>*   Windows</p>
-     * <p>*   Linux</p>
-     * <br>
+     * <ul>
+     * <li>Windows</li>
+     * <li>Linux</li>
+     * </ul>
      * <p>Default value: Windows.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Windows</p>
      */
     @NameInMap("OsType")
     public String osType;
@@ -120,59 +147,82 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The subscription duration. Default value: 1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
      * <p>The unit of the billing cycle. Valid values:</p>
-     * <br>
-     * <p>*   Hour</p>
-     * <p>*   Month</p>
-     * <p>*   Year</p>
-     * <br>
+     * <ul>
+     * <li>Hour</li>
+     * <li>Month</li>
+     * <li>Year</li>
+     * </ul>
      * <p>Default value: Hour.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hour</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
      * <p>The promotion ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456</p>
      */
     @NameInMap("PromotionId")
     public String promotionId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The resource type. Valid values:</p>
-     * <br>
-     * <p>*   Desktop: cloud desktop</p>
-     * <p>*   OfficeSite: workspace</p>
-     * <p>*   Bandwidth: network bandwidth</p>
-     * <br>
+     * <ul>
+     * <li>Desktop: cloud desktop</li>
+     * <li>OfficeSite: workspace</li>
+     * <li>Bandwidth: network bandwidth</li>
+     * </ul>
      * <p>Default value: Desktop.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Desktop</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The performance level (PL) of the system disk. Valid values:</p>
-     * <br>
-     * <p>*   PL0</p>
-     * <p>*   PL1</p>
-     * <p>*   PL2</p>
-     * <p>*   PL3</p>
+     * <ul>
+     * <li>PL0</li>
+     * <li>PL1</li>
+     * <li>PL2</li>
+     * <li>PL3</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PL0</p>
      */
     @NameInMap("RootDiskPerformanceLevel")
     public String rootDiskPerformanceLevel;
 
     /**
      * <p>The system disk size. Unit: GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("RootDiskSizeGib")
     public Integer rootDiskSizeGib;
@@ -188,17 +238,24 @@ public class DescribePriceRequest extends TeaModel {
 
     /**
      * <p>The PL of the data disk. Valid values:</p>
-     * <br>
-     * <p>*   PL0</p>
-     * <p>*   PL1</p>
-     * <p>*   PL2</p>
-     * <p>*   PL3</p>
+     * <ul>
+     * <li>PL0</li>
+     * <li>PL1</li>
+     * <li>PL2</li>
+     * <li>PL3</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PL0</p>
      */
     @NameInMap("UserDiskPerformanceLevel")
     public String userDiskPerformanceLevel;
 
     /**
      * <p>The data disk size. Unit: GiB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("UserDiskSizeGib")
     public Integer userDiskSizeGib;
@@ -474,6 +531,18 @@ public class DescribePriceRequest extends TeaModel {
         @NameInMap("Duration")
         public Integer duration;
 
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        @NameInMap("OsType")
+        public String osType;
+
+        @NameInMap("RootDiskId")
+        public String rootDiskId;
+
+        @NameInMap("UserDiskId")
+        public String userDiskId;
+
         public static DescribePriceRequestBundleModels build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceRequestBundleModels self = new DescribePriceRequestBundleModels();
             return TeaModel.build(map, self);
@@ -501,6 +570,38 @@ public class DescribePriceRequest extends TeaModel {
         }
         public Integer getDuration() {
             return this.duration;
+        }
+
+        public DescribePriceRequestBundleModels setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribePriceRequestBundleModels setOsType(String osType) {
+            this.osType = osType;
+            return this;
+        }
+        public String getOsType() {
+            return this.osType;
+        }
+
+        public DescribePriceRequestBundleModels setRootDiskId(String rootDiskId) {
+            this.rootDiskId = rootDiskId;
+            return this;
+        }
+        public String getRootDiskId() {
+            return this.rootDiskId;
+        }
+
+        public DescribePriceRequestBundleModels setUserDiskId(String userDiskId) {
+            this.userDiskId = userDiskId;
+            return this;
+        }
+        public String getUserDiskId() {
+            return this.userDiskId;
         }
 
     }

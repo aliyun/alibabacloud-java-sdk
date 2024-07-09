@@ -12,6 +12,9 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
 
     /**
      * <p>The business type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("BizType")
     public Integer bizType;
@@ -19,27 +22,52 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     @NameInMap("CdsChargeType")
     public String cdsChargeType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cen-g4ba1mkji8nj6****</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test.local</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>536870912000</p>
+     */
     @NameInMap("MaxSize")
     public Long maxSize;
 
     /**
      * <p>The name of the cloud disk that you want to create in Cloud Drive Service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>wuying-pds</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+dir-400695****</p>
+     */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SIMPLE</p>
+     */
     @NameInMap("OfficeSiteType")
     public String officeSiteType;
 
@@ -51,12 +79,19 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The solution ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>co-0esnf8kb8zpfbqmvt</p>
      */
     @NameInMap("SolutionId")
     public String solutionId;
@@ -64,6 +99,10 @@ public class CreateCloudDriveServiceRequest extends TeaModel {
     @NameInMap("UserCount")
     public Long userCount;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024000</p>
+     */
     @NameInMap("UserMaxSize")
     public Long userMaxSize;
 

@@ -12,6 +12,9 @@ public class ModifyDesktopTimerResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4638719F-3CAB-5704-BD54-55617BFF****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

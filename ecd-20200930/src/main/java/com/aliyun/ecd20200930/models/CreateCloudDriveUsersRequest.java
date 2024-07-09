@@ -6,24 +6,37 @@ import com.aliyun.tea.*;
 public class CreateCloudDriveUsersRequest extends TeaModel {
     /**
      * <p>The ID of the cloud disk.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou+cds-352282****</p>
      */
     @NameInMap("CdsId")
     public String cdsId;
 
     /**
      * <p>The IDs of the end users.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The maximum storage space of an end user. Unit: bytes.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1024</p>
      */
     @NameInMap("UserMaxSize")
     public Long userMaxSize;

@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class SetUserProfilePathRulesRequest extends TeaModel {
     /**
      * <p>The desktop group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dg-2i8qxpv6t1a03****</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -24,32 +31,32 @@ public class SetUserProfilePathRulesRequest extends TeaModel {
 
     /**
      * <p>The directory type that you want to configure.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Both_Default_DesktopGroup</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   DesktopGroup</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Default</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>Both_Default_DesktopGroup</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>DesktopGroup</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Default</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DesktopGroup</p>
      */
     @NameInMap("UserProfileRuleType")
     public String userProfileRuleType;
@@ -94,30 +101,34 @@ public class SetUserProfilePathRulesRequest extends TeaModel {
     public static class SetUserProfilePathRulesRequestUserProfilePathRuleBlackPath extends TeaModel {
         /**
          * <p>The blacklist path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AppLocal/Data</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The path type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   file</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   folder</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>file</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>folder</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>folder</p>
          */
         @NameInMap("Type")
         public String type;
@@ -148,30 +159,34 @@ public class SetUserProfilePathRulesRequest extends TeaModel {
     public static class SetUserProfilePathRulesRequestUserProfilePathRuleWhitePaths extends TeaModel {
         /**
          * <p>The whitelist path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>whitePath</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The path type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   file</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   folder</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>file</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>folder</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         @NameInMap("Type")
         public String type;

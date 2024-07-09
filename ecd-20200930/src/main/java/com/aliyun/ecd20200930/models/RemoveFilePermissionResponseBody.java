@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class RemoveFilePermissionResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4636DBE0-BBB4-4076-8B8E-94D21A9A3CFB</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -6,21 +6,34 @@ import com.aliyun.tea.*;
 public class ModifyDesktopHostNameRequest extends TeaModel {
     /**
      * <p>The ID of the cloud computer.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-gx2x1dhsmucyy****</p>
      */
     @NameInMap("DesktopId")
     public String desktopId;
 
     /**
      * <p>The new hostname of the cloud computer. The hostname must meet the following requirements:</p>
-     * <br>
-     * <p>*   The hostname must be 2 to 15 characters in length.</p>
-     * <p>*   The hostname can contain only letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</p>
+     * <ul>
+     * <li>The hostname must be 2 to 15 characters in length.</li>
+     * <li>The hostname can contain only letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NewName</p>
      */
     @NameInMap("NewHostName")
     public String newHostName;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

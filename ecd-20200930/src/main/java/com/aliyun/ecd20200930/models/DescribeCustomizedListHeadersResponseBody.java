@@ -7,6 +7,10 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
     @NameInMap("Headers")
     public java.util.List<DescribeCustomizedListHeadersResponseBodyHeaders> headers;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class DescribeCustomizedListHeadersResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomizedListHeadersResponseBodyHeaders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>display</p>
+         */
         @NameInMap("DisplayType")
         public String displayType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pay_type</p>
+         */
         @NameInMap("HeaderKey")
         public String headerKey;
 

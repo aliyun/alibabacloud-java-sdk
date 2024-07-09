@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeFlowStatisticResponseBody extends TeaModel {
     /**
      * <p>The number of available cloud computers in the office network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("DesktopCount")
     public Integer desktopCount;
@@ -18,6 +21,9 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>269BDB16-2CD8-4865-84BD-11C40BC2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,24 +60,36 @@ public class DescribeFlowStatisticResponseBody extends TeaModel {
     public static class DescribeFlowStatisticResponseBodyDesktopFlowStatistic extends TeaModel {
         /**
          * <p>The ID of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-8bslxqq0csytn****</p>
          */
         @NameInMap("DesktopId")
         public String desktopId;
 
         /**
          * <p>The name of the cloud computer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desktop-1</p>
          */
         @NameInMap("DesktopName")
         public String desktopName;
 
         /**
          * <p>The traffic amount. Unit: KB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("FlowIn")
         public String flowIn;
 
         /**
          * <p>The traffic ranking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("FlowRank")
         public Integer flowRank;

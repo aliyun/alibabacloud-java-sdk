@@ -12,12 +12,18 @@ public class DescribeImagesResponseBody extends TeaModel {
 
     /**
      * <p>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4636DBE0-BBB4-4076-8B8E-94D21A9A3CFB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,215 +60,255 @@ public class DescribeImagesResponseBody extends TeaModel {
     public static class DescribeImagesResponseBodyImages extends TeaModel {
         /**
          * <p>The version of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("AppVersion")
         public String appVersion;
 
         /**
          * <p>The time when the image was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-01-10T01:01:10Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The size of the data disk. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
          */
         @NameInMap("DataDiskSize")
         public Integer dataDiskSize;
 
         /**
          * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>Indicates whether the image is a GPU-accelerated image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("GpuCategory")
         public Boolean gpuCategory;
 
         /**
          * <p>The version number of the GPU driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>417.22</p>
          */
         @NameInMap("GpuDriverVersion")
         public String gpuDriverVersion;
 
         /**
          * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-gx2x1dhsmusr2****</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
          * <p>The type of the image.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SYSTEM</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   CUSTOM</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>SYSTEM</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CUSTOM</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SYSTEM</p>
          */
         @NameInMap("ImageType")
         public String imageType;
 
         /**
          * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testImageName</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The type of the operating system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WINDOWS</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
          * <p>The operating system type of the image.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Ubuntu</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Windows Server 2022</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   UOS</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   CentOS</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Windows Server 2019</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   SQL Server 2016</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Windows 10</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Ubuntu</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows Server 2022</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>UOS</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CentOS</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows Server 2019</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>SQL Server 2016</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Windows 10</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Windows Server 2019</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
          * <p>The creation progress of the image. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Progress")
         public String progress;
 
         /**
          * <p>The protocol type.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   HDX: High-definition Experience (HDX) protocol</p>
-         * <p>*   ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</p>
+         * <ul>
+         * <li>HDX: High-definition Experience (HDX) protocol</li>
+         * <li>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASP</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
          * <p>The type of the image session.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SINGLE_SESSION: single-session image.</p>
-         * <br>
-         * <p>*   MULTIPLE_SESSION: multi-session image.</p>
+         * <ul>
+         * <li><p>SINGLE_SESSION: single-session image.</p>
+         * </li>
+         * <li><p>MULTIPLE_SESSION: multi-session image.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MULTIPLE_SESSION</p>
          */
         @NameInMap("SessionType")
         public String sessionType;
 
         /**
          * <p>The number of shared images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("SharedCount")
         public Integer sharedCount;
 
         /**
          * <p>The size of the image. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         @NameInMap("Size")
         public Integer size;
 
         /**
          * <p>The status of the image.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Creating</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Available</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   CreateFailed</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Creating</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Available</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>CreateFailed</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         @NameInMap("Status")
         public String status;
@@ -275,18 +321,27 @@ public class DescribeImagesResponseBody extends TeaModel {
 
         /**
          * <p>The time when the image was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-22T02:48:43Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>Indicates whether disk encryption is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the [ListKeys](~~28951~~) operation to query the list of KMS keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query the list of KMS keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
          */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;

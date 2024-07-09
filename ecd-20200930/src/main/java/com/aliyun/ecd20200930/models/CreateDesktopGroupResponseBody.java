@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateDesktopGroupResponseBody extends TeaModel {
     /**
      * <p>The ID of the desktop group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dg-2i8qxpv6t1a03****</p>
      */
     @NameInMap("DesktopGroupId")
     public String desktopGroupId;
@@ -18,6 +21,9 @@ public class CreateDesktopGroupResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3EB7FCEE-D731-4948-85A3-4B2C341CA983</p>
      */
     @NameInMap("RequestId")
     public String requestId;

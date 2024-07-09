@@ -6,18 +6,30 @@ import com.aliyun.tea.*;
 public class ModifyNASDefaultMountTargetRequest extends TeaModel {
     /**
      * <p>The ID of the NAS file system.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04f314****</p>
      */
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
     /**
      * <p>The domain name of the mount target.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0bf744****-xo***.cn-hangzhou.nas.aliyuncs.com</p>
      */
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

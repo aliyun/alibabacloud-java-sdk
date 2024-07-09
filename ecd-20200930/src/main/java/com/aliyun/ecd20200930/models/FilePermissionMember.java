@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class FilePermissionMember extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("CdsIdentity")
     public FilePermissionMemberCdsIdentity cdsIdentity;
 
@@ -13,6 +16,9 @@ public class FilePermissionMember extends TeaModel {
     @NameInMap("ExpireTime")
     public Long expireTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("RoleId")
     public String roleId;
 
@@ -54,9 +60,15 @@ public class FilePermissionMember extends TeaModel {
     }
 
     public static class FilePermissionMemberCdsIdentity extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Type")
         public String type;
 

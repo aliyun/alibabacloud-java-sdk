@@ -6,12 +6,19 @@ import com.aliyun.tea.*;
 public class ModifyDesktopsPolicyGroupRequest extends TeaModel {
     /**
      * <p>The ID of the cloud desktop. You can specify one or more desktop IDs. The value is a JSON array.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-ia2zw38bi6cm7****</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
      * <p>The ID of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pg-gx2x1dhsmthe9****</p>
      */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
@@ -24,6 +31,10 @@ public class ModifyDesktopsPolicyGroupRequest extends TeaModel {
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

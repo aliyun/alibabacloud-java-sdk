@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CompleteCdsFileResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05C2791F-41A7-5E7C-B5E4-1401FD0E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;

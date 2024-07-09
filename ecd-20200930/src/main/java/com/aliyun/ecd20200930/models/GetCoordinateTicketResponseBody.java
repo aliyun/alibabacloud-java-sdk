@@ -6,56 +6,68 @@ import com.aliyun.tea.*;
 public class GetCoordinateTicketResponseBody extends TeaModel {
     /**
      * <p>The ID of the stream collaboration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>co-0sot77uale3****</p>
      */
     @NameInMap("CoId")
     public String coId;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the cloud computer connection task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>39cc15e5-6998-4b9f-9b2c-7a4cc3e2****</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
      * <p>The task status.</p>
-     * <br>
      * <p>Possible values:</p>
-     * <br>
-     * <p>*   Finished</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Failed</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Running</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>Finished</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Failed</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>Running</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Finished</p>
      */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
     /**
      * <p>The credentials of the stream collaboration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>
      */
     @NameInMap("Ticket")
     public String ticket;

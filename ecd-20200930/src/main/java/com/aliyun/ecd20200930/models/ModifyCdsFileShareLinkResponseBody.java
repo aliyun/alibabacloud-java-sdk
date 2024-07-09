@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
     /**
      * <p>The modification result. The value success indicates that the modification is successful. If the modification failed, an error message is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Code")
     public String code;
@@ -18,36 +21,43 @@ public class ModifyCdsFileShareLinkResponseBody extends TeaModel {
 
     /**
      * <p>The error message that is returned. This parameter is not returned if the value of Code is success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F7E4322D-D679-5ACB-A909-490D2F0E****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The request status.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   true: The request is successful.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   false: The request fails.</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>true: The request is successful.</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- -->
+     * </li>
+     * <li><p>false: The request fails.</p>
+     * <!-- -->
+     * 
+     * <!-- -->
+     * 
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

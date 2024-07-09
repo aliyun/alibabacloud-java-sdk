@@ -6,28 +6,39 @@ import com.aliyun.tea.*;
 public class CancelCoordinationForMonitoringRequest extends TeaModel {
     /**
      * <p>The IDs of stream collaboration tasks.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("CoIds")
     public java.util.List<String> coIds;
 
     /**
      * <p>The ID of the end user that initiates stream collaboration. If the initiator is the administrator, skip this parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~436773~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The type of the user.</p>
-     * <br>
      * <p>Valid value:</p>
-     * <br>
-     * <p>* TENANT_ADMIN: administrator.</p>
+     * <ul>
+     * <li>TENANT_ADMIN: administrator.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>TENANT_ADMIN</p>
      */
     @NameInMap("UserType")
     public String userType;

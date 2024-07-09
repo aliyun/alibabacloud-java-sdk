@@ -6,12 +6,20 @@ import com.aliyun.tea.*;
 public class DeletePolicyGroupsRequest extends TeaModel {
     /**
      * <p>The ID of the policy. You can specify 1 to 100 policy IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pg-gx2x1dhsmthe9****</p>
      */
     @NameInMap("PolicyGroupId")
     public java.util.List<String> policyGroupId;
 
     /**
      * <p>The ID of the region.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;

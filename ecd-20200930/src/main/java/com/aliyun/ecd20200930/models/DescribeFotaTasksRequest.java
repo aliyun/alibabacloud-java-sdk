@@ -5,39 +5,58 @@ import com.aliyun.tea.*;
 
 public class DescribeFotaTasksRequest extends TeaModel {
     /**
-     * <p>>  This parameter is not publicly available.</p>
+     * <blockquote>
+     * <p> This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>To be hidden.</p>
      */
     @NameInMap("FotaStatus")
     public String fotaStatus;
 
     /**
      * <p>The language of the image version to update.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   en: English.</p>
-     * <p>*   zh: Simplified Chinese.</p>
+     * <ul>
+     * <li>en: English.</li>
+     * <li>zh: Simplified Chinese.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 100</p>
-     * <p>*   Default value: 20</p>
+     * <ul>
+     * <li>Valid values: 1 to 100</li>
+     * <li>Default value: 20</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. If the NextToken parameter is empty, no next page exists.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -50,11 +69,14 @@ public class DescribeFotaTasksRequest extends TeaModel {
 
     /**
      * <p>Specifies whether to automatically push the image update task.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   Running: automatically pushes the image update task.</p>
-     * <p>*   Pending: does not automatically push the image update task.</p>
+     * <ul>
+     * <li>Running: automatically pushes the image update task.</li>
+     * <li>Pending: does not automatically push the image update task.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Pending</p>
      */
     @NameInMap("UserStatus")
     public String userStatus;

@@ -6,18 +6,29 @@ import com.aliyun.tea.*;
 public class StopInvocationRequest extends TeaModel {
     /**
      * <p>The ID of cloud desktop N. Valid values of N: 1 to 50.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecd-7w78ozhjcwa3u****</p>
      */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
     /**
      * <p>The ID of the execution.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-7d2a745b412b4601b2d47f6a768d****</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
 
     /**
      * <p>The region ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
