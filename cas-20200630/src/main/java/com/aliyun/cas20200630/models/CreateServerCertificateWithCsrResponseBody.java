@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class CreateServerCertificateWithCsrResponseBody extends TeaModel {
     /**
      * <p>The certificate chain of the server certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</p>
      */
     @NameInMap("CertificateChain")
     public String certificateChain;
 
     /**
      * <p>The unique identifier of the server certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>180ae6bb538d538c70c01f81dcf2****</p>
      */
     @NameInMap("Identifier")
     public String identifier;
 
     /**
      * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55C66C7B-671A-4297-9187-2C4477247A74</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The serial number of the server certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>084bde9cd233f0ddae33adc438cfbbbd****</p>
      */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
     /**
      * <p>The content of the server certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</p>
      */
     @NameInMap("X509Certificate")
     public String x509Certificate;

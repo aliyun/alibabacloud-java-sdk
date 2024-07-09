@@ -4,6 +4,12 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DeleteClientCertificateRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>160ae6bb538d538c70c01f81dcf2****</p>
+     */
     @NameInMap("Identifier")
     public String identifier;
 

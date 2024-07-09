@@ -6,16 +6,26 @@ import com.aliyun.tea.*;
 public class UpdateCACertificateStatusRequest extends TeaModel {
     /**
      * <p>The unique identifier of the CA certificate whose status you want to change.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifiers of all CA certificates.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifiers of all CA certificates.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>160ae6bb538d538c70c01f81dcf2****</p>
      */
     @NameInMap("Identifier")
     public String identifier;
 
     /**
-     * <p>The state to which you want to change the CA certificate. Set to the value to **REVOKE**. After this operation is called, the status of the CA certificate is changed to **REVOKE**.</p>
-     * <br>
-     * <p>>  You can call this operation only if the status of a CA certificate is **ISSUE**. You can call the [DescribeCACertificate](~~328096~~) operation to query the status of a CA certificate.</p>
+     * <p>The state to which you want to change the CA certificate. Set to the value to <strong>REVOKE</strong>. After this operation is called, the status of the CA certificate is changed to <strong>REVOKE</strong>.</p>
+     * <blockquote>
+     * <p> You can call this operation only if the status of a CA certificate is <strong>ISSUE</strong>. You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the status of a CA certificate.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REVOKE</p>
      */
     @NameInMap("Status")
     public String status;
