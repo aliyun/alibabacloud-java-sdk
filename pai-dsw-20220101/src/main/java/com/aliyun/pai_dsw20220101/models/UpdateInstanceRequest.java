@@ -66,6 +66,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    @NameInMap("ImageAuth")
+    public String imageAuth;
+
     /**
      * <strong>example:</strong>
      * <p>image-05cefd0be2exxxx</p>
@@ -201,6 +204,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getEcsSpec() {
         return this.ecsSpec;
+    }
+
+    public UpdateInstanceRequest setImageAuth(String imageAuth) {
+        this.imageAuth = imageAuth;
+        return this;
+    }
+    public String getImageAuth() {
+        return this.imageAuth;
     }
 
     public UpdateInstanceRequest setImageId(String imageId) {

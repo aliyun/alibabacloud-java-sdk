@@ -94,6 +94,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("IdleInstanceCuller")
     public GetInstanceResponseBodyIdleInstanceCuller idleInstanceCuller;
 
+    @NameInMap("ImageAuth")
+    public String imageAuth;
+
     /**
      * <strong>example:</strong>
      * <p>image-05cefd0be2exxxx</p>
@@ -414,6 +417,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public GetInstanceResponseBodyIdleInstanceCuller getIdleInstanceCuller() {
         return this.idleInstanceCuller;
+    }
+
+    public GetInstanceResponseBody setImageAuth(String imageAuth) {
+        this.imageAuth = imageAuth;
+        return this;
+    }
+    public String getImageAuth() {
+        return this.imageAuth;
     }
 
     public GetInstanceResponseBody setImageId(String imageId) {

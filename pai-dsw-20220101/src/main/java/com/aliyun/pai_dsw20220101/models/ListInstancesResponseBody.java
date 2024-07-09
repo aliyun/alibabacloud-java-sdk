@@ -1031,6 +1031,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("IdleInstanceCuller")
         public ListInstancesResponseBodyInstancesIdleInstanceCuller idleInstanceCuller;
 
+        @NameInMap("ImageAuth")
+        public String imageAuth;
+
         /**
          * <strong>example:</strong>
          * <p>image-05cefd0be2exxxx</p>
@@ -1311,6 +1314,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public ListInstancesResponseBodyInstancesIdleInstanceCuller getIdleInstanceCuller() {
             return this.idleInstanceCuller;
+        }
+
+        public ListInstancesResponseBodyInstances setImageAuth(String imageAuth) {
+            this.imageAuth = imageAuth;
+            return this;
+        }
+        public String getImageAuth() {
+            return this.imageAuth;
         }
 
         public ListInstancesResponseBodyInstances setImageId(String imageId) {
