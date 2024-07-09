@@ -6,22 +6,29 @@ import com.aliyun.tea.*;
 public class SetReqHeaderConfigRequest extends TeaModel {
     /**
      * <p>The ID of the configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ConfigId")
     public Long configId;
 
     /**
      * <p>The accelerated domain name. Separate multiple domain names with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The name of the custom header.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testkey</p>
      */
     @NameInMap("Key")
     public String key;
@@ -34,8 +41,10 @@ public class SetReqHeaderConfigRequest extends TeaModel {
 
     /**
      * <p>The value of the custom header.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testvalue</p>
      */
     @NameInMap("Value")
     public String value;

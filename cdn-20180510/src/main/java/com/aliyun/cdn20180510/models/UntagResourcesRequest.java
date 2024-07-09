@@ -6,33 +6,43 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes.</p>
-     * <p>*   **false**: no.</p>
-     * <br>
-     * <p>Default value: **false**.</p>
+     * <ul>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
+     * </ul>
+     * <p>Default value: <strong>false</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
      * <p>The list of resource IDs. You can specify up to 50 resource IDs in the list.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resources from which you want to remove tags. Set this parameter to **DOMAIN**.</p>
-     * <br>
+     * <p>The type of the resources from which you want to remove tags. Set this parameter to <strong>DOMAIN</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOMAIN</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The list of tag keys. You can specify up to 20 tag keys in the list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>env</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

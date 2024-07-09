@@ -12,8 +12,10 @@ public class DescribeDomainsBySourceRequest extends TeaModel {
 
     /**
      * <p>The origin servers. Separate multiple origin servers with commas (,). Fuzzy match is not supported.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("Sources")
     public String sources;

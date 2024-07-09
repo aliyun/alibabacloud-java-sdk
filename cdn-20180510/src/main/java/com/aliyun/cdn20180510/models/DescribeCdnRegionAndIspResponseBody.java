@@ -18,6 +18,9 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2387C335-932C-4E1E-862C-1C4363B6DE72</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,6 +57,9 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
     public static class DescribeCdnRegionAndIspResponseBodyIspsIsp extends TeaModel {
         /**
          * <p>The English name of the ISP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>unicom</p>
          */
         @NameInMap("NameEn")
         public String nameEn;
@@ -109,6 +115,9 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
     public static class DescribeCdnRegionAndIspResponseBodyRegionsRegion extends TeaModel {
         /**
          * <p>The English name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liaoning</p>
          */
         @NameInMap("NameEn")
         public String nameEn;

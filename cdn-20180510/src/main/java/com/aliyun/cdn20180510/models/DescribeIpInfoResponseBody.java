@@ -6,38 +6,58 @@ import com.aliyun.tea.*;
 public class DescribeIpInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the IP address belongs to an Alibaba Cloud CDN POP.</p>
-     * <p>*   **True**:Yes.</p>
-     * <p>*   **False**:No.</p>
+     * <ul>
+     * <li><strong>True</strong>:Yes.</li>
+     * <li><strong>False</strong>:No.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
      */
     @NameInMap("CdnIp")
     public String cdnIp;
 
     /**
      * <p>The name of the ISP in Chinese.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>电信</p>
      */
     @NameInMap("ISP")
     public String ISP;
 
     /**
      * <p>The name of the ISP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>telecom</p>
      */
     @NameInMap("IspEname")
     public String ispEname;
 
     /**
      * <p>The name of the region in Chinese.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>中国-贵州省-贵阳市</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
      * <p>The name of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>China-Guizhou-guiyang</p>
      */
     @NameInMap("RegionEname")
     public String regionEname;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123847FA-9A00-4426-83B8-B4B45D475930</p>
      */
     @NameInMap("RequestId")
     public String requestId;

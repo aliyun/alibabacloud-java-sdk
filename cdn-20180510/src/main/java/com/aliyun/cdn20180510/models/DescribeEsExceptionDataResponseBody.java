@@ -12,6 +12,9 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>99D61AB3-6164-4CF2-A0DE-129C9B07618B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,28 +40,6 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeEsExceptionDataResponseBodyContentsPoints extends TeaModel {
-        /**
-         * <p>The data points.</p>
-         */
-        @NameInMap("Points")
-        public java.util.List<String> points;
-
-        public static DescribeEsExceptionDataResponseBodyContentsPoints build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEsExceptionDataResponseBodyContentsPoints self = new DescribeEsExceptionDataResponseBodyContentsPoints();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeEsExceptionDataResponseBodyContentsPoints setPoints(java.util.List<String> points) {
-            this.points = points;
-            return this;
-        }
-        public java.util.List<String> getPoints() {
-            return this.points;
-        }
-
-    }
-
     public static class DescribeEsExceptionDataResponseBodyContents extends TeaModel {
         /**
          * <p>Information about the time column and the error column name.</p>
@@ -68,6 +49,9 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
 
         /**
          * <p>The name of the table that shows the errors of the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>401</p>
          */
         @NameInMap("Name")
         public String name;
@@ -76,7 +60,7 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
          * <p>The time columns and error column names.</p>
          */
         @NameInMap("Points")
-        public java.util.List<DescribeEsExceptionDataResponseBodyContentsPoints> points;
+        public java.util.List<String> points;
 
         public static DescribeEsExceptionDataResponseBodyContents build(java.util.Map<String, ?> map) throws Exception {
             DescribeEsExceptionDataResponseBodyContents self = new DescribeEsExceptionDataResponseBodyContents();
@@ -99,11 +83,11 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeEsExceptionDataResponseBodyContents setPoints(java.util.List<DescribeEsExceptionDataResponseBodyContentsPoints> points) {
+        public DescribeEsExceptionDataResponseBodyContents setPoints(java.util.List<String> points) {
             this.points = points;
             return this;
         }
-        public java.util.List<DescribeEsExceptionDataResponseBodyContentsPoints> getPoints() {
+        public java.util.List<String> getPoints() {
             return this.points;
         }
 

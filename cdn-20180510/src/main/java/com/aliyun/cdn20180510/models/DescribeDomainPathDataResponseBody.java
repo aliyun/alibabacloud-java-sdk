@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class DescribeDomainPathDataResponseBody extends TeaModel {
     /**
      * <p>The time interval. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-09-30T17:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The page number of the returned page. Pages start from page **1**.</p>
+     * <p>The page number of the returned page. Pages start from page <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -42,12 +57,18 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-09-30T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -124,24 +145,36 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
     public static class DescribeDomainPathDataResponseBodyPathDataPerIntervalUsageData extends TeaModel {
         /**
          * <p>The number of visits to the URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("Acc")
         public Integer acc;
 
         /**
          * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/path/</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
          * <p>The point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-09-30T16:00:00Z</p>
          */
         @NameInMap("Time")
         public String time;
 
         /**
          * <p>The amount of network traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>346</p>
          */
         @NameInMap("Traffic")
         public Integer traffic;

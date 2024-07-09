@@ -6,19 +6,38 @@ import com.aliyun.tea.*;
 public class DescribeCdnDomainLogsExTtlRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-12-22T12:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2019-12-21T12:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

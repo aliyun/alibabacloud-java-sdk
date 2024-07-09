@@ -12,9 +12,13 @@ public class DescribeCdnUserResourcePackageRequest extends TeaModel {
 
     /**
      * <p>The status of the resource plan that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **valid**: valid</p>
-     * <p>*   **closed**: expired</p>
+     * <ul>
+     * <li><strong>valid</strong>: valid</li>
+     * <li><strong>closed</strong>: expired</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>valid</p>
      */
     @NameInMap("Status")
     public String status;

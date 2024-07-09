@@ -6,54 +6,69 @@ import com.aliyun.tea.*;
 public class AddFCTriggerRequest extends TeaModel {
     /**
      * <p>The name of the event.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LogFileCreated</p>
      */
     @NameInMap("EventMetaName")
     public String eventMetaName;
 
     /**
      * <p>The version of the event.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("EventMetaVersion")
     public String eventMetaVersion;
 
     /**
      * <p>The feature trigger.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:fc:1223455566666:123:services/myservice/functions/myfunction</p>
      */
     @NameInMap("FunctionARN")
     public String functionARN;
 
     /**
      * <p>The remarks.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Notes")
     public String notes;
 
     /**
      * <p>The assigned Resource Access Management (RAM) role.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram:: 1234567890:role/aliyuncdneventnotificationrole</p>
      */
     @NameInMap("RoleARN")
     public String roleARN;
 
     /**
      * <p>The resources and filters for event listening.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:cdn:*:1234567890:domain/example.com</p>
      */
     @NameInMap("SourceARN")
     public String sourceARN;
 
     /**
      * <p>The trigger that corresponds to the Function Compute service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:fc:cn-beijing: 1234567890:services/FCTestService/functions/printEvent/triggers/testtrigger</p>
      */
     @NameInMap("TriggerARN")
     public String triggerARN;

@@ -12,6 +12,9 @@ public class ListFCTriggerResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EC046C5D-8CB4-4B6B-B7F8-B335E51EF90E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class ListFCTriggerResponseBody extends TeaModel {
     public static class ListFCTriggerResponseBodyFCTriggers extends TeaModel {
         /**
          * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LogFileCreated</p>
          */
         @NameInMap("EventMetaName")
         public String eventMetaName;
 
         /**
          * <p>The version of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         @NameInMap("EventMetaVersion")
         public String eventMetaVersion;
 
         /**
          * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test</p>
          */
         @NameInMap("Notes")
         public String notes;
 
         /**
          * <p>The Resource Access Management (RAM) role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram:: 1234567890:role/aliyuncdneventnotificationrole</p>
          */
         @NameInMap("RoleARN")
         public String roleARN;
 
         /**
          * <p>The resources and filters for event listening.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:cdn:*:1234567890:domain/example.com</p>
          */
         @NameInMap("SourceArn")
         public String sourceArn;
 
         /**
          * <p>The trigger that corresponds to the Function Compute service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:fc:cn-beijing: 1234567890:services/FCTestService/functions/printEvent/triggers/testtrigger</p>
          */
         @NameInMap("TriggerARN")
         public String triggerARN;

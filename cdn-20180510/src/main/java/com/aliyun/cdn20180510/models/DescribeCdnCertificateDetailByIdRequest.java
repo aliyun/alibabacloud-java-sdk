@@ -6,19 +6,24 @@ import com.aliyun.tea.*;
 public class DescribeCdnCertificateDetailByIdRequest extends TeaModel {
     /**
      * <p>The ID of the certificate.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("CertId")
     public String certId;
 
     /**
      * <p>The region of the certificate. Valid values:</p>
-     * <br>
-     * <p>*   **ap-southeast-1**: Singapore</p>
-     * <p>*   **cn-hangzhou**: China (Hangzhou)</p>
-     * <br>
-     * <p>Default value: **cn-hangzhou**</p>
+     * <ul>
+     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+     * </ul>
+     * <p>Default value: <strong>cn-hangzhou</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("CertRegion")
     public String certRegion;

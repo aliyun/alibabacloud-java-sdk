@@ -12,6 +12,9 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5C1E43DC-9E51-4771-82C0-7D5ECEB547A1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,117 +43,167 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
     public static class DescribeDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
         /**
          * <p>The domain name that matches the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("CertDomainName")
         public String certDomainName;
 
         /**
          * <p>The time at which the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-03T22:03:39Z</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9002448</p>
          */
         @NameInMap("CertId")
         public String certId;
 
         /**
          * <p>The unit of the validity period of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   **months**</p>
-         * <p>*   **years**</p>
+         * <ul>
+         * <li><strong>months</strong></li>
+         * <li><strong>years</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>months</p>
          */
         @NameInMap("CertLife")
         public String certLife;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The name of the certificate authority (CA) that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Let\&quot;s Encrypt</p>
          */
         @NameInMap("CertOrg")
         public String certOrg;
 
         /**
          * <p>The region where the certificate is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("CertRegion")
         public String certRegion;
 
         /**
          * <p>The time when the certificate became effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-03T22:03:39Z</p>
          */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
         /**
          * <p>The type of the certificate.</p>
-         * <br>
-         * <p>*   **free**: a free certificate</p>
-         * <p>*   **cas**: a certificate that is purchased by using Certificate Management Service</p>
-         * <p>*   **upload**: a custom certificate that you upload</p>
+         * <ul>
+         * <li><strong>free</strong>: a free certificate</li>
+         * <li><strong>cas</strong>: a certificate that is purchased by using Certificate Management Service</li>
+         * <li><strong>upload</strong>: a custom certificate that you upload</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>free</p>
          */
         @NameInMap("CertType")
         public String certType;
 
         /**
          * <p>The time at which the certificate was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-06-03T22:03:39Z</p>
          */
         @NameInMap("CertUpdateTime")
         public String certUpdateTime;
 
         /**
          * <p>The CNAME status of the domain name.</p>
-         * <br>
-         * <p>*   **ok**: The domain name points to the CNAME assigned by Alibaba Cloud CDN.</p>
-         * <p>*   **cname_error**: An error occurred and the domain name cannot point to the CNAME.</p>
-         * <p>*   **op_domain_cname_error** : An error occurred to the CNAME of the top-level domain. The domain name cannot point to the CNAME.</p>
-         * <p>*   **unsupport_wildcard**: The wildcard domain name is not supported.</p>
+         * <ul>
+         * <li><strong>ok</strong>: The domain name points to the CNAME assigned by Alibaba Cloud CDN.</li>
+         * <li><strong>cname_error</strong>: An error occurred and the domain name cannot point to the CNAME.</li>
+         * <li><strong>op_domain_cname_error</strong> : An error occurred to the CNAME of the top-level domain. The domain name cannot point to the CNAME.</li>
+         * <li><strong>unsupport_wildcard</strong>: The wildcard domain name is not supported.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
          */
         @NameInMap("DomainCnameStatus")
         public String domainCnameStatus;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The public key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdadaxxxx</p>
          */
         @NameInMap("ServerCertificate")
         public String serverCertificate;
 
         /**
          * <p>The status of HTTPS.</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <ul>
+         * <li><strong>on</strong></li>
+         * <li><strong>off</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("ServerCertificateStatus")
         public String serverCertificateStatus;
 
         /**
          * <p>The status of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   **success**: The certificate has taken effect.</p>
-         * <p>*   **checking**: The system is checking whether the domain name is using Alibaba Cloud CDN.</p>
-         * <p>*   **cname_error**: No valid CNAME record has been added for the domain name.</p>
-         * <p>*   **top_domain_cname_error**: No valid CNAME record has been added for the top-level domain.</p>
-         * <p>*   **domain_invalid**: The domain name contains invalid characters.</p>
-         * <p>*   **unsupport_wildcard**: The domain name is a wildcard domain name. Wildcard domain names are not supported.</p>
-         * <p>*   **applying**: The certificate application is in progress.</p>
-         * <p>*   **get_token_timeout**: The certificate application request has timed out.</p>
-         * <p>*   **check_token_timeout**: The verification has timed out.</p>
-         * <p>*   **get_cert_timeout**: The request to obtain the certificate has timed out.</p>
-         * <p>*   **failed**: The certificate application request failed.</p>
+         * <ul>
+         * <li><strong>success</strong>: The certificate has taken effect.</li>
+         * <li><strong>checking</strong>: The system is checking whether the domain name is using Alibaba Cloud CDN.</li>
+         * <li><strong>cname_error</strong>: No valid CNAME record has been added for the domain name.</li>
+         * <li><strong>top_domain_cname_error</strong>: No valid CNAME record has been added for the top-level domain.</li>
+         * <li><strong>domain_invalid</strong>: The domain name contains invalid characters.</li>
+         * <li><strong>unsupport_wildcard</strong>: The domain name is a wildcard domain name. Wildcard domain names are not supported.</li>
+         * <li><strong>applying</strong>: The certificate application is in progress.</li>
+         * <li><strong>get_token_timeout</strong>: The certificate application request has timed out.</li>
+         * <li><strong>check_token_timeout</strong>: The verification has timed out.</li>
+         * <li><strong>get_cert_timeout</strong>: The request to obtain the certificate has timed out.</li>
+         * <li><strong>failed</strong>: The certificate application request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;

@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class ListFCTriggerRequest extends TeaModel {
     /**
      * <p>The name of the event. You can specify only one name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LogFileCreated</p>
      */
     @NameInMap("EventMetaName")
     public String eventMetaName;
 
     /**
      * <p>The version number of the event. You can specify only one version number.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0.0</p>
      */
     @NameInMap("EventMetaVersion")
     public String eventMetaVersion;

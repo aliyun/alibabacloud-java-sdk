@@ -12,24 +12,36 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageIndex")
     public Long pageIndex;
 
     /**
      * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -82,42 +94,63 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
     public static class DescribeDomainCcActivityLogResponseBodyActivityLog extends TeaModel {
         /**
          * <p>The action that was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The name of the rule based on which rate limiting was triggered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The trigger of rate limiting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ip</p>
          */
         @NameInMap("TriggerObject")
         public String triggerObject;
 
         /**
          * <p>The period of time during which rate limiting remains effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         @NameInMap("Ttl")
         public Long ttl;
 
         /**
          * <p>The value of the trigger for rate limiting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.3.4</p>
          */
         @NameInMap("Value")
         public String value;

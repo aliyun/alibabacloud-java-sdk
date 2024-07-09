@@ -40,14 +40,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a domain name to accelerate.
-     *
-     * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
-     * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
-     * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
-     * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see <a href="https://help.aliyun.com/document_detail/27272.html">Activate Alibaba Cloud CDN</a>.</p>
+     * <ul>
+     * <li>The domain name that you want to add has a valid Internet Content Provider (ICP) number.</li>
+     * <li>You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.</li>
+     * <li>If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.</li>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a domain name to accelerate.</p>
+     * 
      * @param request AddCdnDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddCdnDomainResponse
@@ -117,14 +121,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a domain name to accelerate.
-     *
-     * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
-     * *   The domain name that you want to add has a valid Internet Content Provider (ICP) number.
-     * *   You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.
-     * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see <a href="https://help.aliyun.com/document_detail/27272.html">Activate Alibaba Cloud CDN</a>.</p>
+     * <ul>
+     * <li>The domain name that you want to add has a valid Internet Content Provider (ICP) number.</li>
+     * <li>You can add only one domain name to Alibaba Cloud CDN in each call. Each Alibaba Cloud account can add a maximum of 50 domain names to Alibaba Cloud CDN.</li>
+     * <li>If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review will be completed by the end of the next business day after you submit the application.</li>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds a domain name to accelerate.</p>
+     * 
      * @param request AddCdnDomainRequest
      * @return AddCdnDomainResponse
      */
@@ -134,8 +142,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a Function Compute trigger.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a Function Compute trigger.</p>
+     * 
      * @param request AddFCTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddFCTriggerResponse
@@ -191,8 +200,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a Function Compute trigger.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a Function Compute trigger.</p>
+     * 
      * @param request AddFCTriggerRequest
      * @return AddFCTriggerResponse
      */
@@ -202,14 +212,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds one or more domain names to Alibaba Cloud CDN. You can add a maximum of 50 domain names at a time.
-     *
-     * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
-     * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
-     * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
-     * *   For more information, see [Add a domain name](https://help.aliyun.com/document_detail/122181.html).
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see <a href="https://help.aliyun.com/document_detail/27272.html">Activate Alibaba Cloud CDN</a>.</p>
+     * <ul>
+     * <li>If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.</li>
+     * <li>You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/122181.html">Add a domain name</a>.</li>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds one or more domain names to Alibaba Cloud CDN. You can add a maximum of 50 domain names at a time.</p>
+     * 
      * @param request BatchAddCdnDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchAddCdnDomainResponse
@@ -275,14 +289,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds one or more domain names to Alibaba Cloud CDN. You can add a maximum of 50 domain names at a time.
-     *
-     * @description *   You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see [Activate Alibaba Cloud CDN](https://help.aliyun.com/document_detail/27272.html).
-     * *   If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.
-     * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.
-     * *   For more information, see [Add a domain name](https://help.aliyun.com/document_detail/122181.html).
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You must activate Alibaba Cloud CDN before you can add a domain name to it. For more information, see <a href="https://help.aliyun.com/document_detail/27272.html">Activate Alibaba Cloud CDN</a>.</p>
+     * <ul>
+     * <li>If the acceleration region is Chinese Mainland Only or Global, you must apply for an ICP filing for the domain name.</li>
+     * <li>You can specify multiple domain names and separate them with commas (,). You can specify at most 50 domain names in each call.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/122181.html">Add a domain name</a>.</li>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds one or more domain names to Alibaba Cloud CDN. You can add a maximum of 50 domain names at a time.</p>
+     * 
      * @param request BatchAddCdnDomainRequest
      * @return BatchAddCdnDomainResponse
      */
@@ -292,11 +310,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes configurations of multiple accelerated domain names at a time.
-     *
-     * @description *   You can specify up to 50 domain names in each request.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can specify up to 50 domain names in each request.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes configurations of multiple accelerated domain names at a time.</p>
+     * 
      * @param request BatchDeleteCdnDomainConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchDeleteCdnDomainConfigResponse
@@ -342,11 +364,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes configurations of multiple accelerated domain names at a time.
-     *
-     * @description *   You can specify up to 50 domain names in each request.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can specify up to 50 domain names in each request.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes configurations of multiple accelerated domain names at a time.</p>
+     * 
      * @param request BatchDeleteCdnDomainConfigRequest
      * @return BatchDeleteCdnDomainConfigResponse
      */
@@ -356,10 +382,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether one or more IP addresses are assigned to Alibaba Cloud CDN.
-     *
-     * @description >The maximum number of times that each user can call this operation per second is 20.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum number of times that each user can call this operation per second is 20.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether one or more IP addresses are assigned to Alibaba Cloud CDN.</p>
+     * 
      * @param request BatchDescribeCdnIpInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchDescribeCdnIpInfoResponse
@@ -393,10 +423,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries whether one or more IP addresses are assigned to Alibaba Cloud CDN.
-     *
-     * @description >The maximum number of times that each user can call this operation per second is 20.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum number of times that each user can call this operation per second is 20.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries whether one or more IP addresses are assigned to Alibaba Cloud CDN.</p>
+     * 
      * @param request BatchDescribeCdnIpInfoRequest
      * @return BatchDescribeCdnIpInfoResponse
      */
@@ -406,12 +440,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures multiple accelerated domain names at a time.
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
-     * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](https://help.aliyun.com/document_detail/388994.html).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * <ul>
+     * <li>You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.</li>
+     * <li>If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see <a href="https://help.aliyun.com/document_detail/388994.html">Usage notes on ConfigId</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures multiple accelerated domain names at a time.</p>
+     * 
      * @param request BatchSetCdnDomainConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchSetCdnDomainConfigResponse
@@ -457,12 +495,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures multiple accelerated domain names at a time.
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     * *   You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.
-     * *   If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see [Usage notes on ConfigId](https://help.aliyun.com/document_detail/388994.html).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * <ul>
+     * <li>You can specify multiple domain names and must separate them with commas (,). You can specify up to 50 domain names in each call.</li>
+     * <li>If the BatchSetCdnDomainConfig operation is successful, a unique configuration ID (ConfigId) is generated. You can use configuration IDs to update or delete configurations. For more information, see <a href="https://help.aliyun.com/document_detail/388994.html">Usage notes on ConfigId</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures multiple accelerated domain names at a time.</p>
+     * 
      * @param request BatchSetCdnDomainConfigRequest
      * @return BatchSetCdnDomainConfigResponse
      */
@@ -472,12 +514,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables, disables, or configures the SSL certificates of one or more accelerated domain names at a time.
-     *
-     * @description > *   You can call this operation up to 10 times per second per account.
-     * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
-     * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)</li>
+     * <li>If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables, disables, or configures the SSL certificates of one or more accelerated domain names at a time.</p>
+     * 
      * @param request BatchSetCdnDomainServerCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchSetCdnDomainServerCertificateResponse
@@ -543,12 +591,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables, disables, or configures the SSL certificates of one or more accelerated domain names at a time.
-     *
-     * @description > *   You can call this operation up to 10 times per second per account.
-     * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
-     * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * <li>You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)</li>
+     * <li>If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables, disables, or configures the SSL certificates of one or more accelerated domain names at a time.</p>
+     * 
      * @param request BatchSetCdnDomainServerCertificateRequest
      * @return BatchSetCdnDomainServerCertificateResponse
      */
@@ -558,12 +612,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables one or more domain names at a time. After a domain name is enabled, the value of the DomainStatus parameter is changed to Online.
-     *
-     * @description *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
-     * *   You can call this operation up to 30 times per second per account.
-     * *   You can specify up to 50 domain names in each request.
-     *
+     * <b>description</b> :
+     * <p>  If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * <li>You can specify up to 50 domain names in each request.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables one or more domain names at a time. After a domain name is enabled, the value of the DomainStatus parameter is changed to Online.</p>
+     * 
      * @param request BatchStartCdnDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchStartCdnDomainResponse
@@ -601,12 +659,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables one or more domain names at a time. After a domain name is enabled, the value of the DomainStatus parameter is changed to Online.
-     *
-     * @description *   If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.
-     * *   You can call this operation up to 30 times per second per account.
-     * *   You can specify up to 50 domain names in each request.
-     *
+     * <b>description</b> :
+     * <p>  If a domain name specified in the request is in an invalid state or your account has an overdue payment, the domain name cannot be enabled.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * <li>You can specify up to 50 domain names in each request.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables one or more domain names at a time. After a domain name is enabled, the value of the DomainStatus parameter is changed to Online.</p>
+     * 
      * @param request BatchStartCdnDomainRequest
      * @return BatchStartCdnDomainResponse
      */
@@ -616,13 +678,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables one or more accelerated domain names at a time. After an accelerated domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
-     *
-     * @description *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
-     * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
-     * *   You can call this operation up to 30 times per second per account.
-     * *   You can specify up to 50 domain names in each request.
-     *
+     * <b>description</b> :
+     * <p>  After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.</p>
+     * <ul>
+     * <li>If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.</li>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * <li>You can specify up to 50 domain names in each request.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables one or more accelerated domain names at a time. After an accelerated domain name is disabled, the value of the DomainStatus parameter is changed to Offline.</p>
+     * 
      * @param request BatchStopCdnDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchStopCdnDomainResponse
@@ -660,13 +726,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables one or more accelerated domain names at a time. After an accelerated domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
-     *
-     * @description *   After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.
-     * *   If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.
-     * *   You can call this operation up to 30 times per second per account.
-     * *   You can specify up to 50 domain names in each request.
-     *
+     * <b>description</b> :
+     * <p>  After an accelerated domain name is disabled, Alibaba Cloud CDN retains its information and reroutes all the requests that are destined for the accelerated domain name to the origin.</p>
+     * <ul>
+     * <li>If you need to temporarily disable CDN acceleration for a domain name, we recommend that you call the StopDomain operation.</li>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * <li>You can specify up to 50 domain names in each request.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables one or more accelerated domain names at a time. After an accelerated domain name is disabled, the value of the DomainStatus parameter is changed to Offline.</p>
+     * 
      * @param request BatchStopCdnDomainRequest
      * @return BatchStopCdnDomainResponse
      */
@@ -676,11 +746,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of multiple accelerated domain names at a time.
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * <ul>
+     * <li>You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configurations of multiple accelerated domain names at a time.</p>
+     * 
      * @param request BatchUpdateCdnDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BatchUpdateCdnDomainResponse
@@ -730,11 +804,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates the configurations of multiple accelerated domain names at a time.
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * <ul>
+     * <li>You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates the configurations of multiple accelerated domain names at a time.</p>
+     * 
      * @param request BatchUpdateCdnDomainRequest
      * @return BatchUpdateCdnDomainResponse
      */
@@ -744,8 +822,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Registers the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for an Alibaba Cloud CDN-accelerated domain name. After the registration is successful, the routing center generates the dynamic routing information and send it to DCDN points of presence (POPs). This is a prerequisite for you to transfer a domain name from Alibaba Cloud CDN to DCDN.
-     *
+     * <b>summary</b> : 
+     * <p>Registers the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for an Alibaba Cloud CDN-accelerated domain name. After the registration is successful, the routing center generates the dynamic routing information and send it to DCDN points of presence (POPs). This is a prerequisite for you to transfer a domain name from Alibaba Cloud CDN to DCDN.</p>
+     * 
      * @param request CdnMigrateRegisterRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CdnMigrateRegisterResponse
@@ -775,8 +854,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Registers the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for an Alibaba Cloud CDN-accelerated domain name. After the registration is successful, the routing center generates the dynamic routing information and send it to DCDN points of presence (POPs). This is a prerequisite for you to transfer a domain name from Alibaba Cloud CDN to DCDN.
-     *
+     * <b>summary</b> : 
+     * <p>Registers the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for an Alibaba Cloud CDN-accelerated domain name. After the registration is successful, the routing center generates the dynamic routing information and send it to DCDN points of presence (POPs). This is a prerequisite for you to transfer a domain name from Alibaba Cloud CDN to DCDN.</p>
+     * 
      * @param request CdnMigrateRegisterRequest
      * @return CdnMigrateRegisterResponse
      */
@@ -786,8 +866,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Transfer a domain name from Alibaba Cloud CDN to DCDN.
-     *
+     * <b>summary</b> : 
+     * <p>Transfer a domain name from Alibaba Cloud CDN to DCDN.</p>
+     * 
      * @param request ChangeCdnDomainToDcdnRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeCdnDomainToDcdnResponse
@@ -833,8 +914,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Transfer a domain name from Alibaba Cloud CDN to DCDN.
-     *
+     * <b>summary</b> : 
+     * <p>Transfer a domain name from Alibaba Cloud CDN to DCDN.</p>
+     * 
      * @param request ChangeCdnDomainToDcdnRequest
      * @return ChangeCdnDomainToDcdnResponse
      */
@@ -844,8 +926,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a domain name exists.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether a domain name exists.</p>
+     * 
      * @param request CheckCdnDomainExistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckCdnDomainExistResponse
@@ -887,8 +970,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a domain name exists.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether a domain name exists.</p>
+     * 
      * @param request CheckCdnDomainExistRequest
      * @return CheckCdnDomainExistResponse
      */
@@ -898,8 +982,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether an ICP filing is obtained for the domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether an ICP filing is obtained for the domain name.</p>
+     * 
      * @param request CheckCdnDomainICPRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckCdnDomainICPResponse
@@ -941,8 +1026,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether an ICP filing is obtained for the domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether an ICP filing is obtained for the domain name.</p>
+     * 
      * @param request CheckCdnDomainICPRequest
      * @return CheckCdnDomainICPResponse
      */
@@ -952,10 +1038,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a certificate signing request (CSR).
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a certificate signing request (CSR).</p>
+     * 
      * @param request CreateCdnCertificateSigningRequestRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCdnCertificateSigningRequestResponse
@@ -1013,10 +1103,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a certificate signing request (CSR).
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a certificate signing request (CSR).</p>
+     * 
      * @param request CreateCdnCertificateSigningRequestRequest
      * @return CreateCdnCertificateSigningRequestResponse
      */
@@ -1026,10 +1120,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a tracking task. After you create a tracking task, the system sends operations reports to you by email on a regular basis.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a tracking task. After you create a tracking task, the system sends operations reports to you by email on a regular basis.</p>
+     * 
      * @param request CreateCdnDeliverTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCdnDeliverTaskResponse
@@ -1075,10 +1173,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a tracking task. After you create a tracking task, the system sends operations reports to you by email on a regular basis.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a tracking task. After you create a tracking task, the system sends operations reports to you by email on a regular basis.</p>
+     * 
      * @param request CreateCdnDeliverTaskRequest
      * @return CreateCdnDeliverTaskResponse
      */
@@ -1088,11 +1190,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom operations report.
-     *
-     * @description *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
-     * *   You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.</p>
+     * <ul>
+     * <li>You can call this operation up to three times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom operations report.</p>
+     * 
      * @param request CreateCdnSubTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateCdnSubTaskResponse
@@ -1126,11 +1232,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom operations report.
-     *
-     * @description *   This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.
-     * *   You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation allows you to create a custom operations report for a specific domain name. You can view the statistics about the domain name in the report.</p>
+     * <ul>
+     * <li>You can call this operation up to three times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom operations report.</p>
+     * 
      * @param request CreateCdnSubTaskRequest
      * @return CreateCdnSubTaskResponse
      */
@@ -1140,10 +1250,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables real-time log delivery for specific accelerated domain names.
-     *
-     * @description >  You can call this API operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this API operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables real-time log delivery for specific accelerated domain names.</p>
+     * 
      * @param request CreateRealTimeLogDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRealTimeLogDeliveryResponse
@@ -1169,10 +1283,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables real-time log delivery for specific accelerated domain names.
-     *
-     * @description >  You can call this API operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this API operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables real-time log delivery for specific accelerated domain names.</p>
+     * 
      * @param request CreateRealTimeLogDeliveryRequest
      * @return CreateRealTimeLogDeliveryResponse
      */
@@ -1182,11 +1300,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task to export resource usage details to an Excel file.
-     *
-     * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can create a task to query data in the last year. The maximum time range that can be queried is one month.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a task to export resource usage details to an Excel file.</p>
+     * 
      * @param request CreateUsageDetailDataExportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUsageDetailDataExportTaskResponse
@@ -1240,11 +1362,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task to export resource usage details to an Excel file.
-     *
-     * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can create a task to query data in the last year. The maximum time range that can be queried is one month.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a task to export resource usage details to an Excel file.</p>
+     * 
      * @param request CreateUsageDetailDataExportTaskRequest
      * @return CreateUsageDetailDataExportTaskResponse
      */
@@ -1254,11 +1380,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task to export your resource usage history to a PDF file.
-     *
-     * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can create a task to query data in the last year. The maximum time range that can be queried is one month.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a task to export your resource usage history to a PDF file.</p>
+     * 
      * @param request CreateUserUsageDataExportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUserUsageDataExportTaskResponse
@@ -1300,11 +1430,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a task to export your resource usage history to a PDF file.
-     *
-     * @description *   You can create a task to query data in the last year. The maximum time range that can be queried is one month.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can create a task to query data in the last year. The maximum time range that can be queried is one month.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a task to export your resource usage history to a PDF file.</p>
+     * 
      * @param request CreateUserUsageDataExportTaskRequest
      * @return CreateUserUsageDataExportTaskResponse
      */
@@ -1314,10 +1448,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes tracking tasks by task ID.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes tracking tasks by task ID.</p>
+     * 
      * @param request DeleteCdnDeliverTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCdnDeliverTaskResponse
@@ -1347,10 +1485,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes tracking tasks by task ID.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes tracking tasks by task ID.</p>
+     * 
      * @param request DeleteCdnDeliverTaskRequest
      * @return DeleteCdnDeliverTaskResponse
      */
@@ -1360,12 +1502,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes an accelerated domain name from Alibaba Cloud CDN.
-     *
-     * @description *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
-     * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
-     * *   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.</p>
+     * <ul>
+     * <li>After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes an accelerated domain name from Alibaba Cloud CDN.</p>
+     * 
      * @param request DeleteCdnDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCdnDomainResponse
@@ -1403,12 +1549,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes an accelerated domain name from Alibaba Cloud CDN.
-     *
-     * @description *   We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.
-     * *   After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.
-     * *   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  We recommend that you add an A record for the domain name in the system of your DNS service provider before you remove the domain name from Alibaba Cloud CDN. Otherwise, the domain name may become inaccessible. Proceed with caution.</p>
+     * <ul>
+     * <li>After you successfully call the DeleteCdnDomain operation, all records of the removed domain name are deleted. If you need to only disable the domain name, we recommend that you call the StopCdnDomain operation.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes an accelerated domain name from Alibaba Cloud CDN.</p>
+     * 
      * @param request DeleteCdnDomainRequest
      * @return DeleteCdnDomainResponse
      */
@@ -1418,10 +1568,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The ID of the request.
-     *
-     * @description >  You can call this API operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this API operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>The ID of the request.</p>
+     * 
      * @param request DeleteCdnSubTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCdnSubTaskResponse
@@ -1443,10 +1597,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The ID of the request.
-     *
-     * @description >  You can call this API operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this API operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>The ID of the request.</p>
      * @return DeleteCdnSubTaskResponse
      */
     public DeleteCdnSubTaskResponse deleteCdnSubTask() throws Exception {
@@ -1455,8 +1612,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified Function Compute trigger.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a specified Function Compute trigger.</p>
+     * 
      * @param request DeleteFCTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteFCTriggerResponse
@@ -1486,8 +1644,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified Function Compute trigger.
-     *
+     * <b>summary</b> : 
+     * <p>Deletes a specified Function Compute trigger.</p>
+     * 
      * @param request DeleteFCTriggerRequest
      * @return DeleteFCTriggerResponse
      */
@@ -1497,10 +1656,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the Logstore that is used by a specified configuration record of real-time log delivery.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the Logstore that is used by a specified configuration record of real-time log delivery.</p>
+     * 
      * @param request DeleteRealTimeLogLogstoreRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRealTimeLogLogstoreResponse
@@ -1526,10 +1689,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the Logstore that is used by a specified configuration record of real-time log delivery.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the Logstore that is used by a specified configuration record of real-time log delivery.</p>
+     * 
      * @param request DeleteRealTimeLogLogstoreRequest
      * @return DeleteRealTimeLogLogstoreResponse
      */
@@ -1539,10 +1706,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the configurations of real-time log delivery for specific accelerated domain names.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the configurations of real-time log delivery for specific accelerated domain names.</p>
+     * 
      * @param request DeleteRealtimeLogDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRealtimeLogDeliveryResponse
@@ -1568,10 +1739,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes the configurations of real-time log delivery for specific accelerated domain names.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes the configurations of real-time log delivery for specific accelerated domain names.</p>
+     * 
      * @param request DeleteRealtimeLogDeliveryRequest
      * @return DeleteRealtimeLogDeliveryResponse
      */
@@ -1581,10 +1756,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes specified configurations of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes specified configurations of an accelerated domain name.</p>
+     * 
      * @param request DeleteSpecificConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSpecificConfigResponse
@@ -1626,10 +1805,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes specified configurations of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes specified configurations of an accelerated domain name.</p>
+     * 
      * @param request DeleteSpecificConfigRequest
      * @return DeleteSpecificConfigResponse
      */
@@ -1639,10 +1822,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified configuration of the staging environment.
-     *
-     * @description > You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified configuration of the staging environment.</p>
+     * 
      * @param request DeleteSpecificStagingConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSpecificStagingConfigResponse
@@ -1684,10 +1871,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a specified configuration of the staging environment.
-     *
-     * @description > You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a specified configuration of the staging environment.</p>
+     * 
      * @param request DeleteSpecificStagingConfigRequest
      * @return DeleteSpecificStagingConfigResponse
      */
@@ -1697,10 +1888,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a task that was used to export usage details.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a task that was used to export usage details.</p>
+     * 
      * @param request DeleteUsageDetailDataExportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUsageDetailDataExportTaskResponse
@@ -1730,10 +1925,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a task that was used to export usage details.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a task that was used to export usage details.</p>
+     * 
      * @param request DeleteUsageDetailDataExportTaskRequest
      * @return DeleteUsageDetailDataExportTaskResponse
      */
@@ -1743,10 +1942,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a task that was used to export usage history.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a task that was used to export usage history.</p>
+     * 
      * @param request DeleteUserUsageDataExportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserUsageDataExportTaskResponse
@@ -1776,10 +1979,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Deletes a task that was used to export usage history.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a task that was used to export usage history.</p>
+     * 
      * @param request DeleteUserUsageDataExportTaskRequest
      * @return DeleteUserUsageDataExportTaskResponse
      */
@@ -1789,10 +1996,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries countries and regions that can be added to the blacklist.
-     *
-     * @description > You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 50 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries countries and regions that can be added to the blacklist.</p>
+     * 
      * @param request DescribeBlockedRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBlockedRegionsResponse
@@ -1818,10 +2029,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries countries and regions that can be added to the blacklist.
-     *
-     * @description > You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 50 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries countries and regions that can be added to the blacklist.</p>
+     * 
      * @param request DescribeBlockedRegionsRequest
      * @return DescribeBlockedRegionsResponse
      */
@@ -1831,10 +2046,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the detailed information about an SSL certificate.
-     *
-     * @description > You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the detailed information about an SSL certificate.</p>
+     * 
      * @param request DescribeCdnCertificateDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnCertificateDetailResponse
@@ -1872,10 +2091,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the detailed information about an SSL certificate.
-     *
-     * @description > You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the detailed information about an SSL certificate.</p>
+     * 
      * @param request DescribeCdnCertificateDetailRequest
      * @return DescribeCdnCertificateDetailResponse
      */
@@ -1885,8 +2108,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries certificate details by certificate ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries certificate details by certificate ID.</p>
+     * 
      * @param request DescribeCdnCertificateDetailByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnCertificateDetailByIdResponse
@@ -1928,8 +2152,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries certificate details by certificate ID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries certificate details by certificate ID.</p>
+     * 
      * @param request DescribeCdnCertificateDetailByIdRequest
      * @return DescribeCdnCertificateDetailByIdResponse
      */
@@ -1939,16 +2164,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the certificates of accelerated domain names.</p>
+     * 
      * @deprecated OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
-     *
-     * @summary Queries the certificates of accelerated domain names.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * 
      * @param request DescribeCdnCertificateListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnCertificateListResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeCdnCertificateListResponse describeCdnCertificateListWithOptions(DescribeCdnCertificateListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -1983,15 +2213,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the certificates of accelerated domain names.</p>
+     * 
      * @deprecated OpenAPI DescribeCdnCertificateList is deprecated, please use Cdn::2018-05-10::DescribeCdnSSLCertificateList instead.
-     *
-     * @summary Queries the certificates of accelerated domain names.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * 
      * @param request DescribeCdnCertificateListRequest
      * @return DescribeCdnCertificateListResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeCdnCertificateListResponse describeCdnCertificateList(DescribeCdnCertificateListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -1999,8 +2234,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Internet service provider (ISP), region, and country that are required for advanced conditions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Internet service provider (ISP), region, and country that are required for advanced conditions.</p>
+     * 
      * @param request DescribeCdnConditionIPBInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnConditionIPBInfoResponse
@@ -2030,8 +2266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Internet service provider (ISP), region, and country that are required for advanced conditions.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the Internet service provider (ISP), region, and country that are required for advanced conditions.</p>
+     * 
      * @param request DescribeCdnConditionIPBInfoRequest
      * @return DescribeCdnConditionIPBInfoResponse
      */
@@ -2041,10 +2278,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the domain names that are deleted from your account.
-     *
-     * @description > You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are deleted from your account.</p>
+     * 
      * @param request DescribeCdnDeletedDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnDeletedDomainsResponse
@@ -2078,10 +2319,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the domain names that are deleted from your account.
-     *
-     * @description > You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the domain names that are deleted from your account.</p>
+     * 
      * @param request DescribeCdnDeletedDomainsRequest
      * @return DescribeCdnDeletedDomainsResponse
      */
@@ -2091,10 +2336,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries one or more tracking tasks of operations reports.
-     *
-     * @description > You can call this operation up to 3 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 3 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries one or more tracking tasks of operations reports.</p>
+     * 
      * @param request DescribeCdnDeliverListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnDeliverListResponse
@@ -2124,10 +2373,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries one or more tracking tasks of operations reports.
-     *
-     * @description > You can call this operation up to 3 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 3 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries one or more tracking tasks of operations reports.</p>
+     * 
      * @param request DescribeCdnDeliverListRequest
      * @return DescribeCdnDeliverListResponse
      */
@@ -2137,8 +2390,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 天翼定制化小时日志下载接口
-     *
+     * <b>summary</b> : 
+     * <p>天翼定制化小时日志下载接口</p>
+     * 
      * @param request DescribeCdnDomainAtoaLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnDomainAtoaLogsResponse
@@ -2184,8 +2438,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 天翼定制化小时日志下载接口
-     *
+     * <b>summary</b> : 
+     * <p>天翼定制化小时日志下载接口</p>
+     * 
      * @param request DescribeCdnDomainAtoaLogsRequest
      * @return DescribeCdnDomainAtoaLogsResponse
      */
@@ -2195,10 +2450,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries accelerated domain names by SSL certificate.
-     *
-     * @description >  You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries accelerated domain names by SSL certificate.</p>
+     * 
      * @param request DescribeCdnDomainByCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnDomainByCertificateResponse
@@ -2236,10 +2495,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries accelerated domain names by SSL certificate.
-     *
-     * @description >  You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries accelerated domain names by SSL certificate.</p>
+     * 
      * @param request DescribeCdnDomainByCertificateRequest
      * @return DescribeCdnDomainByCertificateResponse
      */
@@ -2249,10 +2512,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of an accelerated domain name. You can query the configurations of one or more features at the same time.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configurations of an accelerated domain name. You can query the configurations of one or more features at the same time.</p>
+     * 
      * @param request DescribeCdnDomainConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnDomainConfigsResponse
@@ -2298,10 +2565,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of an accelerated domain name. You can query the configurations of one or more features at the same time.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configurations of an accelerated domain name. You can query the configurations of one or more features at the same time.</p>
+     * 
      * @param request DescribeCdnDomainConfigsRequest
      * @return DescribeCdnDomainConfigsResponse
      */
@@ -2311,10 +2582,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the basic information about an accelerated domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the basic information about an accelerated domain name.</p>
+     * 
      * @param request DescribeCdnDomainDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnDomainDetailResponse
@@ -2352,10 +2627,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the basic information about an accelerated domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the basic information about an accelerated domain name.</p>
+     * 
      * @param request DescribeCdnDomainDetailRequest
      * @return DescribeCdnDomainDetailResponse
      */
@@ -2365,13 +2644,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the address where you can download the log data of a specific domain name.
-     *
-     * @description *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
-     * *   The log data is collected every hour.
-     * *   You can call this operation up to 100 times per second per account.
-     * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
-     *
+     * <b>description</b> :
+     * <p>  If you do not set <strong>StartTime</strong> or <strong>EndTime</strong>, the request returns the data collected in the last 24 hours. If you set both <strong>StartTime</strong> and <strong>EndTime</strong>, the request returns the data collected within the specified time range.</p>
+     * <ul>
+     * <li>The log data is collected every hour.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * <li>You can query only logs in the last month. The start time and the current time cannot exceed 31 days.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the address where you can download the log data of a specific domain name.</p>
+     * 
      * @param request DescribeCdnDomainLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnDomainLogsResponse
@@ -2417,13 +2700,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the address where you can download the log data of a specific domain name.
-     *
-     * @description *   If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
-     * *   The log data is collected every hour.
-     * *   You can call this operation up to 100 times per second per account.
-     * *   You can query only logs in the last month. The start time and the current time cannot exceed 31 days.
-     *
+     * <b>description</b> :
+     * <p>  If you do not set <strong>StartTime</strong> or <strong>EndTime</strong>, the request returns the data collected in the last 24 hours. If you set both <strong>StartTime</strong> and <strong>EndTime</strong>, the request returns the data collected within the specified time range.</p>
+     * <ul>
+     * <li>The log data is collected every hour.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * <li>You can query only logs in the last month. The start time and the current time cannot exceed 31 days.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the address where you can download the log data of a specific domain name.</p>
+     * 
      * @param request DescribeCdnDomainLogsRequest
      * @return DescribeCdnDomainLogsResponse
      */
@@ -2487,10 +2774,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of features in the staging environment.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configurations of features in the staging environment.</p>
+     * 
      * @param request DescribeCdnDomainStagingConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnDomainStagingConfigResponse
@@ -2524,10 +2815,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the configurations of features in the staging environment.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the configurations of features in the staging environment.</p>
+     * 
      * @param request DescribeCdnDomainStagingConfigRequest
      * @return DescribeCdnDomainStagingConfigResponse
      */
@@ -2537,10 +2832,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about SSL certificates that belong to your Alibaba Cloud account.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>summary</b> : 
+     * <p>获取海量封禁全量配置</p>
+     * 
+     * @param request DescribeCdnFullDomainsBlockIPConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCdnFullDomainsBlockIPConfigResponse
+     */
+    public DescribeCdnFullDomainsBlockIPConfigResponse describeCdnFullDomainsBlockIPConfigWithOptions(DescribeCdnFullDomainsBlockIPConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.IPList)) {
+            body.put("IPList", request.IPList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCdnFullDomainsBlockIPConfig"),
+            new TeaPair("version", "2018-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCdnFullDomainsBlockIPConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取海量封禁全量配置</p>
+     * 
+     * @param request DescribeCdnFullDomainsBlockIPConfigRequest
+     * @return DescribeCdnFullDomainsBlockIPConfigResponse
+     */
+    public DescribeCdnFullDomainsBlockIPConfigResponse describeCdnFullDomainsBlockIPConfig(DescribeCdnFullDomainsBlockIPConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCdnFullDomainsBlockIPConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户海量封禁历史</p>
+     * 
+     * @param request DescribeCdnFullDomainsBlockIPHistoryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCdnFullDomainsBlockIPHistoryResponse
+     */
+    public DescribeCdnFullDomainsBlockIPHistoryResponse describeCdnFullDomainsBlockIPHistoryWithOptions(DescribeCdnFullDomainsBlockIPHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.IPList)) {
+            body.put("IPList", request.IPList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCdnFullDomainsBlockIPHistory"),
+            new TeaPair("version", "2018-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCdnFullDomainsBlockIPHistoryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户海量封禁历史</p>
+     * 
+     * @param request DescribeCdnFullDomainsBlockIPHistoryRequest
+     * @return DescribeCdnFullDomainsBlockIPHistoryResponse
+     */
+    public DescribeCdnFullDomainsBlockIPHistoryResponse describeCdnFullDomainsBlockIPHistory(DescribeCdnFullDomainsBlockIPHistoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCdnFullDomainsBlockIPHistoryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about SSL certificates that belong to your Alibaba Cloud account.</p>
+     * 
      * @param request DescribeCdnHttpsDomainListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnHttpsDomainListResponse
@@ -2578,10 +2973,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about SSL certificates that belong to your Alibaba Cloud account.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about SSL certificates that belong to your Alibaba Cloud account.</p>
+     * 
      * @param request DescribeCdnHttpsDomainListRequest
      * @return DescribeCdnHttpsDomainListResponse
      */
@@ -2591,10 +2990,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the registration status of the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for a domain name that is added to Alibaba Cloud CDN.
-     *
-     * @description >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the registration status of the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for a domain name that is added to Alibaba Cloud CDN.</p>
+     * 
      * @param request DescribeCdnMigrateRegisterStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnMigrateRegisterStatusResponse
@@ -2624,10 +3027,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the registration status of the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for a domain name that is added to Alibaba Cloud CDN.
-     *
-     * @description >  If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> If a domain name is not transferred from Alibaba Cloud CDN to DCDN after it is registered in the routing center of DCDN, the registration information is retained for only one day.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the registration status of the dynamic routing feature of Dynamic Content Delivery Network (DCDN) for a domain name that is added to Alibaba Cloud CDN.</p>
+     * 
      * @param request DescribeCdnMigrateRegisterStatusRequest
      * @return DescribeCdnMigrateRegisterStatusResponse
      */
@@ -2637,8 +3044,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the code of a commodity by account UID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the code of a commodity by account UID.</p>
+     * 
      * @param request DescribeCdnOrderCommodityCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnOrderCommodityCodeResponse
@@ -2676,8 +3084,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the code of a commodity by account UID.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the code of a commodity by account UID.</p>
+     * 
      * @param request DescribeCdnOrderCommodityCodeRequest
      * @return DescribeCdnOrderCommodityCodeResponse
      */
@@ -2687,11 +3096,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Internet service providers (ISPs) and regions that are supported by Alibaba Cloud CDN.
-     *
-     * @description *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Internet service providers (ISPs) and regions that are supported by Alibaba Cloud CDN.</p>
+     * 
      * @param request DescribeCdnRegionAndIspRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnRegionAndIspResponse
@@ -2725,11 +3138,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries Internet service providers (ISPs) and regions that are supported by Alibaba Cloud CDN.
-     *
-     * @description *   The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  The lists of ISPs and regions that are supported by Alibaba Cloud CDN are updated and published on the Alibaba Cloud International site.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries Internet service providers (ISPs) and regions that are supported by Alibaba Cloud CDN.</p>
+     * 
      * @param request DescribeCdnRegionAndIspRequest
      * @return DescribeCdnRegionAndIspResponse
      */
@@ -2739,10 +3156,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the content of an operations report.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the content of an operations report.</p>
+     * 
      * @param request DescribeCdnReportRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnReportResponse
@@ -2796,10 +3217,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the content of an operations report.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the content of an operations report.</p>
+     * 
      * @param request DescribeCdnReportRequest
      * @return DescribeCdnReportResponse
      */
@@ -2809,11 +3234,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries operations reports.
-     *
-     * @description *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
-     * *   You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation queries the metadata of all operations reports. The statistics in the reports are not returned.</p>
+     * <ul>
+     * <li>You can call this operation up to three times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries operations reports.</p>
+     * 
      * @param request DescribeCdnReportListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnReportListResponse
@@ -2843,11 +3272,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries operations reports.
-     *
-     * @description *   This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
-     * *   You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation queries the metadata of all operations reports. The statistics in the reports are not returned.</p>
+     * <ul>
+     * <li>You can call this operation up to three times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries operations reports.</p>
+     * 
      * @param request DescribeCdnReportListRequest
      * @return DescribeCdnReportListResponse
      */
@@ -2857,10 +3290,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a ShangMi (SM) certificate.
-     *
-     * @description > You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about a ShangMi (SM) certificate.</p>
+     * 
      * @param request DescribeCdnSMCertificateDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnSMCertificateDetailResponse
@@ -2898,10 +3335,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a ShangMi (SM) certificate.
-     *
-     * @description > You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about a ShangMi (SM) certificate.</p>
+     * 
      * @param request DescribeCdnSMCertificateDetailRequest
      * @return DescribeCdnSMCertificateDetailResponse
      */
@@ -2911,10 +3352,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the ShangMi (SM) certificates of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ShangMi (SM) certificates of an accelerated domain name.</p>
+     * 
      * @param request DescribeCdnSMCertificateListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnSMCertificateListResponse
@@ -2952,10 +3397,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the ShangMi (SM) certificates of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the ShangMi (SM) certificates of an accelerated domain name.</p>
+     * 
      * @param request DescribeCdnSMCertificateListRequest
      * @return DescribeCdnSMCertificateListResponse
      */
@@ -2965,8 +3414,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the certificate list by domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the certificate list by domain name.</p>
+     * 
      * @param request DescribeCdnSSLCertificateListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnSSLCertificateListResponse
@@ -3016,8 +3466,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the certificate list by domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the certificate list by domain name.</p>
+     * 
      * @param request DescribeCdnSSLCertificateListRequest
      * @return DescribeCdnSSLCertificateListResponse
      */
@@ -3027,8 +3478,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about security features of Alibaba Cloud CDN.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about security features of Alibaba Cloud CDN.</p>
+     * 
      * @param request DescribeCdnSecFuncInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnSecFuncInfoResponse
@@ -3062,8 +3514,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about security features of Alibaba Cloud CDN.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about security features of Alibaba Cloud CDN.</p>
+     * 
      * @param request DescribeCdnSecFuncInfoRequest
      * @return DescribeCdnSecFuncInfoResponse
      */
@@ -3073,10 +3526,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of your Alibaba Cloud CDN service. The information includes the service activation time, the current service status, the current metering method, and the metering method for the next cycle.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of your Alibaba Cloud CDN service. The information includes the service activation time, the current service status, the current metering method, and the metering method for the next cycle.</p>
+     * 
      * @param request DescribeCdnServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnServiceResponse
@@ -3110,10 +3567,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of your Alibaba Cloud CDN service. The information includes the service activation time, the current service status, the current metering method, and the metering method for the next cycle.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of your Alibaba Cloud CDN service. The information includes the service activation time, the current service status, the current metering method, and the metering method for the next cycle.</p>
+     * 
      * @param request DescribeCdnServiceRequest
      * @return DescribeCdnServiceResponse
      */
@@ -3123,11 +3584,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tracking tasks that you have created.
-     *
-     * @description *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
-     * *   You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.</p>
+     * <ul>
+     * <li>You can call this operation up to three times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tracking tasks that you have created.</p>
+     * 
      * @param request DescribeCdnSubListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnSubListResponse
@@ -3149,11 +3614,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tracking tasks that you have created.
-     *
-     * @description *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
-     * *   You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.</p>
+     * <ul>
+     * <li>You can call this operation up to three times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tracking tasks that you have created.</p>
      * @return DescribeCdnSubListResponse
      */
     public DescribeCdnSubListResponse describeCdnSubList() throws Exception {
@@ -3162,11 +3630,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the billing history under your Alibaba Cloud account.
-     *
-     * @description *   You can query billing history up to the last one month.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can query billing history up to the last one month.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the billing history under your Alibaba Cloud account.</p>
+     * 
      * @param request DescribeCdnUserBillHistoryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnUserBillHistoryResponse
@@ -3200,11 +3672,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the billing history under your Alibaba Cloud account.
-     *
-     * @description *   You can query billing history up to the last one month.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can query billing history up to the last one month.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the billing history under your Alibaba Cloud account.</p>
+     * 
      * @param request DescribeCdnUserBillHistoryRequest
      * @return DescribeCdnUserBillHistoryResponse
      */
@@ -3214,16 +3690,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Estimates resource usage of the current month.
-     *
-     * @description You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
-     * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-     * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
-     * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
-     * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
-     * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-     * > You can call this operation only once per second per account.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.</p>
+     * <ul>
+     * <li>Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.</li>
+     * <li>Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.</li>
+     * <li>Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.</li>
+     * <li>Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.</li>
+     * <li>Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.<blockquote>
+     * <p>You can call this operation only once per second per account.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Estimates resource usage of the current month.</p>
+     * 
      * @param request DescribeCdnUserBillPredictionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnUserBillPredictionResponse
@@ -3265,16 +3747,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Estimates resource usage of the current month.
-     *
-     * @description You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.
-     * *   Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-     * *   Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.
-     * *   Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.
-     * *   Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.
-     * *   Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.
-     * > You can call this operation only once per second per account.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to estimate resource usage of the current month based on the metering method that is specified on the first day of the current month. You can call this operation to estimate resource usage only of the current month within your Alibaba Cloud account. The time range used for the estimation starts at 00:00 on the first day of the current month and ends 2 hours earlier than the current time.</p>
+     * <ul>
+     * <li>Pay by monthly 95th percentile: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.</li>
+     * <li>Pay by average daily peak bandwidth per month: Estimated value = Sum of daily peak bandwidth values/Number of days. The current day is excluded.</li>
+     * <li>Pay by 4th peak bandwidth per month: The estimated value is the 4th peak bandwidth value between the start time and end time. If the time range is less than four days, the estimated value is 0.</li>
+     * <li>Pay by average daily 95th percentile bandwidth per month: Estimated value = Sum of daily 95th percentile bandwidth values/Number of days. The current day is excluded.</li>
+     * <li>Pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00: The top 5% values between the start time and end time are excluded. The estimated value is the highest value among the remaining values.<blockquote>
+     * <p>You can call this operation only once per second per account.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Estimates resource usage of the current month.</p>
+     * 
      * @param request DescribeCdnUserBillPredictionRequest
      * @return DescribeCdnUserBillPredictionResponse
      */
@@ -3284,10 +3772,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the metering methods of an account. The maximum time range to query is one month.
-     *
-     * @description *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about the metering methods of an account. The maximum time range to query is one month.</p>
+     * 
      * @param request DescribeCdnUserBillTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnUserBillTypeResponse
@@ -3321,10 +3811,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information about the metering methods of an account. The maximum time range to query is one month.
-     *
-     * @description *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about the metering methods of an account. The maximum time range to query is one month.</p>
+     * 
      * @param request DescribeCdnUserBillTypeRequest
      * @return DescribeCdnUserBillTypeResponse
      */
@@ -3334,10 +3826,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries configurations of security features.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries configurations of security features.</p>
+     * 
      * @param request DescribeCdnUserConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnUserConfigsResponse
@@ -3367,10 +3863,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries configurations of security features.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries configurations of security features.</p>
+     * 
      * @param request DescribeCdnUserConfigsRequest
      * @return DescribeCdnUserConfigsResponse
      */
@@ -3380,10 +3880,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries accelerated domain names that have specified features configured and the status of the domain names.
-     *
-     * @description >  The maximum number of times that each user can call this operation per second is 100.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries accelerated domain names that have specified features configured and the status of the domain names.</p>
+     * 
      * @param request DescribeCdnUserDomainsByFuncRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnUserDomainsByFuncResponse
@@ -3425,10 +3929,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries accelerated domain names that have specified features configured and the status of the domain names.
-     *
-     * @description >  The maximum number of times that each user can call this operation per second is 100.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries accelerated domain names that have specified features configured and the status of the domain names.</p>
+     * 
      * @param request DescribeCdnUserDomainsByFuncRequest
      * @return DescribeCdnUserDomainsByFuncResponse
      */
@@ -3438,10 +3946,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the quotas and usage of Alibaba Cloud CDN resources.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the quotas and usage of Alibaba Cloud CDN resources.</p>
+     * 
      * @param request DescribeCdnUserQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnUserQuotaResponse
@@ -3475,10 +3987,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the quotas and usage of Alibaba Cloud CDN resources.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the quotas and usage of Alibaba Cloud CDN resources.</p>
+     * 
      * @param request DescribeCdnUserQuotaRequest
      * @return DescribeCdnUserQuotaResponse
      */
@@ -3488,10 +4004,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resource plans that you have purchased for Alibaba Cloud CDN.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource plans that you have purchased for Alibaba Cloud CDN.</p>
+     * 
      * @param request DescribeCdnUserResourcePackageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnUserResourcePackageResponse
@@ -3529,10 +4049,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resource plans that you have purchased for Alibaba Cloud CDN.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource plans that you have purchased for Alibaba Cloud CDN.</p>
+     * 
      * @param request DescribeCdnUserResourcePackageRequest
      * @return DescribeCdnUserResourcePackageResponse
      */
@@ -3542,10 +4066,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries domain names that use Web Application Firewall (WAF).
-     *
-     * @description > You can call this operation up to 150 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 150 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries domain names that use Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeCdnWafDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCdnWafDomainResponse
@@ -3583,10 +4111,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries domain names that use Web Application Firewall (WAF).
-     *
-     * @description > You can call this operation up to 150 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 150 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries domain names that use Web Application Firewall (WAF).</p>
+     * 
      * @param request DescribeCdnWafDomainRequest
      * @return DescribeCdnWafDomainResponse
      */
@@ -3596,11 +4128,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a specific certificate by certificate ID.
-     *
-     * @description *   You can call this operation up to 100 times per second per account.
-     * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a specific certificate by certificate ID.</p>
+     * 
      * @param request DescribeCertificateInfoByIDRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCertificateInfoByIDResponse
@@ -3626,11 +4162,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a specific certificate by certificate ID.
-     *
-     * @description *   You can call this operation up to 100 times per second per account.
-     * *   If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If a certificate is associated with a domain name but the certificate is not enabled, the result of this operation shows that the certificate does not exist.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about a specific certificate by certificate ID.</p>
+     * 
      * @param request DescribeCertificateInfoByIDRequest
      * @return DescribeCertificateInfoByIDResponse
      */
@@ -3640,10 +4180,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a custom logging configuration.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about a custom logging configuration.</p>
+     * 
      * @param request DescribeCustomLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCustomLogConfigResponse
@@ -3669,10 +4213,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the details about a custom logging configuration.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the details about a custom logging configuration.</p>
+     * 
      * @param request DescribeCustomLogConfigRequest
      * @return DescribeCustomLogConfigResponse
      */
@@ -3682,13 +4230,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the average response time of one or more accelerated domain names. You can query data collected within the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
-     * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   You can call this operation up to 100 times per second per account.
-     * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature to for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * <li>You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the average response time of one or more accelerated domain names. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainAverageResponseTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainAverageResponseTimeResponse
@@ -3746,13 +4300,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the average response time of one or more accelerated domain names. You can query data collected within the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
-     * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   You can call this operation up to 100 times per second per account.
-     * >*   You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature to for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * <li>You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the average response time of one or more accelerated domain names. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainAverageResponseTimeRequest
      * @return DescribeDomainAverageResponseTimeResponse
      */
@@ -3762,18 +4322,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries bandwidth monitoring data for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 150 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 150 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries bandwidth monitoring data for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainBpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainBpsDataResponse
@@ -3823,18 +4410,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries bandwidth monitoring data for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 150 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 150 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries bandwidth monitoring data for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainBpsDataRequest
      * @return DescribeDomainBpsDataResponse
      */
@@ -3844,18 +4458,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries bandwidth data by protocol.
-     *
-     * @description * You can call this operation up to 20 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries bandwidth data by protocol.</p>
+     * 
      * @param request DescribeDomainBpsDataByLayerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainBpsDataByLayerResponse
@@ -3909,18 +4550,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries bandwidth data by protocol.
-     *
-     * @description * You can call this operation up to 20 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries bandwidth data by protocol.</p>
+     * 
      * @param request DescribeDomainBpsDataByLayerRequest
      * @return DescribeDomainBpsDataByLayerResponse
      */
@@ -3930,13 +4598,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the bandwidth data at a specified time for an accelerated domain.
-     *
-     * @description *   The bandwidth is measured in bit/s.
-     * *   You can specify only one accelerated domain name in each request.
-     * *   The data is collected every 5 minutes.
-     * *   You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  The bandwidth is measured in bit/s.</p>
+     * <ul>
+     * <li>You can specify only one accelerated domain name in each request.</li>
+     * <li>The data is collected every 5 minutes.</li>
+     * <li>You can call this operation up to 20 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the bandwidth data at a specified time for an accelerated domain.</p>
+     * 
      * @param request DescribeDomainBpsDataByTimeStampRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainBpsDataByTimeStampResponse
@@ -3978,13 +4650,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the bandwidth data at a specified time for an accelerated domain.
-     *
-     * @description *   The bandwidth is measured in bit/s.
-     * *   You can specify only one accelerated domain name in each request.
-     * *   The data is collected every 5 minutes.
-     * *   You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  The bandwidth is measured in bit/s.</p>
+     * <ul>
+     * <li>You can specify only one accelerated domain name in each request.</li>
+     * <li>The data is collected every 5 minutes.</li>
+     * <li>You can call this operation up to 20 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the bandwidth data at a specified time for an accelerated domain.</p>
+     * 
      * @param request DescribeDomainBpsDataByTimeStampRequest
      * @return DescribeDomainBpsDataByTimeStampResponse
      */
@@ -3994,13 +4670,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries log entries of rate limiting.
-     *
-     * @description *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
-     * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
-     * *   You can query data collected over the last 30 days.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.</p>
+     * <ul>
+     * <li>You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).</li>
+     * <li>You can query data collected over the last 30 days.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries log entries of rate limiting.</p>
+     * 
      * @param request DescribeDomainCcActivityLogRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainCcActivityLogResponse
@@ -4058,13 +4738,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries log entries of rate limiting.
-     *
-     * @description *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
-     * *   You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).
-     * *   You can query data collected over the last 30 days.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.</p>
+     * <ul>
+     * <li>You can specify up to 20 domain names in reach request. If you specify multiple domain names, separate them with commas (,).</li>
+     * <li>You can query data collected over the last 30 days.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries log entries of rate limiting.</p>
+     * 
      * @param request DescribeDomainCcActivityLogRequest
      * @return DescribeDomainCcActivityLogResponse
      */
@@ -4074,10 +4758,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the certificate information of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the certificate information of an accelerated domain name.</p>
+     * 
      * @param request DescribeDomainCertificateInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainCertificateInfoResponse
@@ -4107,10 +4795,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the certificate information of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the certificate information of an accelerated domain name.</p>
+     * 
      * @param request DescribeDomainCertificateInfoRequest
      * @return DescribeDomainCertificateInfoResponse
      */
@@ -4120,8 +4812,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detects the CNAME for an accelerated domain name. You can check the resolution result to determine whether the CNAME is configured.
-     *
+     * <b>summary</b> : 
+     * <p>Detects the CNAME for an accelerated domain name. You can check the resolution result to determine whether the CNAME is configured.</p>
+     * 
      * @param request DescribeDomainCnameRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainCnameResponse
@@ -4151,8 +4844,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detects the CNAME for an accelerated domain name. You can check the resolution result to determine whether the CNAME is configured.
-     *
+     * <b>summary</b> : 
+     * <p>Detects the CNAME for an accelerated domain name. You can check the resolution result to determine whether the CNAME is configured.</p>
+     * 
      * @param request DescribeDomainCnameRequest
      * @return DescribeDomainCnameResponse
      */
@@ -4162,10 +4856,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the custom log configuration of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the custom log configuration of an accelerated domain name.</p>
+     * 
      * @param request DescribeDomainCustomLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainCustomLogConfigResponse
@@ -4191,10 +4889,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the custom log configuration of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the custom log configuration of an accelerated domain name.</p>
+     * 
      * @param request DescribeDomainCustomLogConfigRequest
      * @return DescribeDomainCustomLogConfigResponse
      */
@@ -4204,10 +4906,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The domain name that you want to query. You can specify multiple domain names and separate them with commas (,). You can specify at most 30 domain names in each call.
-     *
-     * @description You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>The domain name that you want to query. You can specify multiple domain names and separate them with commas (,). You can specify at most 30 domain names in each call.</p>
+     * 
      * @param request DescribeDomainDetailDataByLayerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainDetailDataByLayerResponse
@@ -4233,10 +4937,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The domain name that you want to query. You can specify multiple domain names and separate them with commas (,). You can specify at most 30 domain names in each call.
-     *
-     * @description You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>The domain name that you want to query. You can specify multiple domain names and separate them with commas (,). You can specify at most 30 domain names in each call.</p>
+     * 
      * @param request DescribeDomainDetailDataByLayerRequest
      * @return DescribeDomainDetailDataByLayerResponse
      */
@@ -4246,18 +4952,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries byte hit ratios that are measured in percentage.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries byte hit ratios that are measured in percentage.</p>
+     * 
      * @param request DescribeDomainHitRateDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainHitRateDataResponse
@@ -4299,18 +5032,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries byte hit ratios that are measured in percentage.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries byte hit ratios that are measured in percentage.</p>
+     * 
      * @param request DescribeDomainHitRateDataRequest
      * @return DescribeDomainHitRateDataResponse
      */
@@ -4320,18 +5080,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name. The data is collected every 5 minutes.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number and proportions of HTTP status codes returned from an accelerated domain name. The data is collected every 5 minutes.</p>
+     * 
      * @param request DescribeDomainHttpCodeDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainHttpCodeDataResponse
@@ -4381,18 +5168,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name. The data is collected every 5 minutes.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number and proportions of HTTP status codes returned from an accelerated domain name. The data is collected every 5 minutes.</p>
+     * 
      * @param request DescribeDomainHttpCodeDataRequest
      * @return DescribeDomainHttpCodeDataResponse
      */
@@ -4402,18 +5216,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries HTTP status codes by protocol.
-     *
-     * @description * You can call this operation up to 20 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * ### Time granularity
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * </ul>
+     * <h3>Time granularity</h3>
+     * <p>The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries HTTP status codes by protocol.</p>
+     * 
      * @param request DescribeDomainHttpCodeDataByLayerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainHttpCodeDataByLayerResponse
@@ -4467,18 +5308,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries HTTP status codes by protocol.
-     *
-     * @description * You can call this operation up to 20 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * ### Time granularity
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 20 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * </ul>
+     * <h3>Time granularity</h3>
+     * <p>The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries HTTP status codes by protocol.</p>
+     * 
      * @param request DescribeDomainHttpCodeDataByLayerRequest
      * @return DescribeDomainHttpCodeDataByLayerResponse
      */
@@ -4488,13 +5356,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the proportions of data usage of different Internet service providers (ISPs). Data is collected every day. You can query data collected in the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
-     * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
-     * >*   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.</li>
+     * <li>This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the proportions of data usage of different Internet service providers (ISPs). Data is collected every day. You can query data collected in the last 90 days.</p>
+     * 
      * @param request DescribeDomainISPDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainISPDataResponse
@@ -4532,13 +5406,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the proportions of data usage of different Internet service providers (ISPs). Data is collected every day. You can query data collected in the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.
-     * >*   This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.
-     * >*   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set StartTime or EndTime, the request returns the data collected in the last 24 hours. If you set both StartTime and EndTime, the request returns the data collected within the specified time range.</li>
+     * <li>This operation queries proportions of data usage of different ISPs for only a specific accelerated domain name, or for all accelerated domain names in your Alibaba Cloud account.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the proportions of data usage of different Internet service providers (ISPs). Data is collected every day. You can query data collected in the last 90 days.</p>
+     * 
      * @param request DescribeDomainISPDataRequest
      * @return DescribeDomainISPDataResponse
      */
@@ -4548,19 +5428,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the 95th percentile bandwidth data of a domain name.
-     *
-     * @description **You can use one of the following methods to query data:**
-     * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
-     * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-     * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-     * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
-     * * Maximum time range to query: 90 days 
-     * * Minimum data granularity to query: 1 day 
-     * * Historical data available: 90 days
-     * - You can call this operation up to 100 times per second per account.
-     * - The unit of the bandwidth data returned is bit/s.
-     *
+     * <b>description</b> :
+     * <p><em>You can use one of the following methods to query data:</em>*</p>
+     * <ul>
+     * <li>If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.</li>
+     * <li>If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.</li>
+     * <li>If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+     * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.</li>
+     * <li>Maximum time range to query: 90 days </li>
+     * <li>Minimum data granularity to query: 1 day </li>
+     * <li>Historical data available: 90 days</li>
+     * </ul>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * <li>The unit of the bandwidth data returned is bit/s.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the 95th percentile bandwidth data of a domain name.</p>
+     * 
      * @param request DescribeDomainMax95BpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainMax95BpsDataResponse
@@ -4606,19 +5492,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the 95th percentile bandwidth data of a domain name.
-     *
-     * @description **You can use one of the following methods to query data:**
-     * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
-     * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-     * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
-     * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
-     * * Maximum time range to query: 90 days 
-     * * Minimum data granularity to query: 1 day 
-     * * Historical data available: 90 days
-     * - You can call this operation up to 100 times per second per account.
-     * - The unit of the bandwidth data returned is bit/s.
-     *
+     * <b>description</b> :
+     * <p><em>You can use one of the following methods to query data:</em>*</p>
+     * <ul>
+     * <li>If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.</li>
+     * <li>If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.</li>
+     * <li>If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+     * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.</li>
+     * <li>Maximum time range to query: 90 days </li>
+     * <li>Minimum data granularity to query: 1 day </li>
+     * <li>Historical data available: 90 days</li>
+     * </ul>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * <li>The unit of the bandwidth data returned is bit/s.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the 95th percentile bandwidth data of a domain name.</p>
+     * 
      * @param request DescribeDomainMax95BpsDataRequest
      * @return DescribeDomainMax95BpsDataResponse
      */
@@ -4628,14 +5520,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the traffic data and the number of requests for multiple accelerated domain names at a time.
-     *
-     * @description *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
-     * *   The maximum interval between StartTime and EndTime is 1 hour.
-     * *   You can query data within the last 90 days.
-     * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.</p>
+     * <ul>
+     * <li>The maximum interval between StartTime and EndTime is 1 hour.</li>
+     * <li>You can query data within the last 90 days.</li>
+     * <li>You can query the traffic data and the number of requests for accelerated domain names that are deleted.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the traffic data and the number of requests for multiple accelerated domain names at a time.</p>
+     * 
      * @param request DescribeDomainMultiUsageDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainMultiUsageDataResponse
@@ -4673,14 +5569,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the traffic data and the number of requests for multiple accelerated domain names at a time.
-     *
-     * @description *   If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.
-     * *   The maximum interval between StartTime and EndTime is 1 hour.
-     * *   You can query data within the last 90 days.
-     * *   You can query the traffic data and the number of requests for accelerated domain names that are deleted.
-     * *   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  If you do not set StartTime or EndTime, data collected within the last 10 minutes is queried.</p>
+     * <ul>
+     * <li>The maximum interval between StartTime and EndTime is 1 hour.</li>
+     * <li>You can query data within the last 90 days.</li>
+     * <li>You can query the traffic data and the number of requests for accelerated domain names that are deleted.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the traffic data and the number of requests for multiple accelerated domain names at a time.</p>
+     * 
      * @param request DescribeDomainMultiUsageDataRequest
      * @return DescribeDomainMultiUsageDataResponse
      */
@@ -4690,16 +5590,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries monitoring data including the amount of network traffic and the number of visits by directory.
-     *
-     * @description *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
-     * *   You can call this API operation up to 6,000 times per second per account.
-     * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
-     * *   The average size of the files that belong to the domain name must be larger than 1 MB.
-     * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
-     * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-     * *   You can query data collected within the last 30 days.
-     *
+     * <b>description</b> :
+     * <p>  This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a> to apply to be included in the whitelist.</p>
+     * <ul>
+     * <li>You can call this API operation up to 6,000 times per second per account.</li>
+     * <li>Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.</li>
+     * <li>The average size of the files that belong to the domain name must be larger than 1 MB.</li>
+     * <li>The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.</li>
+     * <li>If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.</li>
+     * <li>You can query data collected within the last 30 days.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries monitoring data including the amount of network traffic and the number of visits by directory.</p>
+     * 
      * @param request DescribeDomainPathDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainPathDataResponse
@@ -4725,16 +5629,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries monitoring data including the amount of network traffic and the number of visits by directory.
-     *
-     * @description *   This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply to be included in the whitelist.
-     * *   You can call this API operation up to 6,000 times per second per account.
-     * *   Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.
-     * *   The average size of the files that belong to the domain name must be larger than 1 MB.
-     * *   The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.
-     * *   If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-     * *   You can query data collected within the last 30 days.
-     *
+     * <b>description</b> :
+     * <p>  This operation is available only to users that are on the whitelist. If the daily peak bandwidth value of your workloads reaches 10 Gbit/s, you can <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a> to apply to be included in the whitelist.</p>
+     * <ul>
+     * <li>You can call this API operation up to 6,000 times per second per account.</li>
+     * <li>Data collection by directory is available only to specified domain names within your Alibaba Cloud account. It cannot be enabled for all domain names within your Alibaba Cloud account.</li>
+     * <li>The average size of the files that belong to the domain name must be larger than 1 MB.</li>
+     * <li>The number of directories specified for a single domain name cannot exceed 100. If the number of directories exceeds 100, the data accuracy reduces.</li>
+     * <li>If you do not set StartTime or EndTime, data collected within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.</li>
+     * <li>You can query data collected within the last 30 days.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries monitoring data including the amount of network traffic and the number of visits by directory.</p>
+     * 
      * @param request DescribeDomainPathDataRequest
      * @return DescribeDomainPathDataResponse
      */
@@ -4744,12 +5652,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the page view (PV) data of an accelerated domain name. The data is collected at an interval of 1 hour. You can query data in the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
-     * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature to for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the page view (PV) data of an accelerated domain name. The data is collected at an interval of 1 hour. You can query data in the last 90 days.</p>
+     * 
      * @param request DescribeDomainPvDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainPvDataResponse
@@ -4787,12 +5701,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the page view (PV) data of an accelerated domain name. The data is collected at an interval of 1 hour. You can query data in the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
-     * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature to for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the page view (PV) data of an accelerated domain name. The data is collected at an interval of 1 hour. You can query data in the last 90 days.</p>
+     * 
      * @param request DescribeDomainPvDataRequest
      * @return DescribeDomainPvDataResponse
      */
@@ -4802,18 +5722,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of queries per second (QPS) for an accelerated domain name. The data is collected every 5 minutes. You can query data collected within the last 90 days.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of queries per second (QPS) for an accelerated domain name. The data is collected every 5 minutes. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainQpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainQpsDataResponse
@@ -4863,18 +5810,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of queries per second (QPS) for an accelerated domain name. The data is collected every 5 minutes. You can query data collected within the last 90 days.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of queries per second (QPS) for an accelerated domain name. The data is collected every 5 minutes. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainQpsDataRequest
      * @return DescribeDomainQpsDataResponse
      */
@@ -4884,18 +5858,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of queries per second (QPS) at a specific layer for one or more accelerated domain names. You can query data collected within the last 90 days.
-     *
-     * @description * You can call this operation up to 20 times per second per user.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 20 times per second per user.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of queries per second (QPS) at a specific layer for one or more accelerated domain names. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainQpsDataByLayerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainQpsDataByLayerResponse
@@ -4949,18 +5950,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of queries per second (QPS) at a specific layer for one or more accelerated domain names. You can query data collected within the last 90 days.
-     *
-     * @description * You can call this operation up to 20 times per second per user.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 20 times per second per user.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of queries per second (QPS) at a specific layer for one or more accelerated domain names. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainQpsDataByLayerRequest
      * @return DescribeDomainQpsDataByLayerResponse
      */
@@ -4970,17 +5998,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the bandwidth data about one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong> The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the bandwidth data about one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeBpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeBpsDataResponse
@@ -5006,17 +6061,44 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the bandwidth data about one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong> The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the bandwidth data about one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeBpsDataRequest
      * @return DescribeDomainRealTimeBpsDataResponse
      */
@@ -5026,19 +6108,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the byte hit ratios of accelerated domain names.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.</li>
+     * <li>The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the byte hit ratios of accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeByteHitRateDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeByteHitRateDataResponse
@@ -5064,19 +6173,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the byte hit ratios of accelerated domain names.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.</li>
+     * <li>The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the byte hit ratios of accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeByteHitRateDataRequest
      * @return DescribeDomainRealTimeByteHitRateDataResponse
      */
@@ -5086,11 +6222,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the real-time monitoring data for a domain name.
-     *
-     * @description *   You can query data in the last seven days. Data is collected every minute.
-     * *   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can query data in the last seven days. Data is collected every minute.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the real-time monitoring data for a domain name.</p>
+     * 
      * @param request DescribeDomainRealTimeDetailDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeDetailDataResponse
@@ -5116,11 +6256,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the real-time monitoring data for a domain name.
-     *
-     * @description *   You can query data in the last seven days. Data is collected every minute.
-     * *   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can query data in the last seven days. Data is collected every minute.</p>
+     * <ul>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the real-time monitoring data for a domain name.</p>
+     * 
      * @param request DescribeDomainRealTimeDetailDataRequest
      * @return DescribeDomainRealTimeDetailDataResponse
      */
@@ -5130,18 +6274,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number and proportions of HTTP status codes returned from an accelerated domain name.</p>
+     * 
      * @param request DescribeDomainRealTimeHttpCodeDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeHttpCodeDataResponse
@@ -5187,18 +6358,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the total number and proportions of HTTP status codes returned from an accelerated domain name.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number and proportions of HTTP status codes returned from an accelerated domain name.</p>
+     * 
      * @param request DescribeDomainRealTimeHttpCodeDataRequest
      * @return DescribeDomainRealTimeHttpCodeDataResponse
      */
@@ -5208,18 +6406,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of queries per second for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of queries per second for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeQpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeQpsDataResponse
@@ -5245,18 +6470,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of queries per second for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of queries per second for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeQpsDataRequest
      * @return DescribeDomainRealTimeQpsDataResponse
      */
@@ -5266,20 +6518,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the request hit ratios for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
-     * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.</li>
+     * <li>By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method=&quot;GET&quot;.</li>
+     * <li>The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the request hit ratios for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeReqHitRateDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeReqHitRateDataResponse
@@ -5305,20 +6584,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the request hit ratios for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * * By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method="GET".
-     * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.</li>
+     * <li>By default, requests in the Go programming language use the POST request method. You must manually change the request method to GET by declaring: request.Method=&quot;GET&quot;.</li>
+     * <li>The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the request hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the request hit ratios for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeReqHitRateDataRequest
      * @return DescribeDomainRealTimeReqHitRateDataResponse
      */
@@ -5328,18 +6634,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries origin bandwidth data for accelerated domain names.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries origin bandwidth data for accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeSrcBpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeSrcBpsDataResponse
@@ -5377,18 +6710,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries origin bandwidth data for accelerated domain names.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries origin bandwidth data for accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeSrcBpsDataRequest
      * @return DescribeDomainRealTimeSrcBpsDataResponse
      */
@@ -5398,18 +6758,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the total number and proportions of HTTP status codes returned during back-to-origin routing.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number and proportions of HTTP status codes returned during back-to-origin routing.</p>
+     * 
      * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
@@ -5455,18 +6842,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the total number and proportions of HTTP status codes returned during back-to-origin routing.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the total number and proportions of HTTP status codes returned during back-to-origin routing.</p>
+     * 
      * @param request DescribeDomainRealTimeSrcHttpCodeDataRequest
      * @return DescribeDomainRealTimeSrcHttpCodeDataResponse
      */
@@ -5476,18 +6890,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the monitoring data of back-to-origin traffic for one or more specified accelerated domains. The data is collected every minute.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring data of back-to-origin traffic for one or more specified accelerated domains. The data is collected every minute.</p>
+     * 
      * @param request DescribeDomainRealTimeSrcTrafficDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeSrcTrafficDataResponse
@@ -5525,18 +6966,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the monitoring data of back-to-origin traffic for one or more specified accelerated domains. The data is collected every minute.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour by default. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring data of back-to-origin traffic for one or more specified accelerated domains. The data is collected every minute.</p>
+     * 
      * @param request DescribeDomainRealTimeSrcTrafficDataRequest
      * @return DescribeDomainRealTimeSrcTrafficDataResponse
      */
@@ -5546,18 +7014,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the monitoring data of network traffic for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 50 times per second per account.
-     * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 50 times per second per account.</p>
+     * <ul>
+     * <li>If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring data of network traffic for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeTrafficDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealTimeTrafficDataResponse
@@ -5603,18 +7098,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the monitoring data of network traffic for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 50 times per second per account.
-     * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |1 minute|1 hour|7 days|5 minutes|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 50 times per second per account.</p>
+     * <ul>
+     * <li>If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>1 minute</td>
+     * <td>1 hour</td>
+     * <td>7 days</td>
+     * <td>5 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring data of network traffic for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainRealTimeTrafficDataRequest
      * @return DescribeDomainRealTimeTrafficDataResponse
      */
@@ -5624,10 +7146,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the real-time log delivery information about an accelerated domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the real-time log delivery information about an accelerated domain name.</p>
+     * 
      * @param request DescribeDomainRealtimeLogDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRealtimeLogDeliveryResponse
@@ -5653,10 +7179,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the real-time log delivery information about an accelerated domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the real-time log delivery information about an accelerated domain name.</p>
+     * 
      * @param request DescribeDomainRealtimeLogDeliveryRequest
      * @return DescribeDomainRealtimeLogDeliveryResponse
      */
@@ -5666,13 +7196,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the geographic distribution of users for a domain name. The data is collected at an interval of one day. You can query the data in the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
-     * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
-     * >*   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not specify the <strong>StartTime</strong> or <strong>EndTime</strong> parameter, data collected within the last <strong>24</strong> hours is queried. If you specify both the <strong>StartTime</strong> and <strong>EndTime</strong> parameters, data collected within the specified time range is queried.</li>
+     * <li>There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the geographic distribution of users for a domain name. The data is collected at an interval of one day. You can query the data in the last 90 days.</p>
+     * 
      * @param request DescribeDomainRegionDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainRegionDataResponse
@@ -5710,13 +7246,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the geographic distribution of users for a domain name. The data is collected at an interval of one day. You can query the data in the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   If you do not specify the **StartTime** or **EndTime** parameter, data collected within the last **24** hours is queried. If you specify both the **StartTime** and **EndTime** parameters, data collected within the specified time range is queried.
-     * >*   There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.
-     * >*   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you not use this operation because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not specify the <strong>StartTime</strong> or <strong>EndTime</strong> parameter, data collected within the last <strong>24</strong> hours is queried. If you specify both the <strong>StartTime</strong> and <strong>EndTime</strong> parameters, data collected within the specified time range is queried.</li>
+     * <li>There is delay in data collection. If you want to query data collected within the last day, we recommend that you query the data on the next day.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the geographic distribution of users for a domain name. The data is collected at an interval of one day. You can query the data in the last 90 days.</p>
+     * 
      * @param request DescribeDomainRegionDataRequest
      * @return DescribeDomainRegionDataResponse
      */
@@ -5726,18 +7268,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the request hit ratio in percentage.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the request hit ratio in percentage.</p>
+     * 
      * @param request DescribeDomainReqHitRateDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainReqHitRateDataResponse
@@ -5779,18 +7348,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the request hit ratio in percentage.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the request hit ratio in percentage.</p>
+     * 
      * @param request DescribeDomainReqHitRateDataRequest
      * @return DescribeDomainReqHitRateDataResponse
      */
@@ -5800,18 +7396,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries bandwidth monitoring data of requests that are redirected to origin servers for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries bandwidth monitoring data of requests that are redirected to origin servers for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainSrcBpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainSrcBpsDataResponse
@@ -5853,18 +7476,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries bandwidth monitoring data of requests that are redirected to origin servers for one or more accelerated domain names.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries bandwidth monitoring data of requests that are redirected to origin servers for one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainSrcBpsDataRequest
      * @return DescribeDomainSrcBpsDataResponse
      */
@@ -5874,18 +7524,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the proportions of HTTP status codes that are returned during back-to-origin routing.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the proportions of HTTP status codes that are returned during back-to-origin routing.</p>
+     * 
      * @param request DescribeDomainSrcHttpCodeDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainSrcHttpCodeDataResponse
@@ -5927,18 +7604,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the proportions of HTTP status codes that are returned during back-to-origin routing.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the proportions of HTTP status codes that are returned during back-to-origin routing.</p>
+     * 
      * @param request DescribeDomainSrcHttpCodeDataRequest
      * @return DescribeDomainSrcHttpCodeDataResponse
      */
@@ -5948,18 +7652,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of queries per second (QPS) that are sent to the origin server. You can query data collected in the last 90 days.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * ### Time granularity
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * </ul>
+     * <h3>Time granularity</h3>
+     * <p>The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of queries per second (QPS) that are sent to the origin server. You can query data collected in the last 90 days.</p>
+     * 
      * @param request DescribeDomainSrcQpsDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainSrcQpsDataResponse
@@ -6001,18 +7732,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of queries per second (QPS) that are sent to the origin server. You can query data collected in the last 90 days.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * ### Time granularity
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * </ul>
+     * <h3>Time granularity</h3>
+     * <p>The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of queries per second (QPS) that are sent to the origin server. You can query data collected in the last 90 days.</p>
+     * 
      * @param request DescribeDomainSrcQpsDataRequest
      * @return DescribeDomainSrcQpsDataResponse
      */
@@ -6022,12 +7780,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries frequently requested origin URLs of one or more accelerated domain names.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   The data is collected at an interval of 5 minutes.
-     * >*   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The data is collected at an interval of 5 minutes.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries frequently requested origin URLs of one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainSrcTopUrlVisitRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainSrcTopUrlVisitResponse
@@ -6069,12 +7833,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries frequently requested origin URLs of one or more accelerated domain names.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   The data is collected at an interval of 5 minutes.
-     * >*   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The data is collected at an interval of 5 minutes.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries frequently requested origin URLs of one or more accelerated domain names.</p>
+     * 
      * @param request DescribeDomainSrcTopUrlVisitRequest
      * @return DescribeDomainSrcTopUrlVisitResponse
      */
@@ -6084,18 +7854,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries origin traffic for one or more specified accelerated domain names.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries origin traffic for one or more specified accelerated domain names.</p>
+     * 
      * @param request DescribeDomainSrcTrafficDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainSrcTrafficDataResponse
@@ -6137,18 +7934,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries origin traffic for one or more specified accelerated domain names.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries origin traffic for one or more specified accelerated domain names.</p>
+     * 
      * @param request DescribeDomainSrcTrafficDataRequest
      * @return DescribeDomainSrcTrafficDataResponse
      */
@@ -6158,13 +7982,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries client IP addresses that are ranked by the number of requests or the amount of network traffic within a specific time range for one or more accelerated domain names. You can query data collected within the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
-     * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   Data is collected every hour.
-     * >*   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature to for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>Data is collected every hour.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries client IP addresses that are ranked by the number of requests or the amount of network traffic within a specific time range for one or more accelerated domain names. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainTopClientIpVisitRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainTopClientIpVisitResponse
@@ -6214,13 +8044,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries client IP addresses that are ranked by the number of requests or the amount of network traffic within a specific time range for one or more accelerated domain names. You can query data collected within the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature to for data analysis.
-     * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   Data is collected every hour.
-     * >*   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature to for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>Data is collected every hour.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries client IP addresses that are ranked by the number of requests or the amount of network traffic within a specific time range for one or more accelerated domain names. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainTopClientIpVisitRequest
      * @return DescribeDomainTopClientIpVisitResponse
      */
@@ -6230,14 +8066,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries frequently requested web pages of one or more accelerated domain names on a specified day and sorts the web pages. You can query data collected within the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature or [ship real-time logs in Log Service](https://help.aliyun.com/document_detail/440145.html) to analyze data.
-     * > 
-     * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * *   Data is collected at an interval of five minutes.
-     * *   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature or <a href="https://help.aliyun.com/document_detail/440145.html">ship real-time logs in Log Service</a> to analyze data.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>Data is collected at an interval of five minutes.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries frequently requested web pages of one or more accelerated domain names on a specified day and sorts the web pages. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainTopReferVisitRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainTopReferVisitResponse
@@ -6279,14 +8120,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries frequently requested web pages of one or more accelerated domain names on a specified day and sorts the web pages. You can query data collected within the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature or [ship real-time logs in Log Service](https://help.aliyun.com/document_detail/440145.html) to analyze data.
-     * > 
-     * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * *   Data is collected at an interval of five minutes.
-     * *   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature or <a href="https://help.aliyun.com/document_detail/440145.html">ship real-time logs in Log Service</a> to analyze data.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>Data is collected at an interval of five minutes.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries frequently requested web pages of one or more accelerated domain names on a specified day and sorts the web pages. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainTopReferVisitRequest
      * @return DescribeDomainTopReferVisitResponse
      */
@@ -6296,14 +8142,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries top 100 frequently requested URLs of an accelerated domain name within a specified time range.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   You can query data collected in the last 90 days.
-     * >*   You can specify only one domain name in each call.
-     * >*   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can query data collected in the last 90 days.</li>
+     * <li>You can specify only one domain name in each call.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries top 100 frequently requested URLs of an accelerated domain name within a specified time range.</p>
+     * 
      * @param request DescribeDomainTopUrlVisitRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainTopUrlVisitResponse
@@ -6345,14 +8197,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries top 100 frequently requested URLs of an accelerated domain name within a specified time range.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   You can query data collected in the last 90 days.
-     * >*   You can specify only one domain name in each call.
-     * >*   You can call this operation up to 10 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can query data collected in the last 90 days.</li>
+     * <li>You can specify only one domain name in each call.</li>
+     * <li>You can call this operation up to 10 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries top 100 frequently requested URLs of an accelerated domain name within a specified time range.</p>
+     * 
      * @param request DescribeDomainTopUrlVisitRequest
      * @return DescribeDomainTopUrlVisitResponse
      */
@@ -6362,18 +8220,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries network traffic for one or more accelerated domain names. You can query data that is collected in the last 90 days.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries network traffic for one or more accelerated domain names. You can query data that is collected in the last 90 days.</p>
+     * 
      * @param request DescribeDomainTrafficDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainTrafficDataResponse
@@ -6423,18 +8308,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries network traffic for one or more accelerated domain names. You can query data that is collected in the last 90 days.
-     *
-     * @description * You can call this operation up to 100 times per second per account.
-     * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * **Time granularity**
-     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|366 days|366|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+     * <strong>Time granularity</strong>
+     * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>366 days</td>
+     * <td>366</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries network traffic for one or more accelerated domain names. You can query data that is collected in the last 90 days.</p>
+     * 
      * @param request DescribeDomainTrafficDataRequest
      * @return DescribeDomainTrafficDataResponse
      */
@@ -6444,16 +8356,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resource usage data of specific domain names in a specified billable region.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|90 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>90 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource usage data of specific domain names in a specified billable region.</p>
+     * 
      * @param request DescribeDomainUsageDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainUsageDataResponse
@@ -6511,16 +8450,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the resource usage data of specific domain names in a specified billable region.
-     *
-     * @description * You can call this operation up to 10 times per second per account.
-     * * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
-     * |Time granularity|Maximum time range per query|Historical data available|Data delay|
-     * |---|---|---|---|
-     * |5 minutes|3 days|93 days|15 minutes|
-     * |1 hour|31 days|186 days|4 hours|
-     * |1 day|90 days|366 days|04:00 on the next day|
-     *
+     * <b>description</b> :
+     * <p>You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.<table>
+     * <thead>
+     * <tr>
+     * <th>Time granularity</th>
+     * <th>Maximum time range per query</th>
+     * <th>Historical data available</th>
+     * <th>Data delay</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>5 minutes</td>
+     * <td>3 days</td>
+     * <td>93 days</td>
+     * <td>15 minutes</td>
+     * </tr>
+     * <tr>
+     * <td>1 hour</td>
+     * <td>31 days</td>
+     * <td>186 days</td>
+     * <td>4 hours</td>
+     * </tr>
+     * <tr>
+     * <td>1 day</td>
+     * <td>90 days</td>
+     * <td>366 days</td>
+     * <td>04:00 on the next day</td>
+     * </tr>
+     * </tbody></table>
+     * </li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the resource usage data of specific domain names in a specified billable region.</p>
+     * 
      * @param request DescribeDomainUsageDataRequest
      * @return DescribeDomainUsageDataResponse
      */
@@ -6530,14 +8496,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the unique visitor (UV) data of an accelerated domain name. Data is collected every hour. You can query data collected in the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > 
-     * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the unique visitor (UV) data of an accelerated domain name. Data is collected every hour. You can query data collected in the last 90 days.</p>
+     * 
      * @param request DescribeDomainUvDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainUvDataResponse
@@ -6575,14 +8546,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the unique visitor (UV) data of an accelerated domain name. Data is collected every hour. You can query data collected in the last 90 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > 
-     * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
-     * *   You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can specify only one accelerated domain name or all accelerated domain names in your Alibaba Cloud account.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the unique visitor (UV) data of an accelerated domain name. Data is collected every hour. You can query data collected in the last 90 days.</p>
+     * 
      * @param request DescribeDomainUvDataRequest
      * @return DescribeDomainUvDataResponse
      */
@@ -6592,10 +8568,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the verification content of a domain name, including the host record and record value.
-     *
-     * @description You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the verification content of a domain name, including the host record and record value.</p>
+     * 
      * @param request DescribeDomainVerifyDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainVerifyDataResponse
@@ -6629,10 +8607,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the verification content of a domain name, including the host record and record value.
-     *
-     * @description You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.
-     *
+     * <b>description</b> :
+     * <p>You can call this operation to query the verification content of an accelerated domain name based on whether the global resource plan is enabled.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the verification content of a domain name, including the host record and record value.</p>
+     * 
      * @param request DescribeDomainVerifyDataRequest
      * @return DescribeDomainVerifyDataResponse
      */
@@ -6642,10 +8622,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries accelerated domain names by origin server.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries accelerated domain names by origin server.</p>
+     * 
      * @param request DescribeDomainsBySourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainsBySourceResponse
@@ -6683,10 +8667,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries accelerated domain names by origin server.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries accelerated domain names by origin server.</p>
+     * 
      * @param request DescribeDomainsBySourceRequest
      * @return DescribeDomainsBySourceResponse
      */
@@ -6696,12 +8684,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the monitoring data of an accelerated domain name. Data is collected every day. You can query data collected within the last 90 days.
-     *
-     * @description *   You can call this operation up to 10 times per second per account.
-     * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-     * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.</li>
+     * <li>You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring data of an accelerated domain name. Data is collected every day. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainsUsageByDayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDomainsUsageByDayResponse
@@ -6739,12 +8731,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the monitoring data of an accelerated domain name. Data is collected every day. You can query data collected within the last 90 days.
-     *
-     * @description *   You can call this operation up to 10 times per second per account.
-     * *   If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.
-     * *   You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 10 times per second per account.</p>
+     * <ul>
+     * <li>If you do not set StartTime or EndTime, data within the last 24 hours is queried. If you set both StartTime and EndTime, data within the specified time range is queried.</li>
+     * <li>You can query the monitoring data of a specific accelerated domain name or all accelerated domain names that belong to your Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the monitoring data of an accelerated domain name. Data is collected every day. You can query data collected within the last 90 days.</p>
+     * 
      * @param request DescribeDomainsUsageByDayRequest
      * @return DescribeDomainsUsageByDayResponse
      */
@@ -6754,10 +8750,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution errors of a script in EdgeScript (ES).
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution errors of a script in EdgeScript (ES).</p>
+     * 
      * @param request DescribeEsExceptionDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeEsExceptionDataResponse
@@ -6795,10 +8793,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution errors of a script in EdgeScript (ES).
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution errors of a script in EdgeScript (ES).</p>
+     * 
      * @param request DescribeEsExceptionDataRequest
      * @return DescribeEsExceptionDataResponse
      */
@@ -6808,10 +8808,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution status of scripts in EdgeScript (ES).
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution status of scripts in EdgeScript (ES).</p>
+     * 
      * @param request DescribeEsExecuteDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeEsExecuteDataResponse
@@ -6849,10 +8851,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the execution status of scripts in EdgeScript (ES).
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the execution status of scripts in EdgeScript (ES).</p>
+     * 
      * @param request DescribeEsExecuteDataRequest
      * @return DescribeEsExecuteDataResponse
      */
@@ -6862,8 +8866,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a specified Function Compute trigger.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a specified Function Compute trigger.</p>
+     * 
      * @param request DescribeFCTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFCTriggerResponse
@@ -6889,8 +8894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a specified Function Compute trigger.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a specified Function Compute trigger.</p>
+     * 
      * @param request DescribeFCTriggerRequest
      * @return DescribeFCTriggerResponse
      */
@@ -6900,8 +8906,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a specified IP address is the IP address of a CDN point of presence (POP).
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether a specified IP address is the IP address of a CDN point of presence (POP).</p>
+     * 
      * @param request DescribeIpInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeIpInfoResponse
@@ -6931,8 +8938,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Checks whether a specified IP address is the IP address of a CDN point of presence (POP).
-     *
+     * <b>summary</b> : 
+     * <p>Checks whether a specified IP address is the IP address of a CDN point of presence (POP).</p>
+     * 
      * @param request DescribeIpInfoRequest
      * @return DescribeIpInfoResponse
      */
@@ -6942,10 +8950,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of IP addresses of points of presence (POPs). The status of an IP address of a POP indicates whether content delivery acceleration is supported by the POP.
-     *
-     * @description > You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 50 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of IP addresses of points of presence (POPs). The status of an IP address of a POP indicates whether content delivery acceleration is supported by the POP.</p>
+     * 
      * @param request DescribeIpStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeIpStatusResponse
@@ -6971,10 +8983,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of IP addresses of points of presence (POPs). The status of an IP address of a POP indicates whether content delivery acceleration is supported by the POP.
-     *
-     * @description > You can call this operation up to 50 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 50 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of IP addresses of points of presence (POPs). The status of an IP address of a POP indicates whether content delivery acceleration is supported by the POP.</p>
+     * 
      * @param request DescribeIpStatusRequest
      * @return DescribeIpStatusResponse
      */
@@ -6984,11 +9000,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the virtual IP addresses (VIPs) of L2 CDN points of presence (POPs) for a specific domain name.
-     *
-     * @description *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
-     * *   You can call this operation up to 40 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a> to apply for permissions to use this operation.</p>
+     * <ul>
+     * <li>You can call this operation up to 40 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the virtual IP addresses (VIPs) of L2 CDN points of presence (POPs) for a specific domain name.</p>
+     * 
      * @param request DescribeL2VipsByDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeL2VipsByDomainResponse
@@ -7026,11 +9046,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the virtual IP addresses (VIPs) of L2 CDN points of presence (POPs) for a specific domain name.
-     *
-     * @description *   This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex) to apply for permissions to use this operation.
-     * *   You can call this operation up to 40 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation is available only to users whose daily peak bandwidth value is higher than 1 Gbit/s. If you meet this requirement, you can <a href="https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex">submit a ticket</a> to apply for permissions to use this operation.</p>
+     * <ul>
+     * <li>You can call this operation up to 40 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the virtual IP addresses (VIPs) of L2 CDN points of presence (POPs) for a specific domain name.</p>
+     * 
      * @param request DescribeL2VipsByDomainRequest
      * @return DescribeL2VipsByDomainResponse
      */
@@ -7040,11 +9064,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the prefetch details of a task, including the prefetch progress of all resources in the task. Only users who are included in the whitelist can use this operation. You can contact your business manager to apply for the whitelist.
-     *
-     * @description *   You can query data within the last 3 days.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can query data within the last 3 days.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the prefetch details of a task, including the prefetch progress of all resources in the task. Only users who are included in the whitelist can use this operation. You can contact your business manager to apply for the whitelist.</p>
+     * 
      * @param request DescribePreloadDetailByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribePreloadDetailByIdResponse
@@ -7074,11 +9102,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the prefetch details of a task, including the prefetch progress of all resources in the task. Only users who are included in the whitelist can use this operation. You can contact your business manager to apply for the whitelist.
-     *
-     * @description *   You can query data within the last 3 days.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can query data within the last 3 days.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the prefetch details of a task, including the prefetch progress of all resources in the task. Only users who are included in the whitelist can use this operation. You can contact your business manager to apply for the whitelist.</p>
+     * 
      * @param request DescribePreloadDetailByIdRequest
      * @return DescribePreloadDetailByIdResponse
      */
@@ -7088,11 +9120,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the bandwidth values by Internet service provider (ISP) and region.
-     *
-     * @description *   The data is collected every 5 minutes.
-     * *   You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  The data is collected every 5 minutes.</p>
+     * <ul>
+     * <li>You can call this operation up to 20 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the bandwidth values by Internet service provider (ISP) and region.</p>
+     * 
      * @param request DescribeRangeDataByLocateAndIspServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRangeDataByLocateAndIspServiceResponse
@@ -7138,11 +9174,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the bandwidth values by Internet service provider (ISP) and region.
-     *
-     * @description *   The data is collected every 5 minutes.
-     * *   You can call this operation up to 20 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  The data is collected every 5 minutes.</p>
+     * <ul>
+     * <li>You can call this operation up to 20 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the bandwidth values by Internet service provider (ISP) and region.</p>
+     * 
      * @param request DescribeRangeDataByLocateAndIspServiceRequest
      * @return DescribeRangeDataByLocateAndIspServiceResponse
      */
@@ -7152,10 +9192,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of real-time log deliveries.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of real-time log deliveries.</p>
+     * 
      * @param request DescribeRealtimeDeliveryAccRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRealtimeDeliveryAccResponse
@@ -7201,10 +9245,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of real-time log deliveries.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of real-time log deliveries.</p>
+     * 
      * @param request DescribeRealtimeDeliveryAccRequest
      * @return DescribeRealtimeDeliveryAccResponse
      */
@@ -7214,10 +9262,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DescribeRefreshQuota
-     *
-     * @description Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
-     *
+     * <b>description</b> :
+     * <p>Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>DescribeRefreshQuota</p>
+     * 
      * @param request DescribeRefreshQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRefreshQuotaResponse
@@ -7251,10 +9301,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary DescribeRefreshQuota
-     *
-     * @description Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.
-     *
+     * <b>description</b> :
+     * <p>Queries the maximum and remaining numbers of URLs and directories that can be refreshed, the maximum and remaining numbers of times that you can prefetch content, and the maximum and remaining numbers of URLs and directories that can be blocked on the current day.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>DescribeRefreshQuota</p>
+     * 
      * @param request DescribeRefreshQuotaRequest
      * @return DescribeRefreshQuotaResponse
      */
@@ -7264,11 +9316,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statuses of refresh or prefetch tasks by task ID.
-     *
-     * @description *   You can query data in the last three days.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can query data in the last three days.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statuses of refresh or prefetch tasks by task ID.</p>
+     * 
      * @param request DescribeRefreshTaskByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRefreshTaskByIdResponse
@@ -7298,11 +9354,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the statuses of refresh or prefetch tasks by task ID.
-     *
-     * @description *   You can query data in the last three days.
-     * *   You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  You can query data in the last three days.</p>
+     * <ul>
+     * <li>You can call this operation up to 30 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the statuses of refresh or prefetch tasks by task ID.</p>
+     * 
      * @param request DescribeRefreshTaskByIdRequest
      * @return DescribeRefreshTaskByIdResponse
      */
@@ -7312,14 +9372,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of refresh or prefetch tasks that belong to an accelerated domain name.
-     *
-     * @description *   You can query the status of tasks by task ID or URL.
-     * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
-     * *   You can query data collected in the last 3 days.
-     * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
-     * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](https://help.aliyun.com/document_detail/187709.html) operation. This operation allows you to query tasks by task ID.
-     *
+     * <b>description</b> :
+     * <p>  You can query the status of tasks by task ID or URL.</p>
+     * <ul>
+     * <li>You can set both the <strong>TaskId</strong> and <strong>ObjectPath</strong> parameters. If you do not set the <strong>TaskId</strong> or <strong>ObjectPath</strong> parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.</li>
+     * <li>You can query data collected in the last 3 days.</li>
+     * <li>If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.</li>
+     * <li>You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the <a href="https://help.aliyun.com/document_detail/187709.html">DescribeRefreshTaskById</a> operation. This operation allows you to query tasks by task ID.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of refresh or prefetch tasks that belong to an accelerated domain name.</p>
+     * 
      * @param request DescribeRefreshTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeRefreshTasksResponse
@@ -7393,14 +9457,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the status of refresh or prefetch tasks that belong to an accelerated domain name.
-     *
-     * @description *   You can query the status of tasks by task ID or URL.
-     * *   You can set both the **TaskId** and **ObjectPath** parameters. If you do not set the **TaskId** or **ObjectPath** parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.
-     * *   You can query data collected in the last 3 days.
-     * *   If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.
-     * *   You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the [DescribeRefreshTaskById](https://help.aliyun.com/document_detail/187709.html) operation. This operation allows you to query tasks by task ID.
-     *
+     * <b>description</b> :
+     * <p>  You can query the status of tasks by task ID or URL.</p>
+     * <ul>
+     * <li>You can set both the <strong>TaskId</strong> and <strong>ObjectPath</strong> parameters. If you do not set the <strong>TaskId</strong> or <strong>ObjectPath</strong> parameter, data entries on the first page (20 entries) collected in the last 3 days are returned.</li>
+     * <li>You can query data collected in the last 3 days.</li>
+     * <li>If auto CDN cache update is enabled in the Object Storage Service (OSS) console, you cannot call the DescribeRefreshTasks operation to query automatic refresh tasks in OSS.</li>
+     * <li>You can call this operation up to 10 times per second per account. If you want to query tasks at a higher frequency, call the <a href="https://help.aliyun.com/document_detail/187709.html">DescribeRefreshTaskById</a> operation. This operation allows you to query tasks by task ID.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the status of refresh or prefetch tasks that belong to an accelerated domain name.</p>
+     * 
      * @param request DescribeRefreshTasksRequest
      * @return DescribeRefreshTasksResponse
      */
@@ -7410,10 +9478,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries node IP addresses in the staging environment.
-     *
-     * @description >The maximum number of times that each user can call this operation per second is 30.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum number of times that each user can call this operation per second is 30.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries node IP addresses in the staging environment.</p>
+     * 
      * @param request DescribeStagingIpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeStagingIpResponse
@@ -7435,10 +9507,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries node IP addresses in the staging environment.
-     *
-     * @description >The maximum number of times that each user can call this operation per second is 30.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The maximum number of times that each user can call this operation per second is 30.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries node IP addresses in the staging environment.</p>
      * @return DescribeStagingIpResponse
      */
     public DescribeStagingIpResponse describeStagingIp() throws Exception {
@@ -7447,10 +9522,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tags that are added to specified resources.
-     *
-     * @description >  The maximum number of times that each user can call this operation per second is 10.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The maximum number of times that each user can call this operation per second is 10.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tags that are added to specified resources.</p>
+     * 
      * @param request DescribeTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTagResourcesResponse
@@ -7488,10 +9567,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tags that are added to specified resources.
-     *
-     * @description >  The maximum number of times that each user can call this operation per second is 10.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The maximum number of times that each user can call this operation per second is 10.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tags that are added to specified resources.</p>
+     * 
      * @param request DescribeTagResourcesRequest
      * @return DescribeTagResourcesResponse
      */
@@ -7501,12 +9584,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N domain names ranked by network traffic. You can query data collected in the last 30 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the <strong>StartTime</strong> or <strong>EndTime</strong> parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the top N domain names ranked by network traffic. You can query data collected in the last 30 days.</p>
+     * 
      * @param request DescribeTopDomainsByFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeTopDomainsByFlowResponse
@@ -7544,12 +9633,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the top N domain names ranked by network traffic. You can query data collected in the last 30 days.
-     *
-     * @description The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the [operations report](https://help.aliyun.com/document_detail/279577.html) feature for data analysis.
-     * > *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.
-     * >*   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>The statistical analysis feature of Alibaba Cloud CDN is no longer available. The API operations related to the statistical analysis feature are no longer maintained. We recommend that you do not use the API operations because data may be missing or inaccurate. You can use the <a href="https://help.aliyun.com/document_detail/279577.html">operations report</a> feature for data analysis.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If you do not set the <strong>StartTime</strong> or <strong>EndTime</strong> parameter, the request returns the data collected in the current month. If you set both these parameters, the request returns the data collected within the specified time range.</li>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the top N domain names ranked by network traffic. You can query data collected in the last 30 days.</p>
+     * 
      * @param request DescribeTopDomainsByFlowRequest
      * @return DescribeTopDomainsByFlowResponse
      */
@@ -7559,10 +9654,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of domain names whose SSL certificates are about to expire or have already expired.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of domain names whose SSL certificates are about to expire or have already expired.</p>
+     * 
      * @param request DescribeUserCertificateExpireCountRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserCertificateExpireCountResponse
@@ -7584,10 +9683,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the number of domain names whose SSL certificates are about to expire or have already expired.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the number of domain names whose SSL certificates are about to expire or have already expired.</p>
      * @return DescribeUserCertificateExpireCountResponse
      */
     public DescribeUserCertificateExpireCountResponse describeUserCertificateExpireCount() throws Exception {
@@ -7596,14 +9698,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries configurations of security features.</p>
+     * 
      * @deprecated OpenAPI DescribeUserConfigs is deprecated
-     *
-     * @summary Queries configurations of security features.
-     *
+     * 
      * @param request DescribeUserConfigsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserConfigsResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeUserConfigsResponse describeUserConfigsWithOptions(DescribeUserConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -7638,13 +9742,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries configurations of security features.</p>
+     * 
      * @deprecated OpenAPI DescribeUserConfigs is deprecated
-     *
-     * @summary Queries configurations of security features.
-     *
+     * 
      * @param request DescribeUserConfigsRequest
      * @return DescribeUserConfigsResponse
      */
+    @Deprecated
     // Deprecated
     public DescribeUserConfigsResponse describeUserConfigs(DescribeUserConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -7652,11 +9758,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all accelerated domain names in your Alibaba Cloud account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.
-     *
-     * @description *   You can call this operation up to 100 times per second per account.
-     * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all accelerated domain names in your Alibaba Cloud account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.</p>
+     * 
      * @param request DescribeUserDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserDomainsResponse
@@ -7742,11 +9852,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all accelerated domain names in your Alibaba Cloud account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.
-     *
-     * @description *   You can call this operation up to 100 times per second per account.
-     * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 100 times per second per account.</p>
+     * <ul>
+     * <li>You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all accelerated domain names in your Alibaba Cloud account and the status of the accelerated domain names. You can filter domain names by name or status. Fuzzy match is supported.</p>
+     * 
      * @param request DescribeUserDomainsRequest
      * @return DescribeUserDomainsResponse
      */
@@ -7756,10 +9870,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries user tags.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries user tags.</p>
+     * 
      * @param request DescribeUserTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserTagsResponse
@@ -7781,10 +9899,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries user tags.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries user tags.</p>
      * @return DescribeUserTagsResponse
      */
     public DescribeUserTagsResponse describeUserTags() throws Exception {
@@ -7793,10 +9914,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries usage export tasks that were created in the last three months.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries usage export tasks that were created in the last three months.</p>
+     * 
      * @param request DescribeUserUsageDataExportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserUsageDataExportTaskResponse
@@ -7830,10 +9955,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries usage export tasks that were created in the last three months.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries usage export tasks that were created in the last three months.</p>
+     * 
      * @param request DescribeUserUsageDataExportTaskRequest
      * @return DescribeUserUsageDataExportTaskResponse
      */
@@ -7843,11 +9972,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tasks that were used to export resource usage details of one or more accelerated domain names that belong to your Alibaba Cloud account. Resource usage information is collected every five minutes.
-     *
-     * @description *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tasks that were used to export resource usage details of one or more accelerated domain names that belong to your Alibaba Cloud account. Resource usage information is collected every five minutes.</p>
+     * 
      * @param request DescribeUserUsageDetailDataExportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserUsageDetailDataExportTaskResponse
@@ -7881,11 +10014,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries tasks that were used to export resource usage details of one or more accelerated domain names that belong to your Alibaba Cloud account. Resource usage information is collected every five minutes.
-     *
-     * @description *   This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  This operation has been available since July 20, 2018. You can query information about resource usage collected within the last three months.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries tasks that were used to export resource usage details of one or more accelerated domain names that belong to your Alibaba Cloud account. Resource usage information is collected every five minutes.</p>
+     * 
      * @param request DescribeUserUsageDetailDataExportTaskRequest
      * @return DescribeUserUsageDetailDataExportTaskResponse
      */
@@ -7895,10 +10032,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries virtual IP addresses (VIPs) of CDN points of presence (POPs) by domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries virtual IP addresses (VIPs) of CDN points of presence (POPs) by domain name.</p>
+     * 
      * @param request DescribeUserVipsByDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserVipsByDomainResponse
@@ -7924,10 +10065,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries virtual IP addresses (VIPs) of CDN points of presence (POPs) by domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries virtual IP addresses (VIPs) of CDN points of presence (POPs) by domain name.</p>
+     * 
      * @param request DescribeUserVipsByDomainRequest
      * @return DescribeUserVipsByDomainResponse
      */
@@ -7937,8 +10082,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the ownership verification content of an accelerated domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the ownership verification content of an accelerated domain name.</p>
+     * 
      * @param request DescribeVerifyContentRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVerifyContentResponse
@@ -7968,8 +10114,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the ownership verification content of an accelerated domain name.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the ownership verification content of an accelerated domain name.</p>
+     * 
      * @param request DescribeVerifyContentRequest
      * @return DescribeVerifyContentResponse
      */
@@ -7979,10 +10126,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The ID of the request.
-     *
-     * @description >  The maximum number of times that each user can call this operation per second is 100.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>The ID of the request.</p>
+     * 
      * @param request DisableRealtimeLogDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DisableRealtimeLogDeliveryResponse
@@ -8008,10 +10159,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The ID of the request.
-     *
-     * @description >  The maximum number of times that each user can call this operation per second is 100.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>The ID of the request.</p>
+     * 
      * @param request DisableRealtimeLogDeliveryRequest
      * @return DisableRealtimeLogDeliveryResponse
      */
@@ -8021,10 +10176,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The ID of the request.
-     *
-     * @description >  The maximum number of times that each user can call this operation per second is 100.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>The ID of the request.</p>
+     * 
      * @param request EnableRealtimeLogDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableRealtimeLogDeliveryResponse
@@ -8050,10 +10209,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary The ID of the request.
-     *
-     * @description >  The maximum number of times that each user can call this operation per second is 100.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> The maximum number of times that each user can call this operation per second is 100.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>The ID of the request.</p>
+     * 
      * @param request EnableRealtimeLogDeliveryRequest
      * @return EnableRealtimeLogDeliveryResponse
      */
@@ -8063,10 +10226,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries domain names by log configuration ID.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries domain names by log configuration ID.</p>
+     * 
      * @param request ListDomainsByLogConfigIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDomainsByLogConfigIdResponse
@@ -8092,10 +10259,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries domain names by log configuration ID.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries domain names by log configuration ID.</p>
+     * 
      * @param request ListDomainsByLogConfigIdRequest
      * @return ListDomainsByLogConfigIdResponse
      */
@@ -8105,10 +10276,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Function Compute trigger that is set for an Alibaba Cloud CDN event.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Function Compute trigger that is set for an Alibaba Cloud CDN event.</p>
+     * 
      * @param request ListFCTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFCTriggerResponse
@@ -8134,10 +10309,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Function Compute trigger that is set for an Alibaba Cloud CDN event.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Function Compute trigger that is set for an Alibaba Cloud CDN event.</p>
+     * 
      * @param request ListFCTriggerRequest
      * @return ListFCTriggerResponse
      */
@@ -8147,10 +10326,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all domain names that are associated with a specific real-time log delivery configuration record.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all domain names that are associated with a specific real-time log delivery configuration record.</p>
+     * 
      * @param request ListRealtimeLogDeliveryDomainsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRealtimeLogDeliveryDomainsResponse
@@ -8176,10 +10359,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all domain names that are associated with a specific real-time log delivery configuration record.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all domain names that are associated with a specific real-time log delivery configuration record.</p>
+     * 
      * @param request ListRealtimeLogDeliveryDomainsRequest
      * @return ListRealtimeLogDeliveryDomainsResponse
      */
@@ -8189,10 +10376,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the real-time log delivery feature in a specified region.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the real-time log delivery feature in a specified region.</p>
+     * 
      * @param request ListRealtimeLogDeliveryInfosRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRealtimeLogDeliveryInfosResponse
@@ -8214,10 +10405,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about the real-time log delivery feature in a specified region.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about the real-time log delivery feature in a specified region.</p>
      * @return ListRealtimeLogDeliveryInfosResponse
      */
     public ListRealtimeLogDeliveryInfosResponse listRealtimeLogDeliveryInfos() throws Exception {
@@ -8226,8 +10420,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are attached to a resource.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are attached to a resource.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTagResourcesResponse
@@ -8277,8 +10472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the tags that are attached to a resource.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are attached to a resource.</p>
+     * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
@@ -8288,10 +10484,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all custom log configurations in your account.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all custom log configurations in your account.</p>
+     * 
      * @param request ListUserCustomLogConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUserCustomLogConfigResponse
@@ -8313,10 +10513,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries all custom log configurations in your account.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries all custom log configurations in your account.</p>
      * @return ListUserCustomLogConfigResponse
      */
     public ListUserCustomLogConfigResponse listUserCustomLogConfig() throws Exception {
@@ -8325,10 +10528,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of an accelerated domain name.</p>
+     * 
      * @param request ModifyCdnDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyCdnDomainResponse
@@ -8378,10 +10585,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configuration of an accelerated domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configuration of an accelerated domain name.</p>
+     * 
      * @param request ModifyCdnDomainRequest
      * @return ModifyCdnDomainResponse
      */
@@ -8391,12 +10602,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Transfer domain names from an Alibaba Cloud account to the current account.
-     *
-     * @description This operation is used in the following scenario:
-     * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
-     * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
-     *
+     * <b>description</b> :
+     * <p>This operation is used in the following scenario:</p>
+     * <ul>
+     * <li>You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.</li>
+     * <li>You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Transfer domain names from an Alibaba Cloud account to the current account.</p>
+     * 
      * @param request ModifyCdnDomainOwnerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyCdnDomainOwnerResponse
@@ -8438,12 +10653,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Transfer domain names from an Alibaba Cloud account to the current account.
-     *
-     * @description This operation is used in the following scenario:
-     * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
-     * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
-     *
+     * <b>description</b> :
+     * <p>This operation is used in the following scenario:</p>
+     * <ul>
+     * <li>You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.</li>
+     * <li>You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Transfer domain names from an Alibaba Cloud account to the current account.</p>
+     * 
      * @param request ModifyCdnDomainOwnerRequest
      * @return ModifyCdnDomainOwnerResponse
      */
@@ -8453,10 +10672,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the acceleration region for an accelerated domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the acceleration region for an accelerated domain name.</p>
+     * 
      * @param request ModifyCdnDomainSchdmByPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyCdnDomainSchdmByPropertyResponse
@@ -8490,10 +10713,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the acceleration region for an accelerated domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the acceleration region for an accelerated domain name.</p>
+     * 
      * @param request ModifyCdnDomainSchdmByPropertyRequest
      * @return ModifyCdnDomainSchdmByPropertyResponse
      */
@@ -8503,10 +10730,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.</p>
+     * 
      * @param request ModifyRealtimeLogDeliveryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyRealtimeLogDeliveryResponse
@@ -8532,10 +10763,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the configurations of real-time log delivery for a specific domain name. Each domain name supports only one Logstore.</p>
+     * 
      * @param request ModifyRealtimeLogDeliveryRequest
      * @return ModifyRealtimeLogDeliveryResponse
      */
@@ -8545,11 +10780,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Activates Alibaba Cloud CDN. You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.
-     *
-     * @description *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
-     * *   You can call this operation up to five times per second per user.
-     *
+     * <b>description</b> :
+     * <p>  Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.</p>
+     * <ul>
+     * <li>You can call this operation up to five times per second per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Activates Alibaba Cloud CDN. You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.</p>
+     * 
      * @param request OpenCdnServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return OpenCdnServiceResponse
@@ -8587,11 +10826,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Activates Alibaba Cloud CDN. You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.
-     *
-     * @description *   Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.
-     * *   You can call this operation up to five times per second per user.
-     *
+     * <b>description</b> :
+     * <p>  Alibaba Cloud CDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must complete real-name verification to activate Alibaba Cloud CDN.</p>
+     * <ul>
+     * <li>You can call this operation up to five times per second per user.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Activates Alibaba Cloud CDN. You must activate Alibaba Cloud CDN before you can manage domain names in Alibaba Cloud CDN.</p>
+     * 
      * @param request OpenCdnServiceRequest
      * @return OpenCdnServiceResponse
      */
@@ -8601,10 +10844,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes the configurations of the staging environment to the production environment.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes the configurations of the staging environment to the production environment.</p>
+     * 
      * @param request PublishStagingConfigToProductionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PublishStagingConfigToProductionResponse
@@ -8634,10 +10881,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Publishes the configurations of the staging environment to the production environment.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Publishes the configurations of the staging environment to the production environment.</p>
+     * 
      * @param request PublishStagingConfigToProductionRequest
      * @return PublishStagingConfigToProductionResponse
      */
@@ -8647,20 +10898,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Prefetches content from origin servers to points of presence (POPs). This reduces loads on origin servers because users can directly hit cache upon their first visits.
-     *
-     * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-     * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
-     * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
-     * *   You can specify at most 100 URLs in each prefetch request.
-     * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
-     * *   You can call this operation up to 50 times per second per account.
-     * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
-     * ## Precautions
-     * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-     * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
-     * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
-     *
+     * <b>description</b> :
+     * <p>  Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/91164.html">RefreshObjectCaches</a> operation to refresh content and call the <a href="https://help.aliyun.com/document_detail/91161.html">PushObjectCache</a> operation to prefetch content.</li>
+     * <li>By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can <a href="https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex">submit a ticket</a> to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.</li>
+     * <li>You can specify at most 100 URLs in each prefetch request.</li>
+     * <li>For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * <li>For more information about how to automate refresh or prefetch tasks, see <a href="https://help.aliyun.com/document_detail/151829.html">Run scripts to refresh and prefetch content</a>.</li>
+     * </ul>
+     * <h2>Precautions</h2>
+     * <ul>
+     * <li>After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.</li>
+     * <li>The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.</li>
+     * <li>To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/260300.html">Authorize a RAM user to prefetch and refresh resources</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Prefetches content from origin servers to points of presence (POPs). This reduces loads on origin servers because users can directly hit cache upon their first visits.</p>
+     * 
      * @param request PushObjectCacheRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PushObjectCacheResponse
@@ -8710,20 +10967,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Prefetches content from origin servers to points of presence (POPs). This reduces loads on origin servers because users can directly hit cache upon their first visits.
-     *
-     * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-     * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
-     * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
-     * *   You can specify at most 100 URLs in each prefetch request.
-     * *   For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.
-     * *   You can call this operation up to 50 times per second per account.
-     * *   For more information about how to automate refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
-     * ## Precautions
-     * *   After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-     * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
-     * *   To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
-     *
+     * <b>description</b> :
+     * <p>  Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/91164.html">RefreshObjectCaches</a> operation to refresh content and call the <a href="https://help.aliyun.com/document_detail/91161.html">PushObjectCache</a> operation to prefetch content.</li>
+     * <li>By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can <a href="https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex">submit a ticket</a> to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.</li>
+     * <li>You can specify at most 100 URLs in each prefetch request.</li>
+     * <li>For each Alibaba Cloud account, the prefetch queue can contain up to 50,000 URLs. Content is prefetched based on the time when the URLs are submitted. The URL that is submitted the earliest has the highest priority. If the number of URLs in the queue reaches 50,000, you cannot submit more URLs until the number drops below 50,000.</li>
+     * <li>You can call this operation up to 50 times per second per account.</li>
+     * <li>For more information about how to automate refresh or prefetch tasks, see <a href="https://help.aliyun.com/document_detail/151829.html">Run scripts to refresh and prefetch content</a>.</li>
+     * </ul>
+     * <h2>Precautions</h2>
+     * <ul>
+     * <li>After a prefetch task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.</li>
+     * <li>The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.</li>
+     * <li>To allow RAM users to perform this operation, you must first grant them the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/260300.html">Authorize a RAM user to prefetch and refresh resources</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Prefetches content from origin servers to points of presence (POPs). This reduces loads on origin servers because users can directly hit cache upon their first visits.</p>
+     * 
      * @param request PushObjectCacheRequest
      * @return PushObjectCacheResponse
      */
@@ -8733,8 +10996,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 指定缓存tag刷新节点上的文件内容
-     *
+     * <b>summary</b> : 
+     * <p>指定缓存tag刷新节点上的文件内容</p>
+     * 
      * @param request RefreshObjectCacheByCacheTagRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RefreshObjectCacheByCacheTagResponse
@@ -8772,8 +11036,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 指定缓存tag刷新节点上的文件内容
-     *
+     * <b>summary</b> : 
+     * <p>指定缓存tag刷新节点上的文件内容</p>
+     * 
      * @param request RefreshObjectCacheByCacheTagRequest
      * @return RefreshObjectCacheByCacheTagResponse
      */
@@ -8783,22 +11048,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Refreshes files on Alibaba Cloud CDN points of presence (POPs). After files are refreshed, the original file content immediately becomes invalid. If clients request the original file content, Alibaba Cloud CDN forwards the requests to the origin server. Then, Alibaba Cloud CDN caches the latest content to the POPs and returns the content to the clients. Alibaba Cloud CDN allows you to refresh content from multiple URLs at the same time.
-     *
-     * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-     * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
-     * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
-     * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
-     * ## Precautions
-     * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-     * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
-     * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
-     * ### Refresh quota
-     * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
-     * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
-     * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
-     * *   You can refresh up to 1,000 URLs per minute for each domain name.
-     *
+     * <b>description</b> :
+     * <p>  Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/91164.html">RefreshObjectCaches</a> operation to refresh content and call the <a href="https://help.aliyun.com/document_detail/91161.html">PushObjectCache</a> operation to prefetch content.</li>
+     * <li>You can call the RefreshObjectCaches operation up to 50 times per second per account.</li>
+     * <li>For more information about how to automatically refresh or prefetch tasks, see <a href="https://help.aliyun.com/document_detail/151829.html">Run scripts to refresh and prefetch content</a>.</li>
+     * </ul>
+     * <h2>Precautions</h2>
+     * <ul>
+     * <li>After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.</li>
+     * <li>A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.</li>
+     * <li>If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/260300.html">Authorize a RAM user to prefetch and refresh resources</a>.</li>
+     * </ul>
+     * <h3>Refresh quota</h3>
+     * <ul>
+     * <li>By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can <a href="https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex">submit a ticket</a> to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.</li>
+     * <li>By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> to request a quota increase.</li>
+     * <li>You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.</li>
+     * <li>You can refresh up to 1,000 URLs per minute for each domain name.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Refreshes files on Alibaba Cloud CDN points of presence (POPs). After files are refreshed, the original file content immediately becomes invalid. If clients request the original file content, Alibaba Cloud CDN forwards the requests to the origin server. Then, Alibaba Cloud CDN caches the latest content to the POPs and returns the content to the clients. Alibaba Cloud CDN allows you to refresh content from multiple URLs at the same time.</p>
+     * 
      * @param request RefreshObjectCachesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RefreshObjectCachesResponse
@@ -8844,22 +11117,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Refreshes files on Alibaba Cloud CDN points of presence (POPs). After files are refreshed, the original file content immediately becomes invalid. If clients request the original file content, Alibaba Cloud CDN forwards the requests to the origin server. Then, Alibaba Cloud CDN caches the latest content to the POPs and returns the content to the clients. Alibaba Cloud CDN allows you to refresh content from multiple URLs at the same time.
-     *
-     * @description *   Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.
-     * *   You can call the [RefreshObjectCaches](https://help.aliyun.com/document_detail/91164.html) operation to refresh content and call the [PushObjectCache](https://help.aliyun.com/document_detail/91161.html) operation to prefetch content.
-     * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
-     * *   For more information about how to automatically refresh or prefetch tasks, see [Run scripts to refresh and prefetch content](https://help.aliyun.com/document_detail/151829.html).
-     * ## Precautions
-     * *   After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
-     * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
-     * *   If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](https://help.aliyun.com/document_detail/260300.html).
-     * ### Refresh quota
-     * *   By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.
-     * *   By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can [submit a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex) to request a quota increase.
-     * *   You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.
-     * *   You can refresh up to 1,000 URLs per minute for each domain name.
-     *
+     * <b>description</b> :
+     * <p>  Alibaba Cloud CDN supports POST requests in which parameters are sent as a form.</p>
+     * <ul>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/91164.html">RefreshObjectCaches</a> operation to refresh content and call the <a href="https://help.aliyun.com/document_detail/91161.html">PushObjectCache</a> operation to prefetch content.</li>
+     * <li>You can call the RefreshObjectCaches operation up to 50 times per second per account.</li>
+     * <li>For more information about how to automatically refresh or prefetch tasks, see <a href="https://help.aliyun.com/document_detail/151829.html">Run scripts to refresh and prefetch content</a>.</li>
+     * </ul>
+     * <h2>Precautions</h2>
+     * <ul>
+     * <li>After a refresh task is submitted and completed, specific resources are removed from POPs. When a POP receives a request for the removed resources, the POP forwards the request to the origin server to retrieve the resources. The retrieved resources are returned to the client and cached on the POP. Multiple refresh tasks may cause a large number of resources to be removed from the POPs. This increases the number of requests that are forwarded to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.</li>
+     * <li>A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.</li>
+     * <li>If you want to use RAM users to refresh or prefetch resources, you must obtain the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/260300.html">Authorize a RAM user to prefetch and refresh resources</a>.</li>
+     * </ul>
+     * <h3>Refresh quota</h3>
+     * <ul>
+     * <li>By default, each Alibaba Cloud account can refresh content from up to 10,000 URLs and 100 directories per day. The directories include subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can <a href="https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex">submit a ticket</a> to request a quota increase. Alibaba Cloud CDN evaluates your application based on your workloads.</li>
+     * <li>By default, each Alibaba Cloud account can submit up to 20 refresh rules that contain regular expressions per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 10 Gbit/s, you can <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> to request a quota increase.</li>
+     * <li>You can specify up to 1,000 URL refresh rules, 100 directory refresh rules, or 1 refresh rule that contains regular expressions in each call.</li>
+     * <li>You can refresh up to 1,000 URLs per minute for each domain name.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Refreshes files on Alibaba Cloud CDN points of presence (POPs). After files are refreshed, the original file content immediately becomes invalid. If clients request the original file content, Alibaba Cloud CDN forwards the requests to the origin server. Then, Alibaba Cloud CDN caches the latest content to the POPs and returns the content to the clients. Alibaba Cloud CDN allows you to refresh content from multiple URLs at the same time.</p>
+     * 
      * @param request RefreshObjectCachesRequest
      * @return RefreshObjectCachesResponse
      */
@@ -8869,10 +11150,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rolls back configurations in the staging environment. After you call this operation, all configurations in the staging environment are cleared.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Rolls back configurations in the staging environment. After you call this operation, all configurations in the staging environment are cleared.</p>
+     * 
      * @param request RollbackStagingConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RollbackStagingConfigResponse
@@ -8902,10 +11187,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Rolls back configurations in the staging environment. After you call this operation, all configurations in the staging environment are cleared.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Rolls back configurations in the staging environment. After you call this operation, all configurations in the staging environment are cleared.</p>
+     * 
      * @param request RollbackStagingConfigRequest
      * @return RollbackStagingConfigResponse
      */
@@ -8915,10 +11204,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to configure an SSL certificate for a specific domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to configure an SSL certificate for a specific domain name.</p>
+     * 
      * @param request SetCdnDomainCSRCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetCdnDomainCSRCertificateResponse
@@ -8952,10 +11245,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to configure an SSL certificate for a specific domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>You can call this operation to configure an SSL certificate for a specific domain name.</p>
+     * 
      * @param request SetCdnDomainCSRCertificateRequest
      * @return SetCdnDomainCSRCertificateResponse
      */
@@ -8965,10 +11262,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables a ShangMi (SM) certificate for a domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables a ShangMi (SM) certificate for a domain name.</p>
+     * 
      * @param request SetCdnDomainSMCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetCdnDomainSMCertificateResponse
@@ -9014,10 +11315,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables a ShangMi (SM) certificate for a domain name.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables a ShangMi (SM) certificate for a domain name.</p>
+     * 
      * @param request SetCdnDomainSMCertificateRequest
      * @return SetCdnDomainSMCertificateResponse
      */
@@ -9027,11 +11332,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the certificate for a domain name and updates the certificate information.
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     * *   Method: POST.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * <ul>
+     * <li>Method: POST.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the certificate for a domain name and updates the certificate information.</p>
+     * 
      * @param request SetCdnDomainSSLCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetCdnDomainSSLCertificateResponse
@@ -9101,11 +11410,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables or disables the certificate for a domain name and updates the certificate information.
-     *
-     * @description *   You can call this operation up to 30 times per second per account.
-     * *   Method: POST.
-     *
+     * <b>description</b> :
+     * <p>  You can call this operation up to 30 times per second per account.</p>
+     * <ul>
+     * <li>Method: POST.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables or disables the certificate for a domain name and updates the certificate information.</p>
+     * 
      * @param request SetCdnDomainSSLCertificateRequest
      * @return SetCdnDomainSSLCertificateResponse
      */
@@ -9115,10 +11428,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures a domain name to be accelerated in the staging environment.
-     *
-     * @description >  You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures a domain name to be accelerated in the staging environment.</p>
+     * 
      * @param request SetCdnDomainStagingConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetCdnDomainStagingConfigResponse
@@ -9152,10 +11469,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures a domain name to be accelerated in the staging environment.
-     *
-     * @description >  You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures a domain name to be accelerated in the staging environment.</p>
+     * 
      * @param request SetCdnDomainStagingConfigRequest
      * @return SetCdnDomainStagingConfigResponse
      */
@@ -9165,17 +11486,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>配置CDN上的海量封禁功能</p>
+     * 
+     * @param request SetCdnFullDomainsBlockIPRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SetCdnFullDomainsBlockIPResponse
+     */
+    public SetCdnFullDomainsBlockIPResponse setCdnFullDomainsBlockIPWithOptions(SetCdnFullDomainsBlockIPRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.blockInterval)) {
+            body.put("BlockInterval", request.blockInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.IPList)) {
+            body.put("IPList", request.IPList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            body.put("OperationType", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.updateType)) {
+            body.put("UpdateType", request.updateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SetCdnFullDomainsBlockIP"),
+            new TeaPair("version", "2018-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SetCdnFullDomainsBlockIPResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>配置CDN上的海量封禁功能</p>
+     * 
+     * @param request SetCdnFullDomainsBlockIPRequest
+     * @return SetCdnFullDomainsBlockIPResponse
+     */
+    public SetCdnFullDomainsBlockIPResponse setCdnFullDomainsBlockIP(SetCdnFullDomainsBlockIPRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setCdnFullDomainsBlockIPWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 10 times per second per user.</p>
+     * <ul>
+     * <li>Method: POST.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures an SSL certificate for an accelerated domain name.</p>
+     * 
      * @deprecated OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
-     *
-     * @summary Configures an SSL certificate for an accelerated domain name.
-     *
-     * @description *   You can call this operation up to 10 times per second per user.
-     * *   Method: POST.
-     *
+     * 
      * @param request SetDomainServerCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDomainServerCertificateResponse
      */
+    @Deprecated
     // Deprecated
     public SetDomainServerCertificateResponse setDomainServerCertificateWithOptions(SetDomainServerCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -9234,16 +11616,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation up to 10 times per second per user.</p>
+     * <ul>
+     * <li>Method: POST.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures an SSL certificate for an accelerated domain name.</p>
+     * 
      * @deprecated OpenAPI SetDomainServerCertificate is deprecated, please use Cdn::2018-05-10::SetCdnDomainSSLCertificate instead.
-     *
-     * @summary Configures an SSL certificate for an accelerated domain name.
-     *
-     * @description *   You can call this operation up to 10 times per second per user.
-     * *   Method: POST.
-     *
+     * 
      * @param request SetDomainServerCertificateRequest
      * @return SetDomainServerCertificateResponse
      */
+    @Deprecated
     // Deprecated
     public SetDomainServerCertificateResponse setDomainServerCertificate(SetDomainServerCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
@@ -9251,8 +11638,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sets a custom origin header.
-     *
+     * <b>summary</b> : 
+     * <p>Sets a custom origin header.</p>
+     * 
      * @param request SetReqHeaderConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetReqHeaderConfigResponse
@@ -9302,8 +11690,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sets a custom origin header.
-     *
+     * <b>summary</b> : 
+     * <p>Sets a custom origin header.</p>
+     * 
      * @param request SetReqHeaderConfigRequest
      * @return SetReqHeaderConfigResponse
      */
@@ -9313,10 +11702,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the virtual waiting room feature for an accelerated domain name. This operation is available only for accelerated domain names of the Dynamic CDN workload type.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures the virtual waiting room feature for an accelerated domain name. This operation is available only for accelerated domain names of the Dynamic CDN workload type.</p>
+     * 
      * @param request SetWaitingRoomConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetWaitingRoomConfigResponse
@@ -9366,10 +11759,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Configures the virtual waiting room feature for an accelerated domain name. This operation is available only for accelerated domain names of the Dynamic CDN workload type.
-     *
-     * @description > You can call this operation up to 30 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 30 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Configures the virtual waiting room feature for an accelerated domain name. This operation is available only for accelerated domain names of the Dynamic CDN workload type.</p>
+     * 
      * @param request SetWaitingRoomConfigRequest
      * @return SetWaitingRoomConfigResponse
      */
@@ -9379,11 +11776,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a disabled domain name. After the domain name is enabled, the value of the DomainStatus parameter is changed to Online.
-     *
-     * @description *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a disabled domain name. After the domain name is enabled, the value of the DomainStatus parameter is changed to Online.</p>
+     * 
      * @param request StartCdnDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartCdnDomainResponse
@@ -9421,11 +11822,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables a disabled domain name. After the domain name is enabled, the value of the DomainStatus parameter is changed to Online.
-     *
-     * @description *   If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.
-     * *   You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  If the domain name is in an invalid state or you have an overdue payment in your account, the domain name cannot be enabled.</p>
+     * <ul>
+     * <li>You can call this operation up to 100 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables a disabled domain name. After the domain name is enabled, the value of the DomainStatus parameter is changed to Online.</p>
+     * 
      * @param request StartCdnDomainRequest
      * @return StartCdnDomainResponse
      */
@@ -9435,11 +11840,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables an accelerated domain name. After the domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
-     *
-     * @description *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
-     * *   You can call this operation up to 40 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.</p>
+     * <ul>
+     * <li>You can call this operation up to 40 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables an accelerated domain name. After the domain name is disabled, the value of the DomainStatus parameter is changed to Offline.</p>
+     * 
      * @param request StopCdnDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopCdnDomainResponse
@@ -9477,11 +11886,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Disables an accelerated domain name. After the domain name is disabled, the value of the DomainStatus parameter is changed to Offline.
-     *
-     * @description *   After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
-     * *   You can call this operation up to 40 times per second per account.
-     *
+     * <b>description</b> :
+     * <p>  After an accelerated domain is disabled, Alibaba Cloud CDN retains its information and routes all the requests that are destined for the accelerated domain to the origin server.</p>
+     * <ul>
+     * <li>You can call this operation up to 40 times per second per account.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables an accelerated domain name. After the domain name is disabled, the value of the DomainStatus parameter is changed to Offline.</p>
+     * 
      * @param request StopCdnDomainRequest
      * @return StopCdnDomainResponse
      */
@@ -9491,10 +11904,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds one or more tags to specific resources.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds one or more tags to specific resources.</p>
+     * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return TagResourcesResponse
@@ -9532,10 +11949,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds one or more tags to specific resources.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Adds one or more tags to specific resources.</p>
+     * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
      */
@@ -9545,10 +11966,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from specified resources.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from specified resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UntagResourcesResponse
@@ -9590,10 +12015,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Removes tags from specified resources.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Removes tags from specified resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */
@@ -9603,10 +12032,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a tracking task.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a tracking task.</p>
+     * 
      * @param request UpdateCdnDeliverTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCdnDeliverTaskResponse
@@ -9656,10 +12089,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a tracking task.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a tracking task.</p>
+     * 
      * @param request UpdateCdnDeliverTaskRequest
      * @return UpdateCdnDeliverTaskResponse
      */
@@ -9669,10 +12106,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates one or more operations reports.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates one or more operations reports.</p>
+     * 
      * @param request UpdateCdnSubTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCdnSubTaskResponse
@@ -9714,10 +12155,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates one or more operations reports.
-     *
-     * @description > You can call this operation up to three times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to three times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates one or more operations reports.</p>
+     * 
      * @param request UpdateCdnSubTaskRequest
      * @return UpdateCdnSubTaskResponse
      */
@@ -9727,8 +12172,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a specified Function Compute trigger.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a specified Function Compute trigger.</p>
+     * 
      * @param request UpdateFCTriggerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateFCTriggerResponse
@@ -9776,8 +12222,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Updates a specified Function Compute trigger.
-     *
+     * <b>summary</b> : 
+     * <p>Updates a specified Function Compute trigger.</p>
+     * 
      * @param request UpdateFCTriggerRequest
      * @return UpdateFCTriggerResponse
      */
@@ -9787,10 +12234,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Verifies the ownership of a specified domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the ownership of a specified domain name.</p>
+     * 
      * @param request VerifyDomainOwnerRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return VerifyDomainOwnerResponse
@@ -9824,10 +12275,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Verifies the ownership of a specified domain name.
-     *
-     * @description > You can call this operation up to 100 times per second per account.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation up to 100 times per second per account.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Verifies the ownership of a specified domain name.</p>
+     * 
      * @param request VerifyDomainOwnerRequest
      * @return VerifyDomainOwnerResponse
      */

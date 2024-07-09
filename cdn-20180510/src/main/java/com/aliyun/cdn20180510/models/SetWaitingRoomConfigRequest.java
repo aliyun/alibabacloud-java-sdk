@@ -5,40 +5,47 @@ import com.aliyun.tea.*;
 
 public class SetWaitingRoomConfigRequest extends TeaModel {
     /**
-     * <p>The percentage of requests that are allowed to be redirected to the origin server. Valid values: **0** to **100**.</p>
-     * <br>
+     * <p>The percentage of requests that are allowed to be redirected to the origin server. Valid values: <strong>0</strong> to <strong>100</strong>.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("AllowPct")
     public Integer allowPct;
 
     /**
      * <p>The accelerated domain name. You can specify only one domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The length of waiting time to skip after an exit from the queue. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("GapTime")
     public Integer gapTime;
 
     /**
      * <p>The maximum length of waiting time in the queue. Unit: seconds.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("MaxTimeWait")
     public Integer maxTimeWait;
 
     /**
      * <p>The regular expression that is used to match URI strings for which the virtual waiting room feature is enabled.</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("WaitUri")
@@ -46,8 +53,10 @@ public class SetWaitingRoomConfigRequest extends TeaModel {
 
     /**
      * <p>The URL of the waiting page.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://example.com/waitingroom.html">https://example.com/waitingroom.html</a></p>
      */
     @NameInMap("WaitUrl")
     public String waitUrl;

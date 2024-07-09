@@ -12,6 +12,9 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC0E34AC-0239-44A7-AB0E-800DE522C8DC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
     public static class DescribeCdnSMCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertldentifier</p>
          */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
         /**
          * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertName</p>
          */
         @NameInMap("CertName")
         public String certName;
 
         /**
          * <p>The common name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertCommon</p>
          */
         @NameInMap("Common")
         public String common;
 
         /**
          * <p>The certificate authority (CA) that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourCertIssuer</p>
          */
         @NameInMap("Issuer")
         public String issuer;
@@ -129,6 +144,9 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
 
         /**
          * <p>The number of certificates that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Count")
         public Integer count;

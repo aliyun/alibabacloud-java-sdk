@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeVerifyContentRequest extends TeaModel {
     /**
      * <p>The domain name of which the ownership was verified. You can specify only one domain name.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

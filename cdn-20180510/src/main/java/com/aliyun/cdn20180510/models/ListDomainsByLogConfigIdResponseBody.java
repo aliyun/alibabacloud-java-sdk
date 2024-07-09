@@ -12,6 +12,9 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

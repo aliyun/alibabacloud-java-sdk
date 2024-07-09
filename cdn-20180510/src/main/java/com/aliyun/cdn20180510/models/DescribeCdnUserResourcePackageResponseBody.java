@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>84839536-2B7E-457D-9D8C-82E6C7D4E1A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,63 +43,93 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
     public static class DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo extends TeaModel {
         /**
          * <p>The ID of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cdnflowbag</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
          * <p>The remaining quota of the resource plan.</p>
-         * <br>
-         * <p>*   For a data transfer plan, the quota is measured in bytes.</p>
-         * <p>*   For a request resource plan, the quota is measured in the number of requests.</p>
+         * <ul>
+         * <li>For a data transfer plan, the quota is measured in bytes.</li>
+         * <li>For a request resource plan, the quota is measured in the number of requests.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10995089554629</p>
          */
         @NameInMap("CurrCapacity")
         public String currCapacity;
 
         /**
          * <p>The name of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDN data transfer plan (Chinese mainland)</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-01T08:00:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The total quota of the resource plan.</p>
-         * <br>
-         * <p>*   For a data transfer plan, the quota is measured in bytes.</p>
-         * <p>*   For a request resource plan, the quota is measured in the number of requests.</p>
+         * <ul>
+         * <li>For a data transfer plan, the quota is measured in bytes.</li>
+         * <li>For a request resource plan, the quota is measured in the number of requests.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>536870912000</p>
          */
         @NameInMap("InitCapacity")
         public String initCapacity;
 
         /**
          * <p>The ID of the instance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FP-ilttxc23a</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
          * <p>The effective time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-05T19:10:58Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The status of the resource plan. Valid values:</p>
-         * <br>
-         * <p>*   **valid**: valid</p>
-         * <p>*   **closed**: expired</p>
+         * <ul>
+         * <li><strong>valid</strong>: valid</li>
+         * <li><strong>closed</strong>: expired</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CDN data transfer plan</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

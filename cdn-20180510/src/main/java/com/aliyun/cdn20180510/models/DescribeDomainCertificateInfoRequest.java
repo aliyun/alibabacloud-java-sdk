@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeDomainCertificateInfoRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;

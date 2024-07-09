@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class ModifyCdnDomainRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -17,6 +19,9 @@ public class ModifyCdnDomainRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyuji4b6r4**</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -26,16 +31,24 @@ public class ModifyCdnDomainRequest extends TeaModel {
 
     /**
      * <p>The information about the addresses of origin servers.</p>
-     * <br>
-     * <p>> Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.</p>
+     * <blockquote>
+     * <p>Do not set <strong>Sources</strong> and <strong>TopLevelDomain</strong> at the same time. If you set <strong>Sources</strong> and <strong>TopLevelDomain</strong> at the same time, <strong>TopLevelDomain</strong> does not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;content&quot;:&quot;1.1.1.1&quot;,&quot;type&quot;:&quot;ipaddr&quot;,&quot;priority&quot;:&quot;20&quot;,&quot;port&quot;:80,&quot;weight&quot;:&quot;15&quot;}]</p>
      */
     @NameInMap("Sources")
     public String sources;
 
     /**
      * <p>The root domain. To add a root domain name, you must be added to the whitelist specified by the CDN_TOP_LEVEL_DOMAIN_GREY_USER_LIST parameter.</p>
-     * <br>
-     * <p>> Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.</p>
+     * <blockquote>
+     * <p>Do not set <strong>Sources</strong> and <strong>TopLevelDomain</strong> at the same time. If you set <strong>Sources</strong> and <strong>TopLevelDomain</strong> at the same time, <strong>TopLevelDomain</strong> does not take effect.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>aliyundoc.com</p>
      */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;

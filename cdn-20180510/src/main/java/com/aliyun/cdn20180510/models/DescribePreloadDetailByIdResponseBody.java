@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribePreloadDetailByIdResponseBody extends TeaModel {
     /**
      * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9D3257A-1B7C-414C-90C1-8D07AC47BCAC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of queried tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -54,21 +60,31 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
     public static class DescribePreloadDetailByIdResponseBodyUrlDetailsUrls extends TeaModel {
         /**
          * <p>The details of resource prefetch.</p>
-         * <br>
-         * <p>*   If the resource is prefetched on all POPs, "Successfully preloaded" is returned.</p>
-         * <p>*   If the resource fails to be prefetched on some POPs, the failure details separated by vertical bars (|) are returned.</p>
+         * <ul>
+         * <li>If the resource is prefetched on all POPs, &quot;Successfully preloaded&quot; is returned.</li>
+         * <li>If the resource fails to be prefetched on some POPs, the failure details separated by vertical bars (|) are returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Successfully preloaded</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The success percentage, which indicates the number of POPs on which the resource is prefetched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>47%</p>
          */
         @NameInMap("Success")
         public String success;
 
         /**
          * <p>The URL of the prefetched resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/abc.jpg</p>
          */
         @NameInMap("Url")
         public String url;
@@ -107,50 +123,70 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
     public static class DescribePreloadDetailByIdResponseBodyUrlDetails extends TeaModel {
         /**
          * <p>The time when the task was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-23T02:26:56Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
          * <p>The domain name for prefetching resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The time when the task ended. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-23T02:27:00Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The progress of the prefetch task, which indicates the number of points of presence (POPs) on which the prefetch task is completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100%</p>
          */
         @NameInMap("Process")
         public String process;
 
         /**
-         * <p>The turned error code. A value of `0` indicates that the task succeeded.</p>
+         * <p>The turned error code. A value of <code>0</code> indicates that the task succeeded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("RetCode")
         public String retCode;
 
         /**
          * <p>The status of the task. Valid values:</p>
-         * <br>
-         * <p>*   **Complete**</p>
-         * <p>*   **Refreshing**</p>
-         * <p>*   **Failed**</p>
+         * <ul>
+         * <li><strong>Complete</strong></li>
+         * <li><strong>Refreshing</strong></li>
+         * <li><strong>Failed</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Complete</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task that you want to query.</p>
-         * <br>
          * <p>You can call the PushObjectCache operation to query task IDs. Then, you can use the task IDs to query task status.</p>
-         * <br>
          * <p>You can query one task ID at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14286878547</p>
          */
         @NameInMap("TaskId")
         public String taskId;

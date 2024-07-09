@@ -12,42 +12,63 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The 95th percentile bandwidth in the Chinese mainland.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16777590.28</p>
      */
     @NameInMap("DomesticMax95Bps")
     public String domesticMax95Bps;
 
     /**
      * <p>The end of the time range for which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-11T21:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The 95th percentile bandwidth.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16777590.28</p>
      */
     @NameInMap("Max95Bps")
     public String max95Bps;
 
     /**
      * <p>The 95th percentile bandwidth outside the Chinese mainland.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("OverseasMax95Bps")
     public String overseasMax95Bps;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The beginning of the time range for which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T20:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -124,24 +145,36 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
     public static class DescribeDomainMax95BpsDataResponseBodyDetailDataMax95Detail extends TeaModel {
         /**
          * <p>Region of the 95th percentile bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The 95th percentile bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16777590.28</p>
          */
         @NameInMap("Max95Bps")
         public Float max95Bps;
 
         /**
          * <p>Time of the 95th percentile bandwidth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-11T21:05:00Z</p>
          */
         @NameInMap("Max95BpsPeakTime")
         public String max95BpsPeakTime;
 
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-11T21:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

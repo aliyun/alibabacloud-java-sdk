@@ -12,6 +12,9 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ASAF2FDS-12SADSA-DDSAE3D-DSADCD4C-CDADS2D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,60 +43,89 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
     public static class DescribeCdnDomainByCertificateResponseBodyCertInfosCertInfo extends TeaModel {
         /**
          * <p>Indicates whether the SSL certificate is obsolete. Valid values:</p>
-         * <br>
-         * <p>*   **yes**: The SSL certificate is obsolete.</p>
-         * <p>*   **no**: The SSL certificate is working as expected.</p>
+         * <ul>
+         * <li><strong>yes</strong>: The SSL certificate is obsolete.</li>
+         * <li><strong>no</strong>: The SSL certificate is working as expected.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         @NameInMap("CertCaIsLegacy")
         public String certCaIsLegacy;
 
         /**
          * <p>The expiration time of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nov 29 00:00:00 2016 GMT</p>
          */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
         /**
          * <p>Indicates whether the SSL certificate is expired. Valid values:</p>
-         * <br>
-         * <p>*   **yes**: The SSL certificate is expired.</p>
-         * <p>*   **no**: The SSL certificate is not expired.</p>
+         * <ul>
+         * <li><strong>yes</strong>: The SSL certificate is expired.</li>
+         * <li><strong>no</strong>: The SSL certificate is not expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         @NameInMap("CertExpired")
         public String certExpired;
 
         /**
          * <p>The time when the certificate became effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Nov 29 23:59:59 2017 GMT</p>
          */
         @NameInMap("CertStartTime")
         public String certStartTime;
 
         /**
          * <p>The name of the SSL certificate owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
          */
         @NameInMap("CertSubjectCommonName")
         public String certSubjectCommonName;
 
         /**
-         * <p>The type of the certificate. Valid values: **RSA**, **DSA**, and **ECDSA**.</p>
+         * <p>The type of the certificate. Valid values: <strong>RSA</strong>, <strong>DSA</strong>, and <strong>ECDSA</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA</p>
          */
         @NameInMap("CertType")
         public String certType;
 
         /**
          * <p>If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,aliyundoc.com</p>
          */
         @NameInMap("DomainList")
         public String domainList;
 
         /**
          * <p>The domain names (DNS fields) that match the SSL certificate. Multiple domain names are separated by commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*.example.com,aliyundoc.com</p>
          */
         @NameInMap("DomainNames")
         public String domainNames;
 
         /**
          * <p>The certificate authority (CA) that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C=US, O=Symantec Corporation, OU=Symantec Trust Network, OU=Domain Validated SSL, CN=Symantec Basic DV SSL CA - G1</p>
          */
         @NameInMap("Issuer")
         public String issuer;

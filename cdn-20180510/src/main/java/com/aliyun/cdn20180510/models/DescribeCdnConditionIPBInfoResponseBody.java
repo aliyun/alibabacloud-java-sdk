@@ -12,6 +12,9 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2C4AA72D-8C00-1113-BD68-8BC4E3CF4FF6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
     public static class DescribeCdnConditionIPBInfoResponseBodyDatas extends TeaModel {
         /**
          * <p>The configuration value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;[{\&quot;text\&quot;:\&quot;阿鲁巴\&quot;,\&quot;value\&quot;:\&quot;AW\&quot;}]&quot;</p>
          */
         @NameInMap("Value")
         public String value;

@@ -6,40 +6,54 @@ import com.aliyun.tea.*;
 public class DescribeDomainRealTimeHttpCodeDataRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify multiple accelerated domain names and separate them with commas (,).</p>
-     * <br>
-     * <p>> You can specify up to 100 accelerated domain names in each request.</p>
-     * <br>
+     * <blockquote>
+     * <p>You can specify up to 100 accelerated domain names in each request.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com,example.org</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:40:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query ISP names.</p>
+     * <p>The name of the Internet service provider (ISP). You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query ISP names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>unicom</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. You can call the [DescribeCdnRegionAndIsp](https://help.aliyun.com/document_detail/91077.html) operation to query regions. If you do not specify a region, all regions are queried.</p>
+     * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query regions. If you do not specify a region, all regions are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>beijing</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-11-30T05:39:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

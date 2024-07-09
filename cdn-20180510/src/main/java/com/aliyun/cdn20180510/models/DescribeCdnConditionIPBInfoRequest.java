@@ -6,15 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeCdnConditionIPBInfoRequest extends TeaModel {
     /**
      * <p>The configuration ID. Valid values:</p>
-     * <br>
-     * <p>*   condition_region_config_cn</p>
-     * <p>*   condition_region_config_en</p>
-     * <p>*   condition_isp_config_cn</p>
-     * <p>*   condition_isp_config_en</p>
-     * <p>*   condition_country_config_cn</p>
-     * <p>*   condition_country_config_en</p>
-     * <br>
+     * <ul>
+     * <li>condition_region_config_cn</li>
+     * <li>condition_region_config_en</li>
+     * <li>condition_isp_config_cn</li>
+     * <li>condition_isp_config_en</li>
+     * <li>condition_country_config_cn</li>
+     * <li>condition_country_config_en</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>condition_region_config_cn</p>
      */
     @NameInMap("DataId")
     public String dataId;

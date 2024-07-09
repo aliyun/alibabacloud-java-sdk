@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class BatchStartCdnDomainRequest extends TeaModel {
     /**
      * <p>The accelerated domain names. You can specify one or more domain names. Separate multiple domain names with commas (,).</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;

@@ -6,41 +6,59 @@ import com.aliyun.tea.*;
 public class SetCdnDomainSSLCertificateRequest extends TeaModel {
     /**
      * <p>The ID of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8089870</p>
      */
     @NameInMap("CertId")
     public Long certId;
 
     /**
      * <p>The name of the SSL certificate. You can specify only one certificate name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourCertName</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
-     * <p>The region ID of the certificate. Valid values: **cn-hangzhou** and **ap-southeast-1**. Default value: **cn-hangzhou**.</p>
+     * <p>The region ID of the certificate. Valid values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>. Default value: <strong>cn-hangzhou</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("CertRegion")
     public String certRegion;
 
     /**
      * <p>The type of the certificate.</p>
-     * <br>
-     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
-     * <p>*   **cas**: a certificate that is acquired through Certificate Management Service.</p>
+     * <ul>
+     * <li><strong>upload</strong>: a user-uploaded SSL certificate.</li>
+     * <li><strong>cas</strong>: a certificate that is acquired through Certificate Management Service.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>upload</p>
      */
     @NameInMap("CertType")
     public String certType;
 
     /**
      * <p>The accelerated domain name for which you want to configure the SSL certificate. The type of request supported by the domain name must be HTTPS. You can specify only one domain name in each request.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>Specifies whether the certificate is issued in canary releases. If you set this parameter to **staging**, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</p>
+     * <p>Specifies whether the certificate is issued in canary releases. If you set this parameter to <strong>staging</strong>, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>staging</p>
      */
     @NameInMap("Env")
     public String env;
@@ -50,23 +68,32 @@ public class SetCdnDomainSSLCertificateRequest extends TeaModel {
 
     /**
      * <p>The private key. Specify the private key only if you want to enable the SSL certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>y****</p>
      */
     @NameInMap("SSLPri")
     public String SSLPri;
 
     /**
      * <p>Specifies whether to enable the SSL certificate.</p>
-     * <br>
-     * <p>*   **on**</p>
-     * <p>*   **off**</p>
-     * <br>
+     * <ul>
+     * <li><strong>on</strong></li>
+     * <li><strong>off</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
      */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
     /**
      * <p>The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("SSLPub")
     public String SSLPub;

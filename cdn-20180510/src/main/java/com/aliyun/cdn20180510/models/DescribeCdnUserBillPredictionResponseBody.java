@@ -12,38 +12,51 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
 
     /**
      * <p>The metering method.</p>
-     * <br>
-     * <p>> If the metering method ends with _overseas, the billable region is outside the Chinese mainland. For example, BillType": "month_avg_day_bandwidth_overseas specifies a billable region outside the Chinese mainland and that the metering method is pay by daily peak bandwidth per month.</p>
-     * <br>
+     * <blockquote>
+     * <p>If the metering method ends with _overseas, the billable region is outside the Chinese mainland. For example, BillType&quot;: &quot;month_avg_day_bandwidth_overseas specifies a billable region outside the Chinese mainland and that the metering method is pay by daily peak bandwidth per month.</p>
+     * </blockquote>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   hour_flow: pay by hourly data transfer</p>
-     * <p>*   day_bandwidth: pay by daily bandwidth</p>
-     * <p>*   month_95: pay by monthly 95th percentile bandwidth.</p>
-     * <p>*   month_avg_day_bandwidth: pay by average daily peak bandwidth per month</p>
-     * <p>*   month_4th_day_bandwidth: pay by monthly 4th peak bandwidth</p>
-     * <p>*   month_avg_day_95: pay by average daily 95th percentile bandwidth per month</p>
-     * <p>*   month_95_night_half: pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00.</p>
-     * <p>*   hour_vas: pay by value-added services per hour</p>
-     * <p>*   day_count: pay by daily requests</p>
+     * <ul>
+     * <li>hour_flow: pay by hourly data transfer</li>
+     * <li>day_bandwidth: pay by daily bandwidth</li>
+     * <li>month_95: pay by monthly 95th percentile bandwidth.</li>
+     * <li>month_avg_day_bandwidth: pay by average daily peak bandwidth per month</li>
+     * <li>month_4th_day_bandwidth: pay by monthly 4th peak bandwidth</li>
+     * <li>month_avg_day_95: pay by average daily 95th percentile bandwidth per month</li>
+     * <li>month_95_night_half: pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00.</li>
+     * <li>hour_vas: pay by value-added services per hour</li>
+     * <li>day_count: pay by daily requests</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>month_95</p>
      */
     @NameInMap("BillType")
     public String billType;
 
     /**
      * <p>The end time of the estimation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-10-25T10:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start time of the estimation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-09-30T16:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -96,18 +109,27 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
     public static class DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem extends TeaModel {
         /**
          * <p>The billable region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         @NameInMap("Area")
         public String area;
 
         /**
          * <p>The time when the value used as the estimated value is generated. This parameter is returned only if the metering method is pay by 95th percentile, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-15T16:00:00Z</p>
          */
         @NameInMap("TimeStp")
         public String timeStp;
 
         /**
          * <p>The estimated value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         @NameInMap("Value")
         public Float value;

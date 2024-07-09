@@ -12,42 +12,63 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
 
     /**
      * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T20:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The name of the ISP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>unicom</p>
      */
     @NameInMap("IspNameEn")
     public String ispNameEn;
 
     /**
      * <p>The name of the region.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>beijing</p>
      */
     @NameInMap("LocationNameEn")
     public String locationNameEn;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The start of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2020-05-14T09:50:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -124,42 +145,63 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
     public static class DescribeDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
         /**
          * <p>The bandwidth value in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11286111</p>
          */
         @NameInMap("DomesticValue")
         public String domesticValue;
 
         /**
          * <p>The bandwidth data for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11286111</p>
          */
         @NameInMap("HttpsDomesticValue")
         public String httpsDomesticValue;
 
         /**
          * <p>The bandwidth data for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("HttpsOverseasValue")
         public String httpsOverseasValue;
 
         /**
          * <p>The bandwidth value for HTTPS requests. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11288111</p>
          */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
         /**
          * <p>The bandwidth data in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
          */
         @NameInMap("OverseasValue")
         public String overseasValue;
 
         /**
          * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11288111</p>
          */
         @NameInMap("Value")
         public String value;

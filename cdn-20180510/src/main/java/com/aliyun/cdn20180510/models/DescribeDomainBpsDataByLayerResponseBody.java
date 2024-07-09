@@ -12,12 +12,18 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
 
     /**
      * <p>The time interval between the data entries. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C565B910-BC3B-467B-9046-2A48566EA967</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,18 +60,27 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
     public static class DescribeDomainBpsDataByLayerResponseBodyBpsDataIntervalDataModule extends TeaModel {
         /**
          * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-05-06T07:10:00Z</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
          * <p>The total amount of network traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2838</p>
          */
         @NameInMap("TrafficValue")
         public String trafficValue;
 
         /**
          * <p>The peak bandwidth value. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75.68</p>
          */
         @NameInMap("Value")
         public String value;

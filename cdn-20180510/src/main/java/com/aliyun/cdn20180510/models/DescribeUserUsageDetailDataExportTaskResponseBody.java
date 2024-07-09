@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A91BE91F-0B34-4CBF-8E0F-A2977E15AA52</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
     public static class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItemTaskConfig extends TeaModel {
         /**
          * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-31T15:59:59Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The start of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-31T16:00:00Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -76,18 +85,27 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
     public static class DescribeUserUsageDetailDataExportTaskResponseBodyUsageDataPerPageDataDataItem extends TeaModel {
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-09T06:33:38Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.oss-cn-beijing.aliyuncs.com/billing_data/xxx">https://test.oss-cn-beijing.aliyuncs.com/billing_data/xxx</a></p>
          */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
         /**
          * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         @NameInMap("Status")
         public String status;
@@ -100,18 +118,27 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
 
         /**
          * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The name of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Refresh</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
         /**
          * <p>The time when the task was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-09T06:35:46Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -207,18 +234,27 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
 
         /**
          * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
          * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
          * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

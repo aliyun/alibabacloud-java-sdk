@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeCdnOrderCommodityCodeRequest extends TeaModel {
     /**
      * <p>The original commodity code.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
      */
     @NameInMap("CommodityCode")
     public String commodityCode;

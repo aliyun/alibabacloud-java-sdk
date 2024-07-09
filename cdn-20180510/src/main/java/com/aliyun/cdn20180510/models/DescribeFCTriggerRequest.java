@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeFCTriggerRequest extends TeaModel {
     /**
      * <p>The trigger that corresponds to the Function Compute service.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:cdn:{RegionID}:{AccountID}:{Filter}</p>
      */
     @NameInMap("TriggerARN")
     public String triggerARN;

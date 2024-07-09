@@ -6,32 +6,40 @@ import com.aliyun.tea.*;
 public class DescribeCdnUserDomainsByFuncRequest extends TeaModel {
     /**
      * <p>The ID of the feature.</p>
-     * <br>
      * <p>For example, the ID of the origin host feature (set_req_host_header) is 18.</p>
-     * <br>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7</p>
      */
     @NameInMap("FuncId")
     public Integer funcId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
-     * <br>
-     * <p>Valid values: **1** to **100000**.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of domain names to return on each page. Default value: **20**.</p>
-     * <br>
-     * <p>Valid values: **1** to **50**.</p>
+     * <p>The number of domain names to return on each page. Default value: <strong>20</strong>.</p>
+     * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-xxxxx</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

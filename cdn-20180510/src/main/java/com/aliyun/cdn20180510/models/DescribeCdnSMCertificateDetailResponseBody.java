@@ -6,54 +6,81 @@ import com.aliyun.tea.*;
 public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
     /**
      * <p>The expiration time of the certificate. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-31T09:42:28Z</p>
      */
     @NameInMap("CertExpireTime")
     public String certExpireTime;
 
     /**
      * <p>The ID of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>648****-cn-hangzhou</p>
      */
     @NameInMap("CertIdentifier")
     public String certIdentifier;
 
     /**
      * <p>The name of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourCertName</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
      * <p>The certificate authority (CA) that issued the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DigiCert Inc</p>
      */
     @NameInMap("CertOrg")
     public String certOrg;
 
     /**
      * <p>The common name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
      * <p>The content of the encryption certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-BEGIN CERTIFICATE-----***-----END CERTIFICATE--</p>
      */
     @NameInMap("EncryptCertificate")
     public String encryptCertificate;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A7C69682-7F88-40DD-A198-10D0309E439D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The subdomain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>***.example.com</p>
      */
     @NameInMap("Sans")
     public String sans;
 
     /**
      * <p>The content of the signature certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>--BEGIN CERTIFICATE-----***-----END CERTIFICATE--</p>
      */
     @NameInMap("SignCertificate")
     public String signCertificate;

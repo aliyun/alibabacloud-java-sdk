@@ -6,36 +6,51 @@ import com.aliyun.tea.*;
 public class DescribeRealtimeDeliveryAccRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
      * <p>The end time must be later than the start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-10-20T05:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The time granularity of the data entries. Unit: seconds. The value varies based on the values of the **StartTime** and **EndTime** parameters. Valid values:</p>
-     * <br>
-     * <p>*   If the time span between StartTime and EndTime is less than 3 days, valid values are **300**, **3600**, and **86400**. Default value: **300**.</p>
-     * <p>*   If the time span between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, valid values are **3600** and **86400**. Default value: **3600**.</p>
-     * <p>*   If the time span between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.</p>
+     * <p>The time granularity of the data entries. Unit: seconds. The value varies based on the values of the <strong>StartTime</strong> and <strong>EndTime</strong> parameters. Valid values:</p>
+     * <ul>
+     * <li>If the time span between StartTime and EndTime is less than 3 days, valid values are <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. Default value: <strong>300</strong>.</li>
+     * <li>If the time span between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, valid values are <strong>3600</strong> and <strong>86400</strong>. Default value: <strong>3600</strong>.</li>
+     * <li>If the time span between StartTime and EndTime is 31 days or longer, the valid value is <strong>86400</strong>. Default value: <strong>86400</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
      * <p>The name of the Logstore that stores log data. If you do leave this parameter empty, real-time log deliveries of all Logstores are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LogStore</p>
      */
     @NameInMap("LogStore")
     public String logStore;
 
     /**
      * <p>The name of the Log Service project that is used for real-time log delivery. If you do leave this parameter empty, real-time log deliveries of all projects are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Project</p>
      */
     @NameInMap("Project")
     public String project;
 
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2016-10-20T04:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;

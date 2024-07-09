@@ -6,33 +6,48 @@ import com.aliyun.tea.*;
 public class DescribeRefreshTasksRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify only one accelerated domain name in each call. By default, this operation queries the status of tasks for all accelerated domain names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
-     * <br>
-     * <p>> The end time must be later than the start time.</p>
+     * <blockquote>
+     * <p>The end time must be later than the start time.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-22T08:00:00Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The path of the object. The path is used as a condition for exact matching.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://example.com/1.txt">http://example.com/1.txt</a></p>
      */
     @NameInMap("ObjectPath")
     public String objectPath;
 
     /**
      * <p>The type of the task. Valid values:</p>
-     * <br>
-     * <p>*   **file**: refreshes one or more files.</p>
-     * <p>*   **directory**: refreshes files in specific directories.</p>
-     * <p>*   **regex**: refreshes content based on a regular expression.</p>
-     * <p>*   **preload**: prefetches one or more files.</p>
-     * <br>
-     * <p>> If you set the **DomainName** or **Status** parameter, you must also set the **ObjectType** parameter.</p>
+     * <ul>
+     * <li><strong>file</strong>: refreshes one or more files.</li>
+     * <li><strong>directory</strong>: refreshes files in specific directories.</li>
+     * <li><strong>regex</strong>: refreshes content based on a regular expression.</li>
+     * <li><strong>preload</strong>: prefetches one or more files.</li>
+     * </ul>
+     * <blockquote>
+     * <p>If you set the <strong>DomainName</strong> or <strong>Status</strong> parameter, you must also set the <strong>ObjectType</strong> parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>file</p>
      */
     @NameInMap("ObjectType")
     public String objectType;
@@ -41,19 +56,28 @@ public class DescribeRefreshTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: **1** to **100000**.</p>
+     * <p>The number of the page to return. Valid values: <strong>1</strong> to <strong>100000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: **100**. Valid values: **1** to **100**.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>. Maximum value: <strong>100</strong>. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmyuji4b6r4**</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -63,22 +87,32 @@ public class DescribeRefreshTasksRequest extends TeaModel {
 
     /**
      * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-21T08:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
      * <p>The status of the task. Valid values:</p>
-     * <br>
-     * <p>*   **Complete**: The task is complete.</p>
-     * <p>*   **Refreshing**: The task is in progress.</p>
-     * <p>*   **Failed**: The task failed.</p>
+     * <ul>
+     * <li><strong>Complete</strong>: The task is complete.</li>
+     * <li><strong>Refreshing</strong>: The task is in progress.</li>
+     * <li><strong>Failed</strong>: The task failed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Complete</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
      * <p>The ID of the task that you want to query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1234321</p>
      */
     @NameInMap("TaskId")
     public String taskId;

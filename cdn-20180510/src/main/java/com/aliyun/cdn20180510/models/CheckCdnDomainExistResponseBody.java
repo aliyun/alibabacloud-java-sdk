@@ -6,21 +6,28 @@ import com.aliyun.tea.*;
 public class CheckCdnDomainExistResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64D28B53-5902-409B-94F6-FD46680144FE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of the domain name. Valid values:</p>
-     * <br>
-     * <p>*   **DomainNotExist**: The domain name is not added.</p>
-     * <p>*   **DomainExistOtherUser**: The domain name has been added by another account.</p>
-     * <p>*   **DomainExistCdnProduct**: The domain name has been added to Alibaba Cloud CDN.</p>
-     * <p>*   **DomainExistDcdnProduct**: The domain name has been added to Dynamic Content Delivery Network (DCDN).</p>
-     * <p>*   **DomainExistScdnProduct**: The domain name has been added to Secure CDN (SCDN).</p>
-     * <p>*   **DomainExistVodProduct**: The domain name has been added to ApsaraVideo VOD.</p>
-     * <p>*   **DomainExistLiveProduct**: The domain name has been added to ApsaraVideo Live.</p>
-     * <p>*   **DomainExistDcdnipaProduct**: The domain name has been added to DCDN IP Application Accelerator (IPA).</p>
+     * <ul>
+     * <li><strong>DomainNotExist</strong>: The domain name is not added.</li>
+     * <li><strong>DomainExistOtherUser</strong>: The domain name has been added by another account.</li>
+     * <li><strong>DomainExistCdnProduct</strong>: The domain name has been added to Alibaba Cloud CDN.</li>
+     * <li><strong>DomainExistDcdnProduct</strong>: The domain name has been added to Dynamic Content Delivery Network (DCDN).</li>
+     * <li><strong>DomainExistScdnProduct</strong>: The domain name has been added to Secure CDN (SCDN).</li>
+     * <li><strong>DomainExistVodProduct</strong>: The domain name has been added to ApsaraVideo VOD.</li>
+     * <li><strong>DomainExistLiveProduct</strong>: The domain name has been added to ApsaraVideo Live.</li>
+     * <li><strong>DomainExistDcdnipaProduct</strong>: The domain name has been added to DCDN IP Application Accelerator (IPA).</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DomainNotExist</p>
      */
     @NameInMap("Status")
     public String status;

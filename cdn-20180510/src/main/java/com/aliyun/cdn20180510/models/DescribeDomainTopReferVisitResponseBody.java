@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
     /**
      * <p>The accelerated domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95994621-8382-464B-8762-C708E73568D1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The beginning of the time range that was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2019-12-21T12:00:00Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -68,30 +77,45 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
     public static class DescribeDomainTopReferVisitResponseBodyTopReferListReferList extends TeaModel {
         /**
          * <p>The amount of network traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Flow")
         public String flow;
 
         /**
          * <p>The proportion of network traffic consumed to access the URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("FlowProportion")
         public Float flowProportion;
 
         /**
          * <p>The URLs to the most frequently requested web pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>learn.aliyundoc.com</p>
          */
         @NameInMap("ReferDetail")
         public String referDetail;
 
         /**
          * <p>The number of visits to the URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("VisitData")
         public String visitData;
 
         /**
          * <p>The proportion of visits to the URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         @NameInMap("VisitProportion")
         public Float visitProportion;

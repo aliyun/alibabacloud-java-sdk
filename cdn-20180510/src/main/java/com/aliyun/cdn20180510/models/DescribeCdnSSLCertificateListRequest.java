@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeCdnSSLCertificateListRequest extends TeaModel {
     /**
      * <p>The accelerated domain name. You can specify only one domain name in each request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://www.example.com">www.example.com</a></p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -14,19 +17,28 @@ public class DescribeCdnSSLCertificateListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: **1**.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: an integer from **1** to **1000**.</p>
+     * <p>The number of entries per page. Valid values: an integer from <strong>1</strong> to <strong>1000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The keyword that is used to query the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>certabc</p>
      */
     @NameInMap("SearchKeyword")
     public String searchKeyword;

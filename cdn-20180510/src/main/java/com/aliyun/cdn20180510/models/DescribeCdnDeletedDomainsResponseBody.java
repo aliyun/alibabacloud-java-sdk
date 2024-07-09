@@ -11,25 +11,37 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
     public DescribeCdnDeletedDomainsResponseBodyDomains domains;
 
     /**
-     * <p>The page number of the returned page, which is the same as the **PageNumber** parameter in request parameters.</p>
+     * <p>The page number of the returned page, which is the same as the <strong>PageNumber</strong> parameter in request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of domain names returned per page, which is the same as the **PageSize** parameter in request parameters.</p>
+     * <p>The number of domain names returned per page, which is the same as the <strong>PageSize</strong> parameter in request parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA75AADB-5E25-4970-B480-EAA1F5658483</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of domain names returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -82,12 +94,18 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
     public static class DescribeCdnDeletedDomainsResponseBodyDomainsPageData extends TeaModel {
         /**
          * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
          * <p>The time when the accelerated domain name was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-10-28T11:05:52Z</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

@@ -6,72 +6,108 @@ import com.aliyun.tea.*;
 public class DescribeCdnUserQuotaResponseBody extends TeaModel {
     /**
      * <p>The maximum number of URLs and directories that can be blocked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("BlockQuota")
     public Integer blockQuota;
 
     /**
      * <p>The remaining number of URLs and directories that can be blocked.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("BlockRemain")
     public Integer blockRemain;
 
     /**
      * <p>The maximum number of accelerated domain names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("DomainQuota")
     public Integer domainQuota;
 
     /**
      * <p>The maximum number of ignore params that can be refreshed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("IgnoreParamsQuota")
     public Integer ignoreParamsQuota;
 
     /**
      * <p>The remaining number of ignore params that can be refreshed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("IgnoreParamsRemain")
     public Integer ignoreParamsRemain;
 
     /**
      * <p>The maximum number of URLs that can be prefetched.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("PreloadQuota")
     public Integer preloadQuota;
 
     /**
      * <p>The remaining number of URLs that can be prefetched.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("PreloadRemain")
     public Integer preloadRemain;
 
     /**
      * <p>The maximum number of directories that can be refreshed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("RefreshDirQuota")
     public Integer refreshDirQuota;
 
     /**
      * <p>The remaining number of directories that can be refreshed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>500</p>
      */
     @NameInMap("RefreshDirRemain")
     public Integer refreshDirRemain;
 
     /**
      * <p>The maximum number of URLs that can be refreshed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("RefreshUrlQuota")
     public Integer refreshUrlQuota;
 
     /**
      * <p>The remaining number of URLs that can be refreshed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2000</p>
      */
     @NameInMap("RefreshUrlRemain")
     public Integer refreshUrlRemain;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EF4F084A-2F49-4E1C-9CA0-DC85BCE7F391</p>
      */
     @NameInMap("RequestId")
     public String requestId;
