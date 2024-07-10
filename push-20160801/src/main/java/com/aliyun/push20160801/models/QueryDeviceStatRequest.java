@@ -14,8 +14,6 @@ public class QueryDeviceStatRequest extends TeaModel {
     public Long appKey;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>iOS</p>
      */
